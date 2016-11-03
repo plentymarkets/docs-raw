@@ -9,7 +9,7 @@ payment order relation
 
 #### Namespace
 
-Plenty\Modules\Payment\Contracts
+`Plenty\Modules\Payment\Contracts`
 
 
 
@@ -68,7 +68,7 @@ The PaymentPropertyRepositoryContract is the interface for the payment property 
 
 #### Namespace
 
-Plenty\Modules\Payment\Contracts
+`Plenty\Modules\Payment\Contracts`
 
 
 
@@ -116,38 +116,38 @@ Lists properties of a property type. The ID of the property type must be specifi
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$typeId</td>
         <td>The ID of the payment property type. The following property types are available:
-         &lt;ul&gt;
-             &lt;li&gt;Transaction ID = 1&lt;/li&gt;
-             &lt;li&gt;Reference ID = 2&lt;/li&gt;
-             &lt;li&gt;Booking text = 3&lt;/li&gt;
-             &lt;li&gt;Transaction password = 4&lt;/li&gt;
-             &lt;li&gt;Transaction code = 5&lt;/li&gt;
-             &lt;li&gt;Authorisation ID = 6&lt;/li&gt;
-             &lt;li&gt;Capture ID = 7&lt;/li&gt;
-             &lt;li&gt;Refund ID = 8&lt;/li&gt;
-             &lt;li&gt;Credit note ID = 9&lt;/li&gt;
-             &lt;li&gt;Order reference = 10&lt;/li&gt;
-             &lt;li&gt;Name of the sender = 11&lt;/li&gt;
-             &lt;li&gt;Email of the sender = 12&lt;/li&gt;
-             &lt;li&gt;The sender&#039;s sort code = 13&lt;/li&gt;
-             &lt;li&gt;The sender&#039;s bank name = 14&lt;/li&gt;
-             &lt;li&gt;The sender&#039;s bank account number = 15&lt;/li&gt;
-             &lt;li&gt;The holder of the bank account = 16&lt;/li&gt;
-             &lt;li&gt;The country of the sender&#039;s bank account = 17&lt;/li&gt;
-             &lt;li&gt;The sender&#039;s IBAN = 18&lt;/li&gt;
-             &lt;li&gt;The sender&#039;s BIC = 19&lt;/li&gt;
-             &lt;li&gt;Name of the recipient = 20&lt;/li&gt;
-             &lt;li&gt;The recipient&#039;s bank account = 21&lt;/li&gt;
-             &lt;li&gt;Reference text of the payment = 22&lt;/li&gt;
-             &lt;li&gt;Payment origin = 23&lt;/li&gt;
-             &lt;li&gt;Shipping address ID = 24&lt;/li&gt;
-             &lt;li&gt;Invoice address ID = 25&lt;/li&gt;
-             &lt;li&gt;Item buyer = 26&lt;/li&gt;
-             &lt;li&gt;Item number = 27&lt;/li&gt;
-             &lt;li&gt;Item transaction ID = 28&lt;/li&gt;
-             &lt;li&gt;External transaction type = 29&lt;/li&gt;
-             &lt;li&gt;External transaction status = 30&lt;/li&gt;
-         &lt;/ul&gt;</td>
+         <ul>
+             <li>Transaction ID = 1</li>
+             <li>Reference ID = 2</li>
+             <li>Booking text = 3</li>
+             <li>Transaction password = 4</li>
+             <li>Transaction code = 5</li>
+             <li>Authorisation ID = 6</li>
+             <li>Capture ID = 7</li>
+             <li>Refund ID = 8</li>
+             <li>Credit note ID = 9</li>
+             <li>Order reference = 10</li>
+             <li>Name of the sender = 11</li>
+             <li>Email of the sender = 12</li>
+             <li>The sender's sort code = 13</li>
+             <li>The sender's bank name = 14</li>
+             <li>The sender's bank account number = 15</li>
+             <li>The holder of the bank account = 16</li>
+             <li>The country of the sender's bank account = 17</li>
+             <li>The sender's IBAN = 18</li>
+             <li>The sender's BIC = 19</li>
+             <li>Name of the recipient = 20</li>
+             <li>The recipient's bank account = 21</li>
+             <li>Reference text of the payment = 22</li>
+             <li>Payment origin = 23</li>
+             <li>Shipping address ID = 24</li>
+             <li>Invoice address ID = 25</li>
+             <li>Item buyer = 26</li>
+             <li>Item number = 27</li>
+             <li>Item transaction ID = 28</li>
+             <li>External transaction type = 29</li>
+             <li>External transaction status = 30</li>
+         </ul></td>
     </tr>
 </table>
 
@@ -211,7 +211,7 @@ The PaymentPropertyTypeNameRepositoryContract is the interface for the repositor
 
 #### Namespace
 
-Plenty\Modules\Payment\Contracts
+`Plenty\Modules\Payment\Contracts`
 
 
 
@@ -283,7 +283,7 @@ The PaymentPropertyTypeRepositoryContract is the interface for the payment prope
 
 #### Namespace
 
-Plenty\Modules\Payment\Contracts
+`Plenty\Modules\Payment\Contracts`
 
 
 
@@ -313,38 +313,38 @@ Gets a payment property type. The ID of the property type must be specified.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
         <td>The ID of the payment property type. The following property types are available:
-         &lt;ul&gt;
-             &lt;li&gt;Transaction ID = 1&lt;/li&gt;
-             &lt;li&gt;Reference ID = 2&lt;/li&gt;
-             &lt;li&gt;Booking text = 3&lt;/li&gt;
-             &lt;li&gt;Transaction password = 4&lt;/li&gt;
-             &lt;li&gt;Transaction code = 5&lt;/li&gt;
-             &lt;li&gt;Authorisation ID = 6&lt;/li&gt;
-             &lt;li&gt;Capture ID = 7&lt;/li&gt;
-             &lt;li&gt;Refund ID = 8&lt;/li&gt;
-             &lt;li&gt;Credit note ID = 9&lt;/li&gt;
-             &lt;li&gt;Order reference = 10&lt;/li&gt;
-             &lt;li&gt;Name of the sender = 11&lt;/li&gt;
-             &lt;li&gt;Email of the sender = 12&lt;/li&gt;
-             &lt;li&gt;The sender&#039;s sort code = 13&lt;/li&gt;
-             &lt;li&gt;The sender&#039;s bank name = 14&lt;/li&gt;
-             &lt;li&gt;The sender&#039;s bank account number = 15&lt;/li&gt;
-             &lt;li&gt;The holder of the bank account = 16&lt;/li&gt;
-             &lt;li&gt;The country of the sender&#039;s bank account = 17&lt;/li&gt;
-             &lt;li&gt;The sender&#039;s IBAN = 18&lt;/li&gt;
-             &lt;li&gt;The sender&#039;s BIC = 19&lt;/li&gt;
-             &lt;li&gt;Name of the recipient = 20&lt;/li&gt;
-             &lt;li&gt;The recipient&#039;s bank account = 21&lt;/li&gt;
-             &lt;li&gt;Reference text of the payment = 22&lt;/li&gt;
-             &lt;li&gt;Payment origin = 23&lt;/li&gt;
-             &lt;li&gt;Shipping address ID = 24&lt;/li&gt;
-             &lt;li&gt;Invoice address ID = 25&lt;/li&gt;
-             &lt;li&gt;Item buyer = 26&lt;/li&gt;
-             &lt;li&gt;Item number = 27&lt;/li&gt;
-             &lt;li&gt;Item transaction ID = 28&lt;/li&gt;
-             &lt;li&gt;External transaction type = 29&lt;/li&gt;
-             &lt;li&gt;External transaction status = 30&lt;/li&gt;
-         &lt;/ul&gt;</td>
+         <ul>
+             <li>Transaction ID = 1</li>
+             <li>Reference ID = 2</li>
+             <li>Booking text = 3</li>
+             <li>Transaction password = 4</li>
+             <li>Transaction code = 5</li>
+             <li>Authorisation ID = 6</li>
+             <li>Capture ID = 7</li>
+             <li>Refund ID = 8</li>
+             <li>Credit note ID = 9</li>
+             <li>Order reference = 10</li>
+             <li>Name of the sender = 11</li>
+             <li>Email of the sender = 12</li>
+             <li>The sender's sort code = 13</li>
+             <li>The sender's bank name = 14</li>
+             <li>The sender's bank account number = 15</li>
+             <li>The holder of the bank account = 16</li>
+             <li>The country of the sender's bank account = 17</li>
+             <li>The sender's IBAN = 18</li>
+             <li>The sender's BIC = 19</li>
+             <li>Name of the recipient = 20</li>
+             <li>The recipient's bank account = 21</li>
+             <li>Reference text of the payment = 22</li>
+             <li>Payment origin = 23</li>
+             <li>Shipping address ID = 24</li>
+             <li>Invoice address ID = 25</li>
+             <li>Item buyer = 26</li>
+             <li>Item number = 27</li>
+             <li>Item transaction ID = 28</li>
+             <li>External transaction type = 29</li>
+             <li>External transaction status = 30</li>
+         </ul></td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -393,7 +393,7 @@ The PaymentRepositoryContract is the interface for the payment repository. List,
 
 #### Namespace
 
-Plenty\Modules\Payment\Contracts
+`Plenty\Modules\Payment\Contracts`
 
 
 
@@ -624,7 +624,7 @@ The payment model
 
 #### Namespace
 
-Plenty\Modules\Payment\Models
+`Plenty\Modules\Payment\Models`
 
 
 #### Properties
@@ -754,7 +754,7 @@ payment order relation model
 
 #### Namespace
 
-Plenty\Modules\Payment\Models
+`Plenty\Modules\Payment\Models`
 
 
 #### Properties
@@ -800,7 +800,7 @@ the payment option
 
 #### Namespace
 
-Plenty\Modules\Payment\Models
+`Plenty\Modules\Payment\Models`
 
 
 #### Properties
@@ -878,7 +878,7 @@ payment propery type model
 
 #### Namespace
 
-Plenty\Modules\Payment\Models
+`Plenty\Modules\Payment\Models`
 
 
 #### Properties
@@ -925,7 +925,7 @@ payment property type name model
 
 #### Namespace
 
-Plenty\Modules\Payment\Models
+`Plenty\Modules\Payment\Models`
 
 
 #### Properties
@@ -973,7 +973,7 @@ execute payment event
 
 #### Namespace
 
-Plenty\Modules\Payment\Events\Checkout
+`Plenty\Modules\Payment\Events\Checkout`
 
 
 
@@ -1062,7 +1062,7 @@ after payment method selected event
 
 #### Namespace
 
-Plenty\Modules\Payment\Events\Checkout
+`Plenty\Modules\Payment\Events\Checkout`
 
 
 
@@ -1155,7 +1155,7 @@ The PaymentHistoryRepositoryContract is the interface for the payment history re
 
 #### Namespace
 
-Plenty\Modules\Payment\History\Contracts
+`Plenty\Modules\Payment\History\Contracts`
 
 
 
@@ -1176,14 +1176,14 @@ Gets the payment history for a payment. The ID of the payment and the ID of the 
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$typeId</td>
         <td>The ID of the history type. The following types are available:
-         &lt;ul&gt;
-             &lt;li&gt;Created = 1&lt;/li&gt;
-             &lt;li&gt;Status updated = 2&lt;/li&gt;
-             &lt;li&gt;Assigned = 3&lt;/li&gt;
-             &lt;li&gt;Detached = 4&lt;/li&gt;
-             &lt;li&gt;Deleted = 5&lt;/li&gt;
-             &lt;li&gt;Updated = 6&lt;/li&gt;
-         &lt;/ul&gt;</td>
+         <ul>
+             <li>Created = 1</li>
+             <li>Status updated = 2</li>
+             <li>Assigned = 3</li>
+             <li>Detached = 4</li>
+             <li>Deleted = 5</li>
+             <li>Updated = 6</li>
+         </ul></td>
     </tr>
 </table>
 
@@ -1211,7 +1211,7 @@ the payment history
 
 #### Namespace
 
-Plenty\Modules\Payment\History\Models
+`Plenty\Modules\Payment\History\Models`
 
 
 #### Properties
@@ -1267,7 +1267,7 @@ payment method container
 
 #### Namespace
 
-Plenty\Modules\Payment\Method\Contracts
+`Plenty\Modules\Payment\Method\Contracts`
 
 
 
@@ -1305,7 +1305,7 @@ The PaymentMethodRepositoryContract is the interface for the payment method repo
 
 #### Namespace
 
-Plenty\Modules\Payment\Method\Contracts
+`Plenty\Modules\Payment\Method\Contracts`
 
 
 
@@ -1416,7 +1416,7 @@ the method of payment service
 
 #### Namespace
 
-Plenty\Modules\Payment\Method\Contracts
+`Plenty\Modules\Payment\Method\Contracts`
 
 
 ## Models<a name="payment_method_models"></a>
@@ -1426,7 +1426,7 @@ PaymentMethod
 
 #### Namespace
 
-Plenty\Modules\Payment\Method\Models
+`Plenty\Modules\Payment\Method\Models`
 
 
 #### Properties

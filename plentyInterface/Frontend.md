@@ -9,7 +9,7 @@ checkout service
 
 #### Namespace
 
-Plenty\Modules\Frontend\Contracts
+`Plenty\Modules\Frontend\Contracts`
 
 
 
@@ -82,7 +82,7 @@ currency changed event
 
 #### Namespace
 
-Plenty\Modules\Frontend\Events
+`Plenty\Modules\Frontend\Events`
 
 
 
@@ -103,7 +103,7 @@ language changed event
 
 #### Namespace
 
-Plenty\Modules\Frontend\Events
+`Plenty\Modules\Frontend\Events`
 
 
 
@@ -120,7 +120,7 @@ delivery address changed event
 
 #### Namespace
 
-Plenty\Modules\Frontend\Events
+`Plenty\Modules\Frontend\Events`
 
 
 
@@ -137,7 +137,7 @@ payment settings changed event
 
 #### Namespace
 
-Plenty\Modules\Frontend\Events
+`Plenty\Modules\Frontend\Events`
 
 
 
@@ -154,7 +154,7 @@ shipping settings changed event
 
 #### Namespace
 
-Plenty\Modules\Frontend\Events
+`Plenty\Modules\Frontend\Events`
 
 
 
@@ -179,7 +179,7 @@ Frontend-Factory
 
 #### Namespace
 
-Plenty\Modules\Frontend\Factories
+`Plenty\Modules\Frontend\Factories`
 
 
 
@@ -212,7 +212,7 @@ Frontend-service for customer information
 
 #### Namespace
 
-Plenty\Modules\Frontend\Services
+`Plenty\Modules\Frontend\Services`
 
 
 
@@ -233,7 +233,7 @@ Frontend-Service for agent information
 
 #### Namespace
 
-Plenty\Modules\Frontend\Services
+`Plenty\Modules\Frontend\Services`
 
 
 
@@ -286,7 +286,7 @@ Frontend-service for file information
 
 #### Namespace
 
-Plenty\Modules\Frontend\Services
+`Plenty\Modules\Frontend\Services`
 
 
 
@@ -457,7 +457,7 @@ Frontend-service for system information
 
 #### Namespace
 
-Plenty\Modules\Frontend\Services
+`Plenty\Modules\Frontend\Services`
 
 
 
@@ -480,7 +480,7 @@ Repository to load payment methods for the front end
 
 #### Namespace
 
-Plenty\Modules\Frontend\PaymentMethod\Contracts
+`Plenty\Modules\Frontend\PaymentMethod\Contracts`
 
 
 
@@ -563,7 +563,7 @@ session storage for frontend
 
 #### Namespace
 
-Plenty\Modules\Frontend\Session\Storage\Contracts
+`Plenty\Modules\Frontend\Session\Storage\Contracts`
 
 
 
@@ -601,7 +601,7 @@ session storage model for customer data
 
 #### Namespace
 
-Plenty\Modules\Frontend\Session\Storage\Models
+`Plenty\Modules\Frontend\Session\Storage\Models`
 
 
 #### Properties
@@ -663,7 +663,7 @@ session storage model for forum data
 
 #### Namespace
 
-Plenty\Modules\Frontend\Session\Storage\Models
+`Plenty\Modules\Frontend\Session\Storage\Models`
 
 
 #### Properties
@@ -713,7 +713,7 @@ session storage model for locale settings
 
 #### Namespace
 
-Plenty\Modules\Frontend\Session\Storage\Models
+`Plenty\Modules\Frontend\Session\Storage\Models`
 
 
 #### Properties
@@ -755,7 +755,7 @@ session storage model for order data
 
 #### Namespace
 
-Plenty\Modules\Frontend\Session\Storage\Models
+`Plenty\Modules\Frontend\Session\Storage\Models`
 
 
 #### Properties
@@ -873,7 +873,7 @@ session storage model for plugins
 
 #### Namespace
 
-Plenty\Modules\Frontend\Session\Storage\Models
+`Plenty\Modules\Frontend\Session\Storage\Models`
 
 
 

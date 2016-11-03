@@ -9,7 +9,7 @@ Repository for basket items
 
 #### Namespace
 
-Plenty\Modules\Basket\Contracts
+`Plenty\Modules\Basket\Contracts`
 
 
 
@@ -106,7 +106,7 @@ Repository for item basket
 
 #### Namespace
 
-Plenty\Modules\Basket\Contracts
+`Plenty\Modules\Basket\Contracts`
 
 
 
@@ -125,7 +125,7 @@ Class BasketItemCheckException
 
 #### Namespace
 
-Plenty\Modules\Basket\Exceptions
+`Plenty\Modules\Basket\Exceptions`
 
 
 
@@ -136,7 +136,7 @@ Class BasketItemQuantityCheckException
 
 #### Namespace
 
-Plenty\Modules\Basket\Exceptions
+`Plenty\Modules\Basket\Exceptions`
 
 
 ## Models<a name="basket_basket_models"></a>
@@ -146,7 +146,7 @@ The basket model
 
 #### Namespace
 
-Plenty\Modules\Basket\Models
+`Plenty\Modules\Basket\Models`
 
 
 #### Properties
@@ -293,7 +293,7 @@ The basket item model
 
 #### Namespace
 
-Plenty\Modules\Basket\Models
+`Plenty\Modules\Basket\Models`
 
 
 #### Properties
@@ -457,7 +457,7 @@ After Basket Changed
 
 #### Namespace
 
-Plenty\Modules\Basket\Events\Basket
+`Plenty\Modules\Basket\Events\Basket`
 
 
 
@@ -573,7 +573,7 @@ After basket created
 
 #### Namespace
 
-Plenty\Modules\Basket\Events\Basket
+`Plenty\Modules\Basket\Events\Basket`
 
 
 
@@ -591,7 +591,7 @@ after basket item add event
 
 #### Namespace
 
-Plenty\Modules\Basket\Events\BasketItem
+`Plenty\Modules\Basket\Events\BasketItem`
 
 
 
@@ -609,7 +609,7 @@ after basket item remove event
 
 #### Namespace
 
-Plenty\Modules\Basket\Events\BasketItem
+`Plenty\Modules\Basket\Events\BasketItem`
 
 
 
@@ -619,7 +619,7 @@ after basket item update event
 
 #### Namespace
 
-Plenty\Modules\Basket\Events\BasketItem
+`Plenty\Modules\Basket\Events\BasketItem`
 
 
 
@@ -629,7 +629,7 @@ before basket item add event
 
 #### Namespace
 
-Plenty\Modules\Basket\Events\BasketItem
+`Plenty\Modules\Basket\Events\BasketItem`
 
 
 
@@ -647,7 +647,7 @@ before basket item removed event
 
 #### Namespace
 
-Plenty\Modules\Basket\Events\BasketItem
+`Plenty\Modules\Basket\Events\BasketItem`
 
 
 
@@ -657,6 +657,6 @@ before basket item update event
 
 #### Namespace
 
-Plenty\Modules\Basket\Events\BasketItem
+`Plenty\Modules\Basket\Events\BasketItem`
 
 

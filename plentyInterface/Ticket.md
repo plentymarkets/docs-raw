@@ -9,7 +9,7 @@ The TicketRepositoryContract is the interface for the ticket repository. This in
 
 #### Namespace
 
-Plenty\Modules\Ticket\Contracts
+`Plenty\Modules\Ticket\Contracts`
 
 
 
@@ -46,7 +46,7 @@ The ticket model.
 
 #### Namespace
 
-Plenty\Modules\Ticket\Models
+`Plenty\Modules\Ticket\Models`
 
 
 #### Properties
@@ -164,7 +164,7 @@ The ticket owner model.
 
 #### Namespace
 
-Plenty\Modules\Ticket\Models
+`Plenty\Modules\Ticket\Models`
 
 
 #### Properties
@@ -206,7 +206,7 @@ The ticket role model.
 
 #### Namespace
 
-Plenty\Modules\Ticket\Models
+`Plenty\Modules\Ticket\Models`
 
 
 #### Properties
@@ -244,7 +244,7 @@ The ticket role name model.
 
 #### Namespace
 
-Plenty\Modules\Ticket\Models
+`Plenty\Modules\Ticket\Models`
 
 
 #### Properties
@@ -290,7 +290,7 @@ The ticket status model.
 
 #### Namespace
 
-Plenty\Modules\Ticket\Models
+`Plenty\Modules\Ticket\Models`
 
 
 #### Properties
@@ -336,7 +336,7 @@ The ticket status group model.
 
 #### Namespace
 
-Plenty\Modules\Ticket\Models
+`Plenty\Modules\Ticket\Models`
 
 
 #### Properties
@@ -378,7 +378,7 @@ The ticket status group name model.
 
 #### Namespace
 
-Plenty\Modules\Ticket\Models
+`Plenty\Modules\Ticket\Models`
 
 
 #### Properties
@@ -420,7 +420,7 @@ The ticket status name model.
 
 #### Namespace
 
-Plenty\Modules\Ticket\Models
+`Plenty\Modules\Ticket\Models`
 
 
 #### Properties
@@ -466,7 +466,7 @@ The ticket type model.
 
 #### Namespace
 
-Plenty\Modules\Ticket\Models
+`Plenty\Modules\Ticket\Models`
 
 
 #### Properties
@@ -504,7 +504,7 @@ The ticket type name model.
 
 #### Namespace
 
-Plenty\Modules\Ticket\Models
+`Plenty\Modules\Ticket\Models`
 
 
 #### Properties

@@ -9,7 +9,7 @@ Document
 
 #### Namespace
 
-Plenty\Modules\Document\Models
+`Plenty\Modules\Document\Models`
 
 
 #### Properties

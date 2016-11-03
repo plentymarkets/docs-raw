@@ -9,7 +9,7 @@ The contract for the address repository
 
 #### Namespace
 
-Plenty\Modules\Account\Address\Contracts
+`Plenty\Modules\Account\Address\Contracts`
 
 
 
@@ -160,7 +160,7 @@ Creates address options for an address and returns all options of the address.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$addressId</td>
         <td>The ID of the address
- @MapParam(name=&quot;addressData&quot;, keyType=&quot;string&quot;, valueType=&quot;mixed&quot;)</td>
+ @MapParam(name="addressData", keyType="string", valueType="mixed")</td>
     </tr>
 </table>
 
@@ -276,7 +276,7 @@ The address model
 
 #### Namespace
 
-Plenty\Modules\Account\Address\Models
+`Plenty\Modules\Account\Address\Models`
 
 
 #### Properties
@@ -495,7 +495,7 @@ address contact relation model
 
 #### Namespace
 
-Plenty\Modules\Account\Address\Models
+`Plenty\Modules\Account\Address\Models`
 
 
 #### Properties
@@ -551,7 +551,7 @@ The address options model
 
 #### Namespace
 
-Plenty\Modules\Account\Address\Models
+`Plenty\Modules\Account\Address\Models`
 
 
 #### Properties
@@ -611,7 +611,7 @@ The address options type model
 
 #### Namespace
 
-Plenty\Modules\Account\Address\Models
+`Plenty\Modules\Account\Address\Models`
 
 
 #### Properties
@@ -674,7 +674,7 @@ The address options type name model
 
 #### Namespace
 
-Plenty\Modules\Account\Address\Models
+`Plenty\Modules\Account\Address\Models`
 
 
 #### Properties
@@ -725,7 +725,7 @@ address order relation model
 
 #### Namespace
 
-Plenty\Modules\Account\Address\Models
+`Plenty\Modules\Account\Address\Models`
 
 
 #### Properties
@@ -781,7 +781,7 @@ The contact address type model
 
 #### Namespace
 
-Plenty\Modules\Account\Address\Models
+`Plenty\Modules\Account\Address\Models`
 
 
 #### Properties
@@ -833,7 +833,7 @@ The address relation type application model
 
 #### Namespace
 
-Plenty\Modules\Account\Address\Models
+`Plenty\Modules\Account\Address\Models`
 
 
 #### Properties
@@ -884,7 +884,7 @@ The address relation type name model.
 
 #### Namespace
 
-Plenty\Modules\Account\Address\Models
+`Plenty\Modules\Account\Address\Models`
 
 
 #### Properties
@@ -935,7 +935,7 @@ address scheduler relation model
 
 #### Namespace
 
-Plenty\Modules\Account\Address\Models
+`Plenty\Modules\Account\Address\Models`
 
 
 #### Properties
@@ -986,7 +986,7 @@ address warehouse relation model
 
 #### Namespace
 
-Plenty\Modules\Account\Address\Models
+`Plenty\Modules\Account\Address\Models`
 
 
 #### Properties
@@ -1039,7 +1039,7 @@ The ContactAccountRepositoryContract is the interface for the contact account re
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Contracts
+`Plenty\Modules\Account\Contact\Contracts`
 
 
 
@@ -1136,7 +1136,7 @@ The ContactAddressRepositoryContract is the interface for the contact address re
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Contracts
+`Plenty\Modules\Account\Contact\Contracts`
 
 
 
@@ -1317,7 +1317,7 @@ The ContactClassRepositoryContract is the interface for the contact class reposi
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Contracts
+`Plenty\Modules\Account\Contact\Contracts`
 
 
 
@@ -1348,7 +1348,7 @@ The ContactOptionRepositoryContract is the interface for the contact option repo
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Contracts
+`Plenty\Modules\Account\Contact\Contracts`
 
 
 
@@ -1487,7 +1487,7 @@ The ContactPaymentRepositoryContract is the interface for the contact payment re
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Contracts
+`Plenty\Modules\Account\Contact\Contracts`
 
 
 
@@ -1507,7 +1507,7 @@ Gets a collection of bank accounts of a contact. The ID of the contact must be s
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>Optional: The columns to retrieve (Default: &#039;[*]&#039;)</td>
+        <td>Optional: The columns to retrieve (Default: '[*]')</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -1532,7 +1532,7 @@ Returns bank details of an order. The ID of the order must be specified.
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>Optional: The columns to retrieve (Default: &#039;[*]&#039;)</td>
+        <td>Optional: The columns to retrieve (Default: '[*]')</td>
     </tr>
 </table>
 
@@ -1608,7 +1608,7 @@ The ContactRepositoryContract is the interface for the contact repository. This 
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Contracts
+`Plenty\Modules\Account\Contact\Contracts`
 
 
 
@@ -1760,7 +1760,7 @@ The ContactTypeRepositoryContract is the interface for the contact type reposito
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Contracts
+`Plenty\Modules\Account\Contact\Contracts`
 
 
 
@@ -1839,7 +1839,7 @@ Returns a collection of contact types.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>Optional: The columns to return as an array (Default: &#039;[*]&#039;)</td>
+        <td>Optional: The columns to return as an array (Default: '[*]')</td>
     </tr>
 </table>
 
@@ -1851,7 +1851,7 @@ The contract for the contact payment repository.
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Contracts
+`Plenty\Modules\Account\Contact\Contracts`
 
 
 
@@ -1871,7 +1871,7 @@ Gets a collection of bank accounts of a contact. The ID of the contact must be s
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>Optional: The columns to retrieve (Default: &#039;[*]&#039;)</td>
+        <td>Optional: The columns to retrieve (Default: '[*]')</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -1896,7 +1896,7 @@ Returns bank details of an order. The ID of the order must be specified.
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>Optional: The columns to retrieve (Default: &#039;[*]&#039;)</td>
+        <td>Optional: The columns to retrieve (Default: '[*]')</td>
     </tr>
 </table>
 
@@ -1972,7 +1972,7 @@ The contact model.
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -2204,7 +2204,7 @@ contact allowed method of payment model
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -2262,7 +2262,7 @@ The contact bank model.
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -2382,7 +2382,7 @@ contact department model
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -2447,7 +2447,7 @@ contact department name model
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -2493,7 +2493,7 @@ The contact options model.
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -2570,7 +2570,7 @@ contact options sub type model
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -2631,7 +2631,7 @@ contact options sub type name model
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -2677,7 +2677,7 @@ contact options type model
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -2737,7 +2737,7 @@ contact options type name model
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -2783,7 +2783,7 @@ contact position model
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -2852,7 +2852,7 @@ contact position name model
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -2898,7 +2898,7 @@ contact type model
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -2958,7 +2958,7 @@ contact type name model
 
 #### Namespace
 
-Plenty\Modules\Account\Contact\Models
+`Plenty\Modules\Account\Contact\Models`
 
 
 #### Properties
@@ -3006,7 +3006,7 @@ The Repository for accounts and relations between accounts and contacts.
 
 #### Namespace
 
-Plenty\Modules\Account\Contracts
+`Plenty\Modules\Account\Contracts`
 
 
 
@@ -3086,7 +3086,7 @@ Returns a collection of all accounts.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>Optional: The columns to retrieve (Default: &#039;[*]&#039;).</td>
+        <td>Optional: The columns to retrieve (Default: '[*]').</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -3133,7 +3133,7 @@ frontend customer settings event
 
 #### Namespace
 
-Plenty\Modules\Account\Events
+`Plenty\Modules\Account\Events`
 
 
 
@@ -3279,7 +3279,7 @@ the account model.
 
 #### Namespace
 
-Plenty\Modules\Account\Models
+`Plenty\Modules\Account\Models`
 
 
 #### Properties
@@ -3370,7 +3370,7 @@ account contact relation model
 
 #### Namespace
 
-Plenty\Modules\Account\Models
+`Plenty\Modules\Account\Models`
 
 
 #### Properties
@@ -3424,7 +3424,7 @@ The contract for the order summary repository
 
 #### Namespace
 
-Plenty\Modules\Account\OrderSummary\Contracts
+`Plenty\Modules\Account\OrderSummary\Contracts`
 
 
 
@@ -3504,7 +3504,7 @@ Returns a collection of all order summaries.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>Optional: The columns to retrieve (Default: &#039;[*]&#039;).</td>
+        <td>Optional: The columns to retrieve (Default: '[*]').</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -3551,7 +3551,7 @@ The order summary model.
 
 #### Namespace
 
-Plenty\Modules\Account\OrderSummary\Models
+`Plenty\Modules\Account\OrderSummary\Models`
 
 
 #### Properties

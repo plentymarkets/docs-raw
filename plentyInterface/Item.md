@@ -9,7 +9,7 @@ Repository for AttributeName
 
 #### Namespace
 
-Plenty\Modules\Item\Attribute\Contracts
+`Plenty\Modules\Item\Attribute\Contracts`
 
 
 
@@ -121,7 +121,7 @@ Repository for Attribute
 
 #### Namespace
 
-Plenty\Modules\Item\Attribute\Contracts
+`Plenty\Modules\Item\Attribute\Contracts`
 
 
 
@@ -237,7 +237,7 @@ Repository for AttributeValueName
 
 #### Namespace
 
-Plenty\Modules\Item\Attribute\Contracts
+`Plenty\Modules\Item\Attribute\Contracts`
 
 
 
@@ -349,7 +349,7 @@ Repository for AttributeValue
 
 #### Namespace
 
-Plenty\Modules\Item\Attribute\Contracts
+`Plenty\Modules\Item\Attribute\Contracts`
 
 
 
@@ -494,7 +494,7 @@ The Attribute model including AttributeName and AttributeValue
 
 #### Namespace
 
-Plenty\Modules\Item\Attribute\Models
+`Plenty\Modules\Item\Attribute\Models`
 
 
 #### Properties
@@ -588,7 +588,7 @@ The AttributeName model including Attribute
 
 #### Namespace
 
-Plenty\Modules\Item\Attribute\Models
+`Plenty\Modules\Item\Attribute\Models`
 
 
 #### Properties
@@ -654,7 +654,7 @@ The AttributeValue model including Attribute and AttributeValueName
 
 #### Namespace
 
-Plenty\Modules\Item\Attribute\Models
+`Plenty\Modules\Item\Attribute\Models`
 
 
 #### Properties
@@ -741,7 +741,7 @@ The AttributeValueName model including AttributeValue
 
 #### Namespace
 
-Plenty\Modules\Item\Attribute\Models
+`Plenty\Modules\Item\Attribute\Models`
 
 
 #### Properties
@@ -809,7 +809,7 @@ Repository for item availability.
 
 #### Namespace
 
-Plenty\Modules\Item\Availability\Contracts
+`Plenty\Modules\Item\Availability\Contracts`
 
 
 
@@ -837,7 +837,7 @@ The item availability model
 
 #### Namespace
 
-Plenty\Modules\Item\Availability\Models
+`Plenty\Modules\Item\Availability\Models`
 
 
 #### Properties
@@ -883,7 +883,7 @@ The item availability lang model
 
 #### Namespace
 
-Plenty\Modules\Item\Availability\Models
+`Plenty\Modules\Item\Availability\Models`
 
 
 #### Properties
@@ -927,7 +927,7 @@ Repository for Barcode
 
 #### Namespace
 
-Plenty\Modules\Item\Barcode\Contracts
+`Plenty\Modules\Item\Barcode\Contracts`
 
 
 
@@ -1120,7 +1120,7 @@ The barcode model including barcode referrer
 
 #### Namespace
 
-Plenty\Modules\Item\Barcode\Models
+`Plenty\Modules\Item\Barcode\Models`
 
 
 #### Properties
@@ -1167,7 +1167,7 @@ The barcode link referrer model including the barcode
 
 #### Namespace
 
-Plenty\Modules\Item\Barcode\Models
+`Plenty\Modules\Item\Barcode\Models`
 
 
 #### Properties
@@ -1220,7 +1220,7 @@ returns this model as an array
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Contracts
+`Plenty\Modules\Item\DataLayer\Contracts`
 
 
 
@@ -1283,7 +1283,7 @@ Plenty\Modules\Item\DataLayer\Contracts
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 
@@ -1300,7 +1300,7 @@ ItemDataLayer - ItemBase
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -1618,7 +1618,7 @@ ItemCrossSelling
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -1667,7 +1667,7 @@ ItemDescription
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -1757,7 +1757,7 @@ ItemProperty
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -1812,7 +1812,7 @@ ItemShippingProfiles
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -1858,7 +1858,7 @@ Record
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -2012,7 +2012,7 @@ RecordList
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 
@@ -2029,7 +2029,7 @@ VariationAttributeValue
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -2067,7 +2067,7 @@ VariationBarcode
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -2113,7 +2113,7 @@ VariationBase
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -2352,7 +2352,7 @@ VariationBundleComponent
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -2398,7 +2398,7 @@ VariationCategory
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -2441,7 +2441,7 @@ VariationImage
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -2507,7 +2507,7 @@ VariationLinkMarketplace
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -2545,7 +2545,7 @@ VariationLinkWebstore
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -2583,7 +2583,7 @@ VariationMarketStatus
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -2664,7 +2664,7 @@ VariationRetailPrice
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -2770,7 +2770,7 @@ VariationSpecialOfferRetailPrice
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -2858,7 +2858,7 @@ VariationStandardCategory
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -2900,7 +2900,7 @@ VariationStock
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -3012,7 +3012,7 @@ VariationStockBuffer
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -3046,7 +3046,7 @@ VariationSupplier
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -3130,7 +3130,7 @@ VariationWarehouse
 
 #### Namespace
 
-Plenty\Modules\Item\DataLayer\Models
+`Plenty\Modules\Item\DataLayer\Models`
 
 
 #### Properties
@@ -3206,7 +3206,7 @@ Repository for DefaultShippingCost
 
 #### Namespace
 
-Plenty\Modules\Item\DefaultShippingCost\Contracts
+`Plenty\Modules\Item\DefaultShippingCost\Contracts`
 
 
 
@@ -3248,7 +3248,7 @@ The default shipping cost model
 
 #### Namespace
 
-Plenty\Modules\Item\DefaultShippingCost\Models
+`Plenty\Modules\Item\DefaultShippingCost\Models`
 
 
 #### Properties
@@ -3292,7 +3292,7 @@ Repository for item basket
 
 #### Namespace
 
-Plenty\Modules\Item\Item\Contracts
+`Plenty\Modules\Item\Item\Contracts`
 
 
 
@@ -3385,7 +3385,7 @@ The item model
 
 #### Namespace
 
-Plenty\Modules\Item\Item\Models
+`Plenty\Modules\Item\Item\Models`
 
 
 #### Properties
@@ -3623,7 +3623,7 @@ The item text model
 
 #### Namespace
 
-Plenty\Modules\Item\Item\Models
+`Plenty\Modules\Item\Item\Models`
 
 
 #### Properties
@@ -3695,7 +3695,7 @@ ItemImageAvailability
 
 #### Namespace
 
-Plenty\Modules\Item\ItemImage\Models
+`Plenty\Modules\Item\ItemImage\Models`
 
 
 #### Properties
@@ -3737,7 +3737,7 @@ ItemImageName
 
 #### Namespace
 
-Plenty\Modules\Item\ItemImage\Models
+`Plenty\Modules\Item\ItemImage\Models`
 
 
 #### Properties
@@ -3783,7 +3783,7 @@ ItemImage
 
 #### Namespace
 
-Plenty\Modules\Item\ItemImage\Models
+`Plenty\Modules\Item\ItemImage\Models`
 
 
 #### Properties
@@ -3855,7 +3855,7 @@ Repository for ManufacturerCommission
 
 #### Namespace
 
-Plenty\Modules\Item\Manufacturer\Contracts
+`Plenty\Modules\Item\Manufacturer\Contracts`
 
 
 
@@ -3947,7 +3947,7 @@ Repository for item manufacturers
 
 #### Namespace
 
-Plenty\Modules\Item\Manufacturer\Contracts
+`Plenty\Modules\Item\Manufacturer\Contracts`
 
 
 
@@ -4070,7 +4070,7 @@ The item manufacturer model
 
 #### Namespace
 
-Plenty\Modules\Item\Manufacturer\Models
+`Plenty\Modules\Item\Manufacturer\Models`
 
 
 #### Properties
@@ -4184,7 +4184,7 @@ The item manufacturer commission model
 
 #### Namespace
 
-Plenty\Modules\Item\Manufacturer\Models
+`Plenty\Modules\Item\Manufacturer\Models`
 
 
 #### Properties
@@ -4241,7 +4241,7 @@ Repository for property item name
 
 #### Namespace
 
-Plenty\Modules\Item\Property\Contracts
+`Plenty\Modules\Item\Property\Contracts`
 
 
 
@@ -4353,7 +4353,7 @@ Repository for property item
 
 #### Namespace
 
-Plenty\Modules\Item\Property\Contracts
+`Plenty\Modules\Item\Property\Contracts`
 
 
 
@@ -4469,7 +4469,7 @@ Repository for property market component
 
 #### Namespace
 
-Plenty\Modules\Item\Property\Contracts
+`Plenty\Modules\Item\Property\Contracts`
 
 
 
@@ -4600,7 +4600,7 @@ Repository for property selection
 
 #### Namespace
 
-Plenty\Modules\Item\Property\Contracts
+`Plenty\Modules\Item\Property\Contracts`
 
 
 
@@ -4712,7 +4712,7 @@ The PropertyItem including PropertyItemName and PropertyMarketComponent
 
 #### Namespace
 
-Plenty\Modules\Item\Property\Models
+`Plenty\Modules\Item\Property\Models`
 
 
 #### Properties
@@ -4814,7 +4814,7 @@ The PropertyItemName including PropertyItem
 
 #### Namespace
 
-Plenty\Modules\Item\Property\Models
+`Plenty\Modules\Item\Property\Models`
 
 
 #### Properties
@@ -4865,7 +4865,7 @@ The PropertyMarketComponent including PropertyItem
 
 #### Namespace
 
-Plenty\Modules\Item\Property\Models
+`Plenty\Modules\Item\Property\Models`
 
 
 #### Properties
@@ -4916,7 +4916,7 @@ The PropertySelection including PropertyItem
 
 #### Namespace
 
-Plenty\Modules\Item\Property\Models
+`Plenty\Modules\Item\Property\Models`
 
 
 #### Properties
@@ -4973,7 +4973,7 @@ sales price
 
 #### Namespace
 
-Plenty\Modules\Item\SalesPrice\Contracts
+`Plenty\Modules\Item\SalesPrice\Contracts`
 
 
 
@@ -5090,7 +5090,7 @@ Get list of SalesPrices
 
 #### Namespace
 
-Plenty\Modules\Item\SalesPrice\Models
+`Plenty\Modules\Item\SalesPrice\Models`
 
 
 #### Properties
@@ -5176,7 +5176,7 @@ returns this model as an array
 
 #### Namespace
 
-Plenty\Modules\Item\SalesPrice\Models
+`Plenty\Modules\Item\SalesPrice\Models`
 
 
 #### Properties
@@ -5218,7 +5218,7 @@ returns this model as an array
 
 #### Namespace
 
-Plenty\Modules\Item\SalesPrice\Models
+`Plenty\Modules\Item\SalesPrice\Models`
 
 
 #### Properties
@@ -5256,7 +5256,7 @@ returns this model as an array
 
 #### Namespace
 
-Plenty\Modules\Item\SalesPrice\Models
+`Plenty\Modules\Item\SalesPrice\Models`
 
 
 #### Properties
@@ -5294,7 +5294,7 @@ returns this model as an array
 
 #### Namespace
 
-Plenty\Modules\Item\SalesPrice\Models
+`Plenty\Modules\Item\SalesPrice\Models`
 
 
 #### Properties
@@ -5332,7 +5332,7 @@ returns this model as an array
 
 #### Namespace
 
-Plenty\Modules\Item\SalesPrice\Models
+`Plenty\Modules\Item\SalesPrice\Models`
 
 
 #### Properties
@@ -5378,7 +5378,7 @@ returns this model as an array
 
 #### Namespace
 
-Plenty\Modules\Item\SalesPrice\Models
+`Plenty\Modules\Item\SalesPrice\Models`
 
 
 #### Properties
@@ -5416,7 +5416,7 @@ returns this model as an array
 
 #### Namespace
 
-Plenty\Modules\Item\SalesPrice\Models
+`Plenty\Modules\Item\SalesPrice\Models`
 
 
 #### Properties
@@ -5456,7 +5456,7 @@ Repository for ShippingSupport
 
 #### Namespace
 
-Plenty\Modules\Item\ShippingSupport\Contracts
+`Plenty\Modules\Item\ShippingSupport\Contracts`
 
 
 
@@ -5527,7 +5527,7 @@ The shipping support model
 
 #### Namespace
 
-Plenty\Modules\Item\ShippingSupport\Models
+`Plenty\Modules\Item\ShippingSupport\Models`
 
 
 #### Properties
@@ -5571,7 +5571,7 @@ Repository for Unit Name
 
 #### Namespace
 
-Plenty\Modules\Item\Unit\Contracts
+`Plenty\Modules\Item\Unit\Contracts`
 
 
 
@@ -5683,7 +5683,7 @@ Repository for Unit
 
 #### Namespace
 
-Plenty\Modules\Item\Unit\Contracts
+`Plenty\Modules\Item\Unit\Contracts`
 
 
 
@@ -5799,7 +5799,7 @@ The unit model including unit name
 
 #### Namespace
 
-Plenty\Modules\Item\Unit\Models
+`Plenty\Modules\Item\Unit\Models`
 
 
 #### Properties
@@ -5857,7 +5857,7 @@ The unit name model including the unit
 
 #### Namespace
 
-Plenty\Modules\Item\Unit\Models
+`Plenty\Modules\Item\Unit\Models`
 
 
 #### Properties
@@ -5906,7 +5906,7 @@ Repository for item basket
 
 #### Namespace
 
-Plenty\Modules\Item\Variation\Contracts
+`Plenty\Modules\Item\Variation\Contracts`
 
 
 
@@ -6004,7 +6004,7 @@ Variation
 
 #### Namespace
 
-Plenty\Modules\Item\Variation\Models
+`Plenty\Modules\Item\Variation\Models`
 
 
 #### Properties
@@ -6293,7 +6293,7 @@ Variation Barcode
 
 #### Namespace
 
-Plenty\Modules\Item\VariationBarcode\Models
+`Plenty\Modules\Item\VariationBarcode\Models`
 
 
 #### Properties
@@ -6341,7 +6341,7 @@ Variation Category
 
 #### Namespace
 
-Plenty\Modules\Item\VariationCategory\Models
+`Plenty\Modules\Item\VariationCategory\Models`
 
 
 #### Properties
@@ -6389,7 +6389,7 @@ Variation Client
 
 #### Namespace
 
-Plenty\Modules\Item\VariationClient\Models
+`Plenty\Modules\Item\VariationClient\Models`
 
 
 #### Properties
@@ -6433,7 +6433,7 @@ Variation Default Category
 
 #### Namespace
 
-Plenty\Modules\Item\VariationDefaultCategory\Models
+`Plenty\Modules\Item\VariationDefaultCategory\Models`
 
 
 #### Properties
@@ -6481,7 +6481,7 @@ Variation Default Category
 
 #### Namespace
 
-Plenty\Modules\Item\VariationDescription\Models
+`Plenty\Modules\Item\VariationDescription\Models`
 
 
 #### Properties
@@ -6561,7 +6561,7 @@ returns this model as an array
 
 #### Namespace
 
-Plenty\Modules\Item\VariationImage\Models
+`Plenty\Modules\Item\VariationImage\Models`
 
 
 #### Properties
@@ -6609,7 +6609,7 @@ Variation Market
 
 #### Namespace
 
-Plenty\Modules\Item\VariationMarket\Models
+`Plenty\Modules\Item\VariationMarket\Models`
 
 
 #### Properties
@@ -6653,7 +6653,7 @@ Variation Market Ident Number
 
 #### Namespace
 
-Plenty\Modules\Item\VariationMarketIdentNumber\Models
+`Plenty\Modules\Item\VariationMarketIdentNumber\Models`
 
 
 #### Properties
@@ -6709,7 +6709,7 @@ The VariationPropertyValue
 
 #### Namespace
 
-Plenty\Modules\Item\VariationProperty\Models
+`Plenty\Modules\Item\VariationProperty\Models`
 
 
 #### Properties
@@ -6752,7 +6752,7 @@ The VariationPropertyValue
 
 #### Namespace
 
-Plenty\Modules\Item\VariationProperty\Models
+`Plenty\Modules\Item\VariationProperty\Models`
 
 
 #### Properties
@@ -6826,7 +6826,7 @@ Repository for VariationSalesPrice
 
 #### Namespace
 
-Plenty\Modules\Item\VariationSalesPrice\Contracts
+`Plenty\Modules\Item\VariationSalesPrice\Contracts`
 
 
 
@@ -6949,7 +6949,7 @@ VariationSalesPrice
 
 #### Namespace
 
-Plenty\Modules\Item\VariationSalesPrice\Models
+`Plenty\Modules\Item\VariationSalesPrice\Models`
 
 
 #### Properties
@@ -6993,7 +6993,7 @@ Repository for VariationSku
 
 #### Namespace
 
-Plenty\Modules\Item\VariationSku\Contracts
+`Plenty\Modules\Item\VariationSku\Contracts`
 
 
 
@@ -7134,7 +7134,7 @@ The variationSku model
 
 #### Namespace
 
-Plenty\Modules\Item\VariationSku\Models
+`Plenty\Modules\Item\VariationSku\Models`
 
 
 #### Properties
@@ -7214,7 +7214,7 @@ returns this model as an array
 
 #### Namespace
 
-Plenty\Modules\Item\VariationStock\Contracts
+`Plenty\Modules\Item\VariationStock\Contracts`
 
 
 
@@ -7324,7 +7324,7 @@ Stock Correction
 
 #### Namespace
 
-Plenty\Modules\Item\VariationStock\Models
+`Plenty\Modules\Item\VariationStock\Models`
 
 
 #### Properties
@@ -7442,7 +7442,7 @@ returns this model as an array
 
 #### Namespace
 
-Plenty\Modules\Item\VariationStock\Models
+`Plenty\Modules\Item\VariationStock\Models`
 
 
 #### Properties
@@ -7550,7 +7550,7 @@ Variation Supplier
 
 #### Namespace
 
-Plenty\Modules\Item\VariationSupplier\Models
+`Plenty\Modules\Item\VariationSupplier\Models`
 
 
 #### Properties
@@ -7634,7 +7634,7 @@ Variation Warehouse
 
 #### Namespace
 
-Plenty\Modules\Item\VariationWarehouse\Models
+`Plenty\Modules\Item\VariationWarehouse\Models`
 
 
 #### Properties

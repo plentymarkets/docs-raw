@@ -9,7 +9,7 @@ Database contract
 
 #### Namespace
 
-Plenty\Modules\Plugin\DataBase\Contracts
+`Plenty\Modules\Plugin\DataBase\Contracts`
 
 
 
@@ -95,7 +95,7 @@ Migrate models
 
 #### Namespace
 
-Plenty\Modules\Plugin\DataBase\Contracts
+`Plenty\Modules\Plugin\DataBase\Contracts`
 
 
 
@@ -146,7 +146,7 @@ Database model
 
 #### Namespace
 
-Plenty\Modules\Plugin\DataBase\Contracts
+`Plenty\Modules\Plugin\DataBase\Contracts`
 
 
 #### Properties
@@ -188,7 +188,7 @@ library call
 
 #### Namespace
 
-Plenty\Modules\Plugin\Libs\Contracts
+`Plenty\Modules\Plugin\Libs\Contracts`
 
 
 

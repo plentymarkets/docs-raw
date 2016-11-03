@@ -9,7 +9,7 @@ Repository Contract for UrlBuilder
 
 #### Namespace
 
-Plenty\Modules\Helper\Contracts
+`Plenty\Modules\Helper\Contracts`
 
 
 
@@ -90,7 +90,7 @@ Class EncryptionException
 
 #### Namespace
 
-Plenty\Modules\Helper\Exceptions
+`Plenty\Modules\Helper\Exceptions`
 
 
 ## Models<a name="helper_helper_models"></a>
@@ -100,7 +100,7 @@ key value data
 
 #### Namespace
 
-Plenty\Modules\Helper\Models
+`Plenty\Modules\Helper\Models`
 
 
 
@@ -133,7 +133,7 @@ helper class for arrays
 
 #### Namespace
 
-Plenty\Modules\Helper\Services
+`Plenty\Modules\Helper\Services`
 
 
 
@@ -172,7 +172,7 @@ Service for encoding strings
 
 #### Namespace
 
-Plenty\Modules\Helper\Services
+`Plenty\Modules\Helper\Services`
 
 
 
@@ -407,7 +407,7 @@ Webstore Helper Service
 
 #### Namespace
 
-Plenty\Modules\Helper\Services
+`Plenty\Modules\Helper\Services`
 
 
 

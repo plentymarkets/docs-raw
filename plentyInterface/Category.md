@@ -9,7 +9,7 @@ Repository for CategoryBranchMarketplace
 
 #### Namespace
 
-Plenty\Modules\Category\Contracts
+`Plenty\Modules\Category\Contracts`
 
 
 
@@ -52,7 +52,7 @@ Repository Contract for CategoryBranch
 
 #### Namespace
 
-Plenty\Modules\Category\Contracts
+`Plenty\Modules\Category\Contracts`
 
 
 
@@ -80,7 +80,7 @@ Repository for categories
 
 #### Namespace
 
-Plenty\Modules\Category\Contracts
+`Plenty\Modules\Category\Contracts`
 
 
 
@@ -188,7 +188,7 @@ Returns all categories of given type.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$type</td>
-        <td>&#039;all&#039;,&#039;item&#039;,&#039;container&#039;,&#039;content&#039; or &#039;blog&#039;</td>
+        <td>'all','item','container','content' or 'blog'</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -250,7 +250,7 @@ Returns all sitemap categories as list.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$type</td>
-        <td>&#039;all&#039;,&#039;item&#039;,&#039;container&#039;,&#039;content&#039; or &#039;blog&#039;</td>
+        <td>'all','item','container','content' or 'blog'</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -269,7 +269,7 @@ Returns all sitemap categories as tree.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$type</td>
-        <td>&#039;all&#039;,&#039;item&#039;,&#039;container&#039;,&#039;content&#039; or &#039;blog&#039;</td>
+        <td>'all','item','container','content' or 'blog'</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -288,7 +288,7 @@ Returns all linklist categories as list.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$type</td>
-        <td>&#039;all&#039;,&#039;item&#039;,&#039;container&#039;,&#039;content&#039; or &#039;blog&#039;</td>
+        <td>'all','item','container','content' or 'blog'</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -307,7 +307,7 @@ Returns all linklist categories as tree.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$type</td>
-        <td>&#039;all&#039;,&#039;item&#039;,&#039;container&#039;,&#039;content&#039; or &#039;blog&#039;</td>
+        <td>'all','item','container','content' or 'blog'</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -336,7 +336,7 @@ Retrieves the url for a category.
     <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$onlySitemaps</td>
-        <td>Whether or not to only include categories with &#039;sitemaps&#039; = &#039;Y&#039;. Default false.</td>
+        <td>Whether or not to only include categories with 'sitemaps' = 'Y'. Default false.</td>
     </tr>
 </table>
 
@@ -442,7 +442,7 @@ Category
 
 #### Namespace
 
-Plenty\Modules\Category\Models
+`Plenty\Modules\Category\Models`
 
 
 #### Properties
@@ -510,7 +510,7 @@ Category Branch
 
 #### Namespace
 
-Plenty\Modules\Category\Models
+`Plenty\Modules\Category\Models`
 
 
 #### Properties
@@ -568,7 +568,7 @@ The CategoryBranchMarketplace model
 
 #### Namespace
 
-Plenty\Modules\Category\Models
+`Plenty\Modules\Category\Models`
 
 
 #### Properties
@@ -635,7 +635,7 @@ The Category Client
 
 #### Namespace
 
-Plenty\Modules\Category\Models
+`Plenty\Modules\Category\Models`
 
 
 #### Properties
@@ -669,7 +669,7 @@ CategoryDetails
 
 #### Namespace
 
-Plenty\Modules\Category\Models
+`Plenty\Modules\Category\Models`
 
 
 #### Properties

@@ -9,7 +9,7 @@ authentication repository
 
 #### Namespace
 
-Plenty\Modules\Authentication\Contracts
+`Plenty\Modules\Authentication\Contracts`
 
 
 
@@ -67,7 +67,7 @@ account contact authentication event
 
 #### Namespace
 
-Plenty\Modules\Authentication\Events
+`Plenty\Modules\Authentication\Events`
 
 
 
@@ -89,7 +89,7 @@ Account contact logged out
 
 #### Namespace
 
-Plenty\Modules\Authentication\Events
+`Plenty\Modules\Authentication\Events`
 
 
 ## Models<a name="authentication_authentication_models"></a>
@@ -99,7 +99,7 @@ User for authentification
 
 #### Namespace
 
-Plenty\Modules\Authentication\Models
+`Plenty\Modules\Authentication\Models`
 
 
 #### Properties

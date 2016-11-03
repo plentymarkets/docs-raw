@@ -9,7 +9,7 @@ The contract for the item set component repository
 
 #### Namespace
 
-Plenty\Modules\ItemSet\Contracts
+`Plenty\Modules\ItemSet\Contracts`
 
 
 
@@ -224,7 +224,7 @@ The contract for the item set config repository
 
 #### Namespace
 
-Plenty\Modules\ItemSet\Contracts
+`Plenty\Modules\ItemSet\Contracts`
 
 
 
@@ -337,7 +337,7 @@ The contract for the item set repository
 
 #### Namespace
 
-Plenty\Modules\ItemSet\Contracts
+`Plenty\Modules\ItemSet\Contracts`
 
 
 
@@ -463,7 +463,7 @@ The ItemSet model.
 
 #### Namespace
 
-Plenty\Modules\ItemSet\Models
+`Plenty\Modules\ItemSet\Models`
 
 
 #### Properties
@@ -505,7 +505,7 @@ The ItemSetComponent model.
 
 #### Namespace
 
-Plenty\Modules\ItemSet\Models
+`Plenty\Modules\ItemSet\Models`
 
 
 #### Properties
@@ -555,7 +555,7 @@ The ItemSetConfig model.
 
 #### Namespace
 
-Plenty\Modules\ItemSet\Models
+`Plenty\Modules\ItemSet\Models`
 
 
 #### Properties

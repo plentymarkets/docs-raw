@@ -9,7 +9,7 @@ The contract for the fitment item property repository.
 
 #### Namespace
 
-Plenty\Modules\Market\Ebay\PartsFitment\Contracts
+`Plenty\Modules\Market\Ebay\PartsFitment\Contracts`
 
 
 
@@ -91,7 +91,7 @@ The contract for the fitment item repository.
 
 #### Namespace
 
-Plenty\Modules\Market\Ebay\PartsFitment\Contracts
+`Plenty\Modules\Market\Ebay\PartsFitment\Contracts`
 
 
 
@@ -173,7 +173,7 @@ The contract for the fitment repository.
 
 #### Namespace
 
-Plenty\Modules\Market\Ebay\PartsFitment\Contracts
+`Plenty\Modules\Market\Ebay\PartsFitment\Contracts`
 
 
 
@@ -280,7 +280,7 @@ The fitment model. This can contain multiple FitmentItems models.
 
 #### Namespace
 
-Plenty\Modules\Market\Ebay\PartsFitment\Models
+`Plenty\Modules\Market\Ebay\PartsFitment\Models`
 
 
 #### Properties
@@ -330,7 +330,7 @@ The fitment item model. This belongs to one fitment model and can contain multip
 
 #### Namespace
 
-Plenty\Modules\Market\Ebay\PartsFitment\Models
+`Plenty\Modules\Market\Ebay\PartsFitment\Models`
 
 
 #### Properties
@@ -377,7 +377,7 @@ The fitment item property model. This bleongs to an FitmentItem model.
 
 #### Namespace
 
-Plenty\Modules\Market\Ebay\PartsFitment\Models
+`Plenty\Modules\Market\Ebay\PartsFitment\Models`
 
 
 #### Properties

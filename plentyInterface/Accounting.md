@@ -9,7 +9,7 @@ The Accounting Location model it is always associated with a client and country 
 
 #### Namespace
 
-Plenty\Modules\Accounting\Models
+`Plenty\Modules\Accounting\Models`
 
 
 #### Properties
@@ -66,7 +66,7 @@ Repository for Newsletter
 
 #### Namespace
 
-Plenty\Modules\Accounting\Newsletter\Contracts
+`Plenty\Modules\Accounting\Newsletter\Contracts`
 
 
 
@@ -109,7 +109,7 @@ NewsletterEmail
 
 #### Namespace
 
-Plenty\Modules\Accounting\Newsletter\Models
+`Plenty\Modules\Accounting\Newsletter\Models`
 
 
 #### Properties
@@ -189,7 +189,7 @@ The VatRepositoryContract is the interface for the VAT functionality. This inter
 
 #### Namespace
 
-Plenty\Modules\Accounting\Vat\Contracts
+`Plenty\Modules\Accounting\Vat\Contracts`
 
 
 
@@ -224,7 +224,7 @@ List VAT configurations for an accounting location
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$relations</td>
-        <td>The relations, that are supposed to load with the Vat object. Either &quot;location&quot; or &quot;country&quot; is available.</td>
+        <td>The relations, that are supposed to load with the Vat object. Either "location" or "country" is available.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -254,7 +254,7 @@ List VAT configuration for a country of delivery
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$relations</td>
-        <td>The relations, that are supposed to load with the VAT object. The relations available are &quot;location&quot; and &quot;country&quot;.</td>
+        <td>The relations, that are supposed to load with the VAT object. The relations available are "location" and "country".</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -332,7 +332,7 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
 
 #### Namespace
 
-Plenty\Modules\Accounting\Vat\Models
+`Plenty\Modules\Accounting\Vat\Models`
 
 
 #### Properties
@@ -401,7 +401,7 @@ The VAT rate model is always associated with a VAT configuration and contains th
 
 #### Namespace
 
-Plenty\Modules\Accounting\Vat\Models
+`Plenty\Modules\Accounting\Vat\Models`
 
 
 #### Properties

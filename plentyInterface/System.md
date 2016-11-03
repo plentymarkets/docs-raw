@@ -9,7 +9,7 @@ Repository for Webstore
 
 #### Namespace
 
-Plenty\Modules\System\Contracts
+`Plenty\Modules\System\Contracts`
 
 
 
@@ -60,7 +60,7 @@ The webstore model
 
 #### Namespace
 
-Plenty\Modules\System\Models
+`Plenty\Modules\System\Models`
 
 
 #### Properties
@@ -111,7 +111,7 @@ The Webstore Configuration Model
 
 #### Namespace
 
-Plenty\Modules\System\Models
+`Plenty\Modules\System\Models`
 
 
 #### Properties

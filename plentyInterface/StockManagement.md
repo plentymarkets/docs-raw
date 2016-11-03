@@ -9,7 +9,7 @@ The StockRepositoryContract is the interface for the stock repository. This inte
 
 #### Namespace
 
-Plenty\Modules\StockManagement\Stock\Contracts
+`Plenty\Modules\StockManagement\Stock\Contracts`
 
 
 
@@ -121,7 +121,7 @@ List stock by warehouse type
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$type</td>
-        <td>The type of the warehouse. Currently only &#039;sales&#039; is supported.</td>
+        <td>The type of the warehouse. Currently only 'sales' is supported.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -148,7 +148,7 @@ The stock model. There are 4 different stock terms used in plentymarkets. The ph
 
 #### Namespace
 
-Plenty\Modules\StockManagement\Stock\Models
+`Plenty\Modules\StockManagement\Stock\Models`
 
 
 #### Properties
@@ -227,7 +227,7 @@ The storage location model. A storage location is the smallest unit of a warehou
 
 #### Namespace
 
-Plenty\Modules\StockManagement\Stock\Models
+`Plenty\Modules\StockManagement\Stock\Models`
 
 
 #### Properties
@@ -291,7 +291,7 @@ The WarehouseRepositoryContract is the interface for the warehouse repository. T
 
 #### Namespace
 
-Plenty\Modules\StockManagement\Warehouse\Contracts
+`Plenty\Modules\StockManagement\Warehouse\Contracts`
 
 
 
@@ -338,7 +338,7 @@ The warehouse model in plentymarkets represents actual warehouses. Every warehou
 
 #### Namespace
 
-Plenty\Modules\StockManagement\Warehouse\Models
+`Plenty\Modules\StockManagement\Warehouse\Models`
 
 
 #### Properties
@@ -441,7 +441,7 @@ The RackManagementRepositoryContract is the interface for the rack management re
 
 #### Namespace
 
-Plenty\Modules\StockManagement\Warehouse\Management\Contracts
+`Plenty\Modules\StockManagement\Warehouse\Management\Contracts`
 
 
 
@@ -548,7 +548,7 @@ The ShelfManagementRepositoryContract is the interface for the shelf management 
 
 #### Namespace
 
-Plenty\Modules\StockManagement\Warehouse\Management\Contracts
+`Plenty\Modules\StockManagement\Warehouse\Management\Contracts`
 
 
 
@@ -660,7 +660,7 @@ The StorageLocationManagementRepositoryContract is the interface for the storage
 
 #### Namespace
 
-Plenty\Modules\StockManagement\Warehouse\Management\Contracts
+`Plenty\Modules\StockManagement\Warehouse\Management\Contracts`
 
 
 
@@ -777,7 +777,7 @@ The storage rack model
 
 #### Namespace
 
-Plenty\Modules\StockManagement\Warehouse\Management\Models
+`Plenty\Modules\StockManagement\Warehouse\Management\Models`
 
 
 #### Properties
@@ -842,7 +842,7 @@ The storage shelf model
 
 #### Namespace
 
-Plenty\Modules\StockManagement\Warehouse\Management\Models
+`Plenty\Modules\StockManagement\Warehouse\Management\Models`
 
 
 #### Properties
@@ -898,7 +898,7 @@ The storage location model
 
 #### Namespace
 
-Plenty\Modules\StockManagement\Warehouse\Management\Models
+`Plenty\Modules\StockManagement\Warehouse\Management\Models`
 
 
 #### Properties

@@ -9,7 +9,7 @@ The main application
 
 #### Namespace
 
-Plenty\Plugin
+`Plenty\Plugin`
 
 
 
@@ -130,7 +130,7 @@ configuration repository
 
 #### Namespace
 
-Plenty\Plugin
+`Plenty\Plugin`
 
 
 
@@ -240,7 +240,7 @@ Controller
 
 #### Namespace
 
-Plenty\Plugin
+`Plenty\Plugin`
 
 
 
@@ -250,7 +250,7 @@ Data Exchange service provider
 
 #### Namespace
 
-Plenty\Plugin
+`Plenty\Plugin`
 
 
 
@@ -278,7 +278,7 @@ Route service provider
 
 #### Namespace
 
-Plenty\Plugin
+`Plenty\Plugin`
 
 
 
@@ -301,7 +301,7 @@ Service provider for plugins
 
 #### Namespace
 
-Plenty\Plugin
+`Plenty\Plugin`
 
 
 
@@ -329,7 +329,7 @@ session repository
 
 #### Namespace
 
-Plenty\Plugin
+`Plenty\Plugin`
 
 
 
@@ -440,7 +440,7 @@ Dummy Attribute Class
 
 #### Namespace
 
-Plenty\Validation
+`Plenty\Validation`
 
 
 
@@ -966,7 +966,7 @@ RulesCollection
 
 #### Namespace
 
-Plenty\Validation
+`Plenty\Validation`
 
 
 
@@ -1114,7 +1114,7 @@ Base Validator Class
 
 #### Namespace
 
-Plenty\Validation
+`Plenty\Validation`
 
 
 
@@ -1282,7 +1282,7 @@ Plenty\Validation
 
 #### Namespace
 
-Plenty\Exceptions
+`Plenty\Exceptions`
 
 
 #### Properties
@@ -1338,7 +1338,7 @@ Class HTTPException
 
 #### Namespace
 
-Plenty\Plugin\Error
+`Plenty\Plugin\Error`
 
 
 ## Events<a name="miscellaneous_plugin_events"></a>
@@ -1348,7 +1348,7 @@ Dispatcher
 
 #### Namespace
 
-Plenty\Plugin\Events
+`Plenty\Plugin\Events`
 
 
 
@@ -1440,7 +1440,7 @@ Event
 
 #### Namespace
 
-Plenty\Plugin\Events
+`Plenty\Plugin\Events`
 
 
 ## Http<a name="miscellaneous_plugin_http"></a>
@@ -1450,7 +1450,7 @@ http request
 
 #### Namespace
 
-Plenty\Plugin\Http
+`Plenty\Plugin\Http`
 
 
 
@@ -1523,7 +1523,7 @@ Class to create different types of http response.
 
 #### Namespace
 
-Plenty\Plugin\Http
+`Plenty\Plugin\Http`
 
 
 
@@ -1885,7 +1885,7 @@ Api router service
 
 #### Namespace
 
-Plenty\Plugin\Routing
+`Plenty\Plugin\Routing`
 
 
 
@@ -2123,7 +2123,7 @@ Route
 
 #### Namespace
 
-Plenty\Plugin\Routing
+`Plenty\Plugin\Routing`
 
 
 
@@ -2176,7 +2176,7 @@ Router service
 
 #### Namespace
 
-Plenty\Plugin\Routing
+`Plenty\Plugin\Routing`
 
 
 
@@ -2362,7 +2362,7 @@ Twig engine
 
 #### Namespace
 
-Plenty\Plugin\Templates
+`Plenty\Plugin\Templates`
 
 
 
@@ -2409,7 +2409,7 @@ view support
 
 #### Namespace
 
-Plenty\Plugin\Templates
+`Plenty\Plugin\Templates`
 
 
 
@@ -2457,7 +2457,7 @@ Twig extension
 
 #### Namespace
 
-Plenty\Plugin\Templates\Extensions
+`Plenty\Plugin\Templates\Extensions`
 
 
 
@@ -2474,7 +2474,7 @@ Twig SimpleFilter
 
 #### Namespace
 
-Plenty\Plugin\Templates\Extensions
+`Plenty\Plugin\Templates\Extensions`
 
 
 
@@ -2484,7 +2484,7 @@ Twig SimpleFunction
 
 #### Namespace
 
-Plenty\Plugin\Templates\Extensions
+`Plenty\Plugin\Templates\Extensions`
 
 
 ## Factories<a name="miscellaneous_templates_factories"></a>
@@ -2494,7 +2494,7 @@ Twig Factory
 
 #### Namespace
 
-Plenty\Plugin\Templates\Factories
+`Plenty\Plugin\Templates\Factories`
 
 
 
@@ -2566,7 +2566,7 @@ DeleteResponse Interface
 
 #### Namespace
 
-Plenty\Repositories\Contracts
+`Plenty\Repositories\Contracts`
 
 
 
@@ -2606,7 +2606,7 @@ Delete Response
 
 #### Namespace
 
-Plenty\Repositories\Models
+`Plenty\Repositories\Models`
 
 
 #### Properties
@@ -2640,7 +2640,7 @@ paginated result
 
 #### Namespace
 
-Plenty\Repositories\Models
+`Plenty\Repositories\Models`
 
 
 
@@ -2694,7 +2694,7 @@ Attribute Interface
 
 #### Namespace
 
-Plenty\Validation\Contracts
+`Plenty\Validation\Contracts`
 
 
 
@@ -3213,7 +3213,7 @@ Instantiates Attribute Classes
 
 #### Namespace
 
-Plenty\Validation\Service
+`Plenty\Validation\Service`
 
 
 
@@ -3241,7 +3241,7 @@ Instantiates Validator Classes
 
 #### Namespace
 
-Plenty\Validation\Service
+`Plenty\Validation\Service`
 
 
 
@@ -3271,7 +3271,7 @@ Plenty\Validation\Service
 
 #### Namespace
 
-Illuminate\Support
+`Illuminate\Support`
 
 
 
@@ -3281,7 +3281,7 @@ Illuminate\Support
 
 #### Namespace
 
-Illuminate\Support
+`Illuminate\Support`
 
 
 
@@ -3301,7 +3301,7 @@ Register the service provider.
 
 #### Namespace
 
-Carbon
+`Carbon`
 
 
 #### Properties
@@ -3376,7 +3376,7 @@ Abstract Model class
 
 #### Namespace
 
-Illuminate\Database\Eloquent
+`Illuminate\Database\Eloquent`
 
 
 
@@ -3386,7 +3386,7 @@ Illuminate\Database\Eloquent
 
 #### Namespace
 
-Illuminate\Database\Eloquent
+`Illuminate\Database\Eloquent`
 
 
 # Component<a name="miscellaneous_component"></a>
@@ -3398,6 +3398,6 @@ Illuminate\Database\Eloquent
 
 #### Namespace
 
-Symfony\Component\HttpFoundation
+`Symfony\Component\HttpFoundation`
 
 

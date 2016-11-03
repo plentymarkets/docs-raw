@@ -9,7 +9,7 @@ The OrderItemRepositoryContract is the interface for the order item repository. 
 
 #### Namespace
 
-Plenty\Modules\Order\Contracts
+`Plenty\Modules\Order\Contracts`
 
 
 
@@ -91,7 +91,7 @@ The OrderRepositoryContract is the interface for the order repository. This inte
 
 #### Namespace
 
-Plenty\Modules\Order\Contracts
+`Plenty\Modules\Order\Contracts`
 
 
 
@@ -112,7 +112,7 @@ Get an order
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance, one of &quot;address&quot;, &quot;events&quot;, &quot;dates&quot;, &quot;relation&quot;, &quot;reference&quot;, &quot;comments&quot;.</td>
+        <td>The relations to load in the Order instance, one of "address", "events", "dates", "relation", "reference", "comments".</td>
     </tr>
 </table>
 
@@ -239,7 +239,7 @@ List orders for a contact id
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance. Valid are &quot;address&quot;, &quot;events&quot;, &quot;dates&quot;, &quot;relation&quot;, &quot;reference&quot;, &quot;comments&quot;.</td>
+        <td>The relations to load in the Order instance. Valid are "address", "events", "dates", "relation", "reference", "comments".</td>
     </tr>
 </table>
 
@@ -259,7 +259,7 @@ Get latest order for a contact id
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance. The relations available are: &quot;address&quot;, &quot;events&quot;, &quot;dates&quot;, &quot;relation&quot;, &quot;reference&quot; and &quot;comments&quot;.
+        <td>The relations to load in the Order instance. The relations available are: "address", "events", "dates", "relation", "reference" and "comments".
                              If you want to load relations, you need to include at least one, but you can also include several or all.</td>
     </tr>
 </table>
@@ -284,7 +284,7 @@ Get latest order for a contact id
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance. Valid are &quot;address&quot;, &quot;events&quot;, &quot;dates&quot;, &quot;relation&quot;, &quot;reference&quot;.</td>
+        <td>The relations to load in the Order instance. Valid are "address", "events", "dates", "relation", "reference".</td>
     </tr>
 </table>
 
@@ -317,7 +317,7 @@ An event class fired after a new order is created. The order type is not relevan
 
 #### Namespace
 
-Plenty\Modules\Order\Events
+`Plenty\Modules\Order\Events`
 
 
 
@@ -334,7 +334,7 @@ A base event class for all order events. Each order event expects an order insta
 
 #### Namespace
 
-Plenty\Modules\Order\Events
+`Plenty\Modules\Order\Events`
 
 
 
@@ -351,7 +351,7 @@ An Event class fired after a payment assignment when the order is fully paid.
 
 #### Namespace
 
-Plenty\Modules\Order\Events
+`Plenty\Modules\Order\Events`
 
 
 
@@ -368,7 +368,7 @@ An Event class fired after a payment assignment when the order is overpaid.
 
 #### Namespace
 
-Plenty\Modules\Order\Events
+`Plenty\Modules\Order\Events`
 
 
 
@@ -385,7 +385,7 @@ A base Event class for all order paid events.
 
 #### Namespace
 
-Plenty\Modules\Order\Events
+`Plenty\Modules\Order\Events`
 
 
 
@@ -402,7 +402,7 @@ An Event class fired after a payment assignment when the order is partly paid.
 
 #### Namespace
 
-Plenty\Modules\Order\Events
+`Plenty\Modules\Order\Events`
 
 
 
@@ -421,7 +421,7 @@ An Event class fired after a payment was assigned to an order.
 
 #### Namespace
 
-Plenty\Modules\Order\Events
+`Plenty\Modules\Order\Events`
 
 
 
@@ -438,7 +438,7 @@ An Event class fired after a payment assignment when the order is paid in advanc
 
 #### Namespace
 
-Plenty\Modules\Order\Events
+`Plenty\Modules\Order\Events`
 
 
 
@@ -455,7 +455,7 @@ The order model.
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -600,7 +600,7 @@ The order amount model.
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -696,7 +696,7 @@ The order amount vat model.
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -758,7 +758,7 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -884,7 +884,7 @@ The order item amount model. Order item amount refers to amounts of money.
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -975,7 +975,7 @@ The order item property model.
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -1082,7 +1082,7 @@ The order item type model.
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -1129,7 +1129,7 @@ The order item type name model.
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -1180,7 +1180,7 @@ The order properties model. Each order property has a type and can have an addit
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -1287,7 +1287,7 @@ The order property sub-type model
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -1334,7 +1334,7 @@ The order property sub type name model
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -1385,7 +1385,7 @@ The order property type model. Each order has a type and can have an additional 
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -1432,7 +1432,7 @@ The order property type name model.
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -1483,7 +1483,7 @@ The order relation reference model specifies how references and orders are relat
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -1569,7 +1569,7 @@ The order type model.
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -1616,7 +1616,7 @@ The order type name model.
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -1667,7 +1667,7 @@ price calculation result item
 
 #### Namespace
 
-Plenty\Modules\Order\Models
+`Plenty\Modules\Order\Models`
 
 
 #### Properties
@@ -1725,7 +1725,7 @@ returns this model as an array
 
 #### Namespace
 
-Plenty\Modules\Order\Services
+`Plenty\Modules\Order\Services`
 
 
 
@@ -1797,7 +1797,7 @@ This is the contract for the coupon codes by contacts repository. It allows you 
 
 #### Namespace
 
-Plenty\Modules\Order\Coupon\Code\Contact\Contracts
+`Plenty\Modules\Order\Coupon\Code\Contact\Contracts`
 
 
 
@@ -1952,7 +1952,7 @@ The CouponCodeContact model.
 
 #### Namespace
 
-Plenty\Modules\Order\Coupon\Code\Contact\Models
+`Plenty\Modules\Order\Coupon\Code\Contact\Models`
 
 
 #### Properties
@@ -2013,7 +2013,7 @@ The CouponCodeRepositoryContract is the interface for the coupon code repository
 
 #### Namespace
 
-Plenty\Modules\Order\Coupon\Code\Contracts
+`Plenty\Modules\Order\Coupon\Code\Contracts`
 
 
 
@@ -2047,7 +2047,7 @@ CouponCodeValidatorContract is the interface for a coupon code validation reposi
 
 #### Namespace
 
-Plenty\Modules\Order\Coupon\Code\Validation\Contracts
+`Plenty\Modules\Order\Coupon\Code\Validation\Contracts`
 
 
 
@@ -2077,7 +2077,7 @@ The CouponCodeValidation data model contains all data necessary for validating a
 
 #### Namespace
 
-Plenty\Modules\Order\Coupon\Code\Validation\Models
+`Plenty\Modules\Order\Coupon\Code\Validation\Models`
 
 
 #### Properties
@@ -2183,7 +2183,7 @@ The CouponCodeValidationItem model contains all item data needed for validating 
 
 #### Namespace
 
-Plenty\Modules\Order\Coupon\Code\Validation\Models
+`Plenty\Modules\Order\Coupon\Code\Validation\Models`
 
 
 #### Properties
@@ -2239,7 +2239,7 @@ Provides methods for currency data.
 
 #### Namespace
 
-Plenty\Modules\Order\Currency\Contracts
+`Plenty\Modules\Order\Currency\Contracts`
 
 
 
@@ -2255,7 +2255,7 @@ Get a currency
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$currencyIso</td>
-        <td>The currency ISO 4217 code, e.g. &quot;EUR&quot;.</td>
+        <td>The currency ISO 4217 code, e.g. "EUR".</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -2265,7 +2265,7 @@ Get a currency
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to be loaded in the currency instance. Valid relations are &quot;names&quot; or &quot;countries&quot;).</td>
+        <td>The relations to be loaded in the currency instance. Valid relations are "names" or "countries").</td>
     </tr>
 </table>
 
@@ -2284,7 +2284,7 @@ Get all currencies supported in the system.
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to be loaded in the currency instance. Valid relations are &quot;names&quot; or &quot;countries&quot;.</td>
+        <td>The relations to be loaded in the currency instance. Valid relations are "names" or "countries".</td>
     </tr>
 </table>
 
@@ -2298,7 +2298,7 @@ List countries for a currency
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$currencyIso</td>
-        <td>The currency ISO 4217 code, e.g. &quot;EUR&quot;.</td>
+        <td>The currency ISO 4217 code, e.g. "EUR".</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -2328,7 +2328,7 @@ Get a currency for a country
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to be loaded in the currency instance (&quot;names&quot; or &quot;countries&quot;).</td>
+        <td>The relations to be loaded in the currency instance ("names" or "countries").</td>
     </tr>
 </table>
 
@@ -2340,7 +2340,7 @@ The currency model. The model includes information like ISO 4217 code and the re
 
 #### Namespace
 
-Plenty\Modules\Order\Currency\Models
+`Plenty\Modules\Order\Currency\Models`
 
 
 #### Properties
@@ -2400,7 +2400,7 @@ The CurrencyCountryRelation model indicates which currency is related to which c
 
 #### Namespace
 
-Plenty\Modules\Order\Currency\Models
+`Plenty\Modules\Order\Currency\Models`
 
 
 #### Properties
@@ -2452,7 +2452,7 @@ The currency name model.
 
 #### Namespace
 
-Plenty\Modules\Order\Currency\Models
+`Plenty\Modules\Order\Currency\Models`
 
 
 #### Properties
@@ -2505,7 +2505,7 @@ The OrderDateRepositoryContract contains the functionality to find available Ord
 
 #### Namespace
 
-Plenty\Modules\Order\Date\Contracts
+`Plenty\Modules\Order\Date\Contracts`
 
 
 
@@ -2540,7 +2540,7 @@ Get a date type name
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td>The language ISO 639-1 code, e.g. &quot;en&quot; for English</td>
+        <td>The language ISO 639-1 code, e.g. "en" for English</td>
     </tr>
 </table>
 
@@ -2655,7 +2655,7 @@ The OrderDate model.
 
 #### Namespace
 
-Plenty\Modules\Order\Date\Models
+`Plenty\Modules\Order\Date\Models`
 
 
 #### Properties
@@ -2732,7 +2732,7 @@ The OrderDateType model.
 
 #### Namespace
 
-Plenty\Modules\Order\Date\Models
+`Plenty\Modules\Order\Date\Models`
 
 
 #### Properties
@@ -2794,7 +2794,7 @@ The OrderDateTypeName model. Order date types can have several names. One name p
 
 #### Namespace
 
-Plenty\Modules\Order\Date\Models
+`Plenty\Modules\Order\Date\Models`
 
 
 #### Properties
@@ -2857,7 +2857,7 @@ An event class fired after a new credit note is created.
 
 #### Namespace
 
-Plenty\Modules\Order\Events\Created
+`Plenty\Modules\Order\Events\Created`
 
 
 
@@ -2874,7 +2874,7 @@ An event class fired after a new delivery order is created.
 
 #### Namespace
 
-Plenty\Modules\Order\Events\Created
+`Plenty\Modules\Order\Events\Created`
 
 
 
@@ -2891,7 +2891,7 @@ An event class fired after a new multi credit note is created.
 
 #### Namespace
 
-Plenty\Modules\Order\Events\Created
+`Plenty\Modules\Order\Events\Created`
 
 
 
@@ -2908,7 +2908,7 @@ An event class fired after a new multi order is created.
 
 #### Namespace
 
-Plenty\Modules\Order\Events\Created
+`Plenty\Modules\Order\Events\Created`
 
 
 
@@ -2925,7 +2925,7 @@ An event class fired after a new repair is created.
 
 #### Namespace
 
-Plenty\Modules\Order\Events\Created
+`Plenty\Modules\Order\Events\Created`
 
 
 
@@ -2942,7 +2942,7 @@ An event class fired after a new returns is created.
 
 #### Namespace
 
-Plenty\Modules\Order\Events\Created
+`Plenty\Modules\Order\Events\Created`
 
 
 
@@ -2959,7 +2959,7 @@ An event class fired after a new sales order is created.
 
 #### Namespace
 
-Plenty\Modules\Order\Events\Created
+`Plenty\Modules\Order\Events\Created`
 
 
 
@@ -2976,7 +2976,7 @@ An event class fired after a new warranty is created.
 
 #### Namespace
 
-Plenty\Modules\Order\Events\Created
+`Plenty\Modules\Order\Events\Created`
 
 
 
@@ -2995,7 +2995,7 @@ The legacy order model
 
 #### Namespace
 
-Plenty\Modules\Order\Models\Legacy
+`Plenty\Modules\Order\Models\Legacy`
 
 
 #### Properties
@@ -3087,7 +3087,7 @@ Repository Contract for PaymentMethod
 
 #### Namespace
 
-Plenty\Modules\Order\Payment\Method\Contracts
+`Plenty\Modules\Order\Payment\Method\Contracts`
 
 
 
@@ -3124,7 +3124,7 @@ The payment method model
 
 #### Namespace
 
-Plenty\Modules\Order\Payment\Method\Models
+`Plenty\Modules\Order\Payment\Method\Models`
 
 
 #### Properties
@@ -3235,7 +3235,7 @@ The payment method information model
 
 #### Namespace
 
-Plenty\Modules\Order\Payment\Method\Models
+`Plenty\Modules\Order\Payment\Method\Models`
 
 
 #### Properties
@@ -3299,7 +3299,7 @@ Provides methods for processing order referrers. An order referrer indicates whe
 
 #### Namespace
 
-Plenty\Modules\Order\Referrer\Contracts
+`Plenty\Modules\Order\Referrer\Contracts`
 
 
 
@@ -3356,7 +3356,7 @@ The order referrer model. An order referrer shows where a purchase was originall
 
 #### Namespace
 
-Plenty\Modules\Order\Referrer\Models
+`Plenty\Modules\Order\Referrer\Models`
 
 
 #### Properties
@@ -3412,7 +3412,7 @@ The legacy order model
 
 #### Namespace
 
-Plenty\Modules\Order\Scheduler\Models
+`Plenty\Modules\Order\Scheduler\Models`
 
 
 #### Properties
@@ -3472,7 +3472,7 @@ The ParcelServicePresetRepositoryContract is the interface for the shipping prof
 
 #### Namespace
 
-Plenty\Modules\Order\Shipping\Contracts
+`Plenty\Modules\Order\Shipping\Contracts`
 
 
 
@@ -3519,7 +3519,7 @@ The Default Shipping model
 
 #### Namespace
 
-Plenty\Modules\Order\Shipping\Models
+`Plenty\Modules\Order\Shipping\Models`
 
 
 #### Properties
@@ -3579,7 +3579,7 @@ Repository for Country
 
 #### Namespace
 
-Plenty\Modules\Order\Shipping\Countries\Contracts
+`Plenty\Modules\Order\Shipping\Countries\Contracts`
 
 
 
@@ -3659,7 +3659,7 @@ The country model
 
 #### Namespace
 
-Plenty\Modules\Order\Shipping\Countries\Models
+`Plenty\Modules\Order\Shipping\Countries\Models`
 
 
 #### Properties
@@ -3733,7 +3733,7 @@ country name
 
 #### Namespace
 
-Plenty\Modules\Order\Shipping\Countries\Models
+`Plenty\Modules\Order\Shipping\Countries\Models`
 
 
 #### Properties
@@ -3775,7 +3775,7 @@ country state
 
 #### Namespace
 
-Plenty\Modules\Order\Shipping\Countries\Models
+`Plenty\Modules\Order\Shipping\Countries\Models`
 
 
 #### Properties
@@ -3827,7 +3827,7 @@ The Parcel Service Model
 
 #### Namespace
 
-Plenty\Modules\Order\Shipping\ParcelService\Models
+`Plenty\Modules\Order\Shipping\ParcelService\Models`
 
 
 
@@ -3844,7 +3844,7 @@ The Parcel Service Preset Model
 
 #### Namespace
 
-Plenty\Modules\Order\Shipping\ParcelService\Models
+`Plenty\Modules\Order\Shipping\ParcelService\Models`
 
 
 #### Properties
@@ -3962,7 +3962,7 @@ The Parcel Service Preset Name Model
 
 #### Namespace
 
-Plenty\Modules\Order\Shipping\ParcelService\Models
+`Plenty\Modules\Order\Shipping\ParcelService\Models`
 
 
 
@@ -3981,7 +3981,7 @@ The StatusRepositoryContract is the interface for the status repository. This in
 
 #### Namespace
 
-Plenty\Modules\Order\Status\Contracts
+`Plenty\Modules\Order\Status\Contracts`
 
 
 
@@ -4002,7 +4002,7 @@ Get a status
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the status instance. Currently the only relation available is &quot;names&quot;.</td>
+        <td>The relations to load in the status instance. Currently the only relation available is "names".</td>
     </tr>
 </table>
 
@@ -4046,7 +4046,7 @@ List statuses
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Status instance. Currently the only relation available is &quot;names&quot;.</td>
+        <td>The relations to load in the Status instance. Currently the only relation available is "names".</td>
     </tr>
 </table>
 
@@ -4058,7 +4058,7 @@ The order status model contains the ID of an order status. The ID is always an i
 
 #### Namespace
 
-Plenty\Modules\Order\Status\Models
+`Plenty\Modules\Order\Status\Models`
 
 
 #### Properties
@@ -4101,7 +4101,7 @@ The order status name model represents a status name for a given status ID. Howe
 
 #### Namespace
 
-Plenty\Modules\Order\Status\Models
+`Plenty\Modules\Order\Status\Models`
 
 
 #### Properties

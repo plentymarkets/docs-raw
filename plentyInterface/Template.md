@@ -9,7 +9,7 @@ DesignConfig
 
 #### Namespace
 
-Plenty\Modules\Template\Design\Config\Contracts
+`Plenty\Modules\Template\Design\Config\Contracts`
 
 
 
@@ -117,7 +117,7 @@ Design
 
 #### Namespace
 
-Plenty\Modules\Template\Design\Config\Contracts
+`Plenty\Modules\Template\Design\Config\Contracts`
 
 
 
@@ -154,7 +154,7 @@ Design model
 
 #### Namespace
 
-Plenty\Modules\Template\Design\Config\Models
+`Plenty\Modules\Template\Design\Config\Models`
 
 
 #### Properties
@@ -208,7 +208,7 @@ Design configuration model
 
 #### Namespace
 
-Plenty\Modules\Template\Design\Config\Models
+`Plenty\Modules\Template\Design\Config\Models`
 
 
 #### Properties

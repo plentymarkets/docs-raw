@@ -9,7 +9,7 @@ CronHandler interface for extending cron handlers.
 
 #### Namespace
 
-Plenty\Modules\Cron\Contracts
+`Plenty\Modules\Cron\Contracts`
 
 
 ## Services<a name="cron_cron_services"></a>
@@ -19,7 +19,7 @@ Register cron jobs
 
 #### Namespace
 
-Plenty\Modules\Cron\Services
+`Plenty\Modules\Cron\Services`
 
 
 
