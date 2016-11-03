@@ -3401,7 +3401,7 @@ The item model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The ID of the item. The ID must be unique.</td>
+            <td>The ID of the item. The ID must be unique!</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
