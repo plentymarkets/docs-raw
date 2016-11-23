@@ -29,7 +29,7 @@ Create a table
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$attributeDefinitions</td>
-        <td>See the [AWS documentation](http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_AttributeValue.html)</td>
+        <td>See the <a href="http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_AttributeValue.html" target="_blank">AWS documentation</a></td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
