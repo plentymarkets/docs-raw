@@ -15,71 +15,21 @@ The OrderItemRepositoryContract is the interface for the order item repository. 
 
 #### Methods
 
-<pre>public <strong>findOrderItemById</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderItemId):<a href="order#order_models_orderitem">OrderItem</a>
-</pre>
+<pre>public <strong>deleteOrderItem</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/int">int</a> $orderItemId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
     
-Finds the order item specified by the id. The data that is returned depends on the order item type.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$orderItemId</td>
-        <td>The id of the order item to be found.</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>createOrderItem</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $orderId):<a href="order#order_models_orderitem">OrderItem</a>
-</pre>
-    
-Adds an order item to the order spedified by the order id.
+Deletes an order item. The order ID and the order item ID have to be provided.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td>The order item data. The data that is required to create an order item can be found in the {@link \Plenty\Modules\Order\Contracts\OrderItemValidator}.</td>
-    </tr>
-    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderId</td>
-        <td>The id of the order that the order item is to be added to.</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>updateOrderItem</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $orderItemId):<a href="order#order_models_orderitem">OrderItem</a>
-</pre>
-    
-Updates the order item specified by the id.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td>The order item data. The data that is required to update an order item can be found in the {@link \Plenty\Modules\Order\Contracts\OrderItemUpdateValidator}.</td>
+        <td>The ID of the order the item belongs to.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderItemId</td>
-        <td>The id of the order item to be updated.</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>deleteOrderItem</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderItemId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
-    
-Deletes the order item specified by the id.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$orderItemId</td>
-        <td>The id of the order item to be deleted.</td>
+        <td>The ID of the order item to be deleted.</td>
     </tr>
 </table>
 
@@ -215,7 +165,8 @@ Get a scheduler order
 </table>
 
 
-<pre>public <strong>allOrdersByContact</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>allOrdersByContact</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
     
 List orders for a contact id
     
@@ -267,7 +218,7 @@ Get latest order for a contact id
 
 <pre>public <strong>searchOrders</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
     
-
+List orders by filter options
     
 ##### <strong>Parameters</strong>
     
@@ -471,13 +422,13 @@ The order model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The order id</td>
+            <td>The order ID</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The order type id
-                                         It is possible to define individual order types. However,
-                                         the following types are available by default:
+            <td>The ID of the order type
+                                         								It is possible to define individual order types. However,
+                                         								the following types are available by default:
          <ul>
              <li>Sales order = 1</li>
              <li>Delivery = 2</li>
@@ -496,87 +447,92 @@ The order model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>methodOfPaymentId</td>
-            <td>The oder's payment method id</td>
+            <td>The ID of the order's payment method</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>shippingProfileId</td>
-            <td>The order's shipping profile (id) of the order</td>
+            <td>The ID of the order's shipping profile</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>paymentStatus</td>
             <td>The payment status of the order</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>statusId</td>
-            <td>The id of the order status</td>
+            <td>The ID of the order status</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>ownerId</td>
-            <td>The user id of ther order's owner</td>
+            <td>The user ID of the order's owner</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>createdAt</td>
-            <td>The date that the order was created.  This date is given as a unix timestamp or a carbon object.</td>
+            <td>The date that the order was created</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>updatedAt</td>
-            <td>The date that the order was updated last.  This date is given as a unix timestamp or a carbon object.</td>
+            <td>The date that the order was updated last</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
-            <td>The plenty id of the client that the order belongs to.</td>
+            <td>The plenty ID of the client that the order belongs to</td>
         </tr><tr>
             <td><a href="account#account_models_address">Address</a>
 </td>
             <td>billingAddress</td>
-            <td>The invoice address of the order.</td>
+            <td>The invoice address of the order</td>
         </tr><tr>
             <td><a href="account#account_models_address">Address</a>
 </td>
             <td>deliveryAddress</td>
-            <td>The delivery address of the order.</td>
+            <td>The delivery address of the order</td>
         </tr><tr>
             <td><a href="authentication#authentication_models_user">User</a>
 </td>
             <td>owner</td>
-            <td>The owner of the order.</td>
+            <td>The owner of the order</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>addresses</td>
-            <td>A collection of Address objects that are associated with the order.</td>
+            <td>The address objects that are associated with the order.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>addressRelations</td>
+            <td>The address relations for this order.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>orderItems</td>
-            <td>A collection of OrderItem instances that are associated with the order.</td>
+            <td>The order items that are associated with the order.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>properties</td>
-            <td>A collection of OrderProperty instances that are associated with the order.</td>
+            <td>The order properties that are associated with the order.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>relations</td>
-            <td>A collection of OrderRelationReference instances that are associated with the order.</td>
+            <td>The order relation reference instances that are associated with the order.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>amounts</td>
-            <td>A collection of OrderAmount instances associated with the order.</td>
+            <td>The order amounts that are associated with the order.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>comments</td>
-            <td>A collection with order comments.</td>
+            <td>The order comments.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>dates</td>
-            <td>A collection with dates for this order. Can contain many different dates with their types like:
+            <td>The dates of the order. Can contain many different dates with their types like:
 <ul>
 <li>Delete date = 1</li>
 <li>Entry date = 2</li>
@@ -662,13 +618,15 @@ The order amount model.
             <td>prepaidAmount</td>
             <td>The discount amount. This amount can be a percentage or a fixed value.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>createdAt</td>
-            <td>The date that the amount was created. This date is given as a unix timestamp.</td>
+            <td>The date that the amount was created.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>updatedAt</td>
-            <td>The date that the amount was updated last. The date is given as a unix timestamp.</td>
+            <td>The date that the amount was updated last.</td>
         </tr><tr>
             <td><a href="order#order_models_order">Order</a>
 </td>
@@ -678,7 +636,7 @@ The order amount model.
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>vats</td>
-            <td>An array or collection of vat amounts.</td>
+            <td>The vat amounts</td>
         </tr></tbody>
 </table>
 
@@ -734,13 +692,20 @@ The order amount vat model.
             <td>value</td>
             <td>The vat amount of money given in the order amount currency.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>createdAt</td>
-            <td>The date that the vat was created. The date is given as a unix timestamp.</td>
+            <td>The date that the vat was created.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>updatedAt</td>
-            <td>The date that the vat was updated last. The date is given as a unix timestamp.</td>
+            <td>The date that the vat was updated last.</td>
+        </tr><tr>
+            <td><a href="order#order_models_orderamount">OrderAmount</a>
+</td>
+            <td>orderAmount</td>
+            <td>The OrderAmount model this OrderAmountVat belongs to.</td>
         </tr></tbody>
 </table>
 
@@ -774,15 +739,15 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the order item.</td>
+            <td>The ID of the order item</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>orderId</td>
-            <td>The id of the order that the order item belongs to.</td>
+            <td>The ID of the order that the order item belongs to</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The order item's type id.
+            <td>The ID of the order item type
 <ul>
 <li>VARIATION			=	1</li>
 <li>ITEM_BUNDLE			=	2</li>
@@ -799,11 +764,11 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>referrerId</td>
-            <td>The order item's referrer id.</td>
+            <td>The ID of order item referrer</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>itemVariationId</td>
-            <td>The item variation id.</td>
+            <td>The ID of the item variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>quantity</td>
@@ -811,19 +776,19 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>orderItemName</td>
-            <td>The item order name (description).</td>
+            <td>The item order name (description)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>attributeValues</td>
-            <td>The attribute value names.</td>
+            <td>The attribute value names</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>shippingProfileId</td>
-            <td>The order item's shipping profile id.</td>
+            <td>The ID of the order item's shipping profile</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>countryVatId</td>
-            <td>The country vat id.</td>
+            <td>The ID of the country vat</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>vatField</td>
@@ -833,15 +798,15 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
             <td>vatRate</td>
             <td>The vat amount, e.g. 19.0 for 19% VAT.</td>
         </tr><tr>
-            <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
+            <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>createdAt</td>
-            <td>The date at which the order item was created. This date is given as a carbon object.</td>
+            <td>The date at which the order item was created.</td>
         </tr><tr>
-            <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
+            <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>updatedAt</td>
-            <td>The date that the order item was last updated. The date is given as a carbon object.</td>
+            <td>The date that the order item was last updated.</td>
         </tr><tr>
             <td><a href="order#order_models_order">Order</a>
 </td>
@@ -851,7 +816,7 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
             <td><a href="order#order_models_orderitemtype">OrderItemType</a>
 </td>
             <td>type</td>
-            <td>The order item type.</td>
+            <td>The order item type</td>
         </tr><tr>
             <td><a href="accounting#accounting_models_vat">Vat</a>
 </td>
@@ -861,12 +826,12 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>amounts</td>
-            <td>A collection of OrderItemAmount instances that are associated with the order item.</td>
+            <td>The order item amounts that are associated with the order item.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>properties</td>
-            <td>A collection of OrderItemProperty instances that are associated with the order item.</td>
+            <td>The order item property that are associated with the order item.</td>
         </tr></tbody>
 </table>
 
@@ -900,11 +865,11 @@ The order item amount model. Order item amount refers to amounts of money.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the order item amount.</td>
+            <td>The ID of the order item amount.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>orderItemId</td>
-            <td>The id of the order item that the amount belongs to.</td>
+            <td>The ID of the order item that the amount belongs to.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isSystemCurrency</td>
@@ -946,13 +911,15 @@ The order item amount model. Order item amount refers to amounts of money.
             <td>isPercentage</td>
             <td>Flag that states if a discount is given as a percentage or as a fixed value.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>createdAt</td>
-            <td>The date that the amount was created. The date is given as a unix timestamp.</td>
+            <td>The date that the amount was created.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>updatedAt</td>
-            <td>The date that the amount was last updated. The date is given as a unix timestamp.</td>
+            <td>The date that the amount was last updated.</td>
         </tr><tr>
             <td><a href="order#order_models_orderitem">OrderItem</a>
 </td>
@@ -991,15 +958,15 @@ The order item property model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the order item property.</td>
+            <td>The ID of the order item property.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>orderItemId</td>
-            <td>The id of the order item that the property belongs to.</td>
+            <td>The ID of the order item that the property belongs to.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The property type id.
+            <td>The ID of the property type.
 <ul>
 <li>WAREHOUSE		=	1</li>
 <li>SHIPPING_PROFILE	=	2</li>
@@ -1023,7 +990,7 @@ The order item property model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>subTypeId</td>
-            <td>The property subtype id.
+            <td>The ID of the property subtype
 <ul>
 <li>MAIN_VALUE		=	1</li>
 <li>ORIGINAL_VALUE	=	2</li>
@@ -1043,13 +1010,15 @@ The order item property model.
             <td>value</td>
             <td>The value of the property. The value depends on type/subtype.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>createdAt</td>
-            <td>The date that the property was created. The date is given as a unix timestamp.</td>
+            <td>The date that the property was created.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>updatedAt</td>
-            <td>The date that the property was last updated. The date is given as a unix timestamp.</td>
+            <td>The date that the property was last updated.</td>
         </tr><tr>
             <td><a href="order#order_models_orderitem">OrderItem</a>
 </td>
@@ -1098,20 +1067,20 @@ The order item type model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The order item type id.</td>
+            <td>The ID of the order item type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
-            <td>nonErasable</td>
-            <td>Flag that states if this type can be deleted or not.</td>
+            <td>isErasable</td>
+            <td>Flag that states if this type can be deleted or not</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
             <td>The position for sorting</td>
         </tr><tr>
-            <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
+            <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>names</td>
-            <td>A collection of order item type names.</td>
+            <td>The names of the order item types.</td>
         </tr></tbody>
 </table>
 
@@ -1248,13 +1217,15 @@ The order properties model. Each order property has a type and can have an addit
             <td>value</td>
             <td>The value of the property. The value depends on type/sub-type.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>createdAt</td>
-            <td>The date that the property was created. The date is given as a unix timestamp.</td>
+            <td>The date that the property was created.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>updatedAt</td>
-            <td>The date that the property was updated last. The date is given as a unix timestamp.</td>
+            <td>The date that the property was updated last.</td>
         </tr><tr>
             <td><a href="order#order_models_order">Order</a>
 </td>
@@ -1303,20 +1274,20 @@ The order property sub-type model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The property sub-type id.</td>
+            <td>The ID of the property sub-type.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
-            <td>nonErasable</td>
-            <td>Flag that states if this type can be deleted or not.</td>
+            <td>isErasable</td>
+            <td>Flag that states if this type can be deleted or not</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
             <td>The position for sorting</td>
         </tr><tr>
-            <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
+            <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>names</td>
-            <td>A collection of order property sub-type names.</td>
+            <td>The names of the order property sub-types</td>
         </tr></tbody>
 </table>
 
@@ -1350,19 +1321,19 @@ The order property sub type name model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The sub type name id.</td>
+            <td>The ID of the sub type name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>subTypeId</td>
-            <td>The related sub type id.</td>
+            <td>The ID of the sub type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
-            <td>The name of the sub type.</td>
+            <td>The name of the sub type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The language of the name of the sub type.</td>
+            <td>The language of the  sub type name</td>
         </tr><tr>
             <td><a href="order#order_models_orderpropertysubtype">OrderPropertySubType</a>
 </td>
@@ -1401,20 +1372,20 @@ The order property type model. Each order has a type and can have an additional 
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The property type id.</td>
+            <td>The ID of the property type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
-            <td>nonErasable</td>
+            <td>isErasable</td>
             <td>Flag that states if this type can be deleted or not.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
             <td>The position for sorting</td>
         </tr><tr>
-            <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
+            <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>names</td>
-            <td>A collection of order property type names.</td>
+            <td>The names of the order property types</td>
         </tr></tbody>
 </table>
 
@@ -1585,20 +1556,20 @@ The order type model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The order type id.</td>
+            <td>The ID of the order type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
-            <td>nonErasable</td>
+            <td>isErasable</td>
             <td>Flag that states if this type can be deleted or not.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
             <td>The position for sorting</td>
         </tr><tr>
-            <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
+            <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>names</td>
-            <td>A collection of order item type names.</td>
+            <td>The names of the order item types.</td>
         </tr></tbody>
 </table>
 
@@ -1788,6 +1759,274 @@ Removes an event class for the given custom order type id.
 </table>
 
 
+# Code<a name="order_code"></a>
+    
+## Models<a name="order_code_models"></a>
+### CouponCampaignCode<a name="order_models_couponcampaigncode"></a>
+
+The CouponCampaignCode model contains information about coupon codes. Each code belongs to one campaign only.
+
+#### Namespace
+
+`Plenty\Modules\Order\Coupon\Campaign\Code\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>code</td>
+            <td>The coupon code</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>campaignId</td>
+            <td>The ID of the campaign that the code belongs to</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>disable</td>
+            <td>Flag that indicates if a code is active or deactivated.
+												<ul><li>True = the code is deactivated</li>
+													<li>False = the code is active</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>consumed</td>
+            <td>Flag that indicates if a code was redeemed or not.
+												<ul><li>True = the code was redeemed</li>
+													<li>False = the code is not redeemed</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>usedCount</td>
+            <td>How many times a code has been redeemed</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>usedAmount</td>
+            <td>The amount that is already redeemed. The total amount that can be redeemed is defined in the campaign as coupon value, because the value applies to all codes of a campaign.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
+</td>
+            <td>generatedAt</td>
+            <td>The date and time that the code was generated</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
+</td>
+            <td>lastUsedAt</td>
+            <td>The date and time that the code was redeemed last. This date will be set if the coupon amount has not been fully used.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
+</td>
+            <td>consumedAt</td>
+            <td>The date and time that the coupon amount of this code was fully consumed</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
+</td>
+            <td>expiresAt</td>
+            <td>The date and time that the code will expire or has expired</td>
+        </tr><tr>
+            <td><a href="order#order_models_couponcampaign">CouponCampaign</a>
+</td>
+            <td>campaign</td>
+            <td>The coupon campaign and all information about the campaign that this code belongs to</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+    
+returns this model as an array
+    
+## Contracts<a name="order_code_contracts"></a>
+### CouponCodeRepositoryContract<a name="order_contracts_couponcoderepositorycontract"></a>
+
+The CouponCodeRepositoryContract is the interface for the coupon code repository. This interface allows you to redeem coupons.
+
+#### Namespace
+
+`Plenty\Modules\Order\Coupon\Code\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>redeem</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/string">string</a> $coupon):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+    
+Redeem coupon codes
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$coupon</td>
+        <td>The coupon code to be redeemed</td>
+    </tr>
+</table>
+
+
+# Campaign<a name="order_campaign"></a>
+    
+## Models<a name="order_campaign_models"></a>
+### CouponCampaign<a name="order_models_couponcampaign"></a>
+
+The CouponCampaign model contains all information of a campaign.
+
+#### Namespace
+
+`Plenty\Modules\Order\Coupon\Campaign\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of a coupon campaign</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>externalId</td>
+            <td>The external ID of a coupon campaign</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the coupon campaign</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>variable</td>
+            <td>The variable to display coupon codes in emails. There are only 10 variables available. A variable may only be used for one campaign. The variable names follow this pattern: CouponCode + Number e.g. CouponCode1.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isPermittedForExternalReferrers</td>
+            <td>Flag that indicates whether or not coupons can be redeemed if a customer enters the online store from an external referrer.
+                                                                 <ul><li>TRUE = The coupon can be redeemed if the customer enters the online store from an external referrer </li>
+                                                                 <li>FALSE = The coupon can not be redeemed</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>includeShipping</td>
+            <td>The discount also applies to shipping costs. The property will be only be set if the discount type fixed is set.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>unusedCodesCount</td>
+            <td>The number of codes that have been redeemed</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>usedCodesCount</td>
+            <td>The number of codes that have not been redeemed</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>endsAt</td>
+            <td>The date that the campaign ends</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>startsAt</td>
+            <td>The date that the campaign starts</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>minOrderValue</td>
+            <td>The minimum order value that needs to be reached for the coupon to be redeemed. If the value is not reached the coupon will not be redeemed.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>codeDurationWeeks</td>
+            <td>The number of weeks that codes of this campaign can be redeemed after they have been generated.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>codeAssignment</td>
+            <td>The code assignment is only relevant for vouchers. Codes can either be generated every time a voucher is bought or a code from a previously created list of codes can be used. The two options available are generate and use_existing.
+														            <ul><li>generate = a new code is generated on demand</li>
+														            <li>use_existing = the code already exists and is taken from a previously entered list of codes</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>codeLength</td>
+            <td>There are 3 different length available. The code can be 6, 16 or 24 characters long.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>usage</td>
+            <td>The usage defines what the coupon codes from this campaign can be used for. There are three options available:
+														            <ul><li>single_and_subscription = The codes can be used for single orders and subscription orders</li>
+														            <li>single_order = The codes can be used for single orders only</li>
+														            <li>subscription = The codes can be used for subscriptions only</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>concept</td>
+            <td>The campaign concept defines how many codes belong to a campaign. The concept interacts with the redeem type that is explained next. There are two concept options available:
+														            <ul><li>single_code = The campaign has only one code</li>
+														            <li>multi_code = The campaign has several codes</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>redeemType</td>
+            <td>The redeem type defines how many times a code of a campaign can be redeemed. There are 4 redeem types available:
+														            <ul><li>multi_redeem_per_user = Each customer is allowed to redeem the same code several times</li>
+														            <li>single_redeem_per_user =  Each customer can only redeem the same code once</li>
+														            <li>redeem_until_value_reached = A code can be entered several times by the same customer or by different customers, but only until the coupon value is depleted</li>
+														            <li>unique_redeem = The code can be redeemed once. If several customers get the same code, only the first customer to enter the code can use it.</li></ul>
+														            The redeem type interacts with the concept. Pay attention to the combination these two options form.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>discountType</td>
+            <td>There are 4 discount types available:
+														            <ul><li>fixed = The coupon value is a fixed amount of money. This discount type is the only one that makes sense for coupons that are sold in the online store. The actual amount of money needs to be set with the value property.</li>
+														            <li>percent = The discount is given as percentage and the actual value depends on the purchase. The actual number of percent need to be set with the value property.</li>
+														            <li>item = The discount applies to entire items. A typical example would be - Buy 1 get 1 free - or in other words - Get 2 for the price of 1. The number of items the customer gets and the number of items the customer has to pay for need to be set with itemDiscountToPay and itemDiscountToBuy.</li>
+														            <li>shipping = The shipping does not cost anything. The cost will be set to zero no matter what the actual shipping costs are.</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemDiscountToPay</td>
+            <td>The number of items that the customer has to pay for. This number needs to be compared to the number of items the customer receives, itemDiscountToBuy</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemDiscountToBuy</td>
+            <td>The number of items that the customer receives, but he or she only has to pay for the number of items set with itemDiscountToPay.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>campaignType</td>
+            <td>The two campaign types available are coupon or voucher.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>couponType</td>
+            <td>The coupon type is only for campaigns that have the campaign type coupon. The two coupon types available are promotion and sales.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>description</td>
+            <td>The description of the campaign</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>value</td>
+            <td>The actual discount value of a coupon. The value needs to be set for the two discount types fixed and percent.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
+</td>
+            <td>codes</td>
+            <td>The codes and information about the codes that belong to this CouponCampaign</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+    
+returns this model as an array
+    
 # Contact<a name="order_contact"></a>
     
 ## Contracts<a name="order_contact_contracts"></a>
@@ -1985,7 +2224,7 @@ The CouponCodeContact model.
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>updatedAt</td>
-            <td>The date that the coupon code was updated last. This date is given as a unix timestamp or a carbon object.</td>
+            <td>The date that the coupon code was updated last.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>campaignId</td>
@@ -2004,46 +2243,12 @@ The CouponCodeContact model.
     
 returns this model as an array
     
-# Code<a name="order_code"></a>
-    
-## Contracts<a name="order_code_contracts"></a>
-### CouponCodeRepositoryContract<a name="order_contracts_couponcoderepositorycontract"></a>
-
-The CouponCodeRepositoryContract is the interface for the coupon code repository. This interface allows you to redeem coupons.
-
-#### Namespace
-
-`Plenty\Modules\Order\Coupon\Code\Contracts`
-
-
-
-#### Methods
-
-<pre>public <strong>redeem</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/string">string</a> $coupon):<a target="_blank" href="http://php.net/bool">bool</a></pre>
-    
-Redeem coupon codes
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$orderId</td>
-        <td>The ID of the order</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$coupon</td>
-        <td>The coupon code to be redeemed</td>
-    </tr>
-</table>
-
-
 # Validation<a name="order_validation"></a>
     
 ## Contracts<a name="order_validation_contracts"></a>
 ### CouponCodeValidatorContract<a name="order_contracts_couponcodevalidatorcontract"></a>
 
-CouponCodeValidatorContract is the interface for a coupon code validation repository. This interface provides the functionality to validate coupon data.
+CouponCodeValidatorContract is the interface for the coupon code validation repository. This interface provides the functionality to validate coupon data.
 
 #### Namespace
 
@@ -2057,7 +2262,7 @@ CouponCodeValidatorContract is the interface for a coupon code validation reposi
  $validationData):<a href="order#order_models_couponcodevalidation">CouponCodeValidation</a>
 </pre>
     
-Validate an instance of CouponCodeValidation
+Validate a coupon code
     
 ##### <strong>Parameters</strong>
     
@@ -2093,19 +2298,20 @@ The CouponCodeValidation data model contains all data necessary for validating a
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>campaignId</td>
-            <td></td>
+            <td>The ID of the campaign</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>validationType</td>
-            <td>The type of the campaign. Currently the types available are plenty or affiliprint.</td>
+            <td>The type of the campaign. Currently the only type available is plentymarkets.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>items</td>
             <td>The list of items or variations to be validated</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>contactId</td>
-            <td>The contact id</td>
+            <td>The ID of the contact that wants to redeem the coupon</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>couponCode</td>
@@ -2113,7 +2319,7 @@ The CouponCodeValidation data model contains all data necessary for validating a
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>currency</td>
-            <td>The used currency.</td>
+            <td>The currency of the purchase</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>referrer</td>
@@ -2145,19 +2351,13 @@ The CouponCodeValidation data model contains all data necessary for validating a
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>usedVatFields</td>
-            <td>The vat fields used for the validation.</td>
+            <td>The vat fields used for the validation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>restCouponAmount</td>
-            <td>The remaining coupon amount</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>orderUid</td>
-            <td>The order ID from affiliprint</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>campaignUid</td>
-            <td>The id of the affiliprint coupon campaign</td>
+            <td>The remaining coupon amount
+int                                    $orderUid				The order ID from affiliprint
+string                                 $campaignUid				The id of the affiliprint coupon campaign</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>checkedItems</td>
@@ -2179,7 +2379,7 @@ returns this model as an array
 
 ### CouponCodeValidationItem<a name="order_models_couponcodevalidationitem"></a>
 
-The CouponCodeValidationItem model contains all item data needed for validating a coupon.
+The CouponCodeValidationItem model contains all item data needed for validating whether the coupon can be redeemed for these items or not.
 
 #### Namespace
 
@@ -2199,7 +2399,7 @@ The CouponCodeValidationItem model contains all item data needed for validating 
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>amount</td>
-            <td>The variation's price multiplied by its quantity</td>
+            <td>The price of a variation multiplied by the quantity</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>noCoupon</td>
@@ -2211,7 +2411,7 @@ The CouponCodeValidationItem model contains all item data needed for validating 
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>singlePrice</td>
-            <td>The single price of a variation</td>
+            <td>The price of a single variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>itemId</td>
@@ -2367,12 +2567,12 @@ The currency model. The model includes information like ISO 4217 code and the re
             <td>The unicode symbol for the currency. If no unicode symbol exists, the html code will be used.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-            <td>active</td>
+            <td>isActive</td>
             <td>Flag that indicates if the currency is active in the system or not. Currencies are activated per sales price.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-            <td>nonErasable</td>
-            <td>Flag that indicates if this currency can be deleted or not. <ul><li>True = Currency cannot be deleted</li><li>False = Currency can be deleted</li></ul></td>
+            <td>isErasable</td>
+            <td>Flag that indicates if this currency can be deleted or not. <ul><li>False = Currency cannot be deleted</li><li>True = Currency can be deleted</li></ul></td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -2416,15 +2616,15 @@ The CurrencyCountryRelation model indicates which currency is related to which c
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the relation</td>
+            <td>The ID of the relation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>currency</td>
-            <td>The currency of the relation</td>
+            <td>The currency</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>countryId</td>
-            <td>The country id of the relation</td>
+            <td>The ID of the country</td>
         </tr><tr>
             <td><a href="order#order_models_country">Country</a>
 </td>
@@ -2580,7 +2780,7 @@ Create an order date
 </table>
 
 
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderDateId, <a target="_blank" href="http://php.net/array">array</a> $data = []):<a href="order#order_models_orderdate">OrderDate</a>
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $orderDateId):<a href="order#order_models_orderdate">OrderDate</a>
 </pre>
     
 Update a date
@@ -2588,11 +2788,26 @@ Update a date
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The order date data. The properties that are required to create an order can be found in the OrderDate model.</td>
+    </tr>
+    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderDateId</td>
         <td>The ID of the order date</td>
     </tr>
-    <tr>
+</table>
+
+
+<pre>public <strong>save</strong>(<a target="_blank" href="http://php.net/array">array</a> $data = []):<a href="order#order_models_orderdate">OrderDate</a>
+</pre>
+    
+Create or update order date
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
         <td>The order date data. The properties that are required to create an order can be found in the OrderDate model.</td>
@@ -2691,15 +2906,10 @@ The OrderDate model.
 <li>Estimated shipping date = 8</li>
 </ul></td>
         </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
+            <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
 </td>
             <td>date</td>
             <td>The actual complete date plus hours, minutes and seconds for the date. The date format must comply with the W3C standard.</td>
-        </tr><tr>
-            <td><a href="order#order_models_order">Order</a>
-</td>
-            <td>order</td>
-            <td>The order that the date belongs to</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -2710,6 +2920,11 @@ The OrderDate model.
 </td>
             <td>updatedAt</td>
             <td>The date when the date was last updated</td>
+        </tr><tr>
+            <td><a href="order#order_models_order">Order</a>
+</td>
+            <td>order</td>
+            <td>The order that the date belongs to</td>
         </tr><tr>
             <td><a href="order#order_models_orderdatetype">OrderDateType</a>
 </td>
@@ -2761,7 +2976,7 @@ The OrderDateType model.
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
-            <td>nonErasable</td>
+            <td>isErasable</td>
             <td>Flag that states if this type can be deleted or not.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -3319,10 +3534,10 @@ List order referrers
 </table>
 
 
-<pre>public <strong>createReferrer</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="order#order_models_orderreferrer">OrderReferrer</a>
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/float">float</a> $parentReferrerId = null):<a href="order#order_models_orderreferrer">OrderReferrer</a>
 </pre>
     
-Create order referrer
+Create an order referrer
     
 ##### <strong>Parameters</strong>
     
@@ -3331,20 +3546,64 @@ Create order referrer
         <td>$data</td>
         <td>The order referrer data. The properties that are required to create an order referrer can be found in the order referrer model.</td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$parentReferrerId</td>
+        <td>If a parent referrer ID is specified, the new referrer will be created as a sub referrer to this one and will be assigned a sub referrer ID. Sub referrer IDs are build of an integer part and a fractional part. The integer part is the parent ID followed by a 2 character long fractional part. This way the relation between a sub referrer and the parent referrer can be seen easily.</td>
+    </tr>
 </table>
 
 
-<pre>public <strong>getReferrerById</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId):<a href="order#order_models_orderreferrer">OrderReferrer</a>
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/float">float</a> $referrerId):<a href="order#order_models_orderreferrer">OrderReferrer</a>
 </pre>
     
-Get order referrer
+Update an order referrer
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The order referrer data. The properties that are required to update an order referrer can be found in the order referrer model.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$referrerId</td>
+        <td>The ID of the order referrer</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getReferrerById</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="order#order_models_orderreferrer">OrderReferrer</a>
+</pre>
+    
+Get an order referrer
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
         <td>$referrerId</td>
-        <td>The id of the order referrer</td>
+        <td>The ID of the order referrer</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>The columns (attributes) to load in the instances.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+    
+Delete an order referrer.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$referrerId</td>
+        <td>The ID of the order referrer</td>
     </tr>
 </table>
 
@@ -3372,11 +3631,13 @@ The order referrer model. An order referrer shows where a purchase was originall
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>id</td>
-            <td>The id of the order referrer .</td>
+            <td>The ID of the order referrer</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-            <td>editable</td>
-            <td>Flag that indicates if this referrer can be updated as well as deleted or not.</td>
+            <td>isEditable</td>
+            <td>Flag that indicates if this referrer can be updated as well as deleted or not
+											<ul><li>True = the referrer can be edited and deleted</li>
+											<li>False = the referrer can neither be edited nor deleted</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>backendName</td>
@@ -3388,11 +3649,17 @@ The order referrer model. An order referrer shows where a purchase was originall
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>orderOwnerId</td>
-            <td>The user id of the owner that is assigned to a new order from this referrer</td>
+            <td>The user ID of whoever owns new orders from this referrer</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isFilterable</td>
-            <td>Flag that indicates if this referrer can be used as a filter or not. <ul><li>True = Can be used as a filter</li><li>False = Cannot be used as a filter</li></ul></td>
+            <td>Flag that indicates if this referrer can be used as a filter or not
+											<ul><li>True = Can be used as a filter</li>
+											<li>False = Cannot be used as a filter</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>origin</td>
+            <td>The origin of this referrer</td>
         </tr></tbody>
 </table>
 
@@ -3508,6 +3775,32 @@ Get specific parcel service preset determined by preset id
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
         <td>The columns (attributes) to load in the instances.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getLastWeightedPresetCombinations</strong>(<a href="basket#basket_models_basket">Basket</a>
+ $basket, <a target="_blank" href="http://php.net/int">int</a> $contactClass, <a target="_blank" href="http://php.net/array">array</a> $customParams = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+    
+Calculate shipping costs and list last weighted preset combinations.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="basket#basket_models_basket">Basket</a>
+</td>
+        <td>$basket</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactClass</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$customParams</td>
+        <td></td>
     </tr>
 </table>
 
@@ -3838,6 +4131,23 @@ The Parcel Service Model
 returns this model as an array
     
 
+### ParcelServiceName<a name="order_models_parcelservicename"></a>
+
+The Parcel Service Name Model
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\ParcelService\Models`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+    
+returns this model as an array
+    
+
 ### ParcelServicePreset<a name="order_models_parcelservicepreset"></a>
 
 The Parcel Service Preset Model
@@ -4007,7 +4317,7 @@ Get a status
 </table>
 
 
-<pre>public <strong>findStatusNameById</strong>(<a target="_blank" href="http://php.net/float">float</a> $statusId, <a target="_blank" href="http://php.net/float">float</a> $lang):<a href="order#order_models_orderstatusname">OrderStatusName</a>
+<pre>public <strong>findStatusNameById</strong>(<a target="_blank" href="http://php.net/float">float</a> $statusId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="order#order_models_orderstatusname">OrderStatusName</a>
 </pre>
     
 Get a name of a status in one language
@@ -4020,7 +4330,7 @@ Get a name of a status in one language
         <td>The id of the status to be found.</td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
         <td>The lang of the status to be found.</td>
     </tr>
@@ -4074,16 +4384,16 @@ The order status model contains the ID of an order status. The ID is always an i
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>id</td>
-            <td>The status id.</td>
+            <td>The status ID</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
-            <td>nonErasable</td>
+            <td>isErasable</td>
             <td>Flag that indicates if the status can be deleted or not.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>names</td>
-            <td>A collection/array of OrderStatusName instances.</td>
+            <td>The names of the order statuses</td>
         </tr></tbody>
 </table>
 
@@ -4135,8 +4445,8 @@ The order status name model represents a status name for a given status ID. Howe
             <td>lang</td>
             <td>The language of the status name</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>frontendVisibility</td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isVisibleInFrontend</td>
             <td>Flag that indicates if this status should be visible in the frontend or not. True = the status is visible in the frontend. False = the status is not visible in the frontend.</td>
         </tr><tr>
             <td><a href="order#order_models_orderstatus">OrderStatus</a>

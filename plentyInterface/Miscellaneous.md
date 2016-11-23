@@ -2599,6 +2599,121 @@ DeleteResponse Interface
     
 
     
+
+### PaginationResponseContract<a name="miscellaneous_contracts_paginationresponsecontract"></a>
+
+Contract for PaginationResponse
+
+#### Namespace
+
+`Plenty\Repositories\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getTotal</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+
+    
+<pre>public <strong>setTotal</strong>($total):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$total</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+
+    
+<pre>public <strong>setPage</strong>($page):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getEntriesPerPage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+
+    
+<pre>public <strong>setEntriesPerPage</strong>($epp):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$epp</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getResult</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+
+    
+<pre>public <strong>setResult</strong>($entries):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$entries</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toJson</strong>(<a target="_blank" href="http://php.net/int">int</a> $options):<a target="_blank" href="http://php.net/string">string</a></pre>
+    
+Convert the object to its JSON representation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$options</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+    
+Get the instance as an array.
+    
 ## Models<a name="miscellaneous_repositories_models"></a>
 ### DeleteResponse<a name="miscellaneous_models_deleteresponse"></a>
 
@@ -2662,6 +2777,22 @@ paginated result
     
 
     
+<pre>public <strong>setResult</strong>($result):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$result</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
     
 Get the instance as an array.
@@ -3266,6 +3397,16 @@ Instantiates Validator Classes
     
 ## Support<a name="miscellaneous_illuminate_support"></a>
 ### MessageBag<a name="miscellaneous_support_messagebag"></a>
+
+
+
+#### Namespace
+
+`Illuminate\Support`
+
+
+
+### Collection<a name="miscellaneous_support_collection"></a>
 
 
 

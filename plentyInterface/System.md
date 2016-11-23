@@ -3,6 +3,23 @@
 # System<a name="system_system"></a>
     
 ## Contracts<a name="system_system_contracts"></a>
+### SystemRepositoryContract<a name="system_contracts_systemrepositorycontract"></a>
+
+The Contract for System settings
+
+#### Namespace
+
+`Plenty\Modules\System\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>findMyPlentyIds</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+    
+Finds all plenty IDs for the current contact
+    
+
 ### WebstoreRepositoryContract<a name="system_contracts_webstorerepositorycontract"></a>
 
 Repository for Webstore

@@ -5,7 +5,7 @@
 ## Contracts<a name="basket_basket_contracts"></a>
 ### BasketItemRepositoryContract<a name="basket_contracts_basketitemrepositorycontract"></a>
 
-Repository for basket items
+The BasketItemRepositoryContract is the interface for the basket item repository. This interface allows to list, add, update and delete items from the shopping cart of the current customer session.
 
 #### Namespace
 
@@ -18,14 +18,14 @@ Repository for basket items
 <pre>public <strong>findOneById</strong>(<a target="_blank" href="http://php.net/int">int</a> $basketRowId):<a href="basket#basket_models_basketitem">BasketItem</a>
 </pre>
     
-Find an existing basket item in current customer session by id
+Gets an existing item by ID in the shopping cart of the current customer session.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$basketRowId</td>
-        <td></td>
+        <td>The ID of the basket row</td>
     </tr>
 </table>
 
@@ -33,33 +33,33 @@ Find an existing basket item in current customer session by id
 <pre>public <strong>findExistingOneByData</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="basket#basket_models_basketitem">BasketItem</a>
 </pre>
     
-
+Gets an existing item by item data in the shopping cart of the current customer session.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The item's data</td>
     </tr>
 </table>
 
 
 <pre>public <strong>all</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
     
-Search basket items by current customer session
+Lists all items in the shopping cart of the current customer session.
     
 <pre>public <strong>addBasketItem</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="basket#basket_models_basketitem">BasketItem</a>
 </pre>
     
-
+Creates an item with the specified item data in the shopping cart.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The item's data</td>
     </tr>
 </table>
 
@@ -67,19 +67,19 @@ Search basket items by current customer session
 <pre>public <strong>updateBasketItem</strong>(<a target="_blank" href="http://php.net/int">int</a> $basketItemId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
     
-
+Updates an existing item in the shopping cart. The ID of the item and the data to be updated must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$basketItemId</td>
-        <td></td>
+        <td>The ID of the item in the shopping cart</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The item's data</td>
     </tr>
 </table>
 
@@ -87,14 +87,14 @@ Search basket items by current customer session
 <pre>public <strong>removeBasketItem</strong>(<a target="_blank" href="http://php.net/int">int</a> $basketItemId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
     
-
+Deletes an item from the shopping cart. The ID of the item must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$basketItemId</td>
-        <td></td>
+        <td>The ID of the item in the shopping cart</td>
     </tr>
 </table>
 
@@ -102,7 +102,7 @@ Search basket items by current customer session
 
 ### BasketRepositoryContract<a name="basket_contracts_basketrepositorycontract"></a>
 
-Repository for item basket
+The BasketRepositoryContract is the interface for the basket repository. This interface allows to get the shopping cart of the current customer session.
 
 #### Namespace
 
@@ -115,7 +115,7 @@ Repository for item basket
 <pre>public <strong>load</strong>():<a href="basket#basket_models_basket">Basket</a>
 </pre>
     
-Load basket from current customer session
+Gets the shopping cart from current customer session.
     
 ## Exceptions<a name="basket_basket_exceptions"></a>
 ### BasketItemCheckException<a name="basket_exceptions_basketitemcheckexception"></a>
@@ -453,7 +453,7 @@ returns this model as an array
 ## Basket<a name="basket_events_basket"></a>
 ### AfterBasketChanged<a name="basket_basket_afterbasketchanged"></a>
 
-After Basket Changed
+The event is triggered after the shopping cart is changed.
 
 #### Namespace
 
@@ -477,7 +477,7 @@ After Basket Changed
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$hasValidCoupon</td>
-        <td></td>
+        <td>Flag that indicates if a valid coupon has been used.</td>
     </tr>
 </table>
 
@@ -501,7 +501,7 @@ After Basket Changed
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$locationId</td>
-        <td></td>
+        <td>The ID of the location</td>
     </tr>
 </table>
 
@@ -523,7 +523,7 @@ After Basket Changed
         <td><a href="account#account_models_address">Address</a>
 </td>
         <td>$invoiceAddress</td>
-        <td></td>
+        <td>The invoice address</td>
     </tr>
 </table>
 
@@ -542,7 +542,7 @@ After Basket Changed
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$maxFsk</td>
-        <td></td>
+        <td>The highest value for age restriction of an item in the shopping cart</td>
     </tr>
 </table>
 
@@ -561,7 +561,7 @@ After Basket Changed
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
         <td>$shippingCosts</td>
-        <td></td>
+        <td>The shipping costs of the shopping cart</td>
     </tr>
 </table>
 
@@ -569,7 +569,7 @@ After Basket Changed
 
 ### AfterBasketCreate<a name="basket_basket_afterbasketcreate"></a>
 
-After basket created
+The event is triggered after the shopping cart is created.
 
 #### Namespace
 
@@ -587,7 +587,7 @@ After basket created
 ## BasketItem<a name="basket_events_basketitem"></a>
 ### AfterBasketItemAdd<a name="basket_basketitem_afterbasketitemadd"></a>
 
-after basket item add event
+The event is triggered after an item is added to the shopping cart.
 
 #### Namespace
 
@@ -605,7 +605,7 @@ after basket item add event
 
 ### AfterBasketItemRemove<a name="basket_basketitem_afterbasketitemremove"></a>
 
-after basket item remove event
+The event is triggered after an item is deleted from the shopping cart.
 
 #### Namespace
 
@@ -615,7 +615,7 @@ after basket item remove event
 
 ### AfterBasketItemUpdate<a name="basket_basketitem_afterbasketitemupdate"></a>
 
-after basket item update event
+The event is triggered after an item in the shopping cart is updated.
 
 #### Namespace
 
@@ -625,7 +625,7 @@ after basket item update event
 
 ### BeforeBasketItemAdd<a name="basket_basketitem_beforebasketitemadd"></a>
 
-before basket item add event
+The event is triggered before an item is created in the shopping cart.
 
 #### Namespace
 
@@ -643,7 +643,7 @@ before basket item add event
 
 ### BeforeBasketItemRemove<a name="basket_basketitem_beforebasketitemremove"></a>
 
-before basket item removed event
+The event is triggered before an item is deleted from the shopping cart.
 
 #### Namespace
 
@@ -653,7 +653,7 @@ before basket item removed event
 
 ### BeforeBasketItemUpdate<a name="basket_basketitem_beforebasketitemupdate"></a>
 
-before basket item update event
+The event is triggered before an item in the shopping cart is updated.
 
 #### Namespace
 

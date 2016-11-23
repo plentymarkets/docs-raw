@@ -292,7 +292,7 @@ The address model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the address</td>
+            <td>The ID of the address</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name1</td>
@@ -364,15 +364,19 @@ The address model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>countryId</td>
-            <td>The id of the country</td>
+            <td>The ID of the country</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>stateId</td>
-            <td>The id of the state</td>
+            <td>The ID of the state</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
             <td>readOnly</td>
             <td>Flag that indicates if the data record is read only</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>sessionId</td>
+            <td>The session ID that was used when the address was created</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>checkedAt</td>
@@ -627,7 +631,7 @@ The address options type model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the address option type. It is possible to define individual types. The following types are available by default:
+            <td>The ID of the address option type. It is possible to define individual types. The following types are available by default:
 <ul>
 <li>1 = VAT number</li>
 <li>2 = External address ID</li>
@@ -741,19 +745,28 @@ address order relation model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the address order relation</td>
+            <td>The ID of the address order relation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>orderId</td>
-            <td>The id of the order</td>
+            <td>The ID of the order</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The id of the address type</td>
+            <td>The ID of the address type
+<ul>
+		<li>Billing address = 1</li>
+		<li>Delivery address = 2</li>
+		<li>Sender address = 3</li>
+		<li>Return address = 4</li>
+		<li>Client address = 5</li>
+		<li>Contractor address = 6</li>
+		<li>Warehouse address = 7</li>
+	</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>addressId</td>
-            <td>The id of the address</td>
+            <td>The ID of the address</td>
         </tr><tr>
             <td><a href="account#account_models_address">Address</a>
 </td>
@@ -1020,6 +1033,124 @@ address warehouse relation model
 </td>
             <td>address</td>
             <td>The address of the relation</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+    
+returns this model as an array
+    
+# ContactEvent<a name="account_contactevent"></a>
+    
+## Contracts<a name="account_contactevent_contracts"></a>
+### ContactEventRepositoryContract<a name="account_contracts_contacteventrepositorycontract"></a>
+
+The contract for the contact event repository
+
+#### Namespace
+
+`Plenty\Modules\Account\Contact\ContactEvent\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>listEvents</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+    
+List contact events identified by contact logged in
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Models<a name="account_contactevent_models"></a>
+### ContactEvent<a name="account_models_contactevent"></a>
+
+The contact event model
+
+#### Namespace
+
+`Plenty\Modules\Account\Contact\ContactEvent\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>eventId</td>
+            <td>The ID of the event</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>contactId</td>
+            <td>The ID of the contact this event belongs to</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>userId</td>
+            <td>The ID of the user this event belongs to</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>eventDuration</td>
+            <td>The duration of the event in seconds</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>eventType</td>
+            <td>The type of the event</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>orderRowId</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>eventInfo</td>
+            <td>Informational text about the event</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>billable</td>
+            <td>Billable if set to 1</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>eventInsertedAt</td>
+            <td>The date the event was created at as unix timestamp</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>eventBilledAt</td>
+            <td>The date the event was billed at as unix timestamp</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>eventProvisionPaidAt</td>
+            <td>The date the provision was paid at as unix timestamp</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>eventCreditValue</td>
+            <td>The credit value of the event</td>
         </tr></tbody>
 </table>
 
@@ -1663,7 +1794,7 @@ Deletes a contact. The ID of the contact must be specified.
 </table>
 
 
-<pre>public <strong>findContactById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="account#account_models_contact">Contact</a>
+<pre>public <strong>findContactById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="account#account_models_contact">Contact</a>
 </pre>
     
 Gets a contact. The ID of the contact must be specified.
@@ -1674,6 +1805,46 @@ Gets a contact. The ID of the contact must be specified.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$contactId</td>
         <td>The ID of the contact</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relationships that should be eager loaded</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getContactList</strong>(<a target="_blank" href="http://php.net/array">array</a> $filter = [], <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+    
+Search for contacts
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filter</td>
+        <td>Filter that restrict the search result</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relationships that should be eager loaded</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>columns</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>page</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>itemsPerPage</td>
     </tr>
 </table>
 
@@ -1988,11 +2159,11 @@ The contact model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the contact</td>
+            <td>The ID of the contact</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>externalId</td>
-            <td>The external id of the contact</td>
+            <td>The external ID of the contact</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>number</td>
@@ -2000,7 +2171,7 @@ The contact model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The id of the contact type</td>
+            <td>The ID of the contact type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>firstName</td>
@@ -2036,7 +2207,7 @@ The contact model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>classId</td>
-            <td>The id of the contact class</td>
+            <td>The ID of the contact class</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>blocked</td>
@@ -2064,7 +2235,7 @@ The contact model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>userId</td>
-            <td>The owner id of the contact</td>
+            <td>The owner ID of the contact</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>birthdayAt</td>
@@ -2128,7 +2299,7 @@ The contact model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>forumGroupId</td>
-            <td>The id of the forum group that is assigned to the contact</td>
+            <td>The ID of the forum group that is assigned to the contact</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>singleAccess</td>
@@ -2137,6 +2308,10 @@ The contact model.
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>contactPerson</td>
             <td>The contact person of the contact</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>marketplacePartner</td>
+            <td>The marketplace partner status of the contact</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </td>
@@ -2398,7 +2573,7 @@ contact department model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the contact department. It is possible to define individual departments. The following departments are available by default.
+            <td>The ID of the contact department. It is possible to define individual departments. The following departments are available by default.
 <ul>
 <li>1 = Management</li>
 <li>2 = Purchasing Department</li>
@@ -2463,11 +2638,11 @@ contact department name model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the contact department name</td>
+            <td>The ID of the contact department name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>departmentId</td>
-            <td>The id of the department</td>
+            <td>The ID of the department</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
@@ -2586,7 +2761,7 @@ contact options sub type model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the contact option sub-type. It is possible to define individual option sub-types. The following types are available by default and cannot be deleted.
+            <td>The ID of the contact option sub-type. It is possible to define individual option sub-types. The following types are available by default and cannot be deleted.
 <ul>
 <li>1 = Work</li>
 <li>2 = Mobile private</li>
@@ -2600,6 +2775,7 @@ contact options sub type model
 <li>10 = Forum</li>
 <li>11 = Guest</li>
 <li>12 = Contact person</li>
+<li>13 = Marketplace partner</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -2647,11 +2823,11 @@ contact options sub type name model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the contact option sub type name entry</td>
+            <td>The ID of the contact option sub type name entry</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>subTypeId</td>
-            <td>The id of the option sub-type the name entry belongs to</td>
+            <td>The ID of the option sub-type the name entry belongs to</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
@@ -2693,7 +2869,7 @@ contact options type model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the contact option type. It is possible to define individual option types. The following types are available by default and cannot be deleted.
+            <td>The ID of the contact option type. It is possible to define individual option types. The following types are available by default and cannot be deleted.
 <ul>
 <li>1 = Telephone</li>
 <li>2 = Email</li>
@@ -2799,7 +2975,7 @@ contact position model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the contact position. It is possible to define individual contact positions. The following positions are available by default:
+            <td>The ID of the contact position. It is possible to define individual contact positions. The following positions are available by default:
 <ul>
 <li>1 = Analyst</li>
 <li>2 = Director of Boards</li>
@@ -2868,11 +3044,11 @@ contact position name model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the contact position name</td>
+            <td>The ID of the contact position name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>positionId</td>
-            <td>The id of the position</td>
+            <td>The ID of the position</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
@@ -2914,7 +3090,7 @@ contact type model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the contact type. It is possible to define individual contact types. The following types are available by default and cannot be deleted.
+            <td>The ID of the contact type. It is possible to define individual contact types. The following types are available by default and cannot be deleted.
 <ul>
 <li>1 = Customer</li>
 <li>2 = Sales lead/Interested party</li>
@@ -3567,15 +3743,15 @@ The order summary model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the order summary</td>
+            <td>The ID of the order summary</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>addressId</td>
-            <td>The address id of the order summary</td>
+            <td>The address ID of the order summary</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>contactId</td>
-            <td>The id of the contact</td>
+            <td>The ID of the contact</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>unpaidOrdersCount</td>
@@ -3587,7 +3763,7 @@ The order summary model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>orderCount</td>
-            <td>The number of all orders of associated model</td>
+            <td>The number of all orders of the associated model</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>

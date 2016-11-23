@@ -23,7 +23,7 @@ Get the order that triggered the event.
 ## Services<a name="eventprocedures_eventprocedures_services"></a>
 ### EventProceduresService<a name="eventprocedures_services_eventproceduresservice"></a>
 
-This service class offers the possibility to register a procedure class and method that can be called by plentymarkets event procedures.
+The EventProcedureService class offers the possibility to register a procedure class and method that can be called by plentymarkets event procedures.
 
 #### Namespace
 
@@ -35,54 +35,52 @@ This service class offers the possibility to register a procedure class and meth
 
 <pre>public <strong>registerProcedure</strong>(<a target="_blank" href="http://php.net/string">string</a> $moduleName, <a target="_blank" href="http://php.net/string">string</a> $eventType, <a target="_blank" href="http://php.net/array">array</a> $procedureNames, <a target="_blank" href="http://php.net/string">string</a> $procedureClass, <a target="_blank" href="http://php.net/string">string</a> $procedureGroup = Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry::PROCEDURE_GROUP_ORDER):<a target="_blank" href="http://php.net/bool">bool</a></pre>
     
-Register an procedure class (with method) for a given module, event type and procedure group with the given names.
+Register a procedure class
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$moduleName</td>
-        <td>The name of the module for this entry.</td>
+        <td>The name of the module. The name of the module can be choosen freely.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$eventType</td>
-        <td>The event type for this entry. Can be one of {@see ProcedureEntry::EVENT_TYPE_ORDER},
-                             {@see ProcedureEntry::EVENT_TYPE_REORDER} or {@see ProcedureEntry::EVENT_TYPE_TICKET}.</td>
+        <td>The name of the event type. The event types are determined and can be one of the following:
+										<ul>
+										<li> {@see ProcedureEntry::EVENT_TYPE_ORDER}, </li>
+                  					<li> {@see ProcedureEntry::EVENT_TYPE_REORDER} or </li>
+										<li> {@see ProcedureEntry::EVENT_TYPE_TICKET} </li>
+										</ul></td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$procedureNames</td>
-        <td>The short descriptions for the procedure to be shown in the event procedure UI for german and english language.</td>
+        <td>The name for the procedure that will be shown in the event procedure UI. The name is unique and will be used for German and English.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$procedureClass</td>
-        <td>The fully qualified name of procedure class to be called by event procedures.
-                             If there is a "@" sign in the name, the right part will be interprated as a method name.</td>
+        <td>The fully qualified name of the procedure class to be called by event procedures.
+                             		Each procedure class must either contain the execute method defined by plentymarkets or can contain an individual method. The individual method has to be provided along with procedure class.
+										The method is separated from the class by an "@" sign. The part following the "@" will be interpreted as method name. The part in front of the "@" is the name of the procedure class.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$procedureGroup</td>
-        <td>The procedure group for this entry. Can be one of {@see ProcedureEntry::PROCEDURE_GROUP_ORDER},
-                             {@see ProcedureEntry::PROCEDURE_GROUP_ITEM}, {@see ProcedureEntry::PROCEDURE_GROUP_DOCUMENT},
-                             {@see ProcedureEntry::PROCEDURE_GROUP_CONTACT}, {@see ProcedureEntry::PROCEDURE_GROUP_SHIPPING},
-                             {@see ProcedureEntry::PROCEDURE_GROUP_PAYMENT}, {@see ProcedureEntry::PROCEDURE_GROUP_RETURN} or
-								{@see ProcedureEntry::PROCEDURE_GROUP_LISTING}. [optional, default={@see ProcedureEntry::PROCEDURE_GROUP_ORDER}]</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>hasProcedureEntry</strong>(<a target="_blank" href="http://php.net/string">string</a> $entryHash):<a target="_blank" href="http://php.net/bool">bool</a></pre>
-    
-Get whether a procedure entry with the given hash exists or not.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$entryHash</td>
-        <td></td>
+        <td>The name of the procedure group. The procedure groups are determined and can be one of the following:
+										<ul>
+										<li> {@see ProcedureEntry::PROCEDURE_GROUP_ORDER}, </li>
+                             		<li> {@see ProcedureEntry::PROCEDURE_GROUP_ITEM}, </li>
+										<li> {@see ProcedureEntry::PROCEDURE_GROUP_DOCUMENT}, </li>
+                             		<li> {@see ProcedureEntry::PROCEDURE_GROUP_CONTACT}, </li>
+										<li> {@see ProcedureEntry::PROCEDURE_GROUP_SHIPPING}, </li>
+                             		<li> {@see ProcedureEntry::PROCEDURE_GROUP_PAYMENT}, </li>
+										<li> {@see ProcedureEntry::PROCEDURE_GROUP_RETURN} or </li>
+										<li> {@see ProcedureEntry::PROCEDURE_GROUP_LISTING} </li>
+										<li> [optional, default={@see ProcedureEntry::PROCEDURE_GROUP_ORDER}] </li>
+										</ul></td>
     </tr>
 </table>
 

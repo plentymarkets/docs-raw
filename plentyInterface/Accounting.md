@@ -195,7 +195,7 @@ The VatRepositoryContract is the interface for the VAT functionality. This inter
 
 #### Methods
 
-<pre>public <strong>getStandardCountryVat</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId = null):<a href="accounting#accounting_models_vat">Vat</a>
+<pre>public <strong>getStandardCountryVat</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId = null, <a target="_blank" href="http://php.net/string">string</a> $startedAt = null):<a href="accounting#accounting_models_vat">Vat</a>
 </pre>
     
 Get a standard VAT configuration
@@ -206,6 +206,11 @@ Get a standard VAT configuration
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$plentyId</td>
         <td>The ID of the client (store)</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$startedAt</td>
+        <td>The date in the W3C format from when the vat configuration is valid</td>
     </tr>
 </table>
 
@@ -234,8 +239,7 @@ List VAT configurations for an accounting location
 </table>
 
 
-<pre>public <strong>findVatByLocationIdAndCountry</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId, <a target="_blank" href="http://php.net/int">int</a> $countryId, <a target="_blank" href="http://php.net/array">array</a> $relations = [], <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="accounting#accounting_models_vat">Vat</a>
-</pre>
+<pre>public <strong>findVatByLocationIdAndCountry</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId, <a target="_blank" href="http://php.net/int">int</a> $countryId, <a target="_blank" href="http://php.net/array">array</a> $relations = [], <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
     
 List VAT configuration for a country of delivery
     
@@ -328,7 +332,7 @@ Get vat id
 ## Models<a name="accounting_vat_models"></a>
 ### Vat<a name="accounting_models_vat"></a>
 
-The VAT model contains the complete VAT configuration in plentymarkets. The VAT configuration is based on 4 VAT rates. A VAT configuration always belongs to an accounting location. The accounting location is in specified country and is assigne to a client. One accounting location can have several VAT configurations, but only one is active at a time. Which one is active depends on the startDate. This also means that only one VAT number is active per accounting location.
+The VAT model contains the complete VAT configuration in plentymarkets. The VAT configuration is based on 4 VAT rates. A VAT configuration always belongs to an accounting location. The accounting location is in specified country and is assigne to a client. One accounting location can have several VAT configurations, but only one is active at a time. Which one is active depends on the startedAt date. This also means that only one VAT number is active per accounting location.
 
 #### Namespace
 
@@ -360,15 +364,19 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
-            <td>startDate</td>
+            <td>startedAt</td>
             <td>The date when the VAT configuration went into effect</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>locationId</td>
+            <td>The ID of the location</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>marginScheme</td>
             <td>Specifies the tax rate that is used, when the margin scheme is applied</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
-            <td>digitalRestriction</td>
+            <td>isRestrictedToDigitalItems</td>
             <td>Specifies, if the VAT configuration is applied only to digital goods or not. True= The VAT set is only applied to digital goods. False = The VAT set is applied to all types of goods.</td>
         </tr><tr>
             <td><a href="accounting#accounting_models_accountinglocation">AccountingLocation</a>

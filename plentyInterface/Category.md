@@ -73,6 +73,51 @@ Repository Contract for CategoryBranch
 </table>
 
 
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous_contracts_paginationresponsecontract">PaginationResponseContract</a>
+</pre>
+    
+Get category trees
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>Filters restrict the list of results. Results can be filtered by the following parameters: 'type' - the category type. Available values: item, container, content, blog</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+Returns the filter array.
+    
 
 ### CategoryRepositoryContract<a name="category_contracts_categoryrepositorycontract"></a>
 
@@ -100,7 +145,7 @@ Return all categories.
 </table>
 
 
-<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId = null, <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId = null, <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
     
 Search for categories
@@ -127,12 +172,17 @@ Search for categories
         <td>$with</td>
         <td>The relations to be loaded.</td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>Filters restrict the list of results. Results can be filtered by the following parameters: 'type','lang','parentId', 'plentyId'</td>
+    </tr>
 </table>
 
 
 <pre>public <strong>createCategories</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
     
-Creates new categories, including CategoryDetails. At least one CategoryDetails object is required. Client objects can also be specified to activate visibility for a client.
+Creates new categories, including CategoryDetails. At least one CategoryDetails object for the default language is required. The data fields &#039;plentyId&#039;,&#039;lang&#039; and &#039;name&#039; are required. Client objects can also be specified to activate visibility for a client.
     
 ##### <strong>Parameters</strong>
     
@@ -140,6 +190,20 @@ Creates new categories, including CategoryDetails. At least one CategoryDetails 
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
         <td>The data fields for the new Categories, including the details data fields</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateCategories</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+    
+Update categories, including optional CategoryDetails. The data fields &#039;plentyId&#039;,&#039;lang&#039; are required for the CategoryDetails object. Client objects can also be specified to change visibility for a client.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The data fields for the Categories, including the details and client data fields</td>
     </tr>
 </table>
 
@@ -152,6 +216,61 @@ Creates a new category
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+    
+Deletes a category by given id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$categoryId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteCategoryDetails</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+    
+Delete category details for the specified languages
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$categoryId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteCategoryClients</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+    
+Deactivate availability for clients
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$categoryId</td>
+        <td></td>
+    </tr>
+    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
         <td></td>
@@ -458,11 +577,11 @@ Category
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The unique ID of the category.</td>
+            <td>The unique ID of the category</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>parentCategoryId</td>
-            <td>The ID of the parent category of the category, if applicable.</td>
+            <td>The ID of the category's parent category. Value is <strong>null</strong> if category level is 1.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>level</td>
@@ -470,7 +589,7 @@ Category
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>type</td>
-            <td>The type of the category.</td>
+            <td>The category type of the category</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>linklist</td>
@@ -488,11 +607,11 @@ Category
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>clients</td>
-            <td>Collection of the category clients that belong to this category</td>
+            <td>Collection of the clients (stores) that belong to this category</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>details</td>
-            <td>Collection of the category details that belong to this category.</td>
+            <td>Collection of the category details that belong to this category</td>
         </tr></tbody>
 </table>
 
@@ -526,31 +645,31 @@ Category Branch
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>categoryId</td>
-            <td>The unique ID of the category</td>
+            <td>The ID of the category</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>category1Id</td>
-            <td></td>
+            <td>The ID of the category tree's 1st level. If 1st value is identical to category ID, category is of this level.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>category2Id</td>
-            <td></td>
+            <td>The ID of the category tree's 2nd level. If 2nd level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>category3Id</td>
-            <td></td>
+            <td>The ID of the category tree's 3rd level. If 3rd level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>category4Id</td>
-            <td></td>
+            <td>The ID of the category tree's 4th level. If 4th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>category5Id</td>
-            <td></td>
+            <td>The ID of the category tree's 5th level. If 5th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>category6Id</td>
-            <td></td>
+            <td>The ID of the category tree's 6th level. If 6th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
         </tr></tbody>
 </table>
 
@@ -786,6 +905,52 @@ CategoryDetails
 </td>
             <td>category</td>
             <td>The category model this CategoryDetails model is associated with</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+    
+returns this model as an array
+    
+
+### CategoryTemplate<a name="category_models_categorytemplate"></a>
+
+Category Template
+
+#### Namespace
+
+`Plenty\Modules\Category\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>categoryId</td>
+            <td>The unique ID of the category</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>plentyId</td>
+            <td>The ID of the client (store)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lang</td>
+            <td>The language of the template</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>content</td>
+            <td>The content of the template</td>
         </tr></tbody>
 </table>
 

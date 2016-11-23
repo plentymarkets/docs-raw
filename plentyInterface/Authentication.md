@@ -5,7 +5,7 @@
 ## Contracts<a name="authentication_authentication_contracts"></a>
 ### ContactAuthenticationRepositoryContract<a name="authentication_contracts_contactauthenticationrepositorycontract"></a>
 
-authentication repository
+The ContactAuthenticationRepositoryContract is the interface for the authentication repository. This interface allows to authenticate users in the client (store) by email and password or by contact ID and password. The interface also provides a method for logging out users from the client (store).
 
 #### Namespace
 
@@ -25,12 +25,12 @@ authentication repository
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$contactEmail</td>
-        <td></td>
+        <td>The email address of the contact of the user</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$password</td>
-        <td></td>
+        <td>The password of the user</td>
     </tr>
 </table>
 
@@ -45,12 +45,12 @@ authentication repository
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$contactId</td>
-        <td></td>
+        <td>The ID of the contact of the user</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$password</td>
-        <td></td>
+        <td>The password of the user</td>
     </tr>
 </table>
 
@@ -63,7 +63,7 @@ authentication repository
 ## Events<a name="authentication_authentication_events"></a>
 ### AfterAccountAuthentication<a name="authentication_events_afteraccountauthentication"></a>
 
-account contact authentication event
+The event is triggered after a user is authenticated in the client (store).
 
 #### Namespace
 
@@ -85,7 +85,7 @@ account contact authentication event
 
 ### AfterAccountContactLogout<a name="authentication_events_afteraccountcontactlogout"></a>
 
-Account contact logged out
+The event is triggered after a user is logged out from the client (store).
 
 #### Namespace
 
@@ -95,7 +95,7 @@ Account contact logged out
 ## Models<a name="authentication_authentication_models"></a>
 ### User<a name="authentication_models_user"></a>
 
-User for authentification
+The user authentication model
 
 #### Namespace
 
@@ -115,7 +115,7 @@ User for authentification
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td></td>
+            <td>The ID of the user</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -129,12 +129,12 @@ User for authentification
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>password</td>
-            <td></td>
+            <td>The password of the user</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>user</td>
-            <td></td>
+            <td>The login name of the user</td>
         </tr></tbody>
 </table>
 

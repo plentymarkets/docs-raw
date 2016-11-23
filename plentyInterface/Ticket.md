@@ -15,6 +15,21 @@ The TicketRepositoryContract is the interface for the ticket repository. This in
 
 #### Methods
 
+<pre>public <strong>createTicket</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_ticket">Ticket</a>
+</pre>
+    
+Create a new ticket.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The ticket data as associative array.</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>searchTickets</strong>(<a target="_blank" href="http://php.net/array">array</a> $filter, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
     
 List tickets by filter options.
@@ -35,6 +50,46 @@ List tickets by filter options.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemsPerPage</td>
         <td>The number of tickets to be displayed per page. The default number of tickets per page is 50.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createMessage</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketId):<a href="ticket#ticket_models_ticket">Ticket</a>
+</pre>
+    
+Creates a message for a ticket.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The message data as associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$ticketId</td>
+        <td>The ID of the ticket to associate this to</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateTicket</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketId):<a href="ticket#ticket_models_ticket">Ticket</a>
+</pre>
+    
+Updates a ticket with given data.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The updating data as associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$ticketId</td>
+        <td>The ID of the ticket to associate this to</td>
     </tr>
 </table>
 
@@ -62,23 +117,23 @@ The ticket model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the ticket</td>
+            <td>The ID of the ticket</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The type id of the ticket</td>
+            <td>The type ID of the ticket</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>priorityId</td>
-            <td>The priority id of the ticket</td>
+            <td>The priority ID of the ticket</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>parentTicketId</td>
-            <td>The id of the parent ticket</td>
+            <td>The ID of the parent ticket</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>statusId</td>
-            <td>The status id of the ticket</td>
+            <td>The status ID of the ticket</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>confidential</td>
@@ -86,7 +141,7 @@ The ticket model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>contactId</td>
-            <td>The id of the contact that is linked with the ticket</td>
+            <td>The ID of the contact that is linked with the ticket</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
@@ -97,15 +152,15 @@ The ticket model.
             <td>The time the ticket was last updated as unix timestamp or carbon object</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>contactLastUpdate</td>
+            <td>contactLastUpdateAt</td>
             <td>The time the contact was last updated</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>deadline</td>
+            <td>deadlineAt</td>
             <td>The date of the ticket deadline</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>done</td>
+            <td>finishedAt</td>
             <td>The date the ticket is solved and displays 100 percent in the progress bar</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -118,7 +173,7 @@ The ticket model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
-            <td>The id of the online store</td>
+            <td>The ID of the client (store)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>source</td>
@@ -129,24 +184,180 @@ The ticket model.
             <td>The number of documents that are attached to the ticket</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>orderId</td>
-            <td>The id of the order that is linked with the ticket</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>emailParseResult</td>
-            <td>The parsed email of the ticket</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>hasDocuments</td>
             <td>Displays 1 if the ticket has one or more documents. Displays 0 if the ticket has no document.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>childsCount</td>
+            <td>childrenCount</td>
             <td>The number of child tickets</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>resubmission</td>
+            <td>resubmissionAt</td>
             <td>The date the ticket should be resubmitted</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>owners</td>
+            <td>The owners of the ticket. It is a combination of the user ID and the role ID.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>messages</td>
+            <td>The messages of the ticket</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+    
+returns this model as an array
+    
+
+### TicketMessage<a name="ticket_models_ticketmessage"></a>
+
+The ticket message model.
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the message</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>ticketId</td>
+            <td>The ticket ID the message belongs to</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>userId</td>
+            <td>The user of the message</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The time the ticket message was created as unix timestamp or carbon object</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>text</td>
+            <td>The content of the message</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>type</td>
+            <td>The type of the message. Two types are available:
+<ul>
+<li>message (visible for the customer)</li>
+<li>comment (not visible for the customer)</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>source</td>
+            <td>The origin of the message. The following sources are available by default and cannot be deleted.
+<ul>
+<li>backend</li>
+<li>frontend</li>
+<li>ebay</li>
+<li>email</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>topicId</td>
+            <td>The ID of the topic the message is assigned to</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+    
+returns this model as an array
+    
+
+### TicketMessageTopic<a name="ticket_models_ticketmessagetopic"></a>
+
+The ticket message topic model.
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The id of the message topic.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>position</td>
+            <td>The position of the topic.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+    
+returns this model as an array
+    
+
+### TicketMessageTopicName<a name="ticket_models_ticketmessagetopicname"></a>
+
+The ticket message topic name model.
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The id of the message topic.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>topicId</td>
+            <td>The topic id.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lang</td>
+            <td>The language of the topic.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The topics name.</td>
         </tr></tbody>
 </table>
 
@@ -313,7 +524,7 @@ The ticket status model.
             <td>The type id of the status.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>positon</td>
+            <td>position</td>
             <td>The position of the status.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>

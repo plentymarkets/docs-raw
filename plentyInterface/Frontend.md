@@ -5,7 +5,7 @@
 ## Contracts<a name="frontend_frontend_contracts"></a>
 ### Checkout<a name="frontend_contracts_checkout"></a>
 
-checkout service
+The CheckoutContract is the interface for the checkout repository. This interface allows to set the shipping country ID, the payment method ID, the shipping profile ID and the currency in the checkout.
 
 #### Namespace
 
@@ -15,17 +15,21 @@ checkout service
 
 #### Methods
 
+<pre>public <strong>getShippingCountryId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+    
+Gets the shipping country ID.
+    
 <pre>public <strong>setShippingCountryId</strong>(<a target="_blank" href="http://php.net/int">int</a> $shippingCountryId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
     
-
+Updates the ID of the shipping country. The ID must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$shippingCountryId</td>
-        <td></td>
+        <td>The ID of the shipping country</td>
     </tr>
 </table>
 
@@ -33,14 +37,14 @@ checkout service
 <pre>public <strong>setPaymentMethodId</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
     
-
+Updates the ID of the payment method. The ID must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$paymentMethodId</td>
-        <td></td>
+        <td>The ID of the payment method</td>
     </tr>
 </table>
 
@@ -48,14 +52,14 @@ checkout service
 <pre>public <strong>setShippingProfileId</strong>(<a target="_blank" href="http://php.net/int">int</a> $shippingProfileId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
     
-
+Updates the ID of the shipping profile. The ID must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$shippingProfileId</td>
-        <td></td>
+        <td>The ID of the shipping profile</td>
     </tr>
 </table>
 
@@ -63,14 +67,14 @@ checkout service
 <pre>public <strong>setCurrency</strong>(<a target="_blank" href="http://php.net/string">string</a> $currency):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
     
-
+Updates the currency. The currency must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$currency</td>
-        <td></td>
+        <td>The currency</td>
     </tr>
 </table>
 
@@ -78,7 +82,7 @@ checkout service
 ## Events<a name="frontend_frontend_events"></a>
 ### FrontendCurrencyChanged<a name="frontend_events_frontendcurrencychanged"></a>
 
-currency changed event
+The event is triggered when the currency is changed in the online store.
 
 #### Namespace
 
@@ -90,16 +94,16 @@ currency changed event
 
 <pre>public <strong>getCurrency</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
     
-
+Gets the currency.
     
 <pre>public <strong>getCurrencyExchangeRatio</strong>():<a target="_blank" href="http://php.net/float">float</a></pre>
     
-
+Gets the exchange rate used for converting the currency.
     
 
 ### FrontendLanguageChanged<a name="frontend_events_frontendlanguagechanged"></a>
 
-language changed event
+The event is triggered when the language is changed in the online store.
 
 #### Namespace
 
@@ -111,12 +115,12 @@ language changed event
 
 <pre>public <strong>getLanguage</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
     
-
+Gets the language of the online store.
     
 
 ### FrontendUpdateDeliveryAddress<a name="frontend_events_frontendupdatedeliveryaddress"></a>
 
-delivery address changed event
+The event is triggered when the delivery address is changed in the online store.
 
 #### Namespace
 
@@ -128,12 +132,12 @@ delivery address changed event
 
 <pre>public <strong>getAccountAddressId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
     
-
+Gets the ID of the address saved for the account.
     
 
 ### FrontendUpdatePaymentSettings<a name="frontend_events_frontendupdatepaymentsettings"></a>
 
-payment settings changed event
+The event is triggered when the payment method is changed in the online store.
 
 #### Namespace
 
@@ -145,12 +149,44 @@ payment settings changed event
 
 <pre>public <strong>getPaymentMethodId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
     
-
+Gets the ID of the payment method.
     
+
+### FrontendUpdateShippingCountry<a name="frontend_events_frontendupdateshippingcountry"></a>
+
+The event is triggered when the shipping country is updated in the online store.
+
+#### Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>getShippingCountryId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+    
+Gets the ID of the shipping country.
+    
+<pre>public <strong>setShippingCountryId</strong>(<a target="_blank" href="http://php.net/int">int</a> $shippingCountryId):<a href="frontend#frontend_events_frontendupdateshippingcountry">FrontendUpdateShippingCountry</a>
+</pre>
+    
+Sets the ID of the shipping country. The ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$shippingCountryId</td>
+        <td>The ID of the shipping country</td>
+    </tr>
+</table>
+
+
 
 ### FrontendUpdateShippingSettings<a name="frontend_events_frontendupdateshippingsettings"></a>
 
-shipping settings changed event
+The event is triggered when the shipping method is updated in the online store.
 
 #### Namespace
 
@@ -162,15 +198,15 @@ shipping settings changed event
 
 <pre>public <strong>getShippingCosts</strong>():<a target="_blank" href="http://php.net/float">float</a></pre>
     
-
+Gets the shipping costs.
     
 <pre>public <strong>getParcelServiceId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
     
-
+Gets the ID of the shipping service provider.
     
 <pre>public <strong>getParcelServicePresetId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
     
-
+Gets the preset ID of the shipping service provider.
     
 ## Factories<a name="frontend_frontend_factories"></a>
 ### FrontendFactory<a name="frontend_factories_frontendfactory"></a>
@@ -491,7 +527,7 @@ Repository to load payment methods for the front end
 
     
 <pre>public <strong>getPaymentMethodName</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
- $paymentMethod):<a target="_blank" href="http://php.net/string">string</a></pre>
+ $paymentMethod, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
     
 
     
@@ -501,6 +537,11 @@ Repository to load payment methods for the front end
         <td><a href="payment#payment_models_paymentmethod">PaymentMethod</a>
 </td>
         <td>$paymentMethod</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
         <td></td>
     </tr>
 </table>
@@ -523,7 +564,7 @@ Repository to load payment methods for the front end
 
 
 <pre>public <strong>getPaymentMethodIcon</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
- $paymentMethod):<a target="_blank" href="http://php.net/string">string</a></pre>
+ $paymentMethod, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
     
 
     
@@ -535,11 +576,16 @@ Repository to load payment methods for the front end
         <td>$paymentMethod</td>
         <td></td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
 </table>
 
 
 <pre>public <strong>getPaymentMethodDescription</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
- $paymentMethod):<a target="_blank" href="http://php.net/string">string</a></pre>
+ $paymentMethod, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
     
 
     
@@ -549,6 +595,82 @@ Repository to load payment methods for the front end
         <td><a href="payment#payment_models_paymentmethod">PaymentMethod</a>
 </td>
         <td>$paymentMethod</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPaymentMethodNameById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$paymentMethodId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPaymentMethodFeeById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId):<a target="_blank" href="http://php.net/float">float</a></pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$paymentMethodId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPaymentMethodIconById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$paymentMethodId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPaymentMethodDescriptionById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$paymentMethodId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
         <td></td>
     </tr>
 </table>

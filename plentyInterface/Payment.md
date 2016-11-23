@@ -5,7 +5,7 @@
 ## Contracts<a name="payment_payment_contracts"></a>
 ### PaymentOrderRelationRepositoryContract<a name="payment_contracts_paymentorderrelationrepositorycontract"></a>
 
-payment order relation
+The PaymentOrderRelationRepositoryContract is the interface for the payment order relation repository. Create and delete relations between payments and orders.
 
 #### Namespace
 
@@ -969,7 +969,7 @@ returns this model as an array
 ## Checkout<a name="payment_events_checkout"></a>
 ### ExecutePayment<a name="payment_checkout_executepayment"></a>
 
-execute payment event
+The event is triggered when a payment is executed.
 
 #### Namespace
 
@@ -982,83 +982,83 @@ execute payment event
 <pre>public <strong>setOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
     
-
+Updates the ID of the order in the checkout. The ID must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderId</td>
-        <td></td>
+        <td>The ID of the order</td>
     </tr>
 </table>
 
 
 <pre>public <strong>getOrderId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
     
-
+Gets the ID of the order.
     
 <pre>public <strong>setMop</strong>(<a target="_blank" href="http://php.net/int">int</a> $mop):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
     
-
+Updates the ID of the payment method. The ID must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$mop</td>
-        <td></td>
+        <td>The ID of the payment method</td>
     </tr>
 </table>
 
 
 <pre>public <strong>getMop</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
     
-
+Gets the ID of the payment method.
     
 <pre>public <strong>setType</strong>(<a target="_blank" href="http://php.net/string">string</a> $type):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
     
-
+Updates the content type.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$type</td>
-        <td></td>
+        <td>The <a href="https://developers.plentymarkets.com/dev-doc/payment-plugins#payment-prepare-payment">content type</a> of the payment plugin</td>
     </tr>
 </table>
 
 
 <pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
     
-
+Gets the content type.
     
 <pre>public <strong>setValue</strong>(<a target="_blank" href="http://php.net/string">string</a> $value):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
     
-
+Updates the value of the content type.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$value</td>
-        <td></td>
+        <td>The value of the content type</td>
     </tr>
 </table>
 
 
 <pre>public <strong>getValue</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
     
-
+Gets the value of the content type.
     
 
 ### GetPaymentMethodContent<a name="payment_checkout_getpaymentmethodcontent"></a>
 
-after payment method selected event
+The event is triggered after the payment method is selected in the checkout.
 
 #### Namespace
 
@@ -1071,64 +1071,64 @@ after payment method selected event
 <pre>public <strong>setMop</strong>(<a target="_blank" href="http://php.net/int">int</a> $mop):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
     
-
+Updates the ID of the payment method. The ID must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$mop</td>
-        <td></td>
+        <td>The ID of the payment method</td>
     </tr>
 </table>
 
 
 <pre>public <strong>getMop</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
     
-
+Gets the ID of the payment method.
     
 <pre>public <strong>setType</strong>(<a target="_blank" href="http://php.net/string">string</a> $type):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
     
-
+Updates the content type.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$type</td>
-        <td></td>
+        <td>The <a href="https://developers.plentymarkets.com/dev-doc/payment-plugins#payment-prepare-payment">content type</a> of the payment plugin</td>
     </tr>
 </table>
 
 
 <pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
     
-
+Gets the content type.
     
 <pre>public <strong>setValue</strong>(<a target="_blank" href="http://php.net/string">string</a> $value):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
     
-
+Updates the value of the content type.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$value</td>
-        <td></td>
+        <td>The value of the content type</td>
     </tr>
 </table>
 
 
 <pre>public <strong>getValue</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
     
-
+Gets the value of the content type.
     
 <pre>public <strong>setParams</strong>($params):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
     
-
+Updates the parameters. The parameters must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -1136,7 +1136,7 @@ after payment method selected event
         <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$params</td>
-        <td></td>
+        <td>The parameters</td>
     </tr>
 </table>
 
@@ -1144,7 +1144,7 @@ after payment method selected event
 <pre>public <strong>getParams</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
     
-
+Gets the parameters.
     
 # History<a name="payment_history"></a>
     

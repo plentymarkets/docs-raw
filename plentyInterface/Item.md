@@ -565,7 +565,7 @@ The Attribute model including AttributeName and AttributeValue
             <td>Flag that indicates if the attribute can be grouped in item lists. If yes, variations with this attribute can be shown in the ItemViewCategoriesList template first. Other attributes are nested and can only be selected after this attribute has been selected.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>langs</td>
+            <td>attributeNames</td>
             <td></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -789,6 +789,62 @@ The AttributeValueName model including AttributeValue
             <td><a href="item#item_models_attributevalue">AttributeValue</a>
 </td>
             <td>attributeValue</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+    
+returns this model as an array
+    
+
+### AttributeValueSet<a name="item_models_attributevalueset"></a>
+
+The AttributeValueSet model
+
+#### Namespace
+
+`Plenty\Modules\Item\Attribute\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>attributeValueSetId</td>
+            <td>The ID of the attribute value set</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>attributeId</td>
+            <td>The ID of the attribute</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>valueId</td>
+            <td>The ID of the attribute value</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>isLinkableToImage</td>
+            <td>Flag that indicates if an image can be linked to the attribute.</td>
+        </tr><tr>
+            <td><a href="item#item_models_attributevalue">AttributeValue</a>
+</td>
+            <td>attributeValue</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="item#item_models_attribute">Attribute</a>
+</td>
+            <td>attribute</td>
             <td></td>
         </tr></tbody>
 </table>
@@ -1146,8 +1202,7 @@ The barcode model including barcode referrer
             <td>type</td>
             <td>The type of the barcode. Possible values: EAN_8, EAN_13, EAN_14, EAN_128, ISBN, QR, CODE_128, UPC</td>
         </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>referrers</td>
             <td></td>
         </tr></tbody>
@@ -1246,6 +1301,31 @@ returns this model as an array
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$params</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>lookup</strong>(<a target="_blank" href="http://php.net/array">array</a> $filter = [], <a target="_blank" href="http://php.net/array">array</a> $params = [], <a target="_blank" href="http://php.net/bool">bool</a> $calculateNumberOfRows = false):<a href="item#item_services_itemdatalayerresultlookup">ItemDataLayerResultLookup</a>
+</pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$params</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$calculateNumberOfRows</td>
         <td></td>
     </tr>
 </table>
@@ -3197,6 +3277,27 @@ VariationWarehouse
     
 returns this model as an array
     
+## Services<a name="item_datalayer_services"></a>
+### ItemDataLayerResultLookup<a name="item_services_itemdatalayerresultlookup"></a>
+
+ItemDataLayer Lookup
+
+#### Namespace
+
+`Plenty\Modules\Item\DataLayer\Services`
+
+
+
+#### Methods
+
+<pre>public <strong>getNumberOfRows</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+    
+
+    
+<pre>public <strong>getResult</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+    
+
+    
 # DefaultShippingCost<a name="item_defaultshippingcost"></a>
     
 ## Contracts<a name="item_defaultshippingcost_contracts"></a>
@@ -3338,7 +3439,7 @@ Repository for item basket
 </table>
 
 
-<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>search</strong>($columns = [], $lang = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
     
 
@@ -3346,13 +3447,30 @@ Repository for item basket
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
         <td>$columns</td>
         <td></td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
         <td>$lang</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
         <td></td>
     </tr>
 </table>
@@ -3401,7 +3519,7 @@ The item model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The ID of the item. The ID must be unique!</td>
+            <td>The ID of the item. The ID must be unique.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
@@ -3606,6 +3724,10 @@ The item model
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>texts</td>
             <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>itemProperties</td>
+            <td></td>
         </tr></tbody>
 </table>
 
@@ -3689,6 +3811,104 @@ returns this model as an array
 # ItemImage<a name="item_itemimage"></a>
     
 ## Models<a name="item_itemimage_models"></a>
+### ItemImage<a name="item_models_itemimage"></a>
+
+The ItemImage Model
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemImage\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The unique ID of the image</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemId</td>
+            <td>The unique ID of the item the image is associated with</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>fileType</td>
+            <td>The file format of the image. Possible file formats: jpg, jpeg, png, gif, svg</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>path</td>
+            <td>The path under which the image is saved.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>position</td>
+            <td>The position of the image. The position is used for sorting images in the online store.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The time the image was uploaded.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the image details were last updated.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>md5Checksum</td>
+            <td>The MD5 hash value of the image file</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>size</td>
+            <td>The size of the image in pixels</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>width</td>
+            <td>The width of the image in pixels</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>height</td>
+            <td>The height of the image in pixels</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>url</td>
+            <td>The URL under which the image can be accessed after the upload.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>urlMiddle</td>
+            <td>The URL that points to the  medium-sized version of the item image.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>urlPreview</td>
+            <td>The URL that points to the  first preview version of the item image.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>urlSecondPreview</td>
+            <td>The URL that points to the second preview version of the item image.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>names</td>
+            <td>Lists the image's name details as an array.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>availabilities</td>
+            <td>Lists the image's availability details as an array.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+    
+returns this model as an array
+    
+
 ### ItemImageAvailability<a name="item_models_itemimageavailability"></a>
 
 ItemImageAvailability
@@ -3711,15 +3931,15 @@ ItemImageAvailability
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>imageId</td>
-            <td></td>
+            <td>The ID of the image. The ID must be unique.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>type</td>
-            <td></td>
+            <td>The type of referrer for which the image is available. Possible types: <ul><li>mandant = The image can be made available for clients (stores).</li><li>marketplace = The image can be made available for markets.</li><li>listing = The image can be made available for listings.</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>value</td>
-            <td></td>
+            <td>The ID of the referrer for which the image is available. <ul><li><strong>-1.00</strong> = The image is available for all referrers of this type.</li></ul></td>
         </tr></tbody>
 </table>
 
@@ -3753,19 +3973,19 @@ ItemImageName
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>imageId</td>
-            <td>The image id of the image</td>
+            <td>The ID of the image. The ID must be unique.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The lang of the image</td>
+            <td>The language of the image name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
-            <td>The name of the image</td>
+            <td>The name of the image in the specified language</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>alternate</td>
-            <td>The alternate name of the image</td>
+            <td>The alternative name of the image in the specified language</td>
         </tr></tbody>
 </table>
 
@@ -3799,43 +4019,125 @@ ItemImage
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>autoincrement</td>
+            <td>The ID of the image. The ID must be unique.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>itemId</td>
-            <td></td>
+            <td>The ID of the item the image is associated with</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>fileType</td>
-            <td></td>
+            <td>The file format of the image. Possible file formats: JPG, JPEG, PNG, GIF, SVG</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>path</td>
-            <td></td>
+            <td>The path under which the image is saved. Permitted characters for file names: alphanumeric (a-z, A-Z, 0-9), hypens (-), underscores (_).</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
-            <td></td>
+            <td>The position of the image. The position is used for sorting images in the online store.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>created</td>
-            <td></td>
+            <td>The time the image was uploaded.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updated</td>
-            <td></td>
+            <td>The time the image details were last updated.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>uploadImageData</td>
-            <td>base64 encoded image data</td>
+            <td>The base64 encoded image data of the image</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>uploadUrl</td>
-            <td>the url to load the image from</td>
+            <td>The URL under which the image can be accessed for uploading. Permitted characters for file names: alphanumeric (a-z, A-Z, 0-9), hypens (-), underscores (_).</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>uploadFileName</td>
-            <td>filename for new image</td>
+            <td>The file name assigned to the uploaded image. Permitted characters for file names: alphanumeric (a-z, A-Z, 0-9), hypens (-), underscores (_).</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>names</td>
+            <td>names</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>availabilities</td>
+            <td>availabilities</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+    
+returns this model as an array
+    
+# ItemProperty<a name="item_itemproperty"></a>
+    
+## Models<a name="item_itemproperty_models"></a>
+### ItemProperty<a name="item_models_itemproperty"></a>
+
+ItemPropertyValue
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemProperty\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The id of the variation property value</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemId</td>
+            <td>The id of the variation</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>propertyItemId</td>
+            <td>The id of the property item</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>propertySelectionId</td>
+            <td>The id of the property selection</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>valueInt</td>
+            <td>The int value of the variation property value</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>valueFloat</td>
+            <td>The float value of the variation property value</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>valueFile</td>
+            <td>The file value of the variation property value</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>surcharge</td>
+            <td>The surcharge of the variation property value</td>
+        </tr><tr>
+            <td><a href="item#item_models_propertyitem">PropertyItem</a>
+</td>
+            <td>propertyItem</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="item#item_models_propertyselection">PropertySelection</a>
+</td>
+            <td>propertySelection</td>
+            <td></td>
         </tr></tbody>
 </table>
 
@@ -4163,6 +4465,10 @@ The item manufacturer model
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lastUpdateTimestamp</td>
             <td>The last update date timestamp</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>position</td>
+            <td>The position of the manufacturer</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>commissions</td>
@@ -5132,33 +5438,41 @@ Get list of SalesPrices
             <td>isLiveConversion</td>
             <td>Indicates if the sales price is live converted</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The time the sales price was created.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the sales price was last updated.</td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>name</td>
+            <td>names</td>
             <td>names</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>account</td>
+            <td>accounts</td>
             <td>accounts</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>country</td>
+            <td>countries</td>
             <td>countries</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>currency</td>
+            <td>currencies</td>
             <td>currencies</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>customerClass</td>
+            <td>customerClasses</td>
             <td>customerClasses</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>referrer</td>
+            <td>referrers</td>
             <td>referrer</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>onlineStore</td>
-            <td>onlineStore</td>
+            <td>clients</td>
+            <td>clients</td>
         </tr></tbody>
 </table>
 
@@ -5201,6 +5515,14 @@ returns this model as an array
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>accountId</td>
             <td>The account id of the sales price</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The time the relation was created.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the relation was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -5239,6 +5561,14 @@ returns this model as an array
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>countryId</td>
             <td>The country id of the sales price</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The time the relation was created.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the relation was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -5277,6 +5607,14 @@ returns this model as an array
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>currency</td>
             <td>The currency of the sales price</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The time the relation was created.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the relation was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -5315,6 +5653,14 @@ returns this model as an array
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>customerClassId</td>
             <td>The customer class id of the sales price</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The time the relation was created.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the relation was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -5361,6 +5707,14 @@ returns this model as an array
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>nameExternal</td>
             <td>The external name of the sales price</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The time the relation was created.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the relation was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -5399,6 +5753,14 @@ returns this model as an array
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
             <td>The plenty id of the sales price</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The time the relation was created.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the relation was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -5437,6 +5799,14 @@ returns this model as an array
             <td><a target="_blank" href="http://php.net/double">double</a></td>
             <td>referrerId</td>
             <td>The referrer id of the sales price</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The time the relation was created.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the relation was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -5825,8 +6195,8 @@ The unit model including unit name
             <td>unitOfMeasurement</td>
             <td>The unit of measurement of the unit</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>DecimalPlacesAllowed</td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isDecimalPlacesAllowed</td>
             <td>Declares if decimal places are allowed</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -5897,9 +6267,165 @@ The unit name model including the unit
     
 returns this model as an array
     
+# UnitCombination<a name="item_unitcombination"></a>
+    
+## Models<a name="item_unitcombination_models"></a>
+### UnitCombination<a name="item_models_unitcombination"></a>
+
+The unitCombination model
+
+#### Namespace
+
+`Plenty\Modules\Item\UnitCombination\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The id of the unitCombination</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>unitId</td>
+            <td>The id of the unit</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>content</td>
+            <td>The content of the unit</td>
+        </tr><tr>
+            <td><a href="item#item_models_unit">Unit</a>
+</td>
+            <td>unit</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+    
+returns this model as an array
+    
 # Variation<a name="item_variation"></a>
     
 ## Contracts<a name="item_variation_contracts"></a>
+### VariationLookupRepositoryContract<a name="item_contracts_variationlookuprepositorycontract"></a>
+
+lookup repository for variations
+
+#### Namespace
+
+`Plenty\Modules\Item\Variation\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>hasBarcode</strong>(<a target="_blank" href="http://php.net/string">string</a> $code):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
+</pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasId</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
+</pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
+</pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasExternalId</strong>(<a target="_blank" href="http://php.net/string">string</a> $externalId):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
+</pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$externalId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasNumber</strong>(<a target="_blank" href="http://php.net/string">string</a> $number):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
+</pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$number</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>limit</strong>(<a target="_blank" href="http://php.net/int">int</a> $limit):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
+</pre>
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$limit</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>lookup</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+    
+
+    
+
 ### VariationRepositoryContract<a name="item_contracts_variationrepositorycontract"></a>
 
 Repository for item basket
@@ -6018,262 +6544,271 @@ Variation
     </tr>
     </thead>
     <tbody><tr>
-            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-            <td>isActive</td>
-            <td>Checks if the variation is active</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>attributeValueSetId</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-            <td>autoStockInvisible</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-            <td>autoStockNoStockIcon</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-            <td>autoStockPositiveStockIcon</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-            <td>autoStockVisible</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>automaticClientVisibility</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>availability</td>
-            <td>Checks the availability of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>availableUntil</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>createdTimestamp</td>
-            <td>The created at date timestamp</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>customNumber</td>
-            <td>The custom number of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>customsPercent</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>estimatedAvailability</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>externalId</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>extraShippingCharge1</td>
-            <td>The extra shipping charge 1 of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>extraShippingCharge2</td>
-            <td>The extra shipping charge 2 of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>heightMm</td>
-            <td>The height in millimeter of the variation</td>
-        </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>intervalOrderQuantity</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>lastUpdateTimestamp</td>
-            <td>The last update date timestamp</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>lengthMm</td>
-            <td>The length in millimeter of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>limitOrderByStockSelect</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>mainWarehouse</td>
-            <td>The main warehouse of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>maximumOrderQuantity</td>
-            <td>The minimum order quantity of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>minimumOrderQuantity</td>
-            <td>The maximum order quantity of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>model</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>operatingCostsPercent</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>packingUnitType</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>packingUnits</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>parentItemVariationQuantity</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>picking</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>position</td>
-            <td>The position of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>priceCalculationSetId</td>
-            <td></td>
+            <td>The ID of the variation. The ID must be unique.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isMain</td>
-            <td>Checks if the variation is a main variation</td>
+            <td>Flag that indicates if the variation is the main variation of the item.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>mainVariationId</td>
-            <td>The id of the main variation</td>
+            <td>The variation ID of the item's main variation. Value is NULL if this variation is the item's main variation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemId</td>
+            <td>The item ID of the item that this variation belongs to.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>position</td>
+            <td>The position of the variation. Value is inherited from the item's main variation if inheritance is active.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isActive</td>
+            <td>Flag that indicates if the variation is active. Only active variations can be offered in the online store and/or on markets.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>number</td>
+            <td>The variation number of the variation. The variation number must be specified. The variation number must be unique.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>model</td>
+            <td>The model of the variation. Value is inherited from the item's main variation if inheritance is active.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>externalId</td>
+            <td>The external variation ID of this variation. The external variation number is optional and allows importing items and variations from external systems to plentymarkets.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>availability</td>
+            <td>The availability of the variation. Possible values: 1 to 10.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>estimatedAvailableAt</td>
+            <td>The estimated delivery date of variations on reorder.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>purchasePrice</td>
-            <td>The purchase price of the variation</td>
+            <td>The net purchase price. Value e.g. is used for price calculations.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>relatedLastUpdateTimestamp</td>
-            <td>The related last update date timestamp of the variation</td>
+            <td>createdAt</td>
+            <td>The time the variation was created.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>releaseDate</td>
-            <td>The release date of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>storageCosts</td>
-            <td>The storage costs of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>transportationCosts</td>
-            <td>The transportation costs of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>unitCombinationId</td>
-            <td>The unit combination id of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>unitLoadDevice</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>unitsContained</td>
-            <td>The amount of units contained for this variation</td>
+            <td>updatedAt</td>
+            <td>The time the variation was last updated.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>variationName</td>
-            <td>The variation name of the variation</td>
+            <td>relatedUpdatedAt</td>
+            <td>The time at which related information for this variation was last updated. Related information is defined as information that is linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>vatId</td>
-            <td>The id of the tax rate of the variation</td>
+            <td>priceCalculationId</td>
+            <td>The ID of the price calculation linked to the variation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>picking</td>
+            <td>The order picking type of the variation. Possible values: single_picking, no_single_picking, exclude_from_picklist, null (no order picking type)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>stockLimitation</td>
+            <td>The stock limitation for the variation. Possible values: <ul><li>0 = No limitation, i.e. stock is not limited. The variations's availability is not checked automatically.</li><li>1 = Stock is limited to net stock. The variation's availability is checked automatically.</li><li>2 = Do not administer stock for this variation.</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isVisibleIfNetStockIsPositive</td>
+            <td>Flag that indicates if the variation is visible in the online store if net stock is positive. If true, the variation automatically becomes visible when the net stock changes to positive.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isInvisibleIfNetStockIsNotPositive</td>
+            <td>Flag that indicates if the variation is invisible in the online store if net stock is not positive. If true, the variation automatically becomes invisible when the net stock changes to 0 or negative.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isAvailableIfNetStockIsPositive</td>
+            <td>Flag that indicates if the variation is available in the online store if net stock is positive. If true, the variation automatically becomes available when the net stock changes to positive.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isUnavailableIfNetStockIsNotPositive</td>
+            <td>Flag that indicates if the variation is unavailable in the online store if net stock is not positive. If true, the variation automatically becomes available when the net stock changes to 0 or negative.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>mainWarehouseId</td>
+            <td>The ID of the main warehouse of the variation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>maximumOrderQuantity</td>
+            <td>The maximum order quantity permitted per order. Decimal values are possible to allow orders by weight or length. Default value is 0. If value is 0, the maximum order quantity is unlimited.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>minimumOrderQuantity</td>
+            <td>The minimum order quantity. Decimal values are possible to allow orders by weight or length.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>intervalOrderQuantity</td>
+            <td>The quantity intervals the variation can be ordered in. Decimal values are possible to allow orders by weight or length.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>availableUntil</td>
+            <td>The last date the item will be available for sale.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>releasedAt</td>
+            <td>The release date of the variation. This is the date on which the variation will become available. The variation can be visible in the online store before this date, e.g. for preorders.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>weightG</td>
-            <td>The weight in grams of the variation</td>
+            <td>The gross weight of the variation in gramms (g). This weight includes the packaging for variations that are packaged separately. This value is used for calculating shipping packages and weight-based shipping costs.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>weightNetG</td>
-            <td></td>
+            <td>The net weight of the variation in gramms (g). This is the weight of the variation without packaging.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>widthMm</td>
-            <td>The width in millimeter of the variation</td>
+            <td>widthMM</td>
+            <td>The width of the variation in millimetres (mm)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>lengthMM</td>
+            <td>The length of the variation in millimeters (mm)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>heightMM</td>
+            <td>The height of the variation in millimetres (mm)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>extraShippingCharge1</td>
+            <td>The extra shipping charge 1 for the variation. Extra shipping charges are useful for large or bulky items that are particularly expensive to ship. Charge 1 is added to the regular shipping costs for the first item of an order. If different variations are ordered, the extra shipping charge 1 of the variation with the highest charge 1 is selected.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>extraShippingCharge2</td>
+            <td>The extra shipping charge 2 for the variation. Extra shipping charges are useful for large or bulky items that are expensive to ship. Charge 2 is added to the shipping costs for any additional items of an order.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>unitsContained</td>
+            <td>The number of sales units contained in one package. Default value is 1.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>palletTypeId</td>
+            <td>The ID of the pallet type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>packingUnits</td>
+            <td>The number of packing units if the item consists of multiple packages. Value is 0 if an item is sent as one package. All items of an order that have the value 0 will be packed into one package.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>packingUnitTypeId</td>
+            <td>The ID of the packing unit type.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>transportationCosts</td>
+            <td>The net transportation costs for the variation. This value is used for price calculations and for calculating the acquisition price.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>storageCosts</td>
+            <td>The net storage costs for the variation</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>customs</td>
+            <td>The customs rate in percent</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>operatingCosts</td>
+            <td>The operating costs for the variation in percent</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>vatId</td>
+            <td>The ID of the VAT rate of the variation. VAT rates are created for each client (store) and linked to the variation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>bundleType</td>
+            <td>Indicates the bundle type of the variation. Possible values:<ul><li>bundle = The variation is a bundle</li><li>bundle_item = The variation is a bundle component.</li><li>Null = The variation is not associated with a bundle</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>automaticClientVisibility</td>
+            <td>Indicates if the variation is set as available for any clients (stores). Possible values:<ul><li>0 / -1 (GET) or 0 (POST) = Variation is not available in any client (store).</li><li>1 / 2 (GET) or 1 (POST) = Variation is available in at least one client (store).</li></ul>The variation's actual visibility depends on the settings for net stock dependency.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isHiddenInCategoryList</td>
+            <td>Flag that indicates if the variation is hidden in the category list. If true, the variation will not be shown in any item category and will not be returned as a search result. The variation can only be accessed via its URL.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>categoryVariationId</td>
+            <td>Either the ID of the variation or the ID of the item's main variation. No other values are permitted.<ul><li>ID of the variation = Categories are not inherited from the main variation.</li><li>ID of the item's main variation = Inheritance of categories is active.</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>marketVariationId</td>
+            <td>Either the ID of the variation or the ID of the item's main variation. No other values are permitted.<ul><li>ID of the variation = Markets are not inherited from the main variation.</li><li>ID of the item's main variation = Inheritance of markets is active.</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>clientVariationId</td>
+            <td>Either the ID of the variation or the ID of the item's main variation. No other values are permitted.<ul><li>ID of the variation = Clients (stores) are not inherited from the main variation.</li><li>ID of the item's main variation = Inheritance of clients (stores) is active.</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>salesPriceVariationId</td>
+            <td>Either the ID of the variation or the ID of the item's main variation. No other values are permitted.<ul><li>ID of the variation = Sales prices are not inherited from the main variation.</li><li>ID of the item's main variation = Inheritance of sales prices is active.</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>supplierVariationId</td>
+            <td>Either the ID of the variation or the ID of the item's main variation. No other values are permitted.<ul><li>ID of the variation = Suppliers are not inherited from the main variation.</li><li>ID of the item's main variation = Inheritance of suppliers is active.</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>warehouseVariationId</td>
+            <td>Either the ID of the variation or the ID of the item's main variation. No other values are permitted.<ul><li>ID of the variation = Warehouses are not inherited from the main variation.</li><li>ID of the item's main variation = Inheritance of warehouses is active.</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationBarcodes</td>
-            <td>barcodes</td>
+            <td>An array of the barcodes of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationSalesPrices</td>
-            <td>salesPrices</td>
+            <td>An array of the sales prices of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>marketItemNumbers</td>
-            <td>marketItemNumbers</td>
+            <td>An array of the barcodes of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationCategories</td>
-            <td>Categories</td>
+            <td>An array of the categories of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationClients</td>
-            <td>Clients</td>
+            <td>An array of the clients (stores) of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationMarkets</td>
-            <td>Markets</td>
+            <td>An array of the markets of the variation.</td>
         </tr><tr>
             <td><a href="item#item_models_variationdefaultcategory">VariationDefaultCategory</a>
 </td>
             <td>variationDefaultCategory</td>
-            <td>DefaultCategory</td>
+            <td>An array of the default category of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationSuppliers</td>
-            <td>Suppliers</td>
+            <td>An array of the suppliers of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationWarehouses</td>
-            <td>Warehouses</td>
+            <td>An array of the warehouses of the variation.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>itemId</td>
-            <td>The item id</td>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>images</td>
+            <td>An array of the images of the variation.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>categoryVariationId</td>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>variationAttributeValues</td>
             <td></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>marketVariationId</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>clientVariationId</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>salesPriceVariationId</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>supplierVariationId</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>warehouseVariationId</td>
-            <td></td>
+            <td><a href="item#item_models_variation">Variation</a>
+</td>
+            <td>parent</td>
+            <td>The details of the main variation of the variation if applicable.</td>
         </tr></tbody>
 </table>
 
@@ -6286,6 +6821,113 @@ returns this model as an array
     
 # VariationBarcode<a name="item_variationbarcode"></a>
     
+## Contracts<a name="item_variationbarcode_contracts"></a>
+### VariationBarcodeRepositoryContract<a name="item_contracts_variationbarcoderepositorycontract"></a>
+
+repository for variation barcode
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationBarcode\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $barcodeId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationbarcode">VariationBarcode</a>
+</pre>
+    
+Show an VariationBarcode by given id.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$barcodeId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationbarcode">VariationBarcode</a>
+</pre>
+    
+Create new VariationBarcode
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $barcodeId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationbarcode">VariationBarcode</a>
+</pre>
+    
+Update an existing VariationBarcode
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$barcodeId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $barcodeId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+    
+Delete an VariationBarcode by given variation and barcode id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$barcodeId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
+    
+Get list of VariationBarcode by variationId
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationbarcode_models"></a>
 ### VariationBarcode<a name="item_models_variationbarcode"></a>
 
@@ -6474,6 +7116,128 @@ returns this model as an array
     
 # VariationDescription<a name="item_variationdescription"></a>
     
+## Contracts<a name="item_variationdescription_contracts"></a>
+### VariationDescriptionRepositoryContract<a name="item_contracts_variationdescriptionrepositorycontract"></a>
+
+Repository for variation descriptions
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationDescription\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationdescription">VariationDescription</a>
+</pre>
+    
+Create new description
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_variationdescription">VariationDescription</a>
+</pre>
+    
+Updates description
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+    
+Delete description
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_variationdescription">VariationDescription</a>
+</pre>
+    
+Find description
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_variationdescription">VariationDescription</a>
+</pre>
+    
+Find description
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
+    
+Find descriptions
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationdescription_models"></a>
 ### VariationDescription<a name="item_models_variationdescription"></a>
 
@@ -6577,19 +7341,27 @@ returns this model as an array
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td></td>
+            <td>The ID of the image link</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>itemId</td>
-            <td></td>
+            <td>The ID of the item</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td></td>
+            <td>The ID of the item variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>imageId</td>
-            <td></td>
+            <td>The ID of the image</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The time the image was linked to the variation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the link from image to variation was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -6999,7 +7771,7 @@ Repository for VariationSku
 
 #### Methods
 
-<pre>public <strong>generateSku</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $accountId, $sku = null, <a target="_blank" href="http://php.net/bool">bool</a> $setLastExportedTimestamp = true):<a target="_blank" href="http://php.net/string">string</a></pre>
+<pre>public <strong>generateSku</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/float">float</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $accountId, $sku = null, <a target="_blank" href="http://php.net/bool">bool</a> $setLastExportedTimestamp = true):<a target="_blank" href="http://php.net/string">string</a></pre>
     
 Generate or update Sku
     
@@ -7011,7 +7783,7 @@ Generate or update Sku
         <td></td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
         <td>$marketId</td>
         <td></td>
     </tr>
@@ -7210,7 +7982,7 @@ returns this model as an array
 ## Contracts<a name="item_variationstock_contracts"></a>
 ### VariationStockRepositoryContract<a name="item_contracts_variationstockrepositorycontract"></a>
 
-
+Get, list, book and correct stock or get stock movements.
 
 #### Namespace
 
@@ -7220,99 +7992,108 @@ returns this model as an array
 
 #### Methods
 
-<pre>public <strong>searchByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $rowCount = 50, <a target="_blank" href="http://php.net/int">int</a> $offset):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>listStockByWarehouse</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $columns):<a target="_blank" href="http://php.net/array">array</a></pre>
     
-Find Stock by given Variation id
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$variationId</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$rowCount</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$offset</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>searchStorageLocationsByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $params):<a target="_blank" href="http://php.net/array">array</a></pre>
-    
-Find all storage locations by given warehouse id
+List stock per warehouse
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The ID of the item.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The ID of the variation.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$params</td>
-        <td></td>
+        <td>$columns</td>
+        <td>The properties to be loaded.</td>
     </tr>
 </table>
 
 
-<pre>public <strong>intake</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationstock">VariationStock</a>
-</pre>
+<pre>public <strong>listStockMovements</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $columns, <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage):<a target="_blank" href="http://php.net/array">array</a></pre>
     
-Stock intake
+List stock movements for a variation
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The ID of the item.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the variation.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>The properties to be loaded.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The requested page.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of items per page.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>bookIncomingItems</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+    
+Book incoming stock
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The ID of the item.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the variation.</td>
+    </tr>
+    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The request data.</td>
     </tr>
 </table>
 
 
-<pre>public <strong>correction</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationstock">VariationStock</a>
-</pre>
+<pre>public <strong>correctStock</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
     
-Stock Correction
+Correct stock
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The ID of the item.</td>
     </tr>
-</table>
-
-
-<pre>public <strong>movement</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $rowCount = 50, <a target="_blank" href="http://php.net/int">int</a> $offset):<a target="_blank" href="http://php.net/array">array</a></pre>
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
+    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The ID of the variation.</td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$rowCount</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$offset</td>
-        <td></td>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data.</td>
     </tr>
 </table>
 
@@ -7320,7 +8101,7 @@ Stock Correction
 ## Models<a name="item_variationstock_models"></a>
 ### VariationStock<a name="item_models_variationstock"></a>
 
-
+The variation stock model.
 
 #### Namespace
 
@@ -7338,69 +8119,33 @@ Stock Correction
     </tr>
     </thead>
     <tbody><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>itemName</td>
-            <td>The item name of the variation</td>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemId</td>
+            <td>The ID of the item</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>flag1</td>
-            <td>The flag 1 of the variation</td>
+            <td>variationId</td>
+            <td>The ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>flag2</td>
-            <td>The flag 2 of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-            <td>isBundle</td>
-            <td>Checks if the variation is a bundle</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>attributeSelection</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>customNumber</td>
-            <td>The custom number of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>barcode</td>
-            <td>The barcode of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>availability</td>
-            <td>Checks the availability of the variation</td>
+            <td>warehouseId</td>
+            <td>The ID of the warehouse</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>reservedListing</td>
-            <td></td>
+            <td>The quantity of a variation that is reserved for listings</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>reservedBundles</td>
-            <td></td>
+            <td>The quantity of a variation that is reserved for item bundles</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>valueOfGoods</td>
-            <td>The value of the goods in the variation stock</td>
+            <td>The value of goods based on the physical stock</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>purchasePrice</td>
             <td>The purchase price of the variation stock</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>warehouseId</td>
-            <td>The id of the warehouse</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>itemId</td>
-            <td>The id of the item</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>variationId</td>
-            <td>The id of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>attributeValueSetId</td>
-            <td>The attribute value set id of the variation stock</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>physicalStock</td>
@@ -7412,19 +8157,15 @@ Stock Correction
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>netStock</td>
-            <td>The actual available stock of the variation stock</td>
+            <td>The net stock is the stock that can still be sold</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>reordered</td>
-            <td>The reordered</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>reorderDelta</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>reorderLevel</td>
-            <td></td>
+            <td>The quantity of a variation that triggers a reorder</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>deltaReorderLevel</td>
+            <td>The quantity of a variation that is required to reach the reorder level</td>
         </tr></tbody>
 </table>
 
@@ -7438,7 +8179,7 @@ returns this model as an array
 
 ### VariationStockMovement<a name="item_models_variationstockmovement"></a>
 
-
+The variation stock movement model.
 
 #### Namespace
 
@@ -7456,81 +8197,65 @@ returns this model as an array
     </tr>
     </thead>
     <tbody><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>sourceString</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>reasonString</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>attributeSelection</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>warehouseName</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>variationNumber</td>
-            <td></td>
-        </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>processRowId</td>
-            <td></td>
+            <td>The ID of the stock movement</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>itemId</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>warehouseId</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>attributeValueSet</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>quantity</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>reason</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>entryDate</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>sourceId</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>processRowType</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>storageLocationName</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>purchasePrice</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>errorCode</td>
-            <td></td>
+            <td>The ID of the item</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td></td>
+            <td>The ID of the variation</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>warehouseId</td>
+            <td>The ID of the warehouse</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>reasonString</td>
+            <td>The reason string</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>attributeValues</td>
+            <td>The attribute values of a variation</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>processRowId</td>
+            <td>The ID is either the actual ID of an order of of an incoming item data set. Whether it is an order ID or an incoming item data set ID depends on the processRowType.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>quantity</td>
+            <td>The quantity</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>reason</td>
+            <td>The reason of the movement</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The date and time that the movement was created. This date is in W3C format.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>processRowType</td>
+            <td>The process row type shows whether the stock movement is based on an order or on an incoming item data set.
+												<ul>
+													<li>1 = incoming item data set</li>
+													<li>2 = order</li>
+												</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>storageLocationName</td>
+            <td>The name of the storage location.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>warehouseName</td>
+            <td>The name of the warehouse.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>purchasePrice</td>
+            <td>The purchase price of a variation</td>
         </tr></tbody>
 </table>
 

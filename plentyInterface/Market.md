@@ -421,3 +421,460 @@ The fitment item property model. This bleongs to an FitmentItem model.
     
 returns this model as an array
     
+# Helper<a name="market_helper"></a>
+    
+## Contracts<a name="market_helper_contracts"></a>
+### MarketAttributeHelperRepositoryContract<a name="market_contracts_marketattributehelperrepositorycontract"></a>
+
+The contract for the market attribute helper repository.
+
+#### Namespace
+
+`Plenty\Modules\Market\Helper\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getAttributeName</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+    
+Returns the attribute name for the given attribute id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getAttributeValueName</strong>(<a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+    
+Returns the attribute value name for the given attribute value id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$attributeId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$valueId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### MarketCategoryHelperRepositoryContract<a name="market_contracts_marketcategoryhelperrepositorycontract"></a>
+
+The contract for the market category helper repository.
+
+#### Namespace
+
+`Plenty\Modules\Market\Helper\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getCategoryBranchName</strong>(<a target="_blank" href="http://php.net/int">int</a> $branchId, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/string">string</a> $separator = &quot;&gt;&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
+    
+Returns the category bread crumbs as string for a given branchId, lang and plentyId
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$branchId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$separator</td>
+        <td>default</td>
+    </tr>
+</table>
+
+
+
+### MarketItemHelperRepositoryContract<a name="market_contracts_marketitemhelperrepositorycontract"></a>
+
+The contract for the item helper repository.
+
+#### Namespace
+
+`Plenty\Modules\Market\Helper\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getExternalManufacturerName</strong>(<a target="_blank" href="http://php.net/int">int</a> $manufacturerId):<a target="_blank" href="http://php.net/string">string</a></pre>
+    
+Get the external manufacturer name.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$manufacturerId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>generateSku</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/float">float</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $accountId, <a target="_blank" href="http://php.net/boolean">boolean</a> $setLastExportedTimestamp):<a target="_blank" href="http://php.net/string">string</a></pre>
+    
+Generates or updates the sku
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$marketId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$accountId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+        <td>$setLastExportedTimestamp</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getAvailability</strong>(<a target="_blank" href="http://php.net/int">int</a> $availabilityId, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/boolean">boolean</a> $returnAvailabilityName):<a target="_blank" href="http://php.net/string">string</a></pre>
+    
+Returns the availability name or the availability average days
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$availabilityId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+        <td>$returnAvailabilityName</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### MarketPropertyHelperRepositoryContract<a name="market_contracts_marketpropertyhelperrepositorycontract"></a>
+
+The contract for the market property helper repository.
+
+#### Namespace
+
+`Plenty\Modules\Market\Helper\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getMarketProperty</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId):<a target="_blank" href="http://php.net/array">array</a></pre>
+    
+Returns a list of the market properties
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$referrerId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+# Settings<a name="market_settings"></a>
+    
+## Contracts<a name="market_settings_contracts"></a>
+### SettingsRepositoryContract<a name="market_contracts_settingsrepositorycontract"></a>
+
+Use this interface to store and retrieve market specific settings.
+
+#### Namespace
+
+`Plenty\Modules\Market\Settings\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/string">string</a> $marketplaceId, <a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/array">array</a> $settings):<a href="market#market_models_settings">Settings</a>
+</pre>
+    
+Create market settings.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$marketplaceId</td>
+        <td>The marketplace ID that the settings belong to</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>The type of settings. Possible values: shipping, attribute, category, property.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$settings</td>
+        <td>The settings that will be saved.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_settings">Settings</a>
+</pre>
+    
+Return the settings for a given settings ID.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The settings id.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/string">string</a> $marketplaceId, <a target="_blank" href="http://php.net/string">string</a> $type = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+    
+Find settings for a given marketplace ID and type.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$marketplaceId</td>
+        <td>The marketplace id for which to retrieve the settings</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>The typo of settings that should be searched for. Possible values: shipping, attribute, category, property.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+Delete a setting.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteAll</strong>(<a target="_blank" href="http://php.net/string">string</a> $marketplaceId, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+Delete all settings for a given type and marketplace ID.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$marketplaceId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Factories<a name="market_settings_factories"></a>
+### SettingsCorrelationFactory<a name="market_factories_settingscorrelationfactory"></a>
+
+Factory that allows to store correlation between market settings and plentymarkets settings.
+
+#### Namespace
+
+`Plenty\Modules\Market\Settings\Factories`
+
+
+
+#### Methods
+
+<pre>public <strong>type</strong>(<a target="_blank" href="http://php.net/string">string</a> $type):<a href="market#market_factories_settingscorrelationfactory">SettingsCorrelationFactory</a>
+</pre>
+    
+Set here the type of relation that should be created.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>The relation type. Possible values: shipping, attribute, category, property</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createRelation</strong>(<a target="_blank" href="http://php.net/int">int</a> $settingsId, <a target="_blank" href="http://php.net/int">int</a> $correlationId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+Use this method to create a relation of the chosen type.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$settingsId</td>
+        <td>The id of the market settings we want to create the relation for.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$correlationId</td>
+        <td>The id of the plentymarkets settings we want to create the relation to.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>clear</strong>($marketplaceId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+    
+Clear all relations for a given correlation type.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$marketplaceId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>all</strong>($marketplaceId):<a target="_blank" href="http://php.net/array">array</a></pre>
+    
+Get all correlations for a given marketplace ID.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$marketplaceId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Models<a name="market_settings_models"></a>
+### Settings<a name="market_models_settings"></a>
+
+The market settings model.
+
+#### Namespace
+
+`Plenty\Modules\Market\Settings\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The id of the market settings.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>marketplaceId</td>
+            <td>The id of the marketplace.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>type</td>
+            <td>The type of the current settings. Possible values are: attribute, property, category, shipping.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>settings</td>
+            <td>The settings for the current marketplace.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>category</td>
+            <td>The category that this settings are related to.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>parcelServicePreset</td>
+            <td>The parcel service preset that this settings are related to.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>attribute</td>
+            <td>The attribute that this settings are related to.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>propertyItem</td>
+            <td>The property item that this settings are related to.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+    
+returns this model as an array
+    
