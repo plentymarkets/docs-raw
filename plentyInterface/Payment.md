@@ -7,6 +7,7 @@
 
 The PaymentOrderRelationRepositoryContract is the interface for the payment order relation repository. Create and delete relations between payments and orders.
 
+
 #### Namespace
 
 `Plenty\Modules\Payment\Contracts`
@@ -18,6 +19,7 @@ The PaymentOrderRelationRepositoryContract is the interface for the payment orde
 <pre>public <strong>createOrderRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
  $payment, <a href="order#order_models_order">Order</a>
  $order):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Creates a payment order relation.
     
@@ -41,6 +43,7 @@ Creates a payment order relation.
 <pre>public <strong>deleteOrderRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
  $payment, <a href="order#order_models_order">Order</a>
  $order):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Deletes a payment order relation.
     
@@ -66,6 +69,7 @@ Deletes a payment order relation.
 
 The PaymentPropertyRepositoryContract is the interface for the payment property repository. List, get, create and update payment properties.
 
+
 #### Namespace
 
 `Plenty\Modules\Payment\Contracts`
@@ -75,10 +79,12 @@ The PaymentPropertyRepositoryContract is the interface for the payment property 
 #### Methods
 
 <pre>public <strong>all</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists properties.
     
 <pre>public <strong>findByPropertyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Gets a property. The ID of the payment property must be specified.
     
@@ -93,6 +99,7 @@ Gets a property. The ID of the payment property must be specified.
 
 
 <pre>public <strong>allByPaymentId</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists properties of a payment. The ID of the payment must be specified.
     
@@ -107,6 +114,7 @@ Lists properties of a payment. The ID of the payment must be specified.
 
 
 <pre>public <strong>allByTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $typeId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists properties of a property type. The ID of the property type must be specified.
     
@@ -153,6 +161,7 @@ Lists properties of a property type. The ID of the property type must be specifi
 
 
 <pre>public <strong>findByCreatedDateInterval</strong>(<a target="_blank" href="http://php.net/string">string</a> $startDate, <a target="_blank" href="http://php.net/string">string</a> $endDate):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists properties by creation date. The start and the end of the date range must be specified.
     
@@ -173,6 +182,7 @@ Lists properties by creation date. The start and the end of the date range must 
 
 <pre>public <strong>createProperty</strong>($data):<a href="payment#payment_models_paymentproperty">PaymentProperty</a>
 </pre>
+
     
 Creates a payment property.
     
@@ -190,6 +200,7 @@ Creates a payment property.
 <pre>public <strong>changeProperty</strong>(<a href="payment#payment_models_paymentproperty">PaymentProperty</a>
  $data):<a href="payment#payment_models_paymentproperty">PaymentProperty</a>
 </pre>
+
     
 Updates a payment property.
     
@@ -209,6 +220,7 @@ Updates a payment property.
 
 The PaymentPropertyTypeNameRepositoryContract is the interface for the repository of payment property type names. List, get, create and update payment property names.
 
+
 #### Namespace
 
 `Plenty\Modules\Payment\Contracts`
@@ -218,6 +230,7 @@ The PaymentPropertyTypeNameRepositoryContract is the interface for the repositor
 #### Methods
 
 <pre>public <strong>allTypeNames</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists payment property type names. The language of the property type names must be specified.
     
@@ -232,6 +245,7 @@ Lists payment property type names. The language of the property type names must 
 
 
 <pre>public <strong>findByNameId</strong>(<a target="_blank" href="http://php.net/int">int</a> $nameId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Finds a payment property type name. The ID of the payment property type name must be specified.
     
@@ -247,6 +261,7 @@ Finds a payment property type name. The ID of the payment property type name mus
 
 <pre>public <strong>createTypeName</strong>($data):<a href="payment#payment_models_paymentpropertytypename">PaymentPropertyTypeName</a>
 </pre>
+
     
 Creates a payment property type name.
     
@@ -262,6 +277,7 @@ Creates a payment property type name.
 
 
 <pre>public <strong>changeProperty</strong>($data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Updates a payment property type name.
     
@@ -281,6 +297,7 @@ Updates a payment property type name.
 
 The PaymentPropertyTypeRepositoryContract is the interface for the payment property type repository. List, get, create and update payment properties.
 
+
 #### Namespace
 
 `Plenty\Modules\Payment\Contracts`
@@ -290,6 +307,7 @@ The PaymentPropertyTypeRepositoryContract is the interface for the payment prope
 #### Methods
 
 <pre>public <strong>allTypes</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists payment property types. The language of the property type must be specified.
     
@@ -304,6 +322,7 @@ Lists payment property types. The language of the property type must be specifie
 
 
 <pre>public <strong>findTypesById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Gets a payment property type. The ID of the property type must be specified.
     
@@ -356,6 +375,7 @@ Gets a payment property type. The ID of the property type must be specified.
 
 <pre>public <strong>createType</strong>($data):<a href="payment#payment_models_paymentpropertytype">PaymentPropertyType</a>
 </pre>
+
     
 Creates a payment property type.
     
@@ -372,6 +392,7 @@ Creates a payment property type.
 
 <pre>public <strong>changeProperty</strong>($data):<a href="payment#payment_models_paymentpropertytype">PaymentPropertyType</a>
 </pre>
+
     
 Updates a payment property type.
     
@@ -391,6 +412,7 @@ Updates a payment property type.
 
 The PaymentRepositoryContract is the interface for the payment repository. List, get, create and update payments. Payments can come into plentymarkets automatically or can be booked manually. Existing payments can be filtered by payment method, by ID, by payment status, by transaction type, by order or by date. Existing payments can also be updated.
 
+
 #### Namespace
 
 `Plenty\Modules\Payment\Contracts`
@@ -400,6 +422,7 @@ The PaymentRepositoryContract is the interface for the payment repository. List,
 #### Methods
 
 <pre>public <strong>getAll</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists payments.
     
@@ -420,6 +443,7 @@ Lists payments.
 
 <pre>public <strong>getPaymentById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentId):<a href="payment#payment_models_payment">Payment</a>
 </pre>
+
     
 Gets a payment. The ID of the payment must be specified.
     
@@ -434,6 +458,7 @@ Gets a payment. The ID of the payment must be specified.
 
 
 <pre>public <strong>getPaymentsByMethodId</strong>(<a target="_blank" href="http://php.net/int">int</a> $methodId, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists payments of a payment method. The ID of the payment method must be specified.
     
@@ -458,6 +483,7 @@ Lists payments of a payment method. The ID of the payment method must be specifi
 
 
 <pre>public <strong>getPaymentsByStatusId</strong>(<a target="_blank" href="http://php.net/int">int</a> $statusId, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists payments of a payment status. The ID of the payment status must be specified.
     
@@ -482,6 +508,7 @@ Lists payments of a payment status. The ID of the payment status must be specifi
 
 
 <pre>public <strong>getPaymentsByTransactionType</strong>(<a target="_blank" href="http://php.net/int">int</a> $transactionType, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists payments of a transaction type. The transaction type must be specified.
     
@@ -506,6 +533,7 @@ Lists payments of a transaction type. The transaction type must be specified.
 
 
 <pre>public <strong>getPaymentsByOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists payments of an order. The ID of the order must be specified.
     
@@ -520,6 +548,7 @@ Lists payments of an order. The ID of the order must be specified.
 
 
 <pre>public <strong>getPaymentsByImportDateInterval</strong>(<a target="_blank" href="http://php.net/string">string</a> $startDate, <a target="_blank" href="http://php.net/string">string</a> $endDate, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists payments by import date. The start and the end of the date range must be specified.
     
@@ -549,6 +578,7 @@ Lists payments by import date. The start and the end of the date range must be s
 
 
 <pre>public <strong>getPaymentsByEntryDateInterval</strong>(<a target="_blank" href="http://php.net/string">string</a> $startDate, <a target="_blank" href="http://php.net/string">string</a> $endDate, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists payments by entry date. The start and the end of the date range must be specified.
     
@@ -579,6 +609,7 @@ Lists payments by entry date. The start and the end of the date range must be sp
 
 <pre>public <strong>createPayment</strong>($data):<a href="payment#payment_models_payment">Payment</a>
 </pre>
+
     
 Creates a payment.
     
@@ -595,6 +626,7 @@ Creates a payment.
 
 <pre>public <strong>updatePayment</strong>($data):<a href="payment#payment_models_payment">Payment</a>
 </pre>
+
     
 Updates a payment.
     
@@ -610,10 +642,12 @@ Updates a payment.
 
 
 <pre>public <strong>getStatusConstants</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
 <pre>public <strong>getOriginConstants</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -621,6 +655,7 @@ Updates a payment.
 ### Payment<a name="payment_models_payment"></a>
 
 The payment model
+
 
 #### Namespace
 
@@ -744,6 +779,7 @@ The payment model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -751,6 +787,7 @@ returns this model as an array
 ### PaymentOrderRelation<a name="payment_models_paymentorderrelation"></a>
 
 payment order relation model
+
 
 #### Namespace
 
@@ -790,6 +827,7 @@ payment order relation model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -797,6 +835,7 @@ returns this model as an array
 ### PaymentProperty<a name="payment_models_paymentproperty"></a>
 
 the payment option
+
 
 #### Namespace
 
@@ -868,6 +907,7 @@ the payment option
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -875,6 +915,7 @@ returns this model as an array
 ### PaymentPropertyType<a name="payment_models_paymentpropertytype"></a>
 
 payment propery type model
+
 
 #### Namespace
 
@@ -915,6 +956,7 @@ payment propery type model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -922,6 +964,7 @@ returns this model as an array
 ### PaymentPropertyTypeName<a name="payment_models_paymentpropertytypename"></a>
 
 payment property type name model
+
 
 #### Namespace
 
@@ -961,6 +1004,7 @@ payment property type name model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -970,6 +1014,7 @@ returns this model as an array
 ### ExecutePayment<a name="payment_checkout_executepayment"></a>
 
 The event is triggered when a payment is executed.
+
 
 #### Namespace
 
@@ -981,6 +1026,7 @@ The event is triggered when a payment is executed.
 
 <pre>public <strong>setOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
+
     
 Updates the ID of the order in the checkout. The ID must be specified.
     
@@ -995,11 +1041,13 @@ Updates the ID of the order in the checkout. The ID must be specified.
 
 
 <pre>public <strong>getOrderId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 Gets the ID of the order.
     
 <pre>public <strong>setMop</strong>(<a target="_blank" href="http://php.net/int">int</a> $mop):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
+
     
 Updates the ID of the payment method. The ID must be specified.
     
@@ -1014,11 +1062,13 @@ Updates the ID of the payment method. The ID must be specified.
 
 
 <pre>public <strong>getMop</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 Gets the ID of the payment method.
     
 <pre>public <strong>setType</strong>(<a target="_blank" href="http://php.net/string">string</a> $type):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
+
     
 Updates the content type.
     
@@ -1033,11 +1083,13 @@ Updates the content type.
 
 
 <pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Gets the content type.
     
 <pre>public <strong>setValue</strong>(<a target="_blank" href="http://php.net/string">string</a> $value):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
+
     
 Updates the value of the content type.
     
@@ -1052,6 +1104,7 @@ Updates the value of the content type.
 
 
 <pre>public <strong>getValue</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Gets the value of the content type.
     
@@ -1059,6 +1112,7 @@ Gets the value of the content type.
 ### GetPaymentMethodContent<a name="payment_checkout_getpaymentmethodcontent"></a>
 
 The event is triggered after the payment method is selected in the checkout.
+
 
 #### Namespace
 
@@ -1070,6 +1124,7 @@ The event is triggered after the payment method is selected in the checkout.
 
 <pre>public <strong>setMop</strong>(<a target="_blank" href="http://php.net/int">int</a> $mop):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
+
     
 Updates the ID of the payment method. The ID must be specified.
     
@@ -1084,11 +1139,13 @@ Updates the ID of the payment method. The ID must be specified.
 
 
 <pre>public <strong>getMop</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 Gets the ID of the payment method.
     
 <pre>public <strong>setType</strong>(<a target="_blank" href="http://php.net/string">string</a> $type):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
+
     
 Updates the content type.
     
@@ -1103,11 +1160,13 @@ Updates the content type.
 
 
 <pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Gets the content type.
     
 <pre>public <strong>setValue</strong>(<a target="_blank" href="http://php.net/string">string</a> $value):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
+
     
 Updates the value of the content type.
     
@@ -1122,11 +1181,13 @@ Updates the value of the content type.
 
 
 <pre>public <strong>getValue</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Gets the value of the content type.
     
 <pre>public <strong>setParams</strong>($params):<a href="payment#payment_events_checkout">Checkout</a>
 </pre>
+
     
 Updates the parameters. The parameters must be specified.
     
@@ -1143,6 +1204,7 @@ Updates the parameters. The parameters must be specified.
 
 <pre>public <strong>getParams</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Gets the parameters.
     
@@ -1153,6 +1215,7 @@ Gets the parameters.
 
 The PaymentHistoryRepositoryContract is the interface for the payment history repository. Get and create the payment history.
 
+
 #### Namespace
 
 `Plenty\Modules\Payment\History\Contracts`
@@ -1162,6 +1225,7 @@ The PaymentHistoryRepositoryContract is the interface for the payment history re
 #### Methods
 
 <pre>public <strong>getByPaymentId</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Gets the payment history for a payment. The ID of the payment and the ID of the payment type must be specified.
     
@@ -1190,6 +1254,7 @@ Gets the payment history for a payment. The ID of the payment and the ID of the 
 
 <pre>public <strong>createHistory</strong>($data):<a href="payment#payment_models_paymenthistory">PaymentHistory</a>
 </pre>
+
     
 Creates the payment history.
     
@@ -1208,6 +1273,7 @@ Creates the payment history.
 ### PaymentHistory<a name="payment_models_paymenthistory"></a>
 
 the payment history
+
 
 #### Namespace
 
@@ -1255,6 +1321,7 @@ the payment history
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1264,6 +1331,7 @@ returns this model as an array
 ### PaymentMethodContainer<a name="payment_contracts_paymentmethodcontainer"></a>
 
 payment method container
+
 
 #### Namespace
 
@@ -1275,6 +1343,7 @@ payment method container
 
 <pre>public <strong>register</strong>(<a target="_blank" href="http://php.net/string">string</a> $paymentKey, <a target="_blank" href="http://php.net/string">string</a> $paymentMethodServiceClass, <a target="_blank" href="http://php.net/array">array</a> $rebuildEventClassesList):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -1303,6 +1372,7 @@ payment method container
 
 The PaymentMethodRepositoryContract is the interface for the payment method repository. List, get, create and update payment methods.
 
+
 #### Namespace
 
 `Plenty\Modules\Payment\Method\Contracts`
@@ -1312,10 +1382,12 @@ The PaymentMethodRepositoryContract is the interface for the payment method repo
 #### Methods
 
 <pre>public <strong>all</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists payment methods.
     
 <pre>public <strong>allForPlugin</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginKey):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists payment methods for a plugin key. The plugin key must be specified.
     
@@ -1331,6 +1403,7 @@ Lists payment methods for a plugin key. The plugin key must be specified.
 
 <pre>public <strong>findByPaymentMethodId</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId):<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
 </pre>
+
     
 Gets a payment method. The ID of the payment method must be specified.
     
@@ -1346,6 +1419,7 @@ Gets a payment method. The ID of the payment method must be specified.
 
 <pre>public <strong>createPaymentMethod</strong>($paymentMethodData):<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
 </pre>
+
     
 Creates a payment method.
     
@@ -1362,6 +1436,7 @@ Creates a payment method.
 
 <pre>public <strong>updateName</strong>($paymentMethodData):<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
 </pre>
+
     
 Updates the payment method name.
     
@@ -1377,6 +1452,7 @@ Updates the payment method name.
 
 
 <pre>public <strong>preparePaymentMethod</strong>(<a target="_blank" href="http://php.net/int">int</a> $mop):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Prepares a payment method. The ID of the payment method must be specified.
     
@@ -1391,6 +1467,7 @@ Prepares a payment method. The ID of the payment method must be specified.
 
 
 <pre>public <strong>executePayment</strong>(<a target="_blank" href="http://php.net/int">int</a> $mop, <a target="_blank" href="http://php.net/int">int</a> $orderId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Executes a payment. The ID of the payment method and the ID of the order must be specified.
     
@@ -1414,6 +1491,7 @@ Executes a payment. The ID of the payment method and the ID of the order must be
 
 the method of payment service
 
+
 #### Namespace
 
 `Plenty\Modules\Payment\Method\Contracts`
@@ -1423,6 +1501,7 @@ the method of payment service
 ### PaymentMethod<a name="payment_models_paymentmethod"></a>
 
 PaymentMethod
+
 
 #### Namespace
 
@@ -1462,6 +1541,7 @@ PaymentMethod
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     

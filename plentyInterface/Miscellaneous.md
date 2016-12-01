@@ -7,6 +7,7 @@
 
 The main application
 
+
 #### Namespace
 
 `Plenty\Plugin`
@@ -17,6 +18,7 @@ The main application
 
 <pre>public <strong>register</strong>(<a target="_blank" href="http://php.net/string">string</a> $providerClassName):<a href="miscellaneous#miscellaneous_plugin_serviceprovider">ServiceProvider</a>
 </pre>
+
     
 Register a service provider with the application.
     
@@ -32,6 +34,7 @@ Register a service provider with the application.
 
 <pre>public <strong>bind</strong>(<a target="_blank" href="http://php.net/string">string</a> $abstract, <a target="_blank" href="http://php.net/string">string</a> $concrete = null):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Register a binding with the container.
     
@@ -52,6 +55,7 @@ Register a binding with the container.
 
 <pre>public <strong>singleton</strong>(<a target="_blank" href="http://php.net/string">string</a> $abstract, <a target="_blank" href="http://php.net/string">string</a> $concrete = null):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Register a shared binding in the container.
     
@@ -72,6 +76,7 @@ Register a shared binding in the container.
 
 <pre>public <strong>make</strong>(<a target="_blank" href="http://php.net/string">string</a> $abstract, <a target="_blank" href="http://php.net/array">array</a> $parameters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -92,6 +97,7 @@ Register a shared binding in the container.
 
 <pre>public <strong>abort</strong>(<a target="_blank" href="http://php.net/int">int</a> $code, <a target="_blank" href="http://php.net/string">string</a> $message = &quot;&quot;, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Throw an HttpException with the given data.
     
@@ -116,10 +122,12 @@ Throw an HttpException with the given data.
 
 
 <pre>public <strong>getWebstoreId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 Returns current webstoreId
     
 <pre>public <strong>getPlentyId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
@@ -127,6 +135,7 @@ Returns current webstoreId
 ### ConfigRepository<a name="miscellaneous_plugin_configrepository"></a>
 
 configuration repository
+
 
 #### Namespace
 
@@ -137,6 +146,7 @@ configuration repository
 #### Methods
 
 <pre>public <strong>has</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Determine if the given configuration value exists.
     
@@ -151,6 +161,7 @@ Determine if the given configuration value exists.
 
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $default = null):<a target="_blank" href="http://php.net/mixed">mixed</a></pre>
+
     
 Get the specified configuration value.
     
@@ -172,6 +183,7 @@ Get the specified configuration value.
 
 <pre>public <strong>set</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value = null):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Set a given configuration value.
     
@@ -193,6 +205,7 @@ Set a given configuration value.
 
 <pre>public <strong>prepend</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Prepend a value onto an array configuration value.
     
@@ -214,6 +227,7 @@ Prepend a value onto an array configuration value.
 
 <pre>public <strong>push</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Push a value onto an array configuration value.
     
@@ -238,6 +252,7 @@ Push a value onto an array configuration value.
 
 Controller
 
+
 #### Namespace
 
 `Plenty\Plugin`
@@ -248,6 +263,7 @@ Controller
 
 Data Exchange service provider
 
+
 #### Namespace
 
 `Plenty\Plugin`
@@ -258,16 +274,19 @@ Data Exchange service provider
 
 <pre>public <strong>register</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Register the service provider.
     
 <pre>public <strong>getApplication</strong>():<a href="miscellaneous#miscellaneous_plugin_application">Application</a>
 </pre>
+
     
 
     
 <pre>public <strong>getEventDispatcher</strong>():<a href="miscellaneous#miscellaneous_events_dispatcher">Dispatcher</a>
 </pre>
+
     
 
     
@@ -276,6 +295,7 @@ Register the service provider.
 
 Route service provider
 
+
 #### Namespace
 
 `Plenty\Plugin`
@@ -286,11 +306,13 @@ Route service provider
 
 <pre>public <strong>getApplication</strong>():<a href="miscellaneous#miscellaneous_plugin_application">Application</a>
 </pre>
+
     
 
     
 <pre>public <strong>getEventDispatcher</strong>():<a href="miscellaneous#miscellaneous_events_dispatcher">Dispatcher</a>
 </pre>
+
     
 
     
@@ -298,6 +320,7 @@ Route service provider
 ### ServiceProvider<a name="miscellaneous_plugin_serviceprovider"></a>
 
 Service provider for plugins
+
 
 #### Namespace
 
@@ -309,16 +332,19 @@ Service provider for plugins
 
 <pre>public <strong>register</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Register the service provider.
     
 <pre>public <strong>getApplication</strong>():<a href="miscellaneous#miscellaneous_plugin_application">Application</a>
 </pre>
+
     
 
     
 <pre>public <strong>getEventDispatcher</strong>():<a href="miscellaneous#miscellaneous_events_dispatcher">Dispatcher</a>
 </pre>
+
     
 
     
@@ -326,6 +352,7 @@ Register the service provider.
 ### SessionRepository<a name="miscellaneous_plugin_sessionrepository"></a>
 
 session repository
+
 
 #### Namespace
 
@@ -336,6 +363,7 @@ session repository
 #### Methods
 
 <pre>public <strong>has</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Determine if the given session value exists.
     
@@ -351,6 +379,7 @@ Determine if the given session value exists.
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $default = null):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Get the specified session value.
     
@@ -372,6 +401,7 @@ Get the specified session value.
 
 <pre>public <strong>set</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value = null):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Set a given session value.
     
@@ -393,6 +423,7 @@ Set a given session value.
 
 <pre>public <strong>prepend</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Prepend a value onto an array session value.
     
@@ -414,6 +445,7 @@ Prepend a value onto an array session value.
 
 <pre>public <strong>push</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Push a value onto an array session value.
     
@@ -438,6 +470,7 @@ Push a value onto an array session value.
 
 Dummy Attribute Class
 
+
 #### Namespace
 
 `Plenty\Validation`
@@ -447,11 +480,13 @@ Dummy Attribute Class
 #### Methods
 
 <pre>public <strong>getAttributeName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
 <pre>public <strong>setAttributeName</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 
     
@@ -467,16 +502,19 @@ Dummy Attribute Class
 
 <pre>public <strong>accepted</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be yes, on, 1, or true. This is useful for validating &quot;Terms of Service&quot; acceptance.
     
 <pre>public <strong>activeUrl</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be a valid URL according to the checkdnsrr PHP function.
     
 <pre>public <strong>dateAfter</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldNameOrTimeStr):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be a value after a given date. The dates will be passed into the strtotime PHP function.
     
@@ -492,26 +530,31 @@ The field under validation must be a value after a given date. The dates will be
 
 <pre>public <strong>alphabetic</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be entirely alphabetic characters.
     
 <pre>public <strong>alphaDash</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation may have alpha-numeric characters, as well as dashes and underscores.
     
 <pre>public <strong>alphaNum</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be entirely alpha-numeric characters.
     
 <pre>public <strong>isArray</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be a PHP array.
     
 <pre>public <strong>dateBefore</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldNameOrTimeStr):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be a value preceding the given date. The dates will be passed into the PHP strtotime function.
     
@@ -527,6 +570,7 @@ The field under validation must be a value preceding the given date. The dates w
 
 <pre>public <strong>between</strong>(<a target="_blank" href="http://php.net/int">int</a> $min, <a target="_blank" href="http://php.net/int">int</a> $max):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must have a size between the given min and max. Strings, numerics, and files are evaluated in the same fashion as the size rule.
     
@@ -547,22 +591,26 @@ The field under validation must have a size between the given min and max. Strin
 
 <pre>public <strong>boolean</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be able to be cast as a boolean. Accepted input are true, false, 1, 0, &quot;1&quot;, and &quot;0&quot;.
     
 <pre>public <strong>confirmed</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must have a matching field of foo_confirmation. For example, if the field under validation is password,
 a matching password_confirmation field must be present in the input.
     
 <pre>public <strong>date</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be a valid date according to the strtotime PHP function.
     
 <pre>public <strong>dateFormat</strong>(<a target="_blank" href="http://php.net/string">string</a> $format):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must match the given format. The format will be evaluated using the PHP date_parse_from_format function.
     
@@ -578,6 +626,7 @@ The field under validation must match the given format. The format will be evalu
 
 <pre>public <strong>different</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must have a different value than field.
     
@@ -593,6 +642,7 @@ The field under validation must have a different value than field.
 
 <pre>public <strong>digits</strong>(<a target="_blank" href="http://php.net/int">int</a> $count):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be numeric and must have an exact length of $count.
     
@@ -608,6 +658,7 @@ The field under validation must be numeric and must have an exact length of $cou
 
 <pre>public <strong>digitsBetween</strong>(<a target="_blank" href="http://php.net/int">int</a> $min, <a target="_blank" href="http://php.net/int">int</a> $max):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must have a length between the given min and max.
     
@@ -628,11 +679,13 @@ The field under validation must have a length between the given min and max.
 
 <pre>public <strong>email</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be formatted as an e-mail address.
     
 <pre>public <strong>exists</strong>(<a target="_blank" href="http://php.net/string">string</a> $table, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must exist on a given database table.
     
@@ -653,11 +706,13 @@ The field under validation must exist on a given database table.
 
 <pre>public <strong>image</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The file under validation must be an image (jpeg, png, bmp, gif, or svg)
     
 <pre>public <strong>in</strong>(<a target="_blank" href="http://php.net/array">array</a> $values):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be included in the given list of values.
     
@@ -673,21 +728,25 @@ The field under validation must be included in the given list of values.
 
 <pre>public <strong>integer</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be an integer.
     
 <pre>public <strong>ip</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be an IP address.
     
 <pre>public <strong>json</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must a valid JSON string.
     
 <pre>public <strong>max</strong>(<a target="_blank" href="http://php.net/int">int</a> $value):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be less than or equal to a maximum value. Strings, numerics, and files are evaluated in the same fashion as the size rule.
     
@@ -703,6 +762,7 @@ The field under validation must be less than or equal to a maximum value. String
 
 <pre>public <strong>mimeTypes</strong>(<a target="_blank" href="http://php.net/array">array</a> $types):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The file under validation must have a MIME type corresponding to one of the listed extensions.
     
@@ -718,6 +778,7 @@ The file under validation must have a MIME type corresponding to one of the list
 
 <pre>public <strong>min</strong>(<a target="_blank" href="http://php.net/int">int</a> $value):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must have a minimum value. Strings, numerics, and files are evaluated in the same fashion as the size rule.
     
@@ -733,6 +794,7 @@ The field under validation must have a minimum value. Strings, numerics, and fil
 
 <pre>public <strong>notIn</strong>($values):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must not be included in the given list of values.
     
@@ -749,11 +811,13 @@ The field under validation must not be included in the given list of values.
 
 <pre>public <strong>numeric</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be numeric.
     
 <pre>public <strong>regex</strong>(<a target="_blank" href="http://php.net/string">string</a> $pattern):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must match the given regular expression.
     
@@ -769,12 +833,14 @@ The field under validation must match the given regular expression.
 
 <pre>public <strong>required</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be present in the input data and not empty. A field is considered &quot;empty&quot; is one of the following conditions are true:
 The value is null.
     
 <pre>public <strong>requiredIf</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, $value):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be present if the anotherfield field is equal to any value.
     
@@ -796,6 +862,7 @@ The field under validation must be present if the anotherfield field is equal to
 
 <pre>public <strong>requiredUnless</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $value):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be present unless the anotherfield field is equal to any value.
     
@@ -816,6 +883,7 @@ The field under validation must be present unless the anotherfield field is equa
 
 <pre>public <strong>requiredWith</strong>(<a target="_blank" href="http://php.net/array">array</a> $fieldNames):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be present only if any of the other specified fields are present.
     
@@ -831,6 +899,7 @@ The field under validation must be present only if any of the other specified fi
 
 <pre>public <strong>requiredWithAll</strong>(<a target="_blank" href="http://php.net/array">array</a> $fieldNames):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 required_with_all
     
@@ -846,6 +915,7 @@ required_with_all
 
 <pre>public <strong>requiredWithout</strong>(<a target="_blank" href="http://php.net/array">array</a> $fieldNames):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be present only when any of the other specified fields are not present.
     
@@ -861,6 +931,7 @@ The field under validation must be present only when any of the other specified 
 
 <pre>public <strong>requiredWithoutAll</strong>(<a target="_blank" href="http://php.net/array">array</a> $fieldNames):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be present only when all of the other specified fields are not present.
     
@@ -876,6 +947,7 @@ The field under validation must be present only when all of the other specified 
 
 <pre>public <strong>same</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The given field must match the field under validation.
     
@@ -891,6 +963,7 @@ The given field must match the field under validation.
 
 <pre>public <strong>size</strong>(<a target="_blank" href="http://php.net/int">int</a> $value):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must have a size matching the given value. For string data, value corresponds to the number of characters.
     
@@ -906,16 +979,19 @@ The field under validation must have a size matching the given value. For string
 
 <pre>public <strong>string</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be a string.
     
 <pre>public <strong>timezone</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be a valid timezone identifier according to the timezone_identifiers_list PHP function.
     
 <pre>public <strong>unique</strong>(<a target="_blank" href="http://php.net/string">string</a> $table, <a target="_blank" href="http://php.net/string">string</a> $column, <a target="_blank" href="http://php.net/string">string</a> $except = null, <a target="_blank" href="http://php.net/string">string</a> $idColumn = null):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be unique on a given database table. If the column option is not specified, the field name will be used.
     
@@ -946,16 +1022,19 @@ The field under validation must be unique on a given database table. If the colu
 
 <pre>public <strong>url</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 The field under validation must be a valid URL according to PHP&#039;s filter_var function.
     
 <pre>public <strong>sometimes</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
+
     
 In some situations, you may wish to run validation checks against a field only if that field is present in the input array. To quickly accomplish this, add the sometimes rule.
     
 <pre>public <strong>generateRulesContent</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -963,6 +1042,7 @@ In some situations, you may wish to run validation checks against a field only i
 ### RulesCollection<a name="miscellaneous_validation_rulescollection"></a>
 
 RulesCollection
+
 
 #### Namespace
 
@@ -974,6 +1054,7 @@ RulesCollection
 
 <pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -989,6 +1070,7 @@ RulesCollection
 
 <pre>public <strong>addConditional</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -1009,6 +1091,7 @@ RulesCollection
 
 <pre>public <strong>addInt</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -1029,6 +1112,7 @@ RulesCollection
 
 <pre>public <strong>addNumeric</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -1049,6 +1133,7 @@ RulesCollection
 
 <pre>public <strong>addDate</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -1069,6 +1154,7 @@ RulesCollection
 
 <pre>public <strong>addBool</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -1089,6 +1175,7 @@ RulesCollection
 
 <pre>public <strong>addString</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -1112,6 +1199,7 @@ RulesCollection
 
 Base Validator Class
 
+
 #### Namespace
 
 `Plenty\Validation`
@@ -1122,6 +1210,7 @@ Base Validator Class
 
 <pre>public static <strong>validateOrFail</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -1137,11 +1226,13 @@ Base Validator Class
 
 <pre>public <strong>defineAttributes</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
 <pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -1157,6 +1248,7 @@ Base Validator Class
 
 <pre>public <strong>addConditional</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -1177,6 +1269,7 @@ Base Validator Class
 
 <pre>public <strong>addInt</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -1197,6 +1290,7 @@ Base Validator Class
 
 <pre>public <strong>addNumeric</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -1217,6 +1311,7 @@ Base Validator Class
 
 <pre>public <strong>addDate</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -1237,6 +1332,7 @@ Base Validator Class
 
 <pre>public <strong>addBool</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -1257,6 +1353,7 @@ Base Validator Class
 
 <pre>public <strong>addString</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -1277,6 +1374,7 @@ Base Validator Class
 
 ## Exceptions<a name="miscellaneous_plenty_exceptions"></a>
 ### ValidationException<a name="miscellaneous_exceptions_validationexception"></a>
+
 
 
 
@@ -1308,12 +1406,14 @@ Base Validator Class
 
 <pre>public <strong>getMessageBag</strong>():<a href="miscellaneous#miscellaneous_support_messagebag">MessageBag</a>
 </pre>
+
     
 
     
 <pre>public <strong>setMessageBag</strong>(<a href="miscellaneous#miscellaneous_support_messagebag">MessageBag</a>
  $messageBag):<a href="miscellaneous#miscellaneous_plenty_exceptions">Exceptions</a>
 </pre>
+
     
 
     
@@ -1336,6 +1436,7 @@ Base Validator Class
 Created by ptopczewski, 29.12.15 13:48
 Class HTTPException
 
+
 #### Namespace
 
 `Plenty\Plugin\Error`
@@ -1345,6 +1446,7 @@ Class HTTPException
 ### Dispatcher<a name="miscellaneous_events_dispatcher"></a>
 
 Dispatcher
+
 
 #### Namespace
 
@@ -1356,6 +1458,7 @@ Dispatcher
 
 <pre>public <strong>listen</strong>($event, $listener, <a target="_blank" href="http://php.net/int">int</a> $priority):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Register an event listener with the dispatcher.
     
@@ -1382,6 +1485,7 @@ Register an event listener with the dispatcher.
 
 
 <pre>public <strong>hasListeners</strong>($event):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Determine if a given event has listeners.
     
@@ -1398,6 +1502,7 @@ Determine if a given event has listeners.
 
 <pre>public <strong>fire</strong>($event, <a target="_blank" href="http://php.net/array">array</a> $payload = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Fire an event and call the listeners.
     
@@ -1419,6 +1524,7 @@ Fire an event and call the listeners.
 
 <pre>public <strong>forget</strong>($event):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Remove a set of listeners from the dispatcher.
     
@@ -1438,6 +1544,7 @@ Remove a set of listeners from the dispatcher.
 
 Event
 
+
 #### Namespace
 
 `Plenty\Plugin\Events`
@@ -1448,6 +1555,7 @@ Event
 
 http request
 
+
 #### Namespace
 
 `Plenty\Plugin\Http`
@@ -1457,11 +1565,13 @@ http request
 #### Methods
 
 <pre>public <strong>all</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Get all of the input and files for the request.
     
 <pre>public <strong>merge</strong>(<a target="_blank" href="http://php.net/array">array</a> $input):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Merge new input into the current request&#039;s input array.
     
@@ -1477,6 +1587,7 @@ Merge new input into the current request&#039;s input array.
 
 <pre>public <strong>replace</strong>(<a target="_blank" href="http://php.net/array">array</a> $input):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Replace the input for the current request.
     
@@ -1492,6 +1603,7 @@ Replace the input for the current request.
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $default = null, <a target="_blank" href="http://php.net/bool">bool</a> $deep = false):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -1521,6 +1633,7 @@ Replace the input for the current request.
 
 Class to create different types of http response.
 
+
 #### Namespace
 
 `Plenty\Plugin\Http`
@@ -1531,6 +1644,7 @@ Class to create different types of http response.
 
 <pre>public <strong>make</strong>(<a target="_blank" href="http://php.net/string">string</a> $content = &quot;&quot;, <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
+
     
 Return a new response from the application.
     
@@ -1556,6 +1670,7 @@ Return a new response from the application.
 
 <pre>public <strong>view</strong>(<a target="_blank" href="http://php.net/string">string</a> $view, <a target="_blank" href="http://php.net/array">array</a> $data = [], <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
+
     
 Return a new view response from the application.
     
@@ -1586,6 +1701,7 @@ Return a new view response from the application.
 
 <pre>public <strong>json</strong>($data = [], <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/int">int</a> $options):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
+
     
 Return a new JSON response from the application.
     
@@ -1617,6 +1733,7 @@ Return a new JSON response from the application.
 
 <pre>public <strong>jsonp</strong>(<a target="_blank" href="http://php.net/string">string</a> $callback, $data = [], <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/int">int</a> $options):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
+
     
 Return a new JSONP response from the application.
     
@@ -1653,6 +1770,7 @@ Return a new JSONP response from the application.
 
 <pre>public <strong>stream</strong>(<a target="_blank" href="http://php.net/callable">callable</a> $callback, <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
+
     
 Return a new streamed response from the application.
     
@@ -1678,6 +1796,7 @@ Return a new streamed response from the application.
 
 <pre>public <strong>download</strong>($file, <a target="_blank" href="http://php.net/string">string</a> $name = null, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/string">string</a> $disposition = &quot;attachment&quot;):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
+
     
 Create a new file download response.
     
@@ -1709,6 +1828,7 @@ Create a new file download response.
 
 <pre>public <strong>file</strong>($file, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
+
     
 Return the raw contents of a binary file.
     
@@ -1730,6 +1850,7 @@ Return the raw contents of a binary file.
 
 <pre>public <strong>redirectTo</strong>(<a target="_blank" href="http://php.net/string">string</a> $path, <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/bool">bool</a> $secure = null):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
+
     
 Create a new redirect response to the given path.
     
@@ -1760,6 +1881,7 @@ Create a new redirect response to the given path.
 
 <pre>public <strong>redirectToRoute</strong>(<a target="_blank" href="http://php.net/string">string</a> $route, <a target="_blank" href="http://php.net/array">array</a> $parameters = [], <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
+
     
 Create a new redirect response to a named route.
     
@@ -1790,6 +1912,7 @@ Create a new redirect response to a named route.
 
 <pre>public <strong>redirectToAction</strong>(<a target="_blank" href="http://php.net/string">string</a> $action, <a target="_blank" href="http://php.net/array">array</a> $parameters = [], <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
+
     
 Create a new redirect response to a controller action.
     
@@ -1820,6 +1943,7 @@ Create a new redirect response to a controller action.
 
 <pre>public <strong>redirectGuest</strong>(<a target="_blank" href="http://php.net/string">string</a> $path, <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/bool">bool</a> $secure = null):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
+
     
 Create a new redirect response, while putting the current URL in the session.
     
@@ -1850,6 +1974,7 @@ Create a new redirect response, while putting the current URL in the session.
 
 <pre>public <strong>redirectToIntended</strong>(<a target="_blank" href="http://php.net/string">string</a> $default = &quot;/&quot;, <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/bool">bool</a> $secure = null):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
+
     
 Create a new redirect response to the previously intended location.
     
@@ -1883,6 +2008,7 @@ Create a new redirect response to the previously intended location.
 
 Api router service
 
+
 #### Namespace
 
 `Plenty\Plugin\Routing`
@@ -1893,6 +2019,7 @@ Api router service
 
 <pre>public <strong>version</strong>(<a target="_blank" href="http://php.net/array">array</a> $version, $second, $third = null):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -1920,6 +2047,7 @@ Api router service
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new GET route with the router.
     
@@ -1941,6 +2069,7 @@ Register a new GET route with the router.
 
 <pre>public <strong>post</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new POST route with the router.
     
@@ -1962,6 +2091,7 @@ Register a new POST route with the router.
 
 <pre>public <strong>put</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new PUT route with the router.
     
@@ -1983,6 +2113,7 @@ Register a new PUT route with the router.
 
 <pre>public <strong>patch</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new PATCH route with the router.
     
@@ -2004,6 +2135,7 @@ Register a new PATCH route with the router.
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new DELETE route with the router.
     
@@ -2025,6 +2157,7 @@ Register a new DELETE route with the router.
 
 <pre>public <strong>options</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new OPTIONS route with the router.
     
@@ -2046,6 +2179,7 @@ Register a new OPTIONS route with the router.
 
 <pre>public <strong>any</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new route responding to all verbs.
     
@@ -2067,6 +2201,7 @@ Register a new route responding to all verbs.
 
 <pre>public <strong>resource</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $controller, <a target="_blank" href="http://php.net/array">array</a> $options = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Route a resource to a controller.
     
@@ -2092,6 +2227,7 @@ Route a resource to a controller.
 
 <pre>public <strong>match</strong>(<a target="_blank" href="http://php.net/array">array</a> $methods, <a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new route with the given verbs.
     
@@ -2121,6 +2257,7 @@ Register a new route with the given verbs.
 
 Route
 
+
 #### Namespace
 
 `Plenty\Plugin\Routing`
@@ -2131,6 +2268,7 @@ Route
 
 <pre>public <strong>addMiddleware</strong>(<a target="_blank" href="http://php.net/array">array</a> $middleware):<a href="miscellaneous#miscellaneous_plugin_routing">Routing</a>
 </pre>
+
     
 Add middlewares attached to the route.
     
@@ -2145,11 +2283,13 @@ Add middlewares attached to the route.
 
 
 <pre>public <strong>getMiddleware</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
 <pre>public <strong>where</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $expression = null):<a href="miscellaneous#miscellaneous_plugin_routing">Routing</a>
 </pre>
+
     
 
     
@@ -2174,6 +2314,7 @@ Add middlewares attached to the route.
 
 Router service
 
+
 #### Namespace
 
 `Plenty\Plugin\Routing`
@@ -2184,6 +2325,7 @@ Router service
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new GET route with the router.
     
@@ -2205,6 +2347,7 @@ Register a new GET route with the router.
 
 <pre>public <strong>post</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new POST route with the router.
     
@@ -2226,6 +2369,7 @@ Register a new POST route with the router.
 
 <pre>public <strong>put</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new PUT route with the router.
     
@@ -2247,6 +2391,7 @@ Register a new PUT route with the router.
 
 <pre>public <strong>patch</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new PATCH route with the router.
     
@@ -2268,6 +2413,7 @@ Register a new PATCH route with the router.
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new DELETE route with the router.
     
@@ -2289,6 +2435,7 @@ Register a new DELETE route with the router.
 
 <pre>public <strong>options</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new OPTIONS route with the router.
     
@@ -2310,6 +2457,7 @@ Register a new OPTIONS route with the router.
 
 <pre>public <strong>any</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new route responding to all verbs.
     
@@ -2331,6 +2479,7 @@ Register a new route responding to all verbs.
 
 <pre>public <strong>match</strong>(<a target="_blank" href="http://php.net/array">array</a> $methods, <a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
 </pre>
+
     
 Register a new route with the given verbs.
     
@@ -2360,6 +2509,7 @@ Register a new route with the given verbs.
 
 Twig engine
 
+
 #### Namespace
 
 `Plenty\Plugin\Templates`
@@ -2369,6 +2519,7 @@ Twig engine
 #### Methods
 
 <pre>public <strong>render</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/array">array</a> $context = []):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Renders a template.
     
@@ -2389,6 +2540,7 @@ Renders a template.
 
 <pre>public <strong>addExtension</strong>(<a target="_blank" href="http://php.net/string">string</a> $extension):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Registers an extension.
     
@@ -2407,6 +2559,7 @@ Registers an extension.
 
 view support
 
+
 #### Namespace
 
 `Plenty\Plugin\Templates`
@@ -2416,6 +2569,7 @@ view support
 #### Methods
 
 <pre>public <strong>render</strong>(<a target="_blank" href="http://php.net/string">string</a> $templatePath, <a target="_blank" href="http://php.net/array">array</a> $data = []):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -2435,6 +2589,7 @@ view support
 
 
 <pre>public <strong>exists</strong>(<a target="_blank" href="http://php.net/string">string</a> $templatePath):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 
     
@@ -2455,6 +2610,7 @@ view support
 
 Twig extension
 
+
 #### Namespace
 
 `Plenty\Plugin\Templates\Extensions`
@@ -2464,6 +2620,7 @@ Twig extension
 #### Methods
 
 <pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -2471,6 +2628,7 @@ Twig extension
 ### Twig_SimpleFilter<a name="miscellaneous_extensions_twig_simplefilter"></a>
 
 Twig SimpleFilter
+
 
 #### Namespace
 
@@ -2482,6 +2640,7 @@ Twig SimpleFilter
 
 Twig SimpleFunction
 
+
 #### Namespace
 
 `Plenty\Plugin\Templates\Extensions`
@@ -2491,6 +2650,7 @@ Twig SimpleFunction
 ### TwigFactory<a name="miscellaneous_factories_twigfactory"></a>
 
 Twig Factory
+
 
 #### Namespace
 
@@ -2502,11 +2662,13 @@ Twig Factory
 
 <pre>public <strong>register</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
 <pre>public <strong>createSimpleFunction</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $callable, <a target="_blank" href="http://php.net/array">array</a> $params = []):<a href="miscellaneous#miscellaneous_extensions_twig_simplefunction">Twig_SimpleFunction</a>
 </pre>
+
     
 
     
@@ -2533,6 +2695,7 @@ Twig Factory
 
 <pre>public <strong>createSimpleFilter</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $callable, <a target="_blank" href="http://php.net/array">array</a> $params = []):<a href="miscellaneous#miscellaneous_extensions_twig_simplefilter">Twig_SimpleFilter</a>
 </pre>
+
     
 
     
@@ -2564,6 +2727,7 @@ Twig Factory
 
 DeleteResponse Interface
 
+
 #### Namespace
 
 `Plenty\Repositories\Contracts`
@@ -2573,11 +2737,13 @@ DeleteResponse Interface
 #### Methods
 
 <pre>public <strong>getAffectedRows</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
 <pre>public <strong>setAffectedRows</strong>(<a target="_blank" href="http://php.net/int">int</a> $value):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -2592,10 +2758,12 @@ DeleteResponse Interface
 
 
 <pre>public <strong>increment</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
 <pre>public <strong>decrement</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
@@ -2603,6 +2771,7 @@ DeleteResponse Interface
 ### PaginationResponseContract<a name="miscellaneous_contracts_paginationresponsecontract"></a>
 
 Contract for PaginationResponse
+
 
 #### Namespace
 
@@ -2614,11 +2783,13 @@ Contract for PaginationResponse
 
 <pre>public <strong>getTotal</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
 <pre>public <strong>setTotal</strong>($total):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -2635,11 +2806,13 @@ Contract for PaginationResponse
 
 <pre>public <strong>getPage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
 <pre>public <strong>setPage</strong>($page):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -2656,11 +2829,13 @@ Contract for PaginationResponse
 
 <pre>public <strong>getEntriesPerPage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
 <pre>public <strong>setEntriesPerPage</strong>($epp):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -2677,11 +2852,13 @@ Contract for PaginationResponse
 
 <pre>public <strong>getResult</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
 <pre>public <strong>setResult</strong>($entries):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -2697,6 +2874,7 @@ Contract for PaginationResponse
 
 
 <pre>public <strong>toJson</strong>(<a target="_blank" href="http://php.net/int">int</a> $options):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Convert the object to its JSON representation.
     
@@ -2711,6 +2889,7 @@ Convert the object to its JSON representation.
 
 
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Get the instance as an array.
     
@@ -2718,6 +2897,7 @@ Get the instance as an array.
 ### DeleteResponse<a name="miscellaneous_models_deleteresponse"></a>
 
 Delete Response
+
 
 #### Namespace
 
@@ -2745,6 +2925,7 @@ Delete Response
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2752,6 +2933,7 @@ returns this model as an array
 ### PaginatedResult<a name="miscellaneous_models_paginatedresult"></a>
 
 paginated result
+
 
 #### Namespace
 
@@ -2762,23 +2944,28 @@ paginated result
 #### Methods
 
 <pre>public <strong>getPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
 <pre>public <strong>getTotalCount</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
 <pre>public <strong>isLastPage</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 
     
 <pre>public <strong>getResult</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
 <pre>public <strong>setResult</strong>($result):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -2794,10 +2981,12 @@ paginated result
 
 
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Get the instance as an array.
     
 <pre>public <strong>toJson</strong>(<a target="_blank" href="http://php.net/int">int</a> $options):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Convert the object to its JSON representation.
     
@@ -2813,6 +3002,7 @@ Convert the object to its JSON representation.
 
 <pre>public <strong>jsonSerialize</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Specify data which should be serialized to JSON
     
@@ -2823,6 +3013,7 @@ Specify data which should be serialized to JSON
 
 Attribute Interface
 
+
 #### Namespace
 
 `Plenty\Validation\Contracts`
@@ -2832,11 +3023,13 @@ Attribute Interface
 #### Methods
 
 <pre>public <strong>getAttributeName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
 <pre>public <strong>setAttributeName</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 
     
@@ -2852,16 +3045,19 @@ Attribute Interface
 
 <pre>public <strong>accepted</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be yes, on, 1, or true. This is useful for validating &quot;Terms of Service&quot; acceptance.
     
 <pre>public <strong>activeUrl</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be a valid URL according to the checkdnsrr PHP function.
     
 <pre>public <strong>dateAfter</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldNameOrTimeStr):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be a value after a given date. The dates will be passed into the strtotime PHP function. Instead of passing a date string to be evaluated by strtotime, you may specify another field to compare against the date
     
@@ -2877,26 +3073,31 @@ The field under validation must be a value after a given date. The dates will be
 
 <pre>public <strong>alphabetic</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be entirely alphabetic characters.
     
 <pre>public <strong>alphaDash</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation may have alpha-numeric characters, as well as dashes and underscores.
     
 <pre>public <strong>alphaNum</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be entirely alpha-numeric characters.
     
 <pre>public <strong>isArray</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be a PHP array.
     
 <pre>public <strong>dateBefore</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldNameOrTimeStr):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be a value preceding the given date. The dates will be passed into the PHP strtotime function.
     
@@ -2912,6 +3113,7 @@ The field under validation must be a value preceding the given date. The dates w
 
 <pre>public <strong>between</strong>(<a target="_blank" href="http://php.net/int">int</a> $min, <a target="_blank" href="http://php.net/int">int</a> $max):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must have a size between the given min and max. Strings, numerics, and files are evaluated in the same fashion as the size rule.
     
@@ -2932,21 +3134,25 @@ The field under validation must have a size between the given min and max. Strin
 
 <pre>public <strong>boolean</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be able to be cast as a boolean. Accepted input are true, false, 1, 0, &quot;1&quot;, and &quot;0&quot;.
     
 <pre>public <strong>confirmed</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must have a matching field of foo_confirmation. For example, if the field under validation is password, a matching password_confirmation field must be present in the input.
     
 <pre>public <strong>date</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be a valid date according to the strtotime PHP function.
     
 <pre>public <strong>dateFormat</strong>(<a target="_blank" href="http://php.net/string">string</a> $format):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must match the given format. The format will be evaluated using the PHP date_parse_from_format function. You should use either date or date_format when validating a field, not both.
     
@@ -2962,6 +3168,7 @@ The field under validation must match the given format. The format will be evalu
 
 <pre>public <strong>different</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must have a different value than field.
     
@@ -2977,6 +3184,7 @@ The field under validation must have a different value than field.
 
 <pre>public <strong>digits</strong>(<a target="_blank" href="http://php.net/int">int</a> $count):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be numeric and must have an exact length of $count.
     
@@ -2992,6 +3200,7 @@ The field under validation must be numeric and must have an exact length of $cou
 
 <pre>public <strong>digitsBetween</strong>(<a target="_blank" href="http://php.net/int">int</a> $min, <a target="_blank" href="http://php.net/int">int</a> $max):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must have a length between the given min and max.
     
@@ -3012,11 +3221,13 @@ The field under validation must have a length between the given min and max.
 
 <pre>public <strong>email</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be formatted as an e-mail address.
     
 <pre>public <strong>exists</strong>(<a target="_blank" href="http://php.net/string">string</a> $table, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must exist on a given database table.
     
@@ -3037,11 +3248,13 @@ The field under validation must exist on a given database table.
 
 <pre>public <strong>image</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The file under validation must be an image (jpeg, png, bmp, gif, or svg)
     
 <pre>public <strong>in</strong>(<a target="_blank" href="http://php.net/array">array</a> $values):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be included in the given list of values.
     
@@ -3057,21 +3270,25 @@ The field under validation must be included in the given list of values.
 
 <pre>public <strong>integer</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be an integer.
     
 <pre>public <strong>ip</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be an IP address.
     
 <pre>public <strong>json</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must a valid JSON string.
     
 <pre>public <strong>max</strong>(<a target="_blank" href="http://php.net/int">int</a> $value):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be less than or equal to a maximum value. Strings, numerics, and files are evaluated in the same fashion as the size rule.
     
@@ -3087,6 +3304,7 @@ The field under validation must be less than or equal to a maximum value. String
 
 <pre>public <strong>mimeTypes</strong>(<a target="_blank" href="http://php.net/array">array</a> $types):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The file under validation must have a MIME type corresponding to one of the listed extensions.
     
@@ -3102,6 +3320,7 @@ The file under validation must have a MIME type corresponding to one of the list
 
 <pre>public <strong>min</strong>(<a target="_blank" href="http://php.net/int">int</a> $value):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must have a minimum value. Strings, numerics, and files are evaluated in the same fashion as the size rule.
     
@@ -3117,6 +3336,7 @@ The field under validation must have a minimum value. Strings, numerics, and fil
 
 <pre>public <strong>notIn</strong>($values):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must not be included in the given list of values.
     
@@ -3133,11 +3353,13 @@ The field under validation must not be included in the given list of values.
 
 <pre>public <strong>numeric</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be numeric.
     
 <pre>public <strong>regex</strong>(<a target="_blank" href="http://php.net/string">string</a> $pattern):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must match the given regular expression.
     
@@ -3153,11 +3375,13 @@ The field under validation must match the given regular expression.
 
 <pre>public <strong>required</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be present in the input data and not empty. A field is considered &quot;empty&quot; is one of the following conditions are true: The value is null. The value is an empty string. The value is an empty array or empty Countable object. The value is an uploaded file with no path.
     
 <pre>public <strong>requiredIf</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, $value):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be present if the anotherfield field is equal to any value.
     
@@ -3179,6 +3403,7 @@ The field under validation must be present if the anotherfield field is equal to
 
 <pre>public <strong>requiredUnless</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $value):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be present unless the anotherfield field is equal to any value.
     
@@ -3199,6 +3424,7 @@ The field under validation must be present unless the anotherfield field is equa
 
 <pre>public <strong>requiredWith</strong>(<a target="_blank" href="http://php.net/array">array</a> $fieldNames):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be present only if any of the other specified fields are present.
     
@@ -3214,6 +3440,7 @@ The field under validation must be present only if any of the other specified fi
 
 <pre>public <strong>requiredWithAll</strong>(<a target="_blank" href="http://php.net/array">array</a> $fieldNames):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 required_with_all
     
@@ -3229,6 +3456,7 @@ required_with_all
 
 <pre>public <strong>requiredWithout</strong>(<a target="_blank" href="http://php.net/array">array</a> $fieldNames):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be present only when any of the other specified fields are not present.
     
@@ -3244,6 +3472,7 @@ The field under validation must be present only when any of the other specified 
 
 <pre>public <strong>requiredWithoutAll</strong>(<a target="_blank" href="http://php.net/array">array</a> $fieldNames):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be present only when all of the other specified fields are not present.
     
@@ -3259,6 +3488,7 @@ The field under validation must be present only when all of the other specified 
 
 <pre>public <strong>same</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The given field must match the field under validation.
     
@@ -3274,6 +3504,7 @@ The given field must match the field under validation.
 
 <pre>public <strong>size</strong>(<a target="_blank" href="http://php.net/int">int</a> $value):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must have a size matching the given value. For string data, value corresponds to the number of characters. For numeric data, value corresponds to a given integer value. For files, size corresponds to the file size in kilobytes.
     
@@ -3289,16 +3520,19 @@ The field under validation must have a size matching the given value. For string
 
 <pre>public <strong>string</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be a string.
     
 <pre>public <strong>timezone</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be a valid timezone identifier according to the timezone_identifiers_list PHP function.
     
 <pre>public <strong>unique</strong>(<a target="_blank" href="http://php.net/string">string</a> $table, <a target="_blank" href="http://php.net/string">string</a> $column, <a target="_blank" href="http://php.net/string">string</a> $except = null, <a target="_blank" href="http://php.net/string">string</a> $idColumn = null):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be unique on a given database table. If the column option is not specified, the field name will be used.
     
@@ -3329,11 +3563,13 @@ The field under validation must be unique on a given database table. If the colu
 
 <pre>public <strong>url</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 The field under validation must be a valid URL according to PHP&#039;s filter_var function.
     
 <pre>public <strong>sometimes</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
+
     
 In some situations, you may wish to run validation checks against a field only if that field is present in the input array. To quickly accomplish this, add the sometimes rule.
     
@@ -3341,6 +3577,7 @@ In some situations, you may wish to run validation checks against a field only i
 ### AttributeFactory<a name="miscellaneous_service_attributefactory"></a>
 
 Instantiates Attribute Classes
+
 
 #### Namespace
 
@@ -3352,6 +3589,7 @@ Instantiates Attribute Classes
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/string">string</a> $which):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -3370,6 +3608,7 @@ Instantiates Attribute Classes
 
 Instantiates Validator Classes
 
+
 #### Namespace
 
 `Plenty\Validation\Service`
@@ -3380,6 +3619,7 @@ Instantiates Validator Classes
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/string">string</a> $validatorClass):<a href="miscellaneous#miscellaneous_validation_validator">Validator</a>
 </pre>
+
     
 
     
@@ -3400,6 +3640,7 @@ Instantiates Validator Classes
 
 
 
+
 #### Namespace
 
 `Illuminate\Support`
@@ -3407,6 +3648,7 @@ Instantiates Validator Classes
 
 
 ### Collection<a name="miscellaneous_support_collection"></a>
+
 
 
 
@@ -3420,6 +3662,7 @@ Instantiates Validator Classes
 
 
 
+
 #### Namespace
 
 `Illuminate\Support`
@@ -3430,6 +3673,7 @@ Instantiates Validator Classes
 
 <pre>public <strong>register</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Register the service provider.
     
@@ -3437,6 +3681,7 @@ Register the service provider.
     
 ## Carbon<a name="miscellaneous__carbon"></a>
 ### Carbon<a name="miscellaneous_carbon_carbon"></a>
+
 
 
 
@@ -3515,6 +3760,7 @@ Register the service provider.
 
 Abstract Model class
 
+
 #### Namespace
 
 `Illuminate\Database\Eloquent`
@@ -3522,6 +3768,7 @@ Abstract Model class
 
 
 ### Collection<a name="miscellaneous_eloquent_collection"></a>
+
 
 
 
@@ -3534,6 +3781,7 @@ Abstract Model class
     
 ## HttpFoundation<a name="miscellaneous_component_httpfoundation"></a>
 ### Response<a name="miscellaneous_httpfoundation_response"></a>
+
 
 
 

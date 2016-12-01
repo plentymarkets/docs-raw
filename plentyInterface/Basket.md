@@ -7,6 +7,7 @@
 
 The BasketItemRepositoryContract is the interface for the basket item repository. This interface allows to list, add, update and delete items from the shopping cart of the current customer session.
 
+
 #### Namespace
 
 `Plenty\Modules\Basket\Contracts`
@@ -17,6 +18,7 @@ The BasketItemRepositoryContract is the interface for the basket item repository
 
 <pre>public <strong>findOneById</strong>(<a target="_blank" href="http://php.net/int">int</a> $basketRowId):<a href="basket#basket_models_basketitem">BasketItem</a>
 </pre>
+
     
 Gets an existing item by ID in the shopping cart of the current customer session.
     
@@ -32,6 +34,7 @@ Gets an existing item by ID in the shopping cart of the current customer session
 
 <pre>public <strong>findExistingOneByData</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="basket#basket_models_basketitem">BasketItem</a>
 </pre>
+
     
 Gets an existing item by item data in the shopping cart of the current customer session.
     
@@ -46,11 +49,13 @@ Gets an existing item by item data in the shopping cart of the current customer 
 
 
 <pre>public <strong>all</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists all items in the shopping cart of the current customer session.
     
 <pre>public <strong>addBasketItem</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="basket#basket_models_basketitem">BasketItem</a>
 </pre>
+
     
 Creates an item with the specified item data in the shopping cart.
     
@@ -66,6 +71,7 @@ Creates an item with the specified item data in the shopping cart.
 
 <pre>public <strong>updateBasketItem</strong>(<a target="_blank" href="http://php.net/int">int</a> $basketItemId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Updates an existing item in the shopping cart. The ID of the item and the data to be updated must be specified.
     
@@ -86,6 +92,7 @@ Updates an existing item in the shopping cart. The ID of the item and the data t
 
 <pre>public <strong>removeBasketItem</strong>(<a target="_blank" href="http://php.net/int">int</a> $basketItemId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Deletes an item from the shopping cart. The ID of the item must be specified.
     
@@ -104,6 +111,7 @@ Deletes an item from the shopping cart. The ID of the item must be specified.
 
 The BasketRepositoryContract is the interface for the basket repository. This interface allows to get the shopping cart of the current customer session.
 
+
 #### Namespace
 
 `Plenty\Modules\Basket\Contracts`
@@ -114,6 +122,7 @@ The BasketRepositoryContract is the interface for the basket repository. This in
 
 <pre>public <strong>load</strong>():<a href="basket#basket_models_basket">Basket</a>
 </pre>
+
     
 Gets the shopping cart from current customer session.
     
@@ -122,6 +131,7 @@ Gets the shopping cart from current customer session.
 
 Created by ptopczewski, 12.05.16 09:03
 Class BasketItemCheckException
+
 
 #### Namespace
 
@@ -134,6 +144,7 @@ Class BasketItemCheckException
 Created by ptopczewski, 17.05.16 09:37
 Class BasketItemQuantityCheckException
 
+
 #### Namespace
 
 `Plenty\Modules\Basket\Exceptions`
@@ -143,6 +154,7 @@ Class BasketItemQuantityCheckException
 ### Basket<a name="basket_models_basket"></a>
 
 The basket model
+
 
 #### Namespace
 
@@ -283,6 +295,7 @@ The basket model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -290,6 +303,7 @@ returns this model as an array
 ### BasketItem<a name="basket_models_basketitem"></a>
 
 The basket item model
+
 
 #### Namespace
 
@@ -445,6 +459,7 @@ The basket item model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -455,6 +470,7 @@ returns this model as an array
 
 The event is triggered after the shopping cart is changed.
 
+
 #### Namespace
 
 `Plenty\Modules\Basket\Events\Basket`
@@ -464,11 +480,13 @@ The event is triggered after the shopping cart is changed.
 #### Methods
 
 <pre>public <strong>hasValidCoupon</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 
     
 <pre>public <strong>setHasValidCoupon</strong>(<a target="_blank" href="http://php.net/bool">bool</a> $hasValidCoupon):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -484,15 +502,18 @@ The event is triggered after the shopping cart is changed.
 
 <pre>public <strong>getBasket</strong>():<a href="basket#basket_models_basket">Basket</a>
 </pre>
+
     
 
     
 <pre>public <strong>getLocationId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
 <pre>public <strong>setLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId):<a href="basket#basket_events_basket">Basket</a>
 </pre>
+
     
 
     
@@ -508,12 +529,14 @@ The event is triggered after the shopping cart is changed.
 
 <pre>public <strong>getInvoiceAddress</strong>():<a href="account#account_models_address">Address</a>
 </pre>
+
     
 
     
 <pre>public <strong>setInvoiceAddress</strong>(<a href="account#account_models_address">Address</a>
  $invoiceAddress):<a href="basket#basket_events_basket">Basket</a>
 </pre>
+
     
 
     
@@ -529,11 +552,13 @@ The event is triggered after the shopping cart is changed.
 
 
 <pre>public <strong>getMaxFsk</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
 <pre>public <strong>setMaxFsk</strong>(<a target="_blank" href="http://php.net/int">int</a> $maxFsk):<a href="basket#basket_events_basket">Basket</a>
 </pre>
+
     
 
     
@@ -548,11 +573,13 @@ The event is triggered after the shopping cart is changed.
 
 
 <pre>public <strong>getShippingCosts</strong>():<a target="_blank" href="http://php.net/float">float</a></pre>
+
     
 
     
 <pre>public <strong>setShippingCosts</strong>(<a target="_blank" href="http://php.net/float">float</a> $shippingCosts):<a href="basket#basket_events_basket">Basket</a>
 </pre>
+
     
 
     
@@ -571,6 +598,7 @@ The event is triggered after the shopping cart is changed.
 
 The event is triggered after the shopping cart is created.
 
+
 #### Namespace
 
 `Plenty\Modules\Basket\Events\Basket`
@@ -581,6 +609,7 @@ The event is triggered after the shopping cart is created.
 
 <pre>public <strong>getBasket</strong>():<a href="basket#basket_models_basket">Basket</a>
 </pre>
+
     
 
     
@@ -588,6 +617,7 @@ The event is triggered after the shopping cart is created.
 ### AfterBasketItemAdd<a name="basket_basketitem_afterbasketitemadd"></a>
 
 The event is triggered after an item is added to the shopping cart.
+
 
 #### Namespace
 
@@ -599,6 +629,7 @@ The event is triggered after an item is added to the shopping cart.
 
 <pre>public <strong>getBasketItem</strong>():<a href="basket#basket_models_basketitem">BasketItem</a>
 </pre>
+
     
 
     
@@ -606,6 +637,7 @@ The event is triggered after an item is added to the shopping cart.
 ### AfterBasketItemRemove<a name="basket_basketitem_afterbasketitemremove"></a>
 
 The event is triggered after an item is deleted from the shopping cart.
+
 
 #### Namespace
 
@@ -617,6 +649,7 @@ The event is triggered after an item is deleted from the shopping cart.
 
 The event is triggered after an item in the shopping cart is updated.
 
+
 #### Namespace
 
 `Plenty\Modules\Basket\Events\BasketItem`
@@ -626,6 +659,7 @@ The event is triggered after an item in the shopping cart is updated.
 ### BeforeBasketItemAdd<a name="basket_basketitem_beforebasketitemadd"></a>
 
 The event is triggered before an item is created in the shopping cart.
+
 
 #### Namespace
 
@@ -637,6 +671,7 @@ The event is triggered before an item is created in the shopping cart.
 
 <pre>public <strong>getBasketItem</strong>():<a href="basket#basket_models_basketitem">BasketItem</a>
 </pre>
+
     
 
     
@@ -644,6 +679,7 @@ The event is triggered before an item is created in the shopping cart.
 ### BeforeBasketItemRemove<a name="basket_basketitem_beforebasketitemremove"></a>
 
 The event is triggered before an item is deleted from the shopping cart.
+
 
 #### Namespace
 
@@ -654,6 +690,7 @@ The event is triggered before an item is deleted from the shopping cart.
 ### BeforeBasketItemUpdate<a name="basket_basketitem_beforebasketitemupdate"></a>
 
 The event is triggered before an item in the shopping cart is updated.
+
 
 #### Namespace
 

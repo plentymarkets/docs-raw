@@ -7,6 +7,7 @@
 
 The OrderItemRepositoryContract is the interface for the order item repository. This interface allows you to find, create and update order items. An order item can be e.g. items, surcharges and coupons. Each order item is given a unique id, which links it to a specific order.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Contracts`
@@ -16,6 +17,7 @@ The OrderItemRepositoryContract is the interface for the order item repository. 
 #### Methods
 
 <pre>public <strong>deleteOrderItem</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/int">int</a> $orderItemId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Deletes an order item. The order ID and the order item ID have to be provided.
     
@@ -39,6 +41,7 @@ Deletes an order item. The order ID and the order item ID have to be provided.
 
 The OrderRepositoryContract is the interface for the order repository. This interface allows you to find, create and update orders. There are many different order types and the data returned depends on the order type.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Contracts`
@@ -49,6 +52,7 @@ The OrderRepositoryContract is the interface for the order repository. This inte
 
 <pre>public <strong>findOrderById</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="order#order_models_order">Order</a>
 </pre>
+
     
 Get an order
     
@@ -57,20 +61,21 @@ Get an order
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderId</td>
-        <td>The id of the order to be found.</td>
+        <td>The ID of the order</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance, one of "address", "events", "dates", "relation", "reference", "comments".</td>
+        <td>The relations to load in the order instance, one of "address", "events", "dates", "relation", "reference", "comments".</td>
     </tr>
 </table>
 
 
 <pre>public <strong>createOrder</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="order#order_models_order">Order</a>
 </pre>
+
     
-Create an order.
+Create an order
     
 ##### <strong>Parameters</strong>
     
@@ -84,8 +89,9 @@ Create an order.
 
 <pre>public <strong>updateOrder</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $orderId):<a href="order#order_models_order">Order</a>
 </pre>
+
     
-Updates the order specified by the id.
+Update an order
     
 ##### <strong>Parameters</strong>
     
@@ -97,12 +103,13 @@ Updates the order specified by the id.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderId</td>
-        <td>The id of the order to be updated</td>
+        <td>The ID of the order</td>
     </tr>
 </table>
 
 
 <pre>public <strong>deleteOrder</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Delete an order
     
@@ -111,47 +118,50 @@ Delete an order
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderId</td>
-        <td>The id of the order to be deleted</td>
+        <td>The ID of the order</td>
     </tr>
 </table>
 
 
 <pre>public <strong>undeleteOrder</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/float">float</a> $status):<a href="order#order_models_order">Order</a>
 </pre>
+
     
-Undos a deletion of a previously deleted order
+Restore an order
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderId</td>
-        <td></td>
+        <td>The ID of the order</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
         <td>$status</td>
-        <td></td>
+        <td>The status of the order</td>
     </tr>
 </table>
 
 
 <pre>public <strong>isDeleted</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
-Checks wheither an order has been deleted or not.
+Checks whether an order has been deleted or not.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderId</td>
-        <td>The id of the order, which should be checked, if it is deleted</td>
+        <td>The ID of the order</td>
     </tr>
 </table>
 
 
 <pre>public <strong>findSchedulerById</strong>(<a target="_blank" href="http://php.net/int">int</a> $schedulerId):<a href="order#order_models_orderscheduler">OrderScheduler</a>
 </pre>
+
     
 Get a scheduler order
     
@@ -160,22 +170,23 @@ Get a scheduler order
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$schedulerId</td>
-        <td>The id of the scheduler order</td>
+        <td>The ID of the scheduler order</td>
     </tr>
 </table>
 
 
 <pre>public <strong>allOrdersByContact</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
+
     
-List orders for a contact id
+List orders of a contact
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$contactId</td>
-        <td>The id of the contact to get all orders for.</td>
+        <td>The ID of the contact</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -197,15 +208,16 @@ List orders for a contact id
 
 <pre>public <strong>getLatestOrderByContactId</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="order#order_models_order">Order</a>
 </pre>
+
     
-Get latest order for a contact id
+Get latest order of a contact
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$contactId</td>
-        <td>The id of the contact</td>
+        <td>The ID of the contact</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -217,6 +229,7 @@ Get latest order for a contact id
 
 
 <pre>public <strong>searchOrders</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List orders by filter options
     
@@ -240,31 +253,27 @@ List orders by filter options
 </table>
 
 
-<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
+<pre>public <strong>getPackageNumbers</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
-Sets the filter array.
+List package numbers of an order
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filters</td>
-        <td></td>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order</td>
     </tr>
 </table>
 
 
-<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-    
-Returns the filter array.
-    
 ## Events<a name="order_order_events"></a>
 ### OrderCreated<a name="order_events_ordercreated"></a>
 
 An event class fired after a new order is created. The order type is not relevant.
  * 	At the same time also type depended events will be fired, like ReturnsCreated or CreditNoteCreated.
+
 
 #### Namespace
 
@@ -275,6 +284,7 @@ An event class fired after a new order is created. The order type is not relevan
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -283,6 +293,7 @@ returns this model as an array
 
 A base event class for all order events. Each order event expects an order instance.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events`
@@ -292,6 +303,7 @@ A base event class for all order events. Each order event expects an order insta
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -300,6 +312,7 @@ returns this model as an array
 
 An Event class fired after a payment assignment when the order is fully paid.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events`
@@ -309,6 +322,7 @@ An Event class fired after a payment assignment when the order is fully paid.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -317,6 +331,7 @@ returns this model as an array
 
 An Event class fired after a payment assignment when the order is overpaid.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events`
@@ -326,6 +341,7 @@ An Event class fired after a payment assignment when the order is overpaid.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -334,6 +350,7 @@ returns this model as an array
 
 A base Event class for all order paid events.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events`
@@ -343,6 +360,7 @@ A base Event class for all order paid events.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -351,6 +369,7 @@ returns this model as an array
 
 An Event class fired after a payment assignment when the order is partly paid.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events`
@@ -360,6 +379,7 @@ An Event class fired after a payment assignment when the order is partly paid.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -370,6 +390,7 @@ An Event class fired after a payment was assigned to an order.
  * After this event one of the following events will be fired, depending the payment status of the order:
  *	 OrderPrepaid, OrderPartlyPaid, OrderFullyPaid, OrderOverpaid.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events`
@@ -379,6 +400,7 @@ An Event class fired after a payment was assigned to an order.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -387,6 +409,7 @@ returns this model as an array
 
 An Event class fired after a payment assignment when the order is paid in advance.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events`
@@ -396,6 +419,7 @@ An Event class fired after a payment assignment when the order is paid in advanc
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -403,6 +427,7 @@ returns this model as an array
 ### Order<a name="order_models_order"></a>
 
 The order model.
+
 
 #### Namespace
 
@@ -546,6 +571,7 @@ The order model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -553,6 +579,7 @@ returns this model as an array
 ### OrderAmount<a name="order_models_orderamount"></a>
 
 The order amount model.
+
 
 #### Namespace
 
@@ -644,6 +671,7 @@ The order amount model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -651,6 +679,7 @@ returns this model as an array
 ### OrderAmountVat<a name="order_models_orderamountvat"></a>
 
 The order amount vat model.
+
 
 #### Namespace
 
@@ -713,6 +742,7 @@ The order amount vat model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -720,6 +750,7 @@ returns this model as an array
 ### OrderItem<a name="order_models_orderitem"></a>
 
 The order item model. Items, shipping costs, coupons, surcharges etc. are all displayed as order items.
+
 
 #### Namespace
 
@@ -832,6 +863,11 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 </td>
             <td>properties</td>
             <td>The order item property that are associated with the order item.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>orderProperties</td>
+            <td>The order item order properties that are associated with the order item.</td>
         </tr></tbody>
 </table>
 
@@ -839,6 +875,7 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -846,6 +883,7 @@ returns this model as an array
 ### OrderItemAmount<a name="order_models_orderitemamount"></a>
 
 The order item amount model. Order item amount refers to amounts of money.
+
 
 #### Namespace
 
@@ -932,6 +970,51 @@ The order item amount model. Order item amount refers to amounts of money.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
+    
+returns this model as an array
+    
+
+### OrderItemOrderProperty<a name="order_models_orderitemorderproperty"></a>
+
+This model holds the order properties that are assigned to order items.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>propertyId</td>
+            <td>The ID of the order property</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td>The value for the order property</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>fileUrl</td>
+            <td>The URL of the oder property</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -939,6 +1022,7 @@ returns this model as an array
 ### OrderItemProperty<a name="order_models_orderitemproperty"></a>
 
 The order item property model.
+
 
 #### Namespace
 
@@ -1041,6 +1125,7 @@ The order item property model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1048,6 +1133,7 @@ returns this model as an array
 ### OrderItemType<a name="order_models_orderitemtype"></a>
 
 The order item type model.
+
 
 #### Namespace
 
@@ -1088,6 +1174,7 @@ The order item type model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1095,6 +1182,7 @@ returns this model as an array
 ### OrderItemTypeName<a name="order_models_orderitemtypename"></a>
 
 The order item type name model.
+
 
 #### Namespace
 
@@ -1139,6 +1227,7 @@ The order item type name model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1146,6 +1235,7 @@ returns this model as an array
 ### OrderProperty<a name="order_models_orderproperty"></a>
 
 The order properties model. Each order property has a type and can have an additional sub-type.
+
 
 #### Namespace
 
@@ -1248,6 +1338,7 @@ The order properties model. Each order property has a type and can have an addit
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1255,6 +1346,7 @@ returns this model as an array
 ### OrderPropertySubType<a name="order_models_orderpropertysubtype"></a>
 
 The order property sub-type model
+
 
 #### Namespace
 
@@ -1295,6 +1387,7 @@ The order property sub-type model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1302,6 +1395,7 @@ returns this model as an array
 ### OrderPropertySubTypeName<a name="order_models_orderpropertysubtypename"></a>
 
 The order property sub type name model
+
 
 #### Namespace
 
@@ -1346,6 +1440,7 @@ The order property sub type name model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1353,6 +1448,7 @@ returns this model as an array
 ### OrderPropertyType<a name="order_models_orderpropertytype"></a>
 
 The order property type model. Each order has a type and can have an additional sub-type.
+
 
 #### Namespace
 
@@ -1393,6 +1489,7 @@ The order property type model. Each order has a type and can have an additional 
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1400,6 +1497,7 @@ returns this model as an array
 ### OrderPropertyTypeName<a name="order_models_orderpropertytypename"></a>
 
 The order property type name model.
+
 
 #### Namespace
 
@@ -1444,6 +1542,7 @@ The order property type name model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1451,6 +1550,7 @@ returns this model as an array
 ### OrderRelationReference<a name="order_models_orderrelationreference"></a>
 
 The order relation reference model specifies how references and orders are related to one another.
+
 
 #### Namespace
 
@@ -1530,6 +1630,7 @@ The order relation reference model specifies how references and orders are relat
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1537,6 +1638,7 @@ returns this model as an array
 ### OrderType<a name="order_models_ordertype"></a>
 
 The order type model.
+
 
 #### Namespace
 
@@ -1577,6 +1679,7 @@ The order type model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1584,6 +1687,7 @@ returns this model as an array
 ### OrderTypeName<a name="order_models_ordertypename"></a>
 
 The order type name model.
+
 
 #### Namespace
 
@@ -1628,6 +1732,7 @@ The order type name model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1635,6 +1740,7 @@ returns this model as an array
 ### PriceCalculationResultItem<a name="order_models_pricecalculationresultitem"></a>
 
 price calculation result item
+
 
 #### Namespace
 
@@ -1686,6 +1792,7 @@ price calculation result item
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1693,6 +1800,7 @@ returns this model as an array
 ### OrderCreatedTypeService<a name="order_services_ordercreatedtypeservice"></a>
 
 (Un)Register event classes extending OrderCreated for custom order types.
+
 
 #### Namespace
 
@@ -1705,6 +1813,7 @@ returns this model as an array
 <pre>public <strong>handle</strong>(<a href="order#order_events_ordercreated">OrderCreated</a>
  $created):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Handle the OrderCreated event by detecting the subevent to fire according the order type id of the order.
     
@@ -1721,6 +1830,7 @@ Handle the OrderCreated event by detecting the subevent to fire according the or
 
 <pre>public static <strong>addEventForType</strong>(<a target="_blank" href="http://php.net/int">int</a> $typeId, <a target="_blank" href="http://php.net/string">string</a> $className):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Add an event class extending OrderCreated for the given custom order type id.
     
@@ -1741,6 +1851,7 @@ Add an event class extending OrderCreated for the given custom order type id.
 
 <pre>public static <strong>removeEventForType</strong>(<a target="_blank" href="http://php.net/int">int</a> $typeId, <a target="_blank" href="http://php.net/string">string</a> $className):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Removes an event class for the given custom order type id.
     
@@ -1765,6 +1876,7 @@ Removes an event class for the given custom order type id.
 ### CouponCampaignCode<a name="order_models_couponcampaigncode"></a>
 
 The CouponCampaignCode model contains information about coupon codes. Each code belongs to one campaign only.
+
 
 #### Namespace
 
@@ -1841,6 +1953,7 @@ The CouponCampaignCode model contains information about coupon codes. Each code 
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1848,6 +1961,7 @@ returns this model as an array
 ### CouponCodeRepositoryContract<a name="order_contracts_couponcoderepositorycontract"></a>
 
 The CouponCodeRepositoryContract is the interface for the coupon code repository. This interface allows you to redeem coupons.
+
 
 #### Namespace
 
@@ -1858,6 +1972,7 @@ The CouponCodeRepositoryContract is the interface for the coupon code repository
 #### Methods
 
 <pre>public <strong>redeem</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/string">string</a> $coupon):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Redeem coupon codes
     
@@ -1882,6 +1997,7 @@ Redeem coupon codes
 ### CouponCampaign<a name="order_models_couponcampaign"></a>
 
 The CouponCampaign model contains all information of a campaign.
+
 
 #### Namespace
 
@@ -2024,6 +2140,7 @@ The CouponCampaign model contains all information of a campaign.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2033,6 +2150,7 @@ returns this model as an array
 ### CouponCodeContactRepositoryContract<a name="order_contracts_couponcodecontactrepositorycontract"></a>
 
 This is the contract for the coupon codes by contacts repository. It allows you to list coupon codes redeemed by a contact as well as to create, update and delete redeemed coupon codes.
+
 
 #### Namespace
 
@@ -2044,6 +2162,7 @@ This is the contract for the coupon codes by contacts repository. It allows you 
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="order#order_models_couponcodecontact">CouponCodeContact</a>
 </pre>
+
     
 Create redeemed coupons for a contact.
     
@@ -2059,6 +2178,7 @@ Create redeemed coupons for a contact.
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $campaignId, <a target="_blank" href="http://php.net/string">string</a> $coupon, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="order#order_models_couponcodecontact">CouponCodeContact</a>
 </pre>
+
     
 Update a redeemed coupon of a contact.
     
@@ -2089,6 +2209,7 @@ Update a redeemed coupon of a contact.
 
 <pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $campaignId, <a target="_blank" href="http://php.net/string">string</a> $coupon):<a href="order#order_models_couponcodecontact">CouponCodeContact</a>
 </pre>
+
     
 Get a redeemed coupon for a contact
     
@@ -2113,6 +2234,7 @@ Get a redeemed coupon for a contact
 
 
 <pre>public <strong>findByContact</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List redeemed coupons for a contact
     
@@ -2137,6 +2259,7 @@ List redeemed coupons for a contact
 
 
 <pre>public <strong>findByCampaign</strong>(<a target="_blank" href="http://php.net/int">int</a> $campaignId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List redeemed coupons of a campaign.
     
@@ -2161,6 +2284,7 @@ List redeemed coupons of a campaign.
 
 
 <pre>public <strong>findByCoupon</strong>(<a target="_blank" href="http://php.net/string">string</a> $coupon, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List redeemed coupons of a coupon code
     
@@ -2188,6 +2312,7 @@ List redeemed coupons of a coupon code
 ### CouponCodeContact<a name="order_models_couponcodecontact"></a>
 
 The CouponCodeContact model.
+
 
 #### Namespace
 
@@ -2240,6 +2365,7 @@ The CouponCodeContact model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2249,6 +2375,7 @@ returns this model as an array
 ### CouponCodeValidatorContract<a name="order_contracts_couponcodevalidatorcontract"></a>
 
 CouponCodeValidatorContract is the interface for the coupon code validation repository. This interface provides the functionality to validate coupon data.
+
 
 #### Namespace
 
@@ -2261,6 +2388,7 @@ CouponCodeValidatorContract is the interface for the coupon code validation repo
 <pre>public <strong>validate</strong>(<a href="order#order_models_couponcodevalidation">CouponCodeValidation</a>
  $validationData):<a href="order#order_models_couponcodevalidation">CouponCodeValidation</a>
 </pre>
+
     
 Validate a coupon code
     
@@ -2279,6 +2407,7 @@ Validate a coupon code
 ### CouponCodeValidation<a name="order_models_couponcodevalidation"></a>
 
 The CouponCodeValidation data model contains all data necessary for validating a coupon.
+
 
 #### Namespace
 
@@ -2373,6 +2502,7 @@ string                                 $campaignUid				The id of the affiliprint
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2380,6 +2510,7 @@ returns this model as an array
 ### CouponCodeValidationItem<a name="order_models_couponcodevalidationitem"></a>
 
 The CouponCodeValidationItem model contains all item data needed for validating whether the coupon can be redeemed for these items or not.
+
 
 #### Namespace
 
@@ -2427,6 +2558,7 @@ The CouponCodeValidationItem model contains all item data needed for validating 
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2436,6 +2568,7 @@ returns this model as an array
 ### CurrencyRepositoryContract<a name="order_contracts_currencyrepositorycontract"></a>
 
 Provides methods for currency data.
+
 
 #### Namespace
 
@@ -2447,6 +2580,7 @@ Provides methods for currency data.
 
 <pre>public <strong>getCurrency</strong>(<a target="_blank" href="http://php.net/string">string</a> $currencyIso, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="order#order_models_currency">Currency</a>
 </pre>
+
     
 Get a currency
     
@@ -2471,6 +2605,7 @@ Get a currency
 
 
 <pre>public <strong>getCurrencyList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Get all currencies supported in the system.
     
@@ -2490,6 +2625,7 @@ Get all currencies supported in the system.
 
 
 <pre>public <strong>getCurrencyCountries</strong>(<a target="_blank" href="http://php.net/string">string</a> $currencyIso, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List countries for a currency
     
@@ -2510,6 +2646,7 @@ List countries for a currency
 
 <pre>public <strong>getCountryCurrency</strong>(<a target="_blank" href="http://php.net/int">int</a> $countryId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="order#order_models_currency">Currency</a>
 </pre>
+
     
 Get a currency for a country
     
@@ -2537,6 +2674,7 @@ Get a currency for a country
 ### Currency<a name="order_models_currency"></a>
 
 The currency model. The model includes information like ISO 4217 code and the related symbols as well as the countries that a currency is used in.
+
 
 #### Namespace
 
@@ -2590,6 +2728,7 @@ The currency model. The model includes information like ISO 4217 code and the re
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2597,6 +2736,7 @@ returns this model as an array
 ### CurrencyCountryRelation<a name="order_models_currencycountryrelation"></a>
 
 The CurrencyCountryRelation model indicates which currency is related to which country.
+
 
 #### Namespace
 
@@ -2642,6 +2782,7 @@ The CurrencyCountryRelation model indicates which currency is related to which c
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2649,6 +2790,7 @@ returns this model as an array
 ### CurrencyName<a name="order_models_currencyname"></a>
 
 The currency name model.
+
 
 #### Namespace
 
@@ -2693,6 +2835,7 @@ The currency name model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2703,6 +2846,7 @@ returns this model as an array
 
 The OrderDateRepositoryContract contains the functionality to find available OrderDateTypes with their names in a specific language. Furthermore it is possible to create new OrderDateTypes, to update or delete existing date types and to create date type names for a language.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Date\Contracts`
@@ -2712,6 +2856,7 @@ The OrderDateRepositoryContract contains the functionality to find available Ord
 #### Methods
 
 <pre>public <strong>findNamesByTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $typeId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Get date type names
     
@@ -2727,6 +2872,7 @@ Get date type names
 
 <pre>public <strong>findNameByTypeIdAndLang</strong>(<a target="_blank" href="http://php.net/int">int</a> $typeId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="order#order_models_orderdatetypename">OrderDateTypeName</a>
 </pre>
+
     
 Get a date type name
     
@@ -2747,11 +2893,13 @@ Get a date type name
 
 <pre>public <strong>findTypes</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Get the date types
     
 <pre>public <strong>findTypeById</strong>(<a target="_blank" href="http://php.net/int">int</a> $typeId):<a href="order#order_models_orderdatetype">OrderDateType</a>
 </pre>
+
     
 Get a date type
     
@@ -2767,6 +2915,7 @@ Get a date type
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data = []):<a href="order#order_models_orderdate">OrderDate</a>
 </pre>
+
     
 Create an order date
     
@@ -2782,6 +2931,7 @@ Create an order date
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $orderDateId):<a href="order#order_models_orderdate">OrderDate</a>
 </pre>
+
     
 Update a date
     
@@ -2802,6 +2952,7 @@ Update a date
 
 <pre>public <strong>save</strong>(<a target="_blank" href="http://php.net/array">array</a> $data = []):<a href="order#order_models_orderdate">OrderDate</a>
 </pre>
+
     
 Create or update order date
     
@@ -2816,6 +2967,7 @@ Create or update order date
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderDateId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Delete a date
     
@@ -2831,6 +2983,7 @@ Delete a date
 
 <pre>public <strong>findByOrderIdAndTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a href="order#order_models_orderdate">OrderDate</a>
 </pre>
+
     
 Get an order date
     
@@ -2850,6 +3003,7 @@ Get an order date
 
 
 <pre>public <strong>findByOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List order dates
     
@@ -2867,6 +3021,7 @@ List order dates
 ### OrderDate<a name="order_models_orderdate"></a>
 
 The OrderDate model.
+
 
 #### Namespace
 
@@ -2937,6 +3092,7 @@ The OrderDate model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2944,6 +3100,7 @@ returns this model as an array
 ### OrderDateType<a name="order_models_orderdatetype"></a>
 
 The OrderDateType model.
+
 
 #### Namespace
 
@@ -2999,6 +3156,7 @@ The OrderDateType model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3006,6 +3164,7 @@ returns this model as an array
 ### OrderDateTypeName<a name="order_models_orderdatetypename"></a>
 
 The OrderDateTypeName model. Order date types can have several names. One name per language. Each name has a unique ID.
+
 
 #### Namespace
 
@@ -3060,6 +3219,7 @@ The OrderDateTypeName model. Order date types can have several names. One name p
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3070,6 +3230,7 @@ returns this model as an array
 
 An event class fired after a new credit note is created.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events\Created`
@@ -3079,6 +3240,7 @@ An event class fired after a new credit note is created.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3087,6 +3249,7 @@ returns this model as an array
 
 An event class fired after a new delivery order is created.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events\Created`
@@ -3096,6 +3259,7 @@ An event class fired after a new delivery order is created.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3104,6 +3268,7 @@ returns this model as an array
 
 An event class fired after a new multi credit note is created.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events\Created`
@@ -3113,6 +3278,7 @@ An event class fired after a new multi credit note is created.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3121,6 +3287,7 @@ returns this model as an array
 
 An event class fired after a new multi order is created.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events\Created`
@@ -3130,6 +3297,7 @@ An event class fired after a new multi order is created.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3138,6 +3306,7 @@ returns this model as an array
 
 An event class fired after a new repair is created.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events\Created`
@@ -3147,6 +3316,7 @@ An event class fired after a new repair is created.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3155,6 +3325,7 @@ returns this model as an array
 
 An event class fired after a new returns is created.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events\Created`
@@ -3164,6 +3335,7 @@ An event class fired after a new returns is created.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3172,6 +3344,7 @@ returns this model as an array
 
 An event class fired after a new sales order is created.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events\Created`
@@ -3181,6 +3354,7 @@ An event class fired after a new sales order is created.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3189,6 +3363,7 @@ returns this model as an array
 
 An event class fired after a new warranty is created.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Events\Created`
@@ -3198,6 +3373,7 @@ An event class fired after a new warranty is created.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3207,6 +3383,7 @@ returns this model as an array
 ### Order<a name="order_legacy_order"></a>
 
 The legacy order model
+
 
 #### Namespace
 
@@ -3290,6 +3467,7 @@ The legacy order model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3300,6 +3478,7 @@ returns this model as an array
 
 Repository Contract for PaymentMethod
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Payment\Method\Contracts`
@@ -3309,6 +3488,7 @@ Repository Contract for PaymentMethod
 #### Methods
 
 <pre>public <strong>getPaymentMethods</strong>(<a target="_blank" href="http://php.net/int">int</a> $countryId, <a target="_blank" href="http://php.net/int">int</a> $plentyId = null, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -3336,6 +3516,7 @@ Repository Contract for PaymentMethod
 ### PaymentMethod<a name="order_models_paymentmethod"></a>
 
 The payment method model
+
 
 #### Namespace
 
@@ -3440,6 +3621,7 @@ The payment method model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3447,6 +3629,7 @@ returns this model as an array
 ### PaymentMethodInformation<a name="order_models_paymentmethodinformation"></a>
 
 The payment method information model
+
 
 #### Namespace
 
@@ -3502,6 +3685,7 @@ The payment method information model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3512,6 +3696,7 @@ returns this model as an array
 
 Provides methods for processing order referrers. An order referrer indicates where a purchase was made originally. 
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Referrer\Contracts`
@@ -3521,6 +3706,7 @@ Provides methods for processing order referrers. An order referrer indicates whe
 #### Methods
 
 <pre>public <strong>getList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List order referrers
     
@@ -3536,6 +3722,7 @@ List order referrers
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/float">float</a> $parentReferrerId = null):<a href="order#order_models_orderreferrer">OrderReferrer</a>
 </pre>
+
     
 Create an order referrer
     
@@ -3556,6 +3743,7 @@ Create an order referrer
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/float">float</a> $referrerId):<a href="order#order_models_orderreferrer">OrderReferrer</a>
 </pre>
+
     
 Update an order referrer
     
@@ -3576,6 +3764,7 @@ Update an order referrer
 
 <pre>public <strong>getReferrerById</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="order#order_models_orderreferrer">OrderReferrer</a>
 </pre>
+
     
 Get an order referrer
     
@@ -3595,6 +3784,7 @@ Get an order referrer
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Delete an order referrer.
     
@@ -3612,6 +3802,7 @@ Delete an order referrer.
 ### OrderReferrer<a name="order_models_orderreferrer"></a>
 
 The order referrer model. An order referrer shows where a purchase was originally made.
+
 
 #### Namespace
 
@@ -3667,6 +3858,7 @@ The order referrer model. An order referrer shows where a purchase was originall
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3676,6 +3868,7 @@ returns this model as an array
 ### OrderScheduler<a name="order_models_orderscheduler"></a>
 
 The legacy order model
+
 
 #### Namespace
 
@@ -3727,6 +3920,7 @@ The legacy order model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3737,6 +3931,7 @@ returns this model as an array
 
 The ParcelServicePresetRepositoryContract is the interface for the shipping profile repository. This interface allows to get a shipping profile by the id or list all shipping profiles.
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Shipping\Contracts`
@@ -3746,6 +3941,7 @@ The ParcelServicePresetRepositoryContract is the interface for the shipping prof
 #### Methods
 
 <pre>public <strong>getPresetList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List all available parcel service presets
     
@@ -3761,6 +3957,7 @@ List all available parcel service presets
 
 <pre>public <strong>getPresetById</strong>(<a target="_blank" href="http://php.net/int">int</a> $presetId, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="order#order_models_parcelservicepreset">ParcelServicePreset</a>
 </pre>
+
     
 Get specific parcel service preset determined by preset id
     
@@ -3781,6 +3978,7 @@ Get specific parcel service preset determined by preset id
 
 <pre>public <strong>getLastWeightedPresetCombinations</strong>(<a href="basket#basket_models_basket">Basket</a>
  $basket, <a target="_blank" href="http://php.net/int">int</a> $contactClass, <a target="_blank" href="http://php.net/array">array</a> $customParams = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Calculate shipping costs and list last weighted preset combinations.
     
@@ -3809,6 +4007,7 @@ Calculate shipping costs and list last weighted preset combinations.
 ### DefaultShipping<a name="order_models_defaultshipping"></a>
 
 The Default Shipping model
+
 
 #### Namespace
 
@@ -3860,6 +4059,7 @@ The Default Shipping model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3870,6 +4070,7 @@ returns this model as an array
 
 Repository for Country
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Shipping\Countries\Contracts`
@@ -3879,6 +4080,7 @@ Repository for Country
 #### Methods
 
 <pre>public <strong>findIsoCode</strong>(<a target="_blank" href="http://php.net/int">int</a> $countryId, <a target="_blank" href="http://php.net/string">string</a> $isoCodeType):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -3899,6 +4101,7 @@ Repository for Country
 
 <pre>public <strong>getCountryById</strong>(<a target="_blank" href="http://php.net/int">int</a> $countryId):<a href="order#order_models_country">Country</a>
 </pre>
+
     
 
     
@@ -3913,6 +4116,7 @@ Repository for Country
 
 
 <pre>public <strong>getCountriesList</strong>(<a target="_blank" href="http://php.net/int">int</a> $active, <a target="_blank" href="http://php.net/array">array</a> $with):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -3932,6 +4136,7 @@ Repository for Country
 
 
 <pre>public <strong>getActiveCountryNameMap</strong>(<a target="_blank" href="http://php.net/string">string</a> $language):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -3949,6 +4154,7 @@ Repository for Country
 ### Country<a name="order_models_country"></a>
 
 The country model
+
 
 #### Namespace
 
@@ -4016,6 +4222,7 @@ The country model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -4023,6 +4230,7 @@ returns this model as an array
 ### CountryName<a name="order_models_countryname"></a>
 
 country name
+
 
 #### Namespace
 
@@ -4058,6 +4266,7 @@ country name
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -4065,6 +4274,7 @@ returns this model as an array
 ### CountryState<a name="order_models_countrystate"></a>
 
 country state
+
 
 #### Namespace
 
@@ -4108,6 +4318,7 @@ country state
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -4118,6 +4329,7 @@ returns this model as an array
 
 The Parcel Service Model
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelService\Models`
@@ -4127,6 +4339,7 @@ The Parcel Service Model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -4135,6 +4348,7 @@ returns this model as an array
 
 The Parcel Service Name Model
 
+
 #### Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelService\Models`
@@ -4144,6 +4358,7 @@ The Parcel Service Name Model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -4151,6 +4366,7 @@ returns this model as an array
 ### ParcelServicePreset<a name="order_models_parcelservicepreset"></a>
 
 The Parcel Service Preset Model
+
 
 #### Namespace
 
@@ -4170,11 +4386,11 @@ The Parcel Service Preset Model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the shipping profile (autoincrement value)</td>
+            <td>The ID of the shipping profile (autoincrement value)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>parcelServiceId</td>
-            <td>The id of the shipping service provider</td>
+            <td>The ID of the shipping service provider</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>backendName</td>
@@ -4262,6 +4478,7 @@ The Parcel Service Preset Model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -4269,6 +4486,7 @@ returns this model as an array
 ### ParcelServicePresetName<a name="order_models_parcelservicepresetname"></a>
 
 The Parcel Service Preset Name Model
+
 
 #### Namespace
 
@@ -4279,6 +4497,7 @@ The Parcel Service Preset Name Model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -4288,6 +4507,7 @@ returns this model as an array
 ### StatusRepositoryContract<a name="order_contracts_statusrepositorycontract"></a>
 
 The StatusRepositoryContract is the interface for the status repository. This interface allows you to find, create and update status.
+
 
 #### Namespace
 
@@ -4299,6 +4519,7 @@ The StatusRepositoryContract is the interface for the status repository. This in
 
 <pre>public <strong>findStatusById</strong>(<a target="_blank" href="http://php.net/float">float</a> $statusId, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="order#order_models_orderstatus">OrderStatus</a>
 </pre>
+
     
 Get a status
     
@@ -4319,6 +4540,7 @@ Get a status
 
 <pre>public <strong>findStatusNameById</strong>(<a target="_blank" href="http://php.net/float">float</a> $statusId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="order#order_models_orderstatusname">OrderStatusName</a>
 </pre>
+
     
 Get a name of a status in one language
     
@@ -4338,6 +4560,7 @@ Get a name of a status in one language
 
 
 <pre>public <strong>searchStatus</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List statuses
     
@@ -4365,6 +4588,7 @@ List statuses
 ### OrderStatus<a name="order_models_orderstatus"></a>
 
 The order status model contains the ID of an order status. The ID is always an integer with two decimal places. The highest number available is 99. Every status has names in different languages, which are accessible through the names attribute.
+
 
 #### Namespace
 
@@ -4401,6 +4625,7 @@ The order status model contains the ID of an order status. The ID is always an i
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -4408,6 +4633,7 @@ returns this model as an array
 ### OrderStatusName<a name="order_models_orderstatusname"></a>
 
 The order status name model represents a status name for a given status ID. However, a status can not only have one name, but two names per language: a frontend name and a backend name.
+
 
 #### Namespace
 
@@ -4460,6 +4686,7 @@ The order status name model represents a status name for a given status ID. Howe
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     

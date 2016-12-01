@@ -7,6 +7,7 @@
 
 The Contract for System settings
 
+
 #### Namespace
 
 `Plenty\Modules\System\Contracts`
@@ -16,6 +17,7 @@ The Contract for System settings
 #### Methods
 
 <pre>public <strong>findMyPlentyIds</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Finds all plenty IDs for the current contact
     
@@ -23,6 +25,7 @@ Finds all plenty IDs for the current contact
 ### WebstoreRepositoryContract<a name="system_contracts_webstorerepositorycontract"></a>
 
 Repository for Webstore
+
 
 #### Namespace
 
@@ -33,15 +36,18 @@ Repository for Webstore
 #### Methods
 
 <pre>public <strong>loadAll</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Shows all webstores
     
 <pre>public <strong>loadAllPreview</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Shows a preview of all webstores with id and name
     
 <pre>public <strong>findByPlentyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId):<a href="system#system_models_webstore">Webstore</a>
 </pre>
+
     
 Shows a specific webstore from type plentymarkets
     
@@ -57,6 +63,7 @@ Shows a specific webstore from type plentymarkets
 
 <pre>public <strong>findByStoreIdentifier</strong>(<a target="_blank" href="http://php.net/int">int</a> $storeIdentifier):<a href="system#system_models_webstore">Webstore</a>
 </pre>
+
     
 Shows a specific webstore
     
@@ -70,10 +77,27 @@ Shows a specific webstore
 </table>
 
 
+<pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $clientId):<a href="system#system_models_webstore">Webstore</a>
+</pre>
+
+    
+Shows a specific webstore
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$clientId</td>
+        <td>The client ID (webstore ID).</td>
+    </tr>
+</table>
+
+
 ## Models<a name="system_system_models"></a>
 ### Webstore<a name="system_models_webstore"></a>
 
 The webstore model
+
 
 #### Namespace
 
@@ -118,6 +142,7 @@ The webstore model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -125,6 +150,7 @@ returns this model as an array
 ### WebstoreConfiguration<a name="system_models_webstoreconfiguration"></a>
 
 The Webstore Configuration Model
+
 
 #### Namespace
 
@@ -816,6 +842,7 @@ The Webstore Configuration Model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     

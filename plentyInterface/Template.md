@@ -7,6 +7,7 @@
 
 DesignConfig
 
+
 #### Namespace
 
 `Plenty\Modules\Template\Design\Config\Contracts`
@@ -16,6 +17,7 @@ DesignConfig
 #### Methods
 
 <pre>public <strong>findByDesignName</strong>(<a target="_blank" href="http://php.net/string">string</a> $designName):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -31,6 +33,7 @@ DesignConfig
 
 <pre>public <strong>findByDesignAndWebStore</strong>(<a target="_blank" href="http://php.net/string">string</a> $designName, <a target="_blank" href="http://php.net/int">int</a> $webStoreId):<a href="template#template_models_designconfig">DesignConfig</a>
 </pre>
+
     
 
     
@@ -51,6 +54,7 @@ DesignConfig
 
 <pre>public <strong>findByDesign</strong>(<a href="template#template_models_design">Design</a>
  $design):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -67,6 +71,7 @@ DesignConfig
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/string">string</a> $designName, <a target="_blank" href="http://php.net/int">int</a> $webstoreId):<a href="template#template_models_designconfig">DesignConfig</a>
 </pre>
+
     
 
     
@@ -92,6 +97,7 @@ DesignConfig
 
 <pre>public <strong>copyDesignConfig</strong>(<a target="_blank" href="http://php.net/string">string</a> $designName, <a target="_blank" href="http://php.net/string">string</a> $newDesignName):<a href="template#template_models_designconfig">DesignConfig</a>
 </pre>
+
     
 
     
@@ -115,6 +121,7 @@ DesignConfig
 
 Design
 
+
 #### Namespace
 
 `Plenty\Modules\Template\Design\Config\Contracts`
@@ -124,11 +131,13 @@ Design
 #### Methods
 
 <pre>public <strong>loadAll</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
 <pre>public <strong>findByDesignName</strong>(<a target="_blank" href="http://php.net/string">string</a> $designName, <a target="_blank" href="http://php.net/bool">bool</a> $withConfig = true):<a href="template#template_models_design">Design</a>
 </pre>
+
     
 
     
@@ -151,6 +160,7 @@ Design
 ### Design<a name="template_models_design"></a>
 
 Design model
+
 
 #### Namespace
 
@@ -198,6 +208,7 @@ Design model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -205,6 +216,7 @@ returns this model as an array
 ### DesignConfig<a name="template_models_designconfig"></a>
 
 Design configuration model
+
 
 #### Namespace
 
@@ -364,6 +376,7 @@ Design configuration model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     

@@ -7,6 +7,7 @@
 
 CronHandler interface for extending cron handlers.
 
+
 #### Namespace
 
 `Plenty\Modules\Cron\Contracts`
@@ -16,6 +17,7 @@ CronHandler interface for extending cron handlers.
 ### CronContainer<a name="cron_services_croncontainer"></a>
 
 Register cron jobs
+
 
 #### Namespace
 
@@ -27,6 +29,7 @@ Register cron jobs
 
 <pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/int">int</a> $schedule, <a target="_blank" href="http://php.net/string">string</a> $handlerClass):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Use this method to add a handler class and a schedule time for your desired cron event. The action will then be triggered according to the given schedule.
     

@@ -7,6 +7,7 @@
 
 The CheckoutContract is the interface for the checkout repository. This interface allows to set the shipping country ID, the payment method ID, the shipping profile ID and the currency in the checkout.
 
+
 #### Namespace
 
 `Plenty\Modules\Frontend\Contracts`
@@ -16,11 +17,13 @@ The CheckoutContract is the interface for the checkout repository. This interfac
 #### Methods
 
 <pre>public <strong>getShippingCountryId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 Gets the shipping country ID.
     
 <pre>public <strong>setShippingCountryId</strong>(<a target="_blank" href="http://php.net/int">int</a> $shippingCountryId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Updates the ID of the shipping country. The ID must be specified.
     
@@ -36,6 +39,7 @@ Updates the ID of the shipping country. The ID must be specified.
 
 <pre>public <strong>setPaymentMethodId</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Updates the ID of the payment method. The ID must be specified.
     
@@ -51,6 +55,7 @@ Updates the ID of the payment method. The ID must be specified.
 
 <pre>public <strong>setShippingProfileId</strong>(<a target="_blank" href="http://php.net/int">int</a> $shippingProfileId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Updates the ID of the shipping profile. The ID must be specified.
     
@@ -66,6 +71,7 @@ Updates the ID of the shipping profile. The ID must be specified.
 
 <pre>public <strong>setCurrency</strong>(<a target="_blank" href="http://php.net/string">string</a> $currency):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Updates the currency. The currency must be specified.
     
@@ -79,10 +85,27 @@ Updates the currency. The currency must be specified.
 </table>
 
 
+<pre>public <strong>setBasketReferrerId</strong>(<a target="_blank" href="http://php.net/int">int</a> $referrerId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$referrerId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Events<a name="frontend_frontend_events"></a>
 ### FrontendCurrencyChanged<a name="frontend_events_frontendcurrencychanged"></a>
 
 The event is triggered when the currency is changed in the online store.
+
 
 #### Namespace
 
@@ -93,10 +116,12 @@ The event is triggered when the currency is changed in the online store.
 #### Methods
 
 <pre>public <strong>getCurrency</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Gets the currency.
     
 <pre>public <strong>getCurrencyExchangeRatio</strong>():<a target="_blank" href="http://php.net/float">float</a></pre>
+
     
 Gets the exchange rate used for converting the currency.
     
@@ -104,6 +129,7 @@ Gets the exchange rate used for converting the currency.
 ### FrontendLanguageChanged<a name="frontend_events_frontendlanguagechanged"></a>
 
 The event is triggered when the language is changed in the online store.
+
 
 #### Namespace
 
@@ -114,13 +140,15 @@ The event is triggered when the language is changed in the online store.
 #### Methods
 
 <pre>public <strong>getLanguage</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Gets the language of the online store.
     
 
-### FrontendUpdateDeliveryAddress<a name="frontend_events_frontendupdatedeliveryaddress"></a>
+### FrontendPaymentMethodChanged<a name="frontend_events_frontendpaymentmethodchanged"></a>
 
-The event is triggered when the delivery address is changed in the online store.
+Event that gets fired when the selected payment method is changed from the frontend
+
 
 #### Namespace
 
@@ -130,31 +158,34 @@ The event is triggered when the delivery address is changed in the online store.
 
 #### Methods
 
-<pre>public <strong>getAccountAddressId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
-    
-Gets the ID of the address saved for the account.
-    
+<pre>public <strong>getPaymentMethodId</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
-### FrontendUpdatePaymentSettings<a name="frontend_events_frontendupdatepaymentsettings"></a>
-
-The event is triggered when the payment method is changed in the online store.
-
-#### Namespace
-
-`Plenty\Modules\Frontend\Events`
-
-
-
-#### Methods
-
-<pre>public <strong>getPaymentMethodId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
-    
-Gets the ID of the payment method.
     
 
-### FrontendUpdateShippingCountry<a name="frontend_events_frontendupdateshippingcountry"></a>
+    
+<pre>public <strong>setPaymentMethodId</strong>($paymentMethodId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
-The event is triggered when the shipping country is updated in the online store.
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$paymentMethodId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### FrontendShippingCountryChanged<a name="frontend_events_frontendshippingcountrychanged"></a>
+
+Event that gets fired when the selected shipping country is changed from the frontend
+
 
 #### Namespace
 
@@ -165,11 +196,13 @@ The event is triggered when the shipping country is updated in the online store.
 #### Methods
 
 <pre>public <strong>getShippingCountryId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 Gets the ID of the shipping country.
     
-<pre>public <strong>setShippingCountryId</strong>(<a target="_blank" href="http://php.net/int">int</a> $shippingCountryId):<a href="frontend#frontend_events_frontendupdateshippingcountry">FrontendUpdateShippingCountry</a>
+<pre>public <strong>setShippingCountryId</strong>(<a target="_blank" href="http://php.net/int">int</a> $shippingCountryId):<a href="frontend#frontend_events_frontendshippingcountrychanged">FrontendShippingCountryChanged</a>
 </pre>
+
     
 Sets the ID of the shipping country. The ID must be specified.
     
@@ -184,9 +217,85 @@ Sets the ID of the shipping country. The ID must be specified.
 
 
 
+### FrontendShippingProfileChanged<a name="frontend_events_frontendshippingprofilechanged"></a>
+
+Event that gets fired when the selected shipping profile is changed from the frontend
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>getShippingProfileId</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setShippingProfileId</strong>($shippingProfileId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$shippingProfileId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### FrontendUpdateDeliveryAddress<a name="frontend_events_frontendupdatedeliveryaddress"></a>
+
+The event is triggered when the delivery address is changed in the online store.
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>getAccountAddressId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Gets the ID of the address saved for the account.
+    
+
+### FrontendUpdatePaymentSettings<a name="frontend_events_frontendupdatepaymentsettings"></a>
+
+The event is triggered when the payment method is changed in the online store.
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>getPaymentMethodId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Gets the ID of the payment method.
+    
+
 ### FrontendUpdateShippingSettings<a name="frontend_events_frontendupdateshippingsettings"></a>
 
 The event is triggered when the shipping method is updated in the online store.
+
 
 #### Namespace
 
@@ -197,14 +306,17 @@ The event is triggered when the shipping method is updated in the online store.
 #### Methods
 
 <pre>public <strong>getShippingCosts</strong>():<a target="_blank" href="http://php.net/float">float</a></pre>
+
     
 Gets the shipping costs.
     
 <pre>public <strong>getParcelServiceId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 Gets the ID of the shipping service provider.
     
 <pre>public <strong>getParcelServicePresetId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 Gets the preset ID of the shipping service provider.
     
@@ -212,6 +324,7 @@ Gets the preset ID of the shipping service provider.
 ### FrontendFactory<a name="frontend_factories_frontendfactory"></a>
 
 Frontend-Factory
+
 
 #### Namespace
 
@@ -223,21 +336,25 @@ Frontend-Factory
 
 <pre>public <strong>getAgent</strong>():<a href="frontend#frontend_services_agentservice">AgentService</a>
 </pre>
+
     
 
     
 <pre>public <strong>getSystem</strong>():<a href="frontend#frontend_services_systemservice">SystemService</a>
 </pre>
+
     
 
     
 <pre>public <strong>getAccount</strong>():<a href="frontend#frontend_services_accountservice">AccountService</a>
 </pre>
+
     
 
     
 <pre>public <strong>getFile</strong>():<a href="frontend#frontend_services_fileservice">FileService</a>
 </pre>
+
     
 
     
@@ -245,6 +362,7 @@ Frontend-Factory
 ### AccountService<a name="frontend_services_accountservice"></a>
 
 Frontend-service for customer information
+
 
 #### Namespace
 
@@ -255,10 +373,12 @@ Frontend-service for customer information
 #### Methods
 
 <pre>public <strong>getIsAccountLoggedIn</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 
     
 <pre>public <strong>getAccountContactId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
@@ -266,6 +386,7 @@ Frontend-service for customer information
 ### AgentService<a name="frontend_services_agentservice"></a>
 
 Frontend-Service for agent information
+
 
 #### Namespace
 
@@ -276,42 +397,52 @@ Frontend-Service for agent information
 #### Methods
 
 <pre>public <strong>getLanguages</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
 <pre>public <strong>getBrowser</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
 <pre>public <strong>getPlatform</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
 <pre>public <strong>getDevice</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
 <pre>public <strong>getIsDesktop</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 
     
 <pre>public <strong>getRobotName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
 <pre>public <strong>getIsRobot</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 
     
 <pre>public <strong>getHttpHeaders</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
 <pre>public <strong>getIsMobile</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 
     
 <pre>public <strong>getIsTablet</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 
     
@@ -319,6 +450,7 @@ Frontend-Service for agent information
 ### FileService<a name="frontend_services_fileservice"></a>
 
 Frontend-service for file information
+
 
 #### Namespace
 
@@ -330,6 +462,7 @@ Frontend-service for file information
 
 <pre>public <strong>addJsFile</strong>(<a target="_blank" href="http://php.net/string">string</a> $jsFile):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -345,6 +478,7 @@ Frontend-service for file information
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -360,6 +494,7 @@ Frontend-service for file information
 
 <pre>public <strong>setAttributes</strong>($attributes):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -376,6 +511,7 @@ Frontend-service for file information
 
 <pre>public <strong>changeValue</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/callable">callable</a> $callback):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -395,6 +531,7 @@ Frontend-service for file information
 
 
 <pre>public <strong>offsetExists</strong>($offset):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 
     
@@ -411,6 +548,7 @@ Frontend-service for file information
 
 <pre>public <strong>offsetGet</strong>($offset):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -427,6 +565,7 @@ Frontend-service for file information
 
 <pre>public <strong>offsetSet</strong>($offset, $value):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -449,6 +588,7 @@ Frontend-service for file information
 
 <pre>public <strong>offsetUnset</strong>($offset):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -464,10 +604,12 @@ Frontend-service for file information
 
 
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
 <pre>public <strong>toJson</strong>(<a target="_blank" href="http://php.net/int">int</a> $options):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -483,6 +625,7 @@ Frontend-service for file information
 
 <pre>public <strong>jsonSerialize</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -490,6 +633,7 @@ Frontend-service for file information
 ### SystemService<a name="frontend_services_systemservice"></a>
 
 Frontend-service for system information
+
 
 #### Namespace
 
@@ -500,10 +644,12 @@ Frontend-service for system information
 #### Methods
 
 <pre>public <strong>getPlentyId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
 <pre>public <strong>getWebstoreId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
@@ -514,6 +660,7 @@ Frontend-service for system information
 
 Repository to load payment methods for the front end
 
+
 #### Namespace
 
 `Plenty\Modules\Frontend\PaymentMethod\Contracts`
@@ -523,11 +670,13 @@ Repository to load payment methods for the front end
 #### Methods
 
 <pre>public <strong>getCurrentPaymentMethodsList</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
 <pre>public <strong>getPaymentMethodName</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
  $paymentMethod, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -549,6 +698,7 @@ Repository to load payment methods for the front end
 
 <pre>public <strong>getPaymentMethodFee</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
  $paymentMethod):<a target="_blank" href="http://php.net/float">float</a></pre>
+
     
 
     
@@ -565,6 +715,7 @@ Repository to load payment methods for the front end
 
 <pre>public <strong>getPaymentMethodIcon</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
  $paymentMethod, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -586,6 +737,7 @@ Repository to load payment methods for the front end
 
 <pre>public <strong>getPaymentMethodDescription</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
  $paymentMethod, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -606,6 +758,7 @@ Repository to load payment methods for the front end
 
 
 <pre>public <strong>getPaymentMethodNameById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -625,6 +778,7 @@ Repository to load payment methods for the front end
 
 
 <pre>public <strong>getPaymentMethodFeeById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId):<a target="_blank" href="http://php.net/float">float</a></pre>
+
     
 
     
@@ -639,6 +793,7 @@ Repository to load payment methods for the front end
 
 
 <pre>public <strong>getPaymentMethodIconById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -658,6 +813,7 @@ Repository to load payment methods for the front end
 
 
 <pre>public <strong>getPaymentMethodDescriptionById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -683,6 +839,7 @@ Repository to load payment methods for the front end
 
 session storage for frontend
 
+
 #### Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Contracts`
@@ -693,26 +850,31 @@ session storage for frontend
 
 <pre>public <strong>getLocaleSettings</strong>():<a href="frontend#frontend_models_localesettings">LocaleSettings</a>
 </pre>
+
     
 
     
 <pre>public <strong>getCustomer</strong>():<a href="frontend#frontend_models_customer">Customer</a>
 </pre>
+
     
 
     
 <pre>public <strong>getOrder</strong>():<a href="frontend#frontend_models_order">Order</a>
 </pre>
+
     
 
     
 <pre>public <strong>getPlugin</strong>():<a href="frontend#frontend_models_plugin">Plugin</a>
 </pre>
+
     
 
     
 <pre>public <strong>getForum</strong>():<a href="frontend#frontend_models_forum">Forum</a>
 </pre>
+
     
 
     
@@ -720,6 +882,7 @@ session storage for frontend
 ### Customer<a name="frontend_models_customer"></a>
 
 session storage model for customer data
+
 
 #### Namespace
 
@@ -775,6 +938,7 @@ session storage model for customer data
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -782,6 +946,7 @@ returns this model as an array
 ### Forum<a name="frontend_models_forum"></a>
 
 session storage model for forum data
+
 
 #### Namespace
 
@@ -825,6 +990,7 @@ session storage model for forum data
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -832,6 +998,7 @@ returns this model as an array
 ### LocaleSettings<a name="frontend_models_localesettings"></a>
 
 session storage model for locale settings
+
 
 #### Namespace
 
@@ -867,6 +1034,7 @@ session storage model for locale settings
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -874,6 +1042,7 @@ returns this model as an array
 ### Order<a name="frontend_models_order"></a>
 
 session storage model for order data
+
 
 #### Namespace
 
@@ -985,6 +1154,7 @@ session storage model for order data
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -992,6 +1162,7 @@ returns this model as an array
 ### Plugin<a name="frontend_models_plugin"></a>
 
 session storage model for plugins
+
 
 #### Namespace
 
@@ -1003,6 +1174,7 @@ session storage model for plugins
 
 <pre>public <strong>setValue</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -1024,6 +1196,7 @@ session storage model for plugins
 
 <pre>public <strong>getValue</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     

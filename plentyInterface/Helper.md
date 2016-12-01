@@ -7,6 +7,7 @@
 
 Repository Contract for UrlBuilder
 
+
 #### Namespace
 
 `Plenty\Modules\Helper\Contracts`
@@ -16,6 +17,7 @@ Repository Contract for UrlBuilder
 #### Methods
 
 <pre>public <strong>getImageUrl</strong>(<a target="_blank" href="http://php.net/string">string</a> $path, <a target="_blank" href="http://php.net/int">int</a> $plentyId = null, <a target="_blank" href="http://php.net/string">string</a> $size = &quot;&quot;, <a target="_blank" href="http://php.net/string">string</a> $fileType = &quot;&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $isExternalImage = false):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -50,6 +52,7 @@ Repository Contract for UrlBuilder
 
 
 <pre>public <strong>getItemUrl</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/string">string</a> $urlContent = &quot;&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $useHttpsDomain = true):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -88,6 +91,7 @@ Repository Contract for UrlBuilder
 
 Class EncryptionException
 
+
 #### Namespace
 
 `Plenty\Modules\Helper\Exceptions`
@@ -98,6 +102,7 @@ Class EncryptionException
 
 key value data
 
+
 #### Namespace
 
 `Plenty\Modules\Helper\Models`
@@ -107,6 +112,7 @@ key value data
 #### Methods
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $default = null):<a target="_blank" href="http://php.net/mixed">mixed</a></pre>
+
     
 
     
@@ -131,6 +137,7 @@ key value data
 
 helper class for arrays
 
+
 #### Namespace
 
 `Plenty\Modules\Helper\Services`
@@ -141,6 +148,7 @@ helper class for arrays
 
 <pre>public <strong>buildMapFromObjectList</strong>($list, <a target="_blank" href="http://php.net/string">string</a> $keyField, <a target="_blank" href="http://php.net/string">string</a> $valueField):<a href="helper#helper_models_keyvalue">KeyValue</a>
 </pre>
+
     
 
     
@@ -170,6 +178,7 @@ helper class for arrays
 
 Service for encoding strings
 
+
 #### Namespace
 
 `Plenty\Modules\Helper\Services`
@@ -179,6 +188,7 @@ Service for encoding strings
 #### Methods
 
 <pre>public <strong>toDatabase</strong>(<a target="_blank" href="http://php.net/string">string</a> $sString):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Method converts a string to self::DATABASE_ENCODING coding
     
@@ -193,6 +203,7 @@ Method converts a string to self::DATABASE_ENCODING coding
 
 
 <pre>public <strong>toEmail</strong>(<a target="_blank" href="http://php.net/string">string</a> $sString):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Method converts a string to self::EMAIL_ENCODING coding
     
@@ -207,6 +218,7 @@ Method converts a string to self::EMAIL_ENCODING coding
 
 
 <pre>public <strong>toWebshop</strong>(<a target="_blank" href="http://php.net/string">string</a> $sString, <a target="_blank" href="http://php.net/string">string</a> $sTargetEncoding = self::WEBSHOP_ENCODING):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Method converts a string to self::WEBSHOP_ENCODING coding
     
@@ -226,6 +238,7 @@ Method converts a string to self::WEBSHOP_ENCODING coding
 
 
 <pre>public <strong>toAdmin</strong>(<a target="_blank" href="http://php.net/string">string</a> $sString, <a target="_blank" href="http://php.net/string">string</a> $sTargetEncoding = self::ADMIN_ENCODING):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Method converts a string to the sended coding. Default will be self::ADMIN_ENCODING coding used
     
@@ -245,6 +258,7 @@ Method converts a string to the sended coding. Default will be self::ADMIN_ENCOD
 
 
 <pre>public <strong>toGwt</strong>(<a target="_blank" href="http://php.net/string">string</a> $sString):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Method converts a string to the sended coding
     
@@ -259,6 +273,7 @@ Method converts a string to the sended coding
 
 
 <pre>public <strong>toExport</strong>(<a target="_blank" href="http://php.net/string">string</a> $sString, <a target="_blank" href="http://php.net/string">string</a> $sTargetEncoding = self::EXPORT_ENCODING):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Method converts a string to the sended coding. Default will be self::EXPORT_ENCODING coding used
     
@@ -278,6 +293,7 @@ Method converts a string to the sended coding. Default will be self::EXPORT_ENCO
 
 
 <pre>public <strong>toLegacy</strong>(<a target="_blank" href="http://php.net/string">string</a> $sString):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Method converts a string to self::LEGACY_ENCODING coding
     
@@ -292,6 +308,7 @@ Method converts a string to self::LEGACY_ENCODING coding
 
 
 <pre>public <strong>toPDF</strong>(<a target="_blank" href="http://php.net/string">string</a> $sString, <a target="_blank" href="http://php.net/string">string</a> $sTargetEncoding = self::PDF_ENCODING):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Method converts a string to self::PDF_ENCODING coding
     
@@ -311,6 +328,7 @@ Method converts a string to self::PDF_ENCODING coding
 
 
 <pre>public <strong>toXML</strong>(<a target="_blank" href="http://php.net/string">string</a> $string, <a target="_blank" href="http://php.net/string">string</a> $targetEncoding = self::XML_ENCODING):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Method converts a string to self::XML_ENCODING coding.
     
@@ -330,6 +348,7 @@ Method converts a string to self::XML_ENCODING coding.
 
 
 <pre>public <strong>detect_encoding</strong>(<a target="_blank" href="http://php.net/string">string</a> $sString):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Method returns the encoding of one string
     
@@ -344,6 +363,7 @@ Method returns the encoding of one string
 
 
 <pre>public <strong>convertArray</strong>(<a target="_blank" href="http://php.net/array">array</a> $array, <a target="_blank" href="http://php.net/string">string</a> $sTargetEncoding = self::UTF8_ENCODING, <a target="_blank" href="http://php.net/bool">bool</a> $convertKey = false):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Method converts a multidimensional array to the desired coding
     
@@ -368,6 +388,7 @@ Method converts a multidimensional array to the desired coding
 
 
 <pre>public <strong>cutTextForDB</strong>(<a target="_blank" href="http://php.net/string">string</a> $text, <a target="_blank" href="http://php.net/int">int</a> $lenghtIntoDB):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 cut the given text to fit for db insert.
     
@@ -387,6 +408,7 @@ cut the given text to fit for db insert.
 
 
 <pre>public <strong>isValidUtf8</strong>(<a target="_blank" href="http://php.net/string">string</a> $string):<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 Checks whether the given string is valid utf-8.
     
@@ -405,6 +427,7 @@ Checks whether the given string is valid utf-8.
 
 Webstore Helper Service
 
+
 #### Namespace
 
 `Plenty\Modules\Helper\Services`
@@ -415,6 +438,7 @@ Webstore Helper Service
 
 <pre>public <strong>getCurrentWebstoreConfiguration</strong>():<a href="system#system_models_webstoreconfiguration">WebstoreConfiguration</a>
 </pre>
+
     
 
     

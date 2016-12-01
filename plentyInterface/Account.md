@@ -7,6 +7,7 @@
 
 The contract for the address repository
 
+
 #### Namespace
 
 `Plenty\Modules\Account\Address\Contracts`
@@ -17,6 +18,7 @@ The contract for the address repository
 
 <pre>public <strong>findAddressById</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressId):<a href="account#account_models_address">Address</a>
 </pre>
+
     
 Gets an address. The ID of the address must be specified.
     
@@ -32,6 +34,7 @@ Gets an address. The ID of the address must be specified.
 
 <pre>public <strong>updateAddress</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $addressId):<a href="account#account_models_address">Address</a>
 </pre>
+
     
 Updates an address. The ID of the address must be specified.
     
@@ -52,6 +55,7 @@ Updates an address. The ID of the address must be specified.
 
 <pre>public <strong>createAddress</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_address">Address</a>
 </pre>
+
     
 Creates an address.
     
@@ -66,6 +70,7 @@ Creates an address.
 
 
 <pre>public <strong>deleteAddress</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Deletes an address. The ID of the address must be specified.
     
@@ -81,6 +86,7 @@ Deletes an address. The ID of the address must be specified.
 
 <pre>public <strong>getAddressesOfWarehouse</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/int">int</a> $relationTypeId = null, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </pre>
+
     
 Returns a collection of addresses linked with a warehouse.
     
@@ -111,6 +117,7 @@ Returns a collection of addresses linked with a warehouse.
 
 <pre>public <strong>createAddressOfWarehouse</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_address">Address</a>
 </pre>
+
     
 Creates an address and immediately links it with a warehouse.
     
@@ -126,6 +133,7 @@ Creates an address and immediately links it with a warehouse.
 
 <pre>public <strong>findAddressOptions</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </pre>
+
     
 Returns a collection of address options of an address.
     
@@ -146,6 +154,7 @@ Returns a collection of address options of an address.
 
 <pre>public <strong>createAddressOptions</strong>(<a target="_blank" href="http://php.net/array">array</a> $addressData, <a target="_blank" href="http://php.net/int">int</a> $addressId):<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </pre>
+
     
 Creates address options for an address and returns all options of the address.
     
@@ -167,6 +176,7 @@ Creates address options for an address and returns all options of the address.
 
 <pre>public <strong>updateAddressOptions</strong>(<a target="_blank" href="http://php.net/array">array</a> $addressData, <a target="_blank" href="http://php.net/int">int</a> $addressId):<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </pre>
+
     
 Updates address options for an address and returns all options of the address.
     
@@ -187,6 +197,7 @@ Updates address options for an address and returns all options of the address.
 
 <pre>public <strong>deleteAddressOptions</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Deletes all address options of an address. The ID of the address must be specified.
     
@@ -202,6 +213,7 @@ Deletes all address options of an address. The ID of the address must be specifi
 
 <pre>public <strong>getAddressOption</strong>(<a target="_blank" href="http://php.net/int">int</a> $optionId):<a href="account#account_models_addressoption">AddressOption</a>
 </pre>
+
     
 Gets an address option. The ID of the option must be specified.
     
@@ -217,6 +229,7 @@ Gets an address option. The ID of the option must be specified.
 
 <pre>public <strong>updateAddressOption</strong>(<a target="_blank" href="http://php.net/array">array</a> $optionData, <a target="_blank" href="http://php.net/int">int</a> $optionId):<a href="account#account_models_addressoption">AddressOption</a>
 </pre>
+
     
 Updates an address option. The ID of the address option must be specified.
     
@@ -236,6 +249,7 @@ Updates an address option. The ID of the address option must be specified.
 
 
 <pre>public <strong>deleteAddressOption</strong>(<a target="_blank" href="http://php.net/int">int</a> $optionId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Deletes an address option. The ID of the option must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
     
@@ -251,6 +265,7 @@ Deletes an address option. The ID of the option must be specified. Returns `true
 
 <pre>public <strong>findAddressRelationTypes</strong>(<a target="_blank" href="http://php.net/string">string</a> $application, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </pre>
+
     
 Returns a collection of address relation types by a specific application and language. The collection may be empty.
     
@@ -273,6 +288,7 @@ Returns a collection of address relation types by a specific application and lan
 ### Address<a name="account_models_address"></a>
 
 The address model
+
 
 #### Namespace
 
@@ -489,6 +505,7 @@ The address model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -496,6 +513,7 @@ returns this model as an array
 ### AddressContactRelation<a name="account_models_addresscontactrelation"></a>
 
 address contact relation model
+
 
 #### Namespace
 
@@ -545,6 +563,7 @@ address contact relation model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -552,6 +571,7 @@ returns this model as an array
 ### AddressOption<a name="account_models_addressoption"></a>
 
 The address options model
+
 
 #### Namespace
 
@@ -605,6 +625,7 @@ The address options model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -612,6 +633,7 @@ returns this model as an array
 ### AddressOptionType<a name="account_models_addressoptiontype"></a>
 
 The address options type model
+
 
 #### Namespace
 
@@ -668,6 +690,7 @@ The address options type model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -675,6 +698,7 @@ returns this model as an array
 ### AddressOptionTypeName<a name="account_models_addressoptiontypename"></a>
 
 The address options type name model
+
 
 #### Namespace
 
@@ -719,6 +743,7 @@ The address options type name model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -726,6 +751,7 @@ returns this model as an array
 ### AddressOrderRelation<a name="account_models_addressorderrelation"></a>
 
 address order relation model
+
 
 #### Namespace
 
@@ -784,6 +810,7 @@ address order relation model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -791,6 +818,7 @@ returns this model as an array
 ### AddressRelationType<a name="account_models_addressrelationtype"></a>
 
 The contact address type model
+
 
 #### Namespace
 
@@ -836,6 +864,7 @@ The contact address type model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -843,6 +872,7 @@ returns this model as an array
 ### AddressRelationTypeApplication<a name="account_models_addressrelationtypeapplication"></a>
 
 The address relation type application model
+
 
 #### Namespace
 
@@ -887,6 +917,7 @@ The address relation type application model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -894,6 +925,7 @@ returns this model as an array
 ### AddressRelationTypeName<a name="account_models_addressrelationtypename"></a>
 
 The address relation type name model.
+
 
 #### Namespace
 
@@ -938,6 +970,7 @@ The address relation type name model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -945,6 +978,7 @@ returns this model as an array
 ### AddressSchedulerRelation<a name="account_models_addressschedulerrelation"></a>
 
 address scheduler relation model
+
 
 #### Namespace
 
@@ -989,6 +1023,7 @@ address scheduler relation model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -996,6 +1031,7 @@ returns this model as an array
 ### AddressWarehouseRelation<a name="account_models_addresswarehouserelation"></a>
 
 address warehouse relation model
+
 
 #### Namespace
 
@@ -1015,19 +1051,19 @@ address warehouse relation model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the address warehouse relation</td>
+            <td>The ID of the address warehouse relation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>warehouseId</td>
-            <td>The id of the warehouse</td>
+            <td>The ID of the warehouse</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The id of the type</td>
+            <td>The ID of the type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>addressId</td>
-            <td>The id of the address</td>
+            <td>The ID of the address</td>
         </tr><tr>
             <td><a href="account#account_models_address">Address</a>
 </td>
@@ -1040,6 +1076,7 @@ address warehouse relation model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1049,6 +1086,7 @@ returns this model as an array
 ### ContactEventRepositoryContract<a name="account_contracts_contacteventrepositorycontract"></a>
 
 The contract for the contact event repository
+
 
 #### Namespace
 
@@ -1060,6 +1098,7 @@ The contract for the contact event repository
 
 <pre>public <strong>listEvents</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
+
     
 List contact events identified by contact logged in
     
@@ -1087,6 +1126,7 @@ List contact events identified by contact logged in
 ### ContactEvent<a name="account_models_contactevent"></a>
 
 The contact event model
+
 
 #### Namespace
 
@@ -1158,6 +1198,7 @@ The contact event model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1167,6 +1208,7 @@ returns this model as an array
 ### ContactAccountRepositoryContract<a name="account_contracts_contactaccountrepositorycontract"></a>
 
 The ContactAccountRepositoryContract is the interface for the contact account repository. This interface allows to get, create, update and delete accounts. An account contains company-related data.
+
 
 #### Namespace
 
@@ -1178,6 +1220,7 @@ The ContactAccountRepositoryContract is the interface for the contact account re
 
 <pre>public <strong>findAccount</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountId, <a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="account#account_models_account">Account</a>
 </pre>
+
     
 Returns an account by an id only if it is associated with the given contact id.
     
@@ -1198,6 +1241,7 @@ Returns an account by an id only if it is associated with the given contact id.
 
 <pre>public <strong>createAccount</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="account#account_models_account">Account</a>
 </pre>
+
     
 Creates an account and associates it immediately with the given ID of the contact.
     
@@ -1218,6 +1262,7 @@ Creates an account and associates it immediately with the given ID of the contac
 
 <pre>public <strong>updateAccount</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $accountId, <a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="account#account_models_account">Account</a>
 </pre>
+
     
 Updates an account. If not already associated, it will associate the account with the given contact ID.
     
@@ -1242,6 +1287,7 @@ Updates an account. If not already associated, it will associate the account wit
 
 
 <pre>public <strong>deleteAccount</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountId, <a target="_blank" href="http://php.net/int">int</a> $contactId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Deletes the given account of the given contact ID. Returns `true` if the deletion was successful. Returns `false` if the deletion was not successful.
     
@@ -1265,6 +1311,7 @@ Deletes the given account of the given contact ID. Returns `true` if the deletio
 
 The ContactAddressRepositoryContract is the interface for the contact address repository. This interface allows to list, get, create, update, add and delete addresses of the contact.
 
+
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
@@ -1275,6 +1322,7 @@ The ContactAddressRepositoryContract is the interface for the contact address re
 
 <pre>public <strong>findContactAddressByTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a href="account#account_models_address">Address</a>
 </pre>
+
     
 Returns an address of a given contact for the given type.
     
@@ -1295,6 +1343,7 @@ Returns an address of a given contact for the given type.
 
 <pre>public <strong>createAddress</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a href="account#account_models_address">Address</a>
 </pre>
+
     
 Creates an address, associates it immediately with the given contact ID with the given type and returns the new address.
     
@@ -1320,6 +1369,7 @@ Creates an address, associates it immediately with the given contact ID with the
 
 <pre>public <strong>updateAddress</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $addressId, <a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a href="account#account_models_address">Address</a>
 </pre>
+
     
 Updates the existing address of a given contact and type and returns it.
     
@@ -1350,6 +1400,7 @@ Updates the existing address of a given contact and type and returns it.
 
 <pre>public <strong>getAddress</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressId, <a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a href="account#account_models_address">Address</a>
 </pre>
+
     
 Returns the address of a given contact and type.
     
@@ -1374,6 +1425,7 @@ Returns the address of a given contact and type.
 
 
 <pre>public <strong>getAddresses</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $typeId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Gets all addresses for the given contact of the given type.
     
@@ -1394,6 +1446,7 @@ Gets all addresses for the given contact of the given type.
 
 <pre>public <strong>addAddress</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressId, <a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a href="account#account_models_address">Address</a>
 </pre>
+
     
 Adds the address to the given contact as the given type.
     
@@ -1418,6 +1471,7 @@ Adds the address to the given contact as the given type.
 
 
 <pre>public <strong>deleteAddress</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressId, <a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Deletes an existing address of a given contact and type. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
     
@@ -1446,6 +1500,7 @@ Deletes an existing address of a given contact and type. Returns `true` if delet
 
 The ContactClassRepositoryContract is the interface for the contact class repository. This interface allows to list all contact classes or to get a contact class by the ID.
 
+
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
@@ -1455,6 +1510,7 @@ The ContactClassRepositoryContract is the interface for the contact class reposi
 #### Methods
 
 <pre>public <strong>findContactClassById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactClassId):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Get a contact class
     
@@ -1469,6 +1525,7 @@ Get a contact class
 
 
 <pre>public <strong>allContactClasses</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Lists contact classes.
     
@@ -1476,6 +1533,7 @@ Lists contact classes.
 ### ContactOptionRepositoryContract<a name="account_contracts_contactoptionrepositorycontract"></a>
 
 The ContactOptionRepositoryContract is the interface for the contact option repository. This interface allows to get, create, update and delete contact options.
+
 
 #### Namespace
 
@@ -1487,6 +1545,7 @@ The ContactOptionRepositoryContract is the interface for the contact option repo
 
 <pre>public <strong>findContactOptions</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $typeId, <a target="_blank" href="http://php.net/int">int</a> $subTypeId):<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </pre>
+
     
 Lists options of the contact. The ID of the contact must be specified. The ID of the option type and the ID of the option sub-type can be optionally used.
     
@@ -1511,6 +1570,7 @@ Lists options of the contact. The ID of the contact must be specified. The ID of
 
 
 <pre>public <strong>createContactOptions</strong>(<a target="_blank" href="http://php.net/array">array</a> $optionData, <a target="_blank" href="http://php.net/int">int</a> $contactId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Creates an option for the given contact and returns them.
     
@@ -1530,6 +1590,7 @@ Creates an option for the given contact and returns them.
 
 
 <pre>public <strong>updateContactOptions</strong>(<a target="_blank" href="http://php.net/array">array</a> $optionData, <a target="_blank" href="http://php.net/int">int</a> $contactId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Updates options of the given contact and returns them. The ID of the contact must be specified.
     
@@ -1549,6 +1610,7 @@ Updates options of the given contact and returns them. The ID of the contact mus
 
 
 <pre>public <strong>deleteContactOptionsByContactId</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Deletes all options of the given contact. The ID of the contact must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
     
@@ -1564,6 +1626,7 @@ Deletes all options of the given contact. The ID of the contact must be specifie
 
 <pre>public <strong>findContactOption</strong>(<a target="_blank" href="http://php.net/int">int</a> $optionId):<a href="account#account_models_contactoption">ContactOption</a>
 </pre>
+
     
 Gets a contact option. The ID of the option must be specified.
     
@@ -1579,6 +1642,7 @@ Gets a contact option. The ID of the option must be specified.
 
 <pre>public <strong>updateContactOption</strong>(<a target="_blank" href="http://php.net/array">array</a> $optionData, <a target="_blank" href="http://php.net/int">int</a> $optionId):<a href="account#account_models_contactoption">ContactOption</a>
 </pre>
+
     
 Updates an option with the given id and returns it.
     
@@ -1598,6 +1662,7 @@ Updates an option with the given id and returns it.
 
 
 <pre>public <strong>deleteContactOption</strong>(<a target="_blank" href="http://php.net/int">int</a> $optionId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Deletes a contact option. The ID of the option must be specified.
     
@@ -1616,6 +1681,7 @@ Deletes a contact option. The ID of the option must be specified.
 
 The ContactPaymentRepositoryContract is the interface for the contact payment repository. This interface allows to list, get, create, update and delete bank accounts of the contact.
 
+
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
@@ -1625,6 +1691,7 @@ The ContactPaymentRepositoryContract is the interface for the contact payment re
 #### Methods
 
 <pre>public <strong>getBanksOfContact</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Gets a collection of bank accounts of a contact. The ID of the contact must be specified.
     
@@ -1650,6 +1717,7 @@ Gets a collection of bank accounts of a contact. The ID of the contact must be s
 
 <pre>public <strong>getBankByOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="account#account_models_contactbank">ContactBank</a>
 </pre>
+
     
 Returns bank details of an order. The ID of the order must be specified.
     
@@ -1670,6 +1738,7 @@ Returns bank details of an order. The ID of the order must be specified.
 
 <pre>public <strong>createContactBank</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_contactbank">ContactBank</a>
 </pre>
+
     
 Creates a bank account for a contact and returns it.
     
@@ -1685,6 +1754,7 @@ Creates a bank account for a contact and returns it.
 
 <pre>public <strong>updateContactBank</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $contactBankId):<a href="account#account_models_contactbank">ContactBank</a>
 </pre>
+
     
 Updates a bank account. The ID of the bank account must be specified.
     
@@ -1704,6 +1774,7 @@ Updates a bank account. The ID of the bank account must be specified.
 
 
 <pre>public <strong>deleteContactBank</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactBankId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Deletes a bank account. The ID of the bank account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
     
@@ -1719,6 +1790,7 @@ Deletes a bank account. The ID of the bank account must be specified. Returns `t
 
 <pre>public <strong>findContactBankById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactBankId):<a href="account#account_models_contactbank">ContactBank</a>
 </pre>
+
     
 Gets a bank account. The ID of the bank account must be specified.
     
@@ -1737,6 +1809,7 @@ Gets a bank account. The ID of the bank account must be specified.
 
 The ContactRepositoryContract is the interface for the contact repository. This interface allows to list, get, create, update and delete contacts. A contact is equivalent to a person.
 
+
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
@@ -1747,6 +1820,7 @@ The ContactRepositoryContract is the interface for the contact repository. This 
 
 <pre>public <strong>createContact</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_contact">Contact</a>
 </pre>
+
     
 Creates a contact and returns it.
     
@@ -1762,6 +1836,7 @@ Creates a contact and returns it.
 
 <pre>public <strong>updateContact</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="account#account_models_contact">Contact</a>
 </pre>
+
     
 Updates a contact and returns it. The ID of the contact must be specified.
     
@@ -1781,6 +1856,7 @@ Updates a contact and returns it. The ID of the contact must be specified.
 
 
 <pre>public <strong>deleteContact</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Deletes a contact. The ID of the contact must be specified.
     
@@ -1796,6 +1872,7 @@ Deletes a contact. The ID of the contact must be specified.
 
 <pre>public <strong>findContactById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="account#account_models_contact">Contact</a>
 </pre>
+
     
 Gets a contact. The ID of the contact must be specified.
     
@@ -1816,8 +1893,9 @@ Gets a contact. The ID of the contact must be specified.
 
 <pre>public <strong>getContactList</strong>(<a target="_blank" href="http://php.net/array">array</a> $filter = [], <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
+
     
-Search for contacts
+List contacts
     
 ##### <strong>Parameters</strong>
     
@@ -1851,6 +1929,7 @@ Search for contacts
 
 <pre>public <strong>getContactByOptionValue</strong>(<a target="_blank" href="http://php.net/string">string</a> $value, <a target="_blank" href="http://php.net/int">int</a> $typeId, <a target="_blank" href="http://php.net/int">int</a> $subTypeId):<a href="account#account_models_contact">Contact</a>
 </pre>
+
     
 Returns an existing contact by a contact option information.
     
@@ -1864,70 +1943,21 @@ Returns an existing contact by a contact option information.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$typeId</td>
-        <td>The type id of the contact option</td>
+        <td>The type ID of the contact option</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$subTypeId</td>
-        <td>The sub-type id of the contact option</td>
+        <td>The sub-type ID of the contact option</td>
     </tr>
 </table>
 
 
-<pre>public <strong>pushSortingOrder</strong>(<a target="_blank" href="http://php.net/string">string</a> $field, <a target="_blank" href="http://php.net/string">string</a> $direction = &quot;asc&quot;):<a href="miscellaneous#miscellaneous_repositories_contracts">Contracts</a>
-</pre>
-    
-Pushes a sorting order to a collection.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$field</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$direction</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>applySortingOrder</strong>():<a href="miscellaneous#miscellaneous_repositories_contracts">Contracts</a>
-</pre>
-    
-Applies the sorting order on the underlying builder instance
-    
-<pre>public <strong>clearSortingOrder</strong>():<a href="miscellaneous#miscellaneous_repositories_contracts">Contracts</a>
-</pre>
-    
-Clears the sorting order on the underlying builder instance
-    
-<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-    
-Sets the filter array.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filters</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-    
-Returns the filter array.
-    
 
 ### ContactTypeRepositoryContract<a name="account_contracts_contacttyperepositorycontract"></a>
 
 The ContactTypeRepositoryContract is the interface for the contact type repository. This interface allows to list, get, create, update and delete contact types.
+
 
 #### Namespace
 
@@ -1939,6 +1969,7 @@ The ContactTypeRepositoryContract is the interface for the contact type reposito
 
 <pre>public <strong>createContactType</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_contacttype">ContactType</a>
 </pre>
+
     
 Creates a contact type and returns it.
     
@@ -1954,6 +1985,7 @@ Creates a contact type and returns it.
 
 <pre>public <strong>updateContactType</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $contactTypeId):<a href="account#account_models_contacttype">ContactType</a>
 </pre>
+
     
 Updates a contact type and returns it. The ID of the contact type must be specified.
     
@@ -1973,6 +2005,7 @@ Updates a contact type and returns it. The ID of the contact type must be specif
 
 
 <pre>public <strong>deleteContactType</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactTypeId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Deletes a contact type. The ID of the contact type must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
     
@@ -1988,6 +2021,7 @@ Deletes a contact type. The ID of the contact type must be specified. Returns `t
 
 <pre>public <strong>findContactTypeById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactTypeId):<a href="account#account_models_contacttype">ContactType</a>
 </pre>
+
     
 Gets a contact type. The ID of the contact type must be specified.
     
@@ -2002,6 +2036,7 @@ Gets a contact type. The ID of the contact type must be specified.
 
 
 <pre>public <strong>allContactTypes</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Returns a collection of contact types.
     
@@ -2020,6 +2055,7 @@ Returns a collection of contact types.
 
 The contract for the contact payment repository.
 
+
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
@@ -2029,6 +2065,7 @@ The contract for the contact payment repository.
 #### Methods
 
 <pre>public <strong>getBanksOfContact</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Gets a collection of bank accounts of a contact. The ID of the contact must be specified.
     
@@ -2054,6 +2091,7 @@ Gets a collection of bank accounts of a contact. The ID of the contact must be s
 
 <pre>public <strong>getBankByOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="account#account_models_contactbank">ContactBank</a>
 </pre>
+
     
 Returns bank details of an order. The ID of the order must be specified.
     
@@ -2074,6 +2112,7 @@ Returns bank details of an order. The ID of the order must be specified.
 
 <pre>public <strong>createContactBank</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_contactbank">ContactBank</a>
 </pre>
+
     
 Creates a bank account for a contact and returns it.
     
@@ -2089,6 +2128,7 @@ Creates a bank account for a contact and returns it.
 
 <pre>public <strong>updateContactBank</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $contactBankId):<a href="account#account_models_contactbank">ContactBank</a>
 </pre>
+
     
 Updates a bank account. The ID of the bank account must be specified.
     
@@ -2108,6 +2148,7 @@ Updates a bank account. The ID of the bank account must be specified.
 
 
 <pre>public <strong>deleteContactBank</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactBankId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Deletes a bank account. The ID of the bank account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
     
@@ -2123,6 +2164,7 @@ Deletes a bank account. The ID of the bank account must be specified. Returns `t
 
 <pre>public <strong>findContactBankById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactBankId):<a href="account#account_models_contactbank">ContactBank</a>
 </pre>
+
     
 Gets a bank account. The ID of the bank account must be specified.
     
@@ -2140,6 +2182,7 @@ Gets a bank account. The ID of the bank account must be specified.
 ### Contact<a name="account_models_contact"></a>
 
 The contact model.
+
 
 #### Namespace
 
@@ -2369,6 +2412,7 @@ The contact model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2376,6 +2420,7 @@ returns this model as an array
 ### ContactAllowedMethodOfPayment<a name="account_models_contactallowedmethodofpayment"></a>
 
 contact allowed method of payment model
+
 
 #### Namespace
 
@@ -2427,6 +2472,7 @@ contact allowed method of payment model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2434,6 +2480,7 @@ returns this model as an array
 ### ContactBank<a name="account_models_contactbank"></a>
 
 The contact bank model.
+
 
 #### Namespace
 
@@ -2547,6 +2594,7 @@ The contact bank model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2554,6 +2602,7 @@ returns this model as an array
 ### ContactDepartment<a name="account_models_contactdepartment"></a>
 
 contact department model
+
 
 #### Namespace
 
@@ -2612,6 +2661,7 @@ contact department model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2619,6 +2669,7 @@ returns this model as an array
 ### ContactDepartmentName<a name="account_models_contactdepartmentname"></a>
 
 contact department name model
+
 
 #### Namespace
 
@@ -2658,6 +2709,7 @@ contact department name model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2665,6 +2717,7 @@ returns this model as an array
 ### ContactOption<a name="account_models_contactoption"></a>
 
 The contact options model.
+
 
 #### Namespace
 
@@ -2735,6 +2788,7 @@ The contact options model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2742,6 +2796,7 @@ returns this model as an array
 ### ContactOptionSubType<a name="account_models_contactoptionsubtype"></a>
 
 contact options sub type model
+
 
 #### Namespace
 
@@ -2797,6 +2852,7 @@ contact options sub type model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2804,6 +2860,7 @@ returns this model as an array
 ### ContactOptionSubTypeName<a name="account_models_contactoptionsubtypename"></a>
 
 contact options sub type name model
+
 
 #### Namespace
 
@@ -2843,6 +2900,7 @@ contact options sub type name model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2850,6 +2908,7 @@ returns this model as an array
 ### ContactOptionType<a name="account_models_contactoptiontype"></a>
 
 contact options type model
+
 
 #### Namespace
 
@@ -2903,6 +2962,7 @@ contact options type model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2910,6 +2970,7 @@ returns this model as an array
 ### ContactOptionTypeName<a name="account_models_contactoptiontypename"></a>
 
 contact options type name model
+
 
 #### Namespace
 
@@ -2949,6 +3010,7 @@ contact options type name model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2956,6 +3018,7 @@ returns this model as an array
 ### ContactPosition<a name="account_models_contactposition"></a>
 
 contact position model
+
 
 #### Namespace
 
@@ -3018,6 +3081,7 @@ contact position model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3025,6 +3089,7 @@ returns this model as an array
 ### ContactPositionName<a name="account_models_contactpositionname"></a>
 
 contact position name model
+
 
 #### Namespace
 
@@ -3064,6 +3129,7 @@ contact position name model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3071,6 +3137,7 @@ returns this model as an array
 ### ContactType<a name="account_models_contacttype"></a>
 
 contact type model
+
 
 #### Namespace
 
@@ -3124,6 +3191,7 @@ contact type model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3131,6 +3199,7 @@ returns this model as an array
 ### ContactTypeName<a name="account_models_contacttypename"></a>
 
 contact type name model
+
 
 #### Namespace
 
@@ -3170,6 +3239,7 @@ contact type name model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3179,6 +3249,7 @@ returns this model as an array
 ### AccountRepositoryContract<a name="account_contracts_accountrepositorycontract"></a>
 
 The Repository for accounts and relations between accounts and contacts.
+
 
 #### Namespace
 
@@ -3190,6 +3261,7 @@ The Repository for accounts and relations between accounts and contacts.
 
 <pre>public <strong>createAccount</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_account">Account</a>
 </pre>
+
     
 Creates a new account and returns it.
     
@@ -3205,6 +3277,7 @@ Creates a new account and returns it.
 
 <pre>public <strong>updateAccount</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $accountId):<a href="account#account_models_account">Account</a>
 </pre>
+
     
 Updates an existing account and returns it. The ID of the account must be specified.
     
@@ -3224,6 +3297,7 @@ Updates an existing account and returns it. The ID of the account must be specif
 
 
 <pre>public <strong>deleteAccount</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Deletes an account. The ID of the account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
     
@@ -3239,6 +3313,7 @@ Deletes an account. The ID of the account must be specified. Returns `true` if d
 
 <pre>public <strong>findAccountById</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountId):<a href="account#account_models_account">Account</a>
 </pre>
+
     
 Gets an account. The ID of the account must be specified.
     
@@ -3254,6 +3329,7 @@ Gets an account. The ID of the account must be specified.
 
 <pre>public <strong>allAccounts</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </pre>
+
     
 Returns a collection of all accounts.
     
@@ -3274,6 +3350,7 @@ Returns a collection of all accounts.
 
 <pre>public <strong>getContactsOfAccount</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountId):<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </pre>
+
     
 Returns a collection of contacts that belong to the account.
     
@@ -3289,6 +3366,7 @@ Returns a collection of contacts that belong to the account.
 
 <pre>public <strong>saveAccount</strong>(<a target="_blank" href="http://php.net/array">array</a> $data = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Creates a new or updates an existing account.
     
@@ -3307,6 +3385,7 @@ Creates a new or updates an existing account.
 
 frontend customer settings event
 
+
 #### Namespace
 
 `Plenty\Modules\Account\Events`
@@ -3316,11 +3395,13 @@ frontend customer settings event
 #### Methods
 
 <pre>public <strong>getDeliveryCountryId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
 <pre>public <strong>setDeliveryCountryId</strong>(<a target="_blank" href="http://php.net/int">int</a> $deliveryCountryId):<a href="account#account_events_frontendupdatecustomersettings">FrontendUpdateCustomerSettings</a>
 </pre>
+
     
 
     
@@ -3335,11 +3416,13 @@ frontend customer settings event
 
 
 <pre>public <strong>getShowNetPrice</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 
     
 <pre>public <strong>setShowNetPrice</strong>(<a target="_blank" href="http://php.net/boolean">boolean</a> $showNetPrice):<a href="account#account_events_frontendupdatecustomersettings">FrontendUpdateCustomerSettings</a>
 </pre>
+
     
 
     
@@ -3354,11 +3437,13 @@ frontend customer settings event
 
 
 <pre>public <strong>getEbaySellerAccount</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
 <pre>public <strong>setEbaySellerAccount</strong>(<a target="_blank" href="http://php.net/string">string</a> $ebaySellerAccount):<a href="account#account_events_frontendupdatecustomersettings">FrontendUpdateCustomerSettings</a>
 </pre>
+
     
 
     
@@ -3373,11 +3458,13 @@ frontend customer settings event
 
 
 <pre>public <strong>getAccountContactSign</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
 <pre>public <strong>setAccountContactSign</strong>(<a target="_blank" href="http://php.net/string">string</a> $accountContactSign):<a href="account#account_events_frontendupdatecustomersettings">FrontendUpdateCustomerSettings</a>
 </pre>
+
     
 
     
@@ -3392,11 +3479,13 @@ frontend customer settings event
 
 
 <pre>public <strong>getAccountContactClassId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
 <pre>public <strong>setAccountContactClassId</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountContactClassId):<a href="account#account_events_frontendupdatecustomersettings">FrontendUpdateCustomerSettings</a>
 </pre>
+
     
 
     
@@ -3411,11 +3500,13 @@ frontend customer settings event
 
 
 <pre>public <strong>getSalesAgent</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
 <pre>public <strong>setSalesAgent</strong>(<a target="_blank" href="http://php.net/string">string</a> $salesAgent):<a href="account#account_events_frontendupdatecustomersettings">FrontendUpdateCustomerSettings</a>
 </pre>
+
     
 
     
@@ -3430,11 +3521,13 @@ frontend customer settings event
 
 
 <pre>public <strong>getAccountContractClassId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
 <pre>public <strong>setAccountContractClassId</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountContractClassId):<a href="account#account_events_frontendupdatecustomersettings">FrontendUpdateCustomerSettings</a>
 </pre>
+
     
 
     
@@ -3452,6 +3545,7 @@ frontend customer settings event
 ### Account<a name="account_models_account"></a>
 
 the account model.
+
 
 #### Namespace
 
@@ -3536,6 +3630,7 @@ the account model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3543,6 +3638,7 @@ returns this model as an array
 ### AccountContactRelation<a name="account_models_accountcontactrelation"></a>
 
 account contact relation model
+
 
 #### Namespace
 
@@ -3588,6 +3684,134 @@ account contact relation model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
+    
+returns this model as an array
+    
+# Newsletter<a name="account_newsletter"></a>
+    
+## Contracts<a name="account_newsletter_contracts"></a>
+### NewsletterRepositoryContract<a name="account_contracts_newsletterrepositorycontract"></a>
+
+Repository for Newsletter
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Newsletter\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>addToNewsletterList</strong>(<a target="_blank" href="http://php.net/string">string</a> $email, <a target="_blank" href="http://php.net/string">string</a> $forename = &quot;&quot;, <a target="_blank" href="http://php.net/string">string</a> $surname = &quot;&quot;, <a target="_blank" href="http://php.net/array">array</a> $emailDirIds = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Add a subscriber to newsletter list
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$email</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$forename</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$surname</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$emailDirIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Models<a name="account_newsletter_models"></a>
+### NewsletterEmail<a name="account_models_newsletteremail"></a>
+
+NewsletterEmail
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Newsletter\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>newsletter email id</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>directory</td>
+            <td>directory id</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>customerId</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>forename</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>surname</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>email</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>gender</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>birthday</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>timestamp</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>templateLang</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>confirmedTimestamp</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>confirmAuthString</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3597,6 +3821,7 @@ returns this model as an array
 ### OrderSummaryRepositoryContract<a name="account_contracts_ordersummaryrepositorycontract"></a>
 
 The contract for the order summary repository
+
 
 #### Namespace
 
@@ -3608,6 +3833,7 @@ The contract for the order summary repository
 
 <pre>public <strong>findOrderSummaryById</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderSummaryId):<a href="account#account_models_ordersummary">OrderSummary</a>
 </pre>
+
     
 Gets an order summary. The ID of the order summary must be specified.
     
@@ -3623,6 +3849,7 @@ Gets an order summary. The ID of the order summary must be specified.
 
 <pre>public <strong>updateOrderSummary</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $orderSummaryId):<a href="account#account_models_ordersummary">OrderSummary</a>
 </pre>
+
     
 Updates an order summary. The ID of the order summary must be specified.
     
@@ -3643,6 +3870,7 @@ Updates an order summary. The ID of the order summary must be specified.
 
 <pre>public <strong>createOrderSummary</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_ordersummary">OrderSummary</a>
 </pre>
+
     
 Creates an order summary.
     
@@ -3657,6 +3885,7 @@ Creates an order summary.
 
 
 <pre>public <strong>deleteOrderSummary</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderSummaryId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Deletes an order summary. The ID of the order summary must be specified.
     
@@ -3672,6 +3901,7 @@ Deletes an order summary. The ID of the order summary must be specified.
 
 <pre>public <strong>allOrderSummaries</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </pre>
+
     
 Returns a collection of all order summaries.
     
@@ -3692,6 +3922,7 @@ Returns a collection of all order summaries.
 
 <pre>public <strong>findOrderSummaryByContactId</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="account#account_models_ordersummary">OrderSummary</a>
 </pre>
+
     
 Gets an order summary. The ID of the contact must be specified.
     
@@ -3707,6 +3938,7 @@ Gets an order summary. The ID of the contact must be specified.
 
 <pre>public <strong>findOrderSummaryByAddressId</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressId):<a href="account#account_models_ordersummary">OrderSummary</a>
 </pre>
+
     
 Gets an order summary. The ID of the address must be specified.
     
@@ -3724,6 +3956,7 @@ Gets an order summary. The ID of the address must be specified.
 ### OrderSummary<a name="account_models_ordersummary"></a>
 
 The order summary model.
+
 
 #### Namespace
 
@@ -3779,6 +4012,7 @@ The order summary model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     

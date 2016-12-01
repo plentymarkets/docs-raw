@@ -7,6 +7,7 @@
 
 The Comment model.
 
+
 #### Namespace
 
 `Plenty\Modules\Comment\Models`
@@ -16,6 +17,7 @@ The Comment model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     

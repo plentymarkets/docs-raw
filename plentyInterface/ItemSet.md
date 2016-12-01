@@ -7,6 +7,7 @@
 
 The contract for the item set component repository
 
+
 #### Namespace
 
 `Plenty\Modules\ItemSet\Contracts`
@@ -17,6 +18,7 @@ The contract for the item set component repository
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $with):<a href="itemset#itemset_models_itemsetcomponent">ItemSetComponent</a>
 </pre>
+
     
 Return item set component by given id
     
@@ -37,6 +39,7 @@ Return item set component by given id
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $setId, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="itemset#itemset_models_itemsetcomponent">ItemSetComponent</a>
 </pre>
+
     
 Return item set component by given set id and id
     
@@ -57,6 +60,7 @@ Return item set component by given set id and id
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/int">int</a> $setConfigId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="itemset#itemset_models_itemsetcomponent">ItemSetComponent</a>
 </pre>
+
     
 Create a new item set component
     
@@ -77,6 +81,7 @@ Create a new item set component
 
 <pre>public <strong>createComponents</strong>(<a target="_blank" href="http://php.net/int">int</a> $setId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="itemset#itemset_models_itemsetcomponent">ItemSetComponent</a>
 </pre>
+
     
 Create new item set components
     
@@ -97,6 +102,7 @@ Create new item set components
 
 <pre>public <strong>updateComponents</strong>(<a target="_blank" href="http://php.net/int">int</a> $setId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="itemset#itemset_models_itemsetcomponent">ItemSetComponent</a>
 </pre>
+
     
 Update item set components
     
@@ -117,6 +123,7 @@ Update item set components
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $setId, <a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="itemset#itemset_models_itemsetcomponent">ItemSetComponent</a>
 </pre>
+
     
 Update one item set component by given setId and id
     
@@ -142,6 +149,7 @@ Update one item set component by given setId and id
 
 <pre>public <strong>deleteComponents</strong>(<a target="_blank" href="http://php.net/int">int</a> $setId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
 </pre>
+
     
 Delete item set components
     
@@ -162,6 +170,7 @@ Delete item set components
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $setId, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
 </pre>
+
     
 Delete item set component by given setId and id
     
@@ -181,10 +190,12 @@ Delete item set component by given setId and id
 
 
 <pre>public <strong>all</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Return all item set components
     
 <pre>public <strong>findBySetId</strong>(<a target="_blank" href="http://php.net/int">int</a> $setId, <a target="_blank" href="http://php.net/array">array</a> $with):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -204,6 +215,7 @@ Return all item set components
 
 
 <pre>public <strong>findByItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -222,6 +234,7 @@ Return all item set components
 
 The contract for the item set config repository
 
+
 #### Namespace
 
 `Plenty\Modules\ItemSet\Contracts`
@@ -232,6 +245,7 @@ The contract for the item set config repository
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="itemset#itemset_models_itemsetconfig">ItemSetConfig</a>
 </pre>
+
     
 Return item set by given id
     
@@ -247,6 +261,7 @@ Return item set by given id
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="itemset#itemset_models_itemsetconfig">ItemSetConfig</a>
 </pre>
+
     
 Create new item set config
     
@@ -262,6 +277,7 @@ Create new item set config
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="itemset#itemset_models_itemsetconfig">ItemSetConfig</a>
 </pre>
+
     
 Update item set config by given id
     
@@ -282,6 +298,7 @@ Update item set config by given id
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
 </pre>
+
     
 Delete item set config by given id
     
@@ -297,6 +314,7 @@ Delete item set config by given id
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $setId, <a target="_blank" href="http://php.net/int">int</a> $setConfigId):<a href="itemset#itemset_models_itemsetconfig">ItemSetConfig</a>
 </pre>
+
     
 Return item set config of item set
     
@@ -317,6 +335,7 @@ Return item set config of item set
 
 <pre>public <strong>findBySetId</strong>(<a target="_blank" href="http://php.net/int">int</a> $setId):<a href="itemset#itemset_models_itemsetconfig">ItemSetConfig</a>
 </pre>
+
     
 Return set config for item set
     
@@ -335,6 +354,7 @@ Return set config for item set
 
 The contract for the item set repository
 
+
 #### Namespace
 
 `Plenty\Modules\ItemSet\Contracts`
@@ -345,6 +365,7 @@ The contract for the item set repository
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="itemset#itemset_models_itemset">ItemSet</a>
 </pre>
+
     
 Return item set by given id
     
@@ -360,6 +381,7 @@ Return item set by given id
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="itemset#itemset_models_itemset">ItemSet</a>
 </pre>
+
     
 Create new item set
     
@@ -375,6 +397,7 @@ Create new item set
 
 <pre>public <strong>createSets</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="itemset#itemset_models_itemset">ItemSet</a>
 </pre>
+
     
 Create new item sets
     
@@ -389,6 +412,7 @@ Create new item sets
 
 
 <pre>public <strong>updateSets</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Update existing item sets
     
@@ -404,6 +428,7 @@ Update existing item sets
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="itemset#itemset_models_itemset">ItemSet</a>
 </pre>
+
     
 Update item set by given id
     
@@ -424,6 +449,7 @@ Update item set by given id
 
 <pre>public <strong>deleteSets</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
 </pre>
+
     
 Delete item sets
     
@@ -439,6 +465,7 @@ Delete item sets
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
 </pre>
+
     
 Delete item set config by given id
     
@@ -453,6 +480,7 @@ Delete item set config by given id
 
 
 <pre>public <strong>all</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Return all item set configs
     
@@ -460,6 +488,7 @@ Return all item set configs
 ### ItemSet<a name="itemset_models_itemset"></a>
 
 The ItemSet model.
+
 
 #### Namespace
 
@@ -495,6 +524,7 @@ The ItemSet model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -502,6 +532,7 @@ returns this model as an array
 ### ItemSetComponent<a name="itemset_models_itemsetcomponent"></a>
 
 The ItemSetComponent model.
+
 
 #### Namespace
 
@@ -545,6 +576,7 @@ The ItemSetComponent model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -552,6 +584,7 @@ returns this model as an array
 ### ItemSetConfig<a name="itemset_models_itemsetconfig"></a>
 
 The ItemSetConfig model.
+
 
 #### Namespace
 
@@ -595,6 +628,7 @@ The ItemSetConfig model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     

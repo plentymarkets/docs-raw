@@ -7,6 +7,7 @@
 
 The ContactAuthenticationRepositoryContract is the interface for the authentication repository. This interface allows to authenticate users in the client (store) by email and password or by contact ID and password. The interface also provides a method for logging out users from the client (store).
 
+
 #### Namespace
 
 `Plenty\Modules\Authentication\Contracts`
@@ -17,6 +18,7 @@ The ContactAuthenticationRepositoryContract is the interface for the authenticat
 
 <pre>public <strong>authenticateWithContactEmail</strong>(<a target="_blank" href="http://php.net/string">string</a> $contactEmail, <a target="_blank" href="http://php.net/string">string</a> $password):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -37,6 +39,7 @@ The ContactAuthenticationRepositoryContract is the interface for the authenticat
 
 <pre>public <strong>authenticateWithContactId</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/string">string</a> $password):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -57,6 +60,7 @@ The ContactAuthenticationRepositoryContract is the interface for the authenticat
 
 <pre>public <strong>logout</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -64,6 +68,7 @@ The ContactAuthenticationRepositoryContract is the interface for the authenticat
 ### AfterAccountAuthentication<a name="authentication_events_afteraccountauthentication"></a>
 
 The event is triggered after a user is authenticated in the client (store).
+
 
 #### Namespace
 
@@ -74,11 +79,13 @@ The event is triggered after a user is authenticated in the client (store).
 #### Methods
 
 <pre>public <strong>isSuccessful</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 
     
 <pre>public <strong>getAccountContact</strong>():<a href="account#account_models_contact">Contact</a>
 </pre>
+
     
 
     
@@ -86,6 +93,7 @@ The event is triggered after a user is authenticated in the client (store).
 ### AfterAccountContactLogout<a name="authentication_events_afteraccountcontactlogout"></a>
 
 The event is triggered after a user is logged out from the client (store).
+
 
 #### Namespace
 
@@ -96,6 +104,7 @@ The event is triggered after a user is logged out from the client (store).
 ### User<a name="authentication_models_user"></a>
 
 The user authentication model
+
 
 #### Namespace
 
@@ -135,6 +144,10 @@ The user authentication model
 </td>
             <td>user</td>
             <td>The login name of the user</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>roles</td>
+            <td></td>
         </tr></tbody>
 </table>
 
@@ -142,6 +155,7 @@ The user authentication model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     

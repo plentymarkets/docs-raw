@@ -7,6 +7,7 @@
 
 The contract for the fitment item property repository.
 
+
 #### Namespace
 
 `Plenty\Modules\Market\Ebay\PartsFitment\Contracts`
@@ -17,6 +18,7 @@ The contract for the fitment item property repository.
 
 <pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_fitmentitemproperty">FitmentItemProperty</a>
 </pre>
+
     
 Returns a fitment item property by an ID.
     
@@ -32,6 +34,7 @@ Returns a fitment item property by an ID.
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_fitmentitemproperty">FitmentItemProperty</a>
 </pre>
+
     
 Creates a new fitment item property.
     
@@ -52,6 +55,7 @@ Creates a new fitment item property.
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_fitmentitem">FitmentItem</a>
 </pre>
+
     
 Updates an existing fitment item property.
     
@@ -71,6 +75,7 @@ Updates an existing fitment item property.
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Deletes a fitment item property. Returns `true` if the deletion was successful, otherwise `false`.
     
@@ -89,6 +94,7 @@ Deletes a fitment item property. Returns `true` if the deletion was successful, 
 
 The contract for the fitment item repository.
 
+
 #### Namespace
 
 `Plenty\Modules\Market\Ebay\PartsFitment\Contracts`
@@ -99,6 +105,7 @@ The contract for the fitment item repository.
 
 <pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_fitmentitem">FitmentItem</a>
 </pre>
+
     
 Returns a fitment item by an ID.
     
@@ -114,6 +121,7 @@ Returns a fitment item by an ID.
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_fitmentitem">FitmentItem</a>
 </pre>
+
     
 Creates a new fitment item.
     
@@ -134,6 +142,7 @@ Creates a new fitment item.
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_fitmentitem">FitmentItem</a>
 </pre>
+
     
 Updates an existing fitment item.
     
@@ -153,6 +162,7 @@ Updates an existing fitment item.
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Deletes a fitment item. Returns `true` if the deletion was successful, otherwise `false`.
     
@@ -171,6 +181,7 @@ Deletes a fitment item. Returns `true` if the deletion was successful, otherwise
 
 The contract for the fitment repository.
 
+
 #### Namespace
 
 `Plenty\Modules\Market\Ebay\PartsFitment\Contracts`
@@ -181,6 +192,7 @@ The contract for the fitment repository.
 
 <pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_fitment">Fitment</a>
 </pre>
+
     
 Returns a fitment by an ID.
     
@@ -196,6 +208,7 @@ Returns a fitment by an ID.
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="market#market_models_fitment">Fitment</a>
 </pre>
+
     
 Creates a new fitment.
     
@@ -211,6 +224,7 @@ Creates a new fitment.
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_fitment">Fitment</a>
 </pre>
+
     
 Updates an existing fitment.
     
@@ -230,6 +244,7 @@ Updates an existing fitment.
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Deletes a fitment. Returns `true` if the deletion was successful, otherwise `false`.
     
@@ -243,40 +258,11 @@ Deletes a fitment. Returns `true` if the deletion was successful, otherwise `fal
 </table>
 
 
-<pre>public <strong>pushSortingOrder</strong>(<a target="_blank" href="http://php.net/string">string</a> $field, <a target="_blank" href="http://php.net/string">string</a> $direction = &quot;asc&quot;):<a href="miscellaneous#miscellaneous_repositories_contracts">Contracts</a>
-</pre>
-    
-Pushes a sorting order to a collection.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$field</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$direction</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>applySortingOrder</strong>():<a href="miscellaneous#miscellaneous_repositories_contracts">Contracts</a>
-</pre>
-    
-Applies the sorting order on the underlying builder instance
-    
-<pre>public <strong>clearSortingOrder</strong>():<a href="miscellaneous#miscellaneous_repositories_contracts">Contracts</a>
-</pre>
-    
-Clears the sorting order on the underlying builder instance
-    
 ## Models<a name="market_partsfitment_models"></a>
 ### Fitment<a name="market_models_fitment"></a>
 
 The fitment model. This can contain multiple FitmentItems models.
+
 
 #### Namespace
 
@@ -320,6 +306,7 @@ The fitment model. This can contain multiple FitmentItems models.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -327,6 +314,7 @@ returns this model as an array
 ### FitmentItem<a name="market_models_fitmentitem"></a>
 
 The fitment item model. This belongs to one fitment model and can contain multiple FitmentItemProperty models.
+
 
 #### Namespace
 
@@ -367,6 +355,7 @@ The fitment item model. This belongs to one fitment model and can contain multip
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -374,6 +363,7 @@ returns this model as an array
 ### FitmentItemProperty<a name="market_models_fitmentitemproperty"></a>
 
 The fitment item property model. This bleongs to an FitmentItem model.
+
 
 #### Namespace
 
@@ -418,6 +408,7 @@ The fitment item property model. This bleongs to an FitmentItem model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -428,6 +419,7 @@ returns this model as an array
 
 The contract for the market attribute helper repository.
 
+
 #### Namespace
 
 `Plenty\Modules\Market\Helper\Contracts`
@@ -437,6 +429,7 @@ The contract for the market attribute helper repository.
 #### Methods
 
 <pre>public <strong>getAttributeName</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Returns the attribute name for the given attribute id
     
@@ -456,6 +449,7 @@ Returns the attribute name for the given attribute id
 
 
 <pre>public <strong>getAttributeValueName</strong>(<a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Returns the attribute value name for the given attribute value id
     
@@ -484,6 +478,7 @@ Returns the attribute value name for the given attribute value id
 
 The contract for the market category helper repository.
 
+
 #### Namespace
 
 `Plenty\Modules\Market\Helper\Contracts`
@@ -493,6 +488,7 @@ The contract for the market category helper repository.
 #### Methods
 
 <pre>public <strong>getCategoryBranchName</strong>(<a target="_blank" href="http://php.net/int">int</a> $branchId, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/string">string</a> $separator = &quot;&gt;&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Returns the category bread crumbs as string for a given branchId, lang and plentyId
     
@@ -526,6 +522,7 @@ Returns the category bread crumbs as string for a given branchId, lang and plent
 
 The contract for the item helper repository.
 
+
 #### Namespace
 
 `Plenty\Modules\Market\Helper\Contracts`
@@ -535,6 +532,7 @@ The contract for the item helper repository.
 #### Methods
 
 <pre>public <strong>getExternalManufacturerName</strong>(<a target="_blank" href="http://php.net/int">int</a> $manufacturerId):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Get the external manufacturer name.
     
@@ -549,6 +547,7 @@ Get the external manufacturer name.
 
 
 <pre>public <strong>generateSku</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/float">float</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $accountId, <a target="_blank" href="http://php.net/boolean">boolean</a> $setLastExportedTimestamp):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Generates or updates the sku
     
@@ -578,6 +577,7 @@ Generates or updates the sku
 
 
 <pre>public <strong>getAvailability</strong>(<a target="_blank" href="http://php.net/int">int</a> $availabilityId, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/boolean">boolean</a> $returnAvailabilityName):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Returns the availability name or the availability average days
     
@@ -606,6 +606,7 @@ Returns the availability name or the availability average days
 
 The contract for the market property helper repository.
 
+
 #### Namespace
 
 `Plenty\Modules\Market\Helper\Contracts`
@@ -615,6 +616,7 @@ The contract for the market property helper repository.
 #### Methods
 
 <pre>public <strong>getMarketProperty</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Returns a list of the market properties
     
@@ -635,6 +637,7 @@ Returns a list of the market properties
 
 Use this interface to store and retrieve market specific settings.
 
+
 #### Namespace
 
 `Plenty\Modules\Market\Settings\Contracts`
@@ -645,6 +648,7 @@ Use this interface to store and retrieve market specific settings.
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/string">string</a> $marketplaceId, <a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/array">array</a> $settings):<a href="market#market_models_settings">Settings</a>
 </pre>
+
     
 Create market settings.
     
@@ -668,8 +672,30 @@ Create market settings.
 </table>
 
 
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $settingsData, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Update one market settings entry.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$settingsData</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_settings">Settings</a>
 </pre>
+
     
 Return the settings for a given settings ID.
     
@@ -684,6 +710,7 @@ Return the settings for a given settings ID.
 
 
 <pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/string">string</a> $marketplaceId, <a target="_blank" href="http://php.net/string">string</a> $type = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Find settings for a given marketplace ID and type.
     
@@ -704,6 +731,7 @@ Find settings for a given marketplace ID and type.
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Delete a setting.
     
@@ -719,6 +747,7 @@ Delete a setting.
 
 <pre>public <strong>deleteAll</strong>(<a target="_blank" href="http://php.net/string">string</a> $marketplaceId, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Delete all settings for a given type and marketplace ID.
     
@@ -742,6 +771,7 @@ Delete all settings for a given type and marketplace ID.
 
 Factory that allows to store correlation between market settings and plentymarkets settings.
 
+
 #### Namespace
 
 `Plenty\Modules\Market\Settings\Factories`
@@ -752,6 +782,7 @@ Factory that allows to store correlation between market settings and plentymarke
 
 <pre>public <strong>type</strong>(<a target="_blank" href="http://php.net/string">string</a> $type):<a href="market#market_factories_settingscorrelationfactory">SettingsCorrelationFactory</a>
 </pre>
+
     
 Set here the type of relation that should be created.
     
@@ -767,6 +798,7 @@ Set here the type of relation that should be created.
 
 <pre>public <strong>createRelation</strong>(<a target="_blank" href="http://php.net/int">int</a> $settingsId, <a target="_blank" href="http://php.net/int">int</a> $correlationId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Use this method to create a relation of the chosen type.
     
@@ -787,6 +819,7 @@ Use this method to create a relation of the chosen type.
 
 <pre>public <strong>clear</strong>($marketplaceId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Clear all relations for a given correlation type.
     
@@ -802,6 +835,7 @@ Clear all relations for a given correlation type.
 
 
 <pre>public <strong>all</strong>($marketplaceId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Get all correlations for a given marketplace ID.
     
@@ -820,6 +854,7 @@ Get all correlations for a given marketplace ID.
 ### Settings<a name="market_models_settings"></a>
 
 The market settings model.
+
 
 #### Namespace
 
@@ -875,6 +910,7 @@ The market settings model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     

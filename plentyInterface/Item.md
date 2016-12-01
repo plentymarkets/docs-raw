@@ -7,6 +7,7 @@
 
 Repository for AttributeName
 
+
 #### Namespace
 
 `Plenty\Modules\Item\Attribute\Contracts`
@@ -17,6 +18,7 @@ Repository for AttributeName
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $attributeId):<a href="item#item_models_attributename">AttributeName</a>
 </pre>
+
     
 
     
@@ -36,6 +38,7 @@ Repository for AttributeName
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 
     
@@ -56,6 +59,7 @@ Repository for AttributeName
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_attributename">AttributeName</a>
 </pre>
+
     
 
     
@@ -81,6 +85,7 @@ Repository for AttributeName
 
 <pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_attributename">AttributeName</a>
 </pre>
+
     
 
     
@@ -101,6 +106,7 @@ Repository for AttributeName
 
 <pre>public <strong>findByAttributeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $attributeId):<a href="item#item_models_attributename">AttributeName</a>
 </pre>
+
     
 
     
@@ -119,6 +125,7 @@ Repository for AttributeName
 
 Repository for Attribute
 
+
 #### Namespace
 
 `Plenty\Modules\Item\Attribute\Contracts`
@@ -129,6 +136,7 @@ Repository for Attribute
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -144,6 +152,7 @@ Repository for Attribute
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -159,6 +168,7 @@ Repository for Attribute
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -178,6 +188,7 @@ Repository for Attribute
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 
     
@@ -193,6 +204,7 @@ Repository for Attribute
 
 <pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_attribute">Attribute</a>
 </pre>
+
     
 
     
@@ -207,6 +219,7 @@ Repository for Attribute
 
 
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -235,6 +248,7 @@ Repository for Attribute
 
 Repository for AttributeValueName
 
+
 #### Namespace
 
 `Plenty\Modules\Item\Attribute\Contracts`
@@ -245,6 +259,7 @@ Repository for AttributeValueName
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $valueId):<a href="item#item_models_attributevaluename">AttributeValueName</a>
 </pre>
+
     
 
     
@@ -264,6 +279,7 @@ Repository for AttributeValueName
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 
     
@@ -284,6 +300,7 @@ Repository for AttributeValueName
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_attributevaluename">AttributeValueName</a>
 </pre>
+
     
 
     
@@ -309,6 +326,7 @@ Repository for AttributeValueName
 
 <pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_attributevaluename">AttributeValueName</a>
 </pre>
+
     
 
     
@@ -329,6 +347,7 @@ Repository for AttributeValueName
 
 <pre>public <strong>findByValueId</strong>(<a target="_blank" href="http://php.net/int">int</a> $valueId):<a href="item#item_models_attributevaluename">AttributeValueName</a>
 </pre>
+
     
 
     
@@ -347,6 +366,7 @@ Repository for AttributeValueName
 
 Repository for AttributeValue
 
+
 #### Namespace
 
 `Plenty\Modules\Item\Attribute\Contracts`
@@ -357,6 +377,7 @@ Repository for AttributeValue
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $attributeId):<a href="item#item_models_attributevalue">AttributeValue</a>
 </pre>
+
     
 
     
@@ -377,6 +398,7 @@ Repository for AttributeValue
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -401,6 +423,7 @@ Repository for AttributeValue
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 
     
@@ -420,6 +443,7 @@ Repository for AttributeValue
 
 
 <pre>public <strong>findByAttributeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -450,6 +474,7 @@ Repository for AttributeValue
 
 <pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_attributevalue">AttributeValue</a>
 </pre>
+
     
 
     
@@ -469,6 +494,7 @@ Repository for AttributeValue
 
 
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -491,6 +517,7 @@ Repository for AttributeValue
 ### Attribute<a name="item_models_attribute"></a>
 
 The Attribute model including AttributeName and AttributeValue
+
 
 #### Namespace
 
@@ -578,6 +605,7 @@ The Attribute model including AttributeName and AttributeValue
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -585,6 +613,7 @@ returns this model as an array
 ### AttributeName<a name="item_models_attributename"></a>
 
 The AttributeName model including Attribute
+
 
 #### Namespace
 
@@ -644,6 +673,7 @@ The AttributeName model including Attribute
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -651,6 +681,7 @@ returns this model as an array
 ### AttributeValue<a name="item_models_attributevalue"></a>
 
 The AttributeValue model including Attribute and AttributeValueName
+
 
 #### Namespace
 
@@ -731,6 +762,7 @@ The AttributeValue model including Attribute and AttributeValueName
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -738,6 +770,7 @@ returns this model as an array
 ### AttributeValueName<a name="item_models_attributevaluename"></a>
 
 The AttributeValueName model including AttributeValue
+
 
 #### Namespace
 
@@ -797,6 +830,7 @@ The AttributeValueName model including AttributeValue
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -804,6 +838,7 @@ returns this model as an array
 ### AttributeValueSet<a name="item_models_attributevalueset"></a>
 
 The AttributeValueSet model
+
 
 #### Namespace
 
@@ -853,6 +888,7 @@ The AttributeValueSet model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -862,6 +898,7 @@ returns this model as an array
 ### AvailabilityRepositoryContract<a name="item_contracts_availabilityrepositorycontract"></a>
 
 Repository for item availability.
+
 
 #### Namespace
 
@@ -873,6 +910,7 @@ Repository for item availability.
 
 <pre>public <strong>findAvailability</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_availability">Availability</a>
 </pre>
+
     
 Find an availability configuration by a given id.
     
@@ -890,6 +928,7 @@ Find an availability configuration by a given id.
 ### Availability<a name="item_models_availability"></a>
 
 The item availability model
+
 
 #### Namespace
 
@@ -929,6 +968,7 @@ The item availability model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -936,6 +976,7 @@ returns this model as an array
 ### AvailabilityLanguage<a name="item_models_availabilitylanguage"></a>
 
 The item availability lang model
+
 
 #### Namespace
 
@@ -971,6 +1012,7 @@ The item availability lang model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -981,6 +1023,7 @@ returns this model as an array
 
 Repository for Barcode
 
+
 #### Namespace
 
 `Plenty\Modules\Item\Barcode\Contracts`
@@ -990,6 +1033,7 @@ Repository for Barcode
 #### Methods
 
 <pre>public <strong>showBarcode</strong>(<a target="_blank" href="http://php.net/int">int</a> $barcodeId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Show an barcode by given id.
     
@@ -1005,6 +1049,7 @@ Show an barcode by given id.
 
 <pre>public <strong>createBarcode</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_barcode">Barcode</a>
 </pre>
+
     
 Create new barcode
     
@@ -1020,6 +1065,7 @@ Create new barcode
 
 <pre>public <strong>updateBarcode</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $barcodeId):<a href="item#item_models_barcode">Barcode</a>
 </pre>
+
     
 Update an existing barcode
     
@@ -1039,6 +1085,7 @@ Update an existing barcode
 
 
 <pre>public <strong>deleteBarcode</strong>(<a target="_blank" href="http://php.net/int">int</a> $barcodeId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Delete an barcode by given id. If at least one relation exists, throws an exception.
     
@@ -1054,6 +1101,7 @@ Delete an barcode by given id. If at least one relation exists, throws an except
 
 <pre>public <strong>findBarcodeById</strong>(<a target="_blank" href="http://php.net/int">int</a> $barcodeId):<a href="item#item_models_barcode">Barcode</a>
 </pre>
+
     
 Find an existing barcode by given id.
     
@@ -1068,6 +1116,7 @@ Find an existing barcode by given id.
 
 
 <pre>public <strong>findBarcodesByType</strong>(<a target="_blank" href="http://php.net/string">string</a> $barcodeType, <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Get list of barcodes from type
     
@@ -1088,6 +1137,7 @@ Get list of barcodes from type
 
 <pre>public <strong>allBarcodes</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
+
     
 Get list of barcodes
     
@@ -1113,6 +1163,7 @@ Get list of barcodes
 
 <pre>public <strong>createBarcodeReferrerRelation</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $barcodeId):<a href="item#item_models_barcodelinkreferrer">BarcodeLinkReferrer</a>
 </pre>
+
     
 Create new barcode referrer for given referrer.
     
@@ -1132,6 +1183,7 @@ Create new barcode referrer for given referrer.
 
 
 <pre>public <strong>deleteBarcodeReferrerRelation</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrer, <a target="_blank" href="http://php.net/int">int</a> $barcodeId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Delete existing barcode referrer with given referrer.
     
@@ -1151,6 +1203,7 @@ Delete existing barcode referrer with given referrer.
 
 
 <pre>public <strong>findBarcodesByReferrerRelation</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrer, <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Get barcode referrer with given referrer
     
@@ -1173,6 +1226,7 @@ Get barcode referrer with given referrer
 ### Barcode<a name="item_models_barcode"></a>
 
 The barcode model including barcode referrer
+
 
 #### Namespace
 
@@ -1212,6 +1266,7 @@ The barcode model including barcode referrer
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1219,6 +1274,7 @@ returns this model as an array
 ### BarcodeLinkReferrer<a name="item_models_barcodelinkreferrer"></a>
 
 The barcode link referrer model including the barcode
+
 
 #### Namespace
 
@@ -1263,6 +1319,7 @@ The barcode link referrer model including the barcode
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1270,6 +1327,7 @@ returns this model as an array
     
 ## Contracts<a name="item_datalayer_contracts"></a>
 ### ItemDataLayerRepositoryContract<a name="item_contracts_itemdatalayerrepositorycontract"></a>
+
 
 
 
@@ -1283,6 +1341,7 @@ returns this model as an array
 
 <pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns, <a target="_blank" href="http://php.net/array">array</a> $filter = [], <a target="_blank" href="http://php.net/array">array</a> $params = []):<a href="item#item_models_recordlist">RecordList</a>
 </pre>
+
     
 
     
@@ -1308,6 +1367,7 @@ returns this model as an array
 
 <pre>public <strong>lookup</strong>(<a target="_blank" href="http://php.net/array">array</a> $filter = [], <a target="_blank" href="http://php.net/array">array</a> $params = [], <a target="_blank" href="http://php.net/bool">bool</a> $calculateNumberOfRows = false):<a href="item#item_services_itemdatalayerresultlookup">ItemDataLayerResultLookup</a>
 </pre>
+
     
 
     
@@ -1333,6 +1393,7 @@ returns this model as an array
 
 <pre>public <strong>searchWithPagination</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns, <a target="_blank" href="http://php.net/array">array</a> $filter = [], <a target="_blank" href="http://php.net/array">array</a> $params = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
+
     
 
     
@@ -1361,6 +1422,7 @@ returns this model as an array
 
 
 
+
 #### Namespace
 
 `Plenty\Modules\Item\DataLayer\Models`
@@ -1370,6 +1432,7 @@ returns this model as an array
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1377,6 +1440,7 @@ returns this model as an array
 ### ItemBase<a name="item_models_itembase"></a>
 
 ItemDataLayer - ItemBase
+
 
 #### Namespace
 
@@ -1688,6 +1752,7 @@ ItemDataLayer - ItemBase
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1695,6 +1760,7 @@ returns this model as an array
 ### ItemCrossSelling<a name="item_models_itemcrossselling"></a>
 
 ItemCrossSelling
+
 
 #### Namespace
 
@@ -1737,6 +1803,7 @@ ItemCrossSelling
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1744,6 +1811,7 @@ returns this model as an array
 ### ItemDescription<a name="item_models_itemdescription"></a>
 
 ItemDescription
+
 
 #### Namespace
 
@@ -1827,6 +1895,7 @@ ItemDescription
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1834,6 +1903,7 @@ returns this model as an array
 ### ItemProperty<a name="item_models_itemproperty"></a>
 
 ItemProperty
+
 
 #### Namespace
 
@@ -1882,6 +1952,7 @@ ItemProperty
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1889,6 +1960,7 @@ returns this model as an array
 ### ItemShippingProfiles<a name="item_models_itemshippingprofiles"></a>
 
 ItemShippingProfiles
+
 
 #### Namespace
 
@@ -1928,6 +2000,7 @@ ItemShippingProfiles
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -1935,6 +2008,7 @@ returns this model as an array
 ### Record<a name="item_models_record"></a>
 
 Record
+
 
 #### Namespace
 
@@ -2082,6 +2156,7 @@ Record
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2089,6 +2164,7 @@ returns this model as an array
 ### RecordList<a name="item_models_recordlist"></a>
 
 RecordList
+
 
 #### Namespace
 
@@ -2099,6 +2175,7 @@ RecordList
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2106,6 +2183,7 @@ returns this model as an array
 ### VariationAttributeValue<a name="item_models_variationattributevalue"></a>
 
 VariationAttributeValue
+
 
 #### Namespace
 
@@ -2137,6 +2215,7 @@ VariationAttributeValue
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2144,6 +2223,7 @@ returns this model as an array
 ### VariationBarcode<a name="item_models_variationbarcode"></a>
 
 VariationBarcode
+
 
 #### Namespace
 
@@ -2183,6 +2263,7 @@ VariationBarcode
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2190,6 +2271,7 @@ returns this model as an array
 ### VariationBase<a name="item_models_variationbase"></a>
 
 VariationBase
+
 
 #### Namespace
 
@@ -2422,6 +2504,7 @@ VariationBase
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2429,6 +2512,7 @@ returns this model as an array
 ### VariationBundleComponent<a name="item_models_variationbundlecomponent"></a>
 
 VariationBundleComponent
+
 
 #### Namespace
 
@@ -2468,6 +2552,7 @@ VariationBundleComponent
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2475,6 +2560,7 @@ returns this model as an array
 ### VariationCategory<a name="item_models_variationcategory"></a>
 
 VariationCategory
+
 
 #### Namespace
 
@@ -2511,6 +2597,7 @@ VariationCategory
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2518,6 +2605,7 @@ returns this model as an array
 ### VariationImage<a name="item_models_variationimage"></a>
 
 VariationImage
+
 
 #### Namespace
 
@@ -2577,6 +2665,7 @@ VariationImage
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2584,6 +2673,7 @@ returns this model as an array
 ### VariationLinkMarketplace<a name="item_models_variationlinkmarketplace"></a>
 
 VariationLinkMarketplace
+
 
 #### Namespace
 
@@ -2615,6 +2705,7 @@ VariationLinkMarketplace
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2622,6 +2713,7 @@ returns this model as an array
 ### VariationLinkWebstore<a name="item_models_variationlinkwebstore"></a>
 
 VariationLinkWebstore
+
 
 #### Namespace
 
@@ -2653,6 +2745,7 @@ VariationLinkWebstore
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2660,6 +2753,7 @@ returns this model as an array
 ### VariationMarketStatus<a name="item_models_variationmarketstatus"></a>
 
 VariationMarketStatus
+
 
 #### Namespace
 
@@ -2734,6 +2828,7 @@ VariationMarketStatus
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2741,6 +2836,7 @@ returns this model as an array
 ### VariationRetailPrice<a name="item_models_variationretailprice"></a>
 
 VariationRetailPrice
+
 
 #### Namespace
 
@@ -2840,6 +2936,7 @@ VariationRetailPrice
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2847,6 +2944,7 @@ returns this model as an array
 ### VariationSpecialOfferRetailPrice<a name="item_models_variationspecialofferretailprice"></a>
 
 VariationSpecialOfferRetailPrice
+
 
 #### Namespace
 
@@ -2928,6 +3026,7 @@ VariationSpecialOfferRetailPrice
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2935,6 +3034,7 @@ returns this model as an array
 ### VariationStandardCategory<a name="item_models_variationstandardcategory"></a>
 
 VariationStandardCategory
+
 
 #### Namespace
 
@@ -2970,6 +3070,7 @@ VariationStandardCategory
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -2977,6 +3078,7 @@ returns this model as an array
 ### VariationStock<a name="item_models_variationstock"></a>
 
 VariationStock
+
 
 #### Namespace
 
@@ -3082,6 +3184,7 @@ VariationStock
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3089,6 +3192,7 @@ returns this model as an array
 ### VariationStockBuffer<a name="item_models_variationstockbuffer"></a>
 
 VariationStockBuffer
+
 
 #### Namespace
 
@@ -3116,6 +3220,7 @@ VariationStockBuffer
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3123,6 +3228,7 @@ returns this model as an array
 ### VariationSupplier<a name="item_models_variationsupplier"></a>
 
 VariationSupplier
+
 
 #### Namespace
 
@@ -3200,6 +3306,7 @@ VariationSupplier
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3207,6 +3314,7 @@ returns this model as an array
 ### VariationWarehouse<a name="item_models_variationwarehouse"></a>
 
 VariationWarehouse
+
 
 #### Namespace
 
@@ -3274,6 +3382,7 @@ VariationWarehouse
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3281,6 +3390,7 @@ returns this model as an array
 ### ItemDataLayerResultLookup<a name="item_services_itemdatalayerresultlookup"></a>
 
 ItemDataLayer Lookup
+
 
 #### Namespace
 
@@ -3291,10 +3401,12 @@ ItemDataLayer Lookup
 #### Methods
 
 <pre>public <strong>getNumberOfRows</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
     
 
     
 <pre>public <strong>getResult</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -3305,6 +3417,7 @@ ItemDataLayer Lookup
 
 Repository for DefaultShippingCost
 
+
 #### Namespace
 
 `Plenty\Modules\Item\DefaultShippingCost\Contracts`
@@ -3314,6 +3427,7 @@ Repository for DefaultShippingCost
 #### Methods
 
 <pre>public <strong>findShippingCost</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/float">float</a> $referrerId, <a target="_blank" href="http://php.net/int">int</a> $shippingDestinationId, <a target="_blank" href="http://php.net/int">int</a> $paymentMethodId):<a target="_blank" href="http://php.net/float">float</a></pre>
+
     
 
     
@@ -3346,6 +3460,7 @@ Repository for DefaultShippingCost
 ### DefaultShippingCost<a name="item_models_defaultshippingcost"></a>
 
 The default shipping cost model
+
 
 #### Namespace
 
@@ -3381,6 +3496,7 @@ The default shipping cost model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3390,6 +3506,7 @@ returns this model as an array
 ### ItemRepositoryContract<a name="item_contracts_itemrepositorycontract"></a>
 
 Repository for item basket
+
 
 #### Namespace
 
@@ -3401,6 +3518,7 @@ Repository for item basket
 
 <pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -3416,6 +3534,7 @@ Repository for item basket
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -3441,6 +3560,7 @@ Repository for item basket
 
 <pre>public <strong>search</strong>($columns = [], $lang = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -3476,30 +3596,11 @@ Repository for item basket
 </table>
 
 
-<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-    
-Sets the filter array.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filters</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-    
-Returns the filter array.
-    
 ## Models<a name="item_item_models"></a>
 ### Item<a name="item_models_item"></a>
 
 The item model
+
 
 #### Namespace
 
@@ -3735,6 +3836,7 @@ The item model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3742,6 +3844,7 @@ returns this model as an array
 ### ItemText<a name="item_models_itemtext"></a>
 
 The item text model
+
 
 #### Namespace
 
@@ -3805,6 +3908,7 @@ The item text model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3814,6 +3918,7 @@ returns this model as an array
 ### ItemImage<a name="item_models_itemimage"></a>
 
 The ItemImage Model
+
 
 #### Namespace
 
@@ -3905,6 +4010,7 @@ The ItemImage Model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3912,6 +4018,7 @@ returns this model as an array
 ### ItemImageAvailability<a name="item_models_itemimageavailability"></a>
 
 ItemImageAvailability
+
 
 #### Namespace
 
@@ -3947,6 +4054,7 @@ ItemImageAvailability
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -3954,6 +4062,7 @@ returns this model as an array
 ### ItemImageName<a name="item_models_itemimagename"></a>
 
 ItemImageName
+
 
 #### Namespace
 
@@ -3993,6 +4102,7 @@ ItemImageName
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -4000,6 +4110,7 @@ returns this model as an array
 ### ItemImageUpload<a name="item_models_itemimageupload"></a>
 
 ItemImage
+
 
 #### Namespace
 
@@ -4071,6 +4182,7 @@ ItemImage
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -4080,6 +4192,7 @@ returns this model as an array
 ### ItemProperty<a name="item_models_itemproperty"></a>
 
 ItemPropertyValue
+
 
 #### Namespace
 
@@ -4145,6 +4258,7 @@ ItemPropertyValue
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -4154,6 +4268,7 @@ returns this model as an array
 ### ManufacturerCommissionRepositoryContract<a name="item_contracts_manufacturercommissionrepositorycontract"></a>
 
 Repository for ManufacturerCommission
+
 
 #### Namespace
 
@@ -4165,6 +4280,7 @@ Repository for ManufacturerCommission
 
 <pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_manufacturercommission">ManufacturerCommission</a>
 </pre>
+
     
 Find one ManufacturerCommission by given Id
     
@@ -4180,6 +4296,7 @@ Find one ManufacturerCommission by given Id
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_manufacturercommission">ManufacturerCommission</a>
 </pre>
+
     
 Creates new ManufacturerCommission
     
@@ -4195,6 +4312,7 @@ Creates new ManufacturerCommission
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_manufacturercommission">ManufacturerCommission</a>
 </pre>
+
     
 Updates existing ManufacturerCommission
     
@@ -4215,6 +4333,7 @@ Updates existing ManufacturerCommission
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
 </pre>
+
     
 Delete an ManufacturerCommission by givenId
     
@@ -4229,6 +4348,7 @@ Delete an ManufacturerCommission by givenId
 
 
 <pre>public <strong>findByManufacturerId</strong>(<a target="_blank" href="http://php.net/int">int</a> $manufacturerId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Find ManufacturerCommissions by given ManufacturerId
     
@@ -4247,6 +4367,7 @@ Find ManufacturerCommissions by given ManufacturerId
 
 Repository for item manufacturers
 
+
 #### Namespace
 
 `Plenty\Modules\Item\Manufacturer\Contracts`
@@ -4257,6 +4378,7 @@ Repository for item manufacturers
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_manufacturer">Manufacturer</a>
 </pre>
+
     
 store a new manufacturer
     
@@ -4272,6 +4394,7 @@ store a new manufacturer
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $manufacturerId):<a href="item#item_models_manufacturer">Manufacturer</a>
 </pre>
+
     
 Update an existing manufacturer
     
@@ -4292,6 +4415,7 @@ Update an existing manufacturer
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $manufacturerId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Delete a manufacturer by the manufacturer id
     
@@ -4307,6 +4431,7 @@ Delete a manufacturer by the manufacturer id
 
 <pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $manufacturerId):<a href="item#item_models_manufacturer">Manufacturer</a>
 </pre>
+
     
 Find an existing Manufacturer
     
@@ -4322,6 +4447,7 @@ Find an existing Manufacturer
 
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
+
     
 
     
@@ -4347,6 +4473,7 @@ Find an existing Manufacturer
 
 <pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/array">array</a> $params = [], <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
+
     
 Search manufacturers by Filter
     
@@ -4369,6 +4496,7 @@ Search manufacturers by Filter
 ### Manufacturer<a name="item_models_manufacturer"></a>
 
 The item manufacturer model
+
 
 #### Namespace
 
@@ -4480,6 +4608,7 @@ The item manufacturer model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -4487,6 +4616,7 @@ returns this model as an array
 ### ManufacturerCommission<a name="item_models_manufacturercommission"></a>
 
 The item manufacturer commission model
+
 
 #### Namespace
 
@@ -4535,6 +4665,7 @@ The item manufacturer commission model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -4544,6 +4675,7 @@ returns this model as an array
 ### PropertyItemNameRepositoryContract<a name="item_contracts_propertyitemnamerepositorycontract"></a>
 
 Repository for property item name
+
 
 #### Namespace
 
@@ -4555,6 +4687,7 @@ Repository for property item name
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyItemId):<a href="item#item_models_propertyitemname">PropertyItemName</a>
 </pre>
+
     
 
     
@@ -4574,6 +4707,7 @@ Repository for property item name
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 
     
@@ -4594,6 +4728,7 @@ Repository for property item name
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyitemname">PropertyItemName</a>
 </pre>
+
     
 
     
@@ -4619,6 +4754,7 @@ Repository for property item name
 
 <pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyitemname">PropertyItemName</a>
 </pre>
+
     
 
     
@@ -4639,6 +4775,7 @@ Repository for property item name
 
 <pre>public <strong>findByPropertyItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId):<a href="item#item_models_propertyitemname">PropertyItemName</a>
 </pre>
+
     
 
     
@@ -4657,6 +4794,7 @@ Repository for property item name
 
 Repository for property item
 
+
 #### Namespace
 
 `Plenty\Modules\Item\Property\Contracts`
@@ -4667,6 +4805,7 @@ Repository for property item
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_propertyitem">PropertyItem</a>
 </pre>
+
     
 
     
@@ -4682,6 +4821,7 @@ Repository for property item
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_propertyitem">PropertyItem</a>
 </pre>
+
     
 
     
@@ -4697,6 +4837,7 @@ Repository for property item
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -4716,6 +4857,7 @@ Repository for property item
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 
     
@@ -4731,6 +4873,7 @@ Repository for property item
 
 <pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_propertyitem">PropertyItem</a>
 </pre>
+
     
 
     
@@ -4745,6 +4888,7 @@ Repository for property item
 
 
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -4773,6 +4917,7 @@ Repository for property item
 
 Repository for property market component
 
+
 #### Namespace
 
 `Plenty\Modules\Item\Property\Contracts`
@@ -4783,6 +4928,7 @@ Repository for property market component
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyItemId):<a href="item#item_models_propertymarketcomponent">PropertyMarketComponent</a>
 </pre>
+
     
 
     
@@ -4802,6 +4948,7 @@ Repository for property market component
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/float">float</a> $marketReference):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 
     
@@ -4822,6 +4969,7 @@ Repository for property market component
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/float">float</a> $marketReference):<a href="item#item_models_propertymarketcomponent">PropertyMarketComponent</a>
 </pre>
+
     
 
     
@@ -4847,6 +4995,7 @@ Repository for property market component
 
 <pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/float">float</a> $marketReference):<a href="item#item_models_propertymarketcomponent">PropertyMarketComponent</a>
 </pre>
+
     
 
     
@@ -4867,6 +5016,7 @@ Repository for property market component
 
 <pre>public <strong>findByPropertyItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId):<a href="item#item_models_propertymarketcomponent">PropertyMarketComponent</a>
 </pre>
+
     
 
     
@@ -4881,6 +5031,7 @@ Repository for property market component
 
 
 <pre>public <strong>getPropertyMarketComponents</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId, <a target="_blank" href="http://php.net/int">int</a> $componentId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -4904,6 +5055,7 @@ Repository for property market component
 
 Repository for property selection
 
+
 #### Namespace
 
 `Plenty\Modules\Item\Property\Contracts`
@@ -4914,6 +5066,7 @@ Repository for property selection
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyItemId):<a href="item#item_models_propertyselection">PropertySelection</a>
 </pre>
+
     
 
     
@@ -4933,6 +5086,7 @@ Repository for property selection
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 
     
@@ -4953,6 +5107,7 @@ Repository for property selection
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyselection">PropertySelection</a>
 </pre>
+
     
 
     
@@ -4978,6 +5133,7 @@ Repository for property selection
 
 <pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyselection">PropertySelection</a>
 </pre>
+
     
 
     
@@ -4998,6 +5154,7 @@ Repository for property selection
 
 <pre>public <strong>findByPropertyItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId):<a href="item#item_models_propertyselection">PropertySelection</a>
 </pre>
+
     
 
     
@@ -5015,6 +5172,7 @@ Repository for property selection
 ### PropertyItem<a name="item_models_propertyitem"></a>
 
 The PropertyItem including PropertyItemName and PropertyMarketComponent
+
 
 #### Namespace
 
@@ -5110,6 +5268,7 @@ The PropertyItem including PropertyItemName and PropertyMarketComponent
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -5117,6 +5276,7 @@ returns this model as an array
 ### PropertyItemName<a name="item_models_propertyitemname"></a>
 
 The PropertyItemName including PropertyItem
+
 
 #### Namespace
 
@@ -5161,6 +5321,7 @@ The PropertyItemName including PropertyItem
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -5168,6 +5329,7 @@ returns this model as an array
 ### PropertyMarketComponent<a name="item_models_propertymarketcomponent"></a>
 
 The PropertyMarketComponent including PropertyItem
+
 
 #### Namespace
 
@@ -5212,6 +5374,7 @@ The PropertyMarketComponent including PropertyItem
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -5219,6 +5382,7 @@ returns this model as an array
 ### PropertySelection<a name="item_models_propertyselection"></a>
 
 The PropertySelection including PropertyItem
+
 
 #### Namespace
 
@@ -5267,6 +5431,7 @@ The PropertySelection including PropertyItem
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -5276,6 +5441,7 @@ returns this model as an array
 ### SalesPriceRepositoryContract<a name="item_contracts_salespricerepositorycontract"></a>
 
 sales price
+
 
 #### Namespace
 
@@ -5287,6 +5453,7 @@ sales price
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salesprice">SalesPrice</a>
 </pre>
+
     
 Show an VariationSalesPrice by given id.
     
@@ -5302,6 +5469,7 @@ Show an VariationSalesPrice by given id.
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_salesprice">SalesPrice</a>
 </pre>
+
     
 Create new VariationSalesPrice
     
@@ -5317,6 +5485,7 @@ Create new VariationSalesPrice
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salesprice">SalesPrice</a>
 </pre>
+
     
 Update an existing VariationSalesPrice
     
@@ -5336,6 +5505,7 @@ Update an existing VariationSalesPrice
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Delete an VariationSalesPrice by given id. If at least one relation exists, throws an exception.
     
@@ -5351,6 +5521,7 @@ Delete an VariationSalesPrice by given id. If at least one relation exists, thro
 
 <pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salesprice">SalesPrice</a>
 </pre>
+
     
 Get list of SalesPrices from type
     
@@ -5366,6 +5537,7 @@ Get list of SalesPrices from type
 
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
+
     
 Get list of SalesPrices
     
@@ -5391,6 +5563,7 @@ Get list of SalesPrices
 
 ## Models<a name="item_salesprice_models"></a>
 ### SalesPrice<a name="item_models_salesprice"></a>
+
 
 
 
@@ -5480,11 +5653,13 @@ Get list of SalesPrices
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
 
 ### SalesPriceAccount<a name="item_models_salespriceaccount"></a>
+
 
 
 
@@ -5530,11 +5705,13 @@ returns this model as an array
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
 
 ### SalesPriceCountry<a name="item_models_salespricecountry"></a>
+
 
 
 
@@ -5576,11 +5753,13 @@ returns this model as an array
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
 
 ### SalesPriceCurrency<a name="item_models_salespricecurrency"></a>
+
 
 
 
@@ -5622,11 +5801,13 @@ returns this model as an array
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
 
 ### SalesPriceCustomerClass<a name="item_models_salespricecustomerclass"></a>
+
 
 
 
@@ -5668,11 +5849,13 @@ returns this model as an array
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
 
 ### SalesPriceName<a name="item_models_salespricename"></a>
+
 
 
 
@@ -5722,11 +5905,13 @@ returns this model as an array
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
 
 ### SalesPriceOnlineStore<a name="item_models_salespriceonlinestore"></a>
+
 
 
 
@@ -5768,11 +5953,13 @@ returns this model as an array
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
 
 ### SalesPriceReferrer<a name="item_models_salespricereferrer"></a>
+
 
 
 
@@ -5814,6 +6001,7 @@ returns this model as an array
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -5823,6 +6011,7 @@ returns this model as an array
 ### ShippingSupportRepositoryContract<a name="item_contracts_shippingsupportrepositorycontract"></a>
 
 Repository for ShippingSupport
+
 
 #### Namespace
 
@@ -5834,6 +6023,7 @@ Repository for ShippingSupport
 
 <pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_shippingsupport">ShippingSupport</a>
 </pre>
+
     
 Find one ShippingSupport by Id
     
@@ -5848,6 +6038,7 @@ Find one ShippingSupport by Id
 
 
 <pre>public <strong>findByItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -5863,6 +6054,7 @@ Find one ShippingSupport by Id
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_shippingsupport">ShippingSupport</a>
 </pre>
+
     
 Adds shipping support to article
     
@@ -5877,6 +6069,7 @@ Adds shipping support to article
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Remove shipping support to article
     
@@ -5894,6 +6087,7 @@ Remove shipping support to article
 ### ShippingSupport<a name="item_models_shippingsupport"></a>
 
 The shipping support model
+
 
 #### Namespace
 
@@ -5929,6 +6123,7 @@ The shipping support model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -5938,6 +6133,7 @@ returns this model as an array
 ### UnitNameRepositoryContract<a name="item_contracts_unitnamerepositorycontract"></a>
 
 Repository for Unit Name
+
 
 #### Namespace
 
@@ -5949,6 +6145,7 @@ Repository for Unit Name
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $unitId):<a href="item#item_models_unitname">UnitName</a>
 </pre>
+
     
 
     
@@ -5968,6 +6165,7 @@ Repository for Unit Name
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $unitId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 
     
@@ -5988,6 +6186,7 @@ Repository for Unit Name
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $unitId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_unitname">UnitName</a>
 </pre>
+
     
 
     
@@ -6013,6 +6212,7 @@ Repository for Unit Name
 
 <pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $unitId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_unitname">UnitName</a>
 </pre>
+
     
 
     
@@ -6033,6 +6233,7 @@ Repository for Unit Name
 
 <pre>public <strong>findByUnitId</strong>(<a target="_blank" href="http://php.net/int">int</a> $unitId):<a href="item#item_models_unitname">UnitName</a>
 </pre>
+
     
 
     
@@ -6051,6 +6252,7 @@ Repository for Unit Name
 
 Repository for Unit
 
+
 #### Namespace
 
 `Plenty\Modules\Item\Unit\Contracts`
@@ -6061,6 +6263,7 @@ Repository for Unit
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_unit">Unit</a>
 </pre>
+
     
 
     
@@ -6076,6 +6279,7 @@ Repository for Unit
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_unit">Unit</a>
 </pre>
+
     
 
     
@@ -6091,6 +6295,7 @@ Repository for Unit
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -6110,6 +6315,7 @@ Repository for Unit
 
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 
     
@@ -6125,6 +6331,7 @@ Repository for Unit
 
 <pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_unit">Unit</a>
 </pre>
+
     
 
     
@@ -6139,6 +6346,7 @@ Repository for Unit
 
 
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -6166,6 +6374,7 @@ Repository for Unit
 ### Unit<a name="item_models_unit"></a>
 
 The unit model including unit name
+
 
 #### Namespace
 
@@ -6217,6 +6426,7 @@ The unit model including unit name
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -6224,6 +6434,7 @@ returns this model as an array
 ### UnitName<a name="item_models_unitname"></a>
 
 The unit name model including the unit
+
 
 #### Namespace
 
@@ -6264,6 +6475,7 @@ The unit name model including the unit
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -6273,6 +6485,7 @@ returns this model as an array
 ### UnitCombination<a name="item_models_unitcombination"></a>
 
 The unitCombination model
+
 
 #### Namespace
 
@@ -6313,6 +6526,7 @@ The unitCombination model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -6322,6 +6536,7 @@ returns this model as an array
 ### VariationLookupRepositoryContract<a name="item_contracts_variationlookuprepositorycontract"></a>
 
 lookup repository for variations
+
 
 #### Namespace
 
@@ -6333,6 +6548,7 @@ lookup repository for variations
 
 <pre>public <strong>hasBarcode</strong>(<a target="_blank" href="http://php.net/string">string</a> $code):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
 </pre>
+
     
 
     
@@ -6348,6 +6564,7 @@ lookup repository for variations
 
 <pre>public <strong>hasId</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
 </pre>
+
     
 
     
@@ -6363,6 +6580,7 @@ lookup repository for variations
 
 <pre>public <strong>hasItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
 </pre>
+
     
 
     
@@ -6378,6 +6596,7 @@ lookup repository for variations
 
 <pre>public <strong>hasExternalId</strong>(<a target="_blank" href="http://php.net/string">string</a> $externalId):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
 </pre>
+
     
 
     
@@ -6393,6 +6612,7 @@ lookup repository for variations
 
 <pre>public <strong>hasNumber</strong>(<a target="_blank" href="http://php.net/string">string</a> $number):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
 </pre>
+
     
 
     
@@ -6408,6 +6628,7 @@ lookup repository for variations
 
 <pre>public <strong>limit</strong>(<a target="_blank" href="http://php.net/int">int</a> $limit):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
 </pre>
+
     
 
     
@@ -6422,6 +6643,7 @@ lookup repository for variations
 
 
 <pre>public <strong>lookup</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -6429,6 +6651,7 @@ lookup repository for variations
 ### VariationRepositoryContract<a name="item_contracts_variationrepositorycontract"></a>
 
 Repository for item basket
+
 
 #### Namespace
 
@@ -6440,6 +6663,7 @@ Repository for item basket
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $with, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -6465,6 +6689,7 @@ Repository for item basket
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -6480,6 +6705,7 @@ Repository for item basket
 
 <pre>public <strong>createPrimary</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -6495,6 +6721,7 @@ Repository for item basket
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -6510,6 +6737,7 @@ Repository for item basket
 
 <pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variation">Variation</a>
 </pre>
+
     
 
     
@@ -6527,6 +6755,7 @@ Repository for item basket
 ### Variation<a name="item_models_variation"></a>
 
 Variation
+
 
 #### Namespace
 
@@ -6816,6 +7045,7 @@ Variation
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -6825,6 +7055,7 @@ returns this model as an array
 ### VariationBarcodeRepositoryContract<a name="item_contracts_variationbarcoderepositorycontract"></a>
 
 repository for variation barcode
+
 
 #### Namespace
 
@@ -6836,6 +7067,7 @@ repository for variation barcode
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $barcodeId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationbarcode">VariationBarcode</a>
 </pre>
+
     
 Show an VariationBarcode by given id.
     
@@ -6856,6 +7088,7 @@ Show an VariationBarcode by given id.
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationbarcode">VariationBarcode</a>
 </pre>
+
     
 Create new VariationBarcode
     
@@ -6871,6 +7104,7 @@ Create new VariationBarcode
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $barcodeId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationbarcode">VariationBarcode</a>
 </pre>
+
     
 Update an existing VariationBarcode
     
@@ -6896,6 +7130,7 @@ Update an existing VariationBarcode
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $barcodeId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
 </pre>
+
     
 Delete an VariationBarcode by given variation and barcode id
     
@@ -6915,6 +7150,7 @@ Delete an VariationBarcode by given variation and barcode id
 
 
 <pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Get list of VariationBarcode by variationId
     
@@ -6932,6 +7168,7 @@ Get list of VariationBarcode by variationId
 ### VariationBarcode<a name="item_models_variationbarcode"></a>
 
 Variation Barcode
+
 
 #### Namespace
 
@@ -6971,6 +7208,7 @@ Variation Barcode
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -6980,6 +7218,7 @@ returns this model as an array
 ### VariationCategory<a name="item_models_variationcategory"></a>
 
 Variation Category
+
 
 #### Namespace
 
@@ -7019,6 +7258,7 @@ Variation Category
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -7028,6 +7268,7 @@ returns this model as an array
 ### VariationClient<a name="item_models_variationclient"></a>
 
 Variation Client
+
 
 #### Namespace
 
@@ -7063,6 +7304,7 @@ Variation Client
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -7072,6 +7314,7 @@ returns this model as an array
 ### VariationDefaultCategory<a name="item_models_variationdefaultcategory"></a>
 
 Variation Default Category
+
 
 #### Namespace
 
@@ -7111,6 +7354,7 @@ Variation Default Category
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -7120,6 +7364,7 @@ returns this model as an array
 ### VariationDescriptionRepositoryContract<a name="item_contracts_variationdescriptionrepositorycontract"></a>
 
 Repository for variation descriptions
+
 
 #### Namespace
 
@@ -7131,6 +7376,7 @@ Repository for variation descriptions
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationdescription">VariationDescription</a>
 </pre>
+
     
 Create new description
     
@@ -7146,6 +7392,7 @@ Create new description
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_variationdescription">VariationDescription</a>
 </pre>
+
     
 Updates description
     
@@ -7171,6 +7418,7 @@ Updates description
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
 </pre>
+
     
 Delete description
     
@@ -7191,6 +7439,7 @@ Delete description
 
 <pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_variationdescription">VariationDescription</a>
 </pre>
+
     
 Find description
     
@@ -7211,6 +7460,7 @@ Find description
 
 <pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_variationdescription">VariationDescription</a>
 </pre>
+
     
 Find description
     
@@ -7225,6 +7475,7 @@ Find description
 
 
 <pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Find descriptions
     
@@ -7242,6 +7493,7 @@ Find descriptions
 ### VariationDescription<a name="item_models_variationdescription"></a>
 
 Variation Default Category
+
 
 #### Namespace
 
@@ -7313,6 +7565,7 @@ Variation Default Category
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -7320,6 +7573,7 @@ returns this model as an array
     
 ## Models<a name="item_variationimage_models"></a>
 ### VariationImage<a name="item_models_variationimage"></a>
+
 
 
 
@@ -7369,6 +7623,7 @@ returns this model as an array
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -7378,6 +7633,7 @@ returns this model as an array
 ### VariationMarket<a name="item_models_variationmarket"></a>
 
 Variation Market
+
 
 #### Namespace
 
@@ -7413,6 +7669,7 @@ Variation Market
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -7422,6 +7679,7 @@ returns this model as an array
 ### VariationMarketIdentNumber<a name="item_models_variationmarketidentnumber"></a>
 
 Variation Market Ident Number
+
 
 #### Namespace
 
@@ -7469,6 +7727,7 @@ Variation Market Ident Number
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -7478,6 +7737,7 @@ returns this model as an array
 ### VariationProperty<a name="item_models_variationproperty"></a>
 
 The VariationPropertyValue
+
 
 #### Namespace
 
@@ -7514,6 +7774,7 @@ The VariationPropertyValue
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -7521,6 +7782,7 @@ returns this model as an array
 ### VariationPropertyValue<a name="item_models_variationpropertyvalue"></a>
 
 The VariationPropertyValue
+
 
 #### Namespace
 
@@ -7586,6 +7848,7 @@ The VariationPropertyValue
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -7595,6 +7858,7 @@ returns this model as an array
 ### VariationSalesPriceRepositoryContract<a name="item_contracts_variationsalespricerepositorycontract"></a>
 
 Repository for VariationSalesPrice
+
 
 #### Namespace
 
@@ -7606,6 +7870,7 @@ Repository for VariationSalesPrice
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationsalesprice">VariationSalesPrice</a>
 </pre>
+
     
 Show an VariationSalesPrice by given id.
     
@@ -7626,6 +7891,7 @@ Show an VariationSalesPrice by given id.
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationsalesprice">VariationSalesPrice</a>
 </pre>
+
     
 Create new VariationSalesPrice
     
@@ -7641,6 +7907,7 @@ Create new VariationSalesPrice
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationsalesprice">VariationSalesPrice</a>
 </pre>
+
     
 Update an existing VariationSalesPrice
     
@@ -7666,6 +7933,7 @@ Update an existing VariationSalesPrice
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
 </pre>
+
     
 Delete an VariationSalesPrice by given id. If at least one relation exists, throws an exception.
     
@@ -7686,6 +7954,7 @@ Delete an VariationSalesPrice by given id. If at least one relation exists, thro
 
 <pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationsalesprice">VariationSalesPrice</a>
 </pre>
+
     
 Find an existing VariationSalesPrice by given id.
     
@@ -7701,6 +7970,7 @@ Find an existing VariationSalesPrice by given id.
 
 <pre>public <strong>findByVariationIdWithInheritance</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationsalesprice">VariationSalesPrice</a>
 </pre>
+
     
 Find an existing VariationSalesPrice by given id.
     
@@ -7718,6 +7988,7 @@ Find an existing VariationSalesPrice by given id.
 ### VariationSalesPrice<a name="item_models_variationsalesprice"></a>
 
 VariationSalesPrice
+
 
 #### Namespace
 
@@ -7753,6 +8024,7 @@ VariationSalesPrice
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -7763,6 +8035,7 @@ returns this model as an array
 
 Repository for VariationSku
 
+
 #### Namespace
 
 `Plenty\Modules\Item\VariationSku\Contracts`
@@ -7771,7 +8044,8 @@ Repository for VariationSku
 
 #### Methods
 
-<pre>public <strong>generateSku</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/float">float</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $accountId, $sku = null, <a target="_blank" href="http://php.net/bool">bool</a> $setLastExportedTimestamp = true):<a target="_blank" href="http://php.net/string">string</a></pre>
+<pre>public <strong>generateSku</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $accountId, $sku = null, <a target="_blank" href="http://php.net/bool">bool</a> $setLastExportedTimestamp = true):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Generate or update Sku
     
@@ -7783,7 +8057,7 @@ Generate or update Sku
         <td></td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$marketId</td>
         <td></td>
     </tr>
@@ -7808,6 +8082,7 @@ Generate or update Sku
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationsku">VariationSku</a>
 </pre>
+
     
 Create sku
     
@@ -7823,6 +8098,7 @@ Create sku
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $skuId):<a href="item#item_models_variationsku">VariationSku</a>
 </pre>
+
     
 Update sku
     
@@ -7843,6 +8119,7 @@ Update sku
 
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $skuId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
 </pre>
+
     
 Delete sku
     
@@ -7858,6 +8135,7 @@ Delete sku
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $skuId):<a href="item#item_models_variationsku">VariationSku</a>
 </pre>
+
     
 Show sku
     
@@ -7872,6 +8150,7 @@ Show sku
 
 
 <pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/array">array</a> $filter):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Search sku´s
     
@@ -7886,6 +8165,7 @@ Search sku´s
 
 
 <pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Find sku´s by variationId
     
@@ -7903,6 +8183,7 @@ Find sku´s by variationId
 ### VariationSku<a name="item_models_variationsku"></a>
 
 The variationSku model
+
 
 #### Namespace
 
@@ -7974,6 +8255,7 @@ The variationSku model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -7984,6 +8266,7 @@ returns this model as an array
 
 Get, list, book and correct stock or get stock movements.
 
+
 #### Namespace
 
 `Plenty\Modules\Item\VariationStock\Contracts`
@@ -7993,6 +8276,7 @@ Get, list, book and correct stock or get stock movements.
 #### Methods
 
 <pre>public <strong>listStockByWarehouse</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $columns):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List stock per warehouse
     
@@ -8017,6 +8301,7 @@ List stock per warehouse
 
 
 <pre>public <strong>listStockMovements</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $columns, <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List stock movements for a variation
     
@@ -8051,6 +8336,7 @@ List stock movements for a variation
 
 
 <pre>public <strong>bookIncomingItems</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Book incoming stock
     
@@ -8075,6 +8361,7 @@ Book incoming stock
 
 
 <pre>public <strong>correctStock</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Correct stock
     
@@ -8098,10 +8385,37 @@ Correct stock
 </table>
 
 
+<pre>public <strong>redistributeStock</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+Redistribute stock
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The ID of the item</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the variation</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationstock_models"></a>
 ### VariationStock<a name="item_models_variationstock"></a>
 
 The variation stock model.
+
 
 #### Namespace
 
@@ -8173,6 +8487,7 @@ The variation stock model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -8180,6 +8495,7 @@ returns this model as an array
 ### VariationStockMovement<a name="item_models_variationstockmovement"></a>
 
 The variation stock movement model.
+
 
 #### Namespace
 
@@ -8263,6 +8579,7 @@ The variation stock movement model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -8272,6 +8589,7 @@ returns this model as an array
 ### VariationSupplier<a name="item_models_variationsupplier"></a>
 
 Variation Supplier
+
 
 #### Namespace
 
@@ -8347,6 +8665,7 @@ Variation Supplier
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -8356,6 +8675,7 @@ returns this model as an array
 ### VariationWarehouse<a name="item_models_variationwarehouse"></a>
 
 Variation Warehouse
+
 
 #### Namespace
 
@@ -8423,6 +8743,7 @@ Variation Warehouse
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     

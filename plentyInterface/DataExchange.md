@@ -7,6 +7,7 @@
 
 generator for csv content
 
+
 #### Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
@@ -17,6 +18,7 @@ generator for csv content
 
 <pre>public <strong>setDelimiter</strong>(<a target="_blank" href="http://php.net/string">string</a> $delimiter):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -32,6 +34,7 @@ generator for csv content
 
 <pre>public <strong>setEnclosure</strong>(<a target="_blank" href="http://php.net/string">string</a> $enclosure):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -47,6 +50,7 @@ generator for csv content
 
 <pre>public <strong>addCSVContent</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -62,6 +66,7 @@ generator for csv content
 
 <pre>public <strong>addContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -77,6 +82,7 @@ generator for csv content
 
 <pre>public <strong>generateContent</strong>($resultData, <a target="_blank" href="http://php.net/array">array</a> $formatSettings = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -101,6 +107,7 @@ generator for csv content
 
 Filters
 
+
 #### Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
@@ -110,6 +117,7 @@ Filters
 #### Methods
 
 <pre>public <strong>generateFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $formatSettings = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -128,6 +136,7 @@ Filters
 
 Generator
 
+
 #### Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
@@ -138,6 +147,7 @@ Generator
 
 <pre>public <strong>addContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -153,6 +163,7 @@ Generator
 
 <pre>public <strong>generateContent</strong>($resultData, <a target="_blank" href="http://php.net/array">array</a> $formatSettings = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -177,6 +188,7 @@ Generator
 
 Output
 
+
 #### Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
@@ -187,6 +199,7 @@ Output
 
 <pre>public <strong>out</strong>(<a target="_blank" href="http://php.net/string">string</a> $ressource, <a target="_blank" href="http://php.net/array">array</a> $outputParams = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 process export output
     
@@ -210,6 +223,7 @@ process export output
 
 ResultFields
 
+
 #### Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
@@ -219,6 +233,7 @@ ResultFields
 #### Methods
 
 <pre>public <strong>generateResultFields</strong>(<a target="_blank" href="http://php.net/array">array</a> $formatSettings = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -234,6 +249,7 @@ ResultFields
 
 <pre>public <strong>setGroupByList</strong>(<a target="_blank" href="http://php.net/array">array</a> $groupByList):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -249,6 +265,7 @@ ResultFields
 
 <pre>public <strong>setOrderByList</strong>(<a target="_blank" href="http://php.net/array">array</a> $orderByList):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -266,6 +283,7 @@ ResultFields
 ### XMLGenerator<a name="dataexchange_contracts_xmlgenerator"></a>
 
 generator for xml content
+
 
 #### Namespace
 
@@ -310,6 +328,7 @@ generator for xml content
 
 <pre>public <strong>init</strong>(<a target="_blank" href="http://php.net/string">string</a> $rootName):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Initializes the xml document and the root element.
     
@@ -325,16 +344,19 @@ Initializes the xml document and the root element.
 
 <pre>public <strong>root</strong>():<a href="miscellaneous#miscellaneous__domelement">DOMElement</a>
 </pre>
+
     
 
     
 <pre>public <strong>build</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Build the XML.
     
 <pre>public <strong>createElement</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $value = null):<a href="miscellaneous#miscellaneous__domelement">DOMElement</a>
 </pre>
+
     
 Create an XML element.
     
@@ -356,6 +378,7 @@ Create an XML element.
 
 <pre>public <strong>createCDATASection</strong>(<a target="_blank" href="http://php.net/string">string</a> $data):<a href="miscellaneous#miscellaneous__domcdatasection">DOMCdataSection</a>
 </pre>
+
     
 Create a CDATA section.
     
@@ -371,6 +394,7 @@ Create a CDATA section.
 
 <pre>public <strong>createAttribute</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $value = null):<a href="miscellaneous#miscellaneous__domattr">DOMAttr</a>
 </pre>
+
     
 Create an XML attribute.
     
@@ -392,6 +416,7 @@ Create an XML attribute.
 
 <pre>public <strong>createTextNode</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__domtext">DOMText</a>
 </pre>
+
     
 Create new text node.
     
@@ -407,6 +432,7 @@ Create new text node.
 
 <pre>public <strong>addContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -422,6 +448,7 @@ Create new text node.
 
 <pre>public <strong>generateContent</strong>($resultData, <a target="_blank" href="http://php.net/array">array</a> $formatSettings = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -445,6 +472,7 @@ Create new text node.
 ### Export<a name="dataexchange_models_export"></a>
 
 Export model
+
 
 #### Namespace
 
@@ -512,6 +540,7 @@ Export model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -519,6 +548,7 @@ returns this model as an array
 ### Filter<a name="dataexchange_models_filter"></a>
 
 export filter
+
 
 #### Namespace
 
@@ -566,6 +596,7 @@ export filter
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -573,6 +604,7 @@ returns this model as an array
 ### FormatSetting<a name="dataexchange_models_formatsetting"></a>
 
 format setting
+
 
 #### Namespace
 
@@ -620,6 +652,7 @@ format setting
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -627,6 +660,7 @@ returns this model as an array
 ### OutputParam<a name="dataexchange_models_outputparam"></a>
 
 output params
+
 
 #### Namespace
 
@@ -674,6 +708,7 @@ output params
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -681,6 +716,7 @@ returns this model as an array
 ### ExportPresetContainer<a name="dataexchange_services_exportpresetcontainer"></a>
 
 Register export presets
+
 
 #### Namespace
 
@@ -692,6 +728,7 @@ Register export presets
 
 <pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $exportKey, <a target="_blank" href="http://php.net/string">string</a> $resultFieldsClass, <a target="_blank" href="http://php.net/string">string</a> $generatorClass, <a target="_blank" href="http://php.net/string">string</a> $filtersClass = &quot;&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -727,6 +764,7 @@ Register export presets
 
 Repository Contract for ResourceLoader
 
+
 #### Namespace
 
 `Plenty\Modules\DataExchange\Resource\Contracts`
@@ -737,6 +775,7 @@ Repository Contract for ResourceLoader
 
 <pre>public <strong>getResource</strong>(<a target="_blank" href="http://php.net/array">array</a> $sourceOptions):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -752,6 +791,7 @@ Repository Contract for ResourceLoader
 
 <pre>public <strong>validateSourceOptions</strong>(<a target="_blank" href="http://php.net/array">array</a> $sourceOptions):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -766,6 +806,7 @@ Repository Contract for ResourceLoader
 
 
 <pre>public <strong>getLoaderType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -773,6 +814,7 @@ Repository Contract for ResourceLoader
 ### ResourceParserContract<a name="dataexchange_contracts_resourceparsercontract"></a>
 
 Repository Contract for ResourceParser
+
 
 #### Namespace
 
@@ -783,6 +825,7 @@ Repository Contract for ResourceParser
 #### Methods
 
 <pre>public <strong>next</strong>($resource, <a target="_blank" href="http://php.net/array">array</a> $parseOptions):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -803,11 +846,13 @@ Repository Contract for ResourceParser
 
 
 <pre>public <strong>getParserType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
 ## Factories<a name="dataexchange_resource_factories"></a>
 ### ResourceLoaderFactory<a name="dataexchange_factories_resourceloaderfactory"></a>
+
 
 
 
@@ -821,6 +866,7 @@ Repository Contract for ResourceParser
 
 <pre>public <strong>getResourceLoaderByType</strong>(<a target="_blank" href="http://php.net/string">string</a> $type):<a href="dataexchange#dataexchange_contracts_resourceloadercontract">ResourceLoaderContract</a>
 </pre>
+
     
 
     
@@ -837,6 +883,7 @@ Repository Contract for ResourceParser
 <pre>public <strong>addLoader</strong>(<a href="dataexchange#dataexchange_contracts_resourceloadercontract">ResourceLoaderContract</a>
  $loader):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     
@@ -856,6 +903,7 @@ Repository Contract for ResourceParser
 
 
 
+
 #### Namespace
 
 `Plenty\Modules\DataExchange\Resource\Factories`
@@ -866,6 +914,7 @@ Repository Contract for ResourceParser
 
 <pre>public <strong>getResourceParserByType</strong>(<a target="_blank" href="http://php.net/string">string</a> $type):<a href="dataexchange#dataexchange_contracts_resourceparsercontract">ResourceParserContract</a>
 </pre>
+
     
 
     
@@ -882,6 +931,7 @@ Repository Contract for ResourceParser
 <pre>public <strong>addParser</strong>(<a href="dataexchange#dataexchange_contracts_resourceparsercontract">ResourceParserContract</a>
  $parser):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 
     

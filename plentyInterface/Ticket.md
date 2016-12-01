@@ -7,6 +7,7 @@
 
 The TicketRepositoryContract is the interface for the ticket repository. This interface allows to list tickets by filters
 
+
 #### Namespace
 
 `Plenty\Modules\Ticket\Contracts`
@@ -17,6 +18,7 @@ The TicketRepositoryContract is the interface for the ticket repository. This in
 
 <pre>public <strong>createTicket</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_ticket">Ticket</a>
 </pre>
+
     
 Create a new ticket.
     
@@ -31,6 +33,7 @@ Create a new ticket.
 
 
 <pre>public <strong>searchTickets</strong>(<a target="_blank" href="http://php.net/array">array</a> $filter, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List tickets by filter options.
     
@@ -56,6 +59,7 @@ List tickets by filter options.
 
 <pre>public <strong>createMessage</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketId):<a href="ticket#ticket_models_ticket">Ticket</a>
 </pre>
+
     
 Creates a message for a ticket.
     
@@ -76,6 +80,7 @@ Creates a message for a ticket.
 
 <pre>public <strong>updateTicket</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketId):<a href="ticket#ticket_models_ticket">Ticket</a>
 </pre>
+
     
 Updates a ticket with given data.
     
@@ -98,6 +103,7 @@ Updates a ticket with given data.
 ### Ticket<a name="ticket_models_ticket"></a>
 
 The ticket model.
+
 
 #### Namespace
 
@@ -209,6 +215,7 @@ The ticket model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -216,6 +223,7 @@ returns this model as an array
 ### TicketMessage<a name="ticket_models_ticketmessage"></a>
 
 The ticket message model.
+
 
 #### Namespace
 
@@ -281,6 +289,7 @@ The ticket message model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -288,6 +297,7 @@ returns this model as an array
 ### TicketMessageTopic<a name="ticket_models_ticketmessagetopic"></a>
 
 The ticket message topic model.
+
 
 #### Namespace
 
@@ -319,6 +329,7 @@ The ticket message topic model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -326,6 +337,7 @@ returns this model as an array
 ### TicketMessageTopicName<a name="ticket_models_ticketmessagetopicname"></a>
 
 The ticket message topic name model.
+
 
 #### Namespace
 
@@ -365,6 +377,7 @@ The ticket message topic name model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -372,6 +385,7 @@ returns this model as an array
 ### TicketOwner<a name="ticket_models_ticketowner"></a>
 
 The ticket owner model.
+
 
 #### Namespace
 
@@ -391,15 +405,15 @@ The ticket owner model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>ticketId</td>
-            <td>The id of the ticket.</td>
+            <td>The ID of the ticket</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>userId</td>
-            <td>The user id of the owner.</td>
+            <td>The user ID of the owner</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>roleId</td>
-            <td>The role id of the owner.</td>
+            <td>The role ID of the owner</td>
         </tr></tbody>
 </table>
 
@@ -407,6 +421,7 @@ The ticket owner model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -414,6 +429,7 @@ returns this model as an array
 ### TicketRole<a name="ticket_models_ticketrole"></a>
 
 The ticket role model.
+
 
 #### Namespace
 
@@ -433,11 +449,11 @@ The ticket role model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the role.</td>
+            <td>The ID of the role</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
-            <td>The position of the role.</td>
+            <td>The position of the role</td>
         </tr></tbody>
 </table>
 
@@ -445,6 +461,7 @@ The ticket role model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -452,6 +469,7 @@ returns this model as an array
 ### TicketRoleName<a name="ticket_models_ticketrolename"></a>
 
 The ticket role name model.
+
 
 #### Namespace
 
@@ -491,6 +509,7 @@ The ticket role name model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -498,6 +517,7 @@ returns this model as an array
 ### TicketStatus<a name="ticket_models_ticketstatus"></a>
 
 The ticket status model.
+
 
 #### Namespace
 
@@ -537,6 +557,7 @@ The ticket status model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -544,6 +565,7 @@ returns this model as an array
 ### TicketStatusGroup<a name="ticket_models_ticketstatusgroup"></a>
 
 The ticket status group model.
+
 
 #### Namespace
 
@@ -579,6 +601,7 @@ The ticket status group model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -586,6 +609,7 @@ returns this model as an array
 ### TicketStatusGroupName<a name="ticket_models_ticketstatusgroupname"></a>
 
 The ticket status group name model.
+
 
 #### Namespace
 
@@ -621,6 +645,7 @@ The ticket status group name model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -628,6 +653,7 @@ returns this model as an array
 ### TicketStatusName<a name="ticket_models_ticketstatusname"></a>
 
 The ticket status name model.
+
 
 #### Namespace
 
@@ -647,19 +673,19 @@ The ticket status name model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the status name</td>
+            <td>The ID of the status name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The type id of the status name.</td>
+            <td>The type ID of the status name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The language if the status name.</td>
+            <td>The language of the status name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
-            <td>The name of the status.</td>
+            <td>The name of the status</td>
         </tr></tbody>
 </table>
 
@@ -667,6 +693,7 @@ The ticket status name model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -674,6 +701,7 @@ returns this model as an array
 ### TicketType<a name="ticket_models_tickettype"></a>
 
 The ticket type model.
+
 
 #### Namespace
 
@@ -705,6 +733,7 @@ The ticket type model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -712,6 +741,7 @@ returns this model as an array
 ### TicketTypeName<a name="ticket_models_tickettypename"></a>
 
 The ticket type name model.
+
 
 #### Namespace
 
@@ -731,15 +761,15 @@ The ticket type name model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the role name.</td>
+            <td>The ID of the role name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The type id of the role name.</td>
+            <td>The type id of the role name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The language if the role name.</td>
+            <td>The language of the role name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
@@ -751,6 +781,7 @@ The ticket type name model.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     

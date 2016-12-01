@@ -7,6 +7,7 @@
 
 Database contract
 
+
 #### Namespace
 
 `Plenty\Modules\Plugin\DataBase\Contracts`
@@ -18,6 +19,7 @@ Database contract
 <pre>public <strong>save</strong>(<a href="plugin#plugin_contracts_model">Model</a>
  $model):<a href="plugin#plugin_contracts_model">Model</a>
 </pre>
+
     
 
     
@@ -34,6 +36,7 @@ Database contract
 
 <pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelClassName, $primaryKeyFieldValue):<a href="plugin#plugin_contracts_model">Model</a>
 </pre>
+
     
 
     
@@ -54,6 +57,7 @@ Database contract
 
 
 <pre>public <strong>query</strong>(<a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/array">array</a> $queryParams):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -74,6 +78,7 @@ Database contract
 
 <pre>public <strong>delete</strong>(<a href="plugin#plugin_contracts_model">Model</a>
  $model):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 
     
@@ -93,6 +98,7 @@ Database contract
 
 Migrate models
 
+
 #### Namespace
 
 `Plenty\Modules\Plugin\DataBase\Contracts`
@@ -102,6 +108,7 @@ Migrate models
 #### Methods
 
 <pre>public <strong>createTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelClassName, <a target="_blank" href="http://php.net/int">int</a> $readCapacityUnits = 10, <a target="_blank" href="http://php.net/int">int</a> $writeCapacityUnits = 20):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 
     
@@ -126,6 +133,7 @@ Migrate models
 
 
 <pre>public <strong>deleteTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelClassName):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 
     
@@ -143,6 +151,7 @@ Migrate models
 ### Model<a name="plugin_contracts_model"></a>
 
 Database model
+
 
 #### Namespace
 
@@ -176,6 +185,7 @@ Database model
 #### Methods
 
 <pre>public <strong>getTableName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 
     
@@ -186,6 +196,7 @@ Database model
 
 AWS DynamoDb Repository
 
+
 #### Namespace
 
 `Plenty\Modules\Plugin\DynamoDb\Contracts`
@@ -195,6 +206,7 @@ AWS DynamoDb Repository
 #### Methods
 
 <pre>public <strong>createTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/array">array</a> $attributeDefinitions, <a target="_blank" href="http://php.net/array">array</a> $keySchema, <a target="_blank" href="http://php.net/int">int</a> $readCapacityUnits = 3, <a target="_blank" href="http://php.net/int">int</a> $writeCapacityUnits = 2):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Create a table
     
@@ -234,6 +246,7 @@ Create a table
 
 
 <pre>public <strong>updateTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/int">int</a> $readCapacityUnits = 3, <a target="_blank" href="http://php.net/int">int</a> $writeCapacityUnits = 2):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Update a table
     
@@ -263,6 +276,7 @@ Update a table
 
 
 <pre>public <strong>putItem</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/array">array</a> $item):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Add item to table
     
@@ -287,6 +301,7 @@ Add item to table
 
 
 <pre>public <strong>getItem</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/boolean">boolean</a> $consistentRead, <a target="_blank" href="http://php.net/array">array</a> $key):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Retrieving items
     
@@ -316,6 +331,7 @@ Retrieving items
 
 
 <pre>public <strong>deleteItem</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/array">array</a> $key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Delete an item
     
@@ -340,6 +356,7 @@ Delete an item
 
 
 <pre>public <strong>deleteTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Deleting a table
     
@@ -360,6 +377,7 @@ Deleting a table
 
 <pre>public <strong>scan</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/string">string</a> $returnFields = &quot;&quot;, <a target="_blank" href="http://php.net/array">array</a> $expressionAttributeValues = [], <a target="_blank" href="http://php.net/string">string</a> $filterExpression = &quot;&quot;, <a target="_blank" href="http://php.net/int">int</a> $limit):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 A scan operation scans the entire table. You can specify filters to apply to the results to refine the values returned to you, after the complete scan. Amazon DynamoDB puts a 1MB limit on the scan (the limit applies before the results are filtered).
     
@@ -405,6 +423,7 @@ A scan operation scans the entire table. You can specify filters to apply to the
 
 library call
 
+
 #### Namespace
 
 `Plenty\Modules\Plugin\Libs\Contracts`
@@ -414,6 +433,7 @@ library call
 #### Methods
 
 <pre>public <strong>call</strong>(<a target="_blank" href="http://php.net/string">string</a> $libCall, <a target="_blank" href="http://php.net/array">array</a> $params = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 
     
@@ -439,6 +459,7 @@ library call
 
 Storage Repository
 
+
 #### Namespace
 
 `Plenty\Modules\Plugin\Storage\Contracts`
@@ -448,6 +469,7 @@ Storage Repository
 #### Methods
 
 <pre>public <strong>uploadFile</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/string">string</a> $pathToFile, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false, <a target="_blank" href="http://php.net/array">array</a> $metaData = []):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Upload an object by streaming the contents of a file $pathToFile should be absolute path to a file on disk
     
@@ -482,6 +504,7 @@ Upload an object by streaming the contents of a file $pathToFile should be absol
 
 
 <pre>public <strong>uploadObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/string">string</a> $body, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false, <a target="_blank" href="http://php.net/array">array</a> $metaData = []):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Create an object with content in $body
     
@@ -516,6 +539,7 @@ Create an object with content in $body
 
 
 <pre>public <strong>getObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Get an object
     
@@ -540,6 +564,7 @@ Get an object
 
 
 <pre>public <strong>getObjectAsTemporaryFileResource</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false):<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Get local file resource of an object. Use this if it is really necessary! Using getObject is the normal and effective way.
     
@@ -564,6 +589,7 @@ Get local file resource of an object. Use this if it is really necessary! Using 
 
 
 <pre>public <strong>doesObjectExist</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/bool">bool</a> $publicVisible = false):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Checks if object exists
     
@@ -588,6 +614,7 @@ Checks if object exists
 
 
 <pre>public <strong>deleteObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/bool">bool</a> $publicVisible = false):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
     
 Executes the DeleteObject operation.
     

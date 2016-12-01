@@ -7,6 +7,7 @@
 
 plentymarkets event procedures triggered
 
+
 #### Namespace
 
 `Plenty\Modules\EventProcedures\Events`
@@ -17,6 +18,7 @@ plentymarkets event procedures triggered
 
 <pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
 </pre>
+
     
 Get the order that triggered the event.
     
@@ -24,6 +26,7 @@ Get the order that triggered the event.
 ### EventProceduresService<a name="eventprocedures_services_eventproceduresservice"></a>
 
 The EventProcedureService class offers the possibility to register a procedure class and method that can be called by plentymarkets event procedures.
+
 
 #### Namespace
 
@@ -34,6 +37,7 @@ The EventProcedureService class offers the possibility to register a procedure c
 #### Methods
 
 <pre>public <strong>registerProcedure</strong>(<a target="_blank" href="http://php.net/string">string</a> $moduleName, <a target="_blank" href="http://php.net/string">string</a> $eventType, <a target="_blank" href="http://php.net/array">array</a> $procedureNames, <a target="_blank" href="http://php.net/string">string</a> $procedureClass, <a target="_blank" href="http://php.net/string">string</a> $procedureGroup = Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry::PROCEDURE_GROUP_ORDER):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
     
 Register a procedure class
     
@@ -92,6 +96,7 @@ Register a procedure class
 
 The procedure entry contains all information needed to use module procedures in plentymarkets event procedures.
 
+
 #### Namespace
 
 `Plenty\Modules\EventProcedures\Services\Entries`
@@ -101,11 +106,13 @@ The procedure entry contains all information needed to use module procedures in 
 #### Methods
 
 <pre>public <strong>getModuleName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Get the
     
 <pre>public <strong>setModuleName</strong>(<a target="_blank" href="http://php.net/string">string</a> $moduleName):<a href="eventprocedures#eventprocedures_entries_procedureentry">ProcedureEntry</a>
 </pre>
+
     
 Set the
     
@@ -120,11 +127,13 @@ Set the
 
 
 <pre>public <strong>getEventType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Get the
     
 <pre>public <strong>setEventType</strong>(<a target="_blank" href="http://php.net/string">string</a> $eventType):<a href="eventprocedures#eventprocedures_entries_procedureentry">ProcedureEntry</a>
 </pre>
+
     
 Set the
     
@@ -139,11 +148,13 @@ Set the
 
 
 <pre>public <strong>getProcedureNames</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Get the
     
 <pre>public <strong>setProcedureNames</strong>(<a target="_blank" href="http://php.net/array">array</a> $procedureNames):<a href="eventprocedures#eventprocedures_entries_procedureentry">ProcedureEntry</a>
 </pre>
+
     
 Set the
     
@@ -158,11 +169,13 @@ Set the
 
 
 <pre>public <strong>getProcedureGroup</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Get the
     
 <pre>public <strong>setProcedureGroup</strong>(<a target="_blank" href="http://php.net/string">string</a> $procedureGroup):<a href="eventprocedures#eventprocedures_entries_procedureentry">ProcedureEntry</a>
 </pre>
+
     
 Set the
     
@@ -177,11 +190,13 @@ Set the
 
 
 <pre>public <strong>getProcedureClass</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
     
 Get the
     
 <pre>public <strong>setProcedureClass</strong>(<a target="_blank" href="http://php.net/string">string</a> $procedureClass):<a href="eventprocedures#eventprocedures_entries_procedureentry">ProcedureEntry</a>
 </pre>
+
     
 Set the
     

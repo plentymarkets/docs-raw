@@ -7,6 +7,7 @@
 
 The StockRepositoryContract is the interface for the stock repository. This interface allows you to find, create and update stock. Stock is assigned to one variation and is stored in warehouses.
 
+
 #### Namespace
 
 `Plenty\Modules\StockManagement\Stock\Contracts`
@@ -16,6 +17,7 @@ The StockRepositoryContract is the interface for the stock repository. This inte
 #### Methods
 
 <pre>public <strong>listStockByWarehouseId</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $columns, <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List stock of a warehouse
     
@@ -45,6 +47,7 @@ List stock of a warehouse
 
 
 <pre>public <strong>listStock</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns, <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List stock
     
@@ -69,6 +72,7 @@ List stock
 
 
 <pre>public <strong>listStockByWarehouseType</strong>(<a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/array">array</a> $columns, <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List stock by warehouse type
     
@@ -99,6 +103,7 @@ List stock by warehouse type
 
 <pre>public <strong>correctStock</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Corrects stock. The ID of the warehouse has to be provided.
     
@@ -119,6 +124,7 @@ Corrects stock. The ID of the warehouse has to be provided.
 
 <pre>public <strong>bookIncomingItems</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
+
     
 Book incoming stock
     
@@ -127,12 +133,28 @@ Book incoming stock
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$warehouseId</td>
-        <td></td>
+        <td>The ID of the warehouse</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The request date</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>redistributeStock</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Redistribute stock
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
     </tr>
 </table>
 
@@ -141,6 +163,7 @@ Book incoming stock
 ### StockStorageLocationRepositoryContract<a name="stockmanagement_contracts_stockstoragelocationrepositorycontract"></a>
 
 The StockStorageLocationRepositoryContract is the interface for the stock storage location repository. This interface allows you to list the stock of all storage locations of a warehouse or to list all storage locations of a variation and the stock stored at these locations.
+
 
 #### Namespace
 
@@ -151,6 +174,7 @@ The StockStorageLocationRepositoryContract is the interface for the stock storag
 #### Methods
 
 <pre>public <strong>listStockStorageLocationsByWarehouseId</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $columns, <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List stock of all storage locations of a warehouse
     
@@ -180,6 +204,7 @@ List stock of all storage locations of a warehouse
 
 
 <pre>public <strong>listStockStorageLocationsByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $columns, <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List stock of a variation per storage location
     
@@ -193,7 +218,7 @@ List stock of a variation per storage location
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>The properties to be loaded.</td>
+        <td>The properties to be loaded</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -212,6 +237,7 @@ List stock of a variation per storage location
 ### Stock<a name="stockmanagement_models_stock"></a>
 
 The stock model. There are 4 different stock terms used in plentymarkets. The physical stock, the net stock, the reserved stock and the stock reserved for listings.
+
 
 #### Namespace
 
@@ -276,7 +302,7 @@ The stock model. There are 4 different stock terms used in plentymarkets. The ph
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>updatedAt</td>
-            <td>The last update.</td>
+            <td>The time the stock was last updated</td>
         </tr></tbody>
 </table>
 
@@ -284,13 +310,15 @@ The stock model. There are 4 different stock terms used in plentymarkets. The ph
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
 
 ### StockStorageLocation<a name="stockmanagement_models_stockstoragelocation"></a>
 
-The stock storage location model. It represents the stock of a storage location.
+The stock storage location model contains all information about the stock that is stored at one storage location.
+
 
 #### Namespace
 
@@ -310,11 +338,11 @@ The stock storage location model. It represents the stock of a storage location.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>itemId</td>
-            <td>The ID of the item.</td>
+            <td>The ID of the item</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The ID of the variation.</td>
+            <td>The ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>storageLocationId</td>
@@ -322,16 +350,16 @@ The stock storage location model. It represents the stock of a storage location.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>warehouseId</td>
-            <td>The ID of the warehouse that the storage location is in.</td>
+            <td>The ID of the warehouse that the storage location is in</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>quantity</td>
-            <td>The amount stored at the storage location</td>
+            <td>The quantity stored at the storage location</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>updatedAt</td>
-            <td>The time of the last update.</td>
+            <td>The day and time the stock was last updated</td>
         </tr></tbody>
 </table>
 
@@ -339,6 +367,7 @@ The stock storage location model. It represents the stock of a storage location.
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -348,6 +377,7 @@ returns this model as an array
 ### WarehouseRepositoryContract<a name="stockmanagement_contracts_warehouserepositorycontract"></a>
 
 The WarehouseRepositoryContract is the interface for the warehouse repository. This interface allows you to either get one warehouse by specifying the id or to list all warehouses.
+
 
 #### Namespace
 
@@ -359,6 +389,7 @@ The WarehouseRepositoryContract is the interface for the warehouse repository. T
 
 <pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="stockmanagement#stockmanagement_models_warehouse">Warehouse</a>
 </pre>
+
     
 Get a warehouse
     
@@ -378,6 +409,7 @@ Get a warehouse
 
 
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 List warehouses
     
@@ -393,6 +425,7 @@ List warehouses
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="stockmanagement#stockmanagement_models_warehouse">Warehouse</a>
 </pre>
+
     
 Create a warehouse
     
@@ -410,6 +443,7 @@ Create a warehouse
 ### Warehouse<a name="stockmanagement_models_warehouse"></a>
 
 The warehouse model in plentymarkets represents actual warehouses. Every warehouse is identified by an Id. Furthermore a warehouse is described by a name and is always associated with an address. This address may not only contain a physical address information like a street, a house number, a postal code and a town, but also an email address, a telephone number or a fax number.
+
 
 #### Namespace
 
@@ -504,6 +538,7 @@ The warehouse model in plentymarkets represents actual warehouses. Every warehou
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -513,6 +548,7 @@ returns this model as an array
 ### RackManagementRepositoryContract<a name="stockmanagement_contracts_rackmanagementrepositorycontract"></a>
 
 The RackManagementRepositoryContract is the interface for the rack management repository. This interface provides the functionality to manage the warehouse configuration for racks. Racks can be retrieved, created or updated here.
+
 
 #### Namespace
 
@@ -524,6 +560,7 @@ The RackManagementRepositoryContract is the interface for the rack management re
 
 <pre>public <strong>getRackById</strong>(<a target="_blank" href="http://php.net/int">int</a> $rackId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="stockmanagement#stockmanagement_models_rack">Rack</a>
 </pre>
+
     
 Find a rack by id.
     
@@ -548,6 +585,7 @@ Find a rack by id.
 
 
 <pre>public <strong>findRacks</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Find racks. The results can be filtered by warehouse id.
     
@@ -578,6 +616,7 @@ Find racks. The results can be filtered by warehouse id.
 
 <pre>public <strong>createRack</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $warehouseId):<a href="stockmanagement#stockmanagement_models_rack">Rack</a>
 </pre>
+
     
 Create a new rack.
     
@@ -596,30 +635,11 @@ Create a new rack.
 </table>
 
 
-<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-    
-Sets the filter array.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filters</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-    
-Returns the filter array.
-    
 
 ### ShelfManagementRepositoryContract<a name="stockmanagement_contracts_shelfmanagementrepositorycontract"></a>
 
 The ShelfManagementRepositoryContract is the interface for the shelf management repository. This interface provides the functionality to manage the warehouse configuration for shelves. Shelves can be retrieved, created or updated here.
+
 
 #### Namespace
 
@@ -631,6 +651,7 @@ The ShelfManagementRepositoryContract is the interface for the shelf management 
 
 <pre>public <strong>getShelfById</strong>(<a target="_blank" href="http://php.net/int">int</a> $shelfId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="stockmanagement#stockmanagement_models_shelf">Shelf</a>
 </pre>
+
     
 Find a shelf by id.
     
@@ -655,6 +676,7 @@ Find a shelf by id.
 
 
 <pre>public <strong>findShelves</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Find shelves. The results can be filtered by warehouse id and rack id.
     
@@ -685,6 +707,7 @@ Find shelves. The results can be filtered by warehouse id and rack id.
 
 <pre>public <strong>createShelf</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/int">int</a> $rackId):<a href="stockmanagement#stockmanagement_models_shelf">Shelf</a>
 </pre>
+
     
 Create a new shelf.
     
@@ -708,30 +731,11 @@ Create a new shelf.
 </table>
 
 
-<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-    
-Sets the filter array.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filters</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-    
-Returns the filter array.
-    
 
 ### StorageLocationManagementRepositoryContract<a name="stockmanagement_contracts_storagelocationmanagementrepositorycontract"></a>
 
 The StorageLocationManagementRepositoryContract is the interface for the storage location management repository. This interface provides the functionality to manage the warehouse configuration for storage locations. Storage locations can be retrieved, created or updated here.
+
 
 #### Namespace
 
@@ -743,6 +747,7 @@ The StorageLocationManagementRepositoryContract is the interface for the storage
 
 <pre>public <strong>getStorageLocationById</strong>(<a target="_blank" href="http://php.net/int">int</a> $storageLocationId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="stockmanagement#stockmanagement_models_storagelocation">StorageLocation</a>
 </pre>
+
     
 Find a storage location by id.
     
@@ -767,6 +772,7 @@ Find a storage location by id.
 
 
 <pre>public <strong>findStorageLocations</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
     
 Find storage locations. The results can be filtered by warehouse id, rack id and shelf id.
     
@@ -797,6 +803,7 @@ Find storage locations. The results can be filtered by warehouse id, rack id and
 
 <pre>public <strong>createStorageLocation</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/int">int</a> $rackId, <a target="_blank" href="http://php.net/int">int</a> $shelfId):<a href="stockmanagement#stockmanagement_models_storagelocation">StorageLocation</a>
 </pre>
+
     
 Create a new storage location.
     
@@ -825,30 +832,11 @@ Create a new storage location.
 </table>
 
 
-<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-    
-Sets the filter array.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filters</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-    
-Returns the filter array.
-    
 ## Models<a name="stockmanagement_management_models"></a>
 ### Rack<a name="stockmanagement_models_rack"></a>
 
 The storage rack model
+
 
 #### Namespace
 
@@ -907,6 +895,7 @@ The storage rack model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -914,6 +903,7 @@ returns this model as an array
 ### Shelf<a name="stockmanagement_models_shelf"></a>
 
 The storage shelf model
+
 
 #### Namespace
 
@@ -963,6 +953,7 @@ The storage shelf model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
@@ -970,6 +961,7 @@ returns this model as an array
 ### StorageLocation<a name="stockmanagement_models_storagelocation"></a>
 
 The storage location model
+
 
 #### Namespace
 
@@ -1036,6 +1028,7 @@ The storage location model
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
+
     
 returns this model as an array
     
