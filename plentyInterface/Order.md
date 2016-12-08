@@ -286,7 +286,7 @@ An event class fired after a new order is created. The order type is not relevan
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderEvent<a name="order_events_orderevent"></a>
@@ -305,7 +305,7 @@ A base event class for all order events. Each order event expects an order insta
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderFullyPaid<a name="order_events_orderfullypaid"></a>
@@ -324,7 +324,7 @@ An Event class fired after a payment assignment when the order is fully paid.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderOverpaid<a name="order_events_orderoverpaid"></a>
@@ -343,7 +343,7 @@ An Event class fired after a payment assignment when the order is overpaid.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderPaidEvent<a name="order_events_orderpaidevent"></a>
@@ -362,7 +362,7 @@ A base Event class for all order paid events.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderPartlyPaid<a name="order_events_orderpartlypaid"></a>
@@ -381,7 +381,7 @@ An Event class fired after a payment assignment when the order is partly paid.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderPaymentAssigned<a name="order_events_orderpaymentassigned"></a>
@@ -402,7 +402,7 @@ An Event class fired after a payment was assigned to an order.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderPrepaid<a name="order_events_orderprepaid"></a>
@@ -421,7 +421,7 @@ An Event class fired after a payment assignment when the order is paid in advanc
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 ## Models<a name="order_order_models"></a>
 ### Order<a name="order_models_order"></a>
@@ -573,7 +573,7 @@ The order model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderAmount<a name="order_models_orderamount"></a>
@@ -673,7 +673,7 @@ The order amount model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderAmountVat<a name="order_models_orderamountvat"></a>
@@ -744,7 +744,7 @@ The order amount vat model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderItem<a name="order_models_orderitem"></a>
@@ -877,7 +877,7 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderItemAmount<a name="order_models_orderitemamount"></a>
@@ -972,7 +972,7 @@ The order item amount model. Order item amount refers to amounts of money.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderItemOrderProperty<a name="order_models_orderitemorderproperty"></a>
@@ -1016,7 +1016,7 @@ This model holds the order properties that are assigned to order items.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderItemProperty<a name="order_models_orderitemproperty"></a>
@@ -1127,7 +1127,7 @@ The order item property model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderItemType<a name="order_models_orderitemtype"></a>
@@ -1176,7 +1176,7 @@ The order item type model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderItemTypeName<a name="order_models_orderitemtypename"></a>
@@ -1229,7 +1229,7 @@ The order item type name model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderProperty<a name="order_models_orderproperty"></a>
@@ -1340,7 +1340,7 @@ The order properties model. Each order property has a type and can have an addit
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderPropertySubType<a name="order_models_orderpropertysubtype"></a>
@@ -1389,7 +1389,7 @@ The order property sub-type model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderPropertySubTypeName<a name="order_models_orderpropertysubtypename"></a>
@@ -1442,7 +1442,7 @@ The order property sub type name model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderPropertyType<a name="order_models_orderpropertytype"></a>
@@ -1491,7 +1491,7 @@ The order property type model. Each order has a type and can have an additional 
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderPropertyTypeName<a name="order_models_orderpropertytypename"></a>
@@ -1544,7 +1544,7 @@ The order property type name model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderRelationReference<a name="order_models_orderrelationreference"></a>
@@ -1632,7 +1632,7 @@ The order relation reference model specifies how references and orders are relat
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderType<a name="order_models_ordertype"></a>
@@ -1681,7 +1681,7 @@ The order type model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderTypeName<a name="order_models_ordertypename"></a>
@@ -1734,7 +1734,7 @@ The order type name model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### PriceCalculationResultItem<a name="order_models_pricecalculationresultitem"></a>
@@ -1794,7 +1794,7 @@ price calculation result item
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 ## Services<a name="order_order_services"></a>
 ### OrderCreatedTypeService<a name="order_services_ordercreatedtypeservice"></a>
@@ -1955,7 +1955,7 @@ The CouponCampaignCode model contains information about coupon codes. Each code 
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 ## Contracts<a name="order_code_contracts"></a>
 ### CouponCodeRepositoryContract<a name="order_contracts_couponcoderepositorycontract"></a>
@@ -2142,7 +2142,7 @@ The CouponCampaign model contains all information of a campaign.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Contact<a name="order_contact"></a>
     
@@ -2367,7 +2367,7 @@ The CouponCodeContact model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Validation<a name="order_validation"></a>
     
@@ -2504,7 +2504,7 @@ string                                 $campaignUid				The id of the affiliprint
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### CouponCodeValidationItem<a name="order_models_couponcodevalidationitem"></a>
@@ -2560,7 +2560,7 @@ The CouponCodeValidationItem model contains all item data needed for validating 
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Currency<a name="order_currency"></a>
     
@@ -2730,7 +2730,7 @@ The currency model. The model includes information like ISO 4217 code and the re
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### CurrencyCountryRelation<a name="order_models_currencycountryrelation"></a>
@@ -2784,7 +2784,7 @@ The CurrencyCountryRelation model indicates which currency is related to which c
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### CurrencyName<a name="order_models_currencyname"></a>
@@ -2837,7 +2837,7 @@ The currency name model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Date<a name="order_date"></a>
     
@@ -3094,7 +3094,7 @@ The OrderDate model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderDateType<a name="order_models_orderdatetype"></a>
@@ -3158,7 +3158,7 @@ The OrderDateType model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderDateTypeName<a name="order_models_orderdatetypename"></a>
@@ -3221,7 +3221,7 @@ The OrderDateTypeName model. Order date types can have several names. One name p
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Events<a name="order_events"></a>
     
@@ -3242,7 +3242,7 @@ An event class fired after a new credit note is created.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### DeliveryOrderCreated<a name="order_created_deliveryordercreated"></a>
@@ -3261,7 +3261,7 @@ An event class fired after a new delivery order is created.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### MultiCreditNoteCreated<a name="order_created_multicreditnotecreated"></a>
@@ -3280,7 +3280,7 @@ An event class fired after a new multi credit note is created.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### MultiOrderCreated<a name="order_created_multiordercreated"></a>
@@ -3299,7 +3299,7 @@ An event class fired after a new multi order is created.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### RepairCreated<a name="order_created_repaircreated"></a>
@@ -3318,7 +3318,7 @@ An event class fired after a new repair is created.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ReturnCreated<a name="order_created_returncreated"></a>
@@ -3337,7 +3337,7 @@ An event class fired after a new returns is created.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### SalesOrderCreated<a name="order_created_salesordercreated"></a>
@@ -3356,7 +3356,7 @@ An event class fired after a new sales order is created.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### WarrantyCreated<a name="order_created_warrantycreated"></a>
@@ -3375,7 +3375,7 @@ An event class fired after a new warranty is created.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Models<a name="order_models"></a>
     
@@ -3469,7 +3469,7 @@ The legacy order model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Method<a name="order_method"></a>
     
@@ -3623,7 +3623,7 @@ The payment method model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### PaymentMethodInformation<a name="order_models_paymentmethodinformation"></a>
@@ -3687,7 +3687,7 @@ The payment method information model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Referrer<a name="order_referrer"></a>
     
@@ -3860,7 +3860,7 @@ The order referrer model. An order referrer shows where a purchase was originall
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Scheduler<a name="order_scheduler"></a>
     
@@ -3922,7 +3922,7 @@ The legacy order model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Shipping<a name="order_shipping"></a>
     
@@ -4061,7 +4061,7 @@ The Default Shipping model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Countries<a name="order_countries"></a>
     
@@ -4224,7 +4224,7 @@ The country model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### CountryName<a name="order_models_countryname"></a>
@@ -4268,7 +4268,7 @@ country name
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### CountryState<a name="order_models_countrystate"></a>
@@ -4320,7 +4320,7 @@ country state
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # ParcelService<a name="order_parcelservice"></a>
     
@@ -4341,7 +4341,7 @@ The Parcel Service Model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ParcelServiceName<a name="order_models_parcelservicename"></a>
@@ -4360,7 +4360,7 @@ The Parcel Service Name Model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ParcelServicePreset<a name="order_models_parcelservicepreset"></a>
@@ -4480,7 +4480,7 @@ The Parcel Service Preset Model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ParcelServicePresetName<a name="order_models_parcelservicepresetname"></a>
@@ -4499,7 +4499,7 @@ The Parcel Service Preset Name Model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Status<a name="order_status"></a>
     
@@ -4627,7 +4627,7 @@ The order status model contains the ID of an order status. The ID is always an i
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OrderStatusName<a name="order_models_orderstatusname"></a>
@@ -4688,5 +4688,5 @@ The order status name model represents a status name for a given status ID. Howe
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

@@ -308,7 +308,7 @@ The fitment model. This can contain multiple FitmentItems models.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### FitmentItem<a name="market_models_fitmentitem"></a>
@@ -357,7 +357,7 @@ The fitment item model. This belongs to one fitment model and can contain multip
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### FitmentItemProperty<a name="market_models_fitmentitemproperty"></a>
@@ -410,7 +410,7 @@ The fitment item property model. This bleongs to an FitmentItem model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Helper<a name="market_helper"></a>
     
@@ -729,8 +729,7 @@ Find settings for a given marketplace ID and type.
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Delete a setting.
@@ -850,6 +849,28 @@ Get all correlations for a given marketplace ID.
 </table>
 
 
+<pre>public <strong>getSettingsByCorrelation</strong>($marketplaceId, <a target="_blank" href="http://php.net/int">int</a> $correlationId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get a specific settings by marketplace id and correlation id.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$marketplaceId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$correlationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="market_settings_models"></a>
 ### Settings<a name="market_models_settings"></a>
 
@@ -912,5 +933,5 @@ The market settings model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

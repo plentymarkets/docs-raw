@@ -320,7 +320,7 @@ The Accounting Location model it is always associated with a client and country 
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Vat<a name="accounting_vat"></a>
     
@@ -776,7 +776,7 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VatRate<a name="accounting_models_vatrate"></a>
@@ -820,5 +820,5 @@ The VAT rate model is always associated with a VAT configuration and contains th
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

@@ -56,7 +56,8 @@ Database contract
 </table>
 
 
-<pre>public <strong>query</strong>(<a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/array">array</a> $queryParams):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>query</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelClassName):<a href="plugin#plugin_contracts_query">Query</a>
+</pre>
 
     
 
@@ -65,12 +66,7 @@ Database contract
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$tableName</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$queryParams</td>
+        <td>$modelClassName</td>
         <td></td>
     </tr>
 </table>
@@ -178,6 +174,11 @@ Database model
 </td>
             <td>primaryKeyFieldType</td>
             <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>autoIncrementPrimaryKey</td>
+            <td></td>
         </tr></tbody>
 </table>
 
@@ -185,6 +186,79 @@ Database model
 #### Methods
 
 <pre>public <strong>getTableName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+
+### Query<a name="plugin_contracts_query"></a>
+
+database query
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\DataBase\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>where</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $operator = null, $value = null):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>orWhere</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $operator = null, $value = null):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>get</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 

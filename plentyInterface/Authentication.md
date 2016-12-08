@@ -157,5 +157,5 @@ The user authentication model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

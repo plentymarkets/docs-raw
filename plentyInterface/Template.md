@@ -210,7 +210,7 @@ Design model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### DesignConfig<a name="template_models_designconfig"></a>
@@ -378,5 +378,5 @@ Design configuration model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

@@ -542,7 +542,7 @@ Export model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### Filter<a name="dataexchange_models_filter"></a>
@@ -598,7 +598,7 @@ export filter
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### FormatSetting<a name="dataexchange_models_formatsetting"></a>
@@ -654,7 +654,7 @@ format setting
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### OutputParam<a name="dataexchange_models_outputparam"></a>
@@ -710,7 +710,7 @@ output params
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 ## Services<a name="dataexchange_dataexchange_services"></a>
 ### ExportPresetContainer<a name="dataexchange_services_exportpresetcontainer"></a>

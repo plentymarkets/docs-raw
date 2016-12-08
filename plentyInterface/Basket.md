@@ -297,7 +297,7 @@ The basket model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### BasketItem<a name="basket_models_basketitem"></a>
@@ -461,7 +461,7 @@ The basket item model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Events<a name="basket_events"></a>
     

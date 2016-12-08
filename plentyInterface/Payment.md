@@ -781,12 +781,12 @@ The payment model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### PaymentOrderRelation<a name="payment_models_paymentorderrelation"></a>
 
-payment order relation model
+The payment order relation model
 
 
 #### Namespace
@@ -829,12 +829,12 @@ payment order relation model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### PaymentProperty<a name="payment_models_paymentproperty"></a>
 
-the payment option
+The payment property model
 
 
 #### Namespace
@@ -909,12 +909,12 @@ the payment option
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### PaymentPropertyType<a name="payment_models_paymentpropertytype"></a>
 
-payment propery type model
+The payment property type model
 
 
 #### Namespace
@@ -948,7 +948,7 @@ payment propery type model
             <td><a href="payment#payment_models_paymentpropertytypename">PaymentPropertyTypeName</a>
 </td>
             <td>name</td>
-            <td>property type name</td>
+            <td>The name of the property type</td>
         </tr></tbody>
 </table>
 
@@ -958,12 +958,12 @@ payment propery type model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### PaymentPropertyTypeName<a name="payment_models_paymentpropertytypename"></a>
 
-payment property type name model
+The payment property type name model
 
 
 #### Namespace
@@ -1006,7 +1006,7 @@ payment property type name model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Events<a name="payment_events"></a>
     
@@ -1272,7 +1272,7 @@ Creates the payment history.
 ## Models<a name="payment_history_models"></a>
 ### PaymentHistory<a name="payment_models_paymenthistory"></a>
 
-the payment history
+The payment history model
 
 
 #### Namespace
@@ -1323,14 +1323,14 @@ the payment history
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Method<a name="payment_method"></a>
     
 ## Contracts<a name="payment_method_contracts"></a>
 ### PaymentMethodContainer<a name="payment_contracts_paymentmethodcontainer"></a>
 
-payment method container
+The payment method container
 
 
 #### Namespace
@@ -1352,17 +1352,17 @@ payment method container
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$paymentKey</td>
-        <td></td>
+        <td>The unique key of a payment plugin</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$paymentMethodServiceClass</td>
-        <td></td>
+        <td>The class of the payment method. This class contains information of the payment plugin, such as the name and whether the payment method is active.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$rebuildEventClassesList</td>
-        <td></td>
+        <td>A list of events. It is checked again for the list of events whether the payment method is active.</td>
     </tr>
 </table>
 
@@ -1489,7 +1489,7 @@ Executes a payment. The ID of the payment method and the ID of the order must be
 
 ### PaymentMethodService<a name="payment_contracts_paymentmethodservice"></a>
 
-the method of payment service
+The payment method service
 
 
 #### Namespace
@@ -1500,7 +1500,7 @@ the method of payment service
 ## Models<a name="payment_method_models"></a>
 ### PaymentMethod<a name="payment_models_paymentmethod"></a>
 
-PaymentMethod
+The payment method model
 
 
 #### Namespace
@@ -1543,5 +1543,5 @@ PaymentMethod
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

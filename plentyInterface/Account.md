@@ -507,7 +507,7 @@ The address model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AddressContactRelation<a name="account_models_addresscontactrelation"></a>
@@ -565,7 +565,7 @@ address contact relation model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AddressOption<a name="account_models_addressoption"></a>
@@ -627,7 +627,7 @@ The address options model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AddressOptionType<a name="account_models_addressoptiontype"></a>
@@ -692,7 +692,7 @@ The address options type model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AddressOptionTypeName<a name="account_models_addressoptiontypename"></a>
@@ -745,7 +745,7 @@ The address options type name model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AddressOrderRelation<a name="account_models_addressorderrelation"></a>
@@ -812,7 +812,7 @@ address order relation model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AddressRelationType<a name="account_models_addressrelationtype"></a>
@@ -866,7 +866,7 @@ The contact address type model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AddressRelationTypeApplication<a name="account_models_addressrelationtypeapplication"></a>
@@ -919,7 +919,7 @@ The address relation type application model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AddressRelationTypeName<a name="account_models_addressrelationtypename"></a>
@@ -972,7 +972,7 @@ The address relation type name model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AddressSchedulerRelation<a name="account_models_addressschedulerrelation"></a>
@@ -1025,7 +1025,7 @@ address scheduler relation model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AddressWarehouseRelation<a name="account_models_addresswarehouserelation"></a>
@@ -1078,7 +1078,7 @@ address warehouse relation model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # ContactEvent<a name="account_contactevent"></a>
     
@@ -1200,7 +1200,7 @@ The contact event model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Contact<a name="account_contact"></a>
     
@@ -2414,7 +2414,7 @@ The contact model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ContactAllowedMethodOfPayment<a name="account_models_contactallowedmethodofpayment"></a>
@@ -2474,7 +2474,7 @@ contact allowed method of payment model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ContactBank<a name="account_models_contactbank"></a>
@@ -2596,7 +2596,7 @@ The contact bank model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ContactDepartment<a name="account_models_contactdepartment"></a>
@@ -2663,7 +2663,7 @@ contact department model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ContactDepartmentName<a name="account_models_contactdepartmentname"></a>
@@ -2711,7 +2711,7 @@ contact department name model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ContactOption<a name="account_models_contactoption"></a>
@@ -2790,7 +2790,7 @@ The contact options model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ContactOptionSubType<a name="account_models_contactoptionsubtype"></a>
@@ -2854,7 +2854,7 @@ contact options sub type model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ContactOptionSubTypeName<a name="account_models_contactoptionsubtypename"></a>
@@ -2902,7 +2902,7 @@ contact options sub type name model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ContactOptionType<a name="account_models_contactoptiontype"></a>
@@ -2964,7 +2964,7 @@ contact options type model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ContactOptionTypeName<a name="account_models_contactoptiontypename"></a>
@@ -3012,7 +3012,7 @@ contact options type name model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ContactPosition<a name="account_models_contactposition"></a>
@@ -3083,7 +3083,7 @@ contact position model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ContactPositionName<a name="account_models_contactpositionname"></a>
@@ -3131,7 +3131,7 @@ contact position name model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ContactType<a name="account_models_contacttype"></a>
@@ -3193,7 +3193,7 @@ contact type model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ContactTypeName<a name="account_models_contacttypename"></a>
@@ -3241,7 +3241,7 @@ contact type name model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Account<a name="account_account"></a>
     
@@ -3632,7 +3632,7 @@ the account model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AccountContactRelation<a name="account_models_accountcontactrelation"></a>
@@ -3686,7 +3686,7 @@ account contact relation model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Newsletter<a name="account_newsletter"></a>
     
@@ -3813,7 +3813,7 @@ NewsletterEmail
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # OrderSummary<a name="account_ordersummary"></a>
     
@@ -4014,5 +4014,5 @@ The order summary model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

@@ -144,7 +144,7 @@ The webstore model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### WebstoreConfiguration<a name="system_models_webstoreconfiguration"></a>
@@ -844,5 +844,5 @@ The Webstore Configuration Model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

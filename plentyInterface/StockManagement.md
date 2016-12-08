@@ -312,7 +312,7 @@ The stock model. There are 4 different stock terms used in plentymarkets. The ph
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### StockStorageLocation<a name="stockmanagement_models_stockstoragelocation"></a>
@@ -369,7 +369,7 @@ The stock storage location model contains all information about the stock that i
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Warehouse<a name="stockmanagement_warehouse"></a>
     
@@ -540,7 +540,7 @@ The warehouse model in plentymarkets represents actual warehouses. Every warehou
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Management<a name="stockmanagement_management"></a>
     
@@ -897,7 +897,7 @@ The storage rack model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### Shelf<a name="stockmanagement_models_shelf"></a>
@@ -955,7 +955,7 @@ The storage shelf model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### StorageLocation<a name="stockmanagement_models_storagelocation"></a>
@@ -1030,5 +1030,5 @@ The storage location model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

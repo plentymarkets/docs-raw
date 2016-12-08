@@ -607,7 +607,7 @@ The Attribute model including AttributeName and AttributeValue
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AttributeName<a name="item_models_attributename"></a>
@@ -675,7 +675,7 @@ The AttributeName model including Attribute
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AttributeValue<a name="item_models_attributevalue"></a>
@@ -764,7 +764,7 @@ The AttributeValue model including Attribute and AttributeValueName
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AttributeValueName<a name="item_models_attributevaluename"></a>
@@ -832,7 +832,7 @@ The AttributeValueName model including AttributeValue
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AttributeValueSet<a name="item_models_attributevalueset"></a>
@@ -890,7 +890,7 @@ The AttributeValueSet model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Availability<a name="item_availability"></a>
     
@@ -970,7 +970,7 @@ The item availability model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### AvailabilityLanguage<a name="item_models_availabilitylanguage"></a>
@@ -1014,7 +1014,7 @@ The item availability lang model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Barcode<a name="item_barcode"></a>
     
@@ -1268,7 +1268,7 @@ The barcode model including barcode referrer
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### BarcodeLinkReferrer<a name="item_models_barcodelinkreferrer"></a>
@@ -1321,7 +1321,7 @@ The barcode link referrer model including the barcode
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # DataLayer<a name="item_datalayer"></a>
     
@@ -1434,7 +1434,7 @@ returns this model as an array
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ItemBase<a name="item_models_itembase"></a>
@@ -1754,7 +1754,7 @@ ItemDataLayer - ItemBase
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ItemCrossSelling<a name="item_models_itemcrossselling"></a>
@@ -1805,7 +1805,7 @@ ItemCrossSelling
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ItemDescription<a name="item_models_itemdescription"></a>
@@ -1897,7 +1897,7 @@ ItemDescription
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ItemProperty<a name="item_models_itemproperty"></a>
@@ -1954,7 +1954,7 @@ ItemProperty
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ItemShippingProfiles<a name="item_models_itemshippingprofiles"></a>
@@ -2002,7 +2002,7 @@ ItemShippingProfiles
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### Record<a name="item_models_record"></a>
@@ -2158,7 +2158,7 @@ Record
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### RecordList<a name="item_models_recordlist"></a>
@@ -2177,7 +2177,7 @@ RecordList
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationAttributeValue<a name="item_models_variationattributevalue"></a>
@@ -2217,7 +2217,7 @@ VariationAttributeValue
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationBarcode<a name="item_models_variationbarcode"></a>
@@ -2265,7 +2265,7 @@ VariationBarcode
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationBase<a name="item_models_variationbase"></a>
@@ -2506,7 +2506,7 @@ VariationBase
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationBundleComponent<a name="item_models_variationbundlecomponent"></a>
@@ -2554,7 +2554,7 @@ VariationBundleComponent
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationCategory<a name="item_models_variationcategory"></a>
@@ -2599,7 +2599,7 @@ VariationCategory
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationImage<a name="item_models_variationimage"></a>
@@ -2667,7 +2667,7 @@ VariationImage
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationLinkMarketplace<a name="item_models_variationlinkmarketplace"></a>
@@ -2707,7 +2707,7 @@ VariationLinkMarketplace
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationLinkWebstore<a name="item_models_variationlinkwebstore"></a>
@@ -2747,7 +2747,7 @@ VariationLinkWebstore
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationMarketStatus<a name="item_models_variationmarketstatus"></a>
@@ -2830,7 +2830,7 @@ VariationMarketStatus
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationRetailPrice<a name="item_models_variationretailprice"></a>
@@ -2938,7 +2938,7 @@ VariationRetailPrice
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationSpecialOfferRetailPrice<a name="item_models_variationspecialofferretailprice"></a>
@@ -3028,7 +3028,7 @@ VariationSpecialOfferRetailPrice
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationStandardCategory<a name="item_models_variationstandardcategory"></a>
@@ -3072,7 +3072,7 @@ VariationStandardCategory
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationStock<a name="item_models_variationstock"></a>
@@ -3186,7 +3186,7 @@ VariationStock
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationStockBuffer<a name="item_models_variationstockbuffer"></a>
@@ -3222,7 +3222,7 @@ VariationStockBuffer
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationSupplier<a name="item_models_variationsupplier"></a>
@@ -3308,7 +3308,7 @@ VariationSupplier
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationWarehouse<a name="item_models_variationwarehouse"></a>
@@ -3384,7 +3384,7 @@ VariationWarehouse
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 ## Services<a name="item_datalayer_services"></a>
 ### ItemDataLayerResultLookup<a name="item_services_itemdatalayerresultlookup"></a>
@@ -3498,7 +3498,7 @@ The default shipping cost model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Item<a name="item_item"></a>
     
@@ -3838,7 +3838,7 @@ The item model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ItemText<a name="item_models_itemtext"></a>
@@ -3910,7 +3910,7 @@ The item text model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # ItemImage<a name="item_itemimage"></a>
     
@@ -4012,7 +4012,7 @@ The ItemImage Model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ItemImageAvailability<a name="item_models_itemimageavailability"></a>
@@ -4056,7 +4056,7 @@ ItemImageAvailability
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ItemImageName<a name="item_models_itemimagename"></a>
@@ -4104,7 +4104,7 @@ ItemImageName
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ItemImageUpload<a name="item_models_itemimageupload"></a>
@@ -4184,7 +4184,7 @@ ItemImage
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # ItemProperty<a name="item_itemproperty"></a>
     
@@ -4260,7 +4260,7 @@ ItemPropertyValue
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Manufacturer<a name="item_manufacturer"></a>
     
@@ -4610,7 +4610,7 @@ The item manufacturer model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ManufacturerCommission<a name="item_models_manufacturercommission"></a>
@@ -4667,7 +4667,7 @@ The item manufacturer commission model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Property<a name="item_property"></a>
     
@@ -5270,7 +5270,7 @@ The PropertyItem including PropertyItemName and PropertyMarketComponent
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### PropertyItemName<a name="item_models_propertyitemname"></a>
@@ -5323,7 +5323,7 @@ The PropertyItemName including PropertyItem
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### PropertyMarketComponent<a name="item_models_propertymarketcomponent"></a>
@@ -5376,7 +5376,7 @@ The PropertyMarketComponent including PropertyItem
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### PropertySelection<a name="item_models_propertyselection"></a>
@@ -5433,7 +5433,7 @@ The PropertySelection including PropertyItem
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # SalesPrice<a name="item_salesprice"></a>
     
@@ -5655,7 +5655,7 @@ Get list of SalesPrices
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### SalesPriceAccount<a name="item_models_salespriceaccount"></a>
@@ -5707,7 +5707,7 @@ returns this model as an array
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### SalesPriceCountry<a name="item_models_salespricecountry"></a>
@@ -5755,7 +5755,7 @@ returns this model as an array
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### SalesPriceCurrency<a name="item_models_salespricecurrency"></a>
@@ -5803,7 +5803,7 @@ returns this model as an array
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### SalesPriceCustomerClass<a name="item_models_salespricecustomerclass"></a>
@@ -5851,7 +5851,7 @@ returns this model as an array
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### SalesPriceName<a name="item_models_salespricename"></a>
@@ -5907,7 +5907,7 @@ returns this model as an array
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### SalesPriceOnlineStore<a name="item_models_salespriceonlinestore"></a>
@@ -5955,7 +5955,7 @@ returns this model as an array
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### SalesPriceReferrer<a name="item_models_salespricereferrer"></a>
@@ -6003,7 +6003,7 @@ returns this model as an array
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # ShippingSupport<a name="item_shippingsupport"></a>
     
@@ -6125,7 +6125,7 @@ The shipping support model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Unit<a name="item_unit"></a>
     
@@ -6428,7 +6428,7 @@ The unit model including unit name
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### UnitName<a name="item_models_unitname"></a>
@@ -6477,7 +6477,7 @@ The unit name model including the unit
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # UnitCombination<a name="item_unitcombination"></a>
     
@@ -6528,7 +6528,7 @@ The unitCombination model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # Variation<a name="item_variation"></a>
     
@@ -7047,7 +7047,7 @@ Variation
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationBarcode<a name="item_variationbarcode"></a>
     
@@ -7210,7 +7210,7 @@ Variation Barcode
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationCategory<a name="item_variationcategory"></a>
     
@@ -7260,7 +7260,7 @@ Variation Category
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationClient<a name="item_variationclient"></a>
     
@@ -7306,7 +7306,7 @@ Variation Client
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationDefaultCategory<a name="item_variationdefaultcategory"></a>
     
@@ -7356,7 +7356,7 @@ Variation Default Category
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationDescription<a name="item_variationdescription"></a>
     
@@ -7567,7 +7567,7 @@ Variation Default Category
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationImage<a name="item_variationimage"></a>
     
@@ -7625,7 +7625,7 @@ returns this model as an array
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationMarket<a name="item_variationmarket"></a>
     
@@ -7671,7 +7671,7 @@ Variation Market
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationMarketIdentNumber<a name="item_variationmarketidentnumber"></a>
     
@@ -7729,7 +7729,7 @@ Variation Market Ident Number
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationProperty<a name="item_variationproperty"></a>
     
@@ -7776,7 +7776,7 @@ The VariationPropertyValue
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationPropertyValue<a name="item_models_variationpropertyvalue"></a>
@@ -7850,7 +7850,7 @@ The VariationPropertyValue
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationSalesPrice<a name="item_variationsalesprice"></a>
     
@@ -8026,7 +8026,7 @@ VariationSalesPrice
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationSku<a name="item_variationsku"></a>
     
@@ -8257,7 +8257,7 @@ The variationSku model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationStock<a name="item_variationstock"></a>
     
@@ -8275,7 +8275,7 @@ Get, list, book and correct stock or get stock movements.
 
 #### Methods
 
-<pre>public <strong>listStockByWarehouse</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $columns):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>listStockByWarehouse</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $columns):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 List stock per warehouse
@@ -8283,11 +8283,6 @@ List stock per warehouse
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemId</td>
-        <td>The ID of the item.</td>
-    </tr>
-    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
         <td>The ID of the variation.</td>
@@ -8300,7 +8295,7 @@ List stock per warehouse
 </table>
 
 
-<pre>public <strong>listStockMovements</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $columns, <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>listStockMovements</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $columns, <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 List stock movements for a variation
@@ -8308,11 +8303,6 @@ List stock movements for a variation
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemId</td>
-        <td>The ID of the item.</td>
-    </tr>
-    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
         <td>The ID of the variation.</td>
@@ -8335,7 +8325,7 @@ List stock movements for a variation
 </table>
 
 
-<pre>public <strong>bookIncomingItems</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>bookIncomingItems</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Book incoming stock
@@ -8344,11 +8334,6 @@ Book incoming stock
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemId</td>
-        <td>The ID of the item.</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
         <td>The ID of the variation.</td>
     </tr>
@@ -8360,7 +8345,7 @@ Book incoming stock
 </table>
 
 
-<pre>public <strong>correctStock</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>correctStock</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Correct stock
@@ -8369,11 +8354,6 @@ Correct stock
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemId</td>
-        <td>The ID of the item.</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
         <td>The ID of the variation.</td>
     </tr>
@@ -8385,7 +8365,7 @@ Correct stock
 </table>
 
 
-<pre>public <strong>redistributeStock</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+<pre>public <strong>redistributeStock</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
 
     
@@ -8394,11 +8374,6 @@ Redistribute stock
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemId</td>
-        <td>The ID of the item</td>
-    </tr>
-    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
         <td>The ID of the variation</td>
@@ -8489,7 +8464,7 @@ The variation stock model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### VariationStockMovement<a name="item_models_variationstockmovement"></a>
@@ -8581,7 +8556,7 @@ The variation stock movement model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationSupplier<a name="item_variationsupplier"></a>
     
@@ -8667,7 +8642,7 @@ Variation Supplier
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 # VariationWarehouse<a name="item_variationwarehouse"></a>
     
@@ -8745,5 +8720,5 @@ Variation Warehouse
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

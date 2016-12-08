@@ -89,14 +89,14 @@ Updates the currency. The currency must be specified.
 </pre>
 
     
-
+Updates the ID of the order referrer. The ID must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$referrerId</td>
-        <td></td>
+        <td>The ID of the order referrer. The <a href="https://www.plentymarkets.co.uk/manual/settings/orders/order-referrer/" target="_blank">order referrer</a> settings can be changed in the plentymarkets back end.</td>
     </tr>
 </table>
 
@@ -147,7 +147,7 @@ Gets the language of the online store.
 
 ### FrontendPaymentMethodChanged<a name="frontend_events_frontendpaymentmethodchanged"></a>
 
-Event that gets fired when the selected payment method is changed from the frontend
+The event is triggered when the payment method is changed in the online store.
 
 
 #### Namespace
@@ -162,13 +162,13 @@ Event that gets fired when the selected payment method is changed from the front
 </pre>
 
     
-
+Gets the ID of the payment method.
     
 <pre>public <strong>setPaymentMethodId</strong>($paymentMethodId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
-
+Updates the ID of the payment method. The ID must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -184,7 +184,7 @@ Event that gets fired when the selected payment method is changed from the front
 
 ### FrontendShippingCountryChanged<a name="frontend_events_frontendshippingcountrychanged"></a>
 
-Event that gets fired when the selected shipping country is changed from the frontend
+The event is triggered when the shipping country is changed in the online store.
 
 
 #### Namespace
@@ -204,7 +204,7 @@ Gets the ID of the shipping country.
 </pre>
 
     
-Sets the ID of the shipping country. The ID must be specified.
+Updates the ID of the shipping country. The ID must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -219,7 +219,7 @@ Sets the ID of the shipping country. The ID must be specified.
 
 ### FrontendShippingProfileChanged<a name="frontend_events_frontendshippingprofilechanged"></a>
 
-Event that gets fired when the selected shipping profile is changed from the frontend
+The event is triggered when the shipping profile is changed in the online store.
 
 
 #### Namespace
@@ -234,13 +234,13 @@ Event that gets fired when the selected shipping profile is changed from the fro
 </pre>
 
     
-
+Gets the ID of the shipping profile.
     
 <pre>public <strong>setShippingProfileId</strong>($shippingProfileId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
-
+Updates the ID of the shipping profile. The ID must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -658,7 +658,7 @@ Frontend-service for system information
 ## Contracts<a name="frontend_paymentmethod_contracts"></a>
 ### FrontendPaymentMethodRepositoryContract<a name="frontend_contracts_frontendpaymentmethodrepositorycontract"></a>
 
-Repository to load payment methods for the front end
+The FrontendPaymentMethodRepositoryContract is the interface for the front end payment method repository. Get the payment method information to be displayed in the online store.
 
 
 #### Namespace
@@ -672,13 +672,13 @@ Repository to load payment methods for the front end
 <pre>public <strong>getCurrentPaymentMethodsList</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-
+Lists all payment methods of the current customer session.
     
 <pre>public <strong>getPaymentMethodName</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
  $paymentMethod, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
-
+Gets the name of the payment method in the specified language.
     
 ##### <strong>Parameters</strong>
     
@@ -686,12 +686,12 @@ Repository to load payment methods for the front end
         <td><a href="payment#payment_models_paymentmethod">PaymentMethod</a>
 </td>
         <td>$paymentMethod</td>
-        <td></td>
+        <td>The payment method</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The language</td>
     </tr>
 </table>
 
@@ -700,7 +700,7 @@ Repository to load payment methods for the front end
  $paymentMethod):<a target="_blank" href="http://php.net/float">float</a></pre>
 
     
-
+Gets additional costs for the payment method. Additional costs can be entered in the config.json.
     
 ##### <strong>Parameters</strong>
     
@@ -708,7 +708,7 @@ Repository to load payment methods for the front end
         <td><a href="payment#payment_models_paymentmethod">PaymentMethod</a>
 </td>
         <td>$paymentMethod</td>
-        <td></td>
+        <td>The payment method</td>
     </tr>
 </table>
 
@@ -717,7 +717,7 @@ Repository to load payment methods for the front end
  $paymentMethod, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
-
+Gets the icon of the payment method. The path of the icon can be entered in the config.json.
     
 ##### <strong>Parameters</strong>
     
@@ -725,12 +725,12 @@ Repository to load payment methods for the front end
         <td><a href="payment#payment_models_paymentmethod">PaymentMethod</a>
 </td>
         <td>$paymentMethod</td>
-        <td></td>
+        <td>The payment method</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The language</td>
     </tr>
 </table>
 
@@ -739,7 +739,7 @@ Repository to load payment methods for the front end
  $paymentMethod, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
-
+Gets the description of the payment method. The description can be entered in the config.json.
     
 ##### <strong>Parameters</strong>
     
@@ -760,19 +760,19 @@ Repository to load payment methods for the front end
 <pre>public <strong>getPaymentMethodNameById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
-
+Gets the name of the payment method by ID and language. The ID of the payment method and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$paymentMethodId</td>
-        <td></td>
+        <td>The ID of the payment method</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The language</td>
     </tr>
 </table>
 
@@ -780,14 +780,14 @@ Repository to load payment methods for the front end
 <pre>public <strong>getPaymentMethodFeeById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId):<a target="_blank" href="http://php.net/float">float</a></pre>
 
     
-
+Gets additional costs for the payment method by ID. The ID of the payment method must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$paymentMethodId</td>
-        <td></td>
+        <td>The ID of the payment method</td>
     </tr>
 </table>
 
@@ -795,19 +795,19 @@ Repository to load payment methods for the front end
 <pre>public <strong>getPaymentMethodIconById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
-
+Gets the icon of the payment method by ID and language. The ID of the payment method and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$paymentMethodId</td>
-        <td></td>
+        <td>The ID of the payment method</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The language</td>
     </tr>
 </table>
 
@@ -815,19 +815,19 @@ Repository to load payment methods for the front end
 <pre>public <strong>getPaymentMethodDescriptionById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
-
+Gets the description of the payment method by ID and language. The ID of the payment method and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$paymentMethodId</td>
-        <td></td>
+        <td>The ID of the payment method</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The language</td>
     </tr>
 </table>
 
@@ -940,7 +940,7 @@ session storage model for customer data
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### Forum<a name="frontend_models_forum"></a>
@@ -992,7 +992,7 @@ session storage model for forum data
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### LocaleSettings<a name="frontend_models_localesettings"></a>
@@ -1036,7 +1036,7 @@ session storage model for locale settings
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### Order<a name="frontend_models_order"></a>
@@ -1156,7 +1156,7 @@ session storage model for order data
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### Plugin<a name="frontend_models_plugin"></a>

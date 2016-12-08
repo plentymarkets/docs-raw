@@ -103,7 +103,7 @@ Document
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### DocumentDirectory<a name="document_models_documentdirectory"></a>
@@ -147,7 +147,7 @@ The document directory model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### DocumentReference<a name="document_models_documentreference"></a>
@@ -191,5 +191,5 @@ The document reference model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

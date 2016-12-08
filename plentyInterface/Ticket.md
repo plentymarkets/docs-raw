@@ -217,7 +217,7 @@ The ticket model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### TicketMessage<a name="ticket_models_ticketmessage"></a>
@@ -291,7 +291,7 @@ The ticket message model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### TicketMessageTopic<a name="ticket_models_ticketmessagetopic"></a>
@@ -331,7 +331,7 @@ The ticket message topic model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### TicketMessageTopicName<a name="ticket_models_ticketmessagetopicname"></a>
@@ -379,7 +379,7 @@ The ticket message topic name model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### TicketOwner<a name="ticket_models_ticketowner"></a>
@@ -423,7 +423,7 @@ The ticket owner model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### TicketRole<a name="ticket_models_ticketrole"></a>
@@ -463,7 +463,7 @@ The ticket role model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### TicketRoleName<a name="ticket_models_ticketrolename"></a>
@@ -511,7 +511,7 @@ The ticket role name model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### TicketStatus<a name="ticket_models_ticketstatus"></a>
@@ -559,7 +559,7 @@ The ticket status model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### TicketStatusGroup<a name="ticket_models_ticketstatusgroup"></a>
@@ -603,7 +603,7 @@ The ticket status group model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### TicketStatusGroupName<a name="ticket_models_ticketstatusgroupname"></a>
@@ -647,7 +647,7 @@ The ticket status group name model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### TicketStatusName<a name="ticket_models_ticketstatusname"></a>
@@ -695,7 +695,7 @@ The ticket status name model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### TicketType<a name="ticket_models_tickettype"></a>
@@ -735,7 +735,7 @@ The ticket type model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### TicketTypeName<a name="ticket_models_tickettypename"></a>
@@ -783,5 +783,5 @@ The ticket type name model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

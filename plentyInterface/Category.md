@@ -138,6 +138,96 @@ Returns one category by id.
 </table>
 
 
+<pre>public <strong>getLinklistTree</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Returns all linklist categories as tree.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>'all','item','container','content' or 'blog'</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>Optional language of details.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getLinklistList</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Returns all linklist categories as list.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>'all','item','container','content' or 'blog'</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>Optional language of details.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasChildren</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/bool">bool</a> $onlySiteMapped = false, <a target="_blank" href="http://php.net/bool">bool</a> $onlyLinkListed = false):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Returns true if category has children.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$categoryId</td>
+        <td>The id of the category.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$onlySiteMapped</td>
+        <td>Determines if the result has only sitemaps or all visible categories.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$onlyLinkListed</td>
+        <td>Determines if the result has only linklists or all visible categories.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getUrl</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $onlySitemaps = false):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Retrieves the url for a category.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$categoryId</td>
+        <td>The id of the category.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>Optional language of details.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$onlySitemaps</td>
+        <td>Whether or not to only include categories with 'sitemaps' = 'Y'. Default false.</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId = null, <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
 
@@ -346,7 +436,7 @@ Category
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### CategoryBranch<a name="category_models_categorybranch"></a>
@@ -406,7 +496,7 @@ Category Branch
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### CategoryBranchMarketplace<a name="category_models_categorybranchmarketplace"></a>
@@ -475,7 +565,7 @@ The CategoryBranchMarketplace model
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### CategoryClient<a name="category_models_categoryclient"></a>
@@ -511,7 +601,7 @@ The Category Client
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### CategoryDetails<a name="category_models_categorydetails"></a>
@@ -647,7 +737,7 @@ CategoryDetails
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### CategoryTemplate<a name="category_models_categorytemplate"></a>
@@ -695,5 +785,5 @@ Category Template
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

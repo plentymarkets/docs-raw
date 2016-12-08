@@ -526,7 +526,7 @@ The ItemSet model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ItemSetComponent<a name="itemset_models_itemsetcomponent"></a>
@@ -578,7 +578,7 @@ The ItemSetComponent model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### ItemSetConfig<a name="itemset_models_itemsetconfig"></a>
@@ -630,5 +630,5 @@ The ItemSetConfig model.
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     

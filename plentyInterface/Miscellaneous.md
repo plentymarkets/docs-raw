@@ -1038,6 +1038,22 @@ In some situations, you may wish to run validation checks against a field only i
     
 
     
+<pre>public <strong>dateW3C</strong>(<a target="_blank" href="http://php.net/bool">bool</a> $allowTimestamps = false):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
+</pre>
+
+    
+The field under validation must be a valid w3c formated date time string.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$allowTimestamps</td>
+        <td>Allow timestamps as a valid format as well.</td>
+    </tr>
+</table>
+
+
 
 ### RulesCollection<a name="miscellaneous_validation_rulescollection"></a>
 
@@ -2927,7 +2943,7 @@ Delete Response
 <pre>public <strong>toArray</strong>()</pre>
 
     
-returns this model as an array
+Returns this model as an array.
     
 
 ### PaginatedResult<a name="miscellaneous_models_paginatedresult"></a>
@@ -3162,6 +3178,22 @@ The field under validation must match the given format. The format will be evalu
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$format</td>
         <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>dateW3C</strong>(<a target="_blank" href="http://php.net/bool">bool</a> $allowTimestamps = false):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
+</pre>
+
+    
+The field under validation must be a valid w3c formated date time string.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$allowTimestamps</td>
+        <td>Allow timestamps as a valid format as well.</td>
     </tr>
 </table>
 
