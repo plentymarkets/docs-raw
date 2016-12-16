@@ -327,7 +327,7 @@ Returns this model as an array.
 ## Contracts<a name="accounting_vat_contracts"></a>
 ### VatInitContract<a name="accounting_contracts_vatinitcontract"></a>
 
-Provides methods for vat initialization and vat rate or vat field detection.
+This interface provides methods to initialize the detection of a VAT configuration and to actually detect VAT rates or VAT fields.
 
 
 #### Namespace
@@ -342,34 +342,34 @@ Provides methods for vat initialization and vat rate or vat field detection.
 </pre>
 
     
-Initialize the VAT system data.
+Initialize the VAT system data
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$billingCountryId</td>
-        <td>The billing country ID.</td>
+        <td>The ID of the country of the invoice address</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$taxIdNumber</td>
-        <td>The tax id number.</td>
+        <td>The tax identification number</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$locationId</td>
-        <td>The location ID</td>
+        <td>The ID of the location</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$shippingCountryId</td>
-        <td>The shipping country ID. [optional, default=0]</td>
+        <td>The ID of the country of the shipping address. [optional, default=0]</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$startedAt</td>
-        <td>The date for the vat data. If not set, the current date will be used.
+        <td>The date when the VAT configuration went into effect. If no date is set, the current date will be used.
                                  [optional, default=null]</td>
     </tr>
 </table>
@@ -378,24 +378,26 @@ Initialize the VAT system data.
 <pre>public <strong>isInitialized</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
-Get whether the VAT system is already initialized or not.
+Get whether the VAT system is already initialized or not
     
 <pre>public <strong>getVatField</strong>(<a target="_blank" href="http://php.net/float">float</a> $vatRate, <a target="_blank" href="http://php.net/bool">bool</a> $restrictedToDigitalItems = false):<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
-Get the vat field for the given vat rate.
+Get the VAT field for a VAT rate
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
         <td>$vatRate</td>
-        <td>The vat rate to use to find the vat field.</td>
+        <td>The VAT rate to be used to find the VAT field</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$restrictedToDigitalItems</td>
-        <td>Specifies, whether to use the restricted to digital items vat configuration or not.</td>
+        <td>Flag that indicates if the VAT is restricted to digital items or not.
+											<br />True = the VAT is restricted to digital items
+											<br />False = the VAT is used for all items</td>
     </tr>
 </table>
 
@@ -403,19 +405,21 @@ Get the vat field for the given vat rate.
 <pre>public <strong>getVatRate</strong>(<a target="_blank" href="http://php.net/int">int</a> $vatField, <a target="_blank" href="http://php.net/bool">bool</a> $restrictedToDigitalItems = false):<a target="_blank" href="http://php.net/float">float</a></pre>
 
     
-Get the vat rate for the given vat field.
+Get the VAT rate of a VAT field
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$vatField</td>
-        <td>The vat field (0-3).</td>
+        <td>The VAT field (0-3).</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$restrictedToDigitalItems</td>
-        <td>Specifies, whether to use the restricted to digital items vat configuration or not.</td>
+        <td>Flag that indicates if the VAT is restricted to digital items or not.
+											<br />True = the VAT is restricted to digital items
+											<br />False = the VAT is used for all items</td>
     </tr>
 </table>
 
@@ -424,14 +428,16 @@ Get the vat rate for the given vat field.
 </pre>
 
     
-Get the Vat instance used.
+Get the VAT configuration to be used for VAT calculation
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$restrictedToDigitalItems</td>
-        <td>Specifies, whether to use the restricted to digital items vat configuration or not.</td>
+        <td>Flag that indicates if the VAT is restricted to digital items or not.
+											<br />True = the VAT is restricted to digital items
+											<br />False = the VAT is used for all items</td>
     </tr>
 </table>
 
@@ -439,14 +445,16 @@ Get the Vat instance used.
 <pre>public <strong>getUsingVatRates</strong>(<a target="_blank" href="http://php.net/bool">bool</a> $restrictedToDigitalItems = false):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Get the vat rates of the using Vat instance.
+Get the VAT rates to be used for VAT calculation
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$restrictedToDigitalItems</td>
-        <td>Specifies, whether to use the restricted to digital items vat configuration or not.</td>
+        <td>Flag that indicates if the VAT is restricted to digital items or not.
+											<br />True = the VAT is restricted to digital items
+											<br />False = the VAT is used for all items</td>
     </tr>
 </table>
 
@@ -455,19 +463,19 @@ Get the vat rates of the using Vat instance.
 </pre>
 
     
-Get a standard VAT configuration by location ID
+Get a standard VAT configuration of an accounting location
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$locationId</td>
-        <td>The ID of the location</td>
+        <td>The ID of the accounting location</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$startedAt</td>
-        <td>The date in the W3C format from when the vat configuration is valid</td>
+        <td>The date when the VAT configuration went into effect. The date is in W3C format.</td>
     </tr>
 </table>
 
@@ -490,14 +498,14 @@ The VatRepositoryContract is the interface for the VAT functionality. This inter
 </pre>
 
     
-Get the VAT configuration with the given ID.
+Get a VAT configuration
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td>The ID of the VAT configuration.</td>
+        <td>The ID of the VAT configuration</td>
     </tr>
 </table>
 
@@ -506,7 +514,7 @@ Get the VAT configuration with the given ID.
 </pre>
 
     
-Get the standard VAT configuration for a plenty ID.
+Get the standard VAT configuration for a plenty ID
     
 ##### <strong>Parameters</strong>
     
@@ -518,7 +526,7 @@ Get the standard VAT configuration for a plenty ID.
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$startedAt</td>
-        <td>The date in the W3C format from when the vat configuration is valid</td>
+        <td>The date when the VAT configuration went into effect. The date is given in W3C format.</td>
     </tr>
 </table>
 
@@ -526,29 +534,29 @@ Get the standard VAT configuration for a plenty ID.
 <pre>public <strong>findVat</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = Plenty\Modules\Accounting\Vat\Models\Vat::ITEMS_PER_PAGE, <a target="_blank" href="http://php.net/array">array</a> $relations = [], <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-List VAT configurations.
+List VAT configurations
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td>The page to be returned. If not given, the first page will be returned.</td>
+        <td>The page to be returned. If no page is specified, the first page will be returned.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemsPerPage</td>
-        <td>The number of items per page. If not given, the model default will be used.</td>
+        <td>The number of items per page. If not given, the model's default number will be used.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$relations</td>
-        <td>The relations, that are supposed to load with the Vat object. Either "location" or "country" is available.</td>
+        <td>The relations to load with the VAT object. The relations available are "location" and "country".</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>The columns, that are supposed to be loaded in the response</td>
+        <td>The columns to load in the response</td>
     </tr>
 </table>
 
@@ -563,17 +571,17 @@ List VAT configurations for an accounting location
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$locationId</td>
-        <td>The Id of the accounting location, whose vat configuration is supposed to be loaded</td>
+        <td>The ID of the accounting location</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$relations</td>
-        <td>The relations, that are supposed to load with the Vat object. Either "location" or "country" is available.</td>
+        <td>The relations to load with the VAT object. The relations available are "location" and "country".</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>The columns, that are supposed to be loaded in the response</td>
+        <td>The columns to load in the response</td>
     </tr>
 </table>
 
@@ -598,12 +606,12 @@ List VAT configuration for a country of delivery
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$relations</td>
-        <td>The relations, that are supposed to load with the VAT object. The relations available are "location" and "country".</td>
+        <td>The relations to load with the VAT object. The relations available are "location" and "country".</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>The columns, that are supposed to be loaded in the response.</td>
+        <td>The columns to load in the response.</td>
     </tr>
 </table>
 
@@ -611,7 +619,7 @@ List VAT configuration for a country of delivery
 
 ### VatServiceContract<a name="accounting_contracts_vatservicecontract"></a>
 
-Provides methods for quick vat field/rate/name search on a given Vat instance.
+Provides methods for a quick search of VAT fields, VAT rates and VAT names of a specific VAT configuration.
 
 
 #### Namespace
@@ -626,7 +634,7 @@ Provides methods for quick vat field/rate/name search on a given Vat instance.
  $vat, <a target="_blank" href="http://php.net/float">float</a> $vatRate):<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
-Get the vat field for the given vat rate.
+Get the VAT field for a VAT rate.
     
 ##### <strong>Parameters</strong>
     
@@ -634,12 +642,12 @@ Get the vat field for the given vat rate.
         <td><a href="accounting#accounting_models_vat">Vat</a>
 </td>
         <td>$vat</td>
-        <td>The country VAT instance.</td>
+        <td>The VAT configuration of a country</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
         <td>$vatRate</td>
-        <td>The vat rate.</td>
+        <td>The VAT rate</td>
     </tr>
 </table>
 
@@ -648,7 +656,7 @@ Get the vat field for the given vat rate.
  $vat, <a target="_blank" href="http://php.net/int">int</a> $vatField):<a target="_blank" href="http://php.net/float">float</a></pre>
 
     
-Get the vat rate for the given vat field.
+Get the VAT rate for a VAT field.
     
 ##### <strong>Parameters</strong>
     
@@ -656,12 +664,12 @@ Get the vat rate for the given vat field.
         <td><a href="accounting#accounting_models_vat">Vat</a>
 </td>
         <td>$vat</td>
-        <td>The country VAT instance.</td>
+        <td>The VAT configuration of a country</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$vatField</td>
-        <td>The vat field.</td>
+        <td>The VAT field</td>
     </tr>
 </table>
 
@@ -670,7 +678,7 @@ Get the vat rate for the given vat field.
  $vat, <a target="_blank" href="http://php.net/int">int</a> $vatField):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
-Get the vat name for the given vat field.
+Get the name of a VAT field.
     
 ##### <strong>Parameters</strong>
     
@@ -678,12 +686,12 @@ Get the vat name for the given vat field.
         <td><a href="accounting#accounting_models_vat">Vat</a>
 </td>
         <td>$vat</td>
-        <td>The country VAT instance.</td>
+        <td>The VAT configuration of a country</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$vatField</td>
-        <td>The vat field.</td>
+        <td>The VAT field</td>
     </tr>
 </table>
 
@@ -748,11 +756,11 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isRestrictedToDigitalItems</td>
-            <td>Specifies, if the VAT configuration is applied only to digital goods or not. True= The VAT set is only applied to digital goods. False = The VAT set is applied to all types of goods.</td>
+            <td>Flag that indicates if the VAT configuration is used only applied to digital goods or not. True= The VAT set is only applied to digital goods. False = The VAT set is applied to all types of goods.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isStandard</td>
-            <td>Specifies, if the VAT configuration is the standard for the location</td>
+            <td>Flag that indicates if the VAT configuration is the standard VAT configuration for the location</td>
         </tr><tr>
             <td><a href="accounting#accounting_models_accountinglocation">AccountingLocation</a>
 </td>

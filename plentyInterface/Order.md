@@ -1072,27 +1072,9 @@ The order item property model.
 <li>PROPERTY			=	18</li>
 </ul></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>subTypeId</td>
-            <td>The ID of the property subtype
-<ul>
-<li>MAIN_VALUE		=	1</li>
-<li>ORIGINAL_VALUE	=	2</li>
-<li>STATUS			=	3</li>
-<li>SURCHARGE		=	4</li>
-<li>TYPE				=	5</li>
-<li>EXTERNAL			=	6</li>
-<li>NAME				=	7</li>
-<li>CONTENT			=	8</li>
-<li>ACCOUNT			=	9</li>
-<li>FLAG				=	10</li>
-<li>LANGUAGE			=	11</li>
-<li>CONSUMER			=	12</li>
-</ul></td>
-        </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>value</td>
-            <td>The value of the property. The value depends on type/subtype.</td>
+            <td>The value of the property. The value depends on type.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -1113,11 +1095,6 @@ The order item property model.
 </td>
             <td>type</td>
             <td>The type of the property.</td>
-        </tr><tr>
-            <td><a href="order#order_models_orderpropertysubtype">OrderPropertySubType</a>
-</td>
-            <td>subType</td>
-            <td>The subtype of the property.</td>
         </tr></tbody>
 </table>
 
@@ -1220,321 +1197,6 @@ The order item type name model.
 </td>
             <td>type</td>
             <td>The order item type instance.</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### OrderProperty<a name="order_models_orderproperty"></a>
-
-The order properties model. Each order property has a type and can have an additional sub-type.
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The order property id.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>orderId</td>
-            <td>The id of the order that the property belongs to.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>typeId</td>
-            <td>The property type id.
-<ul>
-<li>WAREHOUSE		=	1</li>
-<li>SHIPPING_PROFILE	=	2</li>
-<li>CATEGORY			=	3</li>
-<li>WEIGHT			=	4</li>
-<li>WIDTH			=	5</li>
-<li>LENGTH			=	6</li>
-<li>HEIGHT			=	7</li>
-<li>QUANTITY			=	8</li>
-<li>MARKET			=	9</li>
-<li>VARIANT			=	10</li>
-<li>POSITION			=	11</li>
-<li>TOKEN			=	12</li>
-<li>METHOD_OF_PAYMENT=	13</li>
-<li>IDENTIFIER		=	14</li>
-<li>DUNNING			=	15</li>
-<li>ORDER			=	16</li>
-<li>DOCUMENT			=	17</li>
-<li>PROPERTY			=	18</li>
-</ul></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>subTypeId</td>
-            <td>The property sub-type id.
-<ul>
-<li>MAIN_VALUE		=	1</li>
-<li>ORIGINAL_VALUE	=	2</li>
-<li>STATUS			=	3</li>
-<li>SURCHARGE		=	4</li>
-<li>TYPE				=	5</li>
-<li>EXTERNAL			=	6</li>
-<li>NAME				=	7</li>
-<li>CONTENT			=	8</li>
-<li>ACCOUNT			=	9</li>
-<li>FLAG				=	10</li>
-<li>LANGUAGE			=	11</li>
-<li>CONSUMER			=	12</li>
-</ul></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>value</td>
-            <td>The value of the property. The value depends on type/sub-type.</td>
-        </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-            <td>createdAt</td>
-            <td>The date that the property was created.</td>
-        </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-            <td>updatedAt</td>
-            <td>The date that the property was updated last.</td>
-        </tr><tr>
-            <td><a href="order#order_models_order">Order</a>
-</td>
-            <td>order</td>
-            <td>The order that the property belongs to.</td>
-        </tr><tr>
-            <td><a href="order#order_models_orderpropertytype">OrderPropertyType</a>
-</td>
-            <td>type</td>
-            <td>The property type.</td>
-        </tr><tr>
-            <td><a href="order#order_models_orderpropertysubtype">OrderPropertySubType</a>
-</td>
-            <td>subType</td>
-            <td>The property sub-type.</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### OrderPropertySubType<a name="order_models_orderpropertysubtype"></a>
-
-The order property sub-type model
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the property sub-type.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
-            <td>isErasable</td>
-            <td>Flag that states if this type can be deleted or not</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>position</td>
-            <td>The position for sorting</td>
-        </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-            <td>names</td>
-            <td>The names of the order property sub-types</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### OrderPropertySubTypeName<a name="order_models_orderpropertysubtypename"></a>
-
-The order property sub type name model
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the sub type name</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>subTypeId</td>
-            <td>The ID of the sub type</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>name</td>
-            <td>The name of the sub type</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>lang</td>
-            <td>The language of the  sub type name</td>
-        </tr><tr>
-            <td><a href="order#order_models_orderpropertysubtype">OrderPropertySubType</a>
-</td>
-            <td>subType</td>
-            <td>The sub type instance.</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### OrderPropertyType<a name="order_models_orderpropertytype"></a>
-
-The order property type model. Each order has a type and can have an additional sub-type.
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the property type</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
-            <td>isErasable</td>
-            <td>Flag that states if this type can be deleted or not.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>position</td>
-            <td>The position for sorting</td>
-        </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-            <td>names</td>
-            <td>The names of the order property types</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### OrderPropertyTypeName<a name="order_models_orderpropertytypename"></a>
-
-The order property type name model.
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The type name id.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>typeId</td>
-            <td>The type id.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>name</td>
-            <td>The type name.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>lang</td>
-            <td>The language of the type name.</td>
-        </tr><tr>
-            <td><a href="order#order_models_orderpropertytype">OrderPropertyType</a>
-</td>
-            <td>type</td>
-            <td>The property type instance.</td>
         </tr></tbody>
 </table>
 
@@ -3076,11 +2738,6 @@ The OrderDate model.
             <td>updatedAt</td>
             <td>The date when the date was last updated</td>
         </tr><tr>
-            <td><a href="order#order_models_order">Order</a>
-</td>
-            <td>order</td>
-            <td>The order that the date belongs to</td>
-        </tr><tr>
             <td><a href="order#order_models_orderdatetype">OrderDateType</a>
 </td>
             <td>type</td>
@@ -3689,6 +3346,297 @@ The payment method information model
     
 Returns this model as an array.
     
+# Property<a name="order_property"></a>
+    
+## Contracts<a name="order_property_contracts"></a>
+### OrderPropertyRepositoryContract<a name="order_contracts_orderpropertyrepositorycontract"></a>
+
+The OrderPropertyRepositoryContract contains the functionality to list OrderPropertyTypes and OrderProperties as well as to create, update and delete OrderProperties. Order properties contain information that are additional to an order. An order can only have one property of each property type.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Property\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data = []):<a href="order#order_models_orderproperty">OrderProperty</a>
+</pre>
+
+    
+Create an order property
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The order property data. The properties that are required to create an order can be found in the OrderProperty model.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $orderPropertyId = null):<a href="order#order_models_orderproperty">OrderProperty</a>
+</pre>
+
+    
+Update an order property
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The order property data. The properties that are required to create an order can be found in the OrderProperty model.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderPropertyId</td>
+        <td>The ID of the order property.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>($data = []):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+Deletes an order property. The ID of the order property must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td>Either the ID of the property or an array holding the composite key composed of the order ID and the type ID.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/int">int</a> $typeId = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+List order properties of an order
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$typeId</td>
+        <td>The ID of the type.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getTypes</strong>(<a target="_blank" href="http://php.net/array">array</a> $lang = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+List order property types
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Models<a name="order_property_models"></a>
+### OrderProperty<a name="order_models_orderproperty"></a>
+
+The order properties model. Each order property has a type.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Property\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the order property</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>orderId</td>
+            <td>The ID of the order that the property belongs to</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>typeId</td>
+            <td>The ID of the property type. The following types are available:
+                                                                       <ul>
+                                                                         <li>WAREHOUSE		=	1</li>
+                                                                         <li>SHIPPING_PROFILE	=	2</li>
+                                                                         <li>PAYMENT_METHOD			=	3</li>
+                                                                         <li>PAYMENT_STATUS			=	4</li>
+                                                                         <li>EXTERNAL_SHIPPING_PROFILE			=	5</li>
+                                                                         <li>DOCUMENT_LANGUAGE			=	6</li>
+                                                                         <li>EXTERNAL_ORDER_ID			=	7</li>
+                                                                         <li>CUSTOMER_SIGN			=	8</li>
+                                                                         <li>DUNNING_LEVEL			=	9</li>
+                                                                         <li>SELLER_ACCOUNT			=	10</li>
+                                                                         <li>WEIGHT			=	11</li>
+                                                                         <li>WIDTH			=	12</li>
+                                                                         <li>LENGTH          =	13</li>
+                                                                         <li>HEIGHT		=	14</li>
+                                                                         <li>FLAG			=	15</li>
+                                                                         <li>EXTERNAL_TOKEN_ID			=	16</li>
+                                                                         <li>EXTERNAL_ITEM_ID			=	17</li>
+                                                                         <li>COUPON_CODE			=	18</li>
+                                                                         <li>COUPON_TYPE         =   19</li>
+                                                                       </ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td>The value of the property. The value depends on the type.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The date that the property was created.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The date that the property was updated last.</td>
+        </tr><tr>
+            <td><a href="order#order_models_order">Order</a>
+</td>
+            <td>order</td>
+            <td>The order that the property belongs to.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### OrderPropertyType<a name="order_models_orderpropertytype"></a>
+
+The OrderPropertyType model. Each order property must have a property type. An order can have one property of each property type. The default property types provided by plentymarkets are listed here.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Property\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the property type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td>isErasable</td>
+            <td>Flag that states if this type can be deleted or not.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>position</td>
+            <td>The position for sorting</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>names</td>
+            <td>The names of the order property types.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### OrderPropertyTypeName<a name="order_models_orderpropertytypename"></a>
+
+The order property type name model. Each order property type can have one name per language.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Property\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of type name</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>typeId</td>
+            <td>The ID of the property type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of property type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lang</td>
+            <td>The language of the type name</td>
+        </tr><tr>
+            <td><a href="order#order_models_orderpropertytype">OrderPropertyType</a>
+</td>
+            <td>type</td>
+            <td>The property type instance.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # Referrer<a name="order_referrer"></a>
     
 ## Contracts<a name="order_referrer_contracts"></a>
@@ -3893,6 +3841,25 @@ The legacy order model
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>contactId</td>
             <td>The contact id.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>methodOfPayment</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>start</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>last</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>end</td>
+            <td></td>
         </tr><tr>
             <td><a href="account#account_models_address">Address</a>
 </td>

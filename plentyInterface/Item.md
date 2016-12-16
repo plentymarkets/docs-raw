@@ -637,26 +637,7 @@ The AttributeName model including Attribute
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>Language code of the attribute. Supported languages:
-<ul>
-<li><strong>de</strong> = German</li>
-<li><strong>en</strong> = English</li>
-<li><strong>fr</strong> = French</li>
-<li><strong>it</strong> = Italian</li>
-<li><strong>es</strong> = Spanish</li>
-<li><strong>tr</strong> = Turkish</li>
-<li><strong>nl</strong> = Dutch</li>
-<li><strong>pl</strong> = Polish</li>
-<li><strong>pt</strong> = Portuguese</li>
-<li><strong>nn</strong> = Norwegian</li>
-<li><strong>da</strong> = Danish</li>
-<li><strong>se</strong> = Swedish</li>
-<li><strong>cz</strong> = Czech</li>
-<li><strong>ru</strong> = Russian</li>
-<li><strong>sk</strong> = Slovak</li>
-<li><strong>cn</strong> = Chinese</li>
-<li><strong>vn</strong> = Vietnamese</li>
-</ul></td>
+            <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#countries" target="_blank">language</a> of the attribute.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
@@ -794,26 +775,7 @@ The AttributeValueName model including AttributeValue
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>Language code of the attribute value. Supported languages:
-<ul>
-<li><strong>de</strong> = German</li>
-<li><strong>en</strong> = English</li>
-<li><strong>fr</strong> = French</li>
-<li><strong>it</strong> = Italian</li>
-<li><strong>es</strong> = Spanish</li>
-<li><strong>tr</strong> = Turkish</li>
-<li><strong>nl</strong> = Dutch</li>
-<li><strong>pl</strong> = Polish</li>
-<li><strong>pt</strong> = Portuguese</li>
-<li><strong>nn</strong> = Norwegian</li>
-<li><strong>da</strong> = Danish</li>
-<li><strong>se</strong> = Swedish</li>
-<li><strong>cz</strong> = Czech</li>
-<li><strong>ru</strong> = Russian</li>
-<li><strong>sk</strong> = Slovak</li>
-<li><strong>cn</strong> = Chinese</li>
-<li><strong>vn</strong> = Vietnamese</li>
-</ul></td>
+            <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#countries" target="_blank">language</a> of the attribute value.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
@@ -3628,7 +3590,7 @@ The item model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>type</td>
-            <td>The type of the item. Because Set items are managed using a separate route, this valid is always Default.</td>
+            <td>The type of the item. Because Set items are managed using a separate route, this value is always Default.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>stockType</td>
@@ -3900,7 +3862,7 @@ The item text model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>urlPath</td>
-            <td>he item's URL path in the online store. By default, the URL path consists of the categories and the item name. The path is assigned automatically when the item is created and is displayed as part of the URL when the item is selected in the online store.</td>
+            <td>The item's URL path in the online store. By default, the URL path consists of the categories and the item name. The path is assigned automatically when the item is created and is displayed as part of the URL when the item is selected in the online store.</td>
         </tr></tbody>
 </table>
 
@@ -4251,6 +4213,128 @@ ItemPropertyValue
 </td>
             <td>propertySelection</td>
             <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# ItemShippingProfiles<a name="item_itemshippingprofiles"></a>
+    
+## Contracts<a name="item_itemshippingprofiles_contracts"></a>
+### ItemShippingProfilesRepositoryContract<a name="item_contracts_itemshippingprofilesrepositorycontract"></a>
+
+Repository for ItemShippingProfiles
+
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemShippingProfiles\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_itemshippingprofiles">ItemShippingProfiles</a>
+</pre>
+
+    
+Finds a shipping profile link by ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The unique ID of the link between shipping profile and item</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists all shipping profiles activated for an item
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The unique ID of the item</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_itemshippingprofiles">ItemShippingProfiles</a>
+</pre>
+
+    
+Activates a shipping profile for an item
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Deactivates a shipping profile for an item
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The unique ID of the link between shipping profile and item</td>
+    </tr>
+</table>
+
+
+## Models<a name="item_itemshippingprofiles_models"></a>
+### ItemShippingProfiles<a name="item_models_itemshippingprofiles"></a>
+
+The shipping profile model
+
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemShippingProfiles\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The unique ID of the shipping profile</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemId</td>
+            <td>The unique ID of the item</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>profileId</td>
+            <td>The unique ID of the link between item and shipping profile</td>
         </tr></tbody>
 </table>
 
@@ -6005,27 +6089,551 @@ Returns this model as an array.
     
 Returns this model as an array.
     
-# ShippingSupport<a name="item_shippingsupport"></a>
+# Search<a name="item_search"></a>
     
-## Contracts<a name="item_shippingsupport_contracts"></a>
-### ShippingSupportRepositoryContract<a name="item_contracts_shippingsupportrepositorycontract"></a>
+## Contracts<a name="item_search_contracts"></a>
+### ItemElasticSearchSearchRepositoryContract<a name="item_contracts_itemelasticsearchsearchrepositorycontract"></a>
 
-Repository for ShippingSupport
+kommt noch
 
 
 #### Namespace
 
-`Plenty\Modules\Item\ShippingSupport\Contracts`
+`Plenty\Modules\Item\Search\Contracts`
 
 
 
 #### Methods
 
-<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_shippingsupport">ShippingSupport</a>
+<pre>public <strong>execute</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>setIndex</strong>(<a href="cloud#cloud_index_indexinterface">IndexInterface</a>
+ $index):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
-Find one ShippingSupport by Id
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_index_indexinterface">IndexInterface</a>
+</td>
+        <td>$index</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addFilter</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+ $filter):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+</td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSource</strong>(<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+ $result):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</td>
+        <td>$result</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setSorting</strong>(<a href="cloud#cloud_sorting_sortinginterface">SortingInterface</a>
+ $sorting):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_sorting_sortinginterface">SortingInterface</a>
+</td>
+        <td>$sorting</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addMutator</strong>(<a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+ $mutator):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+</td>
+        <td>$mutator</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addPostProcessor</strong>(<a href="cloud#cloud_processor_processorinterface">ProcessorInterface</a>
+ $processor):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_processor_processorinterface">ProcessorInterface</a>
+</td>
+        <td>$processor</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $rowsPerPage):<a href="cloud#cloud_contracts_elasticsearchsearchrepositorycontract">ElasticSearchSearchRepositoryContract</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$rowsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Filter<a name="item_search_filter"></a>
+### BarcodeFilter<a name="item_filter_barcodefilter"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Filter`
+
+
+
+#### Methods
+
+<pre>public <strong>getPath</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>hasCode</strong>($code, <a target="_blank" href="http://php.net/string">string</a> $precision):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$precision</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasType</strong>(<a target="_blank" href="http://php.net/string">string</a> $type):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addStatement</strong>(<a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+ $statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### CategoryFilter<a name="item_filter_categoryfilter"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Filter`
+
+
+
+#### Methods
+
+<pre>public <strong>isInAtLeastOneCategory</strong>(<a target="_blank" href="http://php.net/array">array</a> $categoryIds, <a target="_blank" href="http://php.net/string">string</a> $depth = self::DEPTH_ANY):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$categoryIds</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$depth</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isInEachCategory</strong>(<a target="_blank" href="http://php.net/array">array</a> $categoryIds, <a target="_blank" href="http://php.net/string">string</a> $depth = self::DEPTH_ANY):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$categoryIds</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$depth</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isInCategory</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/string">string</a> $depth = self::DEPTH_ANY):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$categoryId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$depth</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getPathByDepth</strong>(<a target="_blank" href="http://php.net/string">string</a> $depth):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$depth</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addStatement</strong>(<a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+ $statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### ClientFilter<a name="item_filter_clientfilter"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Filter`
+
+
+
+#### Methods
+
+<pre>public <strong>isVisibleForClient</strong>(<a target="_blank" href="http://php.net/int">int</a> $clientId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$clientId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isVisibleForAnyClient</strong>(<a target="_blank" href="http://php.net/array">array</a> $clientIds):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$clientIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isVisibleForAllClients</strong>(<a target="_blank" href="http://php.net/array">array</a> $clientIds):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$clientIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addStatement</strong>(<a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+ $statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### SearchFilter<a name="item_filter_searchfilter"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Filter`
+
+
+
+#### Methods
+
+<pre>public <strong>setSearchString</strong>(<a target="_blank" href="http://php.net/string">string</a> $value, <a target="_blank" href="http://php.net/string">string</a> $precision = Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch::SEARCH_TYPE_FUZZY):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$precision</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPath</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addStatement</strong>(<a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+ $statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### VariationBaseFilter<a name="item_filter_variationbasefilter"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Filter`
+
+
+
+#### Methods
+
+<pre>public <strong>hasNumber</strong>(<a target="_blank" href="http://php.net/string">string</a> $number, <a target="_blank" href="http://php.net/string">string</a> $precision):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$number</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$precision</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isActive</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>isInactive</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>hasId</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
     
 ##### <strong>Parameters</strong>
     
@@ -6037,7 +6645,24 @@ Find one ShippingSupport by Id
 </table>
 
 
-<pre>public <strong>findByItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>hasIds</strong>(<a target="_blank" href="http://php.net/array">array</a> $ids):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$ids</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 
@@ -6052,87 +6677,63 @@ Find one ShippingSupport by Id
 </table>
 
 
-<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_shippingsupport">ShippingSupport</a>
+<pre>public <strong>hasItemIds</strong>(<a target="_blank" href="http://php.net/array">array</a> $itemIds):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
-Adds shipping support to article
+
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
+        <td>$itemIds</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>isMain</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Remove shipping support to article
+
+    
+<pre>public <strong>isChild</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addStatement</strong>(<a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+ $statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$id</td>
+        <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
         <td></td>
     </tr>
 </table>
 
 
-## Models<a name="item_shippingsupport_models"></a>
-### ShippingSupport<a name="item_models_shippingsupport"></a>
-
-The shipping support model
-
-
-#### Namespace
-
-`Plenty\Modules\Item\ShippingSupport\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The id of the shipping support</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>itemId</td>
-            <td>The id of the item</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>profileId</td>
-            <td>The profile id of the shipping support</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
 # Unit<a name="item_unit"></a>
     
 ## Contracts<a name="item_unit_contracts"></a>
 ### UnitNameRepositoryContract<a name="item_contracts_unitnamerepositorycontract"></a>
 
-Repository for Unit Name
+Repository for unit name
 
 
 #### Namespace
@@ -6159,7 +6760,7 @@ Repository for Unit Name
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$unitId</td>
-        <td></td>
+        <td>The unique ID of the unit</td>
     </tr>
 </table>
 
@@ -6174,12 +6775,12 @@ Repository for Unit Name
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$unitId</td>
-        <td></td>
+        <td>The unique ID of the unit</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The language of the unit name</td>
     </tr>
 </table>
 
@@ -6200,12 +6801,12 @@ Repository for Unit Name
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$unitId</td>
-        <td></td>
+        <td>The unique ID of the unit</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The language of the unit name</td>
     </tr>
 </table>
 
@@ -6221,12 +6822,12 @@ Repository for Unit Name
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$unitId</td>
-        <td></td>
+        <td>The unique ID of the unit</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The language of the unit name</td>
     </tr>
 </table>
 
@@ -6242,7 +6843,7 @@ Repository for Unit Name
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$unitId</td>
-        <td></td>
+        <td>The unique ID of the unit</td>
     </tr>
 </table>
 
@@ -6288,7 +6889,7 @@ Repository for Unit
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The unique ID of the unit</td>
     </tr>
 </table>
 
@@ -6309,7 +6910,7 @@ Repository for Unit
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The unique ID of the unit</td>
     </tr>
 </table>
 
@@ -6324,7 +6925,7 @@ Repository for Unit
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The unique ID of the unit</td>
     </tr>
 </table>
 
@@ -6340,7 +6941,7 @@ Repository for Unit
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The unique ID of the unit</td>
     </tr>
 </table>
 
@@ -6373,7 +6974,7 @@ Repository for Unit
 ## Models<a name="item_unit_models"></a>
 ### Unit<a name="item_models_unit"></a>
 
-The unit model including unit name
+The unit model including the unit name
 
 
 #### Namespace
@@ -6394,7 +6995,7 @@ The unit model including unit name
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the unit</td>
+            <td>The unique ID of the unit</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
@@ -6402,19 +7003,19 @@ The unit model including unit name
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>unitOfMeasurement</td>
-            <td>The unit of measurement of the unit</td>
+            <td>The International System of Units (ISO) <a href="https://developers.plentymarkets.com/rest-doc/introduction#units"  target="_blank">code</a> of the unit</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isDecimalPlacesAllowed</td>
-            <td>Declares if decimal places are allowed</td>
+            <td>Flag that indicates if decimal places are allowed for this unit of measurement. If false, only integer values are allowed for the unit.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>
-            <td>The last updated date timestamp</td>
+            <td>The time the unit was last updated.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The created at date timestamp</td>
+            <td>The time the unit was created.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>langs</td>
@@ -6454,11 +7055,11 @@ The unit name model including the unit
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>unitId</td>
-            <td>The id of the unit</td>
+            <td>The unique ID of the unit</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The language of the unit</td>
+            <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages"  target="_blank">language</a> of the unit name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
@@ -7038,6 +7639,11 @@ Variation
 </td>
             <td>parent</td>
             <td>The details of the main variation of the variation if applicable.</td>
+        </tr><tr>
+            <td><a href="item#item_models_item">Item</a>
+</td>
+            <td>item</td>
+            <td></td>
         </tr></tbody>
 </table>
 
@@ -7201,6 +7807,11 @@ Variation Barcode
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
             <td>The time the code for the variation was created.</td>
+        </tr><tr>
+            <td><a href="item#item_models_barcode">Barcode</a>
+</td>
+            <td>barcode</td>
+            <td>The Barcode of the variation's barcode</td>
         </tr></tbody>
 </table>
 

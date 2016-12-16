@@ -837,7 +837,7 @@ Gets the description of the payment method by ID and language. The ID of the pay
 ## Contracts<a name="frontend_storage_contracts"></a>
 ### FrontendSessionStorageFactoryContract<a name="frontend_contracts_frontendsessionstoragefactorycontract"></a>
 
-session storage for frontend
+The FrontendSessionStorageFactoryContract is the interface for the front end session storage repository. This interface allows to get information about the locale, the customer, the order, the plugin and the forum from the session.
 
 
 #### Namespace
@@ -852,36 +852,36 @@ session storage for frontend
 </pre>
 
     
-
+Get the locale settings from the session storage.
     
 <pre>public <strong>getCustomer</strong>():<a href="frontend#frontend_models_customer">Customer</a>
 </pre>
 
     
-
+Get the customer data from the session storage.
     
 <pre>public <strong>getOrder</strong>():<a href="frontend#frontend_models_order">Order</a>
 </pre>
 
     
-
+Get the order data from the session storage.
     
 <pre>public <strong>getPlugin</strong>():<a href="frontend#frontend_models_plugin">Plugin</a>
 </pre>
 
     
-
+Get the plugin data from the session storage.
     
 <pre>public <strong>getForum</strong>():<a href="frontend#frontend_models_forum">Forum</a>
 </pre>
 
     
-
+Get the forum data from the session storage.
     
 ## Models<a name="frontend_storage_models"></a>
 ### Customer<a name="frontend_models_customer"></a>
 
-session storage model for customer data
+The session storage model for customer data.
 
 
 #### Namespace
@@ -902,35 +902,35 @@ session storage model for customer data
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>deliveryCountryId</td>
-            <td></td>
+            <td>The ID of the country of delivery</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>showNetPrice</td>
-            <td></td>
+            <td>Flag that indicates if the shown price is the net price</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>ebaySellerAccount</td>
-            <td></td>
+            <td>The eBay seller account</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>accountContactSign</td>
-            <td></td>
+            <td>The reference sign specified by the contact</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>accountContactClassId</td>
-            <td></td>
+            <td>The ID of the contact class</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>sourceItemWishListAccountContactId</td>
-            <td></td>
+            <td>The ID of the contact that created the wish list</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>sourceItemWishListAccountAddressId</td>
-            <td></td>
+            <td>The ID of the address that created the wish list</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>salesAgent</td>
-            <td></td>
+            <td>The sales representative</td>
         </tr></tbody>
 </table>
 
@@ -945,7 +945,7 @@ Returns this model as an array.
 
 ### Forum<a name="frontend_models_forum"></a>
 
-session storage model for forum data
+The session storage model for forum data.
 
 
 #### Namespace
@@ -966,23 +966,23 @@ session storage model for forum data
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>forumGroupId</td>
-            <td></td>
+            <td>The ID of the forum group</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>forumUsername</td>
-            <td></td>
+            <td>The name of the user in the forum</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>forumConfig</td>
-            <td></td>
+            <td>The forum configuration</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>forumPermissions</td>
-            <td></td>
+            <td>The forum permissions</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>forumLastVisitTime</td>
-            <td></td>
+            <td>The time the forum was visited last</td>
         </tr></tbody>
 </table>
 
@@ -997,7 +997,7 @@ Returns this model as an array.
 
 ### LocaleSettings<a name="frontend_models_localesettings"></a>
 
-session storage model for locale settings
+The session storage model for locale settings.
 
 
 #### Namespace
@@ -1018,15 +1018,15 @@ session storage model for locale settings
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>currency</td>
-            <td></td>
+            <td>The currency</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>currencyExchange</td>
-            <td></td>
+            <td>The exchange rate for the currency</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>language</td>
-            <td></td>
+            <td>The language</td>
         </tr></tbody>
 </table>
 
@@ -1041,7 +1041,7 @@ Returns this model as an array.
 
 ### Order<a name="frontend_models_order"></a>
 
-session storage model for order data
+The session storage model for order data.
 
 
 #### Namespace
@@ -1062,31 +1062,31 @@ session storage model for order data
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>deliveryAddressId</td>
-            <td></td>
+            <td>The ID of the delivery address</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>parcelServiceId</td>
-            <td></td>
+            <td>The ID of the parcel service</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>parcelServicePresetId</td>
-            <td></td>
+            <td>The preset ID of the parcel service</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>methodOfPayment</td>
-            <td></td>
+            <td>The payment method</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isNet</td>
-            <td></td>
+            <td>Flag that indicates if the shown price is the net price</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>shippingCosts</td>
-            <td></td>
+            <td>The shipping costs</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>orderinfoText</td>
-            <td></td>
+            <td>Additional information specified by the customer in the order</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>payDataComplete</td>
@@ -1094,7 +1094,7 @@ session storage model for order data
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>itemOrderParams</td>
-            <td></td>
+            <td>The parameters of the order</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>uploadedFileStack</td>
@@ -1110,7 +1110,7 @@ session storage model for order data
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>coupon</td>
-            <td></td>
+            <td>The coupon code</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>couponDisplay</td>
@@ -1118,35 +1118,35 @@ session storage model for order data
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>activePaymentMethodsList</td>
-            <td></td>
+            <td>A list of active payment methods</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>referrerId</td>
-            <td></td>
+            <td>The ID of the order referrer</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>referrerPriceColumn</td>
-            <td></td>
+            <td>The price column for the order referrer</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>referrerItemId</td>
-            <td></td>
+            <td>The ID of the item referrer</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>schedulerId</td>
-            <td></td>
+            <td>The ID of the subscription</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>schedulerIntervalId</td>
-            <td></td>
+            <td>The ID of the interval of a subscription</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>schedulerOrderExecutionId</td>
-            <td></td>
+            <td>The ID for the execution of the order</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>schedulerFirstDeliveryDate</td>
-            <td></td>
+            <td>The date for the first delivery of a subscription</td>
         </tr></tbody>
 </table>
 
@@ -1161,7 +1161,7 @@ Returns this model as an array.
 
 ### Plugin<a name="frontend_models_plugin"></a>
 
-session storage model for plugins
+The session storage model for plugins.
 
 
 #### Namespace
@@ -1176,7 +1176,7 @@ session storage model for plugins
 </pre>
 
     
-
+Updates the value of a key. The key and the new value must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -1198,7 +1198,7 @@ session storage model for plugins
 </pre>
 
     
-
+Gets a value for a key. The key must be specified.
     
 ##### <strong>Parameters</strong>
     

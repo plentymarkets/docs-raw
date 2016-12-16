@@ -556,7 +556,7 @@ The ItemSetComponent model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>setId</td>
-            <td>set id The item ID of the item set. The ID must be unique.</td>
+            <td>The item ID of the item set. The ID must be unique.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>itemId</td>

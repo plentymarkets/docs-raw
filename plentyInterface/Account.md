@@ -394,15 +394,18 @@ The address model
             <td>sessionId</td>
             <td>The session ID that was used when the address was created</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>checkedAt</td>
             <td>The time the address was checked as unix timestamp</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>createdAt</td>
             <td>The time the address was created as unix timestamp</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>updatedAt</td>
             <td>The time the address was last updated as unix timestamp</td>
         </tr><tr>
@@ -838,7 +841,16 @@ The contact address type model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the address relation type</td>
+            <td>The ID of the address relation type. The following types are available by default and cannot be deleted:
+<ul>
+<li>1 = Billing address</li>
+<li>2 = Delivery address</li>
+<li>3 = Sender address</li>
+<li>4 = Return address</li>
+<li>5 = Client address</li>
+<li>6 = Contractor address</li>
+<li>7 = Warehouse address</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
@@ -998,19 +1010,19 @@ address scheduler relation model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The address order relation id.</td>
+            <td>The ID of the address order relation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>schedulerId</td>
-            <td>The order id.</td>
+            <td>The ID of the scheduler</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The address type id.</td>
+            <td>The ID of the address type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>addressId</td>
-            <td>The address id.</td>
+            <td>The ID of the address</td>
         </tr><tr>
             <td><a href="order#order_models_orderscheduler">OrderScheduler</a>
 </td>
@@ -1085,7 +1097,7 @@ Returns this model as an array.
 ## Contracts<a name="account_contactevent_contracts"></a>
 ### ContactEventRepositoryContract<a name="account_contracts_contacteventrepositorycontract"></a>
 
-The contract for the contact event repository
+The ContactEventRepositoryContract is the interface for the contact event repository. This interface allows to list contact events.
 
 
 #### Namespace
@@ -1100,7 +1112,7 @@ The contract for the contact event repository
 </pre>
 
     
-List contact events identified by contact logged in
+List contact events identified by the contact that is currently logged into the system.
     
 ##### <strong>Parameters</strong>
     
@@ -1519,7 +1531,7 @@ Get a contact class
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$contactClassId</td>
-        <td>The id of the contact class</td>
+        <td>The ID of the contact class</td>
     </tr>
 </table>
 
@@ -2244,7 +2256,8 @@ The contact model.
             <td>formOfAddress</td>
             <td>The form of address for the contact</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>newsletterAllowanceAt</td>
             <td>The time the contact registered for the newsletter as unix timestamp</td>
         </tr><tr>
@@ -2280,27 +2293,33 @@ The contact model.
             <td>userId</td>
             <td>The owner ID of the contact</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>birthdayAt</td>
             <td>The date of birth of the contact as unix timestamp</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>lastLoginAt</td>
             <td>The time of the last login of the contact as unix timestamp</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>lastLoginAtTimestamp</td>
             <td>The time of the last login of the contact as unix timestamp</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>lastOrderAt</td>
             <td>The time of the last order as unix timestamp</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>createdAt</td>
             <td>The time the contact was created as unix timestamp</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>updatedAt</td>
             <td>The time the contact was last updated as unix timestamp</td>
         </tr><tr>
@@ -2500,15 +2519,15 @@ The contact bank model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the bank account</td>
+            <td>The ID of the bank account</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>contactId</td>
-            <td>The id of the contact the bank account belongs to</td>
+            <td>The ID of the contact the bank account belongs to</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>orderId</td>
-            <td>The id of the order the bank account belongs to</td>
+            <td>The ID of the order the bank account belongs to</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>accountOwner</td>
@@ -2737,23 +2756,51 @@ The contact options model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the contact option</td>
+            <td>The ID of the contact option</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>contactId</td>
-            <td>The id of the contact the option belongs to</td>
+            <td>The ID of the contact the option belongs to</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The type id of the option</td>
+            <td>The type ID of the contact option. It is possible to define individual contact option types. The following types are available by default and cannot be deleted:
+<ul>
+<li>1 = Telephone</li>
+<li>2 = Email</li>
+<li>3 = Telefax</li>
+<li>4 = Web page</li>
+<li>5 = Marketplace</li>
+<li>6 = Identification number</li>
+<li>7 = Payment</li>
+<li>8 = User name</li>
+<li>9 = Group</li>
+<li>10 = Access</li>
+<li>11 = Additional</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>subTypeId</td>
-            <td>The sub-type id of the option</td>
+            <td>The sub-type ID of the contact option. It is possible to define individual contact option sub-types. The following types are available by default and cannot be deleted:
+<ul>
+<li>1 = Work</li>
+<li>2 = Mobile private</li>
+<li>3 = Mobile work</li>
+<li>4 = Private</li>
+<li>5 = PayPal</li>
+<li>6 = Ebay</li>
+<li>7 = Amazon</li>
+<li>8 = Klarna</li>
+<li>9 = DHL</li>
+<li>10 = Forum</li>
+<li>11 = Guest</li>
+<li>12 = Contact person</li>
+<li>13 = Marketplace partner</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>value</td>
-            <td>The value of the option. Depends on type/sub-type.</td>
+            <td>The value of the option. Depends on the type/sub-type.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>priority</td>
@@ -2998,11 +3045,11 @@ contact options type name model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>lang      The language of the option type name</td>
+            <td>The language of the option type name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
-            <td>name      The name of the option type</td>
+            <td>The name of the option type</td>
         </tr></tbody>
 </table>
 
@@ -3219,19 +3266,19 @@ contact type name model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the contact type name.</td>
+            <td>The ID of the contact type name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The contact type id. See also {@link ContactType::id}.</td>
+            <td>The contact type ID. See also {@link ContactType::id}.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The language ot the contact type name.</td>
+            <td>The language ot the contact type name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
-            <td>The contact type name.</td>
+            <td>The contact type name</td>
         </tr></tbody>
 </table>
 
@@ -3611,11 +3658,13 @@ the account model.
             <td>dealerMinOrderValue</td>
             <td>The minimum order value for the supplier</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>createdAt</td>
             <td>The time the account was created as unix timestamp</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>updatedAt</td>
             <td>The time the account was last updated as unix timestamp</td>
         </tr><tr>
@@ -3658,15 +3707,15 @@ account contact relation model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>account contact relation id</td>
+            <td>The ID of the account contact relation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>accountId</td>
-            <td>foreign key account id</td>
+            <td>The ID of the foreign key account</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>contactId</td>
-            <td>foreign key contact id</td>
+            <td>The ID of the foreign key contact</td>
         </tr><tr>
             <td><a href="account#account_models_account">Account</a>
 </td>

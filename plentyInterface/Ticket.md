@@ -5,7 +5,7 @@
 ## Contracts<a name="ticket_ticket_contracts"></a>
 ### TicketRepositoryContract<a name="ticket_contracts_ticketrepositorycontract"></a>
 
-The TicketRepositoryContract is the interface for the ticket repository. This interface allows to list tickets by filters
+The TicketRepositoryContract is the interface for the ticket repository. This interface allows to list tickets by filters.
 
 
 #### Namespace
@@ -317,11 +317,11 @@ The ticket message topic model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the message topic.</td>
+            <td>The id of the message</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
-            <td>The position of the topic.</td>
+            <td>The position of the topic</td>
         </tr></tbody>
 </table>
 
@@ -357,19 +357,19 @@ The ticket message topic name model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the message topic.</td>
+            <td>The ID of the message</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>topicId</td>
-            <td>The topic id.</td>
+            <td>The ID of the topic</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The language of the topic.</td>
+            <td>The language of the topic</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
-            <td>The topics name.</td>
+            <td>The name of the topic</td>
         </tr></tbody>
 </table>
 
@@ -489,19 +489,19 @@ The ticket role name model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the role name.</td>
+            <td>The ID of the role name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>roleId</td>
-            <td>The role id.</td>
+            <td>The ID of the role</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>lang</td>
-            <td>The language of role.</td>
+            <td>The language of the role</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
-            <td>The role name.</td>
+            <td>The name of the role</td>
         </tr></tbody>
 </table>
 
@@ -537,19 +537,19 @@ The ticket status model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the status.</td>
+            <td>The ID of the status</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The type id of the status.</td>
+            <td>The type ID of the status</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
-            <td>The position of the status.</td>
+            <td>The position of the status</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>statusGroupId</td>
-            <td>The status group id of the status.</td>
+            <td>The status group ID of the status</td>
         </tr></tbody>
 </table>
 
@@ -585,15 +585,15 @@ The ticket status group model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the status group.</td>
+            <td>The ID of the status group</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
-            <td>The position of the status group.</td>
+            <td>The position of the status group</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>color</td>
-            <td>The color of the status group.</td>
+            <td>The color of the status group</td>
         </tr></tbody>
 </table>
 
@@ -629,15 +629,15 @@ The ticket status group name model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the ticket.</td>
+            <td>The ID of the ticket</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>lang</td>
-            <td>The language of the status group.</td>
+            <td>The language of the status group</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
-            <td>The name of the status group.</td>
+            <td>The name of the status group</td>
         </tr></tbody>
 </table>
 
@@ -721,11 +721,11 @@ The ticket type model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the role.</td>
+            <td>The ID of the role</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
-            <td>The position of the role.</td>
+            <td>The position of the role</td>
         </tr></tbody>
 </table>
 
@@ -773,7 +773,7 @@ The ticket type name model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
-            <td>The name of the role.</td>
+            <td>The name of the role</td>
         </tr></tbody>
 </table>
 

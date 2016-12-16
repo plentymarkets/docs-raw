@@ -26,11 +26,11 @@ Document
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The ID of the document.</td>
+            <td>The ID of the document</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>type</td>
-            <td>The type of the document.</td>
+            <td>The type of the document</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>number</td>
@@ -38,23 +38,19 @@ Document
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>numberWithPrefix</td>
-            <td>Number with prefix</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>directoryId</td>
-            <td>The directory id</td>
+            <td>The document number with prefix</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>path</td>
-            <td>The path</td>
+            <td>The path to the document</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>userId</td>
-            <td>The user id</td>
+            <td>The ID of the user</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>source</td>
-            <td>The source</td>
+            <td>The source where the document was generated. Possible sources are SOAP, admin for the plentymarkets backend, Klarna etc.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>displayDate</td>
@@ -63,17 +59,12 @@ Document
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>createdAt</td>
-            <td>created at timestamp</td>
+            <td>The time the document was created</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>updatedAt</td>
-            <td>updated at timestamp</td>
-        </tr><tr>
-            <td><a href="document#document_models_documentdirectory">DocumentDirectory</a>
-</td>
-            <td>directory</td>
-            <td>The associated directory</td>
+            <td>The time the document was last updated</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous_support_collection">Collection</a>
 </td>
@@ -94,50 +85,6 @@ Document
 </td>
             <td>categories</td>
             <td>Collection of associated categories</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### DocumentDirectory<a name="document_models_documentdirectory"></a>
-
-The document directory model
-
-
-#### Namespace
-
-`Plenty\Modules\Document\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the directory</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>displayType</td>
-            <td>The display type</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>name</td>
-            <td>The directory name</td>
         </tr></tbody>
 </table>
 

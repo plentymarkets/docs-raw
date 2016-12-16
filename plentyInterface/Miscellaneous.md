@@ -1054,6 +1054,27 @@ The field under validation must be a valid w3c formated date time string.
 </table>
 
 
+<pre>public <strong>customRule</strong>(<a target="_blank" href="http://php.net/string">string</a> $rule, <a target="_blank" href="http://php.net/array">array</a> $params):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
+</pre>
+
+    
+Add custom Role
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$rule</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$params</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### RulesCollection<a name="miscellaneous_validation_rulescollection"></a>
 
@@ -1444,6 +1465,66 @@ Base Validator Class
 </table>
 
 
+# Data<a name="miscellaneous_data"></a>
+    
+## Contracts<a name="miscellaneous_data_contracts"></a>
+### PropertyDescriptor<a name="miscellaneous_contracts_propertydescriptor"></a>
+
+describes properties of a Model
+
+
+#### Namespace
+
+`Plenty\Plugin\Data\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getPropertyInformation</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelClassName):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$modelClassName</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Model<a name="miscellaneous_data_model"></a>
+### PropertyInformation<a name="miscellaneous_model_propertyinformation"></a>
+
+property information
+
+
+#### Namespace
+
+`Plenty\Plugin\Data\Model`
+
+
+
+#### Methods
+
+<pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getDescription</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
 # Plugin<a name="miscellaneous_plugin"></a>
     
 ## Error<a name="miscellaneous_plugin_error"></a>
@@ -3065,6 +3146,27 @@ Attribute Interface
     
 The field under validation must be yes, on, 1, or true. This is useful for validating &quot;Terms of Service&quot; acceptance.
     
+<pre>public <strong>customRule</strong>(<a target="_blank" href="http://php.net/string">string</a> $rule, <a target="_blank" href="http://php.net/array">array</a> $params):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
+</pre>
+
+    
+Add custom Role
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$rule</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$params</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>activeUrl</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
 

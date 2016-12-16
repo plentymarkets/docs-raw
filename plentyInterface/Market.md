@@ -473,6 +473,112 @@ Returns the attribute value name for the given attribute value id
 </table>
 
 
+<pre>public <strong>getAttributeNames</strong>(<a href="item#item_models_record">Record</a>
+ $record, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/string">string</a> $delimiter = &quot;,&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Returns all attribute names for the given language as a string delimited by the given delimiter.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="item#item_models_record">Record</a>
+</td>
+        <td>$record</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$delimiter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getAttributeValueSetShortFrontendName</strong>(<a href="item#item_models_record">Record</a>
+ $record, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/string">string</a> $delimiter = &quot;, &quot;, <a target="_blank" href="http://php.net/array">array</a> $attributeNameCombination = []):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Returns the attribute value set short frontend name. Ex.: blue, XL
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="item#item_models_record">Record</a>
+</td>
+        <td>$record</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$delimiter</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$attributeNameCombination</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getAttributeNameAndValueCombination</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeNames, <a target="_blank" href="http://php.net/string">string</a> $attributeValues, <a target="_blank" href="http://php.net/string">string</a> $delimiter = &quot;,&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Returns the combination of attribute names with their attribute values.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attributeNames</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attributeValues</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$delimiter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getVariationNameAndAttributeNameAndValueCombination</strong>(<a href="item#item_models_record">Record</a>
+ $record, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Returns the name for a variation with all attribute names and attribute values. Ex.: T-Shirt (Size: L, Color: red)
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="item#item_models_record">Record</a>
+</td>
+        <td>$record</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### MarketCategoryHelperRepositoryContract<a name="market_contracts_marketcategoryhelperrepositorycontract"></a>
 

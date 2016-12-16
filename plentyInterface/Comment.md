@@ -13,6 +13,23 @@ The Comment model.
 `Plenty\Modules\Comment\Models`
 
 
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>text</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
 
 #### Methods
 
