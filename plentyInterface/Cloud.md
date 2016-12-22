@@ -150,6 +150,17 @@ foo
     
 
     
+## Lib<a name="cloud_elasticsearch_lib"></a>
+### ElasticSearch<a name="cloud_lib_elasticsearch"></a>
+
+elastic search constants
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib`
+
+
 # Lib<a name="cloud_lib"></a>
     
 ## Aggregating<a name="cloud_lib_aggregating"></a>

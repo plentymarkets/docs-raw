@@ -36,7 +36,7 @@ The EventProcedureService class offers the possibility to register a procedure c
 
 #### Methods
 
-<pre>public <strong>registerProcedure</strong>(<a target="_blank" href="http://php.net/string">string</a> $moduleName, <a target="_blank" href="http://php.net/string">string</a> $eventType, <a target="_blank" href="http://php.net/array">array</a> $procedureNames, <a target="_blank" href="http://php.net/string">string</a> $procedureClass, <a target="_blank" href="http://php.net/string">string</a> $procedureGroup = Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry::PROCEDURE_GROUP_ORDER):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+<pre>public <strong>registerProcedure</strong>(<a target="_blank" href="http://php.net/string">string</a> $moduleName, <a target="_blank" href="http://php.net/string">string</a> $eventType, <a target="_blank" href="http://php.net/array">array</a> $procedureNames, <a target="_blank" href="http://php.net/string">string</a> $procedureClass, <a target="_blank" href="http://php.net/string">string</a> $procedureGroup = \Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry::PROCEDURE_GROUP_ORDER):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Register a procedure class

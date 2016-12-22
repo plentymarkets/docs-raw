@@ -4181,7 +4181,7 @@ ItemPropertyValue
             <td>The id of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>propertyItemId</td>
+            <td>propertyId</td>
             <td>The id of the property item</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -4204,9 +4204,9 @@ ItemPropertyValue
             <td>surcharge</td>
             <td>The surcharge of the variation property value</td>
         </tr><tr>
-            <td><a href="item#item_models_propertyitem">PropertyItem</a>
+            <td><a href="item#item_models_property">Property</a>
 </td>
-            <td>propertyItem</td>
+            <td>property</td>
             <td></td>
         </tr><tr>
             <td><a href="item#item_models_propertyselection">PropertySelection</a>
@@ -4756,127 +4756,9 @@ Returns this model as an array.
 # Property<a name="item_property"></a>
     
 ## Contracts<a name="item_property_contracts"></a>
-### PropertyItemNameRepositoryContract<a name="item_contracts_propertyitemnamerepositorycontract"></a>
+### PropertyGroupNameRepositoryContract<a name="item_contracts_propertygroupnamerepositorycontract"></a>
 
-Repository for property item name
-
-
-#### Namespace
-
-`Plenty\Modules\Item\Property\Contracts`
-
-
-
-#### Methods
-
-<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyItemId):<a href="item#item_models_propertyitemname">PropertyItemName</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$lang</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyitemname">PropertyItemName</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$lang</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyitemname">PropertyItemName</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$lang</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>findByPropertyItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId):<a href="item#item_models_propertyitemname">PropertyItemName</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### PropertyItemRepositoryContract<a name="item_contracts_propertyitemrepositorycontract"></a>
-
-Repository for property item
+Repository for property group name
 
 
 #### Namespace
@@ -4887,7 +4769,124 @@ Repository for property item
 
 #### Methods
 
-<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_propertyitem">PropertyItem</a>
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyGroupId):<a href="item#item_models_propertygroupname">PropertyGroupName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyGroupId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyGroupId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyGroupId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyGroupId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertygroupname">PropertyGroupName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyGroupId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyGroupId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertygroupname">PropertyGroupName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyGroupId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByPropertyGroupId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyGroupId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyGroupId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### PropertyGroupRepositoryContract<a name="item_contracts_propertygrouprepositorycontract"></a>
+
+Repository for property group
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Property\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_propertygroup">PropertyGroup</a>
 </pre>
 
     
@@ -4903,7 +4902,7 @@ Repository for property item
 </table>
 
 
-<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_propertyitem">PropertyItem</a>
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_propertygroup">PropertyGroup</a>
 </pre>
 
     
@@ -4955,7 +4954,7 @@ Repository for property item
 </table>
 
 
-<pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_propertyitem">PropertyItem</a>
+<pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_propertygroup">PropertyGroup</a>
 </pre>
 
     
@@ -4997,7 +4996,7 @@ Repository for property item
 
 
 
-### PropertyMarketComponentRepositoryContract<a name="item_contracts_propertymarketcomponentrepositorycontract"></a>
+### PropertyMarketReferenceRepositoryContract<a name="item_contracts_propertymarketreferencerepositorycontract"></a>
 
 Repository for property market component
 
@@ -5010,7 +5009,7 @@ Repository for property market component
 
 #### Methods
 
-<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyItemId):<a href="item#item_models_propertymarketcomponent">PropertyMarketComponent</a>
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyId):<a href="item#item_models_propertymarketreference">PropertyMarketReference</a>
 </pre>
 
     
@@ -5025,13 +5024,13 @@ Repository for property market component
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
+        <td>$propertyId</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/float">float</a> $marketReference):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/float">float</a> $marketId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
 
     
 
@@ -5040,18 +5039,18 @@ Repository for property market component
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
+        <td>$propertyId</td>
         <td></td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
-        <td>$marketReference</td>
+        <td>$marketId</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/float">float</a> $marketReference):<a href="item#item_models_propertymarketcomponent">PropertyMarketComponent</a>
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/float">float</a> $marketId):<a href="item#item_models_propertymarketreference">PropertyMarketReference</a>
 </pre>
 
     
@@ -5066,18 +5065,18 @@ Repository for property market component
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
+        <td>$propertyId</td>
         <td></td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
-        <td>$marketReference</td>
+        <td>$marketId</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/float">float</a> $marketReference):<a href="item#item_models_propertymarketcomponent">PropertyMarketComponent</a>
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/float">float</a> $marketId):<a href="item#item_models_propertymarketreference">PropertyMarketReference</a>
 </pre>
 
     
@@ -5087,18 +5086,18 @@ Repository for property market component
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
+        <td>$propertyId</td>
         <td></td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
-        <td>$marketReference</td>
+        <td>$marketId</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>findByPropertyItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId):<a href="item#item_models_propertymarketcomponent">PropertyMarketComponent</a>
+<pre>public <strong>findByPropertyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId):<a href="item#item_models_propertymarketreference">PropertyMarketReference</a>
 </pre>
 
     
@@ -5108,13 +5107,13 @@ Repository for property market component
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
+        <td>$propertyId</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>getPropertyMarketComponents</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId, <a target="_blank" href="http://php.net/int">int</a> $componentId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPropertyMarketReferences</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId, <a target="_blank" href="http://php.net/int">int</a> $componentId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 
@@ -5135,6 +5134,247 @@ Repository for property market component
 
 
 
+### PropertyNameRepositoryContract<a name="item_contracts_propertynamerepositorycontract"></a>
+
+Repository for property name
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Property\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyId):<a href="item#item_models_propertyname">PropertyName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyname">PropertyName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyname">PropertyName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByPropertyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId):<a href="item#item_models_propertyname">PropertyName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### PropertyRepositoryContract<a name="item_contracts_propertyrepositorycontract"></a>
+
+Repository for property
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Property\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_property">Property</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_property">Property</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_property">Property</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$perPage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### PropertySelectionRepositoryContract<a name="item_contracts_propertyselectionrepositorycontract"></a>
 
 Repository for property selection
@@ -5148,7 +5388,7 @@ Repository for property selection
 
 #### Methods
 
-<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyItemId):<a href="item#item_models_propertyselection">PropertySelection</a>
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyId):<a href="item#item_models_propertyselection">PropertySelection</a>
 </pre>
 
     
@@ -5163,13 +5403,13 @@ Repository for property selection
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
+        <td>$propertyId</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
 
     
 
@@ -5178,7 +5418,7 @@ Repository for property selection
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
+        <td>$propertyId</td>
         <td></td>
     </tr>
     <tr>
@@ -5189,7 +5429,7 @@ Repository for property selection
 </table>
 
 
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyselection">PropertySelection</a>
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyselection">PropertySelection</a>
 </pre>
 
     
@@ -5204,7 +5444,7 @@ Repository for property selection
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
+        <td>$propertyId</td>
         <td></td>
     </tr>
     <tr>
@@ -5215,7 +5455,7 @@ Repository for property selection
 </table>
 
 
-<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyselection">PropertySelection</a>
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyselection">PropertySelection</a>
 </pre>
 
     
@@ -5225,7 +5465,7 @@ Repository for property selection
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
+        <td>$propertyId</td>
         <td></td>
     </tr>
     <tr>
@@ -5236,7 +5476,7 @@ Repository for property selection
 </table>
 
 
-<pre>public <strong>findByPropertyItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyItemId):<a href="item#item_models_propertyselection">PropertySelection</a>
+<pre>public <strong>findByPropertyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId):<a href="item#item_models_propertyselection">PropertySelection</a>
 </pre>
 
     
@@ -5246,16 +5486,16 @@ Repository for property selection
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyItemId</td>
+        <td>$propertyId</td>
         <td></td>
     </tr>
 </table>
 
 
 ## Models<a name="item_property_models"></a>
-### PropertyItem<a name="item_models_propertyitem"></a>
+### Property<a name="item_models_property"></a>
 
-The PropertyItem including PropertyItemName and PropertyMarketComponent
+The property including Property name and property market reference
 
 
 #### Namespace
@@ -5276,67 +5516,67 @@ The PropertyItem including PropertyItemName and PropertyMarketComponent
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the property item</td>
+            <td>The ID of the property</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
-            <td>The position of the property item</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>unit</td>
-            <td>The unit of the property item</td>
+            <td>The position of the property</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>propertyGroupId</td>
-            <td>The property group id of the property item</td>
+            <td>The ID of the property group the property is assigned to. Value is null if property is not assigned to a property group.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>imageName</td>
-            <td>The image name of the property item</td>
+            <td>unit</td>
+            <td>The unit of measurement of the property. Value is null if no unit is associated.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>backendName</td>
-            <td>The backend name of the property item</td>
+            <td>The backend name of the property. The back end name is not visible to customers.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>comment</td>
+            <td>Internal comment/note saved for the property. Internal comments are not visible to customers.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>valueType</td>
-            <td>The value type of the property item</td>
+            <td>Permitted property values are: <ul><li>empty = No property type</li><li>int = A whole number can be saved for an item, e.g. a size.</li><li>float = A number with decimal places can be saved for an item, e.g. a measurement.</li><li>selection = One of several options can be saved for the item. The values of the property value Selection can be managed using the route PropertySelection.</li><li>text = Text can be saved for an item.</li><li>file = A file can be saved for an item.</li></ul></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>searchable</td>
-            <td>Indicates if the property item is searchable</td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isSearchable</td>
+            <td>Flag that indicates if items can be found by entering the property name as a search term.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>orderProperty</td>
-            <td></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isOderProperty</td>
+            <td>Flag that indicates if the property is available in the order process. Depending on the property type, customers e.g. can enter a text or value or select an option from a drop-down list.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>showItem</td>
-            <td>Indicates if the property item is shown</td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isShownOnItemPage</td>
+            <td>Flag that indicates if the property will be shown on the item's page in the online store-</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>showItemList</td>
-            <td>Indicates if the property item list is shown</td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isShownOnItemList</td>
+            <td>Flag that indicates if the property will be shown in the item listing in the online store.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>displayCheckout</td>
-            <td>Indicates if the checkout is displayed</td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isShownAtCheckout</td>
+            <td>Flag that indicates if the property will be shown in the order process.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>displayPdf</td>
-            <td>Indicates if the pdf is displayed</td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isShownInPdf</td>
+            <td>Flag that indicates if the property will be shown in PDF documents.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>backendNote</td>
-            <td>The backend note of the propety item</td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isShownAsAdditionalCosts</td>
+            <td>Display as additional costs</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>surcharge</td>
-            <td>The surcharge of the property item</td>
+            <td>The surcharge for the property. Surcharges will automatically be added to the item price in the detailed view of an item and in the order process. The default value is 0.00, i.e. no surcharge. In the plentymarkets front end, the template variable PriceDynamic displays the price of a variation including the surcharge.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>displayAsAdditionalCosts</td>
-            <td>Indicates if the property item is displayed as additional costs</td>
+            <td>updatedAt</td>
+            <td>The time the property was last updated.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>names</td>
@@ -5357,9 +5597,47 @@ The PropertyItem including PropertyItemName and PropertyMarketComponent
 Returns this model as an array.
     
 
-### PropertyItemName<a name="item_models_propertyitemname"></a>
+### PropertyGroup<a name="item_models_propertygroup"></a>
 
-The PropertyItemName including PropertyItem
+The PropertyGroup including PropertyGroupName
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Property\Models`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### PropertyGroupName<a name="item_models_propertygroupname"></a>
+
+The PropertyGroupName including PropertyGroup
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Property\Models`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### PropertyMarketReference<a name="item_models_propertymarketreference"></a>
+
+The PropertyMarketReference including Property
 
 
 #### Namespace
@@ -5379,22 +5657,22 @@ The PropertyItemName including PropertyItem
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>propertyItemId</td>
-            <td>The id of the property item</td>
+            <td>propertyId</td>
+            <td>The unique ID of the property</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>componentId</td>
+            <td>The unique ID of the reference for the market</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>marketId</td>
+            <td>The unique ID of the market</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>lang</td>
-            <td>The language of the property item</td>
+            <td>externalComponent</td>
+            <td>The external reference of the property</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>name</td>
-            <td>The name of the property item</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>description</td>
-            <td>The description of the property item</td>
-        </tr><tr>
-            <td><a href="item#item_models_propertyitem">PropertyItem</a>
+            <td><a href="item#item_models_property">Property</a>
 </td>
             <td>property</td>
             <td></td>
@@ -5410,9 +5688,9 @@ The PropertyItemName including PropertyItem
 Returns this model as an array.
     
 
-### PropertyMarketComponent<a name="item_models_propertymarketcomponent"></a>
+### PropertyName<a name="item_models_propertyname"></a>
 
-The PropertyMarketComponent including PropertyItem
+The PropertyName including Property
 
 
 #### Namespace
@@ -5432,22 +5710,22 @@ The PropertyMarketComponent including PropertyItem
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>propertyItemId</td>
-            <td>The id of the property item</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>componentId</td>
-            <td>The id of the component</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>marketReference</td>
-            <td>The market reference of the property</td>
+            <td>propertyId</td>
+            <td>The unique ID of the property</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>externalComponent</td>
-            <td>The external component of the property</td>
+            <td>lang</td>
+            <td>The language code of the property name</td>
         </tr><tr>
-            <td><a href="item#item_models_propertyitem">PropertyItem</a>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the property. The property name is displayed in the online store.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>description</td>
+            <td>The description of the property. The property description is displayed in the online store.</td>
+        </tr><tr>
+            <td><a href="item#item_models_property">Property</a>
 </td>
             <td>property</td>
             <td></td>
@@ -5465,7 +5743,7 @@ Returns this model as an array.
 
 ### PropertySelection<a name="item_models_propertyselection"></a>
 
-The PropertySelection including PropertyItem
+The property selection including the property
 
 
 #### Namespace
@@ -5486,25 +5764,25 @@ The PropertySelection including PropertyItem
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the property selection</td>
+            <td>The unique ID of the selection</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>propertyItemId</td>
-            <td>The id of the property item</td>
+            <td>propertyId</td>
+            <td>The unique ID of the property</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The lang of the property selection</td>
+            <td>The code of the language for which name and description of the selection were saved.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
-            <td>The name of the property selection</td>
+            <td>The name of the selection. The name is displayed in the online store.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>description</td>
-            <td>The description of the property selection</td>
+            <td>The description of the selection. This description is displayed in the online store.</td>
         </tr><tr>
-            <td><a href="item#item_models_propertyitem">PropertyItem</a>
+            <td><a href="item#item_models_property">Property</a>
 </td>
             <td>property</td>
             <td></td>
@@ -6520,6 +6798,91 @@ foo
 
 
 
+### MarketFilter<a name="item_filter_marketfilter"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Filter`
+
+
+
+#### Methods
+
+<pre>public <strong>isVisibleForMarket</strong>(<a target="_blank" href="http://php.net/int">int</a> $marketId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$marketId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isVisibleForAnyMarket</strong>(<a target="_blank" href="http://php.net/array">array</a> $marketIds):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$marketIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isVisibleForAllMarkets</strong>(<a target="_blank" href="http://php.net/array">array</a> $marketIds):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$marketIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addStatement</strong>(<a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+ $statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### SearchFilter<a name="item_filter_searchfilter"></a>
 
 foo
@@ -6533,7 +6896,7 @@ foo
 
 #### Methods
 
-<pre>public <strong>setSearchString</strong>(<a target="_blank" href="http://php.net/string">string</a> $value, <a target="_blank" href="http://php.net/string">string</a> $precision = Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch::SEARCH_TYPE_FUZZY):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>setSearchString</strong>(<a target="_blank" href="http://php.net/string">string</a> $value, <a target="_blank" href="http://php.net/string">string</a> $precision = &quot;fuzzy&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -6700,6 +7063,46 @@ foo
 
     
 <pre>public <strong>isChild</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>isSalable</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>hasDescriptionInLanguage</strong>(<a target="_blank" href="http://php.net/string">string</a> $language):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$language</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasImage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>hasVariationImage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>hasItemImage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -8368,15 +8771,15 @@ The VariationPropertyValue
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The id of the variation</td>
+            <td>The unique ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>propertyItemId</td>
-            <td>The id of the property item</td>
+            <td>propertyId</td>
+            <td>The unique ID of the property</td>
         </tr><tr>
-            <td><a href="item#item_models_propertyitem">PropertyItem</a>
+            <td><a href="item#item_models_property">Property</a>
 </td>
-            <td>propertyItem</td>
+            <td>property</td>
             <td></td>
         </tr></tbody>
 </table>
@@ -8413,39 +8816,39 @@ The VariationPropertyValue
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the variation property value</td>
+            <td>The unique ID of the property value of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The id of the variation</td>
+            <td>The unique ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>propertyItemId</td>
-            <td>The id of the property item</td>
+            <td>propertyId</td>
+            <td>The unique ID of the property of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>propertySelectionId</td>
-            <td>The id of the property selection</td>
+            <td>The unique ID of the property selection</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>valueInt</td>
-            <td>The int value of the variation property value</td>
+            <td>The integer value associated with the property value of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>valueFloat</td>
-            <td>The float value of the variation property value</td>
+            <td>The float value associated with the property value of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>valueFile</td>
-            <td>The file value of the variation property value</td>
+            <td>The file associated with the property value of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>surcharge</td>
-            <td>The surcharge of the variation property value</td>
+            <td>The surcharge associated with the property value of the variation.</td>
         </tr><tr>
-            <td><a href="item#item_models_propertyitem">PropertyItem</a>
+            <td><a href="item#item_models_property">Property</a>
 </td>
-            <td>propertyItem</td>
+            <td>property</td>
             <td></td>
         </tr><tr>
             <td><a href="item#item_models_propertyselection">PropertySelection</a>

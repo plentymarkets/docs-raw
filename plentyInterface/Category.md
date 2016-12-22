@@ -138,7 +138,7 @@ Returns one category by id.
 </table>
 
 
-<pre>public <strong>getLinklistTree</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getLinklistTree</strong>(<a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/int">int</a> $clientId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Returns all linklist categories as tree.
@@ -155,10 +155,15 @@ Returns all linklist categories as tree.
         <td>$lang</td>
         <td>Optional language of details.</td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$clientId</td>
+        <td>The unique ID of the client (store)</td>
+    </tr>
 </table>
 
 
-<pre>public <strong>getLinklistList</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getLinklistList</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/int">int</a> $clientId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Returns all linklist categories as list.
@@ -174,6 +179,11 @@ Returns all linklist categories as list.
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
         <td>Optional language of details.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$clientId</td>
+        <td>The unique ID of the client (store)</td>
     </tr>
 </table>
 

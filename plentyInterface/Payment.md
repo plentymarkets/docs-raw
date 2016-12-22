@@ -728,19 +728,7 @@ The payment model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>status</td>
-            <td>The status of the payment. The following statuses are available:
-         <ul>
-             <li>Awaiting approval = 1</li>
-             <li>Approved = 2</li>
-             <li>Captured = 3</li>
-             <li>Partially captured = 4</li>
-             <li>Cancelled = 5</li>
-             <li>Refused = 6</li>
-             <li>Awaiting renewal = 7</li>
-             <li>Expired = 8</li>
-             <li>Refunded = 9</li>
-             <li>Partially refunded = 10</li>
-         </ul></td>
+            <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#payment-statuses"  target="_blank">status</a> of the payment</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>transactionType</td>

@@ -3,6 +3,89 @@
 # Address<a name="account_address"></a>
     
 ## Contracts<a name="account_address_contracts"></a>
+### AddressPosRelationRepositoryContract<a name="account_contracts_addressposrelationrepositorycontract"></a>
+
+The contract for the address pos relation repository
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Address\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>createAddressPosRelation</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_addressposrelation">AddressPosRelation</a>
+</pre>
+
+    
+Create an address pos relation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The address data as associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateAddressPosRelation</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressPosRelationId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_addressposrelation">AddressPosRelation</a>
+</pre>
+
+    
+Update an address pos relation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$addressPosRelationId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findAddressPosRelation</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressPosRelationId):<a href="account#account_models_addressposrelation">AddressPosRelation</a>
+</pre>
+
+    
+Find an address pos relation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$addressPosRelationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteAddressPosRelation</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressPosRelationId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Delete an address pos relation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$addressPosRelationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### AddressRepositoryContract<a name="account_contracts_addressrepositorycontract"></a>
 
 The contract for the address repository
@@ -667,6 +750,7 @@ The address options type model
 <li>7 = Personal id</li>
 <li>8 = BBFC</li>
 <li>9 = Birthday</li>
+<li>10 = Session ID</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -806,6 +890,54 @@ address order relation model
 </td>
             <td>order</td>
             <td>The order of the relation</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### AddressPosRelation<a name="account_models_addressposrelation"></a>
+
+The address pos relation model.
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Address\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the address POS relation</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>posBaseId</td>
+            <td>The ID of the POS base</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>addressId</td>
+            <td>The ID of the address</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>typeId</td>
+            <td>The ID of the relation type</td>
         </tr></tbody>
 </table>
 

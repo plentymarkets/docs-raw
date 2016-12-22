@@ -531,7 +531,7 @@ Get the standard VAT configuration for a plenty ID
 </table>
 
 
-<pre>public <strong>findVat</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = Plenty\Modules\Accounting\Vat\Models\Vat::ITEMS_PER_PAGE, <a target="_blank" href="http://php.net/array">array</a> $relations = [], <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>findVat</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = \Plenty\Modules\Accounting\Vat\Models\Vat::ITEMS_PER_PAGE, <a target="_blank" href="http://php.net/array">array</a> $relations = [], <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 List VAT configurations
