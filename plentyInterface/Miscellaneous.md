@@ -1465,23 +1465,24 @@ Base Validator Class
 </table>
 
 
-# Data<a name="miscellaneous_data"></a>
+# Plugin<a name="miscellaneous_plugin"></a>
     
-## Contracts<a name="miscellaneous_data_contracts"></a>
-### PropertyDescriptor<a name="miscellaneous_contracts_propertydescriptor"></a>
+## Build<a name="miscellaneous_plugin_build"></a>
+### CheckProcess<a name="miscellaneous_build_checkprocess"></a>
 
-describes properties of a Model
+check process
 
 
 #### Namespace
 
-`Plenty\Plugin\Data\Contracts`
+`Plenty\Plugin\Build`
 
 
 
 #### Methods
 
-<pre>public <strong>getPropertyInformation</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelClassName):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>addError</strong>(<a target="_blank" href="http://php.net/string">string</a> $message):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 
@@ -1490,43 +1491,12 @@ describes properties of a Model
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$modelClassName</td>
+        <td>$message</td>
         <td></td>
     </tr>
 </table>
 
 
-## Model<a name="miscellaneous_data_model"></a>
-### PropertyInformation<a name="miscellaneous_model_propertyinformation"></a>
-
-property information
-
-
-#### Namespace
-
-`Plenty\Plugin\Data\Model`
-
-
-
-#### Methods
-
-<pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-<pre>public <strong>getDescription</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-# Plugin<a name="miscellaneous_plugin"></a>
-    
 ## Error<a name="miscellaneous_plugin_error"></a>
 ### HTTPException<a name="miscellaneous_error_httpexception"></a>
 
@@ -2700,6 +2670,66 @@ view support
 </table>
 
 
+# Data<a name="miscellaneous_data"></a>
+    
+## Contracts<a name="miscellaneous_data_contracts"></a>
+### PropertyDescriptor<a name="miscellaneous_contracts_propertydescriptor"></a>
+
+describes properties of a Model
+
+
+#### Namespace
+
+`Plenty\Plugin\Data\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getPropertyInformation</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelClassName):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$modelClassName</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Model<a name="miscellaneous_data_model"></a>
+### PropertyInformation<a name="miscellaneous_model_propertyinformation"></a>
+
+property information
+
+
+#### Namespace
+
+`Plenty\Plugin\Data\Model`
+
+
+
+#### Methods
+
+<pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getDescription</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
 # Templates<a name="miscellaneous_templates"></a>
     
 ## Extensions<a name="miscellaneous_templates_extensions"></a>
