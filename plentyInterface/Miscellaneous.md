@@ -1695,6 +1695,11 @@ Replace the input for the current request.
 </table>
 
 
+<pre>public <strong>getContent</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Returns the request body content.
+    
 
 ### Response<a name="miscellaneous_http_response"></a>
 

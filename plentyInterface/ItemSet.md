@@ -20,14 +20,14 @@ The contract for the item set component repository
 </pre>
 
     
-Return item set component by given id
+Gets an item set component. The ID of the item set component must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The unique ID of the item set component</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -41,19 +41,19 @@ Return item set component by given id
 </pre>
 
     
-Return item set component by given set id and id
+Gets an item set component. The item ID of the item set and the component ID must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$setId</td>
-        <td></td>
+        <td>The unique item ID of the item set</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The unique ID of the item set component</td>
     </tr>
 </table>
 
@@ -62,14 +62,14 @@ Return item set component by given set id and id
 </pre>
 
     
-Create a new item set component
+Creates an item set component.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$setConfigId</td>
-        <td></td>
+        <td>The unique ID of the item set configuration</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -83,14 +83,14 @@ Create a new item set component
 </pre>
 
     
-Create new item set components
+Creates a link between an item and a set item and adds the item as a set component.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$setId</td>
-        <td></td>
+        <td>The unique item ID of the item set</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -104,14 +104,14 @@ Create new item set components
 </pre>
 
     
-Update item set components
+Updates the item set components of a set item.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$setId</td>
-        <td></td>
+        <td>The unique item ID of the item set</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -125,19 +125,19 @@ Update item set components
 </pre>
 
     
-Update one item set component by given setId and id
+Updates an item set component. The item ID of the set and the ID of the set component must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$setId</td>
-        <td></td>
+        <td>The unique item ID of the item set</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The unique ID of the item set component</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -151,14 +151,14 @@ Update one item set component by given setId and id
 </pre>
 
     
-Delete item set components
+Removes all item set components from an item set.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$setId</td>
-        <td></td>
+        <td>The unique item ID of the item set</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -172,19 +172,19 @@ Delete item set components
 </pre>
 
     
-Delete item set component by given setId and id
+Deletes the link between an item set component and an item set. The item ID of the set and the ID of the set component must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$setId</td>
-        <td></td>
+        <td>The unique item ID of the item set</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The unique ID of the item set component</td>
     </tr>
 </table>
 
@@ -192,19 +192,19 @@ Delete item set component by given setId and id
 <pre>public <strong>all</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Return all item set components
+Lists all item set components.
     
 <pre>public <strong>findBySetId</strong>(<a target="_blank" href="http://php.net/int">int</a> $setId, <a target="_blank" href="http://php.net/array">array</a> $with):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-
+Lists the item set components of a set. The item ID of the item set must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$setId</td>
-        <td></td>
+        <td>The unique item ID of the item set</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -217,14 +217,14 @@ Return all item set components
 <pre>public <strong>findByItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-
+Lists the item set components of a set. The item ID of the item set component must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemId</td>
-        <td></td>
+        <td>The unique item ID of the item set component</td>
     </tr>
 </table>
 
@@ -232,7 +232,7 @@ Return all item set components
 
 ### ItemSetConfigRepositoryContract<a name="itemset_contracts_itemsetconfigrepositorycontract"></a>
 
-The contract for the item set config repository
+The contract for the item set configuration repository
 
 
 #### Namespace
@@ -247,14 +247,14 @@ The contract for the item set config repository
 </pre>
 
     
-Return item set by given id
+Gets an item set. The ID of the item set configuration must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The unique ID of the item set configuration</td>
     </tr>
 </table>
 
@@ -263,7 +263,7 @@ Return item set by given id
 </pre>
 
     
-Create new item set config
+Creates an item set configuration.
     
 ##### <strong>Parameters</strong>
     
@@ -279,7 +279,7 @@ Create new item set config
 </pre>
 
     
-Update item set config by given id
+Updates an item set configuration. The ID of the item set configuration must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -300,14 +300,14 @@ Update item set config by given id
 </pre>
 
     
-Delete item set config by given id
+Deletes an item set configuration. The ID of the item set configuration must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The unique ID of the item set configuration</td>
     </tr>
 </table>
 
@@ -316,19 +316,19 @@ Delete item set config by given id
 </pre>
 
     
-Return item set config of item set
+Gets the item set configuration of an item set.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$setId</td>
-        <td></td>
+        <td>The unique item ID of the item set</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$setConfigId</td>
-        <td></td>
+        <td>The unique ID of the item set configuration</td>
     </tr>
 </table>
 
@@ -337,14 +337,14 @@ Return item set config of item set
 </pre>
 
     
-Return set config for item set
+Gets the item set configuration of an item set. The item ID of the set item must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$setId</td>
-        <td></td>
+        <td>The unique item ID of the item set</td>
     </tr>
 </table>
 
@@ -367,14 +367,14 @@ The contract for the item set repository
 </pre>
 
     
-Return item set by given id
+Gets an item set. The item ID of the set must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The unique item ID of the set</td>
     </tr>
 </table>
 
@@ -383,7 +383,7 @@ Return item set by given id
 </pre>
 
     
-Create new item set
+Creates an item set.
     
 ##### <strong>Parameters</strong>
     
@@ -399,7 +399,7 @@ Create new item set
 </pre>
 
     
-Create new item sets
+Creates item sets.
     
 ##### <strong>Parameters</strong>
     
@@ -414,7 +414,7 @@ Create new item sets
 <pre>public <strong>updateSets</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Update existing item sets
+Updates item sets.
     
 ##### <strong>Parameters</strong>
     
@@ -430,14 +430,14 @@ Update existing item sets
 </pre>
 
     
-Update item set by given id
+Updates an item set. The item ID of the set must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The unique item ID of the set.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -451,7 +451,7 @@ Update item set by given id
 </pre>
 
     
-Delete item sets
+Deletes item sets.
     
 ##### <strong>Parameters</strong>
     
@@ -467,7 +467,7 @@ Delete item sets
 </pre>
 
     
-Delete item set config by given id
+Deletes an item set configuration. The ID must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -482,7 +482,7 @@ Delete item set config by given id
 <pre>public <strong>all</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Return all item set configs
+Lists all item set configurations.
     
 ## Models<a name="itemset_itemset_models"></a>
 ### ItemSet<a name="itemset_models_itemset"></a>

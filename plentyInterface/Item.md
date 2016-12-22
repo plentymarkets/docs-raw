@@ -5,7 +5,7 @@
 ## Contracts<a name="item_attribute_contracts"></a>
 ### AttributeNameRepositoryContract<a name="item_contracts_attributenamerepositorycontract"></a>
 
-Repository for AttributeName
+The contract for the attribute name repository
 
 
 #### Namespace
@@ -20,39 +20,40 @@ Repository for AttributeName
 </pre>
 
     
-
+Creates an attribute name. The ID of the attribute must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The attribute name data as associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$attributeId</td>
-        <td></td>
+        <td>The ID of the attribute ID</td>
     </tr>
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
 
     
-
+Deletes an attribute name. The ID of the attribute and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$attributeId</td>
-        <td></td>
+        <td>The ID of the attribute</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The lang of the attribute name</td>
     </tr>
 </table>
 
@@ -61,24 +62,24 @@ Repository for AttributeName
 </pre>
 
     
-
+Updates an attribute name. The ID of the attribute and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The attribute name data as associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$attributeId</td>
-        <td></td>
+        <td>The ID of the attribute</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The lang of the attribute name</td>
     </tr>
 </table>
 
@@ -87,19 +88,19 @@ Repository for AttributeName
 </pre>
 
     
-
+Gets an attribute name. The ID of the attribute and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$attributeId</td>
-        <td></td>
+        <td>The ID of the attribute</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The lang of the attribute name</td>
     </tr>
 </table>
 
@@ -108,14 +109,14 @@ Repository for AttributeName
 </pre>
 
     
-
+Lists attribute names. The ID of the attribute must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$attributeId</td>
-        <td></td>
+        <td>The ID of the attribute</td>
     </tr>
 </table>
 
@@ -123,7 +124,7 @@ Repository for AttributeName
 
 ### AttributeRepositoryContract<a name="item_contracts_attributerepositorycontract"></a>
 
-Repository for Attribute
+The contract for the attribute repository
 
 
 #### Namespace
@@ -138,14 +139,14 @@ Repository for Attribute
 </pre>
 
     
-
+Creates new attribute
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The attribute data as associative array</td>
     </tr>
 </table>
 
@@ -154,50 +155,51 @@ Repository for Attribute
 </pre>
 
     
-
+Gets an attribute. The ID of the attribute must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the attribute</td>
     </tr>
 </table>
 
 
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_attribute">Attribute</a>
 </pre>
 
     
-
+Updates an attribute. The ID of the attribute must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The attribute data as associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the attribute</td>
     </tr>
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
 
     
-
+Deletes an attribute. The ID of the attribute must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the attribute</td>
     </tr>
 </table>
 
@@ -206,14 +208,14 @@ Repository for Attribute
 </pre>
 
     
-
+Gets an attribute. The ID of the attribute must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the attribute</td>
     </tr>
 </table>
 
@@ -221,24 +223,24 @@ Repository for Attribute
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-
+Lists all attributes.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>An array of the shown columns. All columns are returned by default.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td></td>
+        <td>The attributes shown per page. Default value is 50.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td></td>
+        <td>The shown page. Default value is 1.</td>
     </tr>
 </table>
 
@@ -246,7 +248,7 @@ Repository for Attribute
 
 ### AttributeValueNameRepositoryContract<a name="item_contracts_attributevaluenamerepositorycontract"></a>
 
-Repository for AttributeValueName
+The contract for the attribute value name repository
 
 
 #### Namespace
@@ -261,39 +263,40 @@ Repository for AttributeValueName
 </pre>
 
     
-
+Creates an attribute value name. The ID of the attribute value must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The attribute value name data as associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$valueId</td>
-        <td></td>
+        <td>The ID of the attribute value</td>
     </tr>
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
 
     
-
+Deletes an attribute value name. The ID of the attribute value and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$valueId</td>
-        <td></td>
+        <td>The ID of the attribute value</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The lang of the attribute value name</td>
     </tr>
 </table>
 
@@ -302,24 +305,24 @@ Repository for AttributeValueName
 </pre>
 
     
-
+Updates an attribute value name. The ID of the attribute value and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The attribute value name data as associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$valueId</td>
-        <td></td>
+        <td>The ID of the attribute value</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The lang of the attribute value name</td>
     </tr>
 </table>
 
@@ -328,19 +331,19 @@ Repository for AttributeValueName
 </pre>
 
     
-
+Gets an attribute value name. The ID of the attribute value and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$valueId</td>
-        <td></td>
+        <td>The ID of the attribute value</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The lang of the attribute value name</td>
     </tr>
 </table>
 
@@ -349,14 +352,14 @@ Repository for AttributeValueName
 </pre>
 
     
-
+Lists attribute value names. The ID of the attribute value must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$valueId</td>
-        <td></td>
+        <td>The ID of the attribute value</td>
     </tr>
 </table>
 
@@ -364,7 +367,7 @@ Repository for AttributeValueName
 
 ### AttributeValueRepositoryContract<a name="item_contracts_attributevaluerepositorycontract"></a>
 
-Repository for AttributeValue
+The contract for the attribute value repository
 
 
 #### Namespace
@@ -379,65 +382,66 @@ Repository for AttributeValue
 </pre>
 
     
-
+Creates an attribute value. The ID of the attribute must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The attribute value data as associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$attributeId</td>
-        <td></td>
+        <td>The ID of the attribute</td>
     </tr>
 </table>
 
 
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_attributevalue">AttributeValue</a>
 </pre>
 
     
-
+Updates an attribute value. The ID of the attribute and the ID of the value must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The attribute value data as associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$attributeId</td>
-        <td></td>
+        <td>The ID of the attribute</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the value</td>
     </tr>
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
 
     
-
+Deletes an attribute value. The ID of the attribute and the ID of the value must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$attributeId</td>
-        <td></td>
+        <td>The ID of the attribute</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the value</td>
     </tr>
 </table>
 
@@ -445,29 +449,29 @@ Repository for AttributeValue
 <pre>public <strong>findByAttributeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $attributeId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-
+Lists attribute values. The ID of the attribute must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$attributeId</td>
-        <td></td>
+        <td>The ID of the attribute</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td></td>
+        <td>The shown page. Default value is 1.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td></td>
+        <td>The amount of attribute values shown per page. Default value is 50</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>An array of the shown columns. All columns are returned by default.</td>
     </tr>
 </table>
 
@@ -476,19 +480,19 @@ Repository for AttributeValue
 </pre>
 
     
-
+Gets a attribute value. The ID of the attribute and the ID of the value must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$attributeId</td>
-        <td></td>
+        <td>The ID of the attribute</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the value</td>
     </tr>
 </table>
 
@@ -496,19 +500,19 @@ Repository for AttributeValue
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-
+Lists all attribute values.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>An array of the shown columns. All columns are returned by default.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td></td>
+        <td>The amount of attribute values shown per page. Default value is 50.</td>
     </tr>
 </table>
 
@@ -983,7 +987,7 @@ Returns this model as an array.
 ## Contracts<a name="item_barcode_contracts"></a>
 ### BarcodeRepositoryContract<a name="item_contracts_barcoderepositorycontract"></a>
 
-Repository for Barcode
+The contract for the barcode repository
 
 
 #### Namespace
@@ -994,17 +998,18 @@ Repository for Barcode
 
 #### Methods
 
-<pre>public <strong>showBarcode</strong>(<a target="_blank" href="http://php.net/int">int</a> $barcodeId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>showBarcode</strong>(<a target="_blank" href="http://php.net/int">int</a> $barcodeId):<a href="item#item_models_barcode">Barcode</a>
+</pre>
 
     
-Show an barcode by given id.
+Gets a barcode. The ID of the barcode must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td></td>
+        <td>The ID of the barcode.</td>
     </tr>
 </table>
 
@@ -1013,14 +1018,14 @@ Show an barcode by given id.
 </pre>
 
     
-Create new barcode
+Creates a barcode.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The barcode data as associative array</td>
     </tr>
 </table>
 
@@ -1029,34 +1034,35 @@ Create new barcode
 </pre>
 
     
-Update an existing barcode
+Updates a barcode. The ID of the barcode must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The barcode data as associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td></td>
+        <td>The ID of the barcode.</td>
     </tr>
 </table>
 
 
-<pre>public <strong>deleteBarcode</strong>(<a target="_blank" href="http://php.net/int">int</a> $barcodeId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>deleteBarcode</strong>(<a target="_blank" href="http://php.net/int">int</a> $barcodeId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
 
     
-Delete an barcode by given id. If at least one relation exists, throws an exception.
+Deletes a barcode. The ID of the barcode must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td></td>
+        <td>The ID of the barcode</td>
     </tr>
 </table>
 
@@ -1065,14 +1071,14 @@ Delete an barcode by given id. If at least one relation exists, throws an except
 </pre>
 
     
-Find an existing barcode by given id.
+Gets a barcode. The ID of the barcode must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td></td>
+        <td>The ID of the barcode</td>
     </tr>
 </table>
 
@@ -1080,19 +1086,19 @@ Find an existing barcode by given id.
 <pre>public <strong>findBarcodesByType</strong>(<a target="_blank" href="http://php.net/string">string</a> $barcodeType, <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Get list of barcodes from type
+Lists barcodes. The type of the barcode must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$barcodeType</td>
-        <td></td>
+        <td>The type of the barcode.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td></td>
+        <td>The amount of barcodes shown per page. Default value is 50.</td>
     </tr>
 </table>
 
@@ -1101,24 +1107,24 @@ Get list of barcodes from type
 </pre>
 
     
-Get list of barcodes
+Lists all barcodes.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>An array of the shown columns. All columns are returned by default.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td></td>
+        <td>The amount of barcodes shown per page. Default value is 50.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td></td>
+        <td>The shown page. Default value is 1.</td>
     </tr>
 </table>
 
@@ -1127,19 +1133,19 @@ Get list of barcodes
 </pre>
 
     
-Create new barcode referrer for given referrer.
+Creates new barcode referrer for given referrer.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The barcode data as associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td></td>
+        <td>The ID of the barcode</td>
     </tr>
 </table>
 
@@ -1147,19 +1153,19 @@ Create new barcode referrer for given referrer.
 <pre>public <strong>deleteBarcodeReferrerRelation</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrer, <a target="_blank" href="http://php.net/int">int</a> $barcodeId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
-Delete existing barcode referrer with given referrer.
+Deletes existing barcode referrer with given referrer.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
         <td>$referrer</td>
-        <td></td>
+        <td>The float value of the referrer</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td></td>
+        <td>The ID of the barcode</td>
     </tr>
 </table>
 
@@ -1167,19 +1173,19 @@ Delete existing barcode referrer with given referrer.
 <pre>public <strong>findBarcodesByReferrerRelation</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrer, <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Get barcode referrer with given referrer
+Gets barcode referrer with given referrer
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
         <td>$referrer</td>
-        <td></td>
+        <td>The float value of the referrer</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td></td>
+        <td>The amount of barcodes shown per page. Default value is 50.</td>
     </tr>
 </table>
 
@@ -3377,7 +3383,7 @@ ItemDataLayer Lookup
 ## Contracts<a name="item_defaultshippingcost_contracts"></a>
 ### DefaultShippingCostRepositoryContract<a name="item_contracts_defaultshippingcostrepositorycontract"></a>
 
-Repository for DefaultShippingCost
+The contract for the default shipping cost repository
 
 
 #### Namespace
@@ -3398,22 +3404,22 @@ Repository for DefaultShippingCost
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemId</td>
-        <td></td>
+        <td>The ID of the item</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
         <td>$referrerId</td>
-        <td></td>
+        <td>The ID of the referrer</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$shippingDestinationId</td>
-        <td></td>
+        <td>The ID of the shipping destination</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$paymentMethodId</td>
-        <td></td>
+        <td>The ID of the payment method</td>
     </tr>
 </table>
 
@@ -3467,7 +3473,7 @@ Returns this model as an array.
 ## Contracts<a name="item_item_contracts"></a>
 ### ItemRepositoryContract<a name="item_contracts_itemrepositorycontract"></a>
 
-Repository for item basket
+The contract for the attribute value repository
 
 
 #### Namespace
@@ -3482,14 +3488,14 @@ Repository for item basket
 </pre>
 
     
-
+Creates an item.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The item data as an associative array</td>
     </tr>
 </table>
 
@@ -3498,24 +3504,24 @@ Repository for item basket
 </pre>
 
     
-
+Get an item. The ID of the item must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemId</td>
-        <td></td>
+        <td>The ID of the item</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>The array of the shown columns. All columns are returned by default.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The language of the item</td>
     </tr>
 </table>
 
@@ -3532,23 +3538,23 @@ Repository for item basket
         <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$columns</td>
-        <td></td>
+        <td>The array of the shown columns. All columns are returned by default.</td>
     </tr>
     <tr>
         <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$lang</td>
-        <td></td>
+        <td>The language of the item</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td></td>
+        <td>The shown page. Default value is 1.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemsPerPage</td>
-        <td></td>
+        <td>The items shown per page. Default value is 50.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -3876,6 +3882,315 @@ Returns this model as an array.
     
 # ItemImage<a name="item_itemimage"></a>
     
+## Contracts<a name="item_itemimage_contracts"></a>
+### ItemImageAvailabilityRepositoryContract<a name="item_contracts_itemimageavailabilityrepositorycontract"></a>
+
+The contract for the item image availability repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemImage\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_itemimageavailability">ItemImageAvailability</a>
+</pre>
+
+    
+Creates an image availability
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The image availability data as associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes an image availability.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The image availability data as associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByImageId</strong>(<a target="_blank" href="http://php.net/int">int</a> $imageId):<a href="item#item_models_itemimageavailability">ItemImageAvailability</a>
+</pre>
+
+    
+Lists image availabilities. The ID of the image must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The ID of the image</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByType</strong>(<a target="_blank" href="http://php.net/int">int</a> $imageId, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="item#item_models_itemimageavailability">ItemImageAvailability</a>
+</pre>
+
+    
+Lists image availabilities. The ID of the image and the type must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The ID of the image</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>The type of the image</td>
+    </tr>
+</table>
+
+
+
+### ItemImageNameRepositoryContract<a name="item_contracts_itemimagenamerepositorycontract"></a>
+
+The contract for the item image name repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemImage\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_itemimagename">ItemImageName</a>
+</pre>
+
+    
+Creates an image name
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The image name data as associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $imageId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_itemimagename">ItemImageName</a>
+</pre>
+
+    
+Updates an image name. The ID of the image and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The image name data as associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The ID of the image</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The language of the image name</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $imageId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes an image name. The ID of the image and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The ID of the image</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The language of the image name</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $imageId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_itemimagename">ItemImageName</a>
+</pre>
+
+    
+Gets an image name. The ID of the image and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The ID of the image</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The language of the image name</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByImageId</strong>(<a target="_blank" href="http://php.net/int">int</a> $imageId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists all image names. The ID of the image must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The ID of the image</td>
+    </tr>
+</table>
+
+
+
+### ItemImageRepositoryContract<a name="item_contracts_itemimagerepositorycontract"></a>
+
+The contract for the item image repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemImage\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $imageId):<a href="item#item_models_itemimage">ItemImage</a>
+</pre>
+
+    
+Updates an image. The ID of the image must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The image data as associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The ID of the image</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $imageId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes an image. The ID of the item must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The ID of the image</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $imageId):<a href="item#item_models_itemimage">ItemImage</a>
+</pre>
+
+    
+Shows an image. The ID of the item must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The ID of the image</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists images. The ID of the item must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The ID of the image</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists images. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>upload</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_itemimage">ItemImage</a>
+</pre>
+
+    
+Uploads an item image
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The image data as associative array</td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_itemimage_models"></a>
 ### ItemImage<a name="item_models_itemimage"></a>
 
@@ -4351,7 +4666,7 @@ Returns this model as an array.
 ## Contracts<a name="item_manufacturer_contracts"></a>
 ### ManufacturerCommissionRepositoryContract<a name="item_contracts_manufacturercommissionrepositorycontract"></a>
 
-Repository for ManufacturerCommission
+The contract for the manufacturer commission repository
 
 
 #### Namespace
@@ -4366,14 +4681,14 @@ Repository for ManufacturerCommission
 </pre>
 
     
-Find one ManufacturerCommission by given Id
+Gets a manufacturer commission. The ID of the manufacturer commission must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the manufacturer</td>
     </tr>
 </table>
 
@@ -4382,14 +4697,14 @@ Find one ManufacturerCommission by given Id
 </pre>
 
     
-Creates new ManufacturerCommission
+Creates a manufacturer commission.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The manufacturer commission data as an associative array</td>
     </tr>
 </table>
 
@@ -4398,19 +4713,19 @@ Creates new ManufacturerCommission
 </pre>
 
     
-Updates existing ManufacturerCommission
+Updates a manufacturer commission. The ID of the manufacturer commission must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The manufacturer commission data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the manufacturer</td>
     </tr>
 </table>
 
@@ -4419,14 +4734,14 @@ Updates existing ManufacturerCommission
 </pre>
 
     
-Delete an ManufacturerCommission by givenId
+Deletes a manufacturer commission. The ID of the manufacturer commission must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the manufacturer</td>
     </tr>
 </table>
 
@@ -4434,14 +4749,14 @@ Delete an ManufacturerCommission by givenId
 <pre>public <strong>findByManufacturerId</strong>(<a target="_blank" href="http://php.net/int">int</a> $manufacturerId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Find ManufacturerCommissions by given ManufacturerId
+Lists manufacturer commissions. The ID of the manufacturer must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$manufacturerId</td>
-        <td></td>
+        <td>The ID of the manufacturer</td>
     </tr>
 </table>
 
@@ -4449,7 +4764,7 @@ Find ManufacturerCommissions by given ManufacturerId
 
 ### ManufacturerRepositoryContract<a name="item_contracts_manufacturerrepositorycontract"></a>
 
-Repository for item manufacturers
+The contract for the manufacturer repository
 
 
 #### Namespace
@@ -4464,14 +4779,14 @@ Repository for item manufacturers
 </pre>
 
     
-store a new manufacturer
+Creates a manufacturer.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The manufacturer data as an associative array</td>
     </tr>
 </table>
 
@@ -4480,35 +4795,35 @@ store a new manufacturer
 </pre>
 
     
-Update an existing manufacturer
+Updates a manufacturer. The ID of the manufacturer must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The manufacturer data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$manufacturerId</td>
-        <td></td>
+        <td>The ID of the manufacturer</td>
     </tr>
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $manufacturerId):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $manufacturerId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
 </pre>
 
     
-Delete a manufacturer by the manufacturer id
+Deletes a manufacturer. The ID of the manufacturer must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$manufacturerId</td>
-        <td></td>
+        <td>The ID of the manufacturer</td>
     </tr>
 </table>
 
@@ -4517,14 +4832,14 @@ Delete a manufacturer by the manufacturer id
 </pre>
 
     
-Find an existing Manufacturer
+Gets a manufacturer. The ID of the manufacturer must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$manufacturerId</td>
-        <td></td>
+        <td>The ID of the manufacturer</td>
     </tr>
 </table>
 
@@ -4533,24 +4848,24 @@ Find an existing Manufacturer
 </pre>
 
     
-
+Lists all manufacturers.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>An array of the shown columns. All columns are returned by default.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td></td>
+        <td>The amount of manufacturers shown per page. Default value is 50.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td></td>
+        <td>The shown page. Default value is 1.</td>
     </tr>
 </table>
 
@@ -4559,19 +4874,19 @@ Find an existing Manufacturer
 </pre>
 
     
-Search manufacturers by Filter
+Lists manufacturers by filter
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$params</td>
-        <td></td>
+        <td>The filter array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>An array of the shown columns. All columns are returned by default.</td>
     </tr>
 </table>
 
@@ -4758,7 +5073,7 @@ Returns this model as an array.
 ## Contracts<a name="item_property_contracts"></a>
 ### PropertyGroupNameRepositoryContract<a name="item_contracts_propertygroupnamerepositorycontract"></a>
 
-Repository for property group name
+The contract for the property group name repository
 
 
 #### Namespace
@@ -4773,19 +5088,19 @@ Repository for property group name
 </pre>
 
     
-
+Creates a property group name. The ID of the property group must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The property group name data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyGroupId</td>
-        <td></td>
+        <td>The ID of the property group</td>
     </tr>
 </table>
 
@@ -4793,19 +5108,19 @@ Repository for property group name
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyGroupId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
 
     
-
+Deletes a property group name. The ID of the property group and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyGroupId</td>
-        <td></td>
+        <td>The ID of the property group</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The specific language of the property group name</td>
     </tr>
 </table>
 
@@ -4814,24 +5129,24 @@ Repository for property group name
 </pre>
 
     
-
+Updates a property group name. The ID of the property group and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The property group name data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyGroupId</td>
-        <td></td>
+        <td>The ID of the property group</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The specific language of the property group name</td>
     </tr>
 </table>
 
@@ -4840,19 +5155,19 @@ Repository for property group name
 </pre>
 
     
-
+Gets a property group name. The ID of the property group and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyGroupId</td>
-        <td></td>
+        <td>The ID of the property group</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The specific language of the property group name</td>
     </tr>
 </table>
 
@@ -4860,14 +5175,14 @@ Repository for property group name
 <pre>public <strong>findByPropertyGroupId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyGroupId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-
+Lists property group names. The ID of the property group must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyGroupId</td>
-        <td></td>
+        <td>The ID of the property group</td>
     </tr>
 </table>
 
@@ -4875,7 +5190,7 @@ Repository for property group name
 
 ### PropertyGroupRepositoryContract<a name="item_contracts_propertygrouprepositorycontract"></a>
 
-Repository for property group
+The contract for the property group repository
 
 
 #### Namespace
@@ -4890,14 +5205,14 @@ Repository for property group
 </pre>
 
     
-
+Creates a property group.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The property group data as an associative array</td>
     </tr>
 </table>
 
@@ -4906,35 +5221,35 @@ Repository for property group
 </pre>
 
     
-
+Gets a property group. The ID of the property group must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the property group</td>
     </tr>
 </table>
 
 
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_propertygroup">PropertyGroup</a>
 </pre>
 
     
-
+Updates a property group. The ID of the property group must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The property group data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the property group</td>
     </tr>
 </table>
 
@@ -4942,14 +5257,14 @@ Repository for property group
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
 
     
-
+Deletes a property group. The ID of the property group must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the property group</td>
     </tr>
 </table>
 
@@ -4958,14 +5273,14 @@ Repository for property group
 </pre>
 
     
-
+Gets a property group. The ID of the property group must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the property group</td>
     </tr>
 </table>
 
@@ -4973,24 +5288,24 @@ Repository for property group
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-
+Lists all property groups.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>An array of the shown columns. All columns are returned by default.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td></td>
+        <td>The amount of shown property groups per page. Default value is 50.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td></td>
+        <td>The shown page. Default value is 1.</td>
     </tr>
 </table>
 
@@ -4998,7 +5313,7 @@ Repository for property group
 
 ### PropertyMarketReferenceRepositoryContract<a name="item_contracts_propertymarketreferencerepositorycontract"></a>
 
-Repository for property market component
+The contract for the property market reference repository
 
 
 #### Namespace
@@ -5013,86 +5328,86 @@ Repository for property market component
 </pre>
 
     
-
+Creates a property market reference. The ID of the property must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The property market component data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/float">float</a> $marketId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/float">float</a> $marketReference):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
 
     
-
+Deletes a property market reference. The ID of the property and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
-        <td>$marketId</td>
-        <td></td>
+        <td>$marketReference</td>
+        <td>The market reference value</td>
     </tr>
 </table>
 
 
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/float">float</a> $marketId):<a href="item#item_models_propertymarketreference">PropertyMarketReference</a>
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/float">float</a> $marketReference):<a href="item#item_models_propertymarketreference">PropertyMarketReference</a>
 </pre>
 
     
-
+Updates a property market reference. The ID of the property and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The property market component data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
-        <td>$marketId</td>
-        <td></td>
+        <td>$marketReference</td>
+        <td>The market reference value</td>
     </tr>
 </table>
 
 
-<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/float">float</a> $marketId):<a href="item#item_models_propertymarketreference">PropertyMarketReference</a>
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/float">float</a> $marketReference):<a href="item#item_models_propertymarketreference">PropertyMarketReference</a>
 </pre>
 
     
-
+Gets a property market reference. The ID of the property and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
-        <td>$marketId</td>
-        <td></td>
+        <td>$marketReference</td>
+        <td>The market reference value</td>
     </tr>
 </table>
 
@@ -5101,14 +5416,14 @@ Repository for property market component
 </pre>
 
     
-
+List of property market references. The ID of the property must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
 </table>
 
@@ -5116,19 +5431,19 @@ Repository for property market component
 <pre>public <strong>getPropertyMarketReferences</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId, <a target="_blank" href="http://php.net/int">int</a> $componentId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-
+Lists all property market references.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/float">float</a></td>
         <td>$referrerId</td>
-        <td></td>
+        <td>The ID of the referrer</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$componentId</td>
-        <td></td>
+        <td>The ID of the component</td>
     </tr>
 </table>
 
@@ -5136,7 +5451,7 @@ Repository for property market component
 
 ### PropertyNameRepositoryContract<a name="item_contracts_propertynamerepositorycontract"></a>
 
-Repository for property name
+The contract for the property name repository
 
 
 #### Namespace
@@ -5151,19 +5466,19 @@ Repository for property name
 </pre>
 
     
-
+Creates a property name. The ID of the property must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The property name data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
 </table>
 
@@ -5171,19 +5486,19 @@ Repository for property name
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
 
     
-
+Deletes a property name. The ID of the property and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The language of the property name</td>
     </tr>
 </table>
 
@@ -5192,24 +5507,24 @@ Repository for property name
 </pre>
 
     
-
+Updates a property name. The ID of the property and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The property name data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The language of the property name</td>
     </tr>
 </table>
 
@@ -5218,35 +5533,35 @@ Repository for property name
 </pre>
 
     
-
+Gets a property name. The ID of the property and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The language of the property name</td>
     </tr>
 </table>
 
 
-<pre>public <strong>findByPropertyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId):<a href="item#item_models_propertyname">PropertyName</a>
+<pre>public <strong>findBypropertyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId):<a href="item#item_models_propertyname">PropertyName</a>
 </pre>
 
     
-
+Lists property names. The ID of the property must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
 </table>
 
@@ -5254,7 +5569,7 @@ Repository for property name
 
 ### PropertyRepositoryContract<a name="item_contracts_propertyrepositorycontract"></a>
 
-Repository for property
+The contract for the property repository
 
 
 #### Namespace
@@ -5269,14 +5584,14 @@ Repository for property
 </pre>
 
     
-
+Creates a property.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The property data as an associative array</td>
     </tr>
 </table>
 
@@ -5285,35 +5600,35 @@ Repository for property
 </pre>
 
     
-
+Gets a property. The ID of the property must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
 </table>
 
 
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_property">Property</a>
 </pre>
 
     
-
+Updates a property. The ID of the property must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The property data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
 </table>
 
@@ -5321,14 +5636,14 @@ Repository for property
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
 
     
-
+Deletes a property. The ID of the property must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
 </table>
 
@@ -5337,14 +5652,14 @@ Repository for property
 </pre>
 
     
-
+Gets a property. The ID of the property must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
 </table>
 
@@ -5352,24 +5667,24 @@ Repository for property
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-
+Lists all properties.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>An array of the shown columns. All columns are returned by default.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td></td>
+        <td>The amount of attribute values shown per page. Default value is 50</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td></td>
+        <td>The shown page. Default value is 1.</td>
     </tr>
 </table>
 
@@ -5377,7 +5692,7 @@ Repository for property
 
 ### PropertySelectionRepositoryContract<a name="item_contracts_propertyselectionrepositorycontract"></a>
 
-Repository for property selection
+The contract for the property selection repository
 
 
 #### Namespace
@@ -5392,19 +5707,19 @@ Repository for property selection
 </pre>
 
     
-
+Creates a property selection. The ID of the property must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The property selection data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
 </table>
 
@@ -5412,19 +5727,19 @@ Repository for property selection
 <pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
 
     
-
+Deletes a property selection. The ID of the property and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The lang of the property selection</td>
     </tr>
 </table>
 
@@ -5433,24 +5748,24 @@ Repository for property selection
 </pre>
 
     
-
+Updates a property selection. The ID of the property and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The property selection data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The lang of the property selection</td>
     </tr>
 </table>
 
@@ -5459,19 +5774,19 @@ Repository for property selection
 </pre>
 
     
-
+Get a property selection. The ID of the property and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The lang of the property selection</td>
     </tr>
 </table>
 
@@ -5480,14 +5795,14 @@ Repository for property selection
 </pre>
 
     
-
+List of property selections. The ID of the property must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyId</td>
-        <td></td>
+        <td>The ID of the property</td>
     </tr>
 </table>
 
@@ -5800,9 +6115,785 @@ Returns this model as an array.
 # SalesPrice<a name="item_salesprice"></a>
     
 ## Contracts<a name="item_salesprice_contracts"></a>
+### SalesPriceAccountRepositoryContract<a name="item_contracts_salespriceaccountrepositorycontract"></a>
+
+The contract for the sales price account repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\SalesPrice\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salespriceaccount">SalesPriceAccount</a>
+</pre>
+
+    
+Create a sales price account. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The sales price account data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/int">int</a> $accountType, <a target="_blank" href="http://php.net/int">int</a> $accountId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes a sales price account. The ID of the sales price, the type and the ID of the account must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$accountType</td>
+        <td>The type of the account</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$accountId</td>
+        <td>The ID of the account</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/int">int</a> $accountType, <a target="_blank" href="http://php.net/int">int</a> $accountId):<a href="item#item_models_salespriceaccount">SalesPriceAccount</a>
+</pre>
+
+    
+Gets a sales price account. The ID of the sales price, the type and the ID of the account must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$accountType</td>
+        <td>The type of the account</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$accountId</td>
+        <td>The ID of the account</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists sales price accounts. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes sales price accounts. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+
+### SalesPriceCountryRepositoryContract<a name="item_contracts_salespricecountryrepositorycontract"></a>
+
+The contract for the sales price country repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\SalesPrice\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salespricecountry">SalesPriceCountry</a>
+</pre>
+
+    
+Creates a new sales price country. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The sales price country data as an associative array.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/int">int</a> $countryId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes a sales price country. The ID of the sales price and the ID of the country must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td>The ID of the country</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/int">int</a> $countryId):<a href="item#item_models_salespricecountry">SalesPriceCountry</a>
+</pre>
+
+    
+Gets a sales price country. The ID of the sales price and the ID of the country must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td>The ID of the country</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists sales price countries. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes sales price countries. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+
+### SalesPriceCurrencyRepositoryContract<a name="item_contracts_salespricecurrencyrepositorycontract"></a>
+
+The contract for the sales price currency repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\SalesPrice\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salespricecurrency">SalesPriceCurrency</a>
+</pre>
+
+    
+Creates a sales price currency. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The sales price currency data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/string">string</a> $currency):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes a sales price currency. The ID of the sales price and the currency must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$currency</td>
+        <td>The currency of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/string">string</a> $currency):<a href="item#item_models_salespricecurrency">SalesPriceCurrency</a>
+</pre>
+
+    
+Gets a sales price currency. The ID of the sales price and the currency must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$currency</td>
+        <td>The currency of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists sales price currencies. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes sales price currencies. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+
+### SalesPriceCustomerClassRepositoryContract<a name="item_contracts_salespricecustomerclassrepositorycontract"></a>
+
+The contract for the sales price customer class repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\SalesPrice\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salespricecustomerclass">SalesPriceCustomerClass</a>
+</pre>
+
+    
+Creates a sales price customer class. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The sales price customer class data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/int">int</a> $customerClassId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes a sales price customer class. The ID of the sales price and the ID of the customer class must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$customerClassId</td>
+        <td>The ID of the customer class</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/int">int</a> $customerClassId):<a href="item#item_models_salespricecustomerclass">SalesPriceCustomerClass</a>
+</pre>
+
+    
+Gets a sales price customer class. The ID of the sales price and the ID of the customer class must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$customerClassId</td>
+        <td>The ID of the customer class</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists sales price customer classes. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes sales price customer classes. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+
+### SalesPriceNameRepositoryContract<a name="item_contracts_salespricenamerepositorycontract"></a>
+
+The contract for the sales price name repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\SalesPrice\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salespricename">SalesPriceName</a>
+</pre>
+
+    
+Creates a sales price name. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The sales price name data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_salespricename">SalesPriceName</a>
+</pre>
+
+    
+Updates a sales price name. The ID of the sales price and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The sales price name data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The lang of the sales price name</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes a sales price name. The ID of the sales price and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The lang of the sales price name</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_salespricename">SalesPriceName</a>
+</pre>
+
+    
+Gets a sales price name. The ID of the sales price and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The lang of the sales price name</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists sales price names. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+
+### SalesPriceOnlineStoreRepositoryContract<a name="item_contracts_salespriceonlinestorerepositorycontract"></a>
+
+The contract for the sales price online store repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\SalesPrice\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salespriceonlinestore">SalesPriceOnlineStore</a>
+</pre>
+
+    
+Creates a sales price online store. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The sales price online store data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/int">int</a> $onlineStoreId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes a sales price online store. The ID of the sales price and the ID of the online store must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$onlineStoreId</td>
+        <td>The ID of the online store</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes sales price online stores. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/int">int</a> $onlineStoreId):<a href="item#item_models_salespriceonlinestore">SalesPriceOnlineStore</a>
+</pre>
+
+    
+Gets a sales price online store. The ID of the sales price and the ID of the online store must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$onlineStoreId</td>
+        <td>The ID of the online store</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists sales price online stores. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+
+### SalesPriceReferrerRepositoryContract<a name="item_contracts_salespricereferrerrepositorycontract"></a>
+
+The contract for the sales price referrer repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\SalesPrice\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salespricereferrer">SalesPriceReferrer</a>
+</pre>
+
+    
+Creates a sales price referrer. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The sales price referrer data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/int">int</a> $referrerId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes a sales price referrer. The ID of the sales price and the ID of the referrer must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$referrerId</td>
+        <td>The ID of the referrer</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId, <a target="_blank" href="http://php.net/int">int</a> $referrerId):<a href="item#item_models_salespricereferrer">SalesPriceReferrer</a>
+</pre>
+
+    
+Gets a sales price referrer. The ID of the sales price and the ID of the referrer must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$referrerId</td>
+        <td>The ID of the referrer</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists sales price referrers. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes sales price referrers. The ID of the sales price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$salesPriceId</td>
+        <td>The ID of the sales price</td>
+    </tr>
+</table>
+
+
+
 ### SalesPriceRepositoryContract<a name="item_contracts_salespricerepositorycontract"></a>
 
-sales price
+The contract for the sales price repository
 
 
 #### Namespace
@@ -5817,14 +6908,14 @@ sales price
 </pre>
 
     
-Show an VariationSalesPrice by given id.
+Gets a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td></td>
+        <td>The ID of the sales price</td>
     </tr>
 </table>
 
@@ -5833,14 +6924,14 @@ Show an VariationSalesPrice by given id.
 </pre>
 
     
-Create new VariationSalesPrice
+Creates a sales price.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The sales price data as an associative array</td>
     </tr>
 </table>
 
@@ -5849,34 +6940,35 @@ Create new VariationSalesPrice
 </pre>
 
     
-Update an existing VariationSalesPrice
+Updates a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The sales price data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td></td>
+        <td>The ID of the sales price</td>
     </tr>
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
 
     
-Delete an VariationSalesPrice by given id. If at least one relation exists, throws an exception.
+Deletes a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td></td>
+        <td>The ID of the sales price</td>
     </tr>
 </table>
 
@@ -5885,14 +6977,14 @@ Delete an VariationSalesPrice by given id. If at least one relation exists, thro
 </pre>
 
     
-Get list of SalesPrices from type
+Gets a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td></td>
+        <td>The ID of the sales price</td>
     </tr>
 </table>
 
@@ -5901,24 +6993,24 @@ Get list of SalesPrices from type
 </pre>
 
     
-Get list of SalesPrices
+Lists all sales prices.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>An array of the shown columns. All columns are returned by default.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td></td>
+        <td>The amount of sales prices shown per page. Default value is 50</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td></td>
+        <td>The shown page. Default value is 1</td>
     </tr>
 </table>
 
@@ -6370,6 +7462,80 @@ Returns this model as an array.
 # Search<a name="item_search"></a>
     
 ## Contracts<a name="item_search_contracts"></a>
+### IndexItemRepositoryContract<a name="item_contracts_indexitemrepositorycontract"></a>
+
+The contract for the search repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>index</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Index an item
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>indexItemsRecentlyChanged</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Creates or updates index of items which are recently changed
+    
+<pre>public <strong>delete</strong>($itemId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+Deletes item indices
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$itemId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setOutput</strong>(<a href="cloud#cloud_output_outputinterface">OutputInterface</a>
+ $output):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Set OutputInterface
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_output_outputinterface">OutputInterface</a>
+</td>
+        <td>$output</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>execute</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+
 ### ItemElasticSearchSearchRepositoryContract<a name="item_contracts_itemelasticsearchsearchrepositorycontract"></a>
 
 kommt noch
@@ -7136,7 +8302,7 @@ foo
 ## Contracts<a name="item_unit_contracts"></a>
 ### UnitNameRepositoryContract<a name="item_contracts_unitnamerepositorycontract"></a>
 
-Repository for unit name
+The contract for the unit name repository
 
 
 #### Namespace
@@ -7151,39 +8317,40 @@ Repository for unit name
 </pre>
 
     
-
+Creates a unit name. The ID of the unit must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The unit name data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$unitId</td>
-        <td>The unique ID of the unit</td>
+        <td>The ID of the unit</td>
     </tr>
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $unitId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $unitId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
 
     
-
+Deletes a unit name. The ID of the unit and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$unitId</td>
-        <td>The unique ID of the unit</td>
+        <td>The ID of the unit</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td>The language of the unit name</td>
+        <td>The lang of the unit name</td>
     </tr>
 </table>
 
@@ -7192,19 +8359,19 @@ Repository for unit name
 </pre>
 
     
-
+Updates a unit name. The ID of the unit and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The unit name data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$unitId</td>
-        <td>The unique ID of the unit</td>
+        <td>The ID of the unit</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -7218,14 +8385,14 @@ Repository for unit name
 </pre>
 
     
-
+Gets a unit name. The ID of the unit and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$unitId</td>
-        <td>The unique ID of the unit</td>
+        <td>The ID of the unit</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -7235,18 +8402,17 @@ Repository for unit name
 </table>
 
 
-<pre>public <strong>findByUnitId</strong>(<a target="_blank" href="http://php.net/int">int</a> $unitId):<a href="item#item_models_unitname">UnitName</a>
-</pre>
+<pre>public <strong>findByUnitId</strong>(<a target="_blank" href="http://php.net/int">int</a> $unitId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-
+Lists unit names. The ID of the unit must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$unitId</td>
-        <td>The unique ID of the unit</td>
+        <td>The ID of the unit</td>
     </tr>
 </table>
 
@@ -7254,7 +8420,7 @@ Repository for unit name
 
 ### UnitRepositoryContract<a name="item_contracts_unitrepositorycontract"></a>
 
-Repository for Unit
+The contract for the unit repository
 
 
 #### Namespace
@@ -7269,14 +8435,14 @@ Repository for Unit
 </pre>
 
     
-
+Creates a unit.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The unit data as an associative array</td>
     </tr>
 </table>
 
@@ -7285,50 +8451,51 @@ Repository for Unit
 </pre>
 
     
-
+Gets a unit. The ID of the unit must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td>The unique ID of the unit</td>
+        <td>The ID of the unit</td>
     </tr>
 </table>
 
 
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_unit">Unit</a>
 </pre>
 
     
-
+Updates a unit. The ID of the unit must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The unit data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td>The unique ID of the unit</td>
+        <td>The ID of the unit</td>
     </tr>
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
 
     
-
+Deletes a unit. The ID of the unit must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td>The unique ID of the unit</td>
+        <td>The ID of the unit</td>
     </tr>
 </table>
 
@@ -7337,14 +8504,14 @@ Repository for Unit
 </pre>
 
     
-
+Gets a unit. The ID of the unit must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td>The unique ID of the unit</td>
+        <td>The ID of the unit</td>
     </tr>
 </table>
 
@@ -7352,24 +8519,24 @@ Repository for Unit
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-
+Lists all units.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>An array of the shown columns. All columns are returned by default.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td></td>
+        <td>The amount of units shown per page. Default value is 50.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td></td>
+        <td>The shown page. Default value is 1.</td>
     </tr>
 </table>
 
@@ -7654,7 +8821,7 @@ lookup repository for variations
 
 ### VariationRepositoryContract<a name="item_contracts_variationrepositorycontract"></a>
 
-Repository for item basket
+The contract for the variation repository
 
 
 #### Namespace
@@ -7665,18 +8832,18 @@ Repository for item basket
 
 #### Methods
 
-<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $with, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $with, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_variation">Variation</a>
 </pre>
 
     
-
+Gets a variation. The ID of the variation must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The ID of the variation</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -7691,50 +8858,50 @@ Repository for item basket
 </table>
 
 
-<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variation">Variation</a>
 </pre>
 
     
-
+Creates a variation.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The variation data as an associative array</td>
     </tr>
 </table>
 
 
-<pre>public <strong>createPrimary</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>createPrimary</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variation">Variation</a>
 </pre>
 
     
-
+Creates a primary variation.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The variation data as an associative array</td>
     </tr>
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
 </pre>
 
     
-
+Deletes a variation. The ID of the variation must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The ID of the variation</td>
     </tr>
 </table>
 
@@ -7743,14 +8910,14 @@ Repository for item basket
 </pre>
 
     
-
+Get a variation. The ID of the variation must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The ID of the variation</td>
     </tr>
 </table>
 
@@ -8063,7 +9230,7 @@ Returns this model as an array.
 ## Contracts<a name="item_variationbarcode_contracts"></a>
 ### VariationBarcodeRepositoryContract<a name="item_contracts_variationbarcoderepositorycontract"></a>
 
-repository for variation barcode
+The contract of the variation barcode repository
 
 
 #### Namespace
@@ -8078,19 +9245,19 @@ repository for variation barcode
 </pre>
 
     
-Show an VariationBarcode by given id.
+Gets a variation barcode. The ID of the variation and the ID of the barcode must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td></td>
+        <td>The ID of the barcode</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The ID of the variation</td>
     </tr>
 </table>
 
@@ -8099,14 +9266,14 @@ Show an VariationBarcode by given id.
 </pre>
 
     
-Create new VariationBarcode
+Creates a new variation barcode.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The variation barcode data as an associative array</td>
     </tr>
 </table>
 
@@ -8115,24 +9282,24 @@ Create new VariationBarcode
 </pre>
 
     
-Update an existing VariationBarcode
+Updates a variation barcode. The ID of the variation and the ID of the barcode must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The variation barcode data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td></td>
+        <td>The ID of the barcode</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The ID of the variation</td>
     </tr>
 </table>
 
@@ -8141,19 +9308,19 @@ Update an existing VariationBarcode
 </pre>
 
     
-Delete an VariationBarcode by given variation and barcode id
+Deletes a variation barcode. The ID of the variation and the ID of the barcode must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td></td>
+        <td>The ID of the barcode</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The ID of the variation</td>
     </tr>
 </table>
 
@@ -8161,14 +9328,14 @@ Delete an VariationBarcode by given variation and barcode id
 <pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Get list of VariationBarcode by variationId
+Lists variation barcodes. The ID of the variation must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The ID of the variation</td>
     </tr>
 </table>
 
@@ -8226,8 +9393,295 @@ Variation Barcode
     
 Returns this model as an array.
     
+# VariationBundle<a name="item_variationbundle"></a>
+    
+## Contracts<a name="item_variationbundle_contracts"></a>
+### VariationBundleRepositoryContract<a name="item_contracts_variationbundlerepositorycontract"></a>
+
+The contract for the variation bundle repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationBundle\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $bundleId):<a href="item#item_models_variationbundle">VariationBundle</a>
+</pre>
+
+    
+Gets a variation bundle. The ID of the bundle must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$bundleId</td>
+        <td>The ID of the bundle</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationbundle">VariationBundle</a>
+</pre>
+
+    
+Creates a variation bundle.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation bundle data as an associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $bundleId):<a href="item#item_models_variationbundle">VariationBundle</a>
+</pre>
+
+    
+Updates a variation bundle. The ID of the bundle must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation bundle data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$bundleId</td>
+        <td>The ID of the bundle</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $bundleId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes a variation bundle. The ID of the bundle must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$bundleId</td>
+        <td>The ID of the bundle</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationbundle">VariationBundle</a>
+</pre>
+
+    
+Lists variation bundles. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the variation</td>
+    </tr>
+</table>
+
+
+## Models<a name="item_variationbundle_models"></a>
+### VariationBundle<a name="item_models_variationbundle"></a>
+
+The VariationBundle
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationBundle\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The id of the variation bundle</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>variationId</td>
+            <td>The variation id of the variation bundle</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>componentVariationId</td>
+            <td>The variation id of the bundle component</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>componentQuantity</td>
+            <td>The quantity of the bundle component</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lastUpdatedTimestamp</td>
+            <td>The last update date timestamp</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The created at date timestamp</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # VariationCategory<a name="item_variationcategory"></a>
     
+## Contracts<a name="item_variationcategory_contracts"></a>
+### VariationCategoryRepositoryContract<a name="item_contracts_variationcategoryrepositorycontract"></a>
+
+The contract for the variation category repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationCategory\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationcategory">VariationCategory</a>
+</pre>
+
+    
+Gets a variation category. The ID of the variation and the ID of the category must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$categoryId</td>
+        <td>The ID of the category</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationcategory">VariationCategory</a>
+</pre>
+
+    
+Creates a variation category.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation category data as an associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationcategory">VariationCategory</a>
+</pre>
+
+    
+Updates a variation category.  The ID of the variation and the ID of the category must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation category data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$categoryId</td>
+        <td>The ID of the category</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Delete an VariationCategory by given variation and barcode id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$categoryId</td>
+        <td>The ID of the category</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationcategory">VariationCategory</a>
+</pre>
+
+    
+Lists variation categories. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationIdWithInheritance</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationcategory">VariationCategory</a>
+</pre>
+
+    
+Lists variation categories with inheritance. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationcategory_models"></a>
 ### VariationCategory<a name="item_models_variationcategory"></a>
 
@@ -8278,6 +9732,110 @@ Returns this model as an array.
     
 # VariationClient<a name="item_variationclient"></a>
     
+## Contracts<a name="item_variationclient_contracts"></a>
+### VariationClientRepositoryContract<a name="item_contracts_variationclientrepositorycontract"></a>
+
+The contract of the variation client repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationClient\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationclient">VariationClient</a>
+</pre>
+
+    
+Gets a client (store) linked to a variation. The ID of the variation and the plenty ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td>The unique ID of the client (store)</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationclient">VariationClient</a>
+</pre>
+
+    
+Creates a link between a variation and a client (store).
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation client data as an associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes the link between a variation and a client (store). The ID of the variation and the plenty ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td>The unique ID of the client (store)</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationclient">VariationClient</a>
+</pre>
+
+    
+Lists the clients (stores) linked to a variation. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationIdWithInheritance</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationclient">VariationClient</a>
+</pre>
+
+    
+Lists the clients (stores) linked to a variation with inheritance information. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationclient_models"></a>
 ### VariationClient<a name="item_models_variationclient"></a>
 
@@ -8324,6 +9882,120 @@ Returns this model as an array.
     
 # VariationDefaultCategory<a name="item_variationdefaultcategory"></a>
     
+## Contracts<a name="item_variationdefaultcategory_contracts"></a>
+### VariationDefaultCategoryRepositoryContract<a name="item_contracts_variationdefaultcategoryrepositorycontract"></a>
+
+The contract of the variation default category repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationDefaultCategory\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationdefaultcategory">VariationDefaultCategory</a>
+</pre>
+
+    
+Gets the default category of a variation for the client (store) specified. The ID of the variation and the plenty ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td>The unique ID of the client (store)</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationdefaultcategory">VariationDefaultCategory</a>
+</pre>
+
+    
+Creates a link between a variation and a category that designates the category as the default category.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation default category data as an associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationdefaultcategory">VariationDefaultCategory</a>
+</pre>
+
+    
+Updates the default category linked to a variation. The ID of the variation and the plenty ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation default category data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td>The ID of the client (store)</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes the link between a variation and a default category. The ID of the variation and the plenty ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td>The ID of the client (store)</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationdefaultcategory">VariationDefaultCategory</a>
+</pre>
+
+    
+Lists the default categories of a variation for all clients (stores). The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationdefaultcategory_models"></a>
 ### VariationDefaultCategory<a name="item_models_variationdefaultcategory"></a>
 
@@ -8348,15 +10020,15 @@ Variation Default Category
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The id of the variation</td>
+            <td>The unique ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>branchId</td>
-            <td>The id of the category branch</td>
+            <td>The unique ID of the category branch</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
-            <td>The id of the client</td>
+            <td>The unique ID of the client (store)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>manually</td>
@@ -8377,7 +10049,7 @@ Returns this model as an array.
 ## Contracts<a name="item_variationdescription_contracts"></a>
 ### VariationDescriptionRepositoryContract<a name="item_contracts_variationdescriptionrepositorycontract"></a>
 
-Repository for variation descriptions
+The contract of the variation description repository
 
 
 #### Namespace
@@ -8392,14 +10064,14 @@ Repository for variation descriptions
 </pre>
 
     
-Create new description
+Creates texts
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The variation description data as an associative array</td>
     </tr>
 </table>
 
@@ -8408,24 +10080,24 @@ Create new description
 </pre>
 
     
-Updates description
+Updates texts
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The variation description data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The unique ID of the variation</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The unique code of the language</td>
     </tr>
 </table>
 
@@ -8434,19 +10106,19 @@ Updates description
 </pre>
 
     
-Delete description
+Deletes texts
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The unique ID of the variation</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The unique code of the language</td>
     </tr>
 </table>
 
@@ -8455,19 +10127,19 @@ Delete description
 </pre>
 
     
-Find description
+Gets texts
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The unique ID of the variation</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td></td>
+        <td>The unique code of the language</td>
     </tr>
 </table>
 
@@ -8476,14 +10148,14 @@ Find description
 </pre>
 
     
-Find description
+Get texts
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The unique ID of the item texts</td>
     </tr>
 </table>
 
@@ -8491,14 +10163,14 @@ Find description
 <pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Find descriptions
+List texts
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The unique ID of the variation</td>
     </tr>
 </table>
 
@@ -8527,51 +10199,51 @@ Variation Default Category
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The ID of the description</td>
+            <td>The unique ID of the description</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>itemId</td>
-            <td>The ID of the item the description belongs to</td>
+            <td>The unique ID of the item that this description belongs to</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The language of the description</td>
+            <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#countries" target="_blank">language code</a> of the description</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
-            <td>The default name of the item</td>
+            <td>The default name of the item. By default, this name is displayed in the online store. For Default items, this name is also used for markets. Character limit: max. 240 characters.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name2</td>
-            <td>Alternative item name</td>
+            <td>Alternative item name that can be used e.g. for markets. Character limit: max. 240 characters.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name3</td>
-            <td>Alternative item name</td>
+            <td>Alternative item name that can be used e.g. for markets. Character limit: max. 240 characters.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>previewDescription</td>
-            <td>The preview description</td>
+            <td>The preview text. The preview text is a short description that can be displayed in item lists.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>metaDescription</td>
-            <td>The description for search engines</td>
+            <td>The meta description of the item. This description is analysed by search engines and displayed in search results. This text should be treated as an advertising text to maximise click-through from search engine result pages. Current recommended limit is 156 characters.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>description</td>
-            <td>The long description of the item</td>
+            <td>The item description. This is a detailed description displayed in the item layout of the online store.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>technicalData</td>
-            <td>The technical data of the item</td>
+            <td>The technical data for the item. To display the technical data in the online store, insert the template variable TechnicalData and an optional title into the template ItemViewSingleItem.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>urlPath</td>
-            <td>The URL of the item in the online store</td>
+            <td>The URL path of the item in the online store. By default, the URL path consists of the categories and the item name. The path will be assigned automatically by plentymarkets when the item is created and will be displayed as part of the URL when the item is selected in the online store.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>metaKeywords</td>
-            <td>Meta keywords for search engines</td>
+            <td>Meta keywords to tag the item for search engines. More than one keyword can be separated by commas.</td>
         </tr></tbody>
 </table>
 
@@ -8585,6 +10257,118 @@ Returns this model as an array.
     
 # VariationImage<a name="item_variationimage"></a>
     
+## Contracts<a name="item_variationimage_contracts"></a>
+### VariationImageRepositoryContract<a name="item_contracts_variationimagerepositorycontract"></a>
+
+The contract of the variation image repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationImage\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationimage">VariationImage</a>
+</pre>
+
+    
+Creates link between image and variation
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation image data as an associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $imageId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes Link between image and variation
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The unique ID of the image</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByImageId</strong>(<a target="_blank" href="http://php.net/int">int</a> $imageId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists variations linked to an image
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The unique ID of the image</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists images linked to a variation
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists all images linked to an item. The ID of the item must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The unique ID of the image</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_variationimage">VariationImage</a>
+</pre>
+
+    
+Gets an image link
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The unique ID of the image link</td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationimage_models"></a>
 ### VariationImage<a name="item_models_variationimage"></a>
 
@@ -8609,19 +10393,19 @@ Returns this model as an array.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The ID of the image link</td>
+            <td>The unique ID of the link between a variation and an image</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>itemId</td>
-            <td>The ID of the item</td>
+            <td>The unique ID of the item</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The ID of the item variation</td>
+            <td>The unique ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>imageId</td>
-            <td>The ID of the image</td>
+            <td>The unique ID of the image</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
@@ -8629,7 +10413,7 @@ Returns this model as an array.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>
-            <td>The time the link from image to variation was last updated.</td>
+            <td>The time the link between an image and a variation was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -8643,6 +10427,110 @@ Returns this model as an array.
     
 # VariationMarket<a name="item_variationmarket"></a>
     
+## Contracts<a name="item_variationmarket_contracts"></a>
+### VariationMarketRepositoryContract<a name="item_contracts_variationmarketrepositorycontract"></a>
+
+The contract of the variation market repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationMarket\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/double">double</a> $marketplaceId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationmarket">VariationMarket</a>
+</pre>
+
+    
+Gets the data of a market linked to a variation. The ID of the market and the ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/double">double</a></td>
+        <td>$marketplaceId</td>
+        <td>The unique ID of the market</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationmarket">VariationMarket</a>
+</pre>
+
+    
+Creates a link between a market and a variation and adds market data.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation market data as an associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $marketplaceId, <a target="_blank" href="http://php.net/double">double</a> $variationId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes the link between a market and a variation. The ID of the market and the ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$marketplaceId</td>
+        <td>The unique ID of the market</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/double">double</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationmarket">VariationMarket</a>
+</pre>
+
+    
+Lists the markets linked to a variation. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationIdWithInheritance</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationmarket">VariationMarket</a>
+</pre>
+
+    
+Lists the markets linked to a variation with inheritance details. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationmarket_models"></a>
 ### VariationMarket<a name="item_models_variationmarket"></a>
 
@@ -8667,15 +10555,15 @@ Variation Market
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The id of the variation</td>
+            <td>The unique ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>marketId</td>
-            <td>The id of the market</td>
+            <td>The unique ID of the market</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The created at date timestamp</td>
+            <td>The time the link between the variation and the market was created.</td>
         </tr></tbody>
 </table>
 
@@ -8689,6 +10577,104 @@ Returns this model as an array.
     
 # VariationMarketIdentNumber<a name="item_variationmarketidentnumber"></a>
     
+## Contracts<a name="item_variationmarketidentnumber_contracts"></a>
+### VariationMarketIdentNumberRepositoryContract<a name="item_contracts_variationmarketidentnumberrepositorycontract"></a>
+
+The contract of the variation market ident number repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationMarketIdentNumber\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationMarketIdentNumberId):<a href="item#item_models_variationmarketidentnumber">VariationMarketIdentNumber</a>
+</pre>
+
+    
+Gets a market ident number (ASIN/ePID) of a variation. The ID of the market ident number must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationMarketIdentNumberId</td>
+        <td>The unique ID of the market ident number</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationmarketidentnumber">VariationMarketIdentNumber</a>
+</pre>
+
+    
+Creates a new market ident number (ASIN/ePID) for a variation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation market ident number data as an associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $variationMarketIdentNumberId):<a href="item#item_models_variationmarketidentnumber">VariationMarketIdentNumber</a>
+</pre>
+
+    
+Updates a market ident number (ASIN/ePID) of a variation. The ID of the market ident number must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation market ident number data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationMarketIdentNumberId</td>
+        <td>The unique ID of the market ident number</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationMarketIdentNumberId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes a market ident number (ASIN/ePID) of a variation. The ID of the market ident number must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationMarketIdentNumberId</td>
+        <td>The unique ID of the market ident number</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists the market ident numbers (ASIN/ePID) of a variation. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationmarketidentnumber_models"></a>
 ### VariationMarketIdentNumber<a name="item_models_variationmarketidentnumber"></a>
 
@@ -8713,27 +10699,27 @@ Variation Market Ident Number
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the variation market ident number</td>
+            <td>The unique ID of the market ident number (ASIN/ePID) of a variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The id of the variation</td>
+            <td>The unique ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>countryId</td>
-            <td>The country id of the variation market ident number</td>
+            <td>The country code of the market ident number (ASIN/ePID)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>type</td>
-            <td>The type of the variation market ident number</td>
+            <td>The type of market ident number (ASIN/ePID)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
-            <td>The position of the variation market ident number</td>
+            <td>The position of the market ident number  (ASIN/ePID)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>value</td>
-            <td>The value of the variation market ident number</td>
+            <td>The value of the market ident number (ASIN/ePID)</td>
         </tr></tbody>
 </table>
 
@@ -8747,6 +10733,238 @@ Returns this model as an array.
     
 # VariationProperty<a name="item_variationproperty"></a>
     
+## Contracts<a name="item_variationproperty_contracts"></a>
+### VariationPropertyRepositoryContract<a name="item_contracts_variationpropertyrepositorycontract"></a>
+
+The contract of the variation property repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationProperty\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationproperty">VariationProperty</a>
+</pre>
+
+    
+Creates a link between a property and a variation and adds property data.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation property value as an associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_variationproperty">VariationProperty</a>
+</pre>
+
+    
+Updates the data of a property linked to a variation. The ID of the variation property must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation property data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The unique ID of the link between a property and a variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes the link between a property and a variation. The ID of the variation property must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The unique ID of the link between a property and a variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_variationproperty">VariationProperty</a>
+</pre>
+
+    
+Gets the data of a property linked to a variation. The ID of the variation property must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The unique ID of the link between a property and a variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists all properties linked to variations.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$perPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### VariationPropertyValueRepositoryContract<a name="item_contracts_variationpropertyvaluerepositorycontract"></a>
+
+The contract of the variation property value repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationProperty\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationpropertyvalue">VariationPropertyValue</a>
+</pre>
+
+    
+Creates a link between a property value and a variation and adds property value data.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation property value data as an associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_variationpropertyvalue">VariationPropertyValue</a>
+</pre>
+
+    
+Gets the data of a property value linked to a variation. The ID of the variation property value and the variation ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The unique ID of the link between a variation and a property value</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_variationpropertyvalue">VariationPropertyValue</a>
+</pre>
+
+    
+Updates the data of a variation property linked to a variation. The ID of the variation property value and the variation ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation property value data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the Variation</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The unique ID of the link between a property value and a variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes the link between a property value and a variation. The ID of the variation property value and the variation ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the variation</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The unique ID of the link between a variation and a property value</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_variationpropertyvalue">VariationPropertyValue</a>
+</pre>
+
+    
+Gets the data of a property value linked to a variation. The ID of the variation property value must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the link between a property value and a variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists the property values linked to a variation. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationproperty_models"></a>
 ### VariationProperty<a name="item_models_variationproperty"></a>
 
@@ -8775,7 +10993,7 @@ The VariationPropertyValue
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>propertyId</td>
-            <td>The unique ID of the property</td>
+            <td>The unique ID of the link between the variation and the property</td>
         </tr><tr>
             <td><a href="item#item_models_property">Property</a>
 </td>
@@ -8816,7 +11034,7 @@ The VariationPropertyValue
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The unique ID of the property value of the variation.</td>
+            <td>The unique ID of the link between the variation and the property value</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
@@ -8824,27 +11042,27 @@ The VariationPropertyValue
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>propertyId</td>
-            <td>The unique ID of the property of the variation.</td>
+            <td>The unique ID of the link between the variation and the property</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>propertySelectionId</td>
-            <td>The unique ID of the property selection</td>
+            <td>The unique ID of the property selection of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>valueInt</td>
-            <td>The integer value associated with the property value of the variation.</td>
+            <td>The int value of the property value of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>valueFloat</td>
-            <td>The float value associated with the property value of the variation.</td>
+            <td>The float value of the property value of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>valueFile</td>
-            <td>The file associated with the property value of the variation.</td>
+            <td>The file value of the property value of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>surcharge</td>
-            <td>The surcharge associated with the property value of the variation.</td>
+            <td>The surcharge of the property value of the variation</td>
         </tr><tr>
             <td><a href="item#item_models_property">Property</a>
 </td>
@@ -8871,7 +11089,7 @@ Returns this model as an array.
 ## Contracts<a name="item_variationsalesprice_contracts"></a>
 ### VariationSalesPriceRepositoryContract<a name="item_contracts_variationsalespricerepositorycontract"></a>
 
-Repository for VariationSalesPrice
+The contract of the variation sales price repository
 
 
 #### Namespace
@@ -8886,19 +11104,19 @@ Repository for VariationSalesPrice
 </pre>
 
     
-Show an VariationSalesPrice by given id.
+Gets the price data of a sales price linked to a variation. The ID of the sales price and the ID of the variation must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td></td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The unique ID of the variation</td>
     </tr>
 </table>
 
@@ -8907,14 +11125,14 @@ Show an VariationSalesPrice by given id.
 </pre>
 
     
-Create new VariationSalesPrice
+Creates a link between a sales price and a variation and adds sales price data.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The variation sales price data as an associative array</td>
     </tr>
 </table>
 
@@ -8923,24 +11141,24 @@ Create new VariationSalesPrice
 </pre>
 
     
-Update an existing VariationSalesPrice
+Updates the data of a sales price linked to a variation.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The variation sales price data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td></td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The unique ID of the variation</td>
     </tr>
 </table>
 
@@ -8949,19 +11167,19 @@ Update an existing VariationSalesPrice
 </pre>
 
     
-Delete an VariationSalesPrice by given id. If at least one relation exists, throws an exception.
+Deletes a link between a sales price and a variation. The ID of the sales price and the ID of the variation must be specified. An exception is thrown if at least one relation exists.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td></td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The unique ID of the variation</td>
     </tr>
 </table>
 
@@ -8970,14 +11188,14 @@ Delete an VariationSalesPrice by given id. If at least one relation exists, thro
 </pre>
 
     
-Find an existing VariationSalesPrice by given id.
+Lists the data of the sales prices linked to a variation. The ID of the variation must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The unique ID of the variation</td>
     </tr>
 </table>
 
@@ -8986,14 +11204,14 @@ Find an existing VariationSalesPrice by given id.
 </pre>
 
     
-Find an existing VariationSalesPrice by given id.
+Lists the data of the sales prices linked to a variation with inheritance details. The ID of the variation must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The unique ID of the variation</td>
     </tr>
 </table>
 
@@ -9022,15 +11240,15 @@ VariationSalesPrice
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The id of the variation</td>
+            <td>The unique ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>salesPriceId</td>
-            <td>The id of the sales price</td>
+            <td>The unique ID of the sales price</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/double">double</a></td>
             <td>price</td>
-            <td>The price of the variation sales price</td>
+            <td>The price of the variation saved for this sales price</td>
         </tr></tbody>
 </table>
 
@@ -9047,7 +11265,7 @@ Returns this model as an array.
 ## Contracts<a name="item_variationsku_contracts"></a>
 ### VariationSkuRepositoryContract<a name="item_contracts_variationskurepositorycontract"></a>
 
-Repository for VariationSku
+The contract of the variation sku repository
 
 
 #### Namespace
@@ -9061,24 +11279,24 @@ Repository for VariationSku
 <pre>public <strong>generateSku</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $accountId, $sku = null, <a target="_blank" href="http://php.net/bool">bool</a> $setLastExportedTimestamp = true):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
-Generate or update Sku
+Generates or updates an SKU
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The unique ID of the SKU</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$marketId</td>
-        <td></td>
+        <td>The unique ID of the market</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$accountId</td>
-        <td></td>
+        <td>The unique ID of the account</td>
     </tr>
     <tr>
         <td><a href="miscellaneous#miscellaneous__"></a>
@@ -9098,7 +11316,7 @@ Generate or update Sku
 </pre>
 
     
-Create sku
+Creates an SKU
     
 ##### <strong>Parameters</strong>
     
@@ -9114,7 +11332,7 @@ Create sku
 </pre>
 
     
-Update sku
+Updates an SKU
     
 ##### <strong>Parameters</strong>
     
@@ -9126,7 +11344,7 @@ Update sku
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$skuId</td>
-        <td></td>
+        <td>The unique ID of the SKU</td>
     </tr>
 </table>
 
@@ -9135,14 +11353,14 @@ Update sku
 </pre>
 
     
-Delete sku
+Deletes an SKU
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$skuId</td>
-        <td></td>
+        <td>The unique ID of the SKU</td>
     </tr>
 </table>
 
@@ -9151,14 +11369,14 @@ Delete sku
 </pre>
 
     
-Show sku
+Gets an SKU
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$skuId</td>
-        <td></td>
+        <td>The unique ID of the SKU</td>
     </tr>
 </table>
 
@@ -9166,7 +11384,7 @@ Show sku
 <pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/array">array</a> $filter):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Search sku´s
+Lists SKUs
     
 ##### <strong>Parameters</strong>
     
@@ -9181,14 +11399,14 @@ Search sku´s
 <pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Find sku´s by variationId
+Lists SKUs
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td></td>
+        <td>The unique ID of the variation</td>
     </tr>
 </table>
 
@@ -9217,23 +11435,23 @@ The variationSku model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The row id of the table plenty_item_variation_market_status.</td>
+            <td>The row ID of the table plenty_item_variation_market_status</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The id of the variation.</td>
+            <td>The ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>marketId</td>
-            <td>The id of the marketplace.</td>
+            <td>The ID of the market</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>accountId</td>
-            <td>The id of the marketplace account.</td>
+            <td>The ID of the market account</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>initialSku</td>
-            <td>The initial SKU of the variation. The initial SKU can not be modified even if you make changes to the variation SKU. It is possible, however, to reset the variation SKU to the initial SKU.</td>
+            <td>The initial SKU of the variation. The initial SKU cannot be modified even if changes are made to the variation SKU. However, the variation SKU can be reset to the initial SKU.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>variationSku</td>
@@ -9257,7 +11475,7 @@ The variationSku model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>status</td>
-            <td>The status of the variation after the export. Possible entries are INACTIVE, SEND and ACTIVE.</td>
+            <td>The status of the variation after the export. Possible values are INACTIVE, SEND and ACTIVE.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>additionalInformation</td>
@@ -9278,7 +11496,7 @@ Returns this model as an array.
 ## Contracts<a name="item_variationstock_contracts"></a>
 ### VariationStockRepositoryContract<a name="item_contracts_variationstockrepositorycontract"></a>
 
-Get, list, book and correct stock or get stock movements.
+The contract of the variation stock repository
 
 
 #### Namespace
@@ -9574,6 +11792,119 @@ Returns this model as an array.
     
 # VariationSupplier<a name="item_variationsupplier"></a>
     
+## Contracts<a name="item_variationsupplier_contracts"></a>
+### VariationSupplierRepositoryContract<a name="item_contracts_variationsupplierrepositorycontract"></a>
+
+The contract for the variation supplier repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationSupplier\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationSupplierId):<a href="item#item_models_variationsupplier">VariationSupplier</a>
+</pre>
+
+    
+Gets the data of a supplier linked to a variation. The variation supplier ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationSupplierId</td>
+        <td>The unique ID of the link between variation and supplier</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationsupplier">VariationSupplier</a>
+</pre>
+
+    
+Creates a link between a supplier and a variation and adds supplier data.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation supplier data as an associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $variationSupplierId):<a href="item#item_models_variationsupplier">VariationSupplier</a>
+</pre>
+
+    
+Updates the data of a supplier linked to a variation. The variation supplier ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation supplier data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationSupplierId</td>
+        <td>The unique ID of the link between variation and supplier</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationSupplierId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes a link between a supplier and a variation. The variation supplier ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationSupplierId</td>
+        <td>The unique ID of the link between variation and supplier</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists the data of the suppliers linked to a variation. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationIdWithInheritance</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists the data of the suppliers linked to a variation with inheritance details. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationsupplier_models"></a>
 ### VariationSupplier<a name="item_models_variationsupplier"></a>
 
@@ -9598,55 +11929,55 @@ Variation Supplier
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the variation supplier</td>
+            <td>The unique ID of the link between variation and supplier</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The id of the variation</td>
+            <td>The unique ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>supplierId</td>
-            <td>The id of the supplier</td>
+            <td>The unique ID of the supplier</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/double">double</a></td>
             <td>purchasePrice</td>
-            <td>The purchase price of the variation supplier</td>
+            <td>The price at which the variation was purchased from this supplier.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>minimumOrderValue</td>
-            <td>The minimum order value of the variation supplier</td>
+            <td>The minimum quantity of the variation that has to be ordered from the supplier. This value is also used as a quantity suggestion when creating reorders.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>itemNumber</td>
-            <td>The item number of the variation supplier</td>
+            <td>The external item number assigned to the variation by this supplier</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lastPriceQuery</td>
-            <td>The last price of the variation supplier</td>
+            <td>The date of the last price query to this supplier. This helps to plan price negotiations.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>deliveryTimeInDays</td>
-            <td>The delivery time in days of the variation supplier</td>
+            <td>The delivery time in days for the variation saved for this supplier</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/double">double</a></td>
             <td>discount</td>
-            <td>The discount of the variation supplier</td>
+            <td>The discount in percent the supplier grants for the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>discountable</td>
-            <td></td>
+            <td>Flag that indicates if the supplier's discount for this variation is active.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/double">double</a></td>
             <td>packagingUnit</td>
-            <td>The packaging unit of the variation supplier</td>
+            <td>The packaging unit of the supplier if it differs from the packaging unit settings in plentymarkets.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lastUpdateTimestamp</td>
-            <td>The last update date timestamp</td>
+            <td>The time the supplier data was last updated</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The created at date timestamp</td>
+            <td>The time the supplier data was created</td>
         </tr></tbody>
 </table>
 
@@ -9660,6 +11991,136 @@ Returns this model as an array.
     
 # VariationWarehouse<a name="item_variationwarehouse"></a>
     
+## Contracts<a name="item_variationwarehouse_contracts"></a>
+### VariationWarehouseRepositoryContract<a name="item_contracts_variationwarehouserepositorycontract"></a>
+
+The contract for the variation warehouse repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationWarehouse\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $warehouseId):<a href="item#item_models_variationwarehouse">VariationWarehouse</a>
+</pre>
+
+    
+Gets the data of a warehouse linked to a variation. The ID of the variation and the ID of the warehouse must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td>The unique ID of the warehouse</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationwarehouse">VariationWarehouse</a>
+</pre>
+
+    
+Creates a link between a warehouse and a variation and adds warehouse data.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation warehouse data as an associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $warehouseId):<a href="item#item_models_variationwarehouse">VariationWarehouse</a>
+</pre>
+
+    
+Updates the data of a warehouse linked to a variation. The ID of the variation and the ID of the warehouse must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The variation warehouse data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td>The unique ID of the warehouse</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $warehouseId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes the link between a warehouse and a variation. The ID of the variation and the ID of the warehouse must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td>The unique ID of the warehouse</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationwarehouse">VariationWarehouse</a>
+</pre>
+
+    
+Lists all warehouse data of a variation. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByVariationIdWithInheritance</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationwarehouse">VariationWarehouse</a>
+</pre>
+
+    
+Lists all warehouse data of a variation with inheritance details. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationwarehouse_models"></a>
 ### VariationWarehouse<a name="item_models_variationwarehouse"></a>
 
@@ -9684,47 +12145,47 @@ Variation Warehouse
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The id of the variation</td>
+            <td>The unique ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>warehouseId</td>
-            <td>The id of the warehouse</td>
+            <td>The unique ID of the warehouse</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>warehouseZoneId</td>
-            <td>The id of the warehouse zone</td>
+            <td>The unique ID of the warehouse zone</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>storageLocationType</td>
-            <td>The storage location type of the variation warehouse</td>
+            <td>The storage location type of the warehouse</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>reorderLevel</td>
-            <td>The reorder level of the variation warehouse</td>
+            <td>The reorder level for the variation in this warehouse</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>maximumStock</td>
-            <td>The maximum stock of the variation warehouse</td>
+            <td>The maximum stock for the variation in this warehouse</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>stockTurnoverInDays</td>
-            <td>The stock turnover in days of the variation warehouse</td>
+            <td>The stock turnover in days for the variation in this warehouse</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>storageLocation</td>
-            <td>The storage location of the variation warehouse</td>
+            <td>The suggested storage location of the variation in this warehouse</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>stockBuffer</td>
-            <td>The stock buffer of the variation warehouse</td>
+            <td>The stock buffer for the variation in this warehouse</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lastUpdateTimestamp</td>
-            <td>The last update date timestamp</td>
+            <td>The time the warehouse data was last updated.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The created at date timestamp</td>
+            <td>The time the warehouse data was created.</td>
         </tr></tbody>
 </table>
 
