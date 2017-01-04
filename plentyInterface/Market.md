@@ -1028,7 +1028,7 @@ The market settings model.
             <td>The attribute that this settings are related to.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>propertyItem</td>
+            <td>property</td>
             <td>The property item that this settings are related to.</td>
         </tr></tbody>
 </table>

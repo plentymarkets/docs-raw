@@ -3797,6 +3797,10 @@ The item model
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>itemProperties</td>
             <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>itemCrossSelling</td>
+            <td></td>
         </tr></tbody>
 </table>
 
@@ -3869,6 +3873,142 @@ The item text model
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>urlPath</td>
             <td>The item's URL path in the online store. By default, the URL path consists of the categories and the item name. The path is assigned automatically when the item is created and is displayed as part of the URL when the item is selected in the online store.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# ItemCrossSelling<a name="item_itemcrossselling"></a>
+    
+## Contracts<a name="item_itemcrossselling_contracts"></a>
+### ItemCrossSellingRepositoryContract<a name="item_contracts_itemcrosssellingrepositorycontract"></a>
+
+Repository for ItemCrossSelling
+
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemCrossSelling\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_itemcrossselling">ItemCrossSelling</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a href="item#item_models_itemcrossselling">ItemCrossSelling</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $crossItemId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$crossItemId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Models<a name="item_itemcrossselling_models"></a>
+### ItemCrossSelling<a name="item_models_itemcrossselling"></a>
+
+The item cross selling model including item
+
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemCrossSelling\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemId</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>crossItemId</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>relationship</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>dynamic</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="item#item_models_item">Item</a>
+</td>
+            <td>item</td>
+            <td></td>
         </tr></tbody>
 </table>
 
@@ -5922,6 +6062,47 @@ The PropertyGroup including PropertyGroupName
 `Plenty\Modules\Item\Property\Models`
 
 
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The unique ID of the property group</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>backendName</td>
+            <td>The back end name of the property group. This name is not visible to customers.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>orderPropertyGroupingType</td>
+            <td>Indicates how order properties are grouped for selection in the order process. This parameter is applicable to order properties of the type None only.<ul><li>none = Order properties are not grouped.</li><li>single = One of the grouped order properties can be selected from the drop-down list.</li><li>multi = Multiple order properties can be selected.</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isSurchargePercental</td>
+            <td>Flag that indicates if surcharge values are calculated in percent.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>ottoComponentId</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the property group was last updated.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>names</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
 
 #### Methods
 
@@ -5940,6 +6121,40 @@ The PropertyGroupName including PropertyGroup
 
 `Plenty\Modules\Item\Property\Models`
 
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>propertyGroupId</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lang</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>description</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="item#item_models_propertygroup">PropertyGroup</a>
+</td>
+            <td>propertyGroup</td>
+            <td></td>
+        </tr></tbody>
+</table>
 
 
 #### Methods
@@ -7461,6 +7676,208 @@ Returns this model as an array.
     
 # Search<a name="item_search"></a>
     
+## Aggregations<a name="item_search_aggregations"></a>
+### AttributeValueListAggregation<a name="item_aggregations_attributevaluelistaggregation"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Aggregations`
+
+
+
+#### Methods
+
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getField</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getSize</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getAggregation</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getPath</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>addFilter</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+ $filter):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+</td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSource</strong>(<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+ $source):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</td>
+        <td>$source</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setSorting</strong>(<a href="cloud#cloud_sorting_sortinginterface">SortingInterface</a>
+ $sorting):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_sorting_sortinginterface">SortingInterface</a>
+</td>
+        <td>$sorting</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $rowsPerPage):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$rowsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getSources</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+
+### AttributeValueListAggregationProcessor<a name="item_aggregations_attributevaluelistaggregationprocessor"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Aggregations`
+
+
+
+#### Methods
+
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getDependencies</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addMutator</strong>(<a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+ $mutator):<a href="cloud#cloud_lib_processor">Processor</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+</td>
+        <td>$mutator</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Contracts<a name="item_search_contracts"></a>
 ### IndexItemRepositoryContract<a name="item_contracts_indexitemrepositorycontract"></a>
 
@@ -7555,7 +7972,7 @@ kommt noch
 
     
 <pre>public <strong>setIndex</strong>(<a href="cloud#cloud_index_indexinterface">IndexInterface</a>
- $index):<a href="miscellaneous#miscellaneous__void">void</a>
+ $index):<a href="cloud#cloud_contracts_elasticsearchsearchrepositorycontract">ElasticSearchSearchRepositoryContract</a>
 </pre>
 
     
@@ -7572,8 +7989,8 @@ kommt noch
 </table>
 
 
-<pre>public <strong>addFilter</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
- $filter):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>addSearch</strong>(<a href="cloud#cloud_search_searchinterface">SearchInterface</a>
+ $search):<a href="cloud#cloud_contracts_elasticsearchsearchrepositorycontract">ElasticSearchSearchRepositoryContract</a>
 </pre>
 
     
@@ -7582,102 +7999,9 @@ kommt noch
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+        <td><a href="cloud#cloud_search_searchinterface">SearchInterface</a>
 </td>
-        <td>$filter</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addSource</strong>(<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
- $result):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
-</td>
-        <td>$result</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>setSorting</strong>(<a href="cloud#cloud_sorting_sortinginterface">SortingInterface</a>
- $sorting):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="cloud#cloud_sorting_sortinginterface">SortingInterface</a>
-</td>
-        <td>$sorting</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addMutator</strong>(<a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
- $mutator):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
-</td>
-        <td>$mutator</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addPostProcessor</strong>(<a href="cloud#cloud_processor_processorinterface">ProcessorInterface</a>
- $processor):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="cloud#cloud_processor_processorinterface">ProcessorInterface</a>
-</td>
-        <td>$processor</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>setPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $rowsPerPage):<a href="cloud#cloud_contracts_elasticsearchsearchrepositorycontract">ElasticSearchSearchRepositoryContract</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$page</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$rowsPerPage</td>
+        <td>$search</td>
         <td></td>
     </tr>
 </table>
@@ -7840,6 +8164,12 @@ foo
 </table>
 
 
+<pre>public <strong>isInACategory</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 <pre>public static <strong>getPathByDepth</strong>(<a target="_blank" href="http://php.net/string">string</a> $depth):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
@@ -7908,7 +8238,7 @@ foo
 </table>
 
 
-<pre>public <strong>isVisibleForAnyClient</strong>(<a target="_blank" href="http://php.net/array">array</a> $clientIds):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>isVisibleForAtLeastOneClient</strong>(<a target="_blank" href="http://php.net/array">array</a> $clientIds):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -7964,6 +8294,135 @@ foo
 
 
 
+### ItemFilter<a name="item_filter_itemfilter"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Filter`
+
+
+
+#### Methods
+
+<pre>public <strong>hasId</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasIds</strong>(<a target="_blank" href="http://php.net/array">array</a> $ids):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$ids</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAnImage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>hasFlag1</strong>(<a target="_blank" href="http://php.net/int">int</a> $flagId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$flagId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasFlag2</strong>(<a target="_blank" href="http://php.net/int">int</a> $flagId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$flagId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasManufacturer</strong>(<a target="_blank" href="http://php.net/int">int</a> $manufacturerId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$manufacturerId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAManufacturer</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addStatement</strong>(<a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+ $statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### MarketFilter<a name="item_filter_marketfilter"></a>
 
 foo
@@ -7993,7 +8452,7 @@ foo
 </table>
 
 
-<pre>public <strong>isVisibleForAnyMarket</strong>(<a target="_blank" href="http://php.net/array">array</a> $marketIds):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>isVisibleForAtLeastOneMarket</strong>(<a target="_blank" href="http://php.net/array">array</a> $marketIds):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -8083,11 +8542,6 @@ foo
 </table>
 
 
-<pre>public <strong>getPath</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -8240,7 +8694,7 @@ foo
     
 
     
-<pre>public <strong>hasDescriptionInLanguage</strong>(<a target="_blank" href="http://php.net/string">string</a> $language):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>hasADescriptionInLanguage</strong>(<a target="_blank" href="http://php.net/string">string</a> $language):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -8256,19 +8710,13 @@ foo
 </table>
 
 
-<pre>public <strong>hasImage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>hasAnImageOrItemHasAnImage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
 
     
-<pre>public <strong>hasVariationImage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>hasItemImage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>hasAnImage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -11414,7 +11862,7 @@ Lists SKUs
 ## Models<a name="item_variationsku_models"></a>
 ### VariationSku<a name="item_models_variationsku"></a>
 
-The variationSku model
+The variation SKU model
 
 
 #### Namespace
@@ -11435,47 +11883,51 @@ The variationSku model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The row ID of the table plenty_item_variation_market_status</td>
+            <td>The row id of the table plenty_item_variation_market_status.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The ID of the variation</td>
+            <td>The id of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>marketId</td>
-            <td>The ID of the market</td>
+            <td>The id of the marketplace.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>accountId</td>
-            <td>The ID of the market account</td>
+            <td>The id of the marketplace account.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>initialSku</td>
-            <td>The initial SKU of the variation. The initial SKU cannot be modified even if changes are made to the variation SKU. However, the variation SKU can be reset to the initial SKU.</td>
+            <td>The initial SKU of the variation. The initial SKU can not be modified even if you make changes to the variation SKU. It is possible, however, to reset the variation SKU to the initial SKU.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>variationSku</td>
+            <td>sku</td>
             <td>The SKU of the variation. The SKU is adjustable but may not exist twice for the combination maketId and acoountId.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>active</td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isActive</td>
             <td>Flag that indicates if the item is ready for export (currently not in use).</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>createdTimestamp</td>
+            <td>createdAt</td>
             <td>The time the SKU was created (YYYY-MM-DD HH:MM:SS).</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>lastExportTimestamp</td>
+            <td>exportedAt</td>
             <td>The time the variation was last exported (YYYY-MM-DD HH:MM:SS).</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>deletedTimestamp</td>
+            <td>stockUpdatedAt</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>deletedAt</td>
             <td>The time the variation was deleted (YYYY-MM-DD HH:MM:SS).</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>status</td>
-            <td>The status of the variation after the export. Possible values are INACTIVE, SEND and ACTIVE.</td>
+            <td>The status of the variation after the export. Possible entries are INACTIVE, SEND and ACTIVE.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>additionalInformation</td>

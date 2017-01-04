@@ -132,6 +132,214 @@ Returns current webstoreId
 
     
 
+### CachingRepository<a name="miscellaneous_plugin_cachingrepository"></a>
+
+caching repository
+
+
+#### Namespace
+
+`Plenty\Plugin`
+
+
+
+#### Methods
+
+<pre>public <strong>has</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Determine if an item exists in the cache.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $default = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Retrieve an item from the cache by key.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$default</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>many</strong>(<a target="_blank" href="http://php.net/array">array</a> $keys):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Retrieve multiple items from the cache by key.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$keys</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>pull</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $default = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Retrieve an item from the cache and delete it.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$default</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>put</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value, <a target="_blank" href="http://php.net/int">int</a> $minutes = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Store an item in the cache.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$minutes</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>putMany</strong>(<a target="_blank" href="http://php.net/array">array</a> $values, <a target="_blank" href="http://php.net/int">int</a> $minutes):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Store multiple items in the cache for a given number of minutes.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$minutes</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value, <a target="_blank" href="http://php.net/int">int</a> $minutes):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Store an item in the cache if the key does not exist.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$minutes</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>remember</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/int">int</a> $minutes, <a target="_blank" href="http://php.net/callable">callable</a> $callback):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get an item from the cache, or store the default value.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$minutes</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
+        <td>$callback</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>forget</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Remove an item from the cache.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getPrefix</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+
 ### ConfigRepository<a name="miscellaneous_plugin_configrepository"></a>
 
 configuration repository
@@ -247,6 +455,11 @@ Push a value onto an array configuration value.
 </table>
 
 
+<pre>public static <strong>getPrefix</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
 
 ### Controller<a name="miscellaneous_plugin_controller"></a>
 
@@ -465,6 +678,11 @@ Push a value onto an array session value.
 </table>
 
 
+<pre>public static <strong>getPrefix</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
 ## Validation<a name="miscellaneous_plenty_validation"></a>
 ### DummyAttribute<a name="miscellaneous_validation_dummyattribute"></a>
 
@@ -1606,6 +1824,11 @@ Remove a set of listeners from the dispatcher.
 </table>
 
 
+<pre>public static <strong>getPrefix</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
 
 ### Event<a name="miscellaneous_events_event"></a>
 

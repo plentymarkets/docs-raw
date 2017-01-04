@@ -5,7 +5,7 @@
 ## Contracts<a name="account_address_contracts"></a>
 ### AddressPosRelationRepositoryContract<a name="account_contracts_addressposrelationrepositorycontract"></a>
 
-The contract for the address pos relation repository
+The AddressPosRelationRepositoryContract is the interface for the address POS relation repository.
 
 
 #### Namespace
@@ -20,7 +20,7 @@ The contract for the address pos relation repository
 </pre>
 
     
-Create an address pos relation.
+Creates an address POS relation.
     
 ##### <strong>Parameters</strong>
     
@@ -36,7 +36,7 @@ Create an address pos relation.
 </pre>
 
     
-Update an address pos relation.
+Updates an address POS relation.
     
 ##### <strong>Parameters</strong>
     
@@ -57,7 +57,7 @@ Update an address pos relation.
 </pre>
 
     
-Find an address pos relation.
+Lists address POS relations.
     
 ##### <strong>Parameters</strong>
     
@@ -73,7 +73,7 @@ Find an address pos relation.
 </pre>
 
     
-Delete an address pos relation.
+Deletes an address POS relation.
     
 ##### <strong>Parameters</strong>
     
@@ -85,10 +85,46 @@ Delete an address pos relation.
 </table>
 
 
+<pre>public <strong>listAddressPosRelations</strong>(<a target="_blank" href="http://php.net/array">array</a> $filter = [], <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List address pos relations.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### AddressRepositoryContract<a name="account_contracts_addressrepositorycontract"></a>
 
-The contract for the address repository
+The AddressRepositoryContract is the interface for the address repository contract. This interface allows to get, update, create and delete addresses and address options.
 
 
 #### Namespace
@@ -246,7 +282,7 @@ Creates address options for an address and returns all options of the address.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$addressData</td>
-        <td>Address option data as associative array. Multiple options are possible.</td>
+        <td>The address option data as associative array. Multiple options are possible.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -268,7 +304,7 @@ Updates address options for an address and returns all options of the address.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$addressData</td>
-        <td>Address option data as associative array. Multiple options are possible.</td>
+        <td>The address option data as associative array. Multiple options are possible.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -619,19 +655,19 @@ address contact relation model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The address contact relation id.</td>
+            <td>The ID of the address contact relation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>contactId</td>
-            <td>The contact id.</td>
+            <td>The ID of the contact</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The address type id.</td>
+            <td>The ID of the address type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>addressId</td>
-            <td>The address id.</td>
+            <td>The ID of the address</td>
         </tr><tr>
             <td><a href="account#account_models_address">Address</a>
 </td>
@@ -677,15 +713,15 @@ The address options model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the address option</td>
+            <td>The ID of the address option</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>addressId</td>
-            <td>The id of the address</td>
+            <td>The ID of the address</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The id of the address option type</td>
+            <td>The ID of the address option type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>value</td>
@@ -718,7 +754,7 @@ Returns this model as an array.
 
 ### AddressOptionType<a name="account_models_addressoptiontype"></a>
 
-The address options type model
+The AddressOptionType model
 
 
 #### Namespace
@@ -784,7 +820,7 @@ Returns this model as an array.
 
 ### AddressOptionTypeName<a name="account_models_addressoptiontypename"></a>
 
-The address options type name model
+The AddressOptionTypeName model
 
 
 #### Namespace
@@ -904,7 +940,7 @@ Returns this model as an array.
 
 ### AddressPosRelation<a name="account_models_addressposrelation"></a>
 
-The address pos relation model.
+The address POS relation model
 
 
 #### Namespace
@@ -995,12 +1031,12 @@ The contact address type model
             <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </td>
             <td>names</td>
-            <td>A collection of AddressRelationTypeName objects.</td>
+            <td>A collection of AddressRelationTypeName objects</td>
         </tr><tr>
             <td><a href="account#account_models_addressrelationtypeapplication">AddressRelationTypeApplication</a>
 </td>
             <td>application</td>
-            <td>The address relation type application.</td>
+            <td>The address relation type application</td>
         </tr></tbody>
 </table>
 
@@ -1015,7 +1051,7 @@ Returns this model as an array.
 
 ### AddressRelationTypeApplication<a name="account_models_addressrelationtypeapplication"></a>
 
-The address relation type application model
+The AddressRelationTypeApplication model
 
 
 #### Namespace
@@ -1053,7 +1089,7 @@ The address relation type application model
             <td><a href="account#account_models_addressrelationtype">AddressRelationType</a>
 </td>
             <td>type</td>
-            <td>The type of the application</td>
+            <td>The type of the address relation</td>
         </tr></tbody>
 </table>
 
@@ -1068,7 +1104,7 @@ Returns this model as an array.
 
 ### AddressRelationTypeName<a name="account_models_addressrelationtypename"></a>
 
-The address relation type name model.
+The AddressRelationTypeName model
 
 
 #### Namespace
@@ -1106,7 +1142,7 @@ The address relation type name model.
             <td><a href="account#account_models_addressrelationtype">AddressRelationType</a>
 </td>
             <td>type</td>
-            <td>The type that belongs to the name</td>
+            <td>The type of the address relation</td>
         </tr></tbody>
 </table>
 
@@ -1121,7 +1157,7 @@ Returns this model as an array.
 
 ### AddressSchedulerRelation<a name="account_models_addressschedulerrelation"></a>
 
-address scheduler relation model
+The AddressSchedulerRelation model
 
 
 #### Namespace
@@ -1159,7 +1195,7 @@ address scheduler relation model
             <td><a href="order#order_models_orderscheduler">OrderScheduler</a>
 </td>
             <td>scheduler</td>
-            <td>The scheduler of the relation</td>
+            <td>The scheduler of the order</td>
         </tr></tbody>
 </table>
 
@@ -1174,7 +1210,7 @@ Returns this model as an array.
 
 ### AddressWarehouseRelation<a name="account_models_addresswarehouserelation"></a>
 
-address warehouse relation model
+The AddressWarehouseRelation model
 
 
 #### Namespace
@@ -1244,7 +1280,7 @@ The ContactEventRepositoryContract is the interface for the contact event reposi
 </pre>
 
     
-List contact events identified by the contact that is currently logged into the system.
+Lists contact events identified by the contact that is currently logged into the system.
     
 ##### <strong>Parameters</strong>
     
@@ -1366,7 +1402,7 @@ The ContactAccountRepositoryContract is the interface for the contact account re
 </pre>
 
     
-Returns an account by an id only if it is associated with the given contact id.
+Returns an account by an ID only if it is associated with the given contact ID.
     
 ##### <strong>Parameters</strong>
     
@@ -1415,7 +1451,7 @@ Updates an account. If not already associated, it will associate the account wit
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td>The account data to update as associative array</td>
+        <td>The account data as associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -1763,7 +1799,7 @@ Deletes all options of the given contact. The ID of the contact must be specifie
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$contactId</td>
-        <td>The id of the contact</td>
+        <td>The ID of the contact</td>
     </tr>
 </table>
 
@@ -1823,7 +1859,7 @@ Deletes a contact option. The ID of the option must be specified.
 
 ### ContactPaymentRepositoryContract<a name="account_contracts_contactpaymentrepositorycontract"></a>
 
-The ContactPaymentRepositoryContract is the interface for the contact payment repository. This interface allows to list, get, create, update and delete bank accounts of the contact.
+The ContactPaymentRepositoryContract is the interface for the contact payment repository. This interface allows to list, get, create, update and delete bank details of the contact.
 
 
 #### Namespace
@@ -2535,7 +2571,7 @@ The contact model.
             <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </td>
             <td>orderSchedulers</td>
-            <td>A collection of orderSchedulers of the contact</td>
+            <td>A collection of order schedulers of the contact</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </td>
@@ -2550,12 +2586,12 @@ The contact model.
             <td><a href="account#account_models_contacttype">ContactType</a>
 </td>
             <td>type</td>
-            <td>The ContactType of the contact</td>
+            <td>The type of the contact</td>
         </tr><tr>
             <td><a href="account#account_models_ordersummary">OrderSummary</a>
 </td>
             <td>orderSummary</td>
-            <td>The Order Summary of the contact</td>
+            <td>The order summary of the contact</td>
         </tr></tbody>
 </table>
 
@@ -3148,7 +3184,7 @@ Returns this model as an array.
 
 ### ContactOptionTypeName<a name="account_models_contactoptiontypename"></a>
 
-contact options type name model
+The ContactOptionTypeName model
 
 
 #### Namespace
@@ -3169,11 +3205,11 @@ contact options type name model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the contact option type name entry</td>
+            <td>The ID of the contact option type name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The id of the option type the name belongs to</td>
+            <td>The ID of the option type the name belongs to</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
@@ -3196,7 +3232,7 @@ Returns this model as an array.
 
 ### ContactPosition<a name="account_models_contactposition"></a>
 
-contact position model
+The ContactPosition model
 
 
 #### Namespace
@@ -3267,7 +3303,7 @@ Returns this model as an array.
 
 ### ContactPositionName<a name="account_models_contactpositionname"></a>
 
-contact position name model
+The ContactPositionName model
 
 
 #### Namespace
@@ -3315,7 +3351,7 @@ Returns this model as an array.
 
 ### ContactType<a name="account_models_contacttype"></a>
 
-contact type model
+The ContactType model
 
 
 #### Namespace
@@ -3427,7 +3463,7 @@ Returns this model as an array.
 ## Contracts<a name="account_account_contracts"></a>
 ### AccountRepositoryContract<a name="account_contracts_accountrepositorycontract"></a>
 
-The Repository for accounts and relations between accounts and contacts.
+The AccountRepositoryContract is the interface for the account repository. This interface allows to list, get, create, update and delete accounts. An account contains company-related data. It is also possible to list all contacts of an account.
 
 
 #### Namespace
@@ -4001,7 +4037,7 @@ Returns this model as an array.
 ## Contracts<a name="account_ordersummary_contracts"></a>
 ### OrderSummaryRepositoryContract<a name="account_contracts_ordersummaryrepositorycontract"></a>
 
-The contract for the order summary repository
+The OrderSummaryRepositoryContract is the interface for the order summary repository. This interface allows to list, get, update, create and delete order summaries.
 
 
 #### Namespace

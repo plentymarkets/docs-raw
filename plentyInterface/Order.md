@@ -4289,6 +4289,176 @@ country state
     
 Returns this model as an array.
     
+# Information<a name="order_information"></a>
+    
+## Contracts<a name="order_information_contracts"></a>
+### ShippingInformationRepositoryContract<a name="order_contracts_shippinginformationrepositorycontract"></a>
+
+The ShippingInformationRepositoryContract is the interface for the shipping information repository. This interface allows to get shipping information by order ID, create new shipping information or update shipping information.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\Information\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getShippingInformationByOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a href="order#order_models_shippinginformation">ShippingInformation</a>
+</pre>
+
+    
+Get Shipping Information by an order ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the Order</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>resetShippingInformation</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Delete Shipping Information by an order ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the Order</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>saveShippingInformation</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="order#order_models_shippinginformation">ShippingInformation</a>
+</pre>
+
+    
+Create Shipping Information
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The shipping information data as associative array.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateAdditionalData</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $orderId):<a href="order#order_models_shippinginformation">ShippingInformation</a>
+</pre>
+
+    
+Update Additional Data of Shipping Information by Order ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The additional data as associative array.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateShippingStatus</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $orderId):<a href="order#order_models_shippinginformation">ShippingInformation</a>
+</pre>
+
+    
+Update Shipping Status of Shipping Information by Order ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The status data as associative array.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order.</td>
+    </tr>
+</table>
+
+
+## Models<a name="order_information_models"></a>
+### ShippingInformation<a name="order_models_shippinginformation"></a>
+
+ShippingInformationModel
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\Information\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>orderId</td>
+            <td>The ID of the order</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>shippingServiceProvider</td>
+            <td>The name of the shipping service provider</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>transactionId</td>
+            <td>The ID of the transaction</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>shippingStatus</td>
+            <td>The shipping status. Possible values are 'open', 'prepared' and 'registered'.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>shippingCosts</td>
+            <td>The shipping costs</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>additionalData</td>
+            <td>The additional data. Depending on the shipping service provider selected, this data may contain different information, e.g. shipping service, email address and order ID.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>registrationAt</td>
+            <td>The date and time the shipment was registered</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>shipmentAt</td>
+            <td>The date the items will be shipped</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # ParcelService<a name="order_parcelservice"></a>
     
 ## Models<a name="order_parcelservice_models"></a>
@@ -4468,6 +4638,262 @@ The Parcel Service Preset Name Model
     
 Returns this model as an array.
     
+# ServiceProvider<a name="order_serviceprovider"></a>
+    
+## Contracts<a name="order_serviceprovider_contracts"></a>
+### ShippingServiceProviderPluginRepositoryContract<a name="order_contracts_shippingserviceproviderpluginrepositorycontract"></a>
+
+The ShippingServiceProviderPluginRepositoryContract is the interface for the shipping service provider plugin repository. This interface allows to list shipping service provider plugins.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\ServiceProvider\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>plugins</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+
+### ShippingServiceProviderRepositoryContract<a name="order_contracts_shippingserviceproviderrepositorycontract"></a>
+
+The ShippingServiceProviderRepositoryContract is the interface for the shipping provider repository. This interface allows to list shipping providers.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\ServiceProvider\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+Lists ShippingServiceProvider.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $shippingServiceProviderId):<a href="order#order_models_shippingserviceprovider">ShippingServiceProvider</a>
+</pre>
+
+    
+Get ShippingServiceProvider by ID.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$shippingServiceProviderId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Models<a name="order_serviceprovider_models"></a>
+### ShippingServiceProvider<a name="order_models_shippingserviceprovider"></a>
+
+The service provider model
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\ServiceProvider\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the shipping service provider</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the shipping service provider</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>pluginId</td>
+            <td>The optional ID of the plugin when the shipping service provider is registered as a plugin</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The time the shipping service provider was created</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The time the shipping service provider was updated</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+## Services<a name="order_serviceprovider_services"></a>
+### ShippingServiceProviderService<a name="order_services_shippingserviceproviderservice"></a>
+
+The ShippingServiceProviderService class offers the possibility to register a shipping provider class and method that can be called by plentymarkets shipping controllers.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\ServiceProvider\Services`
+
+
+
+#### Methods
+
+<pre>public <strong>registerShippingProvider</strong>(<a target="_blank" href="http://php.net/string">string</a> $shippingProviderCode, <a target="_blank" href="http://php.net/array">array</a> $shippingProviderNames, <a target="_blank" href="http://php.net/string">string</a> $shippingProviderClass):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$shippingProviderCode</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$shippingProviderNames</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$shippingProviderClass</td>
+        <td></td>
+    </tr>
+</table>
+
+
+# Services<a name="order_services"></a>
+    
+## Entries<a name="order_services_entries"></a>
+### ShippingServiceProviderEntry<a name="order_entries_shippingserviceproviderentry"></a>
+
+The shipping provider entry contains all information needed to use module shipping in plentymarkets shipping .
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\ServiceProvider\Services\Entries`
+
+
+
+#### Methods
+
+<pre>public <strong>getShippingProviderClass</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the
+    
+<pre>public <strong>getShippingProviderMethod</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setShippingProviderClass</strong>(<a target="_blank" href="http://php.net/string">string</a> $shippingProviderClass):<a href="order#order_entries_shippingserviceproviderentry">ShippingServiceProviderEntry</a>
+</pre>
+
+    
+Set the
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$shippingProviderClass</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getShippingProviderNames</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the
+    
+<pre>public <strong>setShippingProviderNames</strong>(<a target="_blank" href="http://php.net/array">array</a> $shippingProviderNames):<a href="order#order_entries_shippingserviceproviderentry">ShippingServiceProviderEntry</a>
+</pre>
+
+    
+Set the
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$shippingProviderNames</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getShippingProviderPluginName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the
+    
+<pre>public <strong>setShippingProviderPluginName</strong>(<a target="_blank" href="http://php.net/string">string</a> $shippingProviderPluginName):<a href="order#order_entries_shippingserviceproviderentry">ShippingServiceProviderEntry</a>
+</pre>
+
+    
+Set the
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$shippingProviderPluginName</td>
+        <td></td>
+    </tr>
+</table>
+
+
 # Status<a name="order_status"></a>
     
 ## Contracts<a name="order_status_contracts"></a>
