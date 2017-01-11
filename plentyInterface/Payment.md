@@ -1389,6 +1389,16 @@ Lists payment methods for a plugin key. The plugin key must be specified.
 </table>
 
 
+<pre>public <strong>allPluginPaymentMethods</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>allOldPaymentMethods</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
 <pre>public <strong>findByPaymentMethodId</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId):<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
 </pre>
 

@@ -542,7 +542,8 @@ Storage Repository
 
 #### Methods
 
-<pre>public <strong>uploadFile</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/string">string</a> $pathToFile, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false, <a target="_blank" href="http://php.net/array">array</a> $metaData = []):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>uploadFile</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/string">string</a> $pathToFile, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false, <a target="_blank" href="http://php.net/array">array</a> $metaData = []):<a href="cloud#cloud_models_storageobject">StorageObject</a>
+</pre>
 
     
 Upload an object by streaming the contents of a file $pathToFile should be absolute path to a file on disk
@@ -577,7 +578,8 @@ Upload an object by streaming the contents of a file $pathToFile should be absol
 </table>
 
 
-<pre>public <strong>uploadObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/string">string</a> $body, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false, <a target="_blank" href="http://php.net/array">array</a> $metaData = []):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>uploadObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/string">string</a> $body, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false, <a target="_blank" href="http://php.net/array">array</a> $metaData = []):<a href="cloud#cloud_models_storageobject">StorageObject</a>
+</pre>
 
     
 Create an object with content in $body
@@ -612,7 +614,8 @@ Create an object with content in $body
 </table>
 
 
-<pre>public <strong>getObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false):<a href="cloud#cloud_models_storageobject">StorageObject</a>
+</pre>
 
     
 Get an object
@@ -633,6 +636,36 @@ Get an object
         <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
         <td>$publicVisible</td>
         <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getObjectUrl</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/bool">bool</a> $publicVisible = false, <a target="_blank" href="http://php.net/int">int</a> $minutesToExpire = 5):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Returns the URL to an object identified by its bucket and key. The URL will be signed and set to expire at the provided time.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$pluginName</td>
+        <td>name of your plugin</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td>e.g. myDir/x/y/z/HelloWorld.txt</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$publicVisible</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$minutesToExpire</td>
+        <td>Minutes between 1 and 15</td>
     </tr>
 </table>
 
@@ -707,6 +740,52 @@ Executes the DeleteObject operation.
     <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$publicVisible</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listObjects</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $prefix = &quot;&quot;, <a target="_blank" href="http://php.net/int">int</a> $limit, <a target="_blank" href="http://php.net/string">string</a> $startKey = &quot;&quot;, <a target="_blank" href="http://php.net/string">string</a> $continuationToken = &quot;&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $publicVisible = false, <a target="_blank" href="http://php.net/bool">bool</a> $resultKeyWithoutPrefix = true):<a href="cloud#cloud_models_storageobjectlist">StorageObjectList</a>
+</pre>
+
+    
+Returns some or all (up to 1000) objects
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$pluginName</td>
+        <td>name of your plugin</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$prefix</td>
+        <td>Limits the response to keys that begin with the specified prefix.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$limit</td>
+        <td>The total number of items to return.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$startKey</td>
+        <td>is where you want to start listing from. $startKey can be any key in the bucket.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$continuationToken</td>
+        <td>indicates that the list is being continued on this bucket with a token.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$publicVisible</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$resultKeyWithoutPrefix</td>
         <td></td>
     </tr>
 </table>

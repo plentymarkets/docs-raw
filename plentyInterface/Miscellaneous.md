@@ -2929,6 +2929,56 @@ describes properties of a Model
 </table>
 
 
+
+### Resources<a name="miscellaneous_contracts_resources"></a>
+
+Resource
+
+
+#### Namespace
+
+`Plenty\Plugin\Data\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>load</strong>(<a target="_blank" href="http://php.net/string">string</a> $resourceName, <a target="_blank" href="http://php.net/array">array</a> $options = []):<a href="miscellaneous#miscellaneous_model_resourceinformation">ResourceInformation</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$resourceName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$options</td>
+        <td>[optional]</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>exists</strong>(<a target="_blank" href="http://php.net/string">string</a> $resourceName):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$resourceName</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Model<a name="miscellaneous_data_model"></a>
 ### PropertyInformation<a name="miscellaneous_model_propertyinformation"></a>
 
@@ -2954,6 +3004,36 @@ property information
 
     
 <pre>public <strong>getDescription</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+
+### ResourceInformation<a name="miscellaneous_model_resourceinformation"></a>
+
+resource information
+
+
+#### Namespace
+
+`Plenty\Plugin\Data\Model`
+
+
+
+#### Methods
+
+<pre>public <strong>getPath</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getContentUrl</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getData</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 

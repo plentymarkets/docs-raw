@@ -1018,6 +1018,7 @@ The contact address type model
 <li>5 = Client address</li>
 <li>6 = Contractor address</li>
 <li>7 = Warehouse address</li>
+<li>8 = POS address</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -3457,6 +3458,91 @@ contact type name model
 
     
 Returns this model as an array.
+    
+# Search<a name="account_search"></a>
+    
+## Contracts<a name="account_search_contracts"></a>
+### IndexContactRepositoryContract<a name="account_contracts_indexcontactrepositorycontract"></a>
+
+The contract for the search repository
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Contact\Search\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>index</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Index a contact
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/array">array</a> $contactIds):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Delete contact from index
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$contactIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>bulk</strong>(<a target="_blank" href="http://php.net/array">array</a> $contactIds):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$contactIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setOutput</strong>(<a href="cloud#cloud_output_outputinterface">OutputInterface</a>
+ $output):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_output_outputinterface">OutputInterface</a>
+</td>
+        <td>$output</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>execute</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
     
 # Account<a name="account_account"></a>
     

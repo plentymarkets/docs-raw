@@ -136,6 +136,11 @@ to be written
     
 
     
+<pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
 <pre>public <strong>getSettingsClassName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
@@ -1030,4 +1035,106 @@ foo
 
     
 
+    
+# Storage<a name="cloud_storage"></a>
+    
+## Models<a name="cloud_storage_models"></a>
+### StorageObject<a name="cloud_models_storageobject"></a>
+
+Represent a storage object
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\Storage\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>key</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lastModified</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>eTag</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>size</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>storageClass</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>body</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### StorageObjectList<a name="cloud_models_storageobjectlist"></a>
+
+Represent a list of storage objects
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\Storage\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td>isTruncated</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>nextContinuationToken</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>objects</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
     
