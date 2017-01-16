@@ -43,12 +43,12 @@ Updates an address POS relation.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$addressPosRelationId</td>
-        <td></td>
+        <td>The ID of the address POS relation</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td></td>
+        <td>The data as associative array</td>
     </tr>
 </table>
 
@@ -64,7 +64,7 @@ Lists address POS relations.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$addressPosRelationId</td>
-        <td></td>
+        <td>The ID of the address POS relation</td>
     </tr>
 </table>
 
@@ -80,7 +80,7 @@ Deletes an address POS relation.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$addressPosRelationId</td>
-        <td></td>
+        <td>The ID of the address POS relation</td>
     </tr>
 </table>
 
@@ -89,34 +89,34 @@ Deletes an address POS relation.
 </pre>
 
     
-List address pos relations.
+Lists address POS relations.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$filter</td>
-        <td></td>
+        <td>Filter that restricts the search result</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td></td>
+        <td>An array with child instances to be loaded</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>The columns to retrieve</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td></td>
+        <td>The page of results to search for</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemsPerPage</td>
-        <td></td>
+        <td>The number of items to list per page</td>
     </tr>
 </table>
 
@@ -1288,17 +1288,17 @@ Lists contact events identified by the contact that is currently logged into the
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>The columns to retrieve</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td></td>
+        <td>The page of results to search for</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemsPerPage</td>
-        <td></td>
+        <td>The number of items to list per page</td>
     </tr>
 </table>
 
@@ -1891,7 +1891,7 @@ Gets a collection of bank accounts of a contact. The ID of the contact must be s
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td>Optional: The amount of bank accounts per page (Default: 50)</td>
+        <td>Optional: The number of bank accounts per page (Default: 50)</td>
     </tr>
 </table>
 
@@ -2093,17 +2093,17 @@ List contacts
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>columns</td>
+        <td>columns The columns to retrieve</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td>page</td>
+        <td>page The page of results to search for</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemsPerPage</td>
-        <td>itemsPerPage</td>
+        <td>itemsPerPage The number of items to list per page</td>
     </tr>
 </table>
 
@@ -2265,7 +2265,7 @@ Gets a collection of bank accounts of a contact. The ID of the contact must be s
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td>Optional: The amount of bank accounts per page (Default: 50)</td>
+        <td>Optional: The number of bank accounts per page (Default: 50)</td>
     </tr>
 </table>
 
@@ -3644,7 +3644,7 @@ Returns a collection of all accounts.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td>Optional: Amount of objects per page (Default: 50).</td>
+        <td>Optional: The number of objects per page (Default: 50).</td>
     </tr>
 </table>
 
@@ -3996,7 +3996,7 @@ Returns this model as an array.
 ## Contracts<a name="account_newsletter_contracts"></a>
 ### NewsletterRepositoryContract<a name="account_contracts_newsletterrepositorycontract"></a>
 
-Repository for Newsletter
+The NewsletterRepositoryContract is the interface for the newsletter repository. This interface allows to assign email addresses of contacts or interested parties to email folders. Depending on the settings selected for each email folder, different newsletters can be sent to different target groups.
 
 
 #### Namespace
@@ -4011,29 +4011,29 @@ Repository for Newsletter
 </pre>
 
     
-Add a subscriber to newsletter list
+Adds the email address of a contact or an interested party to an email folder for the newsletter list.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$email</td>
-        <td></td>
+        <td>The email address of the contact or interested party who subscribed to the newsletter</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$forename</td>
-        <td></td>
+        <td>The first name of the contact or interested party</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$surname</td>
-        <td></td>
+        <td>The last name of the contact or interested party</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$emailDirIds</td>
-        <td></td>
+        <td>The IDs of the email folders. The email addresses of the contacts and interested parties must be saved in the folders. This will allow to send different newsletters to different target groups.</td>
     </tr>
 </table>
 
@@ -4062,51 +4062,51 @@ NewsletterEmail
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>newsletter email id</td>
+            <td>The ID of the newsletter email</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>directory</td>
-            <td>directory id</td>
+            <td>The ID of the directory</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>customerId</td>
-            <td></td>
+            <td>The ID of the contact</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>forename</td>
-            <td></td>
+            <td>The first name of the contact or interested party</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>surname</td>
-            <td></td>
+            <td>The last name of the contact or interested party</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>email</td>
-            <td></td>
+            <td>The email address The email address of the contact or interested party</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>gender</td>
-            <td></td>
+            <td>The gender of the contact or interested party</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>birthday</td>
-            <td></td>
+            <td>The birthday of the contact or interested party</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>timestamp</td>
-            <td></td>
+            <td>The timestamp when the newsletter email was sent to the contact or interested party</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>templateLang</td>
-            <td></td>
+            <td>The language of the newsletter's email template</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>confirmedTimestamp</td>
-            <td></td>
+            <td>The timestamp when the contact or interested party confirmed the newsletter subscription</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>confirmAuthString</td>
-            <td></td>
+            <td>The key that is automatically generated by the system. This key recognises the user regardless whether the user is logged in to the system and will then set the confirmation timestamp.</td>
         </tr></tbody>
 </table>
 
@@ -4218,7 +4218,7 @@ Returns a collection of all order summaries.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td>Optional: Amount of objects per page (Default: 50).</td>
+        <td>Optional: The number of objects per page (Default: 50).</td>
     </tr>
 </table>
 
