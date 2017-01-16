@@ -4851,6 +4851,111 @@ The order shipping package model
     
 Returns this model as an array.
     
+# PackageType<a name="order_packagetype"></a>
+    
+## Contracts<a name="order_packagetype_contracts"></a>
+### ShippingPackageTypeRepositoryContract<a name="order_contracts_shippingpackagetyperepositorycontract"></a>
+
+The ShippingPackageTypeRepositoryContract is the interface for the shipping package type repository. This interface allows to get shipping package type by ID.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\PackageType\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>findShippingPackageTypeById</strong>(<a target="_blank" href="http://php.net/int">int</a> $shippingPackageTypeId):<a href="order#order_models_shippingpackagetype">ShippingPackageType</a>
+</pre>
+
+    
+Get Shipping Package Type by an ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$shippingPackageTypeId</td>
+        <td>The ID of the Shipping Package Type</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listShippingPackageTypes</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get all Shipping Package Types
+    
+## Models<a name="order_packagetype_models"></a>
+### ShippingPackageType<a name="order_models_shippingpackagetype"></a>
+
+ShippingPackageTypeModel
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\PackageType\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the shipping package type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the shipping package Type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>width</td>
+            <td>The width of the package type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>height</td>
+            <td>The height of the package type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>length</td>
+            <td>The length of the package type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>unit</td>
+            <td>The unit of the package type´s dimension</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>maxWeight</td>
+            <td>The maximum weight of the package type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>maxVolume</td>
+            <td>The maximum volume of the package type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>volumeType</td>
+            <td>The volume type of the package type</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # ParcelService<a name="order_parcelservice"></a>
     
 ## Models<a name="order_parcelservice_models"></a>
