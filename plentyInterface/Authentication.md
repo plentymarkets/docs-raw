@@ -137,6 +137,10 @@ The user authentication model
             <td></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>timezone</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>password</td>
             <td>The password of the user</td>
         </tr><tr>
