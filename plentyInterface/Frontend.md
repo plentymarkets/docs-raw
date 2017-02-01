@@ -101,6 +101,48 @@ Updates the ID of the order referrer. The ID must be specified.
 </table>
 
 
+<pre>public <strong>getCustomerInvoiceAddressId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Gets the invoice address id of the current shopping cart.
+    
+<pre>public <strong>setCustomerInvoiceAddressId</strong>(<a target="_blank" href="http://php.net/int">int</a> $invoiceAddressId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the invoice address id for the current shopping cart.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$invoiceAddressId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getCustomerShippingAddressId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Gets the shipping address id of the current shopping cart.
+    
+<pre>public <strong>setCustomerShippingAddressId</strong>(<a target="_blank" href="http://php.net/int">int</a> $shippingAddressId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the shipping address id for the current shopping cart.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$shippingAddressId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Events<a name="frontend_frontend_events"></a>
 ### FrontendCurrencyChanged<a name="frontend_events_frontendcurrencychanged"></a>
 
@@ -257,6 +299,25 @@ Updates the ID of the shipping profile. The ID must be specified.
 ### FrontendUpdateDeliveryAddress<a name="frontend_events_frontendupdatedeliveryaddress"></a>
 
 The event is triggered when the delivery address is changed in the online store.
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>getAccountAddressId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Gets the ID of the address saved for the account.
+    
+
+### FrontendUpdateInvoiceAddress<a name="frontend_events_frontendupdateinvoiceaddress"></a>
+
+The event is triggered when the invoice address is changed in the online store.
 
 
 #### Namespace
@@ -652,6 +713,152 @@ Frontend-service for system information
 
     
 
+    
+# LegalInformation<a name="frontend_legalinformation"></a>
+    
+## Contracts<a name="frontend_legalinformation_contracts"></a>
+### LegalInformationRepositoryContract<a name="frontend_contracts_legalinformationrepositorycontract"></a>
+
+Repository contract for LegalInformation model.
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\LegalInformation\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="frontend#frontend_models_legalinformation">LegalInformation</a>
+</pre>
+
+    
+Get legal information of an online store
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td>The ID of the online store</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The language of the legal information text as ISO 639-1 code, e.g. e.g. en for English</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>The type of the legal information text. The types available are:
+<ul>
+<li>TermsConditions</li>
+<li>CancellationRights</li>
+<li>PrivacyPolicy</li>
+<li>LegalDisclosure</li>
+<li>WithdrawalForm</li>
+</ul></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>save</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="frontend#frontend_models_legalinformation">LegalInformation</a>
+</pre>
+
+    
+Save legal information for an online store
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>Array of data for 'plainText' and 'htmlText'</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td>The plenty ID of the online store</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The language of the legal information text as ISO 639-1 code, e.g. en for English</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>The type of the legal information text. The types available are:
+<ul>
+<li>TermsConditions</li>
+<li>CancellationRights</li>
+<li>PrivacyPolicy</li>
+<li>LegalDisclosure</li>
+<li>WithdrawalForm</li>
+</ul></td>
+    </tr>
+</table>
+
+
+## Models<a name="frontend_legalinformation_models"></a>
+### LegalInformation<a name="frontend_models_legalinformation"></a>
+
+The legal information model.
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\LegalInformation\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>plentyId</td>
+            <td>The unique identifier of the plenty client</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lang</td>
+            <td>The language of the legal information text</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>type</td>
+            <td>The type of the legal information text. The types available are:
+<ul>
+<li>TermsConditions</li>
+<li>CancellationRights</li>
+<li>PrivacyPolicy</li>
+<li>LegalDisclosure</li>
+<li>WithdrawalForm</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>plainText</td>
+            <td>The text value of the legal information text</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>htmlText</td>
+            <td>The html value of the legal information text</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
     
 # PaymentMethod<a name="frontend_paymentmethod"></a>
     
@@ -1063,6 +1270,10 @@ The session storage model for order data.
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>deliveryAddressId</td>
             <td>The ID of the delivery address</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>invoiceAddressId</td>
+            <td>The ID of the invoice address</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>parcelServiceId</td>

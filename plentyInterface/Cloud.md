@@ -126,6 +126,11 @@ to be written
     
 
     
+<pre>public <strong>getDomain</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
 <pre>public <strong>getIdentifier</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
@@ -147,6 +152,46 @@ to be written
 
     
 <pre>public <strong>getMappingClassName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getMeta</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>preCreate</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>postCreate</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>preDelete</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>postDelete</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>resetAvailibilityStatus</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>hasUpdatedAt</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 

@@ -126,6 +126,22 @@ The BasketRepositoryContract is the interface for the basket repository. This in
     
 Gets the shopping cart from current customer session.
     
+<pre>public <strong>save</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Exceptions<a name="basket_basket_exceptions"></a>
 ### BasketItemCheckException<a name="basket_exceptions_basketitemcheckexception"></a>
 
@@ -187,6 +203,10 @@ The basket model
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>customerId</td>
             <td>The ID of the customer</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>customerInvoiceAddressId</td>
+            <td>The ID of the customer's invoice address</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>customerShippingAddressId</td>

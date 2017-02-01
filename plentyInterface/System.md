@@ -3,25 +3,6 @@
 # System<a name="system_system"></a>
     
 ## Contracts<a name="system_system_contracts"></a>
-### SystemRepositoryContract<a name="system_contracts_systemrepositorycontract"></a>
-
-The Contract for System settings
-
-
-#### Namespace
-
-`Plenty\Modules\System\Contracts`
-
-
-
-#### Methods
-
-<pre>public <strong>findMyPlentyIds</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Finds all plenty IDs for the current contact
-    
-
 ### WebstoreRepositoryContract<a name="system_contracts_webstorerepositorycontract"></a>
 
 Repository for Webstore
@@ -846,17 +827,17 @@ The Webstore Configuration Model
     
 Returns this model as an array.
     
-# Domain<a name="system_domain"></a>
+# Statistic<a name="system_statistic"></a>
     
-## Models<a name="system_domain_models"></a>
-### Domain<a name="system_models_domain"></a>
+## Models<a name="system_statistic_models"></a>
+### CloudMetrics<a name="system_models_cloudmetrics"></a>
 
-Domain
+Represent cloud metrics for a specific day
 
 
 #### Namespace
 
-`Plenty\Modules\System\Domain\Models`
+`Plenty\Modules\System\Statistic\Models`
 
 
 #### Properties
@@ -871,123 +852,127 @@ Domain
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>contactId</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
             <td></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-            <td>active</td>
-            <td></td>
-        </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>domain</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>ipv4</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>ipv6</td>
+            <td>date</td>
             <td></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>cloudId</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>storage</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>directory</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>vHostOption</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>allowPhp</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>timeToLive</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>provider</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>authCode</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>renewalMode</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>inserted</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>updated</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>lastDnsUpdate</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>mailserver</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>ownMailserverIp</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-            <td>isSubdomain</td>
+            <td>webspaceMB</td>
             <td></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>parentDomainId</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-            <td>isPrimaryDomain</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>topLevelDomain</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>statusUpdate</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>statusAdd</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>dnsProvider</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>dnsProviderSwitch</td>
+            <td>webspaceDocumentsMB</td>
             <td></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>dnsRecordTtl</td>
+            <td>cloudSpaceDocumentsMB</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>cloudSpaceItemsMB</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>dbSpaceMb</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>userAccounts</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>warehouses</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>facetSearchItems</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>facetSearchCalls</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>items</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemVariations</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>hbciDailyAccounts</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>hbciHourlyAccounts</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>ebicsDailyAccounts</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>ebicsHourlyAccounts</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>emailAccountsWithTicketGeneration</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>ebayAccountsWithTicketGeneration</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### CloudMetricsList<a name="system_models_cloudmetricslist"></a>
+
+Represent a list of cloud metrics objects
+
+
+#### Namespace
+
+`Plenty\Modules\System\Statistic\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>page</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>totalsCount</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td>isLastPage</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>objects</td>
             <td></td>
         </tr></tbody>
 </table>

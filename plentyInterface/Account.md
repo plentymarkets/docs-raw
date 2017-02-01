@@ -1501,7 +1501,7 @@ The ContactAddressRepositoryContract is the interface for the contact address re
 
 #### Methods
 
-<pre>public <strong>findContactAddressByTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a href="account#account_models_address">Address</a>
+<pre>public <strong>findContactAddressByTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $typeId, <a target="_blank" href="http://php.net/bool">bool</a> $last = true):<a href="account#account_models_address">Address</a>
 </pre>
 
     
@@ -1518,6 +1518,11 @@ Returns an address of a given contact for the given type.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$typeId</td>
         <td>The ID of the address type</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$last</td>
+        <td>Return the last created billing address</td>
     </tr>
 </table>
 

@@ -1,5 +1,417 @@
 
 
+# Log<a name="miscellaneous_log"></a>
+    
+## Contracts<a name="miscellaneous_log_contracts"></a>
+### LoggerContract<a name="miscellaneous_contracts_loggercontract"></a>
+
+The contract for the logger.
+
+
+#### Namespace
+
+`Plenty\Log\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>debug</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Detailed debug information.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>info</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Interesting events.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>notice</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Normal but significant events.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>warning</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Exceptional occurrences that are not errors.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>error</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Runtime errors that do not require immediate action but should typically
+be logged and monitored.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>critical</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Critical conditions.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>alert</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Action must be taken immediately.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>emergency</strong>($code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+System is unusable.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>logException</strong>(<a href="miscellaneous#miscellaneous__exception">Exception</a>
+ $exception):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Log exceptions.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__exception">Exception</a>
+</td>
+        <td>$exception</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setReferenceType</strong>(<a target="_blank" href="http://php.net/string">string</a> $referenceType):<a href="miscellaneous#miscellaneous_contracts_loggercontract">LoggerContract</a>
+</pre>
+
+    
+The reference type.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$referenceType</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setReferenceValue</strong>($referenceValue):<a href="miscellaneous#miscellaneous_contracts_loggercontract">LoggerContract</a>
+</pre>
+
+    
+The reference value.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$referenceValue</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Exceptions<a name="miscellaneous_log_exceptions"></a>
+### ReferenceTypeException<a name="miscellaneous_exceptions_referencetypeexception"></a>
+
+Class ReferenceTypeException
+
+
+#### Namespace
+
+`Plenty\Log\Exceptions`
+
+
+## Models<a name="miscellaneous_log_models"></a>
+### Log<a name="miscellaneous_models_log"></a>
+
+The log entity model
+
+
+#### Namespace
+
+`Plenty\Log\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>integration</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>identifier</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>code</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>referenceType</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>referenceValue</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>level</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>additionalInfo</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>callerFunction</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>callerLine</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+## Services<a name="miscellaneous_log_services"></a>
+### ReferenceContainer<a name="miscellaneous_services_referencecontainer"></a>
+
+Register log reference types.
+
+
+#### Namespace
+
+`Plenty\Log\Services`
+
+
+
+#### Methods
+
+<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/array">array</a> $referenceTypes):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Use this method to add reference types.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$referenceTypes</td>
+        <td></td>
+    </tr>
+</table>
+
+
+# Search<a name="miscellaneous_search"></a>
+    
+## Contracts<a name="miscellaneous_search_contracts"></a>
+### LogRepositoryContract<a name="miscellaneous_contracts_logrepositorycontract"></a>
+
+Contract for logs.
+
+
+#### Namespace
+
+`Plenty\Log\Search\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/string">string</a> $sortBy = &quot;createdAt&quot;, <a target="_blank" href="http://php.net/string">string</a> $sortOrder = &quot;desc&quot;):<a href="miscellaneous#miscellaneous_models_filteredpaginatedresult">FilteredPaginatedResult</a>
+</pre>
+
+    
+Search logs with the given filters.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$sortBy</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$sortOrder</td>
+        <td></td>
+    </tr>
+</table>
+
+
 # Plenty<a name="miscellaneous_plenty"></a>
     
 ## Plugin<a name="miscellaneous_plenty_plugin"></a>
@@ -1293,6 +1705,12 @@ Add custom Role
 </table>
 
 
+<pre>public <strong>validPlentyId</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
+</pre>
+
+    
+The field under validation must be a valid plentyId.
+    
 
 ### RulesCollection<a name="miscellaneous_validation_rulescollection"></a>
 
@@ -2293,6 +2711,41 @@ Create a new redirect response to the previously intended location.
     <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$secure</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Log<a name="miscellaneous_plugin_log"></a>
+### LoggerFactory<a name="miscellaneous_log_loggerfactory"></a>
+
+Logger factory
+
+
+#### Namespace
+
+`Plenty\Plugin\Log`
+
+
+
+#### Methods
+
+<pre>public <strong>getLogger</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginNamespace, <a target="_blank" href="http://php.net/string">string</a> $identifier):<a href="miscellaneous#miscellaneous_contracts_loggercontract">LoggerContract</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$pluginNamespace</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$identifier</td>
         <td></td>
     </tr>
 </table>
@@ -3365,6 +3818,104 @@ Delete Response
 Returns this model as an array.
     
 
+### FilteredPaginatedResult<a name="miscellaneous_models_filteredpaginatedresult"></a>
+
+Filtered paginated result
+
+
+#### Namespace
+
+`Plenty\Repositories\Models`
+
+
+
+#### Methods
+
+<pre>public <strong>getFilters</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the instance as an array.
+    
+<pre>public <strong>getPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getTotalCount</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>isLastPage</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>getResult</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>setResult</strong>($result):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$result</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toJson</strong>(<a target="_blank" href="http://php.net/int">int</a> $options):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Convert the object to its JSON representation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$options</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>jsonSerialize</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Specify data which should be serialized to JSON
+    
+
 ### PaginatedResult<a name="miscellaneous_models_paginatedresult"></a>
 
 paginated result
@@ -3638,6 +4189,12 @@ The field under validation must be a valid w3c formated date time string.
 </table>
 
 
+<pre>public <strong>validPlentyId</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
+</pre>
+
+    
+The field under validation must be a valid plentyId.
+    
 <pre>public <strong>different</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
 

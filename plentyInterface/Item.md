@@ -3500,7 +3500,7 @@ Creates an item.
 </table>
 
 
-<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -3522,6 +3522,11 @@ Get an item. The ID of the item must be specified.
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
         <td>The language of the item</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to be loaded.</td>
     </tr>
 </table>
 
@@ -3559,7 +3564,7 @@ Get an item. The ID of the item must be specified.
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td></td>
+        <td>The relations to be loaded.</td>
     </tr>
 </table>
 
@@ -3889,7 +3894,7 @@ Returns this model as an array.
 ## Contracts<a name="item_itemcrossselling_contracts"></a>
 ### ItemCrossSellingRepositoryContract<a name="item_contracts_itemcrosssellingrepositorycontract"></a>
 
-Repository for ItemCrossSelling
+Repository for item cross-selling
 
 
 #### Namespace
@@ -3927,7 +3932,7 @@ Repository for ItemCrossSelling
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemId</td>
-        <td></td>
+        <td>The unique ID of the item</td>
     </tr>
 </table>
 
@@ -3942,12 +3947,12 @@ Repository for ItemCrossSelling
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemId</td>
-        <td></td>
+        <td>The unique ID of the item</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$crossItemId</td>
-        <td></td>
+        <td>The unique ID of the linked cross-sellling item</td>
     </tr>
 </table>
 
@@ -3962,7 +3967,7 @@ Repository for ItemCrossSelling
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemId</td>
-        <td></td>
+        <td>The unique ID of the item</td>
     </tr>
 </table>
 
@@ -3970,7 +3975,7 @@ Repository for ItemCrossSelling
 ## Models<a name="item_itemcrossselling_models"></a>
 ### ItemCrossSelling<a name="item_models_itemcrossselling"></a>
 
-The item cross selling model including item
+The item cross-selling model including the item
 
 
 #### Namespace
@@ -3991,19 +3996,19 @@ The item cross selling model including item
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>itemId</td>
-            <td></td>
+            <td>The unique ID of the item to which cross-selling items are linked</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>crossItemId</td>
-            <td></td>
+            <td>The unique ID of the cross-selling item that is linked to the item</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>relationship</td>
-            <td></td>
+            <td>The cross-selling relationship between item and cross-selling item. Possible values:<ul><li>Accessory = The cross-selling item is an accessory of the item.</li><li>ReplacementPart = The cross-selling item is a replacement part for the item.</li><li>Similar = The cross-selling item is similar to the item.</li><li>Bundle = The cross-selling item is suitable to be sold as a bundle with the item.</li></ul></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>dynamic</td>
-            <td></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isDynamic</td>
+            <td>Flag that indicates if the cross-selling link was generated automatically.</td>
         </tr><tr>
             <td><a href="item#item_models_item">Item</a>
 </td>
@@ -5053,61 +5058,41 @@ The item manufacturer model
     </tr>
     </thead>
     <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the manufacturer. The ID must be unique.</td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
             <td>The name of the manufacturer</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The id of the manufacturer</td>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>externalName</td>
+            <td>The external name of the manufacturer. The external name is used for the item export to external markets. If no external name is saved, the Name will be used. The external name will also be transferred to FINDOLOGIC and will be indexed for item searches.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>logo</td>
-            <td>The logo of the manufacturer</td>
+            <td>The URL of the manufacturer's logo</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>url</td>
-            <td>The url of the manufacturer</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>pixmaniaBrandId</td>
-            <td>The pixmania brand id of the manufacturer</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>neckermannBrandId</td>
-            <td>The neckermann brand id of the manufacturer</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>externalName</td>
-            <td>The external name of the manufacturer</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>neckermannAtEpBrandId</td>
-            <td>The neckermann at ep brand id of the manufacturer</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>neckermannAtCdBrandId</td>
-            <td>The neckermann at cd brand id of the manufacturer</td>
+            <td>The URL of the manufacturer's website</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>street</td>
-            <td>The street of the manufacturer</td>
+            <td>The street of the manufacturer's address</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>houseNo</td>
-            <td>The house number of the manufacturer</td>
+            <td>The house number of the manufacturer's address</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>postcode</td>
-            <td>The postal code of the manufacturer</td>
+            <td>The postal code of the manufacturer's address</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>town</td>
-            <td>The town of the manufacturer</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>countryId</td>
-            <td>The country id of the manufacturer</td>
+            <td>The town of the manufacturer's address</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>phoneNumber</td>
@@ -5119,23 +5104,35 @@ The item manufacturer model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>email</td>
-            <td>The email of the manufacturer</td>
+            <td>The email address of the manufacturer</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>countryId</td>
+            <td>The country ID of the manufacturer; 0 = unknown.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>pixmaniaBrandId</td>
+            <td>The manufacturer's ID on the market Pixmania</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>neckermannAtEpBrandId</td>
+            <td>The manufacturer's ID on the market Neckermann Austria, Enterprise version</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>laRedouteBrandId</td>
-            <td>The la redoute brand id of the manufacturer</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>manufacturerComment</td>
-            <td>The comment of the manufacturer</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>lastUpdateTimestamp</td>
-            <td>The last update date timestamp</td>
+            <td>The manufacturer's ID on the market La Redoute</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
             <td>The position of the manufacturer</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>comment</td>
+            <td>Internal comments about the manufacturer (optional)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the manufacturer information was last updated.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>commissions</td>
@@ -5175,23 +5172,23 @@ The item manufacturer commission model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the commission</td>
+            <td>The ID of the manufacturer commission</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>manufacturerId</td>
-            <td>The id of the manufacturer</td>
+            <td>The ID of the manufacturer. The ID must be unique.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>clientId</td>
-            <td>The id of the client</td>
+            <td>plentyId</td>
+            <td>The ID of the client (store) the commission applies to. The route /rest/webstores provides access to clients (stores).</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/double">double</a></td>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>referrerId</td>
-            <td>The id of the referrer</td>
+            <td>The ID of the referrer the commission applies to. The route /rest/orders/referrers provides access to referrers.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/double">double</a></td>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>commission</td>
-            <td>The value of the commission</td>
+            <td>The manufacturer commission value in percent</td>
         </tr><tr>
             <td><a href="item#item_models_manufacturer">Manufacturer</a>
 </td>
@@ -8007,6 +8004,30 @@ kommt noch
 </table>
 
 
+
+### VariationElasticSearchAvailibilityRepositoryContract<a name="item_contracts_variationelasticsearchavailibilityrepositorycontract"></a>
+
+VariationElasticSearchAvailibilityRepositoryContract
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+
+    
+<pre>public <strong>isAvailable</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+
+    
 ## Filter<a name="item_search_filter"></a>
 ### BarcodeFilter<a name="item_filter_barcodefilter"></a>
 
@@ -8521,7 +8542,28 @@ foo
 
 #### Methods
 
-<pre>public <strong>setSearchString</strong>(<a target="_blank" href="http://php.net/string">string</a> $value, <a target="_blank" href="http://php.net/string">string</a> $precision = &quot;fuzzy&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>setNamesString</strong>(<a target="_blank" href="http://php.net/string">string</a> $string, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$string</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setSearchString</strong>(<a target="_blank" href="http://php.net/string">string</a> $value, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $precision = &quot;fuzzy&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -8532,6 +8574,11 @@ foo
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$value</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
         <td></td>
     </tr>
     <tr>
@@ -8745,6 +8792,30 @@ foo
 </table>
 
 
+## Repositories<a name="item_search_repositories"></a>
+### VariationElasticSearchAvailibilityRepository<a name="item_repositories_variationelasticsearchavailibilityrepository"></a>
+
+VariationElasticSearchAvailibilityRepository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Repositories`
+
+
+
+#### Methods
+
+<pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>isAvailable</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
 # Unit<a name="item_unit"></a>
     
 ## Contracts<a name="item_unit_contracts"></a>
@@ -8964,7 +9035,8 @@ Gets a unit. The ID of the unit must be specified.
 </table>
 
 
-<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
 
     
 Lists all units.
@@ -9036,7 +9108,7 @@ The unit model including the unit name
             <td>The time the unit was created.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>langs</td>
+            <td>names</td>
             <td></td>
         </tr></tbody>
 </table>
@@ -11724,7 +11796,8 @@ The contract of the variation sku repository
 
 #### Methods
 
-<pre>public <strong>generateSku</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $accountId, $sku = null, <a target="_blank" href="http://php.net/bool">bool</a> $setLastExportedTimestamp = true):<a target="_blank" href="http://php.net/string">string</a></pre>
+<pre>public <strong>generateSku</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/int">int</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $accountId, $sku = null, <a target="_blank" href="http://php.net/bool">bool</a> $setLastExportedTimestamp = true, <a target="_blank" href="http://php.net/bool">bool</a> $returnObject = false):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 Generates or updates an SKU
@@ -11755,6 +11828,11 @@ Generates or updates an SKU
     <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$setLastExportedTimestamp</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$returnObject</td>
         <td></td>
     </tr>
 </table>

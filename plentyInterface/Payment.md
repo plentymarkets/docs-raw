@@ -3,6 +3,68 @@
 # Payment<a name="payment_payment"></a>
     
 ## Contracts<a name="payment_payment_contracts"></a>
+### PaymentContactRelationRepositoryContract<a name="payment_contracts_paymentcontactrelationrepositorycontract"></a>
+
+The PaymentContactRelationRepositoryContract is the interface for the payment contact relation repository. Create and delete relations between payments and contact.
+
+
+#### Namespace
+
+`Plenty\Modules\Payment\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>createContactRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
+ $payment, <a href="account#account_models_contact">Contact</a>
+ $contact):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Creates a payment contact relation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="payment#payment_models_payment">Payment</a>
+</td>
+        <td>$payment</td>
+        <td>The ID of the payment</td>
+    </tr>
+    <tr>
+        <td><a href="account#account_models_contact">Contact</a>
+</td>
+        <td>$contact</td>
+        <td>The ID of the contact</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteContactRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
+ $payment, <a href="account#account_models_contact">Contact</a>
+ $contact):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Deletes a payment contact relation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="payment#payment_models_payment">Payment</a>
+</td>
+        <td>$payment</td>
+        <td>The ID of the payment</td>
+    </tr>
+    <tr>
+        <td><a href="account#account_models_contact">Contact</a>
+</td>
+        <td>$contact</td>
+        <td>The ID of the contact</td>
+    </tr>
+</table>
+
+
+
 ### PaymentOrderRelationRepositoryContract<a name="payment_contracts_paymentorderrelationrepositorycontract"></a>
 
 The PaymentOrderRelationRepositoryContract is the interface for the payment order relation repository. Create and delete relations between payments and orders.
@@ -607,6 +669,37 @@ Lists payments by entry date. The start and the end of the date range must be sp
 </table>
 
 
+<pre>public <strong>getPaymentsByPropertyTypeAndValue</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyTypeId, $propertyValue, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists payments by payment property type and value.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyTypeId</td>
+        <td>The property type</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$propertyValue</td>
+        <td>The property value</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of items to list per page</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The page of results to search for</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>createPayment</strong>($data):<a href="payment#payment_models_payment">Payment</a>
 </pre>
 
@@ -745,21 +838,69 @@ The payment model
         </tr><tr>
             <td><a href="payment#payment_models_payment">Payment</a>
 </td>
-            <td>parentId</td>
+            <td>parent</td>
             <td>The ID of the parent payment</td>
         </tr><tr>
             <td><a href="payment#payment_models_paymentmethod">PaymentMethod</a>
 </td>
-            <td>paymentMethod</td>
+            <td>method</td>
             <td>The payment method</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>history</td>
+            <td>histories</td>
             <td>The payment history</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>property</td>
+            <td>properties</td>
             <td>The properties of the payment</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### PaymentContactRelation<a name="payment_models_paymentcontactrelation"></a>
+
+The payment contact relation model
+
+
+#### Namespace
+
+`Plenty\Modules\Payment\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the payment order relation</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>paymentId</td>
+            <td>The ID of the payment</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>contactId</td>
+            <td>The ID of the contact</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>assignedAt</td>
+            <td>The time the payment contact relation was assigned</td>
         </tr></tbody>
 </table>
 
