@@ -3860,7 +3860,13 @@ Get the instance as an array.
 <pre>public <strong>getPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
+Returns the page number as received
+    
+<pre>public <strong>getCurrentPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
 
+    
+Returns the normalized page number - checked if out of logical bounds
+( not below 0, not greater than the last page ) and adjusted
     
 <pre>public <strong>getTotalCount</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
 
@@ -3868,6 +3874,21 @@ Get the instance as an array.
 
     
 <pre>public <strong>isLastPage</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>getItemIndexFrom</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getItemIndexTo</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getLastPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
 
@@ -3932,7 +3953,13 @@ paginated result
 <pre>public <strong>getPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
+Returns the page number as received
+    
+<pre>public <strong>getCurrentPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
 
+    
+Returns the normalized page number - checked if out of logical bounds
+( not below 0, not greater than the last page ) and adjusted
     
 <pre>public <strong>getTotalCount</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
 
@@ -3940,6 +3967,21 @@ paginated result
 
     
 <pre>public <strong>isLastPage</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>getItemIndexFrom</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getItemIndexTo</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getLastPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
 

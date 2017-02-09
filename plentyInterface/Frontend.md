@@ -37,6 +37,11 @@ Updates the ID of the shipping country. The ID must be specified.
 </table>
 
 
+<pre>public <strong>getPaymentMethodId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Gets the payment method id of the current shopping cart.
+    
 <pre>public <strong>setPaymentMethodId</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -53,6 +58,11 @@ Updates the ID of the payment method. The ID must be specified.
 </table>
 
 
+<pre>public <strong>getShippingProfileId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Gets the shipping profile id of the current shopping cart.
+    
 <pre>public <strong>setShippingProfileId</strong>(<a target="_blank" href="http://php.net/int">int</a> $shippingProfileId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 

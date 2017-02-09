@@ -1698,7 +1698,7 @@ The ContactClassRepositoryContract is the interface for the contact class reposi
 <pre>public <strong>findContactClassById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactClassId):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
-Get a contact class
+Gets a contact class. The ID of the contact class must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -2098,7 +2098,7 @@ List contacts
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>columns The columns to retrieve</td>
+        <td>The columns to retrieve</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -2108,7 +2108,7 @@ List contacts
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemsPerPage</td>
-        <td>itemsPerPage The number of items to list per page</td>
+        <td>The number of items to list per page</td>
     </tr>
 </table>
 

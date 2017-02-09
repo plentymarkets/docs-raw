@@ -713,162 +713,70 @@ List package numbers of an order
 </table>
 
 
-## Events<a name="order_order_events"></a>
-### OrderCreated<a name="order_events_ordercreated"></a>
-
-An event class fired after a new order is created. The order type is not relevant.
- * 	At the same time also type depended events will be fired, like ReturnsCreated or CreditNoteCreated.
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Events`
-
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### OrderEvent<a name="order_events_orderevent"></a>
-
-A base event class for all order events. Each order event expects an order instance.
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Events`
-
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### OrderFullyPaid<a name="order_events_orderfullypaid"></a>
-
-An Event class fired after a payment assignment when the order is fully paid.
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Events`
-
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### OrderOverpaid<a name="order_events_orderoverpaid"></a>
-
-An Event class fired after a payment assignment when the order is overpaid.
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Events`
-
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### OrderPaidEvent<a name="order_events_orderpaidevent"></a>
-
-A base Event class for all order paid events.
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Events`
-
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### OrderPartlyPaid<a name="order_events_orderpartlypaid"></a>
-
-An Event class fired after a payment assignment when the order is partly paid.
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Events`
-
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### OrderPaymentAssigned<a name="order_events_orderpaymentassigned"></a>
-
-An Event class fired after a payment was assigned to an order.
- * After this event one of the following events will be fired, depending the payment status of the order:
- *	 OrderPrepaid, OrderPartlyPaid, OrderFullyPaid, OrderOverpaid.
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Events`
-
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### OrderPrepaid<a name="order_events_orderprepaid"></a>
-
-An Event class fired after a payment assignment when the order is paid in advance.
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Events`
-
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
 ## Models<a name="order_order_models"></a>
+### CouponCodeOrder<a name="order_models_couponcodeorder"></a>
+
+The CouponCodeOrder model.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Coupon\Code\Order\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>corderItemId</td>
+            <td>The ID of the order item where the coupon was redeemd</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>campaignId</td>
+            <td>The ID of the campaign that the coupon belongs to</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>code</td>
+            <td>The coupon code</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>type</td>
+            <td>The type of the redeemed coupon display type.
+										Possible return values are:<ul>
+										<li>disposable</li>
+										<li>fixed_vat</li>
+										<li>fixed</li>
+										<li>percental</li>
+										<li>undefined</li>
+										</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/double">double</a></td>
+            <td>amount</td>
+            <td>The redeemed amount of the coupon</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>vatRate</td>
+            <td>The redeemed vat rate of the coupon</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
 ### Order<a name="order_models_order"></a>
 
 The order model.
@@ -1815,6 +1723,161 @@ price calculation result item
             <td></td>
         </tr></tbody>
 </table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+## Events<a name="order_order_events"></a>
+### OrderCreated<a name="order_events_ordercreated"></a>
+
+An event class fired after a new order is created. The order type is not relevant.
+ * 	At the same time also type depended events will be fired, like ReturnsCreated or CreditNoteCreated.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### OrderEvent<a name="order_events_orderevent"></a>
+
+A base event class for all order events. Each order event expects an order instance.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### OrderFullyPaid<a name="order_events_orderfullypaid"></a>
+
+An Event class fired after a payment assignment when the order is fully paid.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### OrderOverpaid<a name="order_events_orderoverpaid"></a>
+
+An Event class fired after a payment assignment when the order is overpaid.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### OrderPaidEvent<a name="order_events_orderpaidevent"></a>
+
+A base Event class for all order paid events.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### OrderPartlyPaid<a name="order_events_orderpartlypaid"></a>
+
+An Event class fired after a payment assignment when the order is partly paid.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### OrderPaymentAssigned<a name="order_events_orderpaymentassigned"></a>
+
+An Event class fired after a payment was assigned to an order.
+ * After this event one of the following events will be fired, depending the payment status of the order:
+ *	 OrderPrepaid, OrderPartlyPaid, OrderFullyPaid, OrderOverpaid.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### OrderPrepaid<a name="order_events_orderprepaid"></a>
+
+An Event class fired after a payment assignment when the order is paid in advance.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Events`
+
 
 
 #### Methods
@@ -3676,6 +3739,84 @@ An event class fired after a new warranty is created.
     
 Returns this model as an array.
     
+# Idea<a name="order_idea"></a>
+    
+## Models<a name="order_idea_models"></a>
+### Export<a name="order_models_export"></a>
+
+The export model for IDEA exports.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Export\Pos\Idea\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The id of the export entry.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>token</td>
+            <td>The token generated for the export entry.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>progress</td>
+            <td>The progress of the export process.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>currentModule</td>
+            <td>The currently exporting module of the export process.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>state</td>
+            <td>The current state of the export process.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>filename</td>
+            <td>The filename of the export content.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
+</td>
+            <td>createdAt</td>
+            <td>Specifies the creation date of the export entry.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
+</td>
+            <td>updatedAt</td>
+            <td>Specifies the last update date of the export entry.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
+</td>
+            <td>modules</td>
+            <td>The modules to be used by the export process.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
+</td>
+            <td>options</td>
+            <td>The options for the export process. Currently only "year" is supported as option key.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # Models<a name="order_models"></a>
     
 ## Legacy<a name="order_models_legacy"></a>
@@ -5001,7 +5142,7 @@ Returns this model as an array.
 ## Contracts<a name="order_shipping_contracts"></a>
 ### ParcelServicePresetRepositoryContract<a name="order_contracts_parcelservicepresetrepositorycontract"></a>
 
-The ParcelServicePresetRepositoryContract is the interface for the shipping profile repository. This interface allows to get a shipping profile by the id or list all shipping profiles.
+The ParcelServicePresetRepositoryContract is the interface for the shipping profile repository. This interface allows to get a shipping profile by the ID or list all shipping profiles.
 
 
 #### Namespace
@@ -5015,14 +5156,14 @@ The ParcelServicePresetRepositoryContract is the interface for the shipping prof
 <pre>public <strong>getPresetList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-List all available parcel service presets
+Lists shipping profiles.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>The columns (attributes) to load in the instances.</td>
+        <td>The columns (attributes) to retrieve</td>
     </tr>
 </table>
 
@@ -5031,19 +5172,19 @@ List all available parcel service presets
 </pre>
 
     
-Get specific parcel service preset determined by preset id
+Gets a shipping profile. The ID of the shipping profile must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$presetId</td>
-        <td></td>
+        <td>The ID of the shipping profile</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>The columns (attributes) to load in the instances.</td>
+        <td>The columns (attributes) to retrieve</td>
     </tr>
 </table>
 
@@ -6029,14 +6170,14 @@ The ShippingServiceProviderRepositoryContract is the interface for the shipping 
 </pre>
 
     
-Lists ShippingServiceProvider.
+Lists shipping service providers.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td></td>
+        <td>The columns to retrieve</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -6046,7 +6187,7 @@ Lists ShippingServiceProvider.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemsPerPage</td>
-        <td></td>
+        <td>The number of items to list per page</td>
     </tr>
 </table>
 
@@ -6055,14 +6196,14 @@ Lists ShippingServiceProvider.
 </pre>
 
     
-Get ShippingServiceProvider by ID.
+Gets a shipping service provider. The ID of the shipping service provider must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$shippingServiceProviderId</td>
-        <td></td>
+        <td>The ID of the shipping service provider</td>
     </tr>
 </table>
 

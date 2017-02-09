@@ -1062,7 +1062,7 @@ Deletes a barcode. The ID of the barcode must be specified.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td>The ID of the barcode</td>
+        <td>The unique ID of the barcode</td>
     </tr>
 </table>
 
@@ -1078,7 +1078,7 @@ Gets a barcode. The ID of the barcode must be specified.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td>The ID of the barcode</td>
+        <td>The unique ID of the barcode</td>
     </tr>
 </table>
 
@@ -1093,12 +1093,12 @@ Lists barcodes. The type of the barcode must be specified.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$barcodeType</td>
-        <td>The type of the barcode.</td>
+        <td>The type of the barcode</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td>The amount of barcodes shown per page. Default value is 50.</td>
+        <td>The number of barcodes shown per page. Default value is 50.</td>
     </tr>
 </table>
 
@@ -1119,7 +1119,7 @@ Lists all barcodes.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td>The amount of barcodes shown per page. Default value is 50.</td>
+        <td>The number of barcodes shown per page. Default value is 50.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -1133,7 +1133,7 @@ Lists all barcodes.
 </pre>
 
     
-Creates new barcode referrer for given referrer.
+Creates new barcode referrer for specified referrer.
     
 ##### <strong>Parameters</strong>
     
@@ -1145,7 +1145,7 @@ Creates new barcode referrer for given referrer.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td>The ID of the barcode</td>
+        <td>The unique ID of the barcode</td>
     </tr>
 </table>
 
@@ -1153,7 +1153,7 @@ Creates new barcode referrer for given referrer.
 <pre>public <strong>deleteBarcodeReferrerRelation</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrer, <a target="_blank" href="http://php.net/int">int</a> $barcodeId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
-Deletes existing barcode referrer with given referrer.
+Deletes barcode referrer with specified referrer.
     
 ##### <strong>Parameters</strong>
     
@@ -1165,7 +1165,7 @@ Deletes existing barcode referrer with given referrer.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td>The ID of the barcode</td>
+        <td>The unique ID of the barcode</td>
     </tr>
 </table>
 
@@ -1173,7 +1173,7 @@ Deletes existing barcode referrer with given referrer.
 <pre>public <strong>findBarcodesByReferrerRelation</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrer, <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Gets barcode referrer with given referrer
+Gets barcode referrer by specified referrer.
     
 ##### <strong>Parameters</strong>
     
@@ -1185,7 +1185,7 @@ Gets barcode referrer with given referrer
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$perPage</td>
-        <td>The amount of barcodes shown per page. Default value is 50.</td>
+        <td>The number of barcodes shown per page. Default value is 50.</td>
     </tr>
 </table>
 
@@ -1214,7 +1214,7 @@ The barcode model including barcode referrer
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The ID of the barcode. The ID must be unique.</td>
+            <td>The unique ID of the barcode</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
@@ -1262,11 +1262,11 @@ The barcode link referrer model including the barcode
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>barcodeId</td>
-            <td>The ID of the barcode. The ID must be unique.</td>
+            <td>The unique ID of the barcode</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>referrerId</td>
-            <td>The ID of the referrer. To activate all referrers, the value <strong>-1</strong> must be specified. This value activates all referrers in the system by default, including any referrers added at a later stage.</td>
+            <td>The unique ID of the referrer. To activate all referrers, the value <strong>-1</strong> must be specified. This value activates all referrers in the system by default, including any referrers added at a later stage.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
@@ -6329,7 +6329,7 @@ Returns this model as an array.
 ## Contracts<a name="item_salesprice_contracts"></a>
 ### SalesPriceAccountRepositoryContract<a name="item_contracts_salespriceaccountrepositorycontract"></a>
 
-The contract for the sales price account repository
+The contract for the sales price referrer account repository
 
 
 #### Namespace
@@ -6344,19 +6344,19 @@ The contract for the sales price account repository
 </pre>
 
     
-Create a sales price account. The ID of the sales price must be specified.
+Activates a referrer account for a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td>The sales price account data as an associative array</td>
+        <td>The account data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6365,24 +6365,24 @@ Create a sales price account. The ID of the sales price must be specified.
 </pre>
 
     
-Deletes a sales price account. The ID of the sales price, the type and the ID of the account must be specified.
+Deactivates a referrer account for a sales price. The ID of the sales price, the type and the ID of the referrer account must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$accountType</td>
-        <td>The type of the account</td>
+        <td>The type of the referrer account linked to the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$accountId</td>
-        <td>The ID of the account</td>
+        <td>The ID of the referrer account linked to the sales price</td>
     </tr>
 </table>
 
@@ -6391,24 +6391,24 @@ Deletes a sales price account. The ID of the sales price, the type and the ID of
 </pre>
 
     
-Gets a sales price account. The ID of the sales price, the type and the ID of the account must be specified.
+Gets a referrer account for a sales price. The ID of the sales price, the type and the ID of the referrer account must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$accountType</td>
-        <td>The type of the account</td>
+        <td>The type of the referrer account linked to the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$accountId</td>
-        <td>The ID of the account</td>
+        <td>The ID of the referrer account linked to the sales price</td>
     </tr>
 </table>
 
@@ -6416,14 +6416,14 @@ Gets a sales price account. The ID of the sales price, the type and the ID of th
 <pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Lists sales price accounts. The ID of the sales price must be specified.
+Lists the activated referrer accounts of a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6432,14 +6432,14 @@ Lists sales price accounts. The ID of the sales price must be specified.
 </pre>
 
     
-Deletes sales price accounts. The ID of the sales price must be specified.
+Deactivates the referrer accounts for a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6462,7 +6462,7 @@ The contract for the sales price country repository
 </pre>
 
     
-Creates a new sales price country. The ID of the sales price must be specified.
+Activates a country for a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -6474,7 +6474,7 @@ Creates a new sales price country. The ID of the sales price must be specified.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6483,7 +6483,7 @@ Creates a new sales price country. The ID of the sales price must be specified.
 </pre>
 
     
-Deletes a sales price country. The ID of the sales price and the ID of the country must be specified.
+Deactivates a country for a sales price. The ID of the sales price and the ID of the country must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -6495,7 +6495,7 @@ Deletes a sales price country. The ID of the sales price and the ID of the count
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$countryId</td>
-        <td>The ID of the country</td>
+        <td>The unique ID of the <a href="https://developers.plentymarkets.com/rest-doc/introduction#countries"  target="_blank">country</a>; -1 = all countries.</td>
     </tr>
 </table>
 
@@ -6504,7 +6504,7 @@ Deletes a sales price country. The ID of the sales price and the ID of the count
 </pre>
 
     
-Gets a sales price country. The ID of the sales price and the ID of the country must be specified.
+Gets a country for a sales price. The ID of the sales price and the ID of the country must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -6516,7 +6516,7 @@ Gets a sales price country. The ID of the sales price and the ID of the country 
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$countryId</td>
-        <td>The ID of the country</td>
+        <td>The unique ID of the <a href="https://developers.plentymarkets.com/rest-doc/introduction#countries"  target="_blank">country</a>.</td>
     </tr>
 </table>
 
@@ -6524,14 +6524,14 @@ Gets a sales price country. The ID of the sales price and the ID of the country 
 <pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Lists sales price countries. The ID of the sales price must be specified.
+Lists the countries for a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6540,7 +6540,7 @@ Lists sales price countries. The ID of the sales price must be specified.
 </pre>
 
     
-Deletes sales price countries. The ID of the sales price must be specified.
+Deletes countries from a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -6570,7 +6570,7 @@ The contract for the sales price currency repository
 </pre>
 
     
-Creates a sales price currency. The ID of the sales price must be specified.
+Activates a currency for a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -6582,7 +6582,7 @@ Creates a sales price currency. The ID of the sales price must be specified.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6591,19 +6591,19 @@ Creates a sales price currency. The ID of the sales price must be specified.
 </pre>
 
     
-Deletes a sales price currency. The ID of the sales price and the currency must be specified.
+Deactivates a currency for a sales price. The ID of the sales price and the ISO code of the currency must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$currency</td>
-        <td>The currency of the sales price</td>
+        <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#currencies" target="_blank">ISO</a> code of the currency; -1 = all currencies.</td>
     </tr>
 </table>
 
@@ -6612,7 +6612,7 @@ Deletes a sales price currency. The ID of the sales price and the currency must 
 </pre>
 
     
-Gets a sales price currency. The ID of the sales price and the currency must be specified.
+Gets a sales price currency. The ID of the sales price and the ISO code of the currency must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -6624,7 +6624,7 @@ Gets a sales price currency. The ID of the sales price and the currency must be 
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$currency</td>
-        <td>The currency of the sales price</td>
+        <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#currencies" target="_blank">ISO</a> code of the currency; -1 = all currencies.</td>
     </tr>
 </table>
 
@@ -6632,14 +6632,14 @@ Gets a sales price currency. The ID of the sales price and the currency must be 
 <pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Lists sales price currencies. The ID of the sales price must be specified.
+Lists the active currencies of a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6648,14 +6648,14 @@ Lists sales price currencies. The ID of the sales price must be specified.
 </pre>
 
     
-Deletes sales price currencies. The ID of the sales price must be specified.
+Deactivates the currencies of a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6678,19 +6678,19 @@ The contract for the sales price customer class repository
 </pre>
 
     
-Creates a sales price customer class. The ID of the sales price must be specified.
+Activates a customer class for a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td>The sales price customer class data as an associative array</td>
+        <td>The customer class data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6699,19 +6699,19 @@ Creates a sales price customer class. The ID of the sales price must be specifie
 </pre>
 
     
-Deletes a sales price customer class. The ID of the sales price and the ID of the customer class must be specified.
+Deactivates a customer class for a sales price. The ID of the sales price and the ID of the customer class must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$customerClassId</td>
-        <td>The ID of the customer class</td>
+        <td>The unique ID of the customer class</td>
     </tr>
 </table>
 
@@ -6720,19 +6720,19 @@ Deletes a sales price customer class. The ID of the sales price and the ID of th
 </pre>
 
     
-Gets a sales price customer class. The ID of the sales price and the ID of the customer class must be specified.
+Gets a customer class for a sales price. The ID of the sales price and the ID of the customer class must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$customerClassId</td>
-        <td>The ID of the customer class</td>
+        <td>The unique ID of the customer class</td>
     </tr>
 </table>
 
@@ -6740,14 +6740,14 @@ Gets a sales price customer class. The ID of the sales price and the ID of the c
 <pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Lists sales price customer classes. The ID of the sales price must be specified.
+Lists the active customer classes of a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6756,14 +6756,14 @@ Lists sales price customer classes. The ID of the sales price must be specified.
 </pre>
 
     
-Deletes sales price customer classes. The ID of the sales price must be specified.
+Deactivates the customer classes of a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6798,7 +6798,7 @@ Creates a sales price name. The ID of the sales price must be specified.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6807,7 +6807,7 @@ Creates a sales price name. The ID of the sales price must be specified.
 </pre>
 
     
-Updates a sales price name. The ID of the sales price and the language must be specified.
+Updates a sales price name. The ID of the sales price and the language code must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -6819,12 +6819,12 @@ Updates a sales price name. The ID of the sales price and the language must be s
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td>The lang of the sales price name</td>
+        <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language code</a> of the sales price name</td>
     </tr>
 </table>
 
@@ -6833,19 +6833,19 @@ Updates a sales price name. The ID of the sales price and the language must be s
 </pre>
 
     
-Deletes a sales price name. The ID of the sales price and the language must be specified.
+Deletes a sales price name. The ID of the sales price and the language code must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td>The lang of the sales price name</td>
+        <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language code</a> of the sales price name</td>
     </tr>
 </table>
 
@@ -6854,19 +6854,19 @@ Deletes a sales price name. The ID of the sales price and the language must be s
 </pre>
 
     
-Gets a sales price name. The ID of the sales price and the language must be specified.
+Gets a sales price name. The ID of the sales price and the language code must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td>The lang of the sales price name</td>
+        <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language code</a> of the sales price name</td>
     </tr>
 </table>
 
@@ -6874,14 +6874,14 @@ Gets a sales price name. The ID of the sales price and the language must be spec
 <pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Lists sales price names. The ID of the sales price must be specified.
+Lists all sales price names of a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6904,19 +6904,19 @@ The contract for the sales price online store repository
 </pre>
 
     
-Creates a sales price online store. The ID of the sales price must be specified.
+Activates a client (store) for a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td>The sales price online store data as an associative array</td>
+        <td>The client (store) data as an associative array</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6925,19 +6925,19 @@ Creates a sales price online store. The ID of the sales price must be specified.
 </pre>
 
     
-Deletes a sales price online store. The ID of the sales price and the ID of the online store must be specified.
+Deactivates a client (store) for a sales price. The ID of the sales price and the ID of the client (store) must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$onlineStoreId</td>
-        <td>The ID of the online store</td>
+        <td>The unique ID of the client (store)</td>
     </tr>
 </table>
 
@@ -6946,14 +6946,14 @@ Deletes a sales price online store. The ID of the sales price and the ID of the 
 </pre>
 
     
-Deletes sales price online stores. The ID of the sales price must be specified.
+Deactivates all clients (stores) for a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -6962,14 +6962,14 @@ Deletes sales price online stores. The ID of the sales price must be specified.
 </pre>
 
     
-Gets a sales price online store. The ID of the sales price and the ID of the online store must be specified.
+Gets client (store) information for a sales price. The ID of the sales price and the ID of the client (store) must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -6982,14 +6982,14 @@ Gets a sales price online store. The ID of the sales price and the ID of the onl
 <pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Lists sales price online stores. The ID of the sales price must be specified.
+Lists the active clients (stores) for a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -7012,7 +7012,7 @@ The contract for the sales price referrer repository
 </pre>
 
     
-Creates a sales price referrer. The ID of the sales price must be specified.
+Activates a referrer for a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -7024,7 +7024,7 @@ Creates a sales price referrer. The ID of the sales price must be specified.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -7033,14 +7033,14 @@ Creates a sales price referrer. The ID of the sales price must be specified.
 </pre>
 
     
-Deletes a sales price referrer. The ID of the sales price and the ID of the referrer must be specified.
+Deactivates a referrer for a sales price. The ID of the sales price and the ID of the referrer must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -7054,14 +7054,14 @@ Deletes a sales price referrer. The ID of the sales price and the ID of the refe
 </pre>
 
     
-Gets a sales price referrer. The ID of the sales price and the ID of the referrer must be specified.
+Gets a referrer. The ID of the sales price and the ID of the referrer must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -7074,14 +7074,14 @@ Gets a sales price referrer. The ID of the sales price and the ID of the referre
 <pre>public <strong>findByPriceId</strong>(<a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Lists sales price referrers. The ID of the sales price must be specified.
+Lists all activated referrers of a sales. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -7090,14 +7090,14 @@ Lists sales price referrers. The ID of the sales price must be specified.
 </pre>
 
     
-Deletes sales price referrers. The ID of the sales price must be specified.
+Deactivates all referrers for a sales price. The ID of the sales price must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$salesPriceId</td>
-        <td>The ID of the sales price</td>
+        <td>The unique ID of the sales price</td>
     </tr>
 </table>
 
@@ -7251,7 +7251,7 @@ Lists all sales prices.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the sales price</td>
+            <td>The unique ID of the sales price</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
@@ -7259,23 +7259,23 @@ Lists all sales prices.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/double">double</a></td>
             <td>minimumOrderQuantity</td>
-            <td>The minimum order quantity of the sales price</td>
+            <td>The minimum order quantity of the sales price. Sales prices with different minimum quantities can be used to create a quantity based graduation of prices in plentymarkets.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>type</td>
-            <td>The type of the sales price</td>
+            <td>The price type of the sales price.<ul><li>RRP = Sales price is the recommended retail price (RRP). If the RRP and another sales price are linked with a variation, the RRP will be displayed in the online store as red strike-through text next to the sales price.</li><li>Special offer = Sales price as a special offer. Special offers are used for markets, e.g. Amazon and Hitmeister.</li></ul></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isCustomerPrice</td>
-            <td>Indicates if the sales price is a customer price</td>
+            <td>Flag that indicates if the sales price is a customer price. Currently, this setting is not in use.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isDisplayedByDefault</td>
-            <td>Indicates if the sales price is displayed by default</td>
+            <td>Flag that indicates if the sales price is displayed automatically in the Sales Prices area of the plentymarkets backend when a new item is created. When false, the sales price can still be added manually when a new item is created.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isLiveConversion</td>
-            <td>Indicates if the sales price is live converted</td>
+            <td>Flag that indicates if the sales price is converted live in the online store. When true, the default currency price will be converted into the active currencies based on the conversion rates saved in plentymarkets.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
@@ -7346,24 +7346,24 @@ Returns this model as an array.
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>priceId</td>
-            <td>The price id of the sales price</td>
+            <td>salesPriceId</td>
+            <td>The unique ID of the sales price</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>accountType</td>
-            <td>The account type of the sales price</td>
+            <td>referrerId</td>
+            <td>The ID of the referrer linked to the sales price</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>accountId</td>
-            <td>The account id of the sales price</td>
+            <td>The ID of the referrer account linked to the sales price</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The time the relation was created.</td>
+            <td>The time the referrer account was linked to the sales price.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>
-            <td>The time the relation was last updated.</td>
+            <td>The time the link was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -7398,20 +7398,20 @@ Returns this model as an array.
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>priceId</td>
-            <td>The price id of the sales price</td>
+            <td>salesPriceId</td>
+            <td>The unique ID of the sales price</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>countryId</td>
-            <td>The country id of the sales price</td>
+            <td>The unique ID of the <a href="https://developers.plentymarkets.com/rest-doc/introduction#countries"  target="_blank">country</a></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The time the relation was created.</td>
+            <td>The time the country was activated.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>
-            <td>The time the relation was last updated.</td>
+            <td>The time the relationship between country and sales price was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -7446,20 +7446,20 @@ Returns this model as an array.
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>priceId</td>
-            <td>The price id of the sales price</td>
+            <td>salesPriceId</td>
+            <td>The unique ID of the sales price</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>currency</td>
-            <td>The currency of the sales price</td>
+            <td>The ISO code of the <a href="https://developers.plentymarkets.com/rest-doc/introduction#currencies" target="_blank">currency</a>; -1 = all currencies.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The time the relation was created.</td>
+            <td>The time the currency was activated.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>
-            <td>The time the relation was last updated.</td>
+            <td>The time the relationship between currency and sales price was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -7494,20 +7494,20 @@ Returns this model as an array.
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>priceId</td>
-            <td>The price id of the sales price</td>
+            <td>salesPriceId</td>
+            <td>The unique ID of the sales price</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>customerClassId</td>
-            <td>The customer class id of the sales price</td>
+            <td>The unique ID of the customer class</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The time the relation was created.</td>
+            <td>The time the customer class was activated.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>
-            <td>The time the relation was last updated.</td>
+            <td>The time the relationship between customer class and sales price was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -7542,28 +7542,28 @@ Returns this model as an array.
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>priceId</td>
-            <td>The price id of the sales price</td>
+            <td>salesPriceId</td>
+            <td>The unique ID of the sales price</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The lang of the sales price</td>
+            <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language code</a> of the sales price name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>nameInternal</td>
-            <td>The internal name of the sales price</td>
+            <td>The internal name of the sales price. The internal name is used in the plentymarkets back end only.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>nameExternal</td>
-            <td>The external name of the sales price</td>
+            <td>The external name of the sales price. The external name is displayed in the online store and as such is visible for customers.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The time the relation was created.</td>
+            <td>The time the name was created.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>
-            <td>The time the relation was last updated.</td>
+            <td>The time the name was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -7598,20 +7598,20 @@ Returns this model as an array.
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>priceId</td>
-            <td>The price id of the sales price</td>
+            <td>salesPriceId</td>
+            <td>The unique ID of the sales price</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
-            <td>The plenty id of the sales price</td>
+            <td>The unique ID of the client (store)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The time the relation was created.</td>
+            <td>The time the client (store) was activated.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>
-            <td>The time the relation was last updated.</td>
+            <td>The time the relationship between the client (store) and the sales price was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -7646,20 +7646,20 @@ Returns this model as an array.
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>priceId</td>
-            <td>The price id of the sales price</td>
+            <td>salesPriceId</td>
+            <td>The unique ID of the sales price</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/double">double</a></td>
             <td>referrerId</td>
-            <td>The referrer id of the sales price</td>
+            <td>The unique ID of the referrer</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The time the relation was created.</td>
+            <td>The time the referrer was activated.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>
-            <td>The time the relation was last updated.</td>
+            <td>The time the relationship between referrer and sales price was last updated.</td>
         </tr></tbody>
 </table>
 
@@ -9723,7 +9723,12 @@ Variation
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationAttributeValues</td>
-            <td></td>
+            <td>An array of the attributeValues of the variation.</td>
+        </tr><tr>
+            <td><a href="item#item_models_unitcombination">UnitCombination</a>
+</td>
+            <td>unit</td>
+            <td>The UnitCombination of the Variation. Object contains unitId and content.</td>
         </tr><tr>
             <td><a href="item#item_models_variation">Variation</a>
 </td>
@@ -9772,12 +9777,12 @@ Gets a variation barcode. The ID of the variation and the ID of the barcode must
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td>The ID of the barcode</td>
+        <td>The unique ID of the barcode</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td>The ID of the variation</td>
+        <td>The unique ID of the variation</td>
     </tr>
 </table>
 
@@ -9786,7 +9791,7 @@ Gets a variation barcode. The ID of the variation and the ID of the barcode must
 </pre>
 
     
-Creates a new variation barcode.
+Creates a variation barcode.
     
 ##### <strong>Parameters</strong>
     
@@ -9814,12 +9819,12 @@ Updates a variation barcode. The ID of the variation and the ID of the barcode m
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td>The ID of the barcode</td>
+        <td>The unique ID of the barcode</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td>The ID of the variation</td>
+        <td>The unique ID of the variation</td>
     </tr>
 </table>
 
@@ -9835,12 +9840,12 @@ Deletes a variation barcode. The ID of the variation and the ID of the barcode m
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$barcodeId</td>
-        <td>The ID of the barcode</td>
+        <td>The unique ID of the barcode</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td>The ID of the variation</td>
+        <td>The unique ID of the variation</td>
     </tr>
 </table>
 
@@ -9848,14 +9853,14 @@ Deletes a variation barcode. The ID of the variation and the ID of the barcode m
 <pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Lists variation barcodes. The ID of the variation must be specified.
+Lists all barcodes of a variation. The ID of the variation must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td>The ID of the variation</td>
+        <td>The unique ID of the variation</td>
     </tr>
 </table>
 
@@ -9892,7 +9897,7 @@ Variation Barcode
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The unique ID of the variation. The ID must be specified.</td>
+            <td>The unique ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
