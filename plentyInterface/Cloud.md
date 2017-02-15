@@ -596,12 +596,22 @@ foo
     
 
     
-<pre>public <strong>activate</strong>():<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+<pre>public <strong>activateList</strong>(<a target="_blank" href="http://php.net/array">array</a> $fields):<a href="cloud#cloud_lib_source">Source</a>
 </pre>
 
     
 
     
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$fields</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### IndependentSource<a name="cloud_source_independentsource"></a>
 
@@ -632,12 +642,22 @@ foo
     
 
     
-<pre>public <strong>activate</strong>():<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+<pre>public <strong>activateList</strong>(<a target="_blank" href="http://php.net/array">array</a> $fields):<a href="cloud#cloud_lib_source">Source</a>
 </pre>
 
     
 
     
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$fields</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### SourceInterface<a name="cloud_source_sourceinterface"></a>
 

@@ -651,6 +651,37 @@ List orders of a contact
 </table>
 
 
+<pre>public <strong>allOrdersBySupplier</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List orders having at least one order item with a variation of a supplier
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactId</td>
+        <td>The ID of the contact (supplier id)</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The page to get. The default page that will be returned is page 1.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of orders to be displayed per page. The default number of orders per page is 50.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "comments".</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getLatestOrderByContactId</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="order#order_models_order">Order</a>
 </pre>
 
@@ -713,6 +744,28 @@ List package numbers of an order
 </table>
 
 
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
 ## Models<a name="order_order_models"></a>
 ### CouponCodeOrder<a name="order_models_couponcodeorder"></a>
 
@@ -1282,6 +1335,10 @@ The order item amount model. Order item amount refers to amounts of money.
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>exchangeRate</td>
             <td>The exchange rate for converting the current currency into the system currency.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>purchasePrice</td>
+            <td>The purchase price of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>priceOriginalGross</td>
@@ -3070,6 +3127,27 @@ Delete a date
 </table>
 
 
+<pre>public <strong>deleteByOrderIdAndType</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Delete a order date specified by the id of the order and the type of the order date.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$typeId</td>
+        <td>The type (ID) of the date.</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>findByOrderIdAndTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a href="order#order_models_orderdate">OrderDate</a>
 </pre>
 
@@ -3586,6 +3664,44 @@ The OrderItemDate model.
 Returns this model as an array.
     
 # Events<a name="order_events"></a>
+    
+## Canceled<a name="order_events_canceled"></a>
+### AfterOrderCanceled<a name="order_canceled_afterordercanceled"></a>
+
+An event class fired after an order is canceled.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Events\Canceled`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### BeforeOrderCanceled<a name="order_canceled_beforeordercanceled"></a>
+
+An event class fired before an order will be canceled.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Events\Canceled`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
     
 ## Created<a name="order_events_created"></a>
 ### CreditNoteCreated<a name="order_created_creditnotecreated"></a>
@@ -6100,6 +6216,19 @@ The Parcel Service Preset Model
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>
             <td>The date the shipping profile was last updated</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>parcelServicePresetNames</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>parcelServiceNames</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="order#order_models_parcelservice">ParcelService</a>
+</td>
+            <td>parcelService</td>
+            <td>The parcel service.</td>
         </tr></tbody>
 </table>
 

@@ -41,8 +41,7 @@ Creates a payment contact relation.
 
 
 <pre>public <strong>deleteContactRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
- $payment, <a href="account#account_models_contact">Contact</a>
- $contact):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+ $payment):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes a payment contact relation.
@@ -54,12 +53,6 @@ Deletes a payment contact relation.
 </td>
         <td>$payment</td>
         <td>The ID of the payment</td>
-    </tr>
-    <tr>
-        <td><a href="account#account_models_contact">Contact</a>
-</td>
-        <td>$contact</td>
-        <td>The ID of the contact</td>
     </tr>
 </table>
 

@@ -1,5 +1,39 @@
 
 
+# Item<a name="miscellaneous_item"></a>
+    
+## SalesPrice<a name="miscellaneous_item_salesprice"></a>
+### SalesPriceSearchRepository<a name="miscellaneous_salesprice_salespricesearchrepository"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Legacy\Repositories\Item\SalesPrice`
+
+
+
+#### Methods
+
+<pre>public <strong>search</strong>(<a href="item#item_models_salespricesearchrequest">SalesPriceSearchRequest</a>
+ $request):<a href="item#item_models_salespricesearchresponse">SalesPriceSearchResponse</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="item#item_models_salespricesearchrequest">SalesPriceSearchRequest</a>
+</td>
+        <td>$request</td>
+        <td></td>
+    </tr>
+</table>
+
+
 # Log<a name="miscellaneous_log"></a>
     
 ## Contracts<a name="miscellaneous_log_contracts"></a>
