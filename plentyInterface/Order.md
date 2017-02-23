@@ -963,7 +963,18 @@ The order model.
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>dates</td>
-            <td>The dates of the order. Can contain many different dates with their types like:
+            <td>The dates of the order. Can contain many different dates with their types like:</td>
+        </tr><tr>
+            <td><a href="order#order_models_order">Order</a>
+</td>
+            <td>originOrder</td>
+            <td>The origin order of this order. If this order is the origin, this attribute is null.</td>
+        </tr><tr>
+            <td><a href="order#order_models_order">Order</a>
+</td>
+            <td>parentOrder</td>
+            <td>The parent order of this order. If this order has no parent, this attribute is null.
+
 <ul>
 <li>Delete date = 1</li>
 <li>Entry date = 2</li>
@@ -1259,6 +1270,11 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 </td>
             <td>countryVat</td>
             <td>The country vat instance.</td>
+        </tr><tr>
+            <td><a href="item#item_models_variation">Variation</a>
+</td>
+            <td>variation</td>
+            <td>The item variation in the position.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -4835,6 +4851,17 @@ The OrderPropertyType model. Each order property must have a property type. An o
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
             <td>The position for sorting</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>cast</td>
+            <td>The data type of the values of this property type. Valid types are:
+<ul>
+	<li>string</li>
+	<li>int</li>
+	<li>numeric</li>
+	<li>bool</li>
+	<li>enum(val1,val2,val3,...)</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>names</td>

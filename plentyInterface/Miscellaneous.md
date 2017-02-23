@@ -950,6 +950,63 @@ Register the service provider.
 
     
 
+### Middleware<a name="miscellaneous_plugin_middleware"></a>
+
+Middleware
+
+
+#### Namespace
+
+`Plenty\Plugin`
+
+
+
+#### Methods
+
+<pre>public <strong>before</strong>(<a href="miscellaneous#miscellaneous_http_request">Request</a>
+ $request):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous_http_request">Request</a>
+</td>
+        <td>$request</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>after</strong>(<a href="miscellaneous#miscellaneous_http_request">Request</a>
+ $request, <a href="miscellaneous#miscellaneous_http_response">Response</a>
+ $response):<a href="miscellaneous#miscellaneous_http_response">Response</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous_http_request">Request</a>
+</td>
+        <td>$request</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous_http_response">Response</a>
+</td>
+        <td>$response</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### RouteServiceProvider<a name="miscellaneous_plugin_routeserviceprovider"></a>
 
 Route service provider
@@ -988,6 +1045,22 @@ Service provider for plugins
 
 
 #### Methods
+
+<pre>public <strong>addGlobalMiddleware</strong>(<a target="_blank" href="http://php.net/string">string</a> $middleware):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Add a new middleware to end of the stack if it does not already exist.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$middleware</td>
+        <td></td>
+    </tr>
+</table>
+
 
 <pre>public <strong>register</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -1745,6 +1818,43 @@ Add custom Role
     
 The field under validation must be a valid plentyId.
     
+<pre>public <strong>typeFromDb</strong>(<a target="_blank" href="http://php.net/string">string</a> $table, <a target="_blank" href="http://php.net/string">string</a> $column, <a target="_blank" href="http://php.net/string">string</a> $attribute, <a target="_blank" href="http://php.net/string">string</a> $comparisonKey = &quot;id&quot;):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
+</pre>
+
+    
+The field under validation must have the type specified in the database.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$table</td>
+        <td>The table with the data type</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$column</td>
+        <td>The column with the data type</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attribute</td>
+        <td>The attribute in the validator with the key</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$comparisonKey</td>
+        <td>The column to in $table to compare $attribute to. Default is 'id'.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>validDbType</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
+</pre>
+
+    
+The field under validation must be a valid data type used by the validation rule &#039;typeFromDb&#039;.
+    
 
 ### RulesCollection<a name="miscellaneous_validation_rulescollection"></a>
 
@@ -2375,6 +2485,263 @@ Replace the input for the current request.
     
 Returns the request body content.
     
+<pre>public <strong>getRequestUri</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Returns the requested URI (path and query string).
+    
+<pre>public <strong>exists</strong>($key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Determine if the request contains a given input item key.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>has</strong>($key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Determine if the request contains a non-empty value for an input item.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>input</strong>(<a target="_blank" href="http://php.net/string">string</a> $key = null, $default = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Retrieve an input item from the request.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$default</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>only</strong>($keys):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get a subset of the items from the input data.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$keys</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>except</strong>($keys):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get all of the input except for a specified array of items.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$keys</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>query</strong>(<a target="_blank" href="http://php.net/string">string</a> $key = null, $default = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Retrieve a query string item from the request.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$default</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasHeader</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Determine if a header is set on the request.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>header</strong>(<a target="_blank" href="http://php.net/string">string</a> $key = null, $default = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Retrieve a header from the request.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$default</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isJson</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Determine if the request is sending JSON.
+    
+<pre>public <strong>wantsJson</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Determine if the current request is asking for JSON in return.
+    
+<pre>public <strong>accepts</strong>($contentTypes):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Determines whether the current requests accepts a given content type.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$contentTypes</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>prefers</strong>($contentTypes):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Return the most suitable content type from the given array based on content negotiation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$contentTypes</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>acceptsJson</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Determines whether a request accepts JSON.
+    
+<pre>public <strong>acceptsHtml</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Determines whether a request accepts HTML.
+    
+<pre>public <strong>format</strong>(<a target="_blank" href="http://php.net/string">string</a> $default = &quot;html&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the data format expected in the response.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$default</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getUserInfo</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Gets the user info.
+    
+<pre>public <strong>getHttpHost</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Returns the HTTP host being requested.
+    
+<pre>public <strong>getSchemeAndHttpHost</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Gets the scheme and HTTP host.
+    
+<pre>public <strong>getUri</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Generates a normalized URI (URL) for the Request.
+    
+<pre>public <strong>getUriForPath</strong>(<a target="_blank" href="http://php.net/string">string</a> $path):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Generates a normalized URI for the given path.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$path</td>
+        <td>A path to use instead of the current one</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getQueryString</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Generates the normalized query string for the Request.
+    
 
 ### Response<a name="miscellaneous_http_response"></a>
 
@@ -2389,7 +2756,17 @@ Class to create different types of http response.
 
 #### Methods
 
-<pre>public <strong>make</strong>(<a target="_blank" href="http://php.net/string">string</a> $content = &quot;&quot;, <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
+<pre>public <strong>status</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Get the status code for the response.
+    
+<pre>public <strong>content</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the content of the response.
+    
+<pre>public <strong>make</strong>(<a target="_blank" href="http://php.net/string">string</a> $content = &quot;&quot;, <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_http_response">Response</a>
 </pre>
 
     
@@ -2415,7 +2792,7 @@ Return a new response from the application.
 </table>
 
 
-<pre>public <strong>view</strong>(<a target="_blank" href="http://php.net/string">string</a> $view, <a target="_blank" href="http://php.net/array">array</a> $data = [], <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
+<pre>public <strong>view</strong>(<a target="_blank" href="http://php.net/string">string</a> $view, <a target="_blank" href="http://php.net/array">array</a> $data = [], <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_http_response">Response</a>
 </pre>
 
     
@@ -3281,6 +3658,52 @@ Register a new route with the given verbs.
         <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$action</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>middleware</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $class):<a href="miscellaneous#miscellaneous_plugin_routing">Routing</a>
+</pre>
+
+    
+Register a short-hand name for a middleware.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$class</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>prepareResponse</strong>(<a href="miscellaneous#miscellaneous_http_request">Request</a>
+ $request, <a href="miscellaneous#miscellaneous_http_response">Response</a>
+ $response):<a href="miscellaneous#miscellaneous_http_response">Response</a>
+</pre>
+
+    
+Create a response instance from the given value.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous_http_request">Request</a>
+</td>
+        <td>$request</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous_http_response">Response</a>
+</td>
+        <td>$response</td>
         <td></td>
     </tr>
 </table>
@@ -4270,6 +4693,43 @@ The field under validation must be a valid w3c formated date time string.
 
     
 The field under validation must be a valid plentyId.
+    
+<pre>public <strong>typeFromDb</strong>(<a target="_blank" href="http://php.net/string">string</a> $table, <a target="_blank" href="http://php.net/string">string</a> $column, <a target="_blank" href="http://php.net/string">string</a> $attribute, <a target="_blank" href="http://php.net/string">string</a> $comparisonKey = &quot;id&quot;):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
+</pre>
+
+    
+The field under validation must have the type specified in the database.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$table</td>
+        <td>The table with the data type</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$column</td>
+        <td>The column with the data type</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attribute</td>
+        <td>The attribute in the validator with the key</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$comparisonKey</td>
+        <td>The column to in $table to compare $attribute to. Default is 'id'.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>validDbType</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
+</pre>
+
+    
+The field under validation must be a valid data type used by the validation rule &#039;typeFromDb&#039;.
     
 <pre>public <strong>different</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>

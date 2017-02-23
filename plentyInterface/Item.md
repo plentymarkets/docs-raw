@@ -877,19 +877,66 @@ Repository for item availability.
 <pre>public <strong>findAvailability</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_availability">Availability</a>
 </pre>
 
+<div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                Deprecated!             </h3>
+        </div>
+        <div class="panel-body">
+            This method will not be supported in the future. Please refrain from using it as soon as possible.
+        </div>
+    </div>
     
-Find an availability configuration by a given id.
+Gets an item availability. The ID of the availability must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td>The item availability id that needs to be found.</td>
+        <td>The ID of the item availability</td>
     </tr>
 </table>
 
 
+<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_availability">Availability</a>
+</pre>
+
+    
+Gets an item availability. The ID of the availability must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the item availability</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_availability">Availability</a>
+</pre>
+
+    
+Updates an item availability.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>all</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists all item availabilities.
+    
 ## Models<a name="item_availability_models"></a>
 ### Availability<a name="item_models_availability"></a>
 
@@ -914,18 +961,18 @@ The item availability model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of this availability.</td>
+            <td>The ID of this availability</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>icon</td>
-            <td>The icon of this availability.</td>
+            <td>The icon of this availability</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>averageDays</td>
-            <td>The average days for this availability.</td>
+            <td>The average delivery time in days for this availability</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>languages</td>
+            <td>names</td>
             <td></td>
         </tr></tbody>
 </table>
@@ -939,9 +986,9 @@ The item availability model
 Returns this model as an array.
     
 
-### AvailabilityLanguage<a name="item_models_availabilitylanguage"></a>
+### AvailabilityName<a name="item_models_availabilityname"></a>
 
-The item availability lang model
+The item availability name model
 
 
 #### Namespace
@@ -962,15 +1009,15 @@ The item availability lang model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>availabilityId</td>
-            <td>The availability ID this language belongs to.</td>
+            <td>The ID of the availability that the name belongs to</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>language</td>
-            <td>The language key ('en', 'de' etc.).</td>
+            <td>lang</td>
+            <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language code</a> of the availability name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
-            <td>The given name for this translation.</td>
+            <td>The name of the item availability in the specified language</td>
         </tr></tbody>
 </table>
 
@@ -3659,7 +3706,7 @@ The item model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>couponRestriction</td>
-            <td>Indicates if the item can be purchased using a coupon.<ul><li>0 = Permitted</li><li>1 = Not permitted</li><li>2 = Purchasable with coupon only</li></ul></td>
+            <td>Indicates if the item can be purchased using a promotional coupon.<ul><li>0 = Permitted</li><li>1 = Not permitted</li><li>2 = Purchasable with coupon only</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>condition</td>
@@ -5058,6 +5105,28 @@ Lists manufacturers by filter
 </table>
 
 
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
 ## Models<a name="item_manufacturer_models"></a>
 ### Manufacturer<a name="item_models_manufacturer"></a>
 
@@ -8110,9 +8179,9 @@ To be written
 
 
 ## Contracts<a name="item_search_contracts"></a>
-### IndexItemRepositoryContract<a name="item_contracts_indexitemrepositorycontract"></a>
+### VariationElasticSearchAvailibilityRepositoryContract<a name="item_contracts_variationelasticsearchavailibilityrepositorycontract"></a>
 
-The contract for the search repository
+VariationElasticSearchAvailibilityRepositoryContract
 
 
 #### Namespace
@@ -8123,68 +8192,78 @@ The contract for the search repository
 
 #### Methods
 
-<pre>public <strong>index</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
 
     
-Index an item
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$variationId</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>indexItemsRecentlyChanged</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
-Creates or updates index of items which are recently changed
-    
-<pre>public <strong>delete</strong>($itemId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>isAvailable</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
 
     
-Deletes item indices
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$itemId</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>setOutput</strong>(<a href="cloud#cloud_output_outputinterface">OutputInterface</a>
- $output):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
 
     
-Set OutputInterface
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="cloud#cloud_output_outputinterface">OutputInterface</a>
-</td>
-        <td>$output</td>
-        <td></td>
-    </tr>
-</table>
+
+### VariationElasticSearchScrollRepositoryContract<a name="item_contracts_variationelasticsearchscrollrepositorycontract"></a>
+
+kommt noch
 
 
-<pre>public <strong>execute</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+#### Namespace
+
+`Plenty\Modules\Item\Search\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>hasNext</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>setIndex</strong>(<a href="cloud#cloud_index_indexinterface">IndexInterface</a>
+ $index):<a href="cloud#cloud_contracts_elasticsearchsearchrepositorycontract">ElasticSearchSearchRepositoryContract</a>
 </pre>
 
     
 
     
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_index_indexinterface">IndexInterface</a>
+</td>
+        <td>$index</td>
+        <td></td>
+    </tr>
+</table>
 
-### ItemElasticSearchSearchRepositoryContract<a name="item_contracts_itemelasticsearchsearchrepositorycontract"></a>
+
+<pre>public <strong>addSearch</strong>(<a href="cloud#cloud_search_searchinterface">SearchInterface</a>
+ $search):<a href="cloud#cloud_contracts_elasticsearchsearchrepositorycontract">ElasticSearchSearchRepositoryContract</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_search_searchinterface">SearchInterface</a>
+</td>
+        <td>$search</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>execute</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+
+### VariationElasticSearchSearchRepositoryContract<a name="item_contracts_variationelasticsearchsearchrepositorycontract"></a>
 
 kommt noch
 
@@ -8238,30 +8317,6 @@ kommt noch
 </table>
 
 
-
-### VariationElasticSearchAvailibilityRepositoryContract<a name="item_contracts_variationelasticsearchavailibilityrepositorycontract"></a>
-
-VariationElasticSearchAvailibilityRepositoryContract
-
-
-#### Namespace
-
-`Plenty\Modules\Item\Search\Contracts`
-
-
-
-#### Methods
-
-<pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
-
-    
-
-    
-<pre>public <strong>isAvailable</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
-
-    
-
-    
 ## Filter<a name="item_search_filter"></a>
 ### BarcodeFilter<a name="item_filter_barcodefilter"></a>
 
@@ -9014,6 +9069,22 @@ foo
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$manufacturerId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasSupplier</strong>(<a target="_blank" href="http://php.net/int">int</a> $supplierId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$supplierId</td>
         <td></td>
     </tr>
 </table>
@@ -11509,109 +11580,6 @@ Returns this model as an array.
 # VariationProperty<a name="item_variationproperty"></a>
     
 ## Contracts<a name="item_variationproperty_contracts"></a>
-### VariationPropertyRepositoryContract<a name="item_contracts_variationpropertyrepositorycontract"></a>
-
-The contract of the variation property repository
-
-
-#### Namespace
-
-`Plenty\Modules\Item\VariationProperty\Contracts`
-
-
-
-#### Methods
-
-<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationproperty">VariationProperty</a>
-</pre>
-
-    
-Creates a link between a property and a variation and adds property data.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td>The variation property value as an associative array</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_variationproperty">VariationProperty</a>
-</pre>
-
-    
-Updates the data of a property linked to a variation. The ID of the variation property must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td>The variation property data as an associative array</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$id</td>
-        <td>The unique ID of the link between a property and a variation</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
-</pre>
-
-    
-Deletes the link between a property and a variation. The ID of the variation property must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$id</td>
-        <td>The unique ID of the link between a property and a variation</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_variationproperty">VariationProperty</a>
-</pre>
-
-    
-Gets the data of a property linked to a variation. The ID of the variation property must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$id</td>
-        <td>The unique ID of the link between a property and a variation</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Lists all properties linked to variations.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$columns</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$perPage</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
 ### VariationPropertyValueRepositoryContract<a name="item_contracts_variationpropertyvaluerepositorycontract"></a>
 
 The contract of the variation property value repository
@@ -11709,22 +11677,6 @@ Deletes the link between a property value and a variation. The ID of the variati
 </table>
 
 
-<pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_variationpropertyvalue">VariationPropertyValue</a>
-</pre>
-
-    
-Gets the data of a property value linked to a variation. The ID of the variation property value must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$id</td>
-        <td>The ID of the link between a property value and a variation</td>
-    </tr>
-</table>
-
-
 <pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -11741,51 +11693,6 @@ Lists the property values linked to a variation. The ID of the variation must be
 
 
 ## Models<a name="item_variationproperty_models"></a>
-### VariationProperty<a name="item_models_variationproperty"></a>
-
-The VariationPropertyValue
-
-
-#### Namespace
-
-`Plenty\Modules\Item\VariationProperty\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>variationId</td>
-            <td>The unique ID of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>propertyId</td>
-            <td>The unique ID of the link between the variation and the property</td>
-        </tr><tr>
-            <td><a href="item#item_models_property">Property</a>
-</td>
-            <td>property</td>
-            <td></td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
 ### VariationPropertyValue<a name="item_models_variationpropertyvalue"></a>
 
 The VariationPropertyValue
@@ -11839,6 +11746,10 @@ The VariationPropertyValue
             <td>surcharge</td>
             <td>The surcharge of the property value of the variation</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>names</td>
+            <td>Collection of the variationPropertyValueNames names that belong to this variationPropertyValue</td>
+        </tr><tr>
             <td><a href="item#item_models_property">Property</a>
 </td>
             <td>property</td>
@@ -11848,6 +11759,50 @@ The VariationPropertyValue
 </td>
             <td>propertySelection</td>
             <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### VariationPropertyValueName<a name="item_models_variationpropertyvaluename"></a>
+
+The VariationPropertyName
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationProperty\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>propertyValueId</td>
+            <td>The unique ID of the link between the variation and the property</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lang</td>
+            <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#countries" target="_blank">language</a> of the propertyValueName.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td>The value of the propertyValueName in the specified language</td>
         </tr></tbody>
 </table>
 

@@ -681,7 +681,7 @@ CategoryDetails
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>categoryId</td>
-            <td>The unique ID of the category this CategoryDetails model belongs to</td>
+            <td>The unique ID of the category these category details belong to</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
@@ -689,7 +689,7 @@ CategoryDetails
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The language of the category. Supported languages:<ul><li><strong>de</strong> = German</li><li><strong>en</strong> = English</li><li><strong>fr</strong> = French</li><li><strong>it</strong> = Italian</li><li><strong>es</strong> = Spanish</li><li><strong>tr</strong> = Turkish</li><li><strong>nl</strong> = Dutch</li><li><strong>pl</strong> = Polish</li><li><strong>pt</strong> = Portuguese</li><li><strong>nn</strong> = Norwegian</li><li><strong>da</strong> = Danish</li><li><strong>se</strong> = Swedish</li><li><strong>cz</strong> = Czech</li><li><strong>ru</strong> = Russian</li><li><strong>sk</strong> = Slovak</li><li><strong>cn</strong> = Chinese</li><li><strong>vn</strong> = Vietnamese</li></ul></td>
+            <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language</a> of the category</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
@@ -752,14 +752,6 @@ CategoryDetails
             <td>Flag that indicates if the complete category text, i.e. the complete description, will be searched.<ul><li>Y = Complete text will be searched.</li><li>N = Text will not be searched completely.</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>placeholderTranslation</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-            <td>webTemplateExists</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>metaRobots</td>
             <td>Values from the meta element Robots are analyzed by Web crawlers. These values tell the crawler what it should do with the page and with the links on the page.<ul><li>all = Include this category in the search engine index and follow the links on the page.</li><li>index = Include in the search engine index.</li><li>nofollow = Do not follow the links on the page.</li><li>noindex = Do not include in the search engine index.</li><li>nofollow, noindex = Do not follow the links and do not include the category in the search engine index.</li></ul></td>
         </tr><tr>
@@ -768,20 +760,18 @@ CategoryDetails
             <td>The URL of any category that contains the same content. This
                                                      will avoid duplicate content.</td>
         </tr><tr>
-            <td><a href="document#document_models_document">Document</a>
-</td>
-            <td>imageDocument</td>
-            <td>The Document model for the image1 of the category</td>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the category details were last updated</td>
         </tr><tr>
-            <td><a href="document#document_models_document">Document</a>
-</td>
-            <td>image2Document</td>
-            <td>The Document model for the image2 of the category</td>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedBy</td>
+            <td>The user who last updated the category details</td>
         </tr><tr>
             <td><a href="category#category_models_category">Category</a>
 </td>
             <td>category</td>
-            <td>The category model this CategoryDetails model is associated with</td>
+            <td>The category these category details are associated with.</td>
         </tr></tbody>
 </table>
 

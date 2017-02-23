@@ -301,7 +301,11 @@ The Accounting Location model it is always associated with a client and country 
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>clientId</td>
-            <td>The Id of the client, the accounting location belongs to</td>
+            <td>The Id of the client, the accounting location belongs to.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>plentyId</td>
+            <td>The plenty id of the client, the accounting location belongs to.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>vats</td>

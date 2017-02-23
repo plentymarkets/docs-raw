@@ -161,25 +161,7 @@ to be written
     
 
     
-<pre>public <strong>preCreate</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>postCreate</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>preDelete</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>postDelete</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>getInfo</strong>():<a href="cloud#cloud_info_infointerface">InfoInterface</a>
 </pre>
 
     
@@ -677,6 +659,101 @@ to be written
     
 
     
+# Index<a name="cloud_index"></a>
+    
+## Info<a name="cloud_index_info"></a>
+### InfoInterface<a name="cloud_info_infointerface"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Index\Info`
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $default = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$default</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>set</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>remove</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Settings<a name="cloud_index_settings"></a>
+### SettingsInterface<a name="cloud_settings_settingsinterface"></a>
+
+to be written
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Index\Settings`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the instance as an array.
+    
 # Mapping<a name="cloud_mapping"></a>
     
 ## Property<a name="cloud_mapping_property"></a>
@@ -736,27 +813,6 @@ to be written
     </tr>
 </table>
 
-
-<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Get the instance as an array.
-    
-# Index<a name="cloud_index"></a>
-    
-## Settings<a name="cloud_index_settings"></a>
-### SettingsInterface<a name="cloud_settings_settingsinterface"></a>
-
-to be written
-
-
-#### Namespace
-
-`Plenty\Modules\Cloud\ElasticSearch\Lib\Index\Settings`
-
-
-
-#### Methods
 
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
