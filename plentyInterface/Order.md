@@ -682,6 +682,37 @@ List orders having at least one order item with a variation of a supplier
 </table>
 
 
+<pre>public <strong>allOrdersByContactSender</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List orders of a sender contact
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactId</td>
+        <td>The ID of the contact</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The page to get. The default page that will be returned is page 1.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of orders to be displayed per page. The default number of orders per page is 50.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "comments".</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getLatestOrderByContactId</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="order#order_models_order">Order</a>
 </pre>
 
@@ -740,6 +771,27 @@ List package numbers of an order
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderId</td>
         <td>The ID of the order</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>cancelOrder</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Cancel an order
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
     </tr>
 </table>
 
@@ -1556,94 +1608,6 @@ The order item type name model.
 Returns this model as an array.
     
 
-### OrderRelationReference<a name="order_models_orderrelationreference"></a>
-
-The order relation reference model specifies how references and orders are related to one another.
-
-
-#### Namespace
-
-`Plenty\Modules\Order\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The relation reference id.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>orderId</td>
-            <td>The order id.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>referenceType</td>
-            <td>The reference type.
-                                         The reference types available are the following:
-<ul>
-<li>contact</li>
-<li>account</li>
-<li>warehouse</li>
-</ul></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>referenceId</td>
-            <td>The reference id.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>relation</td>
-            <td>The relation between a reference and an order.
-                                         The relation types available are the following:
-<ul>
-<li>sender</li>
-<li>receiver</li>
-</ul></td>
-        </tr><tr>
-            <td><a href="order#order_models_order">Order</a>
-</td>
-            <td>order</td>
-            <td>The order that the reference belongs to.</td>
-        </tr><tr>
-            <td><a href="account#account_models_contact">Contact</a>
-</td>
-            <td>contactReceiver</td>
-            <td>The Contact referenced with relation "receiver".</td>
-        </tr><tr>
-            <td><a href="account#account_models_contact">Contact</a>
-</td>
-            <td>contactSender</td>
-            <td>The Contact referenced with relation "sender".</td>
-        </tr><tr>
-            <td><a href="account#account_models_account">Account</a>
-</td>
-            <td>accountReceiver</td>
-            <td>The Account referenced with relation "receiver".</td>
-        </tr><tr>
-            <td><a href="account#account_models_account">Account</a>
-</td>
-            <td>accountSender</td>
-            <td>The Account referenced with relation "sender".</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
 ### OrderType<a name="order_models_ordertype"></a>
 
 The order type model.
@@ -1963,7 +1927,7 @@ Returns this model as an array.
 ## Services<a name="order_order_services"></a>
 ### OrderCreatedTypeService<a name="order_services_ordercreatedtypeservice"></a>
 
-(Un)Register event classes extending OrderCreated for custom order types.
+This class is used as an event listener as well as a service for registering events. The class allows to register event classes to extend the OrderCreated event for custom order types.
 
 
 #### Namespace
@@ -1979,7 +1943,7 @@ Returns this model as an array.
 </pre>
 
     
-Handle the OrderCreated event by detecting the subevent to fire according the order type id of the order.
+Reacts upon the OrderCreated event
     
 ##### <strong>Parameters</strong>
     
@@ -1996,19 +1960,19 @@ Handle the OrderCreated event by detecting the subevent to fire according the or
 </pre>
 
     
-Add an event class extending OrderCreated for the given custom order type id.
+Create event class for a custom order type
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$typeId</td>
-        <td>The custom order type id.</td>
+        <td>The ID of the custom order type.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$className</td>
-        <td>The class name of the event class.</td>
+        <td>The name of the event class.</td>
     </tr>
 </table>
 
@@ -2017,19 +1981,19 @@ Add an event class extending OrderCreated for the given custom order type id.
 </pre>
 
     
-Removes an event class for the given custom order type id.
+Delete event class from a custom order type
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$typeId</td>
-        <td>The custom order type id.</td>
+        <td>The ID of the custom order type.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$className</td>
-        <td>The class name of the event class.</td>
+        <td>The name of the event class.</td>
     </tr>
 </table>
 
@@ -3679,6 +3643,89 @@ The OrderItemDate model.
     
 Returns this model as an array.
     
+# Documents<a name="order_documents"></a>
+    
+## Contracts<a name="order_documents_contracts"></a>
+### OrderDocumentStorageContract<a name="order_contracts_orderdocumentstoragecontract"></a>
+
+Provides methods to store, get and delete order document files. The files are stored on an AWS S3 storage by default. The implementation for this contract can be replaced by your own implementation.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Documents\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>fileExists</strong>(<a target="_blank" href="http://php.net/string">string</a> $path):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Check if the file path exists on the storage.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$path</td>
+        <td>The file path</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>put</strong>(<a target="_blank" href="http://php.net/string">string</a> $path, <a target="_blank" href="http://php.net/string">string</a> $file):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Store a file on the storage.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$path</td>
+        <td>The file path</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$file</td>
+        <td>The file to store. Can be either a file path on the file system or an object.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $path):<a href="cloud#cloud_models_storageobject">StorageObject</a>
+</pre>
+
+    
+Get a file from the storage
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$path</td>
+        <td>The file path</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/string">string</a> $path):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+Delete a file from the storage.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$path</td>
+        <td>The file path</td>
+    </tr>
+</table>
+
+
 # Events<a name="order_events"></a>
     
 ## Canceled<a name="order_events_canceled"></a>
@@ -4249,6 +4296,95 @@ The payment method information model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>showLogo</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# Pdf<a name="order_pdf"></a>
+    
+## Events<a name="order_pdf_events"></a>
+### OrderPdfGenerationEvent<a name="order_events_orderpdfgenerationevent"></a>
+
+OrderPdfGenerationEvent
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Pdf\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the
+    
+<pre>public <strong>getDocType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the
+    
+<pre>public <strong>addOrderPdfGeneration</strong>(<a href="order#order_models_orderpdfgeneration">OrderPdfGeneration</a>
+ $orderPdfGeneration):<a href="order#order_pdf_events">Events</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_orderpdfgeneration">OrderPdfGeneration</a>
+</td>
+        <td>$orderPdfGeneration</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Models<a name="order_pdf_models"></a>
+### OrderPdfGeneration<a name="order_models_orderpdfgeneration"></a>
+
+OrderPdfGeneration Model
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Pdf\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>language</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>advice</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>sums</td>
             <td></td>
         </tr></tbody>
 </table>
@@ -5092,6 +5228,336 @@ The order referrer model. An order referrer shows where a purchase was originall
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>origin</td>
             <td>The origin of this referrer</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# RelationReference<a name="order_relationreference"></a>
+    
+## Contracts<a name="order_relationreference_contracts"></a>
+### OrderRelationReferenceRepositoryContract<a name="order_contracts_orderrelationreferencerepositorycontract"></a>
+
+Get, create, update and delete order relation references.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\RelationReference\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="order#order_models_orderrelationreference">OrderRelationReference</a>
+</pre>
+
+    
+Get a relation reference by ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the relation reference</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByComposite</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/string">string</a> $referenceType, <a target="_blank" href="http://php.net/string">string</a> $relation):<a href="order#order_models_orderrelationreference">OrderRelationReference</a>
+</pre>
+
+    
+Get a relation reference by composite key
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$referenceType</td>
+        <td>The reference type. Valid types are:
+<ul>
+	<li>contact</li>
+	<li>warehouse</li>
+	<li>account</li>
+</ul></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$relation</td>
+        <td>The relation. Valid relations are:
+<ul>
+	<li>sender</li>
+	<li>receiver</li>
+</ul></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+List relation references by order ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByAnyValues</strong>(<a target="_blank" href="http://php.net/array">array</a> $values, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List relation references by any values
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>The array with the given filter values. E.g. ['referenceType' => 'contact']. Valid filters are:
+<ul>
+	<li>id</li>
+	<li>orderId</li>
+	<li>referenceType</li>
+	<li>referenceId</li>
+	<li>relation</li>
+</ul></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The page to get</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The items per page</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="order#order_models_orderrelationreference">OrderRelationReference</a>
+</pre>
+
+    
+Create a relation reference
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="order#order_models_orderrelationreference">OrderRelationReference</a>
+</pre>
+
+    
+Update a relation reference by ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the relation reference</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateByComposite</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/string">string</a> $referenceType, <a target="_blank" href="http://php.net/string">string</a> $relation, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="order#order_models_orderrelationreference">OrderRelationReference</a>
+</pre>
+
+    
+Update a relation reference by composite key
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$referenceType</td>
+        <td>The reference type. Valid types are:
+<ul>
+	<li>contact</li>
+	<li>warehouse</li>
+	<li>account</li>
+</ul></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$relation</td>
+        <td>The relation. Valid relations are:
+<ul>
+	<li>sender</li>
+	<li>receiver</li>
+</ul></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+Delete a relation reference by ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the relation reference</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteByComposite</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/string">string</a> $referenceType, <a target="_blank" href="http://php.net/string">string</a> $relation):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+Delete a relation reference by composite key
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$referenceType</td>
+        <td>The reference type. Valid types are:
+<ul>
+	<li>contact</li>
+	<li>warehouse</li>
+	<li>account</li>
+</ul></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$relation</td>
+        <td>The relation. Valid relations are:
+<ul>
+	<li>sender</li>
+	<li>receiver</li>
+</ul></td>
+    </tr>
+</table>
+
+
+## Models<a name="order_relationreference_models"></a>
+### OrderRelationReference<a name="order_models_orderrelationreference"></a>
+
+The order relation reference model specifies how references and orders are related to one another.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\RelationReference\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The relation reference id.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>orderId</td>
+            <td>The order id.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>referenceType</td>
+            <td>The reference type.
+                                         The reference types available are the following:
+<ul>
+<li>contact</li>
+<li>account</li>
+<li>warehouse</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>referenceId</td>
+            <td>The reference id.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>relation</td>
+            <td>The relation between a reference and an order.
+                                         The relation types available are the following:
+<ul>
+<li>sender</li>
+<li>receiver</li>
+</ul></td>
+        </tr><tr>
+            <td><a href="order#order_models_order">Order</a>
+</td>
+            <td>order</td>
+            <td>The order that the reference belongs to.</td>
+        </tr><tr>
+            <td><a href="account#account_models_contact">Contact</a>
+</td>
+            <td>contactReceiver</td>
+            <td>The Contact referenced with relation "receiver".</td>
+        </tr><tr>
+            <td><a href="account#account_models_contact">Contact</a>
+</td>
+            <td>contactSender</td>
+            <td>The Contact referenced with relation "sender".</td>
+        </tr><tr>
+            <td><a href="account#account_models_account">Account</a>
+</td>
+            <td>accountReceiver</td>
+            <td>The Account referenced with relation "receiver".</td>
+        </tr><tr>
+            <td><a href="account#account_models_account">Account</a>
+</td>
+            <td>accountSender</td>
+            <td>The Account referenced with relation "sender".</td>
         </tr></tbody>
 </table>
 
@@ -6094,6 +6560,111 @@ The order shipping package model
     
 Returns this model as an array.
     
+# PackageType<a name="order_packagetype"></a>
+    
+## Contracts<a name="order_packagetype_contracts"></a>
+### ShippingPackageTypeRepositoryContract<a name="order_contracts_shippingpackagetyperepositorycontract"></a>
+
+The ShippingPackageTypeRepositoryContract is the interface for the shipping package type repository. This interface allows to get shipping package type by ID.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\PackageType\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>findShippingPackageTypeById</strong>(<a target="_blank" href="http://php.net/int">int</a> $shippingPackageTypeId):<a href="order#order_models_shippingpackagetype">ShippingPackageType</a>
+</pre>
+
+    
+Get Shipping Package Type by an  ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$shippingPackageTypeId</td>
+        <td>The ID of the Shipping Package Type</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listShippingPackageTypes</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get all Shipping Shipping Package Types
+    
+## Models<a name="order_packagetype_models"></a>
+### ShippingPackageType<a name="order_models_shippingpackagetype"></a>
+
+ShippingPackageTypeModel
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\PackageType\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the shipping package type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the shipping package Type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>width</td>
+            <td>The width of the package type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>height</td>
+            <td>The height of the package type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>length</td>
+            <td>The length of the package type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>unit</td>
+            <td>The unit of the package type´s dimension</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>maxWeight</td>
+            <td>The maximum weight of the package type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>maxVolume</td>
+            <td>The maximum volume of the package type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>volumeType</td>
+            <td>The volume type of the package type</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # ParcelService<a name="order_parcelservice"></a>
     
 ## Models<a name="order_parcelservice_models"></a>
@@ -6256,6 +6827,11 @@ The Parcel Service Preset Model
 </td>
             <td>parcelService</td>
             <td>The parcel service.</td>
+        </tr><tr>
+            <td><a href="order#order_models_parcelservice">ParcelService</a>
+</td>
+            <td>parcelService</td>
+            <td>The parcel service.</td>
         </tr></tbody>
 </table>
 
@@ -6277,6 +6853,115 @@ The Parcel Service Preset Name Model
 
 `Plenty\Modules\Order\Shipping\ParcelService\Models`
 
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# ParcelServiceRegion<a name="order_parcelserviceregion"></a>
+    
+## Contracts<a name="order_parcelserviceregion_contracts"></a>
+### ParcelServiceRegionRepositoryContract<a name="order_contracts_parcelserviceregionrepositorycontract"></a>
+
+Get parcel service region
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\ParcelServiceRegion\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getParcelServiceRegion</strong>(<a target="_blank" href="http://php.net/int">int</a> $parcelServiceRegionId, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="order#order_models_parcelserviceregion">ParcelServiceRegion</a>
+</pre>
+
+    
+Get a parcel service region
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$parcelServiceRegionId</td>
+        <td>The ID of the parcel service region.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listParcelServiceRegions</strong>(<a target="_blank" href="http://php.net/int">int</a> $parcelServicePresetId, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists parcel service regions by parcel service preset id.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$parcelServicePresetId</td>
+        <td>The ID of the parcel service preset.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Models<a name="order_parcelserviceregion_models"></a>
+### ParcelServiceRegion<a name="order_models_parcelserviceregion"></a>
+
+The parcel service region model.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\ParcelServiceRegion\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the parcel service region</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>shippingRegionId</td>
+            <td>The ID of the shipping region</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>parcelServicePresetId</td>
+            <td>The ID of the parcel service preset</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>shippingRegionName</td>
+            <td>The name of the shipping region</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>serviceType</td>
+            <td>Type of the parcel service</td>
+        </tr></tbody>
+</table>
 
 
 #### Methods
@@ -6322,7 +7007,7 @@ The ShippingServiceProviderRepositoryContract is the interface for the shipping 
 
 #### Methods
 
-<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     

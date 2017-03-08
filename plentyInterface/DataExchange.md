@@ -103,6 +103,111 @@ generator for csv content
 
 
 
+### CSVPluginGenerator<a name="dataexchange_contracts_csvplugingenerator"></a>
+
+generator for csv content
+
+
+#### Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>setDelimiter</strong>(<a target="_blank" href="http://php.net/string">string</a> $delimiter):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$delimiter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setEnclosure</strong>(<a target="_blank" href="http://php.net/string">string</a> $enclosure):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$enclosure</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addCSVContent</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$content</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>generatePluginContent</strong>($resultData, <a target="_blank" href="http://php.net/array">array</a> $formatSettings = [], <a target="_blank" href="http://php.net/array">array</a> $filter = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$resultData</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$formatSettings</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### Filters<a name="dataexchange_contracts_filters"></a>
 
 Filters
@@ -213,6 +318,63 @@ process export output
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$outputParams</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### PluginGenerator<a name="dataexchange_contracts_plugingenerator"></a>
+
+PluginGenerator
+
+
+#### Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>addContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$content</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>generatePluginContent</strong>($resultData, <a target="_blank" href="http://php.net/array">array</a> $formatSettings = [], <a target="_blank" href="http://php.net/array">array</a> $filter = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$resultData</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$formatSettings</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filter</td>
         <td></td>
     </tr>
 </table>
@@ -726,7 +888,7 @@ Register export presets
 
 #### Methods
 
-<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $exportKey, <a target="_blank" href="http://php.net/string">string</a> $resultFieldsClass, <a target="_blank" href="http://php.net/string">string</a> $generatorClass, <a target="_blank" href="http://php.net/string">string</a> $filtersClass = &quot;&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $exportKey, <a target="_blank" href="http://php.net/string">string</a> $resultFieldsClass, <a target="_blank" href="http://php.net/string">string</a> $generatorClass, <a target="_blank" href="http://php.net/string">string</a> $filterClass = &quot;&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $isPlugin = false):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -751,7 +913,12 @@ Register export presets
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$filtersClass</td>
+        <td>$filterClass</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$isPlugin</td>
         <td></td>
     </tr>
 </table>

@@ -18,7 +18,8 @@ The PaymentContactRelationRepositoryContract is the interface for the payment co
 
 <pre>public <strong>createContactRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
  $payment, <a href="account#account_models_contact">Contact</a>
- $contact):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+ $contact):<a href="payment#payment_models_paymentcontactrelation">PaymentContactRelation</a>
+</pre>
 
     
 Creates a payment contact relation.
@@ -41,7 +42,8 @@ Creates a payment contact relation.
 
 
 <pre>public <strong>deleteContactRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
- $payment):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+ $payment):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 Deletes a payment contact relation.
@@ -73,7 +75,8 @@ The PaymentOrderRelationRepositoryContract is the interface for the payment orde
 
 <pre>public <strong>createOrderRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
  $payment, <a href="order#order_models_order">Order</a>
- $order):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+ $order):<a href="payment#payment_models_paymentorderrelation">PaymentOrderRelation</a>
+</pre>
 
     
 Creates a payment order relation.
@@ -96,8 +99,8 @@ Creates a payment order relation.
 
 
 <pre>public <strong>deleteOrderRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
- $payment, <a href="order#order_models_order">Order</a>
- $order):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+ $payment):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 Deletes a payment order relation.
@@ -109,12 +112,6 @@ Deletes a payment order relation.
 </td>
         <td>$payment</td>
         <td>The ID of the payment</td>
-    </tr>
-    <tr>
-        <td><a href="order#order_models_order">Order</a>
-</td>
-        <td>$order</td>
-        <td>The ID of the order</td>
     </tr>
 </table>
 

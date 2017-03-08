@@ -596,6 +596,11 @@ The address model
             <td>country</td>
             <td>The address country</td>
         </tr><tr>
+            <td><a href="order#order_models_countrystate">CountryState</a>
+</td>
+            <td>state</td>
+            <td>The address state</td>
+        </tr><tr>
             <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </td>
             <td>contactRelations</td>

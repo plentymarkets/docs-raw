@@ -1248,6 +1248,10 @@ Represent a list of storage objects
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>objects</td>
             <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>commonPrefixes</td>
+            <td></td>
         </tr></tbody>
 </table>
 

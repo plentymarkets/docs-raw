@@ -179,6 +179,11 @@ Database model
 </td>
             <td>autoIncrementPrimaryKey</td>
             <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>textFields</td>
+            <td></td>
         </tr></tbody>
 </table>
 
@@ -740,6 +745,26 @@ Executes the DeleteObject operation.
     <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$publicVisible</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deletePlugin</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/boolean">boolean</a> $isClosedSource = false):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+Deletes the Plugin from Inbox
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$pluginName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+        <td>$isClosedSource</td>
         <td></td>
     </tr>
 </table>
