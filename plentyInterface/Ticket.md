@@ -257,7 +257,7 @@ The ticket message model.
             <td>createdAt</td>
             <td>The time the ticket message was created as unix timestamp or carbon object</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>text</td>
             <td>The content of the message</td>
         </tr><tr>

@@ -220,6 +220,22 @@ Gets an attribute. The ID of the attribute must be specified.
 </table>
 
 
+<pre>public <strong>findByBackendName</strong>(<a target="_blank" href="http://php.net/string">string</a> $backendName):<a href="item#item_models_attribute">Attribute</a>
+</pre>
+
+    
+Gets an attribute. The backend name of the attribute must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$backendName</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -9488,6 +9504,60 @@ foo
 
 
 
+### FacetMutator<a name="item_mutators_facetmutator"></a>
+
+
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Mutators`
+
+
+
+#### Methods
+
+<pre>public <strong>mutate</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>facetSort</strong>(<a target="_blank" href="http://php.net/array">array</a> $a, <a target="_blank" href="http://php.net/array">array</a> $b):<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$a</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$b</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getDependencies</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+
 ### ImageMutator<a name="item_mutators_imagemutator"></a>
 
 
@@ -9663,6 +9733,25 @@ VariationElasticSearchAvailibilityRepository
 
     
 <pre>public <strong>isAvailable</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+## Sort<a name="item_search_sort"></a>
+### NameSorting<a name="item_sort_namesorting"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Sort`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 
@@ -10163,6 +10252,22 @@ lookup repository for variations
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$number</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAttributeValueMap</strong>(<a target="_blank" href="http://php.net/array">array</a> $attributeValueMap):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$attributeValueMap</td>
         <td></td>
     </tr>
 </table>

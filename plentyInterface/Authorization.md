@@ -113,3 +113,33 @@ The Role authentication model
     
 Returns this model as an array.
     
+## Services<a name="authorization_authorization_services"></a>
+### AuthHelper<a name="authorization_services_authhelper"></a>
+
+Service to process unguarded php code
+
+
+#### Namespace
+
+`Plenty\Modules\Authorization\Services`
+
+
+
+#### Methods
+
+<pre>public <strong>processUnguarded</strong>(<a target="_blank" href="http://php.net/callable">callable</a> $callable):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
+        <td>$callable</td>
+        <td></td>
+    </tr>
+</table>
+
+

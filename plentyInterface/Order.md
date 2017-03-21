@@ -5762,7 +5762,7 @@ The ParcelServicePresetRepositoryContract is the interface for the shipping prof
 
 #### Methods
 
-<pre>public <strong>getPresetList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPresetList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns, <a target="_blank" href="http://php.net/string">string</a> $with):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Lists shipping profiles.
@@ -5773,6 +5773,11 @@ Lists shipping profiles.
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
         <td>The columns (attributes) to retrieve</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$with</td>
+        <td></td>
     </tr>
 </table>
 
@@ -6827,11 +6832,6 @@ The Parcel Service Preset Model
 </td>
             <td>parcelService</td>
             <td>The parcel service.</td>
-        </tr><tr>
-            <td><a href="order#order_models_parcelservice">ParcelService</a>
-</td>
-            <td>parcelService</td>
-            <td>The parcel service.</td>
         </tr></tbody>
 </table>
 
@@ -6971,6 +6971,46 @@ The parcel service region model.
     
 Returns this model as an array.
     
+
+### ParcelServiceRegionName<a name="order_models_parcelserviceregionname"></a>
+
+The parcel service region name model.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\ParcelServiceRegion\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the parcel service region name</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>name</td>
+            <td>The name of the shipping region</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # ServiceProvider<a name="order_serviceprovider"></a>
     
 ## Contracts<a name="order_serviceprovider_contracts"></a>
@@ -7045,6 +7085,27 @@ Gets a shipping service provider. The ID of the shipping service provider must b
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$shippingServiceProviderId</td>
         <td>The ID of the shipping service provider</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>saveShippingServiceProvider</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $shippingServiceProviderName):<a href="order#order_models_shippingserviceprovider">ShippingServiceProvider</a>
+</pre>
+
+    
+Creates a shipping service provider or updates it if already existing
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$pluginName</td>
+        <td>The plugin name the plugin is registered with</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$shippingServiceProviderName</td>
+        <td>The name of the shipping service provider</td>
     </tr>
 </table>
 

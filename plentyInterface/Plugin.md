@@ -750,26 +750,6 @@ Executes the DeleteObject operation.
 </table>
 
 
-<pre>public <strong>deletePlugin</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/boolean">boolean</a> $isClosedSource = false):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
-
-    
-Deletes the Plugin from Inbox
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$pluginName</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
-        <td>$isClosedSource</td>
-        <td></td>
-    </tr>
-</table>
-
-
 <pre>public <strong>listObjects</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $prefix = &quot;&quot;, <a target="_blank" href="http://php.net/int">int</a> $limit, <a target="_blank" href="http://php.net/string">string</a> $startKey = &quot;&quot;, <a target="_blank" href="http://php.net/string">string</a> $continuationToken = &quot;&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $publicVisible = false, <a target="_blank" href="http://php.net/bool">bool</a> $resultKeyWithoutPrefix = true):<a href="cloud#cloud_models_storageobjectlist">StorageObjectList</a>
 </pre>
 

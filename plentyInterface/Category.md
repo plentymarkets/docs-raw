@@ -235,6 +235,26 @@ Returns true if category has children.
 </table>
 
 
+<pre>public <strong>getChildren</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Returns children of the category.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$categoryId</td>
+        <td>The id of the category.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>Optional language of details.</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getUrl</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $onlySitemaps = false):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     

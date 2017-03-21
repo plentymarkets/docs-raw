@@ -1,5 +1,2746 @@
 
 
+# Credentials<a name="market_credentials"></a>
+    
+## Contracts<a name="market_credentials_contracts"></a>
+### CredentialsRepositoryContract<a name="market_contracts_credentialsrepositorycontract"></a>
+
+The contract for the fitment repository.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Credentials\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_credentials">Credentials</a>
+</pre>
+
+    
+Get credentials
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the credentials.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="market#market_models_credentials">Credentials</a>
+</pre>
+
+    
+Create credentials
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The credentials data. The properties that are required to update credentials can be found in the credentials model.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="market#market_models_credentials">Credentials</a>
+</pre>
+
+    
+Update credentials
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the credentials.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The credentials data. The properties that are required to update credentials can be found in the credentials model.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Delete credentials
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the credentials.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+List all credentials
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>Credentials can be filtered by ID, market, status, environment.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = \Plenty\Modules\Market\Credentials\Models\Credentials::MAX_ITEMS_PER_PAGE):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List credentials
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>Credentials can be filtered by ID, market, status, environment.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>Current page of the response.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The requested amount of credentials per result page.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+## Models<a name="market_credentials_models"></a>
+### Credentials<a name="market_models_credentials"></a>
+
+The credentials model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Credentials\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the credentials.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>environment</td>
+            <td>The environment for the credentials. Possible values: sandbox, production</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>status</td>
+            <td>The status of the credentials. Possible values: active, inactive, pending</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>data</td>
+            <td>The data of the credentials.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>market</td>
+            <td>The market for the current credentials.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The date that the credentials was created.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The date that the credentials was updated last.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# Api<a name="market_api"></a>
+    
+## Exceptions<a name="market_api_exceptions"></a>
+### InvalidEndPointException<a name="market_exceptions_invalidendpointexception"></a>
+
+InvalidEndPointException.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Exceptions`
+
+
+
+#### Methods
+
+<pre>public <strong>getMessage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getCode</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getFile</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getLine</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getTrace</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getPrevious</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getTraceAsString</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+
+### InvalidPropertyTypeException<a name="market_exceptions_invalidpropertytypeexception"></a>
+
+InvalidPropertyTypeException.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Exceptions`
+
+
+
+#### Methods
+
+<pre>public <strong>getMessage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getCode</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getFile</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getLine</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getTrace</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getPrevious</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getTraceAsString</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+
+### UnknownPropertyException<a name="market_exceptions_unknownpropertyexception"></a>
+
+InvalidPropertyTypeException.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Exceptions`
+
+
+
+#### Methods
+
+<pre>public <strong>getMessage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getCode</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getFile</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getLine</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getTrace</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getPrevious</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getTraceAsString</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+## Services<a name="market_api_services"></a>
+### BaseRestService<a name="market_services_baserestservice"></a>
+
+The service for making eBay REST calls.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Services`
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $config):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$config</td>
+        <td>Configuration option values.</td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getConfigDefinitions</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Returns definitions for each configuration option that is supported.
+    
+<pre>public <strong>getConfig</strong>(<a target="_blank" href="http://php.net/string">string</a> $option = null, $default = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Method to get the service&#039;s configuration.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$option</td>
+        <td>The name of the option whos value will be returned.</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$default</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>callOperation</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a href="market#market_types_basetype">BaseType</a>
+ $request = null):<a href="market#market_types_basetype">BaseType</a>
+</pre>
+
+    
+Build API request and send.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The name of the operation.</td>
+    </tr>
+    <tr>
+        <td><a href="market#market_types_basetype">BaseType</a>
+</td>
+        <td>$request</td>
+        <td>Request object containing the request information.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getEbayHeaders</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Derived classes must implement this method that will build the needed eBay http headers.
+    
+## Types<a name="market_api_types"></a>
+### Base64BinaryType<a name="market_types_base64binarytype"></a>
+
+The service for eBay Base64BinaryType.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Types`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>properties</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>xmlNamespaces</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>requestXmlRootElementNames</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Optional properties and values to assign to the object.</td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getParentValues</strong>(<a target="_blank" href="http://php.net/array">array</a> $properties, <a target="_blank" href="http://php.net/array">array</a> $values):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper function to remove the properties and values that belong to a object&#039;s parent.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$properties</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__get</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when getting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__set</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when setting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td>Value assigned to the property.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__isset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+PHP magic function that is called to determine if a property is set.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__unset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called to unset a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toRequestXml</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Converts the object to a XML request string.
+    
+<pre>public <strong>elementMeta</strong>(<a target="_blank" href="http://php.net/string">string</a> $elementName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the meta data for a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$elementName</td>
+        <td>The element name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>attachment</strong>($data = null, <a target="_blank" href="http://php.net/string">string</a> $mimeType = &quot;application/octet-stream&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td>If a string it is assumed to be the contents of the attachment. If an array copy its values across.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$mimeType</td>
+        <td>The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAttachment</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Helper method to check if an object has an attachment.
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper method that returns an associative array of the object&#039;s properties and values.
+    
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/string">string</a> $expression):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$expression</td>
+        <td>A valid JMESPath expression</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setValues</strong>(<a target="_blank" href="http://php.net/string">string</a> $class, <a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$class</td>
+        <td>The name of the class the properties belong to.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Associative array of property names and their values.</td>
+    </tr>
+</table>
+
+
+
+### BaseType<a name="market_types_basetype"></a>
+
+The service for base type.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Types`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>properties</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>xmlNamespaces</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>requestXmlRootElementNames</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Can pass an associative array that will set the objects properties.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__get</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when getting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__set</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when setting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td>Value assigned to the property.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__isset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+PHP magic function that is called to determine if a property is set.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__unset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called to unset a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toRequestXml</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Converts the object to a XML request string.
+    
+<pre>public <strong>elementMeta</strong>(<a target="_blank" href="http://php.net/string">string</a> $elementName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the meta data for a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$elementName</td>
+        <td>The element name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>attachment</strong>($data = null, <a target="_blank" href="http://php.net/string">string</a> $mimeType = &quot;application/octet-stream&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td>If a string it is assumed to be the contents of the attachment. If an array copy its values across.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$mimeType</td>
+        <td>The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAttachment</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Helper method to check if an object has an attachment.
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper method that returns an associative array of the object&#039;s properties and values.
+    
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/string">string</a> $expression):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$expression</td>
+        <td>A valid JMESPath expression</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setValues</strong>(<a target="_blank" href="http://php.net/string">string</a> $class, <a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$class</td>
+        <td>The name of the class the properties belong to.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Associative array of property names and their values.</td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getParentValues</strong>(<a target="_blank" href="http://php.net/array">array</a> $properties, <a target="_blank" href="http://php.net/array">array</a> $values):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper function to remove the properties and values that belong to a object&#039;s parent.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$properties</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### BooleanType<a name="market_types_booleantype"></a>
+
+The service for boolean type.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Types`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>properties</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>xmlNamespaces</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>requestXmlRootElementNames</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Optional properties and values to assign to the object.</td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getParentValues</strong>(<a target="_blank" href="http://php.net/array">array</a> $properties, <a target="_blank" href="http://php.net/array">array</a> $values):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper function to remove the properties and values that belong to a object&#039;s parent.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$properties</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__get</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when getting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__set</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when setting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td>Value assigned to the property.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__isset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+PHP magic function that is called to determine if a property is set.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__unset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called to unset a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toRequestXml</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Converts the object to a XML request string.
+    
+<pre>public <strong>elementMeta</strong>(<a target="_blank" href="http://php.net/string">string</a> $elementName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the meta data for a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$elementName</td>
+        <td>The element name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>attachment</strong>($data = null, <a target="_blank" href="http://php.net/string">string</a> $mimeType = &quot;application/octet-stream&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td>If a string it is assumed to be the contents of the attachment. If an array copy its values across.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$mimeType</td>
+        <td>The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAttachment</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Helper method to check if an object has an attachment.
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper method that returns an associative array of the object&#039;s properties and values.
+    
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/string">string</a> $expression):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$expression</td>
+        <td>A valid JMESPath expression</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setValues</strong>(<a target="_blank" href="http://php.net/string">string</a> $class, <a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$class</td>
+        <td>The name of the class the properties belong to.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Associative array of property names and their values.</td>
+    </tr>
+</table>
+
+
+
+### DecimalType<a name="market_types_decimaltype"></a>
+
+The service for decimal type.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Types`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>properties</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>xmlNamespaces</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>requestXmlRootElementNames</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Optional properties and values to assign to the object.</td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getParentValues</strong>(<a target="_blank" href="http://php.net/array">array</a> $properties, <a target="_blank" href="http://php.net/array">array</a> $values):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper function to remove the properties and values that belong to a object&#039;s parent.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$properties</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__get</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when getting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__set</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when setting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td>Value assigned to the property.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__isset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+PHP magic function that is called to determine if a property is set.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__unset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called to unset a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toRequestXml</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Converts the object to a XML request string.
+    
+<pre>public <strong>elementMeta</strong>(<a target="_blank" href="http://php.net/string">string</a> $elementName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the meta data for a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$elementName</td>
+        <td>The element name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>attachment</strong>($data = null, <a target="_blank" href="http://php.net/string">string</a> $mimeType = &quot;application/octet-stream&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td>If a string it is assumed to be the contents of the attachment. If an array copy its values across.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$mimeType</td>
+        <td>The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAttachment</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Helper method to check if an object has an attachment.
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper method that returns an associative array of the object&#039;s properties and values.
+    
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/string">string</a> $expression):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$expression</td>
+        <td>A valid JMESPath expression</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setValues</strong>(<a target="_blank" href="http://php.net/string">string</a> $class, <a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$class</td>
+        <td>The name of the class the properties belong to.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Associative array of property names and their values.</td>
+    </tr>
+</table>
+
+
+
+### DoubleType<a name="market_types_doubletype"></a>
+
+The service for double type.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Types`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>properties</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>xmlNamespaces</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>requestXmlRootElementNames</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Optional properties and values to assign to the object.</td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getParentValues</strong>(<a target="_blank" href="http://php.net/array">array</a> $properties, <a target="_blank" href="http://php.net/array">array</a> $values):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper function to remove the properties and values that belong to a object&#039;s parent.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$properties</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__get</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when getting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__set</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when setting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td>Value assigned to the property.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__isset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+PHP magic function that is called to determine if a property is set.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__unset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called to unset a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toRequestXml</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Converts the object to a XML request string.
+    
+<pre>public <strong>elementMeta</strong>(<a target="_blank" href="http://php.net/string">string</a> $elementName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the meta data for a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$elementName</td>
+        <td>The element name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>attachment</strong>($data = null, <a target="_blank" href="http://php.net/string">string</a> $mimeType = &quot;application/octet-stream&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td>If a string it is assumed to be the contents of the attachment. If an array copy its values across.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$mimeType</td>
+        <td>The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAttachment</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Helper method to check if an object has an attachment.
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper method that returns an associative array of the object&#039;s properties and values.
+    
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/string">string</a> $expression):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$expression</td>
+        <td>A valid JMESPath expression</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setValues</strong>(<a target="_blank" href="http://php.net/string">string</a> $class, <a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$class</td>
+        <td>The name of the class the properties belong to.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Associative array of property names and their values.</td>
+    </tr>
+</table>
+
+
+
+### IntegerType<a name="market_types_integertype"></a>
+
+The service for integer type.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Types`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>properties</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>xmlNamespaces</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>requestXmlRootElementNames</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Optional properties and values to assign to the object.</td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getParentValues</strong>(<a target="_blank" href="http://php.net/array">array</a> $properties, <a target="_blank" href="http://php.net/array">array</a> $values):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper function to remove the properties and values that belong to a object&#039;s parent.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$properties</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__get</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when getting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__set</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when setting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td>Value assigned to the property.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__isset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+PHP magic function that is called to determine if a property is set.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__unset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called to unset a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toRequestXml</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Converts the object to a XML request string.
+    
+<pre>public <strong>elementMeta</strong>(<a target="_blank" href="http://php.net/string">string</a> $elementName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the meta data for a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$elementName</td>
+        <td>The element name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>attachment</strong>($data = null, <a target="_blank" href="http://php.net/string">string</a> $mimeType = &quot;application/octet-stream&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td>If a string it is assumed to be the contents of the attachment. If an array copy its values across.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$mimeType</td>
+        <td>The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAttachment</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Helper method to check if an object has an attachment.
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper method that returns an associative array of the object&#039;s properties and values.
+    
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/string">string</a> $expression):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$expression</td>
+        <td>A valid JMESPath expression</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setValues</strong>(<a target="_blank" href="http://php.net/string">string</a> $class, <a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$class</td>
+        <td>The name of the class the properties belong to.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Associative array of property names and their values.</td>
+    </tr>
+</table>
+
+
+
+### RepeatableType<a name="market_types_repeatabletype"></a>
+
+The service for repeatable type.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Types`
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/string">string</a> $class, <a target="_blank" href="http://php.net/string">string</a> $property, <a target="_blank" href="http://php.net/string">string</a> $expectedType):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$class</td>
+        <td>The name of the class that the property is a member of.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$property</td>
+        <td>The name of the property that acts like an array.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$expectedType</td>
+        <td>The type that values assigned to the array should be.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>offsetExists</strong>(<a target="_blank" href="http://php.net/int">int</a> $offset):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Determines if the offset exists in the array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$offset</td>
+        <td>The array index to check.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>offsetGet</strong>(<a target="_blank" href="http://php.net/int">int</a> $offset):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the value of the given offset.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$offset</td>
+        <td>The array index.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>offsetSet</strong>($offset, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets a value for the given offset.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$offset</td>
+        <td>The array index or null to add the value to the end of the array.</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td>The value to add.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>offsetUnset</strong>(<a target="_blank" href="http://php.net/int">int</a> $offset):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Unsets the value of the given offset.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$offset</td>
+        <td>The array index.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>count</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>current</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>key</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>next</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Move onto the next array index.
+    
+<pre>public <strong>rewind</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Reset the array index to the start of the array.
+    
+<pre>public <strong>valid</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+
+### StringType<a name="market_types_stringtype"></a>
+
+The service for string type.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Types`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>properties</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>xmlNamespaces</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>requestXmlRootElementNames</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Optional properties and values to assign to the object.</td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getParentValues</strong>(<a target="_blank" href="http://php.net/array">array</a> $properties, <a target="_blank" href="http://php.net/array">array</a> $values):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper function to remove the properties and values that belong to a object&#039;s parent.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$properties</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__get</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when getting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__set</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when setting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td>Value assigned to the property.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__isset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+PHP magic function that is called to determine if a property is set.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__unset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called to unset a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toRequestXml</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Converts the object to a XML request string.
+    
+<pre>public <strong>elementMeta</strong>(<a target="_blank" href="http://php.net/string">string</a> $elementName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the meta data for a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$elementName</td>
+        <td>The element name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>attachment</strong>($data = null, <a target="_blank" href="http://php.net/string">string</a> $mimeType = &quot;application/octet-stream&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td>If a string it is assumed to be the contents of the attachment. If an array copy its values across.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$mimeType</td>
+        <td>The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAttachment</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Helper method to check if an object has an attachment.
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper method that returns an associative array of the object&#039;s properties and values.
+    
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/string">string</a> $expression):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$expression</td>
+        <td>A valid JMESPath expression</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setValues</strong>(<a target="_blank" href="http://php.net/string">string</a> $class, <a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$class</td>
+        <td>The name of the class the properties belong to.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Associative array of property names and their values.</td>
+    </tr>
+</table>
+
+
+
+### TokenType<a name="market_types_tokentype"></a>
+
+The service for token type.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Types`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>properties</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>xmlNamespaces</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>requestXmlRootElementNames</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Optional properties and values to assign to the object.</td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getParentValues</strong>(<a target="_blank" href="http://php.net/array">array</a> $properties, <a target="_blank" href="http://php.net/array">array</a> $values):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper function to remove the properties and values that belong to a object&#039;s parent.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$properties</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__get</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when getting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__set</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when setting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td>Value assigned to the property.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__isset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+PHP magic function that is called to determine if a property is set.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__unset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called to unset a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toRequestXml</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Converts the object to a XML request string.
+    
+<pre>public <strong>elementMeta</strong>(<a target="_blank" href="http://php.net/string">string</a> $elementName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the meta data for a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$elementName</td>
+        <td>The element name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>attachment</strong>($data = null, <a target="_blank" href="http://php.net/string">string</a> $mimeType = &quot;application/octet-stream&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td>If a string it is assumed to be the contents of the attachment. If an array copy its values across.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$mimeType</td>
+        <td>The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAttachment</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Helper method to check if an object has an attachment.
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper method that returns an associative array of the object&#039;s properties and values.
+    
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/string">string</a> $expression):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$expression</td>
+        <td>A valid JMESPath expression</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setValues</strong>(<a target="_blank" href="http://php.net/string">string</a> $class, <a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$class</td>
+        <td>The name of the class the properties belong to.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Associative array of property names and their values.</td>
+    </tr>
+</table>
+
+
+
+### URIType<a name="market_types_uritype"></a>
+
+The service for uri type.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Api\Types`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>properties</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>xmlNamespaces</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>requestXmlRootElementNames</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Optional properties and values to assign to the object.</td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getParentValues</strong>(<a target="_blank" href="http://php.net/array">array</a> $properties, <a target="_blank" href="http://php.net/array">array</a> $values):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper function to remove the properties and values that belong to a object&#039;s parent.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$properties</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__get</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when getting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__set</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called when setting a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td>Value assigned to the property.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__isset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+PHP magic function that is called to determine if a property is set.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>__unset</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+PHP magic function that is called to unset a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td>The property name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toRequestXml</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Converts the object to a XML request string.
+    
+<pre>public <strong>elementMeta</strong>(<a target="_blank" href="http://php.net/string">string</a> $elementName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the meta data for a property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$elementName</td>
+        <td>The element name.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>attachment</strong>($data = null, <a target="_blank" href="http://php.net/string">string</a> $mimeType = &quot;application/octet-stream&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td>If a string it is assumed to be the contents of the attachment. If an array copy its values across.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$mimeType</td>
+        <td>The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAttachment</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Helper method to check if an object has an attachment.
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Helper method that returns an associative array of the object&#039;s properties and values.
+    
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/string">string</a> $expression):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$expression</td>
+        <td>A valid JMESPath expression</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setValues</strong>(<a target="_blank" href="http://php.net/string">string</a> $class, <a target="_blank" href="http://php.net/array">array</a> $values = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign multiple values to an object.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$class</td>
+        <td>The name of the class the properties belong to.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td>Associative array of property names and their values.</td>
+    </tr>
+</table>
+
+
 # PartsFitment<a name="market_partsfitment"></a>
     
 ## Contracts<a name="market_partsfitment_contracts"></a>
@@ -243,7 +2984,8 @@ Updates an existing fitment.
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
 
     
 Deletes a fitment. Returns `true` if the deletion was successful, otherwise `false`.

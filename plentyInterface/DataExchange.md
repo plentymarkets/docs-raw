@@ -630,6 +630,200 @@ Create new text node.
 </table>
 
 
+
+### XMLPluginGenerator<a name="dataexchange_contracts_xmlplugingenerator"></a>
+
+generator for xml content
+
+
+#### Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>version</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>encoding</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>formatOutput</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>preserveWhiteSpace</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>init</strong>(<a target="_blank" href="http://php.net/string">string</a> $rootName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Initializes the xml document and the root element.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$rootName</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>root</strong>():<a href="miscellaneous#miscellaneous__domelement">DOMElement</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>build</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Build the XML.
+    
+<pre>public <strong>createElement</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $value = null):<a href="miscellaneous#miscellaneous__domelement">DOMElement</a>
+</pre>
+
+    
+Create an XML element.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createCDATASection</strong>(<a target="_blank" href="http://php.net/string">string</a> $data):<a href="miscellaneous#miscellaneous__domcdatasection">DOMCdataSection</a>
+</pre>
+
+    
+Create a CDATA section.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createAttribute</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, $value = null):<a href="miscellaneous#miscellaneous__domattr">DOMAttr</a>
+</pre>
+
+    
+Create an XML attribute.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createTextNode</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__domtext">DOMText</a>
+</pre>
+
+    
+Create new text node.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$content</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$content</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>generatePluginContent</strong>($resultData, <a target="_blank" href="http://php.net/array">array</a> $formatSettings = [], <a target="_blank" href="http://php.net/array">array</a> $filter = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$resultData</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$formatSettings</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="dataexchange_dataexchange_models"></a>
 ### Export<a name="dataexchange_models_export"></a>
 

@@ -530,6 +530,65 @@ To be written
 Get the instance as an array.
     
 ## Sorting<a name="cloud_lib_sorting"></a>
+### MultipleSorting<a name="cloud_sorting_multiplesorting"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Sorting`
+
+
+
+#### Methods
+
+<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $path, <a target="_blank" href="http://php.net/string">string</a> $order = \Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch::SORTING_ORDER_ASC):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$path</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+
+### SingleSorting<a name="cloud_sorting_singlesorting"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Sorting`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+
 ### SortingInterface<a name="cloud_sorting_sortinginterface"></a>
 
 to be written

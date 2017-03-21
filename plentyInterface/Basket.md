@@ -285,7 +285,7 @@ The basket model
             <td>The discount type. The following types are available:
          <ul>
              <li>Discount scale based on net value of items = 4</li>
-             <li>	Discount based on method of payment = 5</li>
+             <li>    Discount based on method of payment = 5</li>
          </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
