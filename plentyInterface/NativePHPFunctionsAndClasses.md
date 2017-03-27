@@ -71,6 +71,12 @@ These are native PHP functions that are *allowed* to be used inside plugins.
             <strong>B</strong>
         <ul>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.base64-decode.php">base64_decode</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.base64-encode.php">base64_encode</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.bin2hex.php">bin2hex</a>
             </li>
                 </ul>
@@ -81,6 +87,9 @@ These are native PHP functions that are *allowed* to be used inside plugins.
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.count.php">count</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.crypt.php">crypt</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.curl-close.php">curl_close</a>
@@ -169,6 +178,9 @@ These are native PHP functions that are *allowed* to be used inside plugins.
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.htmlspecialchars.php">htmlspecialchars</a>
             </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.http-build-query.php">http_build_query</a>
+            </li>
                 </ul>
             <strong>I</strong>
         <ul>
@@ -249,6 +261,15 @@ These are native PHP functions that are *allowed* to be used inside plugins.
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.numfmt-create.php">numfmt_create</a>
+            </li>
+                </ul>
+            <strong>O</strong>
+        <ul>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.openssl-decrypt.php">openssl_decrypt</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.openssl-encrypt.php">openssl_encrypt</a>
             </li>
                 </ul>
             <strong>P</strong>
@@ -363,6 +384,9 @@ These are native PHP functions that are *allowed* to be used inside plugins.
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.urlencode.php">urlencode</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.usort.php">usort</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.utf8-decode.php">utf8_decode</a>

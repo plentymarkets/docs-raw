@@ -3710,6 +3710,35 @@ Create a response instance from the given value.
 
 
 ## Templates<a name="miscellaneous_plugin_templates"></a>
+### Markdown<a name="miscellaneous_templates_markdown"></a>
+
+A simple markdown converter.
+
+
+#### Namespace
+
+`Plenty\Plugin\Templates`
+
+
+
+#### Methods
+
+<pre>public <strong>renderToHtml</strong>(<a target="_blank" href="http://php.net/string">string</a> $markdownContent):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$markdownContent</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### Twig<a name="miscellaneous_templates_twig"></a>
 
 Twig engine

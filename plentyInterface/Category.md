@@ -366,7 +366,7 @@ Creates a new category
 </pre>
 
     
-Deletes a category by given id
+Deletes a category. The ID of the category must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -382,7 +382,7 @@ Deletes a category by given id
 </pre>
 
     
-Delete category details for the specified languages
+Delete the category details for the languages specified.
     
 ##### <strong>Parameters</strong>
     

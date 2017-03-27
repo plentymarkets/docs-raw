@@ -261,6 +261,28 @@ Lists all attributes.
 </table>
 
 
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
 
 ### AttributeValueNameRepositoryContract<a name="item_contracts_attributevaluenamerepositorycontract"></a>
 
@@ -533,6 +555,28 @@ Lists all attribute values.
 </table>
 
 
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
 ## Models<a name="item_attribute_models"></a>
 ### Attribute<a name="item_models_attribute"></a>
 
@@ -557,7 +601,7 @@ The Attribute model including AttributeName and AttributeValue
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The unique ID of the attribute. The ID is assigned automatically.</td>
+            <td>The unique ID of the attribute.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>backendName</td>
@@ -702,11 +746,11 @@ The AttributeValue model including Attribute and AttributeValueName
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The unique ID of the attribute value. The ID is assigned automatically.</td>
+            <td>The unique ID of the attribute value.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>attributeId</td>
-            <td>The unique ID of the attribute associated with the attribute value. The ID is assigned automatically.</td>
+            <td>The unique ID of the attribute associated with the attribute value.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>backendName</td>
@@ -791,7 +835,7 @@ The AttributeValueName model including AttributeValue
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>valueId</td>
-            <td>The unique ID of the attribute value. The ID is assigned automatically.</td>
+            <td>The unique ID of the attribute value.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
@@ -4422,6 +4466,28 @@ Uploads an item image
 </table>
 
 
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
 ## Models<a name="item_itemimage_models"></a>
 ### ItemImage<a name="item_models_itemimage"></a>
 
@@ -5934,6 +6000,28 @@ Lists all properties.
 </table>
 
 
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
 
 ### PropertySelectionRepositoryContract<a name="item_contracts_propertyselectionrepositorycontract"></a>
 
@@ -5969,10 +6057,41 @@ Creates a property selection. The ID of the property must be specified.
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>findByProperty</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang = null):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Deletes a property selection. The ID of the property and the language must be specified.
+List of property selections. The ID of the property must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language</a> of the property selection</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByPropertyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId):<a href="item#item_models_propertyselection">PropertySelection</a>
+</pre>
+
+<div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                Deprecated!             </h3>
+        </div>
+        <div class="panel-body">
+            This method will not be supported in the future. Please refrain from using it as soon as possible.
+        </div>
+    </div>
+    
+List of property selections. The ID of the property must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -5981,19 +6100,86 @@ Deletes a property selection. The ID of the property and the language must be sp
         <td>$propertyId</td>
         <td>The ID of the property</td>
     </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$lang</td>
-        <td>The lang of the property selection</td>
+</table>
+
+
+<pre>public <strong>deleteSelection</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes a property selection. The ID of the property selection must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the property selection</td>
     </tr>
 </table>
 
 
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyselection">PropertySelection</a>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+Deletes a property selection in a specified language. The ID of the property selection and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the property selection</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language</a> of the property selection</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyselection">PropertySelection</a>
 </pre>
 
     
-Updates a property selection. The ID of the property and the language must be specified.
+Get a property selection in the specified language. The ID of the property selection and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the property selection</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language</a> of the property selection</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findSelection</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get a property selection. The ID of the property selection must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the property selection</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyselection">PropertySelection</a>
+</pre>
+
+    
+Updates a property selection. The ID of the property selection and the language must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -6004,50 +6190,13 @@ Updates a property selection. The ID of the property and the language must be sp
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyId</td>
-        <td>The ID of the property</td>
+        <td>$id</td>
+        <td>The ID of the property selection</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
-        <td>The lang of the property selection</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_propertyselection">PropertySelection</a>
-</pre>
-
-    
-Get a property selection. The ID of the property and the language must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyId</td>
-        <td>The ID of the property</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$lang</td>
-        <td>The lang of the property selection</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>findByPropertyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId):<a href="item#item_models_propertyselection">PropertySelection</a>
-</pre>
-
-    
-List of property selections. The ID of the property must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyId</td>
-        <td>The ID of the property</td>
+        <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language</a> of the property selection</td>
     </tr>
 </table>
 
@@ -6148,6 +6297,10 @@ The property including Property name and property market reference
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>group</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>selections</td>
             <td></td>
         </tr></tbody>
 </table>
@@ -7339,6 +7492,28 @@ Lists all sales prices.
 </table>
 
 
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
 
 ### SalesPriceSearchRepositoryContract<a name="item_contracts_salespricesearchrepositorycontract"></a>
 
@@ -10001,6 +10176,28 @@ Lists all units.
 </table>
 
 
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
 ## Models<a name="item_unit_models"></a>
 ### Unit<a name="item_models_unit"></a>
 
@@ -10478,7 +10675,7 @@ Variation
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>number</td>
-            <td>The variation number of the variation. The variation number must be specified. The variation number must be unique.</td>
+            <td>The unique variation number of the variation. The variation number must be specified.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>model</td>
@@ -10715,7 +10912,7 @@ Variation
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationAttributeValues</td>
-            <td>An array of the attributeValues of the variation.</td>
+            <td>An array of the attribute values of the variation.</td>
         </tr><tr>
             <td><a href="item#item_models_unitcombination">UnitCombination</a>
 </td>
@@ -11267,7 +11464,7 @@ The contract of the variation client repository
 </pre>
 
     
-Gets a client (store) linked to a variation. The ID of the variation and the plenty ID must be specified.
+Gets a client (store) linked to a variation. The ID of the variation and the client ID must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -11304,7 +11501,7 @@ Creates a link between a variation and a client (store).
 </pre>
 
     
-Deletes the link between a variation and a client (store). The ID of the variation and the plenty ID must be specified.
+Deletes the link between a variation and a client (store). The ID of the variation and the client ID must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -11341,7 +11538,7 @@ Lists the clients (stores) linked to a variation. The ID of the variation must b
 </pre>
 
     
-Lists the clients (stores) linked to a variation with inheritance information. The ID of the variation must be specified.
+Lists the clients (stores) linked to a variation including inheritance information. The ID of the variation must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -11377,15 +11574,15 @@ Variation Client
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The id of the variation</td>
+            <td>The unique ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
-            <td>The id of the variation client</td>
+            <td>The unique ID of the client (store)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The created at date timestamp</td>
+            <td>The time at which the client (store) was linked to the variation.</td>
         </tr></tbody>
 </table>
 
@@ -11417,7 +11614,7 @@ The contract of the variation default category repository
 </pre>
 
     
-Gets the default category of a variation for the client (store) specified. The ID of the variation and the plenty ID must be specified.
+Gets the default category of a variation for the client (store) specified. The ID of the variation and the client ID must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -11438,7 +11635,7 @@ Gets the default category of a variation for the client (store) specified. The I
 </pre>
 
     
-Creates a link between a variation and a category that designates the category as the default category.
+Creates a link between a variation and a category that designates the category as the default category for this client (store).
     
 ##### <strong>Parameters</strong>
     
@@ -11454,7 +11651,7 @@ Creates a link between a variation and a category that designates the category a
 </pre>
 
     
-Updates the default category linked to a variation. The ID of the variation and the plenty ID must be specified.
+Updates the default category linked to a variation. The ID of the variation and the client ID must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -11466,7 +11663,7 @@ Updates the default category linked to a variation. The ID of the variation and 
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$plentyId</td>
-        <td>The ID of the client (store)</td>
+        <td>The unique ID of the client (store)</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -11480,14 +11677,14 @@ Updates the default category linked to a variation. The ID of the variation and 
 </pre>
 
     
-Deletes the link between a variation and a default category. The ID of the variation and the plenty ID must be specified.
+Deletes the link between a variation and a default category. The ID of the variation and the client ID must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$plentyId</td>
-        <td>The ID of the client (store)</td>
+        <td>The unique ID of the client (store)</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -12889,27 +13086,27 @@ The variation SKU model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The row id of the table plenty_item_variation_market_status.</td>
+            <td>The row ID of the table plenty_item_variation_market_status</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The id of the variation.</td>
+            <td>The ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>marketId</td>
-            <td>The id of the marketplace.</td>
+            <td>The ID of the market</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>accountId</td>
-            <td>The id of the marketplace account.</td>
+            <td>The ID of the market account</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>initialSku</td>
-            <td>The initial SKU of the variation. The initial SKU can not be modified even if you make changes to the variation SKU. It is possible, however, to reset the variation SKU to the initial SKU.</td>
+            <td>The initial SKU of the variation. The initial SKU cannot be modified even if the variation SKU is changed. However, it is possible to reset the variation SKU to the initial SKU.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>sku</td>
-            <td>The SKU of the variation. The SKU is adjustable but may not exist twice for the combination maketId and acoountId.</td>
+            <td>The SKU of the variation. The SKU is adjustable but may not exist twice for the combination of market Id and account Id.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isActive</td>
@@ -12975,12 +13172,12 @@ List stock per warehouse
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td>The ID of the variation.</td>
+        <td>The ID of the variation</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>The properties to be loaded.</td>
+        <td>The properties to be loaded</td>
     </tr>
 </table>
 
@@ -12995,22 +13192,22 @@ List stock movements for a variation
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td>The ID of the variation.</td>
+        <td>The ID of the variation</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
-        <td>The properties to be loaded.</td>
+        <td>The properties to be loaded</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td>The requested page.</td>
+        <td>The requested page</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemsPerPage</td>
-        <td>The number of items per page.</td>
+        <td>The number of items per page</td>
     </tr>
 </table>
 
@@ -13025,12 +13222,12 @@ Book incoming stock
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td>The ID of the variation.</td>
+        <td>The ID of the variation</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td>The request data.</td>
+        <td>The request data</td>
     </tr>
 </table>
 
@@ -13045,12 +13242,12 @@ Correct stock
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
-        <td>The ID of the variation.</td>
+        <td>The ID of the variation</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td>The request data.</td>
+        <td>The request data</td>
     </tr>
 </table>
 
@@ -13079,7 +13276,7 @@ Redistribute stock
 ## Models<a name="item_variationstock_models"></a>
 ### VariationStock<a name="item_models_variationstock"></a>
 
-The variation stock model.
+The variation stock model
 
 
 #### Namespace
@@ -13159,7 +13356,7 @@ Returns this model as an array.
 
 ### VariationStockMovement<a name="item_models_variationstockmovement"></a>
 
-The variation stock movement model.
+The variation stock movement model
 
 
 #### Namespace
@@ -13204,7 +13401,7 @@ The variation stock movement model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>processRowId</td>
-            <td>The ID is either the actual ID of an order of of an incoming item data set. Whether it is an order ID or an incoming item data set ID depends on the processRowType.</td>
+            <td>The ID is either the actual ID of an order or of an incoming item data set. Whether it is an order ID or an incoming item data set ID depends on the processRowType.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>quantity</td>
@@ -13212,7 +13409,7 @@ The variation stock movement model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>reason</td>
-            <td>The reason of the movement</td>
+            <td>The reason for the movement</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
@@ -13228,11 +13425,11 @@ The variation stock movement model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>storageLocationName</td>
-            <td>The name of the storage location.</td>
+            <td>The name of the storage location</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>warehouseName</td>
-            <td>The name of the warehouse.</td>
+            <td>The name of the warehouse</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>purchasePrice</td>

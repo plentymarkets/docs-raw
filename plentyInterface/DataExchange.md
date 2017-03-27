@@ -1082,7 +1082,7 @@ Register export presets
 
 #### Methods
 
-<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $exportKey, <a target="_blank" href="http://php.net/string">string</a> $resultFieldsClass, <a target="_blank" href="http://php.net/string">string</a> $generatorClass, <a target="_blank" href="http://php.net/string">string</a> $filterClass = &quot;&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $isPlugin = false):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $exportKey, <a target="_blank" href="http://php.net/string">string</a> $resultFieldsClass, <a target="_blank" href="http://php.net/string">string</a> $generatorClass, <a target="_blank" href="http://php.net/string">string</a> $filterClass = &quot;&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $isPlugin = false, <a target="_blank" href="http://php.net/bool">bool</a> $generatorExecute = false):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -1113,6 +1113,11 @@ Register export presets
     <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$isPlugin</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$generatorExecute</td>
         <td></td>
     </tr>
 </table>

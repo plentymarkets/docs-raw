@@ -356,7 +356,7 @@ Delete an address relation from an order
 ## Contracts<a name="order_contactwish_contracts"></a>
 ### ContactWishRepositoryContract<a name="order_contracts_contactwishrepositorycontract"></a>
 
-Get and create contact wishes.
+This interface allows you to get and create contact wishes.
 
 
 #### Namespace
@@ -459,14 +459,14 @@ The OrderItemRepositoryContract is the interface for the order item repository. 
 <pre>public <strong>deleteOrderItem</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/int">int</a> $orderItemId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
-Deletes an order item. The order ID and the order item ID have to be provided.
+Delete an order item
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderId</td>
-        <td>The ID of the order the item belongs to.</td>
+        <td>The ID of the order that the item belongs to.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -655,7 +655,7 @@ List orders of a contact
 </pre>
 
     
-List orders having at least one order item with a variation of a supplier
+List orders that include one or more variations from a supplier
     
 ##### <strong>Parameters</strong>
     
@@ -686,7 +686,7 @@ List orders having at least one order item with a variation of a supplier
 </pre>
 
     
-List orders of a sender contact
+List orders sent by a contact
     
 ##### <strong>Parameters</strong>
     
@@ -738,7 +738,7 @@ Get latest order of a contact
 <pre>public <strong>searchOrders</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-List orders by filter options
+List orders
     
 ##### <strong>Parameters</strong>
     
@@ -842,7 +842,7 @@ The CouponCodeOrder model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>corderItemId</td>
-            <td>The ID of the order item where the coupon was redeemd</td>
+            <td>The ID of the order item that the coupon was redeemed for</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>campaignId</td>
@@ -854,8 +854,8 @@ The CouponCodeOrder model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>type</td>
-            <td>The type of the redeemed coupon display type.
-										Possible return values are:<ul>
+            <td>The display type of the redeemed coupon
+										The following display types are available:<ul>
 										<li>disposable</li>
 										<li>fixed_vat</li>
 										<li>fixed</li>
@@ -1830,7 +1830,7 @@ Returns this model as an array.
 
 ### OrderOverpaid<a name="order_events_orderoverpaid"></a>
 
-An Event class fired after a payment assignment when the order is overpaid.
+An event class will be fired after a payment is assigned and if the order is overpaid.
 
 
 #### Namespace
@@ -1868,7 +1868,7 @@ Returns this model as an array.
 
 ### OrderPartlyPaid<a name="order_events_orderpartlypaid"></a>
 
-An Event class fired after a payment assignment when the order is partly paid.
+An Event class fired after a payment is assigned and if the order is only partly paid.
 
 
 #### Namespace
@@ -1908,7 +1908,7 @@ Returns this model as an array.
 
 ### OrderPrepaid<a name="order_events_orderprepaid"></a>
 
-An Event class fired after a payment assignment when the order is paid in advance.
+An Event class fired after a payment is assigned and if the order is paid in advance.
 
 
 #### Namespace
@@ -2664,7 +2664,7 @@ The CouponCodeValidationItem model contains all item data needed for validating 
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>quantity</td>
-            <td>The quantity of the item</td>
+            <td>The quantity of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>singlePrice</td>
@@ -2676,7 +2676,7 @@ The CouponCodeValidationItem model contains all item data needed for validating 
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>vatField</td>
-            <td>The field of the vat rate</td>
+            <td>The field of the VAT rate</td>
         </tr></tbody>
 </table>
 
@@ -2799,7 +2799,7 @@ Get a currency for a country
 ## Models<a name="order_currency_models"></a>
 ### Currency<a name="order_models_currency"></a>
 
-The currency model. The model includes information like ISO 4217 code and the related symbols as well as the countries that a currency is used in.
+The currency model. The model includes information like the ISO 4217 code and the related currency symbols as well as the countries that a currency is used in.
 
 
 #### Namespace
@@ -2936,7 +2936,7 @@ The currency name model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the currency name</td>
+            <td>The ID of the currency name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>currency</td>
@@ -2944,7 +2944,7 @@ The currency name model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The language of the name</td>
+            <td>The language of the currency name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
@@ -2984,14 +2984,14 @@ The OrderDateRepositoryContract contains the functionality to find available Ord
 <pre>public <strong>findNamesByTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $typeId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Get date type names
+List names of a date type
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$typeId</td>
-        <td>The id of the date type</td>
+        <td>The ID of the date type</td>
     </tr>
 </table>
 
@@ -3000,7 +3000,7 @@ Get date type names
 </pre>
 
     
-Get a date type name
+Get a name of a date type
     
 ##### <strong>Parameters</strong>
     
@@ -3021,7 +3021,7 @@ Get a date type name
 </pre>
 
     
-Get the date types
+List date types
     
 <pre>public <strong>findTypeById</strong>(<a target="_blank" href="http://php.net/int">int</a> $typeId):<a href="order#order_models_orderdatetype">OrderDateType</a>
 </pre>
@@ -3111,7 +3111,7 @@ Delete a date
 </pre>
 
     
-Delete a order date specified by the id of the order and the type of the order date.
+Delete an order date from an order by the type of the order date
     
 ##### <strong>Parameters</strong>
     
@@ -3123,7 +3123,7 @@ Delete a order date specified by the id of the order and the type of the order d
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$typeId</td>
-        <td>The type (ID) of the date.</td>
+        <td>The ID of the date type.</td>
     </tr>
 </table>
 
@@ -3132,7 +3132,7 @@ Delete a order date specified by the id of the order and the type of the order d
 </pre>
 
     
-Get an order date
+Get an order date from an order by the type of the order date
     
 ##### <strong>Parameters</strong>
     
@@ -3167,7 +3167,7 @@ List order dates of an order
 
 ### OrderItemDateRepositoryContract<a name="order_contracts_orderitemdaterepositorycontract"></a>
 
-The OrderItemDateRepositoryContract contains the functionality to find, create, update and delete OrderItemDate instances.
+The OrderItemDateRepositoryContract contains the functionality to get, create, update and delete OrderItemDate instances.
 
 
 #### Namespace
@@ -3182,7 +3182,7 @@ The OrderItemDateRepositoryContract contains the functionality to find, create, 
 </pre>
 
     
-Find an order item date by its ID.
+Get an order item date
     
 ##### <strong>Parameters</strong>
     
@@ -3242,7 +3242,7 @@ Create or update an order item date
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td>The order item date data. The properties that are required to create an order can be found in the OrderItemDate model.</td>
+        <td>The order item date data. The properties that are required to create or update an order can be found in the OrderItemDate model.</td>
     </tr>
 </table>
 
@@ -3266,7 +3266,7 @@ Delete a date
 </pre>
 
     
-Get an order item date by an order item ID and an order date type ID.
+Get an order item date by an order item and an order date type.
     
 ##### <strong>Parameters</strong>
     
@@ -3287,7 +3287,7 @@ Get an order item date by an order item ID and an order date type ID.
 </pre>
 
     
-Create an order item date by an order item ID and an order date type ID.
+Create an order item date by an order item and an order date type.
     
 ##### <strong>Parameters</strong>
     
@@ -3313,14 +3313,14 @@ Create an order item date by an order item ID and an order date type ID.
 </pre>
 
     
-Update an order item date by an order item ID and an order date type ID.
+Update an order item date by an order item and an order date type.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td>The order item date data. The properties that are required to create an order can be found in the OrderItemDate model.</td>
+        <td>The order item date data. The properties that are required to update an order can be found in the OrderItemDate model.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -3338,7 +3338,7 @@ Update an order item date by an order item ID and an order date type ID.
 <pre>public <strong>deleteByOrderItemIdAndTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderItemId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
-Delete an order item date by an order item ID and an order date type ID.
+Delete an order item date by an order item and an order date type.
     
 ##### <strong>Parameters</strong>
     
@@ -3420,7 +3420,7 @@ The OrderDate model.
             <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
 </td>
             <td>date</td>
-            <td>The actual complete date plus hours, minutes and seconds for the date. The date format must comply with the W3C standard.</td>
+            <td>The date plus hours, minutes and seconds. The date format must comply with the W3C standard.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -3485,7 +3485,7 @@ The OrderDateType model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
             <td>isErasable</td>
-            <td>Flag that states if this type can be deleted or not.</td>
+            <td>Flag that indicates if this type can be deleted or not.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
@@ -3494,7 +3494,7 @@ The OrderDateType model.
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>names</td>
-            <td>A collection of names for this OrderDateType</td>
+            <td>The names for this OrderDateType</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -3616,7 +3616,7 @@ The OrderItemDate model.
             <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
 </td>
             <td>date</td>
-            <td>The actual complete date plus hours, minutes and seconds for the date. The date format must comply with the W3C standard.</td>
+            <td>The date plus hours, minutes and seconds. The date format must comply with the W3C standard.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -3631,7 +3631,7 @@ The OrderItemDate model.
             <td><a href="order#order_models_orderdatetype">OrderDateType</a>
 </td>
             <td>type</td>
-            <td>The type of date</td>
+            <td>The type of the date</td>
         </tr></tbody>
 </table>
 
@@ -4816,24 +4816,28 @@ The order item property model.
             <td>typeId</td>
             <td>The ID of the property type.
 <ul>
-<li>WAREHOUSE		=	1</li>
-<li>SHIPPING_PROFILE	=	2</li>
-<li>CATEGORY			=	3</li>
-<li>WEIGHT			=	4</li>
-<li>WIDTH			=	5</li>
-<li>LENGTH			=	6</li>
-<li>HEIGHT			=	7</li>
-<li>QUANTITY			=	8</li>
-<li>MARKET			=	9</li>
-<li>VARIANT			=	10</li>
-<li>POSITION			=	11</li>
-<li>TOKEN			=	12</li>
-<li>METHOD_OF_PAYMENT=	13</li>
-<li>IDENTIFIER		=	14</li>
-<li>DUNNING			=	15</li>
-<li>ORDER			=	16</li>
-<li>DOCUMENT			=	17</li>
-<li>PROPERTY			=	18</li>
+<li>WAREHOUSE		        =	1</li>
+<li>SHIPPING_PROFILE	        =	2</li>
+<li>PAYMENT_METHOD	        =	3</li>
+<li>WEIGHT			        =	11</li>
+<li>WIDTH			        =	12</li>
+<li>LENGTH		            =	13</li>
+<li>HEIGHT			        =	14</li>
+<li>EXTERNAL_TOKEN_ID        =	16</li>
+<li>EXTERNAL_ITEM_ID         =	17</li>
+<li>COUPON_CODE		        =	18</li>
+<li>COUPON_TYPE		        =	19</li>
+<li>ORIGINAL_WAREHOUSE	    =	20</li>
+<li>ORIGINAL_QUANTITY        =	21</li>
+<li>CATEGORY_ID              =   22</li>
+<li>MARKET_FEE		        =	23</li>
+<li>STOCK_REVERSING	        =	24</li>
+<li>DISPUTE_STATUS	        =	25</li>
+<li>NO_CHANGE_BY_CONTACT     =   26</li>
+<li>SIZE 			        =	29</li>
+<li>LOCATION_RESERVED	    =	30</li>
+<li>EXTERNAL_ITEM_SHIPMENT_ID=	31</li>
+<li>PARTIAL_SHIPPING_COSTS   =	32</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -5762,7 +5766,7 @@ The ParcelServicePresetRepositoryContract is the interface for the shipping prof
 
 #### Methods
 
-<pre>public <strong>getPresetList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns, <a target="_blank" href="http://php.net/string">string</a> $with):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPresetList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/string">string</a> $parcelServiceName = null, <a target="_blank" href="http://php.net/string">string</a> $with = null):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Lists shipping profiles.
@@ -5776,8 +5780,13 @@ Lists shipping profiles.
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$parcelServiceName</td>
+        <td>Filter that restricts the search result to parcel service presets with a specified service name (e.g. 'DHL' for DHL)</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$with</td>
-        <td></td>
+        <td>The parameter contains the name of an relation</td>
     </tr>
 </table>
 
@@ -7089,6 +7098,22 @@ Gets a shipping service provider. The ID of the shipping service provider must b
 </table>
 
 
+<pre>public <strong>findByName</strong>(<a target="_blank" href="http://php.net/string">string</a> $shippingServiceProviderName):<a href="order#order_models_shippingserviceprovider">ShippingServiceProvider</a>
+</pre>
+
+    
+Gets a shipping service provider. The name of the shipping service provider must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$shippingServiceProviderName</td>
+        <td>The name of the shipping service provider</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>saveShippingServiceProvider</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $shippingServiceProviderName):<a href="order#order_models_shippingserviceprovider">ShippingServiceProvider</a>
 </pre>
 
@@ -7316,3 +7341,145 @@ Set the
 </table>
 
 
+# StatusHistory<a name="order_statushistory"></a>
+    
+## Contracts<a name="order_statushistory_contracts"></a>
+### StatusHistoryRepositoryContract<a name="order_contracts_statushistoryrepositorycontract"></a>
+
+This interface allows you to get the status history of an order and to list the status histories of all orders.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\StatusHistory\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getStatusHistoryByOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
+</pre>
+
+    
+Get the status history of an order
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>The columns to get</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getStatusHistory</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List status histories
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>The columns to get</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The page to get</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of entries from status histories listed per page</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+## Models<a name="order_statushistory_models"></a>
+### StatusHistoryEntry<a name="order_models_statushistoryentry"></a>
+
+The status history entry model
+
+
+#### Namespace
+
+`Plenty\Modules\Order\StatusHistory\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the status history entry</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>orderId</td>
+            <td>The ID of the order</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>statusId</td>
+            <td>The ID of the status</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The date when the entry was created</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>userId</td>
+            <td>The ID of the user</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>procedureText</td>
+            <td>The information text of the procedure that created the entry</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
