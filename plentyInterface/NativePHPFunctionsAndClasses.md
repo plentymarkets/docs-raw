@@ -104,6 +104,9 @@ These are native PHP functions that are *allowed* to be used inside plugins.
                 <a target="_blank" href="http://docs.php.net/manual/function.curl-exec.php">curl_exec</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.curl-getinfo.php">curl_getinfo</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.curl-init.php">curl_init</a>
             </li>
                     <li>

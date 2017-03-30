@@ -4082,7 +4082,7 @@ Repository for item cross-selling
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$crossItemId</td>
-        <td>The unique ID of the linked cross-sellling item</td>
+        <td>The unique ID of the linked cross-selling item</td>
     </tr>
 </table>
 
@@ -5234,7 +5234,7 @@ The item manufacturer model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The ID of the manufacturer. The ID must be unique.</td>
+            <td>The unique ID of the manufacturer.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
@@ -5282,7 +5282,7 @@ The item manufacturer model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>countryId</td>
-            <td>The country ID of the manufacturer; 0 = unknown.</td>
+            <td>The ID of the <a href="https://developers.plentymarkets.com/rest-doc/introduction#countries" target="_blank">country</a> in which the manufacturer is based; 0 = unknown.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>pixmaniaBrandId</td>
@@ -5346,19 +5346,19 @@ The item manufacturer commission model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The ID of the manufacturer commission</td>
+            <td>The unique ID of the manufacturer commission</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>manufacturerId</td>
-            <td>The ID of the manufacturer. The ID must be unique.</td>
+            <td>The unique ID of the manufacturer.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
-            <td>The ID of the client (store) the commission applies to. The route /rest/webstores provides access to clients (stores).</td>
+            <td>The unique ID of the client (store) that the commission applies to. The route /rest/webstores provides access to clients (stores).</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>referrerId</td>
-            <td>The ID of the referrer the commission applies to. The route /rest/orders/referrers provides access to referrers.</td>
+            <td>The unique ID of the referrer that the commission applies to. The route /rest/orders/referrers provides access to referrers.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>commission</td>
@@ -11090,12 +11090,12 @@ Variation Barcode
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The time the code for the variation was created.</td>
+            <td>The time the variation's code was created.</td>
         </tr><tr>
             <td><a href="item#item_models_barcode">Barcode</a>
 </td>
             <td>barcode</td>
-            <td>The Barcode of the variation's barcode</td>
+            <td>The barcode of the variation's barcode</td>
         </tr></tbody>
 </table>
 
@@ -11211,7 +11211,7 @@ Lists variation bundles. The ID of the variation must be specified.
 ## Models<a name="item_variationbundle_models"></a>
 ### VariationBundle<a name="item_models_variationbundle"></a>
 
-The VariationBundle
+The variation bundle
 
 
 #### Namespace
@@ -11232,27 +11232,27 @@ The VariationBundle
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the variation bundle</td>
+            <td>The unique ID of the link that marks a variation as a bundle component</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The variation id of the variation bundle</td>
+            <td>The unique ID of the variation to which other variations are added to create a bundle</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>componentVariationId</td>
-            <td>The variation id of the bundle component</td>
+            <td>The unique ID of the variation added as bundle component</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>componentQuantity</td>
-            <td>The quantity of the bundle component</td>
+            <td>The quantity of the variation to be added as bundle component</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lastUpdatedTimestamp</td>
-            <td>The last update date timestamp</td>
+            <td>The time the bundle was last updated.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>The created at date timestamp</td>
+            <td>The time the bundle was created.</td>
         </tr></tbody>
 </table>
 
@@ -11284,7 +11284,7 @@ The contract for the variation category repository
 </pre>
 
     
-Gets a variation category. The ID of the variation and the ID of the category must be specified.
+Gets the link between a category and a variation. The ID of the variation and the ID of the category must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -11305,7 +11305,7 @@ Gets a variation category. The ID of the variation and the ID of the category mu
 </pre>
 
     
-Creates a variation category.
+Creates a link between a category and a variation.
     
 ##### <strong>Parameters</strong>
     
@@ -11321,7 +11321,7 @@ Creates a variation category.
 </pre>
 
     
-Updates a variation category.  The ID of the variation and the ID of the category must be specified.
+Updates a link between a category and a variation. The ID of the variation and the ID of the category must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -11347,7 +11347,7 @@ Updates a variation category.  The ID of the variation and the ID of the categor
 </pre>
 
     
-Delete an VariationCategory by given variation and barcode id
+Deletes the link between a category and a variation. The ID of the variation and the ID of the category must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -11368,7 +11368,7 @@ Delete an VariationCategory by given variation and barcode id
 </pre>
 
     
-Lists variation categories. The ID of the variation must be specified.
+Lists the categories linked to a variation. The ID of the variation must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -11384,7 +11384,7 @@ Lists variation categories. The ID of the variation must be specified.
 </pre>
 
     
-Lists variation categories with inheritance. The ID of the variation must be specified.
+Lists the categories linked to a variation including inheritance information. The ID of the variation must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -11420,19 +11420,19 @@ Variation Category
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>variationId</td>
-            <td>The id of the variation</td>
+            <td>The unique ID of the variation</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>categoryId</td>
-            <td>The id of the category</td>
+            <td>The unique ID of the category</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
-            <td>The position of the variation category</td>
+            <td>The position of the category</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>isNeckermannPrimary</td>
-            <td>Indicates if the variation category is ...</td>
+            <td>Flag that indicates if the category is the primary category for the market Neckermann for this variation.</td>
         </tr></tbody>
 </table>
 
