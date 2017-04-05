@@ -547,42 +547,6 @@ Storage Repository
 
 #### Methods
 
-<pre>public <strong>uploadFile</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/string">string</a> $pathToFile, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false, <a target="_blank" href="http://php.net/array">array</a> $metaData = []):<a href="cloud#cloud_models_storageobject">StorageObject</a>
-</pre>
-
-    
-Upload an object by streaming the contents of a file $pathToFile should be absolute path to a file on disk
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$pluginName</td>
-        <td>name of your plugin</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$key</td>
-        <td>e.g. myDir/x/y/z/HelloWorld.txt</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$pathToFile</td>
-        <td>absolute path to a file on disk</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
-        <td>$publicVisible</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$metaData</td>
-        <td></td>
-    </tr>
-</table>
-
-
 <pre>public <strong>uploadObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/string">string</a> $body, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false, <a target="_blank" href="http://php.net/array">array</a> $metaData = []):<a href="cloud#cloud_models_storageobject">StorageObject</a>
 </pre>
 

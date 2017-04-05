@@ -769,6 +769,10 @@ The payment model
             <td>The exchange rate. Exchange rates are used if the default currency saved in plentymarkets differs from the currency of the order.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>parentId</td>
+            <td>The ID of the parent payment</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>deleted</td>
             <td>A deleted payment. Deleted payments have the value 1 and are not displayed in the plentymarkets back end.</td>
         </tr><tr>
@@ -829,7 +833,7 @@ The payment model
             <td><a href="payment#payment_models_payment">Payment</a>
 </td>
             <td>parent</td>
-            <td>The ID of the parent payment</td>
+            <td>The parent payment</td>
         </tr><tr>
             <td><a href="payment#payment_models_paymentmethod">PaymentMethod</a>
 </td>
@@ -1014,6 +1018,10 @@ The payment property model
              <li>Item transaction ID = 28</li>
              <li>External transaction type = 29</li>
              <li>External transaction status = 30</li>
+             <li>The receiver's IBAN = 31</li>
+             <li>The receiver's BIC = 32</li>
+             <li>Transaction fee = 33</li>
+             <li>Transaction lifespan = 34</li>
          </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>

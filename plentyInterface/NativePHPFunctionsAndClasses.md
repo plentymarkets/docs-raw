@@ -1,6 +1,9 @@
-# Native PHP Functions And Classes
+# Allowed PHP functionality
+
+On this page, you find an overview of all allowed PHP functions and classes that can be used in plentymarkets plugins. If a certain PHP function or class is not listed below, you can make a request for the required function or class in our [forum](https://forum.plentymarkets.com/c/plugin-entwicklung).
+
 ## Functions
-These are native PHP functions that are *allowed* to be used inside plugins.
+These are native PHP functions that are *allowed* to be used in plentymarkets plugins.
 <div class="multi-column">
             <strong>A</strong>
         <ul>
@@ -401,7 +404,7 @@ These are native PHP functions that are *allowed* to be used inside plugins.
     </div>
 
 ## Classes
-These are the native PHP classes that are *allowed* to be used inside Plugins.
+These are the native PHP classes that are *allowed* to be used in plentymarkets Plugins.
 <div class="multi-column">
             <strong>A</strong>
         <ul>

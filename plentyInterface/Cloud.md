@@ -90,6 +90,11 @@ to be written
     
 
     
+<pre>public <strong>getSize</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
