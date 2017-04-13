@@ -613,6 +613,52 @@ to be written
 Get the instance as an array.
     
 ## Source<a name="cloud_lib_source"></a>
+### ExcludeSource<a name="cloud_source_excludesource"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Source`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getPrefix</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>activateAll</strong>():<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>activateList</strong>(<a target="_blank" href="http://php.net/array">array</a> $fields):<a href="cloud#cloud_lib_source">Source</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$fields</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### IncludeSource<a name="cloud_source_includesource"></a>
 
 foo

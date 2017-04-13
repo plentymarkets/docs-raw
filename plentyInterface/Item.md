@@ -1298,6 +1298,28 @@ Gets barcode referrer by specified referrer.
 </table>
 
 
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
 ## Models<a name="item_barcode_models"></a>
 ### Barcode<a name="item_models_barcode"></a>
 
@@ -1331,6 +1353,10 @@ The barcode model including barcode referrer
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>type</td>
             <td>The type of the barcode. Possible values: GTIN_8, GTIN_13, GTIN_14, GTIN_128, ISBN, QR, CODE_128, UPC</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The time the code was created.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>referrers</td>
@@ -4620,7 +4646,7 @@ ItemImageAvailability
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>value</td>
-            <td>The ID of the referrer for which the image is available. <ul><li><strong>-1.00</strong> = The image is available for all referrers of this type.</li></ul></td>
+            <td>For the type <b>mandant</b>, this is the plentyID of the client (store) for which the image is available. For the types <b>marketplace</b> and <b>listing</b>, this is the ID of the referrer for which the image is available. <ul><li><strong>-1.00</strong> = The image is available for all referrers of this type.</li></ul></td>
         </tr></tbody>
 </table>
 
@@ -5398,7 +5424,7 @@ The item manufacturer commission model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>manufacturerId</td>
-            <td>The unique ID of the manufacturer.</td>
+            <td>The unique ID of the manufacturer</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
@@ -11741,14 +11767,14 @@ The contract of the variation default category repository
 </pre>
 
     
-Gets the default category of a variation for the client (store) specified. The ID of the variation and the client ID must be specified.
+Gets the default category of a variation for the client (store) specified. The ID of the variation and the plenty ID of the client (store) must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$plentyId</td>
-        <td>The unique ID of the client (store)</td>
+        <td>The unique plenty ID of the client (store)</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -11778,7 +11804,7 @@ Creates a link between a variation and a category that designates the category a
 </pre>
 
     
-Updates the default category linked to a variation. The ID of the variation and the client ID must be specified.
+Updates the default category linked to a variation. The ID of the variation and the plenty ID of the client (store) must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -11790,7 +11816,7 @@ Updates the default category linked to a variation. The ID of the variation and 
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$plentyId</td>
-        <td>The unique ID of the client (store)</td>
+        <td>The unique plenty ID of the client (store)</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -11804,14 +11830,14 @@ Updates the default category linked to a variation. The ID of the variation and 
 </pre>
 
     
-Deletes the link between a variation and a default category. The ID of the variation and the client ID must be specified.
+Deletes the link between a variation and a default category. The ID of the variation and the plenty ID of the client (store) must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$plentyId</td>
-        <td>The unique ID of the client (store)</td>
+        <td>The unique plenty ID of the client (store)</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -11869,7 +11895,7 @@ Variation Default Category
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
-            <td>The unique ID of the client (store)</td>
+            <td>The unique plenty ID of the client (store)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>manually</td>

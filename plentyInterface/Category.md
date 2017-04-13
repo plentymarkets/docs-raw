@@ -665,7 +665,7 @@ The Category Client
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
-            <td>The ID of the client (store) in which the category is visible. Several IDs can be separated by commas. If a subcategory is linked to a client, its parent categories will be linked to this client as well.</td>
+            <td>The unique plenty ID of the client (store) in which the category is visible. Several IDs can be separated by commas. If a subcategory is linked to a client, its parent categories will be linked to this client as well.</td>
         </tr></tbody>
 </table>
 
@@ -705,7 +705,7 @@ CategoryDetails
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
-            <td>The ID of the client (store) in which the category is visible. If a subcategory is linked to a client, its parent categories will be linked to this client as well.</td>
+            <td>The unique plenty ID of the client (store) in which the category is visible. If a subcategory is linked to a client, its parent categories will be linked to this client as well.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
@@ -745,11 +745,23 @@ CategoryDetails
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>image</td>
-            <td>The path to the image1 of the category.</td>
+            <td>The ID to the image1 of the category.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>image2</td>
+            <td>The ID to the image2 of the category.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>imagePath</td>
+            <td>The path to the image1 of the category.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>image2Path</td>
             <td>The path to the image2 of the category.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>previewUrl</td>
+            <td>The category's URL.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
@@ -831,7 +843,7 @@ Category Template
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
-            <td>The ID of the client (store)</td>
+            <td>The unique plenty ID of the client (store)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>

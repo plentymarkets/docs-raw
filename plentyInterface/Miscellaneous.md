@@ -577,6 +577,21 @@ Returns current webstoreId
     
 
     
+<pre>public <strong>getUrlPath</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName = &quot;&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Returns the URL to the plugin resources
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$pluginName</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### CachingRepository<a name="miscellaneous_plugin_cachingrepository"></a>
 

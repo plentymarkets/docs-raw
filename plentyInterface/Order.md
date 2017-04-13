@@ -1014,25 +1014,39 @@ The order model.
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
+            <td>orderReferences</td>
+            <td>The order references.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>dates</td>
-            <td>The dates of the order. Can contain many different dates with their types like:</td>
-        </tr><tr>
-            <td><a href="order#order_models_order">Order</a>
-</td>
-            <td>originOrder</td>
-            <td>The origin order of this order. If this order is the origin, this attribute is null.</td>
-        </tr><tr>
-            <td><a href="order#order_models_order">Order</a>
-</td>
-            <td>parentOrder</td>
-            <td>The parent order of this order. If this order has no parent, this attribute is null.
-
+            <td>The dates of the order. Can contain many different dates with their types like:
 <ul>
 <li>Delete date = 1</li>
 <li>Entry date = 2</li>
 <li>Payment date = 3</li>
 <li>Delivery date = 4</li>
 </ul></td>
+        </tr><tr>
+            <td><a href="order#order_models_order">Order</a>
+</td>
+            <td>originOrder</td>
+            <td>The origin order of this order. If this order is the origin, this attribute is null. (deprecated)</td>
+        </tr><tr>
+            <td><a href="order#order_models_order">Order</a>
+</td>
+            <td>parentOrder</td>
+            <td>The parent order of this order. If this order has no parent, this attribute is null. (deprecated)</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>originOrders</td>
+            <td>The origin orders of this order.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>parentOrders</td>
+            <td>The parent orders of this order.</td>
         </tr></tbody>
 </table>
 
@@ -1596,6 +1610,64 @@ The order item type name model.
 </td>
             <td>type</td>
             <td>The order item type instance.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### OrderReference<a name="order_models_orderreference"></a>
+
+The order reference model. Each OrderReference has an origin order (the most top order) and a referenced order (currently only &#039;parent&#039;).
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>orderId</td>
+            <td>The order id.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>originOrderId</td>
+            <td>The id of the origin order.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>referenceOrderId</td>
+            <td>The id of the referenced order.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>referenceType</td>
+            <td>The reference type (currently only "parent") of the referenced order.</td>
+        </tr><tr>
+            <td><a href="order#order_models_order">Order</a>
+</td>
+            <td>originOrder</td>
+            <td>The origin order of the order.</td>
+        </tr><tr>
+            <td><a href="order#order_models_order">Order</a>
+</td>
+            <td>referenceOrder</td>
+            <td>The referenced order of the order.</td>
         </tr></tbody>
 </table>
 

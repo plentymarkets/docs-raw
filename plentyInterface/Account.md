@@ -674,6 +674,10 @@ address contact relation model
             <td>addressId</td>
             <td>The ID of the address</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td>isPrimary</td>
+            <td>Flag that indicates if the address is primary</td>
+        </tr><tr>
             <td><a href="account#account_models_address">Address</a>
 </td>
             <td>address</td>
@@ -1656,6 +1660,32 @@ Adds the address to the given contact as the given type.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$typeId</td>
+        <td>The ID of the address type</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setPrimaryAddress</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressId, <a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $addressTypeId):<a href="account#account_models_addresscontactrelation">AddressContactRelation</a>
+</pre>
+
+    
+Sets a contact address per address type as the primary address.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$addressId</td>
+        <td>The ID of the address</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactId</td>
+        <td>The ID of the contact</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$addressTypeId</td>
         <td>The ID of the address type</td>
     </tr>
 </table>
@@ -3494,6 +3524,90 @@ Returns this model as an array.
 # Search<a name="account_search"></a>
     
 ## Contracts<a name="account_search_contracts"></a>
+### ContactElasticSearchAvailibilityRepositoryContract<a name="account_contracts_contactelasticsearchavailibilityrepositorycontract"></a>
+
+ContactElasticSearchAvailibilityRepositoryContract
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Contact\Search\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+
+    
+<pre>public <strong>isAvailable</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+
+    
+
+    
+
+### ContactElasticSearchScrollRepositoryContract<a name="account_contracts_contactelasticsearchscrollrepositorycontract"></a>
+
+kommt noch
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Contact\Search\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>hasNext</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>setIndex</strong>(<a href="cloud#cloud_index_indexinterface">IndexInterface</a>
+ $index):<a href="cloud#cloud_contracts_elasticsearchsearchrepositorycontract">ElasticSearchSearchRepositoryContract</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_index_indexinterface">IndexInterface</a>
+</td>
+        <td>$index</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSearch</strong>(<a href="cloud#cloud_search_searchinterface">SearchInterface</a>
+ $search):<a href="cloud#cloud_contracts_elasticsearchsearchrepositorycontract">ElasticSearchSearchRepositoryContract</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_search_searchinterface">SearchInterface</a>
+</td>
+        <td>$search</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>execute</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+
 ### IndexContactRepositoryContract<a name="account_contracts_indexcontactrepositorycontract"></a>
 
 The contract for the search repository

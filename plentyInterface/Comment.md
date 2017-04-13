@@ -125,7 +125,7 @@ The comment model.
 	<li>category</li>
 	<li>contact</li>
 	<li>order</li>
- <li>variation</li>
+ <li>item_variation</li>
 	</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
