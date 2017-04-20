@@ -279,6 +279,27 @@ The reference value.
 </table>
 
 
+<pre>public <strong>addReference</strong>(<a target="_blank" href="http://php.net/string">string</a> $referenceType, <a target="_blank" href="http://php.net/int">int</a> $referenceValue):<a href="miscellaneous#miscellaneous_contracts_loggercontract">LoggerContract</a>
+</pre>
+
+    
+Add reference.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$referenceType</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$referenceValue</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Exceptions<a name="miscellaneous_log_exceptions"></a>
 ### ReferenceTypeException<a name="miscellaneous_exceptions_referencetypeexception"></a>
 
@@ -1869,6 +1890,12 @@ The field under validation must have the type specified in the database.
 
     
 The field under validation must be a valid data type used by the validation rule &#039;typeFromDb&#039;.
+    
+<pre>public <strong>validCurrency</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
+</pre>
+
+    
+The field under validation must be a valid currency string (e.g. &#039;EUR&#039;).
     
 
 ### RulesCollection<a name="miscellaneous_validation_rulescollection"></a>
@@ -4774,6 +4801,12 @@ The field under validation must have the type specified in the database.
 
     
 The field under validation must be a valid data type used by the validation rule &#039;typeFromDb&#039;.
+    
+<pre>public <strong>validCurrency</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
+</pre>
+
+    
+The field under validation must be a valid currency string (e.g. &#039;EUR&#039;).
     
 <pre>public <strong>different</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>

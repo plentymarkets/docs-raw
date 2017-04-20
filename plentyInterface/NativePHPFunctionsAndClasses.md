@@ -26,6 +26,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.array-flip.php">array_flip</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.array-intersect-key.php">array_intersect_key</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-key-exists.php">array_key_exists</a>
             </li>
                     <li>

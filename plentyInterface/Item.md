@@ -2895,6 +2895,11 @@ VariationMarketStatus
             <td>sku</td>
             <td></td>
         </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>parentSku</td>
+            <td></td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>active</td>
             <td></td>
@@ -9676,6 +9681,48 @@ foo
 </table>
 
 
+
+### VariationLastUpdatedFilter<a name="item_filter_variationlastupdatedfilter"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Filter`
+
+
+
+#### Methods
+
+<pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addStatement</strong>(<a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+ $statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Mutators<a name="item_search_mutators"></a>
 ### DefaultCategoryMutator<a name="item_mutators_defaultcategorymutator"></a>
 
@@ -12713,6 +12760,120 @@ Lists the property values linked to a variation. The ID of the variation must be
 </table>
 
 
+
+### VariationPropertyValueTextRepositoryContract<a name="item_contracts_variationpropertyvaluetextrepositorycontract"></a>
+
+The contract of the variation property value text repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationProperty\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationpropertyvaluetext">VariationPropertyValueText</a>
+</pre>
+
+    
+Saves text for a specific property of the type Text in the specified language. The ID of the property value and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationpropertyvaluetext">VariationPropertyValueText</a>
+</pre>
+
+    
+Updates the text saved for a specific property of the type Text in the specified language. The ID of the property value and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$valueId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes the text saved for a specific property of the type Text in the specified language. The ID of the property value and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$valueId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_variationpropertyvaluetext">VariationPropertyValueText</a>
+</pre>
+
+    
+Gets the text saved for a specific property of the type Text in the specified language. The ID of the property value and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$valueId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByPropertyValue</strong>(<a target="_blank" href="http://php.net/int">int</a> $valueId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Gets the texts saved for a specific property of the type Text in all available languages. The ID of the property value must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$valueId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationproperty_models"></a>
 ### VariationPropertyValue<a name="item_models_variationpropertyvalue"></a>
 
@@ -12798,7 +12959,7 @@ Returns this model as an array.
 
 ### VariationPropertyValueName<a name="item_models_variationpropertyvaluename"></a>
 
-The VariationPropertyName
+The property name of the variation
 
 
 #### Namespace
@@ -12819,15 +12980,15 @@ The VariationPropertyName
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>propertyValueId</td>
-            <td>The unique ID of the link between the variation and the property</td>
+            <td>The unique ID of the link between the variation and the property value</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#countries" target="_blank">language</a> of the propertyValueName.</td>
+            <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#countries" target="_blank">language</a> of the property value name.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>value</td>
-            <td>The value of the propertyValueName in the specified language</td>
+            <td>The value of the property value name in the specified language</td>
         </tr></tbody>
 </table>
 
@@ -13260,6 +13421,10 @@ The variation SKU model
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>sku</td>
             <td>The SKU of the variation. The SKU is adjustable but may not exist twice for the combination of market Id and account Id.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>parentSku</td>
+            <td>The Parent SKU of the variation. The Parent SKU is adjustable. The same Parent SKU value should be used on variations of same article.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isActive</td>

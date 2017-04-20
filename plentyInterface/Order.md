@@ -456,6 +456,22 @@ The OrderItemRepositoryContract is the interface for the order item repository. 
 
 #### Methods
 
+<pre>public <strong>getOrderItem</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderItemId):<a href="order#order_models_orderitem">OrderItem</a>
+</pre>
+
+    
+Get an order item
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderItemId</td>
+        <td>The ID of the order item</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>deleteOrderItem</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/int">int</a> $orderItemId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
@@ -905,7 +921,7 @@ The order model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The order ID</td>
+            <td>The ID of the order</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
@@ -1082,11 +1098,11 @@ The order amount model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the order  amount.</td>
+            <td>The ID of the order amount.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>orderId</td>
-            <td>The id of the order that the amount belongs to.</td>
+            <td>The ID of the order that the amount belongs to.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isSystemCurrency</td>
@@ -1094,7 +1110,7 @@ The order amount model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isNet</td>
-            <td>Flag that states if the invoice is net or not.</td>
+            <td>Flag that states if the invoice is net or not. If the invoice is not net, it is gross.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>currency</td>
@@ -1122,11 +1138,17 @@ The order amount model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>paidAmount</td>
-            <td>The surcharge gross price.</td>
+            <td>The order amount that is already paid.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>prepaidAmount</td>
-            <td>The discount amount. This amount can be a percentage or a fixed value.</td>
+            <td>Deprecated</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>giftCardAmount</td>
+            <td>The amount that comes from gift cards that were redeemed when placing the order
+                                                                 The gift cards amount does not reduce the invoice total, but reduces the amount that still needs to be paid.
+                                                                 The amount that still needs to paid is not an own parameter because the amount can be calculated by subtracting the gift cards amount from the invoice total.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -1182,42 +1204,42 @@ The order amount vat model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the order amount vat.</td>
+            <td>The ID of the VAT information of an order amount</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>orderAmountId</td>
-            <td>The id of the order amount that the vat belongs to.</td>
+            <td>The ID of the order amount that the VAT information belong to</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>countryVatId</td>
-            <td>The id of the country vat that the vat belongs to.</td>
+            <td>The ID of the VAT configuration</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>vatField</td>
-            <td>The vat id used [0,1,2,3].</td>
+            <td>The ID of the VAT rate\'s field [0,1,2,3].</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>vatRate</td>
-            <td>The actual vat rate that was used, e.g. 19%.</td>
+            <td>The actual VAT rate that was used, e.g. 19%.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>value</td>
-            <td>The vat amount of money given in the order amount currency.</td>
+            <td>The VAT amount of money given in the same currency as the order amount.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>createdAt</td>
-            <td>The date that the vat was created.</td>
+            <td>The date that the VAT was created.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>updatedAt</td>
-            <td>The date that the vat was updated last.</td>
+            <td>The date that the VAT was updated last.</td>
         </tr><tr>
             <td><a href="order#order_models_orderamount">OrderAmount</a>
 </td>
             <td>orderAmount</td>
-            <td>The OrderAmount model this OrderAmountVat belongs to.</td>
+            <td>The OrderAmount model that the OrderAmountVat belongs to.</td>
         </tr></tbody>
 </table>
 
@@ -1345,17 +1367,17 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>amounts</td>
-            <td>The order item amounts that are associated with the order item.</td>
+            <td>The order item amounts that belong to the order item.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>properties</td>
-            <td>The order item property that are associated with the order item.</td>
+            <td>The order item properties that belong to the order item.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>orderProperties</td>
-            <td>The order item order properties that are associated with the order item.</td>
+            <td>The order item order properties that belong to the order item.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -1365,6 +1387,11 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 <li>Start date = 9</li>
 <li>End date = 10</li>
 </ul></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>references</td>
+            <td>The order item references.</td>
         </tr></tbody>
 </table>
 
@@ -1408,7 +1435,7 @@ The order item amount model. Order item amount refers to amounts of money.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isSystemCurrency</td>
-            <td>Flag that states if the current currency is the same as the system currency or not.</td>
+            <td>Flag that indicates if the current currency is the same as the system currency or not.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>currency</td>
@@ -1448,7 +1475,7 @@ The order item amount model. Order item amount refers to amounts of money.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isPercentage</td>
-            <td>Flag that states if a discount is given as a percentage or as a fixed value.</td>
+            <td>Flag that indicates if a discount is given as a percentage or as a fixed value.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -1478,7 +1505,7 @@ Returns this model as an array.
 
 ### OrderItemOrderProperty<a name="order_models_orderitemorderproperty"></a>
 
-This model holds the order properties that are assigned to order items.
+This model contains the order properties that are assigned to order items.
 
 
 #### Namespace
@@ -1547,7 +1574,7 @@ The order item type model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
             <td>isErasable</td>
-            <td>Flag that states if this type can be deleted or not</td>
+            <td>Flag that indicates if this type can be deleted or not</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
@@ -1556,7 +1583,7 @@ The order item type model.
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>names</td>
-            <td>The names of the order item types.</td>
+            <td>The names of the order item types</td>
         </tr></tbody>
 </table>
 
@@ -4094,43 +4121,43 @@ The legacy order model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The order id.</td>
+            <td>The Id of an order</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>orderType</td>
-            <td>The order type.</td>
+            <td>The type of an order type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>contactId</td>
-            <td>The contact id.</td>
+            <td>The ID of the contact</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>referrerId</td>
-            <td>The referrer.</td>
+            <td>The referrer</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>status</td>
-            <td>The status.</td>
+            <td>The status</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>userId</td>
-            <td>The order owner.</td>
+            <td>The owner of an order</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>entryDate</td>
-            <td>The entry date.</td>
+            <td>The date that the order was entered</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>webstoreId</td>
-            <td>The webstore id.</td>
+            <td>The ID of the webstore</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>warehouseId</td>
-            <td>The warehouse id.</td>
+            <td>The ID of the warehouse</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>sellerAccount</td>
-            <td>The seller account.</td>
+            <td>The seller account</td>
         </tr><tr>
             <td><a href="account#account_models_address">Address</a>
 </td>
