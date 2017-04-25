@@ -473,7 +473,7 @@ The PaymentRepositoryContract is the interface for the payment repository. List,
 
 #### Methods
 
-<pre>public <strong>getAll</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getAll</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Lists payments.
@@ -509,7 +509,7 @@ Gets a payment. The ID of the payment must be specified.
 </table>
 
 
-<pre>public <strong>getPaymentsByMethodId</strong>(<a target="_blank" href="http://php.net/int">int</a> $methodId, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPaymentsByMethodId</strong>(<a target="_blank" href="http://php.net/int">int</a> $methodId, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Lists payments of a payment method. The ID of the payment method must be specified.
@@ -534,7 +534,7 @@ Lists payments of a payment method. The ID of the payment method must be specifi
 </table>
 
 
-<pre>public <strong>getPaymentsByStatusId</strong>(<a target="_blank" href="http://php.net/int">int</a> $statusId, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPaymentsByStatusId</strong>(<a target="_blank" href="http://php.net/int">int</a> $statusId, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Lists payments of a payment status. The ID of the payment status must be specified.
@@ -559,7 +559,7 @@ Lists payments of a payment status. The ID of the payment status must be specifi
 </table>
 
 
-<pre>public <strong>getPaymentsByTransactionType</strong>(<a target="_blank" href="http://php.net/int">int</a> $transactionType, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPaymentsByTransactionType</strong>(<a target="_blank" href="http://php.net/int">int</a> $transactionType, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Lists payments of a transaction type. The transaction type must be specified.
@@ -599,7 +599,7 @@ Lists payments of an order. The ID of the order must be specified.
 </table>
 
 
-<pre>public <strong>getPaymentsByImportDateInterval</strong>(<a target="_blank" href="http://php.net/string">string</a> $startDate, <a target="_blank" href="http://php.net/string">string</a> $endDate, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPaymentsByImportDateInterval</strong>(<a target="_blank" href="http://php.net/string">string</a> $startDate, <a target="_blank" href="http://php.net/string">string</a> $endDate, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Lists payments by import date. The start and the end of the date range must be specified.
@@ -629,7 +629,7 @@ Lists payments by import date. The start and the end of the date range must be s
 </table>
 
 
-<pre>public <strong>getPaymentsByEntryDateInterval</strong>(<a target="_blank" href="http://php.net/string">string</a> $startDate, <a target="_blank" href="http://php.net/string">string</a> $endDate, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPaymentsByEntryDateInterval</strong>(<a target="_blank" href="http://php.net/string">string</a> $startDate, <a target="_blank" href="http://php.net/string">string</a> $endDate, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Lists payments by entry date. The start and the end of the date range must be specified.
@@ -659,7 +659,7 @@ Lists payments by entry date. The start and the end of the date range must be sp
 </table>
 
 
-<pre>public <strong>getPaymentsByPropertyTypeAndValue</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyTypeId, $propertyValue, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPaymentsByPropertyTypeAndValue</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyTypeId, $propertyValue, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Lists payments by payment property type and value.
@@ -847,6 +847,14 @@ The payment model
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>properties</td>
             <td>The properties of the payment</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td>regenerateHash</td>
+            <td>If $regenerateHash is true, regenerate the payment hash value. Default is false.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td>updateOrderPaymentStatus</td>
+            <td>If $updateOrderPaymentStatus is true, update the order payment status. Default is false.</td>
         </tr></tbody>
 </table>
 

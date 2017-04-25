@@ -4142,7 +4142,7 @@ Returns this model as an array.
 ## Contracts<a name="account_newsletter_contracts"></a>
 ### NewsletterRepositoryContract<a name="account_contracts_newsletterrepositorycontract"></a>
 
-The NewsletterRepositoryContract is the interface for the newsletter repository. This interface allows to assign email addresses of contacts or interested parties to email folders. Depending on the settings selected for each email folder, different newsletters can be sent to different target groups.
+The NewsletterRepositoryContract is the interface for the newsletter repository. This interface allows to assign email addresses of recipients to email folders. Depending on the settings selected for each email folder, different newsletters can be sent to different target groups.
 
 
 #### Namespace
@@ -4153,9 +4153,265 @@ The NewsletterRepositoryContract is the interface for the newsletter repository.
 
 #### Methods
 
+<pre>public <strong>createEntry</strong>(<a target="_blank" href="http://php.net/array">array</a> $data = []):<a href="account#account_models_entry">Entry</a>
+</pre>
+
+    
+Creates an entry.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createRecipient</strong>(<a target="_blank" href="http://php.net/array">array</a> $data = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Creates a recipient for an existing folder.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createFolder</strong>(<a target="_blank" href="http://php.net/array">array</a> $data = []):<a href="account#account_models_folder">Folder</a>
+</pre>
+
+    
+Creates a folder.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteAllEntries</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Delete all entries
+    
+<pre>public <strong>deleteAllFolders</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Delete all folders
+    
+<pre>public <strong>deleteAllRecipients</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Delete all recipients
+    
+<pre>public <strong>deleteEntryById</strong>(<a target="_blank" href="http://php.net/int">int</a> $entryId):<a href="account#account_models_entry">Entry</a>
+</pre>
+
+    
+Deletes an entry. The ID of the entry must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$entryId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteFolderById</strong>(<a target="_blank" href="http://php.net/int">int</a> $folderId):<a href="account#account_models_folder">Folder</a>
+</pre>
+
+    
+Deletes a folder. The ID of the folder must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$folderId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteRecipientById</strong>(<a target="_blank" href="http://php.net/int">int</a> $recipientId):<a href="account#account_models_recipient">Recipient</a>
+</pre>
+
+    
+Deletes a recipient. The ID of the recipient must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$recipientId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listAllEntries</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists all newsletter entries
+    
+<pre>public <strong>listAllFolders</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists all newsletter folders
+    
+<pre>public <strong>listAllRecipients</strong>(<a target="_blank" href="http://php.net/array">array</a> $data = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists all recipients
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listEntryById</strong>(<a target="_blank" href="http://php.net/int">int</a> $entryId):<a href="account#account_models_entry">Entry</a>
+</pre>
+
+    
+Shows details from entry
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$entryId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listFolderById</strong>(<a target="_blank" href="http://php.net/int">int</a> $folderId):<a href="account#account_models_folder">Folder</a>
+</pre>
+
+    
+Shows details from folder
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$folderId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listRecipientById</strong>(<a target="_blank" href="http://php.net/int">int</a> $recipientId):<a href="account#account_models_recipient">Recipient</a>
+</pre>
+
+    
+Shows details from recipient
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$recipientId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateEntryById</strong>(<a target="_blank" href="http://php.net/int">int</a> $entryId, <a target="_blank" href="http://php.net/array">array</a> $data = []):<a href="account#account_models_entry">Entry</a>
+</pre>
+
+    
+Updates an entry. The ID of the entry must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$entryId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateFolderById</strong>(<a target="_blank" href="http://php.net/int">int</a> $folderId, <a target="_blank" href="http://php.net/array">array</a> $data = []):<a href="account#account_models_folder">Folder</a>
+</pre>
+
+    
+Updates a folder. The ID of the folder must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$folderId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateRecipientById</strong>(<a target="_blank" href="http://php.net/int">int</a> $recipientId, <a target="_blank" href="http://php.net/array">array</a> $data = []):<a href="account#account_models_recipient">Recipient</a>
+</pre>
+
+    
+Updates a recipient. The ID of the recipient must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$recipientId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>addToNewsletterList</strong>(<a target="_blank" href="http://php.net/string">string</a> $email, <a target="_blank" href="http://php.net/string">string</a> $forename = &quot;&quot;, <a target="_blank" href="http://php.net/string">string</a> $surname = &quot;&quot;, <a target="_blank" href="http://php.net/array">array</a> $emailDirIds = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
+<div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                Deprecated!             </h3>
+        </div>
+        <div class="panel-body">
+            This method will not be supported in the future. Please refrain from using it as soon as possible.
+        </div>
+    </div>
     
 Adds the email address of a contact or an interested party to an email folder for the newsletter list.
     
@@ -4185,6 +4441,106 @@ Adds the email address of a contact or an interested party to an email folder fo
 
 
 ## Models<a name="account_newsletter_models"></a>
+### Entry<a name="account_models_entry"></a>
+
+The newsletter entry model.
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Newsletter\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>subject</td>
+            <td>The subject of the newsletter entry</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>body</td>
+            <td>The body of the newsletter entry</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>kind</td>
+            <td>The type of the newsletter entry</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>log</td>
+            <td>The log of the newsletter entry</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### Folder<a name="account_models_folder"></a>
+
+The newsletter folder model.
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Newsletter\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the newsletter folder</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the newsletter folder</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isDeletable</td>
+            <td>Flag that indicates if the newsletter folder can be deleted. The folders 'Customers' and 'Interested parties' are available by default and cannot be deleted.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>position</td>
+            <td>The position of the newsletter folder</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isSelectable</td>
+            <td>Flag that indicates if the newsletter folder can be selected by customers in the online store. If this is allowed, the folder will be displayed in the My account area of the online store. Customers will then be able to subscribe to the newsletters that are included in this folder.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
 ### NewsletterEmail<a name="account_models_newsletteremail"></a>
 
 NewsletterEmail
@@ -4249,6 +4605,86 @@ NewsletterEmail
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>confirmedTimestamp</td>
             <td>The timestamp when the contact or interested party confirmed the newsletter subscription</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>confirmAuthString</td>
+            <td>The key that is automatically generated by the system. This key recognises the user regardless whether the user is logged in to the system and will then set the confirmation timestamp.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### Recipient<a name="account_models_recipient"></a>
+
+The newsletter recipient
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Newsletter\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the newsletter recipient</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>folderId</td>
+            <td>The ID of the newsletter folder</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>contactId</td>
+            <td>The ID of the contact</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>firstName</td>
+            <td>The first name of the recipient</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lastName</td>
+            <td>The last name of the recipient</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>email</td>
+            <td>The email address of the recipient</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>gender</td>
+            <td>The gender of the recipient</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>birthday</td>
+            <td>The birthday of the recipient</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>timestamp</td>
+            <td>The timestamp when the newsletter email was sent to the recipient</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>templateLang</td>
+            <td>The language of the newsletter email template</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>confirmedTimestamp</td>
+            <td>The timestamp when the recipient confirmed the newsletter subscription</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>confirmAuthString</td>
