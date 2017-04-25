@@ -13099,15 +13099,15 @@ The VariationPropertyValueText
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>valueId</td>
-            <td></td>
+            <td>The unique ID of the link between the variation and the property</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td></td>
+            <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language</a> of the property value text</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>value</td>
-            <td></td>
+            <td>The text saved for the property of the type Text</td>
         </tr></tbody>
 </table>
 
