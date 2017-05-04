@@ -57,7 +57,7 @@ List tickets by filter options.
 </table>
 
 
-<pre>public <strong>createMessage</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketId):<a href="ticket#ticket_models_ticket">Ticket</a>
+<pre>public <strong>createMessage</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketId):<a href="ticket#ticket_models_ticketmessage">TicketMessage</a>
 </pre>
 
     
@@ -95,6 +95,387 @@ Updates a ticket with given data.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$ticketId</td>
         <td>The ID of the ticket to associate this to</td>
+    </tr>
+</table>
+
+
+
+### TicketRoleNameRepositoryContract<a name="ticket_contracts_ticketrolenamerepositorycontract"></a>
+
+TicketRoleName Repository
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketRoleNameId):<a href="ticket#ticket_models_ticketrolename">TicketRoleName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$ticketRoleNameId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_ticketrolename">TicketRoleName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByName</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### TicketRoleRepositoryContract<a name="ticket_contracts_ticketrolerepositorycontract"></a>
+
+Ticket role repository
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketRoleId):<a href="ticket#ticket_models_ticketrole">TicketRole</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$ticketRoleId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_ticketrole">TicketRole</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### TicketStatusNameRepositoryContract<a name="ticket_contracts_ticketstatusnamerepositorycontract"></a>
+
+TicketStatusName Repository
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketStatusNameId):<a href="ticket#ticket_models_ticketstatusname">TicketStatusName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$ticketStatusNameId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_ticketstatusname">TicketStatusName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByName</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### TicketStatusRepositoryContract<a name="ticket_contracts_ticketstatusrepositorycontract"></a>
+
+TicketStatus repository
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketStatusId):<a href="ticket#ticket_models_ticketstatus">TicketStatus</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$ticketStatusId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_ticketstatus">TicketStatus</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $typeId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$typeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### TicketTypeNameRepositoryContract<a name="ticket_contracts_tickettypenamerepositorycontract"></a>
+
+TicketTypeName repository
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketTypeNameId):<a href="ticket#ticket_models_tickettypename">TicketTypeName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$ticketTypeNameId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_tickettypename">TicketTypeName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByName</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### TicketTypeRepositoryContract<a name="ticket_contracts_tickettyperepositorycontract"></a>
+
+TicketType repository
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketTypeId):<a href="ticket#ticket_models_tickettype">TicketType</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$ticketTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_tickettype">TicketType</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
     </tr>
 </table>
 
@@ -454,6 +835,10 @@ The ticket role model.
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
             <td>The position of the role</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>names</td>
+            <td></td>
         </tr></tbody>
 </table>
 
@@ -550,6 +935,10 @@ The ticket status model.
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>statusGroupId</td>
             <td>The status group ID of the status</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>names</td>
+            <td></td>
         </tr></tbody>
 </table>
 
@@ -676,8 +1065,8 @@ The ticket status name model.
             <td>The ID of the status name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>typeId</td>
-            <td>The type ID of the status name</td>
+            <td>statusId</td>
+            <td>The status ID of the status name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
@@ -726,6 +1115,10 @@ The ticket type model.
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
             <td>The position of the role</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>names</td>
+            <td></td>
         </tr></tbody>
 </table>
 

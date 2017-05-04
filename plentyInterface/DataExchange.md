@@ -878,6 +878,10 @@ Export model
             <td>outputType</td>
             <td>the output type</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>generateCache</td>
+            <td>if cache should be generated</td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>filters</td>
             <td>list of filters defined by backend users</td>

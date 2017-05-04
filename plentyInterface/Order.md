@@ -946,19 +946,23 @@ The order model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>methodOfPaymentId</td>
-            <td>The ID of the order's payment method</td>
+            <td>The ID of the order's payment method (read only)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>shippingProfileId</td>
-            <td>The ID of the order's shipping profile</td>
+            <td>The ID of the order's shipping profile (read only)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>paymentStatus</td>
-            <td>The payment status of the order</td>
+            <td>The payment status of the order (read only)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>statusId</td>
             <td>The ID of the order status</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>statusName</td>
+            <td>The name for the status ID (read only)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>ownerId</td>
@@ -1671,6 +1675,10 @@ The order reference model. Each OrderReference has an origin order (the most top
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The id of the order reference entry.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>orderId</td>
             <td>The order id.</td>
         </tr><tr>
@@ -1685,6 +1693,11 @@ The order reference model. Each OrderReference has an origin order (the most top
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>referenceType</td>
             <td>The reference type (currently only "parent") of the referenced order.</td>
+        </tr><tr>
+            <td><a href="order#order_models_order">Order</a>
+</td>
+            <td>order</td>
+            <td></td>
         </tr><tr>
             <td><a href="order#order_models_order">Order</a>
 </td>
@@ -3855,6 +3868,25 @@ An event class fired before an order will be canceled.
 #### Namespace
 
 `Plenty\Modules\Order\Events\Canceled`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+## Changed<a name="order_events_changed"></a>
+### OrderStatusChanged<a name="order_changed_orderstatuschanged"></a>
+
+An event class fired after the status of an order has changed.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Events\Changed`
 
 
 

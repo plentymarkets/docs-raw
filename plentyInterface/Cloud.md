@@ -183,6 +183,133 @@ to be written
     
 
     
+<pre>public <strong>getNext</strong>():<a href="cloud#cloud_index_nextindex">NextIndex</a>
+</pre>
+
+    
+
+    
+
+### NextIndex<a name="cloud_index_nextindex"></a>
+
+to bew written
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Index`
+
+
+
+#### Methods
+
+<pre>public <strong>getType</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getVersion</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getDomain</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getSettingsClassName</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getMappingClassName</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getNext</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>hasUpdatedAt</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>maySynchronize</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Vorrübergehender Cheat - alles was noch keine Version hat,
+darf nicht über die &quot;neuen&quot; Prozesse befüllt werden!
+    
+<pre>public <strong>getPlentyId</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getIdentifier</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>isAvailable</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Checks whether ElasticSearch is generally available,
+and whether the index has already been created.
+    
+<pre>public <strong>setRefreshInterval</strong>($value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>resetAvailibilityStatus</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getMeta</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getInfo</strong>():<a href="cloud#cloud_info_baseinfo">BaseInfo</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>mayBeQueuedForCreation</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
 ## Output<a name="cloud_lib_output"></a>
 ### DevNullOutput<a name="cloud_output_devnulloutput"></a>
 
@@ -772,6 +899,80 @@ to be written
 # Index<a name="cloud_index"></a>
     
 ## Info<a name="cloud_index_info"></a>
+### BaseInfo<a name="cloud_info_baseinfo"></a>
+
+to bew written
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Index\Info`
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $default = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$default</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>set</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>remove</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### InfoInterface<a name="cloud_info_infointerface"></a>
 
 foo

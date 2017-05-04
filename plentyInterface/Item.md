@@ -3708,6 +3708,27 @@ Get an item. The ID of the item must be specified.
 </table>
 
 
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $itemId):<a href="item#item_models_item">Item</a>
+</pre>
+
+    
+Update a item. The ID of the item must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -3761,7 +3782,7 @@ The item model
             <td>The position of the item</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>type</td>
+            <td>itemType</td>
             <td>The type of the item. Because Set items are managed using a separate route, this value is always Default.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -9271,6 +9292,22 @@ to bew written
 </table>
 
 
+<pre>public <strong>hasManufacturers</strong>(<a target="_blank" href="http://php.net/array">array</a> $manufacturerIds):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$manufacturerIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>hasAManufacturer</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -14137,8 +14174,7 @@ Deletes the link between a warehouse and a variation. The ID of the variation an
 </table>
 
 
-<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationwarehouse">VariationWarehouse</a>
-</pre>
+<pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Lists all warehouse data of a variation. The ID of the variation must be specified.
@@ -14153,8 +14189,7 @@ Lists all warehouse data of a variation. The ID of the variation must be specifi
 </table>
 
 
-<pre>public <strong>findByVariationIdWithInheritance</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationwarehouse">VariationWarehouse</a>
-</pre>
+<pre>public <strong>findByVariationIdWithInheritance</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Lists all warehouse data of a variation with inheritance details. The ID of the variation must be specified.

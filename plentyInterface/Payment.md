@@ -1690,3 +1690,49 @@ The payment method model
     
 Returns this model as an array.
     
+# MethodName<a name="payment_methodname"></a>
+    
+## Models<a name="payment_methodname_models"></a>
+### PaymentMethodName<a name="payment_models_paymentmethodname"></a>
+
+The payment method name model
+
+
+#### Namespace
+
+`Plenty\Modules\Payment\MethodName\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>paymentMethodId</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lang</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
