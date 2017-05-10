@@ -284,7 +284,7 @@ AWS DynamoDb Repository
 
 #### Methods
 
-<pre>public <strong>createTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/array">array</a> $attributeDefinitions, <a target="_blank" href="http://php.net/array">array</a> $keySchema, <a target="_blank" href="http://php.net/int">int</a> $readCapacityUnits = 3, <a target="_blank" href="http://php.net/int">int</a> $writeCapacityUnits = 2):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>createTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/array">array</a> $attributeDefinitions, <a target="_blank" href="http://php.net/array">array</a> $keySchema, <a target="_blank" href="http://php.net/int">int</a> $readCapacityUnits = 3, <a target="_blank" href="http://php.net/int">int</a> $writeCapacityUnits = 2):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Create a table
@@ -324,7 +324,7 @@ Create a table
 </table>
 
 
-<pre>public <strong>updateTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/int">int</a> $readCapacityUnits = 3, <a target="_blank" href="http://php.net/int">int</a> $writeCapacityUnits = 2):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>updateTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/int">int</a> $readCapacityUnits = 3, <a target="_blank" href="http://php.net/int">int</a> $writeCapacityUnits = 2):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Update a table
@@ -354,7 +354,7 @@ Update a table
 </table>
 
 
-<pre>public <strong>putItem</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/array">array</a> $item):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>putItem</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/array">array</a> $item):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Add item to table
@@ -379,7 +379,7 @@ Add item to table
 </table>
 
 
-<pre>public <strong>getItem</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/boolean">boolean</a> $consistentRead, <a target="_blank" href="http://php.net/array">array</a> $key):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getItem</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/bool">bool</a> $consistentRead, <a target="_blank" href="http://php.net/array">array</a> $key):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Retrieving items
@@ -397,7 +397,7 @@ Retrieving items
         <td></td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$consistentRead</td>
         <td></td>
     </tr>
@@ -434,7 +434,7 @@ Delete an item
 </table>
 
 
-<pre>public <strong>deleteTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>deleteTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deleting a table
@@ -547,7 +547,7 @@ Storage Repository
 
 #### Methods
 
-<pre>public <strong>uploadObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/string">string</a> $body, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false, <a target="_blank" href="http://php.net/array">array</a> $metaData = []):<a href="cloud#cloud_models_storageobject">StorageObject</a>
+<pre>public <strong>uploadObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/string">string</a> $body, <a target="_blank" href="http://php.net/bool">bool</a> $publicVisible = false, <a target="_blank" href="http://php.net/array">array</a> $metaData = []):<a href="cloud#cloud_models_storageobject">StorageObject</a>
 </pre>
 
     
@@ -571,7 +571,7 @@ Create an object with content in $body
         <td>file content</td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$publicVisible</td>
         <td></td>
     </tr>
@@ -583,7 +583,7 @@ Create an object with content in $body
 </table>
 
 
-<pre>public <strong>getObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false):<a href="cloud#cloud_models_storageobject">StorageObject</a>
+<pre>public <strong>getObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/bool">bool</a> $publicVisible = false):<a href="cloud#cloud_models_storageobject">StorageObject</a>
 </pre>
 
     
@@ -602,7 +602,7 @@ Get an object
         <td>e.g. myDir/x/y/z/HelloWorld.txt</td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$publicVisible</td>
         <td></td>
     </tr>
@@ -639,7 +639,7 @@ Returns the URL to an object identified by its bucket and key. The URL will be s
 </table>
 
 
-<pre>public <strong>getObjectAsTemporaryFileResource</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/boolean">boolean</a> $publicVisible = false):<a target="_blank" href="http://php.net/string">string</a></pre>
+<pre>public <strong>getObjectAsTemporaryFileResource</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/bool">bool</a> $publicVisible = false):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
 Get local file resource of an object. Use this if it is really necessary! Using getObject is the normal and effective way.
@@ -657,7 +657,7 @@ Get local file resource of an object. Use this if it is really necessary! Using 
         <td>e.g. myDir/x/y/z/HelloWorld.txt</td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$publicVisible</td>
         <td></td>
     </tr>
@@ -689,7 +689,7 @@ Checks if object exists
 </table>
 
 
-<pre>public <strong>deleteObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/bool">bool</a> $publicVisible = false):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>deleteObject</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $key, <a target="_blank" href="http://php.net/bool">bool</a> $publicVisible = false):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Executes the DeleteObject operation.

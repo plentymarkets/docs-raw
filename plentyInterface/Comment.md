@@ -145,7 +145,7 @@ The comment model.
             <td>text</td>
             <td>The comment text</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isVisibleForContact</td>
             <td>If true, the comment is visible for the associated contact.</td>
         </tr></tbody>

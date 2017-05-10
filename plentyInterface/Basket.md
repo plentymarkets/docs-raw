@@ -272,7 +272,7 @@ The basket model
             <td>couponDiscount</td>
             <td>The received discount due to the coupon code</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>shippingDeleteByCoupon</td>
             <td>Shows whether the shipping costs are subtracted due to a coupon code. Shopping carts that are free of shipping costs have the value true.</td>
         </tr><tr>
@@ -283,10 +283,10 @@ The basket model
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>basketRebateType</td>
             <td>The discount type. The following types are available:
-         <ul>
-             <li>Discount scale based on net value of items = 4</li>
-             <li>    Discount based on method of payment = 5</li>
-         </ul></td>
+<ul>
+    <li>Discount scale based on net value of items = 4</li>
+    <li>    Discount based on method of payment = 5</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>maxFsk</td>
@@ -393,7 +393,7 @@ The basket item model
             <td>givenPrice</td>
             <td></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>useGivenPrice</td>
             <td></td>
         </tr><tr>
@@ -417,7 +417,7 @@ The basket item model
             <td>externalItemId</td>
             <td>The external variation ID</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>noEditByCustomer</td>
             <td>Shows whether the item was edited by the customer</td>
         </tr><tr>

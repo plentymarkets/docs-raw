@@ -176,38 +176,38 @@ Lists properties of a property type. The ID of the property type must be specifi
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$typeId</td>
         <td>The ID of the payment property type. The following property types are available:
-         <ul>
-             <li>Transaction ID = 1</li>
-             <li>Reference ID = 2</li>
-             <li>Booking text = 3</li>
-             <li>Transaction password = 4</li>
-             <li>Transaction code = 5</li>
-             <li>Authorisation ID = 6</li>
-             <li>Capture ID = 7</li>
-             <li>Refund ID = 8</li>
-             <li>Credit note ID = 9</li>
-             <li>Order reference = 10</li>
-             <li>Name of the sender = 11</li>
-             <li>Email of the sender = 12</li>
-             <li>The sender's sort code = 13</li>
-             <li>The sender's bank name = 14</li>
-             <li>The sender's bank account number = 15</li>
-             <li>The holder of the bank account = 16</li>
-             <li>The country of the sender's bank account = 17</li>
-             <li>The sender's IBAN = 18</li>
-             <li>The sender's BIC = 19</li>
-             <li>Name of the recipient = 20</li>
-             <li>The recipient's bank account = 21</li>
-             <li>Reference text of the payment = 22</li>
-             <li>Payment origin = 23</li>
-             <li>Shipping address ID = 24</li>
-             <li>Invoice address ID = 25</li>
-             <li>Item buyer = 26</li>
-             <li>Item number = 27</li>
-             <li>Item transaction ID = 28</li>
-             <li>External transaction type = 29</li>
-             <li>External transaction status = 30</li>
-         </ul></td>
+<ul>
+    <li>Transaction ID = 1</li>
+    <li>Reference ID = 2</li>
+    <li>Booking text = 3</li>
+    <li>Transaction password = 4</li>
+    <li>Transaction code = 5</li>
+    <li>Authorisation ID = 6</li>
+    <li>Capture ID = 7</li>
+    <li>Refund ID = 8</li>
+    <li>Credit note ID = 9</li>
+    <li>Order reference = 10</li>
+    <li>Name of the sender = 11</li>
+    <li>Email of the sender = 12</li>
+    <li>The sender's sort code = 13</li>
+    <li>The sender's bank name = 14</li>
+    <li>The sender's bank account number = 15</li>
+    <li>The holder of the bank account = 16</li>
+    <li>The country of the sender's bank account = 17</li>
+    <li>The sender's IBAN = 18</li>
+    <li>The sender's BIC = 19</li>
+    <li>Name of the recipient = 20</li>
+    <li>The recipient's bank account = 21</li>
+    <li>Reference text of the payment = 22</li>
+    <li>Payment origin = 23</li>
+    <li>Shipping address ID = 24</li>
+    <li>Invoice address ID = 25</li>
+    <li>Item buyer = 26</li>
+    <li>Item number = 27</li>
+    <li>Item transaction ID = 28</li>
+    <li>External transaction type = 29</li>
+    <li>External transaction status = 30</li>
+</ul></td>
     </tr>
 </table>
 
@@ -384,38 +384,38 @@ Gets a payment property type. The ID of the property type must be specified.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
         <td>The ID of the payment property type. The following property types are available:
-         <ul>
-             <li>Transaction ID = 1</li>
-             <li>Reference ID = 2</li>
-             <li>Booking text = 3</li>
-             <li>Transaction password = 4</li>
-             <li>Transaction code = 5</li>
-             <li>Authorisation ID = 6</li>
-             <li>Capture ID = 7</li>
-             <li>Refund ID = 8</li>
-             <li>Credit note ID = 9</li>
-             <li>Order reference = 10</li>
-             <li>Name of the sender = 11</li>
-             <li>Email of the sender = 12</li>
-             <li>The sender's sort code = 13</li>
-             <li>The sender's bank name = 14</li>
-             <li>The sender's bank account number = 15</li>
-             <li>The holder of the bank account = 16</li>
-             <li>The country of the sender's bank account = 17</li>
-             <li>The sender's IBAN = 18</li>
-             <li>The sender's BIC = 19</li>
-             <li>Name of the recipient = 20</li>
-             <li>The recipient's bank account = 21</li>
-             <li>Reference text of the payment = 22</li>
-             <li>Payment origin = 23</li>
-             <li>Shipping address ID = 24</li>
-             <li>Invoice address ID = 25</li>
-             <li>Item buyer = 26</li>
-             <li>Item number = 27</li>
-             <li>Item transaction ID = 28</li>
-             <li>External transaction type = 29</li>
-             <li>External transaction status = 30</li>
-         </ul></td>
+<ul>
+    <li>Transaction ID = 1</li>
+    <li>Reference ID = 2</li>
+    <li>Booking text = 3</li>
+    <li>Transaction password = 4</li>
+    <li>Transaction code = 5</li>
+    <li>Authorisation ID = 6</li>
+    <li>Capture ID = 7</li>
+    <li>Refund ID = 8</li>
+    <li>Credit note ID = 9</li>
+    <li>Order reference = 10</li>
+    <li>Name of the sender = 11</li>
+    <li>Email of the sender = 12</li>
+    <li>The sender's sort code = 13</li>
+    <li>The sender's bank name = 14</li>
+    <li>The sender's bank account number = 15</li>
+    <li>The holder of the bank account = 16</li>
+    <li>The country of the sender's bank account = 17</li>
+    <li>The sender's IBAN = 18</li>
+    <li>The sender's BIC = 19</li>
+    <li>Name of the recipient = 20</li>
+    <li>The recipient's bank account = 21</li>
+    <li>Reference text of the payment = 22</li>
+    <li>Payment origin = 23</li>
+    <li>Shipping address ID = 24</li>
+    <li>Invoice address ID = 25</li>
+    <li>Item buyer = 26</li>
+    <li>Item number = 27</li>
+    <li>Item transaction ID = 28</li>
+    <li>External transaction type = 29</li>
+    <li>External transaction status = 30</li>
+</ul></td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -795,15 +795,15 @@ The payment model
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>origin</td>
             <td>The origin of the payment. The following origins are available:
-         <ul>
-             <li>Undefined = 0</li>
-             <li>System = 1</li>
-             <li>Manually = 2</li>
-             <li>SOAP = 3</li>
-             <li>Import = 4</li>
-             <li>Split payment = 5</li>
-             <li>Plugin = 6</li>
-         </ul></td>
+<ul>
+    <li>Undefined = 0</li>
+    <li>System = 1</li>
+    <li>Manually = 2</li>
+    <li>SOAP = 3</li>
+    <li>Import = 4</li>
+    <li>Split payment = 5</li>
+    <li>Plugin = 6</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>receivedAt</td>
@@ -820,11 +820,11 @@ The payment model
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>transactionType</td>
             <td>The transaction type of the payment. The following transaction types are available:
-         <ul>
-             <li>Interim transaction report = 1</li>
-             <li>Booked payment = 2</li>
-             <li>Split payment = 3</li>
-         </ul></td>
+<ul>
+    <li>Interim transaction report = 1</li>
+    <li>Booked payment = 2</li>
+    <li>Split payment = 3</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>mopId</td>
@@ -848,11 +848,11 @@ The payment model
             <td>properties</td>
             <td>The properties of the payment</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>regenerateHash</td>
             <td>If $regenerateHash is true, regenerate the payment hash value. Default is false.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>updateOrderPaymentStatus</td>
             <td>If $updateOrderPaymentStatus is true, update the order payment status. Default is false.</td>
         </tr></tbody>
@@ -995,42 +995,42 @@ The payment property model
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
             <td>The ID of the property type. The following property types are available:
-         <ul>
-             <li>Transaction ID = 1</li>
-             <li>Reference ID = 2</li>
-             <li>Booking text = 3</li>
-             <li>Transaction password = 4</li>
-             <li>Transaction code = 5</li>
-             <li>Authorisation ID = 6</li>
-             <li>Capture ID = 7</li>
-             <li>Refund ID = 8</li>
-             <li>Credit note ID = 9</li>
-             <li>Order reference = 10</li>
-             <li>Name of the sender = 11</li>
-             <li>Email of the sender = 12</li>
-             <li>The sender's sort code = 13</li>
-             <li>The sender's bank name = 14</li>
-             <li>The sender's bank account number = 15</li>
-             <li>The holder of the bank account = 16</li>
-             <li>The country of the sender's bank account = 17</li>
-             <li>The sender's IBAN = 18</li>
-             <li>The sender's BIC = 19</li>
-             <li>Name of the recipient = 20</li>
-             <li>The recipient's bank account = 21</li>
-             <li>Reference text of the payment = 22</li>
-             <li>Payment origin = 23</li>
-             <li>Shipping address ID = 24</li>
-             <li>Invoice address ID = 25</li>
-             <li>Item buyer = 26</li>
-             <li>Item number = 27</li>
-             <li>Item transaction ID = 28</li>
-             <li>External transaction type = 29</li>
-             <li>External transaction status = 30</li>
-             <li>The receiver's IBAN = 31</li>
-             <li>The receiver's BIC = 32</li>
-             <li>Transaction fee = 33</li>
-             <li>Transaction lifespan = 34</li>
-         </ul></td>
+<ul>
+    <li>Transaction ID = 1</li>
+    <li>Reference ID = 2</li>
+    <li>Booking text = 3</li>
+    <li>Transaction password = 4</li>
+    <li>Transaction code = 5</li>
+    <li>Authorisation ID = 6</li>
+    <li>Capture ID = 7</li>
+    <li>Refund ID = 8</li>
+    <li>Credit note ID = 9</li>
+    <li>Order reference = 10</li>
+    <li>Name of the sender = 11</li>
+    <li>Email of the sender = 12</li>
+    <li>The sender's sort code = 13</li>
+    <li>The sender's bank name = 14</li>
+    <li>The sender's bank account number = 15</li>
+    <li>The holder of the bank account = 16</li>
+    <li>The country of the sender's bank account = 17</li>
+    <li>The sender's IBAN = 18</li>
+    <li>The sender's BIC = 19</li>
+    <li>Name of the recipient = 20</li>
+    <li>The recipient's bank account = 21</li>
+    <li>Reference text of the payment = 22</li>
+    <li>Payment origin = 23</li>
+    <li>Shipping address ID = 24</li>
+    <li>Invoice address ID = 25</li>
+    <li>Item buyer = 26</li>
+    <li>Item number = 27</li>
+    <li>Item transaction ID = 28</li>
+    <li>External transaction type = 29</li>
+    <li>External transaction status = 30</li>
+    <li>The receiver's IBAN = 31</li>
+    <li>The receiver's BIC = 32</li>
+    <li>Transaction fee = 33</li>
+    <li>Transaction lifespan = 34</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>value</td>
@@ -1375,14 +1375,14 @@ Gets the payment history for a payment. The ID of the payment and the ID of the 
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$typeId</td>
         <td>The ID of the history type. The following types are available:
-         <ul>
-             <li>Created = 1</li>
-             <li>Status updated = 2</li>
-             <li>Assigned = 3</li>
-             <li>Detached = 4</li>
-             <li>Deleted = 5</li>
-             <li>Updated = 6</li>
-         </ul></td>
+<ul>
+    <li>Created = 1</li>
+    <li>Status updated = 2</li>
+    <li>Assigned = 3</li>
+    <li>Detached = 4</li>
+    <li>Deleted = 5</li>
+    <li>Updated = 6</li>
+</ul></td>
     </tr>
 </table>
 
@@ -1437,14 +1437,14 @@ The payment history model
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
             <td>The ID of the history type. The following types are available:
-         <ul>
-             <li>Created = 1</li>
-             <li>Status updated = 2</li>
-             <li>Assigned = 3</li>
-             <li>Detached = 4</li>
-             <li>Deleted = 5</li>
-             <li>Updated = 6</li>
-         </ul></td>
+<ul>
+    <li>Created = 1</li>
+    <li>Status updated = 2</li>
+    <li>Assigned = 3</li>
+    <li>Detached = 4</li>
+    <li>Deleted = 5</li>
+    <li>Updated = 6</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>value</td>

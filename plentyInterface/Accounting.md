@@ -374,7 +374,7 @@ Initialize the VAT system data
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$startedAt</td>
         <td>The date when the VAT configuration went into effect. If no date is set, the current date will be used.
-                                 [optional, default=null]</td>
+[optional, default=null]</td>
     </tr>
 </table>
 
@@ -400,8 +400,8 @@ Get the VAT field for a VAT rate
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$restrictedToDigitalItems</td>
         <td>Flag that indicates if the VAT is restricted to digital items or not.
-											<br />True = the VAT is restricted to digital items
-											<br />False = the VAT is used for all items</td>
+<br />True = the VAT is restricted to digital items
+<br />False = the VAT is used for all items</td>
     </tr>
 </table>
 
@@ -422,8 +422,8 @@ Get the VAT rate of a VAT field
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$restrictedToDigitalItems</td>
         <td>Flag that indicates if the VAT is restricted to digital items or not.
-											<br />True = the VAT is restricted to digital items
-											<br />False = the VAT is used for all items</td>
+<br />True = the VAT is restricted to digital items
+<br />False = the VAT is used for all items</td>
     </tr>
 </table>
 
@@ -440,8 +440,8 @@ Get the VAT configuration to be used for VAT calculation
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$restrictedToDigitalItems</td>
         <td>Flag that indicates if the VAT is restricted to digital items or not.
-											<br />True = the VAT is restricted to digital items
-											<br />False = the VAT is used for all items</td>
+<br />True = the VAT is restricted to digital items
+<br />False = the VAT is used for all items</td>
     </tr>
 </table>
 
@@ -457,8 +457,8 @@ Get the VAT rates to be used for VAT calculation
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$restrictedToDigitalItems</td>
         <td>Flag that indicates if the VAT is restricted to digital items or not.
-											<br />True = the VAT is restricted to digital items
-											<br />False = the VAT is used for all items</td>
+<br />True = the VAT is restricted to digital items
+<br />False = the VAT is used for all items</td>
     </tr>
 </table>
 

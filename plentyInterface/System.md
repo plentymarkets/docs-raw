@@ -967,7 +967,7 @@ Represent a list of cloud metrics objects
             <td>totalsCount</td>
             <td></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isLastPage</td>
             <td></td>
         </tr><tr>

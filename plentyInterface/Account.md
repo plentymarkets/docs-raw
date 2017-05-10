@@ -188,7 +188,7 @@ Creates an address.
 </table>
 
 
-<pre>public <strong>deleteAddress</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>deleteAddress</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes an address. The ID of the address must be specified.
@@ -288,7 +288,7 @@ Creates address options for an address and returns all options of the address.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$addressId</td>
         <td>The ID of the address
- @MapParam(name="addressData", keyType="string", valueType="mixed")</td>
+@MapParam(name="addressData", keyType="string", valueType="mixed")</td>
     </tr>
 </table>
 
@@ -367,7 +367,7 @@ Updates an address option. The ID of the address option must be specified.
 </table>
 
 
-<pre>public <strong>deleteAddressOption</strong>(<a target="_blank" href="http://php.net/int">int</a> $optionId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>deleteAddressOption</strong>(<a target="_blank" href="http://php.net/int">int</a> $optionId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes an address option. The ID of the option must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
@@ -505,7 +505,7 @@ The address model
             <td>stateId</td>
             <td>The ID of the state</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>readOnly</td>
             <td>Flag that indicates if the data record is read only</td>
         </tr><tr>
@@ -674,7 +674,7 @@ address contact relation model
             <td>addressId</td>
             <td>The ID of the address</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isPrimary</td>
             <td>Flag that indicates if the address is primary</td>
         </tr><tr>
@@ -1994,7 +1994,7 @@ Updates a bank account. The ID of the bank account must be specified.
 </table>
 
 
-<pre>public <strong>deleteContactBank</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactBankId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>deleteContactBank</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactBankId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes a bank account. The ID of the bank account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
@@ -2076,7 +2076,7 @@ Updates a contact and returns it. The ID of the contact must be specified.
 </table>
 
 
-<pre>public <strong>deleteContact</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>deleteContact</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/bool">bool</a> $checkExistingOrders = null):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes a contact. The ID of the contact must be specified.
@@ -2087,6 +2087,11 @@ Deletes a contact. The ID of the contact must be specified.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$contactId</td>
         <td>The ID of the contact. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$checkExistingOrders</td>
+        <td>Flag that checks if the contact is linked to orders. If the contact is linked to orders, CustomerDeleteException is thrown and the contact will not be deleted.</td>
     </tr>
 </table>
 
@@ -2247,7 +2252,7 @@ Updates a contact type and returns it. The ID of the contact type must be specif
 </table>
 
 
-<pre>public <strong>deleteContactType</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactTypeId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>deleteContactType</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactTypeId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes a contact type. The ID of the contact type must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
@@ -2390,7 +2395,7 @@ Updates a bank account. The ID of the bank account must be specified.
 </table>
 
 
-<pre>public <strong>deleteContactBank</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactBankId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>deleteContactBank</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactBankId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes a bank account. The ID of the bank account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
@@ -3537,12 +3542,12 @@ ContactElasticSearchAvailibilityRepositoryContract
 
 #### Methods
 
-<pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 
     
-<pre>public <strong>isAvailable</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>isAvailable</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 
@@ -3743,7 +3748,7 @@ Updates an existing account and returns it. The ID of the account must be specif
 </table>
 
 
-<pre>public <strong>deleteAccount</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>deleteAccount</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes an account. The ID of the account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
@@ -3862,12 +3867,12 @@ frontend customer settings event
 </table>
 
 
-<pre>public <strong>getShowNetPrice</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>getShowNetPrice</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 
     
-<pre>public <strong>setShowNetPrice</strong>(<a target="_blank" href="http://php.net/boolean">boolean</a> $showNetPrice):<a href="account#account_events_frontendupdatecustomersettings">FrontendUpdateCustomerSettings</a>
+<pre>public <strong>setShowNetPrice</strong>(<a target="_blank" href="http://php.net/bool">bool</a> $showNetPrice):<a href="account#account_events_frontendupdatecustomersettings">FrontendUpdateCustomerSettings</a>
 </pre>
 
     
@@ -3876,7 +3881,7 @@ frontend customer settings event
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$showNetPrice</td>
         <td></td>
     </tr>
@@ -5070,7 +5075,7 @@ Creates an order summary.
 </table>
 
 
-<pre>public <strong>deleteOrderSummary</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderSummaryId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>deleteOrderSummary</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderSummaryId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes an order summary. The ID of the order summary must be specified.

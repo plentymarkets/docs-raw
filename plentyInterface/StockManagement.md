@@ -520,14 +520,14 @@ The warehouse model in plentymarkets represents actual warehouses. Every warehou
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
             <td>The id of the warehouse type. The following types are available:
-                                                         <ul>
-                                                             <li>0 = Sales warehouse</li>
-                                                             <li>1 = Repair warehouse</li>
-                                                             <li>4 = Storage warehouse</li>
-                                                             <li>5 = Transit warehouse</li>
-                                                             <li>6 = Distribution warehouse</li>
-                                                             <li>7 = Other</li>
-                                                         </ul></td>
+<ul>
+    <li>0 = Sales warehouse</li>
+    <li>1 = Repair warehouse</li>
+    <li>4 = Storage warehouse</li>
+    <li>5 = Transit warehouse</li>
+    <li>6 = Distribution warehouse</li>
+    <li>7 = Other</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>onStockAvailability</td>
@@ -537,7 +537,7 @@ The warehouse model in plentymarkets represents actual warehouses. Every warehou
             <td>outOfStockAvailability</td>
             <td>Displayed availability of a variation if no stock is available</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>splitByShippingProfile</td>
             <td>Flag that indicates if for this warehouse orders are split by shipping profiles or not. <ul><li>True = Orders are split by shipping profiles</li> <li>False = Orders will not be split by shipping profiles</li></ul></td>
         </tr><tr>
@@ -553,7 +553,7 @@ The warehouse model in plentymarkets represents actual warehouses. Every warehou
             <td>repairWarehouseId</td>
             <td>The id of the associated repair warehouse</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isInventoryModeActive</td>
             <td>Flag that indicates if the inventory mode for this warehouse is active or not. <ul><li>True = active</li> <li>False = inactive</li></ul></td>
         </tr><tr>

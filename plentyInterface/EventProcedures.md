@@ -52,11 +52,11 @@ Register a procedure class
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$eventType</td>
         <td>The name of the event type. The event types are determined and can be one of the following:
-										<ul>
-										<li> {@see ProcedureEntry::EVENT_TYPE_ORDER}, </li>
-                  					<li> {@see ProcedureEntry::EVENT_TYPE_REORDER} or </li>
-										<li> {@see ProcedureEntry::EVENT_TYPE_TICKET} </li>
-										</ul></td>
+<ul>
+<li> {@see \ProcedureEntry::EVENT_TYPE_ORDER}, </li>
+        					<li> {@see \ProcedureEntry::EVENT_TYPE_REORDER} or </li>
+<li> {@see \ProcedureEntry::EVENT_TYPE_TICKET} </li>
+</ul></td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -67,24 +67,24 @@ Register a procedure class
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$procedureClass</td>
         <td>The fully qualified name of the procedure class to be called by event procedures.
-                             		Each procedure class must either contain the execute method defined by plentymarkets or can contain an individual method. The individual method has to be provided along with procedure class.
-										The method is separated from the class by an "@" sign. The part following the "@" will be interpreted as method name. The part in front of the "@" is the name of the procedure class.</td>
+                   		Each procedure class must either contain the execute method defined by plentymarkets or can contain an individual method. The individual method has to be provided along with procedure class.
+The method is separated from the class by an "@" sign. The part following the "@" will be interpreted as method name. The part in front of the "@" is the name of the procedure class.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$procedureGroup</td>
         <td>The name of the procedure group. The procedure groups are determined and can be one of the following:
-										<ul>
-										<li> {@see ProcedureEntry::PROCEDURE_GROUP_ORDER}, </li>
-                             		<li> {@see ProcedureEntry::PROCEDURE_GROUP_ITEM}, </li>
-										<li> {@see ProcedureEntry::PROCEDURE_GROUP_DOCUMENT}, </li>
-                             		<li> {@see ProcedureEntry::PROCEDURE_GROUP_CONTACT}, </li>
-										<li> {@see ProcedureEntry::PROCEDURE_GROUP_SHIPPING}, </li>
-                             		<li> {@see ProcedureEntry::PROCEDURE_GROUP_PAYMENT}, </li>
-										<li> {@see ProcedureEntry::PROCEDURE_GROUP_RETURN} or </li>
-										<li> {@see ProcedureEntry::PROCEDURE_GROUP_LISTING} </li>
-										<li> [optional, default={@see ProcedureEntry::PROCEDURE_GROUP_ORDER}] </li>
-										</ul></td>
+<ul>
+<li> {@see \ProcedureEntry::PROCEDURE_GROUP_ORDER}, </li>
+                   		<li> {@see \ProcedureEntry::PROCEDURE_GROUP_ITEM}, </li>
+<li> {@see \ProcedureEntry::PROCEDURE_GROUP_DOCUMENT}, </li>
+                   		<li> {@see \ProcedureEntry::PROCEDURE_GROUP_CONTACT}, </li>
+<li> {@see \ProcedureEntry::PROCEDURE_GROUP_SHIPPING}, </li>
+                   		<li> {@see \ProcedureEntry::PROCEDURE_GROUP_PAYMENT}, </li>
+<li> {@see \ProcedureEntry::PROCEDURE_GROUP_RETURN} or </li>
+<li> {@see \ProcedureEntry::PROCEDURE_GROUP_LISTING} </li>
+<li> [optional, default={@see \ProcedureEntry::PROCEDURE_GROUP_ORDER}] </li>
+</ul></td>
     </tr>
 </table>
 

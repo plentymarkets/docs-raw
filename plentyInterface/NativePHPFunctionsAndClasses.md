@@ -155,6 +155,12 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             <strong>F</strong>
         <ul>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.filter-var.php">filter_var</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.filter-var-array.php">filter_var_array</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.floor.php">floor</a>
             </li>
                     <li>
@@ -244,6 +250,18 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 </ul>
             <strong>M</strong>
         <ul>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.mb-check-encoding.php">mb_check_encoding</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.mb-convert-encoding.php">mb_convert_encoding</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.mb-detect-encoding.php">mb_detect_encoding</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.mb-strcut.php">mb_strcut</a>
+            </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.mb-substr.php">mb_substr</a>
             </li>

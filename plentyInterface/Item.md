@@ -4119,7 +4119,7 @@ Repository for item cross-selling
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $crossItemId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $crossItemId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 
@@ -5516,7 +5516,7 @@ Creates a property group name. The ID of the property group must be specified.
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyGroupId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyGroupId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes a property group name. The ID of the property group and the language must be specified.
@@ -5665,7 +5665,7 @@ Updates a property group. The ID of the property group must be specified.
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes a property group. The ID of the property group must be specified.
@@ -5756,7 +5756,7 @@ Creates a property market reference. The ID of the property must be specified.
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/float">float</a> $marketReference):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/float">float</a> $marketReference):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes a property market reference. The ID of the property and the language must be specified.
@@ -5894,7 +5894,7 @@ Creates a property name. The ID of the property must be specified.
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes a property name. The ID of the property and the language must be specified.
@@ -6044,7 +6044,7 @@ Updates a property. The ID of the property must be specified.
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes a property. The ID of the property must be specified.
@@ -6219,7 +6219,7 @@ Deletes a property selection. The ID of the property selection must be specified
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes a property selection in a specified language. The ID of the property selection and the language must be specified.
@@ -7676,7 +7676,7 @@ The contract for the sales price search repository
             <td>position</td>
             <td>The position of the sales price</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/double">double</a></td>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>minimumOrderQuantity</td>
             <td>The minimum order quantity of the sales price. Sales prices with different minimum quantities can be used to create a quantity based graduation of prices in plentymarkets.</td>
         </tr><tr>
@@ -8068,7 +8068,7 @@ Returns this model as an array.
             <td>salesPriceId</td>
             <td>The unique ID of the sales price</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/double">double</a></td>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>referrerId</td>
             <td>The unique ID of the referrer</td>
         </tr><tr>
@@ -8690,12 +8690,12 @@ VariationElasticSearchAvailibilityRepositoryContract
 
 #### Methods
 
-<pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 
     
-<pre>public <strong>isAvailable</strong>():<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>isAvailable</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 
@@ -12467,7 +12467,7 @@ The contract of the variation market repository
 
 #### Methods
 
-<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/double">double</a> $marketplaceId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationmarket">VariationMarket</a>
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/float">float</a> $marketplaceId, <a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variationmarket">VariationMarket</a>
 </pre>
 
     
@@ -12476,7 +12476,7 @@ Gets the data of a market linked to a variation. The ID of the market and the ID
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/double">double</a></td>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
         <td>$marketplaceId</td>
         <td>The unique ID of the market</td>
     </tr>
@@ -12504,7 +12504,7 @@ Creates a link between a market and a variation and adds market data.
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $marketplaceId, <a target="_blank" href="http://php.net/double">double</a> $variationId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $marketplaceId, <a target="_blank" href="http://php.net/float">float</a> $variationId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
 </pre>
 
     
@@ -12518,7 +12518,7 @@ Deletes the link between a market and a variation. The ID of the market and the 
         <td>The unique ID of the market</td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/double">double</a></td>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
         <td>$variationId</td>
         <td>The unique ID of the variation</td>
     </tr>
@@ -13318,7 +13318,7 @@ VariationSalesPrice
             <td>salesPriceId</td>
             <td>The unique ID of the sales price</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/double">double</a></td>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>price</td>
             <td>The price of the variation saved for this sales price</td>
         </tr></tbody>
@@ -13848,10 +13848,10 @@ The variation stock movement model
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>processRowType</td>
             <td>The process row type shows whether the stock movement is based on an order or on an incoming item data set.
-												<ul>
-													<li>1 = incoming item data set</li>
-													<li>2 = order</li>
-												</ul></td>
+<ul>
+	<li>1 = incoming item data set</li>
+	<li>2 = order</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>storageLocationName</td>
@@ -14024,7 +14024,7 @@ Variation Supplier
             <td>supplierId</td>
             <td>The unique ID of the supplier</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/double">double</a></td>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>purchasePrice</td>
             <td>The price at which the variation was purchased from this supplier.</td>
         </tr><tr>
@@ -14044,7 +14044,7 @@ Variation Supplier
             <td>deliveryTimeInDays</td>
             <td>The delivery time in days for the variation saved for this supplier</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/double">double</a></td>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>discount</td>
             <td>The discount in percent the supplier grants for the variation.</td>
         </tr><tr>
@@ -14052,7 +14052,7 @@ Variation Supplier
             <td>isDiscountable</td>
             <td>Flag that indicates if the supplier's discount for this variation is active.</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/double">double</a></td>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>packagingUnit</td>
             <td>The packaging unit of the supplier if it differs from the packaging unit settings in plentymarkets.</td>
         </tr><tr>

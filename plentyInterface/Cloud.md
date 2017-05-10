@@ -189,6 +189,11 @@ to be written
     
 
     
+<pre>public <strong>getScrollRepositoryClassName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
 
 ### NextIndex<a name="cloud_index_nextindex"></a>
 
@@ -233,6 +238,12 @@ to bew written
 
     
 <pre>public <strong>getNext</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getScrollRepositoryClassName</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -1430,7 +1441,7 @@ foo
 </table>
 
 
-<pre>public <strong>setSetLanguageAsIndex</strong>(<a target="_blank" href="http://php.net/boolean">boolean</a> $setLanguageAsIndex):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>setSetLanguageAsIndex</strong>(<a target="_blank" href="http://php.net/bool">bool</a> $setLanguageAsIndex):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -1439,7 +1450,7 @@ foo
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$setLanguageAsIndex</td>
         <td></td>
     </tr>
@@ -1548,7 +1559,7 @@ Represent a list of storage objects
     </tr>
     </thead>
     <tbody><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isTruncated</td>
             <td></td>
         </tr><tr>

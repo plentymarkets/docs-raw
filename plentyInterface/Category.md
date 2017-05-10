@@ -487,8 +487,8 @@ Category
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>right</td>
             <td>Flag that indicates who can see this category. <ul><li>all = Category is
-                                                 visible to all visitors of the online store.</li><li>customer = Category and all of its subcategories are visible to
-                                                 visitors of the online store that have logged in only. Visitors that are not logged in are redirected to the login page.</li></ul></td>
+visible to all visitors of the online store.</li><li>customer = Category and all of its subcategories are visible to
+visitors of the online store that have logged in only. Visitors that are not logged in are redirected to the login page.</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>sitemap</td>
@@ -790,7 +790,7 @@ CategoryDetails
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>canonicalLink</td>
             <td>The URL of any category that contains the same content. This
-                                                     will avoid duplicate content.</td>
+will avoid duplicate content.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>

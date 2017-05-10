@@ -3394,7 +3394,7 @@ Get the external manufacturer name.
 </table>
 
 
-<pre>public <strong>generateSku</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/float">float</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $accountId, <a target="_blank" href="http://php.net/boolean">boolean</a> $setLastExportedTimestamp):<a target="_blank" href="http://php.net/string">string</a></pre>
+<pre>public <strong>generateSku</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/float">float</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $accountId, <a target="_blank" href="http://php.net/bool">bool</a> $setLastExportedTimestamp):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
 Generates or updates the sku
@@ -3417,14 +3417,14 @@ Generates or updates the sku
         <td></td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$setLastExportedTimestamp</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>getAvailability</strong>(<a target="_blank" href="http://php.net/int">int</a> $availabilityId, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/boolean">boolean</a> $returnAvailabilityName):<a target="_blank" href="http://php.net/string">string</a></pre>
+<pre>public <strong>getAvailability</strong>(<a target="_blank" href="http://php.net/int">int</a> $availabilityId, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/bool">bool</a> $returnAvailabilityName):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
 Returns the availability name or the availability average days
@@ -3442,7 +3442,7 @@ Returns the availability name or the availability average days
         <td></td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$returnAvailabilityName</td>
         <td></td>
     </tr>

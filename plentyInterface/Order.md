@@ -746,7 +746,7 @@ Get latest order of a contact
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
         <td>The relations to load in the Order instance. The relations available are: "addresses", "events", "dates", "relation", "reference" and "comments".
-                             If you want to load relations, you need to include at least one, but you can also include several or all.</td>
+If you want to load relations, you need to include at least one, but you can also include several or all.</td>
     </tr>
 </table>
 
@@ -871,15 +871,15 @@ The CouponCodeOrder model.
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>type</td>
             <td>The display type of the redeemed coupon
-										The following display types are available:<ul>
-										<li>disposable</li>
-										<li>fixed_vat</li>
-										<li>fixed</li>
-										<li>percental</li>
-										<li>undefined</li>
-										</ul></td>
+The following display types are available:<ul>
+<li>disposable</li>
+<li>fixed_vat</li>
+<li>fixed</li>
+<li>percental</li>
+<li>undefined</li>
+</ul></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/double">double</a></td>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>amount</td>
             <td>The redeemed amount of the coupon</td>
         </tr><tr>
@@ -926,23 +926,23 @@ The order model.
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
             <td>The ID of the order type
-                                         								It is possible to define individual order types. However,
-                                         								the following types are available by default:
-         <ul>
-             <li>Sales order = 1</li>
-             <li>Delivery = 2</li>
-             <li>Returns = 3</li>
-             <li>Credit note = 4</li>
-             <li>Warranty = 5</li>
-             <li>Repair = 6</li>
-             <li>Offer = 7</li>
-             <li>Advance order = 8</li>
-             <li>Multi-order = 9</li>
-             <li>Multi credit note = 10</li>
-             <li>Multi delivery = 11</li>
-             <li>Reorder = 12</li>
-             <li>Partial delivery = 13</li>
-         </ul></td>
+                                								It is possible to define individual order types. However,
+                                								the following types are available by default:
+<ul>
+    <li>Sales order = 1</li>
+    <li>Delivery = 2</li>
+    <li>Returns = 3</li>
+    <li>Credit note = 4</li>
+    <li>Warranty = 5</li>
+    <li>Repair = 6</li>
+    <li>Offer = 7</li>
+    <li>Advance order = 8</li>
+    <li>Multi-order = 9</li>
+    <li>Multi credit note = 10</li>
+    <li>Multi delivery = 11</li>
+    <li>Reorder = 12</li>
+    <li>Partial delivery = 13</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>methodOfPaymentId</td>
@@ -1151,8 +1151,8 @@ The order amount model.
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>giftCardAmount</td>
             <td>The amount that comes from gift cards that were redeemed when placing the order
-                                                                 The gift cards amount does not reduce the invoice total, but reduces the amount that still needs to be paid.
-                                                                 The amount that still needs to paid is not an own parameter because the amount can be calculated by subtracting the gift cards amount from the invoice total.</td>
+The gift cards amount does not reduce the invoice total, but reduces the amount that still needs to be paid.
+The amount that still needs to paid is not an own parameter because the amount can be calculated by subtracting the gift cards amount from the invoice total.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -1576,7 +1576,7 @@ The order item type model.
             <td>id</td>
             <td>The ID of the order item type</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isErasable</td>
             <td>Flag that indicates if this type can be deleted or not</td>
         </tr><tr>
@@ -1745,7 +1745,7 @@ The order type model.
             <td>id</td>
             <td>The ID of the order type</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isErasable</td>
             <td>Flag that states if this type can be deleted or not.</td>
         </tr><tr>
@@ -2145,14 +2145,14 @@ The CouponCampaignCode model contains information about coupon codes. Each code 
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>disable</td>
             <td>Flag that indicates if a code is active or deactivated.
-												<ul><li>True = the code is deactivated</li>
-													<li>False = the code is active</li></ul></td>
+<ul><li>True = the code is deactivated</li>
+	<li>False = the code is active</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>consumed</td>
             <td>Flag that indicates if a code was redeemed or not.
-												<ul><li>True = the code was redeemed</li>
-													<li>False = the code is not redeemed</li></ul></td>
+<ul><li>True = the code was redeemed</li>
+	<li>False = the code is not redeemed</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>usedCount</td>
@@ -2274,8 +2274,8 @@ The CouponCampaign model contains all information of a campaign.
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isPermittedForExternalReferrers</td>
             <td>Flag that indicates whether or not coupons can be redeemed if a customer enters the online store from an external referrer.
-                                                                 <ul><li>TRUE = The coupon can be redeemed if the customer enters the online store from an external referrer </li>
-                                                                 <li>FALSE = The coupon can not be redeemed</li></ul></td>
+<ul><li>TRUE = The coupon can be redeemed if the customer enters the online store from an external referrer </li>
+<li>FALSE = The coupon can not be redeemed</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>includeShipping</td>
@@ -2308,8 +2308,8 @@ The CouponCampaign model contains all information of a campaign.
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>codeAssignment</td>
             <td>The code assignment is only relevant for vouchers. Codes can either be generated every time a voucher is bought or a code from a previously created list of codes can be used. The two options available are generate and use_existing.
-														            <ul><li>generate = a new code is generated on demand</li>
-														            <li>use_existing = the code already exists and is taken from a previously entered list of codes</li></ul></td>
+<ul><li>generate = a new code is generated on demand</li>
+<li>use_existing = the code already exists and is taken from a previously entered list of codes</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>codeLength</td>
@@ -2318,32 +2318,32 @@ The CouponCampaign model contains all information of a campaign.
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>usage</td>
             <td>The usage defines what the coupon codes from this campaign can be used for. There are three options available:
-														            <ul><li>single_and_subscription = The codes can be used for single orders and subscription orders</li>
-														            <li>single_order = The codes can be used for single orders only</li>
-														            <li>subscription = The codes can be used for subscriptions only</li></ul></td>
+<ul><li>single_and_subscription = The codes can be used for single orders and subscription orders</li>
+<li>single_order = The codes can be used for single orders only</li>
+<li>subscription = The codes can be used for subscriptions only</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>concept</td>
             <td>The campaign concept defines how many codes belong to a campaign. The concept interacts with the redeem type that is explained next. There are two concept options available:
-														            <ul><li>single_code = The campaign has only one code</li>
-														            <li>multi_code = The campaign has several codes</li></ul></td>
+<ul><li>single_code = The campaign has only one code</li>
+<li>multi_code = The campaign has several codes</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>redeemType</td>
             <td>The redeem type defines how many times a code of a campaign can be redeemed. There are 4 redeem types available:
-														            <ul><li>multi_redeem_per_user = Each customer is allowed to redeem the same code several times</li>
-														            <li>single_redeem_per_user =  Each customer can only redeem the same code once</li>
-														            <li>redeem_until_value_reached = A code can be entered several times by the same customer or by different customers, but only until the coupon value is depleted</li>
-														            <li>unique_redeem = The code can be redeemed once. If several customers get the same code, only the first customer to enter the code can use it.</li></ul>
-														            The redeem type interacts with the concept. Pay attention to the combination these two options form.</td>
+<ul><li>multi_redeem_per_user = Each customer is allowed to redeem the same code several times</li>
+<li>single_redeem_per_user =  Each customer can only redeem the same code once</li>
+<li>redeem_until_value_reached = A code can be entered several times by the same customer or by different customers, but only until the coupon value is depleted</li>
+<li>unique_redeem = The code can be redeemed once. If several customers get the same code, only the first customer to enter the code can use it.</li></ul>
+The redeem type interacts with the concept. Pay attention to the combination these two options form.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>discountType</td>
             <td>There are 4 discount types available:
-														            <ul><li>fixed = The coupon value is a fixed amount of money. This discount type is the only one that makes sense for coupons that are sold in the online store. The actual amount of money needs to be set with the value property.</li>
-														            <li>percent = The discount is given as percentage and the actual value depends on the purchase. The actual number of percent need to be set with the value property.</li>
-														            <li>item = The discount applies to entire items. A typical example would be - Buy 1 get 1 free - or in other words - Get 2 for the price of 1. The number of items the customer gets and the number of items the customer has to pay for need to be set with itemDiscountToPay and itemDiscountToBuy.</li>
-														            <li>shipping = The shipping does not cost anything. The cost will be set to zero no matter what the actual shipping costs are.</li></ul></td>
+<ul><li>fixed = The coupon value is a fixed amount of money. This discount type is the only one that makes sense for coupons that are sold in the online store. The actual amount of money needs to be set with the value property.</li>
+<li>percent = The discount is given as percentage and the actual value depends on the purchase. The actual number of percent need to be set with the value property.</li>
+<li>item = The discount applies to entire items. A typical example would be - Buy 1 get 1 free - or in other words - Get 2 for the price of 1. The number of items the customer gets and the number of items the customer has to pay for need to be set with itemDiscountToPay and itemDiscountToBuy.</li>
+<li>shipping = The shipping does not cost anything. The cost will be set to zero no matter what the actual shipping costs are.</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>itemDiscountToPay</td>
@@ -2578,7 +2578,7 @@ The CouponCodeContact model.
             <td>contactId</td>
             <td>The ID of the contact that redeemed the coupon</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/double">double</a></td>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>openAmount</td>
             <td>The coupon amount that can still be redeemed</td>
         </tr><tr>
@@ -3204,7 +3204,7 @@ Create or update an order date
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderDateId):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderDateId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Delete a date
@@ -3595,7 +3595,7 @@ The OrderDateType model.
 <li>Estimated shipping date = 8</li>
 </ul></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isErasable</td>
             <td>Flag that indicates if this type can be deleted or not.</td>
         </tr><tr>
@@ -3823,7 +3823,7 @@ Get a file from the storage
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/string">string</a> $path):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/string">string</a> $path):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Delete a file from the storage.
@@ -4787,7 +4787,7 @@ Update an order property
 </table>
 
 
-<pre>public <strong>delete</strong>($data = []):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>($data = []):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Deletes an order property. The ID of the order property must be specified.
@@ -4898,7 +4898,7 @@ Update an order property type
 </table>
 
 
-<pre>public <strong>deleteType</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>deleteType</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Delete an order property type
@@ -5038,27 +5038,27 @@ The order properties model. Each order property has a type.
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
             <td>The ID of the property type. The following types are available:
-                                                                       <ul>
-                                                                         <li>WAREHOUSE		=	1</li>
-                                                                         <li>SHIPPING_PROFILE	=	2</li>
-                                                                         <li>PAYMENT_METHOD			=	3</li>
-                                                                         <li>PAYMENT_STATUS			=	4</li>
-                                                                         <li>EXTERNAL_SHIPPING_PROFILE			=	5</li>
-                                                                         <li>DOCUMENT_LANGUAGE			=	6</li>
-                                                                         <li>EXTERNAL_ORDER_ID			=	7</li>
-                                                                         <li>CUSTOMER_SIGN			=	8</li>
-                                                                         <li>DUNNING_LEVEL			=	9</li>
-                                                                         <li>SELLER_ACCOUNT			=	10</li>
-                                                                         <li>WEIGHT			=	11</li>
-                                                                         <li>WIDTH			=	12</li>
-                                                                         <li>LENGTH          =	13</li>
-                                                                         <li>HEIGHT		=	14</li>
-                                                                         <li>FLAG			=	15</li>
-                                                                         <li>EXTERNAL_TOKEN_ID			=	16</li>
-                                                                         <li>EXTERNAL_ITEM_ID			=	17</li>
-                                                                         <li>COUPON_CODE			=	18</li>
-                                                                         <li>COUPON_TYPE         =   19</li>
-                                                                       </ul></td>
+<ul>
+  <li>WAREHOUSE		=	1</li>
+  <li>SHIPPING_PROFILE	=	2</li>
+  <li>PAYMENT_METHOD			=	3</li>
+  <li>PAYMENT_STATUS			=	4</li>
+  <li>EXTERNAL_SHIPPING_PROFILE			=	5</li>
+  <li>DOCUMENT_LANGUAGE			=	6</li>
+  <li>EXTERNAL_ORDER_ID			=	7</li>
+  <li>CUSTOMER_SIGN			=	8</li>
+  <li>DUNNING_LEVEL			=	9</li>
+  <li>SELLER_ACCOUNT			=	10</li>
+  <li>WEIGHT			=	11</li>
+  <li>WIDTH			=	12</li>
+  <li>LENGTH          =	13</li>
+  <li>HEIGHT		=	14</li>
+  <li>FLAG			=	15</li>
+  <li>EXTERNAL_TOKEN_ID			=	16</li>
+  <li>EXTERNAL_ITEM_ID			=	17</li>
+  <li>COUPON_CODE			=	18</li>
+  <li>COUPON_TYPE         =   19</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>value</td>
@@ -5115,7 +5115,7 @@ The OrderPropertyType model. Each order property must have a property type. An o
             <td>id</td>
             <td>The ID of the property type</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/boolean">boolean</a></td>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isErasable</td>
             <td>Flag that states if this type can be deleted or not.</td>
         </tr><tr>
@@ -5339,8 +5339,8 @@ The order referrer model. An order referrer shows where a purchase was originall
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isEditable</td>
             <td>Flag that indicates if this referrer can be updated as well as deleted or not
-											<ul><li>True = the referrer can be edited and deleted</li>
-											<li>False = the referrer can neither be edited nor deleted</li></ul></td>
+<ul><li>True = the referrer can be edited and deleted</li>
+<li>False = the referrer can neither be edited nor deleted</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>backendName</td>
@@ -5357,8 +5357,8 @@ The order referrer model. An order referrer shows where a purchase was originall
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isFilterable</td>
             <td>Flag that indicates if this referrer can be used as a filter or not
-											<ul><li>True = Can be used as a filter</li>
-											<li>False = Cannot be used as a filter</li></ul></td>
+<ul><li>True = Can be used as a filter</li>
+<li>False = Cannot be used as a filter</li></ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>origin</td>
@@ -5567,7 +5567,7 @@ Update a relation reference by composite key
 </table>
 
 
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Delete a relation reference by ID
@@ -5582,7 +5582,7 @@ Delete a relation reference by ID
 </table>
 
 
-<pre>public <strong>deleteByComposite</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/string">string</a> $referenceType, <a target="_blank" href="http://php.net/string">string</a> $relation):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>deleteByComposite</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/string">string</a> $referenceType, <a target="_blank" href="http://php.net/string">string</a> $relation):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 Delete a relation reference by composite key

@@ -334,6 +334,10 @@ The log entity model
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>id</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
             <td></td>
         </tr><tr>
@@ -431,7 +435,7 @@ Contract for logs.
 
 #### Methods
 
-<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/string">string</a> $sortBy = &quot;createdAt&quot;, <a target="_blank" href="http://php.net/string">string</a> $sortOrder = &quot;desc&quot;):<a href="miscellaneous#miscellaneous_models_filteredpaginatedresult">FilteredPaginatedResult</a>
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/string">string</a> $sortBy = &quot;createdAt&quot;, <a target="_blank" href="http://php.net/string">string</a> $sortOrder = &quot;desc&quot;, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_filteredpaginatedresult">FilteredPaginatedResult</a>
 </pre>
 
     
@@ -462,6 +466,28 @@ Search logs with the given filters.
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$sortOrder</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>get</strong>($id):<a href="miscellaneous#miscellaneous_models_log">Log</a>
+</pre>
+
+    
+Get log entry by id.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$id</td>
         <td></td>
     </tr>
 </table>
@@ -499,7 +525,7 @@ Register a service provider with the application.
 </table>
 
 
-<pre>public <strong>bind</strong>(<a target="_blank" href="http://php.net/string">string</a> $abstract, <a target="_blank" href="http://php.net/string">string</a> $concrete = null):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>bind</strong>(<a target="_blank" href="http://php.net/string">string</a> $abstract, <a target="_blank" href="http://php.net/string">string</a> $concrete = null, <a target="_blank" href="http://php.net/bool">bool</a> $shared = false):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -515,6 +541,11 @@ Register a binding with the container.
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$concrete</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$shared</td>
         <td></td>
     </tr>
 </table>
@@ -967,12 +998,6 @@ Data Exchange service provider
 
 #### Methods
 
-<pre>public <strong>register</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Register the service provider.
-    
 <pre>public <strong>getApplication</strong>():<a href="miscellaneous#miscellaneous_plugin_application">Application</a>
 </pre>
 
@@ -1098,12 +1123,6 @@ Add a new middleware to end of the stack if it does not already exist.
 </table>
 
 
-<pre>public <strong>register</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Register the service provider.
-    
 <pre>public <strong>getApplication</strong>():<a href="miscellaneous#miscellaneous_plugin_application">Application</a>
 </pre>
 
@@ -1804,6 +1823,13 @@ The field under validation must be a valid URL according to PHP&#039;s filter_va
 
     
 In some situations, you may wish to run validation checks against a field only if that field is present in the input array. To quickly accomplish this, add the sometimes rule.
+    
+<pre>public <strong>nullable</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
+</pre>
+
+    
+The field under validation may be null. This is particularly useful when validating primitive such as strings
+and integers that can contain null values.
     
 <pre>public <strong>generateRulesContent</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -3945,7 +3971,7 @@ Resource
 </table>
 
 
-<pre>public <strong>exists</strong>(<a target="_blank" href="http://php.net/string">string</a> $resourceName):<a target="_blank" href="http://php.net/boolean">boolean</a></pre>
+<pre>public <strong>exists</strong>(<a target="_blank" href="http://php.net/string">string</a> $resourceName):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 
@@ -5215,6 +5241,12 @@ The field under validation must be a valid URL according to PHP&#039;s filter_va
     
 In some situations, you may wish to run validation checks against a field only if that field is present in the input array. To quickly accomplish this, add the sometimes rule.
     
+<pre>public <strong>nullable</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
+</pre>
+
+    
+The field under validation may be null. This is particularly useful when validating primitive such as strings and integers that can contain null values.
+    
 ## Service<a name="miscellaneous_validation_service"></a>
 ### AttributeFactory<a name="miscellaneous_service_attributefactory"></a>
 
@@ -5310,15 +5342,6 @@ Instantiates Validator Classes
 `Illuminate\Support`
 
 
-
-#### Methods
-
-<pre>public <strong>register</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Register the service provider.
-    
 # <a name="miscellaneous_"></a>
     
 ## Carbon<a name="miscellaneous__carbon"></a>
