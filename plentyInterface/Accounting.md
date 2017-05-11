@@ -3,9 +3,107 @@
 # Accounting<a name="accounting_accounting"></a>
     
 ## Contracts<a name="accounting_accounting_contracts"></a>
+### AccountingLocationRepositoryContract<a name="accounting_contracts_accountinglocationrepositorycontract"></a>
+
+The repository to get, create, update and delete accounting locations.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="accounting#accounting_models_accountinglocation">AccountingLocation</a>
+</pre>
+
+    
+Get an accounting location. The ID of ID of the location must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listByPlentyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+List accounting locations for a plenty ID. The plenty ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="accounting#accounting_models_accountinglocation">AccountingLocation</a>
+</pre>
+
+    
+Create an accounting location.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="accounting#accounting_models_accountinglocation">AccountingLocation</a>
+</pre>
+
+    
+Update an accounting location. The ID of the location must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Delete an accounting location. The ID of the location must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### AccountingServiceContract<a name="accounting_contracts_accountingservicecontract"></a>
 
-Provides methods for location ID detection.
+Provides methods to detect a location ID.
 
 
 #### Namespace
@@ -19,19 +117,19 @@ Provides methods for location ID detection.
 <pre>public <strong>detectLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
-Get the location ID for the given plenty ID and delivery country ID.
+Get a location ID for a country of delivery. The plenty ID must be specifiend and the ID of the country of delivery can be specified. If the ID of a country is not specified, the ID of the standard location of the specified client will be returned.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$plentyId</td>
-        <td>The plenty ID of the system.</td>
+        <td>The plenty ID of the client (store). The default client will be used if the plenty ID is not specified.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$countryId</td>
-        <td>The country ID for delivery.</td>
+        <td>The ID of the country of delivery. The standard location of the specified client will be returned, if no ID of a country of delivery is specified.</td>
     </tr>
 </table>
 
@@ -39,19 +137,19 @@ Get the location ID for the given plenty ID and delivery country ID.
 <pre>public <strong>detectLocationIdByClientId</strong>(<a target="_blank" href="http://php.net/int">int</a> $clientId = null, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
-Get the location ID for the given client ID and delivery country ID.
+Get the location ID for a country of delivery. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, the ID of the standard location of the default client will be returned.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$clientId</td>
-        <td>The client ID of the system. If client ID is not given, the default client (ID 0) will be used.</td>
+        <td>The ID of the client. The default client (ID 0) will be used if the ID of client is not specified.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$countryId</td>
-        <td>The country ID for delivery.</td>
+        <td>The ID of the country of delivery. The standard location of the specified client will be returned, if no ID of a country of delivery is specified.</td>
     </tr>
 </table>
 
@@ -59,19 +157,19 @@ Get the location ID for the given client ID and delivery country ID.
 <pre>public <strong>getAccountingLocations</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-List accounting locations for given plenty ID and country ID.
+List accounting locations. The plenty ID must be specified and the ID of a country of delivery can be specified. If the ID of the country is specified, only one accounting location will be returned. If the ID of the country is not specified, all accounting locations of the client will be returned.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$plentyId</td>
-        <td>The plenty ID of the system.</td>
+        <td>The plenty ID of the client (store).</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$countryId</td>
-        <td>The country ID for delivery.</td>
+        <td>The ID of the country of delivery.</td>
     </tr>
 </table>
 
@@ -79,19 +177,19 @@ List accounting locations for given plenty ID and country ID.
 <pre>public <strong>getAccountingLocationsByClient</strong>(<a target="_blank" href="http://php.net/int">int</a> $clientId = null, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-List accounting locations for given client ID and country ID. If client ID is not given, the default client (ID 0) will be used.
+List accounting locations. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, all accounting locations of the default client will be returned.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$clientId</td>
-        <td>The client ID of the system.</td>
+        <td>The ID of the client. The default client (ID 0) will be used if the ID of client is not specified.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$countryId</td>
-        <td>The country ID for delivery.</td>
+        <td>The ID of the country of delivery.</td>
     </tr>
 </table>
 
@@ -99,7 +197,7 @@ List accounting locations for given client ID and country ID. If client ID is no
 
 ### DetermineShopCountryContract<a name="accounting_contracts_determineshopcountrycontract"></a>
 
-Provides methods for system country initialization depending the client id.
+This interface provides methods to initialise the country of location or the country of an order as well as to get the ID of client, the plenty ID of a client, the country or the ID of country. 
 
 
 #### Namespace
@@ -114,14 +212,14 @@ Provides methods for system country initialization depending the client id.
 </pre>
 
     
-Init the system country by the client ID.
+Initialise the country of the standard location of a client. The ID of the client must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$clientId</td>
-        <td>The client ID. [optional, default=0]</td>
+        <td>The ID of the client [optional, default=0]</td>
     </tr>
 </table>
 
@@ -130,14 +228,14 @@ Init the system country by the client ID.
 </pre>
 
     
-Init the system country by the plenty ID.
+Initialise the country of the standard location of a client. The plenty ID of the client can be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$plentyId</td>
-        <td>The plenty ID. [optional, default=0]</td>
+        <td>The plenty ID of the client [optional]</td>
     </tr>
 </table>
 
@@ -146,14 +244,14 @@ Init the system country by the plenty ID.
 </pre>
 
     
-Init the system country by the location ID.
+Initialise the country of a location. The ID of the location must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$locationId</td>
-        <td>The location ID.</td>
+        <td>The ID of the location</td>
     </tr>
 </table>
 
@@ -162,14 +260,14 @@ Init the system country by the location ID.
 </pre>
 
     
-Init the system country by an order ID.
+Initialise the country for an order. The ID of the order must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderId</td>
-        <td>The order ID.</td>
+        <td>The ID of the order</td>
     </tr>
 </table>
 
@@ -177,29 +275,29 @@ Init the system country by an order ID.
 <pre>public <strong>getCountryId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
-Get the current system country ID (headquarters). One of the init-Methods should be called first!
+Get the ID of the country of the current standard location. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
     
 <pre>public <strong>getClientId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
-Get the current client ID. One of the init-Methods should be called first!
+Get the ID of the current client. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
     
 <pre>public <strong>getPlentyId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
-Get the current plenty ID. One of the init-Methods should be called first!
+Get the plenty ID of the current client. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
     
 <pre>public <strong>getCountryIdByClientId</strong>(<a target="_blank" href="http://php.net/int">int</a> $clientId):<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
-Get the shop country (headquarters) for the given client ID.
+Get the ID of the country of a client&#039;s standard location. The ID of the client must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$clientId</td>
-        <td>The client ID. [optional, default=0]</td>
+        <td>The ID of the client. The ID of the default client will be used if no ID is specified [optional, default=0].</td>
     </tr>
 </table>
 
@@ -207,14 +305,14 @@ Get the shop country (headquarters) for the given client ID.
 <pre>public <strong>getCountryIdByPlentyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId):<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
-Get the shop country (headquarters) for the given plenty ID.
+Get the ID of the country of a client&#039;s standard location. The plenty ID of the client must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$plentyId</td>
-        <td>The plenty ID.</td>
+        <td>The plenty ID of a client</td>
     </tr>
 </table>
 
@@ -222,19 +320,19 @@ Get the shop country (headquarters) for the given plenty ID.
 <pre>public <strong>getCountryIdByClientIdAndCountryId</strong>(<a target="_blank" href="http://php.net/int">int</a> $clientId, <a target="_blank" href="http://php.net/int">int</a> $countryId):<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
-Get the shop country (headquarters) for the given client ID and country ID.
+Get the country of a client&#039;s standard location. The ID of the client and the ID of the country must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$clientId</td>
-        <td>The client ID.</td>
+        <td>The ID of the client.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$countryId</td>
-        <td>The country ID.</td>
+        <td>The ID of the country.</td>
     </tr>
 </table>
 
@@ -242,14 +340,14 @@ Get the shop country (headquarters) for the given client ID and country ID.
 <pre>public <strong>getCountryIdByLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId):<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
-Get the shop country (headquarters) for the given location ID.
+Get the country of a location. The ID of the location must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$locationId</td>
-        <td>The location ID.</td>
+        <td>The ID of the location.</td>
     </tr>
 </table>
 
@@ -268,7 +366,7 @@ Class AccountingException
 ## Models<a name="accounting_accounting_models"></a>
 ### AccountingLocation<a name="accounting_models_accountinglocation"></a>
 
-The Accounting Location model it is always associated with a client and country and contains the vat configuration, which is displayed in the Vat model.
+The accounting location model. An accounting location always has a country and belongs to a client. An accounting location contains the VAT configurations. The VAT model contains the VAT configuration.
 
 
 #### Namespace
@@ -289,11 +387,11 @@ The Accounting Location model it is always associated with a client and country 
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the accounting location</td>
+            <td>The ID of the accounting location</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>countryId</td>
-            <td>The country Id of the accounting location</td>
+            <td>The ID of the country of the accounting location</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
@@ -301,20 +399,20 @@ The Accounting Location model it is always associated with a client and country 
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>clientId</td>
-            <td>The Id of the client, the accounting location belongs to.</td>
+            <td>The ID of the client that the accounting location belongs to</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>plentyId</td>
-            <td>The plenty id of the client, the accounting location belongs to.</td>
+            <td>The plenty ID of the client that the accounting location belongs to</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>vats</td>
-            <td>A collection of vat configurations this accounting location is associated with</td>
+            <td>A collection of VAT configurations that are related to the accounting location</td>
         </tr><tr>
             <td><a href="order#order_models_country">Country</a>
 </td>
             <td>country</td>
-            <td>The country this accounting location belongs to</td>
+            <td>The country that the accounting location belongs to</td>
         </tr></tbody>
 </table>
 
@@ -331,7 +429,7 @@ Returns this model as an array.
 ## Contracts<a name="accounting_vat_contracts"></a>
 ### VatInitContract<a name="accounting_contracts_vatinitcontract"></a>
 
-This interface provides methods to initialize the detection of a VAT configuration and to actually detect VAT rates or VAT fields.
+This interface provides methods to initialise the detection of a VAT configuration and to actually detect VAT rates or VAT fields.
 
 
 #### Namespace
@@ -346,7 +444,7 @@ This interface provides methods to initialize the detection of a VAT configurati
 </pre>
 
     
-Initialize the VAT system data
+Initialise the VAT system data
     
 ##### <strong>Parameters</strong>
     
@@ -382,7 +480,7 @@ Initialize the VAT system data
 <pre>public <strong>isInitialized</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
-Get whether the VAT system is already initialized or not
+Get whether the VAT system is already initialised or not
     
 <pre>public <strong>getVatField</strong>(<a target="_blank" href="http://php.net/float">float</a> $vatRate, <a target="_blank" href="http://php.net/bool">bool</a> $restrictedToDigitalItems = false):<a target="_blank" href="http://php.net/int">int</a></pre>
 
@@ -736,7 +834,7 @@ Class VatException
 ## Models<a name="accounting_vat_models"></a>
 ### Vat<a name="accounting_models_vat"></a>
 
-The VAT model contains the complete VAT configuration in plentymarkets. The VAT configuration is based on 4 VAT rates. A VAT configuration always belongs to an accounting location. The accounting location is in specified country and is assigne to a client. One accounting location can have several VAT configurations, but only one is active at a time. Which one is active depends on the startedAt date. This also means that only one VAT number is active per accounting location.
+The VAT model contains the complete VAT configuration in plentymarkets. The VAT configuration is based on 4 VAT rates. A VAT configuration always belongs to an accounting location. The accounting location is in a specified country and is assigned to a client. One accounting location can have several VAT configurations, but only one is active at a time. Which one is active depends on the startedAt date. This also means that only one VAT number is active per accounting location.
 
 
 #### Namespace
@@ -815,7 +913,7 @@ Returns this model as an array.
 
 ### VatRate<a name="accounting_models_vatrate"></a>
 
-The VAT rate model is always associated with a VAT configuration and contains the id, name and percentage of a VAT rate. Each VAT configuration can have 4 rates.
+The VAT rate model is always associated with a VAT configuration and contains the ID, name and percentage of a VAT rate. Each VAT configuration can have 4 rates.
 
 
 #### Namespace
