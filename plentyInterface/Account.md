@@ -2532,32 +2532,32 @@ The contact model.
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>birthdayAt</td>
-            <td>The date of birth of the contact as unix timestamp</td>
+            <td>The date of birth of the contact</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>lastLoginAt</td>
-            <td>The time of the last login of the contact as unix timestamp</td>
+            <td>The date of the last login of the contact</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>lastLoginAtTimestamp</td>
-            <td>The time of the last login of the contact as unix timestamp</td>
+            <td>The date of the last login of the contact</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>lastOrderAt</td>
-            <td>The time of the last order as unix timestamp</td>
+            <td>The date of the last order</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>createdAt</td>
-            <td>The time the contact was created as unix timestamp</td>
+            <td>The date the contact was created</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>updatedAt</td>
-            <td>The time the contact was last updated as unix timestamp</td>
+            <td>The date the contact was last updated</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>privatePhone</td>
