@@ -982,6 +982,10 @@ The order model.
             <td>plentyId</td>
             <td>The plenty ID of the client that the order belongs to</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>locationId</td>
+            <td>The ID of the location that the order belongs to</td>
+        </tr><tr>
             <td><a href="account#account_models_address">Address</a>
 </td>
             <td>billingAddress</td>

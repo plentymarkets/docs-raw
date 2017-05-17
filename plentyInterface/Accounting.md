@@ -413,6 +413,11 @@ The accounting location model. An accounting location always has a country and b
 </td>
             <td>country</td>
             <td>The country that the accounting location belongs to</td>
+        </tr><tr>
+            <td><a href="system#system_models_webstore">Webstore</a>
+</td>
+            <td>client</td>
+            <td>The client (store) this accounting location belongs to</td>
         </tr></tbody>
 </table>
 

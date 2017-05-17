@@ -116,6 +116,11 @@ The webstore model
 </td>
             <td>configuration</td>
             <td>The configuration information of the client (store)</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>locations</td>
+            <td>The accounting locations of the client (store)</td>
         </tr></tbody>
 </table>
 
