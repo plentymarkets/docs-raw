@@ -2143,7 +2143,7 @@ List contacts
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
-        <td>page The page of results to search for</td>
+        <td>The page of results to search for</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -2200,6 +2200,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
     
 
 ### ContactTypeRepositoryContract<a name="account_contracts_contacttyperepositorycontract"></a>
@@ -2691,7 +2697,7 @@ Returns this model as an array.
 
 ### ContactAllowedMethodOfPayment<a name="account_models_contactallowedmethodofpayment"></a>
 
-contact allowed method of payment model
+The model of the allowed payment method for the contact
 
 
 #### Namespace
@@ -2712,31 +2718,35 @@ contact allowed method of payment model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>contact allowed method of payment id</td>
+            <td>The ID of the payment method allowed for the contact</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>contactId</td>
-            <td>contact id (fkey plenty_account_contact.id)</td>
+            <td>The ID of the contact</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>methodOfPaymentId</td>
-            <td>method of payment id (fkey plenty_method_of_payment.id)</td>
+            <td>The ID of the payment method</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>allowed</td>
-            <td>allowed (0/1)</td>
+            <td>Allowed payment method for the contact. Possible values are:
+<ul>
+<li>0 = not allowed</li>
+<li>1 = allowed</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td>created at date timestamp</td>
+            <td>Timestamp when the payment method was created</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>
-            <td>last update date timestamp</td>
+            <td>Timestamp when the payment method was last updated</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isPaymentActive</td>
-            <td>Whether the current payment is active or not.</td>
+            <td>Flag that indicates if the current payment method is active</td>
         </tr></tbody>
 </table>
 

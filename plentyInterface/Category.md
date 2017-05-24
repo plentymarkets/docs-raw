@@ -125,6 +125,12 @@ Sets the filter array.
     
 Returns the filter array.
     
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 
 ### CategoryRepositoryContract<a name="category_contracts_categoryrepositorycontract"></a>
 
@@ -441,6 +447,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
     
 ## Models<a name="category_category_models"></a>
 ### Category<a name="category_models_category"></a>

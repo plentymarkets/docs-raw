@@ -745,6 +745,12 @@ Sets the filter array.
     
 Returns the filter array.
     
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 
 ### VatServiceContract<a name="accounting_contracts_vatservicecontract"></a>
 

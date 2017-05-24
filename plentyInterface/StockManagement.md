@@ -181,6 +181,12 @@ Sets the filter array.
     
 Returns the filter array.
     
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 
 ### StockStorageLocationRepositoryContract<a name="stockmanagement_contracts_stockstoragelocationrepositorycontract"></a>
 
@@ -276,6 +282,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
     
 ## Models<a name="stockmanagement_stock_models"></a>
 ### Stock<a name="stockmanagement_models_stock"></a>
@@ -701,6 +713,12 @@ Sets the filter array.
     
 Returns the filter array.
     
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 
 ### ShelfManagementRepositoryContract<a name="stockmanagement_contracts_shelfmanagementrepositorycontract"></a>
 
@@ -818,6 +836,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
     
 
 ### StorageLocationManagementRepositoryContract<a name="stockmanagement_contracts_storagelocationmanagementrepositorycontract"></a>
@@ -941,6 +965,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
     
 ## Models<a name="stockmanagement_management_models"></a>
 ### Rack<a name="stockmanagement_models_rack"></a>

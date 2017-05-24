@@ -834,6 +834,12 @@ Sets the filter array.
     
 Returns the filter array.
     
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 ## Models<a name="order_order_models"></a>
 ### CouponCodeOrder<a name="order_models_couponcodeorder"></a>
 
@@ -7180,7 +7186,7 @@ The ShippingServiceProviderPluginRepositoryContract is the interface for the shi
 
 ### ShippingServiceProviderRepositoryContract<a name="order_contracts_shippingserviceproviderrepositorycontract"></a>
 
-The ShippingServiceProviderRepositoryContract is the interface for the shipping provider repository. This interface allows to list shipping providers.
+The ShippingServiceProviderRepositoryContract is the interface for the shipping service provider repository. This interface allows to list shipping service providers.
 
 
 #### Namespace
@@ -7560,6 +7566,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
     
 ## Models<a name="order_statushistory_models"></a>
 ### StatusHistoryEntry<a name="order_models_statushistoryentry"></a>

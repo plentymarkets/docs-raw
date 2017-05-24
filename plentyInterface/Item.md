@@ -283,6 +283,12 @@ Sets the filter array.
     
 Returns the filter array.
     
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 
 ### AttributeValueNameRepositoryContract<a name="item_contracts_attributevaluenamerepositorycontract"></a>
 
@@ -576,6 +582,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
     
 ## Models<a name="item_attribute_models"></a>
 ### Attribute<a name="item_models_attribute"></a>
@@ -1319,6 +1331,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
     
 ## Models<a name="item_barcode_models"></a>
 ### Barcode<a name="item_models_barcode"></a>
@@ -3751,6 +3769,12 @@ Sets the filter array.
     
 Returns the filter array.
     
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 ## Models<a name="item_item_models"></a>
 ### Item<a name="item_models_item"></a>
 
@@ -4540,6 +4564,12 @@ Sets the filter array.
     
 Returns the filter array.
     
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 ## Models<a name="item_itemimage_models"></a>
 ### ItemImage<a name="item_models_itemimage"></a>
 
@@ -5309,6 +5339,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
     
 ## Models<a name="item_manufacturer_models"></a>
 ### Manufacturer<a name="item_models_manufacturer"></a>
@@ -6121,6 +6157,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
     
 
 ### PropertySelectionRepositoryContract<a name="item_contracts_propertyselectionrepositorycontract"></a>
@@ -7613,6 +7655,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
     
 
 ### SalesPriceSearchRepositoryContract<a name="item_contracts_salespricesearchrepositorycontract"></a>
@@ -9193,6 +9241,81 @@ foo
 
 
 
+### ImageFilter<a name="item_filter_imagefilter"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Filter`
+
+
+
+#### Methods
+
+<pre>public <strong>getPath</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>hasMarketId</strong>(<a target="_blank" href="http://php.net/int">int</a> $marketId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$marketId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setSection</strong>(<a target="_blank" href="http://php.net/string">string</a> $section):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$section</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addStatement</strong>(<a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+ $statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### ItemFilter<a name="item_filter_itemfilter"></a>
 
 to bew written
@@ -9582,6 +9705,70 @@ foo
 
 
 
+### TextFilter<a name="item_filter_textfilter"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Filter`
+
+
+
+#### Methods
+
+<pre>public <strong>hasAnyName</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>hasNameInLanguage</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang = self::LANG_DE, <a target="_blank" href="http://php.net/string">string</a> $filter = self::FILTER_ANY_NAME):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addStatement</strong>(<a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+ $statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### VariationBaseFilter<a name="item_filter_variationbasefilter"></a>
 
 foo
@@ -9836,6 +10023,76 @@ foo
 
 
 ## Mutators<a name="item_search_mutators"></a>
+### BarcodeMutator<a name="item_mutators_barcodemutator"></a>
+
+
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Mutators`
+
+
+
+#### Methods
+
+<pre>public <strong>getPath</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>mutateObject</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addMarket</strong>(<a target="_blank" href="http://php.net/int">int</a> $marketId):<a href="item#item_search_mutators">Mutators</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$marketId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getDependencies</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>mutate</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### DefaultCategoryMutator<a name="item_mutators_defaultcategorymutator"></a>
 
 
@@ -10509,6 +10766,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
     
 ## Models<a name="item_unit_models"></a>
 ### Unit<a name="item_models_unit"></a>

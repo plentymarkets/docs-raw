@@ -167,6 +167,12 @@ Sets the filter array.
     
 Returns the filter array.
     
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 ## Models<a name="listing_text_models"></a>
 ### ListingMarketText<a name="listing_models_listingmarkettext"></a>
 
