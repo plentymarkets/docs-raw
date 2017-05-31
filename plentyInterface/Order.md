@@ -443,6 +443,72 @@ Returns this model as an array.
 # Order<a name="order_order"></a>
     
 ## Contracts<a name="order_order_contracts"></a>
+### OrderAmountRepositoryContract<a name="order_contracts_orderamountrepositorycontract"></a>
+
+This interface allows you to get and list order amounts and their vats.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getByOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/string">string</a> $currency = null):<a href="order#order_models_orderamount">OrderAmount</a>
+</pre>
+
+    
+Get an order amount for an order in a currency. The ID of the order must be specified. The currency is optional. If no currency is specified, the order amount entry will be returned in the default system currency.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$currency</td>
+        <td>The currency of the order amount</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="order#order_models_orderamount">OrderAmount</a>
+</pre>
+
+    
+Get an order amount. The ID of the order amount must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the order amount</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listByOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+List all order amounts of an order. The ID of the order must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order</td>
+    </tr>
+</table>
+
+
+
 ### OrderItemRepositoryContract<a name="order_contracts_orderitemrepositorycontract"></a>
 
 The OrderItemRepositoryContract is the interface for the order item repository. This interface allows you to find, create and update order items. An order item can be e.g. items, surcharges and coupons. Each order item is given a unique id, which links it to a specific order.
@@ -1156,7 +1222,7 @@ The order amount model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>prepaidAmount</td>
-            <td>Deprecated</td>
+            <td>This is deprecated and will be removed in the next version. Please use <code>$giftCardAmount</code> instead.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>giftCardAmount</td>
@@ -2271,7 +2337,7 @@ The CouponCampaign model contains all information of a campaign.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>externalId</td>
-            <td>The external ID of a coupon campaign</td>
+            <td>DEPRECATED! The external ID of a coupon campaign</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
@@ -6720,7 +6786,7 @@ Returns this model as an array.
 ## Contracts<a name="order_packagetype_contracts"></a>
 ### ShippingPackageTypeRepositoryContract<a name="order_contracts_shippingpackagetyperepositorycontract"></a>
 
-The ShippingPackageTypeRepositoryContract is the interface for the shipping package type repository. This interface allows to get shipping package type by ID.
+The ShippingPackageTypeRepositoryContract is the interface for the shipping package type repository. This interface allows to list all shipping package types or to get a shipping package type by the ID.
 
 
 #### Namespace
@@ -6735,14 +6801,14 @@ The ShippingPackageTypeRepositoryContract is the interface for the shipping pack
 </pre>
 
     
-Get Shipping Package Type by an  ID
+Gets a shipping package type. The ID of the shipping package type must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$shippingPackageTypeId</td>
-        <td>The ID of the Shipping Package Type</td>
+        <td>The ID of the shipping package type</td>
     </tr>
 </table>
 
@@ -6750,12 +6816,12 @@ Get Shipping Package Type by an  ID
 <pre>public <strong>listShippingPackageTypes</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Get all Shipping Shipping Package Types
+Lists shipping packages types.
     
 ## Models<a name="order_packagetype_models"></a>
 ### ShippingPackageType<a name="order_models_shippingpackagetype"></a>
 
-ShippingPackageTypeModel
+The shipping package type model.
 
 
 #### Namespace
@@ -6780,35 +6846,35 @@ ShippingPackageTypeModel
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
-            <td>The name of the shipping package Type</td>
+            <td>The name of the shipping package type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>width</td>
-            <td>The width of the package type</td>
+            <td>The width of the shipping package type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>height</td>
-            <td>The height of the package type</td>
+            <td>The height of the shipping package type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>length</td>
-            <td>The length of the package type</td>
+            <td>The length of the shipping package type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>unit</td>
-            <td>The unit of the package type´s dimension</td>
+            <td>The unit of the shipping package type dimension</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>maxWeight</td>
-            <td>The maximum weight of the package type</td>
+            <td>The maximum weight of the shipping package type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>maxVolume</td>
-            <td>The maximum volume of the package type</td>
+            <td>The maximum volume of the shipping package type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>volumeType</td>
-            <td>The volume type of the package type</td>
+            <td>The volume type of the shipping package type</td>
         </tr></tbody>
 </table>
 

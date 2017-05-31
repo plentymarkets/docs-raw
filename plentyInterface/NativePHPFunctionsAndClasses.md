@@ -374,6 +374,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.strlen.php">strlen</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.strnatcmp.php">strnatcmp</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.strpos.php">strpos</a>
             </li>
                     <li>

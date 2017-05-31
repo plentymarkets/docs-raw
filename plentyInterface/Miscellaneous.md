@@ -3509,6 +3509,22 @@ Add middlewares attached to the route.
 </table>
 
 
+<pre>public <strong>middleware</strong>(<a target="_blank" href="http://php.net/array">array</a> $middleware = []):<a href="miscellaneous#miscellaneous_plugin_routing">Routing</a>
+</pre>
+
+    
+Get or set the middlewares attached to the route.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$middleware</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getMiddleware</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     

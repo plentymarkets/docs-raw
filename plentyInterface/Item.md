@@ -3865,6 +3865,14 @@ The item model
             <td>isSubscribable</td>
             <td>Flag that indicates if the item can be ordered as a subscription item. If yes, the item can be ordered for delivery at regular intervals.</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isSerialNumber</td>
+            <td>Flag that indicates if serial numbers are to be assigned to variations of this item to uniquely identify every item sold. Serial numbers ensure traceability of an item in case of errors or problems.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isShippingPackage</td>
+            <td>Flag that indicates if a shipping package is to be used for this item. If yes and the variation's dimensions are entered in the <b>Settings</b> tab of a variation, the correct shipping package is assigned automatically.</td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>amazonFbaPlatform</td>
             <td>Indicates the platform used for Fulfilment by Amazon (FBA). <ul><li>0 = Do not use</li><li>1 = AMAZON EU (Europe)</li><li>2 = AMAZON FE (Far East)</li><li>3 = AMAZON NA (North America)</li></ul></td>
@@ -10267,6 +10275,38 @@ foo
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$marketId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addClient</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId):<a href="item#item_search_mutators">Mutators</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addListing</strong>(<a target="_blank" href="http://php.net/int">int</a> $listingId):<a href="item#item_search_mutators">Mutators</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$listingId</td>
         <td></td>
     </tr>
 </table>

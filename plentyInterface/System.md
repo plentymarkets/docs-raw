@@ -3,6 +3,37 @@
 # System<a name="system_system"></a>
     
 ## Contracts<a name="system_system_contracts"></a>
+### SystemInformationRepositoryContract<a name="system_contracts_systeminformationrepositorycontract"></a>
+
+Repository for SystemInformation
+
+
+#### Namespace
+
+`Plenty\Modules\System\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>loadValue</strong>($key):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### WebstoreRepositoryContract<a name="system_contracts_webstorerepositorycontract"></a>
 
 Repository for Webstore

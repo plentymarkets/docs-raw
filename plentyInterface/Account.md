@@ -3,6 +3,117 @@
 # Address<a name="account_address"></a>
     
 ## Contracts<a name="account_address_contracts"></a>
+### AddressContactRelationRepositoryContract<a name="account_contracts_addresscontactrelationrepositorycontract"></a>
+
+The AddressContactRelationRepositoryContract is the interface for the address contact relation repository.
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Address\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>createAddressContactRelation</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Creates address contact relations.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The address data as associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateAddressContactRelation</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Updates address contact relations.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The data as associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findAddressContactRelation</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressContactRelationId):<a href="account#account_models_addresscontactrelation">AddressContactRelation</a>
+</pre>
+
+    
+Gets address contact relation by ID.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$addressContactRelationId</td>
+        <td>The ID of the address contact relation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteAddressContactRelation</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressContactRelationId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Deletes an address contact relation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$addressContactRelationId</td>
+        <td>The ID of the address contact relation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listAddressContactRelations</strong>(<a target="_blank" href="http://php.net/array">array</a> $filter = [], <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+Lists address contact relations.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filter</td>
+        <td>Filter that restricts the search result</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>An array with child instances to be loaded</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>The columns to retrieve</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The page of results to search for</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of items to list per page</td>
+    </tr>
+</table>
+
+
+
 ### AddressPosRelationRepositoryContract<a name="account_contracts_addressposrelationrepositorycontract"></a>
 
 The AddressPosRelationRepositoryContract is the interface for the address POS relation repository.
@@ -639,7 +750,7 @@ Returns this model as an array.
 
 ### AddressContactRelation<a name="account_models_addresscontactrelation"></a>
 
-address contact relation model
+The address contact relation model
 
 
 #### Namespace
@@ -668,7 +779,11 @@ address contact relation model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The ID of the address type</td>
+            <td>The type ID of the address. Possible values:
+<ul>
+<li>Invoice address = 1</li>
+<li>Delivery address = 2</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>addressId</td>
