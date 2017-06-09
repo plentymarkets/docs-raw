@@ -229,7 +229,7 @@ System is unusable.
 
 
 <pre>public <strong>logException</strong>(<a href="miscellaneous#miscellaneous__exception">Exception</a>
- $exception):<a href="miscellaneous#miscellaneous__void">void</a>
+ $exception, <a target="_blank" href="http://php.net/int">int</a> $traceDepth = 3):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -242,6 +242,11 @@ Log exceptions.
 </td>
         <td>$exception</td>
         <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$traceDepth</td>
+        <td>The depth of the stack trace to be logged. Default is 3.</td>
     </tr>
 </table>
 

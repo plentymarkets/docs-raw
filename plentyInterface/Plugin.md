@@ -213,7 +213,7 @@ database query
 </pre>
 
     
-
+Add a basic where clause to the query.
     
 ##### <strong>Parameters</strong>
     
@@ -236,11 +236,63 @@ database query
 </table>
 
 
+<pre>public <strong>whereIn</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/array">array</a> $values, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $not = false):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a &quot;where in&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$not</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>orWhereIn</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/array">array</a> $values):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add an &quot;or where in&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>orWhere</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $operator = null, $value = null):<a href="plugin#plugin_database_contracts">Contracts</a>
 </pre>
 
     
-
+Add an &quot;or where&quot; clause to the query.
     
 ##### <strong>Parameters</strong>
     
@@ -258,6 +310,162 @@ database query
         <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>whereNull</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $not = false):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a &quot;where null&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$not</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>orWhereNull</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Add an &quot;or where null&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>having</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $operator = null, <a target="_blank" href="http://php.net/string">string</a> $value = null, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a &quot;having&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>orHaving</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $operator = null, <a target="_blank" href="http://php.net/string">string</a> $value = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Add a &quot;or having&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>orderBy</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $direction = &quot;asc&quot;):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add an &quot;order by&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$direction</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>forPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $perPage = 15):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Set the limit and offset for a given page.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$perPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>count</strong>(<a target="_blank" href="http://php.net/string">string</a> $columns = &quot;*&quot;):<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Retrieve the &quot;count&quot; result of the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$columns</td>
         <td></td>
     </tr>
 </table>

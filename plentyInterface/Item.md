@@ -10540,6 +10540,33 @@ To be written
     
 
     
+# Stock<a name="item_stock"></a>
+    
+## Events<a name="item_stock_events"></a>
+### BasketItemWarnOversell<a name="item_events_basketitemwarnoversell"></a>
+
+The event is triggered to warn about an overselling.
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Stock\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>getBasketItem</strong>():<a href="basket#basket_models_basketitem">BasketItem</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getQuantity</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
 # Unit<a name="item_unit"></a>
     
 ## Contracts<a name="item_unit_contracts"></a>
@@ -13848,6 +13875,10 @@ The variation SKU model
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
             <td>The time the SKU was created (YYYY-MM-DD HH:MM:SS).</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the SKU was updated (YYYY-MM-DD HH:MM:SS).</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>exportedAt</td>

@@ -6178,6 +6178,12 @@ Repository for Country
 </table>
 
 
+<pre>public <strong>getActiveCountriesList</strong>():<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
+</pre>
+
+    
+
+    
 <pre>public <strong>getActiveCountryNameMap</strong>(<a target="_blank" href="http://php.net/string">string</a> $language):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -6593,7 +6599,7 @@ Get an order shipping package
 </table>
 
 
-<pre>public <strong>listOrderShippingPackages</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>listOrderShippingPackages</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 List order shipping packages
@@ -6609,6 +6615,11 @@ List order shipping packages
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
         <td>The properties to be loaded</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>(optional) Possible value is 'labelBase64' to get the label with the response</td>
     </tr>
 </table>
 
@@ -6716,6 +6727,10 @@ The order shipping package model
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>labelPath</td>
             <td>The path to the label</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>labelBase64</td>
+            <td>The base64 encoded label</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>packageType</td>

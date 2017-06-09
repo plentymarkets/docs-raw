@@ -57,6 +57,22 @@ List tickets by filter options.
 </table>
 
 
+<pre>public <strong>deleteTicket</strong>(<a target="_blank" href="http://php.net/int">int</a> $ticketId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Deletes a ticket by given ticketId
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$ticketId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>createMessage</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketId):<a href="ticket#ticket_models_ticketmessage">TicketMessage</a>
 </pre>
 

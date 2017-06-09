@@ -34,6 +34,52 @@ Repository for SystemInformation
 
 
 
+### WebstoreConfigurationRepositoryContract<a name="system_contracts_webstoreconfigurationrepositorycontract"></a>
+
+Repository for Webstore Configuration
+
+
+#### Namespace
+
+`Plenty\Modules\System\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>findByPlentyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId):<a href="system#system_models_webstoreconfiguration">WebstoreConfiguration</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByWebstoreId</strong>(<a target="_blank" href="http://php.net/int">int</a> $webstoreId):<a href="system#system_models_webstoreconfiguration">WebstoreConfiguration</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$webstoreId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### WebstoreRepositoryContract<a name="system_contracts_webstorerepositorycontract"></a>
 
 Repository for Webstore
