@@ -405,6 +405,12 @@ Frontend-Factory
 
 #### Methods
 
+<pre>public <strong>getLocale</strong>():<a href="frontend#frontend_services_localeservice">LocaleService</a>
+</pre>
+
+    
+
+    
 <pre>public <strong>getAgent</strong>():<a href="frontend#frontend_services_agentservice">AgentService</a>
 </pre>
 
@@ -700,6 +706,41 @@ Frontend-service for file information
     
 
     
+
+### LocaleService<a name="frontend_services_localeservice"></a>
+
+frontend service for changing current language
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\Services`
+
+
+
+#### Methods
+
+<pre>public <strong>setLanguage</strong>(<a target="_blank" href="http://php.net/string">string</a> $newLanguage, <a target="_blank" href="http://php.net/bool">bool</a> $fireEvents = true):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$newLanguage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$fireEvents</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### SystemService<a name="frontend_services_systemservice"></a>
 

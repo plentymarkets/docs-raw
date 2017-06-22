@@ -166,7 +166,7 @@ Returns one category by id.
 </table>
 
 
-<pre>public <strong>getLinklistTree</strong>(<a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/int">int</a> $clientId):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getLinklistTree</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/int">int</a> $clientId = null, <a target="_blank" href="http://php.net/int">int</a> $maxLevel = 6):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Returns all linklist categories as tree.
@@ -188,10 +188,41 @@ Returns all linklist categories as tree.
         <td>$clientId</td>
         <td>The unique ID of the client (store)</td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$maxLevel</td>
+        <td>The deepest category level to load</td>
+    </tr>
 </table>
 
 
-<pre>public <strong>getLinklistList</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/int">int</a> $clientId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>buildCache</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/int">int</a> $clientId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Rebuild the category tree cache
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>'all','item','container','content' or 'blog'</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>Optional language of details.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$clientId</td>
+        <td>The unique ID of the client (store)</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getLinklistList</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/int">int</a> $clientId = null, <a target="_blank" href="http://php.net/int">int</a> $maxLevel = 6):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Returns all linklist categories as list.
@@ -212,6 +243,11 @@ Returns all linklist categories as list.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$clientId</td>
         <td>The unique ID of the client (store)</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$maxLevel</td>
+        <td>The deepest category level to load</td>
     </tr>
 </table>
 
@@ -816,6 +852,58 @@ will avoid duplicate content.</td>
 </td>
             <td>category</td>
             <td>The category these category details are associated with.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### CategoryItemCount<a name="category_models_categoryitemcount"></a>
+
+CategoryItemCount
+
+
+#### Namespace
+
+`Plenty\Modules\Category\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>categoryId</td>
+            <td>The unique ID of the category</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>webstoreId</td>
+            <td>The ID of the client (store)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>count</td>
+            <td>The count of items</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The date that the category item count was created.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The date that the category item count was updated last.</td>
         </tr></tbody>
 </table>
 

@@ -1972,10 +1972,29 @@ An event class fired after a new order is created. The order type is not relevan
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### OrderEvent<a name="order_events_orderevent"></a>
@@ -1991,10 +2010,29 @@ A base event class for all order events. Each order event expects an order insta
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### OrderFullyPaid<a name="order_events_orderfullypaid"></a>
@@ -2010,10 +2048,29 @@ An Event class fired after a payment assignment when the order is fully paid.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### OrderOverpaid<a name="order_events_orderoverpaid"></a>
@@ -2029,10 +2086,29 @@ An event class will be fired after a payment is assigned and if the order is ove
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### OrderPaidEvent<a name="order_events_orderpaidevent"></a>
@@ -2048,10 +2124,29 @@ A base Event class for all order paid events.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### OrderPartlyPaid<a name="order_events_orderpartlypaid"></a>
@@ -2067,10 +2162,29 @@ An Event class fired after a payment is assigned and if the order is only partly
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### OrderPaymentAssigned<a name="order_events_orderpaymentassigned"></a>
@@ -2088,10 +2202,42 @@ An Event class fired after a payment was assigned to an order.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order, <a href="payment#payment_models_payment">Payment</a>
+ $payment):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderPaymentAssigned constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="payment#payment_models_payment">Payment</a>
+</td>
+        <td>$payment</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPayment</strong>():<a href="payment#payment_models_payment">Payment</a>
+</pre>
+
+    
+Get the payment.
+    
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### OrderPrepaid<a name="order_events_orderprepaid"></a>
@@ -2107,10 +2253,29 @@ An Event class fired after a payment is assigned and if the order is paid in adv
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 ## Services<a name="order_order_services"></a>
 ### OrderCreatedTypeService<a name="order_services_ordercreatedtypeservice"></a>
@@ -3930,10 +4095,29 @@ An event class fired after an order is canceled.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### BeforeOrderCanceled<a name="order_canceled_beforeordercanceled"></a>
@@ -3949,10 +4133,29 @@ An event class fired before an order will be canceled.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 ## Changed<a name="order_events_changed"></a>
 ### OrderStatusChanged<a name="order_changed_orderstatuschanged"></a>
@@ -3968,10 +4171,39 @@ An event class fired after the status of an order has changed.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order, <a target="_blank" href="http://php.net/float">float</a> $oldStatus):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderStatusChanged constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$oldStatus</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOldStatus</strong>():<a target="_blank" href="http://php.net/float">float</a></pre>
+
+    
+Get the old order status.
+    
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 ## Created<a name="order_events_created"></a>
 ### CreditNoteCreated<a name="order_created_creditnotecreated"></a>
@@ -3987,10 +4219,29 @@ An event class fired after a new credit note is created.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### DeliveryOrderCreated<a name="order_created_deliveryordercreated"></a>
@@ -4006,10 +4257,29 @@ An event class fired after a new delivery order is created.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### MultiCreditNoteCreated<a name="order_created_multicreditnotecreated"></a>
@@ -4025,10 +4295,29 @@ An event class fired after a new multi credit note is created.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### MultiOrderCreated<a name="order_created_multiordercreated"></a>
@@ -4044,10 +4333,29 @@ An event class fired after a new multi order is created.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### RepairCreated<a name="order_created_repaircreated"></a>
@@ -4063,10 +4371,29 @@ An event class fired after a new repair is created.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### ReturnCreated<a name="order_created_returncreated"></a>
@@ -4082,10 +4409,29 @@ An event class fired after a new returns is created.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### SalesOrderCreated<a name="order_created_salesordercreated"></a>
@@ -4101,10 +4447,29 @@ An event class fired after a new sales order is created.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 
 ### WarrantyCreated<a name="order_created_warrantycreated"></a>
@@ -4120,10 +4485,29 @@ An event class fired after a new warranty is created.
 
 #### Methods
 
-<pre>public <strong>toArray</strong>()</pre>
+<pre>public <strong>__construct</strong>(<a href="order#order_models_order">Order</a>
+ $order):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
-Returns this model as an array.
+OrderEvent constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Get the order instance.
     
 # Idea<a name="order_idea"></a>
     

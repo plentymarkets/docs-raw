@@ -11487,6 +11487,10 @@ Variation
             <td>defaultShippingCosts</td>
             <td>The default shipping costs for the variation.</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>mayShowUnitPrice</td>
+            <td>Display unit price in the online store</td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>categoryVariationId</td>
             <td>Either the ID of the variation or the ID of the item's main variation. No other values are permitted.<ul><li>ID of the variation = Categories are not inherited from the main variation.</li><li>ID of the item's main variation = Inheritance of categories is active.</li></ul></td>

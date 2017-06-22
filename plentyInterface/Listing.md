@@ -200,6 +200,11 @@ The listing model.
             <td>unitCombinationId</td>
             <td>The ID of the unit combination.</td>
         </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>properties</td>
+            <td>The listing properties of the listing.</td>
+        </tr><tr>
             <td><a href="listing#listing_models_listingtype">ListingType</a>
 </td>
             <td>type</td>
@@ -209,6 +214,1265 @@ The listing model.
 </td>
             <td>stockDependenceType</td>
             <td>The stock dependence type of the listing.</td>
+        </tr><tr>
+            <td><a href="listing#listing_models_listingmarket">ListingMarket</a>
+</td>
+            <td>markets</td>
+            <td>The listing markets of the listing</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### ListingProperty<a name="listing_models_listingproperty"></a>
+
+The listing properties model. Each listing property has a type.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the listing property</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>listingId</td>
+            <td>The ID of the listing that the property belongs to</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>typeId</td>
+            <td>The ID of the listing property type. The following types are available:
+<ul>
+<li>Use item price = 10</li>
+<li>Number per lot = 11</li>
+<li>Transmit item number type = 12</li>
+</ul></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>value</td>
+            <td>The value of the listing property. The value depends on the type.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The date that the property was created.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The date that the property was updated last.</td>
+        </tr><tr>
+            <td><a href="listing#listing_models_listing">Listing</a>
+</td>
+            <td>listing</td>
+            <td>The listing that the property belongs to.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# Date<a name="listing_date"></a>
+    
+## Models<a name="listing_date_models"></a>
+### ListingDateType<a name="listing_models_listingdatetype"></a>
+
+The listing date type model. Each listing date type can have multiple names.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Date\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the listing date type. The following date types are available:
+<ul>
+<li>Last price update = 1</li>
+<li>Last listing attempt = 2</li>
+<li>Start time = 3</li>
+<li>End time = 4</li>
+<li>Last market update = 5</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isErasable</td>
+            <td>Flag that indicates if this type can be deleted or not.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>names</td>
+            <td>The listing date type names.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### ListingDateTypeName<a name="listing_models_listingdatetypename"></a>
+
+The listing date type name model.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Date\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The listing date type name ID.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>typeId</td>
+            <td>The listing date type ID that the current name belongs to.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>name</td>
+            <td>The name of the listing date type.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>lang</td>
+            <td>The language of the listing date type name.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# LayoutTemplate<a name="listing_layouttemplate"></a>
+    
+## Contracts<a name="listing_layouttemplate_contracts"></a>
+### LayoutTemplateRepositoryContract<a name="listing_contracts_layouttemplaterepositorycontract"></a>
+
+The LayoutTemplateRepositoryContract is the interface for the layout template repository. This interface allows you to get a single layout template or lists of layout templates as well as to create, update or delete a layout tempalte.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\LayoutTemplate\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="listing#listing_models_layouttemplate">LayoutTemplate</a>
+</pre>
+
+    
+Get an layout template.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the layout template.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the LayoutTemplate instance, one of "additional".</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="listing#listing_models_layouttemplate">LayoutTemplate</a>
+</pre>
+
+    
+Create an layout template.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The layout template data.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Delete layout template
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the layout template.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
+## Models<a name="listing_layouttemplate_models"></a>
+### LayoutTemplate<a name="listing_models_layouttemplate"></a>
+
+The layout template model.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\LayoutTemplate\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the layout template.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the layout template.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>css</td>
+            <td>The css of the layout template.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>htmlStructure</td>
+            <td>The html structure of the layout template.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>mainFrame</td>
+            <td>The main frame of the layout template.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>additionalContent</td>
+            <td>The additional content of the layout template.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>appendixType</td>
+            <td>The appendix type of the layout template.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# Market<a name="listing_market"></a>
+    
+## Contracts<a name="listing_market_contracts"></a>
+### ListingMarketRepositoryContract<a name="listing_contracts_listingmarketrepositorycontract"></a>
+
+The ListingMarketRepositoryContract is the interface for the listing market repository. This interface allows you to get a single listing market or lists of listing markets as well as to create a listing market.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="listing#listing_models_listingmarket">ListingMarket</a>
+</pre>
+
+    
+Get an listing market.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the listing market.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts", "infos".</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+List listing markets by filter options
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The page to get. The default page that will be returned is page 1.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of entries to be displayed per page. The default number of entries per page is 50.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts", "infos".</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>The filters that should be applied. The filters that could be applied: 'id', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'directoryId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition', 'shippingProfileId', .</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Create an listing market.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The listing market data.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="listing#listing_models_listingmarket">ListingMarket</a>
+</pre>
+
+    
+Update listing market
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the listing market.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The listing market data as associative array.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>start</strong>(<a target="_blank" href="http://php.net/array">array</a> $ids, <a target="_blank" href="http://php.net/array">array</a> $params = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Start listing markets on the designated markets.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$ids</td>
+        <td>The IDs of the listing markets that need to be started.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$params</td>
+        <td>The parameters that should be considers during start. Available values are 'startTime', 'startDistribution'</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>verify</strong>(<a target="_blank" href="http://php.net/array">array</a> $ids):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Verifies listing markets.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$ids</td>
+        <td>The IDs of the listing markets that need to be verified.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Delete a listing market
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the listing market.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
+## Models<a name="listing_market_models"></a>
+### ListingMarket<a name="listing_models_listingmarket"></a>
+
+The listing market model.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The listing market ID.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>listingId</td>
+            <td>The listing ID of the current listing market.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>variationId</td>
+            <td>The variation ID fixed for this listing market.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>referrerId</td>
+            <td>The referrer ID.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>credentialsId</td>
+            <td>The credentials ID that this listing market belongs to.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>directoryId</td>
+            <td>The directory ID of the listing market.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>enabled</td>
+            <td>Tells if the listing market is enabled.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>duration</td>
+            <td>The duration of the listing market.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>verified</td>
+            <td>Tells if the listing market has been verified. Possible values: 'succeeded', 'failed', 'unknown'.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>quantity</td>
+            <td>The quantity set for this listing market.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>allVariations</td>
+            <td>Tells if all variations should be included.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The date that the listing was created.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The date that the listing was updated last.</td>
+        </tr><tr>
+            <td><a href="listing#listing_models_listing">Listing</a>
+</td>
+            <td>listing</td>
+            <td>The listing that the listing market belongs to.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>properties</td>
+            <td>The listing market properties of the listing market. The following properties are available:
+<ul>
+<li>1 = Shipping profile ID</li>
+<li>2 = Order status</li>
+<li>3 = Layout template ID</li>
+<li>4 = Maximum number of images</li>
+<li>5 = Warehouse ID</li>
+<li>6 = Basic price in text</li>
+<li>7 = Vat value</li>
+<li>8 = Vat country ID</li>
+<li>9 = Main language</li>
+<li>10 = Use item price</li>
+<li>11 = Number per lot</li>
+<li>12 = Transmit item number type</li>
+<li>100 = eBay parts fitment ID</li>
+<li>101 = eBay maximum online listings</li>
+<li>102 = eBay first platform category ID</li>
+<li>103 = eBay second platform category ID</li>
+<li>104 = eBay first shop category ID</li>
+<li>105 = eBay second shop category ID</li>
+<li>106 = eBay private auction</li>
+<li>107 = eBay gallery type</li>
+<li>108 = eBay gallery duration</li>
+<li>109 = eBay transmit MPR</li>
+<li>110 = eBay counter type</li>
+<li>111 = eBay condition ID</li>
+<li>112 = eBay condition description</li>
+<li>113 = eBay enhancements</li>
+<li>114 = eBay best offer</li>
+<li>115 = eBay best offer decline price</li>
+<li>116 = eBay best offer accept price</li>
+<li>117 = eBay is eBayPlus</li>
+<li>118 = eBay is Click & Collect</li>
+<li>200 = Hood first platform category</li>
+<li>201 = Hood second platform category</li>
+<li>202 = Hood first shop category</li>
+<li>203 = Hood second shop category</li>
+<li>204 = Hood third shop category</li>
+<li>205 = Hood payment methods</li>
+<li>206 = Hood enhancements</li>
+<li>207 = Hood show on shop startpage</li>
+<li>208 = Hood shipping discount</li>
+<li>209 = Hood delivery days on stock from</li>
+<li>210 = Hood delivery days on stock to</li>
+<li>211 = Hood delivery days not on stock from</li>
+<li>212 = Hood delivery days not on stock to</li>
+<li>300 = Ricardo first platform category ID</li>
+<li>301 = Ricardo warranty ID</li>
+<li>302 = Ricardo delivery ID</li>
+<li>303 = Ricardo availability ID</li>
+<li>304 = Ricardo delivery cost</li>
+<li>305 = Ricardo payment ID</li>
+<li>306 = Ricardo price increment</li>
+<li>307 = Ricardo payment methods</li>
+<li>308 = Ricardo enhancements</li>
+<li>309 = Ricardo item condition ID</li>
+<li>310 = Ricardo max relist count</li>
+<li>311 = Ricardo is cumulative shipping</li>
+<li>312 = Ricardo delivery package size ID</li>
+<li>313 = Ricardo use secondary language</li>
+<li>314 = Ricardo template ID</li>
+<li>315 = Ricardo is relist sold out</li>
+</ul></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>itemSpecifics</td>
+            <td>The listing market item specifics of the listing market.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>prices</td>
+            <td>The listing market prices of the listing market.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>dates</td>
+            <td>The listing market dates of the listing market.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>texts</td>
+            <td>The listing market texts of the listing market.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### ListingMarketDate<a name="listing_models_listingmarketdate"></a>
+
+The listing market dates model. Each listing market date has a type.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the listing market date.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>listingMarketId</td>
+            <td>The ID of the listing market that the date belongs to.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>typeId</td>
+            <td>The ID of the listing market date type. The following types are available:
+<ul>
+<li>Last price update = 1</li>
+<li>Last listing attempt = 2</li>
+<li>Start time = 3</li>
+<li>End time = 4</li>
+<li>Last market update = 5</li>
+</ul></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
+</td>
+            <td>date</td>
+            <td>The date plus hours, minutes and seconds. The date format must comply with the W3C standard.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The date that the date was created.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The date that the date was updated last.</td>
+        </tr><tr>
+            <td><a href="listing#listing_models_listingmarket">ListingMarket</a>
+</td>
+            <td>listingMarket</td>
+            <td>The listing market that the date belongs to.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### ListingMarketItemSpecific<a name="listing_models_listingmarketitemspecific"></a>
+
+The listing market item specific model.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the listing market item specific.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>listingMarketId</td>
+            <td>The ID of the listing market.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the listing market item specific.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>value</td>
+            <td>The value of the listing market item specific.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### ListingMarketPrice<a name="listing_models_listingmarketprice"></a>
+
+The listing market price model.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the listing price price</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>listingMarketId</td>
+            <td>The ID of the listing market</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>typeId</td>
+            <td>The ID of the listing price type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>value</td>
+            <td>The value of the listing market price</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>listingMarket</td>
+            <td>The listing market</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>type</td>
+            <td>The listing price type</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### ListingMarketProperty<a name="listing_models_listingmarketproperty"></a>
+
+The listing market properties model. Each listing market property has a type.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the listing market property</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>listingMarketId</td>
+            <td>The ID of the listing market that the property belongs to</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>typeId</td>
+            <td>The ID of the listing market property type. The following types are available:
+<ul>
+<li>Shipping profile ID = 1</li>
+<li>Order status = 2</li>
+<li>Layout template ID = 3</li>
+<li>Maximum number of images = 4</li>
+<li>Warehouse ID = 5</li>
+<li>Basic price in text = 6</li>
+<li>Vat value = 7</li>
+<li>Vat country ID = 8</li>
+<li>Main language = 9</li>
+<li>eBay parts fitment ID = 100</li>
+<li>eBay maximum online listings = 101</li>
+<li>eBay first platform category ID = 102</li>
+<li>eBay second platform category ID = 103</li>
+<li>eBay first shop category ID = 104</li>
+<li>eBay second shop category ID = 105</li>
+<li>eBay private auction = 106</li>
+<li>eBay gallery type = 107</li>
+<li>eBay gallery duration = 108</li>
+<li>eBay transmit MPR = 109</li>
+<li>eBay counter type = 110</li>
+<li>eBay condition ID = 111</li>
+<li>eBay condition description = 112</li>
+<li>eBay enhancements = 113</li>
+<li>eBay best offer = 114</li>
+<li>eBay best offer decline price = 115</li>
+<li>eBay best offer accept price = 116</li>
+<li>eBay is eBayPlus = 117</li>
+<li>eBay is Click & Collect = 118</li>
+<li>Hood first platform category = 200</li>
+<li>Hood second platform category = 201</li>
+<li>Hood first shop category = 202</li>
+<li>Hood second shop category = 203</li>
+<li>Hood third shop category = 204</li>
+<li>Hood payment methods = 205</li>
+<li>Hood enhancements = 206</li>
+<li>Hood show on shop startpage = 207</li>
+<li>Hood shipping discount = 208</li>
+<li>Hood delivery days on stock from = 209</li>
+<li>Hood delivery days on stock to = 210</li>
+<li>Hood delivery days not on stock from = 211</li>
+<li>Hood delivery days not on stock to = 212</li>
+<li>Ricardo first platform category ID = 300</li>
+<li>Ricardo warranty ID = 301</li>
+<li>Ricardo delivery ID = 302</li>
+<li>Ricardo availability ID = 303</li>
+<li>Ricardo delivery cost = 304</li>
+<li>Ricardo payment ID = 305</li>
+<li>Ricardo price increment = 306</li>
+<li>Ricardo payment methods = 307</li>
+<li>Ricardo enhancements = 308</li>
+<li>Ricardo item condition ID = 309</li>
+<li>Ricardo max relist count = 310</li>
+<li>Ricardo is cumulative shipping = 311</li>
+<li>Ricardo delivery package size ID = 312</li>
+<li>Ricardo use secondary language = 313</li>
+<li>Ricardo template ID = 314</li>
+<li>Ricardo is relist sold out = 314</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td>The value of the listing market property. The value depends on the type.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The date that the property was created.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The date that the property was updated last.</td>
+        </tr><tr>
+            <td><a href="listing#listing_models_listingmarket">ListingMarket</a>
+</td>
+            <td>listingMarket</td>
+            <td>The listing market that the property belongs to.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# Directory<a name="listing_directory"></a>
+    
+## Contracts<a name="listing_directory_contracts"></a>
+### ListingMarketDirectoryRepositoryContract<a name="listing_contracts_listingmarketdirectoryrepositorycontract"></a>
+
+The contract for the listing market directory repository.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Directory\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="listing#listing_models_listingmarketdirectory">ListingMarketDirectory</a>
+</pre>
+
+    
+Get a listing market directory
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the listing market directory.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Create an listing market directory.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The listing market directory data as associative array.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="listing#listing_models_listingmarketdirectory">ListingMarketDirectory</a>
+</pre>
+
+    
+Update listing market directory
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the listing market directory.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The listing market directory data as associative array.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Delete a listing market directory
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the listing market directory.</td>
+    </tr>
+</table>
+
+
+## Models<a name="listing_directory_models"></a>
+### ListingMarketDirectory<a name="listing_models_listingmarketdirectory"></a>
+
+The listing market directory model.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Directory\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the listing market directory.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the listing market directory.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>parentId</td>
+            <td>The parent id of the listing market directory.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>level</td>
+            <td>The level of the directory.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# Info<a name="listing_info"></a>
+    
+## Contracts<a name="listing_info_contracts"></a>
+### ListingMarketInfoRepositoryContract<a name="listing_contracts_listingmarketinforepositorycontract"></a>
+
+The ListingMarketInfoRepositoryContract is the interface for the listing market info repository. This interface allows you to get a information about one or many listing markets.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Info\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+List listing market infos by filter options
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The page to get. The default page that will be returned is page 1.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of entries to be displayed per page. The default number of entries per page is 50.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the ListingMarketInfo instance.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>The filters that should be applied. The filters that could be applied: 'id', 'listingMarketId', 'type', 'createdAtFrom', 'createdAtTo', 'code'.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
+## Models<a name="listing_info_models"></a>
+### ListingMarketInfo<a name="listing_models_listingmarketinfo"></a>
+
+The listing market info model.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Info\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The listing market info ID.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>listingMarketId</td>
+            <td>The listing market ID that the current information belongs to.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>type</td>
+            <td>The information type. Possible values: 'warning', 'error', 'info'.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>code</td>
+            <td>The information code.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>message</td>
+            <td>The information message.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The date that the listing market info was created.</td>
+        </tr><tr>
+            <td><a href="listing#listing_models_listingmarket">ListingMarket</a>
+</td>
+            <td>listingMarket</td>
+            <td>The listing market that the listing market info belongs to.</td>
         </tr></tbody>
 </table>
 
@@ -438,6 +1702,553 @@ The listing market text model.
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>description</td>
             <td>The description of the listing market text.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# OptionTemplate<a name="listing_optiontemplate"></a>
+    
+## Contracts<a name="listing_optiontemplate_contracts"></a>
+### OptionTemplateRepositoryContract<a name="listing_contracts_optiontemplaterepositorycontract"></a>
+
+The contract for the listing option template repository.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\OptionTemplate\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>preview</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get a preview list of all listing option templates
+    
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="listing#listing_models_optiontemplate">OptionTemplate</a>
+</pre>
+
+    
+Get option template
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the option template</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="listing#listing_models_optiontemplate">OptionTemplate</a>
+</pre>
+
+    
+Create option template
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The option template data as associative array.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Update option template
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the option template</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The option template data as associative array.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Delete option template
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the option template</td>
+    </tr>
+</table>
+
+
+## Models<a name="listing_optiontemplate_models"></a>
+### OptionTemplate<a name="listing_models_optiontemplate"></a>
+
+The option template model.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\OptionTemplate\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the option template.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the option template.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>listing</td>
+            <td>The listing options of the option template</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>listingMarket</td>
+            <td>The listing market options of the option template</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>marketOptions</td>
+            <td>The market options of the option template</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# Price<a name="listing_price"></a>
+    
+## Models<a name="listing_price_models"></a>
+### ListingPriceType<a name="listing_models_listingpricetype"></a>
+
+The listing price type model.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Price\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the listing price type. The following date types are available:
+<ul>
+<li>Start price = 1</li>
+<li>Fixed price = 2</li>
+<li>Reserved price = 3</li>
+<li>SCO minimum price = 4</li>
+<li>Market fee = 5</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isErasable</td>
+            <td>Flag that states if this type can be deleted or not.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>names</td>
+            <td>The listing price type names</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### ListingPriceTypeName<a name="listing_models_listingpricetypename"></a>
+
+The listing price type name model.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Price\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The listing price type name ID.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>typeId</td>
+            <td>The listing price type ID.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>name</td>
+            <td>The name of the listing price type.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>lang</td>
+            <td>The language of the listing price type name.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# Property<a name="listing_property"></a>
+    
+## Models<a name="listing_property_models"></a>
+### ListingPropertyType<a name="listing_models_listingpropertytype"></a>
+
+The listing properties model. Each listing property has a type.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Property\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the listing property. The following date types are available:
+<ul>
+<li>Shipping profile ID = 1</li>
+<li>Order status = 2</li>
+<li>Layout template ID = 3</li>
+<li>Maximum number of images = 4</li>
+<li>Warehouse ID = 5</li>
+<li>Basic price in text = 6</li>
+<li>Vat value = 7</li>
+<li>Vat country ID = 8</li>
+<li>Main language = 9</li>
+<li>Use item price = 10</li>
+<li>Number per lot = 11</li>
+<li>Transmit item number type = 12</li>
+<li>eBay parts fitment ID = 100</li>
+<li>eBay maximum online listings = 101</li>
+<li>eBay first platform category ID = 102</li>
+<li>eBay second platform category ID = 103</li>
+<li>eBay first shop category ID = 104</li>
+<li>eBay second shop category ID = 105</li>
+<li>eBay private auction = 106</li>
+<li>eBay gallery type = 107</li>
+<li>eBay gallery duration = 108</li>
+<li>eBay transmit MPR = 109</li>
+<li>eBay counter type = 110</li>
+<li>eBay condition ID = 111</li>
+<li>eBay condition description = 112</li>
+<li>eBay enhancements = 113</li>
+<li>eBay best offer = 114</li>
+<li>eBay best offer decline price = 115</li>
+<li>eBay best offer accept price = 116</li>
+<li>eBay is eBayPlus = 117</li>
+<li>eBay is Click & Collect = 118</li>
+<li>Hood first platform category = 200</li>
+<li>Hood second platform category = 201</li>
+<li>Hood first shop category = 202</li>
+<li>Hood second shop category = 203</li>
+<li>Hood third shop category = 204</li>
+<li>Hood payment methods = 205</li>
+<li>Hood enhancements = 206</li>
+<li>Hood show on shop startpage = 207</li>
+<li>Hood shipping discount = 208</li>
+<li>Hood delivery days on stock from = 209</li>
+<li>Hood delivery days on stock to = 210</li>
+<li>Hood delivery days not on stock from = 211</li>
+<li>Hood delivery days not on stock to = 212</li>
+<li>Ricardo first platform category ID = 300</li>
+<li>Ricardo warranty ID = 301</li>
+<li>Ricardo delivery ID = 302</li>
+<li>Ricardo availability ID = 303</li>
+<li>Ricardo delivery cost = 304</li>
+<li>Ricardo payment ID = 305</li>
+<li>Ricardo price increment = 306</li>
+<li>Ricardo payment methods = 307</li>
+<li>Ricardo enhancements = 308</li>
+<li>Ricardo item condition ID = 309</li>
+<li>Ricardo max relist count = 310</li>
+<li>Ricardo is cumulative shipping = 311</li>
+<li>Ricardo delivery package size ID = 312</li>
+<li>Ricardo use secondary language = 313</li>
+<li>Ricardo template ID = 314</li>
+<li>Ricardo is relist sold out = 314</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isErasable</td>
+            <td>Flag that states if this type can be deleted or not.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### ListingPropertyTypeName<a name="listing_models_listingpropertytypename"></a>
+
+The listing property type name model.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Property\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The listing property type name ID.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>typeId</td>
+            <td>The listing property type ID.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>name</td>
+            <td>The name of the listing property type.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>lang</td>
+            <td>The language of the listing property type name.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# ShippingProfile<a name="listing_shippingprofile"></a>
+    
+## Contracts<a name="listing_shippingprofile_contracts"></a>
+### ShippingProfileRepositoryContract<a name="listing_contracts_shippingprofilerepositorycontract"></a>
+
+The ShippingProfileRepositoryContract is the interface for the listing shipping profile repository. This interface allows you to get a shipping profile.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\ShippingProfile\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="listing#listing_models_shippingprofile">ShippingProfile</a>
+</pre>
+
+    
+Get a shipping profile
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the shipping profile.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the ShippingProfile instance.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Search shipping profiles
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The page to get. The default page that will be returned is page 1.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of entries to be displayed per page. The default number of entries per page is 50.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the ShippingProfile instance.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>The filters that should be applied. The filters that could be applied: 'id', 'referrerId', 'credentialsId'.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
+## Models<a name="listing_shippingprofile_models"></a>
+### ShippingProfile<a name="listing_models_shippingprofile"></a>
+
+The listing shipping profile model.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\ShippingProfile\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The listing shipping profile ID.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The listing shipping profile name.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>credentialsId</td>
+            <td>The credentials ID that this listing shipping profile belongs to.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>referrerId</td>
+            <td>The referrer ID.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdBy</td>
+            <td>Who created the shipping profile. Possible values: 'migration','customer','external'.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isDefault</td>
+            <td>Tells if the current listing shipping profile is set as default.</td>
         </tr></tbody>
 </table>
 

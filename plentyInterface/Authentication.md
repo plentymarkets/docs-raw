@@ -58,6 +58,27 @@ The ContactAuthenticationRepositoryContract is the interface for the authenticat
 </table>
 
 
+<pre>public <strong>authenticateWithPlentyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/string">string</a> $password):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td>The PlentyId of the plenty system of the user</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$password</td>
+        <td>The password of the user</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>logout</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 

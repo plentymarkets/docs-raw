@@ -2937,7 +2937,7 @@ The contract for the fitment repository.
 
 #### Methods
 
-<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_fitment">Fitment</a>
+<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="market#market_models_fitment">Fitment</a>
 </pre>
 
     
@@ -2949,6 +2949,11 @@ Returns a fitment by an ID.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
         <td>The ID of the fitment that should be found.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the Fitment instance. The relations available are 'items', 'items.properties'.</td>
     </tr>
 </table>
 
@@ -3006,6 +3011,64 @@ Deletes a fitment. Returns `true` if the deletion was successful, otherwise `fal
 </table>
 
 
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Search fitments
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The default page that will be returned is page 1.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of entries to be displayed per page. The default number of entries per page is 50.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the Fitment instance. The relations available are 'items', 'items.properties'.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>The filters that could be applied: 'id', 'categoryId', 'marketId', 'name', 'property', 'propertyName', 'propertyValue'.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 ## Models<a name="market_partsfitment_models"></a>
 ### Fitment<a name="market_models_fitment"></a>
 
@@ -3095,7 +3158,7 @@ The fitment item model. This belongs to one fitment model and can contain multip
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>properties</td>
-            <td>A collection of this fitment item properties.</td>
+            <td>A collection of this fitment item properties. Available names are 'Make', 'Model', 'Platform', 'Type', 'Production Period', 'Engine', 'FitmentComments', 'KType'.</td>
         </tr></tbody>
 </table>
 
@@ -3160,6 +3223,42 @@ The fitment item property model. This bleongs to an FitmentItem model.
     
 Returns this model as an array.
     
+# ShopCategory<a name="market_shopcategory"></a>
+    
+## Contracts<a name="market_shopcategory_contracts"></a>
+### ShopCategoryRepositoryContract<a name="market_contracts_shopcategoryrepositorycontract"></a>
+
+The contract for the eBay shop categories.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\ShopCategory\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/int">int</a> $credentialsId, <a target="_blank" href="http://php.net/string">string</a> $viewType = &quot;list&quot;):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Returns a fitment by an ID.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$credentialsId</td>
+        <td>The credentials ID for whom we want to load the eBay shop categories.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$viewType</td>
+        <td>How should the eBay shop categories be returned. Possible values: 'list' or 'tree'. Default is 'list'.</td>
+    </tr>
+</table>
+
+
 # Helper<a name="market_helper"></a>
     
 ## Contracts<a name="market_helper_contracts"></a>

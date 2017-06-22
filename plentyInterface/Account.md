@@ -2610,6 +2610,10 @@ The contact model.
             <td>The gender of the contact</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>title</td>
+            <td>The title of the contact, e.g. a doctorate</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>formOfAddress</td>
             <td>The form of address for the contact</td>
         </tr><tr>
