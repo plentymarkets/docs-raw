@@ -17,6 +17,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.array-combine.php">array_combine</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.array-diff-assoc.php">array_diff_assoc</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-diff-key.php">array_diff_key</a>
             </li>
                     <li>
@@ -24,6 +27,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-flip.php">array_flip</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.array-intersect.php">array_intersect</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-intersect-key.php">array_intersect_key</a>
@@ -396,6 +402,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.substr.php">substr</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.substr-count.php">substr_count</a>
             </li>
                 </ul>
             <strong>T</strong>

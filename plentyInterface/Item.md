@@ -11258,6 +11258,96 @@ Update a variation. The ID of the variation must be specified.
 </table>
 
 
+
+### VariationSearchRepositoryContract<a name="item_contracts_variationsearchrepositorycontract"></a>
+
+A repository for comfortable searches for variations
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Variation\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>setSearchFilter</strong>(<a target="_blank" href="http://php.net/int">int</a> $name, <a target="_blank" href="http://php.net/array">array</a> $params):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$name</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$params</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setSearchParam</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>search</strong>():<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 ## Exceptions<a name="item_variation_exceptions"></a>
 ### VariationException<a name="item_exceptions_variationexception"></a>
 

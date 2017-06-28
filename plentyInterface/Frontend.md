@@ -932,6 +932,26 @@ The FrontendPaymentMethodRepositoryContract is the interface for the front end p
     
 Lists all payment methods of the current customer session.
     
+<pre>public <strong>getCurrentPaymentMethodsListForSwitch</strong>(<a target="_blank" href="http://php.net/int">int</a> $currentPaymentMethodId, <a target="_blank" href="http://php.net/int">int</a> $orderId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists all payment methods for switch.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$currentPaymentMethodId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getPaymentMethodName</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
  $paymentMethod, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
 
@@ -1086,6 +1106,46 @@ Gets the description of the payment method by ID and language. The ID of the pay
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
         <td>The language</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPaymentMethodSwitchToById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/int">int</a> $orderId = null):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$paymentMethodId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPaymentMethodSwitchFromById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/int">int</a> $orderId = null):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$paymentMethodId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td></td>
     </tr>
 </table>
 

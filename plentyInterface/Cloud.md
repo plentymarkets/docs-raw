@@ -1529,6 +1529,10 @@ Represent a storage object
             <td>lastModified</td>
             <td></td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>metaData</td>
+            <td></td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>eTag</td>
             <td></td>

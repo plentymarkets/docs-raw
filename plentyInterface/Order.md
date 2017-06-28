@@ -817,7 +817,8 @@ If you want to load relations, you need to include at least one, but you can als
 </table>
 
 
-<pre>public <strong>searchOrders</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>searchOrders</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
 
     
 List orders
@@ -2714,7 +2715,8 @@ Get a redeemed coupon for a contact
 </table>
 
 
-<pre>public <strong>findByContact</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>findByContact</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
 
     
 List redeemed coupons for a contact
@@ -2739,7 +2741,8 @@ List redeemed coupons for a contact
 </table>
 
 
-<pre>public <strong>findByCampaign</strong>(<a target="_blank" href="http://php.net/int">int</a> $campaignId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>findByCampaign</strong>(<a target="_blank" href="http://php.net/int">int</a> $campaignId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
 
     
 List redeemed coupons of a campaign.
@@ -2764,7 +2767,8 @@ List redeemed coupons of a campaign.
 </table>
 
 
-<pre>public <strong>findByCoupon</strong>(<a target="_blank" href="http://php.net/string">string</a> $coupon, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>findByCoupon</strong>(<a target="_blank" href="http://php.net/string">string</a> $coupon, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
 
     
 List redeemed coupons of a coupon code
@@ -3083,7 +3087,8 @@ Get a currency
 </table>
 
 
-<pre>public <strong>getCurrencyList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getCurrencyList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 Get all currencies supported in the system.
@@ -3103,7 +3108,8 @@ Get all currencies supported in the system.
 </table>
 
 
-<pre>public <strong>getCurrencyCountries</strong>(<a target="_blank" href="http://php.net/string">string</a> $currencyIso, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getCurrencyCountries</strong>(<a target="_blank" href="http://php.net/string">string</a> $currencyIso, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 List countries for a currency
@@ -3334,7 +3340,8 @@ The OrderDateRepositoryContract contains the functionality to find available Ord
 
 #### Methods
 
-<pre>public <strong>findNamesByTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $typeId):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>findNamesByTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $typeId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 List names of a date type
@@ -3502,7 +3509,8 @@ Get an order date from an order by the type of the order date
 </table>
 
 
-<pre>public <strong>findByOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>findByOrderId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 List order dates of an order
@@ -3708,7 +3716,8 @@ Delete an order item date by an order item and an order date type.
 </table>
 
 
-<pre>public <strong>findByOrderItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderItemId):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>findByOrderItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderItemId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 List order item dates of an order item.
@@ -5181,7 +5190,8 @@ Delete an order item property by an order item ID and an order property type ID.
 </table>
 
 
-<pre>public <strong>findByOrderItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderItemId):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>findByOrderItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderItemId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 List order item properties of an order item.
@@ -5677,7 +5687,8 @@ Provides methods for processing order referrers. An order referrer indicates whe
 
 #### Methods
 
-<pre>public <strong>getList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 List order referrers
@@ -6357,7 +6368,8 @@ The ParcelServicePresetRepositoryContract is the interface for the shipping prof
 
 #### Methods
 
-<pre>public <strong>getPresetList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/string">string</a> $parcelServiceName = null, <a target="_blank" href="http://php.net/string">string</a> $with = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPresetList</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/string">string</a> $with = null, <a target="_blank" href="http://php.net/string">string</a> $parcelServiceName = null, <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 Lists shipping profiles.
@@ -6371,13 +6383,18 @@ Lists shipping profiles.
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$with</td>
+        <td>The parameter contains the name of an relation</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$parcelServiceName</td>
         <td>Filter that restricts the search result to parcel service presets with a specified service name (e.g. 'DHL' for DHL)</td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$with</td>
-        <td>The parameter contains the name of an relation</td>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>Possible attributes are updatedAtBefore and updatedAtAfter (yyyy-mm-dd or yyyy-mm-dd hh:mm:ss)</td>
     </tr>
 </table>
 
@@ -6430,6 +6447,34 @@ Calculate shipping costs and list last weighted preset combinations.
 </table>
 
 
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 ## Models<a name="order_shipping_models"></a>
 ### DefaultShipping<a name="order_models_defaultshipping"></a>
 
@@ -6542,7 +6587,8 @@ Repository for Country
 </table>
 
 
-<pre>public <strong>getCountriesList</strong>(<a target="_blank" href="http://php.net/int">int</a> $active, <a target="_blank" href="http://php.net/array">array</a> $with):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getCountriesList</strong>(<a target="_blank" href="http://php.net/int">int</a> $active, <a target="_blank" href="http://php.net/array">array</a> $with):<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</pre>
 
     
 
@@ -6562,7 +6608,7 @@ Repository for Country
 </table>
 
 
-<pre>public <strong>getActiveCountriesList</strong>():<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
+<pre>public <strong>getActiveCountriesList</strong>():<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
 </pre>
 
     
@@ -7662,7 +7708,7 @@ The ShippingServiceProviderRepositoryContract is the interface for the shipping 
 
 #### Methods
 
-<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -7684,6 +7730,11 @@ Lists shipping service providers.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemsPerPage</td>
         <td>The number of items to list per page</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
     </tr>
 </table>
 
