@@ -481,8 +481,18 @@ Retrieve the &quot;count&quot; result of the query.
 ## Contracts<a name="plugin_dynamodb_contracts"></a>
 ### DynamoDbRepositoryContract<a name="plugin_contracts_dynamodbrepositorycontract"></a>
 
-AWS DynamoDb Repository
+AWS DynamoDb Repository (Deprecated)
 
+<div class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+            Deprecated! <small>(since 2017-06-30)</small>        </h3>
+    </div>
+    <div class="panel-body">
+        Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+    </div>
+</div>
 
 #### Namespace
 
@@ -494,6 +504,16 @@ AWS DynamoDb Repository
 
 <pre>public <strong>createTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/array">array</a> $attributeDefinitions, <a target="_blank" href="http://php.net/array">array</a> $keySchema, <a target="_blank" href="http://php.net/int">int</a> $readCapacityUnits = 3, <a target="_blank" href="http://php.net/int">int</a> $writeCapacityUnits = 2):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
+<div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                Deprecated! <small>(since 2017-06-30)</small>            </h3>
+        </div>
+        <div class="panel-body">
+            Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+        </div>
+    </div>
     
 Create a table
     
@@ -534,6 +554,16 @@ Create a table
 
 <pre>public <strong>updateTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/int">int</a> $readCapacityUnits = 3, <a target="_blank" href="http://php.net/int">int</a> $writeCapacityUnits = 2):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
+<div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                Deprecated! <small>(since 2017-06-30)</small>            </h3>
+        </div>
+        <div class="panel-body">
+            Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+        </div>
+    </div>
     
 Update a table
     
@@ -564,6 +594,16 @@ Update a table
 
 <pre>public <strong>putItem</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/array">array</a> $item):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
+<div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                Deprecated! <small>(since 2017-06-30)</small>            </h3>
+        </div>
+        <div class="panel-body">
+            Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+        </div>
+    </div>
     
 Add item to table
     
@@ -589,6 +629,16 @@ Add item to table
 
 <pre>public <strong>getItem</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/bool">bool</a> $consistentRead, <a target="_blank" href="http://php.net/array">array</a> $key):<a target="_blank" href="http://php.net/array">array</a></pre>
 
+<div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                Deprecated! <small>(since 2017-06-30)</small>            </h3>
+        </div>
+        <div class="panel-body">
+            Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+        </div>
+    </div>
     
 Retrieving items
     
@@ -619,6 +669,16 @@ Retrieving items
 
 <pre>public <strong>deleteItem</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/array">array</a> $key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
+<div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                Deprecated! <small>(since 2017-06-30)</small>            </h3>
+        </div>
+        <div class="panel-body">
+            Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+        </div>
+    </div>
     
 Delete an item
     
@@ -644,6 +704,16 @@ Delete an item
 
 <pre>public <strong>deleteTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
+<div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                Deprecated! <small>(since 2017-06-30)</small>            </h3>
+        </div>
+        <div class="panel-body">
+            Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+        </div>
+    </div>
     
 Deleting a table
     
@@ -665,6 +735,16 @@ Deleting a table
 <pre>public <strong>scan</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/string">string</a> $returnFields = &quot;&quot;, <a target="_blank" href="http://php.net/array">array</a> $expressionAttributeValues = [], <a target="_blank" href="http://php.net/string">string</a> $filterExpression = &quot;&quot;, <a target="_blank" href="http://php.net/int">int</a> $limit):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
+<div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                Deprecated! <small>(since 2017-06-30)</small>            </h3>
+        </div>
+        <div class="panel-body">
+            Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+        </div>
+    </div>
     
 A scan operation scans the entire table. You can specify filters to apply to the results to refine the values returned to you, after the complete scan. Amazon DynamoDB puts a 1MB limit on the scan (the limit applies before the results are filtered).
     

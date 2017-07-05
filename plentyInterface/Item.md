@@ -290,6 +290,188 @@ Returns the filter array.
 Clears the filter array.
     
 
+### AttributeValueMarketNameRepositoryContract<a name="item_contracts_attributevaluemarketnamerepositorycontract"></a>
+
+The contract for the attribute value market name repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Attribute\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_attributevaluemarketname">AttributeValueMarketName</a>
+</pre>
+
+    
+Creates an attribute value market name. The ID of the attribute value must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The attribute value market name data as associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $referenceType):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes an attribute value market name. The ID of the attribute value and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$valueId</td>
+        <td>The ID of the attribute value</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The lang of the attribute value name</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$referenceType</td>
+        <td>The referenceType of the attribute value name</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $referenceType):<a href="item#item_models_attributevaluemarketname">AttributeValueMarketName</a>
+</pre>
+
+    
+Updates an attribute value market name. The ID of the attribute value and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The attribute value market name data as associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$valueId</td>
+        <td>The ID of the attribute value</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The lang of the attribute value market name</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$referenceType</td>
+        <td>The referenceType of the attribute value name</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $referenceType):<a href="item#item_models_attributevaluemarketname">AttributeValueMarketName</a>
+</pre>
+
+    
+Gets an attribute value market name. The ID of the attribute value and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$valueId</td>
+        <td>The ID of the attribute value</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The lang of the attribute value name</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$referenceType</td>
+        <td>The referenceType of the attribute value name</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByAttributeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $valueId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists attribute value market names. The ID of the attribute and the language must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$valueId</td>
+        <td>The ID of the attribute</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The lang of the attribute value name</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+Search attribute value market names.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
+
 ### AttributeValueNameRepositoryContract<a name="item_contracts_attributevaluenamerepositorycontract"></a>
 
 The contract for the attribute value name repository
@@ -811,6 +993,67 @@ The AttributeValue model including Attribute and AttributeValueName
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>valueNames</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>valueMarketNames</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### AttributeValueMarketName<a name="item_models_attributevaluemarketname"></a>
+
+The AttributeValueMarketName model including AttributeValue
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Attribute\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>valueId</td>
+            <td>The unique ID of the attribute value.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lang</td>
+            <td>The <a href="https://developers.plentymarkets.com/rest-doc/introduction#countries" target="_blank">language</a> of the attribute value market.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the attribute value market.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>attributeId</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>referenceType</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="item#item_models_attributevalue">AttributeValue</a>
+</td>
+            <td>attributeValue</td>
             <td></td>
         </tr></tbody>
 </table>
@@ -9588,7 +9831,7 @@ foo
 </table>
 
 
-<pre>public <strong>setSearchString</strong>(<a target="_blank" href="http://php.net/string">string</a> $value, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $precision = &quot;fuzzy&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>setSearchString</strong>(<a target="_blank" href="http://php.net/string">string</a> $value, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $precision = &quot;fuzzy&quot;, <a target="_blank" href="http://php.net/string">string</a> $operator = \Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch::OR_OPERATOR):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -9609,6 +9852,11 @@ foo
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$precision</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
         <td></td>
     </tr>
 </table>

@@ -50,7 +50,7 @@ Document
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>source</td>
-            <td>The source where the document was generated. Possible sources are SOAP, admin for the plentymarkets backend, Klarna etc.</td>
+            <td>The source where the document was generated. Possible sources are 'klarna', 'soap', 'admin', 'hitmeister', 'paypal' and 'rest'.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>displayDate</td>

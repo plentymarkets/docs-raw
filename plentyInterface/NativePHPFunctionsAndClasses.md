@@ -14,6 +14,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.addslashes.php">addslashes</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.array-column.php">array_column</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-combine.php">array_combine</a>
             </li>
                     <li>

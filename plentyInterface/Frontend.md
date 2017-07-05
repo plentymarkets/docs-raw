@@ -932,7 +932,7 @@ The FrontendPaymentMethodRepositoryContract is the interface for the front end p
     
 Lists all payment methods of the current customer session.
     
-<pre>public <strong>getCurrentPaymentMethodsListForSwitch</strong>(<a target="_blank" href="http://php.net/int">int</a> $currentPaymentMethodId, <a target="_blank" href="http://php.net/int">int</a> $orderId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getCurrentPaymentMethodsListForSwitch</strong>(<a target="_blank" href="http://php.net/int">int</a> $currentPaymentMethodId, <a target="_blank" href="http://php.net/int">int</a> $orderId = null, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Lists all payment methods for switch.
@@ -947,6 +947,11 @@ Lists all payment methods for switch.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
         <td></td>
     </tr>
 </table>
@@ -1030,6 +1035,23 @@ Gets the description of the payment method. The description can be entered in th
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPaymentMethodSourceUrl</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
+ $paymentMethod):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Gets the detail link of the payment method. The detail link can be entered in the config.json.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="payment#payment_models_paymentmethod">PaymentMethod</a>
+</td>
+        <td>$paymentMethod</td>
         <td></td>
     </tr>
 </table>

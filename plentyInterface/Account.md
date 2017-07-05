@@ -911,6 +911,7 @@ The AddressOptionType model
 <li>8 = BBFC</li>
 <li>9 = Birthday</li>
 <li>10 = Session ID</li>
+<li>11 = Title</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
