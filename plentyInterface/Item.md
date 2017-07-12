@@ -6387,6 +6387,42 @@ Lists all properties.
 </table>
 
 
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $filter = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+Search properties.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>An array of the shown columns. All columns are returned by default.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$perPage</td>
+        <td>The amount of attribute values shown per page. Default value is 50</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The shown page. Default value is 1.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -9961,6 +9997,91 @@ foo
 
 
 
+### TagFilter<a name="item_filter_tagfilter"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Filter`
+
+
+
+#### Methods
+
+<pre>public <strong>hasTag</strong>(<a target="_blank" href="http://php.net/int">int</a> $tagId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$tagId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAnyTag</strong>(<a target="_blank" href="http://php.net/array">array</a> $tagIds):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$tagIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAllTags</strong>(<a target="_blank" href="http://php.net/array">array</a> $tagIds):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$tagIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addStatement</strong>(<a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+ $statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### TextFilter<a name="item_filter_textfilter"></a>
 
 foo
@@ -10147,12 +10268,38 @@ foo
     
 
     
-<pre>public <strong>isSalable</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>isSalable</strong>(<a target="_blank" href="http://php.net/bool">bool</a> $bool = true):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
 
     
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$bool</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isSalableAndActive</strong>(<a target="_blank" href="http://php.net/bool">bool</a> $bool = true):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$bool</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>hasADescriptionInLanguage</strong>(<a target="_blank" href="http://php.net/string">string</a> $language):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -10481,7 +10628,7 @@ foo
 
 ### ImageMutator<a name="item_mutators_imagemutator"></a>
 
-
+foo
 
 
 #### Namespace
@@ -13067,6 +13214,34 @@ Gets an image link
 </table>
 
 
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 ## Models<a name="item_variationimage_models"></a>
 ### VariationImage<a name="item_models_variationimage"></a>
 
@@ -14020,6 +14195,52 @@ The contract of the variation sku repository
 
 #### Methods
 
+<pre>public <strong>generateSkuWithParent</strong>(<a target="_blank" href="http://php.net/array">array</a> $variation, <a target="_blank" href="http://php.net/float">float</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $accountId, <a target="_blank" href="http://php.net/string">string</a> $sku = null, <a target="_blank" href="http://php.net/string">string</a> $parentSku = null, <a target="_blank" href="http://php.net/bool">bool</a> $setLastExportedTimestamp = true, <a target="_blank" href="http://php.net/bool">bool</a> $returnObject = false):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Generates or updates an SKU and parent SKU
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$variation</td>
+        <td>The array of values from the variation</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$marketId</td>
+        <td>The unique ID of the market</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$accountId</td>
+        <td>The unique ID of the account</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$sku</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$parentSku</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$setLastExportedTimestamp</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$returnObject</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>generateSku</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/float">float</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $accountId, <a target="_blank" href="http://php.net/string">string</a> $sku = null, <a target="_blank" href="http://php.net/bool">bool</a> $setLastExportedTimestamp = true, <a target="_blank" href="http://php.net/bool">bool</a> $returnObject = false):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -14379,6 +14600,34 @@ Redistribute stock
 </table>
 
 
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 ## Models<a name="item_variationstock_models"></a>
 ### VariationStock<a name="item_models_variationstock"></a>
 

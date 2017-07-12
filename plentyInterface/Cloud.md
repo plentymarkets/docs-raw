@@ -731,6 +731,25 @@ To be written
 
     
 
+### SingleNestedSorting<a name="cloud_sorting_singlenestedsorting"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Sorting`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+
 ### SingleSorting<a name="cloud_sorting_singlesorting"></a>
 
 To be written
