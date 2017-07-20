@@ -472,6 +472,66 @@ The basket item model
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>
             <td>The date that the shopping cart was updated last</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>attributeTotalMarkup</td>
+            <td>attribute total markup</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>basketItemOrderParams</td>
+            <td>Array of BasketItemParams</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### BasketItemParams<a name="basket_models_basketitemparams"></a>
+
+The basket item params model
+
+
+#### Namespace
+
+`Plenty\Modules\Basket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>type</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>basketItemId</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>propertyId</td>
+            <td></td>
         </tr></tbody>
 </table>
 

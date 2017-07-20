@@ -32,7 +32,7 @@ Get a listing by a given ID.
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Listing instance, one of "markets", "type", "stockDependenceType", "properties".</td>
+        <td>The relations to load in the listing instance, one of "markets", "type", "stockDependenceType", "properties".</td>
     </tr>
 </table>
 
@@ -421,7 +421,7 @@ The LayoutTemplateRepositoryContract is the interface for the layout template re
 </pre>
 
     
-Get an layout template.
+Get a layout template.
     
 ##### <strong>Parameters</strong>
     
@@ -442,7 +442,7 @@ Get an layout template.
 </pre>
 
     
-Create an layout template.
+Create a layout template.
     
 ##### <strong>Parameters</strong>
     
@@ -676,7 +676,7 @@ Start listing markets on the designated markets.
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$params</td>
-        <td>The parameters that should be considers during start. Available values are 'startTime', 'startDistribution'</td>
+        <td>The parameters that should be considered during start. Available values are 'startTime', 'startDistribution'</td>
     </tr>
 </table>
 
@@ -1256,7 +1256,7 @@ Get a listing market directory
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Create an listing market directory.
+Create a listing market directory.
     
 ##### <strong>Parameters</strong>
     
@@ -1337,7 +1337,7 @@ The listing market directory model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>parentId</td>
-            <td>The parent id of the listing market directory.</td>
+            <td>The parent ID of the listing market directory.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>level</td>
@@ -1487,7 +1487,7 @@ Update the listing market histories on the designated markets.
 <li>quantityPriceAndVariations - Updates the quantity and price (also for variations)</li>
 <li>resetVariations - Reset the variations. The variation from the item are transmitted again</li>
 <li>partsFitment - Updates the parts fitment information (only available for eBay)</li>
-<li>loyaltyProgram - Updates the listing loyalty program information (only available for eBay Plus) -</li>
+<li>loyaltyProgram - Updates the listing loyalty program information (only available for eBay Plus) </li>
 <li>resetRrp - Reset the recommended retail price information</li>
 <li>payment - Updates payment information (only available for Hood)</li>
 </ul></td>
@@ -1551,7 +1551,7 @@ The listing market history model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>listingMarketId</td>
-            <td>The listing market ID of the current listing market history</td>
+            <td>The listing market ID of the current listing market history.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>referrerId</td>
@@ -1699,7 +1699,7 @@ The listing market history dates model. Each listing market history date has a t
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>updatedAt</td>
-            <td>The date that the date was updated last.</td>
+            <td>The date that the date was last updated.</td>
         </tr><tr>
             <td><a href="listing#listing_models_listingmarket">ListingMarket</a>
 </td>
@@ -1931,7 +1931,7 @@ Returns this model as an array.
 ## Contracts<a name="listing_info_contracts"></a>
 ### ListingMarketInfoRepositoryContract<a name="listing_contracts_listingmarketinforepositorycontract"></a>
 
-The ListingMarketInfoRepositoryContract is the interface for the listing market info repository. This interface allows you to get a information about one or many listing markets.
+The ListingMarketInfoRepositoryContract is the interface for the listing market info repository. This interface allows you to get information about one or many listing markets.
 
 
 #### Namespace
@@ -2261,7 +2261,7 @@ The listing market text model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The ID of the lisitng market text.</td>
+            <td>The ID of the listing market text.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>listingMarketId</td>
@@ -2325,7 +2325,7 @@ Get option template
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td>The ID of the option template</td>
+        <td>The ID of the option template.</td>
     </tr>
 </table>
 
@@ -2357,7 +2357,7 @@ Update option template
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td>The ID of the option template</td>
+        <td>The ID of the option template.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -2378,7 +2378,7 @@ Delete option template
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td>The ID of the option template</td>
+        <td>The ID of the option template.</td>
     </tr>
 </table>
 
@@ -2415,15 +2415,15 @@ The option template model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>listing</td>
-            <td>The listing options of the option template</td>
+            <td>The listing options of the option template.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>listingMarket</td>
-            <td>The listing market options of the option template</td>
+            <td>The listing market options of the option template.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>marketOptions</td>
-            <td>The market options of the option template</td>
+            <td>The market options of the option template.</td>
         </tr></tbody>
 </table>
 

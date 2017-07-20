@@ -908,7 +908,7 @@ The AddressOptionType model
 <li>5 = Email</li>
 <li>6 = Post number</li>
 <li>7 = Personal id</li>
-<li>8 = BBFC</li>
+<li>8 = BBFC (age rating)</li>
 <li>9 = Birthday</li>
 <li>10 = Session ID</li>
 <li>11 = Title</li>
@@ -3736,8 +3736,7 @@ kommt noch
 </table>
 
 
-<pre>public <strong>addSearch</strong>(<a href="cloud#cloud_search_searchinterface">SearchInterface</a>
- $search):<a href="cloud#cloud_contracts_elasticsearchsearchrepositorycontract">ElasticSearchSearchRepositoryContract</a>
+<pre>public <strong>addSearch</strong>($search):<a href="cloud#cloud_contracts_elasticsearchsearchrepositorycontract">ElasticSearchSearchRepositoryContract</a>
 </pre>
 
     
@@ -3746,7 +3745,7 @@ kommt noch
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a href="cloud#cloud_search_searchinterface">SearchInterface</a>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$search</td>
         <td></td>

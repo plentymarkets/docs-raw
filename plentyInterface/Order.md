@@ -1615,7 +1615,11 @@ This model contains the order properties that are assigned to order items.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>fileUrl</td>
-            <td>The URL of the oder property</td>
+            <td>The URL of the order property</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the order property</td>
         </tr></tbody>
 </table>
 

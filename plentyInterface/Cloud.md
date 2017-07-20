@@ -3,6 +3,60 @@
 # ElasticSearch<a name="cloud_elasticsearch"></a>
     
 ## Contracts<a name="cloud_elasticsearch_contracts"></a>
+### ElasticSearchMultiSearchRepositoryContract<a name="cloud_contracts_elasticsearchmultisearchrepositorycontract"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>setIndex</strong>(<a href="cloud#cloud_index_indexinterface">IndexInterface</a>
+ $index):<a href="cloud#cloud_contracts_elasticsearchmultisearchrepositorycontract">ElasticSearchMultiSearchRepositoryContract</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_index_indexinterface">IndexInterface</a>
+</td>
+        <td>$index</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSearch</strong>($search):<a href="cloud#cloud_contracts_elasticsearchmultisearchrepositorycontract">ElasticSearchMultiSearchRepositoryContract</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$search</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>execute</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+
 ### ElasticSearchSearchRepositoryContract<a name="cloud_contracts_elasticsearchsearchrepositorycontract"></a>
 
 foo
@@ -34,8 +88,7 @@ foo
 </table>
 
 
-<pre>public <strong>addSearch</strong>(<a href="cloud#cloud_search_searchinterface">SearchInterface</a>
- $search):<a href="cloud#cloud_contracts_elasticsearchsearchrepositorycontract">ElasticSearchSearchRepositoryContract</a>
+<pre>public <strong>addSearch</strong>($search):<a href="cloud#cloud_contracts_elasticsearchsearchrepositorycontract">ElasticSearchSearchRepositoryContract</a>
 </pre>
 
     
@@ -44,7 +97,7 @@ foo
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a href="cloud#cloud_search_searchinterface">SearchInterface</a>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$search</td>
         <td></td>
@@ -66,6 +119,24 @@ elastic search constants
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib`
+
+
+
+#### Methods
+
+<pre>public static <strong>getKeyByLanguage</strong>(<a target="_blank" href="http://php.net/string">string</a> $language):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$language</td>
+        <td></td>
+    </tr>
+</table>
 
 
 # Data<a name="cloud_data"></a>
@@ -583,7 +654,216 @@ to be written
     
 
     
+
+### SuggestionProcessor<a name="cloud_processor_suggestionprocessor"></a>
+
+to be written
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Processor`
+
+
+
+#### Methods
+
+<pre>public <strong>getDependencies</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addMutator</strong>(<a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+ $mutator):<a href="cloud#cloud_lib_processor">Processor</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+</td>
+        <td>$mutator</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Search<a name="cloud_lib_search"></a>
+### BaseSearch<a name="cloud_search_basesearch"></a>
+
+Base class for different Search classes
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Search`
+
+
+
+#### Methods
+
+<pre>public <strong>addFilter</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+ $filter):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+</td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSource</strong>(<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+ $source):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</td>
+        <td>$source</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setSorting</strong>(<a href="cloud#cloud_sorting_sortinginterface">SortingInterface</a>
+ $sorting):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_sorting_sortinginterface">SortingInterface</a>
+</td>
+        <td>$sorting</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addAggregation</strong>(<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+ $aggregation):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</td>
+        <td>$aggregation</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSuggestion</strong>(<a href="cloud#cloud_suggestion_suggestioninterface">SuggestionInterface</a>
+ $suggestion):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_suggestion_suggestioninterface">SuggestionInterface</a>
+</td>
+        <td>$suggestion</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $rowsPerPage):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$rowsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getSources</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the instance as an array.
+    
+
 ### SearchInterface<a name="cloud_search_searchinterface"></a>
 
 To be written
@@ -651,6 +931,42 @@ To be written
 </table>
 
 
+<pre>public <strong>addAggregation</strong>(<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+ $aggregation):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</td>
+        <td>$aggregation</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSuggestion</strong>(<a href="cloud#cloud_suggestion_suggestioninterface">SuggestionInterface</a>
+ $suggestion):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_suggestion_suggestioninterface">SuggestionInterface</a>
+</td>
+        <td>$suggestion</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -667,6 +983,11 @@ To be written
 </table>
 
 
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -1220,6 +1541,64 @@ Get the instance as an array.
     
 # Search<a name="cloud_search"></a>
     
+## Aggregation<a name="cloud_search_aggregation"></a>
+### AggregationInterface<a name="cloud_aggregation_aggregationinterface"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregation`
+
+
+
+#### Methods
+
+<pre>public <strong>addSource</strong>(<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+ $source):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</td>
+        <td>$source</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the instance as an array.
+    
 ## Document<a name="cloud_search_document"></a>
 ### DocumentSearch<a name="cloud_document_documentsearch"></a>
 
@@ -1234,11 +1613,6 @@ foo
 
 #### Methods
 
-<pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -1264,12 +1638,45 @@ foo
     
 
     
+<pre>public <strong>getAggregations</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getSuggestions</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
 <pre>public <strong>getSources</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
 
     
+<pre>public <strong>getName</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setName</strong>($name):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$name</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>addFilter</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
  $filter):<a href="cloud#cloud_lib_search">Search</a>
 </pre>
@@ -1324,6 +1731,42 @@ foo
 </table>
 
 
+<pre>public <strong>addAggregation</strong>(<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+ $aggregation):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</td>
+        <td>$aggregation</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSuggestion</strong>(<a href="cloud#cloud_suggestion_suggestioninterface">SuggestionInterface</a>
+ $suggestion):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_suggestion_suggestioninterface">SuggestionInterface</a>
+</td>
+        <td>$suggestion</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>setPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $rowsPerPage):<a href="cloud#cloud_lib_search">Search</a>
 </pre>
 
@@ -1345,6 +1788,121 @@ foo
 </table>
 
 
+## Suggestion<a name="cloud_search_suggestion"></a>
+### SuggestionInterface<a name="cloud_suggestion_suggestioninterface"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Suggestion`
+
+
+
+#### Methods
+
+<pre>public <strong>setText</strong>(<a target="_blank" href="http://php.net/string">string</a> $text):<a href="cloud#cloud_search_suggestion">Suggestion</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$text</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the instance as an array.
+    
+
+### TermSuggestion<a name="cloud_suggestion_termsuggestion"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Suggestion`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setText</strong>(<a target="_blank" href="http://php.net/string">string</a> $text):<a href="cloud#cloud_search_suggestion">Suggestion</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$text</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getField</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
 # Source<a name="cloud_source"></a>
     
 ## Mutator<a name="cloud_source_mutator"></a>
