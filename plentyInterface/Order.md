@@ -901,6 +901,12 @@ Sets the filter array.
     
 Returns the filter array.
     
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -5785,6 +5791,12 @@ Delete an order referrer.
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 ## Models<a name="order_referrer_models"></a>
 ### OrderReferrer<a name="order_models_orderreferrer"></a>
 
@@ -6451,6 +6463,12 @@ Calculate shipping costs and list last weighted preset combinations.
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -6472,6 +6490,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -7796,6 +7820,12 @@ Creates a shipping service provider or updates it if already existing
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 ## Models<a name="order_serviceprovider_models"></a>
 ### ShippingServiceProvider<a name="order_models_shippingserviceprovider"></a>
 
@@ -8065,6 +8095,12 @@ List status histories
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -8086,6 +8122,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>

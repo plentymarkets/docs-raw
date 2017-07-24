@@ -261,6 +261,12 @@ Lists all attributes.
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -282,6 +288,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -443,6 +455,12 @@ Search attribute value market names.
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -464,6 +482,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -765,11 +789,23 @@ Sets the filter array.
     
 Returns the filter array.
     
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
 Clears the filter array.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
     
 ## Models<a name="item_attribute_models"></a>
 ### Attribute<a name="item_models_attribute"></a>
@@ -1553,6 +1589,12 @@ Gets barcode referrer by specified referrer.
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -1574,6 +1616,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -3990,6 +4038,12 @@ Update a item. The ID of the item must be specified.
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -4011,6 +4065,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -4793,6 +4853,12 @@ Uploads an item image
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -4814,6 +4880,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -5506,7 +5578,7 @@ Deletes a manufacturer. The ID of the manufacturer must be specified.
 </table>
 
 
-<pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $manufacturerId):<a href="item#item_models_manufacturer">Manufacturer</a>
+<pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $manufacturerId, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="item#item_models_manufacturer">Manufacturer</a>
 </pre>
 
     
@@ -5519,10 +5591,15 @@ Gets a manufacturer. The ID of the manufacturer must be specified.
         <td>$manufacturerId</td>
         <td>The ID of the manufacturer</td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td></td>
+    </tr>
 </table>
 
 
-<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
 
     
@@ -5544,6 +5621,11 @@ Lists all manufacturers.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$page</td>
         <td>The shown page. Default value is 1.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td></td>
     </tr>
 </table>
 
@@ -5569,6 +5651,12 @@ Lists manufacturers by filter
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -5590,6 +5678,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -6423,6 +6517,12 @@ Search properties.
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -6444,6 +6544,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -7943,11 +8049,23 @@ Sets the filter array.
     
 Returns the filter array.
     
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
 Clears the filter array.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
     
 
 ### SalesPriceSearchRepositoryContract<a name="item_contracts_salespricesearchrepositorycontract"></a>
@@ -11393,6 +11511,12 @@ Lists all units.
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -11414,6 +11538,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -11901,6 +12031,12 @@ A repository for comfortable searches for variations
     
 
     
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -11922,6 +12058,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -13400,6 +13542,12 @@ Gets an image link
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -13421,6 +13569,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -14807,6 +14961,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>

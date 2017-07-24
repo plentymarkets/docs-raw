@@ -115,6 +115,12 @@ Updates a ticket with given data.
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 
 ### TicketRoleNameRepositoryContract<a name="ticket_contracts_ticketrolenamerepositorycontract"></a>
 

@@ -120,6 +120,12 @@ Delete listing
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -141,6 +147,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -469,6 +481,12 @@ Delete layout template
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -490,6 +508,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -712,6 +736,12 @@ Delete a listing market
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -733,6 +763,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -838,54 +874,55 @@ The listing market model.
 <li>10 = Use item price</li>
 <li>11 = Number per lot</li>
 <li>12 = Transmit item number type</li>
+<li>13 = Relisted external ID</li>
+<li>14 = SCO offer</li>
+<li>15 = Promotion</li>
+<li>16 = UUID</li>
+<li>17 = Update error</li>
+<li>18 = Has variations</li>
+<li>19 = End now</li>
+<li>20 = Insert by type</li>
+<li>21 = Payment methods</li>
+<li>22 = First platform category ID</li>
+<li>23 = Second platform category ID</li>
+<li>24 = First shop category ID</li>
+<li>25 = Second shop category ID</li>
+<li>26 = Third shop category ID</li>
+<li>27 = Enhancements</li>
 <li>100 = eBay parts fitment ID</li>
 <li>101 = eBay maximum online listings</li>
-<li>102 = eBay first platform category ID</li>
-<li>103 = eBay second platform category ID</li>
-<li>104 = eBay first shop category ID</li>
-<li>105 = eBay second shop category ID</li>
-<li>106 = eBay private auction</li>
-<li>107 = eBay gallery type</li>
-<li>108 = eBay gallery duration</li>
-<li>109 = eBay transmit MPR</li>
-<li>110 = eBay counter type</li>
-<li>111 = eBay condition ID</li>
-<li>112 = eBay condition description</li>
-<li>113 = eBay enhancements</li>
-<li>114 = eBay best offer</li>
-<li>115 = eBay best offer decline price</li>
-<li>116 = eBay best offer accept price</li>
-<li>117 = eBay is eBayPlus</li>
-<li>118 = eBay is Click & Collect</li>
-<li>200 = Hood first platform category</li>
-<li>201 = Hood second platform category</li>
-<li>202 = Hood first shop category</li>
-<li>203 = Hood second shop category</li>
-<li>204 = Hood third shop category</li>
-<li>205 = Hood payment methods</li>
-<li>206 = Hood enhancements</li>
-<li>207 = Hood show on shop startpage</li>
-<li>208 = Hood shipping discount</li>
-<li>209 = Hood delivery days on stock from</li>
-<li>210 = Hood delivery days on stock to</li>
-<li>211 = Hood delivery days not on stock from</li>
-<li>212 = Hood delivery days not on stock to</li>
-<li>300 = Ricardo first platform category ID</li>
-<li>301 = Ricardo warranty ID</li>
-<li>302 = Ricardo delivery ID</li>
-<li>303 = Ricardo availability ID</li>
-<li>304 = Ricardo delivery cost</li>
-<li>305 = Ricardo payment ID</li>
-<li>306 = Ricardo price increment</li>
-<li>307 = Ricardo payment methods</li>
-<li>308 = Ricardo enhancements</li>
-<li>309 = Ricardo item condition ID</li>
-<li>310 = Ricardo max relist count</li>
-<li>311 = Ricardo is cumulative shipping</li>
-<li>312 = Ricardo delivery package size ID</li>
-<li>313 = Ricardo use secondary language</li>
-<li>314 = Ricardo template ID</li>
-<li>315 = Ricardo is relist sold out</li>
+<li>102 = eBay private auction</li>
+<li>103 = eBay gallery type</li>
+<li>104 = eBay gallery duration</li>
+<li>105 = eBay transmit MPR</li>
+<li>106 = eBay counter type</li>
+<li>107 = eBay condition ID</li>
+<li>108 = eBay condition description</li>
+<li>109 = eBay best offer</li>
+<li>110 = eBay best offer decline price</li>
+<li>111 = eBay best offer accept price</li>
+<li>112 = eBay is eBay Plus</li>
+<li>113 = eBay is click & Collect</li>
+<li>114 = eBay use EPS</li>
+<li>200 = Hood show on shop startpage</li>
+<li>201 = Hood shipping discount</li>
+<li>202 = Hood delivery days on stock from</li>
+<li>203 = Hood delivery days on stock to</li>
+<li>204 = Hood delivery days not on stock from</li>
+<li>205 = Hood delivery days not on stock to</li>
+<li>300 = Ricardo warranty ID</li>
+<li>301 = Ricardo delivery ID</li>
+<li>302 = Ricardo availability ID</li>
+<li>303 = Ricardo delivery cost</li>
+<li>304 = Ricardo payment ID</li>
+<li>305 = Ricardo price increment</li>
+<li>306 = Ricardo item condition ID</li>
+<li>307 = Ricardo max relist count</li>
+<li>308 = Ricardo is cumulative shipping</li>
+<li>309 = Ricardo delivery package size ID</li>
+<li>310 = Ricardo use secondary language</li>
+<li>311 = Ricardo template ID</li>
+<li>312 = Ricardo is relist sold out</li>
 </ul></td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
@@ -1142,54 +1179,55 @@ The listing market properties model. Each listing market property has a type.
 <li>10 = Use item price</li>
 <li>11 = Number per lot</li>
 <li>12 = Transmit item number type</li>
+<li>13 = Relisted external ID</li>
+<li>14 = SCO offer</li>
+<li>15 = Promotion</li>
+<li>16 = UUID</li>
+<li>17 = Update error</li>
+<li>18 = Has variations</li>
+<li>19 = End now</li>
+<li>20 = Insert by type</li>
+<li>21 = Payment methods</li>
+<li>22 = First platform category ID</li>
+<li>23 = Second platform category ID</li>
+<li>24 = First shop category ID</li>
+<li>25 = Second shop category ID</li>
+<li>26 = Third shop category ID</li>
+<li>27 = Enhancements</li>
 <li>100 = eBay parts fitment ID</li>
 <li>101 = eBay maximum online listings</li>
-<li>102 = eBay first platform category ID</li>
-<li>103 = eBay second platform category ID</li>
-<li>104 = eBay first shop category ID</li>
-<li>105 = eBay second shop category ID</li>
-<li>106 = eBay private auction</li>
-<li>107 = eBay gallery type</li>
-<li>108 = eBay gallery duration</li>
-<li>109 = eBay transmit MPR</li>
-<li>110 = eBay counter type</li>
-<li>111 = eBay condition ID</li>
-<li>112 = eBay condition description</li>
-<li>113 = eBay enhancements</li>
-<li>114 = eBay best offer</li>
-<li>115 = eBay best offer decline price</li>
-<li>116 = eBay best offer accept price</li>
-<li>117 = eBay is eBayPlus</li>
-<li>118 = eBay is Click & Collect</li>
-<li>200 = Hood first platform category</li>
-<li>201 = Hood second platform category</li>
-<li>202 = Hood first shop category</li>
-<li>203 = Hood second shop category</li>
-<li>204 = Hood third shop category</li>
-<li>205 = Hood payment methods</li>
-<li>206 = Hood enhancements</li>
-<li>207 = Hood show on shop startpage</li>
-<li>208 = Hood shipping discount</li>
-<li>209 = Hood delivery days on stock from</li>
-<li>210 = Hood delivery days on stock to</li>
-<li>211 = Hood delivery days not on stock from</li>
-<li>212 = Hood delivery days not on stock to</li>
-<li>300 = Ricardo first platform category ID</li>
-<li>301 = Ricardo warranty ID</li>
-<li>302 = Ricardo delivery ID</li>
-<li>303 = Ricardo availability ID</li>
-<li>304 = Ricardo delivery cost</li>
-<li>305 = Ricardo payment ID</li>
-<li>306 = Ricardo price increment</li>
-<li>307 = Ricardo payment methods</li>
-<li>308 = Ricardo enhancements</li>
-<li>309 = Ricardo item condition ID</li>
-<li>310 = Ricardo max relist count</li>
-<li>311 = Ricardo is cumulative shipping</li>
-<li>312 = Ricardo delivery package size ID</li>
-<li>313 = Ricardo use secondary language</li>
-<li>314 = Ricardo template ID</li>
-<li>315 = Ricardo is relist sold out</li>
+<li>102 = eBay private auction</li>
+<li>103 = eBay gallery type</li>
+<li>104 = eBay gallery duration</li>
+<li>105 = eBay transmit MPR</li>
+<li>106 = eBay counter type</li>
+<li>107 = eBay condition ID</li>
+<li>108 = eBay condition description</li>
+<li>109 = eBay best offer</li>
+<li>110 = eBay best offer decline price</li>
+<li>111 = eBay best offer accept price</li>
+<li>112 = eBay is eBay Plus</li>
+<li>113 = eBay is click & Collect</li>
+<li>114 = eBay use EPS</li>
+<li>200 = Hood show on shop startpage</li>
+<li>201 = Hood shipping discount</li>
+<li>202 = Hood delivery days on stock from</li>
+<li>203 = Hood delivery days on stock to</li>
+<li>204 = Hood delivery days not on stock from</li>
+<li>205 = Hood delivery days not on stock to</li>
+<li>300 = Ricardo warranty ID</li>
+<li>301 = Ricardo delivery ID</li>
+<li>302 = Ricardo availability ID</li>
+<li>303 = Ricardo delivery cost</li>
+<li>304 = Ricardo payment ID</li>
+<li>305 = Ricardo price increment</li>
+<li>306 = Ricardo item condition ID</li>
+<li>307 = Ricardo max relist count</li>
+<li>308 = Ricardo is cumulative shipping</li>
+<li>309 = Ricardo delivery package size ID</li>
+<li>310 = Ricardo use secondary language</li>
+<li>311 = Ricardo template ID</li>
+<li>312 = Ricardo is relist sold out</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -1495,6 +1533,12 @@ Update the listing market histories on the designated markets.
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -1516,6 +1560,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -1973,6 +2023,12 @@ List listing market infos by filter options
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -1994,6 +2050,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -2209,6 +2271,12 @@ List listing market text
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -2230,6 +2298,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -2577,54 +2651,55 @@ The listing properties model. Each listing property has a type.
 <li>10 = Use item price</li>
 <li>11 = Number per lot</li>
 <li>12 = Transmit item number type</li>
+<li>13 = Relisted external ID</li>
+<li>14 = SCO offer</li>
+<li>15 = Promotion</li>
+<li>16 = UUID</li>
+<li>17 = Update error</li>
+<li>18 = Has variations</li>
+<li>19 = End now</li>
+<li>20 = Insert by type</li>
+<li>21 = Payment methods</li>
+<li>22 = First platform category ID</li>
+<li>23 = Second platform category ID</li>
+<li>24 = First shop category ID</li>
+<li>25 = Second shop category ID</li>
+<li>26 = Third shop category ID</li>
+<li>27 = Enhancements</li>
 <li>100 = eBay parts fitment ID</li>
 <li>101 = eBay maximum online listings</li>
-<li>102 = eBay first platform category ID</li>
-<li>103 = eBay second platform category ID</li>
-<li>104 = eBay first shop category ID</li>
-<li>105 = eBay second shop category ID</li>
-<li>106 = eBay private auction</li>
-<li>107 = eBay gallery type</li>
-<li>108 = eBay gallery duration</li>
-<li>109 = eBay transmit MPR</li>
-<li>110 = eBay counter type</li>
-<li>111 = eBay condition ID</li>
-<li>112 = eBay condition description</li>
-<li>113 = eBay enhancements</li>
-<li>114 = eBay best offer</li>
-<li>115 = eBay best offer decline price</li>
-<li>116 = eBay best offer accept price</li>
-<li>117 = eBay is eBayPlus</li>
-<li>118 = eBay is Click & Collect</li>
-<li>200 = Hood first platform category</li>
-<li>201 = Hood second platform category</li>
-<li>202 = Hood first shop category</li>
-<li>203 = Hood second shop category</li>
-<li>204 = Hood third shop category</li>
-<li>205 = Hood payment methods</li>
-<li>206 = Hood enhancements</li>
-<li>207 = Hood show on shop startpage</li>
-<li>208 = Hood shipping discount</li>
-<li>209 = Hood delivery days on stock from</li>
-<li>210 = Hood delivery days on stock to</li>
-<li>211 = Hood delivery days not on stock from</li>
-<li>212 = Hood delivery days not on stock to</li>
-<li>300 = Ricardo first platform category ID</li>
-<li>301 = Ricardo warranty ID</li>
-<li>302 = Ricardo delivery ID</li>
-<li>303 = Ricardo availability ID</li>
-<li>304 = Ricardo delivery cost</li>
-<li>305 = Ricardo payment ID</li>
-<li>306 = Ricardo price increment</li>
-<li>307 = Ricardo payment methods</li>
-<li>308 = Ricardo enhancements</li>
-<li>309 = Ricardo item condition ID</li>
-<li>310 = Ricardo max relist count</li>
-<li>311 = Ricardo is cumulative shipping</li>
-<li>312 = Ricardo delivery package size ID</li>
-<li>313 = Ricardo use secondary language</li>
-<li>314 = Ricardo template ID</li>
-<li>315 = Ricardo is relist sold out</li>
+<li>102 = eBay private auction</li>
+<li>103 = eBay gallery type</li>
+<li>104 = eBay gallery duration</li>
+<li>105 = eBay transmit MPR</li>
+<li>106 = eBay counter type</li>
+<li>107 = eBay condition ID</li>
+<li>108 = eBay condition description</li>
+<li>109 = eBay best offer</li>
+<li>110 = eBay best offer decline price</li>
+<li>111 = eBay best offer accept price</li>
+<li>112 = eBay is eBay Plus</li>
+<li>113 = eBay is click & Collect</li>
+<li>114 = eBay use EPS</li>
+<li>200 = Hood show on shop startpage</li>
+<li>201 = Hood shipping discount</li>
+<li>202 = Hood delivery days on stock from</li>
+<li>203 = Hood delivery days on stock to</li>
+<li>204 = Hood delivery days not on stock from</li>
+<li>205 = Hood delivery days not on stock to</li>
+<li>300 = Ricardo warranty ID</li>
+<li>301 = Ricardo delivery ID</li>
+<li>302 = Ricardo availability ID</li>
+<li>303 = Ricardo delivery cost</li>
+<li>304 = Ricardo payment ID</li>
+<li>305 = Ricardo price increment</li>
+<li>306 = Ricardo item condition ID</li>
+<li>307 = Ricardo max relist count</li>
+<li>308 = Ricardo is cumulative shipping</li>
+<li>309 = Ricardo delivery package size ID</li>
+<li>310 = Ricardo use secondary language</li>
+<li>311 = Ricardo template ID</li>
+<li>312 = Ricardo is relist sold out</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
@@ -2757,6 +2832,12 @@ Search shipping profiles
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -2778,6 +2859,12 @@ Sets the filter array.
 
     
 Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
     
 <pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>

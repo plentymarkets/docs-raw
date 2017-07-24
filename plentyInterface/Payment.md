@@ -734,6 +734,12 @@ Updates a payment.
     
 
     
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 ## Models<a name="payment_payment_models"></a>
 ### Payment<a name="payment_models_payment"></a>
 

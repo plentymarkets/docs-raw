@@ -65,6 +65,12 @@ Repository for TagAvailability
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 
 ### TagNameRepositoryContract<a name="tag_contracts_tagnamerepositorycontract"></a>
 
@@ -141,6 +147,12 @@ Repository for TagName
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 
 ### TagRelationshipRepositoryContract<a name="tag_contracts_tagrelationshiprepositorycontract"></a>
 
@@ -260,6 +272,12 @@ Repository for TagRelationship
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 
 ### TagRepositoryContract<a name="tag_contracts_tagrepositorycontract"></a>
 
@@ -380,6 +398,12 @@ Deletes a tag by given tagId
 </table>
 
 
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 ## Models<a name="tag_tag_models"></a>
 ### Tag<a name="tag_models_tag"></a>
 
