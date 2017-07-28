@@ -588,7 +588,7 @@ Get an order
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the order instance, one of "addresses", "events", "dates", "relation", "reference", "comments".</td>
+        <td>The relations to load in the order instance, one of "addresses", "events", "dates", "relation", "reference", "location", "payments" and "comments".</td>
     </tr>
 </table>
 
@@ -728,7 +728,7 @@ List orders of a contact
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "comments".</td>
+        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "location", "payments" and "comments".</td>
     </tr>
 </table>
 
@@ -759,7 +759,7 @@ List orders that include one or more variations from a supplier
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "comments".</td>
+        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "location", "payments" and "comments".</td>
     </tr>
 </table>
 
@@ -790,7 +790,7 @@ List orders sent by a contact
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "comments".</td>
+        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "location", "payments" and "comments".</td>
     </tr>
 </table>
 
@@ -811,7 +811,7 @@ Get latest order of a contact
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance. The relations available are: "addresses", "events", "dates", "relation", "reference" and "comments".
+        <td>The relations to load in the Order instance. The relations available are: "addresses", "events", "dates", "relation", "reference", "location", "payments" and "comments".
 If you want to load relations, you need to include at least one, but you can also include several or all.</td>
     </tr>
 </table>
@@ -838,7 +838,7 @@ List orders
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference".</td>
+        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "location", "payments" and "comments".</td>
     </tr>
 </table>
 
@@ -914,6 +914,66 @@ Returns a collection of parsed filters as Condition object
 Clears the filter array.
     
 ## Models<a name="order_order_models"></a>
+### GiftCardCode<a name="order_models_giftcardcode"></a>
+
+Model that holds gift card codes.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Coupon\Campaign\Code\Order\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the gift card code</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>orderItemId</td>
+            <td>The order item ID</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>campaignId</td>
+            <td>The campaign ID</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>code</td>
+            <td>The coupon code</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>sender</td>
+            <td>The name of the sender</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>receiver</td>
+            <td>The name of the receiver</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>message</td>
+            <td>The message</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
 ### CouponCodeOrder<a name="order_models_couponcodeorder"></a>
 
 The CouponCodeOrder model.
@@ -1114,6 +1174,16 @@ The order model.
 </td>
             <td>comments</td>
             <td>The order comments.</td>
+        </tr><tr>
+            <td><a href="accounting#accounting_models_accountinglocation">AccountingLocation</a>
+</td>
+            <td>location</td>
+            <td>The accounting location of the order.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>payments</td>
+            <td>The payments that are associated with the order.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -1479,6 +1549,11 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 </td>
             <td>references</td>
             <td>The order item references.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>giftCardCodes</td>
+            <td>The gift card codes that belong to the order item.</td>
         </tr></tbody>
 </table>
 
@@ -5538,6 +5613,8 @@ The order properties model. Each order property has a type.
   <li>EXTERNAL_ITEM_ID			=	17</li>
   <li>COUPON_CODE			=	18</li>
   <li>COUPON_TYPE         =   19</li>
+  <li>SALES_TAX_ID_NUMBER =   34</li>
+  <li>MAIN_DOCUMENT_NUMBER = 33</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>

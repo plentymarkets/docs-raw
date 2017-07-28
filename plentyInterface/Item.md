@@ -6517,6 +6517,22 @@ Search properties.
 </table>
 
 
+<pre>public <strong>findByBackendName</strong>(<a target="_blank" href="http://php.net/string">string</a> $backendName):<a href="item#item_models_property">Property</a>
+</pre>
+
+    
+Gets an property. The backend name of the property must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$backendName</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 

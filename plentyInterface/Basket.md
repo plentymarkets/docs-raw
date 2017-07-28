@@ -143,6 +143,17 @@ Gets the shopping cart from current customer session.
 
 
 ## Exceptions<a name="basket_basket_exceptions"></a>
+### BasketCheckException<a name="basket_exceptions_basketcheckexception"></a>
+
+Class BasketCheckException
+
+
+#### Namespace
+
+`Plenty\Modules\Basket\Exceptions`
+
+
+
 ### BasketItemCheckException<a name="basket_exceptions_basketitemcheckexception"></a>
 
 Created by ptopczewski, 12.05.16 09:03
