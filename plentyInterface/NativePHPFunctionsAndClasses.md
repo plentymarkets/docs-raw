@@ -191,6 +191,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             <strong>H</strong>
         <ul>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.hash.php">hash</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.hash-hmac.php">hash_hmac</a>
             </li>
                     <li>
