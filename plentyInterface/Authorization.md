@@ -2,6 +2,26 @@
 
 # Authorization<a name="authorization_authorization"></a>
     
+## Contracts<a name="authorization_authorization_contracts"></a>
+### AuthorizedUserRepositoryContract<a name="authorization_contracts_authorizeduserrepositorycontract"></a>
+
+service to get current authorized user
+
+
+#### Namespace
+
+`Plenty\Modules\Authorization\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getCurrentAuthorizedUser</strong>():<a href="authorization#authorization_models_authorizeduser">AuthorizedUser</a>
+</pre>
+
+    
+
+    
 ## Exception<a name="authorization_authorization_exception"></a>
 ### AuthorizationException<a name="authorization_exception_authorizationexception"></a>
 
@@ -14,6 +34,59 @@ Class AuthorizationException
 
 
 ## Models<a name="authorization_authorization_models"></a>
+### AuthorizedUser<a name="authorization_models_authorizeduser"></a>
+
+The current authorized user
+
+
+#### Namespace
+
+`Plenty\Modules\Authorization\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>realName</td>
+            <td>The real name of the authorized user</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lang</td>
+            <td>The back end language used by the authorized user</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>isSupportUser</td>
+            <td>Shows whether the authorized user is a support user</td>
+        </tr><tr>
+            <td><a href="authentication#authentication_models_user">User</a>
+</td>
+            <td>user</td>
+            <td>Further information about the user's class, roles and rights</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>oauthAccessTokensId</td>
+            <td>The access token for OAUTH authentication</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
 ### Permission<a name="authorization_models_permission"></a>
 
 The authentication Permission (REST) model

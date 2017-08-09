@@ -551,7 +551,7 @@ Get a warehouse
 </table>
 
 
-<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 List warehouses
@@ -562,6 +562,11 @@ List warehouses
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
         <td>The relations to load in the warehouse instance. repairWarehouse is the only relation currently available.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>The columns to load in the response</td>
     </tr>
 </table>
 

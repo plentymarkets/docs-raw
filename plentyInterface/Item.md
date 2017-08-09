@@ -10544,6 +10544,23 @@ foo
 </table>
 
 
+<pre>public <strong>isHiddenInCategoryList</strong>($bool = true):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$bool</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>hasADescriptionInLanguage</strong>(<a target="_blank" href="http://php.net/string">string</a> $language):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 

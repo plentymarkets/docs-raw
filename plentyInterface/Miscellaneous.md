@@ -4066,6 +4066,59 @@ resource information
     
 
     
+# Mail<a name="miscellaneous_mail"></a>
+    
+## Contracts<a name="miscellaneous_mail_contracts"></a>
+### MailerContract<a name="miscellaneous_contracts_mailercontract"></a>
+
+Plugin Mailer Service
+
+
+#### Namespace
+
+`Plenty\Plugin\Mail\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>sendHtml</strong>(<a target="_blank" href="http://php.net/string">string</a> $html, $recipients, <a target="_blank" href="http://php.net/string">string</a> $subject = &quot;&quot;, <a target="_blank" href="http://php.net/array">array</a> $cc = [], <a target="_blank" href="http://php.net/array">array</a> $bcc = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Send an email containing html
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$html</td>
+        <td>The HTML-String for the email body</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$recipients</td>
+        <td>Either a string containing a single email address or an array of strings containing multiple email addresses</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$subject</td>
+        <td>Optional. The subject of the message</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$cc</td>
+        <td>Optional. Array of strings containing email addresses which the message should be sent to as cc</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$bcc</td>
+        <td>Optional. Array of strings containing email addresses which the message should be sent to as bcc</td>
+    </tr>
+</table>
+
+
 # Templates<a name="miscellaneous_templates"></a>
     
 ## Extensions<a name="miscellaneous_templates_extensions"></a>
