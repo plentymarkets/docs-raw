@@ -2989,7 +2989,7 @@ Validate a coupon code
         <td><a href="order#order_models_couponcodevalidation">CouponCodeValidation</a>
 </td>
         <td>$validationData</td>
-        <td>The CouponCodeValidation data to validate</td>
+        <td>The data to validate a coupon</td>
     </tr>
 </table>
 

@@ -50,6 +50,28 @@ The contract for the logger.
 
 #### Methods
 
+<pre>public <strong>report</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Report information.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>debug</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 

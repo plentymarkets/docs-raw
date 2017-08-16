@@ -471,6 +471,21 @@ Retrieve the &quot;count&quot; result of the query.
 </table>
 
 
+<pre>public <strong>getCountForPagination</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Get the count of the total records for the paginator.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>get</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     

@@ -6144,6 +6144,22 @@ Lists all property groups.
 </table>
 
 
+<pre>public <strong>findByBackendName</strong>(<a target="_blank" href="http://php.net/string">string</a> $backendName):<a href="item#item_models_propertygroup">PropertyGroup</a>
+</pre>
+
+    
+Gets a property group. The backend name of the property group must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$backendName</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### PropertyMarketReferenceRepositoryContract<a name="item_contracts_propertymarketreferencerepositorycontract"></a>
 

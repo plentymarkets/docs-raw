@@ -499,7 +499,7 @@ The Webstore Configuration Model
             <td>feedbackCustomerNameVisibility</td>
             <td></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>languageList</td>
             <td></td>
         </tr><tr>
@@ -543,7 +543,7 @@ The Webstore Configuration Model
             <td>paypalAccount</td>
             <td></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>ebayAccount</td>
             <td></td>
         </tr><tr>
@@ -859,7 +859,7 @@ The Webstore Configuration Model
             <td>minimumOrderValue</td>
             <td></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>itemAvailabilityDisabledList</td>
             <td></td>
         </tr><tr>

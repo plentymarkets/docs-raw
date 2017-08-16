@@ -53,7 +53,7 @@ Get a document
 </table>
 
 
-<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
 
     
@@ -75,6 +75,11 @@ List documents
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$columns</td>
         <td>The columns to be loaded</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to be loaded. Possible value is "references".</td>
     </tr>
 </table>
 
@@ -193,7 +198,7 @@ Clears the filter array.
 ## Models<a name="document_document_models"></a>
 ### Document<a name="document_models_document"></a>
 
-Document
+The document model contains information about actual documents.
 
 
 #### Namespace
@@ -218,7 +223,38 @@ Document
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>type</td>
-            <td>The type of the document</td>
+            <td>The type of the document. The following types are available:
+                           <ul>
+    <li>admin</li>
+    <li>blog</li>
+ <li>category</li>
+ <li>correction_document</li>
+ <li>credit_note</li>
+       <li>customer</li>
+ <li>delivery_note</li>
+    <li>dunning_letter</li>
+       <li>ebics_hash</li>
+    <li>facet</li>
+    <li>invoice</li>
+    <li>invoice_external</li>
+ <li>item</li>
+ <li>multi_credit_note</li>
+    <li>multi_invoice</li>
+       <li>offer</li>
+    <li>order_confirmation</li>
+       <li>pickup_delivery</li>
+    <li>receipt</li>
+    <li>reorder</li>
+    <li>repair_bill</li>
+    <li>return_note</li>
+       <li>reversal_document</li>
+       <li>settlement_report</li>
+    <li>success_confirmation</li>
+    <li>ticket</li>
+    <li>webshop</li>
+  <li>webshop_customer</li>
+    <li>z_report</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>number</td>
@@ -256,23 +292,28 @@ Document
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous_support_collection">Collection</a>
 </td>
+            <td>references</td>
+            <td>Collection of document references (contacts, orders, webstores and categories)</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</td>
             <td>contacts</td>
-            <td>Collection of associated contacts</td>
+            <td>Collection of contacts that are associated with the document</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous_support_collection">Collection</a>
 </td>
             <td>orders</td>
-            <td>Collection of associated orders</td>
+            <td>Collection of orders that are associated with the document</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous_support_collection">Collection</a>
 </td>
             <td>webstores</td>
-            <td>Collection of associated webstores</td>
+            <td>Collection of webstores that are associated with the document</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous_support_collection">Collection</a>
 </td>
             <td>categories</td>
-            <td>Collection of associated categories</td>
+            <td>Collection of categories that are associated with the document</td>
         </tr></tbody>
 </table>
 
@@ -287,7 +328,7 @@ Returns this model as an array.
 
 ### DocumentReference<a name="document_models_documentreference"></a>
 
-The document reference model
+The document reference model. A document reference allows you to assign a document to other models.
 
 
 #### Namespace
@@ -312,11 +353,25 @@ The document reference model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>type</td>
-            <td>The reference type</td>
+            <td>The reference type. The following reference types are available:
+                            <ul>
+    <li>blog</li>
+                               <li>cash_register</li>
+                               <li>category</li>
+    <li>customer</li>
+ <li>facet</li>
+    <li>facet_value</li>
+    <li>item</li>
+ <li>multishop</li>
+    <li>order</li>
+    <li>reorder</li>
+ <li>ticket</li>
+                               <li>warehouse</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>value</td>
-            <td>The reference value (e.g. the id of another model)</td>
+            <td>The reference value (e.g. the ID of another model)</td>
         </tr></tbody>
 </table>
 
