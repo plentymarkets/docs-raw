@@ -153,6 +153,12 @@ Sets the shipping address id for the current shopping cart.
 </table>
 
 
+<pre>public <strong>validateCheckout</strong>():<a href="frontend#frontend_events_validatecheckoutevent">ValidateCheckoutEvent</a>
+</pre>
+
+    
+
+    
 ## Events<a name="frontend_frontend_events"></a>
 ### FrontendCurrencyChanged<a name="frontend_events_frontendcurrencychanged"></a>
 
@@ -391,6 +397,41 @@ Gets the ID of the shipping service provider.
     
 Gets the preset ID of the shipping service provider.
     
+
+### ValidateCheckoutEvent<a name="frontend_events_validatecheckoutevent"></a>
+
+validation event
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>getErrorKeysList</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addErrorKey</strong>(<a target="_blank" href="http://php.net/string">string</a> $errorKey):<a href="frontend#frontend_frontend_events">Events</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$errorKey</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Factories<a name="frontend_frontend_factories"></a>
 ### FrontendFactory<a name="frontend_factories_frontendfactory"></a>
 
@@ -434,6 +475,50 @@ Frontend-Factory
 
     
 
+    
+## Models<a name="frontend_frontend_models"></a>
+### TotalVat<a name="frontend_models_totalvat"></a>
+
+frontend total vat model
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>vatId</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>vatAmount</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>vatValue</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
     
 ## Services<a name="frontend_frontend_services"></a>
 ### AccountService<a name="frontend_services_accountservice"></a>
@@ -780,6 +865,61 @@ Frontend-service for system information
     
 
     
+
+### VatService<a name="frontend_services_vatservice"></a>
+
+Frontend-service for vat information
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\Services`
+
+
+
+#### Methods
+
+<pre>public <strong>getCountryVatId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getCurrentTotalVats</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getVat</strong>(<a target="_blank" href="http://php.net/string">string</a> $taxIdNumber = &quot;&quot;):<a href="accounting#accounting_models_vat">Vat</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$taxIdNumber</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Get the ID of the location
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 # LegalInformation<a name="frontend_legalinformation"></a>
     
 ## Contracts<a name="frontend_legalinformation_contracts"></a>
@@ -1072,6 +1212,40 @@ Gets the detail link of the payment method. The detail link can be entered in th
 </table>
 
 
+<pre>public <strong>getIsSwitchableTo</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
+ $paymentMethod):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Gets the detail link of the payment method. The detail link can be entered in the config.json.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="payment#payment_models_paymentmethod">PaymentMethod</a>
+</td>
+        <td>$paymentMethod</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getIsSwitchableFrom</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
+ $paymentMethod):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Gets the detail link of the payment method. The detail link can be entered in the config.json.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="payment#payment_models_paymentmethod">PaymentMethod</a>
+</td>
+        <td>$paymentMethod</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getPaymentMethodNameById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
@@ -1168,6 +1342,46 @@ Gets the description of the payment method by ID and language. The ID of the pay
 
 
 <pre>public <strong>getPaymentMethodSwitchFromById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/int">int</a> $orderId = null):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$paymentMethodId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPaymentMethodSwitchableToById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/int">int</a> $orderId = null):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$paymentMethodId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPaymentMethodSwitchableFromById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/int">int</a> $orderId = null):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 

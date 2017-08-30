@@ -32,7 +32,7 @@ Get a listing by a given ID.
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Listing instance, one of "markets", "type", "stockDependenceType", "properties".</td>
+        <td>The relations to load in the listing instance, one of "markets", "type", "stockDependenceType", "properties".</td>
     </tr>
 </table>
 
@@ -351,6 +351,7 @@ The listing date type model. Each listing date type can have multiple names.
 <li>3 = Start time</li>
 <li>4 = End time</li>
 <li>5 = Last market update</li>
+<li>6 = Last sale</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
@@ -439,7 +440,7 @@ The LayoutTemplateRepositoryContract is the interface for the layout template re
 </pre>
 
     
-Get an layout template.
+Get a layout template.
     
 ##### <strong>Parameters</strong>
     
@@ -460,7 +461,7 @@ Get an layout template.
 </pre>
 
     
-Create an layout template.
+Create a layout template.
     
 ##### <strong>Parameters</strong>
     
@@ -712,7 +713,7 @@ Start listing markets on the designated markets.
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$params</td>
-        <td>The parameters that should be considers during start. Available values are 'startTime', 'startDistribution'</td>
+        <td>The parameters that should be considered during start. Available values are 'startTime', 'startDistribution'</td>
     </tr>
 </table>
 
@@ -892,54 +893,55 @@ The listing market model.
 <li>10 = Use item price</li>
 <li>11 = Number per lot</li>
 <li>12 = Transmit item number type</li>
+<li>13 = Relisted external ID</li>
+<li>14 = SCO offer</li>
+<li>15 = Promotion</li>
+<li>16 = UUID</li>
+<li>17 = Update error</li>
+<li>18 = Has variations</li>
+<li>19 = End now</li>
+<li>20 = Insert by type</li>
+<li>21 = Payment methods</li>
+<li>22 = First platform category ID</li>
+<li>23 = Second platform category ID</li>
+<li>24 = First shop category ID</li>
+<li>25 = Second shop category ID</li>
+<li>26 = Third shop category ID</li>
+<li>27 = Enhancements</li>
 <li>100 = eBay parts fitment ID</li>
 <li>101 = eBay maximum online listings</li>
-<li>102 = eBay first platform category ID</li>
-<li>103 = eBay second platform category ID</li>
-<li>104 = eBay first shop category ID</li>
-<li>105 = eBay second shop category ID</li>
-<li>106 = eBay private auction</li>
-<li>107 = eBay gallery type</li>
-<li>108 = eBay gallery duration</li>
-<li>109 = eBay transmit MPR</li>
-<li>110 = eBay counter type</li>
-<li>111 = eBay condition ID</li>
-<li>112 = eBay condition description</li>
-<li>113 = eBay enhancements</li>
-<li>114 = eBay best offer</li>
-<li>115 = eBay best offer decline price</li>
-<li>116 = eBay best offer accept price</li>
-<li>117 = eBay is eBayPlus</li>
-<li>118 = eBay is Click & Collect</li>
-<li>200 = Hood first platform category</li>
-<li>201 = Hood second platform category</li>
-<li>202 = Hood first shop category</li>
-<li>203 = Hood second shop category</li>
-<li>204 = Hood third shop category</li>
-<li>205 = Hood payment methods</li>
-<li>206 = Hood enhancements</li>
-<li>207 = Hood show on shop startpage</li>
-<li>208 = Hood shipping discount</li>
-<li>209 = Hood delivery days on stock from</li>
-<li>210 = Hood delivery days on stock to</li>
-<li>211 = Hood delivery days not on stock from</li>
-<li>212 = Hood delivery days not on stock to</li>
-<li>300 = Ricardo first platform category ID</li>
-<li>301 = Ricardo warranty ID</li>
-<li>302 = Ricardo delivery ID</li>
-<li>303 = Ricardo availability ID</li>
-<li>304 = Ricardo delivery cost</li>
-<li>305 = Ricardo payment ID</li>
-<li>306 = Ricardo price increment</li>
-<li>307 = Ricardo payment methods</li>
-<li>308 = Ricardo enhancements</li>
-<li>309 = Ricardo item condition ID</li>
-<li>310 = Ricardo max relist count</li>
-<li>311 = Ricardo is cumulative shipping</li>
-<li>312 = Ricardo delivery package size ID</li>
-<li>313 = Ricardo use secondary language</li>
-<li>314 = Ricardo template ID</li>
-<li>315 = Ricardo is relist sold out</li>
+<li>102 = eBay private auction</li>
+<li>103 = eBay gallery type</li>
+<li>104 = eBay gallery duration</li>
+<li>105 = eBay transmit MPR</li>
+<li>106 = eBay counter type</li>
+<li>107 = eBay condition ID</li>
+<li>108 = eBay condition description</li>
+<li>109 = eBay best offer</li>
+<li>110 = eBay best offer decline price</li>
+<li>111 = eBay best offer accept price</li>
+<li>112 = eBay is eBay Plus</li>
+<li>113 = eBay is click & Collect</li>
+<li>114 = eBay use EPS</li>
+<li>200 = Hood show on shop startpage</li>
+<li>201 = Hood shipping discount</li>
+<li>202 = Hood delivery days on stock from</li>
+<li>203 = Hood delivery days on stock to</li>
+<li>204 = Hood delivery days not on stock from</li>
+<li>205 = Hood delivery days not on stock to</li>
+<li>300 = Ricardo warranty ID</li>
+<li>301 = Ricardo delivery ID</li>
+<li>302 = Ricardo availability ID</li>
+<li>303 = Ricardo delivery cost</li>
+<li>304 = Ricardo payment ID</li>
+<li>305 = Ricardo price increment</li>
+<li>306 = Ricardo item condition ID</li>
+<li>307 = Ricardo max relist count</li>
+<li>308 = Ricardo is cumulative shipping</li>
+<li>309 = Ricardo delivery package size ID</li>
+<li>310 = Ricardo use secondary language</li>
+<li>311 = Ricardo template ID</li>
+<li>312 = Ricardo is relist sold out</li>
 </ul></td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
@@ -1196,54 +1198,55 @@ The listing market properties model. Each listing market property has a type.
 <li>10 = Use item price</li>
 <li>11 = Number per lot</li>
 <li>12 = Transmit item number type</li>
+<li>13 = Relisted external ID</li>
+<li>14 = SCO offer</li>
+<li>15 = Promotion</li>
+<li>16 = UUID</li>
+<li>17 = Update error</li>
+<li>18 = Has variations</li>
+<li>19 = End now</li>
+<li>20 = Insert by type</li>
+<li>21 = Payment methods</li>
+<li>22 = First platform category ID</li>
+<li>23 = Second platform category ID</li>
+<li>24 = First shop category ID</li>
+<li>25 = Second shop category ID</li>
+<li>26 = Third shop category ID</li>
+<li>27 = Enhancements</li>
 <li>100 = eBay parts fitment ID</li>
 <li>101 = eBay maximum online listings</li>
-<li>102 = eBay first platform category ID</li>
-<li>103 = eBay second platform category ID</li>
-<li>104 = eBay first shop category ID</li>
-<li>105 = eBay second shop category ID</li>
-<li>106 = eBay private auction</li>
-<li>107 = eBay gallery type</li>
-<li>108 = eBay gallery duration</li>
-<li>109 = eBay transmit MPR</li>
-<li>110 = eBay counter type</li>
-<li>111 = eBay condition ID</li>
-<li>112 = eBay condition description</li>
-<li>113 = eBay enhancements</li>
-<li>114 = eBay best offer</li>
-<li>115 = eBay best offer decline price</li>
-<li>116 = eBay best offer accept price</li>
-<li>117 = eBay is eBayPlus</li>
-<li>118 = eBay is Click & Collect</li>
-<li>200 = Hood first platform category</li>
-<li>201 = Hood second platform category</li>
-<li>202 = Hood first shop category</li>
-<li>203 = Hood second shop category</li>
-<li>204 = Hood third shop category</li>
-<li>205 = Hood payment methods</li>
-<li>206 = Hood enhancements</li>
-<li>207 = Hood show on shop startpage</li>
-<li>208 = Hood shipping discount</li>
-<li>209 = Hood delivery days on stock from</li>
-<li>210 = Hood delivery days on stock to</li>
-<li>211 = Hood delivery days not on stock from</li>
-<li>212 = Hood delivery days not on stock to</li>
-<li>300 = Ricardo first platform category ID</li>
-<li>301 = Ricardo warranty ID</li>
-<li>302 = Ricardo delivery ID</li>
-<li>303 = Ricardo availability ID</li>
-<li>304 = Ricardo delivery cost</li>
-<li>305 = Ricardo payment ID</li>
-<li>306 = Ricardo price increment</li>
-<li>307 = Ricardo payment methods</li>
-<li>308 = Ricardo enhancements</li>
-<li>309 = Ricardo item condition ID</li>
-<li>310 = Ricardo max relist count</li>
-<li>311 = Ricardo is cumulative shipping</li>
-<li>312 = Ricardo delivery package size ID</li>
-<li>313 = Ricardo use secondary language</li>
-<li>314 = Ricardo template ID</li>
-<li>315 = Ricardo is relist sold out</li>
+<li>102 = eBay private auction</li>
+<li>103 = eBay gallery type</li>
+<li>104 = eBay gallery duration</li>
+<li>105 = eBay transmit MPR</li>
+<li>106 = eBay counter type</li>
+<li>107 = eBay condition ID</li>
+<li>108 = eBay condition description</li>
+<li>109 = eBay best offer</li>
+<li>110 = eBay best offer decline price</li>
+<li>111 = eBay best offer accept price</li>
+<li>112 = eBay is eBay Plus</li>
+<li>113 = eBay is click & Collect</li>
+<li>114 = eBay use EPS</li>
+<li>200 = Hood show on shop startpage</li>
+<li>201 = Hood shipping discount</li>
+<li>202 = Hood delivery days on stock from</li>
+<li>203 = Hood delivery days on stock to</li>
+<li>204 = Hood delivery days not on stock from</li>
+<li>205 = Hood delivery days not on stock to</li>
+<li>300 = Ricardo warranty ID</li>
+<li>301 = Ricardo delivery ID</li>
+<li>302 = Ricardo availability ID</li>
+<li>303 = Ricardo delivery cost</li>
+<li>304 = Ricardo payment ID</li>
+<li>305 = Ricardo price increment</li>
+<li>306 = Ricardo item condition ID</li>
+<li>307 = Ricardo max relist count</li>
+<li>308 = Ricardo is cumulative shipping</li>
+<li>309 = Ricardo delivery package size ID</li>
+<li>310 = Ricardo use secondary language</li>
+<li>311 = Ricardo template ID</li>
+<li>312 = Ricardo is relist sold out</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -1310,7 +1313,7 @@ Get a listing market directory
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Create an listing market directory.
+Create a listing market directory.
     
 ##### <strong>Parameters</strong>
     
@@ -1391,7 +1394,7 @@ The listing market directory model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>parentId</td>
-            <td>The parent id of the listing market directory.</td>
+            <td>The parent ID of the listing market directory.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>level</td>
@@ -1541,7 +1544,7 @@ Update the listing market histories on the designated markets.
 <li>quantityPriceAndVariations - Updates the quantity and price (also for variations)</li>
 <li>resetVariations - Reset the variations. The variation from the item are transmitted again</li>
 <li>partsFitment - Updates the parts fitment information (only available for eBay)</li>
-<li>loyaltyProgram - Updates the listing loyalty program information (only available for eBay Plus) -</li>
+<li>loyaltyProgram - Updates the listing loyalty program information (only available for eBay Plus) </li>
 <li>resetRrp - Reset the recommended retail price information</li>
 <li>payment - Updates payment information (only available for Hood)</li>
 </ul></td>
@@ -1623,7 +1626,7 @@ The listing market history model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>listingMarketId</td>
-            <td>The listing market ID of the current listing market history</td>
+            <td>The listing market ID of the current listing market history.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>referrerId</td>
@@ -1753,9 +1756,8 @@ The listing market history dates model. Each listing market history date has a t
 <ul>
 <li>Start time = 3</li>
 <li>End time = 4</li>
-<li>Start time = 3</li>
-<li>End time = 4</li>
 <li>Last market update = 5</li>
+<li>Last sale = 6</li>
 </ul></td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
@@ -1771,7 +1773,7 @@ The listing market history dates model. Each listing market history date has a t
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>updatedAt</td>
-            <td>The date that the date was updated last.</td>
+            <td>The date that the date was last updated.</td>
         </tr><tr>
             <td><a href="listing#listing_models_listingmarket">ListingMarket</a>
 </td>
@@ -2003,7 +2005,7 @@ Returns this model as an array.
 ## Contracts<a name="listing_info_contracts"></a>
 ### ListingMarketInfoRepositoryContract<a name="listing_contracts_listingmarketinforepositorycontract"></a>
 
-The ListingMarketInfoRepositoryContract is the interface for the listing market info repository. This interface allows you to get a information about one or many listing markets.
+The ListingMarketInfoRepositoryContract is the interface for the listing market info repository. This interface allows you to get information about one or many listing markets.
 
 
 #### Namespace
@@ -2369,7 +2371,7 @@ The listing market text model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The ID of the lisitng market text.</td>
+            <td>The ID of the listing market text.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>listingMarketId</td>
@@ -2433,7 +2435,7 @@ Get option template
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td>The ID of the option template</td>
+        <td>The ID of the option template.</td>
     </tr>
 </table>
 
@@ -2465,7 +2467,7 @@ Update option template
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td>The ID of the option template</td>
+        <td>The ID of the option template.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -2486,7 +2488,7 @@ Delete option template
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td>The ID of the option template</td>
+        <td>The ID of the option template.</td>
     </tr>
 </table>
 
@@ -2523,15 +2525,15 @@ The option template model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>listing</td>
-            <td>The listing options of the option template</td>
+            <td>The listing options of the option template.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>listingMarket</td>
-            <td>The listing market options of the option template</td>
+            <td>The listing market options of the option template.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>marketOptions</td>
-            <td>The market options of the option template</td>
+            <td>The market options of the option template.</td>
         </tr></tbody>
 </table>
 
@@ -2685,54 +2687,55 @@ The listing properties model. Each listing property has a type.
 <li>10 = Use item price</li>
 <li>11 = Number per lot</li>
 <li>12 = Transmit item number type</li>
+<li>13 = Relisted external ID</li>
+<li>14 = SCO offer</li>
+<li>15 = Promotion</li>
+<li>16 = UUID</li>
+<li>17 = Update error</li>
+<li>18 = Has variations</li>
+<li>19 = End now</li>
+<li>20 = Insert by type</li>
+<li>21 = Payment methods</li>
+<li>22 = First platform category ID</li>
+<li>23 = Second platform category ID</li>
+<li>24 = First shop category ID</li>
+<li>25 = Second shop category ID</li>
+<li>26 = Third shop category ID</li>
+<li>27 = Enhancements</li>
 <li>100 = eBay parts fitment ID</li>
 <li>101 = eBay maximum online listings</li>
-<li>102 = eBay first platform category ID</li>
-<li>103 = eBay second platform category ID</li>
-<li>104 = eBay first shop category ID</li>
-<li>105 = eBay second shop category ID</li>
-<li>106 = eBay private auction</li>
-<li>107 = eBay gallery type</li>
-<li>108 = eBay gallery duration</li>
-<li>109 = eBay transmit MPR</li>
-<li>110 = eBay counter type</li>
-<li>111 = eBay condition ID</li>
-<li>112 = eBay condition description</li>
-<li>113 = eBay enhancements</li>
-<li>114 = eBay best offer</li>
-<li>115 = eBay best offer decline price</li>
-<li>116 = eBay best offer accept price</li>
-<li>117 = eBay is eBayPlus</li>
-<li>118 = eBay is Click & Collect</li>
-<li>200 = Hood first platform category</li>
-<li>201 = Hood second platform category</li>
-<li>202 = Hood first shop category</li>
-<li>203 = Hood second shop category</li>
-<li>204 = Hood third shop category</li>
-<li>205 = Hood payment methods</li>
-<li>206 = Hood enhancements</li>
-<li>207 = Hood show on shop startpage</li>
-<li>208 = Hood shipping discount</li>
-<li>209 = Hood delivery days on stock from</li>
-<li>210 = Hood delivery days on stock to</li>
-<li>211 = Hood delivery days not on stock from</li>
-<li>212 = Hood delivery days not on stock to</li>
-<li>300 = Ricardo first platform category ID</li>
-<li>301 = Ricardo warranty ID</li>
-<li>302 = Ricardo delivery ID</li>
-<li>303 = Ricardo availability ID</li>
-<li>304 = Ricardo delivery cost</li>
-<li>305 = Ricardo payment ID</li>
-<li>306 = Ricardo price increment</li>
-<li>307 = Ricardo payment methods</li>
-<li>308 = Ricardo enhancements</li>
-<li>309 = Ricardo item condition ID</li>
-<li>310 = Ricardo max relist count</li>
-<li>311 = Ricardo is cumulative shipping</li>
-<li>312 = Ricardo delivery package size ID</li>
-<li>313 = Ricardo use secondary language</li>
-<li>314 = Ricardo template ID</li>
-<li>315 = Ricardo is relist sold out</li>
+<li>102 = eBay private auction</li>
+<li>103 = eBay gallery type</li>
+<li>104 = eBay gallery duration</li>
+<li>105 = eBay transmit MPR</li>
+<li>106 = eBay counter type</li>
+<li>107 = eBay condition ID</li>
+<li>108 = eBay condition description</li>
+<li>109 = eBay best offer</li>
+<li>110 = eBay best offer decline price</li>
+<li>111 = eBay best offer accept price</li>
+<li>112 = eBay is eBay Plus</li>
+<li>113 = eBay is click & Collect</li>
+<li>114 = eBay use EPS</li>
+<li>200 = Hood show on shop startpage</li>
+<li>201 = Hood shipping discount</li>
+<li>202 = Hood delivery days on stock from</li>
+<li>203 = Hood delivery days on stock to</li>
+<li>204 = Hood delivery days not on stock from</li>
+<li>205 = Hood delivery days not on stock to</li>
+<li>300 = Ricardo warranty ID</li>
+<li>301 = Ricardo delivery ID</li>
+<li>302 = Ricardo availability ID</li>
+<li>303 = Ricardo delivery cost</li>
+<li>304 = Ricardo payment ID</li>
+<li>305 = Ricardo price increment</li>
+<li>306 = Ricardo item condition ID</li>
+<li>307 = Ricardo max relist count</li>
+<li>308 = Ricardo is cumulative shipping</li>
+<li>309 = Ricardo delivery package size ID</li>
+<li>310 = Ricardo use secondary language</li>
+<li>311 = Ricardo template ID</li>
+<li>312 = Ricardo is relist sold out</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>

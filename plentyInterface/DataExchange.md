@@ -415,7 +415,7 @@ Output
 
 #### Methods
 
-<pre>public <strong>out</strong>(<a target="_blank" href="http://php.net/string">string</a> $ressource, <a target="_blank" href="http://php.net/array">array</a> $outputParams = []):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>out</strong>(<a target="_blank" href="http://php.net/string">string</a> $resource, <a target="_blank" href="http://php.net/array">array</a> $outputParams = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -425,7 +425,7 @@ process export output
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$ressource</td>
+        <td>$resource</td>
         <td>filename to ressource</td>
     </tr>
     <tr>

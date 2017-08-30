@@ -1765,6 +1765,16 @@ Returns this model as an array.
 
 
 
+<div class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+            Deprecated! <small>(since 2017-08-22)</small>        </h3>
+    </div>
+    <div class="panel-body">
+        Please use Plenty\Modules\Item\Variation\Contracts\VariationSearchRepositoryContract or Plenty\Modules\Item\Search\Contracts\VariationElasticSearchSearchRepositoryContract instead
+    </div>
+</div>
 
 #### Namespace
 
@@ -15020,7 +15030,7 @@ Book incoming stock
 </table>
 
 
-<pre>public <strong>correctStock</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>correctStock</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/bool">bool</a> $calcStockLater = false, <a target="_blank" href="http://php.net/bool">bool</a> $finishReceiptLater = false):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Correct stock
@@ -15036,6 +15046,16 @@ Correct stock
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
         <td>The request data</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$calcStockLater</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$finishReceiptLater</td>
+        <td></td>
     </tr>
 </table>
 
@@ -15061,6 +15081,12 @@ Redistribute stock
 </table>
 
 
+<pre>public <strong>finishReceipt</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Finish receipt
+    
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 

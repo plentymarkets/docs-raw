@@ -20,7 +20,7 @@ The repository to get, create, update and delete accounting locations.
 </pre>
 
     
-Get an accounting location. The ID of ID of the location must be specified.
+Get an accounting location. The ID of the location must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -36,7 +36,7 @@ Get an accounting location. The ID of ID of the location must be specified.
 </pre>
 
     
-List accounting locations for a plenty ID. The plenty ID must be specified.
+List accounting locations for a client. The plenty ID of the client must be specified.
     
 ##### <strong>Parameters</strong>
     
@@ -117,7 +117,7 @@ Provides methods to detect a location ID.
 <pre>public <strong>detectLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
-Get a location ID for a country of delivery. The plenty ID must be specifiend and the ID of the country of delivery can be specified. If the ID of a country is not specified, the ID of the standard location of the specified client will be returned.
+Get a location ID for a country of delivery. The plenty ID must be specified and the ID of the country of delivery can be specified. If the ID of a country is not specified, the ID of the standard location of the specified client will be returned.
     
 ##### <strong>Parameters</strong>
     
@@ -197,7 +197,7 @@ List accounting locations. The ID of the client and the ID of the country of del
 
 ### DetermineShopCountryContract<a name="accounting_contracts_determineshopcountrycontract"></a>
 
-This interface provides methods to initialise the country of location or the country of an order as well as to get the ID of client, the plenty ID of a client, the country or the ID of country. 
+This interface provides methods to initialise the country of a location or the country of an order as well as methods to get the ID of a client, the plenty ID of a client, the country or the ID of country.
 
 
 #### Namespace
@@ -228,7 +228,7 @@ Initialise the country of the standard location of a client. The ID of the clien
 </pre>
 
     
-Initialise the country of the standard location of a client. The plenty ID of the client can be specified.
+Initialise the country of the standard location of a client. The plenty ID of the client can be specified. If no plenty ID is specified, the standard client will be used.
     
 ##### <strong>Parameters</strong>
     

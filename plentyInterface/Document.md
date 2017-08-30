@@ -244,6 +244,7 @@ The document model contains information about actual documents.
     <li>order_confirmation</li>
        <li>pickup_delivery</li>
     <li>receipt</li>
+                               <li>refund_reversal</li>
     <li>reorder</li>
     <li>repair_bill</li>
     <li>return_note</li>
@@ -293,7 +294,13 @@ The document model contains information about actual documents.
             <td><a href="miscellaneous#miscellaneous_support_collection">Collection</a>
 </td>
             <td>references</td>
-            <td>Collection of document references (contacts, orders, webstores and categories)</td>
+            <td>Collection of document references. The references available are:
+<ul>
+    <li>contacts</li>
+    <li>orders</li>
+    <li>webstores = refers to clients</li>
+    <li>categories</li>
+</ul></td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous_support_collection">Collection</a>
 </td>

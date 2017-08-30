@@ -2331,6 +2331,21 @@ Returns an existing contact by a contact option information.
 </table>
 
 
+<pre>public <strong>getContactIdByEmail</strong>(<a target="_blank" href="http://php.net/string">string</a> $email):<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Returns a contact id by email. The email must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$email</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -2812,6 +2827,11 @@ The contact model.
 </td>
             <td>addresses</td>
             <td>A collection of linked addresses</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
+</td>
+            <td>primaryBillingAddress</td>
+            <td>A collection of linked primary billing addresses</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </td>

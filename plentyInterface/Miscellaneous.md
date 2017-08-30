@@ -3948,6 +3948,41 @@ view support
 </table>
 
 
+## Translation<a name="miscellaneous_plugin_translation"></a>
+### Translator<a name="miscellaneous_translation_translator"></a>
+
+translation service
+
+
+#### Namespace
+
+`Plenty\Plugin\Translation`
+
+
+
+#### Methods
+
+<pre>public <strong>trans</strong>(<a target="_blank" href="http://php.net/string">string</a> $id, <a target="_blank" href="http://php.net/array">array</a> $parameters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get the translation for a given key.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$parameters</td>
+        <td></td>
+    </tr>
+</table>
+
+
 # Data<a name="miscellaneous_data"></a>
     
 ## Contracts<a name="miscellaneous_data_contracts"></a>
@@ -4116,6 +4151,48 @@ Send an email containing html
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$html</td>
         <td>The HTML-String for the email body</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$recipients</td>
+        <td>Either a string containing a single email address or an array of strings containing multiple email addresses</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$subject</td>
+        <td>Optional. The subject of the message</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$cc</td>
+        <td>Optional. Array of strings containing email addresses which the message should be sent to as cc</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$bcc</td>
+        <td>Optional. Array of strings containing email addresses which the message should be sent to as bcc</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>sendFromTwig</strong>(<a target="_blank" href="http://php.net/string">string</a> $twigPath, <a target="_blank" href="http://php.net/array">array</a> $data, $recipients, <a target="_blank" href="http://php.net/string">string</a> $subject = &quot;&quot;, <a target="_blank" href="http://php.net/array">array</a> $cc = [], <a target="_blank" href="http://php.net/array">array</a> $bcc = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Send an email that will get rendered by twig
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$twigPath</td>
+        <td>The path to the twig template file that should be used to render the mail. E.g.: 'PluginNamespace::mail.my_mail'</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>An associative array of data that will be available to the twig template</td>
     </tr>
     <tr>
         <td><a href="miscellaneous#miscellaneous__"></a>

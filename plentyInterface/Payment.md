@@ -60,6 +60,41 @@ Deletes a payment contact relation.
 
 
 
+### PaymentMatcherRepositoryContract<a name="payment_contracts_paymentmatcherrepositorycontract"></a>
+
+The PaymentMatcherRepositoryContract
+
+
+#### Namespace
+
+`Plenty\Modules\Payment\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>checkMapFindAssignPayment</strong>(<a target="_blank" href="http://php.net/int">int</a> $mopId, $data):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$mopId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### PaymentOrderRelationRepositoryContract<a name="payment_contracts_paymentorderrelationrepositorycontract"></a>
 
 The PaymentOrderRelationRepositoryContract is the interface for the payment order relation repository. Create and delete relations between payments and orders.
