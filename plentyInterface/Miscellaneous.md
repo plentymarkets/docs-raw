@@ -4176,7 +4176,7 @@ Send an email containing html
 </table>
 
 
-<pre>public <strong>sendFromTwig</strong>(<a target="_blank" href="http://php.net/string">string</a> $twigPath, <a target="_blank" href="http://php.net/array">array</a> $data, $recipients, <a target="_blank" href="http://php.net/string">string</a> $subject = &quot;&quot;, <a target="_blank" href="http://php.net/array">array</a> $cc = [], <a target="_blank" href="http://php.net/array">array</a> $bcc = []):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>sendFromTwig</strong>(<a target="_blank" href="http://php.net/string">string</a> $twigPath, <a target="_blank" href="http://php.net/array">array</a> $data, $recipients, <a target="_blank" href="http://php.net/string">string</a> $subject = &quot;&quot;, <a target="_blank" href="http://php.net/array">array</a> $altConfig = [], <a target="_blank" href="http://php.net/array">array</a> $cc = [], <a target="_blank" href="http://php.net/array">array</a> $bcc = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -4204,6 +4204,14 @@ Send an email that will get rendered by twig
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$subject</td>
         <td>Optional. The subject of the message</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$altConfig</td>
+        <td>Optional. Alternative email config. If present MUST be an associative array with the keys 'host', 'port',
+'username', 'password' and 'encryption'. It CAN optionally have a key 'from' to set the sender-address
+to something else than specified in the system config. If 'from' is missing, the system-wide configured
+sender-address is used.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>

@@ -415,7 +415,8 @@ Output
 
 #### Methods
 
-<pre>public <strong>out</strong>(<a target="_blank" href="http://php.net/string">string</a> $resource, <a target="_blank" href="http://php.net/array">array</a> $outputParams = []):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>out</strong>(<a target="_blank" href="http://php.net/string">string</a> $resource, <a target="_blank" href="http://php.net/array">array</a> $outputParams = [], <a href="dataexchange#dataexchange_models_export">Export</a>
+ $export = null):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -431,6 +432,12 @@ process export output
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$outputParams</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="dataexchange#dataexchange_models_export">Export</a>
+</td>
+        <td>$export</td>
         <td></td>
     </tr>
 </table>

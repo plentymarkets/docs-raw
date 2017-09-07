@@ -1394,7 +1394,7 @@ The order amount vat model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>vatField</td>
-            <td>The ID of the VAT rate\'s field [0,1,2,3].</td>
+            <td>The ID of the VAT rate's field [0,1,2,3].</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>vatRate</td>
@@ -1403,6 +1403,14 @@ The order amount vat model.
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>value</td>
             <td>The VAT amount of money given in the same currency as the order amount.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>netTotal</td>
+            <td>The net amount for the current vat rate.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>grossTotal</td>
+            <td>The gross amount for the current vat rate.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -5545,6 +5553,10 @@ The order item property model.
 <li>LOCATION_RESERVED	    =	30</li>
 <li>EXTERNAL_ITEM_SHIPMENT_ID=	31</li>
 <li>PARTIAL_SHIPPING_COSTS   =	32</li>
+<li>MAIN_DOCUMENT_NUMBER     =	33</li>
+<li>SALES_TAX_ID_NUMBER      =	34</li>
+<li>RETURNS_REASON           =	35</li>
+<li>RETURNS_ITEM_STATUS      =	36</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>

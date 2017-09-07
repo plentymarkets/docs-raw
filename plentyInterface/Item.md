@@ -4363,6 +4363,10 @@ The item model
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>itemCrossSelling</td>
             <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>variations</td>
+            <td>An array of the variations of the item.</td>
         </tr></tbody>
 </table>
 
@@ -10163,6 +10167,22 @@ foo
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$operator</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setVariationNumber</strong>(<a target="_blank" href="http://php.net/string">string</a> $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$value</td>
         <td></td>
     </tr>
 </table>

@@ -5,7 +5,7 @@
 ## Contracts<a name="comment_comment_contracts"></a>
 ### CommentRepositoryContract<a name="comment_contracts_commentrepositorycontract"></a>
 
-Get, create and delete comments.
+Get, create, update and delete comments.
 
 
 #### Namespace
@@ -66,6 +66,27 @@ Delete a comment
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$commentId</td>
         <td>The ID of the comment</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateComment</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $commentId):<a href="comment#comment_models_comment">Comment</a>
+</pre>
+
+    
+Update a comment
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$commentId</td>
+        <td></td>
     </tr>
 </table>
 
