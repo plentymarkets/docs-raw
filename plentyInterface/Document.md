@@ -281,6 +281,10 @@ The document model contains information about actual documents.
             <td>displayDate</td>
             <td>The date displayed on the document</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>content</td>
+            <td>The base64 encodedcontent of the document.</td>
+        </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>createdAt</td>

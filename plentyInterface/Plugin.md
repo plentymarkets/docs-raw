@@ -471,6 +471,38 @@ Retrieve the &quot;count&quot; result of the query.
 </table>
 
 
+<pre>public <strong>limit</strong>(<a target="_blank" href="http://php.net/int">int</a> $value):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Set the &quot;limit&quot; value of the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>offset</strong>(<a target="_blank" href="http://php.net/int">int</a> $value):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Set the &quot;offset&quot; value of the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getCountForPagination</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/int">int</a></pre>
 
     

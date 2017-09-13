@@ -788,3 +788,12 @@ The event is triggered before an item in the shopping cart is updated.
 `Plenty\Modules\Basket\Events\BasketItem`
 
 
+
+#### Methods
+
+<pre>public <strong>getBasketItem</strong>():<a href="basket#basket_models_basketitem">BasketItem</a>
+</pre>
+
+    
+
+    

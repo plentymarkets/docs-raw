@@ -606,22 +606,18 @@ The tag relationship model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>tagType</td>
-            <td>The type of the tag. The following types are available.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>relationshipValue</td>
-            <td>The identifying value for what the tag is in relation to
+            <td>The type of the tag. The following types are available.
 <ul>
-<li>blog</li>
-<li>category</li>
-<li>content_page</li>
-<li>item</li>
-<li>ticket</li>
+ <li>blog</li>
+ <li>category</li>
+ <li>content_page</li>
+ <li>item</li>
+ <li>ticket</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>relationshipValue</td>
-            <td>The ID of the relationship</td>
+            <td>The identifying value for what the tag is in relation to</td>
         </tr></tbody>
 </table>
 

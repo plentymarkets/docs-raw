@@ -195,6 +195,64 @@ List accounting locations. The ID of the client and the ID of the country of del
 
 
 
+### DebtorAccountRepositoryContract<a name="accounting_contracts_debtoraccountrepositorycontract"></a>
+
+The DebtorAccountRepositoryContract is the interface for the DebtorAccountRepository. This interface allows you to either list debtor accounts by locationId or by locationId and mode. The mode describes the criteria that is used to assign pending amounts to debtor accounts.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>findByLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId):<a href="accounting#accounting_models_debtoraccountconfiguration">DebtorAccountConfiguration</a>
+</pre>
+
+    
+Get debtor account configuration of an accounting location. The ID of the accounting location must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$locationId</td>
+        <td>The ID of the accounting location.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listByLocationIdAndMode</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId, <a target="_blank" href="http://php.net/string">string</a> $mode):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Lists debtor accounts by mode for an accounting location . The mode and the accounting location must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$locationId</td>
+        <td>The ID of the accounting location.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$mode</td>
+        <td>Specifies the mode of the debtor accounts. There are 4 different modes available. These modes are:
+<ul>
+    <li>character</li>
+    <li>country</li>
+    <li>payment</li>
+    <li>country_payment</li>
+</ul>
+The modes are described in detail in the DebtorAccountConfiguration model as well as DebtorAccount model.</td>
+    </tr>
+</table>
+
+
+
 ### DetermineShopCountryContract<a name="accounting_contracts_determineshopcountrycontract"></a>
 
 This interface provides methods to initialise the country of a location or the country of an order as well as methods to get the ID of a client, the plenty ID of a client, the country or the ID of country.
@@ -352,6 +410,108 @@ Get the country of a location. The ID of the location must be specified.
 </table>
 
 
+
+### PostingKeyRepositoryContract<a name="accounting_contracts_postingkeyrepositorycontract"></a>
+
+The PostingKeyRepositoryContract is the interface for the PostingKeyRepository. This interface provides the functionality to find the posting keys for an accounting location.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>findByLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId):<a href="accounting#accounting_models_postingkeyconfiguration">PostingKeyConfiguration</a>
+</pre>
+
+    
+Get the posting key configuration of an accounting location. The ID of the accounting location must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$locationId</td>
+        <td>The ID of the accounting location</td>
+    </tr>
+</table>
+
+
+
+### RevenueAccountRepositoryContract<a name="accounting_contracts_revenueaccountrepositorycontract"></a>
+
+The RevenueAccountRepositoryContract is the interface for the RevenueAccountRepository. This interface allows you to either list revenue accounts by locationId, find by locationId and countryId or to least all for an accounting location.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>listRevenueAccounts</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List revenue account configurations for all accounting locations. Each accounting location has one revenue account configuration.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The page to get. The default page that will be returned is page 1.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of revenue accounts to be displayed per page. The default number of revenue accounts is 50.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId):<a href="accounting#accounting_models_revenueaccountlocationconfiguration">RevenueAccountLocationConfiguration</a>
+</pre>
+
+    
+Get the revenue account configuration of an accounting location. The ID of the accounting location must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$locationId</td>
+        <td>The ID of the accounting location</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByLocationIdAndCountryId</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId, <a target="_blank" href="http://php.net/int">int</a> $countryId):<a href="accounting#accounting_models_revenueaccountcountryconfiguration">RevenueAccountCountryConfiguration</a>
+</pre>
+
+    
+Get the revenue account configuration of a country. The country account configuration is associated with an accounting location. The ID of the accounting location that the country is associated with as well as the ID of the country must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$locationId</td>
+        <td>The ID of the accounting location</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td>The ID of the country</td>
+    </tr>
+</table>
+
+
 ## Exceptions<a name="accounting_accounting_exceptions"></a>
 ### AccountingException<a name="accounting_exceptions_accountingexception"></a>
 
@@ -418,6 +578,377 @@ The accounting location model. An accounting location always has a country and b
 </td>
             <td>client</td>
             <td>The client (store) this accounting location belongs to</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### DebtorAccount<a name="accounting_models_debtoraccount"></a>
+
+The DebtorAccountValue Model which contains the actual configured debtor accounts by character, payment and country.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>accountId</td>
+            <td>The ID of the debtor account configuration that the debtor account belongs to</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>mode</td>
+            <td>The mode describes the criteria based on which pending amounts are assigned to a debtor account. The following modes are available:
+<ul>
+<li>character        = The debtor accounts are selected based on the first character of customer information. The information and the order of the information that will be used are defined with the sequence. There are 3 different sequences available.</li>
+<li>payment          = The debtor accounts are selected based on the payment method.</li>
+<li>country          = The debtor accounts are selected based on the country of delivery.</li>
+<li>country_payment  = The debtor accounts are selected based on two criteria. The first criteria is the country and if the country is same as the country of the accounting location then the payment method is used to select the deptor account.</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>key</td>
+            <td>The key depends on the debtor account mode.
+<ul>
+<li>For the character mode the keys are letters. The letters indicate the first letter of the customer information that was used to assign the pending amounts.</li>
+<li>For the payment mode the key is the ID of payment method.</li>
+<li>For the country mode the key is the ID of the country.</li>
+<li>For the country_payment mode the key is either the ID of the country or the ID of payment method. If the country is the same as the country of the accounting location then the payment methods are used to select the deptor account.</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td>The actual debtor account.</td>
+        </tr><tr>
+            <td><a href="accounting#accounting_models_debtoraccountconfiguration">DebtorAccountConfiguration</a>
+</td>
+            <td>account</td>
+            <td>The debtor account configuration this account is associated with.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### DebtorAccountConfiguration<a name="accounting_models_debtoraccountconfiguration"></a>
+
+The debtor account configuration model. The configuration is a set of debtor accounts. The actual number of debtor accounts within the configuration depends on the mode used to assign pending amounts to debtor accounts.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the debtor account configuration</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>locationId</td>
+            <td>The ID of the accounting location that the debtor account is associated with.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>mode</td>
+            <td>The mode describes the criteria based on which pending amounts are assigned to a debtor account. The following modes are available:
+<ul>
+<li>character        = The debtor accounts are selected based on the first character of customer information. The information and the order of the information that will be used are defined with the sequence. There are 3 different sequences available.</li>
+<li>payment          = The debtor accounts are selected based on the payment method.</li>
+<li>country          = The debtor accounts are selected based on the country of delivery.</li>
+<li>country_payment  = The debtor accounts are selected based on two criteria. The first criteria is the country and if the country is same as the country of the accounting location then the payment method is used to select the deptor account.</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>sequence</td>
+            <td>The sequence defines the order in which customer information will be used for the debtor account assignment if the character made has been chosen. The following sequences are available:
+<ul>
+<li>FNV = stands for the sequence: company, lastname, firstname</li>
+<li>NVF = stands for the sequence: lastname, firstname, company</li>
+<li>NFV = stands for the sequence: lastname, company, firstname</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>standard</td>
+            <td>The standard debtor account that will be used if no matching debtor account can be found.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>save</td>
+            <td>Flag that indicates if the debtor account shall be saved within the contact data.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>accounts</td>
+            <td>The actual debtor accounts</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### PostingKey<a name="accounting_models_postingkey"></a>
+
+The Posting Key Model. A posting key is always associated with an accounting location and holds an posting key for each configured vat rate.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The Id posting key in relation to the vatrate.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td>The actual posting key for the vat rate.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### PostingKeyConfiguration<a name="accounting_models_postingkeyconfiguration"></a>
+
+The posting key configuration model. A posting key configuration is a set of 4 posting keys. A posting key configuration is always associated with an accounting location and can have a posting key per VAT rate. A posting key defines how line items are booked to accounts.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>locationId</td>
+            <td>The ID of the accounting location that the configuration belongs to</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>postingKeys</td>
+            <td>The posting keys for this configuration</td>
+        </tr><tr>
+            <td><a href="accounting#accounting_models_accountinglocation">AccountingLocation</a>
+</td>
+            <td>location</td>
+            <td>The name of the accounting location that the configuration belongs to</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### RevenueAccount<a name="accounting_models_revenueaccount"></a>
+
+The revenue account model provides information on a single revenue account. The ID of an account matches the ID of a VAT rate.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the account. The account IDs are always 0,1,2 or 3. This way the IDs indicate the VAT rate that the account is used for. The revenues that were made with items that have the VAT rate with the ID 0 are assigned to the account with the ID 0.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>account</td>
+            <td>The actual account number that was entered in the entry field.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### RevenueAccountCountryConfiguration<a name="accounting_models_revenueaccountcountryconfiguration"></a>
+
+The revenue account country configuration model. The revenue account country configuration is a set of up to 4 revenue accounts for one country. Each country that you need to pay VAT in needs a configuration. The 4 revenue account included in the configuration are associated with VAT rates. The VAT rate that one revenue account is associated with can be identified by the ID of the VAT rate. The ID of the VAT rate is included in the account name. Furthermore, each revenue account country configuration is part of a revenue account location configuration. A revenue account country configuration is only available if a VAT configuration for the country exists.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>countryId</td>
+            <td>The ID of the country that the account configuration belongs to</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>revenueAccountLocationId</td>
+            <td>The ID configuration of the revenue account that these accounts are for.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>revenueAccounts</td>
+            <td>A list of the actual revenue accounts. The accounts are associated with VAT rate. The association can be identified by</td>
+        </tr><tr>
+            <td><a href="order#order_models_country">Country</a>
+</td>
+            <td>country</td>
+            <td>The country these accounts are associated with.</td>
+        </tr><tr>
+            <td><a href="accounting#accounting_models_revenueaccountlocationconfiguration">RevenueAccountLocationConfiguration</a>
+</td>
+            <td>locationConfiguration</td>
+            <td>The revenue account configuration these accounts are associated with</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### RevenueAccountLocationConfiguration<a name="accounting_models_revenueaccountlocationconfiguration"></a>
+
+The revenue account location configuration model. A revenue account location configuration is the set of all revenue accounts that belong to one accounting location.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the revenue account configuration</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>locationId</td>
+            <td>The ID of the accounting location that the configuration belongs to</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>accountEu</td>
+            <td>The account used for revenues that are exempt from VAT and that were sold within the European Union</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>accountExport</td>
+            <td>The account used for revenues that are exempt from VAT and that were sold to outside the European Union</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>revenueAccountCountryConfigurations</td>
+            <td>The set of revenue accounts of one country</td>
         </tr></tbody>
 </table>
 

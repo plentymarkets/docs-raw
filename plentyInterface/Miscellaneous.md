@@ -362,41 +362,41 @@ The log entity model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>id</td>
-            <td></td>
+            <td>The ID of the log entry</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
-            <td></td>
+            <td>The date when the log entry was created</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>integration</td>
-            <td></td>
+            <td>The integration key used for the log entry. Used as a first level allocation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>identifier</td>
-            <td></td>
+            <td>The identifier used for the log entry. Used as a second level allocation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>code</td>
-            <td></td>
+            <td>The code for this current log entry. For log entries with level "debug", "info", "notice", "warning" and "report" this needs to have an translation in order to be stored.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>referenceType</td>
-            <td></td>
+            <td>Deprecated field, see the <code>references</code> field instead.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>referenceValue</td>
-            <td></td>
+            <td>Deprecated field, see the <code>references</code> field instead.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>level</td>
-            <td></td>
+            <td>The level this current log entry belongs to. Notice! When storing log entries with level "report" the entries will actually be stored as level "info". The difference between "report" and "info" is that log entries with level "report" do not need prior activation.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>additionalInfo</td>
-            <td></td>
+            <td>Additional information that need to also be stored. Can be an int, string or object.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>callerFunction</td>
@@ -405,6 +405,10 @@ The log entity model
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>callerLine</td>
             <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>references</td>
+            <td>All the reference types and values correlated with this log entry.</td>
         </tr></tbody>
 </table>
 
@@ -4123,6 +4127,170 @@ resource information
     
 
     
+# ExternalAuth<a name="miscellaneous_externalauth"></a>
+    
+## Contracts<a name="miscellaneous_externalauth_contracts"></a>
+### ExternalAccessRepositoryContract<a name="miscellaneous_contracts_externalaccessrepositorycontract"></a>
+
+Find and create ExternalAccess-datasets
+
+
+#### Namespace
+
+`Plenty\Plugin\ExternalAuth\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_models_externalaccess">ExternalAccess</a>
+</pre>
+
+    
+Create a new ExternalAccess record
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The data for the ExternalAccess record to be created with. Must be an associative array with
+the keys 'contactId', 'accessType', 'externalContactId' and optionally
+an external 'accessToken'.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findForTypeAndExternalId</strong>(<a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/string">string</a> $externalId):<a href="miscellaneous#miscellaneous_models_externalaccess">ExternalAccess</a>
+</pre>
+
+    
+Find
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>The type of the external access</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$externalId</td>
+        <td>The external ID of the contact</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findForTypeAndContactId</strong>(<a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="miscellaneous#miscellaneous_models_externalaccess">ExternalAccess</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>The type of the external access</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactId</td>
+        <td>The (internal) ID of the contact</td>
+    </tr>
+</table>
+
+
+## Models<a name="miscellaneous_externalauth_models"></a>
+### ExternalAccess<a name="miscellaneous_models_externalaccess"></a>
+
+Information on a contact&#039;s external access tokens
+
+
+#### Namespace
+
+`Plenty\Plugin\ExternalAuth\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>contactId</td>
+            <td>The ID of the contact in question. Must be unique in combination with $accessType.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>accessType</td>
+            <td>The type/provider of external access. Must be unique in combination with $contactId.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>externalContactId</td>
+            <td>The ID of the contact at the external provider.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>accessToken</td>
+            <td>The token for the external access.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
+</td>
+            <td>lastUpdate</td>
+            <td>The Date when this record was updated the last time.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+## Services<a name="miscellaneous_externalauth_services"></a>
+### ExternalAuthService<a name="miscellaneous_services_externalauthservice"></a>
+
+Log in users with external auth
+
+
+#### Namespace
+
+`Plenty\Plugin\ExternalAuth\Services`
+
+
+
+#### Methods
+
+<pre>public <strong>logInWithExternalUserId</strong>(<a target="_blank" href="http://php.net/string">string</a> $externalId, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$externalId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+</table>
+
+
 # Mail<a name="miscellaneous_mail"></a>
     
 ## Contracts<a name="miscellaneous_mail_contracts"></a>

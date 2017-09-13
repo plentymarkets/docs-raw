@@ -5531,32 +5531,34 @@ The order item property model.
             <td>typeId</td>
             <td>The ID of the property type.
 <ul>
-<li>WAREHOUSE		        =	1</li>
-<li>SHIPPING_PROFILE	        =	2</li>
-<li>PAYMENT_METHOD	        =	3</li>
-<li>WEIGHT			        =	11</li>
-<li>WIDTH			        =	12</li>
-<li>LENGTH		            =	13</li>
-<li>HEIGHT			        =	14</li>
-<li>EXTERNAL_TOKEN_ID        =	16</li>
-<li>EXTERNAL_ITEM_ID         =	17</li>
-<li>COUPON_CODE		        =	18</li>
-<li>COUPON_TYPE		        =	19</li>
-<li>ORIGINAL_WAREHOUSE	    =	20</li>
-<li>ORIGINAL_QUANTITY        =	21</li>
-<li>CATEGORY_ID              =   22</li>
-<li>MARKET_FEE		        =	23</li>
-<li>STOCK_REVERSING	        =	24</li>
-<li>DISPUTE_STATUS	        =	25</li>
-<li>NO_CHANGE_BY_CONTACT     =   26</li>
-<li>SIZE 			        =	29</li>
-<li>LOCATION_RESERVED	    =	30</li>
-<li>EXTERNAL_ITEM_SHIPMENT_ID=	31</li>
-<li>PARTIAL_SHIPPING_COSTS   =	32</li>
-<li>MAIN_DOCUMENT_NUMBER     =	33</li>
-<li>SALES_TAX_ID_NUMBER      =	34</li>
-<li>RETURNS_REASON           =	35</li>
-<li>RETURNS_ITEM_STATUS      =	36</li>
+<li>WAREHOUSE		              =	1</li>
+<li>SHIPPING_PROFILE	              =	2</li>
+<li>PAYMENT_METHOD	              =	3</li>
+<li>WEIGHT			              =	11</li>
+<li>WIDTH			              =	12</li>
+<li>LENGTH		                  =	13</li>
+<li>HEIGHT	      		          = 14</li>
+<li>EXTERNAL_TOKEN_ID              =	16</li>
+<li>EXTERNAL_ITEM_ID               =	17</li>
+<li>COUPON_CODE	      	          =	18</li>
+<li>COUPON_TYPE		              =	19</li>
+<li>ORIGINAL_WAREHOUSE	          =	20</li>
+<li>ORIGINAL_QUANTITY              =	21</li>
+<li>CATEGORY_ID                    = 22</li>
+<li>MARKET_FEE		              =	23</li>
+<li>STOCK_REVERSING	              =	24</li>
+<li>DISPUTE_STATUS      	          =	25</li>
+<li>NO_CHANGE_BY_CONTACT           = 26</li>
+<li>SIZE 			              =	29</li>
+<li>LOCATION_RESERVED	          =	30</li>
+<li>EXTERNAL_ITEM_SHIPMENT_ID      =	31</li>
+<li>PARTIAL_SHIPPING_COSTS         =	32</li>
+<li>MAIN_DOCUMENT_NUMBER           =	33</li>
+<li>SALES_TAX_ID_NUMBER            =	34</li>
+<li>RETURNS_REASON                 =	35</li>
+<li>RETURNS_ITEM_STATUS            =	36</li>
+<li>FULFILLMENT_CENTER_ID          = 37</li>
+<li>FULFILLMENT_CENTER_COUNTRY_ISO = 38</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
