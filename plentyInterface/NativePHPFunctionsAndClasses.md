@@ -359,6 +359,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.sha1.php">sha1</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.shuffle.php">shuffle</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.simplexml-load-string.php">simplexml_load_string</a>
             </li>
                     <li>

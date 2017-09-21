@@ -6686,6 +6686,32 @@ Creates a property selection. The ID of the property must be specified.
 </table>
 
 
+<pre>public <strong>createLang</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_propertyselection">PropertySelection</a>
+</pre>
+
+    
+Creates a property selection lang. The ID of the property selection must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The property selection data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyId</td>
+        <td>The ID of the property</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the property selection</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>findByProperty</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/string">string</a> $lang = null):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     

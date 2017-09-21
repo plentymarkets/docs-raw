@@ -34,6 +34,45 @@ foo
 </table>
 
 
+## Variation<a name="miscellaneous_item_variation"></a>
+### SalesPriceService<a name="miscellaneous_variation_salespriceservice"></a>
+
+To be written...
+
+
+#### Namespace
+
+`Plenty\Legacy\Services\Item\Variation`
+
+
+
+#### Methods
+
+<pre>public <strong>getUnitPrice</strong>(<a target="_blank" href="http://php.net/float">float</a> $lot, <a target="_blank" href="http://php.net/float">float</a> $price, <a target="_blank" href="http://php.net/string">string</a> $unit):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$lot</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$price</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$unit</td>
+        <td></td>
+    </tr>
+</table>
+
+
 # Log<a name="miscellaneous_log"></a>
     
 ## Contracts<a name="miscellaneous_log_contracts"></a>
