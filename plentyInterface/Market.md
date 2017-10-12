@@ -2765,6 +2765,110 @@ Assign multiple values to an object.
 </table>
 
 
+# Category<a name="market_category"></a>
+    
+## Contracts<a name="market_category_contracts"></a>
+### CategoryRepositoryContract<a name="market_contracts_categoryrepositorycontract"></a>
+
+The contract for the Ebay category repository.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Category\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="market#market_models_category">Category</a>
+</pre>
+
+    
+Get category
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the category.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>The filters that could be applied: 'marketplaceId'.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+List all categories
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>Categories can be filtered by ID and marketplace ID. The filters that could be applied: 'marketplaceId', 'categoryId'.</td>
+    </tr>
+</table>
+
+
+## Models<a name="market_category_models"></a>
+### Category<a name="market_models_category"></a>
+
+The category model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Category\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the category.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>parentId</td>
+            <td>The parent category ID.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the category.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isLeaf</td>
+            <td>Tells if the category is leaf.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>children</td>
+            <td>Child categories.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # PartsFitment<a name="market_partsfitment"></a>
     
 ## Contracts<a name="market_partsfitment_contracts"></a>
@@ -3635,6 +3739,32 @@ Use this interface to store and retrieve market specific settings.
 
 #### Methods
 
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = \Plenty\Modules\Market\Settings\Models\Settings::MAX_ITEMS_PER_PAGE):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List settings.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>Settings can be filtered by ID, marketplace ID.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>Current page of the response.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The requested amount of settings per result page.</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/string">string</a> $marketplaceId, <a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/array">array</a> $settings):<a href="market#market_models_settings">Settings</a>
 </pre>
 
@@ -3817,6 +3947,32 @@ Use this method to create a relation of the chosen type.
 </table>
 
 
+<pre>public <strong>createRelationWithParent</strong>(<a target="_blank" href="http://php.net/int">int</a> $settingsId, <a target="_blank" href="http://php.net/int">int</a> $correlationId, <a target="_blank" href="http://php.net/int">int</a> $parentSettingsId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Use this method to create a relation of the chosen type.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$settingsId</td>
+        <td>The id of the market settings we want to create the relation for.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$correlationId</td>
+        <td>The id of the plentymarkets settings we want to create the relation to.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$parentSettingsId</td>
+        <td>The id of the parent market settings we want to create the relation to.</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>clear</strong>($marketplaceId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -3872,6 +4028,82 @@ Get a specific settings by marketplace id and correlation id.
 </table>
 
 
+<pre>public <strong>getAllSettingsByCorrelation</strong>($marketplaceId, <a target="_blank" href="http://php.net/int">int</a> $correlationId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get a specific settings by marketplace id and correlation id.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$marketplaceId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$correlationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getSettingsByCorrelationAndParent</strong>($marketplaceId, <a target="_blank" href="http://php.net/int">int</a> $correlationId, <a target="_blank" href="http://php.net/int">int</a> $parentSettingsId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get a specific settings by marketplace id and correlation id.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$marketplaceId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$correlationId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$parentSettingsId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getAllSettingsByCorrelationAndParent</strong>($marketplaceId, <a target="_blank" href="http://php.net/int">int</a> $correlationId, <a target="_blank" href="http://php.net/int">int</a> $parentSettingsId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get a specific settings by marketplace id and correlation id.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$marketplaceId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$correlationId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$parentSettingsId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="market_settings_models"></a>
 ### Settings<a name="market_models_settings"></a>
 
@@ -3896,35 +4128,39 @@ The market settings model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The id of the market settings.</td>
+            <td>The ID of the market settings.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>marketplaceId</td>
-            <td>The id of the marketplace.</td>
+            <td>The ID of the marketplace.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>type</td>
-            <td>The type of the current settings. Possible values are: attribute, property, category, shipping.</td>
+            <td>The type of the current market settings. Possible values are: attribute, attributeValue, property, category, shipping.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>settings</td>
-            <td>The settings for the current marketplace.</td>
+            <td>The market settings for the current marketplace.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>category</td>
-            <td>The category that this settings are related to.</td>
+            <td>The category that these market settings are related to.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>parcelServicePreset</td>
-            <td>The parcel service preset that this settings are related to.</td>
+            <td>The parcel service preset that these market settings are related to.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>attribute</td>
-            <td>The attribute that this settings are related to.</td>
+            <td>The attribute that these market settings are related to.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>property</td>
-            <td>The property item that this settings are related to.</td>
+            <td>The property item that these market settings are related to.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>attributeValue</td>
+            <td>The attributeValue that these market settings are related to.</td>
         </tr></tbody>
 </table>
 

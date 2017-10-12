@@ -588,7 +588,7 @@ Get an order
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the order instance, one of "addresses", "events", "dates", "relation", "reference", "location", "payments" and "comments".</td>
+        <td>The relations to load in the order instance, one of "addresses", "events", "dates", "relation", "reference", "location", "payments", "documents" and "comments".</td>
     </tr>
 </table>
 
@@ -728,7 +728,7 @@ List orders of a contact
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "location", "payments" and "comments".</td>
+        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "location", "payments", "documents" and "comments".</td>
     </tr>
 </table>
 
@@ -759,7 +759,7 @@ List orders that include one or more variations from a supplier
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "location", "payments" and "comments".</td>
+        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "location", "payments", "documents" and "comments".</td>
     </tr>
 </table>
 
@@ -790,7 +790,7 @@ List orders sent by a contact
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "location", "payments" and "comments".</td>
+        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "location", "payments", "documents" and "comments".</td>
     </tr>
 </table>
 
@@ -811,7 +811,7 @@ Get latest order of a contact
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance. The relations available are: "addresses", "events", "dates", "relation", "reference", "location", "payments" and "comments".
+        <td>The relations to load in the Order instance. The relations available are: "addresses", "events", "dates", "relation", "reference", "location", "payments", "documents" and "comments".
 If you want to load relations, you need to include at least one, but you can also include several or all.</td>
     </tr>
 </table>
@@ -838,7 +838,7 @@ List orders
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "location", "payments" and "comments".</td>
+        <td>The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "location", "payments", "documents" and "comments".</td>
     </tr>
 </table>
 
@@ -1146,6 +1146,15 @@ The order model.
             <td>locationId</td>
             <td>The ID of the location that the order belongs to</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lockStatus</td>
+            <td>The lock status of the order. The following statuses are available:
+<ul>
+ <li>unlocked</li>
+ <li>permanentlyLocked</li>
+ <li>reversibleLocked</li>
+</ul></td>
+        </tr><tr>
             <td><a href="account#account_models_address">Address</a>
 </td>
             <td>billingAddress</td>
@@ -1210,6 +1219,11 @@ The order model.
 </td>
             <td>orderReferences</td>
             <td>The order references.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>documents</td>
+            <td>The documents that are associated with the order.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -5559,6 +5573,8 @@ The order item property model.
 <li>RETURNS_ITEM_STATUS            =	36</li>
 <li>FULFILLMENT_CENTER_ID          = 37</li>
 <li>FULFILLMENT_CENTER_COUNTRY_ISO = 38</li>
+<li>REORDER_ITEM_ID                = 39</li>
+<li>LISTING_TYPE                   = 40</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -6489,6 +6505,115 @@ Returns this model as an array.
 # Shipping<a name="order_shipping"></a>
     
 ## Contracts<a name="order_shipping_contracts"></a>
+### EUCountryCodesServiceContract<a name="order_contracts_eucountrycodesservicecontract"></a>
+
+The EUCountryCodesServiceContract
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>isEUCountry</strong>(<a target="_blank" href="http://php.net/int">int</a> $countryId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasCommunityTax</strong>(<a target="_blank" href="http://php.net/int">int</a> $countryId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getTaxTerritory</strong>(<a target="_blank" href="http://php.net/int">int</a> $countryId):<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasCommunityToll</strong>(<a target="_blank" href="http://php.net/int">int</a> $countryId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getTollTerritory</strong>(<a target="_blank" href="http://php.net/int">int</a> $countryId):<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isExportDelivery</strong>(<a target="_blank" href="http://php.net/int">int</a> $countryId, <a target="_blank" href="http://php.net/int">int</a> $merchandCountryId = null):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$merchandCountryId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### ParcelServicePresetRepositoryContract<a name="order_contracts_parcelservicepresetrepositorycontract"></a>
 
 The ParcelServicePresetRepositoryContract is the interface for the shipping profile repository. This interface allows to get a shipping profile by the ID or list all shipping profiles.

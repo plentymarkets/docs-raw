@@ -284,6 +284,53 @@ Repository for TagRelationship
 </table>
 
 
+<pre>public <strong>findRelationship</strong>(<a target="_blank" href="http://php.net/int">int</a> $tagId, <a target="_blank" href="http://php.net/int">int</a> $relationshipValue, <a target="_blank" href="http://php.net/string">string</a> $relationshipType):<a href="tag#tag_models_tagrelationship">TagRelationship</a>
+</pre>
+
+    
+Get a specific tag relationship or return null
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$tagId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$relationshipValue</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$relationshipType</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $relationshipValue, <a target="_blank" href="http://php.net/string">string</a> $relationshipType):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Delete tags by reference value and relationship type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$relationshipValue</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$relationshipType</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -559,14 +606,11 @@ The tag name model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>tagLang</td>
-            <td>The lang of the tag name. The following types are available.
-<ul>
-<li>blog</li>
-<li>category</li>
-<li>content_page</li>
-<li>item</li>
-<li>ticket</li>
-</ul></td>
+            <td>The lang of the tag name.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>tagName</td>
+            <td>The name of the tag.</td>
         </tr></tbody>
 </table>
 

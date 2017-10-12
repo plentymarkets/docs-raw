@@ -184,6 +184,17 @@ Gets the currency.
 Gets the exchange rate used for converting the currency.
     
 
+### FrontendCustomerAddressChanged<a name="frontend_events_frontendcustomeraddresschanged"></a>
+
+The event is triggered when a customer address is changed in the online store.
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
 ### FrontendLanguageChanged<a name="frontend_events_frontendlanguagechanged"></a>
 
 The event is triggered when the language is changed in the online store.
@@ -1112,6 +1123,11 @@ Lists all payment methods for switch.
 </table>
 
 
+<pre>public <strong>getCurrentPaymentMethodsForExpressCheckout</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists all payment methods if express checkout is available
+    
 <pre>public <strong>getPaymentMethodName</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
  $paymentMethod, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
 

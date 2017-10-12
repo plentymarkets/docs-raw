@@ -149,6 +149,66 @@ Delete a category document.
 </table>
 
 
+<pre>public <strong>uploadOrderShippingPackageDocuments</strong>(<a target="_blank" href="http://php.net/int">int</a> $packageId, <a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/string">string</a> $document):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$packageId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$document</td>
+        <td>base64 encoded document</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOrderShippingPackageDocuments</strong>(<a target="_blank" href="http://php.net/int">int</a> $packageId, <a target="_blank" href="http://php.net/string">string</a> $type):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$packageId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteOrderShippingPackageDocuments</strong>(<a target="_blank" href="http://php.net/int">int</a> $packageId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$packageId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -255,6 +315,8 @@ The document model contains information about actual documents.
     <li>webshop</li>
   <li>webshop_customer</li>
     <li>z_report</li>
+    <li>shipping_label</li>
+    <li>shipping_export_label</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -378,6 +440,7 @@ The document reference model. A document reference allows you to assign a docume
     <li>reorder</li>
  <li>ticket</li>
                                <li>warehouse</li>
+                               <li>order_shipping_package</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>

@@ -224,6 +224,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.is-array.php">is_array</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.is-bool.php">is_bool</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.is-int.php">is_int</a>
             </li>
                     <li>
@@ -266,6 +269,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             <strong>M</strong>
         <ul>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.max.php">max</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.mb-check-encoding.php">mb_check_encoding</a>
             </li>
                     <li>
@@ -285,6 +291,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.microtime.php">microtime</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.min.php">min</a>
             </li>
                 </ul>
             <strong>N</strong>

@@ -34,6 +34,23 @@ foo
 </table>
 
 
+<pre>public <strong>searchAll</strong>(<a href="item#item_models_salespricesearchrequest">SalesPriceSearchRequest</a>
+ $request):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="item#item_models_salespricesearchrequest">SalesPriceSearchRequest</a>
+</td>
+        <td>$request</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Variation<a name="miscellaneous_item_variation"></a>
 ### SalesPriceService<a name="miscellaneous_variation_salespriceservice"></a>
 
@@ -3265,6 +3282,12 @@ Create a new redirect response to the previously intended location.
 </table>
 
 
+<pre>public <strong>sendHeaders</strong>():<a href="miscellaneous#miscellaneous_plugin_http">Http</a>
+</pre>
+
+    
+Send the HTTP headers without sending the whole response.
+    
 ## Log<a name="miscellaneous_plugin_log"></a>
 ### LoggerFactory<a name="miscellaneous_log_loggerfactory"></a>
 
@@ -4411,6 +4434,46 @@ Send an email that will get rendered by twig
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$subject</td>
         <td>Optional. The subject of the message</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$altConfig</td>
+        <td>Optional. Alternative email config. If present MUST be an associative array with the keys 'host', 'port',
+'username', 'password' and 'encryption'. It CAN optionally have a key 'from' to set the sender-address
+to something else than specified in the system config. If 'from' is missing, the system-wide configured
+sender-address is used.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$cc</td>
+        <td>Optional. Array of strings containing email addresses which the message should be sent to as cc</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$bcc</td>
+        <td>Optional. Array of strings containing email addresses which the message should be sent to as bcc</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>sendFromMime</strong>(<a target="_blank" href="http://php.net/string">string</a> $mimeMessage, $recipients, <a target="_blank" href="http://php.net/array">array</a> $altConfig = [], <a target="_blank" href="http://php.net/array">array</a> $cc = [], <a target="_blank" href="http://php.net/array">array</a> $bcc = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Send given message as email
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$mimeMessage</td>
+        <td>Complete email mime source header included</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$recipients</td>
+        <td>Either a string containing a single email address or an array of strings containing multiple email addresses</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
