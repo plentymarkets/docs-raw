@@ -86,17 +86,6 @@ Repository Contract for UrlBuilder
 </table>
 
 
-## Exceptions<a name="helper_helper_exceptions"></a>
-### EncryptionException<a name="helper_exceptions_encryptionexception"></a>
-
-Class EncryptionException
-
-
-#### Namespace
-
-`Plenty\Modules\Helper\Exceptions`
-
-
 ## Models<a name="helper_helper_models"></a>
 ### KeyValue<a name="helper_models_keyvalue"></a>
 
@@ -132,48 +121,18 @@ key value data
 </table>
 
 
-## Services<a name="helper_helper_services"></a>
-### ArrayHelper<a name="helper_services_arrayhelper"></a>
+## Exceptions<a name="helper_helper_exceptions"></a>
+### EncryptionException<a name="helper_exceptions_encryptionexception"></a>
 
-helper class for arrays
+Class EncryptionException
 
 
 #### Namespace
 
-`Plenty\Modules\Helper\Services`
+`Plenty\Modules\Helper\Exceptions`
 
 
-
-#### Methods
-
-<pre>public <strong>buildMapFromObjectList</strong>($list, <a target="_blank" href="http://php.net/string">string</a> $keyField, <a target="_blank" href="http://php.net/string">string</a> $valueField):<a href="helper#helper_models_keyvalue">KeyValue</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$list</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$keyField</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$valueField</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
+## Services<a name="helper_helper_services"></a>
 ### StringEncodingService<a name="helper_services_stringencodingservice"></a>
 
 Service for encoding strings
@@ -442,3 +401,44 @@ Webstore Helper Service
     
 
     
+
+### ArrayHelper<a name="helper_services_arrayhelper"></a>
+
+helper class for arrays
+
+
+#### Namespace
+
+`Plenty\Modules\Helper\Services`
+
+
+
+#### Methods
+
+<pre>public <strong>buildMapFromObjectList</strong>($list, <a target="_blank" href="http://php.net/string">string</a> $keyField, <a target="_blank" href="http://php.net/string">string</a> $valueField):<a href="helper#helper_models_keyvalue">KeyValue</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$list</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$keyField</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$valueField</td>
+        <td></td>
+    </tr>
+</table>
+
+
