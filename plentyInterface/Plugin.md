@@ -830,42 +830,6 @@ A scan operation scans the entire table. You can specify filters to apply to the
 </table>
 
 
-# Libs<a name="plugin_libs"></a>
-    
-## Contracts<a name="plugin_libs_contracts"></a>
-### LibraryCallContract<a name="plugin_contracts_librarycallcontract"></a>
-
-library call
-
-
-#### Namespace
-
-`Plenty\Modules\Plugin\Libs\Contracts`
-
-
-
-#### Methods
-
-<pre>public <strong>call</strong>(<a target="_blank" href="http://php.net/string">string</a> $libCall, <a target="_blank" href="http://php.net/array">array</a> $params = []):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$libCall</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$params</td>
-        <td></td>
-    </tr>
-</table>
-
-
 # Storage<a name="plugin_storage"></a>
     
 ## Contracts<a name="plugin_storage_contracts"></a>
@@ -1090,6 +1054,42 @@ Returns some or all (up to 1000) objects
     <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$resultKeyWithoutPrefix</td>
+        <td></td>
+    </tr>
+</table>
+
+
+# Libs<a name="plugin_libs"></a>
+    
+## Contracts<a name="plugin_libs_contracts"></a>
+### LibraryCallContract<a name="plugin_contracts_librarycallcontract"></a>
+
+library call
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\Libs\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>call</strong>(<a target="_blank" href="http://php.net/string">string</a> $libCall, <a target="_blank" href="http://php.net/array">array</a> $params = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$libCall</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$params</td>
         <td></td>
     </tr>
 </table>
