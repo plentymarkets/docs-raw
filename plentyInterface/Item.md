@@ -3094,7 +3094,7 @@ lookup repository for variations
 
 #### Methods
 
-<pre>public <strong>hasBarcode</strong>(<a target="_blank" href="http://php.net/string">string</a> $code):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
+<pre>public <strong>hasBarcode</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, <a target="_blank" href="http://php.net/int">int</a> $barcodeId = null):<a href="item#item_contracts_variationlookuprepositorycontract">VariationLookupRepositoryContract</a>
 </pre>
 
     
@@ -3105,6 +3105,11 @@ lookup repository for variations
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$barcodeId</td>
         <td></td>
     </tr>
 </table>
@@ -5905,6 +5910,22 @@ kommt noch
     
 
     
+<pre>public <strong>setNumberOfDocumentsPerShard</strong>(<a target="_blank" href="http://php.net/int">int</a> $size):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$size</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>setIndex</strong>(<a href="cloud#cloud_index_indexinterface">IndexInterface</a>
  $index):<a href="cloud#cloud_contracts_elasticsearchsearchrepositorycontract">ElasticSearchSearchRepositoryContract</a>
 </pre>

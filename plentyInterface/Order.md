@@ -2356,7 +2356,7 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>orderItemName</td>
-            <td>The item order name (description)</td>
+            <td>The name of the order item</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>attributeValues</td>
@@ -2378,6 +2378,14 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
             <td>vatRate</td>
             <td>The vat amount, e.g. 19.0 for 19% VAT.</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>position</td>
+            <td>The order items position in the order.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>warehouseId</td>
+            <td>The ID of the warehouse.</td>
+        </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>createdAt</td>
@@ -2387,6 +2395,16 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 </td>
             <td>updatedAt</td>
             <td>The date that the order item was last updated.</td>
+        </tr><tr>
+            <td><a href="order#order_models_orderitemamount">OrderItemAmount</a>
+</td>
+            <td>systemAmount</td>
+            <td>The order item's amount in the system currency.</td>
+        </tr><tr>
+            <td><a href="order#order_models_orderitemamount">OrderItemAmount</a>
+</td>
+            <td>amount</td>
+            <td>The order item's amount in the order currency. If the order currency is the same as the system currency this amount is the same.</td>
         </tr><tr>
             <td><a href="order#order_models_order">Order</a>
 </td>
@@ -2425,11 +2443,26 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
+            <td>orderDates</td>
+            <td>The dates of the associated order.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>dates</td>
-            <td>The dates of the order item. Can contain many different dates with their types like:
+            <td>The dates of the order item. Can contain many different dates with their types. The following types are currently available:
 <ul>
+<li>Deleted on = 1</li>
+<li>Created on = 2</li>
+<li>Paid date = 3</li>
+<li>Last update = 4</li>
+<li>Completed on = 5</li>
+<li>Return date = 6</li>
+<li>Payment due date = 7</li>
+<li>Estimated shipping date = 8</li>
 <li>Start date = 9</li>
 <li>End date = 10</li>
+<li>Possible delivery date = 11</li>
+<li>Market transfer date = 12</li>
 </ul></td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
@@ -2575,7 +2608,20 @@ The order item type model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The ID of the order item type</td>
+            <td>The ID of the order item type. The following types are currently available: <br />
+<ul>
+<li>VARIATION			=	1</li>
+<li>ITEM_BUNDLE			=	2</li>
+<li>BUNDLE_COMPONENT		=	3</li>
+<li>PROMOTIONAL_COUPON	=	4</li>
+<li>GIFT_CARD			=	5</li>
+<li>SHIPPING_COSTS		=	6</li>
+<li>PAYMENT_SURCHARGE	=	7</li>
+<li>GIFT_WRAP			=	8</li>
+<li>UNASSIGEND_VARIATION	=	9</li>
+<li>DEPOSIT				=	10</li>
+<li>ORDER				=	11</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isErasable</td>
@@ -2624,7 +2670,7 @@ The order item type name model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The type name id.</td>
+            <td>The ID of the type name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
@@ -2636,7 +2682,7 @@ The order item type name model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The type name's language.</td>
+            <td>The ISO 639-1 language code for the name, e.g. "en" for English</td>
         </tr><tr>
             <td><a href="order#order_models_orderitemtype">OrderItemType</a>
 </td>
@@ -2677,11 +2723,11 @@ The order type name model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The type name id.</td>
+            <td>The ID of the type name</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The type id.</td>
+            <td>The ID of the type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name</td>
@@ -2689,7 +2735,7 @@ The order type name model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
-            <td>The language of the type name.</td>
+            <td>The ISO 639-1 language code for the name, e.g. "en" for English</td>
         </tr><tr>
             <td><a href="order#order_models_ordertype">OrderType</a>
 </td>
@@ -3710,10 +3756,14 @@ The OrderDateType model.
 <li>Created on = 2</li>
 <li>Paid date = 3</li>
 <li>Last update = 4</li>
-<li>Completed date = 5</li>
+<li>Completed on = 5</li>
 <li>Return date = 6</li>
 <li>Payment due date = 7</li>
 <li>Estimated shipping date = 8</li>
+<li>Start date = 9</li>
+<li>End date = 10</li>
+<li>Possible delivery date = 11</li>
+<li>Market transfer date = 12</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
@@ -3878,7 +3928,21 @@ The OrderItemDate model.
             <td><a href="order#order_models_orderdatetype">OrderDateType</a>
 </td>
             <td>type</td>
-            <td>The type of the date</td>
+            <td>The type of the date.  The following date types are available:
+<ul>
+<li>Deleted on = 1</li>
+<li>Created on = 2</li>
+<li>Paid date = 3</li>
+<li>Last update = 4</li>
+<li>Completed on = 5</li>
+<li>Return date = 6</li>
+<li>Payment due date = 7</li>
+<li>Estimated shipping date = 8</li>
+<li>Start date = 9</li>
+<li>End date = 10</li>
+<li>Possible delivery date = 11</li>
+<li>Market transfer date = 12</li>
+</ul></td>
         </tr></tbody>
 </table>
 
@@ -3924,10 +3988,14 @@ The OrderDateTypeName model. Order date types can have several names. One name p
 <li>Created on = 2</li>
 <li>Paid date = 3</li>
 <li>Last update = 4</li>
-<li>Completed date = 5</li>
+<li>Completed on = 5</li>
 <li>Return date = 6</li>
 <li>Payment due date = 7</li>
 <li>Estimated shipping date = 8</li>
+<li>Start date = 9</li>
+<li>End date = 10</li>
+<li>Possible delivery date = 11</li>
+<li>Market transfer date = 12</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -4802,7 +4870,7 @@ The ShippingServiceProviderRepositoryContract is the interface for the shipping 
 
 #### Methods
 
-<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -4828,6 +4896,11 @@ Lists shipping service providers.
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$filters</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
         <td></td>
     </tr>
 </table>

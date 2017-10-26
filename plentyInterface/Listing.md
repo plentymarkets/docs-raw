@@ -1950,7 +1950,7 @@ The contract for the listing market directory repository.
 
 #### Methods
 
-<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="listing#listing_models_listingmarketdirectory">ListingMarketDirectory</a>
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="listing#listing_models_listingmarketdirectory">ListingMarketDirectory</a>
 </pre>
 
     
@@ -1962,6 +1962,31 @@ Get a listing market directory
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
         <td>The ID of the listing market directory.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the ListingMarketDirectory instance, one of "children".</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+List all directories
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the ListingMarketDirectory instances, one of "children".</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>Listing market directory filters. Available filters: parentId (if no parentId is given than top level is returned).</td>
     </tr>
 </table>
 
@@ -2018,6 +2043,52 @@ Delete a listing market directory
 </table>
 
 
+<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 ## Models<a name="listing_directory_models"></a>
 ### ListingMarketDirectory<a name="listing_models_listingmarketdirectory"></a>
 
@@ -2284,7 +2355,7 @@ List listing market histories
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$filters</td>
-        <td>The filters that should be applied. The filters that are available: 'listingMarketId', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition' .</td>
+        <td>The filters that should be applied. The filters that are available: 'listingMarketId', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition', 'updatedAtFrom', 'updatedAtTo , 'textData', 'firstPlatformCategoryId', 'secondPlatformCategoryId', 'firstShopCategoryId', 'secondShopCategoryId', 'thirdShopCategoryId', 'shippingProfileId', 'lastSale', 'isEbayPlus', 'isClickAndCollect'.</td>
     </tr>
 </table>
 

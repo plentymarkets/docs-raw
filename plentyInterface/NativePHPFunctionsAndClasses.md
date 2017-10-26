@@ -128,6 +128,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.curl-setopt.php">curl_setopt</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.curl-setopt-array.php">curl_setopt_array</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.current.php">current</a>
             </li>
                 </ul>
@@ -372,6 +375,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.simplexml-load-string.php">simplexml_load_string</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.sizeof.php">sizeof</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.sleep.php">sleep</a>

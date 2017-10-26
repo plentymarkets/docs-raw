@@ -1284,6 +1284,22 @@ Repository Contract for ResourceLoader
 </table>
 
 
+<pre>public <strong>getResourceBag</strong>(<a target="_blank" href="http://php.net/array">array</a> $sourceOptions):<a href="dataexchange#dataexchange_models_resourcebag">ResourceBag</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$sourceOptions</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>validateSourceOptions</strong>(<a target="_blank" href="http://php.net/array">array</a> $sourceOptions):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -1341,6 +1357,32 @@ Repository Contract for ResourceParser
 
 
 <pre>public <strong>getParserType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+## Models<a name="dataexchange_resource_models"></a>
+### ResourceBag<a name="dataexchange_models_resourcebag"></a>
+
+ResourceBag
+
+
+#### Namespace
+
+`Plenty\Modules\DataExchange\Resource\Models`
+
+
+
+#### Methods
+
+<pre>public <strong>getResource</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getMd5</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 
