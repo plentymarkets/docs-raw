@@ -1274,7 +1274,7 @@ The payment history model
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>Id</td>
+            <td>id</td>
             <td>The ID of the payment history</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -1296,6 +1296,10 @@ The payment history model
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>value</td>
             <td>The language of the payment history</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>user</td>
+            <td>The user who initiated the action</td>
         </tr></tbody>
 </table>
 

@@ -237,6 +237,22 @@ Updates a ticket with given data.
 </table>
 
 
+<pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $ticketId):<a href="ticket#ticket_models_ticket">Ticket</a>
+</pre>
+
+    
+Get an ticket
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$ticketId</td>
+        <td>The ID of the ticket</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -885,6 +901,10 @@ The ticket model.
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>resubmissionAt</td>
             <td>The date the ticket should be resubmitted</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>parseData</td>
+            <td>The ParseData from the ticket</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>owners</td>

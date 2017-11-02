@@ -150,6 +150,22 @@ generator for csv content
 </table>
 
 
+<pre>public <strong>addBulkCSVContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>addContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 

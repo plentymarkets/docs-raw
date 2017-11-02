@@ -3160,8 +3160,7 @@ Creates address options for an address and returns all options of the address.
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$addressId</td>
-        <td>The ID of the address
-@MapParam(name="addressData", keyType="string", valueType="mixed")</td>
+        <td>The ID of the address</td>
     </tr>
 </table>
 

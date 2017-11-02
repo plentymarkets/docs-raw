@@ -16,6 +16,12 @@ plentymarkets event procedures triggered
 
 #### Methods
 
+<pre>public <strong>getTicket</strong>():<a href="ticket#ticket_models_ticket">Ticket</a>
+</pre>
+
+    
+
+    
 <pre>public <strong>getOrder</strong>():<a href="order#order_models_order">Order</a>
 </pre>
 

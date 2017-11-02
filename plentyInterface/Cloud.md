@@ -51,6 +51,14 @@ Represent a storage object
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>body</td>
             <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>contentType</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>contentLength</td>
+            <td></td>
         </tr></tbody>
 </table>
 

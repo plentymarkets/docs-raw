@@ -189,6 +189,12 @@ Lists feedback replies
 </table>
 
 
+<pre>public <strong>migrateLegacyFeedbacks</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Migrate legacy feedbacks
+    
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -726,6 +732,12 @@ Lists feedback replies
 </table>
 
 
+<pre>public <strong>migrateLegacyFeedbacks</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Migrate legacy feedbacks
+    
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -1237,6 +1249,56 @@ The feedback rating average model.
 Returns this model as an array.
     
 
+### FeedbackLegacy<a name="feedback_models_feedbacklegacy"></a>
+
+The feedback legacy model.
+
+
+#### Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>feedbackId</td>
+            <td>The ID of the new feedback</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>legacyFeedbackId</td>
+            <td>The ID of the legacy feedback</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The date when the legacy feedback was created</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The date when the legacy feedback was last updated</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
 ### FeedbackRating<a name="feedback_models_feedbackrating"></a>
 
 The feedback rating model.
@@ -1415,6 +1477,10 @@ The feedback target relation model.
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>targetRelationLabel</td>
             <td>The target relation label</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>targetRelationName</td>
+            <td>The target relation name</td>
         </tr></tbody>
 </table>
 
@@ -1633,6 +1699,10 @@ The feedback model.
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>title</td>
             <td>The title of the feedback</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>authorName</td>
+            <td>The name of the feedback's author</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isVisible</td>
@@ -1824,6 +1894,56 @@ The feedback rating average model.
 Returns this model as an array.
     
 
+### FeedbackLegacy<a name="feedback_models_feedbacklegacy"></a>
+
+The feedback legacy model.
+
+
+#### Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>feedbackId</td>
+            <td>The ID of the new feedback</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>legacyFeedbackId</td>
+            <td>The ID of the legacy feedback</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The date when the legacy feedback was created</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The date when the legacy feedback was last updated</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
 ### FeedbackRating<a name="feedback_models_feedbackrating"></a>
 
 The feedback rating model.
@@ -2002,6 +2122,10 @@ The feedback target relation model.
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>targetRelationLabel</td>
             <td>The target relation label</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>targetRelationName</td>
+            <td>The target relation name</td>
         </tr></tbody>
 </table>
 
@@ -2220,6 +2344,10 @@ The feedback model.
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>title</td>
             <td>The title of the feedback</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>authorName</td>
+            <td>The name of the feedback's author</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isVisible</td>
