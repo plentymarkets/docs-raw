@@ -4144,6 +4144,233 @@ To be written...
 </table>
 
 
+
+### DetectSalesPriceService<a name="miscellaneous_variation_detectsalespriceservice"></a>
+
+To be written...
+
+
+#### Namespace
+
+`Plenty\Legacy\Services\Item\Variation`
+
+
+
+#### Methods
+
+<pre>public <strong>getQuantity</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setQuantity</strong>($quantity):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$quantity</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getCurrency</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setCurrency</strong>($currency):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$currency</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPlentyId</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setPlentyId</strong>($plentyId):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$plentyId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrderReferrer</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setOrderReferrer</strong>($orderReferrer):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$orderReferrer</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getCustomerClass</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setCustomerClass</strong>($customerClass):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$customerClass</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getType</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setType</strong>($type):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getCountryOfDelivery</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setCountryOfDelivery</strong>($countryOfDelivery):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$countryOfDelivery</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getAccountType</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setAccountType</strong>($accountType):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$accountType</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getAccountId</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setAccountId</strong>($accountId):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$accountId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>detect</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 # Repositories<a name="miscellaneous_repositories"></a>
     
 ## Contracts<a name="miscellaneous_repositories_contracts"></a>

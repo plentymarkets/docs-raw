@@ -161,6 +161,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             <strong>E</strong>
         <ul>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.end.php">end</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.explode.php">explode</a>
             </li>
                 </ul>

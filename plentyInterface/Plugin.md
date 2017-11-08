@@ -523,6 +523,11 @@ Get the count of the total records for the paginator.
     
 
     
+<pre>public <strong>delete</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
 # DynamoDb<a name="plugin_dynamodb"></a>
     
 ## Contracts<a name="plugin_dynamodb_contracts"></a>

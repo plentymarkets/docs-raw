@@ -882,7 +882,7 @@ The order item property model.
 <li>NO_CHANGE_BY_CONTACT           = 26</li>
 <li>SIZE 			              =	29</li>
 <li>LOCATION_RESERVED	          =	30</li>
-<li>EXTERNAL_ITEM_SHIPMENT_ID      =	31</li>
+<li>EXTERNAL_SHIPMENT_ITEM_ID      =	31</li>
 <li>PARTIAL_SHIPPING_COSTS         =	32</li>
 <li>MAIN_DOCUMENT_NUMBER           =	33</li>
 <li>SALES_TAX_ID_NUMBER            =	34</li>

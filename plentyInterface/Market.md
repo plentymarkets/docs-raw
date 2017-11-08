@@ -465,7 +465,7 @@ The contract for the Ebay category repository.
 
 #### Methods
 
-<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="market#market_models_category">Category</a>
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="market#market_models_category">Category</a>
 </pre>
 
     
@@ -483,10 +483,15 @@ Get category
         <td>$filters</td>
         <td>The filters that could be applied: 'marketplaceId'.</td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations that should be loaded: 'path'</td>
+    </tr>
 </table>
 
 
-<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 List all categories
@@ -497,6 +502,11 @@ List all categories
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$filters</td>
         <td>Categories can be filtered by ID and marketplace ID. The filters that could be applied: 'marketplaceId', 'categoryId'.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations that should be loaded: 'path'</td>
     </tr>
 </table>
 
@@ -542,6 +552,10 @@ The category model
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>children</td>
             <td>Child categories.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>path</td>
+            <td>The category path.</td>
         </tr></tbody>
 </table>
 
