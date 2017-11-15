@@ -794,27 +794,6 @@ Base Validator Class
 </table>
 
 
-<pre>public <strong>sometimes</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/callable">callable</a> $condition):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
-</pre>
-
-    
-Add a rule for an attribute based on the result of the condition callback.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$attributeName</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
-        <td>$condition</td>
-        <td></td>
-    </tr>
-</table>
-
-
 <pre>public <strong>defineAttributes</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -958,6 +937,27 @@ Add a rule for an attribute based on the result of the condition callback.
     <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$required</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>sometimes</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/callable">callable</a> $condition):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
+</pre>
+
+    
+Add a rule for an attribute based on the result of the condition callback.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attributeName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
+        <td>$condition</td>
         <td></td>
     </tr>
 </table>
@@ -1780,6 +1780,27 @@ RulesCollection
     <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$required</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>sometimes</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/callable">callable</a> $condition):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
+</pre>
+
+    
+Add a rule for an attribute based on the result of the condition callback.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attributeName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
+        <td>$condition</td>
         <td></td>
     </tr>
 </table>

@@ -94,6 +94,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.bin2hex.php">bin2hex</a>
             </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.boolval.php">boolval</a>
+            </li>
                 </ul>
             <strong>C</strong>
         <ul>
@@ -176,6 +179,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.filter-var-array.php">filter_var_array</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.floatval.php">floatval</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.floor.php">floor</a>
             </li>
                     <li>
@@ -192,6 +198,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.getimagesize.php">getimagesize</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.gmdate.php">gmdate</a>
             </li>
                 </ul>
             <strong>H</strong>
@@ -225,6 +234,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.in-array.php">in_array</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.intval.php">intval</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.is-array.php">is_array</a>

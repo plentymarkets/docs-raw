@@ -1657,7 +1657,177 @@ Repository for item cross-selling
 </table>
 
 
+<pre>public <strong>findAllByItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+List all cross-selling links where the given item ID occurs
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The unique ID of the item</td>
+    </tr>
+</table>
+
+
+
+### DynamicItemCrossSellingRepositoryContract<a name="item_contracts_dynamicitemcrosssellingrepositorycontract"></a>
+
+Repository for dynamic item cross-selling
+
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemCrossSelling\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_dynamicitemcrossselling">DynamicItemCrossSelling</a>
+</pre>
+
+    
+Create a new dynamic cross-selling link
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $crossItemId):<a href="item#item_models_dynamicitemcrossselling">DynamicItemCrossSelling</a>
+</pre>
+
+    
+Get one dynamic cross-selling link of an item by item ID and cross-selling item ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The unique ID of the item</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$crossItemId</td>
+        <td>The unique ID of the linked cross-selling item</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $crossItemId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Delete a dynamic cross-selling link. The ID of the item and the ID of the cross-selling item must be specified. An exception is thrown if at least one relation exists.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The unique ID of the item</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$crossItemId</td>
+        <td>The unique ID of the linked cross-selling item</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+List dynamic cross-selling links by item ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The unique ID of the item</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findAllByItemId</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+List all dynamic cross-selling links where the given item ID occurs
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The unique ID of the item</td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_itemcrossselling_models"></a>
+### DynamicItemCrossSelling<a name="item_models_dynamicitemcrossselling"></a>
+
+The item dynamic cross-selling model including the item
+
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemCrossSelling\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemId</td>
+            <td>The unique ID of the item to which cross-selling items are linked</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>crossItemId</td>
+            <td>The unique ID of the cross-selling item that is linked to the item</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>count</td>
+            <td>The count</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>lastUpdate</td>
+            <td>Last update integer</td>
+        </tr><tr>
+            <td><a href="item#item_models_item">Item</a>
+</td>
+            <td>item</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
 ### ItemCrossSelling<a name="item_models_itemcrossselling"></a>
 
 The item cross-selling model including the item
@@ -2247,6 +2417,82 @@ Returns a collection of parsed filters as Condition object
 Clears the filter array.
     
 
+### AttributeValueSetRepositoryContract<a name="item_contracts_attributevaluesetrepositorycontract"></a>
+
+The contract for the attribute value set repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Attribute\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</pre>
+
+    
+List attribute value sets
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
+
 ### AttributeValueNameRepositoryContract<a name="item_contracts_attributevaluenamerepositorycontract"></a>
 
 The contract for the attribute value name repository
@@ -2365,6 +2611,171 @@ Lists attribute value names. The ID of the attribute value must be specified.
 </table>
 
 
+
+### AttributeValueImageRepositoryContract<a name="item_contracts_attributevalueimagerepositorycontract"></a>
+
+The contract for the attribute value image repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Attribute\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getAttributeValueImage</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $imageId, <a target="_blank" href="http://php.net/int">int</a> $valueId):<a href="item#item_models_attributevalueimage">AttributeValueImage</a>
+</pre>
+
+    
+Get an attribute value image link
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The unique ID of the item ID</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The unique ID of the image</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$valueId</td>
+        <td>The unique ID of the attribute value</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_attributevalueimage">AttributeValueImage</a>
+</pre>
+
+    
+Create an attribute value image link
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The attribute value image data as an associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $imageId, <a target="_blank" href="http://php.net/int">int</a> $valueId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Delete an attribute value image link
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The ID of the item</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The ID of the image</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$valueId</td>
+        <td>The ID of the attribute value</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $imageId, <a target="_blank" href="http://php.net/int">int</a> $valueId):<a href="item#item_models_attributevalueimage">AttributeValueImage</a>
+</pre>
+
+    
+Updates an attribute value image link
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The attribute value image data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td>The unique ID of the item</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$imageId</td>
+        <td>The unique ID of the image</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$valueId</td>
+        <td>The unique ID of the attribute value</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>search</strong>():<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</pre>
+
+    
+List attribute value image links
+    
+<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 
 ### AttributeRepositoryContract<a name="item_contracts_attributerepositorycontract"></a>
 
@@ -2597,6 +3008,54 @@ The AttributeValueMarketName model including AttributeValue
 </td>
             <td>attributeValue</td>
             <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### AttributeValueImage<a name="item_models_attributevalueimage"></a>
+
+The AttributeValueImage model
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Attribute\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>imageId</td>
+            <td>The unique ID of the image</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemId</td>
+            <td>The unique ID of the item</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>attributeId</td>
+            <td>The unique ID of the attribute</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>valueId</td>
+            <td>The unique ID of the attribute value</td>
         </tr></tbody>
 </table>
 
@@ -9304,6 +9763,10 @@ The ItemImage Model
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>availabilities</td>
             <td>Lists the image's availability details as an array.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>attributeValueImages</td>
+            <td>Lists the attribute value image's details as an array.</td>
         </tr></tbody>
 </table>
 
@@ -10164,6 +10627,22 @@ Update a item. The ID of the item must be specified.
 </table>
 
 
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Delete a item. The ID of the item must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -10707,6 +11186,66 @@ Variation Market Ident Number
 Returns this model as an array.
     
 # ItemProperty<a name="item_itemproperty"></a>
+    
+## Contracts<a name="item_itemproperty_contracts"></a>
+### ItemPropertyRepositoryContract<a name="item_contracts_itempropertyrepositorycontract"></a>
+
+The contract for the item property repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemProperty\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
     
 ## Models<a name="item_itemproperty_models"></a>
 ### ItemPropertyValueText<a name="item_models_itempropertyvaluetext"></a>

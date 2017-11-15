@@ -6428,6 +6428,52 @@ Redeem coupon codes
 </table>
 
 
+
+### CouponCampaignCodeRepositoryContract<a name="order_contracts_couponcampaigncoderepositorycontract"></a>
+
+This interface allows you to get and create coupon codes.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Coupon\Campaign\Code\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getByCode</strong>(<a target="_blank" href="http://php.net/string">string</a> $code):<a href="order#order_models_couponcampaigncode">CouponCampaignCode</a>
+</pre>
+
+    
+Gets a coupon code. The code string must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="order#order_models_couponcampaigncode">CouponCampaignCode</a>
+</pre>
+
+    
+Creates a coupon code. The ID of the campaign must be specified. A code can optionally be specified. A random code will be generated if the code is not specified. A coupon value can also be optionally specified. The value of the campaign will be used if no individual value is specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="order_code_models"></a>
 ### CouponCampaignCode<a name="order_models_couponcampaigncode"></a>
 
@@ -6497,6 +6543,10 @@ The CouponCampaignCode model contains information about coupon codes. Each code 
 </td>
             <td>expiresAt</td>
             <td>The date and time that the code will expire or has expired</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>value</td>
+            <td>The value of the coupon if it differs from the campaign value. The value is null if the campaign value is used.</td>
         </tr><tr>
             <td><a href="order#order_models_couponcampaign">CouponCampaign</a>
 </td>
