@@ -2239,60 +2239,6 @@ Return a new streamed response from the application.
 </table>
 
 
-<pre>public <strong>download</strong>($file, <a target="_blank" href="http://php.net/string">string</a> $name = null, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/string">string</a> $disposition = &quot;attachment&quot;):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
-</pre>
-
-    
-Create a new file download response.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$file</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$name</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$headers</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$disposition</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>file</strong>($file, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
-</pre>
-
-    
-Return the raw contents of a binary file.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$file</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$headers</td>
-        <td></td>
-    </tr>
-</table>
-
-
 <pre>public <strong>redirectTo</strong>(<a target="_blank" href="http://php.net/string">string</a> $path, <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/bool">bool</a> $secure = null):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
 

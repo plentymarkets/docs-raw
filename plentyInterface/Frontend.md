@@ -1691,6 +1691,22 @@ Gets a value for a key. The key must be specified.
 </table>
 
 
+<pre>public <strong>unsetKey</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Unsets a key. The key must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### LocaleSettings<a name="frontend_models_localesettings"></a>
 

@@ -31,6 +31,21 @@ Gets a contact class. The ID of the contact class must be specified.
 </table>
 
 
+<pre>public <strong>findContactClassDataById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactClassId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Gets the data of a contact class. The ID of the contact class must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactClassId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>allContactClasses</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -2995,6 +3010,198 @@ frontend customer settings event
 # Address<a name="account_address"></a>
     
 ## Contracts<a name="account_address_contracts"></a>
+### AddressParamConfigurationRepositoryContract<a name="account_contracts_addressparamconfigurationrepositorycontract"></a>
+
+The AddressParamConfigurationRepositoryContract is the interface for the address relation types repository.
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Address\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>createAddressRelationType</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_addressrelationtype">AddressRelationType</a>
+</pre>
+
+    
+Create a new address relation type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateAddressRelationType</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $addressRelationTypeId):<a href="account#account_models_addressrelationtype">AddressRelationType</a>
+</pre>
+
+    
+Update an existing address relation type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$addressRelationTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteAddressRelationType</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressRelationTypeId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Delete an address relation type by given id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$addressRelationTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findAddressRelationTypeById</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressRelationTypeId):<a href="account#account_models_addressrelationtype">AddressRelationType</a>
+</pre>
+
+    
+Find an existing address relation type by given id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$addressRelationTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>allAddressRelationTypes</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get list of address relation type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$perPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createAddressOptionType</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_addressoptiontype">AddressOptionType</a>
+</pre>
+
+    
+Create a new address option type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateAddressOptionType</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $addressOptionTypeId):<a href="account#account_models_addressoptiontype">AddressOptionType</a>
+</pre>
+
+    
+Update an existing address option type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$addressOptionTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteAddressOptionType</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressOptionTypeId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Delete an address option type by given id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$addressOptionTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findAddressOptionTypeById</strong>(<a target="_blank" href="http://php.net/int">int</a> $addressOptionTypeId):<a href="account#account_models_addressoptiontype">AddressOptionType</a>
+</pre>
+
+    
+Find an existing address option type by given id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$addressOptionTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>allAddressOptionType</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get list of address option type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$perPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### AddressRepositoryContract<a name="account_contracts_addressrepositorycontract"></a>
 
 The AddressRepositoryContract is the interface for the address repository contract. This interface allows to get, update, create and delete addresses and address options.

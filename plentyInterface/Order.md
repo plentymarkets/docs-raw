@@ -1642,6 +1642,21 @@ Find the order for the given order ID and access key.
 </table>
 
 
+<pre>public <strong>generateAccessKey</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Generate an access key for the given order ID.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -4854,6 +4869,99 @@ The Default Shipping model
     
 Returns this model as an array.
     
+## Events<a name="order_shipping_events"></a>
+### AfterShippingCostCalculated<a name="order_events_aftershippingcostcalculated"></a>
+
+An event class fired after the shipping calculation is done. Listeners can add fees to the shipping costs.
+ * The shipping provider type name is mandatory, orderId is optional.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\Shipping\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>getShippingServiceProvider</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Get the
+    
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/string">string</a> $shippingServiceProvider, <a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/int">int</a> $shippingProfileId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+AfterShippingCostCalculated constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$shippingServiceProvider</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$shippingProfileId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrderId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Get the
+    
+<pre>public <strong>getAdditonalFee</strong>():<a target="_blank" href="http://php.net/float">float</a></pre>
+
+    
+Get the
+    
+<pre>public <strong>addAdditionalFee</strong>(<a target="_blank" href="http://php.net/float">float</a> $additonalFee):<a href="order#order_events_aftershippingcostcalculated">AfterShippingCostCalculated</a>
+</pre>
+
+    
+Set the
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$additonalFee</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getShippingProfileId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>setShippingProfileId</strong>(<a target="_blank" href="http://php.net/int">int</a> $shippingProfileId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$shippingProfileId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 # ServiceProvider<a name="order_serviceprovider"></a>
     
 ## Contracts<a name="order_serviceprovider_contracts"></a>
@@ -4991,6 +5099,22 @@ The ShippingServiceProviderPluginRepositoryContract is the interface for the shi
     
 
     
+<pre>public <strong>filteredPluginList</strong>(<a target="_blank" href="http://php.net/string">string</a> $filter):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="order_serviceprovider_models"></a>
 ### ShippingServiceProvider<a name="order_models_shippingserviceprovider"></a>
 

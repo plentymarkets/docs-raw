@@ -2,6 +2,25 @@
 
 # Helper<a name="helper_helper"></a>
     
+## Configuration<a name="helper_helper_configuration"></a>
+### GetApiCallLimits<a name="helper_configuration_getapicalllimits"></a>
+
+GetApiCallLimits reads the values for the API call limits from the config and returns them as an array.
+
+
+#### Namespace
+
+`Plenty\Modules\Helper\Configuration`
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
 ## Contracts<a name="helper_helper_contracts"></a>
 ### UrlBuilderRepositoryContract<a name="helper_contracts_urlbuilderrepositorycontract"></a>
 

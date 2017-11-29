@@ -20,6 +20,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.array-combine.php">array_combine</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.array-diff.php">array_diff</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-diff-assoc.php">array_diff_assoc</a>
             </li>
                     <li>
@@ -54,6 +57,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-push.php">array_push</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.array-reduce.php">array_reduce</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-reverse.php">array_reverse</a>
@@ -102,6 +108,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
         <ul>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.ceil.php">ceil</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.compact.php">compact</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.count.php">count</a>
@@ -281,6 +290,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             <strong>L</strong>
         <ul>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.lcfirst.php">lcfirst</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.ltrim.php">ltrim</a>
             </li>
                 </ul>
@@ -408,6 +420,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.str-replace.php">str_replace</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.strcmp.php">strcmp</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.strip-tags.php">strip_tags</a>

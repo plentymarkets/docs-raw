@@ -762,6 +762,24 @@ Base class for different Search classes
 </table>
 
 
+<pre>public <strong>addQuery</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+ $query):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+</td>
+        <td>$query</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>addSource</strong>(<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
  $source):<a href="cloud#cloud_lib_search">Search</a>
 </pre>
@@ -914,6 +932,24 @@ To be written
         <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
 </td>
         <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+ $query):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+</td>
+        <td>$query</td>
         <td></td>
     </tr>
 </table>
@@ -1731,6 +1767,11 @@ foo
 </table>
 
 
+<pre>public <strong>getFilter</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
 <pre>public <strong>getQuery</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -1788,6 +1829,24 @@ foo
         <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
 </td>
         <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+ $query):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+</td>
+        <td>$query</td>
         <td></td>
     </tr>
 </table>
