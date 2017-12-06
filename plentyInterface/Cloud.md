@@ -730,6 +730,25 @@ to be written
 </table>
 
 
+## Collapse<a name="cloud_lib_collapse"></a>
+### CollapseInterface<a name="cloud_collapse_collapseinterface"></a>
+
+to be written
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Collapse`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the instance as an array.
+    
 ## Search<a name="cloud_lib_search"></a>
 ### BaseSearch<a name="cloud_search_basesearch"></a>
 
@@ -745,6 +764,24 @@ Base class for different Search classes
 #### Methods
 
 <pre>public <strong>addFilter</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+ $filter):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+</td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addPostFilter</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
  $filter):<a href="cloud#cloud_lib_search">Search</a>
 </pre>
 
@@ -868,6 +905,24 @@ Base class for different Search classes
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$rowsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setCollapse</strong>(<a href="cloud#cloud_collapse_collapseinterface">CollapseInterface</a>
+ $collapse):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_collapse_collapseinterface">CollapseInterface</a>
+</td>
+        <td>$collapse</td>
         <td></td>
     </tr>
 </table>
@@ -1772,6 +1827,11 @@ foo
     
 
     
+<pre>public <strong>getPostFilter</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
 <pre>public <strong>getQuery</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -1817,6 +1877,24 @@ foo
 
 
 <pre>public <strong>addFilter</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+ $filter):<a href="cloud#cloud_lib_search">Search</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+</td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addPostFilter</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
  $filter):<a href="cloud#cloud_lib_search">Search</a>
 </pre>
 
@@ -1940,6 +2018,24 @@ foo
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$rowsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setCollapse</strong>(<a href="cloud#cloud_collapse_collapseinterface">CollapseInterface</a>
+ $collapse):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_collapse_collapseinterface">CollapseInterface</a>
+</td>
+        <td>$collapse</td>
         <td></td>
     </tr>
 </table>

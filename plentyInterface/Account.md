@@ -4101,6 +4101,10 @@ The address model
             <td>The ID of the address</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>gender</td>
+            <td>The gender (female or male)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name1</td>
             <td>The name 1 field (default: company name)</td>
         </tr><tr>

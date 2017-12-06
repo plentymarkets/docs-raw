@@ -3869,6 +3869,10 @@ Variation
             <td>purchasePrice</td>
             <td>The net purchase price. Value e.g. is used for price calculations.</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>movingAveragePrice</td>
+            <td>The moving average purchase price of the variation.</td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
             <td>The time the variation was created.</td>
@@ -7863,6 +7867,27 @@ foo
 </table>
 
 
+<pre>public <strong>hasEachFacetValue</strong>(<a target="_blank" href="http://php.net/int">int</a> $facetId, <a target="_blank" href="http://php.net/array">array</a> $valueIds):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$facetId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$valueIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -9093,6 +9118,344 @@ To be written
 
 
 
+### VariationCardinalityAggregation<a name="item_aggregations_variationcardinalityaggregation"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Aggregations`
+
+
+
+#### Methods
+
+<pre>public <strong>getField</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getAggregation</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addAggregation</strong>(<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+ $aggregation):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</td>
+        <td>$aggregation</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSource</strong>(<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+ $source):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</td>
+        <td>$source</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $rowsPerPage):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$rowsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getSources</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+
+### CardinalityAggregationBase<a name="item_aggregations_cardinalityaggregationbase"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Aggregations`
+
+
+
+#### Methods
+
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getAggregation</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getField</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addAggregation</strong>(<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+ $aggregation):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</td>
+        <td>$aggregation</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSource</strong>(<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+ $source):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</td>
+        <td>$source</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $rowsPerPage):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$rowsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getSources</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+
+### ItemCardinalityAggregation<a name="item_aggregations_itemcardinalityaggregation"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Aggregations`
+
+
+
+#### Methods
+
+<pre>public <strong>getField</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getAggregation</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addAggregation</strong>(<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+ $aggregation):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</td>
+        <td>$aggregation</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSource</strong>(<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+ $source):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</td>
+        <td>$source</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $rowsPerPage):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$rowsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getSources</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+
 ### FacetFilterAggregation<a name="item_aggregations_facetfilteraggregation"></a>
 
 To be written
@@ -9541,119 +9904,6 @@ To be written
     
 <pre>public <strong>getAggregation</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
-
-    
-
-    
-<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
-<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addAggregation</strong>(<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
- $aggregation):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
-</td>
-        <td>$aggregation</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addSource</strong>(<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
- $source):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
-</td>
-        <td>$source</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>setPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $rowsPerPage):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$page</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$rowsPerPage</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getSources</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-
-### CountItemAggregation<a name="item_aggregations_countitemaggregation"></a>
-
-To be written
-
-
-#### Namespace
-
-`Plenty\Modules\Item\Search\Aggregations`
-
-
-
-#### Methods
-
-<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-<pre>public <strong>getField</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>getAggregation</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 
@@ -10906,6 +11156,22 @@ Lists the data of the sales prices linked to a variation with inheritance detail
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
         <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateBulk</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</pre>
+
+    
+Updates a list of variation prices. The variation ID, sales price ID and a new price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The array containing the data.</td>
     </tr>
 </table>
 

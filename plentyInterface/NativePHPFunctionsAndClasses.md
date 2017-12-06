@@ -98,6 +98,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.base64-encode.php">base64_encode</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.basename.php">basename</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.bin2hex.php">bin2hex</a>
             </li>
                     <li>
@@ -293,6 +296,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.lcfirst.php">lcfirst</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.levenshtein.php">levenshtein</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.ltrim.php">ltrim</a>
             </li>
                 </ul>
@@ -356,6 +362,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             <strong>P</strong>
         <ul>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.pathinfo.php">pathinfo</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.preg-match.php">preg_match</a>
             </li>
                     <li>
@@ -363,6 +372,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.preg-replace.php">preg_replace</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.preg-split.php">preg_split</a>
             </li>
                 </ul>
             <strong>R</strong>
@@ -479,6 +491,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.ucwords.php">ucwords</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.uniqid.php">uniqid</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.urldecode.php">urldecode</a>
             </li>
                     <li>
@@ -492,6 +507,12 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.utf8-encode.php">utf8_encode</a>
+            </li>
+                </ul>
+            <strong>W</strong>
+        <ul>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.wordwrap.php">wordwrap</a>
             </li>
                 </ul>
     </div>

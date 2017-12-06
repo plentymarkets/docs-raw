@@ -62,11 +62,21 @@ Repository for Webstore
 
 #### Methods
 
-<pre>public <strong>loadAll</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>loadAll</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Shows all webstores
     
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>loadAllPreview</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     

@@ -5057,6 +5057,28 @@ Add reference.
 </table>
 
 
+<pre>public <strong>addPlaceholder</strong>(<a target="_blank" href="http://php.net/string">string</a> $placeholderName, $placeholderValue):<a href="miscellaneous#miscellaneous_contracts_loggercontract">LoggerContract</a>
+</pre>
+
+    
+Add code placeholder.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$placeholderName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$placeholderValue</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="miscellaneous_log_models"></a>
 ### Log<a name="miscellaneous_models_log"></a>
 
