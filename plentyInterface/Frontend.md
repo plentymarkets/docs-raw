@@ -185,6 +185,23 @@ Gets the detail link of the payment method. The detail link can be entered in th
 </table>
 
 
+<pre>public <strong>getPaymentMethodIsSelectable</strong>(<a href="payment#payment_models_paymentmethod">PaymentMethod</a>
+ $paymentMethod):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Get true if the payment method can be selected in the payment method list
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="payment#payment_models_paymentmethod">PaymentMethod</a>
+</td>
+        <td>$paymentMethod</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getPaymentMethodNameById</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentMethodId, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     

@@ -52,6 +52,89 @@ Gets the data of a contact class. The ID of the contact class must be specified.
 Lists contact classes.
     
 
+### ContactAccessDataRepositoryContract<a name="account_contracts_contactaccessdatarepositorycontract"></a>
+
+The ContactAccessDataRepositoryContract is the interface for the contact access data repository. This interface allows to reset and change contact password, get a login URL and unblock users.
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>updatePassword</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Updates a password for contact.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>sendNewCustomerPassword</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>unblockUser</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getLoginURL</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### ContactAddressRepositoryContract<a name="account_contracts_contactaddressrepositorycontract"></a>
 
 The ContactAddressRepositoryContract is the interface for the contact address repository. This interface allows to list, get, create, update, add and delete addresses of the contact.

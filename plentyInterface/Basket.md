@@ -142,6 +142,28 @@ Gets the shopping cart from current customer session.
 </table>
 
 
+<pre>public <strong>setCouponCode</strong>(<a target="_blank" href="http://php.net/string">string</a> $couponCode):<a href="basket#basket_models_basket">Basket</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$couponCode</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>removeCouponCode</strong>():<a href="basket#basket_models_basket">Basket</a>
+</pre>
+
+    
+
+    
 ## Models<a name="basket_basket_models"></a>
 ### BasketItem<a name="basket_models_basketitem"></a>
 

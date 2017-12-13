@@ -8713,6 +8713,160 @@ foo
 </table>
 
 
+## Query<a name="item_search_query"></a>
+### SearchQuery<a name="item_query_searchquery"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Query`
+
+
+
+#### Methods
+
+<pre>public <strong>addBarcode</strong>(<a target="_blank" href="http://php.net/int">int</a> $boost):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$boost</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addNumericField</strong>(<a target="_blank" href="http://php.net/string">string</a> $field, <a target="_blank" href="http://php.net/int">int</a> $boost):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$field</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$boost</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addMultilingualField</strong>(<a target="_blank" href="http://php.net/string">string</a> $field, <a target="_blank" href="http://php.net/string">string</a> $language, <a target="_blank" href="http://php.net/int">int</a> $boost):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$field</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$language</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$boost</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addField</strong>(<a target="_blank" href="http://php.net/string">string</a> $field, <a target="_blank" href="http://php.net/int">int</a> $boost):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$field</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$boost</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>setType</strong>(<a target="_blank" href="http://php.net/string">string</a> $type):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>isLanguageSupported</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getM10lByLanguage</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $fallback = &quot;en&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fallback</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Aggregations<a name="item_search_aggregations"></a>
 ### FacetTermsAggregation<a name="item_aggregations_facettermsaggregation"></a>
 
@@ -9991,6 +10145,48 @@ To be written
     
 
     
+## Helper<a name="item_search_helper"></a>
+### SearchHelper<a name="item_helper_searchhelper"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Helper`
+
+
+
+#### Methods
+
+<pre>public <strong>getFacetSearch</strong>():<a href="cloud#cloud_document_documentsearch">DocumentSearch</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getFacetFilter</strong>():<a href="item#item_filter_facetfilter">FacetFilter</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getSearchQuery</strong>(<a target="_blank" href="http://php.net/string">string</a> $query):<a href="item#item_query_searchquery">SearchQuery</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$query</td>
+        <td></td>
+    </tr>
+</table>
+
+
 # ItemImage<a name="item_itemimage"></a>
     
 ## Contracts<a name="item_itemimage_contracts"></a>

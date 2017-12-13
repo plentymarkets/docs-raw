@@ -731,6 +731,25 @@ to be written
 
 
 ## Collapse<a name="cloud_lib_collapse"></a>
+### BaseCollapse<a name="cloud_collapse_basecollapse"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Collapse`
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+
 ### CollapseInterface<a name="cloud_collapse_collapseinterface"></a>
 
 to be written
@@ -750,6 +769,74 @@ to be written
 Get the instance as an array.
     
 ## Search<a name="cloud_lib_search"></a>
+### SearchGroup<a name="cloud_search_searchgroup"></a>
+
+To be written...
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Search`
+
+
+
+#### Methods
+
+<pre>public <strong>addSearch</strong>(<a href="cloud#cloud_search_searchinterface">SearchInterface</a>
+ $search):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_search_searchinterface">SearchInterface</a>
+</td>
+        <td>$search</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addFilter</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+ $filter):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+</td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>(<a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+ $query):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
+</td>
+        <td>$query</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### BaseSearch<a name="cloud_search_basesearch"></a>
 
 Base class for different Search classes
@@ -1224,6 +1311,133 @@ To be written
 
     
 ## Index<a name="cloud_lib_index"></a>
+### ReindexIndex<a name="cloud_index_reindexindex"></a>
+
+to bew written
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Index`
+
+
+
+#### Methods
+
+<pre>public <strong>getType</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getVersion</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getDomain</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getMeta</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getSettingsClassName</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getMappingClassName</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getNext</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getScrollRepositoryClassName</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>hasUpdatedAt</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>maySynchronize</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Vorrübergehender Cheat - alles was noch keine Version hat,
+darf nicht über die &quot;neuen&quot; Prozesse befüllt werden!
+    
+<pre>public <strong>getPlentyId</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getIdentifier</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>isAvailable</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Checks whether ElasticSearch is generally available,
+and whether the index has already been created.
+    
+<pre>public <strong>setRefreshInterval</strong>($value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>resetAvailibilityStatus</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getInfo</strong>():<a href="cloud#cloud_info_baseinfo">BaseInfo</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>mayBeQueuedForCreation</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+
 ### IndexInterface<a name="cloud_index_indexinterface"></a>
 
 to be written

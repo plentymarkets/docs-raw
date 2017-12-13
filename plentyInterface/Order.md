@@ -1657,6 +1657,22 @@ Generate an access key for the given order ID.
 </table>
 
 
+<pre>public <strong>createMultiOrderByContact</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="order#order_models_order">Order</a>
+</pre>
+
+    
+Creates a multi order for a specific contact
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -5411,6 +5427,10 @@ The Parcel Service Preset Model
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>islandFee</td>
             <td>The extra charge for islands saved in the shipping profile</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>isCod</td>
+            <td>Flag that indicates Cash on Delivery</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>supportedMultishop</td>
