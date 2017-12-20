@@ -3,128 +3,6 @@
 # Ticket<a name="ticket_ticket"></a>
     
 ## Contracts<a name="ticket_ticket_contracts"></a>
-### TicketTypeRepositoryContract<a name="ticket_contracts_tickettyperepositorycontract"></a>
-
-TicketType repository
-
-
-#### Namespace
-
-`Plenty\Modules\Ticket\Contracts`
-
-
-
-#### Methods
-
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketTypeId):<a href="ticket#ticket_models_tickettype">TicketType</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$ticketTypeId</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_tickettype">TicketType</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### TicketStatusNameRepositoryContract<a name="ticket_contracts_ticketstatusnamerepositorycontract"></a>
-
-TicketStatusName Repository
-
-
-#### Namespace
-
-`Plenty\Modules\Ticket\Contracts`
-
-
-
-#### Methods
-
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketStatusNameId):<a href="ticket#ticket_models_ticketstatusname">TicketStatusName</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$ticketStatusNameId</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_ticketstatusname">TicketStatusName</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>findByName</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$name</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$lang</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
 ### TicketRepositoryContract<a name="ticket_contracts_ticketrepositorycontract"></a>
 
 The TicketRepositoryContract is the interface for the ticket repository. This interface allows to list tickets by filters.
@@ -266,6 +144,77 @@ Resets all Criteria filters by creating a new instance of the builder object.
 Applies criteria classes to the current repository.
     
 
+### TicketRoleNameRepositoryContract<a name="ticket_contracts_ticketrolenamerepositorycontract"></a>
+
+TicketRoleName Repository
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketRoleNameId):<a href="ticket#ticket_models_ticketrolename">TicketRoleName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$ticketRoleNameId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_ticketrolename">TicketRoleName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByName</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### TicketRoleRepositoryContract<a name="ticket_contracts_ticketrolerepositorycontract"></a>
 
 Ticket role repository
@@ -311,6 +260,77 @@ Ticket role repository
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### TicketStatusNameRepositoryContract<a name="ticket_contracts_ticketstatusnamerepositorycontract"></a>
+
+TicketStatusName Repository
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketStatusNameId):<a href="ticket#ticket_models_ticketstatusname">TicketStatusName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$ticketStatusNameId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_ticketstatusname">TicketStatusName</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByName</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
         <td></td>
     </tr>
 </table>
@@ -377,77 +397,6 @@ TicketStatus repository
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$typeId</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### TicketRoleNameRepositoryContract<a name="ticket_contracts_ticketrolenamerepositorycontract"></a>
-
-TicketRoleName Repository
-
-
-#### Namespace
-
-`Plenty\Modules\Ticket\Contracts`
-
-
-
-#### Methods
-
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketRoleNameId):<a href="ticket#ticket_models_ticketrolename">TicketRoleName</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$ticketRoleNameId</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_ticketrolename">TicketRoleName</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>findByName</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$name</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$lang</td>
         <td></td>
     </tr>
 </table>
@@ -524,283 +473,58 @@ TicketTypeName repository
 </table>
 
 
+
+### TicketTypeRepositoryContract<a name="ticket_contracts_tickettyperepositorycontract"></a>
+
+TicketType repository
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketTypeId):<a href="ticket#ticket_models_tickettype">TicketType</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$ticketTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_tickettype">TicketType</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="ticket_ticket_models"></a>
-### TicketRole<a name="ticket_models_ticketrole"></a>
-
-The ticket role model.
-
-
-#### Namespace
-
-`Plenty\Modules\Ticket\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the role</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>position</td>
-            <td>The position of the role</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>names</td>
-            <td></td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### TicketMessageTopicName<a name="ticket_models_ticketmessagetopicname"></a>
-
-The ticket message topic name model.
-
-
-#### Namespace
-
-`Plenty\Modules\Ticket\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the message</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>topicId</td>
-            <td>The ID of the topic</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>lang</td>
-            <td>The language of the topic</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>name</td>
-            <td>The name of the topic</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### TicketStatusGroupName<a name="ticket_models_ticketstatusgroupname"></a>
-
-The ticket status group name model.
-
-
-#### Namespace
-
-`Plenty\Modules\Ticket\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the ticket</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>lang</td>
-            <td>The language of the status group</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>name</td>
-            <td>The name of the status group</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### TicketTypeName<a name="ticket_models_tickettypename"></a>
-
-The ticket type name model.
-
-
-#### Namespace
-
-`Plenty\Modules\Ticket\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the role name</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>typeId</td>
-            <td>The type id of the role name</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>lang</td>
-            <td>The language of the role name</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>name</td>
-            <td>The name of the role</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### TicketStatusName<a name="ticket_models_ticketstatusname"></a>
-
-The ticket status name model.
-
-
-#### Namespace
-
-`Plenty\Modules\Ticket\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the status name</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>statusId</td>
-            <td>The status ID of the status name</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>lang</td>
-            <td>The language of the status name</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>name</td>
-            <td>The name of the status</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### TicketType<a name="ticket_models_tickettype"></a>
-
-The ticket type model.
-
-
-#### Namespace
-
-`Plenty\Modules\Ticket\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the role</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>position</td>
-            <td>The position of the role</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>names</td>
-            <td></td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
 ### Ticket<a name="ticket_models_ticket"></a>
 
 The ticket model.
@@ -925,190 +649,6 @@ The ticket model.
 Returns this model as an array.
     
 
-### TicketOwner<a name="ticket_models_ticketowner"></a>
-
-The ticket owner model.
-
-
-#### Namespace
-
-`Plenty\Modules\Ticket\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>ticketId</td>
-            <td>The ID of the ticket</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>userId</td>
-            <td>The user ID of the owner</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>roleId</td>
-            <td>The role ID of the owner</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### TicketRoleName<a name="ticket_models_ticketrolename"></a>
-
-The ticket role name model.
-
-
-#### Namespace
-
-`Plenty\Modules\Ticket\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the role name</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>roleId</td>
-            <td>The ID of the role</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>lang</td>
-            <td>The language of the role</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>name</td>
-            <td>The name of the role</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### TicketMessageTopic<a name="ticket_models_ticketmessagetopic"></a>
-
-The ticket message topic model.
-
-
-#### Namespace
-
-`Plenty\Modules\Ticket\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The id of the message</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>position</td>
-            <td>The position of the topic</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### TicketStatus<a name="ticket_models_ticketstatus"></a>
-
-The ticket status model.
-
-
-#### Namespace
-
-`Plenty\Modules\Ticket\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the status</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>typeId</td>
-            <td>The type ID of the status</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>position</td>
-            <td>The position of the status</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>statusGroupId</td>
-            <td>The status group ID of the status</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>names</td>
-            <td></td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
 ### TicketMessage<a name="ticket_models_ticketmessage"></a>
 
 The ticket message model.
@@ -1183,6 +723,282 @@ The ticket message model.
 Returns this model as an array.
     
 
+### TicketMessageTopic<a name="ticket_models_ticketmessagetopic"></a>
+
+The ticket message topic model.
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The id of the message</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>position</td>
+            <td>The position of the topic</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### TicketMessageTopicName<a name="ticket_models_ticketmessagetopicname"></a>
+
+The ticket message topic name model.
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the message</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>topicId</td>
+            <td>The ID of the topic</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lang</td>
+            <td>The language of the topic</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the topic</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### TicketOwner<a name="ticket_models_ticketowner"></a>
+
+The ticket owner model.
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>ticketId</td>
+            <td>The ID of the ticket</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>userId</td>
+            <td>The user ID of the owner</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>roleId</td>
+            <td>The role ID of the owner</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### TicketRole<a name="ticket_models_ticketrole"></a>
+
+The ticket role model.
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the role</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>position</td>
+            <td>The position of the role</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>names</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### TicketRoleName<a name="ticket_models_ticketrolename"></a>
+
+The ticket role name model.
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the role name</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>roleId</td>
+            <td>The ID of the role</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>lang</td>
+            <td>The language of the role</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the role</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### TicketStatus<a name="ticket_models_ticketstatus"></a>
+
+The ticket status model.
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the status</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>typeId</td>
+            <td>The type ID of the status</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>position</td>
+            <td>The position of the status</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>statusGroupId</td>
+            <td>The status group ID of the status</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>names</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
 ### TicketStatusGroup<a name="ticket_models_ticketstatusgroup"></a>
 
 The ticket status group model.
@@ -1215,6 +1031,190 @@ The ticket status group model.
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>color</td>
             <td>The color of the status group</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### TicketStatusGroupName<a name="ticket_models_ticketstatusgroupname"></a>
+
+The ticket status group name model.
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the ticket</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>lang</td>
+            <td>The language of the status group</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the status group</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### TicketStatusName<a name="ticket_models_ticketstatusname"></a>
+
+The ticket status name model.
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the status name</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>statusId</td>
+            <td>The status ID of the status name</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lang</td>
+            <td>The language of the status name</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the status</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### TicketType<a name="ticket_models_tickettype"></a>
+
+The ticket type model.
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the role</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>position</td>
+            <td>The position of the role</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>names</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### TicketTypeName<a name="ticket_models_tickettypename"></a>
+
+The ticket type name model.
+
+
+#### Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the role name</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>typeId</td>
+            <td>The type id of the role name</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lang</td>
+            <td>The language of the role name</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the role</td>
         </tr></tbody>
 </table>
 

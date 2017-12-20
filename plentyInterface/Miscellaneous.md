@@ -1,5 +1,834 @@
 
 
+# Item<a name="miscellaneous_item"></a>
+    
+## SalesPrice<a name="miscellaneous_item_salesprice"></a>
+### SalesPriceSearchRepository<a name="miscellaneous_salesprice_salespricesearchrepository"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Legacy\Repositories\Item\SalesPrice`
+
+
+
+#### Methods
+
+<pre>public <strong>search</strong>(<a href="item#item_models_salespricesearchrequest">SalesPriceSearchRequest</a>
+ $request):<a href="item#item_models_salespricesearchresponse">SalesPriceSearchResponse</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="item#item_models_salespricesearchrequest">SalesPriceSearchRequest</a>
+</td>
+        <td>$request</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>searchAll</strong>(<a href="item#item_models_salespricesearchrequest">SalesPriceSearchRequest</a>
+ $request):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="item#item_models_salespricesearchrequest">SalesPriceSearchRequest</a>
+</td>
+        <td>$request</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Variation<a name="miscellaneous_item_variation"></a>
+### DetectSalesPriceService<a name="miscellaneous_variation_detectsalespriceservice"></a>
+
+To be written...
+
+
+#### Namespace
+
+`Plenty\Legacy\Services\Item\Variation`
+
+
+
+#### Methods
+
+<pre>public <strong>getQuantity</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setQuantity</strong>($quantity):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$quantity</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getCurrency</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setCurrency</strong>($currency):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$currency</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPlentyId</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setPlentyId</strong>($plentyId):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$plentyId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrderReferrer</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setOrderReferrer</strong>($orderReferrer):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$orderReferrer</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getCustomerClass</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setCustomerClass</strong>($customerClass):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$customerClass</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getType</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setType</strong>($type):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getCountryOfDelivery</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setCountryOfDelivery</strong>($countryOfDelivery):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$countryOfDelivery</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getAccountType</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setAccountType</strong>($accountType):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$accountType</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getAccountId</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setAccountId</strong>($accountId):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$accountId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>detect</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+
+### SalesPriceService<a name="miscellaneous_variation_salespriceservice"></a>
+
+To be written...
+
+
+#### Namespace
+
+`Plenty\Legacy\Services\Item\Variation`
+
+
+
+#### Methods
+
+<pre>public <strong>getUnitPrice</strong>(<a target="_blank" href="http://php.net/float">float</a> $lot, <a target="_blank" href="http://php.net/float">float</a> $price, <a target="_blank" href="http://php.net/string">string</a> $unit):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$lot</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$price</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$unit</td>
+        <td></td>
+    </tr>
+</table>
+
+
+# Log<a name="miscellaneous_log"></a>
+    
+## Contracts<a name="miscellaneous_log_contracts"></a>
+### LoggerContract<a name="miscellaneous_contracts_loggercontract"></a>
+
+The contract for the logger.
+
+
+#### Namespace
+
+`Plenty\Log\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>report</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Report information.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>debug</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Detailed debug information.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>info</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Interesting events.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>notice</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Normal but significant events.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>warning</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Exceptional occurrences that are not errors.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>error</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Runtime errors that do not require immediate action but should typically
+be logged and monitored.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>critical</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Critical conditions.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>alert</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Action must be taken immediately.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>emergency</strong>($code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+System is unusable.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$additionalInfo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>logException</strong>(<a href="miscellaneous#miscellaneous__exception">Exception</a>
+ $exception, <a target="_blank" href="http://php.net/int">int</a> $traceDepth = 3):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Log exceptions.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__exception">Exception</a>
+</td>
+        <td>$exception</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$traceDepth</td>
+        <td>The depth of the stack trace to be logged. Default is 3.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setReferenceType</strong>(<a target="_blank" href="http://php.net/string">string</a> $referenceType):<a href="miscellaneous#miscellaneous_contracts_loggercontract">LoggerContract</a>
+</pre>
+
+    
+The reference type.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$referenceType</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setReferenceValue</strong>($referenceValue):<a href="miscellaneous#miscellaneous_contracts_loggercontract">LoggerContract</a>
+</pre>
+
+    
+The reference value.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$referenceValue</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addReference</strong>(<a target="_blank" href="http://php.net/string">string</a> $referenceType, <a target="_blank" href="http://php.net/int">int</a> $referenceValue):<a href="miscellaneous#miscellaneous_contracts_loggercontract">LoggerContract</a>
+</pre>
+
+    
+Add reference.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$referenceType</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$referenceValue</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addPlaceholder</strong>(<a target="_blank" href="http://php.net/string">string</a> $placeholderName, $placeholderValue):<a href="miscellaneous#miscellaneous_contracts_loggercontract">LoggerContract</a>
+</pre>
+
+    
+Add code placeholder.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$placeholderName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$placeholderValue</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Exceptions<a name="miscellaneous_log_exceptions"></a>
+### ReferenceTypeException<a name="miscellaneous_exceptions_referencetypeexception"></a>
+
+Class ReferenceTypeException
+
+
+#### Namespace
+
+`Plenty\Log\Exceptions`
+
+
+## Models<a name="miscellaneous_log_models"></a>
+### Log<a name="miscellaneous_models_log"></a>
+
+The log entity model
+
+
+#### Namespace
+
+`Plenty\Log\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>id</td>
+            <td>The ID of the log entry</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The date when the log entry was created</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>integration</td>
+            <td>The integration key used for the log entry. Used as a first level allocation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>identifier</td>
+            <td>The identifier used for the log entry. Used as a second level allocation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>code</td>
+            <td>The code for this current log entry. For log entries with level "debug", "info", "notice", "warning" and "report" this needs to have an translation in order to be stored.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>referenceType</td>
+            <td>Deprecated field, see the <code>references</code> field instead.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>referenceValue</td>
+            <td>Deprecated field, see the <code>references</code> field instead.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>level</td>
+            <td>The level this current log entry belongs to. Notice! When storing log entries with level "report" the entries will actually be stored as level "info". The difference between "report" and "info" is that log entries with level "report" do not need prior activation.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>additionalInfo</td>
+            <td>Additional information that need to also be stored. Can be an int, string or object.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>callerFunction</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>callerLine</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>references</td>
+            <td>All the reference types and values correlated with this log entry.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+## Services<a name="miscellaneous_log_services"></a>
+### ReferenceContainer<a name="miscellaneous_services_referencecontainer"></a>
+
+Register log reference types.
+
+
+#### Namespace
+
+`Plenty\Log\Services`
+
+
+
+#### Methods
+
+<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/array">array</a> $referenceTypes):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Use this method to add reference types.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$referenceTypes</td>
+        <td></td>
+    </tr>
+</table>
+
+
+# Search<a name="miscellaneous_search"></a>
+    
+## Contracts<a name="miscellaneous_search_contracts"></a>
+### LogRepositoryContract<a name="miscellaneous_contracts_logrepositorycontract"></a>
+
+Contract for logs.
+
+
+#### Namespace
+
+`Plenty\Log\Search\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/string">string</a> $sortBy = &quot;createdAt&quot;, <a target="_blank" href="http://php.net/string">string</a> $sortOrder = &quot;desc&quot;, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_filteredpaginatedresult">FilteredPaginatedResult</a>
+</pre>
+
+    
+Search logs with the given filters.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$sortBy</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$sortOrder</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>get</strong>($id):<a href="miscellaneous#miscellaneous_models_log">Log</a>
+</pre>
+
+    
+Get log entry by id.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
 # Plenty<a name="miscellaneous_plenty"></a>
     
 ## Plugin<a name="miscellaneous_plenty_plugin"></a>
@@ -360,6 +1189,127 @@ Remove an item from the cache.
 
     
 
+### ConfigRepository<a name="miscellaneous_plugin_configrepository"></a>
+
+configuration repository
+
+
+#### Namespace
+
+`Plenty\Plugin`
+
+
+
+#### Methods
+
+<pre>public <strong>has</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Determine if the given configuration value exists.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $default = null):<a target="_blank" href="http://php.net/mixed">mixed</a></pre>
+
+    
+Get the specified configuration value.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$default</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>set</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Set a given configuration value.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>prepend</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Prepend a value onto an array configuration value.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>push</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Push a value onto an array configuration value.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getPrefix</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+
 ### Controller<a name="miscellaneous_plugin_controller"></a>
 
 Controller
@@ -368,6 +1318,89 @@ Controller
 #### Namespace
 
 `Plenty\Plugin`
+
+
+
+### DataExchangeServiceProvider<a name="miscellaneous_plugin_dataexchangeserviceprovider"></a>
+
+Data Exchange service provider
+
+
+#### Namespace
+
+`Plenty\Plugin`
+
+
+
+#### Methods
+
+<pre>public <strong>getApplication</strong>():<a href="miscellaneous#miscellaneous_plugin_application">Application</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getEventDispatcher</strong>():<a href="miscellaneous#miscellaneous_events_dispatcher">Dispatcher</a>
+</pre>
+
+    
+
+    
+
+### Middleware<a name="miscellaneous_plugin_middleware"></a>
+
+Middleware
+
+
+#### Namespace
+
+`Plenty\Plugin`
+
+
+
+#### Methods
+
+<pre>public <strong>before</strong>(<a href="miscellaneous#miscellaneous_http_request">Request</a>
+ $request):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous_http_request">Request</a>
+</td>
+        <td>$request</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>after</strong>(<a href="miscellaneous#miscellaneous_http_request">Request</a>
+ $request, <a href="miscellaneous#miscellaneous_http_response">Response</a>
+ $response):<a href="miscellaneous#miscellaneous_http_response">Response</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous_http_request">Request</a>
+</td>
+        <td>$request</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous_http_response">Response</a>
+</td>
+        <td>$response</td>
+        <td></td>
+    </tr>
+</table>
 
 
 
@@ -383,6 +1416,48 @@ Route service provider
 
 
 #### Methods
+
+<pre>public <strong>getApplication</strong>():<a href="miscellaneous#miscellaneous_plugin_application">Application</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getEventDispatcher</strong>():<a href="miscellaneous#miscellaneous_events_dispatcher">Dispatcher</a>
+</pre>
+
+    
+
+    
+
+### ServiceProvider<a name="miscellaneous_plugin_serviceprovider"></a>
+
+Service provider for plugins
+
+
+#### Namespace
+
+`Plenty\Plugin`
+
+
+
+#### Methods
+
+<pre>public <strong>addGlobalMiddleware</strong>(<a target="_blank" href="http://php.net/string">string</a> $middleware):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Add a new middleware to end of the stack if it does not already exist.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$middleware</td>
+        <td></td>
+    </tr>
+</table>
+
 
 <pre>public <strong>getApplication</strong>():<a href="miscellaneous#miscellaneous_plugin_application">Application</a>
 </pre>
@@ -518,452 +1593,7 @@ Push a value onto an array session value.
     
 
     
-
-### DataExchangeServiceProvider<a name="miscellaneous_plugin_dataexchangeserviceprovider"></a>
-
-Data Exchange service provider
-
-
-#### Namespace
-
-`Plenty\Plugin`
-
-
-
-#### Methods
-
-<pre>public <strong>getApplication</strong>():<a href="miscellaneous#miscellaneous_plugin_application">Application</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>getEventDispatcher</strong>():<a href="miscellaneous#miscellaneous_events_dispatcher">Dispatcher</a>
-</pre>
-
-    
-
-    
-
-### ConfigRepository<a name="miscellaneous_plugin_configrepository"></a>
-
-configuration repository
-
-
-#### Namespace
-
-`Plenty\Plugin`
-
-
-
-#### Methods
-
-<pre>public <strong>has</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
-
-    
-Determine if the given configuration value exists.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$key</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $default = null):<a target="_blank" href="http://php.net/mixed">mixed</a></pre>
-
-    
-Get the specified configuration value.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$key</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$default</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>set</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value = null):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Set a given configuration value.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$key</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$value</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>prepend</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Prepend a value onto an array configuration value.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$key</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$value</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>push</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Push a value onto an array configuration value.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$key</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$value</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public static <strong>getPrefix</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-
-### ServiceProvider<a name="miscellaneous_plugin_serviceprovider"></a>
-
-Service provider for plugins
-
-
-#### Namespace
-
-`Plenty\Plugin`
-
-
-
-#### Methods
-
-<pre>public <strong>addGlobalMiddleware</strong>(<a target="_blank" href="http://php.net/string">string</a> $middleware):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Add a new middleware to end of the stack if it does not already exist.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$middleware</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getApplication</strong>():<a href="miscellaneous#miscellaneous_plugin_application">Application</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>getEventDispatcher</strong>():<a href="miscellaneous#miscellaneous_events_dispatcher">Dispatcher</a>
-</pre>
-
-    
-
-    
-
-### Middleware<a name="miscellaneous_plugin_middleware"></a>
-
-Middleware
-
-
-#### Namespace
-
-`Plenty\Plugin`
-
-
-
-#### Methods
-
-<pre>public <strong>before</strong>(<a href="miscellaneous#miscellaneous_http_request">Request</a>
- $request):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous_http_request">Request</a>
-</td>
-        <td>$request</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>after</strong>(<a href="miscellaneous#miscellaneous_http_request">Request</a>
- $request, <a href="miscellaneous#miscellaneous_http_response">Response</a>
- $response):<a href="miscellaneous#miscellaneous_http_response">Response</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous_http_request">Request</a>
-</td>
-        <td>$request</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous_http_response">Response</a>
-</td>
-        <td>$response</td>
-        <td></td>
-    </tr>
-</table>
-
-
 ## Validation<a name="miscellaneous_plenty_validation"></a>
-### Validator<a name="miscellaneous_validation_validator"></a>
-
-Base Validator Class
-
-
-#### Namespace
-
-`Plenty\Validation`
-
-
-
-#### Methods
-
-<pre>public static <strong>validateOrFail</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>defineAttributes</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$attributeName</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addConditional</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$attributeName</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-        <td>$required</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addInt</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$attributeName</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-        <td>$required</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addNumeric</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$attributeName</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-        <td>$required</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addDate</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$attributeName</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-        <td>$required</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addBool</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$attributeName</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-        <td>$required</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addString</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$attributeName</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-        <td>$required</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>sometimes</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/callable">callable</a> $condition):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
-</pre>
-
-    
-Add a rule for an attribute based on the result of the condition callback.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$attributeName</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
-        <td>$condition</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
 ### DummyAttribute<a name="miscellaneous_validation_dummyattribute"></a>
 
 Dummy Attribute Class
@@ -1806,6 +2436,205 @@ Add a rule for an attribute based on the result of the condition callback.
 </table>
 
 
+
+### Validator<a name="miscellaneous_validation_validator"></a>
+
+Base Validator Class
+
+
+#### Namespace
+
+`Plenty\Validation`
+
+
+
+#### Methods
+
+<pre>public static <strong>validateOrFail</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>defineAttributes</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attributeName</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addConditional</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attributeName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$required</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addInt</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attributeName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$required</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addNumeric</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attributeName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$required</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addDate</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attributeName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$required</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addBool</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attributeName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$required</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addString</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/bool">bool</a> $required = false):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attributeName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$required</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>sometimes</strong>(<a target="_blank" href="http://php.net/string">string</a> $attributeName, <a target="_blank" href="http://php.net/callable">callable</a> $condition):<a href="miscellaneous#miscellaneous_contracts_attribute">Attribute</a>
+</pre>
+
+    
+Add a rule for an attribute based on the result of the condition callback.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$attributeName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
+        <td>$condition</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Exceptions<a name="miscellaneous_plenty_exceptions"></a>
 ### ValidationException<a name="miscellaneous_exceptions_validationexception"></a>
 
@@ -1862,545 +2691,164 @@ Add a rule for an attribute based on the result of the condition callback.
 </table>
 
 
-# ExternalAuth<a name="miscellaneous_externalauth"></a>
+# Plugin<a name="miscellaneous_plugin"></a>
     
-## Contracts<a name="miscellaneous_externalauth_contracts"></a>
-### ExternalAccessRepositoryContract<a name="miscellaneous_contracts_externalaccessrepositorycontract"></a>
+## Build<a name="miscellaneous_plugin_build"></a>
+### CheckProcess<a name="miscellaneous_build_checkprocess"></a>
 
-Find and create ExternalAccess-datasets
+check process
 
 
 #### Namespace
 
-`Plenty\Plugin\ExternalAuth\Contracts`
+`Plenty\Plugin\Build`
 
 
 
 #### Methods
 
-<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_models_externalaccess">ExternalAccess</a>
+<pre>public <strong>addError</strong>(<a target="_blank" href="http://php.net/string">string</a> $message):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
-Create a new ExternalAccess record
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td>The data for the ExternalAccess record to be created with. Must be an associative array with
-the keys 'contactId', 'accessType', 'externalContactId' and optionally
-an external 'accessToken'.</td>
-    </tr>
-</table>
 
-
-<pre>public <strong>findForTypeAndExternalId</strong>(<a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/string">string</a> $externalId):<a href="miscellaneous#miscellaneous_models_externalaccess">ExternalAccess</a>
-</pre>
-
-    
-Find
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$type</td>
-        <td>The type of the external access</td>
+        <td>$message</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Error<a name="miscellaneous_plugin_error"></a>
+### HTTPException<a name="miscellaneous_error_httpexception"></a>
+
+Created by ptopczewski, 29.12.15 13:48
+Class HTTPException
+
+
+#### Namespace
+
+`Plenty\Plugin\Error`
+
+
+## Events<a name="miscellaneous_plugin_events"></a>
+### Dispatcher<a name="miscellaneous_events_dispatcher"></a>
+
+Dispatcher
+
+
+#### Namespace
+
+`Plenty\Plugin\Events`
+
+
+
+#### Methods
+
+<pre>public <strong>listen</strong>($event, $listener, <a target="_blank" href="http://php.net/int">int</a> $priority):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Register an event listener with the dispatcher.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$event</td>
+        <td></td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$externalId</td>
-        <td>The external ID of the contact</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>findForTypeAndContactId</strong>(<a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="miscellaneous#miscellaneous_models_externalaccess">ExternalAccess</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$type</td>
-        <td>The type of the external access</td>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$listener</td>
+        <td></td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$contactId</td>
-        <td>The (internal) ID of the contact</td>
+        <td>$priority</td>
+        <td></td>
     </tr>
 </table>
 
 
-## Models<a name="miscellaneous_externalauth_models"></a>
-### ExternalAccess<a name="miscellaneous_models_externalaccess"></a>
+<pre>public <strong>hasListeners</strong>($event):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
-Information on a contact&#039;s external access tokens
-
-
-#### Namespace
-
-`Plenty\Plugin\ExternalAuth\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>contactId</td>
-            <td>The ID of the contact in question. Must be unique in combination with $accessType.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>accessType</td>
-            <td>The type/provider of external access. Must be unique in combination with $contactId.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>externalContactId</td>
-            <td>The ID of the contact at the external provider.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>accessToken</td>
-            <td>The token for the external access.</td>
-        </tr><tr>
-            <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
+    
+Determine if a given event has listeners.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
-            <td>lastUpdate</td>
-            <td>The Date when this record was updated the last time.</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-## Services<a name="miscellaneous_externalauth_services"></a>
-### ExternalAuthService<a name="miscellaneous_services_externalauthservice"></a>
-
-Log in users with external auth
-
-
-#### Namespace
-
-`Plenty\Plugin\ExternalAuth\Services`
-
-
-
-#### Methods
-
-<pre>public <strong>logInWithExternalUserId</strong>(<a target="_blank" href="http://php.net/string">string</a> $externalId, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$externalId</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$type</td>
+        <td>$event</td>
         <td></td>
     </tr>
 </table>
 
 
-# Plugin<a name="miscellaneous_plugin"></a>
-    
-## Translation<a name="miscellaneous_plugin_translation"></a>
-### Translator<a name="miscellaneous_translation_translator"></a>
-
-translation service
-
-
-#### Namespace
-
-`Plenty\Plugin\Translation`
-
-
-
-#### Methods
-
-<pre>public <strong>trans</strong>(<a target="_blank" href="http://php.net/string">string</a> $id, <a target="_blank" href="http://php.net/array">array</a> $parameters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>fire</strong>($event, <a target="_blank" href="http://php.net/array">array</a> $payload = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
-Get the translation for a given key.
+Fire an event and call the listeners.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$id</td>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$event</td>
         <td></td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$parameters</td>
+        <td>$payload</td>
         <td></td>
     </tr>
 </table>
+
+
+<pre>public <strong>forget</strong>($event):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Remove a set of listeners from the dispatcher.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$event</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getPrefix</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+
+### Event<a name="miscellaneous_events_event"></a>
+
+Event
+
+
+#### Namespace
+
+`Plenty\Plugin\Events`
 
 
 ## Http<a name="miscellaneous_plugin_http"></a>
-### Response<a name="miscellaneous_http_response"></a>
-
-Class to create different types of http response.
-
-
-#### Namespace
-
-`Plenty\Plugin\Http`
-
-
-
-#### Methods
-
-<pre>public <strong>status</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
-
-    
-Get the status code for the response.
-    
-<pre>public <strong>content</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-Get the content of the response.
-    
-<pre>public <strong>make</strong>(<a target="_blank" href="http://php.net/string">string</a> $content = &quot;&quot;, <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_http_response">Response</a>
-</pre>
-
-    
-Return a new response from the application.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$content</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$status</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$headers</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>view</strong>(<a target="_blank" href="http://php.net/string">string</a> $view, <a target="_blank" href="http://php.net/array">array</a> $data = [], <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_http_response">Response</a>
-</pre>
-
-    
-Return a new view response from the application.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$view</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$status</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$headers</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>json</strong>($data = [], <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/int">int</a> $options):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
-</pre>
-
-    
-Return a new JSON response from the application.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$status</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$headers</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$options</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>jsonp</strong>(<a target="_blank" href="http://php.net/string">string</a> $callback, $data = [], <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/int">int</a> $options):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
-</pre>
-
-    
-Return a new JSONP response from the application.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$callback</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$status</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$headers</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$options</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>stream</strong>(<a target="_blank" href="http://php.net/callable">callable</a> $callback, <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
-</pre>
-
-    
-Return a new streamed response from the application.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
-        <td>$callback</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$status</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$headers</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>redirectTo</strong>(<a target="_blank" href="http://php.net/string">string</a> $path, <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/bool">bool</a> $secure = null):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
-</pre>
-
-    
-Create a new redirect response to the given path.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$path</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$status</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$headers</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-        <td>$secure</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>redirectToRoute</strong>(<a target="_blank" href="http://php.net/string">string</a> $route, <a target="_blank" href="http://php.net/array">array</a> $parameters = [], <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
-</pre>
-
-    
-Create a new redirect response to a named route.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$route</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$parameters</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$status</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$headers</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>redirectToAction</strong>(<a target="_blank" href="http://php.net/string">string</a> $action, <a target="_blank" href="http://php.net/array">array</a> $parameters = [], <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
-</pre>
-
-    
-Create a new redirect response to a controller action.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$action</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$parameters</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$status</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$headers</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>redirectGuest</strong>(<a target="_blank" href="http://php.net/string">string</a> $path, <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/bool">bool</a> $secure = null):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
-</pre>
-
-    
-Create a new redirect response, while putting the current URL in the session.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$path</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$status</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$headers</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-        <td>$secure</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>redirectToIntended</strong>(<a target="_blank" href="http://php.net/string">string</a> $default = &quot;/&quot;, <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/bool">bool</a> $secure = null):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
-</pre>
-
-    
-Create a new redirect response to the previously intended location.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$default</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$status</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$headers</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
-        <td>$secure</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>sendHeaders</strong>():<a href="miscellaneous#miscellaneous_plugin_http">Http</a>
-</pre>
-
-    
-Send the HTTP headers without sending the whole response.
-    
-
 ### Request<a name="miscellaneous_http_request"></a>
 
 http request
@@ -2740,59 +3188,67 @@ Generates a normalized URI for the given path.
     
 Generates the normalized query string for the Request.
     
-## Templates<a name="miscellaneous_plugin_templates"></a>
-### Markdown<a name="miscellaneous_templates_markdown"></a>
 
-A simple markdown converter.
+### Response<a name="miscellaneous_http_response"></a>
+
+Class to create different types of http response.
 
 
 #### Namespace
 
-`Plenty\Plugin\Templates`
+`Plenty\Plugin\Http`
 
 
 
 #### Methods
 
-<pre>public <strong>renderToHtml</strong>(<a target="_blank" href="http://php.net/string">string</a> $markdownContent):<a target="_blank" href="http://php.net/string">string</a></pre>
+<pre>public <strong>status</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
 
     
+Get the status code for the response.
+    
+<pre>public <strong>content</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
 
+    
+Get the content of the response.
+    
+<pre>public <strong>make</strong>(<a target="_blank" href="http://php.net/string">string</a> $content = &quot;&quot;, <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_http_response">Response</a>
+</pre>
+
+    
+Return a new response from the application.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$markdownContent</td>
+        <td>$content</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$status</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$headers</td>
         <td></td>
     </tr>
 </table>
 
 
-
-### View<a name="miscellaneous_templates_view"></a>
-
-view support
-
-
-#### Namespace
-
-`Plenty\Plugin\Templates`
-
-
-
-#### Methods
-
-<pre>public <strong>render</strong>(<a target="_blank" href="http://php.net/string">string</a> $templatePath, <a target="_blank" href="http://php.net/array">array</a> $data = []):<a target="_blank" href="http://php.net/string">string</a></pre>
+<pre>public <strong>view</strong>(<a target="_blank" href="http://php.net/string">string</a> $view, <a target="_blank" href="http://php.net/array">array</a> $data = [], <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_http_response">Response</a>
+</pre>
 
     
-
+Return a new view response from the application.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$templatePath</td>
+        <td>$view</td>
         <td></td>
     </tr>
     <tr>
@@ -2800,74 +3256,275 @@ view support
         <td>$data</td>
         <td></td>
     </tr>
-</table>
-
-
-<pre>public <strong>exists</strong>(<a target="_blank" href="http://php.net/string">string</a> $templatePath):<a target="_blank" href="http://php.net/bool">bool</a></pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$templatePath</td>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$status</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$headers</td>
         <td></td>
     </tr>
 </table>
 
 
-
-### Twig<a name="miscellaneous_templates_twig"></a>
-
-Twig engine
-
-
-#### Namespace
-
-`Plenty\Plugin\Templates`
-
-
-
-#### Methods
-
-<pre>public <strong>render</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/array">array</a> $context = []):<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-Renders a template.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$name</td>
-        <td>The template name</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$context</td>
-        <td>An array of parameters to pass to the template</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addExtension</strong>(<a target="_blank" href="http://php.net/string">string</a> $extension):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>json</strong>($data = [], <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/int">int</a> $options):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
 </pre>
 
     
-Registers an extension.
+Return a new JSON response from the application.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$status</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$headers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$options</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>jsonp</strong>(<a target="_blank" href="http://php.net/string">string</a> $callback, $data = [], <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/int">int</a> $options):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
+</pre>
+
+    
+Return a new JSONP response from the application.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$extension</td>
-        <td>A Twig_ExtensionInterface instance</td>
+        <td>$callback</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$status</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$headers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$options</td>
+        <td></td>
     </tr>
 </table>
 
 
+<pre>public <strong>stream</strong>(<a target="_blank" href="http://php.net/callable">callable</a> $callback, <a target="_blank" href="http://php.net/int">int</a> $status = 200, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
+</pre>
+
+    
+Return a new streamed response from the application.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
+        <td>$callback</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$status</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$headers</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>redirectTo</strong>(<a target="_blank" href="http://php.net/string">string</a> $path, <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/bool">bool</a> $secure = null):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
+</pre>
+
+    
+Create a new redirect response to the given path.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$path</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$status</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$headers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$secure</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>redirectToRoute</strong>(<a target="_blank" href="http://php.net/string">string</a> $route, <a target="_blank" href="http://php.net/array">array</a> $parameters = [], <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
+</pre>
+
+    
+Create a new redirect response to a named route.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$route</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$parameters</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$status</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$headers</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>redirectToAction</strong>(<a target="_blank" href="http://php.net/string">string</a> $action, <a target="_blank" href="http://php.net/array">array</a> $parameters = [], <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = []):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
+</pre>
+
+    
+Create a new redirect response to a controller action.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$action</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$parameters</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$status</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$headers</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>redirectGuest</strong>(<a target="_blank" href="http://php.net/string">string</a> $path, <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/bool">bool</a> $secure = null):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
+</pre>
+
+    
+Create a new redirect response, while putting the current URL in the session.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$path</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$status</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$headers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$secure</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>redirectToIntended</strong>(<a target="_blank" href="http://php.net/string">string</a> $default = &quot;/&quot;, <a target="_blank" href="http://php.net/int">int</a> $status = 302, <a target="_blank" href="http://php.net/array">array</a> $headers = [], <a target="_blank" href="http://php.net/bool">bool</a> $secure = null):<a href="miscellaneous#miscellaneous_httpfoundation_response">Response</a>
+</pre>
+
+    
+Create a new redirect response to the previously intended location.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$default</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$status</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$headers</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$secure</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>sendHeaders</strong>():<a href="miscellaneous#miscellaneous_plugin_http">Http</a>
+</pre>
+
+    
+Send the HTTP headers without sending the whole response.
+    
 ## Log<a name="miscellaneous_plugin_log"></a>
 ### LoggerFactory<a name="miscellaneous_log_loggerfactory"></a>
 
@@ -2904,6 +3561,255 @@ Logger factory
 
 
 ## Routing<a name="miscellaneous_plugin_routing"></a>
+### ApiRouter<a name="miscellaneous_routing_apirouter"></a>
+
+Api router service
+
+
+#### Namespace
+
+`Plenty\Plugin\Routing`
+
+
+
+#### Methods
+
+<pre>public <strong>version</strong>(<a target="_blank" href="http://php.net/array">array</a> $version, $second, $third = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$version</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$second</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$third</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
+</pre>
+
+    
+Register a new GET route with the router.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$uri</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$action</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>post</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
+</pre>
+
+    
+Register a new POST route with the router.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$uri</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$action</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>put</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
+</pre>
+
+    
+Register a new PUT route with the router.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$uri</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$action</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>patch</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
+</pre>
+
+    
+Register a new PATCH route with the router.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$uri</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$action</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
+</pre>
+
+    
+Register a new DELETE route with the router.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$uri</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$action</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>options</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
+</pre>
+
+    
+Register a new OPTIONS route with the router.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$uri</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$action</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>any</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
+</pre>
+
+    
+Register a new route responding to all verbs.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$uri</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$action</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>resource</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $controller, <a target="_blank" href="http://php.net/array">array</a> $options = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Route a resource to a controller.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$name</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$controller</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$options</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>match</strong>(<a target="_blank" href="http://php.net/array">array</a> $methods, <a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
+</pre>
+
+    
+Register a new route with the given verbs.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$methods</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$uri</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$action</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### Route<a name="miscellaneous_routing_route"></a>
 
 Route
@@ -3217,270 +4123,365 @@ Create a response instance from the given value.
 </table>
 
 
+## Templates<a name="miscellaneous_plugin_templates"></a>
+### Markdown<a name="miscellaneous_templates_markdown"></a>
 
-### ApiRouter<a name="miscellaneous_routing_apirouter"></a>
-
-Api router service
+A simple markdown converter.
 
 
 #### Namespace
 
-`Plenty\Plugin\Routing`
+`Plenty\Plugin\Templates`
 
 
 
 #### Methods
 
-<pre>public <strong>version</strong>(<a target="_blank" href="http://php.net/array">array</a> $version, $second, $third = null):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
+<pre>public <strong>renderToHtml</strong>(<a target="_blank" href="http://php.net/string">string</a> $markdownContent):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
 
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$version</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$second</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$third</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
-</pre>
-
-    
-Register a new GET route with the router.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$uri</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$action</td>
+        <td>$markdownContent</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>post</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
-</pre>
 
-    
-Register a new POST route with the router.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$uri</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$action</td>
-        <td></td>
-    </tr>
-</table>
+### Twig<a name="miscellaneous_templates_twig"></a>
+
+Twig engine
 
 
-<pre>public <strong>put</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
-</pre>
+#### Namespace
 
-    
-Register a new PUT route with the router.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$uri</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$action</td>
-        <td></td>
-    </tr>
-</table>
+`Plenty\Plugin\Templates`
 
 
-<pre>public <strong>patch</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
-</pre>
+
+#### Methods
+
+<pre>public <strong>render</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/array">array</a> $context = []):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
-Register a new PATCH route with the router.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$uri</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$action</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
-</pre>
-
-    
-Register a new DELETE route with the router.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$uri</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$action</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>options</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
-</pre>
-
-    
-Register a new OPTIONS route with the router.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$uri</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$action</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>any</strong>(<a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
-</pre>
-
-    
-Register a new route responding to all verbs.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$uri</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$action</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>resource</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $controller, <a target="_blank" href="http://php.net/array">array</a> $options = []):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Route a resource to a controller.
+Renders a template.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$name</td>
+        <td>The template name</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$context</td>
+        <td>An array of parameters to pass to the template</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addExtension</strong>(<a target="_blank" href="http://php.net/string">string</a> $extension):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Registers an extension.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$extension</td>
+        <td>A Twig_ExtensionInterface instance</td>
+    </tr>
+</table>
+
+
+
+### View<a name="miscellaneous_templates_view"></a>
+
+view support
+
+
+#### Namespace
+
+`Plenty\Plugin\Templates`
+
+
+
+#### Methods
+
+<pre>public <strong>render</strong>(<a target="_blank" href="http://php.net/string">string</a> $templatePath, <a target="_blank" href="http://php.net/array">array</a> $data = []):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$templatePath</td>
         <td></td>
     </tr>
     <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>exists</strong>(<a target="_blank" href="http://php.net/string">string</a> $templatePath):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$controller</td>
+        <td>$templatePath</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Translation<a name="miscellaneous_plugin_translation"></a>
+### Translator<a name="miscellaneous_translation_translator"></a>
+
+translation service
+
+
+#### Namespace
+
+`Plenty\Plugin\Translation`
+
+
+
+#### Methods
+
+<pre>public <strong>trans</strong>(<a target="_blank" href="http://php.net/string">string</a> $id, <a target="_blank" href="http://php.net/array">array</a> $parameters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get the translation for a given key.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$parameters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+# Data<a name="miscellaneous_data"></a>
+    
+## Contracts<a name="miscellaneous_data_contracts"></a>
+### PropertyDescriptor<a name="miscellaneous_contracts_propertydescriptor"></a>
+
+describes properties of a Model
+
+
+#### Namespace
+
+`Plenty\Plugin\Data\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>getPropertyInformation</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelClassName):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$modelClassName</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### Resources<a name="miscellaneous_contracts_resources"></a>
+
+Resource
+
+
+#### Namespace
+
+`Plenty\Plugin\Data\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>load</strong>(<a target="_blank" href="http://php.net/string">string</a> $resourceName, <a target="_blank" href="http://php.net/array">array</a> $options = []):<a href="miscellaneous#miscellaneous_model_resourceinformation">ResourceInformation</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$resourceName</td>
         <td></td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$options</td>
+        <td>[optional]</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>exists</strong>(<a target="_blank" href="http://php.net/string">string</a> $resourceName):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$resourceName</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>match</strong>(<a target="_blank" href="http://php.net/array">array</a> $methods, <a target="_blank" href="http://php.net/string">string</a> $uri, $action):<a href="miscellaneous#miscellaneous_routing_route">Route</a>
+## Model<a name="miscellaneous_data_model"></a>
+### PropertyInformation<a name="miscellaneous_model_propertyinformation"></a>
+
+property information
+
+
+#### Namespace
+
+`Plenty\Plugin\Data\Model`
+
+
+
+#### Methods
+
+<pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getDescription</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+
+### ResourceInformation<a name="miscellaneous_model_resourceinformation"></a>
+
+resource information
+
+
+#### Namespace
+
+`Plenty\Plugin\Data\Model`
+
+
+
+#### Methods
+
+<pre>public <strong>getPath</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getContentUrl</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getData</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
-Register a new route with the given verbs.
+
+    
+# ExternalAuth<a name="miscellaneous_externalauth"></a>
+    
+## Contracts<a name="miscellaneous_externalauth_contracts"></a>
+### ExternalAccessRepositoryContract<a name="miscellaneous_contracts_externalaccessrepositorycontract"></a>
+
+Find and create ExternalAccess-datasets
+
+
+#### Namespace
+
+`Plenty\Plugin\ExternalAuth\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_models_externalaccess">ExternalAccess</a>
+</pre>
+
+    
+Create a new ExternalAccess record
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$methods</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$uri</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$action</td>
-        <td></td>
+        <td>$data</td>
+        <td>The data for the ExternalAccess record to be created with. Must be an associative array with
+the keys 'contactId', 'accessType', 'externalContactId' and optionally
+an external 'accessToken'.</td>
     </tr>
 </table>
 
 
-## Build<a name="miscellaneous_plugin_build"></a>
-### CheckProcess<a name="miscellaneous_build_checkprocess"></a>
+<pre>public <strong>findForTypeAndExternalId</strong>(<a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/string">string</a> $externalId):<a href="miscellaneous#miscellaneous_models_externalaccess">ExternalAccess</a>
+</pre>
 
-check process
+    
+Find
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>The type of the external access</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$externalId</td>
+        <td>The external ID of the contact</td>
+    </tr>
+</table>
 
 
-#### Namespace
-
-`Plenty\Plugin\Build`
-
-
-
-#### Methods
-
-<pre>public <strong>addError</strong>(<a target="_blank" href="http://php.net/string">string</a> $message):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>findForTypeAndContactId</strong>(<a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="miscellaneous#miscellaneous_models_externalaccess">ExternalAccess</a>
 </pre>
 
     
@@ -3490,135 +4491,103 @@ check process
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$message</td>
-        <td></td>
-    </tr>
-</table>
-
-
-## Events<a name="miscellaneous_plugin_events"></a>
-### Event<a name="miscellaneous_events_event"></a>
-
-Event
-
-
-#### Namespace
-
-`Plenty\Plugin\Events`
-
-
-
-### Dispatcher<a name="miscellaneous_events_dispatcher"></a>
-
-Dispatcher
-
-
-#### Namespace
-
-`Plenty\Plugin\Events`
-
-
-
-#### Methods
-
-<pre>public <strong>listen</strong>($event, $listener, <a target="_blank" href="http://php.net/int">int</a> $priority):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Register an event listener with the dispatcher.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$event</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$listener</td>
-        <td></td>
+        <td>$type</td>
+        <td>The type of the external access</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$priority</td>
-        <td></td>
+        <td>$contactId</td>
+        <td>The (internal) ID of the contact</td>
     </tr>
 </table>
 
 
-<pre>public <strong>hasListeners</strong>($event):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+## Models<a name="miscellaneous_externalauth_models"></a>
+### ExternalAccess<a name="miscellaneous_models_externalaccess"></a>
 
-    
-Determine if a given event has listeners.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$event</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>fire</strong>($event, <a target="_blank" href="http://php.net/array">array</a> $payload = []):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Fire an event and call the listeners.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$event</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$payload</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>forget</strong>($event):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Remove a set of listeners from the dispatcher.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$event</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public static <strong>getPrefix</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-## Error<a name="miscellaneous_plugin_error"></a>
-### HTTPException<a name="miscellaneous_error_httpexception"></a>
-
-Created by ptopczewski, 29.12.15 13:48
-Class HTTPException
+Information on a contact&#039;s external access tokens
 
 
 #### Namespace
 
-`Plenty\Plugin\Error`
+`Plenty\Plugin\ExternalAuth\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>contactId</td>
+            <td>The ID of the contact in question. Must be unique in combination with $accessType.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>accessType</td>
+            <td>The type/provider of external access. Must be unique in combination with $contactId.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>externalContactId</td>
+            <td>The ID of the contact at the external provider.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>accessToken</td>
+            <td>The token for the external access.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous_carbon_carbon">Carbon</a>
+</td>
+            <td>lastUpdate</td>
+            <td>The Date when this record was updated the last time.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+## Services<a name="miscellaneous_externalauth_services"></a>
+### ExternalAuthService<a name="miscellaneous_services_externalauthservice"></a>
+
+Log in users with external auth
+
+
+#### Namespace
+
+`Plenty\Plugin\ExternalAuth\Services`
+
+
+
+#### Methods
+
+<pre>public <strong>logInWithExternalUserId</strong>(<a target="_blank" href="http://php.net/string">string</a> $externalId, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$externalId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+</table>
 
 
 # Mail<a name="miscellaneous_mail"></a>
@@ -3881,463 +4850,6 @@ Twig Factory
 </table>
 
 
-# Data<a name="miscellaneous_data"></a>
-    
-## Contracts<a name="miscellaneous_data_contracts"></a>
-### PropertyDescriptor<a name="miscellaneous_contracts_propertydescriptor"></a>
-
-describes properties of a Model
-
-
-#### Namespace
-
-`Plenty\Plugin\Data\Contracts`
-
-
-
-#### Methods
-
-<pre>public <strong>getPropertyInformation</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelClassName):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$modelClassName</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### Resources<a name="miscellaneous_contracts_resources"></a>
-
-Resource
-
-
-#### Namespace
-
-`Plenty\Plugin\Data\Contracts`
-
-
-
-#### Methods
-
-<pre>public <strong>load</strong>(<a target="_blank" href="http://php.net/string">string</a> $resourceName, <a target="_blank" href="http://php.net/array">array</a> $options = []):<a href="miscellaneous#miscellaneous_model_resourceinformation">ResourceInformation</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$resourceName</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$options</td>
-        <td>[optional]</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>exists</strong>(<a target="_blank" href="http://php.net/string">string</a> $resourceName):<a target="_blank" href="http://php.net/bool">bool</a></pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$resourceName</td>
-        <td></td>
-    </tr>
-</table>
-
-
-## Model<a name="miscellaneous_data_model"></a>
-### ResourceInformation<a name="miscellaneous_model_resourceinformation"></a>
-
-resource information
-
-
-#### Namespace
-
-`Plenty\Plugin\Data\Model`
-
-
-
-#### Methods
-
-<pre>public <strong>getPath</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-<pre>public <strong>getContentUrl</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-<pre>public <strong>getData</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-
-### PropertyInformation<a name="miscellaneous_model_propertyinformation"></a>
-
-property information
-
-
-#### Namespace
-
-`Plenty\Plugin\Data\Model`
-
-
-
-#### Methods
-
-<pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-<pre>public <strong>getDescription</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-# Item<a name="miscellaneous_item"></a>
-    
-## SalesPrice<a name="miscellaneous_item_salesprice"></a>
-### SalesPriceSearchRepository<a name="miscellaneous_salesprice_salespricesearchrepository"></a>
-
-foo
-
-
-#### Namespace
-
-`Plenty\Legacy\Repositories\Item\SalesPrice`
-
-
-
-#### Methods
-
-<pre>public <strong>search</strong>(<a href="item#item_models_salespricesearchrequest">SalesPriceSearchRequest</a>
- $request):<a href="item#item_models_salespricesearchresponse">SalesPriceSearchResponse</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="item#item_models_salespricesearchrequest">SalesPriceSearchRequest</a>
-</td>
-        <td>$request</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>searchAll</strong>(<a href="item#item_models_salespricesearchrequest">SalesPriceSearchRequest</a>
- $request):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="item#item_models_salespricesearchrequest">SalesPriceSearchRequest</a>
-</td>
-        <td>$request</td>
-        <td></td>
-    </tr>
-</table>
-
-
-## Variation<a name="miscellaneous_item_variation"></a>
-### SalesPriceService<a name="miscellaneous_variation_salespriceservice"></a>
-
-To be written...
-
-
-#### Namespace
-
-`Plenty\Legacy\Services\Item\Variation`
-
-
-
-#### Methods
-
-<pre>public <strong>getUnitPrice</strong>(<a target="_blank" href="http://php.net/float">float</a> $lot, <a target="_blank" href="http://php.net/float">float</a> $price, <a target="_blank" href="http://php.net/string">string</a> $unit):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/float">float</a></td>
-        <td>$lot</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/float">float</a></td>
-        <td>$price</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$unit</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### DetectSalesPriceService<a name="miscellaneous_variation_detectsalespriceservice"></a>
-
-To be written...
-
-
-#### Namespace
-
-`Plenty\Legacy\Services\Item\Variation`
-
-
-
-#### Methods
-
-<pre>public <strong>getQuantity</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>setQuantity</strong>($quantity):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$quantity</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getCurrency</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>setCurrency</strong>($currency):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$currency</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getPlentyId</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>setPlentyId</strong>($plentyId):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$plentyId</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getOrderReferrer</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>setOrderReferrer</strong>($orderReferrer):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$orderReferrer</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getCustomerClass</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>setCustomerClass</strong>($customerClass):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$customerClass</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getType</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>setType</strong>($type):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$type</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getCountryOfDelivery</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>setCountryOfDelivery</strong>($countryOfDelivery):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$countryOfDelivery</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getAccountType</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>setAccountType</strong>($accountType):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$accountType</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getAccountId</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>setAccountId</strong>($accountId):<a href="miscellaneous#miscellaneous_variation_detectsalespriceservice">DetectSalesPriceService</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$accountId</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>detect</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
 # Repositories<a name="miscellaneous_repositories"></a>
     
 ## Contracts<a name="miscellaneous_repositories_contracts"></a>
@@ -4548,104 +5060,6 @@ Delete Response
 Returns this model as an array.
     
 
-### PaginatedResult<a name="miscellaneous_models_paginatedresult"></a>
-
-paginated result
-
-
-#### Namespace
-
-`Plenty\Repositories\Models`
-
-
-
-#### Methods
-
-<pre>public <strong>getPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
-
-    
-Returns the page number as received
-    
-<pre>public <strong>getCurrentPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
-
-    
-Returns the normalized page number - checked if out of logical bounds
-( not below 0, not greater than the last page ) and adjusted
-    
-<pre>public <strong>getTotalCount</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
-
-    
-
-    
-<pre>public <strong>isLastPage</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
-
-    
-
-    
-<pre>public <strong>getItemIndexFrom</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
-
-    
-
-    
-<pre>public <strong>getItemIndexTo</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
-
-    
-
-    
-<pre>public <strong>getLastPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
-
-    
-
-    
-<pre>public <strong>getResult</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
-<pre>public <strong>setResult</strong>($result):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$result</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Get the instance as an array.
-    
-<pre>public <strong>toJson</strong>(<a target="_blank" href="http://php.net/int">int</a> $options):<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-Convert the object to its JSON representation.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$options</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>jsonSerialize</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Specify data which should be serialized to JSON
-    
-
 ### FilteredPaginatedResult<a name="miscellaneous_models_filteredpaginatedresult"></a>
 
 Filtered paginated result
@@ -4764,518 +5178,104 @@ Convert the object to its JSON representation.
     
 Specify data which should be serialized to JSON
     
-# Log<a name="miscellaneous_log"></a>
-    
-## Contracts<a name="miscellaneous_log_contracts"></a>
-### LoggerContract<a name="miscellaneous_contracts_loggercontract"></a>
 
-The contract for the logger.
+### PaginatedResult<a name="miscellaneous_models_paginatedresult"></a>
+
+paginated result
 
 
 #### Namespace
 
-`Plenty\Log\Contracts`
+`Plenty\Repositories\Models`
 
 
 
 #### Methods
 
-<pre>public <strong>report</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>getPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Returns the page number as received
+    
+<pre>public <strong>getCurrentPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Returns the normalized page number - checked if out of logical bounds
+( not below 0, not greater than the last page ) and adjusted
+    
+<pre>public <strong>getTotalCount</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>isLastPage</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>getItemIndexFrom</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getItemIndexTo</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getLastPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getResult</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>setResult</strong>($result):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
-Report information.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$code</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$additionalInfo</td>
-        <td></td>
-    </tr>
-</table>
 
-
-<pre>public <strong>debug</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Detailed debug information.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$code</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$additionalInfo</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>info</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Interesting events.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$code</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$additionalInfo</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>notice</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Normal but significant events.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$code</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$additionalInfo</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>warning</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Exceptional occurrences that are not errors.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$code</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$additionalInfo</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>error</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Runtime errors that do not require immediate action but should typically
-be logged and monitored.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$code</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$additionalInfo</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>critical</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Critical conditions.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$code</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$additionalInfo</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>alert</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Action must be taken immediately.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$code</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$additionalInfo</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>emergency</strong>($code, $additionalInfo = null):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-System is unusable.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
-        <td>$code</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$additionalInfo</td>
+        <td>$result</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>logException</strong>(<a href="miscellaneous#miscellaneous__exception">Exception</a>
- $exception, <a target="_blank" href="http://php.net/int">int</a> $traceDepth = 3):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Log exceptions.
+Get the instance as an array.
     
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__exception">Exception</a>
-</td>
-        <td>$exception</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$traceDepth</td>
-        <td>The depth of the stack trace to be logged. Default is 3.</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>setReferenceType</strong>(<a target="_blank" href="http://php.net/string">string</a> $referenceType):<a href="miscellaneous#miscellaneous_contracts_loggercontract">LoggerContract</a>
-</pre>
+<pre>public <strong>toJson</strong>(<a target="_blank" href="http://php.net/int">int</a> $options):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
-The reference type.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$referenceType</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>setReferenceValue</strong>($referenceValue):<a href="miscellaneous#miscellaneous_contracts_loggercontract">LoggerContract</a>
-</pre>
-
-    
-The reference value.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$referenceValue</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addReference</strong>(<a target="_blank" href="http://php.net/string">string</a> $referenceType, <a target="_blank" href="http://php.net/int">int</a> $referenceValue):<a href="miscellaneous#miscellaneous_contracts_loggercontract">LoggerContract</a>
-</pre>
-
-    
-Add reference.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$referenceType</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$referenceValue</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addPlaceholder</strong>(<a target="_blank" href="http://php.net/string">string</a> $placeholderName, $placeholderValue):<a href="miscellaneous#miscellaneous_contracts_loggercontract">LoggerContract</a>
-</pre>
-
-    
-Add code placeholder.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$placeholderName</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$placeholderValue</td>
-        <td></td>
-    </tr>
-</table>
-
-
-## Models<a name="miscellaneous_log_models"></a>
-### Log<a name="miscellaneous_models_log"></a>
-
-The log entity model
-
-
-#### Namespace
-
-`Plenty\Log\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>id</td>
-            <td>The ID of the log entry</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>createdAt</td>
-            <td>The date when the log entry was created</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>integration</td>
-            <td>The integration key used for the log entry. Used as a first level allocation.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>identifier</td>
-            <td>The identifier used for the log entry. Used as a second level allocation.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>code</td>
-            <td>The code for this current log entry. For log entries with level "debug", "info", "notice", "warning" and "report" this needs to have an translation in order to be stored.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>referenceType</td>
-            <td>Deprecated field, see the <code>references</code> field instead.</td>
-        </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-            <td>referenceValue</td>
-            <td>Deprecated field, see the <code>references</code> field instead.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>level</td>
-            <td>The level this current log entry belongs to. Notice! When storing log entries with level "report" the entries will actually be stored as level "info". The difference between "report" and "info" is that log entries with level "report" do not need prior activation.</td>
-        </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-            <td>additionalInfo</td>
-            <td>Additional information that need to also be stored. Can be an int, string or object.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>callerFunction</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>callerLine</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>references</td>
-            <td>All the reference types and values correlated with this log entry.</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-## Exceptions<a name="miscellaneous_log_exceptions"></a>
-### ReferenceTypeException<a name="miscellaneous_exceptions_referencetypeexception"></a>
-
-Class ReferenceTypeException
-
-
-#### Namespace
-
-`Plenty\Log\Exceptions`
-
-
-## Services<a name="miscellaneous_log_services"></a>
-### ReferenceContainer<a name="miscellaneous_services_referencecontainer"></a>
-
-Register log reference types.
-
-
-#### Namespace
-
-`Plenty\Log\Services`
-
-
-
-#### Methods
-
-<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/array">array</a> $referenceTypes):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Use this method to add reference types.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$referenceTypes</td>
-        <td></td>
-    </tr>
-</table>
-
-
-# Search<a name="miscellaneous_search"></a>
-    
-## Contracts<a name="miscellaneous_search_contracts"></a>
-### LogRepositoryContract<a name="miscellaneous_contracts_logrepositorycontract"></a>
-
-Contract for logs.
-
-
-#### Namespace
-
-`Plenty\Log\Search\Contracts`
-
-
-
-#### Methods
-
-<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/string">string</a> $sortBy = &quot;createdAt&quot;, <a target="_blank" href="http://php.net/string">string</a> $sortOrder = &quot;desc&quot;, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_filteredpaginatedresult">FilteredPaginatedResult</a>
-</pre>
-
-    
-Search logs with the given filters.
+Convert the object to its JSON representation.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$page</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemsPerPage</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filters</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$sortBy</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$sortOrder</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$with</td>
+        <td>$options</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>get</strong>($id):<a href="miscellaneous#miscellaneous_models_log">Log</a>
+<pre>public <strong>jsonSerialize</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
-Get log entry by id.
+Specify data which should be serialized to JSON
     
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$id</td>
-        <td></td>
-    </tr>
-</table>
-
-
 # Validation<a name="miscellaneous_validation"></a>
     
 ## Contracts<a name="miscellaneous_validation_contracts"></a>
@@ -5936,36 +5936,6 @@ In some situations, you may wish to run validation checks against a field only i
 The field under validation may be null. This is particularly useful when validating primitive such as strings and integers that can contain null values.
     
 ## Service<a name="miscellaneous_validation_service"></a>
-### ValidatorFactory<a name="miscellaneous_service_validatorfactory"></a>
-
-Instantiates Validator Classes
-
-
-#### Namespace
-
-`Plenty\Validation\Service`
-
-
-
-#### Methods
-
-<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/string">string</a> $validatorClass):<a href="miscellaneous#miscellaneous_validation_validator">Validator</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$validatorClass</td>
-        <td>The fully qualified classname of the validator to create (including namespace)</td>
-    </tr>
-</table>
-
-
-
 ### AttributeFactory<a name="miscellaneous_service_attributefactory"></a>
 
 Instantiates Attribute Classes
@@ -5991,6 +5961,36 @@ Instantiates Attribute Classes
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$which</td>
         <td></td>
+    </tr>
+</table>
+
+
+
+### ValidatorFactory<a name="miscellaneous_service_validatorfactory"></a>
+
+Instantiates Validator Classes
+
+
+#### Namespace
+
+`Plenty\Validation\Service`
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/string">string</a> $validatorClass):<a href="miscellaneous#miscellaneous_validation_validator">Validator</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$validatorClass</td>
+        <td>The fully qualified classname of the validator to create (including namespace)</td>
     </tr>
 </table>
 

@@ -3,6 +3,37 @@
 # System<a name="system_system"></a>
     
 ## Contracts<a name="system_system_contracts"></a>
+### SystemInformationRepositoryContract<a name="system_contracts_systeminformationrepositorycontract"></a>
+
+Repository for SystemInformation
+
+
+#### Namespace
+
+`Plenty\Modules\System\Contracts`
+
+
+
+#### Methods
+
+<pre>public <strong>loadValue</strong>($key):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### WebstoreConfigurationRepositoryContract<a name="system_contracts_webstoreconfigurationrepositorycontract"></a>
 
 Repository for Webstore Configuration
@@ -126,37 +157,6 @@ Shows a specific webstore
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$clientId</td>
         <td>The client ID (webstore ID).</td>
-    </tr>
-</table>
-
-
-
-### SystemInformationRepositoryContract<a name="system_contracts_systeminformationrepositorycontract"></a>
-
-Repository for SystemInformation
-
-
-#### Namespace
-
-`Plenty\Modules\System\Contracts`
-
-
-
-#### Methods
-
-<pre>public <strong>loadValue</strong>($key):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$key</td>
-        <td></td>
     </tr>
 </table>
 

@@ -434,6 +434,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.str-replace.php">str_replace</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.str-split.php">str_split</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.strcmp.php">strcmp</a>
             </li>
                     <li>

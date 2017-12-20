@@ -273,65 +273,6 @@ Returns a collection of parsed filters as Condition object
 Clears the filter array.
     
 ## Models<a name="document_document_models"></a>
-### DocumentReference<a name="document_models_documentreference"></a>
-
-The document reference model. A document reference allows you to assign a document to other models.
-
-
-#### Namespace
-
-`Plenty\Modules\Document\Models`
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>documentId</td>
-            <td>The ID of the document</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>type</td>
-            <td>The reference type. The following reference types are available:
-                            <ul>
-    <li>blog</li>
-                               <li>cash_register</li>
-                               <li>category</li>
-    <li>customer</li>
- <li>facet</li>
-    <li>facet_value</li>
-    <li>item</li>
- <li>multishop</li>
-    <li>order</li>
-    <li>reorder</li>
- <li>ticket</li>
-                               <li>warehouse</li>
-                               <li>order_shipping_package</li>
-</ul></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>value</td>
-            <td>The reference value (e.g. the ID of another model)</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
 ### Document<a name="document_models_document"></a>
 
 The document model contains information about actual documents.
@@ -463,6 +404,65 @@ The document model contains information about actual documents.
 </td>
             <td>categories</td>
             <td>Collection of categories that are associated with the document</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### DocumentReference<a name="document_models_documentreference"></a>
+
+The document reference model. A document reference allows you to assign a document to other models.
+
+
+#### Namespace
+
+`Plenty\Modules\Document\Models`
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>documentId</td>
+            <td>The ID of the document</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>type</td>
+            <td>The reference type. The following reference types are available:
+                            <ul>
+    <li>blog</li>
+                               <li>cash_register</li>
+                               <li>category</li>
+    <li>customer</li>
+ <li>facet</li>
+    <li>facet_value</li>
+    <li>item</li>
+ <li>multishop</li>
+    <li>order</li>
+    <li>reorder</li>
+ <li>ticket</li>
+                               <li>warehouse</li>
+                               <li>order_shipping_package</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td>The reference value (e.g. the ID of another model)</td>
         </tr></tbody>
 </table>
 
