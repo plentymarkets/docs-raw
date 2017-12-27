@@ -1169,6 +1169,32 @@ Get the standard VAT configuration for a plenty ID
 </table>
 
 
+<pre>public <strong>getVat</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId, <a target="_blank" href="http://php.net/int">int</a> $countryId, <a target="_blank" href="http://php.net/string">string</a> $startedAt = null):<a href="accounting#accounting_models_vat">Vat</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$locationId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$startedAt</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>findVat</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = \Plenty\Modules\Accounting\Vat\Models\Vat::ITEMS_PER_PAGE, <a target="_blank" href="http://php.net/array">array</a> $relations = [], <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -1430,6 +1456,11 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
             <td>startedAt</td>
             <td>The date when the VAT configuration went into effect</td>
         </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>invalidFrom</td>
+            <td>The date when the VAT configuration should not be used any more</td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>locationId</td>
             <td>The ID of the location</td>
@@ -1445,6 +1476,16 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isStandard</td>
             <td>Flag that indicates if the VAT configuration is the standard VAT configuration for the location</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The date at which the VAT configuration was created.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The date that the VAT configuration was last updated.</td>
         </tr><tr>
             <td><a href="accounting#accounting_models_accountinglocation">AccountingLocation</a>
 </td>

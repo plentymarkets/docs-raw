@@ -503,6 +503,11 @@ The stock storage location model contains all information about the stock that i
 </td>
             <td>storageLocation</td>
             <td>The storageLocation this stock information belongs to</td>
+        </tr><tr>
+            <td><a href="item#item_models_variation">Variation</a>
+</td>
+            <td>variation</td>
+            <td>The variation of the item</td>
         </tr></tbody>
 </table>
 
