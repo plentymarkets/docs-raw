@@ -227,6 +227,22 @@ Get a warehouse location level
 </table>
 
 
+<pre>public <strong>getWarehouseLocationLevelOnlyByName</strong>(<a target="_blank" href="http://php.net/string">string</a> $warehouseLocationLevelName):<a href="warehouse#warehouse_models_warehouselocationlevel">WarehouseLocationLevel</a>
+</pre>
+
+    
+Get a warehouse location level only by name.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$warehouseLocationLevelName</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>listWarehouseLocationLevels</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/int">int</a> $warehouseId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -414,6 +430,23 @@ Get all warehouse locations
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$warehouseId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getWarehouseLocationByLabel</strong>(<a target="_blank" href="http://php.net/string">string</a> $label):<a href="warehouse#warehouse_models_warehouselocation">WarehouseLocation</a>
+</pre>
+
+    
+Get first warehouse location matching the given label
+Gets the first warehouse location matching the given label. The label must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$label</td>
         <td></td>
     </tr>
 </table>
