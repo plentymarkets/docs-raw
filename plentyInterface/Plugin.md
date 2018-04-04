@@ -1,8 +1,871 @@
 
 
+# Plugin<a name="plugin_plugin"></a>
+    
+## Contracts<a name="plugin_plugin_contracts"></a>
+### ConfigurationRepositoryContract<a name="plugin_contracts_configurationrepositorycontract"></a>
+
+Save config values for plugins
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>saveConfiguration</strong>(<a target="_blank" href="http://php.net/int">int</a> $pluginId, <a target="_blank" href="http://php.net/array">array</a> $configMap, <a target="_blank" href="http://php.net/int">int</a> $setId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$pluginId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$configMap</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$setId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### PluginRepositoryContract<a name="plugin_contracts_pluginrepositorycontract"></a>
+
+Search plugins according to parameters
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>searchPlugins</strong>(<a target="_blank" href="http://php.net/array">array</a> $params = [], <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = \Plenty\Modules\Plugin\Models\Plugin::DEFAULT_ITEMS_PER_PAGE):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+Search plugins using filters. Example: searchPlugins([&#039;name&#039; =&gt; &#039;PluginIWantToFind&#039;])
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$params</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Events<a name="plugin_plugin_events"></a>
+### LoadSitemapPattern<a name="plugin_events_loadsitemappattern"></a>
+
+LoadSitemapPatternEvent
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\Events`
+
+
+
+
+## Models<a name="plugin_plugin_models"></a>
+### InstalledPlugins<a name="plugin_models_installedplugins"></a>
+
+Model representing an installed Plugin
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the installed plugin instance</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>variationId</td>
+            <td>The variationId of the installed version</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemId</td>
+            <td>The id of the installed plugin</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>removed</td>
+            <td>Whether this version of the plugin has been removed by the customer</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lastUpdateChecksum</td>
+            <td>checksum of last installed plugin code</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### Plugin<a name="plugin_models_plugin"></a>
+
+Eloquent model representing a Plugin.
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the plugin</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the plugin</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>position</td>
+            <td>The position of the plugin. The position is used to determine the plugin order.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>activeStage</td>
+            <td>Shows whether the plugin is active in Stage. Inactive plugins will not be provisioned in Stage.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>activeProductive</td>
+            <td>Shows whether the plugin is active in Productive. Inactive plugins will not be provisioned in Productive.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>created_at</td>
+            <td>The date that the plugin was created.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updated_at</td>
+            <td>The date that the plugin was updated last.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>inStage</td>
+            <td>Shows whether the plugin is provisioned in Stage.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>inProductive</td>
+            <td>Shows whether the plugin is provisioned in Productive.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isConnectedWithGit</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>updateInformation</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>type</td>
+            <td>The type of the plugin. The following plugin types are available:
+<ul>
+    <li>Template</li>
+    <li>Export</li>
+</ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>version</td>
+            <td>The version of the plugin</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>versionStage</td>
+            <td>The version of the plugin in stage</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>versionProductive</td>
+            <td>The version of the plugin in productive</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>description</td>
+            <td>The description text of the plugin</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>namespace</td>
+            <td>The namespace of the plugin</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>dependencies</td>
+            <td>A list of plugins with dependencies to the plugin</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>author</td>
+            <td>The name of the plugin author</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>price</td>
+            <td>The price of the plugin</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>keywords</td>
+            <td>A list of plugin keywords</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>require</td>
+            <td>A list of plugins that are required by the plugin</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>notInstalledRequirements</td>
+            <td>A list of required plugins that are not installed</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>notActiveStageRequirements</td>
+            <td>A list of required plugins that are not active in stage</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>notActiveProductiveRequirements</td>
+            <td>A list of required plugins that are not active in productive</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>serviceProvider</td>
+            <td>The class name of the service provider</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>runOnBuild</td>
+            <td>The list of classes to execute once on plugin build</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>checkOnBuild</td>
+            <td>The list of classes to execute on every plugin build</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>pluginPath</td>
+            <td>The plugin path</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>authorIcon</td>
+            <td>The author icon</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>pluginIcon</td>
+            <td>The plugin icon</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>license</td>
+            <td>The plugin license</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>shortDescription</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isClosedSource</td>
+            <td>is closed source</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>marketplaceName</td>
+            <td>The plugin name displayed in marketplace</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>source</td>
+            <td>Whether this plugin was installed from marketplace, git or local</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>javaScriptFiles</td>
+            <td>A list of included javascript files</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>containers</td>
+            <td>A list of provided containers with name and description</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>dataProviders</td>
+            <td>A list of data providers with name and description</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>categories</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>webhookUrl</td>
+            <td>webhookUrl</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isExternalTool</td>
+            <td>is external tool</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>directDownloadLinks</td>
+            <td>A list of urls for the external tool</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>forwardLink</td>
+            <td>A forward link to the external tool developers page</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>configurations</td>
+            <td>A list of plugin configuration items</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>permissions</td>
+            <td>A list of plugin permissions</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>webstores</td>
+            <td>A list of clients (stores) activated for the plugin</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>linkedDataProviders</td>
+            <td>A list of dataProviders linked with a container of this plugin</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>linkedContainers</td>
+            <td>A list of containers linked with a data provider of this plugin</td>
+        </tr><tr>
+            <td><a href="plugin#plugin_models_git">Git</a>
+</td>
+            <td>repository</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="plugin#plugin_models_installedplugins">InstalledPlugins</a>
+</td>
+            <td>installedPlugins</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>pluginSetIds</td>
+            <td>Array of PluginSet Ids where this plugin is contained.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>pluginSetEntries</td>
+            <td>A list of PluginSetEntries this plugin is linked to</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+## Services<a name="plugin_plugin_services"></a>
+### PluginSeoSitemapService<a name="plugin_services_pluginseositemapservice"></a>
+
+The PluginSeoSitemapService collect the sitemap patterns.
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\Services`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>loadPatterns</strong>(<a target="_blank" href="http://php.net/string">string</a> $url):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$url</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPatterns</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>setItemPattern</strong>(<a target="_blank" href="http://php.net/array">array</a> $pattern):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$pattern</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setBlogPattern</strong>(<a target="_blank" href="http://php.net/array">array</a> $pattern):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$pattern</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setContentCategoryPattern</strong>(<a target="_blank" href="http://php.net/array">array</a> $pattern):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$pattern</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setItemCategoryPattern</strong>(<a target="_blank" href="http://php.net/array">array</a> $pattern):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$pattern</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getItemPattern</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getBlogPattern</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getItemCategoryPattern</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getContentCategoryPattern</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
 # DataBase<a name="plugin_database"></a>
     
+## Annotations<a name="plugin_database_annotations"></a>
+### Index<a name="plugin_annotations_index"></a>
+
+
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\DataBase\Annotations`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### Relation<a name="plugin_annotations_relation"></a>
+
+
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\DataBase\Annotations`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 ## Contracts<a name="plugin_database_contracts"></a>
+### CriteriaQuery<a name="plugin_contracts_criteriaquery"></a>
+
+database query
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\DataBase\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>where</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $operator = null, $value = null):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a basic where clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>whereIn</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/array">array</a> $values, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $not = false):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a &quot;where in&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$not</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>orWhereIn</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/array">array</a> $values):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add an &quot;or where in&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>orWhere</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $operator = null, $value = null):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add an &quot;or where&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>whereNull</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $not = false):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a &quot;where null&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$not</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>orWhereNull</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Add an &quot;or where null&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>having</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $operator = null, <a target="_blank" href="http://php.net/string">string</a> $value = null, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a &quot;having&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>orHaving</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $operator = null, <a target="_blank" href="http://php.net/string">string</a> $value = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Add a &quot;or having&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>whereHas</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelName, $callback = null, <a target="_blank" href="http://php.net/string">string</a> $operator = &quot;&gt;=&quot;, <a target="_blank" href="http://php.net/int">int</a> $count = 1):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$modelName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$callback</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$count</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>join</strong>(<a target="_blank" href="http://php.net/string">string</a> $firstModelName, $callback, <a target="_blank" href="http://php.net/string">string</a> $as = &quot;&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Add a join clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$firstModelName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$callback</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$as</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>leftJoin</strong>(<a target="_blank" href="http://php.net/string">string</a> $firstModelName, $callback):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Add a left join to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$firstModelName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$callback</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### DataBase<a name="plugin_contracts_database"></a>
 
 Database contract
@@ -11,6 +874,8 @@ Database contract
 #### Namespace
 
 `Plenty\Modules\Plugin\DataBase\Contracts`
+
+
 
 
 
@@ -90,6 +955,189 @@ Database contract
 
 
 
+### JoinClauseQuery<a name="plugin_contracts_joinclausequery"></a>
+
+database join query
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\DataBase\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>on</strong>(<a target="_blank" href="http://php.net/string">string</a> $firstModelName, $first, <a target="_blank" href="http://php.net/string">string</a> $operator = null, <a target="_blank" href="http://php.net/string">string</a> $secondModelName = null, <a target="_blank" href="http://php.net/string">string</a> $second = null, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$firstModelName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$first</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$secondModelName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$second</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>where</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelName, $column, <a target="_blank" href="http://php.net/string">string</a> $operator = null, $value = null, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a basic where clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$modelName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$column</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>orWhere</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelName, $column, <a target="_blank" href="http://php.net/string">string</a> $operator = null, $value = null):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add an &quot;or where&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$modelName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$column</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>whereNull</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelName, $column, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $not = false):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a &quot;where null&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$modelName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$column</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$not</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>orWhereNull</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelName, $column):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add an &quot;or where null&quot; clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$modelName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$column</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### Migrate<a name="plugin_contracts_migrate"></a>
 
 Migrate models
@@ -98,6 +1146,8 @@ Migrate models
 #### Namespace
 
 `Plenty\Modules\Plugin\DataBase\Contracts`
+
+
 
 
 
@@ -118,11 +1168,26 @@ Migrate models
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$readCapacityUnits</td>
-        <td></td>
+        <td>This field is deprecated and will be removed soon</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$writeCapacityUnits</td>
+        <td>This field is deprecated and will be removed soon</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $modelClassName):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$modelClassName</td>
         <td></td>
     </tr>
 </table>
@@ -152,6 +1217,8 @@ Database model
 #### Namespace
 
 `Plenty\Modules\Plugin\DataBase\Contracts`
+
+
 
 
 #### Properties
@@ -204,6 +1271,8 @@ database query
 #### Namespace
 
 `Plenty\Modules\Plugin\DataBase\Contracts`
+
+
 
 
 
@@ -552,6 +1621,8 @@ AWS DynamoDb Repository (Deprecated)
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>createTable</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/string">string</a> $tableName, <a target="_blank" href="http://php.net/array">array</a> $attributeDefinitions, <a target="_blank" href="http://php.net/array">array</a> $keySchema, <a target="_blank" href="http://php.net/int">int</a> $readCapacityUnits = 3, <a target="_blank" href="http://php.net/int">int</a> $writeCapacityUnits = 2):<a target="_blank" href="http://php.net/bool">bool</a></pre>
@@ -849,6 +1920,8 @@ library call
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>call</strong>(<a target="_blank" href="http://php.net/string">string</a> $libCall, <a target="_blank" href="http://php.net/array">array</a> $params = []):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -871,6 +1944,125 @@ library call
 </table>
 
 
+# PluginSet<a name="plugin_pluginset"></a>
+    
+## Models<a name="plugin_pluginset_models"></a>
+### PluginSet<a name="plugin_models_pluginset"></a>
+
+Eloquent model representing a PluginSet.
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\PluginSet\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>parentPluginSetId</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="plugin#plugin_models_pluginset">PluginSet</a>
+</td>
+            <td>parentPluginSet</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>pluginSetEntries</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>layoutContainers</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>webstores</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### PluginSetEntry<a name="plugin_models_pluginsetentry"></a>
+
+Eloquent model representing a Plugin.
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\PluginSet\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>pluginId</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>pluginSetId</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="plugin#plugin_models_plugin">Plugin</a>
+</td>
+            <td>plugin</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # Storage<a name="plugin_storage"></a>
     
 ## Contracts<a name="plugin_storage_contracts"></a>
@@ -882,6 +2074,8 @@ Storage Repository
 #### Namespace
 
 `Plenty\Modules\Plugin\Storage\Contracts`
+
+
 
 
 
@@ -1100,3 +2294,84 @@ Returns some or all (up to 1000) objects
 </table>
 
 
+# VersionControl<a name="plugin_versioncontrol"></a>
+    
+## Models<a name="plugin_versioncontrol_models"></a>
+### Git<a name="plugin_models_git"></a>
+
+Model holding plugin data concerning Git version control.
+
+
+#### Namespace
+
+`Plenty\Modules\Plugin\VersionControl\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>git id</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>pluginId</td>
+            <td>plugin id</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>username</td>
+            <td>username for remote account</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>password</td>
+            <td>password for remote account</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>remoteUrl</td>
+            <td>url for remote repository</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>branch</td>
+            <td>actual selected branch</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>autoFetch</td>
+            <td>automatically fetch from remote repository</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>webhookToken</td>
+            <td>token needed for development</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>created timestamp</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>last update timestamp</td>
+        </tr><tr>
+            <td><a href="plugin#plugin_models_plugin">Plugin</a>
+</td>
+            <td>plugin</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    

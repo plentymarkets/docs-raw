@@ -14,6 +14,8 @@ The StockRepositoryContract is the interface for the stock repository. This inte
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>listStockByWarehouseId</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
@@ -251,6 +253,8 @@ The StockStorageLocationRepositoryContract is the interface for the stock storag
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>listStockStorageLocationsByWarehouseId</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
@@ -382,6 +386,8 @@ The stock model. There are 4 different stock terms used in plentymarkets. The ph
 `Plenty\Modules\StockManagement\Stock\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -463,6 +469,8 @@ The stock storage location model contains all information about the stock that i
 `Plenty\Modules\StockManagement\Stock\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -502,7 +510,12 @@ The stock storage location model contains all information about the stock that i
             <td><a href="stockmanagement#stockmanagement_models_storagelocation">StorageLocation</a>
 </td>
             <td>storageLocation</td>
-            <td>The storageLocation this stock information belongs to</td>
+            <td>Deprecated! Use warehouseLocation instead</td>
+        </tr><tr>
+            <td><a href="warehouse#warehouse_models_warehouselocation">WarehouseLocation</a>
+</td>
+            <td>warehouseLocation</td>
+            <td>The warehouse location of the item</td>
         </tr><tr>
             <td><a href="item#item_models_variation">Variation</a>
 </td>
@@ -530,6 +543,8 @@ The WarehouseRepositoryContract is the interface for the warehouse repository. T
 #### Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Contracts`
+
+
 
 
 
@@ -601,6 +616,8 @@ The warehouse model in plentymarkets represents actual warehouses. Every warehou
 #### Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Models`
+
+
 
 
 #### Properties
@@ -702,10 +719,22 @@ Returns this model as an array.
 
 The RackManagementRepositoryContract is the interface for the rack management repository. This interface provides the functionality to manage the warehouse configuration for racks. Racks can be retrieved, created or updated here.
 
+<div class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+            Deprecated! <small>(since 2018-03)</small>        </h3>
+    </div>
+    <div class="panel-body">
+        Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationDimensionRepositoryContract instead
+    </div>
+</div>
 
 #### Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Management\Contracts`
+
+
 
 
 
@@ -840,10 +869,22 @@ Clears the filter array.
 
 The ShelfManagementRepositoryContract is the interface for the shelf management repository. This interface provides the functionality to manage the warehouse configuration for shelves. Shelves can be retrieved, created or updated here.
 
+<div class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+            Deprecated! <small>(since 2018-03)</small>        </h3>
+    </div>
+    <div class="panel-body">
+        Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationDimensionRepositoryContract instead
+    </div>
+</div>
 
 #### Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Management\Contracts`
+
+
 
 
 
@@ -983,10 +1024,22 @@ Clears the filter array.
 
 The StorageLocationManagementRepositoryContract is the interface for the storage location management repository. This interface provides the functionality to manage the warehouse configuration for storage locations. Storage locations can be retrieved, created or updated here.
 
+<div class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+            Deprecated! <small>(since 2018-03)</small>        </h3>
+    </div>
+    <div class="panel-body">
+        Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationRepositoryContract instead
+    </div>
+</div>
 
 #### Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Management\Contracts`
+
+
 
 
 
@@ -1137,6 +1190,8 @@ The storage rack model
 `Plenty\Modules\StockManagement\Warehouse\Management\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1204,6 +1259,8 @@ The storage shelf model
 `Plenty\Modules\StockManagement\Warehouse\Management\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1260,6 +1317,8 @@ The storage location model
 #### Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Management\Models`
+
+
 
 
 #### Properties

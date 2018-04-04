@@ -14,6 +14,8 @@ Download and list order documents as well as download, list, upload and delete c
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getDocumentPath</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -226,6 +228,48 @@ Delete a category document.
 </table>
 
 
+<pre>public <strong>uploadOrderReturnsDocuments</strong>(<a target="_blank" href="http://php.net/int">int</a> $returnsId, <a target="_blank" href="http://php.net/string">string</a> $document):<a href="document#document_models_document">Document</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$returnsId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$document</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getOrderReturnsDocumentById</strong>(<a target="_blank" href="http://php.net/int">int</a> $returnsId, <a target="_blank" href="http://php.net/bool">bool</a> $withLabel = false):<a href="document#document_models_document">Document</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$returnsId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$withLabel</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -283,6 +327,8 @@ The document model contains information about actual documents.
 `Plenty\Modules\Document\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -334,6 +380,7 @@ The document model contains information about actual documents.
     <li>z_report</li>
     <li>shipping_label</li>
     <li>shipping_export_label</li>
+    <li>returns_label</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -424,6 +471,8 @@ The document reference model. A document reference allows you to assign a docume
 #### Namespace
 
 `Plenty\Modules\Document\Models`
+
+
 
 
 #### Properties

@@ -14,6 +14,8 @@ The contract for the fitment repository.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_credentials">Credentials</a>
@@ -183,6 +185,8 @@ The credentials model
 `Plenty\Modules\Market\Credentials\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -234,6 +238,1342 @@ The credentials model
     
 Returns this model as an array.
     
+# AccountPolicy<a name="market_accountpolicy"></a>
+    
+## Contracts<a name="market_accountpolicy_contracts"></a>
+### FulfillmentPolicyRepositoryContract<a name="market_contracts_fulfillmentpolicyrepositorycontract"></a>
+
+The contract for the eBay fulfillment policy repository.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $id, <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="market#market_models_fulfillmentpolicy">FulfillmentPolicy</a>
+</pre>
+
+    
+Get a stored fulfillment policy based on ID.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$id</td>
+        <td>The ID of the policy that we want to get</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>A list of filters that are needed to get the corresponding policy. Available: `marketplaceId´, `credentialsId´.</td>
+    </tr>
+</table>
+
+
+
+### PaymentPolicyRepositoryContract<a name="market_contracts_paymentpolicyrepositorycontract"></a>
+
+The contract for the eBay payment policy repository.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $id, <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="market#market_models_paymentpolicy">PaymentPolicy</a>
+</pre>
+
+    
+Get a stored payment policy based on ID.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$id</td>
+        <td>The ID of the payment policy.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>A list of filters that are needed to get the corresponding policy. Available: `marketplaceId´, `credentialsId´.</td>
+    </tr>
+</table>
+
+
+
+### ReturnPolicyRepositoryContract<a name="market_contracts_returnpolicyrepositorycontract"></a>
+
+The contract for the eBay return policy repository.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $id, <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="market#market_models_returnpolicy">ReturnPolicy</a>
+</pre>
+
+    
+Get a stored return policy based on ID.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$id</td>
+        <td>The ID of the policy that we want to get</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>A list of filters that are needed to get the corresponding policy. Available: `marketplaceId´, `credentialsId´.</td>
+    </tr>
+</table>
+
+
+## Events<a name="market_accountpolicy_events"></a>
+### FulfillmentPolicyCreated<a name="market_events_fulfillmentpolicycreated"></a>
+
+An event class fired after a new fulfillment policy is created.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="market#market_models_fulfillmentpolicy">FulfillmentPolicy</a>
+ $fulfillmentPolicy):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="market#market_models_fulfillmentpolicy">FulfillmentPolicy</a>
+</td>
+        <td>$fulfillmentPolicy</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFulfillmentPolicy</strong>():<a href="market#market_models_fulfillmentpolicy">FulfillmentPolicy</a>
+</pre>
+
+    
+Get the FulfillmentPolicy instance.
+    
+
+### FulfillmentPolicyDeleted<a name="market_events_fulfillmentpolicydeleted"></a>
+
+An event class fired after a new fulfillment policy is deleted.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="market#market_models_fulfillmentpolicy">FulfillmentPolicy</a>
+ $fulfillmentPolicy):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="market#market_models_fulfillmentpolicy">FulfillmentPolicy</a>
+</td>
+        <td>$fulfillmentPolicy</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFulfillmentPolicy</strong>():<a href="market#market_models_fulfillmentpolicy">FulfillmentPolicy</a>
+</pre>
+
+    
+Get the FulfillmentPolicy instance.
+    
+
+### FulfillmentPolicyEvent<a name="market_events_fulfillmentpolicyevent"></a>
+
+A base event class for all fulfillment policy events. Each fulfillment policy events expects an FulfillmentPolicy model.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="market#market_models_fulfillmentpolicy">FulfillmentPolicy</a>
+ $fulfillmentPolicy):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="market#market_models_fulfillmentpolicy">FulfillmentPolicy</a>
+</td>
+        <td>$fulfillmentPolicy</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFulfillmentPolicy</strong>():<a href="market#market_models_fulfillmentpolicy">FulfillmentPolicy</a>
+</pre>
+
+    
+Get the FulfillmentPolicy instance.
+    
+
+### FulfillmentPolicyUpdated<a name="market_events_fulfillmentpolicyupdated"></a>
+
+An event class fired after a new fulfillment policy is updated.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="market#market_models_fulfillmentpolicy">FulfillmentPolicy</a>
+ $fulfillmentPolicy):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="market#market_models_fulfillmentpolicy">FulfillmentPolicy</a>
+</td>
+        <td>$fulfillmentPolicy</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFulfillmentPolicy</strong>():<a href="market#market_models_fulfillmentpolicy">FulfillmentPolicy</a>
+</pre>
+
+    
+Get the FulfillmentPolicy instance.
+    
+
+### PaymentPolicyCreated<a name="market_events_paymentpolicycreated"></a>
+
+An event class fired after a new payment policy is created.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="market#market_models_paymentpolicy">PaymentPolicy</a>
+ $paymentPolicy):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="market#market_models_paymentpolicy">PaymentPolicy</a>
+</td>
+        <td>$paymentPolicy</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPaymentPolicy</strong>():<a href="market#market_models_paymentpolicy">PaymentPolicy</a>
+</pre>
+
+    
+Get the PaymentPolicy instance.
+    
+
+### PaymentPolicyDeleted<a name="market_events_paymentpolicydeleted"></a>
+
+An event class fired after a new payment policy is deleted.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="market#market_models_paymentpolicy">PaymentPolicy</a>
+ $paymentPolicy):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="market#market_models_paymentpolicy">PaymentPolicy</a>
+</td>
+        <td>$paymentPolicy</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPaymentPolicy</strong>():<a href="market#market_models_paymentpolicy">PaymentPolicy</a>
+</pre>
+
+    
+Get the PaymentPolicy instance.
+    
+
+### PaymentPolicyEvent<a name="market_events_paymentpolicyevent"></a>
+
+A base event class for all payment policy events. Each payment policy events expects an PaymentPolicy model.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="market#market_models_paymentpolicy">PaymentPolicy</a>
+ $paymentPolicy):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="market#market_models_paymentpolicy">PaymentPolicy</a>
+</td>
+        <td>$paymentPolicy</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPaymentPolicy</strong>():<a href="market#market_models_paymentpolicy">PaymentPolicy</a>
+</pre>
+
+    
+Get the PaymentPolicy instance.
+    
+
+### PaymentPolicyUpdated<a name="market_events_paymentpolicyupdated"></a>
+
+An event class fired after a new payment policy is updated.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="market#market_models_paymentpolicy">PaymentPolicy</a>
+ $paymentPolicy):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="market#market_models_paymentpolicy">PaymentPolicy</a>
+</td>
+        <td>$paymentPolicy</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPaymentPolicy</strong>():<a href="market#market_models_paymentpolicy">PaymentPolicy</a>
+</pre>
+
+    
+Get the PaymentPolicy instance.
+    
+
+### ReturnPolicyCreated<a name="market_events_returnpolicycreated"></a>
+
+An event class fired after a new return policy is created.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="market#market_models_returnpolicy">ReturnPolicy</a>
+ $returnPolicy):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="market#market_models_returnpolicy">ReturnPolicy</a>
+</td>
+        <td>$returnPolicy</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getReturnPolicy</strong>():<a href="market#market_models_returnpolicy">ReturnPolicy</a>
+</pre>
+
+    
+Get the ReturnPolicy instance.
+    
+
+### ReturnPolicyDeleted<a name="market_events_returnpolicydeleted"></a>
+
+An event class fired after a new return policy is deleted.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="market#market_models_returnpolicy">ReturnPolicy</a>
+ $returnPolicy):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="market#market_models_returnpolicy">ReturnPolicy</a>
+</td>
+        <td>$returnPolicy</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getReturnPolicy</strong>():<a href="market#market_models_returnpolicy">ReturnPolicy</a>
+</pre>
+
+    
+Get the ReturnPolicy instance.
+    
+
+### ReturnPolicyEvent<a name="market_events_returnpolicyevent"></a>
+
+A base event class for all return policy events. Each return policy events expects an ReturnPolicy model.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="market#market_models_returnpolicy">ReturnPolicy</a>
+ $returnPolicy):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="market#market_models_returnpolicy">ReturnPolicy</a>
+</td>
+        <td>$returnPolicy</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getReturnPolicy</strong>():<a href="market#market_models_returnpolicy">ReturnPolicy</a>
+</pre>
+
+    
+Get the ReturnPolicy instance.
+    
+
+### ReturnPolicyUpdated<a name="market_events_returnpolicyupdated"></a>
+
+An event class fired after a new return policy is updated.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="market#market_models_returnpolicy">ReturnPolicy</a>
+ $returnPolicy):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="market#market_models_returnpolicy">ReturnPolicy</a>
+</td>
+        <td>$returnPolicy</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getReturnPolicy</strong>():<a href="market#market_models_returnpolicy">ReturnPolicy</a>
+</pre>
+
+    
+Get the ReturnPolicy instance.
+    
+## Models<a name="market_accountpolicy_models"></a>
+### AmountType<a name="market_models_amounttype"></a>
+
+The eBay amount type model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>currency</td>
+            <td>The base currency applied to the value field to establish a monetary amount. The currency is represented as a 3-letter ISO4217 currency code. For example, the code for the Canadian Dollar is CAD.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>value</td>
+            <td>The value of the monetary amount in the specified currency.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### CategoryType<a name="market_models_categorytype"></a>
+
+The eBay category type model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>default</td>
+            <td>If this value is set to true, it indicates that this policy is the default policy for the associated categoryTypes.name and marketplaceId pair</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The category type to which the policy applies (motor vehicles or non-motor vehicles). Available values: `MOTORS_VEHICLES`, `ALL_EXCLUDING_MOTORS_VEHICLES`</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### Deposit<a name="market_models_deposit"></a>
+
+The eBay deposit model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="market#market_models_amounttype">AmountType</a>
+</td>
+            <td>amount</td>
+            <td>Deposits are used only with Motors listings and the amount value indicates the initial deposit that a buyer must make to purchase a motor vehicle. Deposits on motor vehicles can only be paid using PayPal, so if you specify a deposit amount, then you must also set the paymetMethodType value to 'PayPal'.</td>
+        </tr><tr>
+            <td><a href="market#market_models_timeduration">TimeDuration</a>
+</td>
+            <td>dueIn</td>
+            <td>Indicates the number of hours the buyer has (after they commit to buy) to make an initial deposit to the seller as a down payment on a motor vehicle.</td>
+        </tr><tr>
+            <td><a href="market#market_models_paymentmethod">PaymentMethod</a>
+</td>
+            <td>paymentMethods</td>
+            <td>A list of accepted payment methods. For deposits (which are applicable to only motor listings), the paymentMethodType must be set to 'PayPal'</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### FulfillmentPolicy<a name="market_models_fulfillmentpolicy"></a>
+
+The eBay fulfillment policy model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>fulfillmentPolicyId</td>
+            <td>The ID of the fulfillment policy.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>categoryTypes</td>
+            <td>The CategoryTypeEnum value to which this policy applies. Used to discern accounts that sell motor vehicles from those that don't. (Currently, each policy can be set to only one categoryTypes value at a time.)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>description</td>
+            <td>An optional seller-defined description of the fulfillment policy.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>freightShipping</td>
+            <td>Set this value to true to indicate the seller offers freight shipping.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>globalShipping</td>
+            <td>If this value is set to true, it indicates the seller has opted-in to the eBay Global Shipping Program and that they use that service for thier internation shipments.</td>
+        </tr><tr>
+            <td><a href="market#market_models_timeduration">TimeDuration</a>
+</td>
+            <td>handlingTime</td>
+            <td>Specifies the maximum number of business days the seller commits to for preparing and shipping an order after receiving a cleared payment for the order.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>localPickup</td>
+            <td>If this value is set to true, it indicates the seller offers local pickup of their items.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>marketplaceId</td>
+            <td>The ID of the eBay marketplace to which this fulfillment policy applies. If this value is not specified, value defaults to the seller's eBay registration site.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>A user-defined name for this fulfillment policy. Names must be unique for policies assigned to the same marketplace.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>pickupDropOff</td>
+            <td>If this value is set to true, it indicates the seller offers the "Click and Collect" feature.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>shippingOptions</td>
+            <td>A list that defines the seller's shipping configurations for DOMESTIC and INTERNATIONAL order shipments.</td>
+        </tr><tr>
+            <td><a href="market#market_models_regionset">RegionSet</a>
+</td>
+            <td>shipToLocations</td>
+            <td>This object contains the regionIncluded and regionExcluded fields, which indicate the areas to where the seller does and dosen't ship.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### PaymentMethod<a name="market_models_paymentmethod"></a>
+
+The eBay payment method model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>brands</td>
+            <td>A list of credit card brands accepted by the seller. This field is required if the paymentMethodType is set to CREDIT_CARD.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>paymentMethodType</td>
+            <td>The payment method, selected from the supported payment method types..</td>
+        </tr><tr>
+            <td><a href="market#market_models_recipientaccountreference">RecipientAccountReference</a>
+</td>
+            <td>recipientAccountReference</td>
+            <td>Information that is used to identify the recipient's account to which electronic funds are sent. This field is required if the payment method is set to PAYPAL, and the field must contain the email address associated with the PayPal account selected by the seller.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### PaymentPolicy<a name="market_models_paymentpolicy"></a>
+
+The eBay payment policy model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>paymentPolicyId</td>
+            <td>The ID of the payment policy.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>categoryTypes</td>
+            <td>The CategoryTypeEnum value to which this policy applies. The category type discerns whether the policy covers the sale of motor vehicles (via eBay Motors), or the sale of everything except motor vehicles.</td>
+        </tr><tr>
+            <td><a href="market#market_models_deposit">Deposit</a>
+</td>
+            <td>deposit</td>
+            <td>A container that describes the details of a deposit. Used only with motor listings.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>description</td>
+            <td>An optional seller-defined description of the payment policy. (Max length: 250)</td>
+        </tr><tr>
+            <td><a href="market#market_models_timeduration">TimeDuration</a>
+</td>
+            <td>fullPaymentDueIn</td>
+            <td>Indicates the number of days that a buyer has to make their full payment to the seller, and close the remaining balance on a motor vehicle transaction. The period starts when the buyer commits to buy.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>immediatePay</td>
+            <td>Indicate if the payment is due upon receipt or not. (eBay generates a receipt when the buyer agrees to purchase an item)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>marketplaceId</td>
+            <td>The ID of the eBay marketplace to which this return policy applies. If this value is not specified, value defaults to the seller's eBay registration site.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>A user-defined name for this payment policy. Names must be unique for policies assigned to the same marketplace. (Max length: 64)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>paymentInstructions</td>
+            <td>Allows the seller to give payment instructions to the buyer. These instructions appear on the eBay View Item and Checkout pages.</td>
+        </tr><tr>
+            <td><a href="market#market_models_paymentmethod">PaymentMethod</a>
+</td>
+            <td>paymentMethods</td>
+            <td>A list of the payment methods accepted by the seller. Each payment policy must specify at least one payment method.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### RecipientAccountReference<a name="market_models_recipientaccountreference"></a>
+
+The eBay recipient account reference model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>referenceId</td>
+            <td>The recipient's reference.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>referenceType</td>
+            <td>The reference type of a recipient's account.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### Region<a name="market_models_region"></a>
+
+The eBay region model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>regionName</td>
+            <td>A string that indicates the name of a region, as defined by eBay. A "region" can be either a 'world region' (e.g., the "Middle East" or "Southeast Asia") or a country, as represented with a two-letter country code.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>regionType</td>
+            <td>Available values: `COUNTRY`, `COUNTRY_REGION`, `STATE_OR_PROVINCE`, `WORLD_REGION`, `WORLDWIDE`.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### RegionSet<a name="market_models_regionset"></a>
+
+The eBay region set model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>regionExcluded</td>
+            <td>A list of one or more regionsName fields that specify the areas to where a seller does not ship. Populate regionExcluded in only the top-level shipToLocations container.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>regionIncluded</td>
+            <td>A list of one or more regionsName fields that specify the areas to where a seller ships.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### ReturnPolicy<a name="market_models_returnpolicy"></a>
+
+The eBay return policy model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>returnPolicyId</td>
+            <td>The ID of the return policy.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>categoryTypes</td>
+            <td>For return policies, this field can be set to only `ALL_EXCLUDING_MOTORS_VEHICLES (returns on motor vehicles are not processed through eBay flows.)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>description</td>
+            <td>An optional seller-defined description of the return policy.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>extendedHolidayReturnsOffered</td>
+            <td>If this value is set to true, it indicates the seller offers an Extended Holiday Returns policy for their listings.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>marketplaceId</td>
+            <td>The ID of the eBay marketplace to which this return policy applies. If this value is not specified, value defaults to the seller's eBay registration site.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>A user-defined name for this fulfillment policy. Names must be unique for policies assigned to the same marketplace.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>refundMethod</td>
+            <td>Indicates the method the seller uses to compensate the buyer for returned items. The return method specified applies only to remorse returns. Available options: `MERCHANDISE_CREDIT`, `MONEY_BACK`.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>restockingFeePercentage</td>
+            <td>Sellers who accept returns should include this field if they charge buyers a restocking fee when items are returned.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>returnInstruction</td>
+            <td>This optional free-form string field lets the seller provide a detailed explanation of the return policy.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>returnMethod</td>
+            <td>This field indicates the method in which the seller handles non-money back return requests for remorse returns. Sellers can specify they either exchange or replace items. Available options: `EXCHANGE`, `REPLACEMENT`.</td>
+        </tr><tr>
+            <td><a href="market#market_models_timeduration">TimeDuration</a>
+</td>
+            <td>returnPeriod</td>
+            <td>This value indicates the length of time the seller accepts returns, the duration of which starts when the buyer receives the item.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>returnsAccepted</td>
+            <td>Set this value to true to indicate the seller accepts returns.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>returnShippingCostPayer</td>
+            <td>The seller uses this value to specify whether the buyer or the seller is responsible for paying return shipping charges. The field can be set to either `BUYER` or `SELLER`.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### ShippingOption<a name="market_models_shippingoption"></a>
+
+The eBay shipping option model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>costType</td>
+            <td>Defines whether the shipping cost is `FLAT_RATE`, `CALCULATED`, or `NOT_SPECIFIED` (for use with freight shipping and local pickup)</td>
+        </tr><tr>
+            <td><a href="market#market_models_amounttype">AmountType</a>
+</td>
+            <td>insuranceFee</td>
+            <td>Sellers can offer international shipping insurance only when they ship to AU, FR, or IT. This value indicates the cost the buyer must pay to purchase shipping insurance for the items being shipped.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>insuranceOffered</td>
+            <td>When set to true, it indicates the seller offers shipping insurance.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>optionType</td>
+            <td>Use this field to set the ShippingOption element to either `DOMESTIC` or `INTERNATIONAL`</td>
+        </tr><tr>
+            <td><a href="market#market_models_amounttype">AmountType</a>
+</td>
+            <td>packageHandlingCost</td>
+            <td>A fee a seller can add to cover package and handling costs. This fee is in addition to the amount of the selected shipping service and this fee is included in the final shipping service costs in the output.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>rateTableId</td>
+            <td>A unique eBay-assigned ID associated with a user-created shipping rate table.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>shippingServices</td>
+            <td>Contains a list of shipping services offered for either `DOMESTIC` or `INTERNATIONAL` shipments.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### ShippingService<a name="market_models_shippingservice"></a>
+
+The eBay shipping service model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="market#market_models_amounttype">AmountType</a>
+</td>
+            <td>additionalShippingCost</td>
+            <td>The cost of shipping each additional item if the same buyer purchases a multiple quantity of the same line item. This field is applicable for policies that cover multiple-quantity, fixed-price listings and is not applicable for policies that apply to single-quantity listings.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>buyerResponsibleForPickup</td>
+            <td>This field is only applicable to vehicle categories on eBay Motors (US and Canada). If set to true, the buyer is responsible for picking up the vehicle. Otherwise, the seller should specify the vehicle pickup arrangements in the item description.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>buyerResponsibleForShipping</td>
+            <td>This field is applicable for only items listed in vehicle categories on eBay Motors (US and Canada). If set to true, the buyer is responsible for the shipment of the vehicle. Otherwise, the seller should specify the vehicle shipping arrangements in the item description.</td>
+        </tr><tr>
+            <td><a href="market#market_models_amounttype">AmountType</a>
+</td>
+            <td>cashOnDeliveryFee</td>
+            <td>The value indicates the Cash on Delivery (COD) fee that the seller charges if the buyer uses the CASH_ON_DELIVERY payment method.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>freeShipping</td>
+            <td>The seller can set this flag to true if they want to offer free shipping to the buyer. This field can only be included and set to 'true' for the first domestic shipping service option specified in the shippingServices container</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>shippingCarrierCode</td>
+            <td>The shipping carrier, such as 'USPS', 'FedEx', 'UPS', and so on.</td>
+        </tr><tr>
+            <td><a href="market#market_models_amounttype">AmountType</a>
+</td>
+            <td>shippingCost</td>
+            <td>For shipping options that use a FLAT_RATE cost type, the amount is the shipping cost for the selected shipping carrier and service. The amount supplied must exclude any additional shipping charges (such as the seller's handling charges or insurance).</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>shippingServiceCode</td>
+            <td>The shipping service that the shipping carrier uses to ship an item. For example, an overnight, two-day delivery, or other type of service.</td>
+        </tr><tr>
+            <td><a href="market#market_models_regionset">RegionSet</a>
+</td>
+            <td>shipToLocations</td>
+            <td>This object contains the regionIncluded and regionExcluded fields that define the list of geographical regions that the seller ships to and the list of regions where they do not ship.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>sortOrder</td>
+            <td>This integer value controls the order that this shipping service option appears in the View Item and Checkout pages, as related to the other specified shipping service options.</td>
+        </tr><tr>
+            <td><a href="market#market_models_amounttype">AmountType</a>
+</td>
+            <td>surcharge</td>
+            <td>A fee that can be charged to US buyers when they have an item shipped via UPS or FedEx to Alaska, Hawaii or Puerto Rico.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### TimeDuration<a name="market_models_timeduration"></a>
+
+The eBay time duration model
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>unit</td>
+            <td>A time-measurement unit used to specify a period of time. Available values: `MONTH`, `DAY`, `HOUR`, `CALENDAR_DAY`, `BUSINESS_DAY`, `MINUTE`, `SECOND`, `MILLISECOND`</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td>An amount of time, as measured by the time-measurement units specified in the unit field.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # Api<a name="market_api"></a>
     
 ## Exceptions<a name="market_api_exceptions"></a>
@@ -245,6 +1585,8 @@ InvalidEndPointException.
 #### Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Exceptions`
+
+
 
 
 
@@ -304,6 +1646,8 @@ InvalidPropertyTypeException.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getMessage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
@@ -360,6 +1704,8 @@ InvalidPropertyTypeException.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getMessage</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
@@ -413,6 +1759,8 @@ The service for making eBay REST calls.
 #### Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Services`
+
+
 
 
 
@@ -498,6 +1846,8 @@ The service for eBay Base64BinaryType.
 #### Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
+
+
 
 
 #### Properties
@@ -737,6 +2087,8 @@ The service for base type.
 `Plenty\Modules\Market\Ebay\Api\Types`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -972,6 +2324,8 @@ The service for boolean type.
 #### Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
+
+
 
 
 #### Properties
@@ -1211,6 +2565,8 @@ The service for decimal type.
 `Plenty\Modules\Market\Ebay\Api\Types`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1448,6 +2804,8 @@ The service for double type.
 `Plenty\Modules\Market\Ebay\Api\Types`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1683,6 +3041,8 @@ The service for integer type.
 #### Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
+
+
 
 
 #### Properties
@@ -1923,6 +3283,8 @@ The service for repeatable type.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/string">string</a> $class, <a target="_blank" href="http://php.net/string">string</a> $property, <a target="_blank" href="http://php.net/string">string</a> $expectedType):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -2063,6 +3425,8 @@ The service for string type.
 #### Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
+
+
 
 
 #### Properties
@@ -2302,6 +3666,8 @@ The service for token type.
 `Plenty\Modules\Market\Ebay\Api\Types`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -2537,6 +3903,8 @@ The service for uri type.
 #### Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
+
+
 
 
 #### Properties
@@ -2779,6 +4147,8 @@ The contract for the Ebay category repository.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="market#market_models_category">Category</a>
@@ -2838,6 +4208,8 @@ The category model
 `Plenty\Modules\Market\Ebay\Category\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -2883,6 +4255,350 @@ The category model
     
 Returns this model as an array.
     
+# ItemSpecific<a name="market_itemspecific"></a>
+    
+## Contracts<a name="market_itemspecific_contracts"></a>
+### ItemSpecificRepositoryContract<a name="market_contracts_itemspecificrepositorycontract"></a>
+
+The contract for the Ebay category repository.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\ItemSpecific\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+List item specifics.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>The filters that could be applied: 'categoryId', 'marketplaceId'.</td>
+    </tr>
+</table>
+
+
+## Models<a name="market_itemspecific_models"></a>
+### ItemSpecific<a name="market_models_itemspecific"></a>
+
+The eBay item specific model.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\ItemSpecific\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>A recommended Item Specific name.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>minValues</td>
+            <td>Minimum number of values that you can specify for this Item Specific.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>maxValues</td>
+            <td>Maximum number of values that you can specify for this Item Specific.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>selectionMode</td>
+            <td>Controls whether you can specify your own name and value in listing requests, or if you need to use a name and/or value that eBay has defined.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>valueType</td>
+            <td>The data type (e.g., date) that eBay expects the value to adhere to in listing requests. Only returned if the data type is not Text. In some cases, more details about the data type are returned in the `valueFormat` field.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>valueFormat</td>
+            <td>The format of the data type (e.g., date format) that eBay expects the item specific's value to adhere to in listing requests. A data type identified by the `valueType` field may have different representations, and `valueFormat` specifies the precise format that is required.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>helpText</td>
+            <td>Help-text defines the purpose of the Item Specific. The help text will be shown only when it is available for the particular Item Specific.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>helpUrl</td>
+            <td>A page on the eBay Web site with context-specific help tips that provide useful information about this Item Specific. Only returned when an applicable page is available in the system.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>variationPicture</td>
+            <td>Indicates whether the name (e.g., Color) can (or must) be used to classify the variation pictures</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>variationSpecifics</td>
+            <td>Indicates whether the recommended name/value pair can be used as variation attributes in a fixed-price listing call. For example, a given category could disable a name like Brand in variation specifics (if Brand is only allowed in the item specifics at the Item level). The same category could enable a name like Size for variation specifics (in addition to recommending it for item specifics). If not returned, then the name/value can be used for both variation specifics and item specifics.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>values</td>
+            <td>The available values.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# Marketplace<a name="market_marketplace"></a>
+    
+## Contracts<a name="market_marketplace_contracts"></a>
+### MarketplaceRepositoryContract<a name="market_contracts_marketplacerepositorycontract"></a>
+
+The contract for the Ebay marketplace repository.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Marketplace\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the list of all available eBay marketplaces.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>You can pass multiple filters to search only custom marketplaces. Available filters: `referrerId`, `marketplaceId`, `marketId`, `siteId`.</td>
+    </tr>
+</table>
+
+
+## Helpers<a name="market_marketplace_helpers"></a>
+### MarketplaceHelper<a name="market_helpers_marketplacehelper"></a>
+
+Helper class that allows getting information about an eBay marketplace more easily.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Marketplace\Helpers`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters):<a href="market#market_models_marketplace">Marketplace</a>
+</pre>
+
+    
+Get marketplace data model based on filters.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getMarketplaceId</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the marketplace ID based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getMarketplaceIds</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get all available marketplace IDs.
+    
+<pre>public <strong>getReferrerId</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the referrer ID based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getReferrerIds</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get all available referrer IDs.
+    
+<pre>public <strong>getSiteId</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the site ID based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getSiteIds</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get all available site IDs.
+    
+<pre>public <strong>getMarketId</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the market ID based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getMarketIds</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get all available market IDs.
+    
+<pre>public <strong>getCurrency</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the currency based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getShortcut</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the shortcut based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Models<a name="market_marketplace_models"></a>
+### Marketplace<a name="market_models_marketplace"></a>
+
+The eBay marketplace model.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Marketplace\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>siteId</td>
+            <td>The ID of the site exactly as eBay specifies it in the docs. This value is/was used in the old eBay SOAP APIs</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>marketplaceId</td>
+            <td>The ID of the marketplace exactly as eBay specifies it in the docs. This value is used in the new eBay REST APIs. Eg. `EBAY_DE` or `EBAY-DE`</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>marketId</td>
+            <td>System-Listing wide internal ID for the listing marketplace. This id occurs only in correlation with the listing DB tables.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>referrerId</td>
+            <td>System wide internal ID for the marketplace. Use this instead of `marketId` whenever possible!</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>shortcut</td>
+            <td>The marketplace shortcut name.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>currency</td>
+            <td>The currency used for the marketplace</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # PartsFitment<a name="market_partsfitment"></a>
     
 ## Contracts<a name="market_partsfitment_contracts"></a>
@@ -2894,6 +4610,8 @@ The contract for the fitment item property repository.
 #### Namespace
 
 `Plenty\Modules\Market\Ebay\PartsFitment\Contracts`
+
+
 
 
 
@@ -2984,6 +4702,8 @@ The contract for the fitment item repository.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="market#market_models_fitmentitem">FitmentItem</a>
@@ -3068,6 +4788,8 @@ The contract for the fitment repository.
 #### Namespace
 
 `Plenty\Modules\Market\Ebay\PartsFitment\Contracts`
+
+
 
 
 
@@ -3234,6 +4956,8 @@ The fitment model. This can contain multiple FitmentItems models.
 `Plenty\Modules\Market\Ebay\PartsFitment\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3286,6 +5010,8 @@ The fitment item model. This belongs to one fitment model and can contain multip
 `Plenty\Modules\Market\Ebay\PartsFitment\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3333,6 +5059,8 @@ The fitment item property model. This bleongs to an FitmentItem model.
 #### Namespace
 
 `Plenty\Modules\Market\Ebay\PartsFitment\Models`
+
+
 
 
 #### Properties
@@ -3391,6 +5119,8 @@ The contract for the eBay shop categories.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/int">int</a> $credentialsId, <a target="_blank" href="http://php.net/string">string</a> $viewType = &quot;list&quot;):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -3424,6 +5154,8 @@ The contract for the market attribute helper repository.
 #### Namespace
 
 `Plenty\Modules\Market\Helper\Contracts`
+
+
 
 
 
@@ -3592,6 +5324,8 @@ The contract for the market category helper repository.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getCategoryBranchName</strong>(<a target="_blank" href="http://php.net/int">int</a> $branchId, <a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/string">string</a> $separator = &quot;&gt;&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -3633,6 +5367,8 @@ The contract for the item helper repository.
 #### Namespace
 
 `Plenty\Modules\Market\Helper\Contracts`
+
+
 
 
 
@@ -3720,6 +5456,8 @@ The contract for the market property helper repository.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getMarketProperty</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -3748,6 +5486,8 @@ Use this interface to store and retrieve market specific settings.
 #### Namespace
 
 `Plenty\Modules\Market\Settings\Contracts`
+
+
 
 
 
@@ -3922,6 +5662,8 @@ Factory that allows to store correlation between market settings and plentymarke
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>type</strong>(<a target="_blank" href="http://php.net/string">string</a> $type):<a href="market#market_factories_settingscorrelationfactory">SettingsCorrelationFactory</a>
@@ -4091,6 +5833,28 @@ Get a specific settings by marketplace id and correlation id.
 </table>
 
 
+<pre>public <strong>getSettingsByParent</strong>($marketplaceId, <a target="_blank" href="http://php.net/int">int</a> $parentSettingsId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+List settings by marketplace id and parent settings id.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$marketplaceId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$parentSettingsId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getAllSettingsByCorrelationAndParent</strong>($marketplaceId, <a target="_blank" href="http://php.net/int">int</a> $correlationId, <a target="_blank" href="http://php.net/int">int</a> $parentSettingsId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -4127,6 +5891,8 @@ The market settings model.
 #### Namespace
 
 `Plenty\Modules\Market\Settings\Models`
+
+
 
 
 #### Properties

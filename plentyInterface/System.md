@@ -14,6 +14,8 @@ Repository for SystemInformation
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>loadValue</strong>($key):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -42,6 +44,8 @@ Repository for Webstore Configuration
 #### Namespace
 
 `Plenty\Modules\System\Contracts`
+
+
 
 
 
@@ -79,6 +83,27 @@ Repository for Webstore Configuration
 </table>
 
 
+<pre>public <strong>updateByPlentyId</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $plentyId):<a href="system#system_models_webstoreconfiguration">WebstoreConfiguration</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### WebstoreRepositoryContract<a name="system_contracts_webstorerepositorycontract"></a>
 
@@ -88,6 +113,8 @@ Repository for Webstore
 #### Namespace
 
 `Plenty\Modules\System\Contracts`
+
+
 
 
 
@@ -172,6 +199,8 @@ The webstore model
 `Plenty\Modules\System\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -195,7 +224,7 @@ The webstore model
             <td>type</td>
             <td>The type of the client (store)</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>storeIdentifier</td>
             <td>The identifier of the client (store)</td>
         </tr><tr>
@@ -208,6 +237,15 @@ The webstore model
 </td>
             <td>locations</td>
             <td>The accounting locations of the client (store)</td>
+        </tr><tr>
+            <td><a href="plugin#plugin_models_pluginset">PluginSet</a>
+</td>
+            <td>pluginSet</td>
+            <td>The plugin set of the client (store)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>pluginSetId</td>
+            <td>The plugin set id of the client (store)</td>
         </tr></tbody>
 </table>
 
@@ -228,6 +266,8 @@ The Webstore Configuration Model
 #### Namespace
 
 `Plenty\Modules\System\Models`
+
+
 
 
 #### Properties
@@ -906,6 +946,10 @@ The Webstore Configuration Model
             <td></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>googleRecaptchaApiWebsitekey</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>itemSearchEngine</td>
             <td></td>
         </tr></tbody>
@@ -919,6 +963,90 @@ The Webstore Configuration Model
     
 Returns this model as an array.
     
+# Module<a name="system_module"></a>
+    
+## Contracts<a name="system_module_contracts"></a>
+### PlentyModuleRepositoryContract<a name="system_contracts_plentymodulerepositorycontract"></a>
+
+PlentyModuleRepositoryContract
+
+
+#### Namespace
+
+`Plenty\Modules\System\Module\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>isActive</strong>(<a target="_blank" href="http://php.net/string">string</a> $module):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Returns whether or not a given module is active
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$module</td>
+        <td>The keyPath for the module</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isHidden</strong>(<a target="_blank" href="http://php.net/string">string</a> $module):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Returns whether or not a given module is hidden
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$module</td>
+        <td>The keyPath for the module</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getQuantity</strong>(<a target="_blank" href="http://php.net/string">string</a> $module):<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Get the &#039;quantity&#039; attribute of the given module
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$module</td>
+        <td>keyPath of the module in Question</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getValueForModule</strong>(<a target="_blank" href="http://php.net/string">string</a> $module, <a target="_blank" href="http://php.net/string">string</a> $value):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get any value for any module
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$module</td>
+        <td>The keyPath of the module</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$value</td>
+        <td>The key for the value</td>
+    </tr>
+</table>
+
+
 # Statistic<a name="system_statistic"></a>
     
 ## Models<a name="system_statistic_models"></a>
@@ -930,6 +1058,8 @@ Represent cloud metrics for a specific day
 #### Namespace
 
 `Plenty\Modules\System\Statistic\Models`
+
+
 
 
 #### Properties
@@ -1038,6 +1168,8 @@ Represent a list of cloud metrics objects
 #### Namespace
 
 `Plenty\Modules\System\Statistic\Models`
+
+
 
 
 #### Properties

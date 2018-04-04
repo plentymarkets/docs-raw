@@ -14,6 +14,8 @@ The CheckoutContract is the interface for the checkout repository. This interfac
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getShippingCountryId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
@@ -159,6 +161,92 @@ Sets the shipping address id for the current shopping cart.
     
 
     
+
+### CurrencyExchangeRepositoryContract<a name="frontend_contracts_currencyexchangerepositorycontract"></a>
+
+The CurrencyExchangeRatioRepositoryContract is the interface for the currency exchange repository. This interface allows you to get the default system currency, to get exchange ratios for every currency and to convert an amount from the default currency into a given currency or from a given currency into the default currency.
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getExchangeRatioByCurrency</strong>(<a target="_blank" href="http://php.net/string">string</a> $currency):<a target="_blank" href="http://php.net/float">float</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$currency</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getDefaultCurrency</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the default currency.
+    
+<pre>public <strong>convertFromDefaultCurrency</strong>(<a target="_blank" href="http://php.net/string">string</a> $currency, <a target="_blank" href="http://php.net/float">float</a> $amount, <a target="_blank" href="http://php.net/float">float</a> $exchangeRatio = 0.0):<a target="_blank" href="http://php.net/float">float</a></pre>
+
+    
+Converts the given value from the default currency to the given currency.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$currency</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$amount</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$exchangeRatio</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>convertToDefaultCurrency</strong>(<a target="_blank" href="http://php.net/string">string</a> $currency, <a target="_blank" href="http://php.net/float">float</a> $amount, <a target="_blank" href="http://php.net/float">float</a> $exchangeRatio = 0.0):<a target="_blank" href="http://php.net/float">float</a></pre>
+
+    
+Converts the given value to the default currency from the given currency.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$currency</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$amount</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$exchangeRatio</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Events<a name="frontend_frontend_events"></a>
 ### FrontendCurrencyChanged<a name="frontend_events_frontendcurrencychanged"></a>
 
@@ -168,6 +256,8 @@ The event is triggered when the currency is changed in the online store.
 #### Namespace
 
 `Plenty\Modules\Frontend\Events`
+
+
 
 
 
@@ -195,6 +285,8 @@ The event is triggered when a customer address is changed in the online store.
 
 
 
+
+
 ### FrontendLanguageChanged<a name="frontend_events_frontendlanguagechanged"></a>
 
 The event is triggered when the language is changed in the online store.
@@ -203,6 +295,8 @@ The event is triggered when the language is changed in the online store.
 #### Namespace
 
 `Plenty\Modules\Frontend\Events`
+
+
 
 
 
@@ -222,6 +316,8 @@ The event is triggered when the payment method is changed in the online store.
 #### Namespace
 
 `Plenty\Modules\Frontend\Events`
+
+
 
 
 
@@ -251,6 +347,45 @@ Updates the ID of the payment method. The ID must be specified.
 
 
 
+### FrontendReferrerChanged<a name="frontend_events_frontendreferrerchanged"></a>
+
+The event is triggered when the referrer id  is changed in the online store.
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getReferrerId</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setReferrerId</strong>($referrerId):<a href="frontend#frontend_events_frontendreferrerchanged">FrontendReferrerChanged</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$referrerId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### FrontendShippingCountryChanged<a name="frontend_events_frontendshippingcountrychanged"></a>
 
 The event is triggered when the shipping country is changed in the online store.
@@ -259,6 +394,8 @@ The event is triggered when the shipping country is changed in the online store.
 #### Namespace
 
 `Plenty\Modules\Frontend\Events`
+
+
 
 
 
@@ -294,6 +431,8 @@ The event is triggered when the shipping profile is changed in the online store.
 #### Namespace
 
 `Plenty\Modules\Frontend\Events`
+
+
 
 
 
@@ -334,6 +473,8 @@ The event is triggered when the delivery address is changed in the online store.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getAccountAddressId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
@@ -350,6 +491,8 @@ The event is triggered when the invoice address is changed in the online store.
 #### Namespace
 
 `Plenty\Modules\Frontend\Events`
+
+
 
 
 
@@ -372,6 +515,8 @@ The event is triggered when the payment method is changed in the online store.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getPaymentMethodId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
@@ -388,6 +533,8 @@ The event is triggered when the shipping method is updated in the online store.
 #### Namespace
 
 `Plenty\Modules\Frontend\Events`
+
+
 
 
 
@@ -417,6 +564,8 @@ validation event
 #### Namespace
 
 `Plenty\Modules\Frontend\Events`
+
+
 
 
 
@@ -452,6 +601,8 @@ Frontend-Factory
 #### Namespace
 
 `Plenty\Modules\Frontend\Factories`
+
+
 
 
 
@@ -496,6 +647,8 @@ frontend total vat model
 #### Namespace
 
 `Plenty\Modules\Frontend\Models`
+
+
 
 
 #### Properties
@@ -543,6 +696,8 @@ Frontend-service for customer information
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getIsAccountLoggedIn</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
@@ -564,6 +719,8 @@ Frontend-Service for agent information
 #### Namespace
 
 `Plenty\Modules\Frontend\Services`
+
+
 
 
 
@@ -631,6 +788,8 @@ Frontend-service for file information
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>addJsFile</strong>(<a target="_blank" href="http://php.net/string">string</a> $jsFile):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -692,6 +851,43 @@ Determine if a get mutator exists for an attribute.
         <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$attributes</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setAttribute</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $value):<a href="miscellaneous#miscellaneous_repositories_models">Models</a>
+</pre>
+
+    
+Set a given attribute on the model.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasSetMutator</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Determine if a set mutator exists for an attribute.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
         <td></td>
     </tr>
 </table>
@@ -817,6 +1013,58 @@ Determine if a get mutator exists for an attribute.
     
 
     
+<pre>public <strong>fill</strong>(<a target="_blank" href="http://php.net/array">array</a> $attributes):<a href="miscellaneous#miscellaneous_repositories_models">Models</a>
+</pre>
+
+    
+Fill the model with an array of attributes.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$attributes</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isFillable</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Determine if the given attribute may be mass assigned.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFillable</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the fillable attributes for the model.
+    
+<pre>public <strong>fillable</strong>(<a target="_blank" href="http://php.net/array">array</a> $fillable):<a href="miscellaneous#miscellaneous_repositories_models">Models</a>
+</pre>
+
+    
+Set the fillable attributes for the model.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$fillable</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### LocaleService<a name="frontend_services_localeservice"></a>
 
@@ -826,6 +1074,8 @@ frontend service for changing current language
 #### Namespace
 
 `Plenty\Modules\Frontend\Services`
+
+
 
 
 
@@ -853,6 +1103,99 @@ frontend service for changing current language
 
 
 
+### OrderPropertyFileService<a name="frontend_services_orderpropertyfileservice"></a>
+
+Frontend-service for customer information
+
+
+#### Namespace
+
+`Plenty\Modules\Frontend\Services`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>uploadFile</strong>(<a target="_blank" href="http://php.net/array">array</a> $fileData):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$fileData</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFileURL</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFile</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a href="cloud#cloud_models_storageobject">StorageObject</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>copyBasketFileToOrder</strong>(<a target="_blank" href="http://php.net/string">string</a> $filename):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$filename</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteFile</strong>(<a target="_blank" href="http://php.net/string">string</a> $filename):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$filename</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### SystemService<a name="frontend_services_systemservice"></a>
 
 Frontend-service for system information
@@ -861,6 +1204,8 @@ Frontend-service for system information
 #### Namespace
 
 `Plenty\Modules\Frontend\Services`
+
+
 
 
 
@@ -885,6 +1230,8 @@ Frontend-service for vat information
 #### Namespace
 
 `Plenty\Modules\Frontend\Services`
+
+
 
 
 
@@ -942,6 +1289,8 @@ Repository contract for LegalInformation model.
 #### Namespace
 
 `Plenty\Modules\Frontend\LegalInformation\Contracts`
+
+
 
 
 
@@ -1029,6 +1378,8 @@ The legal information model.
 `Plenty\Modules\Frontend\LegalInformation\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1088,6 +1439,8 @@ The FrontendPaymentMethodRepositoryContract is the interface for the front end p
 #### Namespace
 
 `Plenty\Modules\Frontend\PaymentMethod\Contracts`
+
+
 
 
 
@@ -1448,6 +1801,8 @@ The FrontendSessionStorageFactoryContract is the interface for the front end ses
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getLocaleSettings</strong>():<a href="frontend#frontend_models_localesettings">LocaleSettings</a>
@@ -1489,6 +1844,8 @@ The session storage model for customer data.
 #### Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
+
+
 
 
 #### Properties
@@ -1555,6 +1912,8 @@ The session storage model for forum data.
 `Plenty\Modules\Frontend\Session\Storage\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1607,6 +1966,8 @@ The session storage model for locale settings.
 `Plenty\Modules\Frontend\Session\Storage\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1649,6 +2010,8 @@ The session storage model for order data.
 #### Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
+
+
 
 
 #### Properties
@@ -1773,6 +2136,8 @@ The session storage model for plugins.
 #### Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
+
+
 
 
 

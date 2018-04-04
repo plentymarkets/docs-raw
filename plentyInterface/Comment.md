@@ -14,6 +14,8 @@ Get, create, update and delete comments.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getComment</strong>(<a target="_blank" href="http://php.net/int">int</a> $commentId):<a href="comment#comment_models_comment">Comment</a>
@@ -146,6 +148,8 @@ The comment model.
 #### Namespace
 
 `Plenty\Modules\Comment\Models`
+
+
 
 
 #### Properties

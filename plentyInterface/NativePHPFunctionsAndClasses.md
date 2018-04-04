@@ -14,6 +14,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.addslashes.php">addslashes</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.array-chunk.php">array_chunk</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-column.php">array_column</a>
             </li>
                     <li>
@@ -53,6 +56,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.array-merge.php">array_merge</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.array-merge-recursive.php">array_merge_recursive</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-pop.php">array_pop</a>
             </li>
                     <li>
@@ -60,6 +66,12 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-reduce.php">array_reduce</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.array-replace.php">array_replace</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.array-replace-recursive.php">array_replace_recursive</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-reverse.php">array_reverse</a>
@@ -203,6 +215,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             <strong>G</strong>
         <ul>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.get-class.php">get_class</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.get-parent-class.php">get_parent_class</a>
             </li>
                     <li>
@@ -225,6 +240,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.header.php">header</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.hexdec.php">hexdec</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.html-entity-decode.php">html_entity_decode</a>
@@ -318,6 +336,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.mb-strcut.php">mb_strcut</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.mb-strlen.php">mb_strlen</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.mb-substr.php">mb_substr</a>

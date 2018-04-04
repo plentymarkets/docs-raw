@@ -14,6 +14,8 @@ The contract for the attribute map repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_attributemap">AttributeMap</a>
@@ -181,6 +183,8 @@ The contract for the attribute name repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $attributeId):<a href="item#item_models_attributename">AttributeName</a>
@@ -297,6 +301,8 @@ The contract for the attribute repository
 #### Namespace
 
 `Plenty\Modules\Item\Attribute\Contracts`
+
+
 
 
 
@@ -486,6 +492,8 @@ The contract for the attribute value image repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getAttributeValueImage</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $imageId, <a target="_blank" href="http://php.net/int">int</a> $valueId):<a href="item#item_models_attributevalueimage">AttributeValueImage</a>
@@ -648,6 +656,8 @@ The contract for the attribute value map repository
 #### Namespace
 
 `Plenty\Modules\Item\Attribute\Contracts`
+
+
 
 
 
@@ -830,6 +840,8 @@ The contract for the attribute value market name repository
 #### Namespace
 
 `Plenty\Modules\Item\Attribute\Contracts`
+
+
 
 
 
@@ -1033,6 +1045,8 @@ The contract for the attribute value name repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $valueId):<a href="item#item_models_attributevaluename">AttributeValueName</a>
@@ -1149,6 +1163,8 @@ The contract for the attribute value repository
 #### Namespace
 
 `Plenty\Modules\Item\Attribute\Contracts`
+
+
 
 
 
@@ -1367,6 +1383,8 @@ The contract for the attribute value set repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
@@ -1440,6 +1458,8 @@ The Attribute model including AttributeName and AttributeValue
 #### Namespace
 
 `Plenty\Modules\Item\Attribute\Models`
+
+
 
 
 #### Properties
@@ -1538,6 +1558,8 @@ The AttributeMap model
 `Plenty\Modules\Item\Attribute\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1590,6 +1612,8 @@ The AttributeName model including Attribute
 `Plenty\Modules\Item\Attribute\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1637,6 +1661,8 @@ The AttributeValue model including Attribute and AttributeValueName
 #### Namespace
 
 `Plenty\Modules\Item\Attribute\Models`
+
+
 
 
 #### Properties
@@ -1732,6 +1758,8 @@ The AttributeValueImage model
 `Plenty\Modules\Item\Attribute\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1778,6 +1806,8 @@ The AttributeValueMap model
 #### Namespace
 
 `Plenty\Modules\Item\Attribute\Models`
+
+
 
 
 #### Properties
@@ -1834,6 +1864,8 @@ The AttributeValueMarketName model including AttributeValue
 #### Namespace
 
 `Plenty\Modules\Item\Attribute\Models`
+
+
 
 
 #### Properties
@@ -1893,6 +1925,8 @@ The AttributeValueName model including AttributeValue
 `Plenty\Modules\Item\Attribute\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1940,6 +1974,8 @@ The AttributeValueSet model
 #### Namespace
 
 `Plenty\Modules\Item\Attribute\Models`
+
+
 
 
 #### Properties
@@ -2000,6 +2036,8 @@ Repository for item availability.
 #### Namespace
 
 `Plenty\Modules\Item\Availability\Contracts`
+
+
 
 
 
@@ -2079,6 +2117,8 @@ The item availability model
 `Plenty\Modules\Item\Availability\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -2127,6 +2167,8 @@ The item availability name model
 `Plenty\Modules\Item\Availability\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -2171,6 +2213,8 @@ The contract for the barcode repository
 #### Namespace
 
 `Plenty\Modules\Item\Barcode\Contracts`
+
+
 
 
 
@@ -2426,6 +2470,8 @@ The barcode model including barcode referrer
 `Plenty\Modules\Item\Barcode\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -2476,6 +2522,8 @@ The barcode link referrer model including the barcode
 #### Namespace
 
 `Plenty\Modules\Item\Barcode\Models`
+
+
 
 
 #### Properties
@@ -2541,6 +2589,8 @@ Returns this model as an array.
 #### Namespace
 
 `Plenty\Modules\Item\DataLayer\Contracts`
+
+
 
 
 
@@ -2636,6 +2686,8 @@ Returns this model as an array.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
@@ -2652,6 +2704,8 @@ ItemDataLayer - ItemBase
 #### Namespace
 
 `Plenty\Modules\Item\DataLayer\Models`
+
+
 
 
 #### Properties
@@ -2974,6 +3028,8 @@ ItemCrossSelling
 `Plenty\Modules\Item\DataLayer\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3023,6 +3079,8 @@ ItemDescription
 #### Namespace
 
 `Plenty\Modules\Item\DataLayer\Models`
+
+
 
 
 #### Properties
@@ -3117,6 +3175,8 @@ ItemProperty
 `Plenty\Modules\Item\DataLayer\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3174,6 +3234,8 @@ ItemShippingProfiles
 `Plenty\Modules\Item\DataLayer\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3220,6 +3282,8 @@ Record
 #### Namespace
 
 `Plenty\Modules\Item\DataLayer\Models`
+
+
 
 
 #### Properties
@@ -3379,6 +3443,8 @@ RecordList
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>toArray</strong>()</pre>
@@ -3395,6 +3461,8 @@ VariationAttributeValue
 #### Namespace
 
 `Plenty\Modules\Item\DataLayer\Models`
+
+
 
 
 #### Properties
@@ -3435,6 +3503,8 @@ VariationBarcode
 #### Namespace
 
 `Plenty\Modules\Item\DataLayer\Models`
+
+
 
 
 #### Properties
@@ -3483,6 +3553,8 @@ VariationBase
 #### Namespace
 
 `Plenty\Modules\Item\DataLayer\Models`
+
+
 
 
 #### Properties
@@ -3726,6 +3798,8 @@ VariationBundleComponent
 `Plenty\Modules\Item\DataLayer\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3774,6 +3848,8 @@ VariationCategory
 `Plenty\Modules\Item\DataLayer\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3817,6 +3893,8 @@ VariationImage
 #### Namespace
 
 `Plenty\Modules\Item\DataLayer\Models`
+
+
 
 
 #### Properties
@@ -3887,6 +3965,8 @@ VariationLinkMarketplace
 `Plenty\Modules\Item\DataLayer\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3927,6 +4007,8 @@ VariationLinkWebstore
 `Plenty\Modules\Item\DataLayer\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3965,6 +4047,8 @@ VariationMarketStatus
 #### Namespace
 
 `Plenty\Modules\Item\DataLayer\Models`
+
+
 
 
 #### Properties
@@ -4053,6 +4137,8 @@ VariationRetailPrice
 #### Namespace
 
 `Plenty\Modules\Item\DataLayer\Models`
+
+
 
 
 #### Properties
@@ -4163,6 +4249,8 @@ VariationSpecialOfferRetailPrice
 `Plenty\Modules\Item\DataLayer\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -4253,6 +4341,8 @@ VariationStandardCategory
 `Plenty\Modules\Item\DataLayer\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -4295,6 +4385,8 @@ VariationStock
 #### Namespace
 
 `Plenty\Modules\Item\DataLayer\Models`
+
+
 
 
 #### Properties
@@ -4411,6 +4503,8 @@ VariationStockBuffer
 `Plenty\Modules\Item\DataLayer\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -4445,6 +4539,8 @@ VariationSupplier
 #### Namespace
 
 `Plenty\Modules\Item\DataLayer\Models`
+
+
 
 
 #### Properties
@@ -4533,6 +4629,8 @@ VariationWarehouse
 `Plenty\Modules\Item\DataLayer\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -4610,6 +4708,8 @@ ItemDataLayer Lookup
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getNumberOfRows</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
@@ -4633,6 +4733,8 @@ The contract for the default shipping cost repository
 #### Namespace
 
 `Plenty\Modules\Item\DefaultShippingCost\Contracts`
+
+
 
 
 
@@ -4679,6 +4781,8 @@ The default shipping cost model
 `Plenty\Modules\Item\DefaultShippingCost\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -4723,6 +4827,8 @@ The contract for the attribute value repository
 #### Namespace
 
 `Plenty\Modules\Item\Item\Contracts`
+
+
 
 
 
@@ -4905,6 +5011,8 @@ The item model
 #### Namespace
 
 `Plenty\Modules\Item\Item\Models`
+
+
 
 
 #### Properties
@@ -5135,6 +5243,10 @@ The item model
             <td></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>ebayTitles</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>itemShippingProfiles</td>
             <td></td>
         </tr><tr>
@@ -5165,6 +5277,52 @@ The item model
 Returns this model as an array.
     
 
+### ItemEbayTitle<a name="item_models_itemebaytitle"></a>
+
+The item ebay title model
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Item\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>title</td>
+            <td>The title.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemId</td>
+            <td>The unique ID of the item.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The unique ID of the ebay title.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
 ### ItemText<a name="item_models_itemtext"></a>
 
 The item text model
@@ -5173,6 +5331,8 @@ The item text model
 #### Namespace
 
 `Plenty\Modules\Item\Item\Models`
+
+
 
 
 #### Properties
@@ -5247,6 +5407,8 @@ Repository for dynamic item cross-selling
 #### Namespace
 
 `Plenty\Modules\Item\ItemCrossSelling\Contracts`
+
+
 
 
 
@@ -5352,6 +5514,8 @@ Repository for item cross-selling
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_itemcrossselling">ItemCrossSelling</a>
@@ -5447,6 +5611,8 @@ The item dynamic cross-selling model including the item
 `Plenty\Modules\Item\ItemCrossSelling\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -5498,6 +5664,8 @@ The item cross-selling model including the item
 #### Namespace
 
 `Plenty\Modules\Item\ItemCrossSelling\Models`
+
+
 
 
 #### Properties
@@ -5553,6 +5721,8 @@ The contract for the item image availability repository
 #### Namespace
 
 `Plenty\Modules\Item\ItemImage\Contracts`
+
+
 
 
 
@@ -5636,6 +5806,8 @@ The contract for the item image name repository
 #### Namespace
 
 `Plenty\Modules\Item\ItemImage\Contracts`
+
+
 
 
 
@@ -5749,6 +5921,8 @@ The contract for the item image repository
 #### Namespace
 
 `Plenty\Modules\Item\ItemImage\Contracts`
+
+
 
 
 
@@ -5920,6 +6094,61 @@ Returns a collection of parsed filters as Condition object
     
 Clears the filter array.
     
+
+### ItemImageSettingsRepositoryContract<a name="item_contracts_itemimagesettingsrepositorycontract"></a>
+
+Get, update or invalidate item image settings
+
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemImage\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>get</strong>():<a href="miscellaneous#miscellaneous_item_itemimagesettings">ItemImageSettings</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>update</strong>($data):<a href="miscellaneous#miscellaneous_item_itemimagesettings">ItemImageSettings</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>invalidate</strong>(<a target="_blank" href="http://php.net/string">string</a> $path):<a href="miscellaneous#miscellaneous_item_itemimagesettings">ItemImageSettings</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$path</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_itemimage_models"></a>
 ### ItemImage<a name="item_models_itemimage"></a>
 
@@ -5929,6 +6158,8 @@ The ItemImage Model
 #### Namespace
 
 `Plenty\Modules\Item\ItemImage\Models`
+
+
 
 
 #### Properties
@@ -6039,6 +6270,8 @@ ItemImageAvailability
 `Plenty\Modules\Item\ItemImage\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -6081,6 +6314,8 @@ ItemImageName
 #### Namespace
 
 `Plenty\Modules\Item\ItemImage\Models`
+
+
 
 
 #### Properties
@@ -6129,6 +6364,8 @@ ItemImage
 #### Namespace
 
 `Plenty\Modules\Item\ItemImage\Models`
+
+
 
 
 #### Properties
@@ -6214,6 +6451,8 @@ The contract for the item property repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
@@ -6271,6 +6510,8 @@ ItemPropertyValue
 #### Namespace
 
 `Plenty\Modules\Item\ItemProperty\Models`
+
+
 
 
 #### Properties
@@ -6351,6 +6592,8 @@ The ItemPropertyValueText
 `Plenty\Modules\Item\ItemProperty\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -6384,6 +6627,214 @@ The ItemPropertyValueText
     
 Returns this model as an array.
     
+# ItemSerialNumber<a name="item_itemserialnumber"></a>
+    
+## Contracts<a name="item_itemserialnumber_contracts"></a>
+### ItemSerialNumberRepositoryContract<a name="item_contracts_itemserialnumberrepositorycontract"></a>
+
+The contract of the item serial number repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemSerialNumber\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/int">int</a> $perPage = 100, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+Lists all serial numbers.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$perPage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_itemserialnumber">ItemSerialNumber</a>
+</pre>
+
+    
+Gets a serial number. The ID of the serial number must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_itemserialnumber">ItemSerialNumber</a>
+</pre>
+
+    
+Creates a serial number
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_itemserialnumber">ItemSerialNumber</a>
+</pre>
+
+    
+Updates a serial number. The ID of the serial number must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_contracts_deleteresponsecontract">DeleteResponseContract</a>
+</pre>
+
+    
+Deletes a serial number. The ID of the serial number must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
+<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
+## Models<a name="item_itemserialnumber_models"></a>
+### ItemSerialNumber<a name="item_models_itemserialnumber"></a>
+
+The item serial number model
+
+
+#### Namespace
+
+`Plenty\Modules\Item\ItemSerialNumber\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the serial number</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>orderId</td>
+            <td>The ID of the order</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>orderItemId</td>
+            <td>The ID of the order item</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemId</td>
+            <td>The ID of the item</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>serialNumber</td>
+            <td>The serial number</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # ItemShippingProfiles<a name="item_itemshippingprofiles"></a>
     
 ## Contracts<a name="item_itemshippingprofiles_contracts"></a>
@@ -6395,6 +6846,8 @@ Repository for ItemShippingProfiles
 #### Namespace
 
 `Plenty\Modules\Item\ItemShippingProfiles\Contracts`
+
+
 
 
 
@@ -6473,6 +6926,8 @@ The shipping profile model
 `Plenty\Modules\Item\ItemShippingProfiles\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -6517,6 +6972,8 @@ The contract for the manufacturer commission repository
 #### Namespace
 
 `Plenty\Modules\Item\Manufacturer\Contracts`
+
+
 
 
 
@@ -6615,6 +7072,8 @@ The contract for the manufacturer repository
 #### Namespace
 
 `Plenty\Modules\Item\Manufacturer\Contracts`
+
+
 
 
 
@@ -6803,6 +7262,8 @@ The item manufacturer model
 `Plenty\Modules\Item\Manufacturer\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -6915,6 +7376,8 @@ The item manufacturer commission model
 `Plenty\Modules\Item\Manufacturer\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -6972,6 +7435,8 @@ The contract for the property group name repository
 #### Namespace
 
 `Plenty\Modules\Item\Property\Contracts`
+
+
 
 
 
@@ -7089,6 +7554,8 @@ The contract for the property group repository
 #### Namespace
 
 `Plenty\Modules\Item\Property\Contracts`
+
+
 
 
 
@@ -7236,6 +7703,8 @@ The contract for the property market reference repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyId):<a href="item#item_models_propertymarketreference">PropertyMarketReference</a>
@@ -7342,7 +7811,7 @@ List of property market references. The ID of the property must be specified.
 </table>
 
 
-<pre>public <strong>getPropertyMarketReferences</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId, <a target="_blank" href="http://php.net/int">int</a> $componentId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPropertyMarketReferences</strong>(<a target="_blank" href="http://php.net/float">float</a> $referrerId, <a target="_blank" href="http://php.net/int">int</a> $componentId = null, <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Lists all property market references.
@@ -7359,6 +7828,11 @@ Lists all property market references.
         <td>$componentId</td>
         <td>The ID of the component</td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>You can pass here multiple filters. Available: `componentId` - pass multiple component IDs that should be searched for.</td>
+    </tr>
 </table>
 
 
@@ -7371,6 +7845,8 @@ The contract for the property name repository
 #### Namespace
 
 `Plenty\Modules\Item\Property\Contracts`
+
+
 
 
 
@@ -7489,6 +7965,8 @@ The contract for the property repository
 #### Namespace
 
 `Plenty\Modules\Item\Property\Contracts`
+
+
 
 
 
@@ -7713,6 +8191,8 @@ The contract for the property selection repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $propertyId):<a href="item#item_models_propertyselection">PropertySelection</a>
@@ -7917,6 +8397,8 @@ The property including Property name and property market reference
 `Plenty\Modules\Item\Property\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -8029,6 +8511,8 @@ The PropertyGroup including PropertyGroupName
 `Plenty\Modules\Item\Property\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -8093,6 +8577,8 @@ The PropertyGroupName including PropertyGroup
 `Plenty\Modules\Item\Property\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -8144,6 +8630,8 @@ The PropertyMarketReference including Property
 #### Namespace
 
 `Plenty\Modules\Item\Property\Models`
+
+
 
 
 #### Properties
@@ -8199,6 +8687,8 @@ The PropertyName including Property
 `Plenty\Modules\Item\Property\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -8250,6 +8740,8 @@ The property selection including the property
 #### Namespace
 
 `Plenty\Modules\Item\Property\Models`
+
+
 
 
 #### Properties
@@ -8309,6 +8801,8 @@ The contract for the sales price referrer account repository
 #### Namespace
 
 `Plenty\Modules\Item\SalesPrice\Contracts`
+
+
 
 
 
@@ -8430,6 +8924,8 @@ The contract for the sales price country repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salespricecountry">SalesPriceCountry</a>
@@ -8535,6 +9031,8 @@ The contract for the sales price currency repository
 #### Namespace
 
 `Plenty\Modules\Item\SalesPrice\Contracts`
+
+
 
 
 
@@ -8646,6 +9144,8 @@ The contract for the sales price customer class repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salespricecustomerclass">SalesPriceCustomerClass</a>
@@ -8751,6 +9251,8 @@ The contract for the sales price name repository
 #### Namespace
 
 `Plenty\Modules\Item\SalesPrice\Contracts`
+
+
 
 
 
@@ -8872,6 +9374,8 @@ The contract for the sales price online store repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salespriceonlinestore">SalesPriceOnlineStore</a>
@@ -8980,6 +9484,8 @@ The contract for the sales price referrer repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $salesPriceId):<a href="item#item_models_salespricereferrer">SalesPriceReferrer</a>
@@ -9085,6 +9591,8 @@ The contract for the sales price repository
 #### Namespace
 
 `Plenty\Modules\Item\SalesPrice\Contracts`
+
+
 
 
 
@@ -9259,6 +9767,8 @@ The contract for the sales price search repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>search</strong>(<a href="item#item_models_salespricesearchrequest">SalesPriceSearchRequest</a>
@@ -9307,6 +9817,8 @@ The contract for the sales price search repository
 `Plenty\Modules\Item\SalesPrice\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -9345,6 +9857,10 @@ The contract for the sales price search repository
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isLiveConversion</td>
             <td>Flag that indicates if the sales price is converted live in the online store. When true, the default currency price will be converted into the active currencies based on the conversion rates saved in plentymarkets.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>interval</td>
+            <td>The interval of the price. Possible values are: daily, weekly, monthly, quarterly, half-yearly and yearly.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>
@@ -9403,6 +9919,8 @@ Returns this model as an array.
 `Plenty\Modules\Item\SalesPrice\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -9455,6 +9973,8 @@ Returns this model as an array.
 `Plenty\Modules\Item\SalesPrice\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -9501,6 +10021,8 @@ Returns this model as an array.
 #### Namespace
 
 `Plenty\Modules\Item\SalesPrice\Models`
+
+
 
 
 #### Properties
@@ -9551,6 +10073,8 @@ Returns this model as an array.
 `Plenty\Modules\Item\SalesPrice\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -9597,6 +10121,8 @@ Returns this model as an array.
 #### Namespace
 
 `Plenty\Modules\Item\SalesPrice\Models`
+
+
 
 
 #### Properties
@@ -9655,6 +10181,8 @@ Returns this model as an array.
 `Plenty\Modules\Item\SalesPrice\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -9703,6 +10231,8 @@ Returns this model as an array.
 `Plenty\Modules\Item\SalesPrice\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -9749,6 +10279,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Item\SalesPrice\Models`
+
+
 
 
 #### Properties
@@ -9821,6 +10353,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Item\SalesPrice\Models`
+
+
 
 
 #### Properties
@@ -9934,6 +10468,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -10038,6 +10574,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -10084,6 +10622,180 @@ To be written
 
 
 
+### AvailabilityAggregation<a name="item_aggregations_availabilityaggregation"></a>
+
+aggregation for item availabilities
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Aggregations`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getField</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getAggregation</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addAggregation</strong>(<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+ $aggregation):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</td>
+        <td>$aggregation</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSource</strong>(<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+ $source):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</td>
+        <td>$source</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $rowsPerPage):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$rowsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getSources</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+
+### AvailabilityAggregationProcessor<a name="item_aggregations_availabilityaggregationprocessor"></a>
+
+aggregation processor for item availabilities
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Aggregations`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getName</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getDependencies</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addMutator</strong>(<a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+ $mutator):<a href="cloud#cloud_lib_processor">Processor</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+</td>
+        <td>$mutator</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### CardinalityAggregationBase<a name="item_aggregations_cardinalityaggregationbase"></a>
 
 To be written
@@ -10092,6 +10804,8 @@ To be written
 #### Namespace
 
 `Plenty\Modules\Item\Search\Aggregations`
+
+
 
 
 
@@ -10207,6 +10921,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -10311,6 +11027,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -10357,6 +11075,121 @@ To be written
 
 
 
+### FacetFacetTermsAggregation<a name="item_aggregations_facetfacettermsaggregation"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Aggregations`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getField</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getAggregation</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addAggregation</strong>(<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+ $aggregation):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</td>
+        <td>$aggregation</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSource</strong>(<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+ $source):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</td>
+        <td>$source</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $rowsPerPage):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$rowsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getSources</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+
 ### FacetFilterAggregation<a name="item_aggregations_facetfilteraggregation"></a>
 
 To be written
@@ -10365,6 +11198,8 @@ To be written
 #### Namespace
 
 `Plenty\Modules\Item\Search\Aggregations`
+
+
 
 
 
@@ -10509,6 +11344,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>setFacetId</strong>(<a target="_blank" href="http://php.net/int">int</a> $facetId):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -10638,6 +11475,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -10757,6 +11596,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -10811,6 +11652,8 @@ To be written
 #### Namespace
 
 `Plenty\Modules\Item\Search\Aggregations`
+
+
 
 
 
@@ -10916,6 +11759,62 @@ To be written
 
     
 
+### ItemCardinalityAggregationProcessor<a name="item_aggregations_itemcardinalityaggregationprocessor"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Aggregations`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>process</strong>($data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getDependencies</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addMutator</strong>(<a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+ $mutator):<a href="cloud#cloud_lib_processor">Processor</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+</td>
+        <td>$mutator</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### PriceRangeAggregation<a name="item_aggregations_pricerangeaggregation"></a>
 
 To be written
@@ -10924,6 +11823,8 @@ To be written
 #### Namespace
 
 `Plenty\Modules\Item\Search\Aggregations`
+
+
 
 
 
@@ -11042,6 +11943,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -11096,6 +11999,8 @@ To be written
 #### Namespace
 
 `Plenty\Modules\Item\Search\Aggregations`
+
+
 
 
 
@@ -11212,6 +12117,8 @@ VariationElasticSearchAvailibilityRepositoryContract
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
@@ -11233,6 +12140,8 @@ kommt noch
 #### Namespace
 
 `Plenty\Modules\Item\Search\Contracts`
+
+
 
 
 
@@ -11287,6 +12196,8 @@ kommt noch
 #### Namespace
 
 `Plenty\Modules\Item\Search\Contracts`
+
+
 
 
 
@@ -11365,6 +12276,8 @@ kommt noch
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>execute</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -11416,6 +12329,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Item\Search\Filter`
+
+
 
 
 
@@ -11496,6 +12411,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Item\Search\Filter`
+
+
 
 
 
@@ -11620,6 +12537,8 @@ foo
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>isVisibleForClient</strong>(<a target="_blank" href="http://php.net/int">int</a> $clientId):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -11721,6 +12640,8 @@ foo
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getPath</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -11804,6 +12725,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Item\Search\Filter`
+
+
 
 
 
@@ -11940,6 +12863,8 @@ foo
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>hasFeedbackGreaterThan</strong>(<a target="_blank" href="http://php.net/int">int</a> $value):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -11995,6 +12920,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Item\Search\Filter`
+
+
 
 
 
@@ -12070,6 +12997,8 @@ to bew written
 #### Namespace
 
 `Plenty\Modules\Item\Search\Filter`
+
+
 
 
 
@@ -12218,6 +13147,8 @@ foo
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>isVisibleForMarket</strong>(<a target="_blank" href="http://php.net/int">int</a> $marketId):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -12303,6 +13234,8 @@ foo
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>between</strong>(<a target="_blank" href="http://php.net/float">float</a> $min = null, <a target="_blank" href="http://php.net/float">float</a> $max = null):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -12366,6 +13299,8 @@ foo
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>hasAtLeastOnePrice</strong>(<a target="_blank" href="http://php.net/array">array</a> $priceIds):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -12416,6 +13351,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Item\Search\Filter`
+
+
 
 
 
@@ -12524,6 +13461,8 @@ foo
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getPath</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
@@ -12596,6 +13535,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Item\Search\Filter`
+
+
 
 
 
@@ -12684,6 +13625,8 @@ foo
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>hasAnyName</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
@@ -12745,6 +13688,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Item\Search\Filter`
+
+
 
 
 
@@ -12968,6 +13913,22 @@ foo
 </table>
 
 
+<pre>public <strong>hasAtLeastOneAvailability</strong>(<a target="_blank" href="http://php.net/array">array</a> $availabilities):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$availabilities</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -13000,6 +13961,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Item\Search\Filter`
+
+
 
 
 
@@ -13045,6 +14008,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getFacetSearch</strong>():<a href="cloud#cloud_document_documentsearch">DocumentSearch</a>
@@ -13084,6 +14049,8 @@ To be written
 #### Namespace
 
 `Plenty\Modules\Item\Search\Mutators`
+
+
 
 
 
@@ -13154,6 +14121,8 @@ To be written
 #### Namespace
 
 `Plenty\Modules\Item\Search\Mutators`
+
+
 
 
 
@@ -13233,6 +14202,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>mutate</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -13284,6 +14255,8 @@ Converts image domains to client specific image domains.
 #### Namespace
 
 `Plenty\Modules\Item\Search\Mutators`
+
+
 
 
 
@@ -13354,6 +14327,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Item\Search\Mutators`
+
+
 
 
 
@@ -13459,6 +14434,8 @@ foo
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getKeyList</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -13538,6 +14515,8 @@ foo
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getPath</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -13612,6 +14591,43 @@ foo
 </table>
 
 
+
+### VariationPropertyGroupMutator<a name="item_mutators_variationpropertygroupmutator"></a>
+
+To be written...
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Mutators`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>mutate</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getDependencies</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 ## Query<a name="item_search_query"></a>
 ### SearchQuery<a name="item_query_searchquery"></a>
 
@@ -13621,6 +14637,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Item\Search\Query`
+
+
 
 
 
@@ -13778,6 +14796,8 @@ VariationElasticSearchAvailibilityRepository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
@@ -13802,6 +14822,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -13818,6 +14840,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Item\Search\Suggestions`
+
+
 
 
 
@@ -13899,6 +14923,8 @@ to be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -13953,6 +14979,8 @@ The event is triggered to warn about an overselling.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getBasketItem</strong>():<a href="basket#basket_models_basketitem">BasketItem</a>
@@ -13977,6 +15005,8 @@ The contract for the unit name repository
 #### Namespace
 
 `Plenty\Modules\Item\Unit\Contracts`
+
+
 
 
 
@@ -14095,6 +15125,8 @@ The contract for the unit repository
 #### Namespace
 
 `Plenty\Modules\Item\Unit\Contracts`
+
+
 
 
 
@@ -14268,6 +15300,8 @@ The unit model including the unit name
 `Plenty\Modules\Item\Unit\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -14328,6 +15362,8 @@ The unit name model including the unit
 `Plenty\Modules\Item\Unit\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -14379,6 +15415,8 @@ The unitCombination model
 `Plenty\Modules\Item\UnitCombination\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -14420,6 +15458,68 @@ Returns this model as an array.
 # Variation<a name="item_variation"></a>
     
 ## Contracts<a name="item_variation_contracts"></a>
+### VariationInheritanceServiceContract<a name="item_contracts_variationinheritanceservicecontract"></a>
+
+To be written...
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Variation\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>activate</strong>(<a href="item#item_models_variation">Variation</a>
+ $variation, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="item#item_models_variation">Variation</a>
+</td>
+        <td>$variation</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deactivate</strong>(<a href="item#item_models_variation">Variation</a>
+ $variation, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="item#item_models_variation">Variation</a>
+</td>
+        <td>$variation</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### VariationLookupRepositoryContract<a name="item_contracts_variationlookuprepositorycontract"></a>
 
 lookup repository for variations
@@ -14428,6 +15528,8 @@ lookup repository for variations
 #### Namespace
 
 `Plenty\Modules\Item\Variation\Contracts`
+
+
 
 
 
@@ -14583,6 +15685,8 @@ The contract for the variation repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $with, <a target="_blank" href="http://php.net/string">string</a> $lang):<a href="item#item_models_variation">Variation</a>
@@ -14708,6 +15812,8 @@ A repository for comfortable searches for variations
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>setSearchFilter</strong>(<a target="_blank" href="http://php.net/int">int</a> $name, <a target="_blank" href="http://php.net/array">array</a> $params):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -14747,6 +15853,22 @@ A repository for comfortable searches for variations
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setSearchParams</strong>(<a target="_blank" href="http://php.net/array">array</a> $params):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$params</td>
         <td></td>
     </tr>
 </table>
@@ -14815,6 +15937,8 @@ Class VariationException
 `Plenty\Modules\Item\Variation\Exceptions`
 
 
+
+
 ## Models<a name="item_variation_models"></a>
 ### Variation<a name="item_models_variation"></a>
 
@@ -14824,6 +15948,8 @@ Variation
 #### Namespace
 
 `Plenty\Modules\Item\Variation\Models`
+
+
 
 
 #### Properties
@@ -15073,9 +16199,17 @@ Variation
             <td>warehouseVariationId</td>
             <td>Either the ID of the variation or the ID of the item's main variation. No other values are permitted.<ul><li>ID of the variation = Warehouses are not inherited from the main variation.</li><li>ID of the item's main variation = Inheritance of warehouses is active.</li></ul></td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>propertyVariationId</td>
+            <td>Either the ID of the variation or the ID of the item's main variation. No other values are permitted.<ul><li>ID of the variation = Properties are not inherited from the main variation.</li><li>ID of the item's main variation = Inheritance of properties is active.</li></ul></td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationBarcodes</td>
             <td>An array of the barcodes of the variation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>variationBundleComponents</td>
+            <td>An array of the bundle components of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationProperties</td>
@@ -15109,6 +16243,10 @@ Variation
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationSuppliers</td>
             <td>An array of the suppliers of the variation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>variationTexts</td>
+            <td>An array of the texts of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationWarehouses</td>
@@ -15151,6 +16289,170 @@ Variation
     
 Returns this model as an array.
     
+# VariationAdditionalSku<a name="item_variationadditionalsku"></a>
+    
+## Contracts<a name="item_variationadditionalsku_contracts"></a>
+### VariationAdditionalSkuRepositoryContract<a name="item_contracts_variationadditionalskurepositorycontract"></a>
+
+The contract of the variation additional sku repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationAdditionalSku\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/array">array</a> $filter):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists additional SKUs
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="item#item_models_variationadditionalsku">VariationAdditionalSku</a>
+</pre>
+
+    
+Gets an additional SKU
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The unique ID of the additional SKU</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationadditionalsku">VariationAdditionalSku</a>
+</pre>
+
+    
+Creates an additional SKU
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_variationadditionalsku">VariationAdditionalSku</a>
+</pre>
+
+    
+Updates an additional SKU
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The unique ID of the SKU</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes an additional SKU
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The unique ID of the additional SKU</td>
+    </tr>
+</table>
+
+
+## Models<a name="item_variationadditionalsku_models"></a>
+### VariationAdditionalSku<a name="item_models_variationadditionalsku"></a>
+
+The variation additional SKU model for order import
+
+
+#### Namespace
+
+`Plenty\Modules\Item\VariationAdditionalSku\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the additional sku</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>variationId</td>
+            <td>The ID of the variation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>marketId</td>
+            <td>The ID of the market reference.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>marketAccountId</td>
+            <td>The ID of the market account.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>sku</td>
+            <td>The additional sku for this variation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The time the SKU was created (YYYY-MM-DD HH:MM:SS).</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The time the SKU was updated (YYYY-MM-DD HH:MM:SS).</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # VariationBarcode<a name="item_variationbarcode"></a>
     
 ## Contracts<a name="item_variationbarcode_contracts"></a>
@@ -15162,6 +16464,8 @@ The contract of the variation barcode repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationBarcode\Contracts`
+
+
 
 
 
@@ -15277,6 +16581,8 @@ Variation Barcode
 `Plenty\Modules\Item\VariationBarcode\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -15330,6 +16636,8 @@ The contract for the variation bundle repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationBundle\Contracts`
+
+
 
 
 
@@ -15446,6 +16754,8 @@ The variation bundle
 `Plenty\Modules\Item\VariationBundle\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -15502,6 +16812,8 @@ The contract for the variation category repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationCategory\Contracts`
+
+
 
 
 
@@ -15623,6 +16935,38 @@ Lists the categories linked to a variation including inheritance information. Th
 </table>
 
 
+<pre>public <strong>updateBulk</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</pre>
+
+    
+Updates up to 50 links between variations and categories. The ID of the variations and the ID of the categories must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The array containing the data.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createBulk</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</pre>
+
+    
+Creates up to 50 links between variations and categories. The ID of the variations and the ID of the categories must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The array containing the data.</td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationcategory_models"></a>
 ### VariationCategory<a name="item_models_variationcategory"></a>
 
@@ -15632,6 +16976,8 @@ Variation Category
 #### Namespace
 
 `Plenty\Modules\Item\VariationCategory\Models`
+
+
 
 
 #### Properties
@@ -15682,6 +17028,8 @@ The contract of the variation client repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationClient\Contracts`
+
+
 
 
 
@@ -15788,6 +17136,8 @@ Variation Client
 `Plenty\Modules\Item\VariationClient\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -15832,6 +17182,8 @@ The contract of the variation default category repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationDefaultCategory\Contracts`
+
+
 
 
 
@@ -15948,6 +17300,8 @@ Variation Default Category
 `Plenty\Modules\Item\VariationDefaultCategory\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -15996,6 +17350,8 @@ The contract of the variation description repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationDescription\Contracts`
+
+
 
 
 
@@ -16127,6 +17483,8 @@ Variation Default Category
 `Plenty\Modules\Item\VariationDescription\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -16207,6 +17565,8 @@ The contract of the variation image repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationImage\Contracts`
+
+
 
 
 
@@ -16367,6 +17727,8 @@ Clears the filter array.
 `Plenty\Modules\Item\VariationImage\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -16423,6 +17785,8 @@ The contract of the variation market repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationMarket\Contracts`
+
+
 
 
 
@@ -16529,6 +17893,8 @@ Variation Market
 `Plenty\Modules\Item\VariationMarket\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -16573,6 +17939,8 @@ The contract of the variation market ident number repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationMarketIdentNumber\Contracts`
+
+
 
 
 
@@ -16673,6 +18041,8 @@ Variation Market Ident Number
 `Plenty\Modules\Item\VariationMarketIdentNumber\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -16729,6 +18099,8 @@ The contract of the variation property value repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationProperty\Contracts`
+
+
 
 
 
@@ -16818,6 +18190,22 @@ Deletes the link between a property value and a variation. The ID of the variati
 </table>
 
 
+<pre>public <strong>deleteAll</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes all links between a variation and its property values. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the variation</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>findByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -16833,6 +18221,38 @@ Lists the property values linked to a variation. The ID of the variation must be
 </table>
 
 
+<pre>public <strong>createBulk</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</pre>
+
+    
+Creates a list of variation properties.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The array containing the data.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateBulk</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</pre>
+
+    
+Updates a list of variation properties.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The array containing the data.</td>
+    </tr>
+</table>
+
+
 
 ### VariationPropertyValueTextRepositoryContract<a name="item_contracts_variationpropertyvaluetextrepositorycontract"></a>
 
@@ -16842,6 +18262,8 @@ The contract of the variation property value text repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationProperty\Contracts`
+
+
 
 
 
@@ -16958,6 +18380,8 @@ The VariationPropertyValue
 `Plenty\Modules\Item\VariationProperty\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -16979,7 +18403,7 @@ The VariationPropertyValue
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>propertyId</td>
-            <td>The unique ID of the link between the variation and the property</td>
+            <td>The unique ID of the property</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>propertySelectionId</td>
@@ -17040,6 +18464,8 @@ The property name of the variation
 `Plenty\Modules\Item\VariationProperty\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -17053,7 +18479,7 @@ The property name of the variation
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>propertyValueId</td>
-            <td>The unique ID of the link between the variation and the property value</td>
+            <td>The unique ID of the link between the variation and the property</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>lang</td>
@@ -17082,6 +18508,8 @@ The VariationPropertyValueText
 #### Namespace
 
 `Plenty\Modules\Item\VariationProperty\Models`
+
+
 
 
 #### Properties
@@ -17128,6 +18556,8 @@ The contract of the variation sales price repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationSalesPrice\Contracts`
+
+
 
 
 
@@ -17200,7 +18630,7 @@ Updates the data of a sales price linked to a variation.
 </pre>
 
     
-Deletes a link between a sales price and a variation. The ID of the sales price and the ID of the variation must be specified. An exception is thrown if at least one relation exists.
+Deletes a link between a sales price and a variation and deletes the sales price data. The ID of the sales price and the ID of the variation must be specified. An exception is thrown if at least one relation exists.
     
 ##### <strong>Parameters</strong>
     
@@ -17213,6 +18643,22 @@ Deletes a link between a sales price and a variation. The ID of the sales price 
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
         <td>The unique ID of the variation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteAll</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes all links between a variation and its sales prices and deletes the sales price data. The ID of the variation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the variation</td>
     </tr>
 </table>
 
@@ -17265,6 +18711,89 @@ Updates a list of variation prices. The variation ID, sales price ID and a new p
 </table>
 
 
+<pre>public <strong>createBulk</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</pre>
+
+    
+Creates a list of variation prices. The variation ID, sales price ID and a new price must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The array containing the data.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findAll</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 100, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+Gets all sales price relations.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
+<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
 ## Models<a name="item_variationsalesprice_models"></a>
 ### VariationSalesPrice<a name="item_models_variationsalesprice"></a>
 
@@ -17274,6 +18803,8 @@ VariationSalesPrice
 #### Namespace
 
 `Plenty\Modules\Item\VariationSalesPrice\Models`
+
+
 
 
 #### Properties
@@ -17320,6 +18851,8 @@ The contract of the variation sku repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationSku\Contracts`
+
+
 
 
 
@@ -17522,6 +19055,8 @@ The variation SKU model
 `Plenty\Modules\Item\VariationSku\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -17587,7 +19122,7 @@ The variation SKU model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>status</td>
-            <td>The status of the variation after the export. Possible entries are INACTIVE, SEND and ACTIVE.</td>
+            <td>The status of the variation after the export. Possible entries are INACTIVE, ERROR, SENT and ACTIVE.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>additionalInformation</td>
@@ -17614,6 +19149,8 @@ The contract of the variation stock repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationStock\Contracts`
+
+
 
 
 
@@ -17791,6 +19328,8 @@ The variation stock model
 `Plenty\Modules\Item\VariationStock\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -17871,6 +19410,8 @@ The variation stock movement model
 `Plenty\Modules\Item\VariationStock\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -17941,6 +19482,10 @@ The variation stock movement model
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>purchasePrice</td>
             <td>The purchase price of a variation</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>userId</td>
+            <td>The id of the user. Can be null if the movement was not triggered by an user.</td>
         </tr></tbody>
 </table>
 
@@ -17963,6 +19508,8 @@ The contract for the variation supplier repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationSupplier\Contracts`
+
+
 
 
 
@@ -18078,6 +19625,8 @@ Variation Supplier
 `Plenty\Modules\Item\VariationSupplier\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -18162,6 +19711,8 @@ The contract for the variation warehouse repository
 #### Namespace
 
 `Plenty\Modules\Item\VariationWarehouse\Contracts`
+
+
 
 
 
@@ -18290,6 +19841,8 @@ Variation Warehouse
 #### Namespace
 
 `Plenty\Modules\Item\VariationWarehouse\Models`
+
+
 
 
 #### Properties

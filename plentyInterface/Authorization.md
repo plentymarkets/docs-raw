@@ -14,6 +14,8 @@ service to get current authorized user
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getCurrentAuthorizedUser</strong>():<a href="authorization#authorization_models_authorizeduser">AuthorizedUser</a>
@@ -33,6 +35,32 @@ Class AuthorizationException
 `Plenty\Modules\Authorization\Exception`
 
 
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/string">string</a> $message, <a target="_blank" href="http://php.net/int">int</a> $code):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$message</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="authorization_authorization_models"></a>
 ### AuthorizedUser<a name="authorization_models_authorizeduser"></a>
 
@@ -42,6 +70,8 @@ The current authorized user
 #### Namespace
 
 `Plenty\Modules\Authorization\Models`
+
+
 
 
 #### Properties
@@ -97,6 +127,8 @@ The authentication Permission (REST) model
 `Plenty\Modules\Authorization\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -139,6 +171,8 @@ The Role authentication model
 #### Namespace
 
 `Plenty\Modules\Authorization\Models`
+
+
 
 
 #### Properties
@@ -195,6 +229,8 @@ Service to process unguarded php code
 #### Namespace
 
 `Plenty\Modules\Authorization\Services`
+
+
 
 
 

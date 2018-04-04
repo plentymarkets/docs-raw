@@ -14,6 +14,8 @@ The TicketRepositoryContract is the interface for the ticket repository. This in
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>createTicket</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="ticket#ticket_models_ticket">Ticket</a>
@@ -155,6 +157,8 @@ TicketRoleName Repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketRoleNameId):<a href="ticket#ticket_models_ticketrolename">TicketRoleName</a>
@@ -226,6 +230,8 @@ Ticket role repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketRoleId):<a href="ticket#ticket_models_ticketrole">TicketRole</a>
@@ -274,6 +280,8 @@ TicketStatusName Repository
 #### Namespace
 
 `Plenty\Modules\Ticket\Contracts`
+
+
 
 
 
@@ -336,6 +344,21 @@ TicketStatusName Repository
 </table>
 
 
+<pre>public <strong>statusNameList</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### TicketStatusRepositoryContract<a name="ticket_contracts_ticketstatusrepositorycontract"></a>
 
@@ -345,6 +368,8 @@ TicketStatus repository
 #### Namespace
 
 `Plenty\Modules\Ticket\Contracts`
+
+
 
 
 
@@ -414,6 +439,8 @@ TicketTypeName repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $ticketTypeNameId):<a href="ticket#ticket_models_tickettypename">TicketTypeName</a>
@@ -473,6 +500,21 @@ TicketTypeName repository
 </table>
 
 
+<pre>public <strong>typeNameList</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### TicketTypeRepositoryContract<a name="ticket_contracts_tickettyperepositorycontract"></a>
 
@@ -482,6 +524,8 @@ TicketType repository
 #### Namespace
 
 `Plenty\Modules\Ticket\Contracts`
+
+
 
 
 
@@ -533,6 +577,8 @@ The ticket model.
 #### Namespace
 
 `Plenty\Modules\Ticket\Models`
+
+
 
 
 #### Properties
@@ -659,6 +705,8 @@ The ticket message model.
 `Plenty\Modules\Ticket\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -733,6 +781,8 @@ The ticket message topic model.
 `Plenty\Modules\Ticket\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -771,6 +821,8 @@ The ticket message topic name model.
 #### Namespace
 
 `Plenty\Modules\Ticket\Models`
+
+
 
 
 #### Properties
@@ -821,6 +873,8 @@ The ticket owner model.
 `Plenty\Modules\Ticket\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -865,6 +919,8 @@ The ticket role model.
 `Plenty\Modules\Ticket\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -907,6 +963,8 @@ The ticket role name model.
 #### Namespace
 
 `Plenty\Modules\Ticket\Models`
+
+
 
 
 #### Properties
@@ -955,6 +1013,8 @@ The ticket status model.
 #### Namespace
 
 `Plenty\Modules\Ticket\Models`
+
+
 
 
 #### Properties
@@ -1009,6 +1069,8 @@ The ticket status group model.
 `Plenty\Modules\Ticket\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1053,6 +1115,8 @@ The ticket status group name model.
 `Plenty\Modules\Ticket\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1095,6 +1159,8 @@ The ticket status name model.
 #### Namespace
 
 `Plenty\Modules\Ticket\Models`
+
+
 
 
 #### Properties
@@ -1145,6 +1211,8 @@ The ticket type model.
 `Plenty\Modules\Ticket\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1187,6 +1255,8 @@ The ticket type name model.
 #### Namespace
 
 `Plenty\Modules\Ticket\Models`
+
+
 
 
 #### Properties

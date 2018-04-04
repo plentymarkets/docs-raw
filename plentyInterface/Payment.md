@@ -14,6 +14,8 @@ The PaymentContactRelationRepositoryContract is the interface for the payment co
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>createContactRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
@@ -71,6 +73,8 @@ The PaymentMatcherRepositoryContract
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>checkMapFindAssignPayment</strong>(<a target="_blank" href="http://php.net/int">int</a> $mopId, $data):<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -103,6 +107,8 @@ The PaymentOrderRelationRepositoryContract is the interface for the payment orde
 #### Namespace
 
 `Plenty\Modules\Payment\Contracts`
+
+
 
 
 
@@ -160,6 +166,8 @@ The PaymentPropertyRepositoryContract is the interface for the payment property 
 #### Namespace
 
 `Plenty\Modules\Payment\Contracts`
+
+
 
 
 
@@ -314,6 +322,8 @@ The PaymentPropertyTypeNameRepositoryContract is the interface for the repositor
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>allTypeNames</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -388,6 +398,8 @@ The PaymentPropertyTypeRepositoryContract is the interface for the payment prope
 #### Namespace
 
 `Plenty\Modules\Payment\Contracts`
+
+
 
 
 
@@ -503,6 +515,8 @@ The PaymentRepositoryContract is the interface for the payment repository. List,
 #### Namespace
 
 `Plenty\Modules\Payment\Contracts`
+
+
 
 
 
@@ -792,6 +806,8 @@ The payment model
 `Plenty\Modules\Payment\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -902,6 +918,10 @@ The payment model
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>updateOrderPaymentStatus</td>
             <td>If $updateOrderPaymentStatus is true, update the order payment status. Default is false.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isSystemCurrency</td>
+            <td>If $isSystemCurrency is false, the value will be converted to the standard currency with the provided exchange rate. If $isSystemCurrency is false, the value is not converted. Default is true.</td>
         </tr></tbody>
 </table>
 
@@ -922,6 +942,8 @@ The payment contact relation model
 #### Namespace
 
 `Plenty\Modules\Payment\Models`
+
+
 
 
 #### Properties
@@ -972,6 +994,8 @@ The payment order relation model
 `Plenty\Modules\Payment\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1018,6 +1042,8 @@ The payment property model
 #### Namespace
 
 `Plenty\Modules\Payment\Models`
+
+
 
 
 #### Properties
@@ -1104,6 +1130,8 @@ The payment property type model
 `Plenty\Modules\Payment\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1151,6 +1179,8 @@ The payment property type name model
 #### Namespace
 
 `Plenty\Modules\Payment\Models`
+
+
 
 
 #### Properties
@@ -1201,6 +1231,8 @@ The event is triggered when a payment is executed.
 #### Namespace
 
 `Plenty\Modules\Payment\Events\Checkout`
+
+
 
 
 
@@ -1299,6 +1331,8 @@ The event is triggered after the payment method is selected in the checkout.
 #### Namespace
 
 `Plenty\Modules\Payment\Events\Checkout`
+
+
 
 
 
@@ -1404,6 +1438,8 @@ The PaymentHistoryRepositoryContract is the interface for the payment history re
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getByPaymentId</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -1460,6 +1496,8 @@ The payment history model
 #### Namespace
 
 `Plenty\Modules\Payment\History\Models`
+
+
 
 
 #### Properties
@@ -1525,6 +1563,8 @@ The payment method container
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>register</strong>(<a target="_blank" href="http://php.net/string">string</a> $paymentKey, <a target="_blank" href="http://php.net/string">string</a> $paymentMethodServiceClass, <a target="_blank" href="http://php.net/array">array</a> $rebuildEventClassesList):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -1562,6 +1602,8 @@ The PaymentMethodRepositoryContract is the interface for the payment method repo
 #### Namespace
 
 `Plenty\Modules\Payment\Method\Contracts`
+
+
 
 
 
@@ -1609,6 +1651,21 @@ Gets a payment method. The ID of the payment method must be specified.
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$paymentMethodId</td>
         <td>The ID of the payment method</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPreviewList</strong>(<a target="_blank" href="http://php.net/string">string</a> $language = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get an array with all payment methods with the ID as key and the name as value.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$language</td>
+        <td>The names will be returned in this language.</td>
     </tr>
 </table>
 
@@ -1693,6 +1750,8 @@ The payment method service
 `Plenty\Modules\Payment\Method\Contracts`
 
 
+
+
 ## Models<a name="payment_method_models"></a>
 ### PaymentMethod<a name="payment_models_paymentmethod"></a>
 
@@ -1702,6 +1761,8 @@ The payment method model
 #### Namespace
 
 `Plenty\Modules\Payment\Method\Models`
+
+
 
 
 #### Properties
@@ -1752,6 +1813,8 @@ The payment method name model
 #### Namespace
 
 `Plenty\Modules\Payment\MethodName\Models`
+
+
 
 
 #### Properties

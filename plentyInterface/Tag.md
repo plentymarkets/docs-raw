@@ -14,6 +14,8 @@ Repository for TagAvailability
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $tagId, <a target="_blank" href="http://php.net/string">string</a> $availabilityType):<a href="tag#tag_models_tagavailability">TagAvailability</a>
@@ -86,6 +88,8 @@ Repository for TagName
 #### Namespace
 
 `Plenty\Modules\Tag\Contracts`
+
+
 
 
 
@@ -177,6 +181,8 @@ Repository for TagRelationship
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $tagId, <a target="_blank" href="http://php.net/string">string</a> $availabilityType, <a target="_blank" href="http://php.net/int">int</a> $relationshipValue):<a href="tag#tag_models_tagrelationship">TagRelationship</a>
@@ -190,21 +196,19 @@ Repository for TagRelationship
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td>The relationship data. The properties that are required to update an relationship can be found in the TagRelationship model.</td>
+        <td>The relationship data. The properties that are required to update a relationship can be found in the TagRelationship model.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$tagId</td>
-        <td>The tag ID</td>
+        <td>The ID of the tag</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$availabilityType</td>
-        <td>The type of the availability. The following types are available.
+        <td>The type of the availability. The following types are available:
 <ul>
-<li>blog</li>
 <li>category</li>
-<li>content_page</li>
 <li>item</li>
 <li>ticket</li>
 </ul></td>
@@ -212,7 +216,7 @@ Repository for TagRelationship
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$relationshipValue</td>
-        <td>The value of the relationship. E.g. the item id 1234</td>
+        <td>The value of the relationship. This value is the ID of the data set the tag is linked to, e.g. item ID 1234.</td>
     </tr>
 </table>
 
@@ -228,7 +232,7 @@ Repository for TagRelationship
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td>The relationship data. The properties that are required to update an relationship can be found in the TagRelationship model.</td>
+        <td>The relationship data. The properties that are required to update a relationship can be found in the TagRelationship model.</td>
     </tr>
 </table>
 
@@ -244,12 +248,38 @@ Repository for TagRelationship
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$relationshipValue</td>
-        <td>The value of the relationship. E.g. the item id 1234</td>
+        <td>The value of the relationship. This value is the ID of the data set the tag is linked to, e.g. item ID 1234.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$tagId</td>
-        <td>The tag ID</td>
+        <td>The ID of the tag</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteOneRelation</strong>(<a target="_blank" href="http://php.net/int">int</a> $relationshipValue, <a target="_blank" href="http://php.net/string">string</a> $relationshipType, <a target="_blank" href="http://php.net/int">int</a> $tagId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$relationshipValue</td>
+        <td>The value of the relationship. This value is the ID of the data set the tag is linked to, e.g. item ID 1234.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$relationshipType</td>
+        <td>The type of the relationship, i.e. <b>category</b>, <b>item</b> or <b>ticket</b></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$tagId</td>
+        <td>The ID of the tag</td>
     </tr>
 </table>
 
@@ -264,7 +294,7 @@ Repository for TagRelationship
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$valueId</td>
-        <td>The value of the relationship. E.g. the item id 1234</td>
+        <td>The value of the relationship. This value is the ID of the data set the tag is linked to, e.g. item ID 1234.</td>
     </tr>
 </table>
 
@@ -279,7 +309,7 @@ Repository for TagRelationship
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$tagId</td>
-        <td>The tag ID</td>
+        <td>The ID of the tag</td>
     </tr>
 </table>
 
@@ -288,7 +318,7 @@ Repository for TagRelationship
 </pre>
 
     
-Get a specific tag relationship or return null
+Gets a specific tag relationship or returns null
     
 ##### <strong>Parameters</strong>
     
@@ -314,7 +344,7 @@ Get a specific tag relationship or return null
 </pre>
 
     
-Delete tags by reference value and relationship type
+Deletes tag links by reference value and relationship type
     
 ##### <strong>Parameters</strong>
     
@@ -331,6 +361,12 @@ Delete tags by reference value and relationship type
 </table>
 
 
+<pre>public <strong>listRelationships</strong>():<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</pre>
+
+    
+Returns all tagRelationships
+    
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -343,6 +379,40 @@ Resets all Criteria filters by creating a new instance of the builder object.
     
 Applies criteria classes to the current repository.
     
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 
 ### TagRepositoryContract<a name="tag_contracts_tagrepositorycontract"></a>
 
@@ -352,6 +422,8 @@ The TagRepositoryContract is the interface for the tag repository.
 #### Namespace
 
 `Plenty\Modules\Tag\Contracts`
+
+
 
 
 
@@ -441,6 +513,22 @@ Deletes a tag by given tagId
 </table>
 
 
+<pre>public <strong>getTagById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="tag#tag_models_tag">Tag</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getTagsByAvailability</strong>(<a target="_blank" href="http://php.net/string">string</a> $availabilityType):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -463,6 +551,28 @@ Deletes a tag by given tagId
 </table>
 
 
+<pre>public <strong>listTags</strong>():<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</pre>
+
+    
+Returns all tags
+    
+<pre>public <strong>createTag</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="tag#tag_models_tag">Tag</a>
+</pre>
+
+    
+Creates a new tag
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -475,6 +585,40 @@ Resets all Criteria filters by creating a new instance of the builder object.
     
 Applies criteria classes to the current repository.
     
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 ## Models<a name="tag_tag_models"></a>
 ### Tag<a name="tag_models_tag"></a>
 
@@ -484,6 +628,8 @@ The Tag model.
 #### Namespace
 
 `Plenty\Modules\Tag\Models`
+
+
 
 
 #### Properties
@@ -538,6 +684,8 @@ The tag availability model.
 `Plenty\Modules\Tag\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -583,6 +731,8 @@ The tag name model.
 #### Namespace
 
 `Plenty\Modules\Tag\Models`
+
+
 
 
 #### Properties
@@ -631,6 +781,8 @@ The tag relationship model.
 #### Namespace
 
 `Plenty\Modules\Tag\Models`
+
+
 
 
 #### Properties

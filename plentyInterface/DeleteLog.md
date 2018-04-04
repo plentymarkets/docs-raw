@@ -14,6 +14,8 @@ List delete log entries.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
@@ -92,6 +94,8 @@ The delete log model
 #### Namespace
 
 `Plenty\Modules\DeleteLog\Models`
+
+
 
 
 #### Properties

@@ -14,6 +14,8 @@ generator for csv content
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>setDelimiter</strong>(<a target="_blank" href="http://php.net/string">string</a> $delimiter):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -58,6 +60,22 @@ generator for csv content
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addBulkCSVContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$data</td>
         <td></td>
     </tr>
@@ -111,6 +129,8 @@ generator for csv content
 #### Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
+
+
 
 
 
@@ -235,6 +255,8 @@ generator for csv content
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="dataexchange#dataexchange_models_export">Export</a>
@@ -348,6 +370,8 @@ Filters
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>generateFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $formatSettings = []):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -374,6 +398,8 @@ Generator
 #### Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
+
+
 
 
 
@@ -429,6 +455,8 @@ Output
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>out</strong>(<a target="_blank" href="http://php.net/string">string</a> $resource, <a target="_blank" href="http://php.net/array">array</a> $outputParams = [], <a href="dataexchange#dataexchange_models_export">Export</a>
@@ -468,6 +496,8 @@ PluginGenerator
 #### Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
+
+
 
 
 
@@ -525,6 +555,8 @@ ResultFields
 #### Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
+
+
 
 
 
@@ -586,6 +618,8 @@ generator for xml content
 #### Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
+
+
 
 
 #### Properties
@@ -775,6 +809,8 @@ generator for xml content
 #### Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
+
+
 
 
 #### Properties
@@ -971,6 +1007,8 @@ Export model
 `Plenty\Modules\DataExchange\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1051,6 +1089,8 @@ export filter
 `Plenty\Modules\DataExchange\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1105,6 +1145,8 @@ format setting
 #### Namespace
 
 `Plenty\Modules\DataExchange\Models`
+
+
 
 
 #### Properties
@@ -1163,6 +1205,8 @@ output params
 `Plenty\Modules\DataExchange\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1217,6 +1261,8 @@ Register export presets
 #### Namespace
 
 `Plenty\Modules\DataExchange\Services`
+
+
 
 
 
@@ -1282,6 +1328,8 @@ Repository Contract for ResourceLoader
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getResource</strong>(<a target="_blank" href="http://php.net/array">array</a> $sourceOptions):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -1332,6 +1380,22 @@ Repository Contract for ResourceLoader
 </table>
 
 
+<pre>public <strong>archiveFile</strong>(<a target="_blank" href="http://php.net/array">array</a> $sourceOptions):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$sourceOptions</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getLoaderType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
@@ -1346,6 +1410,8 @@ Repository Contract for ResourceParser
 #### Namespace
 
 `Plenty\Modules\DataExchange\Resource\Contracts`
+
+
 
 
 
@@ -1386,6 +1452,8 @@ Repository Contract for ResourceParser
 #### Namespace
 
 `Plenty\Modules\DataExchange\Resource\Factories`
+
+
 
 
 
@@ -1437,6 +1505,8 @@ Repository Contract for ResourceParser
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getResourceParserByType</strong>(<a target="_blank" href="http://php.net/string">string</a> $type):<a href="dataexchange#dataexchange_contracts_resourceparsercontract">ResourceParserContract</a>
@@ -1482,6 +1552,8 @@ ResourceBag
 #### Namespace
 
 `Plenty\Modules\DataExchange\Resource\Models`
+
+
 
 
 

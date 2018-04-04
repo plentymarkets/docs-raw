@@ -14,6 +14,8 @@ The ContactAuthenticationRepositoryContract is the interface for the authenticat
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>authenticateWithContactEmail</strong>(<a target="_blank" href="http://php.net/string">string</a> $contactEmail, <a target="_blank" href="http://php.net/string">string</a> $password):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -97,6 +99,8 @@ The event is triggered after a user is authenticated in the client (store).
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>isSuccessful</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
@@ -121,6 +125,8 @@ The event is triggered after a user is logged out from the client (store).
 `Plenty\Modules\Authentication\Events`
 
 
+
+
 ## Models<a name="authentication_authentication_models"></a>
 ### User<a name="authentication_models_user"></a>
 
@@ -130,6 +136,8 @@ The user authentication model
 #### Namespace
 
 `Plenty\Modules\Authentication\Models`
+
+
 
 
 #### Properties

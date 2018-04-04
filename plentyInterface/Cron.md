@@ -13,6 +13,8 @@ CronHandler interface for extending cron handlers.
 `Plenty\Modules\Cron\Contracts`
 
 
+
+
 ## Services<a name="cron_cron_services"></a>
 ### CronContainer<a name="cron_services_croncontainer"></a>
 
@@ -22,6 +24,8 @@ Register cron jobs
 #### Namespace
 
 `Plenty\Modules\Cron\Services`
+
+
 
 
 

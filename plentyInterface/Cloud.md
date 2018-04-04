@@ -14,6 +14,8 @@ foo
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>setIndex</strong>(<a href="cloud#cloud_index_indexinterface">IndexInterface</a>
@@ -65,6 +67,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Contracts`
+
+
 
 
 
@@ -122,6 +126,8 @@ elastic search constants
 
 
 
+
+
 #### Methods
 
 <pre>public static <strong>getKeyByLanguage</strong>(<a target="_blank" href="http://php.net/string">string</a> $language):<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -150,6 +156,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Collapse`
+
+
 
 
 
@@ -190,6 +198,8 @@ to be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>addInnerHit</strong>(<a href="cloud#cloud_innerhit_innerhitinterface">InnerHitInterface</a>
@@ -224,6 +234,8 @@ to be written
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Index`
+
+
 
 
 
@@ -321,6 +333,8 @@ to bew written
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Index`
+
+
 
 
 
@@ -456,6 +470,8 @@ to bew written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getType</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
@@ -588,6 +604,8 @@ to be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>write</strong>(<a target="_blank" href="http://php.net/string">string</a> $message):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -647,6 +665,8 @@ to be written
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Output`
+
+
 
 
 
@@ -712,6 +732,8 @@ to be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>addMutator</strong>(<a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
@@ -761,6 +783,8 @@ to be written
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Processor`
+
+
 
 
 
@@ -816,6 +840,8 @@ to be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -847,6 +873,8 @@ to be written
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Processor`
+
+
 
 
 
@@ -899,6 +927,8 @@ Base class for different Search classes
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Search`
+
+
 
 
 
@@ -1113,6 +1143,8 @@ To be written...
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>addSearch</strong>(<a href="cloud#cloud_search_searchinterface">SearchInterface</a>
@@ -1178,6 +1210,8 @@ To be written
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Search`
+
+
 
 
 
@@ -1329,6 +1363,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>addSorting</strong>(<a href="cloud#cloud_sorting_sortinginterface">SortingInterface</a>
@@ -1387,6 +1423,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -1403,6 +1441,8 @@ To be written
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Sorting`
+
+
 
 
 
@@ -1425,6 +1465,8 @@ to be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -1441,6 +1483,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Source`
+
+
 
 
 
@@ -1490,6 +1534,8 @@ foo
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -1533,6 +1579,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Source`
+
+
 
 
 
@@ -1582,6 +1630,8 @@ to be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -1600,6 +1650,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Collapse\InnerHit`
+
+
 
 
 
@@ -1663,6 +1715,8 @@ to be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -1686,6 +1740,8 @@ to be written
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Data\Document`
+
+
 
 
 
@@ -1718,6 +1774,8 @@ to bew written
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Index\Info`
+
+
 
 
 
@@ -1795,6 +1853,8 @@ foo
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $default = null):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -1869,6 +1929,8 @@ to be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -1890,6 +1952,8 @@ to be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -1908,6 +1972,8 @@ to be written
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Index\Mapping\Property\Type\Complex`
+
+
 
 
 
@@ -1955,6 +2021,8 @@ to be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -1971,6 +2039,8 @@ to be written
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Type`
+
+
 
 
 
@@ -1992,6 +2062,8 @@ To be written
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregation`
+
+
 
 
 
@@ -2050,6 +2122,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Document`
+
+
 
 
 
@@ -2306,6 +2380,8 @@ To be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>setText</strong>(<a target="_blank" href="http://php.net/string">string</a> $text):<a href="cloud#cloud_search_suggestion">Suggestion</a>
@@ -2358,6 +2434,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Suggestion`
+
+
 
 
 
@@ -2423,6 +2501,8 @@ to be written
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getDependencies</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -2454,6 +2534,8 @@ to be written
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Source\Mutator`
+
+
 
 
 
@@ -2490,6 +2572,8 @@ foo
 #### Namespace
 
 `Plenty\Modules\Cloud\ElasticSearch\Lib\Source\Mutator\BuiltIn`
+
+
 
 
 
@@ -2593,6 +2677,8 @@ Represent a storage object
 `Plenty\Modules\Cloud\Storage\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -2659,6 +2745,8 @@ Represent a list of storage objects
 #### Namespace
 
 `Plenty\Modules\Cloud\Storage\Models`
+
+
 
 
 #### Properties

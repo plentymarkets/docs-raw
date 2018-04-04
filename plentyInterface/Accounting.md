@@ -14,6 +14,8 @@ The repository to get, create, update and delete accounting locations.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="accounting#accounting_models_accountinglocation">AccountingLocation</a>
@@ -112,6 +114,8 @@ Provides methods to detect a location ID.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>detectLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/int">int</a></pre>
@@ -206,6 +210,8 @@ The DebtorAccountRepositoryContract is the interface for the DebtorAccountReposi
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>findByLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId):<a href="accounting#accounting_models_debtoraccountconfiguration">DebtorAccountConfiguration</a>
@@ -261,6 +267,8 @@ This interface provides methods to initialise the country of a location or the c
 #### Namespace
 
 `Plenty\Modules\Accounting\Contracts`
+
+
 
 
 
@@ -422,6 +430,8 @@ The PostingKeyRepositoryContract is the interface for the PostingKeyRepository. 
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>findByLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId):<a href="accounting#accounting_models_postingkeyconfiguration">PostingKeyConfiguration</a>
@@ -449,6 +459,8 @@ The RevenueAccountRepositoryContract is the interface for the RevenueAccountRepo
 #### Namespace
 
 `Plenty\Modules\Accounting\Contracts`
+
+
 
 
 
@@ -523,6 +535,8 @@ Class AccountingException
 `Plenty\Modules\Accounting\Exceptions`
 
 
+
+
 ## Models<a name="accounting_accounting_models"></a>
 ### AccountingLocation<a name="accounting_models_accountinglocation"></a>
 
@@ -532,6 +546,8 @@ The accounting location model. An accounting location always has a country and b
 #### Namespace
 
 `Plenty\Modules\Accounting\Models`
+
+
 
 
 #### Properties
@@ -600,6 +616,8 @@ The DebtorAccountValue Model which contains the actual configured debtor account
 `Plenty\Modules\Accounting\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -663,6 +681,8 @@ The debtor account configuration model. The configuration is a set of debtor acc
 #### Namespace
 
 `Plenty\Modules\Accounting\Models`
+
+
 
 
 #### Properties
@@ -737,6 +757,8 @@ The Posting Key Model. A posting key is always associated with an accounting loc
 `Plenty\Modules\Accounting\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -775,6 +797,8 @@ The posting key configuration model. A posting key configuration is a set of 4 p
 #### Namespace
 
 `Plenty\Modules\Accounting\Models`
+
+
 
 
 #### Properties
@@ -823,6 +847,8 @@ The revenue account model provides information on a single revenue account. The 
 `Plenty\Modules\Accounting\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -861,6 +887,8 @@ The revenue account country configuration model. The revenue account country con
 #### Namespace
 
 `Plenty\Modules\Accounting\Models`
+
+
 
 
 #### Properties
@@ -918,6 +946,8 @@ The revenue account location configuration model. A revenue account location con
 `Plenty\Modules\Accounting\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -971,6 +1001,8 @@ This interface provides methods to initialise the detection of a VAT configurati
 #### Namespace
 
 `Plenty\Modules\Accounting\Vat\Contracts`
+
+
 
 
 
@@ -1130,6 +1162,8 @@ The VatRepositoryContract is the interface for the VAT functionality. This inter
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="accounting#accounting_models_vat">Vat</a>
@@ -1160,6 +1194,27 @@ Get the standard VAT configuration for a plenty ID
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$plentyId</td>
         <td>The ID of the client (store)</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$startedAt</td>
+        <td>The date when the VAT configuration went into effect. The date is given in W3C format.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getStandardVatByLocation</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId, <a target="_blank" href="http://php.net/string">string</a> $startedAt = null):<a href="accounting#accounting_models_vat">Vat</a>
+</pre>
+
+    
+Get the standard VAT configuration for a location ID
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$locationId</td>
+        <td>The ID of the location.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -1338,6 +1393,8 @@ Provides methods for a quick search of VAT fields, VAT rates and VAT names of a 
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getVatField</strong>(<a href="accounting#accounting_models_vat">Vat</a>
@@ -1417,6 +1474,8 @@ Class VatException
 `Plenty\Modules\Accounting\Vat\Exceptions`
 
 
+
+
 ## Models<a name="accounting_vat_models"></a>
 ### Vat<a name="accounting_models_vat"></a>
 
@@ -1426,6 +1485,8 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
 #### Namespace
 
 `Plenty\Modules\Accounting\Vat\Models`
+
+
 
 
 #### Properties
@@ -1520,6 +1581,8 @@ The VAT rate model is always associated with a VAT configuration and contains th
 #### Namespace
 
 `Plenty\Modules\Accounting\Vat\Models`
+
+
 
 
 #### Properties

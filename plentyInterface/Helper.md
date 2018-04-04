@@ -14,6 +14,8 @@ GetApiCallLimits reads the values for the API call limits from the config and re
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>get</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -30,6 +32,8 @@ Repository Contract for UrlBuilder
 #### Namespace
 
 `Plenty\Modules\Helper\Contracts`
+
+
 
 
 
@@ -116,6 +120,32 @@ Class EncryptionException
 `Plenty\Modules\Helper\Exceptions`
 
 
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/string">string</a> $message, <a target="_blank" href="http://php.net/int">int</a> $code):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$message</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="helper_helper_models"></a>
 ### KeyValue<a name="helper_models_keyvalue"></a>
 
@@ -125,6 +155,8 @@ key value data
 #### Namespace
 
 `Plenty\Modules\Helper\Models`
+
+
 
 
 
@@ -160,6 +192,8 @@ helper class for arrays
 #### Namespace
 
 `Plenty\Modules\Helper\Services`
+
+
 
 
 
@@ -201,6 +235,8 @@ Service for encoding strings
 #### Namespace
 
 `Plenty\Modules\Helper\Services`
+
+
 
 
 
@@ -450,6 +486,8 @@ Webstore Helper Service
 #### Namespace
 
 `Plenty\Modules\Helper\Services`
+
+
 
 
 

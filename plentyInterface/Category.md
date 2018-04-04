@@ -14,6 +14,8 @@ Repository for CategoryBranchMarketplace
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>findCategoryBranchMarketplace</strong>(<a target="_blank" href="http://php.net/int">int</a> $branchId, <a target="_blank" href="http://php.net/int">int</a> $webstoreId, <a target="_blank" href="http://php.net/int">int</a> $marketplaceId, <a target="_blank" href="http://php.net/float">float</a> $marketplaceSubId = 0.0):<a href="category#category_models_categorybranchmarketplace">CategoryBranchMarketplace</a>
@@ -56,6 +58,8 @@ Repository Contract for CategoryBranch
 #### Namespace
 
 `Plenty\Modules\Category\Contracts`
+
+
 
 
 
@@ -158,6 +162,8 @@ Repository for categories
 #### Namespace
 
 `Plenty\Modules\Category\Contracts`
+
+
 
 
 
@@ -537,6 +543,8 @@ Category
 `Plenty\Modules\Category\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -607,6 +615,8 @@ Category Branch
 `Plenty\Modules\Category\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -665,6 +675,8 @@ The CategoryBranchMarketplace model
 #### Namespace
 
 `Plenty\Modules\Category\Models`
+
+
 
 
 #### Properties
@@ -736,6 +748,8 @@ The Category Client
 `Plenty\Modules\Category\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -770,6 +784,8 @@ CategoryDetails
 #### Namespace
 
 `Plenty\Modules\Category\Models`
+
+
 
 
 #### Properties
@@ -910,6 +926,8 @@ CategoryItemCount
 `Plenty\Modules\Category\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -960,6 +978,8 @@ Category Template
 #### Namespace
 
 `Plenty\Modules\Category\Models`
+
+
 
 
 #### Properties

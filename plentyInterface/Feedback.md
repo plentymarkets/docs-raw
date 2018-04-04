@@ -14,6 +14,8 @@ Get the feedback average.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getFeedbackAverage</strong>(<a target="_blank" href="http://php.net/int">int</a> $feedbackRelationTargetId):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -87,6 +89,8 @@ Get, create and delete feedback comments.
 #### Namespace
 
 `Plenty\Modules\Feedback\Contracts`
+
+
 
 
 
@@ -204,6 +208,8 @@ Get, create and delete feedback ratings.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getFeedbackRating</strong>(<a target="_blank" href="http://php.net/int">int</a> $feedbackRatingId):<a href="feedback#feedback_models_feedbackrating">FeedbackRating</a>
@@ -315,6 +321,8 @@ Get, create and delete feedbacks.
 #### Namespace
 
 `Plenty\Modules\Feedback\Contracts`
+
+
 
 
 
@@ -556,6 +564,8 @@ The feedback model.
 `Plenty\Modules\Feedback\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -617,6 +627,8 @@ The feedback average model.
 #### Namespace
 
 `Plenty\Modules\Feedback\Models`
+
+
 
 
 #### Properties
@@ -701,6 +713,8 @@ The feedback comment model.
 `Plenty\Modules\Feedback\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -755,6 +769,8 @@ The feedback comment source relation model.
 `Plenty\Modules\Feedback\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -799,6 +815,8 @@ The feedback comment target relation model.
 `Plenty\Modules\Feedback\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -841,6 +859,8 @@ The feedback legacy model.
 #### Namespace
 
 `Plenty\Modules\Feedback\Models`
+
+
 
 
 #### Properties
@@ -891,6 +911,8 @@ The feedback rating model.
 #### Namespace
 
 `Plenty\Modules\Feedback\Models`
+
+
 
 
 #### Properties
@@ -945,6 +967,8 @@ The feedback rating average model.
 #### Namespace
 
 `Plenty\Modules\Feedback\Models`
+
+
 
 
 #### Properties
@@ -1009,6 +1033,8 @@ The feedback rating source relation model.
 `Plenty\Modules\Feedback\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1053,6 +1079,8 @@ The feedback rating target relation model.
 `Plenty\Modules\Feedback\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1095,6 +1123,8 @@ The feedback source relation model.
 #### Namespace
 
 `Plenty\Modules\Feedback\Models`
+
+
 
 
 #### Properties
@@ -1147,6 +1177,8 @@ The feedback target relation model.
 #### Namespace
 
 `Plenty\Modules\Feedback\Models`
+
+
 
 
 #### Properties

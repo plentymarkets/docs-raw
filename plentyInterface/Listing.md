@@ -14,6 +14,8 @@ The contract for the listing repository.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="listing#listing_models_listing">Listing</a>
@@ -177,6 +179,8 @@ The listing model.
 `Plenty\Modules\Listing\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -260,6 +264,8 @@ The listing properties model. Each listing property has a type.
 `Plenty\Modules\Listing\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -331,6 +337,8 @@ The listing date type model. Each listing date type can have multiple names.
 `Plenty\Modules\Listing\Date\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -383,6 +391,8 @@ The listing date type name model.
 `Plenty\Modules\Listing\Date\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -431,6 +441,8 @@ The LayoutTemplateRepositoryContract is the interface for the layout template re
 #### Namespace
 
 `Plenty\Modules\Listing\LayoutTemplate\Contracts`
+
+
 
 
 
@@ -545,6 +557,8 @@ The layout template model.
 `Plenty\Modules\Listing\LayoutTemplate\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -606,6 +620,19 @@ The ListingMarketRepositoryContract is the interface for the listing market repo
 
 `Plenty\Modules\Listing\Market\Contracts`
 
+<div class="panel panel-warning">
+    <div class="panel-heading">
+        <h3 class="panel-title">
+            <span class="glyphicon glyphicon-info-sign" aria-hidden="true"></span>
+            Repository can be extended!
+        </h3>
+    </div>
+    <div class="panel-body">
+        It is possible to extend this repository with own search criteria.
+    </div>
+</div>
+
+
 
 
 #### Methods
@@ -636,6 +663,37 @@ Get a listing market
 
     
 List listing markets
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The page to get. The default page that will be returned is page 1.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of entries to be displayed per page. The default number of entries per page is 50.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts", "infos".</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>The filters that should be applied. The filters that could be applied: 'id', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'directoryId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition', 'shippingProfileId', .</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+Find listing markets
     
 ##### <strong>Parameters</strong>
     
@@ -795,6 +853,394 @@ Returns a collection of parsed filters as Condition object
     
 Clears the filter array.
     
+## Events<a name="listing_market_events"></a>
+### ListingMarketBatchCreated<a name="listing_events_listingmarketbatchcreated"></a>
+
+An event class fired after multiple new listing markets are created.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $listingMarkets):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$listingMarkets</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getListingMarkets</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the list of ListingMarket instances.
+    
+
+### ListingMarketBatchDeleted<a name="listing_events_listingmarketbatchdeleted"></a>
+
+An event class fired after multiple listing markets are deleted.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $listingMarkets):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$listingMarkets</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getListingMarkets</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the list of ListingMarket instances.
+    
+
+### ListingMarketBatchEvent<a name="listing_events_listingmarketbatchevent"></a>
+
+A base event class for all listing market events. Each listing market batch event expects an array of ListingMarket instances.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $listingMarkets):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$listingMarkets</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getListingMarkets</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the list of ListingMarket instances.
+    
+
+### ListingMarketBatchUpdated<a name="listing_events_listingmarketbatchupdated"></a>
+
+An event class fired after multiple listing markets are updated.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/array">array</a> $listingMarkets):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$listingMarkets</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getListingMarkets</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the list of ListingMarket instances.
+    
+
+### ListingMarketCreated<a name="listing_events_listingmarketcreated"></a>
+
+An event class fired after a new listing market is created.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="listing#listing_models_listingmarket">ListingMarket</a>
+ $listingMarket):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="listing#listing_models_listingmarket">ListingMarket</a>
+</td>
+        <td>$listingMarket</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getListingMarket</strong>():<a href="listing#listing_models_listingmarket">ListingMarket</a>
+</pre>
+
+    
+Get the ListingMarket instance.
+    
+
+### ListingMarketDeleted<a name="listing_events_listingmarketdeleted"></a>
+
+An event class fired after a new listing market is deleted.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="listing#listing_models_listingmarket">ListingMarket</a>
+ $listingMarket):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="listing#listing_models_listingmarket">ListingMarket</a>
+</td>
+        <td>$listingMarket</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getListingMarket</strong>():<a href="listing#listing_models_listingmarket">ListingMarket</a>
+</pre>
+
+    
+Get the ListingMarket instance.
+    
+
+### ListingMarketEvent<a name="listing_events_listingmarketevent"></a>
+
+A base event class for all listing market events. Each listing market event expects an ListingMarket instance.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="listing#listing_models_listingmarket">ListingMarket</a>
+ $listingMarket):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="listing#listing_models_listingmarket">ListingMarket</a>
+</td>
+        <td>$listingMarket</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getListingMarket</strong>():<a href="listing#listing_models_listingmarket">ListingMarket</a>
+</pre>
+
+    
+Get the ListingMarket instance.
+    
+
+### ListingMarketItemSpecificsCreated<a name="listing_events_listingmarketitemspecificscreated"></a>
+
+An event class fired after a new listing market item specifics are created.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="listing#listing_models_listingmarket">ListingMarket</a>
+ $listingMarket):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="listing#listing_models_listingmarket">ListingMarket</a>
+</td>
+        <td>$listingMarket</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getListingMarket</strong>():<a href="listing#listing_models_listingmarket">ListingMarket</a>
+</pre>
+
+    
+Get the ListingMarket instance.
+    
+
+### ListingMarketItemSpecificsDeleted<a name="listing_events_listingmarketitemspecificsdeleted"></a>
+
+An event class fired after a new listing market item specifics are deleted.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="listing#listing_models_listingmarket">ListingMarket</a>
+ $listingMarket):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="listing#listing_models_listingmarket">ListingMarket</a>
+</td>
+        <td>$listingMarket</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getListingMarket</strong>():<a href="listing#listing_models_listingmarket">ListingMarket</a>
+</pre>
+
+    
+Get the ListingMarket instance.
+    
+
+### ListingMarketUpdated<a name="listing_events_listingmarketupdated"></a>
+
+An event class fired after a new listing market is updated.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="listing#listing_models_listingmarket">ListingMarket</a>
+ $listingMarket):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="listing#listing_models_listingmarket">ListingMarket</a>
+</td>
+        <td>$listingMarket</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getListingMarket</strong>():<a href="listing#listing_models_listingmarket">ListingMarket</a>
+</pre>
+
+    
+Get the ListingMarket instance.
+    
 ## Models<a name="listing_market_models"></a>
 ### ListingMarket<a name="listing_models_listingmarket"></a>
 
@@ -804,6 +1250,8 @@ The listing market model.
 #### Namespace
 
 `Plenty\Modules\Listing\Market\Models`
+
+
 
 
 #### Properties
@@ -985,6 +1433,8 @@ The listing market dates model. Each listing market date has a type.
 `Plenty\Modules\Listing\Market\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1056,6 +1506,8 @@ The listing market item specific model.
 `Plenty\Modules\Listing\Market\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1103,6 +1555,8 @@ The listing market price model.
 #### Namespace
 
 `Plenty\Modules\Listing\Market\Models`
+
+
 
 
 #### Properties
@@ -1161,6 +1615,8 @@ The listing market properties model. Each listing market property has a type.
 #### Namespace
 
 `Plenty\Modules\Listing\Market\Models`
+
+
 
 
 #### Properties
@@ -1289,6 +1745,8 @@ The contract for the listing market directory repository.
 #### Namespace
 
 `Plenty\Modules\Listing\Market\Directory\Contracts`
+
+
 
 
 
@@ -1444,6 +1902,8 @@ The listing market directory model.
 `Plenty\Modules\Listing\Market\Directory\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1492,6 +1952,8 @@ The ListingMarketHistoryRepositoryContract is the interface for the listing mark
 #### Namespace
 
 `Plenty\Modules\Listing\Market\History\Contracts`
+
+
 
 
 
@@ -1680,6 +2142,8 @@ The listing market history model.
 `Plenty\Modules\Listing\Market\History\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1802,6 +2266,8 @@ The listing market history dates model. Each listing market history date has a t
 `Plenty\Modules\Listing\Market\History\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1870,6 +2336,8 @@ The listing market properties model. Each listing market property has a type.
 #### Namespace
 
 `Plenty\Modules\Listing\Market\History\Models`
+
+
 
 
 #### Properties
@@ -1947,6 +2415,8 @@ The listing market history text model.
 `Plenty\Modules\Listing\Market\History\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1993,6 +2463,8 @@ The listing market history model.
 #### Namespace
 
 `Plenty\Modules\Listing\Market\History\Models`
+
+
 
 
 #### Properties
@@ -2082,6 +2554,8 @@ The ListingMarketInfoRepositoryContract is the interface for the listing market 
 #### Namespace
 
 `Plenty\Modules\Listing\Market\Info\Contracts`
+
+
 
 
 
@@ -2175,6 +2649,8 @@ The listing market info model.
 `Plenty\Modules\Listing\Market\Info\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -2237,6 +2713,8 @@ The contract for the listing market text repository.
 #### Namespace
 
 `Plenty\Modules\Listing\Market\Text\Contracts`
+
+
 
 
 
@@ -2429,6 +2907,8 @@ The listing market text model.
 `Plenty\Modules\Listing\Market\Text\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -2485,6 +2965,8 @@ The contract for the listing option template repository.
 #### Namespace
 
 `Plenty\Modules\Listing\OptionTemplate\Contracts`
+
+
 
 
 
@@ -2575,6 +3057,8 @@ The option template model.
 `Plenty\Modules\Listing\OptionTemplate\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -2629,6 +3113,8 @@ The listing price type model.
 `Plenty\Modules\Listing\Price\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -2681,6 +3167,8 @@ The listing price type name model.
 `Plenty\Modules\Listing\Price\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -2729,6 +3217,8 @@ The listing properties model. Each listing property has a type.
 #### Namespace
 
 `Plenty\Modules\Listing\Property\Models`
+
+
 
 
 #### Properties
@@ -2834,6 +3324,8 @@ The listing property type name model.
 `Plenty\Modules\Listing\Property\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -2882,6 +3374,8 @@ The ShippingProfileRepositoryContract is the interface for the listing shipping 
 #### Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Contracts`
+
+
 
 
 
@@ -2985,6 +3479,166 @@ Returns a collection of parsed filters as Condition object
     
 Clears the filter array.
     
+## Events<a name="listing_shippingprofile_events"></a>
+### ShippingProfileCreated<a name="listing_events_shippingprofilecreated"></a>
+
+An event class fired after a new listing shipping profile is created.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\ShippingProfile\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="listing#listing_models_shippingprofile">ShippingProfile</a>
+ $shippingProfile):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="listing#listing_models_shippingprofile">ShippingProfile</a>
+</td>
+        <td>$shippingProfile</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getShippingProfile</strong>():<a href="listing#listing_models_shippingprofile">ShippingProfile</a>
+</pre>
+
+    
+Get the ShippingProfile instance.
+    
+
+### ShippingProfileDeleted<a name="listing_events_shippingprofiledeleted"></a>
+
+An event class fired after a listing shipping profile is deleted.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\ShippingProfile\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="listing#listing_models_shippingprofile">ShippingProfile</a>
+ $shippingProfile):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="listing#listing_models_shippingprofile">ShippingProfile</a>
+</td>
+        <td>$shippingProfile</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getShippingProfile</strong>():<a href="listing#listing_models_shippingprofile">ShippingProfile</a>
+</pre>
+
+    
+Get the ShippingProfile instance.
+    
+
+### ShippingProfileEvent<a name="listing_events_shippingprofileevent"></a>
+
+A base event class for all listing shipping profile events. Each shipping profile event expects an ShippingProfile instance.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\ShippingProfile\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="listing#listing_models_shippingprofile">ShippingProfile</a>
+ $shippingProfile):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="listing#listing_models_shippingprofile">ShippingProfile</a>
+</td>
+        <td>$shippingProfile</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getShippingProfile</strong>():<a href="listing#listing_models_shippingprofile">ShippingProfile</a>
+</pre>
+
+    
+Get the ShippingProfile instance.
+    
+
+### ShippingProfileUpdated<a name="listing_events_shippingprofileupdated"></a>
+
+An event class fired after a listing shipping profile is updated.
+
+
+#### Namespace
+
+`Plenty\Modules\Listing\ShippingProfile\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a href="listing#listing_models_shippingprofile">ShippingProfile</a>
+ $shippingProfile):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="listing#listing_models_shippingprofile">ShippingProfile</a>
+</td>
+        <td>$shippingProfile</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getShippingProfile</strong>():<a href="listing#listing_models_shippingprofile">ShippingProfile</a>
+</pre>
+
+    
+Get the ShippingProfile instance.
+    
 ## Models<a name="listing_shippingprofile_models"></a>
 ### ShippingProfile<a name="listing_models_shippingprofile"></a>
 
@@ -2994,6 +3648,8 @@ The listing shipping profile model.
 #### Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Models`
+
+
 
 
 #### Properties
@@ -3030,6 +3686,10 @@ The listing shipping profile model.
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isDefault</td>
             <td>Tells if the current listing shipping profile is set as default.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>extendedData</td>
+            <td>Extended data that defines the current shipping profile.</td>
         </tr></tbody>
 </table>
 
@@ -3052,6 +3712,8 @@ The listing status model.
 #### Namespace
 
 `Plenty\Modules\Listing\Status\Models`
+
+
 
 
 #### Properties
@@ -3103,6 +3765,8 @@ The listing status name model.
 `Plenty\Modules\Listing\Status\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3151,6 +3815,8 @@ The contract for the listing stock dependence type repository.
 #### Namespace
 
 `Plenty\Modules\Listing\StockDependenceType\Contracts`
+
+
 
 
 
@@ -3214,6 +3880,8 @@ The listing stock dependence type model.
 `Plenty\Modules\Listing\StockDependenceType\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3261,6 +3929,8 @@ The listing stock dependence type name model.
 #### Namespace
 
 `Plenty\Modules\Listing\StockDependenceType\Models`
+
+
 
 
 #### Properties
@@ -3311,6 +3981,8 @@ The contract for the listing type repository.
 #### Namespace
 
 `Plenty\Modules\Listing\Type\Contracts`
+
+
 
 
 
@@ -3374,6 +4046,8 @@ The listing type model.
 `Plenty\Modules\Listing\Type\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3421,6 +4095,8 @@ The listing type name model.
 #### Namespace
 
 `Plenty\Modules\Listing\Type\Models`
+
+
 
 
 #### Properties

@@ -1,5 +1,97 @@
 
 
+# Models<a name="miscellaneous_models"></a>
+    
+## Item<a name="miscellaneous_models_item"></a>
+### ItemImageSettings<a name="miscellaneous_item_itemimagesettings"></a>
+
+Configuration of item images
+
+
+#### Namespace
+
+`Plenty\Legacy\Models\Item`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>cdnUrl</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>maxAge</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>imageExportPos</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>defaultExport</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>ftpImport</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>ftpImportMatching</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>neckermannExport</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>attributeImageWidth</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>attributeImageHeight</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>name</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>placeholder</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>sizes</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>aliases</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>legacyPreviousSizes</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
 # Item<a name="miscellaneous_item"></a>
     
 ## SalesPrice<a name="miscellaneous_item_salesprice"></a>
@@ -11,6 +103,8 @@ foo
 #### Namespace
 
 `Plenty\Legacy\Repositories\Item\SalesPrice`
+
+
 
 
 
@@ -60,6 +154,8 @@ To be written...
 #### Namespace
 
 `Plenty\Legacy\Services\Item\Variation`
+
+
 
 
 
@@ -290,6 +386,8 @@ To be written...
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getUnitPrice</strong>(<a target="_blank" href="http://php.net/float">float</a> $lot, <a target="_blank" href="http://php.net/float">float</a> $price, <a target="_blank" href="http://php.net/string">string</a> $unit):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -328,6 +426,8 @@ The contract for the logger.
 #### Namespace
 
 `Plenty\Log\Contracts`
+
+
 
 
 
@@ -643,6 +743,39 @@ Class ReferenceTypeException
 `Plenty\Log\Exceptions`
 
 
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/string">string</a> $message, <a target="_blank" href="http://php.net/int">int</a> $code, <a href="miscellaneous#miscellaneous__exception">Exception</a>
+ $previous = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$message</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__exception">Exception</a>
+</td>
+        <td>$previous</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="miscellaneous_log_models"></a>
 ### Log<a name="miscellaneous_models_log"></a>
 
@@ -652,6 +785,8 @@ The log entity model
 #### Namespace
 
 `Plenty\Log\Models`
+
+
 
 
 #### Properties
@@ -737,6 +872,8 @@ Register log reference types.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/array">array</a> $referenceTypes):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -766,6 +903,8 @@ Contract for logs.
 #### Namespace
 
 `Plenty\Log\Search\Contracts`
+
+
 
 
 
@@ -840,6 +979,8 @@ The main application
 #### Namespace
 
 `Plenty\Plugin`
+
+
 
 
 
@@ -989,6 +1130,8 @@ caching repository
 #### Namespace
 
 `Plenty\Plugin`
+
+
 
 
 
@@ -1200,6 +1343,8 @@ configuration repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>has</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a target="_blank" href="http://php.net/bool">bool</a></pre>
@@ -1321,6 +1466,8 @@ Controller
 
 
 
+
+
 ### DataExchangeServiceProvider<a name="miscellaneous_plugin_dataexchangeserviceprovider"></a>
 
 Data Exchange service provider
@@ -1329,6 +1476,8 @@ Data Exchange service provider
 #### Namespace
 
 `Plenty\Plugin`
+
+
 
 
 
@@ -1355,6 +1504,8 @@ Middleware
 #### Namespace
 
 `Plenty\Plugin`
+
+
 
 
 
@@ -1415,6 +1566,8 @@ Route service provider
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getApplication</strong>():<a href="miscellaneous#miscellaneous_plugin_application">Application</a>
@@ -1438,6 +1591,8 @@ Service provider for plugins
 #### Namespace
 
 `Plenty\Plugin`
+
+
 
 
 
@@ -1480,6 +1635,8 @@ session repository
 #### Namespace
 
 `Plenty\Plugin`
+
+
 
 
 
@@ -1602,6 +1759,8 @@ Dummy Attribute Class
 #### Namespace
 
 `Plenty\Validation`
+
+
 
 
 
@@ -1735,6 +1894,12 @@ a matching password_confirmation field must be present in the input.
 
     
 The field under validation must be a valid date according to the strtotime PHP function.
+    
+<pre>public <strong>present</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
+</pre>
+
+    
+Validate that an attribute exists even if not filled.
     
 <pre>public <strong>dateFormat</strong>(<a target="_blank" href="http://php.net/string">string</a> $format):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
@@ -2073,6 +2238,22 @@ The field under validation must be present only when all of the other specified 
 </table>
 
 
+<pre>public <strong>notLike</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
+</pre>
+
+    
+The field under validation must be not like the specified name.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>same</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
 </pre>
 
@@ -2259,6 +2440,12 @@ The field under validation must be a valid data type used by the validation rule
     
 The field under validation must be a valid currency string (e.g. &#039;EUR&#039;).
     
+<pre>public <strong>validBoardTaskReferenceValue</strong>():<a href="miscellaneous#miscellaneous_plenty_validation">Validation</a>
+</pre>
+
+    
+The field under validation must be a valid board task reference type (e.g. {@link BoardTaskReferenceType::CONTACT}).
+    
 
 ### RulesCollection<a name="miscellaneous_validation_rulescollection"></a>
 
@@ -2268,6 +2455,8 @@ RulesCollection
 #### Namespace
 
 `Plenty\Validation`
+
+
 
 
 
@@ -2448,6 +2637,26 @@ Base Validator Class
 
 
 
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>customMessageKey</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
 #### Methods
 
 <pre>public static <strong>validateOrFail</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -2466,6 +2675,12 @@ Base Validator Class
 </table>
 
 
+<pre>public <strong>buildCustomMessages</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 <pre>public <strong>defineAttributes</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -2646,6 +2861,8 @@ Add a rule for an attribute based on the result of the condition callback.
 `Plenty\Exceptions`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -2705,6 +2922,8 @@ check process
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>addError</strong>(<a target="_blank" href="http://php.net/string">string</a> $message):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -2735,6 +2954,39 @@ Class HTTPException
 `Plenty\Plugin\Error`
 
 
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/string">string</a> $statusCode, <a target="_blank" href="http://php.net/string">string</a> $message, <a href="miscellaneous#miscellaneous__exception">Exception</a>
+ $previous = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+HTTPException constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$statusCode</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$message</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__exception">Exception</a>
+</td>
+        <td>$previous</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Events<a name="miscellaneous_plugin_events"></a>
 ### Dispatcher<a name="miscellaneous_events_dispatcher"></a>
 
@@ -2744,6 +2996,8 @@ Dispatcher
 #### Namespace
 
 `Plenty\Plugin\Events`
+
+
 
 
 
@@ -2848,6 +3102,21 @@ Event
 `Plenty\Plugin\Events`
 
 
+
+
+
+### ShouldQueue<a name="miscellaneous_events_shouldqueue"></a>
+
+Class that allows plugin event listeners to be queued.
+
+
+#### Namespace
+
+`Plenty\Plugin\Events`
+
+
+
+
 ## Http<a name="miscellaneous_plugin_http"></a>
 ### Request<a name="miscellaneous_http_request"></a>
 
@@ -2857,6 +3126,8 @@ http request
 #### Namespace
 
 `Plenty\Plugin\Http`
+
+
 
 
 
@@ -3200,6 +3471,8 @@ Class to create different types of http response.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>status</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
@@ -3525,6 +3798,27 @@ Create a new redirect response to the previously intended location.
     
 Send the HTTP headers without sending the whole response.
     
+<pre>public <strong>forceStatus</strong>(<a target="_blank" href="http://php.net/int">int</a> $status = 200):<a href="miscellaneous#miscellaneous_plugin_http">Http</a>
+</pre>
+
+    
+Force sending response with defined status instead of falling back to default handlers in case of 40* status codes.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$status</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isStatusForced</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Check if response should be send instead of falling back to default handlers in case of 40* status codes.
+    
 ## Log<a name="miscellaneous_plugin_log"></a>
 ### LoggerFactory<a name="miscellaneous_log_loggerfactory"></a>
 
@@ -3534,6 +3828,8 @@ Logger factory
 #### Namespace
 
 `Plenty\Plugin\Log`
+
+
 
 
 
@@ -3569,6 +3865,8 @@ Api router service
 #### Namespace
 
 `Plenty\Plugin\Routing`
+
+
 
 
 
@@ -3821,6 +4119,8 @@ Route
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>addMiddleware</strong>(<a target="_blank" href="http://php.net/array">array</a> $middleware):<a href="miscellaneous#miscellaneous_plugin_routing">Routing</a>
@@ -3891,6 +4191,8 @@ Router service
 #### Namespace
 
 `Plenty\Plugin\Routing`
+
+
 
 
 
@@ -4135,6 +4437,8 @@ A simple markdown converter.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>renderToHtml</strong>(<a target="_blank" href="http://php.net/string">string</a> $markdownContent):<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -4161,6 +4465,8 @@ Twig engine
 #### Namespace
 
 `Plenty\Plugin\Templates`
+
+
 
 
 
@@ -4214,6 +4520,8 @@ view support
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>render</strong>(<a target="_blank" href="http://php.net/string">string</a> $templatePath, <a target="_blank" href="http://php.net/array">array</a> $data = []):<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -4263,9 +4571,11 @@ translation service
 
 
 
+
+
 #### Methods
 
-<pre>public <strong>trans</strong>(<a target="_blank" href="http://php.net/string">string</a> $id, <a target="_blank" href="http://php.net/array">array</a> $parameters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>trans</strong>(<a target="_blank" href="http://php.net/string">string</a> $id, <a target="_blank" href="http://php.net/array">array</a> $parameters = [], <a target="_blank" href="http://php.net/string">string</a> $locale = null):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -4283,6 +4593,11 @@ Get the translation for a given key.
         <td>$parameters</td>
         <td></td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$locale</td>
+        <td></td>
+    </tr>
 </table>
 
 
@@ -4297,6 +4612,8 @@ describes properties of a Model
 #### Namespace
 
 `Plenty\Plugin\Data\Contracts`
+
+
 
 
 
@@ -4326,6 +4643,8 @@ Resource
 #### Namespace
 
 `Plenty\Plugin\Data\Contracts`
+
+
 
 
 
@@ -4379,6 +4698,8 @@ property information
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -4405,6 +4726,8 @@ resource information
 #### Namespace
 
 `Plenty\Plugin\Data\Model`
+
+
 
 
 
@@ -4437,6 +4760,8 @@ Find and create ExternalAccess-datasets
 #### Namespace
 
 `Plenty\Plugin\ExternalAuth\Contracts`
+
+
 
 
 
@@ -4513,6 +4838,8 @@ Information on a contact&#039;s external access tokens
 `Plenty\Plugin\ExternalAuth\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -4567,6 +4894,8 @@ Log in users with external auth
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>logInWithExternalUserId</strong>(<a target="_blank" href="http://php.net/string">string</a> $externalId, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="miscellaneous#miscellaneous__void">void</a>
@@ -4601,6 +4930,8 @@ Plugin Mailer Service
 #### Namespace
 
 `Plenty\Plugin\Mail\Contracts`
+
+
 
 
 
@@ -4747,6 +5078,8 @@ Twig extension
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -4766,6 +5099,8 @@ Twig SimpleFilter
 
 
 
+
+
 ### Twig_SimpleFunction<a name="miscellaneous_extensions_twig_simplefunction"></a>
 
 Twig SimpleFunction
@@ -4774,6 +5109,8 @@ Twig SimpleFunction
 #### Namespace
 
 `Plenty\Plugin\Templates\Extensions`
+
+
 
 
 ## Factories<a name="miscellaneous_templates_factories"></a>
@@ -4785,6 +5122,8 @@ Twig Factory
 #### Namespace
 
 `Plenty\Plugin\Templates\Factories`
+
+
 
 
 
@@ -4864,6 +5203,8 @@ DeleteResponse Interface
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getAffectedRows</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
@@ -4906,6 +5247,8 @@ Contract for PaginationResponse
 #### Namespace
 
 `Plenty\Repositories\Contracts`
+
+
 
 
 
@@ -5023,6 +5366,114 @@ Convert the object to its JSON representation.
     
 Get the instance as an array.
     
+## Criteria<a name="miscellaneous_repositories_criteria"></a>
+### Comparison<a name="miscellaneous_criteria_comparison"></a>
+
+comparison class
+
+
+#### Namespace
+
+`Plenty\Repositories\Criteria`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getOperator</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getTerm</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>isOperator</strong>(<a target="_blank" href="http://php.net/string">string</a> $comparison):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$comparison</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>castTerm</strong>(<a target="_blank" href="http://php.net/string">string</a> $castTo):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$castTo</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### PluginCriteria<a name="miscellaneous_criteria_plugincriteria"></a>
+
+The contract for defining criteria.
+
+
+#### Namespace
+
+`Plenty\Repositories\Criteria`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>comparisons</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>apply</strong>($builder, <a href="miscellaneous#miscellaneous_contracts_criteriablecontract">CriteriableContract</a>
+ $repository):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$builder</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous_contracts_criteriablecontract">CriteriableContract</a>
+</td>
+        <td>$repository</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>allowedComparators</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
 ## Models<a name="miscellaneous_repositories_models"></a>
 ### DeleteResponse<a name="miscellaneous_models_deleteresponse"></a>
 
@@ -5032,6 +5483,8 @@ Delete Response
 #### Namespace
 
 `Plenty\Repositories\Models`
+
+
 
 
 #### Properties
@@ -5068,6 +5521,8 @@ Filtered paginated result
 #### Namespace
 
 `Plenty\Repositories\Models`
+
+
 
 
 
@@ -5190,6 +5645,8 @@ paginated result
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getPage</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
@@ -5276,6 +5733,91 @@ Convert the object to its JSON representation.
     
 Specify data which should be serialized to JSON
     
+# Criteria<a name="miscellaneous_criteria"></a>
+    
+## Containers<a name="miscellaneous_criteria_containers"></a>
+### CriteriaContainer<a name="miscellaneous_containers_criteriacontainer"></a>
+
+Register repository criteria
+
+
+#### Namespace
+
+`Plenty\Repositories\Criteria\Containers`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $repository, <a target="_blank" href="http://php.net/string">string</a> $criteria, <a target="_blank" href="http://php.net/string">string</a> $key):<a href="miscellaneous#miscellaneous_criteria_containers">Containers</a>
+</pre>
+
+    
+Use this method to add criteria to a existing repository.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$repository</td>
+        <td>The repository that should use the criteria</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$criteria</td>
+        <td>The criteria class name that should be used.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td>The key that should match the given criteria.</td>
+    </tr>
+</table>
+
+
+## Contracts<a name="miscellaneous_criteria_contracts"></a>
+### CriteriableContract<a name="miscellaneous_contracts_criteriablecontract"></a>
+
+Interface which provides the possibility to use Criteria filters.
+
+
+#### Namespace
+
+`Plenty\Repositories\Criteria\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
+
+### ExtendsCriteriaContract<a name="miscellaneous_contracts_extendscriteriacontract"></a>
+
+Interface which provides the possibility to extends repositories with new Criteria filters.
+
+
+#### Namespace
+
+`Plenty\Repositories\Criteria\Contracts`
+
+
+
+
 # Validation<a name="miscellaneous_validation"></a>
     
 ## Contracts<a name="miscellaneous_validation_contracts"></a>
@@ -5287,6 +5829,8 @@ Attribute Interface
 #### Namespace
 
 `Plenty\Validation\Contracts`
+
+
 
 
 
@@ -5434,6 +5978,12 @@ The field under validation must be able to be cast as a boolean. Accepted input 
 
     
 The field under validation must have a matching field of foo_confirmation. For example, if the field under validation is password, a matching password_confirmation field must be present in the input.
+    
+<pre>public <strong>present</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
+</pre>
+
+    
+Validate that an attribute exists even if not filled.
     
 <pre>public <strong>date</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
@@ -5842,6 +6392,22 @@ The field under validation must be present only when all of the other specified 
 </table>
 
 
+<pre>public <strong>notLike</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
+</pre>
+
+    
+The field under validation must be not like the specified name.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fieldName</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>same</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
 </pre>
 
@@ -5935,6 +6501,12 @@ In some situations, you may wish to run validation checks against a field only i
     
 The field under validation may be null. This is particularly useful when validating primitive such as strings and integers that can contain null values.
     
+<pre>public <strong>validBoardTaskReferenceValue</strong>():<a href="miscellaneous#miscellaneous_validation_contracts">Contracts</a>
+</pre>
+
+    
+The field under validation must be a valid board task reference type (e.g. {@link BoardTaskReferenceType::CONTACT}).
+    
 ## Service<a name="miscellaneous_validation_service"></a>
 ### AttributeFactory<a name="miscellaneous_service_attributefactory"></a>
 
@@ -5944,6 +6516,8 @@ Instantiates Attribute Classes
 #### Namespace
 
 `Plenty\Validation\Service`
+
+
 
 
 
@@ -5974,6 +6548,8 @@ Instantiates Validator Classes
 #### Namespace
 
 `Plenty\Validation\Service`
+
+
 
 
 
@@ -6009,6 +6585,8 @@ Instantiates Validator Classes
 
 
 
+
+
 ### Collection<a name="miscellaneous_support_collection"></a>
 
 
@@ -6017,6 +6595,8 @@ Instantiates Validator Classes
 #### Namespace
 
 `Illuminate\Support`
+
+
 
 
 
@@ -6030,6 +6610,8 @@ Instantiates Validator Classes
 `Illuminate\Support`
 
 
+
+
 # <a name="miscellaneous_"></a>
     
 ## Carbon<a name="miscellaneous__carbon"></a>
@@ -6041,6 +6623,8 @@ Instantiates Validator Classes
 #### Namespace
 
 `Carbon`
+
+
 
 
 #### Properties
@@ -6120,6 +6704,8 @@ Abstract Model class
 
 
 
+
+
 ### Collection<a name="miscellaneous_eloquent_collection"></a>
 
 
@@ -6128,6 +6714,8 @@ Abstract Model class
 #### Namespace
 
 `Illuminate\Database\Eloquent`
+
+
 
 
 # Component<a name="miscellaneous_component"></a>
@@ -6141,5 +6729,7 @@ Abstract Model class
 #### Namespace
 
 `Symfony\Component\HttpFoundation`
+
+
 
 

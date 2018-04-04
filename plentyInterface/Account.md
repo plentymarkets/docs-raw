@@ -14,6 +14,8 @@ The AddressContactRelationRepositoryContract is the interface for the address co
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>createAddressContactRelation</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -128,12 +130,14 @@ Applies criteria classes to the current repository.
 
 ### AddressParamConfigurationRepositoryContract<a name="account_contracts_addressparamconfigurationrepositorycontract"></a>
 
-The AddressParamConfigurationRepositoryContract is the interface for the address relation types repository.
+The AddressParamConfigurationRepositoryContract is the interface for the address param configuration repository. This interface allows to create, update, delete, list and get address relation types and address option types.
 
 
 #### Namespace
 
 `Plenty\Modules\Account\Address\Contracts`
+
+
 
 
 
@@ -329,6 +333,8 @@ The AddressPosRelationRepositoryContract is the interface for the address POS re
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>createAddressPosRelation</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_addressposrelation">AddressPosRelation</a>
@@ -457,6 +463,8 @@ The AddressRepositoryContract is the interface for the address repository contra
 #### Namespace
 
 `Plenty\Modules\Account\Address\Contracts`
+
+
 
 
 
@@ -752,6 +760,8 @@ The address model
 `Plenty\Modules\Account\Address\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -989,6 +999,8 @@ The address contact relation model
 `Plenty\Modules\Account\Address\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1055,6 +1067,8 @@ The address options model
 `Plenty\Modules\Account\Address\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1115,6 +1129,8 @@ The AddressOptionType model
 #### Namespace
 
 `Plenty\Modules\Account\Address\Models`
+
+
 
 
 #### Properties
@@ -1184,6 +1200,8 @@ The AddressOptionTypeName model
 `Plenty\Modules\Account\Address\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1235,6 +1253,8 @@ address order relation model
 #### Namespace
 
 `Plenty\Modules\Account\Address\Models`
+
+
 
 
 #### Properties
@@ -1304,6 +1324,8 @@ The address POS relation model
 `Plenty\Modules\Account\Address\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1350,6 +1372,8 @@ The contact address type model
 #### Namespace
 
 `Plenty\Modules\Account\Address\Models`
+
+
 
 
 #### Properties
@@ -1416,6 +1440,8 @@ The AddressRelationTypeApplication model
 `Plenty\Modules\Account\Address\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1467,6 +1493,8 @@ The AddressRelationTypeName model
 #### Namespace
 
 `Plenty\Modules\Account\Address\Models`
+
+
 
 
 #### Properties
@@ -1522,6 +1550,8 @@ The AddressSchedulerRelation model
 `Plenty\Modules\Account\Address\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -1573,6 +1603,8 @@ The AddressWarehouseRelation model
 #### Namespace
 
 `Plenty\Modules\Account\Address\Models`
+
+
 
 
 #### Properties
@@ -1628,6 +1660,8 @@ The ContactEventRepositoryContract is the interface for the contact event reposi
 #### Namespace
 
 `Plenty\Modules\Account\Contact\ContactEvent\Contracts`
+
+
 
 
 
@@ -1746,12 +1780,14 @@ Deletes an entry of the table customer events by contact event id.
 ## Models<a name="account_contactevent_models"></a>
 ### ContactEvent<a name="account_models_contactevent"></a>
 
-The contact event model
+The contact event model.
 
 
 #### Namespace
 
 `Plenty\Modules\Account\Contact\ContactEvent\Models`
+
+
 
 
 #### Properties
@@ -1783,7 +1819,7 @@ The contact event model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>eventType</td>
-            <td>The type of the event</td>
+            <td>The type of the event. Possible values are call, ticket, email, meeting, webinar, development and design.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>orderRowId</td>
@@ -1834,6 +1870,8 @@ The ContactAccessDataRepositoryContract is the interface for the contact access 
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
+
+
 
 
 
@@ -1917,6 +1955,8 @@ The ContactAccountRepositoryContract is the interface for the contact account re
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
+
+
 
 
 
@@ -2019,6 +2059,8 @@ The ContactAddressRepositoryContract is the interface for the contact address re
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
+
+
 
 
 
@@ -2268,6 +2310,8 @@ The ContactClassRepositoryContract is the interface for the contact class reposi
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>findContactClassById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactClassId):<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -2317,6 +2361,8 @@ The ContactGroupFunctionsRepositoryContract is the interface for the contact acc
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>loadGroupFunctions</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -2355,6 +2401,91 @@ The ContactGroupFunctionsRepositoryContract is the interface for the contact acc
 
 
 
+### ContactLookupRepositoryContract<a name="account_contracts_contactlookuprepositorycontract"></a>
+
+lookup repository for contacts
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>hasId</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId):<a href="account#account_contracts_contactlookuprepositorycontract">ContactLookupRepositoryContract</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasEmail</strong>(<a target="_blank" href="http://php.net/string">string</a> $emailAddress):<a href="account#account_contracts_contactlookuprepositorycontract">ContactLookupRepositoryContract</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$emailAddress</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasBillingAddress</strong>(<a target="_blank" href="http://php.net/int">int</a> $billingAddressId):<a href="account#account_contracts_contactlookuprepositorycontract">ContactLookupRepositoryContract</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$billingAddressId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasDeliveryAddress</strong>(<a target="_blank" href="http://php.net/int">int</a> $deliveryAddressId):<a href="account#account_contracts_contactlookuprepositorycontract">ContactLookupRepositoryContract</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$deliveryAddressId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>lookup</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+
 ### ContactOptionRepositoryContract<a name="account_contracts_contactoptionrepositorycontract"></a>
 
 The ContactOptionRepositoryContract is the interface for the contact option repository. This interface allows to get, create, update and delete contact options.
@@ -2363,6 +2494,8 @@ The ContactOptionRepositoryContract is the interface for the contact option repo
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
+
+
 
 
 
@@ -2502,6 +2635,383 @@ Deletes a contact option. The ID of the option must be specified.
 
 
 
+### ContactParamConfigurationContract<a name="account_contracts_contactparamconfigurationcontract"></a>
+
+The ContactParamConfigurationContract is the interface for the contact param configuration repository. This interface allows to create, update, delete, list and get contact positions, contact departments, contact option types and and contact option sub types.
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>createContactPosition</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_contactposition">ContactPosition</a>
+</pre>
+
+    
+Create a new contact position
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateContactPosition</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $contactPositionId):<a href="account#account_models_contactposition">ContactPosition</a>
+</pre>
+
+    
+Update an existing contact position
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactPositionId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteContactPosition</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactPositionId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Delete an contact position by given id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactPositionId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findContactPositionById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactPositionId):<a href="account#account_models_contactposition">ContactPosition</a>
+</pre>
+
+    
+Find an existing contact position by given id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactPositionId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>allContactPositions</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get list of contact position
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$perPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createContactDepartment</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_contactdepartment">ContactDepartment</a>
+</pre>
+
+    
+Create a new contact department
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateContactDepartment</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $contactDepartmentId):<a href="account#account_models_contactdepartment">ContactDepartment</a>
+</pre>
+
+    
+Update an existing contact department
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactDepartmentId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteContactDepartment</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactDepartmentId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Delete an contact department by given id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactDepartmentId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findContactDepartmentById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactDepartmentId):<a href="account#account_models_contactdepartment">ContactDepartment</a>
+</pre>
+
+    
+Find an existing contact department by given id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactDepartmentId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>allContactDepartments</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get list of contact department
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$perPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createContactOptionType</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_contactoptiontype">ContactOptionType</a>
+</pre>
+
+    
+Create a new contact option type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateContactOptionType</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $contactOptionTypeId):<a href="account#account_models_contactoptiontype">ContactOptionType</a>
+</pre>
+
+    
+Update an existing contact option type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactOptionTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteContactOptionType</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactOptionTypeId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Delete an contact option type by given id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactOptionTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findContactOptionTypeById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactOptionTypeId):<a href="account#account_models_contactoptiontype">ContactOptionType</a>
+</pre>
+
+    
+Find an existing contact option type by given id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactOptionTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>allContactOptionType</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get list of contact option type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$perPage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createContactOptionSubType</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_contactoptionsubtype">ContactOptionSubType</a>
+</pre>
+
+    
+Create a new contact option sub type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateContactOptionSubType</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $contactOptionSubTypeId):<a href="account#account_models_contactoptionsubtype">ContactOptionSubType</a>
+</pre>
+
+    
+Update an existing contact options sub type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactOptionSubTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteContactOptionSubType</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactOptionSubTypeId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Delete an contact options sub type by given id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactOptionSubTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findContactOptionSubTypeById</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactOptionSubTypeId):<a href="account#account_models_contactoptionsubtype">ContactOptionSubType</a>
+</pre>
+
+    
+Find an existing contact options sub type by given id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactOptionSubTypeId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>allContactOptionSubType</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get list of contact option sub type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$perPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### ContactPaymentRepositoryContract<a name="account_contracts_contactpaymentrepositorycontract"></a>
 
 The ContactPaymentRepositoryContract is the interface for the contact payment repository. This interface allows to list, get, create, update and delete bank details of the contact.
@@ -2510,6 +3020,8 @@ The ContactPaymentRepositoryContract is the interface for the contact payment re
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
+
+
 
 
 
@@ -2638,6 +3150,8 @@ The ContactRepositoryContract is the interface for the contact repository. This 
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
+
+
 
 
 
@@ -2866,6 +3380,8 @@ The ContactTypeRepositoryContract is the interface for the contact type reposito
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>createContactType</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="account#account_models_contacttype">ContactType</a>
@@ -2960,6 +3476,8 @@ The contract for the contact payment repository.
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
+
+
 
 
 
@@ -3088,6 +3606,8 @@ The contact model.
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Models`
+
+
 
 
 #### Properties
@@ -3298,7 +3818,7 @@ The contact model.
             <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </td>
             <td>accounts</td>
-            <td>A collection of linked accounts</td>
+            <td>A collection of linked accounts. An ID or a company name must be specified. When the ID is used, a relation will be created. When the company name without an ID is used, a new account with the given data will be created.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </td>
@@ -3359,6 +3879,8 @@ The model of the allowed payment method for the contact
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Models`
+
+
 
 
 #### Properties
@@ -3423,6 +3945,8 @@ The contact bank model.
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Models`
+
+
 
 
 #### Properties
@@ -3547,6 +4071,8 @@ contact department model
 `Plenty\Modules\Account\Contact\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3614,6 +4140,8 @@ contact department name model
 `Plenty\Modules\Account\Contact\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3660,6 +4188,8 @@ The contact options model.
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Models`
+
+
 
 
 #### Properties
@@ -3769,6 +4299,8 @@ contact options sub type model
 `Plenty\Modules\Account\Contact\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3833,6 +4365,8 @@ contact options sub type name model
 `Plenty\Modules\Account\Contact\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3879,6 +4413,8 @@ contact options type model
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Models`
+
+
 
 
 #### Properties
@@ -3943,6 +4479,8 @@ The ContactOptionTypeName model
 `Plenty\Modules\Account\Contact\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -3989,6 +4527,8 @@ The ContactPosition model
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Models`
+
+
 
 
 #### Properties
@@ -4062,6 +4602,8 @@ The ContactPositionName model
 `Plenty\Modules\Account\Contact\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -4108,6 +4650,8 @@ The ContactType model
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Models`
+
+
 
 
 #### Properties
@@ -4172,6 +4716,8 @@ contact type name model
 `Plenty\Modules\Account\Contact\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -4223,6 +4769,8 @@ ContactElasticSearchAvailibilityRepositoryContract
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>isReady</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
@@ -4244,6 +4792,8 @@ kommt noch
 #### Namespace
 
 `Plenty\Modules\Account\Contact\Search\Contracts`
+
+
 
 
 
@@ -4322,6 +4872,8 @@ The contract for the search repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>index</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -4396,6 +4948,53 @@ Delete contact from index
 # Account<a name="account_account"></a>
     
 ## Contracts<a name="account_account_contracts"></a>
+### AccountContactRelationRepositoryContract<a name="account_contracts_accountcontactrelationrepositorycontract"></a>
+
+The AccountContactRelationRepositoryContract is the interface for the account contact relation repository. This interface allows to find and delete an account contact relation.
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>findAccountContactRelationById</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountContactRelation):<a href="account#account_models_accountcontactrelation">AccountContactRelation</a>
+</pre>
+
+    
+Gets an account contact releation. The ID of the account contact relation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$accountContactRelation</td>
+        <td>The ID of the account contact relation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteAccountContactRelation</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountContactRelationId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Deletes an account contact relation. The ID of the account contact relation must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$accountContactRelationId</td>
+        <td>The ID of the account contact relation</td>
+    </tr>
+</table>
+
+
+
 ### AccountRepositoryContract<a name="account_contracts_accountrepositorycontract"></a>
 
 The AccountRepositoryContract is the interface for the account repository. This interface allows to list, get, create, update and delete accounts. An account contains company-related data. It is also possible to list all contacts of an account.
@@ -4404,6 +5003,8 @@ The AccountRepositoryContract is the interface for the account repository. This 
 #### Namespace
 
 `Plenty\Modules\Account\Contracts`
+
+
 
 
 
@@ -4498,6 +5099,37 @@ Returns a collection of all accounts.
 </table>
 
 
+<pre>public <strong>allAccountsPaginated</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+Returns a collection of all accounts.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>Optional: The columns to retrieve (Default: '[*]').</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>Optional: The number of the page (Default: 1).</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>Optional: The number of objects per page (Default: 50).</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>Optional: The relationships that should be eager loaded.</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getContactsOfAccount</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountId):<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </pre>
 
@@ -4539,6 +5171,8 @@ frontend customer settings event
 #### Namespace
 
 `Plenty\Modules\Account\Events`
+
+
 
 
 
@@ -4702,6 +5336,8 @@ the account model.
 `Plenty\Modules\Account\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -4797,6 +5433,8 @@ account contact relation model
 `Plenty\Modules\Account\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -4851,6 +5489,8 @@ The NewsletterRepositoryContract is the interface for the newsletter repository.
 #### Namespace
 
 `Plenty\Modules\Account\Newsletter\Contracts`
+
+
 
 
 
@@ -5154,6 +5794,8 @@ The newsletter entry model.
 `Plenty\Modules\Account\Newsletter\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -5200,6 +5842,8 @@ The newsletter folder model.
 #### Namespace
 
 `Plenty\Modules\Account\Newsletter\Models`
+
+
 
 
 #### Properties
@@ -5252,6 +5896,8 @@ NewsletterEmail
 #### Namespace
 
 `Plenty\Modules\Account\Newsletter\Models`
+
+
 
 
 #### Properties
@@ -5334,6 +5980,8 @@ The newsletter recipient
 `Plenty\Modules\Account\Newsletter\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -5414,6 +6062,8 @@ The OrderSummaryRepositoryContract is the interface for the order summary reposi
 #### Namespace
 
 `Plenty\Modules\Account\OrderSummary\Contracts`
+
+
 
 
 
@@ -5549,6 +6199,8 @@ The order summary model.
 #### Namespace
 
 `Plenty\Modules\Account\OrderSummary\Models`
+
+
 
 
 #### Properties

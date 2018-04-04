@@ -14,6 +14,8 @@ The contract for the item set component repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $with):<a href="itemset#itemset_models_itemsetcomponent">ItemSetComponent</a>
@@ -241,6 +243,8 @@ The contract for the item set configuration repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>show</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="itemset#itemset_models_itemsetconfig">ItemSetConfig</a>
@@ -358,6 +362,8 @@ The contract for the item set repository
 #### Namespace
 
 `Plenty\Modules\ItemSet\Contracts`
+
+
 
 
 
@@ -495,6 +501,8 @@ The ItemSet model.
 `Plenty\Modules\ItemSet\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -537,6 +545,8 @@ The ItemSetComponent model.
 #### Namespace
 
 `Plenty\Modules\ItemSet\Models`
+
+
 
 
 #### Properties
@@ -589,6 +599,8 @@ The ItemSetConfig model.
 #### Namespace
 
 `Plenty\Modules\ItemSet\Models`
+
+
 
 
 #### Properties

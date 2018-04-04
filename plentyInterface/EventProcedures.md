@@ -14,6 +14,8 @@ plentymarkets event procedures triggered
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getTicket</strong>():<a href="ticket#ticket_models_ticket">Ticket</a>
@@ -37,6 +39,8 @@ The EventProcedureService class offers the possibility to register a procedure c
 #### Namespace
 
 `Plenty\Modules\EventProcedures\Services`
+
+
 
 
 
@@ -146,6 +150,8 @@ The filter entry contains all information needed to use module filters in plenty
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getModuleName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
@@ -241,6 +247,8 @@ The procedure entry contains all information needed to use module procedures in 
 #### Namespace
 
 `Plenty\Modules\EventProcedures\Services\Entries`
+
+
 
 
 

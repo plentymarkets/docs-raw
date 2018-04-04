@@ -14,6 +14,8 @@ The BasketItemRepositoryContract is the interface for the basket item repository
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>findOneById</strong>(<a target="_blank" href="http://php.net/int">int</a> $basketRowId):<a href="basket#basket_models_basketitem">BasketItem</a>
@@ -118,6 +120,8 @@ The BasketRepositoryContract is the interface for the basket repository. This in
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>load</strong>():<a href="basket#basket_models_basket">Basket</a>
@@ -176,6 +180,39 @@ Class BasketCheckException
 
 
 
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/string">string</a> $code, <a target="_blank" href="http://php.net/string">string</a> $message = &quot;&quot;, <a href="miscellaneous#miscellaneous__exception">Exception</a>
+ $previous = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+BasketItemCheckException constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$message</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__exception">Exception</a>
+</td>
+        <td>$previous</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### BasketItemCheckException<a name="basket_exceptions_basketitemcheckexception"></a>
 
 Created by ptopczewski, 12.05.16 09:03
@@ -185,6 +222,39 @@ Class BasketItemCheckException
 #### Namespace
 
 `Plenty\Modules\Basket\Exceptions`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/int">int</a> $code = 404, <a target="_blank" href="http://php.net/string">string</a> $message = &quot;&quot;, <a href="miscellaneous#miscellaneous__exception">Exception</a>
+ $previous = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+BasketItemCheckException constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$message</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__exception">Exception</a>
+</td>
+        <td>$previous</td>
+        <td></td>
+    </tr>
+</table>
 
 
 
@@ -199,6 +269,59 @@ Class BasketItemQuantityCheckException
 `Plenty\Modules\Basket\Exceptions`
 
 
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/int">int</a> $code, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/float">float</a> $requestedQuantity, <a target="_blank" href="http://php.net/string">string</a> $message = &quot;&quot;, <a href="miscellaneous#miscellaneous__exception">Exception</a>
+ $previous = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+BasketItemQuantityCheckException constructor.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$code</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$requestedQuantity</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$message</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__exception">Exception</a>
+</td>
+        <td>$previous</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getVariationId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getRequestedQuantity</strong>():<a target="_blank" href="http://php.net/float">float</a></pre>
+
+    
+
+    
 ## Models<a name="basket_basket_models"></a>
 ### Basket<a name="basket_models_basket"></a>
 
@@ -208,6 +331,8 @@ The basket model
 #### Namespace
 
 `Plenty\Modules\Basket\Models`
+
+
 
 
 #### Properties
@@ -361,6 +486,8 @@ The basket item model
 #### Namespace
 
 `Plenty\Modules\Basket\Models`
+
+
 
 
 #### Properties
@@ -535,6 +662,8 @@ The basket item params model
 `Plenty\Modules\Basket\Models`
 
 
+
+
 #### Properties
 
 <table class="table table-bordered table-striped table-condensed table-hover">
@@ -587,6 +716,8 @@ The event is triggered after the shopping cart is changed.
 #### Namespace
 
 `Plenty\Modules\Basket\Events\Basket`
+
+
 
 
 
@@ -718,6 +849,8 @@ The event is triggered after the shopping cart is created.
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>getBasket</strong>():<a href="basket#basket_models_basket">Basket</a>
@@ -735,6 +868,8 @@ The event is triggered after an item is added to the shopping cart.
 #### Namespace
 
 `Plenty\Modules\Basket\Events\BasketItem`
+
+
 
 
 
@@ -758,6 +893,8 @@ The event is triggered after an item is deleted from the shopping cart.
 
 
 
+
+
 ### AfterBasketItemUpdate<a name="basket_basketitem_afterbasketitemupdate"></a>
 
 The event is triggered after an item in the shopping cart is updated.
@@ -769,6 +906,8 @@ The event is triggered after an item in the shopping cart is updated.
 
 
 
+
+
 ### BeforeBasketItemAdd<a name="basket_basketitem_beforebasketitemadd"></a>
 
 The event is triggered before an item is created in the shopping cart.
@@ -777,6 +916,8 @@ The event is triggered before an item is created in the shopping cart.
 #### Namespace
 
 `Plenty\Modules\Basket\Events\BasketItem`
+
+
 
 
 
@@ -800,6 +941,8 @@ The event is triggered before an item is deleted from the shopping cart.
 
 
 
+
+
 ### BeforeBasketItemUpdate<a name="basket_basketitem_beforebasketitemupdate"></a>
 
 The event is triggered before an item in the shopping cart is updated.
@@ -808,6 +951,8 @@ The event is triggered before an item in the shopping cart is updated.
 #### Namespace
 
 `Plenty\Modules\Basket\Events\BasketItem`
+
+
 
 
 

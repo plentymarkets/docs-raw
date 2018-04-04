@@ -14,6 +14,8 @@ DesignConfig
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>findByDesignName</strong>(<a target="_blank" href="http://php.net/string">string</a> $designName):<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -128,6 +130,8 @@ Design
 
 
 
+
+
 #### Methods
 
 <pre>public <strong>loadAll</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
@@ -165,6 +169,8 @@ Design model
 #### Namespace
 
 `Plenty\Modules\Template\Design\Config\Models`
+
+
 
 
 #### Properties
@@ -221,6 +227,8 @@ Design configuration model
 #### Namespace
 
 `Plenty\Modules\Template\Design\Config\Models`
+
+
 
 
 #### Properties
