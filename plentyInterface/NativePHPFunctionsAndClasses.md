@@ -125,10 +125,25 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.ceil.php">ceil</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.checkdate.php">checkdate</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.chop.php">chop</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.chr.php">chr</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.chunk-split.php">chunk_split</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.compact.php">compact</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.count.php">count</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.count-chars.php">count_chars</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.crypt.php">crypt</a>
@@ -187,6 +202,12 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 </ul>
             <strong>E</strong>
         <ul>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.easter-date.php">easter_date</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.easter-days.php">easter_days</a>
+            </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.end.php">end</a>
             </li>
@@ -302,6 +323,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             <strong>K</strong>
         <ul>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.key.php">key</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.krsort.php">krsort</a>
             </li>
                     <li>
@@ -351,6 +375,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.min.php">min</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.mktime.php">mktime</a>
             </li>
                 </ul>
             <strong>N</strong>
@@ -461,6 +488,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.strcmp.php">strcmp</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.strftime.php">strftime</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.strip-tags.php">strip_tags</a>
             </li>
                     <li>
@@ -499,6 +529,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 </ul>
             <strong>T</strong>
         <ul>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.time.php">time</a>
+            </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.time.php">time</a>
             </li>

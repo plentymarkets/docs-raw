@@ -3,39 +3,6 @@
 # System<a name="system_system"></a>
     
 ## Contracts<a name="system_system_contracts"></a>
-### SystemInformationRepositoryContract<a name="system_contracts_systeminformationrepositorycontract"></a>
-
-Repository for SystemInformation
-
-
-#### Namespace
-
-`Plenty\Modules\System\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>loadValue</strong>($key):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$key</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
 ### WebstoreConfigurationRepositoryContract<a name="system_contracts_webstoreconfigurationrepositorycontract"></a>
 
 Repository for Webstore Configuration
@@ -184,6 +151,39 @@ Shows a specific webstore
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$clientId</td>
         <td>The client ID (webstore ID).</td>
+    </tr>
+</table>
+
+
+
+### SystemInformationRepositoryContract<a name="system_contracts_systeminformationrepositorycontract"></a>
+
+Repository for SystemInformation
+
+
+#### Namespace
+
+`Plenty\Modules\System\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>loadValue</strong>($key):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$key</td>
+        <td></td>
     </tr>
 </table>
 
@@ -1090,6 +1090,10 @@ Represent cloud metrics for a specific day
             <td></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>websiteContentMB</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>cloudSpaceDocumentsMB</td>
             <td></td>
         </tr><tr>
@@ -1098,7 +1102,35 @@ Represent cloud metrics for a specific day
             <td></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>cloudSpacePrivateMB</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>cloudSpacePublicMB</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>dbSpaceMb</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>websiteTrafficMB</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>cdnTrafficMB</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>cdnTrafficCount</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>contentCachingPutRequests</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>contentCachingGetRequests</td>
             <td></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
@@ -1107,6 +1139,10 @@ Represent cloud metrics for a specific day
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>warehouses</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>warehousesSales</td>
             <td></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>

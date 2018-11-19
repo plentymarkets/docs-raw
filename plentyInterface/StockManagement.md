@@ -1,537 +1,5 @@
 
 
-# Stock<a name="stockmanagement_stock"></a>
-    
-## Contracts<a name="stockmanagement_stock_contracts"></a>
-### StockRepositoryContract<a name="stockmanagement_contracts_stockrepositorycontract"></a>
-
-The StockRepositoryContract is the interface for the stock repository. This interface allows you to find, create and update stock. Stock is assigned to one variation and is stored in warehouses.
-
-
-#### Namespace
-
-`Plenty\Modules\StockManagement\Stock\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>listStockByWarehouseId</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
-</pre>
-
-    
-List stock of a warehouse
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$warehouseId</td>
-        <td>The ID of the warehouse</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$columns</td>
-        <td>The properties to be loaded</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$page</td>
-        <td>The requested page</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemsPerPage</td>
-        <td>The number of items per page</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>listStock</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
-</pre>
-
-    
-List stock
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$columns</td>
-        <td>The properties to be loaded</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$page</td>
-        <td>The requested page</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemsPerPage</td>
-        <td>The number of items per page</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>listStockByWarehouseType</strong>(<a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
-</pre>
-
-    
-List stock by warehouse type
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$type</td>
-        <td>The type of the warehouse. Currently only 'sales' is supported.</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$columns</td>
-        <td>The properties to be loaded</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$page</td>
-        <td>The requested page</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemsPerPage</td>
-        <td>The number of items per page</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>correctStock</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Corrects stock. The ID of the warehouse has to be provided.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$warehouseId</td>
-        <td>The ID of the warehouse.</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td>The request data.</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>bookIncomingItems</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Book incoming stock
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$warehouseId</td>
-        <td>The ID of the warehouse</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td>The request date</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>redistributeStock</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Redistribute stock
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td>The request data</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>listStockMovements</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
-</pre>
-
-    
-List stock movements
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$warehouseId</td>
-        <td>The ID of the warehouse</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$columns</td>
-        <td>The properties to be loaded</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$page</td>
-        <td>The requested page</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemsPerPage</td>
-        <td>The number of items per page</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Resets all Criteria filters by creating a new instance of the builder object.
-    
-<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Applies criteria classes to the current repository.
-    
-<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Sets the filter array.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filters</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Returns the filter array.
-    
-<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Returns a collection of parsed filters as Condition object
-    
-<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Clears the filter array.
-    
-
-### StockStorageLocationRepositoryContract<a name="stockmanagement_contracts_stockstoragelocationrepositorycontract"></a>
-
-The StockStorageLocationRepositoryContract is the interface for the stock storage location repository. This interface allows you to list the stock of all storage locations of a warehouse or to list all storage locations of a variation and the stock stored at these locations.
-
-
-#### Namespace
-
-`Plenty\Modules\StockManagement\Stock\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>listStockStorageLocationsByWarehouseId</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
-</pre>
-
-    
-List stock of all storage locations of a warehouse
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$warehouseId</td>
-        <td>The ID of the warehouse</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$columns</td>
-        <td>The properties to be loaded</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$page</td>
-        <td>The requested page</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemsPerPage</td>
-        <td>The number of items per page</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$with</td>
-        <td>The relations to load in the StockStorageLocationInstance, possible is: storageLocation</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>listStockStorageLocationsByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
-</pre>
-
-    
-List stock of a variation per storage location
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$variationId</td>
-        <td>The ID of the variation.</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$columns</td>
-        <td>The properties to be loaded</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$page</td>
-        <td>The requested page</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemsPerPage</td>
-        <td>The number of items per page</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$with</td>
-        <td>The relations to load in the StockStorageLocationInstance, possible is: storageLocation</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Resets all Criteria filters by creating a new instance of the builder object.
-    
-<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Applies criteria classes to the current repository.
-    
-<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Sets the filter array.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filters</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Returns the filter array.
-    
-<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Returns a collection of parsed filters as Condition object
-    
-<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Clears the filter array.
-    
-## Models<a name="stockmanagement_stock_models"></a>
-### Stock<a name="stockmanagement_models_stock"></a>
-
-The stock model. There are 4 different stock terms used in plentymarkets. The physical stock, the net stock, the reserved stock and the stock reserved for listings.
-
-
-#### Namespace
-
-`Plenty\Modules\StockManagement\Stock\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>itemId</td>
-            <td>The ID of the item</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>variationId</td>
-            <td>The ID of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>warehouseId</td>
-            <td>The ID of the warehouse</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>stockPhysical</td>
-            <td>The physical stock</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>reservedStock</td>
-            <td>The reserved stock</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>reservedEbay</td>
-            <td>The stock reserved for ebay</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>reorderDelta</td>
-            <td>The reorder delta</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>stockNet</td>
-            <td>The net stock</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>reordered</td>
-            <td>The reordered quantity of a variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>reservedBundle</td>
-            <td>Reserved bundle</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>averagePurchasePrice</td>
-            <td>The average purchase price</td>
-        </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-            <td>updatedAt</td>
-            <td>The time the stock was last updated</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### StockStorageLocation<a name="stockmanagement_models_stockstoragelocation"></a>
-
-The stock storage location model contains all information about the stock that is stored at one storage location.
-
-
-#### Namespace
-
-`Plenty\Modules\StockManagement\Stock\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>itemId</td>
-            <td>The ID of the item</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>variationId</td>
-            <td>The ID of the variation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>storageLocationId</td>
-            <td>The ID of the storage location.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>warehouseId</td>
-            <td>The ID of the warehouse that the storage location is in</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>quantity</td>
-            <td>The quantity stored at the storage location</td>
-        </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-            <td>updatedAt</td>
-            <td>The day and time the stock was last updated</td>
-        </tr><tr>
-            <td><a href="stockmanagement#stockmanagement_models_storagelocation">StorageLocation</a>
-</td>
-            <td>storageLocation</td>
-            <td>Deprecated! Use warehouseLocation instead</td>
-        </tr><tr>
-            <td><a href="warehouse#warehouse_models_warehouselocation">WarehouseLocation</a>
-</td>
-            <td>warehouseLocation</td>
-            <td>The warehouse location of the item</td>
-        </tr><tr>
-            <td><a href="item#item_models_variation">Variation</a>
-</td>
-            <td>variation</td>
-            <td>The variation of the item</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
 # Warehouse<a name="stockmanagement_warehouse"></a>
     
 ## Contracts<a name="stockmanagement_warehouse_contracts"></a>
@@ -715,9 +183,9 @@ Returns this model as an array.
 # Management<a name="stockmanagement_management"></a>
     
 ## Contracts<a name="stockmanagement_management_contracts"></a>
-### RackManagementRepositoryContract<a name="stockmanagement_contracts_rackmanagementrepositorycontract"></a>
+### StorageLocationManagementRepositoryContract<a name="stockmanagement_contracts_storagelocationmanagementrepositorycontract"></a>
 
-The RackManagementRepositoryContract is the interface for the rack management repository. This interface provides the functionality to manage the warehouse configuration for racks. Racks can be retrieved, created or updated here.
+The StorageLocationManagementRepositoryContract is the interface for the storage location management repository. This interface provides the functionality to manage the warehouse configuration for storage locations. Storage locations can be retrieved, created or updated here.
 
 <div class="panel panel-warning">
     <div class="panel-heading">
@@ -726,7 +194,7 @@ The RackManagementRepositoryContract is the interface for the rack management re
             Deprecated! <small>(since 2018-03)</small>        </h3>
     </div>
     <div class="panel-body">
-        Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationDimensionRepositoryContract instead
+        Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationRepositoryContract instead
     </div>
 </div>
 
@@ -740,18 +208,18 @@ The RackManagementRepositoryContract is the interface for the rack management re
 
 #### Methods
 
-<pre>public <strong>getRackById</strong>(<a target="_blank" href="http://php.net/int">int</a> $rackId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="stockmanagement#stockmanagement_models_rack">Rack</a>
+<pre>public <strong>getStorageLocationById</strong>(<a target="_blank" href="http://php.net/int">int</a> $storageLocationId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="stockmanagement#stockmanagement_models_storagelocation">StorageLocation</a>
 </pre>
 
     
-Find a rack by id.
+Find a storage location by id.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$rackId</td>
-        <td>The id of the rack.</td>
+        <td>$storageLocationId</td>
+        <td>The id of the storage location.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -761,16 +229,16 @@ Find a rack by id.
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to be loaded. Possible values are 'warehouse', 'shelves' and 'storageLocations'.</td>
+        <td>The relations to be loaded. Possible values are 'warehouse', 'rack' and 'shelf'.</td>
     </tr>
 </table>
 
 
-<pre>public <strong>findRacks</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+<pre>public <strong>findStorageLocations</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
 
     
-Find racks. The results can be filtered by warehouse id.
+Find storage locations. The results can be filtered by warehouse id, rack id and shelf id.
     
 ##### <strong>Parameters</strong>
     
@@ -792,28 +260,38 @@ Find racks. The results can be filtered by warehouse id.
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to be loaded. Possible values are 'warehouse', 'shelves' and 'storageLocations'.</td>
+        <td>The relations to be loaded. Possible values are 'warehouse', 'rack' and 'shelf'.</td>
     </tr>
 </table>
 
 
-<pre>public <strong>createRack</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $warehouseId):<a href="stockmanagement#stockmanagement_models_rack">Rack</a>
+<pre>public <strong>createStorageLocation</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/int">int</a> $rackId, <a target="_blank" href="http://php.net/int">int</a> $shelfId):<a href="stockmanagement#stockmanagement_models_storagelocation">StorageLocation</a>
 </pre>
 
     
-Create a new rack.
+Create a new storage location.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td>The data to create a new rack.</td>
+        <td>The data to create a new storage location.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$warehouseId</td>
-        <td>The id of the warehouse the rack shall belong to.</td>
+        <td>The id of the warehouse the storage location shall belong to.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$rackId</td>
+        <td>The id of the rack the storage location shall belong to.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$shelfId</td>
+        <td>The id of the shelf the storage location shall belong to.</td>
     </tr>
 </table>
 
@@ -1020,9 +498,9 @@ Returns a collection of parsed filters as Condition object
 Clears the filter array.
     
 
-### StorageLocationManagementRepositoryContract<a name="stockmanagement_contracts_storagelocationmanagementrepositorycontract"></a>
+### RackManagementRepositoryContract<a name="stockmanagement_contracts_rackmanagementrepositorycontract"></a>
 
-The StorageLocationManagementRepositoryContract is the interface for the storage location management repository. This interface provides the functionality to manage the warehouse configuration for storage locations. Storage locations can be retrieved, created or updated here.
+The RackManagementRepositoryContract is the interface for the rack management repository. This interface provides the functionality to manage the warehouse configuration for racks. Racks can be retrieved, created or updated here.
 
 <div class="panel panel-warning">
     <div class="panel-heading">
@@ -1031,7 +509,7 @@ The StorageLocationManagementRepositoryContract is the interface for the storage
             Deprecated! <small>(since 2018-03)</small>        </h3>
     </div>
     <div class="panel-body">
-        Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationRepositoryContract instead
+        Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationDimensionRepositoryContract instead
     </div>
 </div>
 
@@ -1045,18 +523,18 @@ The StorageLocationManagementRepositoryContract is the interface for the storage
 
 #### Methods
 
-<pre>public <strong>getStorageLocationById</strong>(<a target="_blank" href="http://php.net/int">int</a> $storageLocationId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="stockmanagement#stockmanagement_models_storagelocation">StorageLocation</a>
+<pre>public <strong>getRackById</strong>(<a target="_blank" href="http://php.net/int">int</a> $rackId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="stockmanagement#stockmanagement_models_rack">Rack</a>
 </pre>
 
     
-Find a storage location by id.
+Find a rack by id.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$storageLocationId</td>
-        <td>The id of the storage location.</td>
+        <td>$rackId</td>
+        <td>The id of the rack.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -1066,16 +544,16 @@ Find a storage location by id.
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to be loaded. Possible values are 'warehouse', 'rack' and 'shelf'.</td>
+        <td>The relations to be loaded. Possible values are 'warehouse', 'shelves' and 'storageLocations'.</td>
     </tr>
 </table>
 
 
-<pre>public <strong>findStorageLocations</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+<pre>public <strong>findRacks</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
 
     
-Find storage locations. The results can be filtered by warehouse id, rack id and shelf id.
+Find racks. The results can be filtered by warehouse id.
     
 ##### <strong>Parameters</strong>
     
@@ -1097,38 +575,28 @@ Find storage locations. The results can be filtered by warehouse id, rack id and
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$with</td>
-        <td>The relations to be loaded. Possible values are 'warehouse', 'rack' and 'shelf'.</td>
+        <td>The relations to be loaded. Possible values are 'warehouse', 'shelves' and 'storageLocations'.</td>
     </tr>
 </table>
 
 
-<pre>public <strong>createStorageLocation</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/int">int</a> $rackId, <a target="_blank" href="http://php.net/int">int</a> $shelfId):<a href="stockmanagement#stockmanagement_models_storagelocation">StorageLocation</a>
+<pre>public <strong>createRack</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $warehouseId):<a href="stockmanagement#stockmanagement_models_rack">Rack</a>
 </pre>
 
     
-Create a new storage location.
+Create a new rack.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
-        <td>The data to create a new storage location.</td>
+        <td>The data to create a new rack.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$warehouseId</td>
-        <td>The id of the warehouse the storage location shall belong to.</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$rackId</td>
-        <td>The id of the rack the storage location shall belong to.</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$shelfId</td>
-        <td>The id of the shelf the storage location shall belong to.</td>
+        <td>The id of the warehouse the rack shall belong to.</td>
     </tr>
 </table>
 
@@ -1249,66 +717,6 @@ The storage rack model
 Returns this model as an array.
     
 
-### Shelf<a name="stockmanagement_models_shelf"></a>
-
-The storage shelf model
-
-
-#### Namespace
-
-`Plenty\Modules\StockManagement\Warehouse\Management\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The id of the shelf.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>rackId</td>
-            <td>The id of the rack the shelf belongs to.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>name</td>
-            <td>The name of the shelf.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>level</td>
-            <td>The level of the shelf. Numbers between 1 and 25 are valid.</td>
-        </tr><tr>
-            <td><a href="stockmanagement#stockmanagement_models_rack">Rack</a>
-</td>
-            <td>rack</td>
-            <td>The rack this shelf belongs to.</td>
-        </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-            <td>storageLocations</td>
-            <td>The storage locations of this shelf.</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
 ### StorageLocation<a name="stockmanagement_models_storagelocation"></a>
 
 The storage location model
@@ -1374,6 +782,669 @@ The storage location model
 </td>
             <td>shelf</td>
             <td>The shelf this storage location belongs to.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### Shelf<a name="stockmanagement_models_shelf"></a>
+
+The storage shelf model
+
+
+#### Namespace
+
+`Plenty\Modules\StockManagement\Warehouse\Management\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The id of the shelf.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>rackId</td>
+            <td>The id of the rack the shelf belongs to.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the shelf.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>level</td>
+            <td>The level of the shelf. Numbers between 1 and 25 are valid.</td>
+        </tr><tr>
+            <td><a href="stockmanagement#stockmanagement_models_rack">Rack</a>
+</td>
+            <td>rack</td>
+            <td>The rack this shelf belongs to.</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>storageLocations</td>
+            <td>The storage locations of this shelf.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# Stock<a name="stockmanagement_stock"></a>
+    
+## Contracts<a name="stockmanagement_stock_contracts"></a>
+### StockStorageLocationRepositoryContract<a name="stockmanagement_contracts_stockstoragelocationrepositorycontract"></a>
+
+The StockStorageLocationRepositoryContract is the interface for the stock storage location repository. This interface allows you to list the stock of all storage locations of a warehouse or to list all storage locations of a variation and the stock stored at these locations.
+
+
+#### Namespace
+
+`Plenty\Modules\StockManagement\Stock\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>listStockStorageLocationsByWarehouseId</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List stock of all storage locations of a warehouse
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td>The ID of the warehouse</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>The properties to be loaded</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The requested page</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of items per page</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the StockStorageLocationInstance, possible is: storageLocation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listStockStorageLocationsByVariationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List stock of a variation per storage location
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td>The ID of the variation.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>The properties to be loaded</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The requested page</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of items per page</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td>The relations to load in the StockStorageLocationInstance, possible is: storageLocation</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
+
+### StockRepositoryContract<a name="stockmanagement_contracts_stockrepositorycontract"></a>
+
+The StockRepositoryContract is the interface for the stock repository. This interface allows you to find, create and update stock. Stock is assigned to one variation and is stored in warehouses.
+
+
+#### Namespace
+
+`Plenty\Modules\StockManagement\Stock\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>listStockByWarehouseId</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List stock of a warehouse
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td>The ID of the warehouse</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>The properties to be loaded</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The requested page</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of items per page</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listStock</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List stock
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>The properties to be loaded</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The requested page</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of items per page</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listStockByWarehouseType</strong>(<a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List stock by warehouse type
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>The type of the warehouse. Currently only 'sales' is supported.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>The properties to be loaded</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The requested page</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of items per page</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>correctStock</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Corrects stock. The ID of the warehouse has to be provided.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td>The ID of the warehouse.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>bookIncomingItems</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Book incoming stock
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td>The ID of the warehouse</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>bookOutgoingItems</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Book outgoing stock
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td>The ID of the warehouse</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>redistributeStock</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Redistribute stock
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listStockMovements</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+List stock movements
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td>The ID of the warehouse</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td>The properties to be loaded</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The requested page</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The number of items per page</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
+## Models<a name="stockmanagement_stock_models"></a>
+### StockStorageLocation<a name="stockmanagement_models_stockstoragelocation"></a>
+
+The stock storage location model contains all information about the stock that is stored at one storage location.
+
+
+#### Namespace
+
+`Plenty\Modules\StockManagement\Stock\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemId</td>
+            <td>The ID of the item</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>variationId</td>
+            <td>The ID of the variation</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>storageLocationId</td>
+            <td>The ID of the storage location.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>warehouseId</td>
+            <td>The ID of the warehouse that the storage location is in</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>quantity</td>
+            <td>The quantity stored at the storage location</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>bestBeforeDate</td>
+            <td>The best before date</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>batch</td>
+            <td>The batch</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The day and time the stock was last updated</td>
+        </tr><tr>
+            <td><a href="stockmanagement#stockmanagement_models_storagelocation">StorageLocation</a>
+</td>
+            <td>storageLocation</td>
+            <td>Deprecated! Use warehouseLocation instead</td>
+        </tr><tr>
+            <td><a href="warehouse#warehouse_models_warehouselocation">WarehouseLocation</a>
+</td>
+            <td>warehouseLocation</td>
+            <td>The warehouse location of the item</td>
+        </tr><tr>
+            <td><a href="item#item_models_variation">Variation</a>
+</td>
+            <td>variation</td>
+            <td>The variation of the item</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### StockBatchBestBeforeDate<a name="stockmanagement_models_stockbatchbestbeforedate"></a>
+
+The stock batch best before date model contains all information about the batch and best before date.
+
+
+#### Namespace
+
+`Plenty\Modules\StockManagement\Stock\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>batch</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>bestBeforeDate</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### Stock<a name="stockmanagement_models_stock"></a>
+
+The stock model. There are 4 different stock terms used in plentymarkets. The physical stock, the net stock, the reserved stock and the stock reserved for listings.
+
+
+#### Namespace
+
+`Plenty\Modules\StockManagement\Stock\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>itemId</td>
+            <td>The ID of the item</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>variationId</td>
+            <td>The ID of the variation</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>warehouseId</td>
+            <td>The ID of the warehouse</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>stockPhysical</td>
+            <td>The physical stock</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>reservedStock</td>
+            <td>The reserved stock</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>reservedEbay</td>
+            <td>The stock reserved for ebay</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>reorderDelta</td>
+            <td>The reorder delta</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>stockNet</td>
+            <td>The net stock</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>reordered</td>
+            <td>The reordered quantity of a variation</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>reservedBundle</td>
+            <td>Reserved bundle</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>averagePurchasePrice</td>
+            <td>The average purchase price</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The time the stock was last updated</td>
         </tr></tbody>
 </table>
 

@@ -139,106 +139,6 @@ The method is separated from the class by an "@" sign. The part following the "@
 # Services<a name="eventprocedures_services"></a>
     
 ## Entries<a name="eventprocedures_services_entries"></a>
-### FilterEntry<a name="eventprocedures_entries_filterentry"></a>
-
-The filter entry contains all information needed to use module filters in plentymarkets event procedures.
-
-
-#### Namespace
-
-`Plenty\Modules\EventProcedures\Services\Entries`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>getModuleName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-<pre>public <strong>setModuleName</strong>(<a target="_blank" href="http://php.net/string">string</a> $moduleName):<a href="eventprocedures#eventprocedures_entries_filterentry">FilterEntry</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$moduleName</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getEventType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-<pre>public <strong>setEventType</strong>(<a target="_blank" href="http://php.net/string">string</a> $eventType):<a href="eventprocedures#eventprocedures_entries_filterentry">FilterEntry</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$eventType</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getFilterNames</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
-<pre>public <strong>setFilterNames</strong>(<a target="_blank" href="http://php.net/array">array</a> $filterNames):<a href="eventprocedures#eventprocedures_entries_filterentry">FilterEntry</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filterNames</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getFilterClass</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-<pre>public <strong>setFilterClass</strong>(<a target="_blank" href="http://php.net/string">string</a> $filterClass):<a href="eventprocedures#eventprocedures_entries_filterentry">FilterEntry</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$filterClass</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
 ### ProcedureEntry<a name="eventprocedures_entries_procedureentry"></a>
 
 The procedure entry contains all information needed to use module procedures in plentymarkets event procedures.
@@ -354,6 +254,106 @@ Set the
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$procedureClass</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### FilterEntry<a name="eventprocedures_entries_filterentry"></a>
+
+The filter entry contains all information needed to use module filters in plentymarkets event procedures.
+
+
+#### Namespace
+
+`Plenty\Modules\EventProcedures\Services\Entries`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getModuleName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>setModuleName</strong>(<a target="_blank" href="http://php.net/string">string</a> $moduleName):<a href="eventprocedures#eventprocedures_entries_filterentry">FilterEntry</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$moduleName</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getEventType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>setEventType</strong>(<a target="_blank" href="http://php.net/string">string</a> $eventType):<a href="eventprocedures#eventprocedures_entries_filterentry">FilterEntry</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$eventType</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilterNames</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>setFilterNames</strong>(<a target="_blank" href="http://php.net/array">array</a> $filterNames):<a href="eventprocedures#eventprocedures_entries_filterentry">FilterEntry</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filterNames</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilterClass</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>setFilterClass</strong>(<a target="_blank" href="http://php.net/string">string</a> $filterClass):<a href="eventprocedures#eventprocedures_entries_filterentry">FilterEntry</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$filterClass</td>
         <td></td>
     </tr>
 </table>

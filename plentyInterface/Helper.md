@@ -109,43 +109,6 @@ Repository Contract for UrlBuilder
 </table>
 
 
-## Exceptions<a name="helper_helper_exceptions"></a>
-### EncryptionException<a name="helper_exceptions_encryptionexception"></a>
-
-Class EncryptionException
-
-
-#### Namespace
-
-`Plenty\Modules\Helper\Exceptions`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/string">string</a> $message, <a target="_blank" href="http://php.net/int">int</a> $code):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$message</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$code</td>
-        <td></td>
-    </tr>
-</table>
-
-
 ## Models<a name="helper_helper_models"></a>
 ### KeyValue<a name="helper_models_keyvalue"></a>
 
@@ -183,15 +146,15 @@ key value data
 </table>
 
 
-## Services<a name="helper_helper_services"></a>
-### ArrayHelper<a name="helper_services_arrayhelper"></a>
+## Exceptions<a name="helper_helper_exceptions"></a>
+### EncryptionException<a name="helper_exceptions_encryptionexception"></a>
 
-helper class for arrays
+Class EncryptionException
 
 
 #### Namespace
 
-`Plenty\Modules\Helper\Services`
+`Plenty\Modules\Helper\Exceptions`
 
 
 
@@ -199,7 +162,7 @@ helper class for arrays
 
 #### Methods
 
-<pre>public <strong>buildMapFromObjectList</strong>($list, <a target="_blank" href="http://php.net/string">string</a> $keyField, <a target="_blank" href="http://php.net/string">string</a> $valueField):<a href="helper#helper_models_keyvalue">KeyValue</a>
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/string">string</a> $message, <a target="_blank" href="http://php.net/int">int</a> $code):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -208,25 +171,19 @@ helper class for arrays
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$list</td>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$message</td>
         <td></td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$keyField</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$valueField</td>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$code</td>
         <td></td>
     </tr>
 </table>
 
 
-
+## Services<a name="helper_helper_services"></a>
 ### StringEncodingService<a name="helper_services_stringencodingservice"></a>
 
 Service for encoding strings
@@ -498,4 +455,208 @@ Webstore Helper Service
 
     
 
+    
+
+### ArrayHelper<a name="helper_services_arrayhelper"></a>
+
+helper class for arrays
+
+
+#### Namespace
+
+`Plenty\Modules\Helper\Services`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>buildMapFromObjectList</strong>($list, <a target="_blank" href="http://php.net/string">string</a> $keyField, <a target="_blank" href="http://php.net/string">string</a> $valueField):<a href="helper#helper_models_keyvalue">KeyValue</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$list</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$keyField</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$valueField</td>
+        <td></td>
+    </tr>
+</table>
+
+
+# AutomaticEmail<a name="helper_automaticemail"></a>
+    
+## Contracts<a name="helper_automaticemail_contracts"></a>
+### AutomaticEmailContract<a name="helper_contracts_automaticemailcontract"></a>
+
+This service provides a method to initiate the automatic email delivery.
+
+
+#### Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>sendAutomatic</strong>(<a href="helper#helper_models_automaticemail">AutomaticEmail</a>
+ $email):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Send the automatic email.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="helper#helper_models_automaticemail">AutomaticEmail</a>
+</td>
+        <td>$email</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Models<a name="helper_automaticemail_models"></a>
+### AutomaticEmail<a name="helper_models_automaticemail"></a>
+
+A container with all needed data to initiate the automatic email delivery.
+
+
+#### Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Models`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### AutomaticEmailContact<a name="helper_models_automaticemailcontact"></a>
+
+The automatic email data for contact type emails.
+
+
+#### Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Models`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### AutomaticEmailData<a name="helper_models_automaticemaildata"></a>
+
+The abstract base class for all automatic email data. Provides constants for the email type to be used.
+
+
+#### Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Models`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### AutomaticEmailNewsletter<a name="helper_models_automaticemailnewsletter"></a>
+
+The automatic email data for newsletter type emails.
+
+
+#### Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Models`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### AutomaticEmailTemplate<a name="helper_models_automaticemailtemplate"></a>
+
+Provides constants for the automatic email template names.
+
+
+#### Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Models`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### AutomaticEmailOrder<a name="helper_models_automaticemailorder"></a>
+
+The automatic email data for order type emails.
+
+
+#### Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Models`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
     

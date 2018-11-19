@@ -24,6 +24,12 @@ UserRepositoryContract
     
 
     
+<pre>public <strong>getCurrentUser</strong>():<a href="user#user_models_user">User</a>
+</pre>
+
+    
+
+    
 <pre>public <strong>getUserById</strong>(<a target="_blank" href="http://php.net/int">int</a> $userId):<a href="user#user_models_user">User</a>
 </pre>
 
@@ -40,6 +46,27 @@ UserRepositoryContract
 </table>
 
 
+<pre>public <strong>getAllPinUsers</strong>(<a target="_blank" href="http://php.net/string">string</a> $clientName = null, <a target="_blank" href="http://php.net/string">string</a> $clientSecret = null):<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
+</pre>
+
+    
+Get all users with a pin
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$clientName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$clientSecret</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>findByName</strong>(<a target="_blank" href="http://php.net/string">string</a> $name):<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </pre>
 
@@ -51,6 +78,26 @@ UserRepositoryContract
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$name</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setBackendPluginSet</strong>(<a target="_blank" href="http://php.net/int">int</a> $userId, <a target="_blank" href="http://php.net/int">int</a> $setId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Sets the selected PluginSet for a given user&#039;s backend
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$userId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$setId</td>
         <td></td>
     </tr>
 </table>
@@ -343,6 +390,10 @@ User
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>incomingItems</td>
             <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>backendPluginSetId</td>
+            <td>The ID of the user's selected backend set</td>
         </tr></tbody>
 </table>
 

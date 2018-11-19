@@ -40,59 +40,6 @@ The PickingOrderItemRepositoryContract
 </table>
 
 
-## Events<a name="fulfillment_picklist_events"></a>
-### GetPickingItemConfig<a name="fulfillment_events_getpickingitemconfig"></a>
-
-This event will be triggered, when an item is picked
-
-
-#### Namespace
-
-`Plenty\Modules\Fulfillment\Picklist\Events`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>getPickingOrderItemId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
-
-    
-
-    
-<pre>public <strong>getProcessUserId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
-
-    
-
-    
-<pre>public <strong>addPluginConfig</strong>(<a target="_blank" href="http://php.net/string">string</a> $identifier, $pluginConfig):<a href="fulfillment#fulfillment_picklist_events">Events</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$identifier</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$pluginConfig</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getPluginConfigs</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
 ## Models<a name="fulfillment_picklist_models"></a>
 ### PickingOrderItem<a name="fulfillment_models_pickingorderitem"></a>
 
@@ -175,4 +122,57 @@ PickingOrderItem
 
     
 Returns this model as an array.
+    
+## Events<a name="fulfillment_picklist_events"></a>
+### GetPickingItemConfig<a name="fulfillment_events_getpickingitemconfig"></a>
+
+This event will be triggered, when an item is picked
+
+
+#### Namespace
+
+`Plenty\Modules\Fulfillment\Picklist\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getPickingOrderItemId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getProcessUserId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>addPluginConfig</strong>(<a target="_blank" href="http://php.net/string">string</a> $identifier, $pluginConfig):<a href="fulfillment#fulfillment_picklist_events">Events</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$identifier</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$pluginConfig</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPluginConfigs</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
     

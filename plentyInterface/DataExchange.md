@@ -3,9 +3,9 @@
 # DataExchange<a name="dataexchange_dataexchange"></a>
     
 ## Contracts<a name="dataexchange_dataexchange_contracts"></a>
-### CSVGenerator<a name="dataexchange_contracts_csvgenerator"></a>
+### Filters<a name="dataexchange_contracts_filters"></a>
 
-generator for csv content
+Filters
 
 
 #### Namespace
@@ -18,40 +18,7 @@ generator for csv content
 
 #### Methods
 
-<pre>public <strong>setDelimiter</strong>(<a target="_blank" href="http://php.net/string">string</a> $delimiter):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$delimiter</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>setEnclosure</strong>(<a target="_blank" href="http://php.net/string">string</a> $enclosure):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$enclosure</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>addCSVContent</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
+<pre>public <strong>generateFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $formatSettings = []):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 
@@ -60,27 +27,27 @@ generator for csv content
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
+        <td>$formatSettings</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>addBulkCSVContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
 
-    
+### PluginGenerator<a name="dataexchange_contracts_plugingenerator"></a>
 
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-</table>
+PluginGenerator
 
+
+#### Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+#### Methods
 
 <pre>public <strong>addContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -98,7 +65,7 @@ generator for csv content
 </table>
 
 
-<pre>public <strong>generateContent</strong>($resultData, <a target="_blank" href="http://php.net/array">array</a> $formatSettings = []):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>generatePluginContent</strong>($resultData, <a target="_blank" href="http://php.net/array">array</a> $formatSettings = [], <a target="_blank" href="http://php.net/array">array</a> $filter = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -115,6 +82,11 @@ generator for csv content
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$formatSettings</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filter</td>
         <td></td>
     </tr>
 </table>
@@ -199,309 +171,6 @@ generator for csv content
     </tr>
 </table>
 
-
-<pre>public <strong>addContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$content</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>generatePluginContent</strong>($resultData, <a target="_blank" href="http://php.net/array">array</a> $formatSettings = [], <a target="_blank" href="http://php.net/array">array</a> $filter = []):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$resultData</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$formatSettings</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filter</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### ExportRepositoryContract<a name="dataexchange_contracts_exportrepositorycontract"></a>
-
-
-
-
-#### Namespace
-
-`Plenty\Modules\DataExchange\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="dataexchange#dataexchange_models_export">Export</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $exportId):<a href="dataexchange#dataexchange_models_export">Export</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$exportId</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $exportId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$exportId</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/array">array</a> $params = [], <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$params</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$with</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$columns</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $exportId, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="dataexchange#dataexchange_models_export">Export</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$exportId</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$with</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### Filters<a name="dataexchange_contracts_filters"></a>
-
-Filters
-
-
-#### Namespace
-
-`Plenty\Modules\DataExchange\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>generateFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $formatSettings = []):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$formatSettings</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### Generator<a name="dataexchange_contracts_generator"></a>
-
-Generator
-
-
-#### Namespace
-
-`Plenty\Modules\DataExchange\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>addContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$content</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>generateContent</strong>($resultData, <a target="_blank" href="http://php.net/array">array</a> $formatSettings = []):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$resultData</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$formatSettings</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### Output<a name="dataexchange_contracts_output"></a>
-
-Output
-
-
-#### Namespace
-
-`Plenty\Modules\DataExchange\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>out</strong>(<a target="_blank" href="http://php.net/string">string</a> $resource, <a target="_blank" href="http://php.net/array">array</a> $outputParams = [], <a href="dataexchange#dataexchange_models_export">Export</a>
- $export = null):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-process export output
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$resource</td>
-        <td>filename to ressource</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$outputParams</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a href="dataexchange#dataexchange_models_export">Export</a>
-</td>
-        <td>$export</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### PluginGenerator<a name="dataexchange_contracts_plugingenerator"></a>
-
-PluginGenerator
-
-
-#### Namespace
-
-`Plenty\Modules\DataExchange\Contracts`
-
-
-
-
-
-#### Methods
 
 <pre>public <strong>addContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
@@ -996,6 +665,337 @@ Create new text node.
 </table>
 
 
+
+### Output<a name="dataexchange_contracts_output"></a>
+
+Output
+
+
+#### Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>out</strong>(<a target="_blank" href="http://php.net/string">string</a> $resource, <a target="_blank" href="http://php.net/array">array</a> $outputParams = [], <a href="dataexchange#dataexchange_models_export">Export</a>
+ $export = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+process export output
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$resource</td>
+        <td>filename to ressource</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$outputParams</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="dataexchange#dataexchange_models_export">Export</a>
+</td>
+        <td>$export</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### Generator<a name="dataexchange_contracts_generator"></a>
+
+Generator
+
+
+#### Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>addContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$content</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>generateContent</strong>($resultData, <a target="_blank" href="http://php.net/array">array</a> $formatSettings = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$resultData</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$formatSettings</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### ExportRepositoryContract<a name="dataexchange_contracts_exportrepositorycontract"></a>
+
+
+
+
+#### Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="dataexchange#dataexchange_models_export">Export</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $exportId):<a href="dataexchange#dataexchange_models_export">Export</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$exportId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $exportId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$exportId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/array">array</a> $params = [], <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$params</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findById</strong>(<a target="_blank" href="http://php.net/int">int</a> $exportId, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="dataexchange#dataexchange_models_export">Export</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$exportId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### CSVGenerator<a name="dataexchange_contracts_csvgenerator"></a>
+
+generator for csv content
+
+
+#### Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>setDelimiter</strong>(<a target="_blank" href="http://php.net/string">string</a> $delimiter):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$delimiter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setEnclosure</strong>(<a target="_blank" href="http://php.net/string">string</a> $enclosure):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$enclosure</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addCSVContent</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addBulkCSVContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addContent</strong>(<a target="_blank" href="http://php.net/string">string</a> $content):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$content</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>generateContent</strong>($resultData, <a target="_blank" href="http://php.net/array">array</a> $formatSettings = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$resultData</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$formatSettings</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="dataexchange_dataexchange_models"></a>
 ### Export<a name="dataexchange_models_export"></a>
 
@@ -1079,64 +1079,6 @@ Export model
 Returns this model as an array.
     
 
-### Filter<a name="dataexchange_models_filter"></a>
-
-export filter
-
-
-#### Namespace
-
-`Plenty\Modules\DataExchange\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>filter id</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>createdAt</td>
-            <td>created at date timestamp</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>updatedAt</td>
-            <td>last update date timestamp</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>exportId</td>
-            <td>depending export id</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>key</td>
-            <td>filter key</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>value</td>
-            <td>filter value</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
 ### FormatSetting<a name="dataexchange_models_formatsetting"></a>
 
 format setting
@@ -1183,6 +1125,64 @@ format setting
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>value</td>
             <td>format setting value</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### Filter<a name="dataexchange_models_filter"></a>
+
+export filter
+
+
+#### Namespace
+
+`Plenty\Modules\DataExchange\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>filter id</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>created at date timestamp</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>last update date timestamp</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>exportId</td>
+            <td>depending export id</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>key</td>
+            <td>filter key</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td>filter value</td>
         </tr></tbody>
 </table>
 
@@ -1268,7 +1268,7 @@ Register export presets
 
 #### Methods
 
-<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $exportKey, <a target="_blank" href="http://php.net/string">string</a> $resultFieldsClass, <a target="_blank" href="http://php.net/string">string</a> $generatorClass, <a target="_blank" href="http://php.net/string">string</a> $filterClass = &quot;&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $isPlugin = false, <a target="_blank" href="http://php.net/bool">bool</a> $generatorExecute = false, <a target="_blank" href="http://php.net/string">string</a> $exportType = &quot;item&quot;):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>add</strong>(<a target="_blank" href="http://php.net/string">string</a> $exportKey, <a target="_blank" href="http://php.net/string">string</a> $resultFieldsClass, <a target="_blank" href="http://php.net/string">string</a> $generatorClass, <a target="_blank" href="http://php.net/string">string</a> $filterClass = &quot;&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $isPlugin = false, <a target="_blank" href="http://php.net/bool">bool</a> $generatorExecute = false, <a target="_blank" href="http://php.net/string">string</a> $exportType = &quot;item&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $restrictRows = true):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -1309,6 +1309,11 @@ Register export presets
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$exportType</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$restrictRows</td>
         <td></td>
     </tr>
 </table>
@@ -1443,6 +1448,34 @@ Repository Contract for ResourceParser
     
 
     
+## Models<a name="dataexchange_resource_models"></a>
+### ResourceBag<a name="dataexchange_models_resourcebag"></a>
+
+ResourceBag
+
+
+#### Namespace
+
+`Plenty\Modules\DataExchange\Resource\Models`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getResource</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getMd5</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 ## Factories<a name="dataexchange_resource_factories"></a>
 ### ResourceLoaderFactory<a name="dataexchange_factories_resourceloaderfactory"></a>
 
@@ -1543,31 +1576,3 @@ Repository Contract for ResourceParser
 </table>
 
 
-## Models<a name="dataexchange_resource_models"></a>
-### ResourceBag<a name="dataexchange_models_resourcebag"></a>
-
-ResourceBag
-
-
-#### Namespace
-
-`Plenty\Modules\DataExchange\Resource\Models`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>getResource</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>getMd5</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    

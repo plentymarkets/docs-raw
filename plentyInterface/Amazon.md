@@ -3,6 +3,70 @@
 # Amazon<a name="amazon_amazon"></a>
     
 ## Contracts<a name="amazon_amazon_contracts"></a>
+### AmazonClientFactory<a name="amazon_contracts_amazonclientfactory"></a>
+
+
+
+
+#### Namespace
+
+`Plenty\Modules\Amazon\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getClient</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountId, <a target="_blank" href="http://php.net/string">string</a> $endpointPath):<a href="amazon#amazon_contracts_amazonclient">AmazonClient</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$accountId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$endpointPath</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### AmazonClientResponse<a name="amazon_contracts_amazonclientresponse"></a>
+
+
+
+
+#### Namespace
+
+`Plenty\Modules\Amazon\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getResponseContent</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getResponseMetaData</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+
 ### AmazonClient<a name="amazon_contracts_amazonclient"></a>
 
 The amazon client
@@ -36,43 +100,6 @@ The amazon client
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$serviceVersion</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### AmazonClientFactory<a name="amazon_contracts_amazonclientfactory"></a>
-
-
-
-
-#### Namespace
-
-`Plenty\Modules\Amazon\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>getClient</strong>(<a target="_blank" href="http://php.net/int">int</a> $accountId, <a target="_blank" href="http://php.net/string">string</a> $endpointPath):<a href="amazon#amazon_contracts_amazonclient">AmazonClient</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$accountId</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$endpointPath</td>
         <td></td>
     </tr>
 </table>
@@ -115,7 +142,7 @@ The amazon client
 
     
 
-### AmazonClientResponse<a name="amazon_contracts_amazonclientresponse"></a>
+### AmazonClientRequestPayload<a name="amazon_contracts_amazonclientrequestpayload"></a>
 
 
 
@@ -130,12 +157,8 @@ The amazon client
 
 #### Methods
 
-<pre>public <strong>getResponseContent</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
-<pre>public <strong>getResponseMetaData</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPayload</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 

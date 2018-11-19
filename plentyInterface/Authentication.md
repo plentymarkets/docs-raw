@@ -81,52 +81,28 @@ The ContactAuthenticationRepositoryContract is the interface for the authenticat
 </table>
 
 
+<pre>public <strong>authenticateWithToken</strong>(<a target="_blank" href="http://php.net/string">string</a> $token):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$token</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>logout</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
 
     
-## Events<a name="authentication_authentication_events"></a>
-### AfterAccountAuthentication<a name="authentication_events_afteraccountauthentication"></a>
-
-The event is triggered after a user is authenticated in the client (store).
-
-
-#### Namespace
-
-`Plenty\Modules\Authentication\Events`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>isSuccessful</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
-
-    
-
-    
-<pre>public <strong>getAccountContact</strong>():<a href="account#account_models_contact">Contact</a>
-</pre>
-
-    
-
-    
-
-### AfterAccountContactLogout<a name="authentication_events_afteraccountcontactlogout"></a>
-
-The event is triggered after a user is logged out from the client (store).
-
-
-#### Namespace
-
-`Plenty\Modules\Authentication\Events`
-
-
-
-
 ## Models<a name="authentication_authentication_models"></a>
 ### User<a name="authentication_models_user"></a>
 
@@ -169,6 +145,10 @@ The user authentication model
             <td>timezone</td>
             <td></td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>ticket</td>
+            <td></td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>password</td>
             <td>The password of the user</td>
@@ -191,4 +171,44 @@ The user authentication model
 
     
 Returns this model as an array.
+    
+## Events<a name="authentication_authentication_events"></a>
+### AfterAccountContactLogout<a name="authentication_events_afteraccountcontactlogout"></a>
+
+The event is triggered after a user is logged out from the client (store).
+
+
+#### Namespace
+
+`Plenty\Modules\Authentication\Events`
+
+
+
+
+
+### AfterAccountAuthentication<a name="authentication_events_afteraccountauthentication"></a>
+
+The event is triggered after a user is authenticated in the client (store).
+
+
+#### Namespace
+
+`Plenty\Modules\Authentication\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>isSuccessful</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>getAccountContact</strong>():<a href="account#account_models_contact">Contact</a>
+</pre>
+
+    
+
     

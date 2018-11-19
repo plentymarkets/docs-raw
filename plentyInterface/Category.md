@@ -3,157 +3,6 @@
 # Category<a name="category_category"></a>
     
 ## Contracts<a name="category_category_contracts"></a>
-### CategoryBranchMarketplaceRepositoryContract<a name="category_contracts_categorybranchmarketplacerepositorycontract"></a>
-
-Repository for CategoryBranchMarketplace
-
-
-#### Namespace
-
-`Plenty\Modules\Category\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>findCategoryBranchMarketplace</strong>(<a target="_blank" href="http://php.net/int">int</a> $branchId, <a target="_blank" href="http://php.net/int">int</a> $webstoreId, <a target="_blank" href="http://php.net/int">int</a> $marketplaceId, <a target="_blank" href="http://php.net/float">float</a> $marketplaceSubId = 0.0):<a href="category#category_models_categorybranchmarketplace">CategoryBranchMarketplace</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$branchId</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$webstoreId</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$marketplaceId</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/float">float</a></td>
-        <td>$marketplaceSubId</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### CategoryBranchRepositoryContract<a name="category_contracts_categorybranchrepositorycontract"></a>
-
-Repository Contract for CategoryBranch
-
-
-#### Namespace
-
-`Plenty\Modules\Category\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="category#category_models_categorybranch">CategoryBranch</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$id</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous_contracts_paginationresponsecontract">PaginationResponseContract</a>
-</pre>
-
-    
-Get category trees
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$page</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemsPerPage</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filters</td>
-        <td>Filters restrict the list of results. Results can be filtered by the following parameters: 'type' - the category type. Available values: item, container, content, blog</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Resets all Criteria filters by creating a new instance of the builder object.
-    
-<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Applies criteria classes to the current repository.
-    
-<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Sets the filter array.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filters</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Returns the filter array.
-    
-<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Returns a collection of parsed filters as Condition object
-    
-<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Clears the filter array.
-    
-
 ### CategoryRepositoryContract<a name="category_contracts_categoryrepositorycontract"></a>
 
 Repository for categories
@@ -190,7 +39,7 @@ Returns one category by id.
 </table>
 
 
-<pre>public <strong>getLinklistTree</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/int">int</a> $clientId = null, <a target="_blank" href="http://php.net/int">int</a> $maxLevel = 6):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getLinklistTree</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/int">int</a> $clientId = null, <a target="_blank" href="http://php.net/int">int</a> $maxLevel = 6, <a target="_blank" href="http://php.net/int">int</a> $customerClassId):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 Returns all linklist categories as tree.
@@ -217,10 +66,15 @@ Returns all linklist categories as tree.
         <td>$maxLevel</td>
         <td>The deepest category level to load</td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$customerClassId</td>
+        <td>The customer class id</td>
+    </tr>
 </table>
 
 
-<pre>public <strong>buildCache</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/int">int</a> $clientId):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>buildCache</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/int">int</a> $clientId, <a target="_blank" href="http://php.net/int">int</a> $customerClassId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -242,6 +96,11 @@ Rebuild the category tree cache
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$clientId</td>
         <td>The unique ID of the client (store)</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$customerClassId</td>
+        <td>The customer class id</td>
     </tr>
 </table>
 
@@ -532,6 +391,356 @@ Returns a collection of parsed filters as Condition object
     
 Clears the filter array.
     
+
+### CategoryTemplateRepositoryContract<a name="category_contracts_categorytemplaterepositorycontract"></a>
+
+Repository for category templates
+
+
+#### Namespace
+
+`Plenty\Modules\Category\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/array">array</a> $params):<a href="category#category_models_categorytemplate">CategoryTemplate</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$params</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>put</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="category#category_models_categorytemplate">CategoryTemplate</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="category#category_models_categorytemplate">CategoryTemplate</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### CategoryPropertyRepositoryContract<a name="category_contracts_categorypropertyrepositorycontract"></a>
+
+Repository Contract for CategoryProperty
+
+
+#### Namespace
+
+`Plenty\Modules\Category\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="category#category_models_categoryproperty">CategoryProperty</a>
+</pre>
+
+    
+Link a category to an Elmar category
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/float">float</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="category#category_models_categoryproperty">CategoryProperty</a>
+</pre>
+
+    
+Update a link between a category and an Elmar category
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$categoryId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$marketId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/float">float</a> $marketId, <a target="_blank" href="http://php.net/int">int</a> $plentyId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Delete the link between a category and an Elmar category
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$categoryId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$marketId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
+
+### CategoryBranchMarketplaceRepositoryContract<a name="category_contracts_categorybranchmarketplacerepositorycontract"></a>
+
+Repository for CategoryBranchMarketplace
+
+
+#### Namespace
+
+`Plenty\Modules\Category\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>findCategoryBranchMarketplace</strong>(<a target="_blank" href="http://php.net/int">int</a> $branchId, <a target="_blank" href="http://php.net/int">int</a> $webstoreId, <a target="_blank" href="http://php.net/int">int</a> $marketplaceId, <a target="_blank" href="http://php.net/float">float</a> $marketplaceSubId = 0.0):<a href="category#category_models_categorybranchmarketplace">CategoryBranchMarketplace</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$branchId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$webstoreId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$marketplaceId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$marketplaceSubId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### CategoryBranchRepositoryContract<a name="category_contracts_categorybranchrepositorycontract"></a>
+
+Repository Contract for CategoryBranch
+
+
+#### Namespace
+
+`Plenty\Modules\Category\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="category#category_models_categorybranch">CategoryBranch</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous_contracts_paginationresponsecontract">PaginationResponseContract</a>
+</pre>
+
+    
+Get category trees
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>Filters restrict the list of results. Results can be filtered by the following parameters: 'type' - the category type. Available values: item, container, content, blog</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 ## Models<a name="category_category_models"></a>
 ### Category<a name="category_models_category"></a>
 
@@ -586,6 +795,10 @@ visitors of the online store that have logged in only. Visitors that are not log
             <td>sitemap</td>
             <td>Flag that indicates if the category will be included in the sitemap.</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The updated at timestamp of the category.</td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>clients</td>
             <td>Collection of the clients (stores) that belong to this category</td>
@@ -593,177 +806,10 @@ visitors of the online store that have logged in only. Visitors that are not log
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>details</td>
             <td>Collection of the category details that belong to this category</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### CategoryBranch<a name="category_models_categorybranch"></a>
-
-Category Branch
-
-
-#### Namespace
-
-`Plenty\Modules\Category\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>categoryId</td>
-            <td>The ID of the category</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>category1Id</td>
-            <td>The ID of the category tree's 1st level. If 1st value is identical to category ID, category is of this level.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>category2Id</td>
-            <td>The ID of the category tree's 2nd level. If 2nd level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>category3Id</td>
-            <td>The ID of the category tree's 3rd level. If 3rd level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>category4Id</td>
-            <td>The ID of the category tree's 4th level. If 4th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>category5Id</td>
-            <td>The ID of the category tree's 5th level. If 5th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>category6Id</td>
-            <td>The ID of the category tree's 6th level. If 6th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### CategoryBranchMarketplace<a name="category_models_categorybranchmarketplace"></a>
-
-The CategoryBranchMarketplace model
-
-
-#### Namespace
-
-`Plenty\Modules\Category\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>plenty_category_branch_marketplace_branch_id</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>plenty_category_branch_marketplace_webstore_id</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>plenty_category_branch_marketplace_marketplace_id</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/float">float</a></td>
-            <td>plenty_category_branch_marketplace_marketplace_sub_id</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>plenty_category_branch_marketplace_delimiter</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>plenty_category_branch_marketplace_value1</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>plenty_category_branch_marketplace_value2</td>
-            <td></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>plenty_category_branch_marketplace_last_update</td>
-            <td></td>
-        </tr><tr>
-            <td><a href="category#category_models_categorybranch">CategoryBranch</a>
-</td>
-            <td>branch</td>
-            <td></td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### CategoryClient<a name="category_models_categoryclient"></a>
-
-The Category Client
-
-
-#### Namespace
-
-`Plenty\Modules\Category\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>plentyId</td>
-            <td>The unique plenty ID of the client (store) in which the category is visible. Several IDs can be separated by commas. If a subcategory is linked to a client, its parent categories will be linked to this client as well.</td>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>elmarCategories</td>
+            <td>The linked elmar</td>
         </tr></tbody>
 </table>
 
@@ -958,6 +1004,147 @@ CategoryItemCount
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>updatedAt</td>
             <td>The date that the category item count was updated last.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>variationCount</td>
+            <td>The count of variations</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>customerClassId</td>
+            <td>The ID of the customer class</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### CategoryBranchMarketplace<a name="category_models_categorybranchmarketplace"></a>
+
+The CategoryBranchMarketplace model
+
+
+#### Namespace
+
+`Plenty\Modules\Category\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>plenty_category_branch_marketplace_branch_id</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>plenty_category_branch_marketplace_webstore_id</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>plenty_category_branch_marketplace_marketplace_id</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>plenty_category_branch_marketplace_marketplace_sub_id</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>plenty_category_branch_marketplace_delimiter</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>plenty_category_branch_marketplace_value1</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>plenty_category_branch_marketplace_value2</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>plenty_category_branch_marketplace_last_update</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="category#category_models_categorybranch">CategoryBranch</a>
+</td>
+            <td>branch</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### CategoryBranch<a name="category_models_categorybranch"></a>
+
+Category Branch
+
+
+#### Namespace
+
+`Plenty\Modules\Category\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>categoryId</td>
+            <td>The ID of the category</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>category1Id</td>
+            <td>The ID of the category tree's 1st level. If 1st value is identical to category ID, category is of this level.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>category2Id</td>
+            <td>The ID of the category tree's 2nd level. If 2nd level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>category3Id</td>
+            <td>The ID of the category tree's 3rd level. If 3rd level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>category4Id</td>
+            <td>The ID of the category tree's 4th level. If 4th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>category5Id</td>
+            <td>The ID of the category tree's 5th level. If 5th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>category6Id</td>
+            <td>The ID of the category tree's 6th level. If 6th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.</td>
         </tr></tbody>
 </table>
 
@@ -1008,6 +1195,94 @@ Category Template
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>content</td>
             <td>The content of the template</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### CategoryProperty<a name="category_models_categoryproperty"></a>
+
+The Category Property
+
+
+#### Namespace
+
+`Plenty\Modules\Category\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>categoryId</td>
+            <td>The unique ID of the category</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>marketId</td>
+            <td>The unique ID of the referrer</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>plentyId</td>
+            <td>The unique plenty ID of the client (store)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td>The category of the referrer</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### CategoryClient<a name="category_models_categoryclient"></a>
+
+The Category Client
+
+
+#### Namespace
+
+`Plenty\Modules\Category\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>plentyId</td>
+            <td>The unique plenty ID of the client (store) in which the category is visible. Several IDs can be separated by commas. If a subcategory is linked to a client, its parent categories will be linked to this client as well.</td>
         </tr></tbody>
 </table>
 

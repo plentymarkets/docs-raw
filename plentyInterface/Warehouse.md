@@ -3,9 +3,9 @@
 # Warehouse<a name="warehouse_warehouse"></a>
     
 ## Contracts<a name="warehouse_warehouse_contracts"></a>
-### WarehouseLocationDimensionRepositoryContract<a name="warehouse_contracts_warehouselocationdimensionrepositorycontract"></a>
+### WarehouseLocationRepositoryContract<a name="warehouse_contracts_warehouselocationrepositorycontract"></a>
 
-Get, create, update and delete warehouse location dimensions
+Get, create, update and delete warehouse locations
 
 
 #### Namespace
@@ -18,32 +18,163 @@ Get, create, update and delete warehouse location dimensions
 
 #### Methods
 
-<pre>public <strong>getWarehouseLocationDimension</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseLocationDimension, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="warehouse#warehouse_models_warehouselocationdimension">WarehouseLocationDimension</a>
+<pre>public <strong>getWarehouseLocation</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseLocation):<a href="warehouse#warehouse_models_warehouselocation">WarehouseLocation</a>
 </pre>
 
     
-Get a warehouse location dimension
+Get a warehouse location
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$warehouseLocationDimension</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$with</td>
+        <td>$warehouseLocation</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>listWarehouseLocationDimension</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId):<a href="warehouse#warehouse_models_warehouselocationdimension">WarehouseLocationDimension</a>
+<pre>public <strong>listWarehouseLocations</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $paginate = 1, <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/int">int</a> $warehouseId = null):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
 
     
-Get all warehouse location dimensions
+Get all warehouse locations
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$paginate</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getWarehouseLocationByLabel</strong>(<a target="_blank" href="http://php.net/string">string</a> $label):<a href="warehouse#warehouse_models_warehouselocation">WarehouseLocation</a>
+</pre>
+
+    
+Get first warehouse location matching the given label
+Gets the first warehouse location matching the given label. The label must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$label</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createWarehouseLocation</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="warehouse#warehouse_models_warehouselocation">WarehouseLocation</a>
+</pre>
+
+    
+Create a warehouse location
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateWarehouseLocation</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseLocation, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="warehouse#warehouse_models_warehouselocation">WarehouseLocation</a>
+</pre>
+
+    
+Update a warehouse location
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseLocation</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteWarehouseLocation</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseLocation):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Delete a warehouse location
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseLocation</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteMultipleWarehouseLocations</strong>(<a target="_blank" href="http://php.net/array">array</a> $warehouseLocationIds):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Delete multiple warehouse locations
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$warehouseLocationIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>executeGroupFunction</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Edit the purpose and status for a group of storage locations
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>generateWarehouseLocationLabel</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $warehouseLocationIds):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Generate warehouse location labels
     
 ##### <strong>Parameters</strong>
     
@@ -52,73 +183,26 @@ Get all warehouse location dimensions
         <td>$warehouseId</td>
         <td></td>
     </tr>
-</table>
-
-
-<pre>public <strong>createMultipleWarehouseLocationDimension</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Create multiple warehouse location dimensions
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td>The request data</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>createWarehouseLocationDimension</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="warehouse#warehouse_models_warehouselocationdimension">WarehouseLocationDimension</a>
-</pre>
-
-    
-Create a warehouse location dimension
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td>The request data</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>updateWarehouseLocationDimension</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseLocationDimension, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="warehouse#warehouse_models_warehouselocationdimension">WarehouseLocationDimension</a>
-</pre>
-
-    
-Update a warehouse location dimension
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$warehouseLocationDimension</td>
-        <td></td>
-    </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
+        <td>$warehouseLocationIds</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>deleteWarehouseLocationDimension</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseLocationDimension):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>moveWarehouseLocationPosition</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
-Delete a warehouse location dimension
+Move a warehouse location position
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$warehouseLocationDimension</td>
-        <td></td>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
     </tr>
 </table>
 
@@ -321,6 +405,38 @@ Delete a warehouse location level
 </table>
 
 
+<pre>public <strong>getWarehouseStructure</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get a warehouse structure.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>moveWarehouseLocationLevelPosition</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Move a warehouse location level position
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -368,9 +484,9 @@ Returns a collection of parsed filters as Condition object
 Clears the filter array.
     
 
-### WarehouseLocationRepositoryContract<a name="warehouse_contracts_warehouselocationrepositorycontract"></a>
+### WarehouseLocationDimensionRepositoryContract<a name="warehouse_contracts_warehouselocationdimensionrepositorycontract"></a>
 
-Get, create, update and delete warehouse locations
+Get, create, update and delete warehouse location dimensions
 
 
 #### Namespace
@@ -383,51 +499,36 @@ Get, create, update and delete warehouse locations
 
 #### Methods
 
-<pre>public <strong>getWarehouseLocation</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseLocation):<a href="warehouse#warehouse_models_warehouselocation">WarehouseLocation</a>
+<pre>public <strong>getWarehouseLocationDimension</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseLocationDimension, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="warehouse#warehouse_models_warehouselocationdimension">WarehouseLocationDimension</a>
 </pre>
 
     
-Get a warehouse location
+Get a warehouse location dimension
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$warehouseLocation</td>
+        <td>$warehouseLocationDimension</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
         <td></td>
     </tr>
 </table>
 
 
-<pre>public <strong>listWarehouseLocations</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $paginate = 1, <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/int">int</a> $warehouseId = null):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+<pre>public <strong>listWarehouseLocationDimension</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId):<a href="warehouse#warehouse_models_warehouselocationdimension">WarehouseLocationDimension</a>
 </pre>
 
     
-Get all warehouse locations
+Get all warehouse location dimensions
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$page</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$itemsPerPage</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$paginate</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$filters</td>
-        <td></td>
-    </tr>
-    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$warehouseId</td>
         <td></td>
@@ -435,28 +536,10 @@ Get all warehouse locations
 </table>
 
 
-<pre>public <strong>getWarehouseLocationByLabel</strong>(<a target="_blank" href="http://php.net/string">string</a> $label):<a href="warehouse#warehouse_models_warehouselocation">WarehouseLocation</a>
-</pre>
+<pre>public <strong>createMultipleWarehouseLocationDimension</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
-Get first warehouse location matching the given label
-Gets the first warehouse location matching the given label. The label must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$label</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>createWarehouseLocation</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="warehouse#warehouse_models_warehouselocation">WarehouseLocation</a>
-</pre>
-
-    
-Create a warehouse location
+Create multiple warehouse location dimensions
     
 ##### <strong>Parameters</strong>
     
@@ -468,17 +551,33 @@ Create a warehouse location
 </table>
 
 
-<pre>public <strong>updateWarehouseLocation</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseLocation, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="warehouse#warehouse_models_warehouselocation">WarehouseLocation</a>
+<pre>public <strong>createWarehouseLocationDimension</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="warehouse#warehouse_models_warehouselocationdimension">WarehouseLocationDimension</a>
 </pre>
 
     
-Update a warehouse location
+Create a warehouse location dimension
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateWarehouseLocationDimension</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseLocationDimension, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="warehouse#warehouse_models_warehouselocationdimension">WarehouseLocationDimension</a>
+</pre>
+
+    
+Update a warehouse location dimension
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$warehouseLocation</td>
+        <td>$warehouseLocationDimension</td>
         <td></td>
     </tr>
     <tr>
@@ -489,68 +588,17 @@ Update a warehouse location
 </table>
 
 
-<pre>public <strong>deleteWarehouseLocation</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseLocation):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>deleteWarehouseLocationDimension</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseLocationDimension):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
-Delete a warehouse location
+Delete a warehouse location dimension
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$warehouseLocation</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>deleteMultipleWarehouseLocations</strong>(<a target="_blank" href="http://php.net/array">array</a> $warehouseLocationIds):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Delete multiple warehouse locations
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$warehouseLocationIds</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>executeGroupFunction</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Edit the purpose and status for a group of storage locations
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>generateWarehouseLocationLabel</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $warehouseLocationIds):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Generate warehouse location labels
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$warehouseId</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$warehouseLocationIds</td>
+        <td>$warehouseLocationDimension</td>
         <td></td>
     </tr>
 </table>
@@ -603,87 +651,6 @@ Returns a collection of parsed filters as Condition object
 Clears the filter array.
     
 ## Models<a name="warehouse_warehouse_models"></a>
-### WarehouseLocation<a name="warehouse_models_warehouselocation"></a>
-
-The warehouse location model.
-
-
-#### Namespace
-
-`Plenty\Modules\Warehouse\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the warehouse location</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>levelId</td>
-            <td>The level ID of the warehouse location</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>label</td>
-            <td>The label of the warehouse location</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>purposeKey</td>
-            <td>The purpose key of the warehouse location</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>statusKey</td>
-            <td>The status key of the warehouse location</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>position</td>
-            <td>The position of the warehouse location</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>fullLabel</td>
-            <td>The label with level path name</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>type</td>
-            <td>The type of the warehouse location (array values: 'small','medium','large','europallet')</td>
-        </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-            <td>createdAt</td>
-            <td>The date when the warehouse location was created</td>
-        </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-            <td>updatedAt</td>
-            <td>The date when the warehouse location was last updated</td>
-        </tr><tr>
-            <td><a href="warehouse#warehouse_models_warehouselocationlevel">WarehouseLocationLevel</a>
-</td>
-            <td>warehouseLocationLevel</td>
-            <td>The level from warehouse location.</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
 ### WarehouseLocationDimension<a name="warehouse_models_warehouselocationdimension"></a>
 
 The warehouse location dimension model.
@@ -846,6 +813,91 @@ The warehouse location level model.
 </td>
             <td>warehouseLocationDimension</td>
             <td>The linked warehouse location dimension</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### WarehouseLocation<a name="warehouse_models_warehouselocation"></a>
+
+The warehouse location model.
+
+
+#### Namespace
+
+`Plenty\Modules\Warehouse\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the warehouse location</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>levelId</td>
+            <td>The level ID of the warehouse location</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>label</td>
+            <td>The label of the warehouse location</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>purposeKey</td>
+            <td>The purpose key of the warehouse location</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>statusKey</td>
+            <td>The status key of the warehouse location</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>position</td>
+            <td>The position of the warehouse location</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>fullLabel</td>
+            <td>The label with level path name</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>type</td>
+            <td>The type of the warehouse location (array values: 'small','medium','large','europallet')</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>notes</td>
+            <td>The notes of the warehouse location</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The date when the warehouse location was created</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The date when the warehouse location was last updated</td>
+        </tr><tr>
+            <td><a href="warehouse#warehouse_models_warehouselocationlevel">WarehouseLocationLevel</a>
+</td>
+            <td>warehouseLocationLevel</td>
+            <td>The level from warehouse location.</td>
         </tr></tbody>
 </table>
 

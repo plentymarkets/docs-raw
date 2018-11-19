@@ -34,6 +34,13 @@ Get an accounting location. The ID of the location must be specified.
 </table>
 
 
+<pre>public <strong>getAll</strong>():<a href="accounting#accounting_models_accountinglocation">AccountingLocation</a>
+</pre>
+
+    
+List all accounting locations
+*
+    
 <pre>public <strong>listByPlentyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -102,10 +109,26 @@ Delete an accounting location. The ID of the location must be specified.
 </table>
 
 
+<pre>public <strong>getSettings</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="accounting#accounting_models_accountinglocationsettings">AccountingLocationSettings</a>
+</pre>
 
-### AccountingServiceContract<a name="accounting_contracts_accountingservicecontract"></a>
+    
+Get accounting location settings. The ID of the location must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
 
-Provides methods to detect a location ID.
+
+
+### PostingKeyRepositoryContract<a name="accounting_contracts_postingkeyrepositorycontract"></a>
+
+The PostingKeyRepositoryContract is the interface for the PostingKeyRepository. This interface provides the functionality to find the posting keys for an accounting location.
 
 
 #### Namespace
@@ -118,82 +141,18 @@ Provides methods to detect a location ID.
 
 #### Methods
 
-<pre>public <strong>detectLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/int">int</a></pre>
+<pre>public <strong>findByLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId):<a href="accounting#accounting_models_postingkeyconfiguration">PostingKeyConfiguration</a>
+</pre>
 
     
-Get a location ID for a country of delivery. The plenty ID must be specified and the ID of the country of delivery can be specified. If the ID of a country is not specified, the ID of the standard location of the specified client will be returned.
+Get the posting key configuration of an accounting location. The ID of the accounting location must be specified.
     
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$plentyId</td>
-        <td>The plenty ID of the client (store). The default client will be used if the plenty ID is not specified.</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$countryId</td>
-        <td>The ID of the country of delivery. The standard location of the specified client will be returned, if no ID of a country of delivery is specified.</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>detectLocationIdByClientId</strong>(<a target="_blank" href="http://php.net/int">int</a> $clientId = null, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/int">int</a></pre>
-
-    
-Get the location ID for a country of delivery. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, the ID of the standard location of the default client will be returned.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$clientId</td>
-        <td>The ID of the client. The default client (ID 0) will be used if the ID of client is not specified.</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$countryId</td>
-        <td>The ID of the country of delivery. The standard location of the specified client will be returned, if no ID of a country of delivery is specified.</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getAccountingLocations</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-List accounting locations. The plenty ID must be specified and the ID of a country of delivery can be specified. If the ID of the country is specified, only one accounting location will be returned. If the ID of the country is not specified, all accounting locations of the client will be returned.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$plentyId</td>
-        <td>The plenty ID of the client (store).</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$countryId</td>
-        <td>The ID of the country of delivery.</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getAccountingLocationsByClient</strong>(<a target="_blank" href="http://php.net/int">int</a> $clientId = null, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-List accounting locations. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, all accounting locations of the default client will be returned.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$clientId</td>
-        <td>The ID of the client. The default client (ID 0) will be used if the ID of client is not specified.</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$countryId</td>
-        <td>The ID of the country of delivery.</td>
+        <td>$locationId</td>
+        <td>The ID of the accounting location</td>
     </tr>
 </table>
 
@@ -419,38 +378,6 @@ Get the country of a location. The ID of the location must be specified.
 
 
 
-### PostingKeyRepositoryContract<a name="accounting_contracts_postingkeyrepositorycontract"></a>
-
-The PostingKeyRepositoryContract is the interface for the PostingKeyRepository. This interface provides the functionality to find the posting keys for an accounting location.
-
-
-#### Namespace
-
-`Plenty\Modules\Accounting\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>findByLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $locationId):<a href="accounting#accounting_models_postingkeyconfiguration">PostingKeyConfiguration</a>
-</pre>
-
-    
-Get the posting key configuration of an accounting location. The ID of the accounting location must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$locationId</td>
-        <td>The ID of the accounting location</td>
-    </tr>
-</table>
-
-
-
 ### RevenueAccountRepositoryContract<a name="accounting_contracts_revenueaccountrepositorycontract"></a>
 
 The RevenueAccountRepositoryContract is the interface for the RevenueAccountRepository. This interface allows you to either list revenue accounts by locationId, find by locationId and countryId or to least all for an accounting location.
@@ -524,20 +451,304 @@ Get the revenue account configuration of a country. The country account configur
 </table>
 
 
-## Exceptions<a name="accounting_accounting_exceptions"></a>
-### AccountingException<a name="accounting_exceptions_accountingexception"></a>
 
-Class AccountingException
+### AccountingServiceContract<a name="accounting_contracts_accountingservicecontract"></a>
+
+Provides methods to detect a location ID.
 
 
 #### Namespace
 
-`Plenty\Modules\Accounting\Exceptions`
+`Plenty\Modules\Accounting\Contracts`
 
 
+
+
+
+#### Methods
+
+<pre>public <strong>detectLocationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Get a location ID for a country of delivery. The plenty ID must be specified and the ID of the country of delivery can be specified. If the ID of a country is not specified, the ID of the standard location of the specified client will be returned.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td>The plenty ID of the client (store). The default client will be used if the plenty ID is not specified.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td>The ID of the country of delivery. The standard location of the specified client will be returned, if no ID of a country of delivery is specified.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>detectLocationIdByClientId</strong>(<a target="_blank" href="http://php.net/int">int</a> $clientId = null, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Get the location ID for a country of delivery. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, the ID of the standard location of the default client will be returned.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$clientId</td>
+        <td>The ID of the client. The default client (ID 0) will be used if the ID of client is not specified.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td>The ID of the country of delivery. The standard location of the specified client will be returned, if no ID of a country of delivery is specified.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getAccountingLocations</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+List accounting locations. The plenty ID must be specified and the ID of a country of delivery can be specified. If the ID of the country is specified, only one accounting location will be returned. If the ID of the country is not specified, all accounting locations of the client will be returned.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td>The plenty ID of the client (store).</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td>The ID of the country of delivery.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getAccountingLocationsByClient</strong>(<a target="_blank" href="http://php.net/int">int</a> $clientId = null, <a target="_blank" href="http://php.net/int">int</a> $countryId = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+List accounting locations. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, all accounting locations of the default client will be returned.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$clientId</td>
+        <td>The ID of the client. The default client (ID 0) will be used if the ID of client is not specified.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$countryId</td>
+        <td>The ID of the country of delivery.</td>
+    </tr>
+</table>
 
 
 ## Models<a name="accounting_accounting_models"></a>
+### PostingKey<a name="accounting_models_postingkey"></a>
+
+The Posting Key Model. A posting key is always associated with an accounting location and holds an posting key for each configured vat rate.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The Id posting key in relation to the vatrate.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td>The actual posting key for the vat rate.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### RevenueAccount<a name="accounting_models_revenueaccount"></a>
+
+The revenue account model provides information on a single revenue account. The ID of an account matches the ID of a VAT rate.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the account. The account IDs are always 0,1,2 or 3. This way the IDs indicate the VAT rate that the account is used for. The revenues that were made with items that have the VAT rate with the ID 0 are assigned to the account with the ID 0.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>account</td>
+            <td>The actual account number that was entered in the entry field.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### RevenueAccountLocationConfiguration<a name="accounting_models_revenueaccountlocationconfiguration"></a>
+
+The revenue account location configuration model. A revenue account location configuration is the set of all revenue accounts that belong to one accounting location.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the revenue account configuration</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>locationId</td>
+            <td>The ID of the accounting location that the configuration belongs to</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>accountEu</td>
+            <td>The account used for revenues that are exempt from VAT and that were sold within the European Union</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>accountExport</td>
+            <td>The account used for revenues that are exempt from VAT and that were sold to outside the European Union</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>revenueAccountCountryConfigurations</td>
+            <td>The set of revenue accounts of one country</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### AccountingLocationSettings<a name="accounting_models_accountinglocationsettings"></a>
+
+The accounting location settings model.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>locationId</td>
+            <td>The ID of the accounting location</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isInvoiceEUNet</td>
+            <td>Is the invoice net for EU?</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isInvoiceExportNet</td>
+            <td>Is the invoice net for export?</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>showShippingVat</td>
+            <td>Show the vat for shipping costs on the invoice?</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isSmallBusiness</td>
+            <td>Is it a small business?</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>numberOfDecimalPlaces</td>
+            <td>The number of decimal places for prices</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>roundTotalsOnly</td>
+            <td>Do only round totals?</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
 ### AccountingLocation<a name="accounting_models_accountinglocation"></a>
 
 The accounting location model. An accounting location always has a country and belongs to a client. An accounting location contains the VAT configurations. The VAT model contains the VAT configuration.
@@ -606,9 +817,9 @@ The accounting location model. An accounting location always has a country and b
 Returns this model as an array.
     
 
-### DebtorAccount<a name="accounting_models_debtoraccount"></a>
+### PostingKeyConfiguration<a name="accounting_models_postingkeyconfiguration"></a>
 
-The DebtorAccountValue Model which contains the actual configured debtor accounts by character, payment and country.
+The posting key configuration model. A posting key configuration is a set of 4 posting keys. A posting key configuration is always associated with an accounting location and can have a posting key per VAT rate. A posting key defines how line items are booked to accounts.
 
 
 #### Namespace
@@ -630,37 +841,18 @@ The DebtorAccountValue Model which contains the actual configured debtor account
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>accountId</td>
-            <td>The ID of the debtor account configuration that the debtor account belongs to</td>
+            <td>locationId</td>
+            <td>The ID of the accounting location that the configuration belongs to</td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>mode</td>
-            <td>The mode describes the criteria based on which pending amounts are assigned to a debtor account. The following modes are available:
-<ul>
-<li>character        = The debtor accounts are selected based on the first character of customer information. The information and the order of the information that will be used are defined with the sequence. There are 3 different sequences available.</li>
-<li>payment          = The debtor accounts are selected based on the payment method.</li>
-<li>country          = The debtor accounts are selected based on the country of delivery.</li>
-<li>country_payment  = The debtor accounts are selected based on two criteria. The first criteria is the country and if the country is same as the country of the accounting location then the payment method is used to select the deptor account.</li>
-</ul></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>key</td>
-            <td>The key depends on the debtor account mode.
-<ul>
-<li>For the character mode the keys are letters. The letters indicate the first letter of the customer information that was used to assign the pending amounts.</li>
-<li>For the payment mode the key is the ID of payment method.</li>
-<li>For the country mode the key is the ID of the country.</li>
-<li>For the country_payment mode the key is either the ID of the country or the ID of payment method. If the country is the same as the country of the accounting location then the payment methods are used to select the deptor account.</li>
-</ul></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>value</td>
-            <td>The actual debtor account.</td>
-        </tr><tr>
-            <td><a href="accounting#accounting_models_debtoraccountconfiguration">DebtorAccountConfiguration</a>
+            <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
-            <td>account</td>
-            <td>The debtor account configuration this account is associated with.</td>
+            <td>postingKeys</td>
+            <td>The posting keys for this configuration</td>
+        </tr><tr>
+            <td><a href="accounting#accounting_models_accountinglocation">AccountingLocation</a>
+</td>
+            <td>location</td>
+            <td>The name of the accounting location that the configuration belongs to</td>
         </tr></tbody>
 </table>
 
@@ -747,138 +939,6 @@ The debtor account configuration model. The configuration is a set of debtor acc
 Returns this model as an array.
     
 
-### PostingKey<a name="accounting_models_postingkey"></a>
-
-The Posting Key Model. A posting key is always associated with an accounting location and holds an posting key for each configured vat rate.
-
-
-#### Namespace
-
-`Plenty\Modules\Accounting\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The Id posting key in relation to the vatrate.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>value</td>
-            <td>The actual posting key for the vat rate.</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### PostingKeyConfiguration<a name="accounting_models_postingkeyconfiguration"></a>
-
-The posting key configuration model. A posting key configuration is a set of 4 posting keys. A posting key configuration is always associated with an accounting location and can have a posting key per VAT rate. A posting key defines how line items are booked to accounts.
-
-
-#### Namespace
-
-`Plenty\Modules\Accounting\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>locationId</td>
-            <td>The ID of the accounting location that the configuration belongs to</td>
-        </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-            <td>postingKeys</td>
-            <td>The posting keys for this configuration</td>
-        </tr><tr>
-            <td><a href="accounting#accounting_models_accountinglocation">AccountingLocation</a>
-</td>
-            <td>location</td>
-            <td>The name of the accounting location that the configuration belongs to</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### RevenueAccount<a name="accounting_models_revenueaccount"></a>
-
-The revenue account model provides information on a single revenue account. The ID of an account matches the ID of a VAT rate.
-
-
-#### Namespace
-
-`Plenty\Modules\Accounting\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the account. The account IDs are always 0,1,2 or 3. This way the IDs indicate the VAT rate that the account is used for. The revenues that were made with items that have the VAT rate with the ID 0 are assigned to the account with the ID 0.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>account</td>
-            <td>The actual account number that was entered in the entry field.</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
 ### RevenueAccountCountryConfiguration<a name="accounting_models_revenueaccountcountryconfiguration"></a>
 
 The revenue account country configuration model. The revenue account country configuration is a set of up to 4 revenue accounts for one country. Each country that you need to pay VAT in needs a configuration. The 4 revenue account included in the configuration are associated with VAT rates. The VAT rate that one revenue account is associated with can be identified by the ID of the VAT rate. The ID of the VAT rate is included in the account name. Furthermore, each revenue account country configuration is part of a revenue account location configuration. A revenue account country configuration is only available if a VAT configuration for the country exists.
@@ -936,9 +996,9 @@ The revenue account country configuration model. The revenue account country con
 Returns this model as an array.
     
 
-### RevenueAccountLocationConfiguration<a name="accounting_models_revenueaccountlocationconfiguration"></a>
+### DebtorAccount<a name="accounting_models_debtoraccount"></a>
 
-The revenue account location configuration model. A revenue account location configuration is the set of all revenue accounts that belong to one accounting location.
+The DebtorAccountValue Model which contains the actual configured debtor accounts by character, payment and country.
 
 
 #### Namespace
@@ -960,25 +1020,37 @@ The revenue account location configuration model. A revenue account location con
     </thead>
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the revenue account configuration</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>locationId</td>
-            <td>The ID of the accounting location that the configuration belongs to</td>
+            <td>accountId</td>
+            <td>The ID of the debtor account configuration that the debtor account belongs to</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>accountEu</td>
-            <td>The account used for revenues that are exempt from VAT and that were sold within the European Union</td>
+            <td>mode</td>
+            <td>The mode describes the criteria based on which pending amounts are assigned to a debtor account. The following modes are available:
+<ul>
+<li>character        = The debtor accounts are selected based on the first character of customer information. The information and the order of the information that will be used are defined with the sequence. There are 3 different sequences available.</li>
+<li>payment          = The debtor accounts are selected based on the payment method.</li>
+<li>country          = The debtor accounts are selected based on the country of delivery.</li>
+<li>country_payment  = The debtor accounts are selected based on two criteria. The first criteria is the country and if the country is same as the country of the accounting location then the payment method is used to select the deptor account.</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>accountExport</td>
-            <td>The account used for revenues that are exempt from VAT and that were sold to outside the European Union</td>
+            <td>key</td>
+            <td>The key depends on the debtor account mode.
+<ul>
+<li>For the character mode the keys are letters. The letters indicate the first letter of the customer information that was used to assign the pending amounts.</li>
+<li>For the payment mode the key is the ID of payment method.</li>
+<li>For the country mode the key is the ID of the country.</li>
+<li>For the country_payment mode the key is either the ID of the country or the ID of payment method. If the country is the same as the country of the accounting location then the payment methods are used to select the deptor account.</li>
+</ul></td>
         </tr><tr>
-            <td><a href="miscellaneous#miscellaneous__"></a>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td>The actual debtor account.</td>
+        </tr><tr>
+            <td><a href="accounting#accounting_models_debtoraccountconfiguration">DebtorAccountConfiguration</a>
 </td>
-            <td>revenueAccountCountryConfigurations</td>
-            <td>The set of revenue accounts of one country</td>
+            <td>account</td>
+            <td>The debtor account configuration this account is associated with.</td>
         </tr></tbody>
 </table>
 
@@ -990,9 +1062,104 @@ The revenue account location configuration model. A revenue account location con
     
 Returns this model as an array.
     
+## Exceptions<a name="accounting_accounting_exceptions"></a>
+### AccountingException<a name="accounting_exceptions_accountingexception"></a>
+
+Class AccountingException
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Exceptions`
+
+
+
+
 # Vat<a name="accounting_vat"></a>
     
 ## Contracts<a name="accounting_vat_contracts"></a>
+### VatServiceContract<a name="accounting_contracts_vatservicecontract"></a>
+
+Provides methods for a quick search of VAT fields, VAT rates and VAT names of a specific VAT configuration.
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Vat\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getVatField</strong>(<a href="accounting#accounting_models_vat">Vat</a>
+ $vat, <a target="_blank" href="http://php.net/float">float</a> $vatRate):<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Get the VAT field for a VAT rate.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="accounting#accounting_models_vat">Vat</a>
+</td>
+        <td>$vat</td>
+        <td>The VAT configuration of a country</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$vatRate</td>
+        <td>The VAT rate</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getVatRate</strong>(<a href="accounting#accounting_models_vat">Vat</a>
+ $vat, <a target="_blank" href="http://php.net/int">int</a> $vatField):<a target="_blank" href="http://php.net/float">float</a></pre>
+
+    
+Get the VAT rate for a VAT field.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="accounting#accounting_models_vat">Vat</a>
+</td>
+        <td>$vat</td>
+        <td>The VAT configuration of a country</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$vatField</td>
+        <td>The VAT field</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getVatName</strong>(<a href="accounting#accounting_models_vat">Vat</a>
+ $vat, <a target="_blank" href="http://php.net/int">int</a> $vatField):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the name of a VAT field.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="accounting#accounting_models_vat">Vat</a>
+</td>
+        <td>$vat</td>
+        <td>The VAT configuration of a country</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$vatField</td>
+        <td>The VAT field</td>
+    </tr>
+</table>
+
+
+
 ### VatInitContract<a name="accounting_contracts_vatinitcontract"></a>
 
 This interface provides methods to initialise the detection of a VAT configuration and to actually detect VAT rates or VAT fields.
@@ -1335,6 +1502,59 @@ List VAT configuration for a country of delivery
 </table>
 
 
+<pre>public <strong>getVatById</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="accounting#accounting_models_vat">Vat</a>
+</pre>
+
+    
+Get a VAT configuration by id
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createVat</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="accounting#accounting_models_vat">Vat</a>
+</pre>
+
+    
+Create a VAT configuration
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateVat</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="accounting#accounting_models_vat">Vat</a>
+</pre>
+
+    
+Update a VAT configuration
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -1381,101 +1601,6 @@ Returns a collection of parsed filters as Condition object
     
 Clears the filter array.
     
-
-### VatServiceContract<a name="accounting_contracts_vatservicecontract"></a>
-
-Provides methods for a quick search of VAT fields, VAT rates and VAT names of a specific VAT configuration.
-
-
-#### Namespace
-
-`Plenty\Modules\Accounting\Vat\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>getVatField</strong>(<a href="accounting#accounting_models_vat">Vat</a>
- $vat, <a target="_blank" href="http://php.net/float">float</a> $vatRate):<a target="_blank" href="http://php.net/int">int</a></pre>
-
-    
-Get the VAT field for a VAT rate.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="accounting#accounting_models_vat">Vat</a>
-</td>
-        <td>$vat</td>
-        <td>The VAT configuration of a country</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/float">float</a></td>
-        <td>$vatRate</td>
-        <td>The VAT rate</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getVatRate</strong>(<a href="accounting#accounting_models_vat">Vat</a>
- $vat, <a target="_blank" href="http://php.net/int">int</a> $vatField):<a target="_blank" href="http://php.net/float">float</a></pre>
-
-    
-Get the VAT rate for a VAT field.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="accounting#accounting_models_vat">Vat</a>
-</td>
-        <td>$vat</td>
-        <td>The VAT configuration of a country</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$vatField</td>
-        <td>The VAT field</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>getVatName</strong>(<a href="accounting#accounting_models_vat">Vat</a>
- $vat, <a target="_blank" href="http://php.net/int">int</a> $vatField):<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-Get the name of a VAT field.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="accounting#accounting_models_vat">Vat</a>
-</td>
-        <td>$vat</td>
-        <td>The VAT configuration of a country</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$vatField</td>
-        <td>The VAT field</td>
-    </tr>
-</table>
-
-
-## Exceptions<a name="accounting_vat_exceptions"></a>
-### VatException<a name="accounting_exceptions_vatexception"></a>
-
-Class VatException
-
-
-#### Namespace
-
-`Plenty\Modules\Accounting\Vat\Exceptions`
-
-
-
-
 ## Models<a name="accounting_vat_models"></a>
 ### Vat<a name="accounting_models_vat"></a>
 
@@ -1528,7 +1653,7 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>marginScheme</td>
-            <td>Specifies the tax rate that is used, when the margin scheme is applied</td>
+            <td>Specifies the tax rate that is used, when the margin scheme is applied. Available values: 'none', 'vat1', 'vat2', 'vat3', 'vat4'.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isRestrictedToDigitalItems</td>
@@ -1618,3 +1743,16 @@ The VAT rate model is always associated with a VAT configuration and contains th
     
 Returns this model as an array.
     
+## Exceptions<a name="accounting_vat_exceptions"></a>
+### VatException<a name="accounting_exceptions_vatexception"></a>
+
+Class VatException
+
+
+#### Namespace
+
+`Plenty\Modules\Accounting\Vat\Exceptions`
+
+
+
+

@@ -3,65 +3,6 @@
 # Payment<a name="payment_payment"></a>
     
 ## Contracts<a name="payment_payment_contracts"></a>
-### PaymentContactRelationRepositoryContract<a name="payment_contracts_paymentcontactrelationrepositorycontract"></a>
-
-The PaymentContactRelationRepositoryContract is the interface for the payment contact relation repository. Create and delete relations between payments and contact.
-
-
-#### Namespace
-
-`Plenty\Modules\Payment\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>createContactRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
- $payment, <a href="account#account_models_contact">Contact</a>
- $contact):<a href="payment#payment_models_paymentcontactrelation">PaymentContactRelation</a>
-</pre>
-
-    
-Creates a payment contact relation.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="payment#payment_models_payment">Payment</a>
-</td>
-        <td>$payment</td>
-        <td>The ID of the payment</td>
-    </tr>
-    <tr>
-        <td><a href="account#account_models_contact">Contact</a>
-</td>
-        <td>$contact</td>
-        <td>The ID of the contact</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>deleteContactRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
- $payment):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Deletes a payment contact relation.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="payment#payment_models_payment">Payment</a>
-</td>
-        <td>$payment</td>
-        <td>The ID of the payment</td>
-    </tr>
-</table>
-
-
-
 ### PaymentMatcherRepositoryContract<a name="payment_contracts_paymentmatcherrepositorycontract"></a>
 
 The PaymentMatcherRepositoryContract
@@ -90,297 +31,6 @@ The PaymentMatcherRepositoryContract
         <td></td>
     </tr>
     <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### PaymentOrderRelationRepositoryContract<a name="payment_contracts_paymentorderrelationrepositorycontract"></a>
-
-The PaymentOrderRelationRepositoryContract is the interface for the payment order relation repository. Create and delete relations between payments and orders.
-
-
-#### Namespace
-
-`Plenty\Modules\Payment\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>createOrderRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
- $payment, <a href="order#order_models_order">Order</a>
- $order):<a href="payment#payment_models_paymentorderrelation">PaymentOrderRelation</a>
-</pre>
-
-    
-Creates a payment order relation.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="payment#payment_models_payment">Payment</a>
-</td>
-        <td>$payment</td>
-        <td>The ID of the payment</td>
-    </tr>
-    <tr>
-        <td><a href="order#order_models_order">Order</a>
-</td>
-        <td>$order</td>
-        <td>The ID of the order</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>deleteOrderRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
- $payment):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-Deletes a payment order relation.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="payment#payment_models_payment">Payment</a>
-</td>
-        <td>$payment</td>
-        <td>The ID of the payment</td>
-    </tr>
-</table>
-
-
-
-### PaymentPropertyRepositoryContract<a name="payment_contracts_paymentpropertyrepositorycontract"></a>
-
-The PaymentPropertyRepositoryContract is the interface for the payment property repository. List, get, create and update payment properties.
-
-
-#### Namespace
-
-`Plenty\Modules\Payment\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>all</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Lists properties.
-    
-<pre>public <strong>findByPropertyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Gets a property. The ID of the payment property must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$propertyId</td>
-        <td>The ID of the payment property</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>allByPaymentId</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentId):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Lists properties of a payment. The ID of the payment must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$paymentId</td>
-        <td>The ID of the payment</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>allByTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $typeId):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Lists properties of a property type. The ID of the property type must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$typeId</td>
-        <td>The ID of the payment property type. The following property types are available:
-<ul>
-    <li>Transaction ID = 1</li>
-    <li>Reference ID = 2</li>
-    <li>Booking text = 3</li>
-    <li>Transaction password = 4</li>
-    <li>Transaction code = 5</li>
-    <li>Authorisation ID = 6</li>
-    <li>Capture ID = 7</li>
-    <li>Refund ID = 8</li>
-    <li>Credit note ID = 9</li>
-    <li>Order reference = 10</li>
-    <li>Name of the sender = 11</li>
-    <li>Email of the sender = 12</li>
-    <li>The sender's sort code = 13</li>
-    <li>The sender's bank name = 14</li>
-    <li>The sender's bank account number = 15</li>
-    <li>The holder of the bank account = 16</li>
-    <li>The country of the sender's bank account = 17</li>
-    <li>The sender's IBAN = 18</li>
-    <li>The sender's BIC = 19</li>
-    <li>Name of the recipient = 20</li>
-    <li>The recipient's bank account = 21</li>
-    <li>Reference text of the payment = 22</li>
-    <li>Payment origin = 23</li>
-    <li>Shipping address ID = 24</li>
-    <li>Invoice address ID = 25</li>
-    <li>Item buyer = 26</li>
-    <li>Item number = 27</li>
-    <li>Item transaction ID = 28</li>
-    <li>External transaction type = 29</li>
-    <li>External transaction status = 30</li>
-</ul></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>findByCreatedDateInterval</strong>(<a target="_blank" href="http://php.net/string">string</a> $startDate, <a target="_blank" href="http://php.net/string">string</a> $endDate):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Lists properties by creation date. The start and the end of the date range must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$startDate</td>
-        <td>The start date of the date range for the date of creation of the property</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$endDate</td>
-        <td>The end date of the date range for the date of creation of the property</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>createProperty</strong>($data):<a href="payment#payment_models_paymentproperty">PaymentProperty</a>
-</pre>
-
-    
-Creates a payment property.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>changeProperty</strong>(<a href="payment#payment_models_paymentproperty">PaymentProperty</a>
- $data):<a href="payment#payment_models_paymentproperty">PaymentProperty</a>
-</pre>
-
-    
-Updates a payment property.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="payment#payment_models_paymentproperty">PaymentProperty</a>
-</td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-</table>
-
-
-
-### PaymentPropertyTypeNameRepositoryContract<a name="payment_contracts_paymentpropertytypenamerepositorycontract"></a>
-
-The PaymentPropertyTypeNameRepositoryContract is the interface for the repository of payment property type names. List, get, create and update payment property names.
-
-
-#### Namespace
-
-`Plenty\Modules\Payment\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>allTypeNames</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Lists payment property type names. The language of the property type names must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$lang</td>
-        <td>The language of the payment property type name</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>findByNameId</strong>(<a target="_blank" href="http://php.net/int">int</a> $nameId):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Finds a payment property type name. The ID of the payment property type name must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$nameId</td>
-        <td>The ID of the payment property type name</td>
-    </tr>
-</table>
-
-
-<pre>public <strong>createTypeName</strong>($data):<a href="payment#payment_models_paymentpropertytypename">PaymentPropertyTypeName</a>
-</pre>
-
-    
-Creates a payment property type name.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>changeProperty</strong>($data):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Updates a payment property type name.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
         <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$data</td>
@@ -502,6 +152,142 @@ Updates a payment property type.
 </td>
         <td>$data</td>
         <td></td>
+    </tr>
+</table>
+
+
+
+### PaymentOrderRelationRepositoryContract<a name="payment_contracts_paymentorderrelationrepositorycontract"></a>
+
+The PaymentOrderRelationRepositoryContract is the interface for the payment order relation repository. Create and delete relations between payments and orders.
+
+
+#### Namespace
+
+`Plenty\Modules\Payment\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>createOrderRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
+ $payment, <a href="order#order_models_order">Order</a>
+ $order):<a href="payment#payment_models_paymentorderrelation">PaymentOrderRelation</a>
+</pre>
+
+    
+Creates a payment order relation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="payment#payment_models_payment">Payment</a>
+</td>
+        <td>$payment</td>
+        <td>The ID of the payment</td>
+    </tr>
+    <tr>
+        <td><a href="order#order_models_order">Order</a>
+</td>
+        <td>$order</td>
+        <td>The ID of the order</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findOrderRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
+ $payment):<a href="payment#payment_models_paymentorderrelation">PaymentOrderRelation</a>
+</pre>
+
+    
+Gets the payment order relation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="payment#payment_models_payment">Payment</a>
+</td>
+        <td>$payment</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteOrderRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
+ $payment):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Deletes a payment order relation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="payment#payment_models_payment">Payment</a>
+</td>
+        <td>$payment</td>
+        <td>The ID of the payment</td>
+    </tr>
+</table>
+
+
+
+### PaymentContactRelationRepositoryContract<a name="payment_contracts_paymentcontactrelationrepositorycontract"></a>
+
+The PaymentContactRelationRepositoryContract is the interface for the payment contact relation repository. Create and delete relations between payments and contact.
+
+
+#### Namespace
+
+`Plenty\Modules\Payment\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>createContactRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
+ $payment, <a href="account#account_models_contact">Contact</a>
+ $contact):<a href="payment#payment_models_paymentcontactrelation">PaymentContactRelation</a>
+</pre>
+
+    
+Creates a payment contact relation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="payment#payment_models_payment">Payment</a>
+</td>
+        <td>$payment</td>
+        <td>The ID of the payment</td>
+    </tr>
+    <tr>
+        <td><a href="account#account_models_contact">Contact</a>
+</td>
+        <td>$contact</td>
+        <td>The ID of the contact</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteContactRelation</strong>(<a href="payment#payment_models_payment">Payment</a>
+ $payment):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Deletes a payment contact relation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="payment#payment_models_payment">Payment</a>
+</td>
+        <td>$payment</td>
+        <td>The ID of the payment</td>
     </tr>
 </table>
 
@@ -795,6 +581,238 @@ Resets all Criteria filters by creating a new instance of the builder object.
     
 Applies criteria classes to the current repository.
     
+
+### PaymentPropertyRepositoryContract<a name="payment_contracts_paymentpropertyrepositorycontract"></a>
+
+The PaymentPropertyRepositoryContract is the interface for the payment property repository. List, get, create and update payment properties.
+
+
+#### Namespace
+
+`Plenty\Modules\Payment\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>all</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists properties.
+    
+<pre>public <strong>findByPropertyId</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Gets a property. The ID of the payment property must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyId</td>
+        <td>The ID of the payment property</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>allByPaymentId</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists properties of a payment. The ID of the payment must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$paymentId</td>
+        <td>The ID of the payment</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>allByTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $typeId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists properties of a property type. The ID of the property type must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$typeId</td>
+        <td>The ID of the payment property type. The following property types are available:
+<ul>
+    <li>Transaction ID = 1</li>
+    <li>Reference ID = 2</li>
+    <li>Booking text = 3</li>
+    <li>Transaction password = 4</li>
+    <li>Transaction code = 5</li>
+    <li>Authorisation ID = 6</li>
+    <li>Capture ID = 7</li>
+    <li>Refund ID = 8</li>
+    <li>Credit note ID = 9</li>
+    <li>Order reference = 10</li>
+    <li>Name of the sender = 11</li>
+    <li>Email of the sender = 12</li>
+    <li>The sender's sort code = 13</li>
+    <li>The sender's bank name = 14</li>
+    <li>The sender's bank account number = 15</li>
+    <li>The holder of the bank account = 16</li>
+    <li>The country of the sender's bank account = 17</li>
+    <li>The sender's IBAN = 18</li>
+    <li>The sender's BIC = 19</li>
+    <li>Name of the recipient = 20</li>
+    <li>The recipient's bank account = 21</li>
+    <li>Reference text of the payment = 22</li>
+    <li>Payment origin = 23</li>
+    <li>Shipping address ID = 24</li>
+    <li>Invoice address ID = 25</li>
+    <li>Item buyer = 26</li>
+    <li>Item number = 27</li>
+    <li>Item transaction ID = 28</li>
+    <li>External transaction type = 29</li>
+    <li>External transaction status = 30</li>
+</ul></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByCreatedDateInterval</strong>(<a target="_blank" href="http://php.net/string">string</a> $startDate, <a target="_blank" href="http://php.net/string">string</a> $endDate):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists properties by creation date. The start and the end of the date range must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$startDate</td>
+        <td>The start date of the date range for the date of creation of the property</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$endDate</td>
+        <td>The end date of the date range for the date of creation of the property</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createProperty</strong>($data):<a href="payment#payment_models_paymentproperty">PaymentProperty</a>
+</pre>
+
+    
+Creates a payment property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>changeProperty</strong>(<a href="payment#payment_models_paymentproperty">PaymentProperty</a>
+ $data):<a href="payment#payment_models_paymentproperty">PaymentProperty</a>
+</pre>
+
+    
+Updates a payment property.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="payment#payment_models_paymentproperty">PaymentProperty</a>
+</td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### PaymentPropertyTypeNameRepositoryContract<a name="payment_contracts_paymentpropertytypenamerepositorycontract"></a>
+
+The PaymentPropertyTypeNameRepositoryContract is the interface for the repository of payment property type names. List, get, create and update payment property names.
+
+
+#### Namespace
+
+`Plenty\Modules\Payment\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>allTypeNames</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists payment property type names. The language of the property type names must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>The language of the payment property type name</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findByNameId</strong>(<a target="_blank" href="http://php.net/int">int</a> $nameId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Finds a payment property type name. The ID of the payment property type name must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$nameId</td>
+        <td>The ID of the payment property type name</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createTypeName</strong>($data):<a href="payment#payment_models_paymentpropertytypename">PaymentPropertyTypeName</a>
+</pre>
+
+    
+Creates a payment property type name.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>changeProperty</strong>($data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Updates a payment property type name.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="payment_payment_models"></a>
 ### Payment<a name="payment_models_payment"></a>
 
@@ -934,59 +952,9 @@ The payment model
 Returns this model as an array.
     
 
-### PaymentContactRelation<a name="payment_models_paymentcontactrelation"></a>
+### PaymentPropertyTypeName<a name="payment_models_paymentpropertytypename"></a>
 
-The payment contact relation model
-
-
-#### Namespace
-
-`Plenty\Modules\Payment\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the payment order relation</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>paymentId</td>
-            <td>The ID of the payment</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>contactId</td>
-            <td>The ID of the contact</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>assignedAt</td>
-            <td>The time the payment contact relation was assigned</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### PaymentOrderRelation<a name="payment_models_paymentorderrelation"></a>
-
-The payment order relation model
+The payment property type name model
 
 
 #### Namespace
@@ -1009,19 +977,19 @@ The payment order relation model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The ID of the payment order relation</td>
+            <td>The ID of the name of the property type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>paymentId</td>
-            <td>The ID of the payment</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>orderId</td>
-            <td>The ID of the order</td>
+            <td>typeId</td>
+            <td>The ID of the property type</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>assignedAt</td>
-            <td>The time the payment order relation was assigned</td>
+            <td>lang</td>
+            <td>The language of the name of the property type</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>name</td>
+            <td>The name of the property type</td>
         </tr></tbody>
 </table>
 
@@ -1171,9 +1139,9 @@ The payment property type model
 Returns this model as an array.
     
 
-### PaymentPropertyTypeName<a name="payment_models_paymentpropertytypename"></a>
+### PaymentContactRelation<a name="payment_models_paymentcontactrelation"></a>
 
-The payment property type name model
+The payment contact relation model
 
 
 #### Namespace
@@ -1196,19 +1164,194 @@ The payment property type name model
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>id</td>
-            <td>The ID of the name of the property type</td>
+            <td>The ID of the payment order relation</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>paymentId</td>
+            <td>The ID of the payment</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>contactId</td>
+            <td>The ID of the contact</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>assignedAt</td>
+            <td>The time the payment contact relation was assigned</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### PaymentOrderRelation<a name="payment_models_paymentorderrelation"></a>
+
+The payment order relation model
+
+
+#### Namespace
+
+`Plenty\Modules\Payment\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the payment order relation</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>paymentId</td>
+            <td>The ID of the payment</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>orderId</td>
+            <td>The ID of the order</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>assignedAt</td>
+            <td>The time the payment order relation was assigned</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+# History<a name="payment_history"></a>
+    
+## Contracts<a name="payment_history_contracts"></a>
+### PaymentHistoryRepositoryContract<a name="payment_contracts_paymenthistoryrepositorycontract"></a>
+
+The PaymentHistoryRepositoryContract is the interface for the payment history repository. Get and create the payment history.
+
+
+#### Namespace
+
+`Plenty\Modules\Payment\History\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getByPaymentId</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Gets the payment history for a payment. The ID of the payment and the ID of the payment type must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$paymentId</td>
+        <td>The ID of the payment</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$typeId</td>
+        <td>The ID of the history type. The following types are available:
+<ul>
+    <li>Created = 1</li>
+    <li>Status updated = 2</li>
+    <li>Assigned = 3</li>
+    <li>Detached = 4</li>
+    <li>Deleted = 5</li>
+    <li>Updated = 6</li>
+</ul></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createHistory</strong>($data):<a href="payment#payment_models_paymenthistory">PaymentHistory</a>
+</pre>
+
+    
+Creates the payment history.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+## Models<a name="payment_history_models"></a>
+### PaymentHistory<a name="payment_models_paymenthistory"></a>
+
+The payment history model
+
+
+#### Namespace
+
+`Plenty\Modules\Payment\History\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the payment history</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>paymentId</td>
+            <td>The ID of the payment</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>typeId</td>
-            <td>The ID of the property type</td>
+            <td>The ID of the history type. The following types are available:
+<ul>
+    <li>Created = 1</li>
+    <li>Status updated = 2</li>
+    <li>Assigned = 3</li>
+    <li>Detached = 4</li>
+    <li>Deleted = 5</li>
+    <li>Updated = 6</li>
+</ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>lang</td>
-            <td>The language of the name of the property type</td>
+            <td>value</td>
+            <td>The language of the payment history</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>name</td>
-            <td>The name of the property type</td>
+            <td>user</td>
+            <td>The user who initiated the action</td>
         </tr></tbody>
 </table>
 
@@ -1424,176 +1567,9 @@ Updates the parameters. The parameters must be specified.
     
 Gets the parameters.
     
-# History<a name="payment_history"></a>
-    
-## Contracts<a name="payment_history_contracts"></a>
-### PaymentHistoryRepositoryContract<a name="payment_contracts_paymenthistoryrepositorycontract"></a>
-
-The PaymentHistoryRepositoryContract is the interface for the payment history repository. Get and create the payment history.
-
-
-#### Namespace
-
-`Plenty\Modules\Payment\History\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>getByPaymentId</strong>(<a target="_blank" href="http://php.net/int">int</a> $paymentId, <a target="_blank" href="http://php.net/int">int</a> $typeId):<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-Gets the payment history for a payment. The ID of the payment and the ID of the payment type must be specified.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$paymentId</td>
-        <td>The ID of the payment</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$typeId</td>
-        <td>The ID of the history type. The following types are available:
-<ul>
-    <li>Created = 1</li>
-    <li>Status updated = 2</li>
-    <li>Assigned = 3</li>
-    <li>Detached = 4</li>
-    <li>Deleted = 5</li>
-    <li>Updated = 6</li>
-</ul></td>
-    </tr>
-</table>
-
-
-<pre>public <strong>createHistory</strong>($data):<a href="payment#payment_models_paymenthistory">PaymentHistory</a>
-</pre>
-
-    
-Creates the payment history.
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
-        <td>$data</td>
-        <td></td>
-    </tr>
-</table>
-
-
-## Models<a name="payment_history_models"></a>
-### PaymentHistory<a name="payment_models_paymenthistory"></a>
-
-The payment history model
-
-
-#### Namespace
-
-`Plenty\Modules\Payment\History\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>The ID of the payment history</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>paymentId</td>
-            <td>The ID of the payment</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>typeId</td>
-            <td>The ID of the history type. The following types are available:
-<ul>
-    <li>Created = 1</li>
-    <li>Status updated = 2</li>
-    <li>Assigned = 3</li>
-    <li>Detached = 4</li>
-    <li>Deleted = 5</li>
-    <li>Updated = 6</li>
-</ul></td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>value</td>
-            <td>The language of the payment history</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>user</td>
-            <td>The user who initiated the action</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
 # Method<a name="payment_method"></a>
     
 ## Contracts<a name="payment_method_contracts"></a>
-### PaymentMethodContainer<a name="payment_contracts_paymentmethodcontainer"></a>
-
-The payment method container
-
-
-#### Namespace
-
-`Plenty\Modules\Payment\Method\Contracts`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>register</strong>(<a target="_blank" href="http://php.net/string">string</a> $paymentKey, <a target="_blank" href="http://php.net/string">string</a> $paymentMethodServiceClass, <a target="_blank" href="http://php.net/array">array</a> $rebuildEventClassesList):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$paymentKey</td>
-        <td>The unique key of a payment plugin</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$paymentMethodServiceClass</td>
-        <td>The class of the payment method. This class contains information of the payment plugin, such as the name and whether the payment method is active.</td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/array">array</a></td>
-        <td>$rebuildEventClassesList</td>
-        <td>A list of events. It is checked again for the list of events whether the payment method is active.</td>
-    </tr>
-</table>
-
-
-
 ### PaymentMethodRepositoryContract<a name="payment_contracts_paymentmethodrepositorycontract"></a>
 
 The PaymentMethodRepositoryContract is the interface for the payment method repository. List, get, create and update payment methods.
@@ -1735,6 +1711,63 @@ Executes a payment. The ID of the payment method and the ID of the order must be
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderId</td>
         <td>The ID of the order</td>
+    </tr>
+</table>
+
+
+
+### PaymentMethodContainer<a name="payment_contracts_paymentmethodcontainer"></a>
+
+The payment method container
+
+
+#### Namespace
+
+`Plenty\Modules\Payment\Method\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>register</strong>(<a target="_blank" href="http://php.net/string">string</a> $paymentKey, <a target="_blank" href="http://php.net/string">string</a> $paymentMethodServiceClass, <a target="_blank" href="http://php.net/array">array</a> $rebuildEventClassesList):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$paymentKey</td>
+        <td>The unique key of a payment plugin</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$paymentMethodServiceClass</td>
+        <td>The class of the payment method. This class contains information of the payment plugin, such as the name and whether the payment method is active.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$rebuildEventClassesList</td>
+        <td>A list of events. It is checked again for the list of events whether the payment method is active.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isRegistered</strong>(<a target="_blank" href="http://php.net/string">string</a> $paymentKey):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$paymentKey</td>
+        <td></td>
     </tr>
 </table>
 

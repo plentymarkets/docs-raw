@@ -24,43 +24,6 @@ service to get current authorized user
     
 
     
-## Exception<a name="authorization_authorization_exception"></a>
-### AuthorizationException<a name="authorization_exception_authorizationexception"></a>
-
-Class AuthorizationException
-
-
-#### Namespace
-
-`Plenty\Modules\Authorization\Exception`
-
-
-
-
-
-#### Methods
-
-<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/string">string</a> $message, <a target="_blank" href="http://php.net/int">int</a> $code):<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$message</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$code</td>
-        <td></td>
-    </tr>
-</table>
-
-
 ## Models<a name="authorization_authorization_models"></a>
 ### AuthorizedUser<a name="authorization_models_authorizeduser"></a>
 
@@ -105,52 +68,6 @@ The current authorized user
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>oauthAccessTokensId</td>
             <td>The access token for OAUTH authentication</td>
-        </tr></tbody>
-</table>
-
-
-#### Methods
-
-<pre>public <strong>toArray</strong>()</pre>
-
-    
-Returns this model as an array.
-    
-
-### Permission<a name="authorization_models_permission"></a>
-
-The authentication Permission (REST) model
-
-
-#### Namespace
-
-`Plenty\Modules\Authorization\Models`
-
-
-
-
-#### Properties
-
-<table class="table table-bordered table-striped table-condensed table-hover">
-    <thead>
-    <tr>
-        <th>Type</th>
-        <th>Name</th>
-        <th>Description</th>
-    </tr>
-    </thead>
-    <tbody><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
-            <td>id</td>
-            <td>permission id</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>permissionKey</td>
-            <td>permission key</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/array">array</a></td>
-            <td>roles</td>
-            <td></td>
         </tr></tbody>
 </table>
 
@@ -220,6 +137,118 @@ The Role authentication model
     
 Returns this model as an array.
     
+
+### Permission<a name="authorization_models_permission"></a>
+
+The authentication Permission (REST) model
+
+
+#### Namespace
+
+`Plenty\Modules\Authorization\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>permission id</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>permissionKey</td>
+            <td>permission key</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>roles</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+## Exception<a name="authorization_authorization_exception"></a>
+### AuthorizationException<a name="authorization_exception_authorizationexception"></a>
+
+Class AuthorizationException
+
+
+#### Namespace
+
+`Plenty\Modules\Authorization\Exception`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/string">string</a> $message = &quot;&quot;, <a target="_blank" href="http://php.net/int">int</a> $code, <a href="miscellaneous#miscellaneous__exception">Exception</a>
+ $previous = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$message</td>
+        <td>The exception message</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$code</td>
+        <td>The exception code</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__exception">Exception</a>
+</td>
+        <td>$previous</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>missingPermissions</strong>():<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>addMissingPermission</strong>(<a target="_blank" href="http://php.net/string">string</a> $permissionKey):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$permissionKey</td>
+        <td>The permission key</td>
+    </tr>
+</table>
+
+
 ## Services<a name="authorization_authorization_services"></a>
 ### AuthHelper<a name="authorization_services_authhelper"></a>
 
