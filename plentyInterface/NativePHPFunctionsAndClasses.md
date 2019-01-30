@@ -14,6 +14,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.addslashes.php">addslashes</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.array.php">array</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-chunk.php">array_chunk</a>
             </li>
                     <li>
@@ -57,6 +60,12 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-merge-recursive.php">array_merge_recursive</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.array-multisort.php">array_multisort</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.array-pad.php">array_pad</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.array-pop.php">array_pop</a>
@@ -122,6 +131,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             <strong>C</strong>
         <ul>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.catch.php">catch</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.ceil.php">ceil</a>
             </li>
                     <li>
@@ -135,6 +147,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.chunk-split.php">chunk_split</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.clone.php">clone</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.compact.php">compact</a>
@@ -209,7 +224,13 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.easter-days.php">easter_days</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.elseif.php">elseif</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.end.php">end</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.exit.php">exit</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.explode.php">explode</a>
@@ -228,6 +249,12 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.floor.php">floor</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.for.php">for</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.foreach.php">foreach</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.function-exists.php">function_exists</a>
@@ -281,6 +308,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             <strong>I</strong>
         <ul>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.if.php">if</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.implode.php">implode</a>
             </li>
                     <li>
@@ -288,6 +318,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.intval.php">intval</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.invariant.php">invariant</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.is-array.php">is_array</a>
@@ -309,6 +342,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.is-string.php">is_string</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.isset.php">isset</a>
             </li>
                 </ul>
             <strong>J</strong>
@@ -339,6 +375,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.levenshtein.php">levenshtein</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.list.php">list</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.ltrim.php">ltrim</a>
@@ -443,6 +482,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.reset.php">reset</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.return.php">return</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.round.php">round</a>
             </li>
                     <li>
@@ -526,6 +568,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.substr-count.php">substr_count</a>
             </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.switch.php">switch</a>
+            </li>
                 </ul>
             <strong>T</strong>
         <ul>
@@ -542,13 +587,22 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             <strong>U</strong>
         <ul>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.uasort.php">uasort</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.ucfirst.php">ucfirst</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.ucwords.php">ucwords</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.uksort.php">uksort</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.uniqid.php">uniqid</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.unset.php">unset</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.urldecode.php">urldecode</a>
@@ -568,6 +622,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 </ul>
             <strong>W</strong>
         <ul>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.while.php">while</a>
+            </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.wordwrap.php">wordwrap</a>
             </li>
@@ -768,6 +825,36 @@ These are the native PHP classes that are *allowed* to be used in plentymarkets 
                 </ul>
             <strong>I</strong>
         <ul>
+                <li>
+            <a target="_blank" href="http://docs.php.net/manual/class.imagick.php">Imagick</a>
+        </li>
+                <li>
+            <a target="_blank" href="http://docs.php.net/manual/class.imagickdraw.php">ImagickDraw</a>
+        </li>
+                <li>
+            <a target="_blank" href="http://docs.php.net/manual/class.imagickdrawexception.php">ImagickDrawException</a>
+        </li>
+                <li>
+            <a target="_blank" href="http://docs.php.net/manual/class.imagickexception.php">ImagickException</a>
+        </li>
+                <li>
+            <a target="_blank" href="http://docs.php.net/manual/class.imagickkernel.php">ImagickKernel</a>
+        </li>
+                <li>
+            <a target="_blank" href="http://docs.php.net/manual/class.imagickkernelexception.php">ImagickKernelException</a>
+        </li>
+                <li>
+            <a target="_blank" href="http://docs.php.net/manual/class.imagickpixel.php">ImagickPixel</a>
+        </li>
+                <li>
+            <a target="_blank" href="http://docs.php.net/manual/class.imagickpixelexception.php">ImagickPixelException</a>
+        </li>
+                <li>
+            <a target="_blank" href="http://docs.php.net/manual/class.imagickpixeliterator.php">ImagickPixelIterator</a>
+        </li>
+                <li>
+            <a target="_blank" href="http://docs.php.net/manual/class.imagickpixeliteratorexception.php">ImagickPixelIteratorException</a>
+        </li>
                 <li>
             <a target="_blank" href="http://docs.php.net/manual/class.infiniteiterator.php">InfiniteIterator</a>
         </li>

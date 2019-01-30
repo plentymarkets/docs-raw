@@ -111,6 +111,26 @@ Upload order documents
 </table>
 
 
+<pre>public <strong>deleteOrderDocument</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/int">int</a> $documentId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Delete order document
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$documentId</td>
+        <td>The ID of the document</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>uploadCategoryDocuments</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     

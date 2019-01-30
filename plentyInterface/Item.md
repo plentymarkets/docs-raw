@@ -5434,6 +5434,10 @@ Variation
 </td>
             <td>item</td>
             <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>stockStorageLocations</td>
+            <td>An array of the stockStorageLocations of the variation.</td>
         </tr></tbody>
 </table>
 

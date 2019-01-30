@@ -2897,6 +2897,11 @@ The Parcel Service Preset Model
 </td>
             <td>parcelService</td>
             <td>The parcel service.</td>
+        </tr><tr>
+            <td><a href="order#order_models_parcelserviceregion">ParcelServiceRegion</a>
+</td>
+            <td>parcelServiceRegionConstraint</td>
+            <td>The parcel service region constraint</td>
         </tr></tbody>
 </table>
 
@@ -6370,6 +6375,26 @@ The order model.
 </td>
             <td>amount</td>
             <td>The order amount in foreign currency if exists. Otherwise the amount in system currency.</td>
+        </tr><tr>
+            <td><a href="account#account_models_contact">Contact</a>
+</td>
+            <td>contactSender</td>
+            <td>The associated contact for the contact-sender relation.</td>
+        </tr><tr>
+            <td><a href="account#account_models_contact">Contact</a>
+</td>
+            <td>contactReceiver</td>
+            <td>The associated contact for the contact-receiver relation.</td>
+        </tr><tr>
+            <td><a href="stockmanagement#stockmanagement_models_warehouse">Warehouse</a>
+</td>
+            <td>warehouseSender</td>
+            <td>The associated warehouse for the warehouse-sender relation.</td>
+        </tr><tr>
+            <td><a href="stockmanagement#stockmanagement_models_warehouse">Warehouse</a>
+</td>
+            <td>warehouseReceiver</td>
+            <td>The associated warehouse for the warehouse-receiver relation.</td>
         </tr></tbody>
 </table>
 
@@ -6740,6 +6765,11 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationBarcodes</td>
             <td>The barcodes that belong to the variation of the order item</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>comments</td>
+            <td>The order item comments.</td>
         </tr></tbody>
 </table>
 
@@ -7644,6 +7674,37 @@ Delete an order item
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$orderItemId</td>
         <td>The ID of the order item to be deleted.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+Search order items
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td></td>
     </tr>
 </table>
 
@@ -9945,11 +10006,15 @@ The order item transaction model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>identification</td>
-            <td>External identification. Can be an arbitrary string</td>
+            <td>External identification. Can be an arbitrary string.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>direction</td>
+            <td>The direction. Possible values are 'in' and 'out'.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>status</td>
-            <td>The status. Possible values are 'in' and 'out'</td>
+            <td>The status. Possible values are 'regular' and 'cancelled'.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>receiptId</td>
@@ -12135,11 +12200,11 @@ The order status model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isFrontendVisible</td>
-            <td></td>
+            <td>Indicates visibility in frontend.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>color</td>
-            <td></td>
+            <td>The color of the status.</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </td>
@@ -12272,6 +12337,87 @@ Finds all subscriptions that are due on the given date and creates corresponding
 
     
 
+    
+# ReturnReason<a name="order_returnreason"></a>
+    
+## Contracts<a name="order_returnreason_contracts"></a>
+### ReturnReasonRepositoryContract<a name="order_contracts_returnreasonrepositorycontract"></a>
+
+Use this interface to retrieve order return reasons.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\ReturnReason\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>all</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get all return reasons.
+    
+<pre>public <strong>get</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="order#order_models_returnreason">ReturnReason</a>
+</pre>
+
+    
+Get a return reason.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The ID of the return reason.</td>
+    </tr>
+</table>
+
+
+## Models<a name="order_returnreason_models"></a>
+### ReturnReason<a name="order_models_returnreason"></a>
+
+The return reason model.
+
+
+#### Namespace
+
+`Plenty\Modules\Order\ReturnReason\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the return reason.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>reason</td>
+            <td>The specified reason.</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
     
 # Address<a name="order_address"></a>
     
