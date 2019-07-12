@@ -171,7 +171,7 @@ Repository for SystemInformation
 
 #### Methods
 
-<pre>public <strong>loadValue</strong>($key):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>loadValue</strong>(<a target="_blank" href="http://php.net/string">string</a> $key):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -180,8 +180,7 @@ Repository for SystemInformation
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$key</td>
         <td></td>
     </tr>

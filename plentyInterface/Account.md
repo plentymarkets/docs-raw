@@ -2524,7 +2524,7 @@ The contact model.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>gender</td>
-            <td>The gender of the contact</td>
+            <td>The gender of the contact ("female", "male" or "diverse")</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>title</td>
@@ -5459,7 +5459,7 @@ The address model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>gender</td>
-            <td>The gender (female or male)</td>
+            <td>The gender ("female", "male" or "diverse")</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name1</td>
@@ -5975,6 +5975,16 @@ The address options model
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
             <td>The position for sorting</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>createdAt</td>
+            <td>The time the option was created as unix timestamp</td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+            <td>updatedAt</td>
+            <td>The time the option was last updated as unix timestamp</td>
         </tr><tr>
             <td><a href="account#account_models_address">Address</a>
 </td>

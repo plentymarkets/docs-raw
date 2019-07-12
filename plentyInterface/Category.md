@@ -74,6 +74,46 @@ Returns all linklist categories as tree.
 </table>
 
 
+<pre>public <strong>getArrayTree</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/int">int</a> $clientId = null, <a target="_blank" href="http://php.net/int">int</a> $maxLevel = 6, <a target="_blank" href="http://php.net/int">int</a> $customerClassId, <a target="_blank" href="http://php.net/callable">callable</a> $filter = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td>'all','item','container','content' or 'blog'</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td>Optional language of details.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$clientId</td>
+        <td>The unique ID of the client (store)</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$maxLevel</td>
+        <td>The deepest category level to load</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$customerClassId</td>
+        <td>The customer class id</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
+        <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>buildCache</strong>(<a target="_blank" href="http://php.net/string">string</a> $type = &quot;all&quot;, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/int">int</a> $clientId, <a target="_blank" href="http://php.net/int">int</a> $customerClassId):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -180,7 +220,7 @@ Returns children of the category.
 </table>
 
 
-<pre>public <strong>getUrl</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $onlySitemaps = false):<a target="_blank" href="http://php.net/string">string</a></pre>
+<pre>public <strong>getUrl</strong>(<a target="_blank" href="http://php.net/int">int</a> $categoryId, <a target="_blank" href="http://php.net/string">string</a> $lang = &quot;de&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $onlySitemaps = false, <a target="_blank" href="http://php.net/bool">bool</a> $webstoreId = null):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
 Retrieves the url for a category.
@@ -201,6 +241,11 @@ Retrieves the url for a category.
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$onlySitemaps</td>
         <td>Whether or not to only include categories with 'sitemaps' = 'Y'. Default false.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$webstoreId</td>
+        <td>webstoreId of details</td>
     </tr>
 </table>
 

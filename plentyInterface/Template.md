@@ -160,6 +160,11 @@ Design
 </table>
 
 
+<pre>public <strong>getCheckoutType</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
 ## Models<a name="template_config_models"></a>
 ### Design<a name="template_models_design"></a>
 

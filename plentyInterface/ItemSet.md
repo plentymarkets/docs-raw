@@ -490,6 +490,27 @@ Lists the item set components of a set. The item ID of the item set component mu
 </table>
 
 
+<pre>public <strong>deleteOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $setConfigId, <a target="_blank" href="http://php.net/int">int</a> $itemId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Delete an item set component. The item ID of the item set component and the set config ID must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$setConfigId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="itemset_itemset_models"></a>
 ### ItemSetComponent<a name="itemset_models_itemsetcomponent"></a>
 

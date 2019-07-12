@@ -547,7 +547,7 @@ Add a &quot;where null&quot; clause to the query.
 </table>
 
 
-<pre>public <strong>orWhereNull</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>orWhereNull</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName):<a href="plugin#plugin_database_contracts">Contracts</a>
 </pre>
 
     
@@ -594,7 +594,7 @@ Add a &quot;having&quot; clause to the query.
 </table>
 
 
-<pre>public <strong>orHaving</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $operator = null, <a target="_blank" href="http://php.net/string">string</a> $value = null):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>orHaving</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $operator = null, <a target="_blank" href="http://php.net/string">string</a> $value = null):<a href="plugin#plugin_database_contracts">Contracts</a>
 </pre>
 
     
@@ -641,7 +641,7 @@ Add an &quot;order by&quot; clause to the query.
 </table>
 
 
-<pre>public <strong>forPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $perPage = 15):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>forPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $perPage = 15):<a href="plugin#plugin_database_contracts">Contracts</a>
 </pre>
 
     
@@ -1604,6 +1604,11 @@ Eloquent model representing a PluginSet.
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
+            <td>pluginSetEntriesWithTrashed</td>
+            <td></td>
+        </tr><tr>
+            <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
             <td>layoutContainers</td>
             <td></td>
         </tr><tr>
@@ -1715,6 +1720,86 @@ Search plugins using filters. Example: searchPlugins([&#039;name&#039; =&gt; &#0
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isActiveInPluginSet</strong>(<a target="_blank" href="http://php.net/int">int</a> $pluginId, <a target="_blank" href="http://php.net/int">int</a> $pluginSetId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$pluginId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$pluginSetId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isActiveInPluginSetByName</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/int">int</a> $pluginSetId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$pluginName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$pluginSetId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isActiveInWebstore</strong>(<a target="_blank" href="http://php.net/int">int</a> $pluginId, <a target="_blank" href="http://php.net/int">int</a> $webstoreId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$pluginId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$webstoreId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isActiveInWebstoreByPluginName</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName, <a target="_blank" href="http://php.net/int">int</a> $webstoreId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$pluginName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$webstoreId</td>
         <td></td>
     </tr>
 </table>
@@ -1846,6 +1931,78 @@ Plugin layout container
 </table>
 
 
+<pre>public <strong>addOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $pluginSetId, <a target="_blank" href="http://php.net/string">string</a> $containerKey, <a target="_blank" href="http://php.net/string">string</a> $dataProviderKey, <a target="_blank" href="http://php.net/int">int</a> $containerPluginId = null, <a target="_blank" href="http://php.net/int">int</a> $dataProviderPluginId = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$pluginSetId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$containerKey</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$dataProviderKey</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$containerPluginId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$dataProviderPluginId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>removeOne</strong>(<a target="_blank" href="http://php.net/int">int</a> $pluginSetId, <a target="_blank" href="http://php.net/string">string</a> $containerKey, <a target="_blank" href="http://php.net/string">string</a> $dataProviderKey, <a target="_blank" href="http://php.net/int">int</a> $containerPluginId = null, <a target="_blank" href="http://php.net/int">int</a> $dataProviderPluginId = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$pluginSetId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$containerKey</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$dataProviderKey</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$containerPluginId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$dataProviderPluginId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### ConfigurationRepositoryContract<a name="plugin_contracts_configurationrepositorycontract"></a>
 
@@ -1924,6 +2081,57 @@ Save config values for plugins
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$setId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>export</strong>(<a target="_blank" href="http://php.net/int">int</a> $setId, <a target="_blank" href="http://php.net/int">int</a> $pluginId = null, <a target="_blank" href="http://php.net/bool">bool</a> $active = null):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$setId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$pluginId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$active</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>import</strong>(<a target="_blank" href="http://php.net/int">int</a> $setId, <a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $pluginId = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$setId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$pluginId</td>
         <td></td>
     </tr>
 </table>
@@ -2105,6 +2313,10 @@ that have been purchased from the marketplace but have not yet been installed in
             <td>isClosedSource</td>
             <td>is closed source</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>inboxPath</td>
+            <td>path in the inbox (closed source, open source)</td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>marketplaceName</td>
             <td>The plugin name displayed in marketplace</td>
@@ -2156,6 +2368,10 @@ that have been purchased from the marketplace but have not yet been installed in
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>offerTrial</td>
             <td>Determines if the plugin offers a trial period for plentyMarketplace</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>offerFreemium</td>
+            <td>Determines if the plugin offers freemium functionality</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>configurations</td>
@@ -3165,6 +3381,27 @@ Returns some or all (up to 1000) objects
     <tr>
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$resultKeyWithoutPrefix</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getPluginZip</strong>(<a target="_blank" href="http://php.net/int">int</a> $pluginSetId, <a target="_blank" href="http://php.net/string">string</a> $pluginName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get all objects of a plugin as zip file
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$pluginSetId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$pluginName</td>
         <td></td>
     </tr>
 </table>

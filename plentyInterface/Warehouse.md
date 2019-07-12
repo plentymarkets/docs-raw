@@ -34,7 +34,7 @@ Get a warehouse location
 </table>
 
 
-<pre>public <strong>listWarehouseLocations</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $paginate = 1, <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/int">int</a> $warehouseId = null):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+<pre>public <strong>listWarehouseLocations</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $paginate = 1, <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/int">int</a> $warehouseId = null, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
 
     
@@ -65,6 +65,32 @@ Get all warehouse locations
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$warehouseId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listWarehouseLocationsByLevelId</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/int">int</a> $levelId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+List warehouse locations by levelId
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$levelId</td>
         <td></td>
     </tr>
 </table>
@@ -203,6 +229,62 @@ Move a warehouse location position
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
         <td>The request data</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>listWarehouseLocationStock</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $paginate = 1, <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/int">int</a> $warehouseLocationId = null, <a target="_blank" href="http://php.net/array">array</a> $with = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
+
+    
+Get all warehouse locations stock
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$paginate</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseLocationId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$with</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getWarehouseLocationAvailability</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseLocationId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get availability for storage location
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseLocationId</td>
+        <td></td>
     </tr>
 </table>
 
@@ -405,7 +487,7 @@ Delete a warehouse location level
 </table>
 
 
-<pre>public <strong>getWarehouseStructure</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>getWarehouseStructure</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $data = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -416,6 +498,11 @@ Get a warehouse structure.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$warehouseId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
         <td></td>
     </tr>
 </table>
@@ -433,6 +520,27 @@ Move a warehouse location level position
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
         <td>The request data</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getWarehouseStructureMoving</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get a warehouse structure moving.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
     </tr>
 </table>
 

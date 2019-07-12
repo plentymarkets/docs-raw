@@ -164,6 +164,12 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.crypt.php">crypt</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.ctype-alnum.php">ctype_alnum</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.ctype-alpha.php">ctype_alpha</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.curl-close.php">curl_close</a>
             </li>
                     <li>
@@ -452,6 +458,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
                 <a target="_blank" href="http://docs.php.net/manual/function.pathinfo.php">pathinfo</a>
             </li>
                     <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.pow.php">pow</a>
+            </li>
+                    <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.preg-match.php">preg_match</a>
             </li>
                     <li>
@@ -516,6 +525,9 @@ These are native PHP functions that are *allowed* to be used in plentymarkets pl
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.sprintf.php">sprintf</a>
+            </li>
+                    <li>
+                <a target="_blank" href="http://docs.php.net/manual/function.str-getcsv.php">str_getcsv</a>
             </li>
                     <li>
                 <a target="_blank" href="http://docs.php.net/manual/function.str-pad.php">str_pad</a>

@@ -126,6 +126,10 @@ The Role authentication model
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>permissions</td>
             <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>accessControl</td>
+            <td></td>
         </tr></tbody>
 </table>
 

@@ -169,7 +169,7 @@ Gets a property relation. The ID of the property relation must be specified.
 </table>
 
 
-<pre>public <strong>listRelations</strong>($filters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>listRelations</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $paginate):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 List property relations
@@ -177,9 +177,23 @@ List property relations
 ##### <strong>Parameters</strong>
     
 <table class="table table-condensed">    <tr>
-        <td><a href="miscellaneous#miscellaneous__"></a>
-</td>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$filters</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$paginate</td>
         <td></td>
     </tr>
 </table>
@@ -233,6 +247,31 @@ Deletes a property relation. The ID of property relation must be specified.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$relationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>savePropertyRelationFile</strong>(<a target="_blank" href="http://php.net/int">int</a> $relationId, <a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/string">string</a> $file):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Save property relation file to S3
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$relationId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$file</td>
         <td></td>
     </tr>
 </table>
@@ -594,6 +633,62 @@ Returns a collection of parsed filters as Condition object
     
 Clears the filter array.
     
+
+### PropertyGroupRelationRepositoryContract<a name="property_contracts_propertygrouprelationrepositorycontract"></a>
+
+This interface allows you to link or unlink properties with a property group.
+
+
+#### Namespace
+
+`Plenty\Modules\Property\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>link</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/int">int</a> $propertyGroupId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Links a property to a property group.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyGroupId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>unlink</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyId, <a target="_blank" href="http://php.net/int">int</a> $propertyGroupId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Unlinks a property to a property group.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$propertyGroupId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### PropertyGroupNameRepositoryContract<a name="property_contracts_propertygroupnamerepositorycontract"></a>
 

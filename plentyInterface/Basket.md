@@ -572,7 +572,7 @@ Class BasketCheckException
 </pre>
 
     
-BasketItemCheckException constructor.
+BasketCheckException constructor.
     
 ##### <strong>Parameters</strong>
     
@@ -612,8 +612,8 @@ Class BasketItemQuantityCheckException
 
 #### Methods
 
-<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/int">int</a> $code, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/float">float</a> $requestedQuantity, <a target="_blank" href="http://php.net/string">string</a> $message = &quot;&quot;, <a href="miscellaneous#miscellaneous__exception">Exception</a>
- $previous = null):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/int">int</a> $code, <a target="_blank" href="http://php.net/string">string</a> $message = &quot;&quot;, <a href="miscellaneous#miscellaneous__exception">Exception</a>
+ $previous = null, <a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/float">float</a> $requestedQuantity = 0.0, <a target="_blank" href="http://php.net/float">float</a> $specifiedQuantity = 0.0):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -627,16 +627,6 @@ BasketItemQuantityCheckException constructor.
         <td></td>
     </tr>
     <tr>
-        <td><a target="_blank" href="http://php.net/int">int</a></td>
-        <td>$variationId</td>
-        <td></td>
-    </tr>
-    <tr>
-        <td><a target="_blank" href="http://php.net/float">float</a></td>
-        <td>$requestedQuantity</td>
-        <td></td>
-    </tr>
-    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$message</td>
         <td></td>
@@ -647,15 +637,35 @@ BasketItemQuantityCheckException constructor.
         <td>$previous</td>
         <td></td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$requestedQuantity</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$specifiedQuantity</td>
+        <td></td>
+    </tr>
 </table>
 
 
-<pre>public <strong>getVariationId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
-
-    
-
-    
 <pre>public <strong>getRequestedQuantity</strong>():<a target="_blank" href="http://php.net/float">float</a></pre>
+
+    
+
+    
+<pre>public <strong>getSpecifiedQuantity</strong>():<a target="_blank" href="http://php.net/float">float</a></pre>
 
     
 
@@ -678,7 +688,7 @@ Class BasketItemCheckException
 #### Methods
 
 <pre>public <strong>__construct</strong>(<a target="_blank" href="http://php.net/int">int</a> $code = 404, <a target="_blank" href="http://php.net/string">string</a> $message = &quot;&quot;, <a href="miscellaneous#miscellaneous__exception">Exception</a>
- $previous = null):<a href="miscellaneous#miscellaneous__void">void</a>
+ $previous = null, <a target="_blank" href="http://php.net/int">int</a> $itemId, <a target="_blank" href="http://php.net/int">int</a> $variationId, <a target="_blank" href="http://php.net/float">float</a> $stockNet = 0.0):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -702,9 +712,39 @@ BasketItemCheckException constructor.
         <td>$previous</td>
         <td></td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$variationId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/float">float</a></td>
+        <td>$stockNet</td>
+        <td></td>
+    </tr>
 </table>
 
 
+<pre>public <strong>getItemId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getVariationId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+<pre>public <strong>getStockNet</strong>():<a target="_blank" href="http://php.net/float">float</a></pre>
+
+    
+
+    
 # Events<a name="basket_events"></a>
     
 ## Basket<a name="basket_events_basket"></a>
@@ -860,6 +900,28 @@ The event is triggered after the shopping cart is changed.
 
 
 ## BasketItem<a name="basket_events_basketitem"></a>
+### BasketItemEvent<a name="basket_basketitem_basketitemevent"></a>
+
+BasketItemEvent
+
+
+#### Namespace
+
+`Plenty\Modules\Basket\Events\BasketItem`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getBasketItem</strong>():<a href="basket#basket_models_basketitem">BasketItem</a>
+</pre>
+
+    
+
+    
+
 ### BeforeBasketItemAdd<a name="basket_basketitem_beforebasketitemadd"></a>
 
 The event is triggered before an item is created in the shopping cart.

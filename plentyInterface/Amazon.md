@@ -3,6 +3,80 @@
 # Amazon<a name="amazon_amazon"></a>
     
 ## Contracts<a name="amazon_amazon_contracts"></a>
+### AmazonFulfillmentCenterRepositoryContract<a name="amazon_contracts_amazonfulfillmentcenterrepositorycontract"></a>
+
+AmazonFulfillmentCenterRepository
+
+
+#### Namespace
+
+`Plenty\Modules\Amazon\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getDeliveryAddresses</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists amazon fulfilment centers delivery addresses.
+    
+<pre>public <strong>getDeliveryAddressByFulfillmentCenterId</strong>(<a target="_blank" href="http://php.net/string">string</a> $amazonFulfillmentCenterId):<a href="account#account_models_address">Address</a>
+</pre>
+
+    
+Get the delivery address by fulfillment center ID.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$amazonFulfillmentCenterId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getDeliveryAddressByGLN</strong>(<a target="_blank" href="http://php.net/string">string</a> $GLN):<a href="account#account_models_address">Address</a>
+</pre>
+
+    
+Get the delivery address by GLN.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$GLN</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getInvoiceAddressByGLN</strong>(<a target="_blank" href="http://php.net/string">string</a> $GLN):<a href="account#account_models_address">Address</a>
+</pre>
+
+    
+Get the invoice address by GLN.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$GLN</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getContactId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
+
 ### AmazonClientFactory<a name="amazon_contracts_amazonclientfactory"></a>
 
 

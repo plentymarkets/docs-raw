@@ -169,6 +169,14 @@ The warehouse model in plentymarkets represents actual warehouses. Every warehou
 </td>
             <td>repairWarehouse</td>
             <td>All information about the repair warehouse if a repair warehouse is linked to the sales warehouse</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The updated at timestamp of the warehouse</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The created at timestamp of the warehouse</td>
         </tr></tbody>
 </table>
 
@@ -1199,6 +1207,32 @@ List stock movements
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$itemsPerPage</td>
         <td>The number of items per page</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>unpackVariation</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId, <a target="_blank" href="http://php.net/array">array</a> $variationStockIntake, <a target="_blank" href="http://php.net/array">array</a> $variationStockCorrection):<a href="stockmanagement#stockmanagement_models_warehouse">Warehouse</a>
+</pre>
+
+    
+Unpack variation
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td>The ID of the warehouse</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$variationStockIntake</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$variationStockCorrection</td>
+        <td></td>
     </tr>
 </table>
 

@@ -359,6 +359,12 @@ Gets the description of the payment method by ID and language. The ID of the pay
 </table>
 
 
+<pre>public <strong>getAllowedPaymentMethodListForContact</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 # Frontend<a name="frontend_frontend"></a>
     
 ## Contracts<a name="frontend_frontend_contracts"></a>

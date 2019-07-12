@@ -50,6 +50,37 @@ Takes the Name of a subscription plugin and returns information about the subscr
 </table>
 
 
+
+### MarketplacePurchaseInformationContract<a name="plentymarketplace_contracts_marketplacepurchaseinformationcontract"></a>
+
+Get information about purchases on marketplace.
+
+
+#### Namespace
+
+`Plenty\Modules\PlentyMarketplace\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>isPaid</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Takes the Name of a plugin and returns true if the plugin has been paid for.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$pluginName</td>
+        <td>The plugin name. Must be exactly as provided in the plugin.json.</td>
+    </tr>
+</table>
+
+
 ## Models<a name="plentymarketplace_plentymarketplace_models"></a>
 ### SubscriptionChildOrderInformation<a name="plentymarketplace_models_subscriptionchildorderinformation"></a>
 

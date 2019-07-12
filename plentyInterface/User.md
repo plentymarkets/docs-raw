@@ -103,6 +103,22 @@ Sets the selected PluginSet for a given user&#039;s backend
 </table>
 
 
+<pre>public <strong>getBackendPluginSet</strong>(<a target="_blank" href="http://php.net/int">int</a> $userId):<a href="plugin#plugin_models_pluginset">PluginSet</a>
+</pre>
+
+    
+Gets the selected PluginSet for a given user&#039;s backend
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$userId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="user_user_models"></a>
 ### User<a name="user_models_user"></a>
 

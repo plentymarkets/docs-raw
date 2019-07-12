@@ -131,6 +131,10 @@ The user authentication model
             <td>id</td>
             <td>The ID of the user</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>userId</td>
+            <td>The ID of the user</td>
+        </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>pwd</td>
@@ -139,6 +143,14 @@ The user authentication model
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>pwd_md5</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>email</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>emailHash</td>
             <td></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
@@ -158,8 +170,48 @@ The user authentication model
             <td>user</td>
             <td>The login name of the user</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>username</td>
+            <td>The login name of the user</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>userClass</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>userRights</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>uiConfig</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>permissions</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>pluginPermissions</td>
+            <td></td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>roles</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>accessControl</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>daysLeftToChangePassword</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>isSupportUser</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>oauthAccessTokensId</td>
             <td></td>
         </tr></tbody>
 </table>

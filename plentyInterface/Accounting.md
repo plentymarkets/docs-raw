@@ -120,7 +120,28 @@ Get accounting location settings. The ID of the location must be specified.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
-        <td></td>
+        <td>The accounting location Id</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateSettings</strong>(<a target="_blank" href="http://php.net/int">int</a> $id, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="accounting#accounting_models_accountinglocationsettings">AccountingLocationSettings</a>
+</pre>
+
+    
+Update accounting location settings. The ID of the location must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td>The accounting location Id</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
     </tr>
 </table>
 

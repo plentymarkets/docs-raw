@@ -18,7 +18,7 @@ This interface provides methods to list contracts
 
 #### Methods
 
-<pre>public <strong>list</strong>():<a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
+<pre>public <strong>list</strong>():<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
 </pre>
 
     

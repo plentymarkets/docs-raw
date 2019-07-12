@@ -290,6 +290,157 @@ Returns a collection of parsed filters as Condition object
     
 Clears the filter array.
     
+
+### ManufacturerExternalRepositoryContract<a name="item_contracts_manufacturerexternalrepositorycontract"></a>
+
+The contract for the manufacturer external repository
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Manufacturer\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>find</strong>(<a target="_blank" href="http://php.net/int">int</a> $manufacturerId, <a target="_blank" href="http://php.net/int">int</a> $marketId):<a href="item#item_models_manufacturerexternal">ManufacturerExternal</a>
+</pre>
+
+    
+Gets a manufacturer external. The ID of the manufacturer and the ID of the market must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$manufacturerId</td>
+        <td>The ID of the manufacturer</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$marketId</td>
+        <td>The ID of the market</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>create</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_manufacturerexternal">ManufacturerExternal</a>
+</pre>
+
+    
+Creates a manufacturer external.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The manufacturer external data as an associative array</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>update</strong>(<a target="_blank" href="http://php.net/array">array</a> $data, <a target="_blank" href="http://php.net/int">int</a> $manufacturerId, <a target="_blank" href="http://php.net/int">int</a> $marketId):<a href="item#item_models_manufacturerexternal">ManufacturerExternal</a>
+</pre>
+
+    
+Updates a manufacturer external. The ID of the manufacturer and the ID of the market must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The manufacturer external data as an associative array</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$manufacturerId</td>
+        <td>The ID of the manufacturer</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$marketId</td>
+        <td>The ID of the market</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/int">int</a> $manufacturerId, <a target="_blank" href="http://php.net/int">int</a> $marketId):<a href="miscellaneous#miscellaneous_models_deleteresponse">DeleteResponse</a>
+</pre>
+
+    
+Deletes a manufacturer external. The ID of the manufacturer and the ID of the market must be specified.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$manufacturerId</td>
+        <td>The ID of the manufacturer</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$marketId</td>
+        <td>The ID of the market</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>search</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Lists manufacturer externals.
+    
+<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 ## Models<a name="item_manufacturer_models"></a>
 ### Manufacturer<a name="item_models_manufacturer"></a>
 
@@ -393,6 +544,10 @@ The item manufacturer model
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>commissions</td>
             <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>externals</td>
+            <td></td>
         </tr></tbody>
 </table>
 
@@ -447,6 +602,57 @@ The item manufacturer commission model
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>commission</td>
             <td>The manufacturer commission value in percent</td>
+        </tr><tr>
+            <td><a href="item#item_models_manufacturer">Manufacturer</a>
+</td>
+            <td>manufacturer</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### ManufacturerExternal<a name="item_models_manufacturerexternal"></a>
+
+The item manufacturer external model
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Manufacturer\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>manufacturerId</td>
+            <td>The unique ID of the manufacturer</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>marketId</td>
+            <td>The unique ID of the market</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>value</td>
+            <td>The external value</td>
         </tr><tr>
             <td><a href="item#item_models_manufacturer">Manufacturer</a>
 </td>
@@ -3593,7 +3799,8 @@ Gets an attribute. The backend name of the attribute must be specified.
 </table>
 
 
-<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>all</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = [], <a target="_blank" href="http://php.net/int">int</a> $perPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+</pre>
 
     
 Lists all attributes.
@@ -4554,11 +4761,26 @@ Update a variation. The ID of the variation must be specified.
 </table>
 
 
+<pre>public <strong>updateBulk</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Updates up to 50 variations.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>changePrimaryVariation</strong>(<a target="_blank" href="http://php.net/int">int</a> $variationId):<a href="item#item_models_variation">Variation</a>
 </pre>
 
     
-Change main variation. Changes the given variation id to the new main variation
+Change main variation. Changes the variation with the specified variation ID to the new main variation.
     
 ##### <strong>Parameters</strong>
     
@@ -4731,7 +4953,7 @@ Enhances the loading speed.
 </table>
 
 
-<pre>public <strong>preload</strong>(<a target="_blank" href="http://php.net/array">array</a> $values):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>preload</strong>(<a target="_blank" href="http://php.net/array">array</a> $values, <a target="_blank" href="http://php.net/array">array</a> $parameters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 
@@ -4741,6 +4963,11 @@ Enhances the loading speed.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$values</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$parameters</td>
         <td></td>
     </tr>
 </table>
@@ -5151,6 +5378,10 @@ Variation
             <td>relatedUpdatedAt</td>
             <td>The time at which related information for this variation was last updated. Related information is defined as information that is linked to the variation, i.e. barcodes, categories, images, markets, clients (stores), prices, suppliers, warehouses and the default category.</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>availabilityUpdatedAt</td>
+            <td>The time at which the availability of this variation was last updated.</td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>priceCalculationId</td>
             <td>The ID of the price calculation linked to the variation.</td>
@@ -5312,6 +5543,18 @@ Variation
             <td>The sales rank of the variation. This ranking is used to position top items automatically if the option <b>Automatically sort by monthly sales</b> (<b>Settings » Client (store) » Standard » Item layouts » Basic settings</b>) is set to <b>Yes</b>. The sales ranking is calculated daily. If the option <b>Automatically sort by monthly sales</b> is set to <b>No</b>, a value of 0 is returned and variations are sorted by position instead.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>parentVariationId</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/float">float</a></td>
+            <td>parentVariationQuantity</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>singleItemCount</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>categoryVariationId</td>
             <td>Either the ID of the variation or the ID of the item's main variation. No other values are permitted.<ul><li>ID of the variation = Categories are not inherited from the main variation.</li><li>ID of the item's main variation = Inheritance of categories is active.</li></ul></td>
         </tr><tr>
@@ -5338,6 +5581,26 @@ Variation
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>propertyVariationId</td>
             <td>Either the ID of the variation or the ID of the item's main variation. No other values are permitted.<ul><li>ID of the variation = Properties are not inherited from the main variation.</li><li>ID of the item's main variation = Inheritance of properties is active.</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>tagVariationId</td>
+            <td>Either the ID of the variation or the ID of the item's main variation. No other values are permitted.<ul><li>ID of the variation = Tags are not inherited from the main variation.</li><li>ID of the item's main variation = Inheritance of tags is active.</li></ul></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>hasCalculatedBundleWeight</td>
+            <td>Indicates if the gross bundle weight is calculated by its components.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>hasCalculatedBundleNetWeight</td>
+            <td>Indicates if the net bundle weight is calculated by its components.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>hasCalculatedBundlePurchasePrice</td>
+            <td>Indicates if the net purchase price is calculated by its components.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>hasCalculatedBundleMovingAveragePrice</td>
+            <td>Indicates if the moving average net purchase price is calculated by its components.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationBarcodes</td>
@@ -5401,12 +5664,28 @@ Variation
             <td>An array of the warehouses of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>tags</td>
+            <td>An array of the tags of the variation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>comments</td>
+            <td>An array of the comments of the variation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>images</td>
             <td>An array of the images of the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>itemImages</td>
             <td>An array of the images of the item linked to the variation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>itemCrossSelling</td>
+            <td>An array of the cross selling items of the item linked to the variation.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>itemShippingProfiles</td>
+            <td>An array of the shipping profiles of the item linked to the variation.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>variationAdditionalSkus</td>
@@ -5436,6 +5715,10 @@ Variation
             <td></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>children</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>stockStorageLocations</td>
             <td>An array of the stockStorageLocations of the variation.</td>
         </tr></tbody>
@@ -5460,6 +5743,64 @@ Class VariationException
 `Plenty\Modules\Item\Variation\Exceptions`
 
 
+
+
+## Events<a name="item_variation_events"></a>
+### BeforeStatisticAccess<a name="item_events_beforestatisticaccess"></a>
+
+The event is triggered before a statics will be loaded
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Variation\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>isAccessAllowed</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>setAccessAllowed</strong>(<a target="_blank" href="http://php.net/bool">bool</a> $accessAllowed):<a href="item#item_events_beforestatisticaccess">BeforeStatisticAccess</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$accessAllowed</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getStatistic</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>setStatistic</strong>(<a target="_blank" href="http://php.net/string">string</a> $statistic):<a href="item#item_events_beforestatisticaccess">BeforeStatisticAccess</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$statistic</td>
+        <td></td>
+    </tr>
+</table>
 
 
 # Services<a name="item_services"></a>
@@ -7373,6 +7714,52 @@ Lists SKUs
 </table>
 
 
+<pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+    
+<pre>public <strong>applyCriteriaFromFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Applies criteria classes to the current repository.
+    
+<pre>public <strong>setFilters</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Sets the filter array.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns the filter array.
+    
+<pre>public <strong>getConditions</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Returns a collection of parsed filters as Condition object
+    
+<pre>public <strong>clearFilters</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Clears the filter array.
+    
 
 ### VariationSkuBulkRepositoryContract<a name="item_contracts_variationskubulkrepositorycontract"></a>
 
@@ -8392,6 +8779,22 @@ foo
     
 
     
+<pre>public <strong>setSorting</strong>(<a target="_blank" href="http://php.net/string">string</a> $field):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$field</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>mutateObject</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -9144,6 +9547,56 @@ foo
 
 
 
+### VariationAvailabilityUpdatedAtFilter<a name="item_filter_variationavailabilityupdatedatfilter"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Filter`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getTimestamp</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addStatement</strong>(<a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+ $statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### CrossSellingFilter<a name="item_filter_crosssellingfilter"></a>
 
 foo
@@ -9290,6 +9743,93 @@ foo
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$tagIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addStatement</strong>(<a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+ $statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### VariationPropertyFilter<a name="item_filter_variationpropertyfilter"></a>
+
+foo
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Filter`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>hasPropertySelection</strong>(<a target="_blank" href="http://php.net/int">int</a> $id):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasAtLeastOnePropertySelection</strong>(<a target="_blank" href="http://php.net/array">array</a> $ids):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$ids</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>hasEachPropertySelection</strong>(<a target="_blank" href="http://php.net/array">array</a> $ids):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$ids</td>
         <td></td>
     </tr>
 </table>
@@ -10624,6 +11164,12 @@ foo
 
 #### Methods
 
+<pre>public <strong>getTimestamp</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 <pre>public <strong>getType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
@@ -11456,6 +12002,121 @@ To be written
 </table>
 
 
+
+### ItemAttributeValueCardinalityAggregation<a name="item_aggregations_itemattributevaluecardinalityaggregation"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Aggregations`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getField</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getAggregation</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addAggregation</strong>(<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+ $aggregation):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</td>
+        <td>$aggregation</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSource</strong>(<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+ $source):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</td>
+        <td>$source</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $page, <a target="_blank" href="http://php.net/int">int</a> $rowsPerPage):<a href="cloud#cloud_aggregation_aggregationinterface">AggregationInterface</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$rowsPerPage</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getSources</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 
 ### OptimizedAttributeValueListAggregationProcessor<a name="item_aggregations_optimizedattributevaluelistaggregationprocessor"></a>
 
@@ -12517,6 +13178,80 @@ To be written
     
 
     
+
+### ItemAttributeValueCardinalityAggregationProcessor<a name="item_aggregations_itemattributevaluecardinalityaggregationprocessor"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Aggregations`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>process</strong>($data):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getDependencies</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addMutator</strong>(<a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+ $mutator):<a href="cloud#cloud_lib_processor">Processor</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+</td>
+        <td>$mutator</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addCondition</strong>(<a href="cloud#cloud_condition_conditioninterface">ConditionInterface</a>
+ $conditions):<a href="cloud#cloud_lib_processor">Processor</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_condition_conditioninterface">ConditionInterface</a>
+</td>
+        <td>$conditions</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### ItemCardinalityAggregation<a name="item_aggregations_itemcardinalityaggregation"></a>
 
@@ -17156,6 +17891,40 @@ Returns this model as an array.
     
 # Stock<a name="item_stock"></a>
     
+## Hooks<a name="item_stock_hooks"></a>
+### CheckItemStock<a name="item_hooks_checkitemstock"></a>
+
+CheckItemStock
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Stock\Hooks`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>handle</strong>(<a href="basket#basket_basketitem_basketitemevent">BasketItemEvent</a>
+ $basketItemEvent):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="basket#basket_basketitem_basketitemevent">BasketItemEvent</a>
+</td>
+        <td>$basketItemEvent</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Events<a name="item_stock_events"></a>
 ### BasketItemWarnOversell<a name="item_events_basketitemwarnoversell"></a>
 

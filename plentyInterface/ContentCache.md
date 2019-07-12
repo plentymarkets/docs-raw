@@ -77,7 +77,28 @@ Invalidate all cache entries related to given variation ids.
 </table>
 
 
-<pre>public <strong>invalidateAll</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>invalidateItemIds</strong>(<a target="_blank" href="http://php.net/array">array</a> $itemIds, <a target="_blank" href="http://php.net/int">int</a> $plentyId = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$itemIds</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>invalidateAll</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId = null):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     

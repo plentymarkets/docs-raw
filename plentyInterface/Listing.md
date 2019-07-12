@@ -1571,6 +1571,10 @@ The listing market price model.
             <td>value</td>
             <td>The value of the listing market price.</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>currency</td>
+            <td>The currency of the listing market price.</td>
+        </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>listingMarket</td>
@@ -2817,7 +2821,7 @@ Get a listing market.
 </table>
 
 
-<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $filters = []):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
+<pre>public <strong>search</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = 1, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/array">array</a> $with = [], <a target="_blank" href="http://php.net/array">array</a> $filters = [], <a target="_blank" href="http://php.net/string">string</a> $sort = &quot;&quot;):<a href="miscellaneous#miscellaneous_models_paginatedresult">PaginatedResult</a>
 </pre>
 
     
@@ -2844,6 +2848,11 @@ List listing market histories
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$filters</td>
         <td>The filters that should be applied. The filters that are available: 'listingMarketId', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition', 'updatedAtFrom', 'updatedAtTo , 'textData', 'firstPlatformCategoryId', 'secondPlatformCategoryId', 'firstShopCategoryId', 'secondShopCategoryId', 'thirdShopCategoryId', 'shippingProfileId', 'lastSale', 'isEbayPlus', 'isClickAndCollect'.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$sort</td>
+        <td>The sorting key that can be applied. These sortings are available: 'endTimeAsc', 'endTimeDesc', 'startTimeAsc', 'startTimeDesc', 'externalListingIdAsc', 'externalListingIdDesc'</td>
     </tr>
 </table>
 
@@ -3037,6 +3046,10 @@ The listing market history model.
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>price</td>
             <td>The price offered for this listing market. @see ListingMarketHistoryVariation if the listing market history contains variations.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>currency</td>
+            <td>The currency for the price of this listing market.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>sku</td>
@@ -3736,6 +3749,21 @@ Deletes a ListingMarketItemSpecific.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deleteByListingMarketId</strong>(<a target="_blank" href="http://php.net/int">int</a> $listingMarketId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Deletes all ListingMarketItemSpecific entries by listing market id.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$listingMarketId</td>
         <td></td>
     </tr>
 </table>

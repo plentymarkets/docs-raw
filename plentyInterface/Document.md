@@ -101,7 +101,7 @@ Upload order documents
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$type</td>
-        <td>The document type. Supported types are 'invoiceExternal', 'deliveryNote', 'orderConfirmation', 'offer', 'dunningLetter', 'returnNote', 'successConfirmation', 'correction'.</td>
+        <td>The document type. Supported types are 'invoiceExternal', 'deliveryNote', 'poDeliveryNote', 'orderConfirmation', 'offer', 'dunningLetter', 'returnNote', 'successConfirmation', 'correction'.</td>
     </tr>
     <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
@@ -216,6 +216,48 @@ Delete a category document.
 </table>
 
 
+<pre>public <strong>findCurrentOrderDocument</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="document#document_models_document">Document</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>findRecentOrderDocument</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="document#document_models_document">Document</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>deleteOrderShippingPackageDocuments</strong>(<a target="_blank" href="http://php.net/int">int</a> $packageId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
@@ -286,6 +328,31 @@ Delete a category document.
         <td><a target="_blank" href="http://php.net/bool">bool</a></td>
         <td>$withLabel</td>
         <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>generateOrderDocument</strong>(<a target="_blank" href="http://php.net/int">int</a> $orderId, <a target="_blank" href="http://php.net/int">int</a> $type, <a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Generate order document
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$orderId</td>
+        <td>The ID of the order</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$type</td>
+        <td>The document type</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
     </tr>
 </table>
 
@@ -434,6 +501,7 @@ The document model contains information about actual documents.
  <li>category</li>
  <li>correction_document</li>
  <li>credit_note</li>
+    <li>credit_note_external</li>
        <li>customer</li>
  <li>delivery_note</li>
     <li>dunning_letter</li>

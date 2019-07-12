@@ -159,7 +159,7 @@ Unlink a content from a layout container. The content itself will remain
 </table>
 
 
-<pre>public <strong>getContentLinksForContainer</strong>(<a target="_blank" href="http://php.net/string">string</a> $containerName, <a target="_blank" href="http://php.net/int">int</a> $pluginSetId = null, <a target="_blank" href="http://php.net/string">string</a> $lang = null):<a href="miscellaneous#miscellaneous__void">void</a>
+<pre>public <strong>getContentLinksForContainer</strong>(<a target="_blank" href="http://php.net/string">string</a> $containerName, <a target="_blank" href="http://php.net/int">int</a> $pluginSetId = null, <a target="_blank" href="http://php.net/string">string</a> $lang = null, <a target="_blank" href="http://php.net/string">string</a> $contentType = null):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -181,6 +181,11 @@ Get all content links for a specific layout container.
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$lang</td>
         <td>The language to get content links for. Current language will be get from session if not defined.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$contentType</td>
+        <td>Type of the content to get</td>
     </tr>
 </table>
 
@@ -207,6 +212,45 @@ Contract for content presets
     
 Get the widget configurations of the presets to be assigned to the created content.
     
+
+### GlobalSettingsHandler<a name="shopbuilder_contracts_globalsettingshandler"></a>
+
+Contract for classes handling global settings for the ShopBuilder.
+
+
+#### Namespace
+
+`Plenty\Modules\ShopBuilder\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>readSettings</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Read values of global settings.
+    
+<pre>public <strong>writeSettings</strong>($values):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Store values of global settings.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### ContentRepositoryContract<a name="shopbuilder_contracts_contentrepositorycontract"></a>
 
@@ -360,6 +404,152 @@ Delete content. Any connections to layout containers will be removed too.
 </table>
 
 
+<pre>public <strong>duplicateContent</strong>(<a target="_blank" href="http://php.net/int">int</a> $contentId, <a target="_blank" href="http://php.net/int">int</a> $targetPluginSetId, <a target="_blank" href="http://php.net/string">string</a> $language, <a target="_blank" href="http://php.net/string">string</a> $containerName, <a target="_blank" href="http://php.net/string">string</a> $contentName):<a href="shopbuilder#shopbuilder_models_content">Content</a>
+</pre>
+
+    
+Duplicate a content and its link
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contentId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$targetPluginSetId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$language</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$containerName</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$contentName</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>rebuildContents</strong>(<a target="_blank" href="http://php.net/string">string</a> $containerName = null):<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Rebuild all contents linked to the current plugin set.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$containerName</td>
+        <td>Name of the layout container to rebuild contents for.</td>
+    </tr>
+</table>
+
+
+## Providers<a name="shopbuilder_shopbuilder_providers"></a>
+### DataFieldProvider<a name="shopbuilder_providers_datafieldprovider"></a>
+
+Base class for data field providers.
+
+
+#### Namespace
+
+`Plenty\Modules\ShopBuilder\Providers`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>register</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>addField</strong>(<a target="_blank" href="http://php.net/string">string</a> $identifier, <a target="_blank" href="http://php.net/string">string</a> $label, <a target="_blank" href="http://php.net/string">string</a> $expression):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Register a new data field.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$identifier</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$label</td>
+        <td>The label of the field</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$expression</td>
+        <td>The twig expression to be inserted by this field</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addChildProvider</strong>(<a target="_blank" href="http://php.net/string">string</a> $label, <a target="_blank" href="http://php.net/string">string</a> $childProviderClass, <a target="_blank" href="http://php.net/array">array</a> $params = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Register a nested provider containing a list of child data fields.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$label</td>
+        <td>The label of the group</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$childProviderClass</td>
+        <td>The class name of the nested data fields provider.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$params</td>
+        <td>Additional parameters to be passed to provider constructor method.</td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addSearchKeywords</strong>(<a target="_blank" href="http://php.net/string">string</a> $identifier, <a target="_blank" href="http://php.net/array">array</a> $keywords = []):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Assign keywords to a field to be respected during search.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$identifier</td>
+        <td>The identifier of the field to assign keywords to.</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$keywords</td>
+        <td>A list of keywords. Each keyword may contain a translation key. A single keyword could be a comma separated list of words.</td>
+    </tr>
+</table>
+
+
 ## Models<a name="shopbuilder_shopbuilder_models"></a>
 ### ContentWidget<a name="shopbuilder_models_contentwidget"></a>
 
@@ -407,6 +597,14 @@ Content widget provided by a frontend plugin
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>type</td>
             <td>The type of the widget</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>maxPerPage</td>
+            <td>Maximum occurrences per content of the widget</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>categories</td>
+            <td>List of categories</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>allowedNestingTypes</td>
@@ -671,6 +869,14 @@ Links a content from the shop builder to a layout container of the frontend plug
             <td>active</td>
             <td>Indicates if the link is active and the content should be visible for the frontend.</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>relatedContentType</td>
+            <td>The content type the content is linked to</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>relatedContainerName</td>
+            <td>The container name the content is linked to</td>
+        </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>createdAt</td>
@@ -696,3 +902,101 @@ Links a content from the shop builder to a layout container of the frontend plug
     
 Returns this model as an array.
     
+## Helper<a name="shopbuilder_shopbuilder_helper"></a>
+### ShopBuilderRequest<a name="shopbuilder_helper_shopbuilderrequest"></a>
+
+Information provided by each request made from the shop builder preview.
+
+
+#### Namespace
+
+`Plenty\Modules\ShopBuilder\Helper`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>isShopBuilder</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>getPreviewContentType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getMainContentType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>setMainContentType</strong>(<a target="_blank" href="http://php.net/string">string</a> $mainContentType):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$mainContentType</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getMainContainerName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>setMainContainerName</strong>(<a target="_blank" href="http://php.net/string">string</a> $mainContainerName):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$mainContainerName</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setMainCategory</strong>($mainCategory):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$mainCategory</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### MappableSettingsHandler<a name="shopbuilder_helper_mappablesettingshandler"></a>
+
+Helper to map global configurations to plugin configs.
+
+
+#### Namespace
+
+`Plenty\Modules\ShopBuilder\Helper`
+
+
+
+

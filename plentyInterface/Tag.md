@@ -228,7 +228,7 @@ Deletes a tag by given tagId
 <li>blog</li>
 <li>category</li>
 <li>content_page</li>
-<li>item</li>
+<li>variation</li>
 <li>ticket</li>
 <li>board</li>
 </ul></td>
@@ -283,6 +283,36 @@ Returns all tags
 
     
 Creates a new tag
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>createBulk</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Creates up to 50 new tags
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>updateBulk</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Updates up to 50 tags
     
 ##### <strong>Parameters</strong>
     
@@ -382,7 +412,7 @@ Repository for TagAvailability
 <li>blog</li>
 <li>category</li>
 <li>content_page</li>
-<li>item</li>
+<li>variation</li>
 <li>ticket</li>
 </ul></td>
     </tr>
@@ -457,7 +487,7 @@ Repository for TagRelationship
         <td>The type of the availability. The following types are available:
 <ul>
 <li>category</li>
-<li>item</li>
+<li>variation</li>
 <li>ticket</li>
 </ul></td>
     </tr>
@@ -743,27 +773,19 @@ The tag relationship model.
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>tagId</td>
-            <td>The Tag ID of the tag</td>
+            <td>The ID of the tag</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>tagType</td>
-            <td>The type of the tag. The following types are available.
-<ul>
- <li>blog</li>
- <li>category</li>
- <li>content_page</li>
- <li>item</li>
- <li>ticket</li>
- <li>board</li>
-</ul></td>
+            <td>The type of tag.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>relationshipValue</td>
-            <td>The identifying value for what the tag is in relation to</td>
+            <td>The ID of the data record for which a tag relationship is created</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>relationshipUUID5</td>
-            <td>The identifying value for what the tag is in relation to for models with uuid5 as primary key</td>
+            <td>The ID of the data record for which a tag relationship is created. For models with uuid5 as primary key</td>
         </tr></tbody>
 </table>
 
@@ -822,6 +844,14 @@ The Tag model.
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>relationships</td>
             <td>The relationships of the tag.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>The updated at timestamp of the tag.</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>The created at timestamp of the tag.</td>
         </tr></tbody>
 </table>
 
@@ -918,9 +948,10 @@ The tag availability model.
 <li>blog</li>
 <li>category</li>
 <li>content_page</li>
-<li>item</li>
+<li>variation</li>
 <li>ticket</li>
 <li>board</li>
+<li>order</li>
 </ul></td>
         </tr></tbody>
 </table>

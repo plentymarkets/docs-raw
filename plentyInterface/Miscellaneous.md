@@ -169,6 +169,11 @@ Returns current webstoreId
     
 
     
+<pre>public <strong>getPluginSetId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+
+    
 <pre>public <strong>getUrlPath</strong>(<a target="_blank" href="http://php.net/string">string</a> $pluginName = &quot;&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
@@ -2938,6 +2943,11 @@ Generates the normalized query string for the Request.
     
 Gets the request &quot;intended&quot; method.
     
+<pre>public <strong>getLocale</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+Get the locale.
+    
 ## Templates<a name="miscellaneous_plugin_templates"></a>
 ### Markdown<a name="miscellaneous_templates_markdown"></a>
 
@@ -3924,7 +3934,7 @@ Plugin Mailer Service
 #### Methods
 
 <pre>public <strong>sendHtml</strong>(<a target="_blank" href="http://php.net/string">string</a> $html, $recipients, <a target="_blank" href="http://php.net/string">string</a> $subject = &quot;&quot;, <a target="_blank" href="http://php.net/array">array</a> $cc = [], <a target="_blank" href="http://php.net/array">array</a> $bcc = [], <a href="miscellaneous#miscellaneous_models_replyto">ReplyTo</a>
- $replyTo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+ $replyTo = null, <a target="_blank" href="http://php.net/array">array</a> $attachments = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -3964,11 +3974,16 @@ Send an email containing html
         <td>$replyTo</td>
         <td>Optional. ReplyToRecipient model with mailaddress and name attributes</td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$attachments</td>
+        <td>Optional. A list of StorageObject objects ( see Plenty\Modules\Plugin\Storage\Contracts\StorageRepositoryContract )</td>
+    </tr>
 </table>
 
 
 <pre>public <strong>sendFromTwig</strong>(<a target="_blank" href="http://php.net/string">string</a> $twigPath, <a target="_blank" href="http://php.net/array">array</a> $data, $recipients, <a target="_blank" href="http://php.net/string">string</a> $subject = &quot;&quot;, <a target="_blank" href="http://php.net/array">array</a> $altConfig = [], <a target="_blank" href="http://php.net/array">array</a> $cc = [], <a target="_blank" href="http://php.net/array">array</a> $bcc = [], <a href="miscellaneous#miscellaneous_models_replyto">ReplyTo</a>
- $replyTo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+ $replyTo = null, <a target="_blank" href="http://php.net/array">array</a> $attachments = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -4021,11 +4036,16 @@ sender-address is used.</td>
         <td>$replyTo</td>
         <td>Optional. ReplyToRecipient model with mailaddress and name attributes</td>
     </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$attachments</td>
+        <td>Optional. A list of StorageObject objects ( see Plenty\Modules\Plugin\Storage\Contracts\StorageRepositoryContract )</td>
+    </tr>
 </table>
 
 
 <pre>public <strong>sendFromMime</strong>(<a target="_blank" href="http://php.net/string">string</a> $mimeMessage, $recipients, <a target="_blank" href="http://php.net/array">array</a> $altConfig = [], <a target="_blank" href="http://php.net/array">array</a> $cc = [], <a target="_blank" href="http://php.net/array">array</a> $bcc = [], <a href="miscellaneous#miscellaneous_models_replyto">ReplyTo</a>
- $replyTo = null):<a href="miscellaneous#miscellaneous__void">void</a>
+ $replyTo = null, <a target="_blank" href="http://php.net/array">array</a> $attachments = []):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -4067,6 +4087,11 @@ sender-address is used.</td>
 </td>
         <td>$replyTo</td>
         <td>Optional. ReplyToRecipient model with mailaddress and name attributes</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$attachments</td>
+        <td>Optional. A list of StorageObject objects ( see Plenty\Modules\Plugin\Storage\Contracts\StorageRepositoryContract )</td>
     </tr>
 </table>
 
@@ -6995,6 +7020,59 @@ Instantiates Attribute Classes
 `Illuminate\Support`
 
 
+
+
+
+#### Methods
+
+<pre>public <strong>where</strong>(<a target="_blank" href="http://php.net/string">string</a> $key, $operator, $value = null):<a href="miscellaneous#miscellaneous_illuminate_support">Support</a>
+</pre>
+
+    
+Filter items by the given key value pair.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$key</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>first</strong>(<a target="_blank" href="http://php.net/callable">callable</a> $callback = null, $default = null):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Get the first item from the collection.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
+        <td>$callback</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$default</td>
+        <td></td>
+    </tr>
+</table>
 
 
 

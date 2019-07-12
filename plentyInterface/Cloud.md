@@ -342,6 +342,78 @@ to be written
 
     
 
+### DocumentInnerHitsToRootProcessor<a name="cloud_processor_documentinnerhitstorootprocessor"></a>
+
+DocumentInnerHitsToRootProcessor
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Processor`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getDependencies</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addMutator</strong>(<a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+ $mutator):<a href="cloud#cloud_lib_processor">Processor</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_mutator_mutatorinterface">MutatorInterface</a>
+</td>
+        <td>$mutator</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addCondition</strong>(<a href="cloud#cloud_condition_conditioninterface">ConditionInterface</a>
+ $conditions):<a href="cloud#cloud_lib_processor">Processor</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_condition_conditioninterface">ConditionInterface</a>
+</td>
+        <td>$conditions</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### ProcessorInterface<a name="cloud_processor_processorinterface"></a>
 
 to be written
@@ -553,6 +625,12 @@ foo
     
 
     
+<pre>public <strong>activate</strong>():<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</pre>
+
+    
+
+    
 <pre>public <strong>activateList</strong>(<a target="_blank" href="http://php.net/array">array</a> $fields):<a href="cloud#cloud_lib_source">Source</a>
 </pre>
 
@@ -596,6 +674,12 @@ foo
 
     
 <pre>public <strong>activateAll</strong>():<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>activate</strong>():<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
 </pre>
 
     
@@ -665,6 +749,12 @@ foo
 
     
 <pre>public <strong>activateAll</strong>():<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>activate</strong>():<a href="cloud#cloud_source_sourceinterface">SourceInterface</a>
 </pre>
 
     
@@ -1183,6 +1273,22 @@ Base class for different Search classes
 </table>
 
 
+<pre>public <strong>setMaxResultWindow</strong>(<a target="_blank" href="http://php.net/int">int</a> $maxResults = 10000):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$maxResults</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -1354,6 +1460,22 @@ To be written
     
 
     
+<pre>public <strong>setMaxResultWindow</strong>(<a target="_blank" href="http://php.net/int">int</a> $maxResults = 10000):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$maxResults</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -1622,6 +1744,12 @@ and whether the index has already been created.
     
 
     
+<pre>public <strong>refresh</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 
 ### IndexInterface<a name="cloud_index_indexinterface"></a>
 
@@ -1722,6 +1850,11 @@ to be written
 
     
 <pre>public <strong>getScrollRepositoryClassName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>refresh</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 
@@ -1862,6 +1995,12 @@ and whether the index has already been created.
 
     
 <pre>public <strong>hasAllField</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>refresh</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 
@@ -2629,6 +2768,22 @@ foo
         <td><a href="cloud#cloud_scoremodifier_scoremodifierinterface">ScoreModifierInterface</a>
 </td>
         <td>$scoreModifier</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setMaxResultWindow</strong>(<a target="_blank" href="http://php.net/int">int</a> $maxResults = 10000):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$maxResults</td>
         <td></td>
     </tr>
 </table>

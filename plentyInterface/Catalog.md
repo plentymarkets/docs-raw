@@ -3,6 +3,83 @@
 # Catalog<a name="catalog_catalog"></a>
     
 ## DataProviders<a name="catalog_catalog_dataproviders"></a>
+### NestedKeyDataProvider<a name="catalog_dataproviders_nestedkeydataprovider"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Catalog\DataProviders`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getKey</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getNestedRows</strong>($parentId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$parentId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getNestedData</strong>(<a target="_blank" href="http://php.net/string">string</a> $parentId, <a target="_blank" href="http://php.net/string">string</a> $query = &quot;&quot;):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$parentId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$query</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getRows</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getDataByValue</strong>(<a target="_blank" href="http://php.net/string">string</a> $id):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### BaseDataProvider<a name="catalog_dataproviders_basedataprovider"></a>
 
 To be written
@@ -207,6 +284,72 @@ Returns a collection of parsed filters as Condition object
 Clears the filter array.
     
 
+### NestedDataProviderContract<a name="catalog_contracts_nesteddataprovidercontract"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Catalog\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getNestedData</strong>(<a target="_blank" href="http://php.net/string">string</a> $parentId, <a target="_blank" href="http://php.net/string">string</a> $query = &quot;&quot;):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$parentId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$query</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getDataByValue</strong>(<a target="_blank" href="http://php.net/string">string</a> $id):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$id</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getData</strong>(<a target="_blank" href="http://php.net/string">string</a> $query = &quot;&quot;):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$query</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### TemplateContract<a name="catalog_contracts_templatecontract"></a>
 
 To be written
@@ -269,6 +412,38 @@ To be written
 </table>
 
 
+<pre>public <strong>addPreMutator</strong>(<a target="_blank" href="http://php.net/callable">callable</a> $callback):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
+        <td>$callback</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addPostMutator</strong>(<a target="_blank" href="http://php.net/callable">callable</a> $callback):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
+        <td>$callback</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getFilter</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -296,6 +471,16 @@ To be written
 
     
 <pre>public <strong>getMutators</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getPreMutators</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getPostMutators</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 
@@ -390,7 +575,7 @@ To be written
 
 #### Methods
 
-<pre>public <strong>register</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $type):<a href="catalog#catalog_contracts_templatecontract">TemplateContract</a>
+<pre>public <strong>register</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/string">string</a> $providerClass = &quot;&quot;):<a href="catalog#catalog_contracts_templatecontract">TemplateContract</a>
 </pre>
 
     
@@ -406,6 +591,11 @@ To be written
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$type</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$providerClass</td>
         <td></td>
     </tr>
 </table>
@@ -459,6 +649,22 @@ To be written
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$additionalFields</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addMutator</strong>(<a target="_blank" href="http://php.net/callable">callable</a> $mutator):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
+        <td>$mutator</td>
         <td></td>
     </tr>
 </table>
@@ -602,6 +808,57 @@ To be written
 </table>
 
 
+
+### CatalogTemplateProviderContract<a name="catalog_contracts_catalogtemplateprovidercontract"></a>
+
+To be written
+
+
+#### Namespace
+
+`Plenty\Modules\Catalog\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getMappings</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getFilter</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getPreMutators</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getPostMutators</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getSkuCallback</strong>():<a target="_blank" href="http://php.net/callable">callable</a></pre>
+
+    
+
+    
+<pre>public <strong>getSettings</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getMetaInfo</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
 
 ### CatalogExportRepositoryContract<a name="catalog_contracts_catalogexportrepositorycontract"></a>
 
@@ -758,6 +1015,43 @@ foo
 </table>
 
 
+<pre>public <strong>getMutators</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>addPreMutator</strong>(<a target="_blank" href="http://php.net/callable">callable</a> $callback):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
+        <td>$callback</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addPostMutator</strong>(<a target="_blank" href="http://php.net/callable">callable</a> $callback):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/callable">callable</a></td>
+        <td>$callback</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>getFilter</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -779,7 +1073,12 @@ foo
 </table>
 
 
-<pre>public <strong>getMutators</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPreMutators</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getPostMutators</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 
@@ -871,6 +1170,29 @@ foo
 
     
 <pre>public <strong>getIdentifier</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>boot</strong>(<a href="catalog#catalog_contracts_catalogtemplateprovidercontract">CatalogTemplateProviderContract</a>
+ $provider):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="catalog#catalog_contracts_catalogtemplateprovidercontract">CatalogTemplateProviderContract</a>
+</td>
+        <td>$provider</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>isBooted</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
 

@@ -884,6 +884,7 @@ The payment model
     <li>Import = 4</li>
     <li>Split payment = 5</li>
     <li>Plugin = 6</li>
+    <li>POS = 7</li>
 </ul></td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
