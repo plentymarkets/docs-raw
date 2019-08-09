@@ -6218,6 +6218,10 @@ The order shipping package model
             <td>exportLabelBase64</td>
             <td>The base64 encoded export label</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>returnPackageNumber</td>
+            <td>The return package number</td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>packageType</td>
             <td>The type of the package. The following types are valid:

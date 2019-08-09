@@ -2239,6 +2239,21 @@ Get the list of all available eBay marketplaces.
 </table>
 
 
+<pre>public <strong>allEbay</strong>(<a target="_blank" href="http://php.net/array">array</a> $filters = []):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the list of all available eBay marketplaces.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$filters</td>
+        <td>You can pass multiple filters to search only custom marketplaces. Available filters: `referrerId`, `marketplaceId`, `marketId`, `siteId`.</td>
+    </tr>
+</table>
+
+
 ## Models<a name="market_marketplace_models"></a>
 ### Marketplace<a name="market_models_marketplace"></a>
 

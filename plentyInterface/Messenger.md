@@ -626,3 +626,149 @@ The messenger MessageTo model
     
 Returns this model as an array.
     
+## Events<a name="messenger_messenger_events"></a>
+### MessageCreated<a name="messenger_events_messagecreated"></a>
+
+The event is triggered after a new message was created
+
+
+#### Namespace
+
+`Plenty\Modules\Messenger\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>isFirstMessage</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+If &lt;tt&gt;TRUE&lt;/tt&gt;, the message is the first one, otherwise an answer message.
+    
+<pre>public <strong>getMessage</strong>():<a href="messenger#messenger_models_message">Message</a>
+</pre>
+
+    
+Get the message.
+    
+## Services<a name="messenger_messenger_services"></a>
+### MessageTypesService<a name="messenger_services_messagetypesservice"></a>
+
+Types and type validation for several types in messenger
+
+
+#### Namespace
+
+`Plenty\Modules\Messenger\Services`
+
+
+
+
+
+#### Methods
+
+<pre>public static <strong>getValidLinkedToTypes</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the valid types for &quot;linked to&quot; references.
+    
+<pre>public static <strong>isValidLinkedTo</strong>(<a target="_blank" href="http://php.net/string">string</a> $linkType, $linkValue):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Checks whether the given link is valid or not.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$linkType</td>
+        <td>The link type.</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$linkValue</td>
+        <td>The link value.</td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getValidFromTypes</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the valid types for &quot;from&quot; references.
+    
+<pre>public static <strong>isValidFrom</strong>(<a target="_blank" href="http://php.net/string">string</a> $fromType, $fromValue):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Checks whether the given from is valid or not.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fromType</td>
+        <td>The from type.</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$fromValue</td>
+        <td>The from value.</td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getValidReferrerTypes</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the valid types for &quot;referrer&quot; references.
+    
+<pre>public static <strong>isValidReferrer</strong>(<a target="_blank" href="http://php.net/string">string</a> $referrerType, $referrerValue, <a target="_blank" href="http://php.net/string">string</a> $referrerName = null):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Checks whether the given referrer reference is valid or not.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$referrerType</td>
+        <td>The reference to be checked</td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$referrerValue</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$referrerName</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getValidToTypes</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get the valid key types for the &#039;to&#039; array.
+    
+<pre>public static <strong>isValidTo</strong>(<a target="_blank" href="http://php.net/string">string</a> $toKey):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+Checks whether the given key has a valid value for to.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$toKey</td>
+        <td></td>
+    </tr>
+</table>
+
+

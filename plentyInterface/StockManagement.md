@@ -123,6 +123,10 @@ The warehouse model in plentymarkets represents actual warehouses. Every warehou
     <li>7 = Other</li>
 </ul></td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>allocationReferrerIds</td>
+            <td>Allocation Referrer Ids by automatic warehouse detection</td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>onStockAvailability</td>
             <td>Displayed availability of a variation if stock is available</td>
@@ -1466,6 +1470,10 @@ The stock model. There are 4 different stock terms used in plentymarkets. The ph
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>reordered</td>
             <td>The reordered quantity of a variation</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>warehousePriority</td>
+            <td>The priority of the warehouse</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/float">float</a></td>
             <td>reservedBundle</td>

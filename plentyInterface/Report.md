@@ -211,6 +211,44 @@ The report raw model
 Returns this model as an array.
     
 
+### KeyFigureFilter<a name="report_models_keyfigurefilter"></a>
+
+The key figure filter model is the base class of all key figure filter classes. Each KeyFigure class needs a filter class, which defines the allowed fields to be filtered.
+
+
+#### Namespace
+
+`Plenty\Modules\Report\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>filters</td>
+            <td>List of allowed filter names</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
 ### RawDataCreator<a name="report_models_rawdatacreator"></a>
 
 The report raw data creator model
@@ -335,6 +373,131 @@ The report raw data search result model
 Returns this model as an array.
     
 
+### KeyFigureResult<a name="report_models_keyfigureresult"></a>
+
+Represents a key figure result
+
+
+#### Namespace
+
+`Plenty\Modules\Report\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>keyFigureConfigId</td>
+            <td>Id of key figure config</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>scaleBasisTime</td>
+            <td>Scale basis time</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>keyFigure</td>
+            <td>Key figure name</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>plentyIdHash</td>
+            <td>System id hash</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>resultData</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### KeyFigureConfig<a name="report_models_keyfigureconfig"></a>
+
+The key figure config model represents the configuration of a key figure.
+
+
+#### Namespace
+
+`Plenty\Modules\Report\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>id</td>
+            <td>Id of this configuration</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>plentyIdHash</td>
+            <td>The plentymarkets system id hash</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>keyFigure</td>
+            <td>Key figure name</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>keyFigureName</td>
+            <td>User defined name</td>
+        </tr><tr>
+            <td><a href="report#report_models_keyfigurefilter">KeyFigureFilter</a>
+</td>
+            <td>filter</td>
+            <td>Filter for calculating key this key figure</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>calculateAt</td>
+            <td>Time of last calculation (Unixtime)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>Time of last change</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>Time of creation</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
 ### RawDataConfigs<a name="report_models_rawdataconfigs"></a>
 
 List of all saved raw data configurations
@@ -360,11 +523,65 @@ List of all saved raw data configurations
     <tbody><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>plentyIdHash</td>
-            <td>System id hash</td>
+            <td>The plentymarkets system id hash</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>configs</td>
             <td>List of all saved configurations</td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### Report<a name="report_models_report"></a>
+
+Represents the configuration of a report and its key figures.
+
+
+#### Namespace
+
+`Plenty\Modules\Report\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>id</td>
+            <td>Id of this report</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>plentyIdHash</td>
+            <td>The plentymarkets system id hash</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>reportName</td>
+            <td>Name of this report</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>updatedAt</td>
+            <td>Time of last change</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>createdAt</td>
+            <td>Time of creation</td>
         </tr></tbody>
 </table>
 

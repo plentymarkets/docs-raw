@@ -568,6 +568,10 @@ The wizard model.
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>relevance</td>
             <td>Wizard's level of relevance</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>keywords</td>
+            <td>Keywords describing the wizard</td>
         </tr></tbody>
 </table>
 

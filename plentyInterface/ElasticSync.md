@@ -186,6 +186,16 @@ Get the mapping values.
 
 <pre>public <strong>fieldValuesMap</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
+<div class="panel panel-warning">
+        <div class="panel-heading">
+            <h3 class="panel-title">
+                <span class="glyphicon glyphicon-warning-sign" aria-hidden="true"></span>
+                Deprecated!             </h3>
+        </div>
+        <div class="panel-body">
+            This method will not be supported in the future. Please refrain from using it as soon as possible.
+        </div>
+    </div>
     
 Get the field value map for all sync types.
     
@@ -1117,6 +1127,11 @@ Get list of sync types.
 
     
 Get list of sync intervals.
+    
+<pre>public <strong>getListDecimals</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get list of sync decimals.
     
 <pre>public <strong>export</strong>(<a target="_blank" href="http://php.net/array">array</a> $syncIds):<a target="_blank" href="http://php.net/array">array</a></pre>
 

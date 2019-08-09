@@ -4463,6 +4463,56 @@ The AttributeValueSet model
 Returns this model as an array.
     
 
+### AttributeValueSetId<a name="item_models_attributevaluesetid"></a>
+
+The AttributeValueSetId model
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Attribute\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>id</td>
+            <td>The ID of the attribute value set id</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>hash</td>
+            <td>a hash</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>amazon_variation_set</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>size</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
 ### AttributeName<a name="item_models_attributename"></a>
 
 The AttributeName model including Attribute
@@ -4787,6 +4837,22 @@ Change main variation. Changes the variation with the specified variation ID to 
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$variationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>patchBulk</strong>(<a target="_blank" href="http://php.net/array">array</a> $rows):<a href="miscellaneous#miscellaneous_support_collection">Collection</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$rows</td>
         <td></td>
     </tr>
 </table>
@@ -7855,6 +7921,21 @@ Updates stockUpdatedAt for multiple SKUs.
 </table>
 
 
+<pre>public <strong>delete</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Deletes multiple SKUs.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Models<a name="item_variationsku_models"></a>
 ### VariationSku<a name="item_models_variationsku"></a>
 
@@ -8295,6 +8376,26 @@ To be written
 
 
 <pre>public static <strong>getM10lByLanguage</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $fallback = &quot;en&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fallback</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getLanguageByM10l</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $fallback = &quot;english&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
 
@@ -8795,6 +8896,23 @@ foo
 </table>
 
 
+<pre>public <strong>setSections</strong>($sections):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$sections</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>mutateObject</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -9083,11 +9201,6 @@ Converts image domains to client specific image domains.
 </table>
 
 
-<pre>public <strong>getDependencies</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
-
-    
-
-    
 <pre>public <strong>mutate</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -9103,6 +9216,11 @@ Converts image domains to client specific image domains.
 </table>
 
 
+<pre>public <strong>getDependencies</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
 
 ### FacetMutator<a name="item_mutators_facetmutator"></a>
 
@@ -9403,6 +9521,23 @@ foo
 </table>
 
 
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### PropertyFilter<a name="item_filter_propertyfilter"></a>
 
@@ -9480,6 +9615,23 @@ foo
 </table>
 
 
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### TextFilter<a name="item_filter_textfilter"></a>
 
@@ -9546,6 +9698,93 @@ foo
 </table>
 
 
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>isLanguageSupported</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>isLanguageActivated</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getM10lByLanguage</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $fallback = &quot;en&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fallback</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getLanguageByM10l</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $fallback = &quot;english&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fallback</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### VariationAvailabilityUpdatedAtFilter<a name="item_filter_variationavailabilityupdatedatfilter"></a>
 
@@ -9589,6 +9828,23 @@ foo
     
 <table class="table table-condensed">    <tr>
         <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$statement</td>
         <td></td>
@@ -9684,6 +9940,23 @@ foo
 </table>
 
 
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### TagFilter<a name="item_filter_tagfilter"></a>
 
@@ -9764,6 +10037,23 @@ foo
     
 <table class="table table-condensed">    <tr>
         <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$statement</td>
         <td></td>
@@ -9858,6 +10148,23 @@ foo
 </table>
 
 
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### FeedbackRangeFilter<a name="item_filter_feedbackrangefilter"></a>
 
@@ -9911,6 +10218,23 @@ foo
     
 <table class="table table-condensed">    <tr>
         <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$statement</td>
         <td></td>
@@ -10005,6 +10329,23 @@ foo
 </table>
 
 
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### ImageFilter<a name="item_filter_imagefilter"></a>
 
@@ -10075,6 +10416,23 @@ foo
     
 <table class="table table-condensed">    <tr>
         <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$statement</td>
         <td></td>
@@ -10173,6 +10531,23 @@ foo
     
 <table class="table table-condensed">    <tr>
         <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$statement</td>
         <td></td>
@@ -10280,6 +10655,23 @@ foo
     
 <table class="table table-condensed">    <tr>
         <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$statement</td>
         <td></td>
@@ -10415,6 +10807,23 @@ foo
     
 <table class="table table-condensed">    <tr>
         <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$statement</td>
         <td></td>
@@ -10727,6 +11136,23 @@ foo
 </table>
 
 
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### CategoryFilter<a name="item_filter_categoryfilter"></a>
 
@@ -10757,6 +11183,21 @@ foo
         <td></td>
     </tr>
     <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$depth</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getPathByDepth</strong>(<a target="_blank" href="http://php.net/string">string</a> $depth):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$depth</td>
         <td></td>
@@ -10812,21 +11253,6 @@ foo
     
 
     
-<pre>public static <strong>getPathByDepth</strong>(<a target="_blank" href="http://php.net/string">string</a> $depth):<a target="_blank" href="http://php.net/string">string</a></pre>
-
-    
-
-    
-##### <strong>Parameters</strong>
-    
-<table class="table table-condensed">    <tr>
-        <td><a target="_blank" href="http://php.net/string">string</a></td>
-        <td>$depth</td>
-        <td></td>
-    </tr>
-</table>
-
-
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -10843,6 +11269,23 @@ foo
     
 <table class="table table-condensed">    <tr>
         <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$statement</td>
         <td></td>
@@ -11013,6 +11456,23 @@ to bew written
 </table>
 
 
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### AttributeFilter<a name="item_filter_attributefilter"></a>
 
@@ -11148,6 +11608,23 @@ Filters the index by specific attributes or attribute values
 </table>
 
 
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### VariationLastUpdatedFilter<a name="item_filter_variationlastupdatedfilter"></a>
 
@@ -11191,6 +11668,23 @@ foo
     
 <table class="table table-condensed">    <tr>
         <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$statement</td>
         <td></td>
@@ -11284,6 +11778,23 @@ foo
     
 <table class="table table-condensed">    <tr>
         <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$statement</td>
         <td></td>
@@ -11394,6 +11905,23 @@ foo
 </table>
 
 
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
 
 ### PriceFilter<a name="item_filter_pricefilter"></a>
 
@@ -11478,6 +12006,23 @@ foo
     
 <table class="table table-condensed">    <tr>
         <td><a href="cloud#cloud_statement_statementinterface">StatementInterface</a>
+</td>
+        <td>$statement</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>addQuery</strong>($statement):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
         <td>$statement</td>
         <td></td>
@@ -11669,6 +12214,26 @@ foo
 
 
 <pre>public static <strong>getM10lByLanguage</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $fallback = &quot;en&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$lang</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$fallback</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public static <strong>getLanguageByM10l</strong>(<a target="_blank" href="http://php.net/string">string</a> $lang, <a target="_blank" href="http://php.net/string">string</a> $fallback = &quot;english&quot;):<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
 
@@ -12866,6 +13431,23 @@ To be written
 </table>
 
 
+<pre>public <strong>setIndex</strong>($index):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$index</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -13609,6 +14191,23 @@ To be written
         <td><a href="cloud#cloud_type_typeinterface">TypeInterface</a>
 </td>
         <td>$filter</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setIndex</strong>($index):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$index</td>
         <td></td>
     </tr>
 </table>
@@ -23210,7 +23809,7 @@ Returns this model as an array.
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>interval</td>
-            <td>The interval of the price. Possible values are: daily, weekly, monthly, quarterly, half-yearly and yearly.</td>
+            <td>The interval of the price. Possible values are: daily, weekly, monthly, quarterly, semi-annual and annual.</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>createdAt</td>

@@ -3,6 +3,75 @@
 # ContentCache<a name="contentcache_contentcache"></a>
     
 ## Contracts<a name="contentcache_contentcache_contracts"></a>
+### ContentCacheSettingsRepositoryContract<a name="contentcache_contracts_contentcachesettingsrepositorycontract"></a>
+
+Interface for content cache settings
+
+
+#### Namespace
+
+`Plenty\Modules\ContentCache\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getSettings</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId):<a href="contentcache#contentcache_contentcachesettings_contentcachesettings">ContentCacheSettings</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getSettingsMultiple</strong>(<a target="_blank" href="http://php.net/array">array</a> $plentyIds):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$plentyIds</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>saveSettings</strong>(<a target="_blank" href="http://php.net/int">int</a> $plentyId, <a target="_blank" href="http://php.net/bool">bool</a> $contentCacheActive):<a href="contentcache#contentcache_contentcachesettings_contentcachesettings">ContentCacheSettings</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$plentyId</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$contentCacheActive</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
 ### ContentCacheRepositoryContract<a name="contentcache_contracts_contentcacherepositorycontract"></a>
 
 Save and retrieve values to or from the content cache
@@ -135,6 +204,48 @@ Invalidate cache entries by URI
 
     
 
+    
+## ContentCacheSettings<a name="contentcache_contentcache_contentcachesettings"></a>
+### ContentCacheSettings<a name="contentcache_contentcachesettings_contentcachesettings"></a>
+
+Eloquent model representing the Content Cache Settings.
+
+
+#### Namespace
+
+`Plenty\Modules\ContentCache\ContentCacheSettings`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td>plentyId</td>
+            <td></td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+            <td>contentCacheActive</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
     
 # ContentCacheLink<a name="contentcache_contentcachelink"></a>
     

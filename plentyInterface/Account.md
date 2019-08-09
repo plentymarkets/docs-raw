@@ -531,6 +531,21 @@ The ContactAddressRepositoryContract is the interface for the contact address re
 
 #### Methods
 
+<pre>public <strong>getPrimaryOrLastCreatedContactAddresses</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Returns primary or last created contact addresses
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$contactId</td>
+        <td>The ID of the contact</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>findContactAddressByTypeId</strong>(<a target="_blank" href="http://php.net/int">int</a> $contactId, <a target="_blank" href="http://php.net/int">int</a> $typeId, <a target="_blank" href="http://php.net/bool">bool</a> $last = true):<a href="account#account_models_address">Address</a>
 </pre>
 
@@ -4159,6 +4174,28 @@ Sales representative region model
 Returns this model as an array.
     
 ## Events<a name="account_account_events"></a>
+### NewsletterRecipientCreatedEvent<a name="account_events_newsletterrecipientcreatedevent"></a>
+
+This event will be triggered, after a recipient was created.
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getRecipient</strong>():<a href="account#account_models_recipient">Recipient</a>
+</pre>
+
+    
+returns recipient.
+    
+
 ### FrontendUpdateCustomerSettings<a name="account_events_frontendupdatecustomersettings"></a>
 
 frontend customer settings event
@@ -4321,6 +4358,55 @@ frontend customer settings event
 </table>
 
 
+
+### NewsletterRecipientMovedToNewFolderEvent<a name="account_events_newsletterrecipientmovedtonewfolderevent"></a>
+
+This event will be triggered, after a recipient was moved to a new folder.
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getOldFolder</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+returns old folder id.
+    
+<pre>public <strong>getRecipient</strong>():<a href="account#account_models_recipient">Recipient</a>
+</pre>
+
+    
+returns recipient.
+    
+
+### NewsletterRecipientDeletedEvent<a name="account_events_newsletterrecipientdeletedevent"></a>
+
+This event will be triggered, after a recipient was deleted.
+
+
+#### Namespace
+
+`Plenty\Modules\Account\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getRecipient</strong>():<a href="account#account_models_recipient">Recipient</a>
+</pre>
+
+    
+returns recipient.
+    
 # Address<a name="account_address"></a>
     
 ## Contracts<a name="account_address_contracts"></a>
@@ -5463,63 +5549,35 @@ The address model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name1</td>
-            <td>The name 1 field (default: company name)</td>
+            <td>The name 1 field (defaults to: company name)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name2</td>
-            <td>The name 2 field (default: first name)</td>
+            <td>The name 2 field (defaults to: first name)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name3</td>
-            <td>The name 3 field (default: last name)</td>
+            <td>The name 3 field (defaults to: last name)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>name4</td>
-            <td>The name 4 field (default: c/o)</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>companyName</td>
-            <td>The company name (read only)</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>firstName</td>
-            <td>The first name (read only)</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>lastName</td>
-            <td>The last name (read only)</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>careOf</td>
-            <td>The c/o (read only)</td>
+            <td>The name 4 field (defaults to: c/o)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>address1</td>
-            <td>The address 1 field (street|PACKSTATION|POSTFILIALE)</td>
+            <td>The address 1 field (defaults to: street|'PACKSTATION'|'POSTFILIALE')</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>address2</td>
-            <td>The address 2 field (house no|packstation id)</td>
+            <td>The address 2 field (defaults to: houseNumber|packstationNo)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>address3</td>
-            <td>The address 3 field (additional)</td>
+            <td>The address 3 field (defaults to: additional)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>address4</td>
             <td>The address 4 field is currently undefined and can be freely used.</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>street</td>
-            <td>The street (read only)</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>houseNumber</td>
-            <td>The house number (read only)</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>additional</td>
-            <td>The additional address information (read only)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>postalCode</td>
@@ -5542,8 +5600,32 @@ The address model
             <td>Flag that indicates if the data record is read only</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>sessionId</td>
-            <td>The session ID that was used when the address was created</td>
+            <td>companyName</td>
+            <td>The company name (alias for name1, <i>read only</i>)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>firstName</td>
+            <td>The first name (alias for name2, <i>read only</i>)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>lastName</td>
+            <td>The last name (alias for name3, <i>read only</i>)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>careOf</td>
+            <td>The c/o (alias for name4, <i>read only</i>)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>street</td>
+            <td>The street (alias for address1, <i>read only</i>)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>houseNumber</td>
+            <td>The house number (alias for address2, <i>read only</i>)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>additional</td>
+            <td>The additional address information (alias for address3, <i>read only</i>)</td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
@@ -5562,47 +5644,55 @@ The address model
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>taxIdNumber</td>
-            <td>The taxIdNumber option</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>title</td>
-            <td>The title option</td>
+            <td>The taxIdNumber option (alias for option with typeId 1, <i>read only</i>)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>externalId</td>
-            <td>The externalId option</td>
+            <td>The externalId option (alias for option with typeId 2, <i>read only</i>)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>entryCertificate</td>
-            <td>The entryCertificate option</td>
+            <td>The entryCertificate option (alias for option with typeId 3, <i>read only</i>)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>phone</td>
-            <td>The phone option</td>
+            <td>The phone option (alias for option with typeId 4, <i>read only</i>)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>email</td>
-            <td>The email option</td>
+            <td>The email option (alias for option with typeId 5, <i>read only</i>)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>postident</td>
-            <td>The PostIdent option</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>fsk</td>
-            <td>The age rating option</td>
-        </tr><tr>
-            <td><a target="_blank" href="http://php.net/string">string</a></td>
-            <td>birthday</td>
-            <td>The birthday option</td>
+            <td>The PostIdent option (alias for option with typeId 6, <i>read only</i>)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>personalNumber</td>
-            <td>The personal number option</td>
+            <td>The personal number option (alias for option with typeId 7, <i>read only</i>)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>fsk</td>
+            <td>The age rating option (alias for option with typeId 8, <i>read only</i>)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>birthday</td>
+            <td>The birthday option (alias for option with typeId 9, <i>read only</i>)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>title</td>
+            <td>The title option (alias for option with typeId 11, <i>read only</i>)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>sessionId</td>
+            <td>The fronetnd session ID that was used when the address was created (alias for option with typeId 10, <i>read only</i>)</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>contactPerson</td>
+            <td>The contact person option (alias for option with typeId 12, <i>read only</i>)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>packstationNo</td>
-            <td>The packstation number</td>
+            <td>The packstation number (alias for houseNumber and address2, <i>read only</i>)</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/bool">bool</a></td>
             <td>isPackstation</td>
@@ -5615,7 +5705,21 @@ The address model
             <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </td>
             <td>options</td>
-            <td>A collection of address options</td>
+            <td>A collection of address options. Standard plentymarkets address option types:
+<ul>
+<li>1: tax id number (VAT number)</li>
+<li>2: external ID</li>
+<li>3: entry certificate (bool)</li>
+<li>4: phone number</li>
+<li>5: email</li>
+<li>6: post number</li>
+<li>7: personal ID</li>
+<li>8: BBFC/FSK</li>
+<li>9: birthday</li>
+<li>10: frontend session ID</li>
+<li>11: title (salutation)</li>
+<li>12: contact person</li>
+</ul></td>
         </tr><tr>
             <td><a href="miscellaneous#miscellaneous_eloquent_collection">Collection</a>
 </td>
@@ -6359,6 +6463,21 @@ Lists all recipients
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/array">array</a></td>
         <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getRecipientsByEMail</strong>(<a target="_blank" href="http://php.net/string">string</a> $email):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Returns recipients by email
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$email</td>
         <td></td>
     </tr>
 </table>

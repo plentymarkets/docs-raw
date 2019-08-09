@@ -415,6 +415,22 @@ database query
 
 #### Methods
 
+<pre>public <strong>select</strong>(<a target="_blank" href="http://php.net/array">array</a> $columns = []):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a basic select clause to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$columns</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>where</strong>(<a target="_blank" href="http://php.net/string">string</a> $fieldName, <a target="_blank" href="http://php.net/string">string</a> $operator = null, $value = null):<a href="plugin#plugin_database_contracts">Contracts</a>
 </pre>
 
@@ -558,6 +574,222 @@ Add an &quot;or where null&quot; clause to the query.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$fieldName</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>whereBetween</strong>(<a target="_blank" href="http://php.net/string">string</a> $column, <a target="_blank" href="http://php.net/array">array</a> $values, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;, <a target="_blank" href="http://php.net/bool">bool</a> $not = false):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a where between statement to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$column</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$not</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>whereNotBetween</strong>(<a target="_blank" href="http://php.net/string">string</a> $column, <a target="_blank" href="http://php.net/array">array</a> $values, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a where not between statement to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$column</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$values</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>whereDate</strong>(<a target="_blank" href="http://php.net/string">string</a> $column, <a target="_blank" href="http://php.net/string">string</a> $operator, $value = null, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a &quot;where date&quot; statement to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$column</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>whereMonth</strong>(<a target="_blank" href="http://php.net/string">string</a> $column, <a target="_blank" href="http://php.net/string">string</a> $operator, $value = null, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a &quot;where month&quot; statement to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$column</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>whereDay</strong>(<a target="_blank" href="http://php.net/string">string</a> $column, <a target="_blank" href="http://php.net/string">string</a> $operator, $value = null, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a &quot;where day&quot; statement to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$column</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>whereYear</strong>(<a target="_blank" href="http://php.net/string">string</a> $column, <a target="_blank" href="http://php.net/string">string</a> $operator, $value = null, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a &quot;where year&quot; statement to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$column</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>whereTime</strong>(<a target="_blank" href="http://php.net/string">string</a> $column, <a target="_blank" href="http://php.net/string">string</a> $operator, <a target="_blank" href="http://php.net/int">int</a> $value = null, <a target="_blank" href="http://php.net/string">string</a> $boolean = &quot;and&quot;):<a href="plugin#plugin_database_contracts">Contracts</a>
+</pre>
+
+    
+Add a &quot;where time&quot; statement to the query.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$column</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$value</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$boolean</td>
         <td></td>
     </tr>
 </table>
@@ -1438,6 +1670,11 @@ Get the sync state, to determine if Plugins have been (de-)activated since last 
 </table>
 
 
+<pre>public <strong>getCurrentPluginSetId</strong>():<a target="_blank" href="http://php.net/int">int</a></pre>
+
+    
+Get the PluginSetID of the currently running plugin.
+    
 
 ### PluginSetEntryRepositoryContract<a name="plugin_contracts_pluginsetentryrepositorycontract"></a>
 
@@ -1725,6 +1962,21 @@ Search plugins using filters. Example: searchPlugins([&#039;name&#039; =&gt; &#0
 </table>
 
 
+<pre>public <strong>getPluginSets</strong>(<a target="_blank" href="http://php.net/int">int</a> $pluginId):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$pluginId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>isActiveInPluginSet</strong>(<a target="_blank" href="http://php.net/int">int</a> $pluginId, <a target="_blank" href="http://php.net/int">int</a> $pluginSetId):<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
@@ -1800,6 +2052,29 @@ Search plugins using filters. Example: searchPlugins([&#039;name&#039; =&gt; &#0
     <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$webstoreId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>decoratePlugin</strong>(<a href="plugin#plugin_models_plugin">Plugin</a>
+ $plugin, <a target="_blank" href="http://php.net/int">int</a> $pluginSetId = null):<a href="plugin#plugin_models_plugin">Plugin</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="plugin#plugin_models_plugin">Plugin</a>
+</td>
+        <td>$plugin</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$pluginSetId</td>
         <td></td>
     </tr>
 </table>

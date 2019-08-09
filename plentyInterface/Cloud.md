@@ -1289,6 +1289,46 @@ Base class for different Search classes
 </table>
 
 
+<pre>public <strong>setIndex</strong>($index):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$index</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilterRaw</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getQueriesRaw</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getAggregationsRaw</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getSorting</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 <pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -1750,6 +1790,12 @@ and whether the index has already been created.
     
 
     
+<pre>public <strong>getElasticSearchVersion</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 
 ### IndexInterface<a name="cloud_index_indexinterface"></a>
 
@@ -1855,6 +1901,11 @@ to be written
 
     
 <pre>public <strong>refresh</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+<pre>public <strong>getElasticSearchVersion</strong>():<a target="_blank" href="http://php.net/float">float</a></pre>
 
     
 
@@ -2000,6 +2051,12 @@ and whether the index has already been created.
 
     
 <pre>public <strong>refresh</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getElasticSearchVersion</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
@@ -2789,6 +2846,46 @@ foo
 </table>
 
 
+<pre>public <strong>setIndex</strong>($index):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="miscellaneous#miscellaneous__"></a>
+</td>
+        <td>$index</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getFilterRaw</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getQueriesRaw</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getAggregationsRaw</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>getSorting</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 # Mapping<a name="cloud_mapping"></a>
     
 ## Property<a name="cloud_mapping_property"></a>
@@ -2806,6 +2903,24 @@ to be written
 
 
 #### Methods
+
+<pre>public <strong>setIndex</strong>(<a href="cloud#cloud_index_indexinterface">IndexInterface</a>
+ $index):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_index_indexinterface">IndexInterface</a>
+</td>
+        <td>$index</td>
+        <td></td>
+    </tr>
+</table>
+
 
 <pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
@@ -2848,6 +2963,24 @@ to be written
         <td><a href="cloud#cloud_property_propertyinterface">PropertyInterface</a>
 </td>
         <td>$property</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setIndex</strong>(<a href="cloud#cloud_index_indexinterface">IndexInterface</a>
+ $index):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a href="cloud#cloud_index_indexinterface">IndexInterface</a>
+</td>
+        <td>$index</td>
         <td></td>
     </tr>
 </table>
@@ -3276,6 +3409,98 @@ to be written
     
 Get the instance as an array.
     
+# Statement<a name="cloud_statement"></a>
+    
+## Filter<a name="cloud_statement_filter"></a>
+### MultiMatchFilter<a name="cloud_filter_multimatchfilter"></a>
+
+to be written
+
+
+#### Namespace
+
+`Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Statement\Filter`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>addField</strong>(<a target="_blank" href="http://php.net/string">string</a> $field, <a target="_blank" href="http://php.net/int">int</a> $boost):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$field</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$boost</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>toArray</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+
+    
+<pre>public <strong>setType</strong>(<a target="_blank" href="http://php.net/string">string</a> $type):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$type</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setOperator</strong>(<a target="_blank" href="http://php.net/string">string</a> $operator):<a href="cloud#cloud_filter_multimatchfilter">MultiMatchFilter</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$operator</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setFuzzy</strong>(<a target="_blank" href="http://php.net/bool">bool</a> $fuzzy):<a href="cloud#cloud_filter_multimatchfilter">MultiMatchFilter</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/bool">bool</a></td>
+        <td>$fuzzy</td>
+        <td></td>
+    </tr>
+</table>
+
+
 # Data<a name="cloud_data"></a>
     
 ## Document<a name="cloud_data_document"></a>
