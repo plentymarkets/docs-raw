@@ -1973,6 +1973,12 @@ to bew written
     
 
     
+<pre>public <strong>getElasticSearchVersion</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 <pre>public <strong>hasUpdatedAt</strong>():<a target="_blank" href="http://php.net/bool">bool</a></pre>
 
     
@@ -2051,12 +2057,6 @@ and whether the index has already been created.
 
     
 <pre>public <strong>refresh</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
-
-    
-
-    
-<pre>public <strong>getElasticSearchVersion</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     

@@ -494,7 +494,8 @@ Lists payments by entry date. The start and the end of the date range must be sp
 </table>
 
 
-<pre>public <strong>getPaymentsByPropertyTypeAndValue</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyTypeId, $propertyValue, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a target="_blank" href="http://php.net/array">array</a></pre>
+<pre>public <strong>getPaymentsByPropertyTypeAndValue</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyTypeId, $propertyValue, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = 50, <a target="_blank" href="http://php.net/int">int</a> $page = 1):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
 
     
 Lists payments by payment property type and value.

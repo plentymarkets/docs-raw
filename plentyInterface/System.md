@@ -932,7 +932,7 @@ The Webstore Configuration Model
             <td>orderRowDeliveryDate</td>
             <td></td>
         </tr><tr>
-            <td><a target="_blank" href="http://php.net/int">int</a></td>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>browserLanguage</td>
             <td></td>
         </tr><tr>
