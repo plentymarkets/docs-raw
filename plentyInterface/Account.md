@@ -4002,6 +4002,10 @@ the account model.
             <td>dealerMinOrderValue</td>
             <td>The minimum order value for the supplier</td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>supplierCurrency</td>
+            <td>The currency used by a supplier</td>
+        </tr><tr>
             <td><a href="miscellaneous#miscellaneous__"></a>
 </td>
             <td>createdAt</td>

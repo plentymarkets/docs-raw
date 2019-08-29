@@ -413,6 +413,15 @@ Controller
 
 
 
+#### Methods
+
+<pre>public <strong>__construct</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Controller constructor.
+    
+
 ### RouteServiceProvider<a name="miscellaneous_plugin_routeserviceprovider"></a>
 
 Route service provider
@@ -868,8 +877,7 @@ Base Validator Class
 </table>
 
 
-<pre>public <strong>buildCustomMessages</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
-</pre>
+<pre>public <strong>buildCustomMessages</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
 
@@ -3768,6 +3776,21 @@ Dispatcher
 
 
 #### Methods
+
+<pre>public <strong>isPublicEvent</strong>(<a target="_blank" href="http://php.net/string">string</a> $event):<a target="_blank" href="http://php.net/bool">bool</a></pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$event</td>
+        <td></td>
+    </tr>
+</table>
+
 
 <pre>public <strong>listen</strong>($event, $listener, <a target="_blank" href="http://php.net/int">int</a> $priority):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>

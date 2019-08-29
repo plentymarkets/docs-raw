@@ -8630,6 +8630,66 @@ VariationElasticSearchAvailibilityRepositoryContract
     
 
     
+
+### VariationElasticSearchSettingsRepositoryContract<a name="item_contracts_variationelasticsearchsettingsrepositorycontract"></a>
+
+Read and update search settings
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Contracts`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getLanguages</strong>():<a href="item#item_models_languagesettings">LanguageSettings</a>
+</pre>
+
+    
+Get language settings
+    
+<pre>public <strong>saveLanguages</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_languagesettings">LanguageSettings</a>
+</pre>
+
+    
+Update language settings
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>getSearchSettings</strong>():<a href="item#item_models_searchsettings">SearchSettings</a>
+</pre>
+
+    
+Get search settings
+    
+<pre>public <strong>saveSearchSettings</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="item#item_models_searchsettings">SearchSettings</a>
+</pre>
+
+    
+Update search settings
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td></td>
+    </tr>
+</table>
+
+
 ## Repositories<a name="item_search_repositories"></a>
 ### VariationElasticSearchAvailibilityRepository<a name="item_repositories_variationelasticsearchavailibilityrepository"></a>
 
@@ -8655,6 +8715,82 @@ VariationElasticSearchAvailibilityRepository
 
     
 
+    
+## Models<a name="item_search_models"></a>
+### SearchSettings<a name="item_models_searchsettings"></a>
+
+The search settings model
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>fields</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
+    
+
+### LanguageSettings<a name="item_models_languagesettings"></a>
+
+The language settings model
+
+
+#### Namespace
+
+`Plenty\Modules\Item\Search\Models`
+
+
+
+
+#### Properties
+
+<table class="table table-bordered table-striped table-condensed table-hover">
+    <thead>
+    <tr>
+        <th>Type</th>
+        <th>Name</th>
+        <th>Description</th>
+    </tr>
+    </thead>
+    <tbody><tr>
+            <td><a target="_blank" href="http://php.net/array">array</a></td>
+            <td>languages</td>
+            <td></td>
+        </tr></tbody>
+</table>
+
+
+#### Methods
+
+<pre>public <strong>toArray</strong>()</pre>
+
+    
+Returns this model as an array.
     
 ## Mutators<a name="item_search_mutators"></a>
 ### DefaultCategoryMutator<a name="item_mutators_defaultcategorymutator"></a>

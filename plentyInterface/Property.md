@@ -1408,6 +1408,22 @@ Delete a property relation value
 </table>
 
 
+<pre>public <strong>deleteRelationsByRelationId</strong>(<a target="_blank" href="http://php.net/int">int</a> $relationId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+Delete all property relation values of a specified property relation.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$relationId</td>
+        <td></td>
+    </tr>
+</table>
+
+
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 

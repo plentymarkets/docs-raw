@@ -6371,3 +6371,93 @@ The credentials model
     
 Returns this model as an array.
     
+# Order<a name="market_order"></a>
+    
+## Events<a name="market_order_events"></a>
+### BeforeNewOrderItemCreationEvent<a name="market_events_beforeneworderitemcreationevent"></a>
+
+Event which signals a new ebay order item before its creation.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Order\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getData</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getWarehouseId</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setWarehouseId</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+
+### OrderItemEvent<a name="market_events_orderitemevent"></a>
+
+Generic ebay order item event.
+
+
+#### Namespace
+
+`Plenty\Modules\Market\Ebay\Order\Events`
+
+
+
+
+
+#### Methods
+
+<pre>public <strong>getData</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getWarehouseId</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>setWarehouseId</strong>(<a target="_blank" href="http://php.net/int">int</a> $warehouseId):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$warehouseId</td>
+        <td></td>
+    </tr>
+</table>
+
+
