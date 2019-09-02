@@ -800,7 +800,7 @@ Returns this model as an array.
 
 ### Tag<a name="tag_models_tag"></a>
 
-The Tag model.
+The Tag model
 
 
 #### Namespace

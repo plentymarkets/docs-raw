@@ -1086,6 +1086,12 @@ Get the messages for the given navigation page.
     
 
     
+<pre>public <strong>getScoreModifier</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 
 ### MessageTypesService<a name="messenger_services_messagetypesservice"></a>
 

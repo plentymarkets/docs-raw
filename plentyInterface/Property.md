@@ -1523,6 +1523,21 @@ Creates a property option
 </table>
 
 
+<pre>public <strong>createPropertyOptions</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Creates property options
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$data</td>
+        <td>The request data</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>updatePropertyOption</strong>(<a target="_blank" href="http://php.net/int">int</a> $propertyOptionId, <a target="_blank" href="http://php.net/array">array</a> $data):<a href="property#property_models_propertyoption">PropertyOption</a>
 </pre>
 
@@ -1554,6 +1569,21 @@ Deletes a property option. The ID of property option must be specified.
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$propertyOptionId</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>deletePropertyOptions</strong>(<a target="_blank" href="http://php.net/array">array</a> $optionIds):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Delete one or more property options.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/array">array</a></td>
+        <td>$optionIds</td>
         <td></td>
     </tr>
 </table>

@@ -1909,6 +1909,10 @@ Eloquent model representing a PluginSetEntry.
             <td>branchName</td>
             <td></td>
         </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>commit</td>
+            <td></td>
+        </tr><tr>
             <td><a target="_blank" href="http://php.net/int">int</a></td>
             <td>position</td>
             <td></td>
@@ -2635,6 +2639,10 @@ that have been purchased from the marketplace but have not yet been installed in
             <td><a target="_blank" href="http://php.net/string">string</a></td>
             <td>branch</td>
             <td>The branch to checkout for this particular Plugin</td>
+        </tr><tr>
+            <td><a target="_blank" href="http://php.net/string">string</a></td>
+            <td>commit</td>
+            <td>The commit to checkout for this particular Plugin</td>
         </tr><tr>
             <td><a target="_blank" href="http://php.net/array">array</a></td>
             <td>subscriptionInformation</td>

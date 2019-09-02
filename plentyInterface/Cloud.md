@@ -1329,6 +1329,12 @@ Base class for different Search classes
     
 
     
+<pre>public <strong>getScoreModifier</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
 <pre>public <strong>process</strong>(<a target="_blank" href="http://php.net/array">array</a> $data):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
@@ -2881,6 +2887,12 @@ foo
 
     
 <pre>public <strong>getSorting</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+<pre>public <strong>getScoreModifier</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 
     
