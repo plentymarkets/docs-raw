@@ -76,6 +76,26 @@ If not set, the uuid of the newest message will be used.</td>
 </table>
 
 
+<pre>public <strong>getMessages</strong>(<a target="_blank" href="http://php.net/int">int</a> $page = self::DEFAULT_PAGE_OF_MESSAGES, <a target="_blank" href="http://php.net/int">int</a> $itemsPerPage = self::DEFAULT_ITEMS_PER_PAGE_OF_MESSAGES):<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get messages.
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$page</td>
+        <td>The number of the retured page of messages, default is 1 (the first)</td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
+        <td>The amount of messages to list (defaults to 50)</td>
+    </tr>
+</table>
+
+
 <pre>public <strong>updateReadBy</strong>(<a target="_blank" href="http://php.net/int">int</a> $readBy, <a target="_blank" href="http://php.net/string">string</a> $uuid):<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 

@@ -1358,6 +1358,11 @@ Export the sync.
 </table>
 
 
+<pre>public <strong>syncStatus</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
+
+    
+Get syncs status.
+    
 <pre>public <strong>clearCriteria</strong>():<a href="miscellaneous#miscellaneous__void">void</a>
 </pre>
 

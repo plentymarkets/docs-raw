@@ -375,6 +375,11 @@ To be written
     
 
     
+<pre>public <strong>getExportType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
 <pre>public <strong>getMappings</strong>():<a target="_blank" href="http://php.net/array">array</a></pre>
 
     
@@ -575,7 +580,7 @@ To be written
 
 #### Methods
 
-<pre>public <strong>register</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/string">string</a> $providerClass = &quot;&quot;):<a href="catalog#catalog_contracts_templatecontract">TemplateContract</a>
+<pre>public <strong>register</strong>(<a target="_blank" href="http://php.net/string">string</a> $name, <a target="_blank" href="http://php.net/string">string</a> $type, <a target="_blank" href="http://php.net/string">string</a> $providerClass = &quot;&quot;, <a target="_blank" href="http://php.net/string">string</a> $exportType = &quot;Plenty\Modules\Catalog\Dummy\VariationCatalogExportType&quot;):<a href="catalog#catalog_contracts_templatecontract">TemplateContract</a>
 </pre>
 
     
@@ -596,6 +601,11 @@ To be written
     <tr>
         <td><a target="_blank" href="http://php.net/string">string</a></td>
         <td>$providerClass</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td><a target="_blank" href="http://php.net/string">string</a></td>
+        <td>$exportType</td>
         <td></td>
     </tr>
 </table>
@@ -697,6 +707,22 @@ To be written
 <table class="table table-condensed">    <tr>
         <td><a target="_blank" href="http://php.net/int">int</a></td>
         <td>$numberOfDocumentsPerShard</td>
+        <td></td>
+    </tr>
+</table>
+
+
+<pre>public <strong>setItemsPerPage</strong>(<a target="_blank" href="http://php.net/int">int</a> $itemsPerPage):<a href="miscellaneous#miscellaneous__void">void</a>
+</pre>
+
+    
+
+    
+##### <strong>Parameters</strong>
+    
+<table class="table table-condensed">    <tr>
+        <td><a target="_blank" href="http://php.net/int">int</a></td>
+        <td>$itemsPerPage</td>
         <td></td>
     </tr>
 </table>
@@ -1148,6 +1174,11 @@ foo
 
     
 <pre>public <strong>getName</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
+
+    
+
+    
+<pre>public <strong>getExportType</strong>():<a target="_blank" href="http://php.net/string">string</a></pre>
 
     
 
