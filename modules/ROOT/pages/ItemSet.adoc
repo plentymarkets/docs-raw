@@ -1,0 +1,936 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[itemset_itemset]]
+= ItemSet
+
+[[itemset_itemset_contracts]]
+==  Contracts
+=== ItemSetComponentRepositoryContract
+
+The contract for the item set component repository
+
+
+==== Namespace
+
+`Plenty\Modules\ItemSet\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public show($id, $with):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
+
+----
+
+
+    
+Gets an item set component. The ID of the item set component must be specified.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemsetcomponent[ItemSetComponent^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The unique ID of the item set component
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public get($setId, $id):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
+
+----
+
+
+    
+Gets an item set component. The item ID of the item set and the component ID must be specified.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemsetcomponent[ItemSetComponent^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|The unique item ID of the item set
+
+|link:http://php.net/int[int^]
+a|`$id`
+|The unique ID of the item set component
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($setConfigId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
+
+----
+
+
+    
+Creates an item set component.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemsetcomponent[ItemSetComponent^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setConfigId`
+|The unique ID of the item set configuration
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createComponents($setId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
+
+----
+
+
+    
+Creates a link between an item and a set item and adds the item as a set component.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemsetcomponent[ItemSetComponent^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|The unique item ID of the item set
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateComponents($setId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
+
+----
+
+
+    
+Updates the item set components of a set item.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemsetcomponent[ItemSetComponent^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|The unique item ID of the item set
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($setId, $id, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
+
+----
+
+
+    
+Updates an item set component. The item ID of the set and the ID of the set component must be specified.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemsetcomponent[ItemSetComponent^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|The unique item ID of the item set
+
+|link:http://php.net/int[int^]
+a|`$id`
+|The unique ID of the item set component
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteComponents($setId, $data):Plenty\Repositories\Models\DeleteResponse // <1>
+
+----
+
+
+    
+Removes all item set components from an item set.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|The unique item ID of the item set
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($setId, $id):Plenty\Repositories\Models\DeleteResponse // <1>
+
+----
+
+
+    
+Deletes the link between an item set component and an item set. The item ID of the set and the ID of the set component must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|The unique item ID of the item set
+
+|link:http://php.net/int[int^]
+a|`$id`
+|The unique ID of the item set component
+|===
+
+
+[source%nowrap, php]
+----
+
+public all():array // <1>
+
+----
+
+
+    
+Lists all item set components.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public findBySetId($setId, $with):array // <1>
+
+----
+
+
+    
+Lists the item set components of a set. The item ID of the item set must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|The unique item ID of the item set
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public findByItemId($itemId):array // <1>
+
+----
+
+
+    
+Lists the item set components of a set. The item ID of the item set component must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$itemId`
+|The unique item ID of the item set component
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteOne($setConfigId, $itemId):Plenty\Repositories\Models\DeleteResponse // <1>
+
+----
+
+
+    
+Delete an item set component. The item ID of the item set component and the set config ID must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setConfigId`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemId`
+|
+|===
+
+
+
+=== ItemSetConfigRepositoryContract
+
+The contract for the item set configuration repository
+
+
+==== Namespace
+
+`Plenty\Modules\ItemSet\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public show($id):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
+
+----
+
+
+    
+Gets an item set. The ID of the item set configuration must be specified.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemsetconfig[ItemSetConfig^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The unique ID of the item set configuration
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
+
+----
+
+
+    
+Creates an item set configuration.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemsetconfig[ItemSetConfig^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
+
+----
+
+
+    
+Updates an item set configuration. The ID of the item set configuration must be specified.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemsetconfig[ItemSetConfig^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
+
+----
+
+
+    
+Deletes an item set configuration. The ID of the item set configuration must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The unique ID of the item set configuration
+|===
+
+
+[source%nowrap, php]
+----
+
+public get($setId, $setConfigId):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
+
+----
+
+
+    
+Gets the item set configuration of an item set.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemsetconfig[ItemSetConfig^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|The unique item ID of the item set
+
+|link:http://php.net/int[int^]
+a|`$setConfigId`
+|The unique ID of the item set configuration
+|===
+
+
+[source%nowrap, php]
+----
+
+public findBySetId($setId):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
+
+----
+
+
+    
+Gets the item set configuration of an item set. The item ID of the set item must be specified.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemsetconfig[ItemSetConfig^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|The unique item ID of the item set
+|===
+
+
+
+=== ItemSetRepositoryContract
+
+The contract for the item set repository
+
+
+==== Namespace
+
+`Plenty\Modules\ItemSet\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public show($id):Plenty\Modules\ItemSet\Models\ItemSet // <1>
+
+----
+
+
+    
+Gets an item set. The item ID of the set must be specified.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemset[ItemSet^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The unique item ID of the set
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\ItemSet\Models\ItemSet // <1>
+
+----
+
+
+    
+Creates an item set.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemset[ItemSet^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createSets($data):Plenty\Modules\ItemSet\Models\ItemSet // <1>
+
+----
+
+
+    
+Creates item sets.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemset[ItemSet^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateSets($data):array // <1>
+
+----
+
+
+    
+Updates item sets.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):Plenty\Modules\ItemSet\Models\ItemSet // <1>
+
+----
+
+
+    
+Updates an item set. The item ID of the set must be specified.
+
+
+==== Return type
+    
+<1> link:itemset#itemset_models_itemset[ItemSet^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The unique item ID of the set.
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteSets($data):Plenty\Repositories\Models\DeleteResponse // <1>
+
+----
+
+
+    
+Deletes item sets.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
+
+----
+
+
+    
+Deletes an item set configuration. The ID must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public all():array // <1>
+
+----
+
+
+    
+Lists all item set configurations.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[[itemset_itemset_models]]
+==  Models
+=== ItemSet
+
+The ItemSet model.
+
+
+==== Namespace
+
+`Plenty\Modules\ItemSet\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The item ID of the item set. The ID must be unique.
+|link:http://php.net/string[string^]
+    |name
+    |The name of the item set. The default language of the system is used.
+|link:http://php.net/array[array^]
+    |categories
+    |The array with categories of the item set. The category ID key  "categoryId" must be specified. Example for JSON Object:  "categories":[{"categoryId":"34"},{"categoryId":"35"}]}]
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ItemSetComponent
+
+The ItemSetComponent model.
+
+
+==== Namespace
+
+`Plenty\Modules\ItemSet\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The item set component ID. The ID must be unique.
+|link:http://php.net/int[int^]
+    |setId
+    |The item ID of the item set. The ID must be unique.
+|link:http://php.net/int[int^]
+    |itemId
+    |The item ID of the set component
+|link:http://php.net/float[float^]
+    |minimalOrderQuantity
+    |Minimum order quantity.
+|link:http://php.net/float[float^]
+    |maximumOrderQuantity
+    |Maximum order quantity.
+|link:http://php.net/bool[bool^]
+    |orderQuantityPossible
+    |Order quantities possible.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ItemSetConfig
+
+The ItemSetConfig model.
+
+
+==== Namespace
+
+`Plenty\Modules\ItemSet\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |setId
+    |set id The item ID of the item set. The ID must be unique.
+|link:http://php.net/float[float^]
+    |rebate
+    |The discount in percent to be subtracted from the sum of the prices of the selected set components.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

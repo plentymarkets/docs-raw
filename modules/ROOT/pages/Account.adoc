@@ -1,0 +1,9407 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[account_address]]
+= Address
+
+[[account_address_contracts]]
+==  Contracts
+=== AddressContactRelationRepositoryContract
+
+The AddressContactRelationRepositoryContract is the interface for the address contact relation repository.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createAddressContactRelation($data):array // <1>
+
+----
+
+
+    
+Creates address contact relations.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The address data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateAddressContactRelation($data):array // <1>
+
+----
+
+
+    
+Updates address contact relations.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public findAddressContactRelation($addressContactRelationId):Plenty\Modules\Account\Address\Models\AddressContactRelation // <1>
+
+----
+
+
+    
+Gets address contact relation by ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_addresscontactrelation[AddressContactRelation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressContactRelationId`
+|The ID of the address contact relation
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteAddressContactRelation($addressContactRelationId):bool // <1>
+
+----
+
+
+    
+Deletes an address contact relation.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressContactRelationId`
+|The ID of the address contact relation
+|===
+
+
+[source%nowrap, php]
+----
+
+public listAddressContactRelations($filter = [], $with = [], $columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Lists address contact relations.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filter`
+|Filter that restricts the search result
+
+|link:http://php.net/array[array^]
+a|`$with`
+|An array with child instances to be loaded
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The columns to retrieve
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== AddressParamConfigurationRepositoryContract
+
+The AddressParamConfigurationRepositoryContract is the interface for the address param configuration repository. This interface allows to create, update, delete, list and get address relation types and address option types.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createAddressRelationType($data):Plenty\Modules\Account\Address\Models\AddressRelationType // <1>
+
+----
+
+
+    
+Creates a new address relation type.
+
+
+==== Return type
+    
+<1> link:account#account_models_addressrelationtype[AddressRelationType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateAddressRelationType($data, $addressRelationTypeId):Plenty\Modules\Account\Address\Models\AddressRelationType // <1>
+
+----
+
+
+    
+Updates an existing address relation type.
+
+
+==== Return type
+    
+<1> link:account#account_models_addressrelationtype[AddressRelationType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The address relation data as associative array
+
+|link:http://php.net/int[int^]
+a|`$addressRelationTypeId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteAddressRelationType($addressRelationTypeId):bool // <1>
+
+----
+
+
+    
+Deletes an address relation type by the given ID.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressRelationTypeId`
+|The ID of the address relation type
+|===
+
+
+[source%nowrap, php]
+----
+
+public findAddressRelationTypeById($addressRelationTypeId):Plenty\Modules\Account\Address\Models\AddressRelationType // <1>
+
+----
+
+
+    
+Gets an existing address relation type by the given ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_addressrelationtype[AddressRelationType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressRelationTypeId`
+|The ID of the address relation type
+|===
+
+
+[source%nowrap, php]
+----
+
+public allAddressRelationTypes($columns = [], $perPage = 50):void // <1>
+
+----
+
+
+    
+Gets a list of address relation types.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|The columns to retrieve
+
+|link:http://php.net/int[int^]
+a|`$perPage`
+|The number of items to list per page
+|===
+
+
+[source%nowrap, php]
+----
+
+public createAddressOptionType($data):Plenty\Modules\Account\Address\Models\AddressOptionType // <1>
+
+----
+
+
+    
+Creates an address option type.
+
+
+==== Return type
+    
+<1> link:account#account_models_addressoptiontype[AddressOptionType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateAddressOptionType($data, $addressOptionTypeId):Plenty\Modules\Account\Address\Models\AddressOptionType // <1>
+
+----
+
+
+    
+Updates an existing address option type.
+
+
+==== Return type
+    
+<1> link:account#account_models_addressoptiontype[AddressOptionType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/int[int^]
+a|`$addressOptionTypeId`
+|The ID of the address option type
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteAddressOptionType($addressOptionTypeId):bool // <1>
+
+----
+
+
+    
+Deletes an address option type by the given ID.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressOptionTypeId`
+|The ID of the address option type
+|===
+
+
+[source%nowrap, php]
+----
+
+public findAddressOptionTypeById($addressOptionTypeId):Plenty\Modules\Account\Address\Models\AddressOptionType // <1>
+
+----
+
+
+    
+Finds an existing address option type by the given ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_addressoptiontype[AddressOptionType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressOptionTypeId`
+|The ID of the address option type
+|===
+
+
+[source%nowrap, php]
+----
+
+public allAddressOptionType($columns = [], $perPage = 50):void // <1>
+
+----
+
+
+    
+Gets a list of address option types.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|The columns to retrieve
+
+|link:http://php.net/int[int^]
+a|`$perPage`
+|The number of items to list per page
+|===
+
+
+
+=== AddressPosRelationRepositoryContract
+
+The AddressPosRelationRepositoryContract is the interface for the address POS relation repository.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createAddressPosRelation($data):Plenty\Modules\Account\Address\Models\AddressPosRelation // <1>
+
+----
+
+
+    
+Creates an address POS relation.
+
+
+==== Return type
+    
+<1> link:account#account_models_addressposrelation[AddressPosRelation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The address data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateAddressPosRelation($addressPosRelationId, $data):Plenty\Modules\Account\Address\Models\AddressPosRelation // <1>
+
+----
+
+
+    
+Updates an address POS relation.
+
+
+==== Return type
+    
+<1> link:account#account_models_addressposrelation[AddressPosRelation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressPosRelationId`
+|The ID of the address POS relation
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public findAddressPosRelation($addressPosRelationId):Plenty\Modules\Account\Address\Models\AddressPosRelation // <1>
+
+----
+
+
+    
+Lists address POS relations.
+
+
+==== Return type
+    
+<1> link:account#account_models_addressposrelation[AddressPosRelation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressPosRelationId`
+|The ID of the address POS relation
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteAddressPosRelation($addressPosRelationId):void // <1>
+
+----
+
+
+    
+Deletes an address POS relation.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressPosRelationId`
+|The ID of the address POS relation
+|===
+
+
+[source%nowrap, php]
+----
+
+public listAddressPosRelations($filter = [], $with = [], $columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Lists address POS relations.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filter`
+|Filter that restricts the search result
+
+|link:http://php.net/array[array^]
+a|`$with`
+|An array with child instances to be loaded
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The columns to retrieve
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== AddressRepositoryContract
+
+The AddressRepositoryContract is the interface for the address repository contract. This interface allows to get, update, create and delete addresses and address options.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findAddressById($addressId):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Gets an address. The ID of the address must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateAddress($data, $addressId):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Updates an address. The ID of the address must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The address data as associative array
+
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address
+|===
+
+
+[source%nowrap, php]
+----
+
+public createAddress($data):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Creates an address.
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The address data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteAddress($addressId):bool // <1>
+
+----
+
+
+    
+Deletes an address. The ID of the address must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAddressesOfWarehouse($warehouseId, $relationTypeId = null, $columns = [], $perPage = 50):Illuminate\Database\Eloquent\Collection // <1>
+
+----
+
+
+    
+Returns a collection of addresses linked with a warehouse.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|The ID of the warehouse
+
+|link:http://php.net/int[int^]
+a|`$relationTypeId`
+|The ID of the relation type
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The columns to retrieve
+
+|link:http://php.net/int[int^]
+a|`$perPage`
+|The quantity of the result
+|===
+
+
+[source%nowrap, php]
+----
+
+public createAddressOfWarehouse($data):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Creates an address and immediately links it with a warehouse.
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The data to save
+|===
+
+
+[source%nowrap, php]
+----
+
+public findAddressOptions($addressId, $typeId):Illuminate\Database\Eloquent\Collection // <1>
+
+----
+
+
+    
+Returns a collection of address options of an address.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address
+
+|link:http://php.net/int[int^]
+a|`$typeId`
+|(Optional) The ID of an address option type
+|===
+
+
+[source%nowrap, php]
+----
+
+public createAddressOptions($addressData, $addressId):Illuminate\Database\Eloquent\Collection // <1>
+
+----
+
+
+    
+Creates address options for an address and returns all options of the address.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$addressData`
+|The address option data as associative array. Multiple options are possible.
+
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateAddressOptions($addressData, $addressId):Illuminate\Database\Eloquent\Collection // <1>
+
+----
+
+
+    
+Updates address options for an address and returns all options of the address.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$addressData`
+|The address option data as associative array. Multiple options are possible.
+
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteAddressOptions($addressId):void // <1>
+
+----
+
+
+    
+Deletes all address options of an address. The ID of the address must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAddressOption($optionId):Plenty\Modules\Account\Address\Models\AddressOption // <1>
+
+----
+
+
+    
+Gets an address option. The ID of the option must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_addressoption[AddressOption^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$optionId`
+|The ID of the address option
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateAddressOption($optionData, $optionId):Plenty\Modules\Account\Address\Models\AddressOption // <1>
+
+----
+
+
+    
+Updates an address option. The ID of the address option must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_addressoption[AddressOption^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$optionData`
+|The option data as associative array
+
+|link:http://php.net/int[int^]
+a|`$optionId`
+|The ID of the address option
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteAddressOption($optionId):bool // <1>
+
+----
+
+
+    
+Deletes an address option. The ID of the option must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$optionId`
+|The ID of the address option
+|===
+
+
+[source%nowrap, php]
+----
+
+public findAddressRelationTypes($application, $lang):Illuminate\Database\Eloquent\Collection // <1>
+
+----
+
+
+    
+Returns a collection of address relation types by a specific application and language. The collection may be empty.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$application`
+|The application type
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language as ISO 639-1 code (e.g. `en` for english).
+|===
+
+
+[source%nowrap, php]
+----
+
+public findAddressDataByAddressId($addressId, $orderIds):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Find address data by address id
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressId`
+|
+
+|link:http://php.net/string[string^]
+a|`$orderIds`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public findExistingAddress($addressData):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Find an existing address
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$addressData`
+|The address data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[account_address_models]]
+==  Models
+=== Address
+
+The address model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the address
+|link:http://php.net/string[string^]
+    |gender
+    |The gender ("female", "male" or "diverse")
+|link:http://php.net/string[string^]
+    |name1
+    |The name 1 field (defaults to: company name)
+|link:http://php.net/string[string^]
+    |name2
+    |The name 2 field (defaults to: first name)
+|link:http://php.net/string[string^]
+    |name3
+    |The name 3 field (defaults to: last name)
+|link:http://php.net/string[string^]
+    |name4
+    |The name 4 field (defaults to: c/o)
+|link:http://php.net/string[string^]
+    |address1
+    |The address 1 field (defaults to: street|'PACKSTATION'|'POSTFILIALE')
+|link:http://php.net/string[string^]
+    |address2
+    |The address 2 field (defaults to: houseNumber|packstationNo)
+|link:http://php.net/string[string^]
+    |address3
+    |The address 3 field (defaults to: additional)
+|link:http://php.net/string[string^]
+    |address4
+    |The address 4 field is currently undefined and can be freely used.
+|link:http://php.net/string[string^]
+    |postalCode
+    |The postcode
+|link:http://php.net/string[string^]
+    |town
+    |The town
+|link:http://php.net/int[int^]
+    |countryId
+    |The ID of the country
+|link:http://php.net/int[int^]
+    |stateId
+    |The ID of the state
+|link:http://php.net/bool[bool^]
+    |readOnly
+    |Flag that indicates if the data record is read only
+|link:http://php.net/string[string^]
+    |companyName
+    |The company name (alias for name1, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |firstName
+    |The first name (alias for name2, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |lastName
+    |The last name (alias for name3, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |careOf
+    |The c/o (alias for name4, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |street
+    |The street (alias for address1, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |houseNumber
+    |The house number (alias for address2, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |additional
+    |The additional address information (alias for address3, <i>read only</i>)
+|link:miscellaneous#miscellaneous__[^]
+
+    |checkedAt
+    |The time the address was checked as unix timestamp
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The time the address was created as unix timestamp
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The time the address was last updated as unix timestamp
+|link:http://php.net/string[string^]
+    |taxIdNumber
+    |The taxIdNumber option (alias for option with typeId 1, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |externalId
+    |The externalId option (alias for option with typeId 2, <i>read only</i>)
+|link:http://php.net/bool[bool^]
+    |entryCertificate
+    |The entryCertificate option (alias for option with typeId 3, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |phone
+    |The phone option (alias for option with typeId 4, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |email
+    |The email option (alias for option with typeId 5, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |postident
+    |The PostIdent option (alias for option with typeId 6, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |personalNumber
+    |The personal number option (alias for option with typeId 7, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |fsk
+    |The age rating option (alias for option with typeId 8, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |birthday
+    |The birthday option (alias for option with typeId 9, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |title
+    |The title option (alias for option with typeId 11, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |sessionId
+    |The fronetnd session ID that was used when the address was created (alias for option with typeId 10, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |contactPerson
+    |The contact person option (alias for option with typeId 12, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |externalCustomerId
+    |The external customer ID option (alias for option with typeId 13, <i>read only</i>)
+|link:http://php.net/string[string^]
+    |packstationNo
+    |The packstation number (alias for houseNumber and address2, <i>read only</i>)
+|link:http://php.net/bool[bool^]
+    |isPackstation
+    |Flag that indicates if the address is a packstation
+|link:http://php.net/bool[bool^]
+    |isPostfiliale
+    |Flag that indicates if the address is a postfiliale (post office)
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |options
+    |A collection of address options. Standard plentymarkets address option types:
+<ul>
+<li>1: tax id number (VAT number)</li>
+<li>2: external ID</li>
+<li>3: entry certificate (bool)</li>
+<li>4: phone number</li>
+<li>5: email</li>
+<li>6: post number</li>
+<li>7: personal ID</li>
+<li>8: BBFC/FSK</li>
+<li>9: birthday</li>
+<li>10: frontend session ID</li>
+<li>11: title (salutation)</li>
+<li>12: contact person</li>
+<li>13: external customer ID</li>
+</ul>
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |contacts
+    |A collection of contacts that are linked with the address record
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |orders
+    |A collection of orders that are linked with the address record
+|link:order#order_models_country[Country^]
+
+    |country
+    |The address country
+|link:order#order_models_countrystate[CountryState^]
+
+    |state
+    |The address state
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |contactRelations
+    |A collection of relations to linked contacts
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |orderRelations
+    |A collection of relations to linked orders
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |warehouseRelations
+    |A collection of relations to linked warehouses
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |reorderRelations
+    |A collection of relations to linked reorders
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |schedulerRelations
+    |A collection of relations to linked schedulers
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AddressContactRelation
+
+The address contact relation model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the address contact relation
+|link:http://php.net/int[int^]
+    |contactId
+    |The ID of the contact
+|link:http://php.net/int[int^]
+    |typeId
+    |The type ID of the address. Possible values:
+<ul>
+<li>Invoice address = 1</li>
+<li>Delivery address = 2</li>
+</ul>
+|link:http://php.net/int[int^]
+    |addressId
+    |The ID of the address
+|link:http://php.net/bool[bool^]
+    |isPrimary
+    |Flag that indicates if the address is primary
+|link:account#account_models_address[Address^]
+
+    |address
+    |The address of the relation
+|link:account#account_models_contact[Contact^]
+
+    |contact
+    |The contact of the relation
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AddressOption
+
+The address options model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the address option
+|link:http://php.net/int[int^]
+    |addressId
+    |The ID of the address
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the address option type
+|link:http://php.net/string[string^]
+    |value
+    |The option value
+|link:http://php.net/int[int^]
+    |position
+    |The position for sorting
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The time the option was created as unix timestamp
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The time the option was last updated as unix timestamp
+|link:account#account_models_address[Address^]
+
+    |address
+    |The address the option belongs to
+|link:account#account_models_addressoptiontype[AddressOptionType^]
+
+    |type
+    |The option type of the address option
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AddressOptionType
+
+The AddressOptionType model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the address option type. It is possible to define individual types. The following types are available by default:
+<ul>
+<li>1 = VAT number</li>
+<li>2 = External address ID</li>
+<li>3 = Entry certificate</li>
+<li>4 = Telephone</li>
+<li>5 = Email</li>
+<li>6 = Post number</li>
+<li>7 = Personal id</li>
+<li>8 = BBFC (age rating)</li>
+<li>9 = Birthday</li>
+<li>10 = Session ID</li>
+<li>11 = Title</li>
+<li>12 = Contact person</li>
+<li>13 = External customer ID</li>
+</ul>
+|link:http://php.net/int[int^]
+    |position
+    |The position for sorting
+|link:http://php.net/int[int^]
+    |nonErasable
+    |Flag that indicates if the type can be deleted
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |names
+    |A collection of address option type names
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |options
+    |A collection of all address options of the type
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AddressOptionTypeName
+
+The AddressOptionTypeName model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the address option type name
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the address option type
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the name
+|link:http://php.net/string[string^]
+    |name
+    |The name
+|link:account#account_models_addressoptiontype[AddressOptionType^]
+
+    |type
+    |The address option type that belongs to the name
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AddressOrderRelation
+
+address order relation model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the address order relation
+|link:http://php.net/int[int^]
+    |orderId
+    |The ID of the order
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the address type
+<ul>
+		<li>Billing address = 1</li>
+		<li>Delivery address = 2</li>
+		<li>Sender address = 3</li>
+		<li>Return address = 4</li>
+		<li>Client address = 5</li>
+		<li>Contractor address = 6</li>
+		<li>Warehouse address = 7</li>
+	</ul>
+|link:http://php.net/int[int^]
+    |addressId
+    |The ID of the address
+|link:account#account_models_address[Address^]
+
+    |address
+    |The address of the relation
+|link:order#order_models_order[Order^]
+
+    |order
+    |The order of the relation
+|link:account#account_models_addressrelationtype[AddressRelationType^]
+
+    |type
+    |The address relation type
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AddressPosRelation
+
+The address POS relation model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the address POS relation
+|link:http://php.net/string[string^]
+    |posBaseId
+    |The ID of the POS base
+|link:http://php.net/string[string^]
+    |addressId
+    |The ID of the address
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the relation type
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AddressRelationType
+
+The contact address type model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the address relation type. The following types are available by default and cannot be deleted:
+<ul>
+<li>1 = Billing address</li>
+<li>2 = Delivery address</li>
+<li>3 = Sender address</li>
+<li>4 = Return address</li>
+<li>5 = Client address</li>
+<li>6 = Contractor address</li>
+<li>7 = Warehouse address</li>
+<li>8 = POS address</li>
+</ul>
+|link:http://php.net/int[int^]
+    |position
+    |The position for sorting
+|link:http://php.net/int[int^]
+    |nonErasable
+    |Flag that indicates if the type can be deleted
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |names
+    |A collection of AddressRelationTypeName objects
+|link:account#account_models_addressrelationtypeapplication[AddressRelationTypeApplication^]
+
+    |application
+    |The address relation type application
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AddressRelationTypeApplication
+
+The AddressRelationTypeApplication model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the address relation type name
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the relation type
+|link:http://php.net/string[string^]
+    |application
+    |The application type. Allowed values: contact, order, warehouse.
+|link:http://php.net/int[int^]
+    |position
+    |The position for sorting
+|link:account#account_models_addressrelationtype[AddressRelationType^]
+
+    |type
+    |The type of the address relation
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AddressRelationTypeName
+
+The AddressRelationTypeName model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the address relation type name
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the relation type
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the name
+|link:http://php.net/string[string^]
+    |name
+    |The name
+|link:account#account_models_addressrelationtype[AddressRelationType^]
+
+    |type
+    |The type of the address relation
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AddressSchedulerRelation
+
+The AddressSchedulerRelation model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the address order relation
+|link:http://php.net/int[int^]
+    |schedulerId
+    |The ID of the scheduler
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the address type
+|link:http://php.net/int[int^]
+    |addressId
+    |The ID of the address
+|link:order#order_models_orderscheduler[OrderScheduler^]
+
+    |scheduler
+    |The scheduler of the order
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AddressWarehouseRelation
+
+The AddressWarehouseRelation model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Address\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the address warehouse relation
+|link:http://php.net/int[int^]
+    |warehouseId
+    |The ID of the warehouse
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the type
+|link:http://php.net/int[int^]
+    |addressId
+    |The ID of the address
+|link:account#account_models_address[Address^]
+
+    |address
+    |The address of the relation
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[account_contactevent]]
+= ContactEvent
+
+[[account_contactevent_contracts]]
+==  Contracts
+=== ContactEventRepositoryContract
+
+The ContactEventRepositoryContract is the interface for the contact event repository. This interface allows to list contact events.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\ContactEvent\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public listEvents($columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Lists contact events identified by the contact that is currently logged into the system.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|The columns to retrieve
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+|===
+
+
+[source%nowrap, php]
+----
+
+public listEventsByContactId($contactId, $columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Lists contact events by the contact ID.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The columns to retrieve
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+|===
+
+
+[source%nowrap, php]
+----
+
+public createEvent($data):Plenty\Modules\Account\Contact\ContactEvent\Models\ContactEvent // <1>
+
+----
+
+
+    
+Adds an entry to the table customer events by the contact ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactevent[ContactEvent^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateEvent($contactEventId, $data):Plenty\Modules\Account\Contact\ContactEvent\Models\ContactEvent // <1>
+
+----
+
+
+    
+Updates an entry of the table customer events by the contact event ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactevent[ContactEvent^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactEventId`
+|The ID of the contact event
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteEvent($contactEventId):void // <1>
+
+----
+
+
+    
+Deletes an entry of the table customer events by the contact event ID.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactEventId`
+|The ID of the contact event
+|===
+
+
+[source%nowrap, php]
+----
+
+public getEventTypesPreview():array // <1>
+
+----
+
+
+    
+Get the contact event types as key/pair array
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[[account_contactevent_models]]
+==  Models
+=== ContactEvent
+
+The contact event model.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\ContactEvent\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |eventId
+    |The ID of the event
+|link:http://php.net/int[int^]
+    |contactId
+    |The ID of the contact this event belongs to
+|link:http://php.net/int[int^]
+    |userId
+    |The ID of the user this event belongs to
+|link:http://php.net/int[int^]
+    |eventDuration
+    |The duration of the event in seconds
+|link:http://php.net/string[string^]
+    |eventType
+    |The type of the event. Possible values are call, ticket, email, meeting, webinar, development and design.
+|link:http://php.net/int[int^]
+    |orderRowId
+    |
+|link:http://php.net/string[string^]
+    |eventInfo
+    |Informational text about the event
+|link:http://php.net/bool[bool^]
+    |billable
+    |Billable if set to 1
+|link:http://php.net/string[string^]
+    |eventInsertedAt
+    |The date the event was created at as unix timestamp
+|link:http://php.net/string[string^]
+    |eventBilledAt
+    |The date the event was billed at as unix timestamp
+|link:http://php.net/string[string^]
+    |eventProvisionPaidAt
+    |The date the provision was paid at as unix timestamp
+|link:http://php.net/float[float^]
+    |eventCreditValue
+    |The credit value of the event
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[account_contact]]
+= Contact
+
+[[account_contact_contracts]]
+==  Contracts
+=== ContactAccessDataRepositoryContract
+
+The ContactAccessDataRepositoryContract is the interface for the contact access data repository. This interface allows to reset and change contact password, get a login URL and unblock users.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public updatePassword($contactId, $data):void // <1>
+
+----
+
+
+    
+Updates the password for a contact.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public sendNewCustomerPassword($contactId):void // <1>
+
+----
+
+
+    
+Sends a new password to the contact.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public unblockUser($contactId):void // <1>
+
+----
+
+
+    
+Unblocks the user.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public getLoginURL($contactId):void // <1>
+
+----
+
+
+    
+Gets the login URL.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+
+=== ContactAccountRepositoryContract
+
+The ContactAccountRepositoryContract is the interface for the contact account repository. This interface allows to get, create, update and delete accounts. An account contains company-related data.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findAccount($accountId, $contactId):Plenty\Modules\Account\Models\Account // <1>
+
+----
+
+
+    
+Returns an account by an ID only if it is associated with the given contact ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_account[Account^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$accountId`
+|The ID of the account
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public createAccount($data, $contactId):Plenty\Modules\Account\Models\Account // <1>
+
+----
+
+
+    
+Creates an account and associates it immediately with the given ID of the contact.
+
+
+==== Return type
+    
+<1> link:account#account_models_account[Account^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The account data as associative array
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact to associate this to
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateAccount($data, $accountId, $contactId):Plenty\Modules\Account\Models\Account // <1>
+
+----
+
+
+    
+Updates an account. If not already associated, it will associate the account with the given contact ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_account[Account^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The account data as associative array
+
+|link:http://php.net/int[int^]
+a|`$accountId`
+|The ID of the account
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteAccount($accountId, $contactId):bool // <1>
+
+----
+
+
+    
+Deletes the given account of the given contact ID. Returns `true` if the deletion was successful. Returns `false` if the deletion was not successful.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$accountId`
+|The ID of the account
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+
+=== ContactAddressRepositoryContract
+
+The ContactAddressRepositoryContract is the interface for the contact address repository. This interface allows to list, get, create, update, add and delete addresses of the contact.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getPrimaryOrLastCreatedContactAddresses($contactId):array // <1>
+
+----
+
+
+    
+Returns primary or last created contact addresses
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public findContactAddressByTypeId($contactId, $typeId, $last = true):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Returns an address of a given contact for the given type.
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/int[int^]
+a|`$typeId`
+|The ID of the address type
+
+|link:http://php.net/bool[bool^]
+a|`$last`
+|Return the last created billing address
+|===
+
+
+[source%nowrap, php]
+----
+
+public createAddress($data, $contactId, $typeId):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Creates an address, associates it immediately with the given contact ID with the given type and returns the new address.
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The address data as associative array
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/int[int^]
+a|`$typeId`
+|The ID of the address type
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateAddress($data, $addressId, $contactId, $typeId):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Updates the existing address of a given contact and type and returns it.
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The address data as associative array
+
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address to update
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/int[int^]
+a|`$typeId`
+|The ID of the address type
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAddress($addressId, $contactId, $typeId):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Returns the address of a given contact and type.
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/int[int^]
+a|`$typeId`
+|The ID of the address type
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAddresses($contactId, $typeId = null):array // <1>
+
+----
+
+
+    
+Gets all addresses for the given contact of the given type.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/int[int^]
+a|`$typeId`
+|The address type (default: all / null)
+|===
+
+
+[source%nowrap, php]
+----
+
+public addAddress($addressId, $contactId, $typeId):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Adds the address to the given contact as the given type.
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/int[int^]
+a|`$typeId`
+|The ID of the address type
+|===
+
+
+[source%nowrap, php]
+----
+
+public setPrimaryAddress($addressId, $contactId, $addressTypeId):Plenty\Modules\Account\Address\Models\AddressContactRelation // <1>
+
+----
+
+
+    
+Sets a contact address per address type as the primary address.
+
+
+==== Return type
+    
+<1> link:account#account_models_addresscontactrelation[AddressContactRelation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/int[int^]
+a|`$addressTypeId`
+|The ID of the address type
+|===
+
+
+[source%nowrap, php]
+----
+
+public resetPrimaryAddress($addressId, $contactId, $addressTypeId):Plenty\Modules\Account\Address\Models\AddressContactRelation // <1>
+
+----
+
+
+    
+Resets a contact primary address.
+
+
+==== Return type
+    
+<1> link:account#account_models_addresscontactrelation[AddressContactRelation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/int[int^]
+a|`$addressTypeId`
+|The ID of the address type
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteAddress($addressId, $contactId, $typeId):bool // <1>
+
+----
+
+
+    
+Deletes an existing address of a given contact and type. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/int[int^]
+a|`$typeId`
+|The ID of the address type
+|===
+
+
+
+=== ContactClassRepositoryContract
+
+The ContactClassRepositoryContract is the interface for the contact class repository. This interface allows to list all contact classes or to get a contact class by the ID.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findContactClassById($contactClassId):string // <1>
+
+----
+
+
+    
+Gets a contact class. The ID of the contact class must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactClassId`
+|The ID of the contact class
+|===
+
+
+[source%nowrap, php]
+----
+
+public findContactClassDataById($contactClassId):array // <1>
+
+----
+
+
+    
+Gets the data of a contact class. The ID of the contact class must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactClassId`
+|The ID of the contact class
+|===
+
+
+[source%nowrap, php]
+----
+
+public allContactClasses():array // <1>
+
+----
+
+
+    
+Lists contact classes.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+
+=== ContactDocumentContract
+
+The ContactDocumentContract is the interface for contact documents.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public listDocuments($continuationToken, $contactId):Plenty\Modules\Cloud\Storage\Models\StorageObjectList // <1>
+
+----
+
+
+    
+List documents of a contact
+
+
+==== Return type
+    
+<1> link:cloud#cloud_models_storageobjectlist[StorageObjectList^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$continuationToken`
+|The contnuation token
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public getDocument($key, $contactId):Plenty\Modules\Cloud\Storage\Models\StorageObject // <1>
+
+----
+
+
+    
+Get storage object from contact documents
+
+
+==== Return type
+    
+<1> link:cloud#cloud_models_storageobject[StorageObject^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The key for the file
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public getDocumentUrl($key, $contactId):string // <1>
+
+----
+
+
+    
+Get temporary url for document
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The key for the file
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public uploadDocument($key, $content, $contactId):Plenty\Modules\Cloud\Storage\Models\StorageObject // <1>
+
+----
+
+
+    
+Upload document to contact directory
+
+
+==== Return type
+    
+<1> link:cloud#cloud_models_storageobject[StorageObject^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The key for the file
+
+|link:http://php.net/string[string^]
+a|`$content`
+|The content of the file
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteDocuments($keyList, $contactId):bool // <1>
+
+----
+
+
+    
+Delete files from contact documents
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$keyList`
+|The array of the key list
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+
+=== ContactGroupFunctionsRepositoryContract
+
+The ContactGroupFunctionsRepositoryContract is the interface for the contact account group function repository. This interface allows to execute a group function call and get group function related data.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public loadGroupFunctions():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public executeGroupFunction($contactList = [], $addressLabelTemplate = null, $emailTemplate = null, $newsletter = null):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$contactList`
+|The list of the contacts
+
+|link:http://php.net/int[int^]
+a|`$addressLabelTemplate`
+|The address label template
+
+|link:http://php.net/int[int^]
+a|`$emailTemplate`
+|The email templates
+
+|link:http://php.net/int[int^]
+a|`$newsletter`
+|The newsletter
+|===
+
+
+[source%nowrap, php]
+----
+
+public executeGroupFunctionV2($data = []):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The data as associative array
+|===
+
+
+
+=== ContactLookupRepositoryContract
+
+lookup repository for contacts
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public hasId($contactId):Plenty\Modules\Account\Contact\Contracts\ContactLookupRepositoryContract // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:account#account_contracts_contactlookuprepositorycontract[ContactLookupRepositoryContract^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public hasEmail($emailAddress):Plenty\Modules\Account\Contact\Contracts\ContactLookupRepositoryContract // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:account#account_contracts_contactlookuprepositorycontract[ContactLookupRepositoryContract^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$emailAddress`
+|The email address of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public hasBillingAddress($billingAddressId):Plenty\Modules\Account\Contact\Contracts\ContactLookupRepositoryContract // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:account#account_contracts_contactlookuprepositorycontract[ContactLookupRepositoryContract^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$billingAddressId`
+|The ID of the billing address
+|===
+
+
+[source%nowrap, php]
+----
+
+public hasDeliveryAddress($deliveryAddressId):Plenty\Modules\Account\Contact\Contracts\ContactLookupRepositoryContract // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:account#account_contracts_contactlookuprepositorycontract[ContactLookupRepositoryContract^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$deliveryAddressId`
+|The ID of the delivery address
+|===
+
+
+[source%nowrap, php]
+----
+
+public lookup():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+
+=== ContactOptionRepositoryContract
+
+The ContactOptionRepositoryContract is the interface for the contact option repository. This interface allows to get, create, update and delete contact options.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findContactOptions($contactId, $typeId, $subTypeId):Illuminate\Database\Eloquent\Collection // <1>
+
+----
+
+
+    
+Lists options of the contact. The ID of the contact must be specified. The ID of the option type and the ID of the option sub-type can be optionally used.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/int[int^]
+a|`$typeId`
+|Optional: The ID of the option type (default: 0)
+
+|link:http://php.net/int[int^]
+a|`$subTypeId`
+|Optional: The ID of the option sub-type (default: 0)
+|===
+
+
+[source%nowrap, php]
+----
+
+public createContactOptions($optionData, $contactId):array // <1>
+
+----
+
+
+    
+Creates an option for the given contact and returns them.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$optionData`
+|The option data as associative array
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateContactOptions($optionData, $contactId):array // <1>
+
+----
+
+
+    
+Updates options of the given contact and returns them. The ID of the contact must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$optionData`
+|The option data as associative array
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteContactOptionsByContactId($contactId):bool // <1>
+
+----
+
+
+    
+Deletes all options of the given contact. The ID of the contact must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public findContactOption($optionId):Plenty\Modules\Account\Contact\Models\ContactOption // <1>
+
+----
+
+
+    
+Gets a contact option. The ID of the option must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactoption[ContactOption^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$optionId`
+|The ID of the option
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateContactOption($optionData, $optionId):Plenty\Modules\Account\Contact\Models\ContactOption // <1>
+
+----
+
+
+    
+Updates an option with the given id and returns it.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactoption[ContactOption^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$optionData`
+|The option data as associative array
+
+|link:http://php.net/int[int^]
+a|`$optionId`
+|The ID of the option
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteContactOption($optionId):bool // <1>
+
+----
+
+
+    
+Deletes a contact option. The ID of the option must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$optionId`
+|The ID of the option
+|===
+
+
+[source%nowrap, php]
+----
+
+public validateValue($contactId, $typeId, $subTypeId, $value):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|
+
+|link:http://php.net/int[int^]
+a|`$typeId`
+|
+
+|link:http://php.net/int[int^]
+a|`$subTypeId`
+|
+
+|link:http://php.net/string[string^]
+a|`$value`
+|
+|===
+
+
+
+=== ContactParamConfigurationContract
+
+The ContactParamConfigurationContract is the interface for the contact param configuration repository. This interface allows to create, update, delete, list and get contact positions, contact departments, contact option types and and contact option sub-types.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createContactPosition($data):Plenty\Modules\Account\Contact\Models\ContactPosition // <1>
+
+----
+
+
+    
+Creates a contact position.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactposition[ContactPosition^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateContactPosition($data, $contactPositionId):Plenty\Modules\Account\Contact\Models\ContactPosition // <1>
+
+----
+
+
+    
+Updates an existing contact position.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactposition[ContactPosition^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/int[int^]
+a|`$contactPositionId`
+|The ID of the contact position
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteContactPosition($contactPositionId):bool // <1>
+
+----
+
+
+    
+Deletes a contact position by the given ID.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactPositionId`
+|The ID of the contact position
+|===
+
+
+[source%nowrap, php]
+----
+
+public findContactPositionById($contactPositionId):Plenty\Modules\Account\Contact\Models\ContactPosition // <1>
+
+----
+
+
+    
+Finds an existing contact position by the given ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactposition[ContactPosition^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactPositionId`
+|The ID of the contact position
+|===
+
+
+[source%nowrap, php]
+----
+
+public allContactPositions($columns = [], $perPage = 50):void // <1>
+
+----
+
+
+    
+Gets a list of contact positions.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|
+
+|link:http://php.net/int[int^]
+a|`$perPage`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createContactDepartment($data):Plenty\Modules\Account\Contact\Models\ContactDepartment // <1>
+
+----
+
+
+    
+Creates a contact department.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactdepartment[ContactDepartment^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateContactDepartment($data, $contactDepartmentId):Plenty\Modules\Account\Contact\Models\ContactDepartment // <1>
+
+----
+
+
+    
+Updates an existing contact department.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactdepartment[ContactDepartment^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/int[int^]
+a|`$contactDepartmentId`
+|The ID of the contact department
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteContactDepartment($contactDepartmentId):bool // <1>
+
+----
+
+
+    
+Deletes a contact department by the given ID.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactDepartmentId`
+|The ID of the contact department
+|===
+
+
+[source%nowrap, php]
+----
+
+public findContactDepartmentById($contactDepartmentId):Plenty\Modules\Account\Contact\Models\ContactDepartment // <1>
+
+----
+
+
+    
+Finds an existing contact department by the given ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactdepartment[ContactDepartment^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactDepartmentId`
+|The ID of the contact department
+|===
+
+
+[source%nowrap, php]
+----
+
+public allContactDepartments($columns = [], $perPage = 50):void // <1>
+
+----
+
+
+    
+Gets a list of contact departments.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|
+
+|link:http://php.net/int[int^]
+a|`$perPage`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createContactOptionType($data):Plenty\Modules\Account\Contact\Models\ContactOptionType // <1>
+
+----
+
+
+    
+Creates a contact option type.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactoptiontype[ContactOptionType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateContactOptionType($data, $contactOptionTypeId):Plenty\Modules\Account\Contact\Models\ContactOptionType // <1>
+
+----
+
+
+    
+Updates an existing contact option type.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactoptiontype[ContactOptionType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/int[int^]
+a|`$contactOptionTypeId`
+|The ID of the contact option type
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteContactOptionType($contactOptionTypeId):bool // <1>
+
+----
+
+
+    
+Deletes a contact option type by the given ID.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactOptionTypeId`
+|The ID of the contact option type
+|===
+
+
+[source%nowrap, php]
+----
+
+public findContactOptionTypeById($contactOptionTypeId):Plenty\Modules\Account\Contact\Models\ContactOptionType // <1>
+
+----
+
+
+    
+Finds an existing contact option type by the given ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactoptiontype[ContactOptionType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactOptionTypeId`
+|The ID of the contact option type
+|===
+
+
+[source%nowrap, php]
+----
+
+public allContactOptionType($columns = [], $perPage = 50, $with = []):void // <1>
+
+----
+
+
+    
+Gets a list of contact option types.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|
+
+|link:http://php.net/int[int^]
+a|`$perPage`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createContactOptionSubType($data):Plenty\Modules\Account\Contact\Models\ContactOptionSubType // <1>
+
+----
+
+
+    
+Creates a contact option sub-type.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactoptionsubtype[ContactOptionSubType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateContactOptionSubType($data, $contactOptionSubTypeId):Plenty\Modules\Account\Contact\Models\ContactOptionSubType // <1>
+
+----
+
+
+    
+Updates an existing contact option sub-type.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactoptionsubtype[ContactOptionSubType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/int[int^]
+a|`$contactOptionSubTypeId`
+|The ID of the contact option sub-type
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteContactOptionSubType($contactOptionSubTypeId):bool // <1>
+
+----
+
+
+    
+Deletes a contact option sub-type by the given ID.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactOptionSubTypeId`
+|The ID of the contact option sub-type
+|===
+
+
+[source%nowrap, php]
+----
+
+public findContactOptionSubTypeById($contactOptionSubTypeId):Plenty\Modules\Account\Contact\Models\ContactOptionSubType // <1>
+
+----
+
+
+    
+Finds an existing contact option sub-type by the given ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactoptionsubtype[ContactOptionSubType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactOptionSubTypeId`
+|The ID contact option sub-type
+|===
+
+
+[source%nowrap, php]
+----
+
+public allContactOptionSubType($columns = [], $perPage = 50):void // <1>
+
+----
+
+
+    
+Gets a list of contact option sub-types.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|
+
+|link:http://php.net/int[int^]
+a|`$perPage`
+|
+|===
+
+
+
+=== ContactPaymentRepositoryContract
+
+The ContactPaymentRepositoryContract is the interface for the contact payment repository. This interface allows to list, get, create, update and delete bank details of the contact.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBanksOfContact($contactId, $columns = [], $perPage = 50):array // <1>
+
+----
+
+
+    
+Gets a collection of bank accounts of a contact. The ID of the contact must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|Optional: The columns to retrieve (Default: '[*]')
+
+|link:http://php.net/int[int^]
+a|`$perPage`
+|Optional: The number of bank accounts per page (Default: 50)
+|===
+
+
+[source%nowrap, php]
+----
+
+public getBankByOrderId($orderId, $columns = []):Plenty\Modules\Account\Contact\Models\ContactBank // <1>
+
+----
+
+
+    
+Returns bank details of an order. The ID of the order must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactbank[ContactBank^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$orderId`
+|The ID of the order
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|Optional: The columns to retrieve (Default: '[*]')
+|===
+
+
+[source%nowrap, php]
+----
+
+public createContactBank($data):Plenty\Modules\Account\Contact\Models\ContactBank // <1>
+
+----
+
+
+    
+Creates a bank account for a contact and returns it.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactbank[ContactBank^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The bank account data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateContactBank($data, $contactBankId):Plenty\Modules\Account\Contact\Models\ContactBank // <1>
+
+----
+
+
+    
+Updates a bank account. The ID of the bank account must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactbank[ContactBank^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The bank data as associative array
+
+|link:http://php.net/int[int^]
+a|`$contactBankId`
+|The ID of the bank account entry
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteContactBank($contactBankId):bool // <1>
+
+----
+
+
+    
+Deletes a bank account. The ID of the bank account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactBankId`
+|The ID of the bank account entry
+|===
+
+
+[source%nowrap, php]
+----
+
+public findContactBankById($contactBankId):Plenty\Modules\Account\Contact\Models\ContactBank // <1>
+
+----
+
+
+    
+Gets a bank account. The ID of the bank account must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactbank[ContactBank^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactBankId`
+|The ID of the bank account entry
+|===
+
+
+
+=== ContactRepositoryContract
+
+The ContactRepositoryContract is the interface for the contact repository. This interface allows to list, get, create, update and delete contacts. A contact is equivalent to a person.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createContact($data):Plenty\Modules\Account\Contact\Models\Contact // <1>
+
+----
+
+
+    
+Creates a contact and returns it.
+
+
+==== Return type
+    
+<1> link:account#account_models_contact[Contact^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The contact data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateContact($data, $contactId):Plenty\Modules\Account\Contact\Models\Contact // <1>
+
+----
+
+
+    
+Updates a contact and returns it. The ID of the contact must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_contact[Contact^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The contact data as associative array
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteContact($contactId, $checkExistingOrders = null):bool // <1>
+
+----
+
+
+    
+Deletes a contact. The ID of the contact must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+
+|link:http://php.net/bool[bool^]
+a|`$checkExistingOrders`
+|Flag that checks if the contact is linked to orders. If the contact is linked to orders, CustomerDeleteException is thrown and the contact will not be deleted.
+|===
+
+
+[source%nowrap, php]
+----
+
+public findContactById($contactId, $with = []):Plenty\Modules\Account\Contact\Models\Contact // <1>
+
+----
+
+
+    
+Gets a contact. The ID of the contact must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_contact[Contact^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relationships that should be eager loaded
+|===
+
+
+[source%nowrap, php]
+----
+
+public getContactList($filter = [], $with = [], $columns = [], $page = 1, $itemsPerPage = 50, $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List contacts
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filter`
+|Filter that restrict the search result
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relationships that should be eager loaded
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The columns to retrieve
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+
+|link:http://php.net/string[string^]
+a|`$sortBy`
+|[optional, default=id]
+
+|link:http://php.net/string[string^]
+a|`$sortOrder`
+|[optional, default=desc]
+|===
+
+
+[source%nowrap, php]
+----
+
+public getContactByOptionValue($value, $typeId, $subTypeId):Plenty\Modules\Account\Contact\Models\Contact // <1>
+
+----
+
+
+    
+Returns an existing contact by a contact option information.
+
+
+==== Return type
+    
+<1> link:account#account_models_contact[Contact^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$value`
+|The value of the contact option
+
+|link:http://php.net/int[int^]
+a|`$typeId`
+|The type ID of the contact option
+
+|link:http://php.net/int[int^]
+a|`$subTypeId`
+|The sub-type ID of the contact option
+|===
+
+
+[source%nowrap, php]
+----
+
+public getContactIdByEmail($email):int // <1>
+
+----
+
+
+    
+Returns a contact id by email. The email must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$email`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public findContactDataByContactId($contactId):Plenty\Modules\Account\Contact\Models\Contact // <1>
+
+----
+
+
+    
+Returns all contact related data.
+
+
+==== Return type
+    
+<1> link:account#account_models_contact[Contact^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getDataHistory($referenceType, $referenceId):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$referenceType`
+|
+
+|link:http://php.net/int[int^]
+a|`$referenceId`
+|
+|===
+
+
+
+=== ContactTypeRepositoryContract
+
+The ContactTypeRepositoryContract is the interface for the contact type repository. This interface allows to list, get, create, update and delete contact types.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createContactType($data):Plenty\Modules\Account\Contact\Models\ContactType // <1>
+
+----
+
+
+    
+Creates a contact type and returns it.
+
+
+==== Return type
+    
+<1> link:account#account_models_contacttype[ContactType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The contact type data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateContactType($data, $contactTypeId):Plenty\Modules\Account\Contact\Models\ContactType // <1>
+
+----
+
+
+    
+Updates a contact type and returns it. The ID of the contact type must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_contacttype[ContactType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The contact type data as associative array
+
+|link:http://php.net/int[int^]
+a|`$contactTypeId`
+|The ID of the contact type
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteContactType($contactTypeId):bool // <1>
+
+----
+
+
+    
+Deletes a contact type. The ID of the contact type must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactTypeId`
+|The ID of the contact type
+|===
+
+
+[source%nowrap, php]
+----
+
+public findContactTypeById($contactTypeId):Plenty\Modules\Account\Contact\Models\ContactType // <1>
+
+----
+
+
+    
+Gets a contact type. The ID of the contact type must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_contacttype[ContactType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactTypeId`
+|The ID of the contact type
+|===
+
+
+[source%nowrap, php]
+----
+
+public allContactTypes($columns = []):array // <1>
+
+----
+
+
+    
+Returns a collection of contact types.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|Optional: The columns to return as an array (Default: '[*]')
+|===
+
+
+
+=== ContactVCardRepositoryContract
+
+The ContractVCardRepositoryContract is the interface for the vcard repository. The interface allows you to return a vcard filestream.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getVCard($contactId):array // <1>
+
+----
+
+
+    
+Gets a filestream of the vcard of a contact.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+
+=== InternalContactPaymentRepositoryContract
+
+The contract for the contact payment repository.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBanksOfContact($contactId, $columns = [], $perPage = 50):array // <1>
+
+----
+
+
+    
+Gets a collection of bank accounts of a contact. The ID of the contact must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|Optional: The columns to retrieve (Default: '[*]')
+
+|link:http://php.net/int[int^]
+a|`$perPage`
+|Optional: The number of bank accounts per page (Default: 50)
+|===
+
+
+[source%nowrap, php]
+----
+
+public getBankByOrderId($orderId, $columns = []):Plenty\Modules\Account\Contact\Models\ContactBank // <1>
+
+----
+
+
+    
+Returns bank details of an order. The ID of the order must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactbank[ContactBank^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$orderId`
+|The ID of the order
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|Optional: The columns to retrieve (Default: '[*]')
+|===
+
+
+[source%nowrap, php]
+----
+
+public createContactBank($data):Plenty\Modules\Account\Contact\Models\ContactBank // <1>
+
+----
+
+
+    
+Creates a bank account for a contact and returns it.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactbank[ContactBank^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The bank account data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateContactBank($data, $contactBankId):Plenty\Modules\Account\Contact\Models\ContactBank // <1>
+
+----
+
+
+    
+Updates a bank account. The ID of the bank account must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactbank[ContactBank^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The bank data as associative array
+
+|link:http://php.net/int[int^]
+a|`$contactBankId`
+|The ID of the bank account entry
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteContactBank($contactBankId):bool // <1>
+
+----
+
+
+    
+Deletes a bank account. The ID of the bank account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactBankId`
+|The ID of the bank account entry
+|===
+
+
+[source%nowrap, php]
+----
+
+public findContactBankById($contactBankId):Plenty\Modules\Account\Contact\Models\ContactBank // <1>
+
+----
+
+
+    
+Gets a bank account. The ID of the bank account must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_contactbank[ContactBank^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactBankId`
+|The ID of the bank account entry
+|===
+
+
+
+=== SalesRepresentativeRegionRepositoryContract
+
+Sales representatives region repository
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createRegion($data, $contactId = null, $accountId = null):Plenty\Modules\Account\Models\SalesRepresentativeRegion // <1>
+
+----
+
+
+    
+Create a region for the sales representative
+
+
+==== Return type
+    
+<1> link:account#account_models_salesrepresentativeregion[SalesRepresentativeRegion^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The data as associative array
+
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/int[int^]
+a|`$accountId`
+|The ID of the account
+|===
+
+
+[source%nowrap, php]
+----
+
+public find($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getRegionById($accountContactRelationId):Plenty\Modules\Account\Models\SalesRepresentativeRegion // <1>
+
+----
+
+
+    
+Get a region by the ID
+
+
+==== Return type
+    
+<1> link:account#account_models_salesrepresentativeregion[SalesRepresentativeRegion^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$accountContactRelationId`
+|The ID of the account contact relation
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteRegionById($accountContactRelationId):bool // <1>
+
+----
+
+
+    
+Delete a region by the ID
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$accountContactRelationId`
+|The ID of the account contact relation
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateRegionById($accountContactRelationId, $data):Plenty\Modules\Account\Models\SalesRepresentativeRegion // <1>
+
+----
+
+
+    
+Update an existing region by the ID
+
+
+==== Return type
+    
+<1> link:account#account_models_salesrepresentativeregion[SalesRepresentativeRegion^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$accountContactRelationId`
+|The ID of the account contact relation
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getRegionByContactAndAccountId($contactId, $accountId):Plenty\Modules\Account\Models\SalesRepresentativeRegion // <1>
+
+----
+
+
+    
+Get a region by contact ID and account ID
+
+
+==== Return type
+    
+<1> link:account#account_models_salesrepresentativeregion[SalesRepresentativeRegion^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+
+|link:http://php.net/int[int^]
+a|`$accountId`
+|The ID of the account
+|===
+
+
+[source%nowrap, php]
+----
+
+public getRegionsByContactId($contactId):Illuminate\Support\Collection // <1>
+
+----
+
+
+    
+Get a region by the contact ID
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[account_contact_models]]
+==  Models
+=== Contact
+
+The contact model.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+==== Referenceable
+id
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the contact
+|link:http://php.net/string[string^]
+    |externalId
+    |The external ID of the contact
+|link:http://php.net/string[string^]
+    |number
+    |The number of the contact (previous customer number)
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the contact type
+|link:http://php.net/string[string^]
+    |firstName
+    |The first name of the contact
+|link:http://php.net/string[string^]
+    |lastName
+    |The last name of the contact
+|link:http://php.net/string[string^]
+    |fullName
+    |The full name of the contact. A concatenation of first and last name.
+|link:http://php.net/string[string^]
+    |email
+    |The private email address of the contact
+|link:http://php.net/string[string^]
+    |secondaryEmail
+    |The secondary private email address of the contact
+|link:http://php.net/string[string^]
+    |gender
+    |The gender of the contact ("female", "male" or "diverse")
+|link:http://php.net/string[string^]
+    |title
+    |The title of the contact, e.g. a doctorate
+|link:http://php.net/string[string^]
+    |formOfAddress
+    |The form of address for the contact
+|link:miscellaneous#miscellaneous__[^]
+
+    |newsletterAllowanceAt
+    |The time the contact registered for the newsletter as unix timestamp
+|link:http://php.net/int[int^]
+    |classId
+    |The ID of the contact class
+|link:http://php.net/int[int^]
+    |blocked
+    |The blocked status of the contact. Contacts can be blocked for a specific client (store). Possible values:
+<ul>
+<li> 0 = not blocked</li>
+<li> 1 = blocked</li>
+</ul>
+|link:http://php.net/int[int^]
+    |rating
+    |The rating of the contact. This rating is for internal use only. 5 red stars are for the worst and 5 yellow stars for the best rating. Possible values:
+<ul>
+<li>-5 = 5 red stars (worst rating)</li>
+<li>-4 = 4 red stars</li>
+<li>-3 = 3 red stars</li>
+<li>-2 = 2 red stars</li>
+<li>-1 = 1 red star</li>
+<li>0 = 5 grey stars, no rating saved for the contact</li>
+<li>1 = 1 yellow star</li>
+<li>2 = 2 yellow stars</li>
+<li>3 = 3 yellow stars</li>
+<li>4 = 4 yellow stars</li>
+<li>5 = 5 yellow stars (best rating)</li>
+</ul>
+|link:http://php.net/string[string^]
+    |bookAccount
+    |The book account (debtor account) of the contact. An additional, separate number that generally corresponds to the customer number or the debtor number in your financial accounting.
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the contact
+|link:http://php.net/float[float^]
+    |referrerId
+    |The origin of the contact
+|link:http://php.net/int[int^]
+    |plentyId
+    |The client (store) that is assigned to the contact
+|link:http://php.net/int[int^]
+    |userId
+    |The owner ID of the contact
+|link:miscellaneous#miscellaneous__[^]
+
+    |birthdayAt
+    |The date of birth of the contact
+|link:miscellaneous#miscellaneous__[^]
+
+    |lastLoginAt
+    |The date of the last login of the contact
+|link:miscellaneous#miscellaneous__[^]
+
+    |lastLoginAtTimestamp
+    |The date of the last login of the contact
+|link:miscellaneous#miscellaneous__[^]
+
+    |lastOrderAt
+    |The date of the last order
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date the contact was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date the contact was last updated
+|link:http://php.net/string[string^]
+    |privatePhone
+    |The private phone number of the contact
+|link:http://php.net/string[string^]
+    |privateFax
+    |The private fax number of the contact
+|link:http://php.net/string[string^]
+    |privateMobile
+    |The private mobile phone number of the contact
+|link:http://php.net/string[string^]
+    |ebayName
+    |The eBay account name of the contact
+|link:http://php.net/string[string^]
+    |paypalEmail
+    |The email address of the PayPal account of the contact
+|link:http://php.net/string[string^]
+    |paypalPayerId
+    |The PayPal payer id of the contact
+|link:http://php.net/string[string^]
+    |klarnaPersonalId
+    |The Klarna personal id of the contact
+|link:http://php.net/string[string^]
+    |dhlPostIdent
+    |The DHL PostIdent of the contact
+|link:http://php.net/string[string^]
+    |forumUsername
+    |The user name of the contact in the forum
+|link:http://php.net/string[string^]
+    |forumGroupId
+    |The ID of the forum group that is assigned to the contact
+|link:http://php.net/string[string^]
+    |singleAccess
+    |The access type of the contact
+|link:http://php.net/string[string^]
+    |contactPerson
+    |The contact person of the contact
+|link:http://php.net/string[string^]
+    |marketplacePartner
+    |The marketplace partner status of the contact
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |addresses
+    |A collection of linked addresses
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |primaryBillingAddress
+    |A collection of linked primary billing addresses
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |accounts
+    |A collection of linked accounts. An ID or a company name must be specified. When the ID is used, a relation will be created. When the company name without an ID is used, a new account with the given data will be created.
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |orders
+    |A collection of orders of the contact. Deprecated.
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |contactOrders
+    |A collection of orders of the contact
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |banks
+    |A collection of bank accounts of the contact
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |reorders
+    |A collection of reorders of the contact
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |orderSchedulers
+    |A collection of order schedulers of the contact
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |options
+    |A collection of options of the contact
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |salesRepresentativeRegions
+    |A collection of sales representative regions of the contact
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |allowedMethodsOfPayment
+    |A collection of allowed payment methods for the contact.*
+|link:account#account_models_contacttype[ContactType^]
+
+    |type
+    |The type of the contact
+|link:account#account_models_ordersummary[OrderSummary^]
+
+    |orderSummary
+    |The order summary of the contact
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |tagRelationships
+    |The tag relations of the contact
+|link:http://php.net/int[int^]
+    |valuta
+    |The foreign currency of the contact
+|link:http://php.net/int[int^]
+    |discountDays
+    |The early payment discount period in days specified for the account
+|link:http://php.net/float[float^]
+    |discountPercent
+    |The early payment discount in percent specified for the account
+|link:http://php.net/int[int^]
+    |timeForPaymentAllowedDays
+    |The payment due date in days specified for the account
+|link:http://php.net/int[int^]
+    |salesRepresentativeContactId
+    |The salesRepresentative ID of the contact
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContactAllowedMethodOfPayment
+
+The model of the allowed payment method for the contact
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the payment method allowed for the contact
+|link:http://php.net/int[int^]
+    |contactId
+    |The ID of the contact
+|link:http://php.net/int[int^]
+    |methodOfPaymentId
+    |The ID of the payment method
+|link:http://php.net/int[int^]
+    |allowed
+    |Allowed payment method for the contact. Possible values are:
+<ul>
+<li>0 = not allowed</li>
+<li>1 = allowed</li>
+</ul>
+|link:http://php.net/string[string^]
+    |createdAt
+    |Timestamp when the payment method was created
+|link:http://php.net/string[string^]
+    |updatedAt
+    |Timestamp when the payment method was last updated
+|link:http://php.net/bool[bool^]
+    |isPaymentActive
+    |Flag that indicates if the current payment method is active
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContactBank
+
+The contact bank model.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the bank account
+|link:http://php.net/int[int^]
+    |contactId
+    |The ID of the contact the bank account belongs to
+|link:http://php.net/int[int^]
+    |orderId
+    |The ID of the order the bank account belongs to
+|link:http://php.net/string[string^]
+    |accountOwner
+    |The owner of the bank account
+|link:http://php.net/string[string^]
+    |bankName
+    |The name of the bank
+|link:http://php.net/string[string^]
+    |bankAddress
+    |The address of the bank
+|link:http://php.net/string[string^]
+    |bankPostalCodeTown
+    |The postcode and town of the bank
+|link:http://php.net/string[string^]
+    |bankCountry
+    |The country of the bank
+|link:http://php.net/string[string^]
+    |iban
+    |The IBAN of the bank account
+|link:http://php.net/string[string^]
+    |bic
+    |The BIC of the bank account
+|link:http://php.net/string[string^]
+    |accountNumber
+    |The account number of the bank account
+|link:http://php.net/string[string^]
+    |sortCode
+    |The sort code of the bank account
+|link:http://php.net/string[string^]
+    |lastUpdateBy
+    |The source of the last change (possible values: `customer`, `backend`, `import`)
+|link:http://php.net/int[int^]
+    |directDebitMandateAvailable
+    |Flag that indicates if a direct debit mandate is available
+|link:http://php.net/string[string^]
+    |directDebitMandateAt
+    |The time the direct debit mandate was created as unix timestamp
+|link:http://php.net/string[string^]
+    |directDebitMethod
+    |The direct debit method (possible values: `sepaDirectDebit`, `sepaB2bDirectDebit`)
+|link:http://php.net/string[string^]
+    |directDebitType
+    |The direct debit type (possible values: `first`, `next`)
+|link:http://php.net/string[string^]
+    |paymentMethod
+    |The payment method (possible values: `recurrent`, `onOff`)
+|link:http://php.net/string[string^]
+    |createdAt
+    |The time the bank account was created as  unix timestamp
+|link:http://php.net/string[string^]
+    |updatedAt
+    |The time the bank account was last updated as  unix timestamp
+|link:account#account_models_contact[Contact^]
+
+    |contact
+    |The contact the bank account belongs to
+|link:order#order_legacy_order[Order^]
+
+    |order
+    |The order the bank account belongs to
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContactDepartment
+
+contact department model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the contact department. It is possible to define individual departments. The following departments are available by default.
+<ul>
+<li>1 = Management</li>
+<li>2 = Purchasing Department</li>
+<li>3 = Sales Department</li>
+<li>4 = Research & Development Team</li>
+<li>5 = Production</li>
+<li>6 = Quality Assurance</li>
+<li>7 = Public Relations</li>
+<li>8 = Marketing Department</li>
+<li>9 = IT Department</li>
+<li>10 = EDP Team</li>
+<li>11 = Logistics</li>
+<li>12 = Warehousing Department</li>
+<li>13 = Export Department</li>
+<li>14 = Import Department</li>
+<li>15 = Customer Service</li>
+<li>16 = Technical Support Team</li>
+<li>17 = Human Resources</li>
+<li>18 = Accounting Department</li>
+<li>19 = Financial Department</li>
+<li>20 = Legal Department</li>
+<li>21 = Secretary's Office</li>
+</ul>
+|link:http://php.net/int[int^]
+    |position
+    |The position for sorting
+|link:http://php.net/array[array^]
+    |names
+    |List of contact department names
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContactDepartmentName
+
+contact department name model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the contact department name
+|link:http://php.net/int[int^]
+    |departmentId
+    |The ID of the department
+|link:http://php.net/string[string^]
+    |lang
+    |The language
+|link:http://php.net/string[string^]
+    |name
+    |The name
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContactOption
+
+The contact options model.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the contact option
+|link:http://php.net/int[int^]
+    |contactId
+    |The ID of the contact the option belongs to
+|link:http://php.net/int[int^]
+    |typeId
+    |The type ID of the contact option. It is possible to define individual contact option types. The following types are available by default and cannot be deleted:
+<ul>
+<li>1 = Telephone</li>
+<li>2 = Email</li>
+<li>3 = Telefax</li>
+<li>4 = Web page</li>
+<li>5 = Marketplace</li>
+<li>6 = Identification number</li>
+<li>7 = Payment</li>
+<li>8 = User name</li>
+<li>9 = Group</li>
+<li>10 = Access</li>
+<li>11 = Additional</li>
+</ul>
+|link:http://php.net/int[int^]
+    |subTypeId
+    |The sub-type ID of the contact option. It is possible to define individual contact option sub-types. The following types are available by default and cannot be deleted:
+<ul>
+<li>1 = Work</li>
+<li>2 = Mobile private</li>
+<li>3 = Mobile work</li>
+<li>4 = Private</li>
+<li>5 = PayPal</li>
+<li>6 = Ebay</li>
+<li>7 = Amazon</li>
+<li>8 = Klarna</li>
+<li>9 = DHL</li>
+<li>10 = Forum</li>
+<li>11 = Guest</li>
+<li>12 = Contact person</li>
+<li>13 = Marketplace partner</li>
+</ul>
+|link:http://php.net/string[string^]
+    |value
+    |The value of the option. Depends on the type/sub-type.
+|link:http://php.net/int[int^]
+    |priority
+    |The priority for sorting
+|link:http://php.net/string[string^]
+    |createdAt
+    |The time the option was created as unix timestamp
+|link:http://php.net/string[string^]
+    |updatedAt
+    |The time the option was last updated as unix timestamp
+|link:account#account_models_contact[Contact^]
+
+    |contact
+    |The contact the option belongs to
+|link:account#account_models_contactoptiontype[ContactOptionType^]
+
+    |type
+    |The type of the option
+|link:account#account_models_contactoptionsubtype[ContactOptionSubType^]
+
+    |subType
+    |The sub-type of the option
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContactOptionSubType
+
+contact options sub type model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the contact option sub-type. It is possible to define individual option sub-types. The following types are available by default and cannot be deleted.
+<ul>
+<li>1 = Work</li>
+<li>2 = Mobile private</li>
+<li>3 = Mobile work</li>
+<li>4 = Private</li>
+<li>5 = PayPal</li>
+<li>6 = Ebay</li>
+<li>7 = Amazon</li>
+<li>8 = Klarna</li>
+<li>9 = DHL</li>
+<li>10 = Forum</li>
+<li>11 = Guest</li>
+<li>12 = Contact person</li>
+<li>13 = Marketplace partner</li>
+</ul>
+|link:http://php.net/int[int^]
+    |position
+    |The position for sorting
+|link:http://php.net/int[int^]
+    |nonErasable
+    |Flag that indicates if the option sub-type can be deleted
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |names
+    |A collection of names in different languages for the option sub-type.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContactOptionSubTypeName
+
+contact options sub type name model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the contact option sub type name entry
+|link:http://php.net/int[int^]
+    |subTypeId
+    |The ID of the option sub-type the name entry belongs to
+|link:http://php.net/string[string^]
+    |lang
+    |lang      The language of the sub-type name
+|link:http://php.net/string[string^]
+    |name
+    |name      The name of the sub-type
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContactOptionType
+
+contact options type model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the contact option type. It is possible to define individual option types. The following types are available by default and cannot be deleted.
+<ul>
+<li>1 = Telephone</li>
+<li>2 = Email</li>
+<li>3 = Telefax</li>
+<li>4 = Web page</li>
+<li>5 = Marketplace</li>
+<li>6 = Identification number</li>
+<li>7 = Payment</li>
+<li>8 = User name</li>
+<li>9 = Group</li>
+<li>10 = Access</li>
+<li>11 = Additional</li>
+</ul>
+|link:http://php.net/int[int^]
+    |position
+    |The position for sorting
+|link:http://php.net/int[int^]
+    |nonErasable
+    |Flag that indicates if the option type can be deleted
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |names
+    |A collection of names in different languages for the option type
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContactOptionTypeName
+
+The ContactOptionTypeName model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the contact option type name
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the option type the name belongs to
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the option type name
+|link:http://php.net/string[string^]
+    |name
+    |The name of the option type
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContactPosition
+
+The ContactPosition model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the contact position. It is possible to define individual contact positions. The following positions are available by default:
+<ul>
+<li>1 = Analyst</li>
+<li>2 = Director of Boards</li>
+<li>3 = CEO</li>
+<li>4 = Buyer</li>
+<li>5 = Purchasing Manager</li>
+<li>6 = CFO</li>
+<li>7 = Director General</li>
+<li>8 = Managing Director</li>
+<li>9 = Codirector</li>
+<li>10 = Commercial Agent</li>
+<li>11 = Assistant</li>
+<li>12 = Service Engineer</li>
+<li>13 = Warehouse Manager</li>
+<li>14 = Warehouse Worker</li>
+<li>15 = Senior Executive</li>
+<li>16 = Assistent</li>
+<li>17 = Purchasing Assistent</li>
+<li>18 = Software Developer</li>
+<li>19 = Sales Representative</li>
+<li>20 = Sales Manager</li>
+<li>21 = Export Sales Manager</li>
+<li>22 = Wholesale Distributing Manager</li>
+<li>23 = Secretary</li>
+<li>24 = Economist</li>
+<li>25 = Management Board</li>
+</ul>
+|link:http://php.net/int[int^]
+    |position
+    |The position for sorting
+|link:http://php.net/array[array^]
+    |names
+    |The list of contact position names
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContactPositionName
+
+The ContactPositionName model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the contact position name
+|link:http://php.net/int[int^]
+    |positionId
+    |The ID of the position
+|link:http://php.net/string[string^]
+    |lang
+    |The language
+|link:http://php.net/string[string^]
+    |name
+    |The name
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContactType
+
+The ContactType model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the contact type. It is possible to define individual contact types. The following types are available by default and cannot be deleted.
+<ul>
+<li>1 = Customer</li>
+<li>2 = Sales lead/Interested party</li>
+<li>3 = Sales representative</li>
+<li>4 = Supplier</li>
+<li>5 = Producer/Manufacturer</li>
+<li>6 = Partner</li>
+</ul>
+|link:http://php.net/int[int^]
+    |position
+    |The position for sorting
+|link:http://php.net/int[int^]
+    |nonErasable
+    |Flag that indicates if the type can be deleted
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |names
+    |A collection of contact type names in different languages
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |contacts
+    |A collection of contacts with the type
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContactTypeName
+
+contact type name model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the contact type name
+|link:http://php.net/int[int^]
+    |typeId
+    |The contact type ID. See also {@link ContactType::id}.
+|link:http://php.net/string[string^]
+    |lang
+    |The language ot the contact type name
+|link:http://php.net/string[string^]
+    |name
+    |The contact type name
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[account_search]]
+= Search
+
+[[account_search_contracts]]
+==  Contracts
+=== ContactElasticSearchAvailibilityRepositoryContract
+
+ContactElasticSearchAvailibilityRepositoryContract
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Search\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public isReady():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public isAvailable():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+
+=== ContactElasticSearchScrollRepositoryContract
+
+kommt noch
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Search\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public hasNext():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public setNumberOfDocumentsPerShard($size):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$size`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setIndex($index):Plenty\Modules\Cloud\ElasticSearch\Contracts\ElasticSearchSearchRepositoryContract // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:cloud#cloud_contracts_elasticsearchsearchrepositorycontract[ElasticSearchSearchRepositoryContract^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:cloud#cloud_index_indexinterface[IndexInterface^]
+
+a|`$index`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addSearch($search):Plenty\Modules\Cloud\ElasticSearch\Contracts\ElasticSearchSearchRepositoryContract // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:cloud#cloud_contracts_elasticsearchsearchrepositorycontract[ElasticSearchSearchRepositoryContract^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$search`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public execute():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+
+=== ContactElasticSearchSearchRepositoryContract
+
+Contract for search contacts
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Search\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public search($page = 1, $itemsPerPage = 50, $filters = [], $sortBy = &quot;contactId&quot;, $sortOrder = &quot;desc&quot;, $with = &quot;&quot;):Plenty\Repositories\Models\FilteredPaginatedResult // <1>
+
+----
+
+
+    
+Search contacts with the given filters.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_filteredpaginatedresult[FilteredPaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+
+|link:http://php.net/string[string^]
+a|`$sortBy`
+|
+
+|link:http://php.net/string[string^]
+a|`$sortOrder`
+|
+
+|link:http://php.net/string[string^]
+a|`$with`
+|
+|===
+
+
+
+=== IndexContactRepositoryContract
+
+The contract for the search repository
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contact\Search\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public index($contactId):array // <1>
+
+----
+
+
+    
+Index a contact
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($contactIds):array // <1>
+
+----
+
+
+    
+Delete contact from index
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$contactIds`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public bulk($contactIds):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$contactIds`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setOutput($output):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:cloud#cloud_output_outputinterface[OutputInterface^]
+
+a|`$output`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public execute():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[account_account]]
+= Account
+
+[[account_account_contracts]]
+==  Contracts
+=== AccountContactRelationRepositoryContract
+
+The AccountContactRelationRepositoryContract is the interface for the account contact relation repository. This interface allows to find and delete an account contact relation.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findAccountContactRelationById($accountContactRelation):Plenty\Modules\Account\Models\AccountContactRelation // <1>
+
+----
+
+
+    
+Gets an account contact releation. The ID of the account contact relation must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_accountcontactrelation[AccountContactRelation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$accountContactRelation`
+|The ID of the account contact relation
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteAccountContactRelation($accountContactRelationId):bool // <1>
+
+----
+
+
+    
+Deletes an account contact relation. The ID of the account contact relation must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$accountContactRelationId`
+|The ID of the account contact relation
+|===
+
+
+
+=== AccountRepositoryContract
+
+The AccountRepositoryContract is the interface for the account repository. This interface allows to list, get, create, update and delete accounts. An account contains company-related data. It is also possible to list all contacts of an account.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createAccount($data):Plenty\Modules\Account\Models\Account // <1>
+
+----
+
+
+    
+Creates a new account and returns it.
+
+
+==== Return type
+    
+<1> link:account#account_models_account[Account^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The account data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateAccount($data, $accountId):Plenty\Modules\Account\Models\Account // <1>
+
+----
+
+
+    
+Updates an existing account and returns it. The ID of the account must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_account[Account^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The account data as associative array
+
+|link:http://php.net/int[int^]
+a|`$accountId`
+|The ID of the account
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteAccount($accountId):bool // <1>
+
+----
+
+
+    
+Deletes an account. The ID of the account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$accountId`
+|The ID of the account
+|===
+
+
+[source%nowrap, php]
+----
+
+public findAccountById($accountId):Plenty\Modules\Account\Models\Account // <1>
+
+----
+
+
+    
+Gets an account. The ID of the account must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_account[Account^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$accountId`
+|The ID of the account
+|===
+
+
+[source%nowrap, php]
+----
+
+public allAccounts($columns = [], $perPage = 50):Illuminate\Database\Eloquent\Collection // <1>
+
+----
+
+
+    
+Returns a collection of all accounts.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|Optional: The columns to retrieve (Default: '[*]').
+
+|link:http://php.net/int[int^]
+a|`$perPage`
+|Optional: The number of objects per page (Default: 50).
+|===
+
+
+[source%nowrap, php]
+----
+
+public allAccountsPaginated($columns = [], $page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Returns a collection of all accounts.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|Optional: The columns to retrieve (Default: '[*]').
+
+|link:http://php.net/int[int^]
+a|`$page`
+|Optional: The number of the page (Default: 1).
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|Optional: The number of objects per page (Default: 50).
+
+|link:http://php.net/array[array^]
+a|`$with`
+|Optional: The relationships that should be eager loaded.
+|===
+
+
+[source%nowrap, php]
+----
+
+public getContactsOfAccount($accountId):Illuminate\Database\Eloquent\Collection // <1>
+
+----
+
+
+    
+Returns a collection of contacts that belong to the account.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$accountId`
+|The ID of the account
+|===
+
+
+[source%nowrap, php]
+----
+
+public saveAccount($data = []):void // <1>
+
+----
+
+
+    
+Creates a new or updates an existing account.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The account data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[account_account_events]]
+==  Events
+=== FrontendUpdateCustomerSettings
+
+frontend customer settings event
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getDeliveryCountryId():int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setDeliveryCountryId($deliveryCountryId):Plenty\Modules\Account\Events\FrontendUpdateCustomerSettings // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$deliveryCountryId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getShowNetPrice():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public setShowNetPrice($showNetPrice):Plenty\Modules\Account\Events\FrontendUpdateCustomerSettings // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$showNetPrice`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getEbaySellerAccount():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setEbaySellerAccount($ebaySellerAccount):Plenty\Modules\Account\Events\FrontendUpdateCustomerSettings // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$ebaySellerAccount`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAccountContactSign():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setAccountContactSign($accountContactSign):Plenty\Modules\Account\Events\FrontendUpdateCustomerSettings // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$accountContactSign`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAccountContactClassId():int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setAccountContactClassId($accountContactClassId):Plenty\Modules\Account\Events\FrontendUpdateCustomerSettings // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$accountContactClassId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSalesAgent():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setSalesAgent($salesAgent):Plenty\Modules\Account\Events\FrontendUpdateCustomerSettings // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$salesAgent`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAccountContractClassId():int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setAccountContractClassId($accountContractClassId):Plenty\Modules\Account\Events\FrontendUpdateCustomerSettings // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$accountContractClassId`
+|
+|===
+
+
+
+=== NewsletterRecipientCreatedEvent
+
+This event will be triggered, after a recipient was created.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getRecipient():Plenty\Modules\Account\Newsletter\Models\Recipient // <1>
+
+----
+
+
+    
+returns recipient.
+
+
+==== Return type
+    
+<1> link:account#account_models_recipient[Recipient^]
+
+    
+
+
+=== NewsletterRecipientDeletedEvent
+
+This event will be triggered, after a recipient was deleted.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getRecipient():Plenty\Modules\Account\Newsletter\Models\Recipient // <1>
+
+----
+
+
+    
+returns recipient.
+
+
+==== Return type
+    
+<1> link:account#account_models_recipient[Recipient^]
+
+    
+
+
+=== NewsletterRecipientMovedToNewFolderEvent
+
+This event will be triggered, after a recipient was moved to a new folder.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getOldFolder():int // <1>
+
+----
+
+
+    
+returns old folder id.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public getRecipient():Plenty\Modules\Account\Newsletter\Models\Recipient // <1>
+
+----
+
+
+    
+returns recipient.
+
+
+==== Return type
+    
+<1> link:account#account_models_recipient[Recipient^]
+
+    
+
+[[account_account_models]]
+==  Models
+=== Account
+
+the account model.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the account
+|link:http://php.net/string[string^]
+    |number
+    |The number of the account
+|link:http://php.net/string[string^]
+    |companyName
+    |The company name
+|link:http://php.net/string[string^]
+    |taxIdNumber
+    |The ID of the tax number
+|link:http://php.net/int[int^]
+    |valuta
+    |The valuta date in days specified for the account
+|link:http://php.net/int[int^]
+    |discountDays
+    |The early payment discount period in days specified for the account
+|link:http://php.net/float[float^]
+    |discountPercent
+    |The early payment discount in percent specified for the account
+|link:http://php.net/int[int^]
+    |timeForPaymentAllowedDays
+    |The payment due date in days specified for the account
+|link:http://php.net/int[int^]
+    |salesRepresentativeContactId
+    |The contact ID of the sales representative
+|link:http://php.net/int[int^]
+    |userId
+    |The ID of the account owner
+|link:http://php.net/int[int^]
+    |deliveryTime
+    |The delivery time for the supplier
+|link:http://php.net/float[float^]
+    |dealerMinOrderValue
+    |The minimum order value for the supplier
+|link:http://php.net/string[string^]
+    |supplierCurrency
+    |The currency used by a supplier
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The time the account was created as unix timestamp
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The time the account was last updated as unix timestamp
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |contacts
+    |A list of contacts that belong to the account
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |contactRelations
+    |A list with contact relations to the account
+|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    |salesRepresentativeRegions
+    |A list with sales representative regions related to the account
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AccountContactRelation
+
+account contact relation model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the account contact relation
+|link:http://php.net/int[int^]
+    |accountId
+    |The ID of the foreign key account
+|link:http://php.net/int[int^]
+    |contactId
+    |The ID of the foreign key contact
+|link:account#account_models_account[Account^]
+
+    |account
+    |The account of the relation
+|link:account#account_models_contact[Contact^]
+
+    |contact
+    |The contact of the relation
+|link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    |accountContactSalesRepresentativeRelations
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== SalesRepresentativeRegion
+
+Sales representative region model
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the account contact sales representative relation
+|link:http://php.net/int[int^]
+    |accountContactRelationId
+    |The ID of the foreign key account contact relation
+|link:http://php.net/string[string^]
+    |postalCodeArea
+    |
+|link:http://php.net/int[int^]
+    |countryId
+    |
+|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+
+    |createdAt
+    |
+|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+
+    |updatedAt
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |contacts
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |accounts
+    |
+|link:account#account_models_accountcontactrelation[AccountContactRelation^]
+
+    |accountContactRelation
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[account_newsletter]]
+= Newsletter
+
+[[account_newsletter_contracts]]
+==  Contracts
+=== NewsletterRepositoryContract
+
+The NewsletterRepositoryContract is the interface for the newsletter repository. This interface allows to assign email addresses of recipients to email folders. Depending on the settings selected for each email folder, different newsletters can be sent to different target groups.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Newsletter\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createEntry($data = []):Plenty\Modules\Account\Newsletter\Models\Entry // <1>
+
+----
+
+
+    
+Creates an entry.
+
+
+==== Return type
+    
+<1> link:account#account_models_entry[Entry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createRecipient($data = []):array // <1>
+
+----
+
+
+    
+Creates a recipient for an existing folder.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createFolder($data = []):Plenty\Modules\Account\Newsletter\Models\Folder // <1>
+
+----
+
+
+    
+Creates a folder.
+
+
+==== Return type
+    
+<1> link:account#account_models_folder[Folder^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteAllEntries():array // <1>
+
+----
+
+
+    
+Deletes all entries.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public deleteAllFolders():array // <1>
+
+----
+
+
+    
+Deletes all folders.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public deleteAllRecipients():array // <1>
+
+----
+
+
+    
+Deletes all recipients.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public deleteEntryById($entryId):Plenty\Modules\Account\Newsletter\Models\Entry // <1>
+
+----
+
+
+    
+Deletes an entry. The ID of the entry must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_entry[Entry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$entryId`
+|The ID of the entry
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteFolderById($folderId):Plenty\Modules\Account\Newsletter\Models\Folder // <1>
+
+----
+
+
+    
+Deletes a folder. The ID of the folder must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_folder[Folder^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$folderId`
+|The ID of the folder
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteRecipientById($recipientId):Plenty\Modules\Account\Newsletter\Models\Recipient // <1>
+
+----
+
+
+    
+Deletes a recipient. The ID of the recipient must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_recipient[Recipient^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$recipientId`
+|The ID of the recipient
+|===
+
+
+[source%nowrap, php]
+----
+
+public listAllEntries():array // <1>
+
+----
+
+
+    
+Lists all newsletter entries.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public listAllFolders():array // <1>
+
+----
+
+
+    
+Lists all newsletter folders.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public listAllRecipients($data = []):array // <1>
+
+----
+
+
+    
+Lists all recipients.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getRecipientsByEMail($email):array // <1>
+
+----
+
+
+    
+Returns recipients by the email address.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$email`
+|The email address of the recipient
+|===
+
+
+[source%nowrap, php]
+----
+
+public listRecipients($columns, $page, $itemsPerPage, $filter, $with):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Lists all recipients.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|The columns to retrieve
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+
+|link:http://php.net/array[array^]
+a|`$filter`
+|Filter that restricts the search result
+
+|link:http://php.net/array[array^]
+a|`$with`
+|An array with child instances to be loaded
+|===
+
+
+[source%nowrap, php]
+----
+
+public listEntryById($entryId):Plenty\Modules\Account\Newsletter\Models\Entry // <1>
+
+----
+
+
+    
+Gets details by the entry ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_entry[Entry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$entryId`
+|The ID of the entry
+|===
+
+
+[source%nowrap, php]
+----
+
+public listFolderById($folderId):Plenty\Modules\Account\Newsletter\Models\Folder // <1>
+
+----
+
+
+    
+Gets details by the folder ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_folder[Folder^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$folderId`
+|The ID of the folder
+|===
+
+
+[source%nowrap, php]
+----
+
+public listRecipientById($recipientId):Plenty\Modules\Account\Newsletter\Models\Recipient // <1>
+
+----
+
+
+    
+Gets details by the recipient ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_recipient[Recipient^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$recipientId`
+|The ID of the recipient
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateEntryById($entryId, $data = []):Plenty\Modules\Account\Newsletter\Models\Entry // <1>
+
+----
+
+
+    
+Updates an existing entry. The ID of the entry must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_entry[Entry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$entryId`
+|The ID of the entry
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateFolderById($folderId, $data = []):Plenty\Modules\Account\Newsletter\Models\Folder // <1>
+
+----
+
+
+    
+Updates an existing folder. The ID of the folder must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_folder[Folder^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$folderId`
+|The ID of the folder
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateRecipientById($recipientId, $data = []):Plenty\Modules\Account\Newsletter\Models\Recipient // <1>
+
+----
+
+
+    
+Updates an existing recipient. The ID of the recipient must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_recipient[Recipient^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$recipientId`
+|The ID of the recipient
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public addToNewsletterList($email, $forename = &quot;&quot;, $surname = &quot;&quot;, $emailDirIds = []):void // <1>
+
+----
+
+
+[warning]
+.Deprecated! ====
+This method will not be supported in the future. Please refrain from using it as soon as possible.
+====
+    
+Adds the email address of a contact or an interested party to an email folder for the newsletter list.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$email`
+|The email address of the contact or interested party who subscribed to the newsletter
+
+|link:http://php.net/string[string^]
+a|`$forename`
+|The first name of the contact or interested party
+
+|link:http://php.net/string[string^]
+a|`$surname`
+|The last name of the contact or interested party
+
+|link:http://php.net/array[array^]
+a|`$emailDirIds`
+|The IDs of the email folders. The email addresses of the contacts and interested parties must be saved in the folders. This will allow to send different newsletters to different target groups.
+|===
+
+
+[[account_newsletter_models]]
+==  Models
+=== Entry
+
+The newsletter entry model.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Newsletter\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |subject
+    |The subject of the newsletter entry
+|link:http://php.net/string[string^]
+    |body
+    |The body of the newsletter entry
+|link:http://php.net/string[string^]
+    |kind
+    |The type of the newsletter entry
+|link:http://php.net/string[string^]
+    |log
+    |The log of the newsletter entry
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== Folder
+
+The newsletter folder model.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Newsletter\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the newsletter folder
+|link:http://php.net/string[string^]
+    |name
+    |The name of the newsletter folder
+|link:http://php.net/bool[bool^]
+    |isDeletable
+    |Flag that indicates if the newsletter folder can be deleted. The folders 'Customers' and 'Interested parties' are available by default and cannot be deleted.
+|link:http://php.net/int[int^]
+    |position
+    |The position of the newsletter folder
+|link:http://php.net/bool[bool^]
+    |isSelectable
+    |Flag that indicates if the newsletter folder can be selected by customers in the online store. If this is allowed, the folder will be displayed in the My account area of the online store. Customers will then be able to subscribe to the newsletters that are included in this folder.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== NewsletterEmail
+
+NewsletterEmail
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Newsletter\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the newsletter email
+|link:http://php.net/int[int^]
+    |directory
+    |The ID of the directory
+|link:http://php.net/int[int^]
+    |customerId
+    |The ID of the contact
+|link:http://php.net/string[string^]
+    |forename
+    |The first name of the contact or interested party
+|link:http://php.net/string[string^]
+    |surname
+    |The last name of the contact or interested party
+|link:http://php.net/string[string^]
+    |email
+    |The email address The email address of the contact or interested party
+|link:http://php.net/string[string^]
+    |gender
+    |The gender of the contact or interested party
+|link:http://php.net/string[string^]
+    |birthday
+    |The birthday of the contact or interested party
+|link:http://php.net/int[int^]
+    |timestamp
+    |The timestamp when the newsletter email was sent to the contact or interested party
+|link:http://php.net/string[string^]
+    |templateLang
+    |The language of the newsletter's email template
+|link:http://php.net/int[int^]
+    |confirmedTimestamp
+    |The timestamp when the contact or interested party confirmed the newsletter subscription
+|link:http://php.net/string[string^]
+    |confirmAuthString
+    |The key that is automatically generated by the system. This key recognises the user regardless whether the user is logged in to the system and will then set the confirmation timestamp.
+|link:http://php.net/string[string^]
+    |ipAddress
+    |The ip address of the client
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== Recipient
+
+The newsletter recipient
+
+
+==== Namespace
+
+`Plenty\Modules\Account\Newsletter\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the newsletter recipient
+|link:http://php.net/int[int^]
+    |folderId
+    |The ID of the newsletter folder
+|link:http://php.net/int[int^]
+    |contactId
+    |The ID of the contact
+|link:http://php.net/string[string^]
+    |firstName
+    |The first name of the recipient
+|link:http://php.net/string[string^]
+    |lastName
+    |The last name of the recipient
+|link:http://php.net/string[string^]
+    |email
+    |The email address of the recipient
+|link:http://php.net/string[string^]
+    |gender
+    |The gender of the recipient
+|link:http://php.net/string[string^]
+    |birthday
+    |The birthday of the recipient
+|link:http://php.net/int[int^]
+    |timestamp
+    |The timestamp when the newsletter email was sent to the recipient
+|link:http://php.net/string[string^]
+    |templateLang
+    |The language of the newsletter email template
+|link:http://php.net/int[int^]
+    |confirmedTimestamp
+    |The timestamp when the recipient confirmed the newsletter subscription
+|link:http://php.net/string[string^]
+    |confirmAuthString
+    |The key that is automatically generated by the system. This key recognises the user regardless whether the user is logged in to the system and will then set the confirmation timestamp.
+|link:http://php.net/string[string^]
+    |ipAddress
+    |The IP address from where the customer has confirmed the newsletter
+|link:http://php.net/string[string^]
+    |confirmationURL
+    |The url with which the customer has confirmed the newsletter
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[account_ordersummary]]
+= OrderSummary
+
+[[account_ordersummary_contracts]]
+==  Contracts
+=== OrderSummaryRepositoryContract
+
+The OrderSummaryRepositoryContract is the interface for the order summary repository. This interface allows to list, get, update, create and delete order summaries.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\OrderSummary\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findOrderSummaryById($orderSummaryId):Plenty\Modules\Account\OrderSummary\Models\OrderSummary // <1>
+
+----
+
+
+    
+Gets an order summary. The ID of the order summary must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_ordersummary[OrderSummary^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$orderSummaryId`
+|The ID of the order summary
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateOrderSummary($data, $orderSummaryId):Plenty\Modules\Account\OrderSummary\Models\OrderSummary // <1>
+
+----
+
+
+    
+Updates an order summary. The ID of the order summary must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_ordersummary[OrderSummary^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The order summary data as associative array
+
+|link:http://php.net/int[int^]
+a|`$orderSummaryId`
+|The ID of the order summary
+|===
+
+
+[source%nowrap, php]
+----
+
+public createOrderSummary($data):Plenty\Modules\Account\OrderSummary\Models\OrderSummary // <1>
+
+----
+
+
+    
+Creates an order summary.
+
+
+==== Return type
+    
+<1> link:account#account_models_ordersummary[OrderSummary^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The order summary data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteOrderSummary($orderSummaryId):bool // <1>
+
+----
+
+
+    
+Deletes an order summary. The ID of the order summary must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$orderSummaryId`
+|The ID of the order summary
+|===
+
+
+[source%nowrap, php]
+----
+
+public allOrderSummaries($columns = [], $perPage = 50):Illuminate\Database\Eloquent\Collection // <1>
+
+----
+
+
+    
+Returns a collection of all order summaries.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|Optional: The columns to retrieve (Default: '[*]').
+
+|link:http://php.net/int[int^]
+a|`$perPage`
+|Optional: The number of objects per page (Default: 50).
+|===
+
+
+[source%nowrap, php]
+----
+
+public findOrderSummaryByContactId($contactId):Plenty\Modules\Account\OrderSummary\Models\OrderSummary // <1>
+
+----
+
+
+    
+Gets an order summary. The ID of the contact must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_ordersummary[OrderSummary^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contactId`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public findOrderSummaryByAddressId($addressId):Plenty\Modules\Account\OrderSummary\Models\OrderSummary // <1>
+
+----
+
+
+    
+Gets an order summary. The ID of the address must be specified.
+
+
+==== Return type
+    
+<1> link:account#account_models_ordersummary[OrderSummary^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$addressId`
+|The ID of the address
+|===
+
+
+[[account_ordersummary_models]]
+==  Models
+=== OrderSummary
+
+The order summary model.
+
+
+==== Namespace
+
+`Plenty\Modules\Account\OrderSummary\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the order summary
+|link:http://php.net/int[int^]
+    |addressId
+    |The address ID of the order summary
+|link:http://php.net/int[int^]
+    |contactId
+    |The ID of the contact
+|link:http://php.net/int[int^]
+    |unpaidOrdersCount
+    |The number of unpaid orders
+|link:http://php.net/float[float^]
+    |unpaidOrderTotalAmount
+    |The total amount of unpaid orders
+|link:http://php.net/int[int^]
+    |orderCount
+    |The number of all orders of the associated model
+|link:http://php.net/string[string^]
+    |createdAt
+    |The time the order summary was created as unix timestamp
+|link:http://php.net/string[string^]
+    |updatedAt
+    |The time the order summary was last updated as unix timestamp
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

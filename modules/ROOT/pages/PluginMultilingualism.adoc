@@ -1,0 +1,404 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[pluginmultilingualism_pluginmultilingualism]]
+= PluginMultilingualism
+
+[[pluginmultilingualism_pluginmultilingualism_contracts]]
+==  Contracts
+=== PluginTranslationRepositoryContract
+
+Get, create , update and delete plugin translations.
+
+
+==== Namespace
+
+`Plenty\Modules\PluginMultilingualism\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public listTranslations($filters):array // <1>
+
+----
+
+
+    
+List translations for plugin set
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getTranslation($translationId):Plenty\Modules\PluginMultilingualism\Models\PluginTranslation // <1>
+
+----
+
+
+    
+Get a translation
+
+
+==== Return type
+    
+<1> link:pluginmultilingualism#pluginmultilingualism_models_plugintranslation[PluginTranslation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$translationId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createTranslation($data):Plenty\Modules\PluginMultilingualism\Models\PluginTranslation // <1>
+
+----
+
+
+    
+Create a translation
+
+
+==== Return type
+    
+<1> link:pluginmultilingualism#pluginmultilingualism_models_plugintranslation[PluginTranslation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateTranslation($data, $translationId):Plenty\Modules\PluginMultilingualism\Models\PluginTranslation // <1>
+
+----
+
+
+    
+Update a translation
+
+
+==== Return type
+    
+<1> link:pluginmultilingualism#pluginmultilingualism_models_plugintranslation[PluginTranslation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/int[int^]
+a|`$translationId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteTranslation($id):void // <1>
+
+----
+
+
+    
+Delete a translation
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteTranslations($pluginSetId, $languageCode):void // <1>
+
+----
+
+
+    
+Delete multiple translation
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+
+|link:http://php.net/string[string^]
+a|`$languageCode`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateOrCreateTranslation($data):Plenty\Modules\PluginMultilingualism\Models\PluginTranslation // <1>
+
+----
+
+
+    
+Update or create a translation
+
+
+==== Return type
+    
+<1> link:pluginmultilingualism#pluginmultilingualism_models_plugintranslation[PluginTranslation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[pluginmultilingualism_pluginmultilingualism_models]]
+==  Models
+=== PluginTranslation
+
+The plugin translation model.
+
+
+==== Namespace
+
+`Plenty\Modules\PluginMultilingualism\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the translation
+|link:http://php.net/int[int^]
+    |pluginSetId
+    |The ID of the plugin set
+|link:http://php.net/string[string^]
+    |pluginName
+    |The name of the plugin
+|link:http://php.net/string[string^]
+    |languageCode
+    |The code of the language
+|link:http://php.net/string[string^]
+    |fileName
+    |The file of the key
+|link:http://php.net/string[string^]
+    |key
+    |The translation key
+|link:http://php.net/string[string^]
+    |value
+    |The translation value
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the translation was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the translation was last updated
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

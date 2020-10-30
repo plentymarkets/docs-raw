@@ -1,0 +1,2224 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[messenger_messenger]]
+= Messenger
+
+[[messenger_messenger_contracts]]
+==  Contracts
+=== MessengerRepositoryContract
+
+The MessengerRepositoryContract is the interface for the messenger repository. This interface defines methods to add and show/list messages.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public add($data):Plenty\Modules\Messenger\Models\Message // <1>
+
+----
+
+
+    
+Creates a new message.
+
+
+==== Return type
+    
+<1> link:messenger#messenger_models_message[Message^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The message data to be loaded
+|===
+
+
+[source%nowrap, php]
+----
+
+public show($uuid):void // <1>
+
+----
+
+
+    
+Gets a message with all its successors.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$uuid`
+|The UUID5 of the message
+|===
+
+
+[source%nowrap, php]
+----
+
+public list($uuid = null, $successors = true, $amount = self::DEFAULT_MESSAGES_AMOUNT):array // <1>
+
+----
+
+
+    
+Lists messages. If no reference UUID5 is given, the method returns the $amount first messages. If $successor is set to FALSE, the messages older than the referenced message will be returned.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$uuid`
+|The reference UUID5 of the message to start from (excluding).
+If not set, the uuid of the newest message will be used.
+
+|link:http://php.net/bool[bool^]
+a|`$successors`
+|If set to FALSE, the messages older than the referenced message will be returned.
+
+|link:http://php.net/int[int^]
+a|`$amount`
+|The amount of messages to list (defaults to 50)
+|===
+
+
+[source%nowrap, php]
+----
+
+public getMessages($page = self::DEFAULT_PAGE_OF_MESSAGES, $itemsPerPage = self::DEFAULT_ITEMS_PER_PAGE_OF_MESSAGES):array // <1>
+
+----
+
+
+    
+Lists messages.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The number of the returned page of messages, default is 1 (the first)
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The amount of messages to list (defaults to 50)
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateReadBy($readBy, $uuid):void // <1>
+
+----
+
+
+    
+Updates the readBy array of the message.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$readBy`
+|The ID of the user who read the message
+
+|link:http://php.net/string[string^]
+a|`$uuid`
+|The UUID of the message
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateTags($tags, $uuid):void // <1>
+
+----
+
+
+    
+Updates the tags of the message.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$tags`
+|Array of tag IDs of the message
+
+|link:http://php.net/string[string^]
+a|`$uuid`
+|The UUID of the message
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateVisibility($data, $uuid):void // <1>
+
+----
+
+
+    
+Updates the visibility of the message. Attributes that are updated are Message.visibility, Message.linkedTo and Message.accessFor.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The message with the data to be updated
+
+|link:http://php.net/string[string^]
+a|`$uuid`
+|The UUID of the messages
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateControls($data, $uuid):Plenty\Modules\Messenger\Models\Message // <1>
+
+----
+
+
+    
+Updates the message ui control options in the message meta data and returns the message.
+
+
+==== Return type
+    
+<1> link:messenger#messenger_models_message[Message^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The controls data to be updated.
+
+|link:http://php.net/string[string^]
+a|`$uuid`
+|The uuid of the message.
+|===
+
+
+[source%nowrap, php]
+----
+
+public setDone($doneAt = null, $uuid):void // <1>
+
+----
+
+
+    
+Sets the doneAt date in the message. If $doneAt is NULL, the doneAt date will be reset.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$doneAt`
+|The doneAt date as ISO date string
+
+|link:http://php.net/string[string^]
+a|`$uuid`
+|The UUID of the message
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($uuid):int // <1>
+
+----
+
+
+    
+Deletes a message stream by the UUID. Returns the count of messages deleted.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$uuid`
+|The UUID of the message
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAttachment($uuid, $filename):Plenty\Modules\Messenger\Models\Attachment // <1>
+
+----
+
+
+    
+Gets a message attachment.
+
+
+==== Return type
+    
+<1> link:messenger#messenger_models_attachment[Attachment^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$uuid`
+|The UUID of the message
+
+|link:http://php.net/string[string^]
+a|`$filename`
+|The file name of the attachment
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateMetaData($uuid, $metaData):Plenty\Modules\Messenger\Models\Message // <1>
+
+----
+
+
+    
+Updates the meta data of the message.
+
+
+==== Return type
+    
+<1> link:messenger#messenger_models_message[Message^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$uuid`
+|The UUID of the message
+
+|link:http://php.net/array[array^]
+a|`$metaData`
+|The meta data of the message
+|===
+
+
+[source%nowrap, php]
+----
+
+public getTotalEntries():int // <1>
+
+----
+
+
+    
+Returns total message entries
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[messenger_messenger_events]]
+==  Events
+=== MessageCreated
+
+The event is triggered after a new message was created.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public isFirstMessage():bool // <1>
+
+----
+
+
+    
+If TRUE, the message is the first one. Otherwise, it is a reply message.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public getMessage():Plenty\Modules\Messenger\Models\Message // <1>
+
+----
+
+
+    
+Get the message.
+
+
+==== Return type
+    
+<1> link:messenger#messenger_models_message[Message^]
+
+    
+
+[[messenger_messenger_models]]
+==  Models
+=== Attachment
+
+The Attachment model of the messenger.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |name
+    |The file name of the attachment
+|link:http://php.net/string[string^]
+    |message
+    |The UUID of the message the attachment belongs to
+|link:http://php.net/int[int^]
+    |size
+    |The size of the attachment in bytes
+|link:http://php.net/string[string^]
+    |contentType
+    |The content type fo the attachment
+|link:http://php.net/string[string^]
+    |content
+    |The content of the attachment
+|link:http://php.net/string[string^]
+    |createdAt
+    |The createdAt date of the attachment
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== Message
+
+The Message model of the messenger.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |uuid
+    |The UUID5 identifier of the message
+|link:http://php.net/string[string^]
+    |plentyIdHash
+    |The plenty ID hash
+|link:http://php.net/string[string^]
+    |parentUuid
+    |The UUID5 of the parent message
+|link:http://php.net/array[array^]
+    |linkedTo
+    |An array with MessageLinkedTo instances
+|link:messenger#messenger_models_messagefrom[MessageFrom^]
+
+    |from
+    |The sender of the message as MessageFrom instance.
+|link:messenger#messenger_models_messageto[MessageTo^]
+
+    |to
+    |The user and role IDs and emails receiving the message
+|link:http://php.net/bool[bool^]
+    |whispered
+    |Whether the message is whispered (not visible for the contact/order linked to the message) or not
+|link:http://php.net/array[array^]
+    |tags
+    |An array with tag IDs assigned to the message
+|link:http://php.net/string[string^]
+    |title
+    |The title of the message
+|link:http://php.net/string[string^]
+    |preview
+    |The first two lines of the message without any markup
+|link:http://php.net/string[string^]
+    |message
+    |The content of the message
+|link:http://php.net/int[int^]
+    |attachedFilesCount
+    |The amount of attached files (readonly)
+|link:messenger#messenger_models_messagereferrer[MessageReferrer^]
+
+    |referrer
+    |The message referrer
+|link:messenger#messenger_models_messagemetadata[MessageMetaData^]
+
+    |metaData
+    |The meta data of the message
+|link:http://php.net/string[string^]
+    |doneAt
+    |The date the messages was set to done
+|link:http://php.net/string[string^]
+    |createdAt
+    |The creation date of the message
+|link:http://php.net/string[string^]
+    |updatedAt
+    |The date of the last update of the message
+|link:http://php.net/string[string^]
+    |deletedAt
+    |The date the message was deleted
+|link:http://php.net/int[int^]
+    |deletedBy
+    |The ID of the user who deleted the message
+|link:http://php.net/array[array^]
+    |attachments
+    |The message attachments
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== MessageFrom
+
+The MessageFrom model of the messenger.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |type
+    |The type of the from instance (one of {@link MessageTypesService::FROM_TYPE_USER},
+{@link MessageTypesService::FROM_TYPE_CONTACT} and {@link MessageTypesService::FROM_TYPE_EMAIL})
+|link:miscellaneous#miscellaneous__[^]
+
+    |value
+    |The value of the instance. For type {@link MessageTypesService::FROM_TYPE_EMAIL} it is a string (the email)
+and the id of the user or the contact otherwise.
+|link:http://php.net/string[string^]
+    |name
+    |An optional name for the instance, e.g. the real name for type {@link MessageTypesService::FROM_TYPE_EMAIL}
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== MessageLinkedTo
+
+The MessageLinkedTo model of the messenger.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |type
+    |The type of the link (one of {@link MessageTypesService::LINKED_TO_TYPE_MESSAGE},
+{@link MessageTypesService::LINKED_TO_TYPE_ORDER}, {@link MessageTypesService::LINKED_TO_TYPE_CONTACT}
+and {@link MessageTypesService::LINKED_TO_TYPE_PAYMENT})
+|link:miscellaneous#miscellaneous__[^]
+
+    |value
+    |The value of the link. For type {@link MessageTypesService::LINKED_TO_TYPE_MESSAGE} it is a string (uuid5)
+and an integer otherwise.
+|link:miscellaneous#miscellaneous__[^]
+
+    |typeId
+    |This can be the ID of a sub-type (e.g. the order subTypeId). (optional)
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== MessageMetaData
+
+The MessageMetaData model of the messenger.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/array[array^]
+    |readBy
+    |The array of users
+|link:http://php.net/array[array^]
+    |links
+    |Array with links
+|link:messenger#messenger_models_messagemetadatanotdone[MessageMetaDataNotDone^]
+
+    |notDoneByBackend
+    |deactivates the toggle button in the messenger ui (backend) also has optional tooltips (reason for the deactivated toggle)
+|link:messenger#messenger_models_messagemetadatacontrols[MessageMetaDataControls^]
+
+    |controls
+    |An object with control options for the ui.
+|link:messenger#messenger_models_messagemetadatatimecapture[MessageMetaDataTimeCapture^]
+
+    |timeCapture
+    |An object of the message time capture data
+|link:http://php.net/int[int^]
+    |plentyId
+    |the plenty id of the related contact
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== MessageMetaDataControls
+
+The message controls model. Currently supported controls:
+ * &lt;ul&gt;
+ * &lt;li&gt;&lt;tt&gt;bool replyable&lt;/tt&gt;
+ *      Indicates whether or not is allowed to reply to this message stream (default true).
+ *      It is a global control and effects only in the parent message of a stream.&lt;/li&gt;
+ * &lt;li&gt;&lt;tt&gt;bool attachable&lt;/tt&gt;
+ *      Indicates whether or not is allowed to attach files in a message (default true).
+ *      It is a global control and effects only in the parent message of a stream.&lt;/li&gt;
+ * &lt;li&gt;&lt;tt&gt;bool linksDisabled&lt;/tt&gt;
+ *      Indicates whether or not the message links should be disabled (default false).
+ *      It is a loacal control and effects every message.&lt;/li&gt;
+ * &lt;/ul&gt;
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/bool[bool^]
+    |replyable
+    |Indicates whether or not is allowed to reply to this message stream (default true).
+|link:http://php.net/bool[bool^]
+    |attachable
+    |Indicates whether or not is allowed to attach files in a message (default true).
+|link:http://php.net/bool[bool^]
+    |linksDisabled
+    |Indicates whether or not the message links should be disabled (default false).
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== MessageMetaDataNotDone
+
+The MessageMetaDataNotDone model of the messenger.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/bool[bool^]
+    |deactivated
+    |Deactivates the toggle button for the UI
+|link:http://php.net/array[array^]
+    |tooltips
+    |Tooltips for the UI to show why the toggle is deactivated (if not set, show default values)
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== MessageMetaDataTimeCapture
+
+The MessageMetaDataTimeCapture model of the messenger.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/bool[bool^]
+    |chargeable
+    |
+|link:http://php.net/int[int^]
+    |minutes
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== MessageMetaLink
+
+The MessageMetaLink model of the messenger.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |image
+    |An optional image URL for the link
+|link:http://php.net/string[string^]
+    |caption
+    |The caption to be shown for the link
+|link:http://php.net/string[string^]
+    |url
+    |The link URL
+<ul>
+    <li>for {@link MessageMetaLink::TYPE_MAILTO} the email</li>
+    <li>for {@link MessageMetaLink::TYPE_URL} the complete URL with protocol</li>
+    <li>for {@link MessageMetaLink::TYPE_PLUGIN} the relative route to the backend</li>
+    <li>not needed for {@link MessageMetaLink::TYPE_REPLY}</li>
+</ul>
+|link:http://php.net/string[string^]
+    |type
+    |One of the constants:
+<ul>
+    <li>{@link MessageMetaLink::TYPE_MAILTO}</li>
+    <li>{@link MessageMetaLink::TYPE_URL}</li>
+    <li>{@link MessageMetaLink::TYPE_PLUGIN}</li>
+    <li>{@link MessageMetaLink::TYPE_REPLY}</li>
+</ul>
+|link:http://php.net/string[string^]
+    |content
+    |The reply content, only needed for type {@link MessageMetaLink::TYPE_REPLY}
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== MessageReferrer
+
+The MessageReferrer model of the messenger.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |type
+    |The type of the from instance (one of {@link MessageTypesService::REFERRER_TYPE_SYSTEM},
+{@link MessageTypesService::REFERRER_TYPE_BACKEND}, {@link MessageTypesService::REFERRER_TYPE_REST}
+and {@link MessageTypesService::REFERRER_TYPE_PLUGIN})
+|link:miscellaneous#miscellaneous__[^]
+
+    |value
+    |The value of the instance. It is an integer (the user id) for type
+{@link MessageTypesService::REFERRER_TYPE_SYSTEM}, {@link MessageTypesService::REFERRER_TYPE_BACKEND}
+and {@link MessageTypesService::REFERRER_TYPE_REST} and a string (the plugin name) for type
+{@link MessageTypesService::REFERRER_TYPE_PLUGIN}.
+|link:http://php.net/string[string^]
+    |name
+    |An optional name for the instance. For type {@link MessageTypesService::REFERRER_TYPE_PLUGIN} it is
+the plugin namespace, the user name otherwise.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== MessageTo
+
+The MessageTo model of the messenger.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/array[array^]
+    |user
+    |An array with user IDs of users receiving the message
+|link:http://php.net/array[array^]
+    |role
+    |An array with user role IDs of user roles receiving the message
+|link:http://php.net/array[array^]
+    |email
+    |An array with emails receiving the message
+|link:http://php.net/bool[bool^]
+    |allUsers
+    |Flag indicating that all system users receive the message
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[messenger_messenger_services]]
+==  Services
+=== MessageTypesService
+
+Types and type validation for several types in the messenger.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public static getValidLinkedToTypes():array // <1>
+
+----
+
+
+    
+Gets the valid types for &quot;linked to&quot; references.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public static isValidLinkedTo($linkType, $linkValue):bool // <1>
+
+----
+
+
+    
+Checks whether the given link is valid or not.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$linkType`
+|The link type
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$linkValue`
+|The link value
+|===
+
+
+[source%nowrap, php]
+----
+
+public static getValidFromTypes():array // <1>
+
+----
+
+
+    
+Gets the valid types for &quot;from&quot; references.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public static isValidFrom($fromType, $fromValue):bool // <1>
+
+----
+
+
+    
+Checks whether the given from is valid or not.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fromType`
+|The from type
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$fromValue`
+|The from value
+|===
+
+
+[source%nowrap, php]
+----
+
+public static getValidReferrerTypes():array // <1>
+
+----
+
+
+    
+Gets the valid types for &quot;referrer&quot; references.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public static isValidReferrer($referrerType, $referrerValue, $referrerName = null):bool // <1>
+
+----
+
+
+    
+Checks whether the given referrer reference is valid or not.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$referrerType`
+|The reference to be checked
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$referrerValue`
+|The value of the reference
+
+|link:http://php.net/string[string^]
+a|`$referrerName`
+|The name of the reference
+|===
+
+
+[source%nowrap, php]
+----
+
+public static getValidToTypes():array // <1>
+
+----
+
+
+    
+Gets the valid key types for the &#039;to&#039; array.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public static isValidTo($toKey):bool // <1>
+
+----
+
+
+    
+Checks whether the given key has a valid value for to.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$toKey`
+|The to key
+|===
+
+
+
+=== MessagesSearchService
+
+Search service for the messenger.
+
+
+==== Namespace
+
+`Plenty\Modules\Messenger\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public find($uuid):Plenty\Modules\Messenger\Models\Message // <1>
+
+----
+
+
+    
+Gets the message with the given uuid.
+
+
+==== Return type
+    
+<1> link:messenger#messenger_models_message[Message^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$uuid`
+|The UUID of the message
+|===
+
+
+[source%nowrap, php]
+----
+
+public findOrFail($uuid):Plenty\Modules\Messenger\Models\Message // <1>
+
+----
+
+
+    
+Gets the message with the given UUID.
+
+
+==== Return type
+    
+<1> link:messenger#messenger_models_message[Message^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$uuid`
+|The UUID of the message
+|===
+
+
+[source%nowrap, php]
+----
+
+public findMany($uuid):array // <1>
+
+----
+
+
+    
+Gets a stream of messages. The given UUID can be the UUID of the first message in the stream or one of the replied messages.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$uuid`
+|The UUID of the message
+|===
+
+
+[source%nowrap, php]
+----
+
+public navigate($page = 1, $itemsPerPage = 50):array // <1>
+
+----
+
+
+    
+Lists the messages for the given navigation page.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+|===
+
+
+[source%nowrap, php]
+----
+
+public getTotalEntries():int // <1>
+
+----
+
+
+    
+Returns total entries
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public toArray():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public process($data):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilter():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getPostFilter():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getQuery():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getAggregations():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getSuggestions():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getSources():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public addDependenciesToSource($sources):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$sources`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getName():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setName($name):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$name`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setIsSourceDisabled($isSourceDisabled):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$isSourceDisabled`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:cloud#cloud_lib_search[Search^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:cloud#cloud_type_typeinterface[TypeInterface^]
+
+a|`$filter`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addPostFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:cloud#cloud_lib_search[Search^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:cloud#cloud_type_typeinterface[TypeInterface^]
+
+a|`$filter`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addQuery($query):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:cloud#cloud_lib_search[Search^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:cloud#cloud_type_typeinterface[TypeInterface^]
+
+a|`$query`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:cloud#cloud_lib_search[Search^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:cloud#cloud_source_sourceinterface[SourceInterface^]
+
+a|`$source`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setSorting($sorting):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:cloud#cloud_lib_search[Search^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:cloud#cloud_sorting_sortinginterface[SortingInterface^]
+
+a|`$sorting`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addAggregation($aggregation):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:cloud#cloud_lib_search[Search^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
+
+a|`$aggregation`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addSuggestion($suggestion):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:cloud#cloud_lib_search[Search^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:cloud#cloud_suggestion_suggestioninterface[SuggestionInterface^]
+
+a|`$suggestion`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:cloud#cloud_lib_search[Search^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$rowsPerPage`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setPagination($pagination):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$pagination`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setCollapse($collapse):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:cloud#cloud_collapse_collapseinterface[CollapseInterface^]
+
+a|`$collapse`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setScoreModifier($scoreModifier):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:cloud#cloud_lib_search[Search^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:cloud#cloud_scoremodifier_scoremodifierinterface[ScoreModifierInterface^]
+
+a|`$scoreModifier`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setMaxResultWindow($maxResults = 10000):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$maxResults`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setIndex($index):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$index`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public isSearchAfter():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getFilterRaw():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getQueriesRaw():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getAggregationsRaw():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getSorting():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getScoreModifier():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+

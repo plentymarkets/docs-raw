@@ -1,0 +1,947 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[helper_automaticemail]]
+= AutomaticEmail
+
+[[helper_automaticemail_contracts]]
+==  Contracts
+=== AutomaticEmailContract
+
+This service provides a method to initiate the automatic email delivery.
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public sendAutomatic($email):bool // <1>
+
+----
+
+
+    
+Send the automatic email.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:helper#helper_models_automaticemail[AutomaticEmail^]
+
+a|`$email`
+|
+|===
+
+
+[[helper_automaticemail_models]]
+==  Models
+=== AutomaticEmail
+
+A container with all needed data to initiate the automatic email delivery.
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Models`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AutomaticEmailContact
+
+The automatic email data for contact type emails.
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Models`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AutomaticEmailData
+
+The abstract base class for all automatic email data. Provides constants for the email type to be used.
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Models`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AutomaticEmailNewsletter
+
+The automatic email data for newsletter type emails.
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Models`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AutomaticEmailOrder
+
+The automatic email data for order type emails.
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Models`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AutomaticEmailTemplate
+
+Provides constants for the automatic email template names.
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\AutomaticEmail\Models`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[helper_helper]]
+= Helper
+
+[[helper_helper_configuration]]
+==  Configuration
+=== GetApiCallLimits
+
+GetApiCallLimits reads the values for the API call limits from the config and returns them as an array.
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\Configuration`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[[helper_helper_contracts]]
+==  Contracts
+=== UrlBuilderRepositoryContract
+
+Repository Contract for UrlBuilder
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getImageUrl($path, $plentyId = null, $size = &quot;&quot;, $fileType = &quot;&quot;, $isExternalImage = false):string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$path`
+|
+
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|
+
+|link:http://php.net/string[string^]
+a|`$size`
+|
+
+|link:http://php.net/string[string^]
+a|`$fileType`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$isExternalImage`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getItemUrl($itemId, $plentyId, $urlContent = &quot;&quot;, $lang = &quot;de&quot;, $useHttpsDomain = true):string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$itemId`
+|
+
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|
+
+|link:http://php.net/string[string^]
+a|`$urlContent`
+|
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$useHttpsDomain`
+|
+|===
+
+
+[[helper_helper_exceptions]]
+==  Exceptions
+=== EncryptionException
+
+Class EncryptionException
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\Exceptions`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($message, $code):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$message`
+|
+
+|link:http://php.net/int[int^]
+a|`$code`
+|
+|===
+
+
+[[helper_helper_models]]
+==  Models
+=== KeyValue
+
+key value data
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\Models`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($key, $default = null):mixed // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/mixed[mixed^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$default`
+|
+|===
+
+
+[[helper_helper_services]]
+==  Services
+=== ArrayHelper
+
+helper class for arrays
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public buildMapFromObjectList($list, $keyField, $valueField):Plenty\Modules\Helper\Models\KeyValue // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:helper#helper_models_keyvalue[KeyValue^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$list`
+|
+
+|link:http://php.net/string[string^]
+a|`$keyField`
+|
+
+|link:http://php.net/string[string^]
+a|`$valueField`
+|
+|===
+
+
+
+=== StringEncodingService
+
+Service for encoding strings
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toDatabase($sString):string // <1>
+
+----
+
+
+    
+Method converts a string to self::DATABASE_ENCODING coding
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$sString`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public toEmail($sString):string // <1>
+
+----
+
+
+    
+Method converts a string to self::EMAIL_ENCODING coding
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$sString`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public toWebshop($sString, $sTargetEncoding = self::WEBSHOP_ENCODING):string // <1>
+
+----
+
+
+    
+Method converts a string to self::WEBSHOP_ENCODING coding
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$sString`
+|
+
+|link:http://php.net/string[string^]
+a|`$sTargetEncoding`
+|[optional default=PlentyCoding::WEBSHOP_ENCODING]
+|===
+
+
+[source%nowrap, php]
+----
+
+public toAdmin($sString, $sTargetEncoding = self::ADMIN_ENCODING):string // <1>
+
+----
+
+
+    
+Method converts a string to the sended coding. Default will be self::ADMIN_ENCODING coding used
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$sString`
+|
+
+|link:http://php.net/string[string^]
+a|`$sTargetEncoding`
+|[optional default=PlentyCoding::ADMIN_ENCODING]
+|===
+
+
+[source%nowrap, php]
+----
+
+public toGwt($sString):string // <1>
+
+----
+
+
+    
+Method converts a string to the sended coding
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$sString`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public toExport($sString, $sTargetEncoding = self::EXPORT_ENCODING):string // <1>
+
+----
+
+
+    
+Method converts a string to the sended coding. Default will be self::EXPORT_ENCODING coding used
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$sString`
+|
+
+|link:http://php.net/string[string^]
+a|`$sTargetEncoding`
+|[optional default=PlentyCoding::EXPORT_ENCODING]
+|===
+
+
+[source%nowrap, php]
+----
+
+public toLegacy($sString):string // <1>
+
+----
+
+
+    
+Method converts a string to self::LEGACY_ENCODING coding
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$sString`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public toPDF($sString, $sTargetEncoding = self::PDF_ENCODING):string // <1>
+
+----
+
+
+    
+Method converts a string to self::PDF_ENCODING coding
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$sString`
+|The string to be encoded.
+
+|link:http://php.net/string[string^]
+a|`$sTargetEncoding`
+|The target encoding (since plentymarkets version 5.100). [optional, default=PlentyCoding::PDF_ENCODING]
+|===
+
+
+[source%nowrap, php]
+----
+
+public toXML($string, $targetEncoding = self::XML_ENCODING):string // <1>
+
+----
+
+
+    
+Method converts a string to self::XML_ENCODING coding.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$string`
+|The string to be encoded.
+
+|link:http://php.net/string[string^]
+a|`$targetEncoding`
+|The target encoding (since plentymarkets version 5.100). [optional, default=PlentyCoding::XML_ENCODING]
+|===
+
+
+[source%nowrap, php]
+----
+
+public detect_encoding($sString):string // <1>
+
+----
+
+
+    
+Method returns the encoding of one string
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$sString`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public convertArray($array, $sTargetEncoding = self::UTF8_ENCODING, $convertKey = false):array // <1>
+
+----
+
+
+    
+Method converts a multidimensional array to the desired coding
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$array`
+|
+
+|link:http://php.net/string[string^]
+a|`$sTargetEncoding`
+|[optional, default=PlentyCoding::UTF8_ENCODING]
+
+|link:http://php.net/bool[bool^]
+a|`$convertKey`
+|[optional, default=false]
+|===
+
+
+[source%nowrap, php]
+----
+
+public cutTextForDB($text, $lenghtIntoDB):string // <1>
+
+----
+
+
+    
+cut the given text to fit for db insert.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$text`
+|
+
+|link:http://php.net/int[int^]
+a|`$lenghtIntoDB`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public isValidUtf8($string):int // <1>
+
+----
+
+
+    
+Checks whether the given string is valid utf-8.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$string`
+|
+|===
+
+
+
+=== WebstoreHelper
+
+Webstore Helper Service
+
+
+==== Namespace
+
+`Plenty\Modules\Helper\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getCurrentWebstoreConfiguration():Plenty\Modules\System\Models\WebstoreConfiguration // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:system#system_models_webstoreconfiguration[WebstoreConfiguration^]
+
+    
+

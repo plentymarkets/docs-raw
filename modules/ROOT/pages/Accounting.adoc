@@ -1,0 +1,2340 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[accounting_accounting]]
+= Accounting
+
+[[accounting_accounting_contracts]]
+==  Contracts
+=== AccountingLocationRepositoryContract
+
+The repository to get, create, update and delete accounting locations.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($id):Plenty\Modules\Accounting\Models\AccountingLocation // <1>
+
+----
+
+
+    
+Get an accounting location. The ID of the location must be specified.
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_accountinglocation[AccountingLocation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAll():Plenty\Modules\Accounting\Models\AccountingLocation // <1>
+
+----
+
+
+    
+List all accounting locations
+*
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_accountinglocation[AccountingLocation^]
+
+    
+
+[source%nowrap, php]
+----
+
+public listByPlentyId($plentyId):void // <1>
+
+----
+
+
+    
+List accounting locations for a client. The plenty ID of the client must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Accounting\Models\AccountingLocation // <1>
+
+----
+
+
+    
+Create an accounting location.
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_accountinglocation[AccountingLocation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):Plenty\Modules\Accounting\Models\AccountingLocation // <1>
+
+----
+
+
+    
+Update an accounting location. The ID of the location must be specified.
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_accountinglocation[AccountingLocation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):bool // <1>
+
+----
+
+
+    
+Delete an accounting location. The ID of the location must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSettings($id):Plenty\Modules\Accounting\Models\AccountingLocationSettings // <1>
+
+----
+
+
+    
+Get accounting location settings. The ID of the location must be specified.
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_accountinglocationsettings[AccountingLocationSettings^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The accounting location Id
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateSettings($id, $data):Plenty\Modules\Accounting\Models\AccountingLocationSettings // <1>
+
+----
+
+
+    
+Update accounting location settings. The ID of the location must be specified.
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_accountinglocationsettings[AccountingLocationSettings^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The accounting location Id
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+
+=== AccountingServiceContract
+
+Provides methods to detect a location ID.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public detectLocationId($plentyId, $countryId = null):int // <1>
+
+----
+
+
+    
+Get a location ID for a country of delivery. The plenty ID must be specified and the ID of the country of delivery can be specified. If the ID of a country is not specified, the ID of the standard location of the specified client will be returned.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|The plenty ID of the client (store). The default client will be used if the plenty ID is not specified.
+
+|link:http://php.net/int[int^]
+a|`$countryId`
+|The ID of the country of delivery. The standard location of the specified client will be returned, if no ID of a country of delivery is specified.
+|===
+
+
+[source%nowrap, php]
+----
+
+public detectLocationIdByClientId($clientId = null, $countryId = null):int // <1>
+
+----
+
+
+    
+Get the location ID for a country of delivery. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, the ID of the standard location of the default client will be returned.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$clientId`
+|The ID of the client. The default client (ID 0) will be used if the ID of client is not specified.
+
+|link:http://php.net/int[int^]
+a|`$countryId`
+|The ID of the country of delivery. The standard location of the specified client will be returned, if no ID of a country of delivery is specified.
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAccountingLocations($plentyId, $countryId = null):array // <1>
+
+----
+
+
+    
+List accounting locations. The plenty ID must be specified and the ID of a country of delivery can be specified. If the ID of the country is specified, only one accounting location will be returned. If the ID of the country is not specified, all accounting locations of the client will be returned.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|The plenty ID of the client (store).
+
+|link:http://php.net/int[int^]
+a|`$countryId`
+|The ID of the country of delivery.
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAccountingLocationsByClient($clientId = null, $countryId = null):array // <1>
+
+----
+
+
+    
+List accounting locations. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, all accounting locations of the default client will be returned.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$clientId`
+|The ID of the client. The default client (ID 0) will be used if the ID of client is not specified.
+
+|link:http://php.net/int[int^]
+a|`$countryId`
+|The ID of the country of delivery.
+|===
+
+
+
+=== DebtorAccountRepositoryContract
+
+The DebtorAccountRepositoryContract is the interface for the DebtorAccountRepository. This interface allows you to either list debtor accounts by locationId or by locationId and mode. The mode describes the criteria that is used to assign pending amounts to debtor accounts.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findByLocationId($locationId):Plenty\Modules\Accounting\Models\DebtorAccountConfiguration // <1>
+
+----
+
+
+    
+Get debtor account configuration of an accounting location. The ID of the accounting location must be specified.
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_debtoraccountconfiguration[DebtorAccountConfiguration^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$locationId`
+|The ID of the accounting location.
+|===
+
+
+[source%nowrap, php]
+----
+
+public listByLocationIdAndMode($locationId, $mode):void // <1>
+
+----
+
+
+    
+Lists debtor accounts by mode for an accounting location . The mode and the accounting location must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$locationId`
+|The ID of the accounting location.
+
+|link:http://php.net/string[string^]
+a|`$mode`
+|Specifies the mode of the debtor accounts. There are 4 different modes available. These modes are:
+<ul>
+    <li>character</li>
+    <li>country</li>
+    <li>payment</li>
+    <li>country_payment</li>
+</ul>
+The modes are described in detail in the DebtorAccountConfiguration model as well as DebtorAccount model.
+|===
+
+
+
+=== DetermineShopCountryContract
+
+This interface provides methods to initialise the country of a location or the country of an order as well as methods to get the ID of a client, the plenty ID of a client, the country or the ID of country.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public initByClientId($clientId):void // <1>
+
+----
+
+
+    
+Initialise the country of the standard location of a client. The ID of the client must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$clientId`
+|The ID of the client [optional, default=0]
+|===
+
+
+[source%nowrap, php]
+----
+
+public initByPlentyId($plentyId):void // <1>
+
+----
+
+
+    
+Initialise the country of the standard location of a client. The plenty ID of the client can be specified. If no plenty ID is specified, the standard client will be used.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|The plenty ID of the client [optional]
+|===
+
+
+[source%nowrap, php]
+----
+
+public initByLocationId($locationId):void // <1>
+
+----
+
+
+    
+Initialise the country of a location. The ID of the location must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$locationId`
+|The ID of the location
+|===
+
+
+[source%nowrap, php]
+----
+
+public initByOrderId($orderId):void // <1>
+
+----
+
+
+    
+Initialise the country for an order. The ID of the order must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$orderId`
+|The ID of the order
+|===
+
+
+[source%nowrap, php]
+----
+
+public getCountryId():int // <1>
+
+----
+
+
+    
+Get the ID of the country of the current standard location. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public getClientId():int // <1>
+
+----
+
+
+    
+Get the ID of the current client. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public getPlentyId():int // <1>
+
+----
+
+
+    
+Get the plenty ID of the current client. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public getCountryIdByClientId($clientId):int // <1>
+
+----
+
+
+    
+Get the ID of the country of a client&#039;s standard location. The ID of the client must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$clientId`
+|The ID of the client. The ID of the default client will be used if no ID is specified [optional, default=0].
+|===
+
+
+[source%nowrap, php]
+----
+
+public getCountryIdByPlentyId($plentyId):int // <1>
+
+----
+
+
+    
+Get the ID of the country of a client&#039;s standard location. The plenty ID of the client must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|The plenty ID of a client
+|===
+
+
+[source%nowrap, php]
+----
+
+public getCountryIdByClientIdAndCountryId($clientId, $countryId):int // <1>
+
+----
+
+
+    
+Get the country of a client&#039;s standard location. The ID of the client and the ID of the country must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$clientId`
+|The ID of the client.
+
+|link:http://php.net/int[int^]
+a|`$countryId`
+|The ID of the country.
+|===
+
+
+[source%nowrap, php]
+----
+
+public getCountryIdByLocationId($locationId):int // <1>
+
+----
+
+
+    
+Get the country of a location. The ID of the location must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$locationId`
+|The ID of the location.
+|===
+
+
+
+=== PostingKeyRepositoryContract
+
+The PostingKeyRepositoryContract is the interface for the PostingKeyRepository. This interface provides the functionality to find the posting keys for an accounting location.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findByLocationId($locationId):Plenty\Modules\Accounting\Models\PostingKeyConfiguration // <1>
+
+----
+
+
+    
+Get the posting key configuration of an accounting location. The ID of the accounting location must be specified.
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_postingkeyconfiguration[PostingKeyConfiguration^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$locationId`
+|The ID of the accounting location
+|===
+
+
+
+=== RevenueAccountRepositoryContract
+
+The RevenueAccountRepositoryContract is the interface for the RevenueAccountRepository. This interface allows you to either list revenue accounts by locationId, find by locationId and countryId or to least all for an accounting location.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public listRevenueAccounts($page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List revenue account configurations for all accounting locations. Each accounting location has one revenue account configuration.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The page to get. The default page that will be returned is page 1.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of revenue accounts to be displayed per page. The default number of revenue accounts is 50.
+|===
+
+
+[source%nowrap, php]
+----
+
+public findByLocationId($locationId):Plenty\Modules\Accounting\Models\RevenueAccountLocationConfiguration // <1>
+
+----
+
+
+    
+Get the revenue account configuration of an accounting location. The ID of the accounting location must be specified.
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_revenueaccountlocationconfiguration[RevenueAccountLocationConfiguration^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$locationId`
+|The ID of the accounting location
+|===
+
+
+[source%nowrap, php]
+----
+
+public findByLocationIdAndCountryId($locationId, $countryId):Plenty\Modules\Accounting\Models\RevenueAccountCountryConfiguration // <1>
+
+----
+
+
+    
+Get the revenue account configuration of a country. The country account configuration is associated with an accounting location. The ID of the accounting location that the country is associated with as well as the ID of the country must be specified.
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_revenueaccountcountryconfiguration[RevenueAccountCountryConfiguration^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$locationId`
+|The ID of the accounting location
+
+|link:http://php.net/int[int^]
+a|`$countryId`
+|The ID of the country
+|===
+
+
+[[accounting_accounting_exceptions]]
+==  Exceptions
+=== AccountingException
+
+Class AccountingException
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Exceptions`
+
+
+
+
+
+[[accounting_accounting_models]]
+==  Models
+=== AccountingLocation
+
+The accounting location model. An accounting location always has a country and belongs to a client. An accounting location contains the VAT configurations. The VAT model contains the VAT configuration.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the accounting location
+|link:http://php.net/int[int^]
+    |countryId
+    |The ID of the country of the accounting location
+|link:http://php.net/string[string^]
+    |name
+    |The name of the accounting location
+|link:http://php.net/int[int^]
+    |clientId
+    |The ID of the client that the accounting location belongs to
+|link:http://php.net/int[int^]
+    |plentyId
+    |The plenty ID of the client that the accounting location belongs to
+|link:http://php.net/array[array^]
+    |vats
+    |A collection of VAT configurations that are related to the accounting location
+|link:order#order_models_country[Country^]
+
+    |country
+    |The country that the accounting location belongs to
+|link:system#system_models_webstore[Webstore^]
+
+    |client
+    |The client (store) this accounting location belongs to
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== AccountingLocationSettings
+
+The accounting location settings model.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |locationId
+    |The ID of the accounting location
+|link:http://php.net/bool[bool^]
+    |isInvoiceEUNet
+    |Is the invoice net for EU?
+|link:http://php.net/bool[bool^]
+    |isInvoiceExportNet
+    |Is the invoice net for export?
+|link:http://php.net/bool[bool^]
+    |showShippingVat
+    |Show the vat for shipping costs on the invoice?
+|link:http://php.net/bool[bool^]
+    |isSmallBusiness
+    |Is it a small business?
+|link:http://php.net/int[int^]
+    |numberOfDecimalPlaces
+    |The number of decimal places for prices
+|link:http://php.net/bool[bool^]
+    |roundTotalsOnly
+    |Do only round totals?
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== DebtorAccount
+
+The DebtorAccountValue Model which contains the actual configured debtor accounts by character, payment and country.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |accountId
+    |The ID of the debtor account configuration that the debtor account belongs to
+|link:http://php.net/string[string^]
+    |mode
+    |The mode describes the criteria based on which pending amounts are assigned to a debtor account. The following modes are available:
+<ul>
+<li>character        = The debtor accounts are selected based on the first character of customer information. The information and the order of the information that will be used are defined with the sequence. There are 3 different sequences available.</li>
+<li>payment          = The debtor accounts are selected based on the payment method.</li>
+<li>country          = The debtor accounts are selected based on the country of delivery.</li>
+<li>country_payment  = The debtor accounts are selected based on two criteria. The first criteria is the country and if the country is same as the country of the accounting location then the payment method is used to select the deptor account.</li>
+</ul>
+|link:http://php.net/string[string^]
+    |key
+    |The key depends on the debtor account mode.
+<ul>
+<li>For the character mode the keys are letters. The letters indicate the first letter of the customer information that was used to assign the pending amounts.</li>
+<li>For the payment mode the key is the ID of payment method.</li>
+<li>For the country mode the key is the ID of the country.</li>
+<li>For the country_payment mode the key is either the ID of the country or the ID of payment method. If the country is the same as the country of the accounting location then the payment methods are used to select the deptor account.</li>
+</ul>
+|link:http://php.net/string[string^]
+    |value
+    |The actual debtor account.
+|link:accounting#accounting_models_debtoraccountconfiguration[DebtorAccountConfiguration^]
+
+    |account
+    |The debtor account configuration this account is associated with.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== DebtorAccountConfiguration
+
+The debtor account configuration model. The configuration is a set of debtor accounts. The actual number of debtor accounts within the configuration depends on the mode used to assign pending amounts to debtor accounts.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the debtor account configuration
+|link:http://php.net/int[int^]
+    |locationId
+    |The ID of the accounting location that the debtor account is associated with.
+|link:http://php.net/string[string^]
+    |mode
+    |The mode describes the criteria based on which pending amounts are assigned to a debtor account. The following modes are available:
+<ul>
+<li>character        = The debtor accounts are selected based on the first character of customer information. The information and the order of the information that will be used are defined with the sequence. There are 3 different sequences available.</li>
+<li>payment          = The debtor accounts are selected based on the payment method.</li>
+<li>country          = The debtor accounts are selected based on the country of delivery.</li>
+<li>country_payment  = The debtor accounts are selected based on two criteria. The first criteria is the country and if the country is same as the country of the accounting location then the payment method is used to select the deptor account.</li>
+</ul>
+|link:http://php.net/string[string^]
+    |sequence
+    |The sequence defines the order in which customer information will be used for the debtor account assignment if the character made has been chosen. The following sequences are available:
+<ul>
+<li>FNV = stands for the sequence: company, lastname, firstname</li>
+<li>NVF = stands for the sequence: lastname, firstname, company</li>
+<li>NFV = stands for the sequence: lastname, company, firstname</li>
+</ul>
+|link:http://php.net/string[string^]
+    |standard
+    |The standard debtor account that will be used if no matching debtor account can be found.
+|link:http://php.net/bool[bool^]
+    |save
+    |Flag that indicates if the debtor account shall be saved within the contact data.
+|link:miscellaneous#miscellaneous__[^]
+
+    |accounts
+    |The actual debtor accounts
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== PostingKey
+
+The Posting Key Model. A posting key is always associated with an accounting location and holds an posting key for each configured vat rate.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The Id posting key in relation to the vatrate.
+|link:http://php.net/string[string^]
+    |value
+    |The actual posting key for the vat rate.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== PostingKeyConfiguration
+
+The posting key configuration model. A posting key configuration is a set of 4 posting keys. A posting key configuration is always associated with an accounting location and can have a posting key per VAT rate. A posting key defines how line items are booked to accounts.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |locationId
+    |The ID of the accounting location that the configuration belongs to
+|link:miscellaneous#miscellaneous__[^]
+
+    |postingKeys
+    |The posting keys for this configuration
+|link:accounting#accounting_models_accountinglocation[AccountingLocation^]
+
+    |location
+    |The name of the accounting location that the configuration belongs to
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== RevenueAccount
+
+The revenue account model provides information on a single revenue account. The ID of an account matches the ID of a VAT rate.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the account. The account IDs are always 0,1,2 or 3. This way the IDs indicate the VAT rate that the account is used for. The revenues that were made with items that have the VAT rate with the ID 0 are assigned to the account with the ID 0.
+|link:http://php.net/int[int^]
+    |account
+    |The actual account number that was entered in the entry field.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== RevenueAccountCountryConfiguration
+
+The revenue account country configuration model. The revenue account country configuration is a set of up to 4 revenue accounts for one country. Each country that you need to pay VAT in needs a configuration. The 4 revenue account included in the configuration are associated with VAT rates. The VAT rate that one revenue account is associated with can be identified by the ID of the VAT rate. The ID of the VAT rate is included in the account name. Furthermore, each revenue account country configuration is part of a revenue account location configuration. A revenue account country configuration is only available if a VAT configuration for the country exists.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |countryId
+    |The ID of the country that the account configuration belongs to
+|link:http://php.net/int[int^]
+    |revenueAccountLocationId
+    |The ID configuration of the revenue account that these accounts are for.
+|link:miscellaneous#miscellaneous__[^]
+
+    |revenueAccounts
+    |A list of the actual revenue accounts. The accounts are associated with VAT rate. The association can be identified by
+|link:order#order_models_country[Country^]
+
+    |country
+    |The country these accounts are associated with.
+|link:accounting#accounting_models_revenueaccountlocationconfiguration[RevenueAccountLocationConfiguration^]
+
+    |locationConfiguration
+    |The revenue account configuration these accounts are associated with
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== RevenueAccountLocationConfiguration
+
+The revenue account location configuration model. A revenue account location configuration is the set of all revenue accounts that belong to one accounting location.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the revenue account configuration
+|link:http://php.net/int[int^]
+    |locationId
+    |The ID of the accounting location that the configuration belongs to
+|link:http://php.net/string[string^]
+    |accountEu
+    |The account used for revenues that are exempt from VAT and that were sold within the European Union
+|link:http://php.net/string[string^]
+    |accountExport
+    |The account used for revenues that are exempt from VAT and that were sold to outside the European Union
+|link:miscellaneous#miscellaneous__[^]
+
+    |revenueAccountCountryConfigurations
+    |The set of revenue accounts of one country
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[accounting_vat]]
+= Vat
+
+[[accounting_vat_contracts]]
+==  Contracts
+=== VatInitContract
+
+This interface provides methods to initialise the detection of a VAT configuration and to actually detect VAT rates or VAT fields.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Vat\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public init($billingCountryId, $taxIdNumber, $locationId, $shippingCountryId, $startedAt = null):void // <1>
+
+----
+
+
+    
+Initialise the VAT system data
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$billingCountryId`
+|The ID of the country of the invoice address
+
+|link:http://php.net/string[string^]
+a|`$taxIdNumber`
+|The tax identification number
+
+|link:http://php.net/int[int^]
+a|`$locationId`
+|The ID of the location
+
+|link:http://php.net/int[int^]
+a|`$shippingCountryId`
+|The ID of the country of the shipping address. [optional, default=0]
+
+|link:http://php.net/string[string^]
+a|`$startedAt`
+|The date when the VAT configuration went into effect. If no date is set, the current date will be used.
+[optional, default=null]
+|===
+
+
+[source%nowrap, php]
+----
+
+public isInitialized():bool // <1>
+
+----
+
+
+    
+Get whether the VAT system is already initialised or not
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public getVatField($vatRate, $restrictedToDigitalItems = false):int // <1>
+
+----
+
+
+    
+Get the VAT field for a VAT rate
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/float[float^]
+a|`$vatRate`
+|The VAT rate to be used to find the VAT field
+
+|link:http://php.net/bool[bool^]
+a|`$restrictedToDigitalItems`
+|Flag that indicates if the VAT is restricted to digital items or not.
+<br />True = the VAT is restricted to digital items
+<br />False = the VAT is used for all items
+|===
+
+
+[source%nowrap, php]
+----
+
+public getVatRate($vatField, $restrictedToDigitalItems = false):float // <1>
+
+----
+
+
+    
+Get the VAT rate of a VAT field
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$vatField`
+|The VAT field (0-3).
+
+|link:http://php.net/bool[bool^]
+a|`$restrictedToDigitalItems`
+|Flag that indicates if the VAT is restricted to digital items or not.
+<br />True = the VAT is restricted to digital items
+<br />False = the VAT is used for all items
+|===
+
+
+[source%nowrap, php]
+----
+
+public getUsingVat($restrictedToDigitalItems = false):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+
+----
+
+
+    
+Get the VAT configuration to be used for VAT calculation
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_vat[Vat^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$restrictedToDigitalItems`
+|Flag that indicates if the VAT is restricted to digital items or not.
+<br />True = the VAT is restricted to digital items
+<br />False = the VAT is used for all items
+|===
+
+
+[source%nowrap, php]
+----
+
+public getUsingVatRates($restrictedToDigitalItems = false):array // <1>
+
+----
+
+
+    
+Get the VAT rates to be used for VAT calculation
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$restrictedToDigitalItems`
+|Flag that indicates if the VAT is restricted to digital items or not.
+<br />True = the VAT is restricted to digital items
+<br />False = the VAT is used for all items
+|===
+
+
+[source%nowrap, php]
+----
+
+public getStandardVatByLocationId($locationId, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+
+----
+
+
+    
+Get a standard VAT configuration of an accounting location
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_vat[Vat^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$locationId`
+|The ID of the accounting location
+
+|link:http://php.net/string[string^]
+a|`$startedAt`
+|The date when the VAT configuration went into effect. The date is in W3C format.
+|===
+
+
+
+=== VatRepositoryContract
+
+The VatRepositoryContract is the interface for the VAT functionality. This interface allows you to get the VAT configuration for an accounting location and a country of delivery.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Vat\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findById($id):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+
+----
+
+
+    
+Get a VAT configuration
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_vat[Vat^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the VAT configuration
+|===
+
+
+[source%nowrap, php]
+----
+
+public getStandardVat($plentyId = null, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+
+----
+
+
+    
+Get the standard VAT configuration for a plenty ID
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_vat[Vat^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|The ID of the client (store)
+
+|link:http://php.net/string[string^]
+a|`$startedAt`
+|The date when the VAT configuration went into effect. The date is given in W3C format.
+|===
+
+
+[source%nowrap, php]
+----
+
+public getStandardVatByLocation($locationId, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+
+----
+
+
+    
+Get the standard VAT configuration for a location ID
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_vat[Vat^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$locationId`
+|The ID of the location.
+
+|link:http://php.net/string[string^]
+a|`$startedAt`
+|The date when the VAT configuration went into effect. The date is given in W3C format.
+|===
+
+
+[source%nowrap, php]
+----
+
+public getVat($locationId, $countryId, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_vat[Vat^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$locationId`
+|
+
+|link:http://php.net/int[int^]
+a|`$countryId`
+|
+
+|link:http://php.net/string[string^]
+a|`$startedAt`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public findVat($page = 1, $itemsPerPage = \Plenty\Modules\Accounting\Vat\Models\Vat::ITEMS_PER_PAGE, $relations = [], $columns = []):array // <1>
+
+----
+
+
+    
+List VAT configurations
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The page to be returned. If no page is specified, the first page will be returned.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items per page. If not given, the model's default number will be used.
+
+|link:http://php.net/array[array^]
+a|`$relations`
+|The relations to load with the VAT object. The relations available are "location" and "country".
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The columns to load in the response
+|===
+
+
+[source%nowrap, php]
+----
+
+public findVatByLocationId($locationId, $relations = [], $columns = []):array // <1>
+
+----
+
+
+    
+List VAT configurations for an accounting location
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$locationId`
+|The ID of the accounting location
+
+|link:http://php.net/array[array^]
+a|`$relations`
+|The relations to load with the VAT object. The relations available are "location" and "country".
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The columns to load in the response
+|===
+
+
+[source%nowrap, php]
+----
+
+public findVatByLocationIdAndCountry($locationId, $countryId, $relations = [], $columns = []):array // <1>
+
+----
+
+
+    
+List VAT configuration for a country of delivery
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$locationId`
+|The ID of the accounting location
+
+|link:http://php.net/int[int^]
+a|`$countryId`
+|The ID of the country of delivery
+
+|link:http://php.net/array[array^]
+a|`$relations`
+|The relations to load with the VAT object. The relations available are "location" and "country".
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The columns to load in the response.
+|===
+
+
+[source%nowrap, php]
+----
+
+public getVatById($id):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+
+----
+
+
+    
+Get a VAT configuration by id
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_vat[Vat^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createVat($data):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+
+----
+
+
+    
+Create a VAT configuration
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_vat[Vat^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateVat($id, $data):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+
+----
+
+
+    
+Update a VAT configuration
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_vat[Vat^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== VatServiceContract
+
+Provides methods for a quick search of VAT fields, VAT rates and VAT names of a specific VAT configuration.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Vat\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getVatField($vat, $vatRate):int // <1>
+
+----
+
+
+    
+Get the VAT field for a VAT rate.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:accounting#accounting_models_vat[Vat^]
+
+a|`$vat`
+|The VAT configuration of a country
+
+|link:http://php.net/float[float^]
+a|`$vatRate`
+|The VAT rate
+|===
+
+
+[source%nowrap, php]
+----
+
+public getVatRate($vat, $vatField):float // <1>
+
+----
+
+
+    
+Get the VAT rate for a VAT field.
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:accounting#accounting_models_vat[Vat^]
+
+a|`$vat`
+|The VAT configuration of a country
+
+|link:http://php.net/int[int^]
+a|`$vatField`
+|The VAT field
+|===
+
+
+[source%nowrap, php]
+----
+
+public getVatName($vat, $vatField):string // <1>
+
+----
+
+
+    
+Get the name of a VAT field.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:accounting#accounting_models_vat[Vat^]
+
+a|`$vat`
+|The VAT configuration of a country
+
+|link:http://php.net/int[int^]
+a|`$vatField`
+|The VAT field
+|===
+
+
+[[accounting_vat_exceptions]]
+==  Exceptions
+=== VatException
+
+Class VatException
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Vat\Exceptions`
+
+
+
+
+
+[[accounting_vat_models]]
+==  Models
+=== Vat
+
+The VAT model contains the complete VAT configuration in plentymarkets. The VAT configuration is based on 4 VAT rates. A VAT configuration always belongs to an accounting location. The accounting location is in a specified country and is assigned to a client. One accounting location can have several VAT configurations, but only one is active at a time. Which one is active depends on the startedAt date. This also means that only one VAT number is active per accounting location.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Vat\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the VAT configuration. A VAT configuration includes 4 VAT rates
+|link:http://php.net/int[int^]
+    |countryId
+    |The ID of the country that the VAT configuration belongs to
+|link:http://php.net/string[string^]
+    |taxIdNumber
+    |The tax id number of VAT configuration.
+|link:miscellaneous#miscellaneous__[^]
+
+    |startedAt
+    |The date when the VAT configuration went into effect
+|link:miscellaneous#miscellaneous__[^]
+
+    |invalidFrom
+    |The date when the VAT configuration should not be used any more
+|link:http://php.net/int[int^]
+    |locationId
+    |The ID of the location
+|link:http://php.net/string[string^]
+    |marginScheme
+    |Specifies the tax rate that is used, when the margin scheme is applied. Available values: 'none', 'vat1', 'vat2', 'vat3', 'vat4'.
+|link:http://php.net/bool[bool^]
+    |isRestrictedToDigitalItems
+    |Flag that indicates if the VAT configuration is used only applied to digital goods or not. True= The VAT set is only applied to digital goods. False = The VAT set is applied to all types of goods.
+|link:http://php.net/bool[bool^]
+    |isStandard
+    |Flag that indicates if the VAT configuration is the standard VAT configuration for the location
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date at which the VAT configuration was created.
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date that the VAT configuration was last updated.
+|link:accounting#accounting_models_accountinglocation[AccountingLocation^]
+
+    |location
+    |The accounting location that the VAT configuration belongs to. Each accounting location is assigned to a country and only one accounting location is allowed per country.
+|link:order#order_models_country[Country^]
+
+    |country
+    |The country that the VAT configuration belongs to
+|link:http://php.net/array[array^]
+    |vatRates
+    |The VAT rates of a VAT configuration
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== VatRate
+
+The VAT rate model is always associated with a VAT configuration and contains the ID, name and percentage of a VAT rate. Each VAT configuration can have 4 rates.
+
+
+==== Namespace
+
+`Plenty\Modules\Accounting\Vat\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the VAT rate
+|link:http://php.net/float[float^]
+    |vatRate
+    |The percentage of the VAT rate, e.g. 19.00 for 19 %
+|link:http://php.net/string[string^]
+    |name
+    |The name of a VAT rate
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

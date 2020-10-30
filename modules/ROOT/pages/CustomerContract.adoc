@@ -1,0 +1,323 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[customercontract_customercontract]]
+= CustomerContract
+
+[[customercontract_customercontract_contracts]]
+==  Contracts
+=== ContractSigningRepositoryContract
+
+This interface provides methods to digital sign contracts
+
+
+==== Namespace
+
+`Plenty\Modules\CustomerContract\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public signContract($contractId, $signerName):Plenty\Modules\CustomerContract\Models\Signing // <1>
+
+----
+
+
+    
+Sign a contract
+
+
+==== Return type
+    
+<1> link:customercontract#customercontract_models_signing[Signing^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$contractId`
+|The contract Id
+
+|link:http://php.net/string[string^]
+a|`$signerName`
+|Name of signer
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSigning($contractId):Plenty\Modules\CustomerContract\Models\Signing // <1>
+
+----
+
+
+    
+Returns signing of a contract
+
+
+==== Return type
+    
+<1> link:customercontract#customercontract_models_signing[Signing^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$contractId`
+|The contract Id
+|===
+
+
+[source%nowrap, php]
+----
+
+public signedDocument($contractId):void // <1>
+
+----
+
+
+    
+Download the signed contract document
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$contractId`
+|The contract Id
+|===
+
+
+
+=== CustomerContractRepositoryContract
+
+This interface provides methods to list contracts
+
+
+==== Namespace
+
+`Plenty\Modules\CustomerContract\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public list():Illuminate\Support\Collection // <1>
+
+----
+
+
+    
+List all contracts
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    
+
+[source%nowrap, php]
+----
+
+public get($contractId):Plenty\Modules\CustomerContract\Models\CustomerContract // <1>
+
+----
+
+
+    
+Returns a single contract
+
+
+==== Return type
+    
+<1> link:customercontract#customercontract_models_customercontract[CustomerContract^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$contractId`
+|The contract Id
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\CustomerContract\Models\CustomerContract // <1>
+
+----
+
+
+    
+Add a contract
+
+
+==== Return type
+    
+<1> link:customercontract#customercontract_models_customercontract[CustomerContract^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|Data of the new contract
+|===
+
+
+[source%nowrap, php]
+----
+
+public document($contractId):void // <1>
+
+----
+
+
+    
+Download contract document
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$contractId`
+|The contract Id
+|===
+
+
+[[customercontract_customercontract_models]]
+==  Models
+=== CustomerContract
+
+The customer contract model
+
+
+==== Namespace
+
+`Plenty\Modules\CustomerContract\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |id
+    |
+|link:http://php.net/string[string^]
+    |contractLang
+    |
+|link:http://php.net/string[string^]
+    |contractName
+    |
+|link:http://php.net/bool[bool^]
+    |contractVisible
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== Signing
+
+The customer contract model
+
+
+==== Namespace
+
+`Plenty\Modules\CustomerContract\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |contractId
+    |
+|link:http://php.net/string[string^]
+    |contactId
+    |
+|link:http://php.net/string[string^]
+    |signerName
+    |
+|link:http://php.net/string[string^]
+    |createdAt
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

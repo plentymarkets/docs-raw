@@ -1,0 +1,71 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[cron_cron]]
+= Cron
+
+[[cron_cron_contracts]]
+==  Contracts
+=== CronHandler
+
+CronHandler interface for extending cron handlers.
+
+
+==== Namespace
+
+`Plenty\Modules\Cron\Contracts`
+
+
+
+
+
+[[cron_cron_services]]
+==  Services
+=== CronContainer
+
+Register cron jobs
+
+
+==== Namespace
+
+`Plenty\Modules\Cron\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public add($schedule, $handlerClass):void // <1>
+
+----
+
+
+    
+Use this method to add a handler class and a schedule time for your desired cron event. The action will then be triggered according to the given schedule.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$schedule`
+|The number of minutes for which the cron action should be scheduled. Currently allowed are: 15, 20, 60 and 3600. You can also use constants like `CronContainer::EVERY_FIFTEEN_MINUTES`, `CronContainer::EVERY_TWENTY_MINUTES`, `CronContainer::HOURLY`, `CronContainer::DAILY`;
+
+|link:http://php.net/string[string^]
+a|`$handlerClass`
+|The handler class that should be triggered when the cron event is launched. This class has to extend the CronHandler interface and implement the `handle()` method.
+|===
+
+

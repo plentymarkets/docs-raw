@@ -1,0 +1,494 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[amazon_amazon]]
+= Amazon
+
+[[amazon_amazon_contracts]]
+==  Contracts
+=== AmazonClient
+
+The amazon client
+
+
+==== Namespace
+
+`Plenty\Modules\Amazon\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public sendRequest($request, $serviceVersion):Plenty\Modules\Amazon\Contracts\AmazonClientResponse // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:amazon#amazon_contracts_amazonclientresponse[AmazonClientResponse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:amazon#amazon_contracts_amazonclientrequest[AmazonClientRequest^]
+
+a|`$request`
+|
+
+|link:http://php.net/string[string^]
+a|`$serviceVersion`
+|
+|===
+
+
+
+=== AmazonClientFactory
+
+
+
+
+==== Namespace
+
+`Plenty\Modules\Amazon\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getClient($accountId, $endpointPath):Plenty\Modules\Amazon\Contracts\AmazonClient // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:amazon#amazon_contracts_amazonclient[AmazonClient^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$accountId`
+|
+
+|link:http://php.net/string[string^]
+a|`$endpointPath`
+|
+|===
+
+
+
+=== AmazonClientRequest
+
+
+
+
+==== Namespace
+
+`Plenty\Modules\Amazon\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getRequestData():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public requiresSellerId():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public getSellerIdFieldName():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getAction():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+
+=== AmazonClientRequestPayload
+
+
+
+
+==== Namespace
+
+`Plenty\Modules\Amazon\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getPayload():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== AmazonClientResponse
+
+
+
+
+==== Namespace
+
+`Plenty\Modules\Amazon\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getResponseContent():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getResponseMetaData():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+
+=== AmazonFulfillmentCenterRepositoryContract
+
+AmazonFulfillmentCenterRepository
+
+
+==== Namespace
+
+`Plenty\Modules\Amazon\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getDeliveryAddresses():array // <1>
+
+----
+
+
+    
+Lists amazon fulfilment centers delivery addresses.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getDeliveryAddressByFulfillmentCenterId($amazonFulfillmentCenterId):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Get the delivery address by fulfillment center ID.
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$amazonFulfillmentCenterId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getDeliveryAddressByGLN($GLN):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Get the delivery address by GLN.
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$GLN`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getInvoiceAddressByGLN($GLN):Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+Get the invoice address by GLN.
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$GLN`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getContactId():int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[[amazon_amazon_exceptions]]
+==  Exceptions
+=== AmazonClientException
+
+Created by ptopczewski, 01.02.18 11:41
+Class AmazonClientException
+
+
+==== Namespace
+
+`Plenty\Modules\Amazon\Exceptions`
+
+
+
+
+
+
+=== AmazonClientRequestException
+
+Created by ptopczewski, 07.02.18 10:34
+Class AmazonClientRequestException
+
+
+==== Namespace
+
+`Plenty\Modules\Amazon\Exceptions`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getType():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getRequestId():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getErrorCode():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+

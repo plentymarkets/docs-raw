@@ -1,0 +1,3401 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[payment_payment]]
+= Payment
+
+[[payment_payment_contracts]]
+==  Contracts
+=== PaymentContactRelationRepositoryContract
+
+The PaymentContactRelationRepositoryContract is the interface for the payment contact relation repository. Create and delete relations between payments and contact.
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createContactRelation($payment, $contact):Plenty\Modules\Payment\Models\PaymentContactRelation // <1>
+
+----
+
+
+    
+Creates a payment contact relation.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_paymentcontactrelation[PaymentContactRelation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_payment[Payment^]
+
+a|`$payment`
+|The ID of the payment
+
+|link:account#account_models_contact[Contact^]
+
+a|`$contact`
+|The ID of the contact
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteContactRelation($payment):void // <1>
+
+----
+
+
+    
+Deletes a payment contact relation.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_payment[Payment^]
+
+a|`$payment`
+|The ID of the payment
+|===
+
+
+
+=== PaymentMatcherRepositoryContract
+
+The PaymentMatcherRepositoryContract
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public checkMapFindAssignPayment($mopId, $data):string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mopId`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public findAssignPayment($payment):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_payment[Payment^]
+
+a|`$payment`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getMatchingRatesForPayment($paymentId):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentId`
+|
+|===
+
+
+
+=== PaymentOrderRelationRepositoryContract
+
+The PaymentOrderRelationRepositoryContract is the interface for the payment order relation repository. Create and delete relations between payments and orders.
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createOrderRelation($payment, $order):Plenty\Modules\Payment\Models\PaymentOrderRelation // <1>
+
+----
+
+
+    
+Creates a payment order relation.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_paymentorderrelation[PaymentOrderRelation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_payment[Payment^]
+
+a|`$payment`
+|The ID of the payment
+
+|link:order#order_models_order[Order^]
+
+a|`$order`
+|The ID of the order
+|===
+
+
+[source%nowrap, php]
+----
+
+public findOrderRelation($payment):Plenty\Modules\Payment\Models\PaymentOrderRelation // <1>
+
+----
+
+
+    
+Gets the payment order relation.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_paymentorderrelation[PaymentOrderRelation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_payment[Payment^]
+
+a|`$payment`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteOrderRelation($payment):void // <1>
+
+----
+
+
+    
+Deletes a payment order relation.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_payment[Payment^]
+
+a|`$payment`
+|The ID of the payment
+|===
+
+
+[source%nowrap, php]
+----
+
+public createOrderRelationWithValidation($paymentId, $orderId):Plenty\Modules\Payment\Models\PaymentOrderRelation // <1>
+
+----
+
+
+    
+Assign a payment to an order ID if order ID is valid and order ID doesn&#039;t have a payment assigned.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_paymentorderrelation[PaymentOrderRelation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentId`
+|
+
+|link:http://php.net/int[int^]
+a|`$orderId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public autoAssignPayments($paymentIds):array // <1>
+
+----
+
+
+    
+Bulk auto assign payments
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$paymentIds`
+|
+|===
+
+
+
+=== PaymentPropertyRepositoryContract
+
+The PaymentPropertyRepositoryContract is the interface for the payment property repository. List, get, create and update payment properties.
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public all():array // <1>
+
+----
+
+
+    
+Lists properties.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public findByPropertyId($propertyId):array // <1>
+
+----
+
+
+    
+Gets a property. The ID of the payment property must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$propertyId`
+|The ID of the payment property
+|===
+
+
+[source%nowrap, php]
+----
+
+public allByPaymentId($paymentId):array // <1>
+
+----
+
+
+    
+Lists properties of a payment. The ID of the payment must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentId`
+|The ID of the payment
+|===
+
+
+[source%nowrap, php]
+----
+
+public allByTypeId($typeId):array // <1>
+
+----
+
+
+    
+Lists properties of a property type. The ID of the property type must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$typeId`
+|The ID of the payment property type. The following property types are available:
+<ul>
+    <li>Transaction ID = 1</li>
+    <li>Reference ID = 2</li>
+    <li>Booking text = 3</li>
+    <li>Transaction password = 4</li>
+    <li>Transaction code = 5</li>
+    <li>Authorisation ID = 6</li>
+    <li>Capture ID = 7</li>
+    <li>Refund ID = 8</li>
+    <li>Credit note ID = 9</li>
+    <li>Order reference = 10</li>
+    <li>Name of the sender = 11</li>
+    <li>Email of the sender = 12</li>
+    <li>The sender's sort code = 13</li>
+    <li>The sender's bank name = 14</li>
+    <li>The sender's bank account number = 15</li>
+    <li>The holder of the bank account = 16</li>
+    <li>The country of the sender's bank account = 17</li>
+    <li>The sender's IBAN = 18</li>
+    <li>The sender's BIC = 19</li>
+    <li>Name of the recipient = 20</li>
+    <li>The recipient's bank account = 21</li>
+    <li>Reference text of the payment = 22</li>
+    <li>Payment origin = 23</li>
+    <li>Shipping address ID = 24</li>
+    <li>Invoice address ID = 25</li>
+    <li>Item buyer = 26</li>
+    <li>Item number = 27</li>
+    <li>Item transaction ID = 28</li>
+    <li>External transaction type = 29</li>
+    <li>External transaction status = 30</li>
+</ul>
+|===
+
+
+[source%nowrap, php]
+----
+
+public findByCreatedDateInterval($startDate, $endDate):array // <1>
+
+----
+
+
+    
+Lists properties by creation date. The start and the end of the date range must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$startDate`
+|The start date of the date range for the date of creation of the property
+
+|link:http://php.net/string[string^]
+a|`$endDate`
+|The end date of the date range for the date of creation of the property
+|===
+
+
+[source%nowrap, php]
+----
+
+public createProperty($data):Plenty\Modules\Payment\Models\PaymentProperty // <1>
+
+----
+
+
+    
+Creates a payment property.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_paymentproperty[PaymentProperty^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public changeProperty($data):Plenty\Modules\Payment\Models\PaymentProperty // <1>
+
+----
+
+
+    
+Updates a payment property.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_paymentproperty[PaymentProperty^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_paymentproperty[PaymentProperty^]
+
+a|`$data`
+|
+|===
+
+
+
+=== PaymentPropertyTypeNameRepositoryContract
+
+The PaymentPropertyTypeNameRepositoryContract is the interface for the repository of payment property type names. List, get, create and update payment property names.
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public allTypeNames($lang):array // <1>
+
+----
+
+
+    
+Lists payment property type names. The language of the property type names must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language of the payment property type name
+|===
+
+
+[source%nowrap, php]
+----
+
+public findByNameId($nameId):array // <1>
+
+----
+
+
+    
+Finds a payment property type name. The ID of the payment property type name must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$nameId`
+|The ID of the payment property type name
+|===
+
+
+[source%nowrap, php]
+----
+
+public createTypeName($data):Plenty\Modules\Payment\Models\PaymentPropertyTypeName // <1>
+
+----
+
+
+    
+Creates a payment property type name.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_paymentpropertytypename[PaymentPropertyTypeName^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public changeProperty($data):array // <1>
+
+----
+
+
+    
+Updates a payment property type name.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$data`
+|
+|===
+
+
+
+=== PaymentPropertyTypeRepositoryContract
+
+The PaymentPropertyTypeRepositoryContract is the interface for the payment property type repository. List, get, create and update payment properties.
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public allTypes($lang):array // <1>
+
+----
+
+
+    
+Lists payment property types. The language of the property type must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language of the payment property type
+|===
+
+
+[source%nowrap, php]
+----
+
+public findTypesById($id, $lang):array // <1>
+
+----
+
+
+    
+Gets a payment property type. The ID of the property type must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the payment property type. The following property types are available:
+<ul>
+    <li>Transaction ID = 1</li>
+    <li>Reference ID = 2</li>
+    <li>Booking text = 3</li>
+    <li>Transaction password = 4</li>
+    <li>Transaction code = 5</li>
+    <li>Authorisation ID = 6</li>
+    <li>Capture ID = 7</li>
+    <li>Refund ID = 8</li>
+    <li>Credit note ID = 9</li>
+    <li>Order reference = 10</li>
+    <li>Name of the sender = 11</li>
+    <li>Email of the sender = 12</li>
+    <li>The sender's sort code = 13</li>
+    <li>The sender's bank name = 14</li>
+    <li>The sender's bank account number = 15</li>
+    <li>The holder of the bank account = 16</li>
+    <li>The country of the sender's bank account = 17</li>
+    <li>The sender's IBAN = 18</li>
+    <li>The sender's BIC = 19</li>
+    <li>Name of the recipient = 20</li>
+    <li>The recipient's bank account = 21</li>
+    <li>Reference text of the payment = 22</li>
+    <li>Payment origin = 23</li>
+    <li>Shipping address ID = 24</li>
+    <li>Invoice address ID = 25</li>
+    <li>Item buyer = 26</li>
+    <li>Item number = 27</li>
+    <li>Item transaction ID = 28</li>
+    <li>External transaction type = 29</li>
+    <li>External transaction status = 30</li>
+</ul>
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language of the payment property type
+|===
+
+
+[source%nowrap, php]
+----
+
+public createType($data):Plenty\Modules\Payment\Models\PaymentPropertyType // <1>
+
+----
+
+
+    
+Creates a payment property type.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_paymentpropertytype[PaymentPropertyType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public changeProperty($data):Plenty\Modules\Payment\Models\PaymentPropertyType // <1>
+
+----
+
+
+    
+Updates a payment property type.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_paymentpropertytype[PaymentPropertyType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$data`
+|
+|===
+
+
+
+=== PaymentRepositoryContract
+
+The PaymentRepositoryContract is the interface for the payment repository. List, get, create and update payments. Payments can come into plentymarkets automatically or can be booked manually. Existing payments can be filtered by payment method, by ID, by payment status, by transaction type, by order or by date. Existing payments can also be updated.
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getAll($itemsPerPage = 50, $page = 1):array // <1>
+
+----
+
+
+    
+Lists payments.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+|===
+
+
+[source%nowrap, php]
+----
+
+public search($page = 1, $itemsPerPage = \Plenty\Modules\Payment\Models\Payment::MAX_ITEMS_PER_PAGE, $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The shown page. Default value is 1.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The items shown per page. Default value is 50.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to be loaded.
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentById($paymentId):Plenty\Modules\Payment\Models\Payment // <1>
+
+----
+
+
+    
+Gets a payment. The ID of the payment must be specified.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_payment[Payment^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentId`
+|The ID of the payment
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentsByMethodId($methodId, $itemsPerPage = 50, $page = 1):array // <1>
+
+----
+
+
+    
+Lists payments of a payment method. The ID of the payment method must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$methodId`
+|The ID of the payment method
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentsByStatusId($statusId, $itemsPerPage = 50, $page = 1):array // <1>
+
+----
+
+
+    
+Lists payments of a payment status. The ID of the payment status must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$statusId`
+|The ID of the payment status
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentsByTransactionType($transactionType, $itemsPerPage = 50, $page = 1):array // <1>
+
+----
+
+
+    
+Lists payments of a transaction type. The transaction type must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$transactionType`
+|The transaction type of the payment
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentsByOrderId($orderId):array // <1>
+
+----
+
+
+    
+Lists payments of an order. The ID of the order must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$orderId`
+|The ID of the order
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentsByImportDateInterval($startDate, $endDate, $itemsPerPage = 50, $page = 1):array // <1>
+
+----
+
+
+    
+Lists payments by import date. The start and the end of the date range must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$startDate`
+|The start date of the date range for the import date of the payment
+
+|link:http://php.net/string[string^]
+a|`$endDate`
+|The end date of the date range for the import date of the payment
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentsByEntryDateInterval($startDate, $endDate, $itemsPerPage = 50, $page = 1):array // <1>
+
+----
+
+
+    
+Lists payments by entry date. The start and the end of the date range must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$startDate`
+|The start date of the date range for the entry date of the payment
+
+|link:http://php.net/string[string^]
+a|`$endDate`
+|The end date of the date range for the entry date of the payment
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentsByPropertyTypeAndValue($propertyTypeId, $propertyValue, $itemsPerPage = 50, $page = 1):void // <1>
+
+----
+
+
+    
+Lists payments by payment property type and value.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$propertyTypeId`
+|The property type
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$propertyValue`
+|The property value
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items to list per page
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page of results to search for
+|===
+
+
+[source%nowrap, php]
+----
+
+public createPayment($data):Plenty\Modules\Payment\Models\Payment // <1>
+
+----
+
+
+    
+Creates a payment.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_payment[Payment^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updatePayment($data):Plenty\Modules\Payment\Models\Payment // <1>
+
+----
+
+
+    
+Updates a payment.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_payment[Payment^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getStatusConstants():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getOriginConstants():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public deletePayment($paymentId):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public splitAndAssignPayment($paymentId, $orderIds):bool // <1>
+
+----
+
+
+    
+Split and assign a payment to given order IDs
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentId`
+|
+
+|link:http://php.net/array[array^]
+a|`$orderIds`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deletePayments($paymentIds):array // <1>
+
+----
+
+
+    
+Bulk delete payments.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$paymentIds`
+|An array containing payment ids. Eg: [ids => [1, 2, 3]]
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[payment_payment_models]]
+==  Models
+=== Payment
+
+The payment model
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the payment
+|link:http://php.net/float[float^]
+    |amount
+    |The amount of the payment
+|link:http://php.net/float[float^]
+    |exchangeRatio
+    |The exchange rate. Exchange rates are used if the default currency saved in plentymarkets differs from the currency of the order.
+|link:http://php.net/int[int^]
+    |parentId
+    |The ID of the parent payment
+|link:http://php.net/int[int^]
+    |deleted
+    |A deleted payment. Deleted payments have the value 1 and are not displayed in the plentymarkets back end.
+|link:http://php.net/int[int^]
+    |unaccountable
+    |An unassigned payment. Unassigned payments have the value 1.
+|link:http://php.net/string[string^]
+    |currency
+    |The currency of the payment in ISO 4217 code.
+|link:http://php.net/string[string^]
+    |type
+    |The payment type. Available types are credit and debit.
+|link:http://php.net/string[string^]
+    |hash
+    |The hash code of the payment. The hash code consists of 32 characters and is automatically generated.
+|link:http://php.net/int[int^]
+    |origin
+    |The origin of the payment. The following origins are available:
+<ul>
+    <li>Undefined = 0</li>
+    <li>System = 1</li>
+    <li>Manually = 2</li>
+    <li>SOAP = 3</li>
+    <li>Import = 4</li>
+    <li>Split payment = 5</li>
+    <li>Plugin = 6</li>
+    <li>POS = 7</li>
+</ul>
+|link:http://php.net/string[string^]
+    |receivedAt
+    |The time the payment was received
+|link:http://php.net/string[string^]
+    |importedAt
+    |The time the payment was imported
+|link:http://php.net/int[int^]
+    |status
+    |The <a href="https://developers.plentymarkets.com/rest-doc/introduction#payment-statuses"  target="_blank">status</a> of the payment
+|link:http://php.net/int[int^]
+    |transactionType
+    |The transaction type of the payment. The following transaction types are available:
+<ul>
+    <li>Interim transaction report = 1</li>
+    <li>Booked payment = 2</li>
+    <li>Split payment = 3</li>
+</ul>
+|link:http://php.net/int[int^]
+    |mopId
+    |The ID of the payment method
+|link:payment#payment_models_payment[Payment^]
+
+    |parent
+    |The parent payment
+|link:miscellaneous#miscellaneous__[^]
+
+    |children
+    |
+|link:payment#payment_models_paymentmethod[PaymentMethod^]
+
+    |method
+    |The payment method
+|link:payment#payment_models_paymentorderrelation[PaymentOrderRelation^]
+
+    |order
+    |
+|link:http://php.net/array[array^]
+    |histories
+    |The payment history
+|link:http://php.net/array[array^]
+    |properties
+    |The properties of the payment
+|link:http://php.net/bool[bool^]
+    |regenerateHash
+    |If $regenerateHash is true, regenerate the payment hash value. Default is false.
+|link:http://php.net/bool[bool^]
+    |updateOrderPaymentStatus
+    |If $updateOrderPaymentStatus is true, update the order payment status. Default is false.
+|link:http://php.net/bool[bool^]
+    |isSystemCurrency
+    |If $isSystemCurrency is false, the value will be converted to the standard currency with the provided exchange rate. If $isSystemCurrency is false, the value is not converted. Default is true.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== PaymentContactRelation
+
+The payment contact relation model
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the payment order relation
+|link:http://php.net/int[int^]
+    |paymentId
+    |The ID of the payment
+|link:http://php.net/int[int^]
+    |contactId
+    |The ID of the contact
+|link:http://php.net/string[string^]
+    |assignedAt
+    |The time the payment contact relation was assigned
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== PaymentOrderRelation
+
+The payment order relation model
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the payment order relation
+|link:http://php.net/int[int^]
+    |paymentId
+    |The ID of the payment
+|link:http://php.net/int[int^]
+    |orderId
+    |The ID of the order
+|link:http://php.net/string[string^]
+    |assignedAt
+    |The time the payment order relation was assigned
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== PaymentProperty
+
+The payment property model
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the payment property
+|link:http://php.net/int[int^]
+    |paymentId
+    |The ID of the payment
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the property type. The following property types are available:
+<ul>
+    <li>Transaction ID = 1</li>
+    <li>Reference ID = 2</li>
+    <li>Booking text = 3</li>
+    <li>Transaction password = 4</li>
+    <li>Transaction code = 5</li>
+    <li>Authorisation ID = 6</li>
+    <li>Capture ID = 7</li>
+    <li>Refund ID = 8</li>
+    <li>Credit note ID = 9</li>
+    <li>Order reference = 10</li>
+    <li>Name of the sender = 11</li>
+    <li>Email of the sender = 12</li>
+    <li>The sender's sort code = 13</li>
+    <li>The sender's bank name = 14</li>
+    <li>The sender's bank account number = 15</li>
+    <li>The holder of the bank account = 16</li>
+    <li>The country of the sender's bank account = 17</li>
+    <li>The sender's IBAN = 18</li>
+    <li>The sender's BIC = 19</li>
+    <li>Name of the recipient = 20</li>
+    <li>The recipient's bank account = 21</li>
+    <li>Reference text of the payment = 22</li>
+    <li>Payment origin = 23</li>
+    <li>Shipping address ID = 24</li>
+    <li>Invoice address ID = 25</li>
+    <li>Item buyer = 26</li>
+    <li>Item number = 27</li>
+    <li>Item transaction ID = 28</li>
+    <li>External transaction type = 29</li>
+    <li>External transaction status = 30</li>
+    <li>The receiver's IBAN = 31</li>
+    <li>The receiver's BIC = 32</li>
+    <li>Transaction fee = 33</li>
+    <li>Transaction lifespan = 34</li>
+    <li>Matching rate = 36</li>
+</ul>
+|link:http://php.net/string[string^]
+    |value
+    |The value of the property type
+|link:payment#payment_models_payment[Payment^]
+
+    |payment
+    |
+|link:payment#payment_models_paymentpropertytype[PaymentPropertyType^]
+
+    |type
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== PaymentPropertyType
+
+The payment property type model
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the property type
+|link:http://php.net/int[int^]
+    |erasable
+    |Specifies whether the property type can be deleted. Property types that can be deleted have the value 1. Default property types cannot be deleted.
+|link:http://php.net/int[int^]
+    |position
+    |The position number of the property type
+|link:payment#payment_models_paymentpropertytypename[PaymentPropertyTypeName^]
+
+    |name
+    |The name of the property type
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== PaymentPropertyTypeName
+
+The payment property type name model
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the name of the property type
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the property type
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the name of the property type
+|link:http://php.net/string[string^]
+    |name
+    |The name of the property type
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[payment_events]]
+= Events
+
+[[payment_events_checkout]]
+==  Checkout
+=== ExecutePayment
+
+The event is triggered when a payment is executed.
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Events\Checkout`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public setOrderId($orderId):Plenty\Modules\Payment\Events\Checkout // <1>
+
+----
+
+
+    
+Updates the ID of the order in the checkout. The ID must be specified.
+
+
+==== Return type
+    
+<1> link:payment#payment_events_checkout[Checkout^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$orderId`
+|The ID of the order
+|===
+
+
+[source%nowrap, php]
+----
+
+public getOrderId():int // <1>
+
+----
+
+
+    
+Gets the ID of the order.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setMop($mop):Plenty\Modules\Payment\Events\Checkout // <1>
+
+----
+
+
+    
+Updates the ID of the payment method. The ID must be specified.
+
+
+==== Return type
+    
+<1> link:payment#payment_events_checkout[Checkout^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mop`
+|The ID of the payment method
+|===
+
+
+[source%nowrap, php]
+----
+
+public getMop():int // <1>
+
+----
+
+
+    
+Gets the ID of the payment method.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setType($type):Plenty\Modules\Payment\Events\Checkout // <1>
+
+----
+
+
+    
+Updates the content type.
+
+
+==== Return type
+    
+<1> link:payment#payment_events_checkout[Checkout^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|The <a href="https://developers.plentymarkets.com/dev-doc/payment-plugins#payment-prepare-payment">content type</a> of the payment plugin
+|===
+
+
+[source%nowrap, php]
+----
+
+public getType():string // <1>
+
+----
+
+
+    
+Gets the content type.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setValue($value):Plenty\Modules\Payment\Events\Checkout // <1>
+
+----
+
+
+    
+Updates the value of the content type.
+
+
+==== Return type
+    
+<1> link:payment#payment_events_checkout[Checkout^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$value`
+|The value of the content type
+|===
+
+
+[source%nowrap, php]
+----
+
+public getValue():string // <1>
+
+----
+
+
+    
+Gets the value of the content type.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+
+=== GetPaymentMethodContent
+
+The event is triggered after the payment method is selected in the checkout.
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Events\Checkout`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public setMop($mop):Plenty\Modules\Payment\Events\Checkout // <1>
+
+----
+
+
+    
+Updates the ID of the payment method. The ID must be specified.
+
+
+==== Return type
+    
+<1> link:payment#payment_events_checkout[Checkout^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mop`
+|The ID of the payment method
+|===
+
+
+[source%nowrap, php]
+----
+
+public getMop():int // <1>
+
+----
+
+
+    
+Gets the ID of the payment method.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setType($type):Plenty\Modules\Payment\Events\Checkout // <1>
+
+----
+
+
+    
+Updates the content type.
+
+
+==== Return type
+    
+<1> link:payment#payment_events_checkout[Checkout^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|The <a href="https://developers.plentymarkets.com/dev-doc/payment-plugins#payment-prepare-payment">content type</a> of the payment plugin
+|===
+
+
+[source%nowrap, php]
+----
+
+public getType():string // <1>
+
+----
+
+
+    
+Gets the content type.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setValue($value):Plenty\Modules\Payment\Events\Checkout // <1>
+
+----
+
+
+    
+Updates the value of the content type.
+
+
+==== Return type
+    
+<1> link:payment#payment_events_checkout[Checkout^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$value`
+|The value of the content type
+|===
+
+
+[source%nowrap, php]
+----
+
+public getValue():string // <1>
+
+----
+
+
+    
+Gets the value of the content type.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setParams($params):Plenty\Modules\Payment\Events\Checkout // <1>
+
+----
+
+
+    
+Updates the parameters. The parameters must be specified.
+
+
+==== Return type
+    
+<1> link:payment#payment_events_checkout[Checkout^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$params`
+|The parameters
+|===
+
+
+[source%nowrap, php]
+----
+
+public getParams():void // <1>
+
+----
+
+
+    
+Gets the parameters.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[payment_history]]
+= History
+
+[[payment_history_contracts]]
+==  Contracts
+=== PaymentHistoryRepositoryContract
+
+The PaymentHistoryRepositoryContract is the interface for the payment history repository. Get and create the payment history.
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\History\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getByPaymentId($paymentId, $typeId):array // <1>
+
+----
+
+
+    
+Gets the payment history for a payment. The ID of the payment and the ID of the payment type must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentId`
+|The ID of the payment
+
+|link:http://php.net/int[int^]
+a|`$typeId`
+|The ID of the history type. The following types are available:
+<ul>
+    <li>Created = 1</li>
+    <li>Status updated = 2</li>
+    <li>Assigned = 3</li>
+    <li>Detached = 4</li>
+    <li>Deleted = 5</li>
+    <li>Updated = 6</li>
+</ul>
+|===
+
+
+[source%nowrap, php]
+----
+
+public createHistory($data):Plenty\Modules\Payment\History\Models\PaymentHistory // <1>
+
+----
+
+
+    
+Creates the payment history.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_paymenthistory[PaymentHistory^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$data`
+|
+|===
+
+
+[[payment_history_models]]
+==  Models
+=== PaymentHistory
+
+The payment history model
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\History\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the payment history
+|link:http://php.net/int[int^]
+    |paymentId
+    |The ID of the payment
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the history type. The following types are available:
+<ul>
+    <li>Created = 1</li>
+    <li>Status updated = 2</li>
+    <li>Assigned = 3</li>
+    <li>Detached = 4</li>
+    <li>Deleted = 5</li>
+    <li>Updated = 6</li>
+</ul>
+|link:http://php.net/string[string^]
+    |value
+    |The value of the payment history
+|link:http://php.net/string[string^]
+    |user
+    |The user who initiated the action
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[payment_method]]
+= Method
+
+[[payment_method_contracts]]
+==  Contracts
+=== PaymentMethodContainer
+
+The payment method container
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Method\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public register($paymentKey, $paymentMethodServiceClass, $rebuildEventClassesList):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$paymentKey`
+|The unique key of a payment plugin
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$paymentMethodServiceClass`
+|The class of the payment method. This class contains information of the payment plugin, such as the name and whether the payment method is active.
+
+|link:http://php.net/array[array^]
+a|`$rebuildEventClassesList`
+|A list of events. It is checked again for the list of events whether the payment method is active.
+|===
+
+
+[source%nowrap, php]
+----
+
+public isRegistered($paymentKey):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$paymentKey`
+|
+|===
+
+
+
+=== PaymentMethodRepositoryContract
+
+The PaymentMethodRepositoryContract is the interface for the payment method repository. List, get, create and update payment methods.
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Method\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public all():array // <1>
+
+----
+
+
+    
+Lists payment methods.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public allForPlugin($pluginKey):array // <1>
+
+----
+
+
+    
+Lists payment methods for a plugin key. The plugin key must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginKey`
+|The plugin key
+|===
+
+
+[source%nowrap, php]
+----
+
+public allPluginPaymentMethods():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public allOldPaymentMethods():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public findByPaymentMethodId($paymentMethodId):Plenty\Modules\Payment\Method\Models\PaymentMethod // <1>
+
+----
+
+
+    
+Gets a payment method. The ID of the payment method must be specified.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_paymentmethod[PaymentMethod^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentMethodId`
+|The ID of the payment method
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPreviewList($language = null):array // <1>
+
+----
+
+
+    
+Get an array with all payment methods with the ID as key and the name as value.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$language`
+|The names will be returned in this language.
+|===
+
+
+[source%nowrap, php]
+----
+
+public createPaymentMethod($paymentMethodData):Plenty\Modules\Payment\Method\Models\PaymentMethod // <1>
+
+----
+
+
+    
+Creates a payment method.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_paymentmethod[PaymentMethod^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$paymentMethodData`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateName($paymentMethodData):Plenty\Modules\Payment\Method\Models\PaymentMethod // <1>
+
+----
+
+
+    
+Updates the payment method name.
+
+
+==== Return type
+    
+<1> link:payment#payment_models_paymentmethod[PaymentMethod^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$paymentMethodData`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public preparePaymentMethod($mop):array // <1>
+
+----
+
+
+    
+Prepares a payment method. The ID of the payment method must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mop`
+|The ID of the payment method
+|===
+
+
+[source%nowrap, php]
+----
+
+public executePayment($mop, $orderId):array // <1>
+
+----
+
+
+    
+Executes a payment. The ID of the payment method and the ID of the order must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mop`
+|The ID of the payment method
+
+|link:http://php.net/int[int^]
+a|`$orderId`
+|The ID of the order
+|===
+
+
+[source%nowrap, php]
+----
+
+public listBackendSearchable($lang):array // <1>
+
+----
+
+
+    
+List all payment methods which are searchable for the backend
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listBackendActive($lang):array // <1>
+
+----
+
+
+    
+List all payment methods which are active for the backend
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listBackendIcon():array // <1>
+
+----
+
+
+    
+List all payment methods backend icon
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public listCanHandleSubscriptions($lang):array // <1>
+
+----
+
+
+    
+List all payment methods which can handle subscriptions
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listAllActive($lang):array // <1>
+
+----
+
+
+    
+List all payment methods which are active
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+
+=== PaymentMethodService
+
+Deprecated: The payment method service
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Method\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public isBackendSearchable():bool // <1>
+
+----
+
+
+    
+Is this payment method searchable in the backend?
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public isBackendActive():bool // <1>
+
+----
+
+
+    
+Is this payment method active in the backend?
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public getBackendName($lang):string // <1>
+
+----
+
+
+    
+Get the backend name of the payment method
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public canHandleSubscriptions():bool // <1>
+
+----
+
+
+    
+Can this payment method handle subscriptions?
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[[payment_method_models]]
+==  Models
+=== PaymentMethod
+
+The payment method model
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Method\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the payment method
+|link:http://php.net/string[string^]
+    |pluginKey
+    |The plugin key of the payment method
+|link:http://php.net/string[string^]
+    |paymentKey
+    |The payment key of the payment method
+|link:http://php.net/string[string^]
+    |name
+    |The name of the payment method
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[payment_method_services]]
+==  Services
+=== PaymentMethodBaseService
+
+The payment method service
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Method\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public isActive():bool // <1>
+
+----
+
+
+    
+Determine if the payment method is active for the frontend
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public getName($lang = &quot;&quot;):string // <1>
+
+----
+
+
+    
+Return the frontend name of the payment method according to the language
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFee():float // <1>
+
+----
+
+
+    
+Return an additional payment fee for the payment method
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+[source%nowrap, php]
+----
+
+public getIcon($lang = &quot;&quot;):string // <1>
+
+----
+
+
+    
+Return the frontend icon of the payment method according to the language
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getDescription($lang = &quot;&quot;):string // <1>
+
+----
+
+
+    
+Return the frontend description of the payment method according to the language
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSourceUrl($lang = &quot;&quot;):string // <1>
+
+----
+
+
+    
+Return an url with additional information shown in the frontend about the payment method according to the language
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public isSwitchableTo():bool // <1>
+
+----
+
+
+    
+Check if it is allowed to switch to this payment method after the order is placed
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public isSwitchableFrom():bool // <1>
+
+----
+
+
+    
+Check if it is allowed to switch from this payment method after the order is placed
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public isBackendSearchable():bool // <1>
+
+----
+
+
+    
+Is this payment method searchable in the backend?
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public isBackendActive():bool // <1>
+
+----
+
+
+    
+Is this payment method active in the backend to used for existing orders?
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public getBackendName($lang = &quot;&quot;):string // <1>
+
+----
+
+
+    
+Get the backend name of the payment method according to the language
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public canHandleSubscriptions():bool // <1>
+
+----
+
+
+    
+Can this payment method handle subscriptions?
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public getBackendIcon():string // <1>
+
+----
+
+
+    
+Return the icon for the backend, shown in the payments ui
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[[payment_methodname]]
+= MethodName
+
+[[payment_methodname_models]]
+==  Models
+=== PaymentMethodName
+
+The payment method name model
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\MethodName\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |paymentMethodId
+    |
+|link:http://php.net/string[string^]
+    |lang
+    |
+|link:http://php.net/string[string^]
+    |name
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

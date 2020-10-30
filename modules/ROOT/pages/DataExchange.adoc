@@ -1,0 +1,2176 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[dataexchange_dataexchange]]
+= DataExchange
+
+[[dataexchange_dataexchange_contracts]]
+==  Contracts
+=== CSVGenerator
+
+generator for csv content
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public setDelimiter($delimiter):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$delimiter`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setEnclosure($enclosure):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$enclosure`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addCSVContent($data):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addBulkCSVContent($data):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addContent($content):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$content`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public generateContent($resultData, $formatSettings = []):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$resultData`
+|
+
+|link:http://php.net/array[array^]
+a|`$formatSettings`
+|
+|===
+
+
+
+=== CSVPluginGenerator
+
+generator for csv content
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public setDelimiter($delimiter):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$delimiter`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setEnclosure($enclosure):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$enclosure`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addCSVContent($data):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addBulkCSVContent($data):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addContent($content):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$content`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public generatePluginContent($resultData, $formatSettings = [], $filter = []):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$resultData`
+|
+
+|link:http://php.net/array[array^]
+a|`$formatSettings`
+|
+
+|link:http://php.net/array[array^]
+a|`$filter`
+|
+|===
+
+
+
+=== ExportRepositoryContract
+
+
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\DataExchange\Models\Export // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:dataexchange#dataexchange_models_export[Export^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($data, $exportId):Plenty\Modules\DataExchange\Models\Export // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:dataexchange#dataexchange_models_export[Export^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/int[int^]
+a|`$exportId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($exportId):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$exportId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public search($params = [], $with = [], $columns = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$params`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public findById($exportId, $with = []):Plenty\Modules\DataExchange\Models\Export // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:dataexchange#dataexchange_models_export[Export^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$exportId`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+
+=== Filters
+
+Filters
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public generateFilters($formatSettings = []):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$formatSettings`
+|
+|===
+
+
+
+=== Generator
+
+Generator
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public addContent($content):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$content`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public generateContent($resultData, $formatSettings = []):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$resultData`
+|
+
+|link:http://php.net/array[array^]
+a|`$formatSettings`
+|
+|===
+
+
+
+=== Output
+
+Output
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public out($resource, $outputParams = [], $export = null):void // <1>
+
+----
+
+
+    
+process export output
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$resource`
+|filename to ressource
+
+|link:http://php.net/array[array^]
+a|`$outputParams`
+|
+
+|link:dataexchange#dataexchange_models_export[Export^]
+
+a|`$export`
+|
+|===
+
+
+
+=== PluginGenerator
+
+PluginGenerator
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public addContent($content):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$content`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public generatePluginContent($resultData, $formatSettings = [], $filter = []):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$resultData`
+|
+
+|link:http://php.net/array[array^]
+a|`$formatSettings`
+|
+
+|link:http://php.net/array[array^]
+a|`$filter`
+|
+|===
+
+
+
+=== ResultFields
+
+ResultFields
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public generateResultFields($formatSettings = []):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$formatSettings`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setGroupByList($groupByList):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$groupByList`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setOrderByList($orderByList):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$orderByList`
+|
+|===
+
+
+
+=== XMLGenerator
+
+generator for xml content
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:miscellaneous#miscellaneous__[^]
+
+    |version
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |encoding
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |formatOutput
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |preserveWhiteSpace
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public init($rootName):void // <1>
+
+----
+
+
+    
+Initializes the xml document and the root element.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$rootName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public root():\DOMElement // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__domelement[DOMElement^]
+
+    
+
+[source%nowrap, php]
+----
+
+public build():void // <1>
+
+----
+
+
+    
+Build the XML.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public createElement($name, $value = null):\DOMElement // <1>
+
+----
+
+
+    
+Create an XML element.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__domelement[DOMElement^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createCDATASection($data):\DOMCdataSection // <1>
+
+----
+
+
+    
+Create a CDATA section.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__domcdatasection[DOMCdataSection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createAttribute($name, $value = null):\DOMAttr // <1>
+
+----
+
+
+    
+Create an XML attribute.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__domattr[DOMAttr^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createTextNode($content):\DOMText // <1>
+
+----
+
+
+    
+Create new text node.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__domtext[DOMText^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$content`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addContent($content):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$content`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public generateContent($resultData, $formatSettings = []):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$resultData`
+|
+
+|link:http://php.net/array[array^]
+a|`$formatSettings`
+|
+|===
+
+
+
+=== XMLPluginGenerator
+
+generator for xml content
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Contracts`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:miscellaneous#miscellaneous__[^]
+
+    |version
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |encoding
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |formatOutput
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |preserveWhiteSpace
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public init($rootName):void // <1>
+
+----
+
+
+    
+Initializes the xml document and the root element.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$rootName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public root():\DOMElement // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__domelement[DOMElement^]
+
+    
+
+[source%nowrap, php]
+----
+
+public build():void // <1>
+
+----
+
+
+    
+Build the XML.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public createElement($name, $value = null):\DOMElement // <1>
+
+----
+
+
+    
+Create an XML element.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__domelement[DOMElement^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createCDATASection($data):\DOMCdataSection // <1>
+
+----
+
+
+    
+Create a CDATA section.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__domcdatasection[DOMCdataSection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createAttribute($name, $value = null):\DOMAttr // <1>
+
+----
+
+
+    
+Create an XML attribute.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__domattr[DOMAttr^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createTextNode($content):\DOMText // <1>
+
+----
+
+
+    
+Create new text node.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__domtext[DOMText^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$content`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addContent($content):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$content`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public generatePluginContent($resultData, $formatSettings = [], $filter = []):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$resultData`
+|
+
+|link:http://php.net/array[array^]
+a|`$formatSettings`
+|
+
+|link:http://php.net/array[array^]
+a|`$filter`
+|
+|===
+
+
+[[dataexchange_dataexchange_models]]
+==  Models
+=== Export
+
+Export model
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |export id
+|link:http://php.net/string[string^]
+    |name
+    |export name
+|link:http://php.net/string[string^]
+    |type
+    |export type
+|link:http://php.net/int[int^]
+    |limit
+    |maximum number of entries
+|link:http://php.net/string[string^]
+    |createdAt
+    |created at date timestamp
+|link:http://php.net/string[string^]
+    |updatedAt
+    |last update date timestamp
+|link:http://php.net/string[string^]
+    |formatKey
+    |the format key
+|link:http://php.net/string[string^]
+    |outputType
+    |the output type
+|link:http://php.net/int[int^]
+    |generateCache
+    |if cache should be generated
+|link:http://php.net/array[array^]
+    |filters
+    |list of filters defined by backend users
+|link:http://php.net/array[array^]
+    |outputParams
+    |list of output params
+|link:http://php.net/array[array^]
+    |formatSettings
+    |list of format settings
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== Filter
+
+export filter
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |filter id
+|link:http://php.net/string[string^]
+    |createdAt
+    |created at date timestamp
+|link:http://php.net/string[string^]
+    |updatedAt
+    |last update date timestamp
+|link:http://php.net/int[int^]
+    |exportId
+    |depending export id
+|link:http://php.net/string[string^]
+    |key
+    |filter key
+|link:http://php.net/string[string^]
+    |value
+    |filter value
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FormatSetting
+
+format setting
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |format setting id
+|link:http://php.net/string[string^]
+    |createdAt
+    |created at date timestamp
+|link:http://php.net/string[string^]
+    |updatedAt
+    |last update date timestamp
+|link:http://php.net/int[int^]
+    |exportId
+    |depending export id
+|link:http://php.net/string[string^]
+    |key
+    |format setting key
+|link:http://php.net/string[string^]
+    |value
+    |format setting value
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== OutputParam
+
+output params
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |output param id
+|link:http://php.net/string[string^]
+    |createdAt
+    |created at date timestamp
+|link:http://php.net/string[string^]
+    |updatedAt
+    |last update date timestamp
+|link:http://php.net/int[int^]
+    |exportId
+    |depending export id
+|link:http://php.net/string[string^]
+    |key
+    |output param key
+|link:http://php.net/string[string^]
+    |value
+    |output param value
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[dataexchange_dataexchange_services]]
+==  Services
+=== ExportPresetContainer
+
+Register export presets
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public add($exportKey, $resultFieldsClass, $generatorClass, $filterClass = &quot;&quot;, $isPlugin = false, $generatorExecute = false, $exportType = &quot;item&quot;, $restrictRows = true):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$exportKey`
+|
+
+|link:http://php.net/string[string^]
+a|`$resultFieldsClass`
+|
+
+|link:http://php.net/string[string^]
+a|`$generatorClass`
+|
+
+|link:http://php.net/string[string^]
+a|`$filterClass`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$isPlugin`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$generatorExecute`
+|
+
+|link:http://php.net/string[string^]
+a|`$exportType`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$restrictRows`
+|
+|===
+
+
+[[dataexchange_resource]]
+= Resource
+
+[[dataexchange_resource_contracts]]
+==  Contracts
+=== ResourceLoaderContract
+
+Repository Contract for ResourceLoader
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Resource\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getResource($sourceOptions):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$sourceOptions`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getResourceBag($sourceOptions):Plenty\Modules\DataExchange\Resource\Models\ResourceBag // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:dataexchange#dataexchange_models_resourcebag[ResourceBag^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$sourceOptions`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public validateSourceOptions($sourceOptions):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$sourceOptions`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public archiveFile($sourceOptions):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$sourceOptions`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getLoaderType():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+
+=== ResourceParserContract
+
+Repository Contract for ResourceParser
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Resource\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public next($resource, $parseOptions):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$resource`
+|
+
+|link:http://php.net/array[array^]
+a|`$parseOptions`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getParserType():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[[dataexchange_resource_factories]]
+==  Factories
+=== ResourceLoaderFactory
+
+
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Resource\Factories`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getResourceLoaderByType($type):Plenty\Modules\DataExchange\Resource\Contracts\ResourceLoaderContract // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:dataexchange#dataexchange_contracts_resourceloadercontract[ResourceLoaderContract^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addLoader($loader):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:dataexchange#dataexchange_contracts_resourceloadercontract[ResourceLoaderContract^]
+
+a|`$loader`
+|
+|===
+
+
+
+=== ResourceParserFactory
+
+
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Resource\Factories`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getResourceParserByType($type):Plenty\Modules\DataExchange\Resource\Contracts\ResourceParserContract // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:dataexchange#dataexchange_contracts_resourceparsercontract[ResourceParserContract^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addParser($parser):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:dataexchange#dataexchange_contracts_resourceparsercontract[ResourceParserContract^]
+
+a|`$parser`
+|
+|===
+
+
+[[dataexchange_resource_models]]
+==  Models
+=== ResourceBag
+
+ResourceBag
+
+
+==== Namespace
+
+`Plenty\Modules\DataExchange\Resource\Models`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getResource():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getMd5():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+

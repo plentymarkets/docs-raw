@@ -1,0 +1,1671 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[feedback_feedback]]
+= Feedback
+
+[[feedback_feedback_contracts]]
+==  Contracts
+=== FeedbackAverageRepositoryContract
+
+Get the feedback average.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getFeedbackAverage($feedbackRelationTargetId):void // <1>
+
+----
+
+
+    
+Gets the feedback average
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$feedbackRelationTargetId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== FeedbackCommentRepositoryContract
+
+Get, create and delete feedback comments.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getFeedbackComment($feedbackCommentId):Plenty\Modules\Feedback\Models\FeedbackComment // <1>
+
+----
+
+
+    
+Get a feedback comment
+
+
+==== Return type
+    
+<1> link:feedback#feedback_models_feedbackcomment[FeedbackComment^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$feedbackCommentId`
+|The ID of the feedback comment
+|===
+
+
+[source%nowrap, php]
+----
+
+public listFeedbackComments():Illuminate\Support\Collection // <1>
+
+----
+
+
+    
+List feedback comments
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    
+
+[source%nowrap, php]
+----
+
+public createFeedbackComment($data):Plenty\Modules\Feedback\Models\FeedbackComment // <1>
+
+----
+
+
+    
+Create a feedback comment
+
+
+==== Return type
+    
+<1> link:feedback#feedback_models_feedbackcomment[FeedbackComment^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteFeedbackComment($feedbackCommentId):void // <1>
+
+----
+
+
+    
+Delete a feedback comment
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$feedbackCommentId`
+|The ID of the feedback comment
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== FeedbackRatingRepositoryContract
+
+Get, create and delete feedback ratings.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getFeedbackRating($feedbackRatingId):Plenty\Modules\Feedback\Models\FeedbackRating // <1>
+
+----
+
+
+    
+Get a feedback rating
+
+
+==== Return type
+    
+<1> link:feedback#feedback_models_feedbackrating[FeedbackRating^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$feedbackRatingId`
+|The ID of the feedback rating
+|===
+
+
+[source%nowrap, php]
+----
+
+public listFeedbackRatings():Illuminate\Support\Collection // <1>
+
+----
+
+
+    
+List feedback ratings
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    
+
+[source%nowrap, php]
+----
+
+public createFeedbackRating($data):Plenty\Modules\Feedback\Models\FeedbackRating // <1>
+
+----
+
+
+    
+Create a feedback rating
+
+
+==== Return type
+    
+<1> link:feedback#feedback_models_feedbackrating[FeedbackRating^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteFeedbackRating($feedbackRatingId):void // <1>
+
+----
+
+
+    
+Delete a feedback rating
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$feedbackRatingId`
+|The ID of the feedback rating
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== FeedbackRepositoryContract
+
+Get, create and delete feedbacks.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getFeedback($feedbackId):void // <1>
+
+----
+
+
+    
+Get a feedback
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$feedbackId`
+|The ID of the feedback
+|===
+
+
+[source%nowrap, php]
+----
+
+public listFeedbacks($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createFeedback($data):void // <1>
+
+----
+
+
+    
+Create a feedback
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteFeedback($feedbackId):void // <1>
+
+----
+
+
+    
+Delete a feedback
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$feedbackId`
+|The ID of the feedback
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateFeedback($data, $feedbackId):void // <1>
+
+----
+
+
+    
+Update a feedback
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|Request data
+
+|link:http://php.net/int[int^]
+a|`$feedbackId`
+|The ID of the feedback
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateFeedbacksVisibility($feedbackIds, $isVisible):void // <1>
+
+----
+
+
+    
+Update the visibility of multiple feedbacks
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$feedbackIds`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$isVisible`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteFeedbacks($feedbackIds):void // <1>
+
+----
+
+
+    
+Delete multiple feedbacks
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$feedbackIds`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listFeedbackReplies($feedbackId, $page = 1, $itemsPerPage = 50, $with = [], $filters = []):void // <1>
+
+----
+
+
+    
+Lists feedback replies
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$feedbackId`
+|
+
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public migrateLegacyFeedbacks():void // <1>
+
+----
+
+
+    
+Migrate legacy feedbacks
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[feedback_feedback_models]]
+==  Models
+=== Feedback
+
+The feedback model.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the feedback
+|link:http://php.net/string[string^]
+    |title
+    |The title of the feedback
+|link:http://php.net/string[string^]
+    |authorName
+    |The name of the feedback's author
+|link:http://php.net/bool[bool^]
+    |isVisible
+    |If true, the feedback is visible
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the feedback was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the feedback was last updated
+|link:feedback#feedback_models_feedbacksourcerelation[FeedbackSourceRelation^]
+
+    |sourceRelation
+    |The feedback source relation
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FeedbackAverage
+
+The feedback average model.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the feedback average
+|link:http://php.net/string[string^]
+    |feedbackRelationType
+    |The feedback relation type
+|link:http://php.net/int[int^]
+    |feedbackRelationTargetId
+    |The feedback relation target ID
+|link:http://php.net/float[float^]
+    |averageValue
+    |The average value of the feedback
+|link:http://php.net/int[int^]
+    |ratingsCountTotal
+    |The total count of ratings for this target
+|link:http://php.net/int[int^]
+    |ratingsCountOf1
+    |Number of ratings of 1 for this target
+|link:http://php.net/int[int^]
+    |ratingsCountOf2
+    |Number of ratings of 2 for this target
+|link:http://php.net/int[int^]
+    |ratingsCountOf3
+    |Number of ratings of 3 for this target
+|link:http://php.net/int[int^]
+    |ratingsCountOf4
+    |Number of ratings of 4 for this target
+|link:http://php.net/int[int^]
+    |ratingsCountOf5
+    |Number of ratings of 5 for this target
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the feedback average was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the feedback average was last updated
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FeedbackComment
+
+The feedback comment model.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the comment
+|link:http://php.net/string[string^]
+    |message
+    |The message of the comment
+|link:http://php.net/bool[bool^]
+    |isVisible
+    |If true, the comment is visible
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the feedback relation type name was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the feedback relation type name was last updated
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FeedbackCommentSourceRelation
+
+The feedback comment source relation model.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |commentId
+    |The ID of the feedback comment
+|link:http://php.net/string[string^]
+    |commentRelationType
+    |The relation comment relation type
+|link:http://php.net/int[int^]
+    |commentRelationSourceId
+    |The relation comment relation source ID
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FeedbackCommentTargetRelation
+
+The feedback comment target relation model.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |commentId
+    |The ID of the feedback comment
+|link:http://php.net/string[string^]
+    |commentRelationType
+    |The relation comment relation type
+|link:http://php.net/int[int^]
+    |commentRelationTargetId
+    |The relation comment relation target ID
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FeedbackLegacy
+
+The feedback legacy model.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |feedbackId
+    |The ID of the new feedback
+|link:http://php.net/int[int^]
+    |legacyFeedbackId
+    |The ID of the legacy feedback
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the legacy feedback was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the legacy feedback was last updated
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FeedbackRating
+
+The feedback rating model.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the rating
+|link:http://php.net/string[string^]
+    |ratingValue
+    |The value of the rating
+|link:http://php.net/bool[bool^]
+    |isVisible
+    |If true, the rating is visible
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the feedback rating relation type name was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the feedback rating relation type name was last updated
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FeedbackRatingAverage
+
+The feedback rating average model.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the feedback rating average
+|link:http://php.net/string[string^]
+    |ratingRelationType
+    |The feedback rating relation type
+|link:http://php.net/int[int^]
+    |ratingRelationTargetId
+    |The feedback rating relation target ID
+|link:http://php.net/float[float^]
+    |averageValue
+    |The average value of the feedback rating
+|link:http://php.net/int[int^]
+    |averageCount
+    |The average count of the feedback rating
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the feedback rating average was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the feedback rating average was last updated
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FeedbackRatingSourceRelation
+
+The feedback rating source relation model.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |ratingId
+    |The ID of the feedback rating
+|link:http://php.net/string[string^]
+    |ratingRelationType
+    |The rating relation type
+|link:http://php.net/int[int^]
+    |ratingRelationSourceId
+    |The rating relation source ID
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FeedbackRatingTargetRelation
+
+The feedback rating target relation model.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |ratingId
+    |The ID of the feedback rating
+|link:http://php.net/string[string^]
+    |ratingRelationType
+    |The relation rating relation type
+|link:http://php.net/int[int^]
+    |ratingRelationTargetId
+    |The relation rating relation target ID
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FeedbackSourceRelation
+
+The feedback source relation model.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |feedbackId
+    |The ID of the feedback
+|link:http://php.net/string[string^]
+    |feedbackRelationType
+    |The relation type
+|link:http://php.net/int[int^]
+    |feedbackRelationSourceId
+    |The relation source ID
+|link:http://php.net/string[string^]
+    |sourceRelationLabel
+    |The source relation label
+|link:http://php.net/string[string^]
+    |sourceRelationTypeLabel
+    |The source relation type label
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FeedbackTargetRelation
+
+The feedback target relation model.
+
+
+==== Namespace
+
+`Plenty\Modules\Feedback\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |feedbackId
+    |The ID of the feedback
+|link:http://php.net/string[string^]
+    |feedbackRelationType
+    |The relation type
+|link:http://php.net/int[int^]
+    |feedbackRelationSourceId
+    |The relation source ID
+|link:http://php.net/string[string^]
+    |targetRelationLabel
+    |The target relation label
+|link:http://php.net/string[string^]
+    |targetRelationName
+    |The target relation name
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

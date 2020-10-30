@@ -1,0 +1,1478 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[board_board]]
+= Board
+
+[[board_board_contracts]]
+==  Contracts
+=== BoardColumnRepositoryContract
+
+The BoardColumnRepositoryContract is the interface for the board column repository. This interface provides methods to access, create, update or delete columns.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public list($boardId):Illuminate\Support\Collection // <1>
+
+----
+
+
+    
+Lists all columns assigned to a specific board.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board to get columns for
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($boardId, $data):Plenty\Modules\Board\Models\BoardColumn // <1>
+
+----
+
+
+    
+Creates a new column and assigns it to a specific board.
+
+
+==== Return type
+    
+<1> link:board#board_models_boardcolumn[BoardColumn^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board to assign the new column to
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The data of the new column
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardColumn // <1>
+
+----
+
+
+    
+Updates a specific column.
+
+
+==== Return type
+    
+<1> link:board#board_models_boardcolumn[BoardColumn^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board the column belongs to
+
+|link:http://php.net/string[string^]
+a|`$columnId`
+|The ID of the column to be updated
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The data to assign to the specified column
+|===
+
+
+[source%nowrap, php]
+----
+
+public copy($boardId, $columnId):Plenty\Modules\Board\Models\BoardColumn // <1>
+
+----
+
+
+    
+Copies a column and all its tasks.
+
+
+==== Return type
+    
+<1> link:board#board_models_boardcolumn[BoardColumn^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board the column belongs to
+
+|link:http://php.net/string[string^]
+a|`$columnId`
+|The ID of the column to be copied
+|===
+
+
+[source%nowrap, php]
+----
+
+public updatePosition($boardId, $columnId, $newPosition):bool // <1>
+
+----
+
+
+    
+Updates the position of a specified column. This will update the position of all affected columns on the same board too.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board the column belongs to
+
+|link:http://php.net/string[string^]
+a|`$columnId`
+|The ID of the column to update the position for
+
+|link:http://php.net/int[int^]
+a|`$newPosition`
+|The new position
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($boardId, $columnId):bool // <1>
+
+----
+
+
+    
+Deletes a specific column.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board the column belongs to
+
+|link:http://php.net/string[string^]
+a|`$columnId`
+|The ID of the column to be deleted
+|===
+
+
+
+=== BoardRepositoryContract
+
+The BoardRepositoryContract is the interface for the board repository. This interface provides all methods to access, create, update or delete boards.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public list($columns = []):Illuminate\Database\Eloquent\Collection // <1>
+
+----
+
+
+    
+Lists all boards.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|Fields to load for each board
+|===
+
+
+[source%nowrap, php]
+----
+
+public get($boardId, $tasksPerPage = 20):Plenty\Modules\Board\Models\Board // <1>
+
+----
+
+
+    
+Returns a single board.
+
+
+==== Return type
+    
+<1> link:board#board_models_board[Board^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board to get
+
+|link:http://php.net/int[int^]
+a|`$tasksPerPage`
+|The maximum number of tasks to load for each column
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Board\Models\Board // <1>
+
+----
+
+
+    
+Creates a new board.
+
+
+==== Return type
+    
+<1> link:board#board_models_board[Board^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The data of the new board
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($boardId, $data):Plenty\Modules\Board\Models\Board // <1>
+
+----
+
+
+    
+Updates a board.
+
+
+==== Return type
+    
+<1> link:board#board_models_board[Board^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board to be updated
+
+|link:http://php.net/array[array^]
+a|`$data`
+|New data to be assigned to the board if it exists
+|===
+
+
+[source%nowrap, php]
+----
+
+public copy($boardId):Plenty\Modules\Board\Models\Board // <1>
+
+----
+
+
+    
+Copies a board and all its columns.
+
+
+==== Return type
+    
+<1> link:board#board_models_board[Board^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board to be copied
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateTasksCount($boardId):bool // <1>
+
+----
+
+
+    
+Updates the tasks count value.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board to update the tasks count
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($boardId):bool // <1>
+
+----
+
+
+    
+Deletes a board. Returns `true` if the deletion was successful.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board to be deleted
+|===
+
+
+
+=== BoardTaskReferenceRepositoryContract
+
+The BoardTaskReferenceRepositoryContract is the interface for the board task reference repository. This interface provides methods to create or delete references from tasks to contacts or tickets.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public create($taskId, $referenceValue):Plenty\Modules\Board\Models\BoardTaskReference // <1>
+
+----
+
+
+    
+Creates a new reference to a given task. A reference may either point to a contact or to a ticket.
+
+
+==== Return type
+    
+<1> link:board#board_models_boardtaskreference[BoardTaskReference^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$taskId`
+|The ID of the task to create a reference for
+
+|link:http://php.net/string[string^]
+a|`$referenceValue`
+|Reference type followed by foreign ID of the referenced object. Syntax: TYPE-ID Example: user-123456 Types: user,ticket,contact,order,item
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($referenceId):bool // <1>
+
+----
+
+
+    
+Deletes a specific reference.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$referenceId`
+|The ID of the reference
+|===
+
+
+[source%nowrap, php]
+----
+
+public checkReferenceKey($referenceType, $referenceKey):bool // <1>
+
+----
+
+
+    
+Checks whether the reference key for the given reference type exists or not.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$referenceType`
+|The reference type (one of 'contact', 'order', 'item', 'ticket' or 'user')
+
+|link:http://php.net/int[int^]
+a|`$referenceKey`
+|The ID of the corresponding reference type
+|===
+
+
+
+=== BoardTaskRepositoryContract
+
+The BoardTaskRepositoryContract is the interface for the board task repository. This interface provides methods to access, create, update or delete tasks.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public list($columnId, $startAt, $tasksPerPage = 20, $columns = []):Illuminate\Database\Eloquent\Collection // <1>
+
+----
+
+
+    
+Lists tasks for a specific column. Will return at most 20 tasks starting at defined task.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$columnId`
+|The ID of the column to get tasks for
+
+|link:http://php.net/int[int^]
+a|`$startAt`
+|The position of a task to start listing at
+
+|link:http://php.net/int[int^]
+a|`$tasksPerPage`
+|The number of tasks to get per page
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|Fields to load for each task
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardTask // <1>
+
+----
+
+
+    
+Creates a new task and assigns it to a specified column.
+
+
+==== Return type
+    
+<1> link:board#board_models_boardtask[BoardTask^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board the column belongs to
+
+|link:http://php.net/string[string^]
+a|`$columnId`
+|The ID of the column to assign the created task to
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The data of the new task
+|===
+
+
+[source%nowrap, php]
+----
+
+public copy($boardId, $columnId, $taskId):Plenty\Modules\Board\Models\BoardTask // <1>
+
+----
+
+
+    
+Copies the task with all references.
+
+
+==== Return type
+    
+<1> link:board#board_models_boardtask[BoardTask^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board the column belongs to
+
+|link:http://php.net/string[string^]
+a|`$columnId`
+|The ID of the column to assign the copied task to
+
+|link:http://php.net/string[string^]
+a|`$taskId`
+|The ID of the task to be copied
+|===
+
+
+[source%nowrap, php]
+----
+
+public get($taskId):Plenty\Modules\Board\Models\BoardTask // <1>
+
+----
+
+
+    
+Returns a task for a given ID.
+
+
+==== Return type
+    
+<1> link:board#board_models_boardtask[BoardTask^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$taskId`
+|The ID of the task
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($boardId, $columnId, $taskId, $data):Plenty\Modules\Board\Models\BoardTask // <1>
+
+----
+
+
+    
+Updates a specified task.
+
+
+==== Return type
+    
+<1> link:board#board_models_boardtask[BoardTask^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board the column belongs to
+
+|link:http://php.net/string[string^]
+a|`$columnId`
+|The ID of the column the task belongs to
+
+|link:http://php.net/string[string^]
+a|`$taskId`
+|The ID of the task to be updated
+
+|link:http://php.net/array[array^]
+a|`$data`
+|Data to set at the task
+|===
+
+
+[source%nowrap, php]
+----
+
+public addReference($boardTaskReference):bool // <1>
+
+----
+
+
+    
+Adds a task reference to a task object.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:board#board_models_boardtaskreference[BoardTaskReference^]
+
+a|`$boardTaskReference`
+|The board task reference
+|===
+
+
+[source%nowrap, php]
+----
+
+public removeReference($boardTaskReference):bool // <1>
+
+----
+
+
+    
+Removes a task reference from a task object.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:board#board_models_boardtaskreference[BoardTaskReference^]
+
+a|`$boardTaskReference`
+|The board task reference
+|===
+
+
+[source%nowrap, php]
+----
+
+public updatePosition($taskId, $newColumnId, $newPosition):int // <1>
+
+----
+
+
+    
+Updates the position of a specified task. Will also update the position of all following tasks in the same column.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$taskId`
+|The ID of the task to update the position for
+
+|link:http://php.net/string[string^]
+a|`$newColumnId`
+|The ID of the column the task now belongs to
+
+|link:http://php.net/int[int^]
+a|`$newPosition`
+|The new position
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($taskId):bool // <1>
+
+----
+
+
+    
+Deletes a specified task.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$taskId`
+|The ID of the task to be deleted
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteByColumn($boardId, $columnId):bool // <1>
+
+----
+
+
+    
+Deletes all tasks of a column.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board the column belongs to
+
+|link:http://php.net/string[string^]
+a|`$columnId`
+|The ID of the column the task belongs to
+|===
+
+
+[source%nowrap, php]
+----
+
+public allByColumnId($columnId, $referenceValue = null, $columns = []):void // <1>
+
+----
+
+
+    
+Gets all tasks for the given column ID having a reference with the given reference value.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$columnId`
+|The ID of the column
+
+|link:http://php.net/string[string^]
+a|`$referenceValue`
+|The reference value that has to be contained in the task. Can be NULL.
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The attributes of the task to load
+|===
+
+
+[source%nowrap, php]
+----
+
+public allByBoardId($boardId, $referenceValue = null, $columns = []):void // <1>
+
+----
+
+
+    
+Gets all tasks for the given column ID having a reference with the given reference value.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$boardId`
+|The ID of the board
+
+|link:http://php.net/string[string^]
+a|`$referenceValue`
+|The reference value that has to be contained in the task. Can be NULL.
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The attributes of the task to load
+|===
+
+
+[[board_board_events]]
+==  Events
+=== AfterBoardColumnTasksDeleted
+
+This event will be triggered, after all tasks of a column were deleted.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBoardId():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getColumnId():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getDeletedTaskIdList():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+
+=== AfterBoardTaskCreated
+
+This event will be triggered, when a board task was created.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBoardTask():Plenty\Modules\Board\Models\BoardTask // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:board#board_models_boardtask[BoardTask^]
+
+    
+
+
+=== AfterBoardTaskDeleted
+
+This event will be triggered, when a single board task was deleted. It won&#039;t be triggered, if a board column was deleted.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBoardTask():Plenty\Modules\Board\Models\BoardTask // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:board#board_models_boardtask[BoardTask^]
+
+    
+
+
+=== AfterBoardTaskReferenceCreated
+
+This event will be triggered, after a task reference was created.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:board#board_models_boardtaskreference[BoardTaskReference^]
+
+    
+
+
+=== AfterBoardTaskReferenceDeleted
+
+This event will be triggered, after a task reference was deleted.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:board#board_models_boardtaskreference[BoardTaskReference^]
+
+    
+
+
+=== BeforeBoardColumnDeleted
+
+This event will be triggered, before a board column will be deleted.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBoard():Plenty\Modules\Board\Models\Board // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:board#board_models_board[Board^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getColumnId():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+
+=== BeforeBoardDeleted
+
+This event will be triggered, before a board will be deleted.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBoard():Plenty\Modules\Board\Models\Board // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:board#board_models_board[Board^]
+
+    
+
+
+=== BeforeBoardTaskDeleted
+
+This event will be triggered, before a single board task was deleted. It won&#039;t be triggered, if a board column will be deleted.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBoardTask():Plenty\Modules\Board\Models\BoardTask // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:board#board_models_boardtask[BoardTask^]
+
+    
+
+[[board_board_models]]
+==  Models
+=== Board
+
+The board model.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |id
+    |The ID of the board
+|link:http://php.net/string[string^]
+    |boardName
+    |The name of the board
+|link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    |boardColumns
+    |The columns of the board
+|link:http://php.net/int[int^]
+    |columnsCount
+    |The number of columns
+|link:http://php.net/int[int^]
+    |tasksCount
+    |The number of tasks
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== BoardColumn
+
+The board column model.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |id
+    |The ID of the board column
+|link:http://php.net/string[string^]
+    |boardId
+    |The ID of the board
+|link:http://php.net/string[string^]
+    |columnName
+    |The name of the column
+|link:http://php.net/int[int^]
+    |position
+    |The position
+|link:miscellaneous#miscellaneous__[^]
+
+    |tasks
+    |The tasks
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== BoardTask
+
+The board task model.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |id
+    |The ID of the board task
+|link:http://php.net/string[string^]
+    |taskName
+    |The name of the task
+|link:http://php.net/string[string^]
+    |description
+    |The description of the task
+|link:http://php.net/int[int^]
+    |position
+    |The position of the task
+|link:http://php.net/string[string^]
+    |columnId
+    |The ID of the column
+|link:http://php.net/string[string^]
+    |boardId
+    |The ID of the board
+|link:miscellaneous#miscellaneous__[^]
+
+    |tags
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |references
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== BoardTaskReference
+
+The task reference model.
+
+
+==== Namespace
+
+`Plenty\Modules\Board\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |id
+    |The ID of the board task reference
+|link:http://php.net/string[string^]
+    |taskId
+    |The ID of the task to create a reference for
+|link:http://php.net/string[string^]
+    |referenceValue
+    |Reference type followed by foreign ID of the referenced object. Syntax: TYPE-ID Example: user-123456 Types: user,ticket,contact,order,item
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

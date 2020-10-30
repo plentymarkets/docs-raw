@@ -1,0 +1,1472 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[wizard_wizard]]
+= Wizard
+
+[[wizard_wizard_contracts]]
+==  Contracts
+=== WizardActionHandler
+
+This interface provides a template for an action handler for Wizards
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Contracts`
+
+
+
+
+
+
+=== WizardContainerContract
+
+This interface provides methods to register, get and list all wizards.
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public register($wizardKey, $wizard):void // <1>
+
+----
+
+
+    
+Register a wizard
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$wizardKey`
+|
+
+|link:http://php.net/string[string^]
+a|`$wizard`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public registerFolders($folderClass):void // <1>
+
+----
+
+
+    
+Register a wizard folder
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$folderClass`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public get($wizardKey, $skipTranslation = false):Plenty\Modules\Wizard\Models\Wizard // <1>
+
+----
+
+
+    
+Get a single wizard by its key
+
+
+==== Return type
+    
+<1> link:wizard#wizard_models_wizard[Wizard^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$wizardKey`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$skipTranslation`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public all():array // <1>
+
+----
+
+
+    
+List all wizards class names
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public folders($hierarchy = false):array // <1>
+
+----
+
+
+    
+List all wizard folders
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$hierarchy`
+|
+|===
+
+
+
+=== WizardDataModifier
+
+This interface provides methods to modify wizard data.
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public modify($parameters):void // <1>
+
+----
+
+
+    
+Modify a wizard data for a step
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$parameters`
+|
+|===
+
+
+
+=== WizardDataRepositoryContract
+
+This interface provides methods to create, get, list, update and delete wizard data
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public create($wizardKey, $steps = []):void // <1>
+
+----
+
+
+    
+Creates a new WizardData.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$wizardKey`
+|
+
+|link:http://php.net/array[array^]
+a|`$steps`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createDataOption($wizardKey, $data = [], $optionId = &quot;default&quot;):void // <1>
+
+----
+
+
+    
+Creates a new WizardData option
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$wizardKey`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/string[string^]
+a|`$optionId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public get($wizardKey):void // <1>
+
+----
+
+
+    
+Get a single WizardData by its ID
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$wizardKey`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getByOptionId($wizardKey, $optionId = &quot;default&quot;):void // <1>
+
+----
+
+
+    
+Get a single WizardData for an option ID
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$wizardKey`
+|
+
+|link:http://php.net/string[string^]
+a|`$optionId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public findByWizardKey($wizardKey):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$wizardKey`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public list($page = 1, $itemsPerPage = 50, $filters = []):array // <1>
+
+----
+
+
+    
+List all WizardData for current plenty ID.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($wizardKey, $properties):void // <1>
+
+----
+
+
+    
+Update data for a WizardData
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$wizardKey`
+|
+
+|link:http://php.net/array[array^]
+a|`$properties`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateDataOption($wizardKey, $optionId, $data, $stepKey, $skipValidation = false):void // <1>
+
+----
+
+
+    
+Update data for a WizardData option
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$wizardKey`
+|
+
+|link:http://php.net/string[string^]
+a|`$optionId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/string[string^]
+a|`$stepKey`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$skipValidation`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($wizardKey):void // <1>
+
+----
+
+
+    
+Delete a single WizardData by its ID
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$wizardKey`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteDataOption($wizardKey, $optionId):void // <1>
+
+----
+
+
+    
+Delete a single WizardData by its ID
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$wizardKey`
+|
+
+|link:http://php.net/string[string^]
+a|`$optionId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public finalize($wizardKey, $optionId = &quot;default&quot;, $data = []):void // <1>
+
+----
+
+
+    
+Finalize wizard
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$wizardKey`
+|
+
+|link:http://php.net/string[string^]
+a|`$optionId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== WizardDynamicLoader
+
+This interface provides methods to dynamically load data in the wizard ui.
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Contracts`
+
+
+
+
+
+
+=== WizardRepositoryContract
+
+This interface provides methods to get and list wizards.
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Contracts`
+
+
+
+
+
+
+=== WizardSettingsHandler
+
+This interface provides methods to handle final wizard data.
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public handle($parameters):bool // <1>
+
+----
+
+
+    
+Handle wizard data for a finalized wizard
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$parameters`
+|
+|===
+
+
+[[wizard_wizard_models]]
+==  Models
+=== Wizard
+
+The wizard model.
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |title
+    |The title
+|link:http://php.net/string[string^]
+    |key
+    |The wizard's key
+|link:http://php.net/string[string^]
+    |settingsHandlerClass
+    |Settings handler
+|link:http://php.net/string[string^]
+    |shortDescription
+    |The short description
+|link:http://php.net/string[string^]
+    |translationKey
+    |The translation key
+|link:http://php.net/string[string^]
+    |deleteConfirmationText
+    |Delete confirmation Text in deletion overlay
+|link:http://php.net/array[array^]
+    |topics
+    |The topics
+|link:http://php.net/array[array^]
+    |steps
+    |Wizard's structure
+|link:http://php.net/int[int^]
+    |priority
+    |Wizard's listing priority in the overview
+|link:http://php.net/string[string^]
+    |relevance
+    |Wizard's level of relevance
+|link:http://php.net/array[array^]
+    |keywords
+    |Keywords describing the wizard
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== WizardData
+
+The wizard data model.
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |uuid
+    |
+|link:http://php.net/string[string^]
+    |plentyIdHash
+    |
+|link:http://php.net/string[string^]
+    |wizardKey
+    |
+|link:http://php.net/array[array^]
+    |data
+    |
+|link:http://php.net/array[array^]
+    |steps
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== WizardFolder
+
+The wizard folder.
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |name
+    |The name
+|link:http://php.net/int[int^]
+    |priority
+    |The priority
+|link:http://php.net/string[string^]
+    |shortDescription
+    |The short description
+|link:http://php.net/string[string^]
+    |parent
+    |The parent
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== WizardFormOption
+
+The wizard form option.
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |name
+    |The name
+|link:http://php.net/string[string^]
+    |placeholder
+    |The placeholder
+|link:http://php.net/string[string^]
+    |caption
+    |The caption. Only for checkboxValues.
+|link:http://php.net/string[string^]
+    |label
+    |The label
+|link:http://php.net/string[string^]
+    |tooltip
+    |The tooltip
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== WizardSection
+
+The wizard step section model.
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |title
+    |The title
+|link:http://php.net/string[string^]
+    |description
+    |The description
+|link:http://php.net/array[array^]
+    |form
+    |The form
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== WizardStep
+
+The wizard step model.
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |title
+    |The title
+|link:http://php.net/string[string^]
+    |description
+    |The short description
+|link:http://php.net/string[string^]
+    |modifierClass
+    |The modifier class
+|link:http://php.net/string[string^]
+    |validationClass
+    |The validation class
+|link:http://php.net/array[array^]
+    |sections
+    |The sections
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[wizard_wizard_services]]
+==  Services
+=== WizardFolderProvider
+
+Register a wizard folder.
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public folders():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+
+=== WizardProvider
+
+Register a wizard.
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public structure():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[[wizard_services]]
+= Services
+
+[[wizard_services_datasources]]
+==  DataSources
+=== BaseWizardDataSource
+
+Base data source for wizards
+
+
+==== Namespace
+
+`Plenty\Modules\Wizard\Services\DataSources`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:miscellaneous#miscellaneous__[^]
+
+    |wizardKey
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |dataStructure
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public setWizardKey($wizardKey):void // <1>
+
+----
+
+
+    
+Sets the wizard key for this data source
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$wizardKey`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getIdentifiers():array // <1>
+
+----
+
+
+    
+List of option identifiers
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public create($steps = []):array // <1>
+
+----
+
+
+    
+Create data
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$steps`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public get():array // <1>
+
+----
+
+
+    
+Get data
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public update($properties = []):void // <1>
+
+----
+
+
+    
+Update data
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$properties`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete():void // <1>
+
+----
+
+
+    
+Delete data
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public createDataOption($data = [], $optionId = &quot;default&quot;):array // <1>
+
+----
+
+
+    
+Create data option
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/string[string^]
+a|`$optionId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getByOptionId($optionId = &quot;default&quot;):array // <1>
+
+----
+
+
+    
+Get data option by its option ID
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$optionId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateDataOption($optionId = &quot;default&quot;, $data = [], $stepKey = &quot;&quot;):array // <1>
+
+----
+
+
+    
+Update data option
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$optionId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/string[string^]
+a|`$stepKey`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteDataOption($optionId):void // <1>
+
+----
+
+
+    
+Delete data option
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$optionId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public finalize($optionId, $data = []):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$optionId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+

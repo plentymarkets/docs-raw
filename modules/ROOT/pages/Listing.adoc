@@ -1,0 +1,5789 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[listing_listing]]
+= Listing
+
+[[listing_listing_contracts]]
+==  Contracts
+=== ListingRepositoryContract
+
+The contract for the listing repository.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($id, $with = []):Plenty\Modules\Listing\Models\Listing // <1>
+
+----
+
+
+    
+Get a listing by a given ID.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listing[Listing^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the listing instance, one of "markets", "type", "stockDependenceType", "properties".
+|===
+
+
+[source%nowrap, php]
+----
+
+public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List listing
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The default page that will be returned is page 1.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of entries to be displayed per page. The default number of entries per page is 50.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the ListingMarket instance. The relations available are 'type', 'stockDependenceType' and 'markets'.
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|The filters that could be applied: 'id', 'itemId', 'typeId', 'stockDependenceTypeId', 'unitCombinationId'
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Listing\Models\Listing // <1>
+
+----
+
+
+    
+Create new listing
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listing[Listing^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The listing data as associative array.
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):Plenty\Modules\Listing\Models\Listing // <1>
+
+----
+
+
+    
+Update listing
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listing[Listing^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing.
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The listing data as associative array.
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):bool // <1>
+
+----
+
+
+    
+Delete listing
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing.
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[listing_listing_models]]
+==  Models
+=== Listing
+
+The listing model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing.
+|link:http://php.net/int[int^]
+    |itemId
+    |The ID of the item.
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the listing type. Possible types are:
+<ul>
+    <li>1 = Auction</li>
+    <li>2 = Fixed</li>
+    <li>3 = Shop item</li>
+</ul>
+|link:http://php.net/int[int^]
+    |stockDependenceTypeId
+    |The ID of the listing stock dependence. Possible stock dependence types are:
+<ul>
+    <li>1 = Unlimited with sync</li>
+    <li>2 = Limited with reservation</li>
+    <li>3 = Limited without reservation</li>
+    <li>4 = Unlimited without sync</li>
+</ul>
+|link:http://php.net/int[int^]
+    |unitCombinationId
+    |The ID of the unit combination.
+|link:miscellaneous#miscellaneous__[^]
+
+    |properties
+    |The listing properties of the listing.
+|link:listing#listing_models_listingtype[ListingType^]
+
+    |type
+    |The type of the listing.
+|link:listing#listing_models_stockdependencetype[StockDependenceType^]
+
+    |stockDependenceType
+    |The stock dependence type of the listing.
+|link:listing#listing_models_listingmarket[ListingMarket^]
+
+    |markets
+    |The listing markets of the listing
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingProperty
+
+The listing properties model. Each listing property has a type.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing property.
+|link:http://php.net/int[int^]
+    |listingId
+    |The ID of the listing that the property belongs to.
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the listing property type. The following types are available:
+<ul>
+<li>10 = Use item price</li>
+<li>11 = Number per lot</li>
+<li>12 = Transmit item number type</li>
+</ul>
+|link:miscellaneous#miscellaneous__[^]
+
+    |value
+    |The value of the listing property. The value depends on the type.
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date that the property was created.
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date that the property was last updated.
+|link:listing#listing_models_listing[Listing^]
+
+    |listing
+    |The listing that the property belongs to.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_date]]
+= Date
+
+[[listing_date_models]]
+==  Models
+=== ListingDateType
+
+The listing date type model. Each listing date type can have multiple names.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Date\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing date type. The following date types are available:
+<ul>
+<li>1 = Last price update</li>
+<li>2 = Last listing attempt</li>
+<li>3 = Start time</li>
+<li>4 = End time</li>
+<li>5 = Last market update</li>
+<li>6 = Last sale</li>
+</ul>
+|link:http://php.net/bool[bool^]
+    |isErasable
+    |Flag that indicates if this type can be deleted or not.
+|link:http://php.net/array[array^]
+    |names
+    |The listing date type names.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingDateTypeName
+
+The listing date type name model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Date\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing date type name.
+|link:http://php.net/int[int^]
+    |typeId
+    |The listing date type ID that the current name belongs to.
+|link:http://php.net/int[int^]
+    |name
+    |The name of the listing date type.
+|link:http://php.net/int[int^]
+    |lang
+    |The language of the listing date type name.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_layouttemplate]]
+= LayoutTemplate
+
+[[listing_layouttemplate_contracts]]
+==  Contracts
+=== LayoutTemplateRepositoryContract
+
+The LayoutTemplateRepositoryContract is the interface for the layout template repository. This interface allows you to get a single layout template or lists of layout templates as well as to create, update or delete a layout tempalte.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\LayoutTemplate\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($id, $with = []):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutTemplate // <1>
+
+----
+
+
+    
+Get a layout template.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_layouttemplate[LayoutTemplate^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the layout template.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the LayoutTemplate instance, one of "additional".
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutTemplate // <1>
+
+----
+
+
+    
+Create a layout template.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_layouttemplate[LayoutTemplate^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The layout template data.
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):bool // <1>
+
+----
+
+
+    
+Delete layout template
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the layout template.
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[listing_layouttemplate_models]]
+==  Models
+=== LayoutTemplate
+
+The layout template model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\LayoutTemplate\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the layout template.
+|link:http://php.net/string[string^]
+    |name
+    |The name of the layout template.
+|link:http://php.net/string[string^]
+    |css
+    |The css of the layout template.
+|link:http://php.net/string[string^]
+    |htmlStructure
+    |The html structure of the layout template.
+|link:http://php.net/string[string^]
+    |mainFrame
+    |The main frame of the layout template.
+|link:http://php.net/array[array^]
+    |additionalContent
+    |The additional content of the layout template.
+|link:http://php.net/string[string^]
+    |appendixType
+    |The appendix type of the layout template.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_market]]
+= Market
+
+[[listing_market_contracts]]
+==  Contracts
+=== ListingMarketRepositoryContract
+
+The ListingMarketRepositoryContract is the interface for the listing market repository. This interface allows you to get a single listing market or lists of listing markets as well as to create a listing market.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Contracts`
+
+
+[note, caption=]
+.Repository can be extended!
+====
+It is possible to extend this repository with own search criteria.
+====
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($id, $with = []):Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+
+----
+
+
+    
+Get a listing market
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarket[ListingMarket^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing market.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts", "infos".
+|===
+
+
+[source%nowrap, php]
+----
+
+public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List listing markets
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The page to get. The default page that will be returned is page 1.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of entries to be displayed per page. The default number of entries per page is 50.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts", "infos".
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|The filters that should be applied. The filters that could be applied: 'id', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'directoryId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition', 'shippingProfileId', .
+|===
+
+
+[source%nowrap, php]
+----
+
+public find($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Find listing markets
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The page to get. The default page that will be returned is page 1.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of entries to be displayed per page. The default number of entries per page is 50.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts", "infos".
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|The filters that should be applied. The filters that could be applied: 'id', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'directoryId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition', 'shippingProfileId', .
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):array // <1>
+
+----
+
+
+    
+Create a listing
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The listing market data.
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+
+----
+
+
+    
+Update listing market
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarket[ListingMarket^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing market.
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The listing market data as associative array.
+|===
+
+
+[source%nowrap, php]
+----
+
+public start($ids, $params = []):array // <1>
+
+----
+
+
+    
+Start listing markets on the designated markets.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$ids`
+|The IDs of the listing markets that need to be started.
+
+|link:http://php.net/array[array^]
+a|`$params`
+|The parameters that should be considered during start. Available values are 'startTime', 'startDistribution'
+|===
+
+
+[source%nowrap, php]
+----
+
+public verify($ids):array // <1>
+
+----
+
+
+    
+Verifies listing markets.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$ids`
+|The IDs of the listing markets that need to be verified.
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):void // <1>
+
+----
+
+
+    
+Delete a listing market
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing market.
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[listing_market_events]]
+==  Events
+=== ListingMarketBatchCreated
+
+An event class fired after multiple new listing markets are created.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($listingMarkets):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$listingMarkets`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getListingMarkets():array // <1>
+
+----
+
+
+    
+Get the list of ListingMarket instances.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+
+=== ListingMarketBatchDeleted
+
+An event class fired after multiple listing markets are deleted.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($listingMarkets):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$listingMarkets`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getListingMarkets():array // <1>
+
+----
+
+
+    
+Get the list of ListingMarket instances.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+
+=== ListingMarketBatchEvent
+
+A base event class for all listing market events. Each listing market batch event expects an array of ListingMarket instances.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($listingMarkets):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$listingMarkets`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getListingMarkets():array // <1>
+
+----
+
+
+    
+Get the list of ListingMarket instances.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+
+=== ListingMarketBatchUpdated
+
+An event class fired after multiple listing markets are updated.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($listingMarkets):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$listingMarkets`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getListingMarkets():array // <1>
+
+----
+
+
+    
+Get the list of ListingMarket instances.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+
+=== ListingMarketCreated
+
+An event class fired after a new listing market is created.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($listingMarket):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:listing#listing_models_listingmarket[ListingMarket^]
+
+a|`$listingMarket`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+
+----
+
+
+    
+Get the ListingMarket instance.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarket[ListingMarket^]
+
+    
+
+
+=== ListingMarketDeleted
+
+An event class fired after a new listing market is deleted.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($listingMarket):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:listing#listing_models_listingmarket[ListingMarket^]
+
+a|`$listingMarket`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+
+----
+
+
+    
+Get the ListingMarket instance.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarket[ListingMarket^]
+
+    
+
+
+=== ListingMarketEvent
+
+A base event class for all listing market events. Each listing market event expects an ListingMarket instance.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($listingMarket):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:listing#listing_models_listingmarket[ListingMarket^]
+
+a|`$listingMarket`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+
+----
+
+
+    
+Get the ListingMarket instance.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarket[ListingMarket^]
+
+    
+
+
+=== ListingMarketItemSpecificsCreated
+
+An event class fired after a new listing market item specifics are created.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($listingMarket):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:listing#listing_models_listingmarket[ListingMarket^]
+
+a|`$listingMarket`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+
+----
+
+
+    
+Get the ListingMarket instance.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarket[ListingMarket^]
+
+    
+
+
+=== ListingMarketItemSpecificsDeleted
+
+An event class fired after a new listing market item specifics are deleted.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($listingMarket):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:listing#listing_models_listingmarket[ListingMarket^]
+
+a|`$listingMarket`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+
+----
+
+
+    
+Get the ListingMarket instance.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarket[ListingMarket^]
+
+    
+
+
+=== ListingMarketUpdated
+
+An event class fired after a new listing market is updated.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($listingMarket):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:listing#listing_models_listingmarket[ListingMarket^]
+
+a|`$listingMarket`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+
+----
+
+
+    
+Get the ListingMarket instance.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarket[ListingMarket^]
+
+    
+
+[[listing_market_models]]
+==  Models
+=== ListingMarket
+
+The listing market model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing market.
+|link:http://php.net/int[int^]
+    |listingId
+    |The listing ID of the current listing market.
+|link:http://php.net/int[int^]
+    |variationId
+    |The variation ID for this listing market.
+|link:http://php.net/int[int^]
+    |referrerId
+    |The ID of the referrer.
+|link:http://php.net/int[int^]
+    |credentialsId
+    |The credentials ID that this listing market belongs to.
+|link:http://php.net/int[int^]
+    |directoryId
+    |The directory ID of the listing market.
+|link:http://php.net/bool[bool^]
+    |enabled
+    |Indicates if the listing market is enabled.
+|link:http://php.net/string[string^]
+    |duration
+    |The duration of the listing market.
+|link:http://php.net/string[string^]
+    |verified
+    |Indicates if the listing market has been verified. Possible values are: 'succeeded', 'failed', 'unknown'.
+|link:http://php.net/int[int^]
+    |quantity
+    |The quantity set for this listing market.
+|link:http://php.net/bool[bool^]
+    |allVariations
+    |Indicates if all variations should be included.
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date that the listing was created.
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date that the listing was last updated.
+|link:listing#listing_models_listing[Listing^]
+
+    |listing
+    |The listing that the listing market belongs to.
+|link:miscellaneous#miscellaneous__[^]
+
+    |properties
+    |The listing market properties of the listing market. The following properties are available:
+<ul>
+<li>1 = Shipping profile ID</li>
+<li>2 = Order status</li>
+<li>3 = Layout template ID</li>
+<li>4 = Maximum number of images</li>
+<li>5 = Warehouse ID</li>
+<li>6 = Basic price in text</li>
+<li>7 = Vat value</li>
+<li>8 = Vat country ID</li>
+<li>9 = Main language</li>
+<li>10 = Use item price</li>
+<li>11 = Number per lot</li>
+<li>12 = Transmit item number type</li>
+<li>13 = Relisted external ID</li>
+<li>14 = SCO offer</li>
+<li>15 = Promotion</li>
+<li>16 = UUID</li>
+<li>17 = Update error</li>
+<li>18 = Has variations</li>
+<li>19 = End now</li>
+<li>20 = Insert by type</li>
+<li>21 = Payment methods</li>
+<li>22 = First platform category ID</li>
+<li>23 = Second platform category ID</li>
+<li>24 = First shop category ID</li>
+<li>25 = Second shop category ID</li>
+<li>26 = Third shop category ID</li>
+<li>27 = Enhancements</li>
+<li>100 = eBay parts fitment ID</li>
+<li>101 = eBay maximum online listings</li>
+<li>102 = eBay private auction</li>
+<li>103 = eBay gallery type</li>
+<li>104 = eBay gallery duration</li>
+<li>105 = eBay transmit MPR</li>
+<li>106 = eBay counter type</li>
+<li>107 = eBay condition ID</li>
+<li>108 = eBay condition description</li>
+<li>109 = eBay best offer</li>
+<li>110 = eBay best offer decline price</li>
+<li>111 = eBay best offer accept price</li>
+<li>112 = eBay is eBay Plus</li>
+<li>113 = eBay is click & Collect</li>
+<li>114 = eBay use EPS</li>
+<li>200 = Hood show on shop startpage</li>
+<li>201 = Hood shipping discount</li>
+<li>202 = Hood delivery days on stock from</li>
+<li>203 = Hood delivery days on stock to</li>
+<li>204 = Hood delivery days not on stock from</li>
+<li>205 = Hood delivery days not on stock to</li>
+<li>300 = Ricardo warranty ID</li>
+<li>301 = Ricardo delivery ID</li>
+<li>302 = Ricardo availability ID</li>
+<li>303 = Ricardo delivery cost</li>
+<li>304 = Ricardo payment ID</li>
+<li>305 = Ricardo price increment</li>
+<li>306 = Ricardo item condition ID</li>
+<li>307 = Ricardo max relist count</li>
+<li>308 = Ricardo is cumulative shipping</li>
+<li>309 = Ricardo delivery package size ID</li>
+<li>310 = Ricardo use secondary language</li>
+<li>311 = Ricardo template ID</li>
+<li>312 = Ricardo is relist sold out</li>
+</ul>
+|link:miscellaneous#miscellaneous__[^]
+
+    |itemSpecifics
+    |The listing market item specifics of the listing market.
+|link:miscellaneous#miscellaneous__[^]
+
+    |prices
+    |The listing market prices of the listing market.
+|link:miscellaneous#miscellaneous__[^]
+
+    |dates
+    |The listing market dates of the listing market.
+|link:miscellaneous#miscellaneous__[^]
+
+    |texts
+    |The listing market texts of the listing market.
+|link:miscellaneous#miscellaneous__[^]
+
+    |infos
+    |The listing market infos of the listing market.
+|link:miscellaneous#miscellaneous__[^]
+
+    |lister
+    |The listing market lister of the listing market.
+|link:miscellaneous#miscellaneous__[^]
+
+    |histories
+    |The listing market histories of the listing market.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingMarketDate
+
+The listing market dates model. Each listing market date has a type.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing market date.
+|link:http://php.net/int[int^]
+    |listingMarketId
+    |The ID of the listing market that the date belongs to.
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the listing market date type. The following types are available:
+<ul>
+<li>1 = Last price update</li>
+<li>2 = Last listing attempt</li>
+<li>3 = Start time</li>
+<li>4 = End time</li>
+<li>5 = Last market update</li>
+</ul>
+|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+
+    |date
+    |The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date that the date was created.
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date that the date was last updated.
+|link:listing#listing_models_listingmarket[ListingMarket^]
+
+    |listingMarket
+    |The listing market that the date belongs to.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingMarketItemSpecific
+
+The listing market item specific model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing market item specific.
+|link:http://php.net/int[int^]
+    |listingMarketId
+    |The ID of the listing market.
+|link:http://php.net/string[string^]
+    |name
+    |The name of the listing market item specific.
+|link:miscellaneous#miscellaneous__[^]
+
+    |value
+    |The value of the listing market item specific.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingMarketPrice
+
+The listing market price model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing price.
+|link:http://php.net/int[int^]
+    |listingMarketId
+    |The ID of the listing market.
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the listing price type.
+|link:http://php.net/float[float^]
+    |value
+    |The value of the listing market price.
+|link:http://php.net/string[string^]
+    |currency
+    |The currency of the listing market price.
+|link:miscellaneous#miscellaneous__[^]
+
+    |listingMarket
+    |The listing market.
+|link:miscellaneous#miscellaneous__[^]
+
+    |type
+    |The listing price type.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingMarketProperty
+
+The listing market properties model. Each listing market property has a type.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing market property.
+|link:http://php.net/int[int^]
+    |listingMarketId
+    |The ID of the listing market that the property belongs to.
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the listing market property type. The following types are available:
+<ul>
+<li>1 = Shipping profile ID</li>
+<li>2 = Order status</li>
+<li>3 = Layout template ID</li>
+<li>4 = Maximum number of images</li>
+<li>5 = Warehouse ID</li>
+<li>6 = Basic price in text</li>
+<li>7 = Vat value</li>
+<li>8 = Vat country ID</li>
+<li>9 = Main language</li>
+<li>10 = Use item price</li>
+<li>11 = Number per lot</li>
+<li>12 = Transmit item number type</li>
+<li>13 = Relisted external ID</li>
+<li>14 = SCO offer</li>
+<li>15 = Promotion</li>
+<li>16 = UUID</li>
+<li>17 = Update error</li>
+<li>18 = Has variations</li>
+<li>19 = End now</li>
+<li>20 = Insert by type</li>
+<li>21 = Payment methods</li>
+<li>22 = First platform category ID</li>
+<li>23 = Second platform category ID</li>
+<li>24 = First shop category ID</li>
+<li>25 = Second shop category ID</li>
+<li>26 = Third shop category ID</li>
+<li>27 = Enhancements</li>
+<li>100 = eBay parts fitment ID</li>
+<li>101 = eBay maximum online listings</li>
+<li>102 = eBay private auction</li>
+<li>103 = eBay gallery type</li>
+<li>104 = eBay gallery duration</li>
+<li>105 = eBay transmit MPR</li>
+<li>106 = eBay counter type</li>
+<li>107 = eBay condition ID</li>
+<li>108 = eBay condition description</li>
+<li>109 = eBay best offer</li>
+<li>110 = eBay best offer decline price</li>
+<li>111 = eBay best offer accept price</li>
+<li>112 = eBay is eBay Plus</li>
+<li>113 = eBay is click & Collect</li>
+<li>114 = eBay use EPS</li>
+<li>200 = Hood show on shop startpage</li>
+<li>201 = Hood shipping discount</li>
+<li>202 = Hood delivery days on stock from</li>
+<li>203 = Hood delivery days on stock to</li>
+<li>204 = Hood delivery days not on stock from</li>
+<li>205 = Hood delivery days not on stock to</li>
+<li>300 = Ricardo warranty ID</li>
+<li>301 = Ricardo delivery ID</li>
+<li>302 = Ricardo availability ID</li>
+<li>303 = Ricardo delivery cost</li>
+<li>304 = Ricardo payment ID</li>
+<li>305 = Ricardo price increment</li>
+<li>306 = Ricardo item condition ID</li>
+<li>307 = Ricardo max relist count</li>
+<li>308 = Ricardo is cumulative shipping</li>
+<li>309 = Ricardo delivery package size ID</li>
+<li>310 = Ricardo use secondary language</li>
+<li>311 = Ricardo template ID</li>
+<li>312 = Ricardo is relist sold out</li>
+</ul>
+|link:http://php.net/string[string^]
+    |value
+    |The value of the listing market property. The value depends on the type.
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date that the property was created.
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date that the property was updated last.
+|link:listing#listing_models_listingmarket[ListingMarket^]
+
+    |listingMarket
+    |The listing market that the property belongs to.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_directory]]
+= Directory
+
+[[listing_directory_contracts]]
+==  Contracts
+=== ListingMarketDirectoryRepositoryContract
+
+The contract for the listing market directory repository.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Directory\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($id, $with = []):Plenty\Modules\Listing\Market\Directory\Models\ListingMarketDirectory // <1>
+
+----
+
+
+    
+Get a listing market directory
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarketdirectory[ListingMarketDirectory^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing market directory.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the ListingMarketDirectory instance, one of "children".
+|===
+
+
+[source%nowrap, php]
+----
+
+public all($with = [], $filters = []):array // <1>
+
+----
+
+
+    
+List all directories
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the ListingMarketDirectory instances, one of "children".
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|Listing market directory filters. Available filters: parentId (if no parentId is given than top level is returned).
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):array // <1>
+
+----
+
+
+    
+Create a listing market directory.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The listing market directory data as associative array.
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):Plenty\Modules\Listing\Market\Directory\Models\ListingMarketDirectory // <1>
+
+----
+
+
+    
+Update listing market directory
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarketdirectory[ListingMarketDirectory^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing market directory.
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The listing market directory data as associative array.
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):void // <1>
+
+----
+
+
+    
+Delete a listing market directory
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing market directory.
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[listing_directory_models]]
+==  Models
+=== ListingMarketDirectory
+
+The listing market directory model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Directory\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing market directory.
+|link:http://php.net/string[string^]
+    |name
+    |The name of the listing market directory.
+|link:http://php.net/int[int^]
+    |parentId
+    |The parent ID of the listing market directory.
+|link:http://php.net/int[int^]
+    |level
+    |The level of the directory.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_history]]
+= History
+
+[[listing_history_contracts]]
+==  Contracts
+=== ListingMarketHistoryRepositoryContract
+
+The ListingMarketHistoryRepositoryContract is the interface for the listing market history repository. This interface allows you to get a single listing market history or to list several listing market histories.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\History\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($id, $with = []):Plenty\Modules\Listing\Market\History\Models\ListingMarketHistory // <1>
+
+----
+
+
+    
+Get a listing market.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarkethistory[ListingMarketHistory^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing market.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts".
+|===
+
+
+[source%nowrap, php]
+----
+
+public search($page = 1, $itemsPerPage = 50, $with = [], $filters = [], $sort = &quot;&quot;):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List listing market histories
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The page to get. The default page that will be returned is page 1.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of entries to be displayed per page. The default number of entries per page is 50.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the ListingMarketHistory instance, one of "listingMarket", "dates", "properties", "texts".
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|The filters that should be applied. The filters that are available: 'listingMarketId', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition', 'updatedAtFrom', 'updatedAtTo , 'textData', 'firstPlatformCategoryId', 'secondPlatformCategoryId', 'firstShopCategoryId', 'secondShopCategoryId', 'thirdShopCategoryId', 'shippingProfileId', 'lastSale', 'isEbayPlus', 'isClickAndCollect'.
+
+|link:http://php.net/string[string^]
+a|`$sort`
+|The sorting key that can be applied. These sortings are available: 'endTimeAsc', 'endTimeDesc', 'startTimeAsc', 'startTimeDesc', 'externalListingIdAsc', 'externalListingIdDesc'
+|===
+
+
+[source%nowrap, php]
+----
+
+public end($ids, $params = []):array // <1>
+
+----
+
+
+    
+End the listing market histories on the designated markets.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$ids`
+|The IDs of the listing market histories that need to be started.
+
+|link:http://php.net/array[array^]
+a|`$params`
+|The parameters that should be considers during end. Available values are 'deleteOnSuccess'
+|===
+
+
+[source%nowrap, php]
+----
+
+public relist($ids):void // <1>
+
+----
+
+
+    
+Relist the listing market histories on the designated markets.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$ids`
+|The IDs of the listing market histories that need to be started.
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($ids, $options = []):array // <1>
+
+----
+
+
+    
+Update the listing market histories on the designated markets.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$ids`
+|The IDs of the listing market histories that need to be updated.
+
+|link:http://php.net/array[array^]
+a|`$options`
+|The update options that should be considers during update. Available values are:
+<ul>
+<li>title - Updates the title
+<li>subtitle - Updates the subtitle</li></li>
+<li>itemSpecifics - Updates the item specifics</li>
+<li>category - Updates the platform and shop category</li>
+<li>productListingDetails - Updates the product data for the listing</li>
+<li>listingEnhancements - Updates the enhancements information</li>
+<li>duration - Updates the duration</li>
+<li>shipping - Updates the shipping information</li>
+<li>description - Updates the description</li>
+<li>pictures - Updates the entry pictures</li>
+<li>quantityPriceAndVariations - Updates the quantity and price (also for variations)</li>
+<li>resetVariations - Reset the variations. The variation from the item are transmitted again</li>
+<li>partsFitment - Updates the parts fitment information (only available for eBay)</li>
+<li>loyaltyProgram - Updates the listing loyalty program information (only available for eBay Plus) </li>
+<li>resetRrp - Reset the recommended retail price information</li>
+<li>payment - Updates payment information (only available for Hood)</li>
+</ul>
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[listing_history_models]]
+==  Models
+=== ListingMarketHistory
+
+The listing market history model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\History\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The listing market history ID.
+|link:http://php.net/int[int^]
+    |listingMarketId
+    |The listing market ID of the current listing market history.
+|link:http://php.net/int[int^]
+    |referrerId
+    |The referrer ID.
+|link:http://php.net/string[string^]
+    |externalId
+    |The external ID of the listing market history.
+|link:http://php.net/int[int^]
+    |statusId
+    |The status ID of the current listing market history. The following properties are available:
+<ul>
+<li>1 = Active</li>
+<li>2 = Ended</li>
+<li>3 = Relisted</li>
+<li>4 = Hidden</li>
+</ul>
+|link:http://php.net/int[int^]
+    |quantity
+    |The quantity available for sale on the marketplace.
+|link:http://php.net/int[int^]
+    |quantitySold
+    |The quantity sold currently on the marketplace.
+|link:http://php.net/int[int^]
+    |quantitySoldDelta
+    |The difference between the sold quantity and orders imported for this listing market history.
+|link:http://php.net/int[int^]
+    |quantityRemain
+    |The quantity remaining on the marketplace.
+|link:http://php.net/float[float^]
+    |price
+    |The price offered for this listing market. @see ListingMarketHistoryVariation if the listing market history contains variations.
+|link:http://php.net/string[string^]
+    |currency
+    |The currency for the price of this listing market.
+|link:http://php.net/string[string^]
+    |sku
+    |The stock keeping unit of this listing market history.
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date that the entry was created.
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date that the entry was updated last.
+|link:listing#listing_models_listingmarket[ListingMarket^]
+
+    |listingMarket
+    |The listing market that the listing market history belongs to.
+|link:miscellaneous#miscellaneous__[^]
+
+    |variations
+    |The listing market history variations that belong to this listing market history.
+|link:miscellaneous#miscellaneous__[^]
+
+    |properties
+    |The listing market history properties of the listing market.
+|link:miscellaneous#miscellaneous__[^]
+
+    |dates
+    |The listing market history dates of the listing market history.
+|link:miscellaneous#miscellaneous__[^]
+
+    |texts
+    |The listing market history texts of the listing market history.
+|link:miscellaneous#miscellaneous__[^]
+
+    |status
+    |The listing market history status of the listing market history.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingMarketHistoryDate
+
+The listing market history dates model. Each listing market history date has a type.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\History\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing market history date.
+|link:http://php.net/int[int^]
+    |historyId
+    |The ID of the listing market history that the date belongs to.
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the listing date type. The following types are available:
+<ul>
+<li>Last price update = 1</li>
+<li>Last listing attempt = 2</li>
+<li>Start time = 3</li>
+<li>End time = 4</li>
+<li>Last market update = 5</li>
+<li>Last sale = 6</li>
+</ul>
+|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+
+    |date
+    |The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date that the date was created.
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date that the date was last updated.
+|link:listing#listing_models_listingmarket[ListingMarket^]
+
+    |listingMarket
+    |The listing market that the date belongs to.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingMarketHistoryProperty
+
+The listing market properties model. Each listing market property has a type.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\History\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing market history property
+|link:http://php.net/int[int^]
+    |historyId
+    |The ID of the listing market history that the property belongs to
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the listing market history property type. The following types are available:
+<ul>
+<li>Relisted external ID = 13</li>
+<li>SCO Offer = 14</li>
+<li>Promotion = 15</li>
+<li>Unique user ID = 16</li>
+<li>Update error = 17</li>
+<li>Has variations = 18</li>
+<li>End now = 19</li>
+<li>Insert by type = 20</li>
+<li>Is eBayPlus = 117</li>
+<li>Is click & collect = 118</li>
+</ul>
+|link:http://php.net/string[string^]
+    |value
+    |The value of the listing market history property. The value depends on the type.
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date that the property was created.
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date that the property was updated last.
+|link:listing#listing_models_listingmarkethistory[ListingMarketHistory^]
+
+    |history
+    |The listing market history that the property belongs to.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingMarketHistoryText
+
+The listing market history text model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\History\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing market history text.
+|link:http://php.net/int[int^]
+    |historyId
+    |The ID of the listing market history the text belongs to.
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the listing market text. Available values: 'de', 'en', 'fr', 'it', 'es', 'tr', 'nl', 'pl', 'nn', 'da', 'se', 'cz', 'ru', 'sk', 'cn', 'vn', 'pt', 'bg', 'ro'.
+|link:http://php.net/string[string^]
+    |title
+    |The title of the listing market text.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingMarketHistoryVariation
+
+The listing market history model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\History\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The listing market history variation ID.
+|link:http://php.net/int[int^]
+    |historyId
+    |The listing market history ID of the current listing market history variation.
+|link:http://php.net/int[int^]
+    |variationId
+    |The variation ID.
+|link:http://php.net/string[string^]
+    |attributeName
+    |The attribute name. This is an serialized array of the attribute-value data.
+|link:http://php.net/string[string^]
+    |sku
+    |The stock keeping unit of this listing market history variation.
+|link:http://php.net/int[int^]
+    |quantity
+    |The quantity available for sale on the marketplace.
+|link:http://php.net/int[int^]
+    |quantitySold
+    |The quantity sold currently on the marketplace.
+|link:http://php.net/int[int^]
+    |quantitySoldDelta
+    |The difference between the sold quantity and orders imported for this listing market history variation.
+|link:http://php.net/int[int^]
+    |quantityRemain
+    |The quantity remaining on the marketplace.
+|link:http://php.net/float[float^]
+    |price
+    |The price offered for this listing market history variation.
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date that the entry was created.
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date that the entry was updated last.
+|link:listing#listing_models_listingmarkethistory[ListingMarketHistory^]
+
+    |history
+    |The listing market history variations that belong to this listing market history.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_info]]
+= Info
+
+[[listing_info_contracts]]
+==  Contracts
+=== ListingMarketInfoRepositoryContract
+
+The ListingMarketInfoRepositoryContract is the interface for the listing market info repository. This interface allows you to get information about one or many listing markets.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Info\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List listing market infos by filter options
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The page to get. The default page that will be returned is page 1.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of entries to be displayed per page. The default number of entries per page is 50.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the ListingMarketInfo instance.
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|The filters that should be applied. The filters that could be applied: 'id', 'listingMarketId', 'type', 'createdAtFrom', 'createdAtTo', 'code'.
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[listing_info_models]]
+==  Models
+=== ListingMarketInfo
+
+The listing market info model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Info\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The listing market info ID.
+|link:http://php.net/int[int^]
+    |listingMarketId
+    |The listing market ID that the current information belongs to.
+|link:http://php.net/string[string^]
+    |type
+    |The information type. Possible values: 'warning', 'error', 'info'.
+|link:http://php.net/int[int^]
+    |code
+    |The information code.
+|link:http://php.net/string[string^]
+    |message
+    |The information message.
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date that the listing market info was created.
+|link:listing#listing_models_listingmarket[ListingMarket^]
+
+    |listingMarket
+    |The listing market that the listing market info belongs to.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_itemspecific]]
+= ItemSpecific
+
+[[listing_itemspecific_contracts]]
+==  Contracts
+=== ListingMarketItemSpecificRepositoryContract
+
+The contract of the listing market item specific repository
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\ItemSpecific\Contracts`
+
+
+[note, caption=]
+.Repository can be extended!
+====
+It is possible to extend this repository with own search criteria.
+====
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($id):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketItemSpecific // <1>
+
+----
+
+
+    
+Gets a ListingMarketItemSpecific.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarketitemspecific[ListingMarketItemSpecific^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public search($data, $page = 1, $itemsPerPage = 50):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketItemSpecific // <1>
+
+----
+
+
+    
+Gets all ListingMarketItemSpecifics.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarketitemspecific[ListingMarketItemSpecific^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public find($filters = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Gets all ListingMarketItemSpecifics.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketItemSpecific // <1>
+
+----
+
+
+    
+Updates a ListingMarketItemSpecific.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarketitemspecific[ListingMarketItemSpecific^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):bool // <1>
+
+----
+
+
+    
+Deletes a ListingMarketItemSpecific.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteByListingMarketId($listingMarketId):bool // <1>
+
+----
+
+
+    
+Deletes all ListingMarketItemSpecific entries by listing market id.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$listingMarketId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[listing_itemspecific_models]]
+==  Models
+=== ListingMarketItemSpecific
+
+The item specific model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\ItemSpecific\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the item specific.
+|link:http://php.net/int[int^]
+    |listingMarketId
+    |The LMID which belongs to the item specific ID.
+|link:http://php.net/string[string^]
+    |name
+    |The name of the item specific.
+|link:http://php.net/string[string^]
+    |value
+    |The value of the item specific.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_text]]
+= Text
+
+[[listing_text_contracts]]
+==  Contracts
+=== ListingMarketTextRepositoryContract
+
+The contract for the listing market text repository.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Text\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($id):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText // <1>
+
+----
+
+
+    
+Get a listing market text
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarkettext[ListingMarketText^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing market text.
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($listingMarketId, $data):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText // <1>
+
+----
+
+
+    
+Create new listing market text
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarkettext[ListingMarketText^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$listingMarketId`
+|The listing market ID the new market listing text belongs to.
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The listing market text data as associative array.
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($listingMarketId, $lang, $data):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText // <1>
+
+----
+
+
+    
+Update listing market text
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarkettext[ListingMarketText^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$listingMarketId`
+|The listing market ID the new listing market text belongs to.
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language that should be updated.
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The listing market text data as associative array.
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateOrCreate($listingMarketId, $lang, $data):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText // <1>
+
+----
+
+
+    
+Update or create listing market text
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingmarkettext[ListingMarketText^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$listingMarketId`
+|The listing market ID the new listing market text belongs to.
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language that should be updated.
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The listing market text data as associative array.
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):bool // <1>
+
+----
+
+
+    
+Delete listing market text
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing market text.
+|===
+
+
+[source%nowrap, php]
+----
+
+public search($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List listing market text
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The default page that will be returned is page 1.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of entries to be displayed per page. The default number of entries per page is 50.
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|The filters that should be applied: 'id', 'language', 'contains'
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[listing_text_models]]
+==  Models
+=== ListingMarketText
+
+The listing market text model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Market\Text\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing market text.
+|link:http://php.net/int[int^]
+    |listingMarketId
+    |The ID of the listing market the text belongs to.
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the listing market text. Available values: 'de', 'en', 'fr', 'it', 'es', 'tr', 'nl', 'pl', 'nn', 'da', 'se', 'cz', 'ru', 'sk', 'cn', 'vn', 'pt', 'bg', 'ro'.
+|link:http://php.net/string[string^]
+    |title
+    |The title of the listing market text.
+|link:http://php.net/string[string^]
+    |subtitle
+    |The subtitle of the listing market text.
+|link:http://php.net/string[string^]
+    |description
+    |The description of the listing market text.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_optiontemplate]]
+= OptionTemplate
+
+[[listing_optiontemplate_contracts]]
+==  Contracts
+=== OptionTemplateRepositoryContract
+
+The contract for the listing option template repository.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\OptionTemplate\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public preview():array // <1>
+
+----
+
+
+    
+Get a preview list of all listing option templates
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public get($id):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate // <1>
+
+----
+
+
+    
+Get option template
+
+
+==== Return type
+    
+<1> link:listing#listing_models_optiontemplate[OptionTemplate^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the option template.
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate // <1>
+
+----
+
+
+    
+Create option template
+
+
+==== Return type
+    
+<1> link:listing#listing_models_optiontemplate[OptionTemplate^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The option template data as associative array.
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):void // <1>
+
+----
+
+
+    
+Update option template
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the option template.
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The option template data as associative array.
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):void // <1>
+
+----
+
+
+    
+Delete option template
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the option template.
+|===
+
+
+[[listing_optiontemplate_models]]
+==  Models
+=== OptionTemplate
+
+The option template model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\OptionTemplate\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the option template.
+|link:http://php.net/string[string^]
+    |name
+    |The name of the option template.
+|link:http://php.net/array[array^]
+    |listing
+    |The listing options of the option template.
+|link:http://php.net/array[array^]
+    |listingMarket
+    |The listing market options of the option template.
+|link:http://php.net/array[array^]
+    |marketOptions
+    |The market options of the option template.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_price]]
+= Price
+
+[[listing_price_models]]
+==  Models
+=== ListingPriceType
+
+The listing price type model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Price\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing price type. The following date types are available:
+<ul>
+<li>1 = Start price</li>
+<li>2 = Fixed price</li>
+<li>3 = Reserved price</li>
+<li>4 = SCO minimum price</li>
+<li>5 = Market fee</li>
+</ul>
+|link:http://php.net/bool[bool^]
+    |isErasable
+    |Flag that states if this type can be deleted or not.
+|link:miscellaneous#miscellaneous__[^]
+
+    |names
+    |The listing price type names.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingPriceTypeName
+
+The listing price type name model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Price\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing price type name.
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the listing price type.
+|link:http://php.net/int[int^]
+    |name
+    |The name of the listing price type.
+|link:http://php.net/int[int^]
+    |lang
+    |The language of the listing price type name.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_property]]
+= Property
+
+[[listing_property_models]]
+==  Models
+=== ListingPropertyType
+
+The listing properties model. Each listing property has a type.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Property\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing property. The following types are available:
+<ul>
+<li>1 = Shipping profile ID</li>
+<li>2 = Order status</li>
+<li>3 = Layout template ID</li>
+<li>4 = Maximum number of images</li>
+<li>5 = Warehouse ID</li>
+<li>6 = Basic price in text</li>
+<li>7 = Vat value</li>
+<li>8 = Vat country ID</li>
+<li>9 = Main language</li>
+<li>10 = Use item price</li>
+<li>11 = Number per lot</li>
+<li>12 = Transmit item number type</li>
+<li>13 = Relisted external ID</li>
+<li>14 = SCO offer</li>
+<li>15 = Promotion</li>
+<li>16 = UUID</li>
+<li>17 = Update error</li>
+<li>18 = Has variations</li>
+<li>19 = End now</li>
+<li>20 = Insert by type</li>
+<li>21 = Payment methods</li>
+<li>22 = First platform category ID</li>
+<li>23 = Second platform category ID</li>
+<li>24 = First shop category ID</li>
+<li>25 = Second shop category ID</li>
+<li>26 = Third shop category ID</li>
+<li>27 = Enhancements</li>
+<li>100 = eBay parts fitment ID</li>
+<li>101 = eBay maximum online listings</li>
+<li>102 = eBay private auction</li>
+<li>103 = eBay gallery type</li>
+<li>104 = eBay gallery duration</li>
+<li>105 = eBay transmit MPR</li>
+<li>106 = eBay counter type</li>
+<li>107 = eBay condition ID</li>
+<li>108 = eBay condition description</li>
+<li>109 = eBay best offer</li>
+<li>110 = eBay best offer decline price</li>
+<li>111 = eBay best offer accept price</li>
+<li>112 = eBay is eBay Plus</li>
+<li>113 = eBay is click & Collect</li>
+<li>114 = eBay use EPS</li>
+<li>200 = Hood show on shop startpage</li>
+<li>201 = Hood shipping discount</li>
+<li>202 = Hood delivery days on stock from</li>
+<li>203 = Hood delivery days on stock to</li>
+<li>204 = Hood delivery days not on stock from</li>
+<li>205 = Hood delivery days not on stock to</li>
+<li>300 = Ricardo warranty ID</li>
+<li>301 = Ricardo delivery ID</li>
+<li>302 = Ricardo availability ID</li>
+<li>303 = Ricardo delivery cost</li>
+<li>304 = Ricardo payment ID</li>
+<li>305 = Ricardo price increment</li>
+<li>306 = Ricardo item condition ID</li>
+<li>307 = Ricardo max relist count</li>
+<li>308 = Ricardo is cumulative shipping</li>
+<li>309 = Ricardo delivery package size ID</li>
+<li>310 = Ricardo use secondary language</li>
+<li>311 = Ricardo template ID</li>
+<li>312 = Ricardo is relist sold out</li>
+</ul>
+|link:http://php.net/bool[bool^]
+    |isErasable
+    |Flag that indicates if this type can be deleted or not.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingPropertyTypeName
+
+The listing property type name model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Property\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing property type name.
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the listing property type.
+|link:http://php.net/int[int^]
+    |name
+    |The name of the listing property type.
+|link:http://php.net/int[int^]
+    |lang
+    |The language of the listing property type name.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_shippingprofile]]
+= ShippingProfile
+
+[[listing_shippingprofile_contracts]]
+==  Contracts
+=== ShippingProfileRepositoryContract
+
+The ShippingProfileRepositoryContract is the interface for the listing shipping profile repository. This interface allows you to get a shipping profile.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\ShippingProfile\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($id, $with = []):Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile // <1>
+
+----
+
+
+    
+Get a shipping profile
+
+
+==== Return type
+    
+<1> link:listing#listing_models_shippingprofile[ShippingProfile^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the shipping profile.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the ShippingProfile instance.
+|===
+
+
+[source%nowrap, php]
+----
+
+public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Search shipping profiles
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The page to get. The default page that will be returned is page 1.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of entries to be displayed per page. The default number of entries per page is 50.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the ShippingProfile instance.
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|The filters that should be applied. The filters that could be applied: 'id', 'referrerId', 'credentialsId'.
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[listing_shippingprofile_events]]
+==  Events
+=== ShippingProfileCreated
+
+An event class fired after a new listing shipping profile is created.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\ShippingProfile\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($shippingProfile):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:listing#listing_models_shippingprofile[ShippingProfile^]
+
+a|`$shippingProfile`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile // <1>
+
+----
+
+
+    
+Get the ShippingProfile instance.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_shippingprofile[ShippingProfile^]
+
+    
+
+
+=== ShippingProfileDeleted
+
+An event class fired after a listing shipping profile is deleted.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\ShippingProfile\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($shippingProfile):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:listing#listing_models_shippingprofile[ShippingProfile^]
+
+a|`$shippingProfile`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile // <1>
+
+----
+
+
+    
+Get the ShippingProfile instance.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_shippingprofile[ShippingProfile^]
+
+    
+
+
+=== ShippingProfileEvent
+
+A base event class for all listing shipping profile events. Each shipping profile event expects an ShippingProfile instance.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\ShippingProfile\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($shippingProfile):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:listing#listing_models_shippingprofile[ShippingProfile^]
+
+a|`$shippingProfile`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile // <1>
+
+----
+
+
+    
+Get the ShippingProfile instance.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_shippingprofile[ShippingProfile^]
+
+    
+
+
+=== ShippingProfileUpdated
+
+An event class fired after a listing shipping profile is updated.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\ShippingProfile\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($shippingProfile):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:listing#listing_models_shippingprofile[ShippingProfile^]
+
+a|`$shippingProfile`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile // <1>
+
+----
+
+
+    
+Get the ShippingProfile instance.
+
+
+==== Return type
+    
+<1> link:listing#listing_models_shippingprofile[ShippingProfile^]
+
+    
+
+[[listing_shippingprofile_models]]
+==  Models
+=== ShippingProfile
+
+The listing shipping profile model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\ShippingProfile\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The listing shipping profile ID.
+|link:http://php.net/string[string^]
+    |name
+    |The listing shipping profile name.
+|link:http://php.net/int[int^]
+    |credentialsId
+    |The credentials ID that this listing shipping profile belongs to.
+|link:http://php.net/int[int^]
+    |referrerId
+    |The referrer ID.
+|link:http://php.net/string[string^]
+    |createdBy
+    |Who created the shipping profile. Possible values: 'migration','customer','external'.
+|link:http://php.net/bool[bool^]
+    |isDefault
+    |Tells if the current listing shipping profile is set as default.
+|link:http://php.net/array[array^]
+    |extendedData
+    |Extended data that defines the current shipping profile.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_status]]
+= Status
+
+[[listing_status_models]]
+==  Models
+=== ListingStatus
+
+The listing status model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Status\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing status.
+|link:http://php.net/int[int^]
+    |isErasable
+    |Flag that indicates if the status can be deleted.
+|link:http://php.net/int[int^]
+    |position
+    |The position for sorting.
+|link:miscellaneous#miscellaneous__[^]
+
+    |names
+    |The listing status names.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingStatusName
+
+The listing status name model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Status\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing status name.
+|link:http://php.net/int[int^]
+    |statusId
+    |The ID of the listing status.
+|link:http://php.net/string[string^]
+    |name
+    |The name of the listing status.
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the listing status name.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_stockdependencetype]]
+= StockDependenceType
+
+[[listing_stockdependencetype_contracts]]
+==  Contracts
+=== StockDependenceTypeRepositoryContract
+
+The contract for the listing stock dependence type repository.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\StockDependenceType\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($id, $with = []):Plenty\Modules\Listing\StockDependenceType\Models\StockDependenceType // <1>
+
+----
+
+
+    
+Get a listing stock dependence type
+
+
+==== Return type
+    
+<1> link:listing#listing_models_stockdependencetype[StockDependenceType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing stock dependence type.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the StockDependenceType instance, available values are: "names".
+|===
+
+
+[source%nowrap, php]
+----
+
+public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List listing stock dependence types
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The default page that will be returned is page 1.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of entries to be displayed per page. The default number of entries per page is 50.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the ListingMarket instance. The relations available are 'names'.
+|===
+
+
+[[listing_stockdependencetype_models]]
+==  Models
+=== StockDependenceType
+
+The listing stock dependence type model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\StockDependenceType\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing stock dependence type.
+|link:http://php.net/int[int^]
+    |isErasable
+    |Flag that indicates if the type can be deleted.
+|link:http://php.net/int[int^]
+    |position
+    |The position for sorting.
+|link:miscellaneous#miscellaneous__[^]
+
+    |names
+    |The listing stock dependence type names.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== StockDependenceTypeName
+
+The listing stock dependence type name model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\StockDependenceType\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing stock dependence type name.
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the listing stock type.
+|link:http://php.net/string[string^]
+    |name
+    |The name of the listing stock dependence type.
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the listing stock dependence type name.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[listing_type]]
+= Type
+
+[[listing_type_contracts]]
+==  Contracts
+=== ListingTypeRepositoryContract
+
+The contract for the listing type repository.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Type\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($id, $with = []):Plenty\Modules\Listing\Type\Models\ListingType // <1>
+
+----
+
+
+    
+Get a listing type
+
+
+==== Return type
+    
+<1> link:listing#listing_models_listingtype[ListingType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The ID of the listing type.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the type instance, available values are: "names".
+|===
+
+
+[source%nowrap, php]
+----
+
+public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List listing types
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The default page that will be returned is page 1.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of entries to be displayed per page. The default number of entries per page is 50.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the ListingMarket instance. The relations available are 'names'.
+|===
+
+
+[[listing_type_models]]
+==  Models
+=== ListingType
+
+The listing type model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Type\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing type.
+|link:http://php.net/int[int^]
+    |isErasable
+    |Flag that indicates if the type can be deleted.
+|link:http://php.net/int[int^]
+    |position
+    |The position for sorting.
+|link:miscellaneous#miscellaneous__[^]
+
+    |names
+    |The listing type names.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ListingTypeName
+
+The listing type name model.
+
+
+==== Namespace
+
+`Plenty\Modules\Listing\Type\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the listing type name.
+|link:http://php.net/int[int^]
+    |typeId
+    |The ID of the listing type.
+|link:http://php.net/string[string^]
+    |name
+    |The name of the listing type.
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the listing type name.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

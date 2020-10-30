@@ -1,0 +1,379 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[myview_myview]]
+= MyView
+
+[[myview_myview_contracts]]
+==  Contracts
+=== ViewSetNameRepositoryContract
+
+This interface provides a method to update ViewSetNames
+
+
+==== Namespace
+
+`Plenty\Modules\MyView\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public updateViewSetName($name, $id):void // <1>
+
+----
+
+
+    
+Update given view set name.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|
+
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+
+=== ViewSetPermissionContract
+
+This interface provides methods to create, get, update and delete ViewSets
+
+
+==== Namespace
+
+`Plenty\Modules\MyView\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public search($searchParams):void // <1>
+
+----
+
+
+    
+Search permissions
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$searchParams`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public save($data):bool // <1>
+
+----
+
+
+    
+Save permissions
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateDefaultViewSetRelation($relations, $key):void // <1>
+
+----
+
+
+    
+Update given default view set relations.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$relations`
+|
+
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateViewSetRelation($relations, $viewSetId):void // <1>
+
+----
+
+
+    
+Update given view set relations.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$relations`
+|
+
+|link:http://php.net/int[int^]
+a|`$viewSetId`
+|
+|===
+
+
+
+=== ViewSetRepositoryContract
+
+This interface provides methods to create, get, update and delete ViewSets
+
+
+==== Namespace
+
+`Plenty\Modules\MyView\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public search($searchParams):void // <1>
+
+----
+
+
+    
+Search the list of view sets.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$searchParams`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public get($id):void // <1>
+
+----
+
+
+    
+Get given view set.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):void // <1>
+
+----
+
+
+    
+Create given view set.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):void // <1>
+
+----
+
+
+    
+Update given view set.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):void // <1>
+
+----
+
+
+    
+Delete given view set.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setActive($userId, $viewSetId, $viewSetKey):void // <1>
+
+----
+
+
+    
+Set the given view set active by user id
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$userId`
+|
+
+|link:http://php.net/int[int^]
+a|`$viewSetId`
+|
+
+|link:http://php.net/string[string^]
+a|`$viewSetKey`
+|
+|===
+
+

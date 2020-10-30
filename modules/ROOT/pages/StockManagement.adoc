@@ -1,0 +1,2015 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[stockmanagement_stock]]
+= Stock
+
+[[stockmanagement_stock_contracts]]
+==  Contracts
+=== StockRepositoryContract
+
+The StockRepositoryContract is the interface for the stock repository. This interface allows you to find, create and update stock. Stock is assigned to one variation and is stored in warehouses.
+
+
+==== Namespace
+
+`Plenty\Modules\StockManagement\Stock\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public listStockByWarehouseId($warehouseId, $columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List stock of a warehouse
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|The ID of the warehouse
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The properties to be loaded
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The requested page
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items per page
+|===
+
+
+[source%nowrap, php]
+----
+
+public listStock($columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List stock
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|The properties to be loaded
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The requested page
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items per page
+|===
+
+
+[source%nowrap, php]
+----
+
+public listStockByWarehouseType($type, $columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List stock by warehouse type
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|The type of the warehouse. Currently only 'sales' is supported.
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The properties to be loaded
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The requested page
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items per page
+|===
+
+
+[source%nowrap, php]
+----
+
+public correctStock($warehouseId, $data):void // <1>
+
+----
+
+
+    
+Corrects stock. The ID of the warehouse has to be provided.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|The ID of the warehouse.
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data.
+|===
+
+
+[source%nowrap, php]
+----
+
+public bookIncomingItems($warehouseId, $data):void // <1>
+
+----
+
+
+    
+Book incoming stock
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|The ID of the warehouse
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public bookOutgoingItems($warehouseId, $data):void // <1>
+
+----
+
+
+    
+Book outgoing stock
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|The ID of the warehouse
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public redistributeStock($data):void // <1>
+
+----
+
+
+    
+Redistribute stock
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public listStockMovements($warehouseId, $columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List stock movements
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|The ID of the warehouse
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The properties to be loaded
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The requested page
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items per page
+|===
+
+
+[source%nowrap, php]
+----
+
+public unpackVariation($warehouseId, $variationStockIntake, $variationStockCorrection):Plenty\Modules\StockManagement\Warehouse\Models\Warehouse // <1>
+
+----
+
+
+    
+Unpack variation
+
+
+==== Return type
+    
+<1> link:stockmanagement#stockmanagement_models_warehouse[Warehouse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|The ID of the warehouse
+
+|link:http://php.net/array[array^]
+a|`$variationStockIntake`
+|
+
+|link:http://php.net/array[array^]
+a|`$variationStockCorrection`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== StockStorageLocationRepositoryContract
+
+The StockStorageLocationRepositoryContract is the interface for the stock storage location repository. This interface allows you to list the stock of all storage locations of a warehouse or to list all storage locations of a variation and the stock stored at these locations.
+
+
+==== Namespace
+
+`Plenty\Modules\StockManagement\Stock\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public listStockStorageLocationsByWarehouseId($warehouseId, $columns = [], $page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List stock of all storage locations of a warehouse
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|The ID of the warehouse
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The properties to be loaded
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The requested page
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items per page
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the StockStorageLocationInstance, possible is: storageLocation
+|===
+
+
+[source%nowrap, php]
+----
+
+public listStockStorageLocationsByVariationId($variationId, $columns = [], $page = 1, $itemsPerPage = 50, $with = [], $sortBy = &quot;id&quot;, $sortOrder = &quot;asc&quot;):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List stock of a variation per storage location
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$variationId`
+|The ID of the variation.
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The properties to be loaded
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The requested page
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items per page
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the StockStorageLocationInstance, possible is: storageLocation
+
+|link:http://php.net/string[string^]
+a|`$sortBy`
+|[optional]
+
+|link:http://php.net/string[string^]
+a|`$sortOrder`
+|[optional, default=asc]
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[stockmanagement_stock_models]]
+==  Models
+=== Stock
+
+The stock model. There are 4 different stock terms used in plentymarkets. The physical stock, the net stock, the reserved stock and the stock reserved for listings.
+
+
+==== Namespace
+
+`Plenty\Modules\StockManagement\Stock\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |itemId
+    |The ID of the item
+|link:http://php.net/int[int^]
+    |variationId
+    |The ID of the variation
+|link:http://php.net/int[int^]
+    |warehouseId
+    |The ID of the warehouse
+|link:http://php.net/float[float^]
+    |stockPhysical
+    |The physical stock
+|link:http://php.net/float[float^]
+    |reservedStock
+    |The reserved stock
+|link:http://php.net/float[float^]
+    |reservedEbay
+    |The stock reserved for ebay
+|link:http://php.net/float[float^]
+    |reorderDelta
+    |The reorder delta
+|link:http://php.net/float[float^]
+    |stockNet
+    |The net stock
+|link:http://php.net/int[int^]
+    |reordered
+    |The reordered quantity of a variation
+|link:http://php.net/int[int^]
+    |warehousePriority
+    |The priority of the warehouse
+|link:http://php.net/float[float^]
+    |reservedBundle
+    |Reserved bundle
+|link:http://php.net/float[float^]
+    |averagePurchasePrice
+    |The average purchase price
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The time the stock was last updated
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== StockBatchBestBeforeDate
+
+The stock batch best before date model contains all information about the batch and best before date.
+
+
+==== Namespace
+
+`Plenty\Modules\StockManagement\Stock\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |batch
+    |
+|link:http://php.net/string[string^]
+    |bestBeforeDate
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== StockStorageLocation
+
+The stock storage location model contains all information about the stock that is stored at one storage location.
+
+
+==== Namespace
+
+`Plenty\Modules\StockManagement\Stock\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |itemId
+    |The ID of the item
+|link:http://php.net/int[int^]
+    |variationId
+    |The ID of the variation
+|link:http://php.net/int[int^]
+    |storageLocationId
+    |The ID of the storage location.
+|link:http://php.net/int[int^]
+    |warehouseId
+    |The ID of the warehouse that the storage location is in
+|link:http://php.net/float[float^]
+    |quantity
+    |The quantity stored at the storage location
+|link:http://php.net/string[string^]
+    |bestBeforeDate
+    |The best before date
+|link:http://php.net/string[string^]
+    |batch
+    |The batch
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The day and time the stock was last updated
+|link:stockmanagement#stockmanagement_models_storagelocation[StorageLocation^]
+
+    |storageLocation
+    |Deprecated! Use warehouseLocation instead
+|link:warehouse#warehouse_models_warehouselocation[WarehouseLocation^]
+
+    |warehouseLocation
+    |The warehouse location of the item
+|link:item#item_models_variation[Variation^]
+
+    |variation
+    |The variation of the item
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[stockmanagement_warehouse]]
+= Warehouse
+
+[[stockmanagement_warehouse_contracts]]
+==  Contracts
+=== WarehouseRepositoryContract
+
+The WarehouseRepositoryContract is the interface for the warehouse repository. This interface allows you to either get one warehouse by specifying the id or to list all warehouses.
+
+
+==== Namespace
+
+`Plenty\Modules\StockManagement\Warehouse\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findById($warehouseId, $with = []):Plenty\Modules\StockManagement\Warehouse\Models\Warehouse // <1>
+
+----
+
+
+    
+Get a warehouse
+
+
+==== Return type
+    
+<1> link:stockmanagement#stockmanagement_models_warehouse[Warehouse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|The id of the warehouse.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the warehouse instance. repairWarehouse is the only relation currently available.
+|===
+
+
+[source%nowrap, php]
+----
+
+public all($with = [], $columns = []):array // <1>
+
+----
+
+
+    
+List warehouses
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to load in the warehouse instance. repairWarehouse is the only relation currently available.
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The columns to load in the response
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\StockManagement\Warehouse\Models\Warehouse // <1>
+
+----
+
+
+    
+Create a warehouse
+
+
+==== Return type
+    
+<1> link:stockmanagement#stockmanagement_models_warehouse[Warehouse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data.
+|===
+
+
+[[stockmanagement_warehouse_models]]
+==  Models
+=== Warehouse
+
+The warehouse model in plentymarkets represents actual warehouses. Every warehouse is identified by an Id. Furthermore a warehouse is described by a name and is always associated with an address. This address may not only contain a physical address information like a street, a house number, a postal code and a town, but also an email address, a telephone number or a fax number.
+
+
+==== Namespace
+
+`Plenty\Modules\StockManagement\Warehouse\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The id of the warehouse
+|link:http://php.net/string[string^]
+    |name
+    |The name of the warehouse
+|link:http://php.net/string[string^]
+    |note
+    |A note for this warehouse
+|link:http://php.net/int[int^]
+    |typeId
+    |The id of the warehouse type. The following types are available:
+<ul>
+    <li>0 = Sales warehouse</li>
+    <li>1 = Repair warehouse</li>
+    <li>4 = Storage warehouse</li>
+    <li>5 = Transit warehouse</li>
+    <li>6 = Distribution warehouse</li>
+    <li>7 = Other</li>
+</ul>
+|link:http://php.net/array[array^]
+    |allocationReferrerIds
+    |Allocation Referrer Ids by automatic warehouse detection
+|link:http://php.net/int[int^]
+    |onStockAvailability
+    |Displayed availability of a variation if stock is available
+|link:http://php.net/int[int^]
+    |outOfStockAvailability
+    |Displayed availability of a variation if no stock is available
+|link:http://php.net/bool[bool^]
+    |splitByShippingProfile
+    |Flag that indicates if for this warehouse orders are split by shipping profiles or not. <ul><li>True = Orders are split by shipping profiles</li> <li>False = Orders will not be split by shipping profiles</li></ul>
+|link:http://php.net/string[string^]
+    |storageLocationType
+    |The storage location type. The following types are available: <ul><li>none</li> <li>small</li><li>medium</li> <li>large</li> <li>europallet</li></ul>
+|link:http://php.net/int[int^]
+    |storageLocationZone
+    |The zone that the storage location is in
+|link:http://php.net/int[int^]
+    |repairWarehouseId
+    |The id of the associated repair warehouse
+|link:http://php.net/bool[bool^]
+    |isInventoryModeActive
+    |Flag that indicates if the inventory mode for this warehouse is active or not. <ul><li>True = active</li> <li>False = inactive</li></ul>
+|link:http://php.net/string[string^]
+    |logisticsType
+    |The id of the logistics type of the warehouse. The logistics type states which service provider fulfills the storage and shipping. The following logistics types are available:
+<ul>
+<li>own</li>
+<li>amazon</li>
+<li>dhlFulfillment</li>
+</ul>
+|link:account#account_models_address[Address^]
+
+    |address
+    |The address that the warehouse is located at
+|link:stockmanagement#stockmanagement_models_warehouse[Warehouse^]
+
+    |repairWarehouse
+    |All information about the repair warehouse if a repair warehouse is linked to the sales warehouse
+|link:http://php.net/string[string^]
+    |updatedAt
+    |The updated at timestamp of the warehouse
+|link:http://php.net/string[string^]
+    |createdAt
+    |The created at timestamp of the warehouse
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[stockmanagement_management]]
+= Management
+
+[[stockmanagement_management_contracts]]
+==  Contracts
+=== RackManagementRepositoryContract
+
+The RackManagementRepositoryContract is the interface for the rack management repository. This interface provides the functionality to manage the warehouse configuration for racks. Racks can be retrieved, created or updated here.
+
+[warning]
+.Deprecated! <small>(since 2018-03)</small>====
+Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationDimensionRepositoryContract instead
+====
+
+==== Namespace
+
+`Plenty\Modules\StockManagement\Warehouse\Management\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getRackById($rackId, $columns = [], $with = []):Plenty\Modules\StockManagement\Warehouse\Management\Models\Rack // <1>
+
+----
+
+
+    
+Find a rack by id.
+
+
+==== Return type
+    
+<1> link:stockmanagement#stockmanagement_models_rack[Rack^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$rackId`
+|The id of the rack.
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The attributes to be loaded.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to be loaded. Possible values are 'warehouse', 'shelves' and 'storageLocations'.
+|===
+
+
+[source%nowrap, php]
+----
+
+public findRacks($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Find racks. The results can be filtered by warehouse id.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The requested page.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|Number of items per page.
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The attributes to be loaded.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to be loaded. Possible values are 'warehouse', 'shelves' and 'storageLocations'.
+|===
+
+
+[source%nowrap, php]
+----
+
+public createRack($data, $warehouseId):Plenty\Modules\StockManagement\Warehouse\Management\Models\Rack // <1>
+
+----
+
+
+    
+Create a new rack.
+
+
+==== Return type
+    
+<1> link:stockmanagement#stockmanagement_models_rack[Rack^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The data to create a new rack.
+
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|The id of the warehouse the rack shall belong to.
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== ShelfManagementRepositoryContract
+
+The ShelfManagementRepositoryContract is the interface for the shelf management repository. This interface provides the functionality to manage the warehouse configuration for shelves. Shelves can be retrieved, created or updated here.
+
+[warning]
+.Deprecated! <small>(since 2018-03)</small>====
+Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationDimensionRepositoryContract instead
+====
+
+==== Namespace
+
+`Plenty\Modules\StockManagement\Warehouse\Management\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getShelfById($shelfId, $columns = [], $with = []):Plenty\Modules\StockManagement\Warehouse\Management\Models\Shelf // <1>
+
+----
+
+
+    
+Find a shelf by id.
+
+
+==== Return type
+    
+<1> link:stockmanagement#stockmanagement_models_shelf[Shelf^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$shelfId`
+|The id of the shelf.
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The attributes to be loaded.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to be loaded. Possible values are 'warehouse', 'rack' and 'storageLocations'.
+|===
+
+
+[source%nowrap, php]
+----
+
+public findShelves($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Find shelves. The results can be filtered by warehouse id and rack id.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The requested page.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|Number of items per page.
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The attributes to be loaded.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to be loaded. Possible values are 'warehouse', 'rack' and 'storageLocations'.
+|===
+
+
+[source%nowrap, php]
+----
+
+public createShelf($data, $warehouseId, $rackId):Plenty\Modules\StockManagement\Warehouse\Management\Models\Shelf // <1>
+
+----
+
+
+    
+Create a new shelf.
+
+
+==== Return type
+    
+<1> link:stockmanagement#stockmanagement_models_shelf[Shelf^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The data to create a new shelf.
+
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|The id of the warehouse the shelf shall belong to.
+
+|link:http://php.net/int[int^]
+a|`$rackId`
+|The id of the rack the shelf shall belong to.
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== StorageLocationManagementRepositoryContract
+
+The StorageLocationManagementRepositoryContract is the interface for the storage location management repository. This interface provides the functionality to manage the warehouse configuration for storage locations. Storage locations can be retrieved, created or updated here.
+
+[warning]
+.Deprecated! <small>(since 2018-03)</small>====
+Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationRepositoryContract instead
+====
+
+==== Namespace
+
+`Plenty\Modules\StockManagement\Warehouse\Management\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getStorageLocationById($storageLocationId, $columns = [], $with = []):Plenty\Modules\StockManagement\Warehouse\Management\Models\StorageLocation // <1>
+
+----
+
+
+    
+Find a storage location by id.
+
+
+==== Return type
+    
+<1> link:stockmanagement#stockmanagement_models_storagelocation[StorageLocation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$storageLocationId`
+|The id of the storage location.
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The attributes to be loaded.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to be loaded. Possible values are 'warehouse', 'rack' and 'shelf'.
+|===
+
+
+[source%nowrap, php]
+----
+
+public findStorageLocations($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Find storage locations. The results can be filtered by warehouse id, rack id and shelf id.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|The requested page.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|Number of items per page.
+
+|link:http://php.net/array[array^]
+a|`$columns`
+|The attributes to be loaded.
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to be loaded. Possible values are 'warehouse', 'rack' and 'shelf'.
+|===
+
+
+[source%nowrap, php]
+----
+
+public createStorageLocation($data, $warehouseId, $rackId, $shelfId):Plenty\Modules\StockManagement\Warehouse\Management\Models\StorageLocation // <1>
+
+----
+
+
+    
+Create a new storage location.
+
+
+==== Return type
+    
+<1> link:stockmanagement#stockmanagement_models_storagelocation[StorageLocation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The data to create a new storage location.
+
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|The id of the warehouse the storage location shall belong to.
+
+|link:http://php.net/int[int^]
+a|`$rackId`
+|The id of the rack the storage location shall belong to.
+
+|link:http://php.net/int[int^]
+a|`$shelfId`
+|The id of the shelf the storage location shall belong to.
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[stockmanagement_management_models]]
+==  Models
+=== Rack
+
+The storage rack model
+
+
+==== Namespace
+
+`Plenty\Modules\StockManagement\Warehouse\Management\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The id of the rack.
+|link:http://php.net/int[int^]
+    |name
+    |The name of the rack.
+|link:http://php.net/int[int^]
+    |position
+    |The position of the rack.
+|link:http://php.net/int[int^]
+    |warehouseId
+    |The id of the warehouse the rack belongs to.
+|link:http://php.net/int[int^]
+    |zone
+    |The zone of the rack. Numbers between 1 and 20 are valid.
+|link:stockmanagement#stockmanagement_models_warehouse[Warehouse^]
+
+    |warehouse
+    |The warehouse this rack belongs to.
+|link:miscellaneous#miscellaneous__[^]
+
+    |shelves
+    |The shelves that belong to this rack.
+|link:miscellaneous#miscellaneous__[^]
+
+    |storageLocations
+    |The storage locations that belong to this rack.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== Shelf
+
+The storage shelf model
+
+
+==== Namespace
+
+`Plenty\Modules\StockManagement\Warehouse\Management\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The id of the shelf.
+|link:http://php.net/int[int^]
+    |rackId
+    |The id of the rack the shelf belongs to.
+|link:http://php.net/string[string^]
+    |name
+    |The name of the shelf.
+|link:http://php.net/int[int^]
+    |level
+    |The level of the shelf. Numbers between 1 and 25 are valid.
+|link:stockmanagement#stockmanagement_models_rack[Rack^]
+
+    |rack
+    |The rack this shelf belongs to.
+|link:miscellaneous#miscellaneous__[^]
+
+    |storageLocations
+    |The storage locations of this shelf.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== StorageLocation
+
+The storage location model
+
+
+==== Namespace
+
+`Plenty\Modules\StockManagement\Warehouse\Management\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The id of the storage location.
+|link:http://php.net/int[int^]
+    |warehouseId
+    |The id of the warehouse the storage location belongs to.
+|link:http://php.net/int[int^]
+    |rackId
+    |The id of the rack the storage location belongs to.
+|link:http://php.net/int[int^]
+    |shelfId
+    |The id of the shelf the storage location belongs to.
+|link:http://php.net/string[string^]
+    |name
+    |The name of the storage location.
+|link:http://php.net/int[int^]
+    |type
+    |The type of the storage location. Valid strings are: 'small', 'medium', 'large', 'europallet'.
+|link:http://php.net/int[int^]
+    |position
+    |The position of the storage location.
+|link:stockmanagement#stockmanagement_models_warehouse[Warehouse^]
+
+    |warehouse
+    |The warehouse this storage location belongs to.
+|link:stockmanagement#stockmanagement_models_rack[Rack^]
+
+    |rack
+    |The rack this storage location belongs to.
+|link:stockmanagement#stockmanagement_models_shelf[Shelf^]
+
+    |shelf
+    |The shelf this storage location belongs to.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

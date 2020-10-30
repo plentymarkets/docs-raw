@@ -1,0 +1,225 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[notifications_notifications]]
+= Notifications
+
+[[notifications_notifications_contracts]]
+==  Contracts
+=== NotificationsRepositoryContract
+
+Plugin Notifications Service
+
+
+==== Namespace
+
+`Plenty\Modules\Notifications\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public addNotification($notificationBuiltWithNotificationBuilder):array // <1>
+
+----
+
+
+    
+Add a Notification in the system
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$notificationBuiltWithNotificationBuilder`
+|An array built with NotificationBuilder::build() method
+|===
+
+
+[source%nowrap, php]
+----
+
+public fetchNotifications($queryBuiltWithNotificationsQueryBuilder, $page, $itemsPerPage):Plenty\Repositories\Models\UnspecifiedLengthPaginationResponse // <1>
+
+----
+
+
+    
+Fetch a list of short/incomplete notifications, containing only the subject. To be used for listing purposes.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_unspecifiedlengthpaginationresponse[UnspecifiedLengthPaginationResponse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$queryBuiltWithNotificationsQueryBuilder`
+|An array built with NotificationsQueryBuilder::build() method
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page number, starting from 1
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of notifications per page
+|===
+
+
+[source%nowrap, php]
+----
+
+public fetchNotificationsDetails($notificationsFetchDetailsQuery):array // <1>
+
+----
+
+
+    
+Fetch all the details of a Notification based on its id.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$notificationsFetchDetailsQuery`
+|An array built with NotificationsFetchDetailsQueryBuilder::build() method
+|===
+
+
+[source%nowrap, php]
+----
+
+public acknowledgeNotifications($queryBuiltWithNotificationsAcknowledgeQueryBuilder):bool // <1>
+
+----
+
+
+    
+Mark a Notification as acknowledged.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$queryBuiltWithNotificationsAcknowledgeQueryBuilder`
+|An array built with NotificationsAcknowledgeQueryBuilder::build() method
+|===
+
+
+[source%nowrap, php]
+----
+
+public getNotificationsCount($queryBuiltWithNotificationsQueryBuilder):int // <1>
+
+----
+
+
+    
+Retrieve the current unread Notifications count
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$queryBuiltWithNotificationsQueryBuilder`
+|An array built with NotificationsQueryBuilder::build() method
+|===
+
+
+[[notifications_notifications_models]]
+==  Models
+=== Notification
+
+The Notification Model
+
+
+==== Namespace
+
+`Plenty\Modules\Notifications\Models`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== NotificationContent
+
+The Notification Content model
+
+
+==== Namespace
+
+`Plenty\Modules\Notifications\Models`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

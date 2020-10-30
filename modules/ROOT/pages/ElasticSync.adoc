@@ -1,0 +1,4356 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[elasticsync_contracts]]
+= Contracts
+
+[[elasticsync_contracts_core]]
+==  Core
+=== ElasticSyncMappingFilterRepositoryContract
+
+This interface allows you to get, list, create, update and delete elastic sync mapping filters.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Contracts\Core`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createSyncMappingFilter($mappingId, $data):void // <1>
+
+----
+
+
+    
+Create a sync mapping filter.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mappingId`
+|The id of the mapping
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSyncMappingFilter($filterId):void // <1>
+
+----
+
+
+    
+Get a sync mapping filter.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$filterId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listSyncMappingFilters($mappingId, $filters = [], $with = []):void // <1>
+
+----
+
+
+    
+List sync mapping filters.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mappingId`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateSyncMappingFilter($filterId, $data):void // <1>
+
+----
+
+
+    
+Update a sync mapping filter.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$filterId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteSyncMappingFilter($filterId):void // <1>
+
+----
+
+
+    
+Delete a sync mapping filter.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$filterId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createSyncMappingFilters($mappingId, $data):void // <1>
+
+----
+
+
+    
+Create sync mapping filters.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mappingId`
+|The id of the mapping
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateSyncMappingFilters($mappingId, $data):void // <1>
+
+----
+
+
+    
+Update sync mapping filters.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mappingId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== ElasticSyncMappingRepositoryContract
+
+This interface allows you to get, list, create, update and delete elastic sync mappings.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Contracts\Core`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createSyncMapping($syncId, $data):void // <1>
+
+----
+
+
+    
+Create a sync mapping.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSyncMapping($mappingId, $with = []):void // <1>
+
+----
+
+
+    
+Get a sync mapping.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mappingId`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listSyncMappings($syncId, $page = 1, $itemsPerPage = 50, $paginate = 1, $filters = [], $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+List sync mappings.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/int[int^]
+a|`$paginate`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateSyncMapping($mappingId, $data):void // <1>
+
+----
+
+
+    
+Update a sync mapping.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mappingId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteSyncMapping($mappingId):void // <1>
+
+----
+
+
+    
+Delete a sync mapping.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mappingId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteSyncMappings($mappingIds):void // <1>
+
+----
+
+
+    
+Delete one or more mappings.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$mappingIds`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public copySyncMapping($mappingIds):array // <1>
+
+----
+
+
+    
+Copy sync mapping.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$mappingIds`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public mappingValues($sync_type):array // <1>
+
+----
+
+
+    
+Get the mapping values.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$sync_type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public fieldValuesMap():array // <1>
+
+----
+
+
+[warning]
+.Deprecated! ====
+This method will not be supported in the future. Please refrain from using it as soon as possible.
+====
+    
+Get the field value map for all sync types.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public listVariationMatched():array // <1>
+
+----
+
+
+    
+Get a list with variation matches.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public modelKeyToFieldValueKey($syncType):array // <1>
+
+----
+
+
+    
+Get the model key to field value key.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$syncType`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public filterLabelList():array // <1>
+
+----
+
+
+    
+Get the label list for mapping filtration.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public mappingValuesTree($data):array // <1>
+
+----
+
+
+    
+Get the mapping values tree.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public csvColumns($syncId):array // <1>
+
+----
+
+
+    
+Get the csv columns of a sync.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public rowCsv($syncId):array // <1>
+
+----
+
+
+    
+Get the csv rows.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPlentyFieldsValueMap($syncDataType):array // <1>
+
+----
+
+
+    
+Get the plenty fields value map for a particular sync type.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$syncDataType`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== ElasticSyncMappingRowRepositoryContract
+
+This interface allows you to get, list, create, update and delete elastic sync mapping rows.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Contracts\Core`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createSyncMappingRow($mappingId, $data):void // <1>
+
+----
+
+
+    
+Create a sync mapping row.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mappingId`
+|The id of the mapping
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSyncMappingRow($rowId):void // <1>
+
+----
+
+
+    
+Get a sync mapping row.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$rowId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listSyncMappingRows($mappingId, $filters = [], $with = [], $page = 1, $itemsPerPage = 25):void // <1>
+
+----
+
+
+    
+List sync mapping rows.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mappingId`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateSyncMappingRow($rowId, $data):void // <1>
+
+----
+
+
+    
+Update a sync mapping row.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$rowId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteSyncMappingRow($rowId):void // <1>
+
+----
+
+
+    
+Delete a sync mapping row.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$rowId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateSyncMappingRows($mappingId, $data):void // <1>
+
+----
+
+
+    
+Update sync mapping rows.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mappingId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createSyncMappingRows($mappingId, $data):void // <1>
+
+----
+
+
+    
+Create sync mapping rows.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$mappingId`
+|The id of the mapping
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== ElasticSyncMatchingRepositoryContract
+
+This interface allows you to get, list, create, update and delete elastic sync matches.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Contracts\Core`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createSyncMatching($syncId, $data):void // <1>
+
+----
+
+
+    
+Create a sync matching.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|The id of the sync
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSyncMatching($matchingId):void // <1>
+
+----
+
+
+    
+Get a sync matching.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$matchingId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listSyncMatches($syncId, $filters = [], $with = []):void // <1>
+
+----
+
+
+    
+List sync matches.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateSyncMatching($matchingId, $data):void // <1>
+
+----
+
+
+    
+Update a sync matching.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$matchingId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteSyncMatching($matchingId):void // <1>
+
+----
+
+
+    
+Delete a sync matching.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$matchingId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getEntity($syncId):array // <1>
+
+----
+
+
+    
+Get an entity.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public matchingFields($syncType):array // <1>
+
+----
+
+
+    
+Get a list of all mappings for a particular sync type.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$syncType`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createSyncMatches($syncId, $data):void // <1>
+
+----
+
+
+    
+Create sync matches.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|The id of the sync
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateSyncMatches($syncId, $data):void // <1>
+
+----
+
+
+    
+Update sync matches.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listDecimals():array // <1>
+
+----
+
+
+    
+Get list of decimals.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== ElasticSyncOptionRepositoryContract
+
+This interface allows you to get, list, create, update and delete elastic sync options.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Contracts\Core`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createSyncOption($syncId, $data):void // <1>
+
+----
+
+
+    
+Create a sync option.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|The sync id
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSyncOption($optionId):void // <1>
+
+----
+
+
+    
+Get a sync option.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$optionId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listSyncOptions($syncId, $filters = [], $with = []):void // <1>
+
+----
+
+
+    
+List sync options.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|The sync id
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateSyncOption($optionId, $data):void // <1>
+
+----
+
+
+    
+Update a sync option.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$optionId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteSyncOption($optionId):void // <1>
+
+----
+
+
+    
+Delete a sync option.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$optionId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createSyncOptions($syncId, $data):void // <1>
+
+----
+
+
+    
+Create sync options.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|The sync id
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateSyncOptions($syncId, $data):void // <1>
+
+----
+
+
+    
+Update sync options.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== ElasticSyncSyncRepositoryContract
+
+This interface allows you to get, list, create, update and delete elastic sync syncs.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Contracts\Core`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createSync($data):void // <1>
+
+----
+
+
+    
+Create a sync.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSync($syncId, $with = []):array // <1>
+
+----
+
+
+    
+Get a sync.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listSyncs($page = 1, $itemsPerPage = 50, $paginate = 1, $filters = [], $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Get all syncs
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/int[int^]
+a|`$paginate`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateSync($syncId, $data):void // <1>
+
+----
+
+
+    
+Update a sync.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteSync($syncId):void // <1>
+
+----
+
+
+    
+Delete a sync.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteSyncs($syncIds):void // <1>
+
+----
+
+
+    
+Delete syncs.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$syncIds`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getListTypes():array // <1>
+
+----
+
+
+    
+Get list of sync types.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getListIntervals():array // <1>
+
+----
+
+
+    
+Get list of sync intervals.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getListDecimals():array // <1>
+
+----
+
+
+    
+Get list of sync decimals.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public export($syncIds):array // <1>
+
+----
+
+
+    
+Export the syncs.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$syncIds`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public copy($syncIds):array // <1>
+
+----
+
+
+    
+Copy the syncs.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$syncIds`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public resetCache():array // <1>
+
+----
+
+
+    
+Reset the cache.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public sourcePreview($syncId):array // <1>
+
+----
+
+
+    
+Preview the syncs.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public scheduleTimes():string // <1>
+
+----
+
+
+    
+Get schedule times.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getReportLogs($page = 1, $itemsPerPage = 50, $paginate = 1, $filters = [], $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Check Report Log.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/int[int^]
+a|`$paginate`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public saveCsvToS3($data):void // <1>
+
+----
+
+
+    
+Save the CSV on S3.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public importSyncDifferent($data):void // <1>
+
+----
+
+
+    
+Import the sync with different plentyId.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPreviewValues($syncId):array // <1>
+
+----
+
+
+    
+Get preview of csv values.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public run($syncId, $data):void // <1>
+
+----
+
+
+    
+Execute the run procedure.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public newRun($syncId, $data):array // <1>
+
+----
+
+
+    
+Execute the new run procedure.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public report($id):array // <1>
+
+----
+
+
+    
+Get Log by ID
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public reportAvailable($page = 1, $itemsPerPage = 50, $paginate = 1, $filters = [], $with = []):array // <1>
+
+----
+
+
+    
+Check Report Log.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/int[int^]
+a|`$paginate`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public exportSync($syncId):array // <1>
+
+----
+
+
+    
+Export the sync.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$syncId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public syncStatus():array // <1>
+
+----
+
+
+    
+Get syncs status.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public updateCsvSync($data):void // <1>
+
+----
+
+
+    
+Update the Csv of a Sync.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public importSyncJson($data):void // <1>
+
+----
+
+
+    
+Save the CSV on S3.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public importSyncJsonDifferent($data):void // <1>
+
+----
+
+
+    
+Import the sync with different plentyId.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[elasticsync_contracts_mapper]]
+==  Mapper
+=== PropertyDescriptor
+
+describes properties of a Model
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Contracts\Mapper`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getPropertyInformation($modelClassName):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$modelClassName`
+|
+|===
+
+
+[[elasticsync_contracts_report]]
+==  Report
+=== ElasticSyncReportOptionRepositoryContract
+
+This interface provides methods to CRUD report options
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Contracts\Report`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\ElasticSync\Models\Report\RunReportOption // <1>
+
+----
+
+
+    
+Creates a run report option
+
+
+==== Return type
+    
+<1> link:elasticsync#elasticsync_report_runreportoption[RunReportOption^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public get($id):Plenty\Modules\ElasticSync\Models\Report\RunReportOption // <1>
+
+----
+
+
+    
+Gets a run report option
+
+
+==== Return type
+    
+<1> link:elasticsync#elasticsync_report_runreportoption[RunReportOption^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):Plenty\Modules\ElasticSync\Models\Report\RunReportOption // <1>
+
+----
+
+
+    
+Updates a run report option
+
+
+==== Return type
+    
+<1> link:elasticsync#elasticsync_report_runreportoption[RunReportOption^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):void // <1>
+
+----
+
+
+    
+Deletes a run report option
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public set($report, $name, $value = null, $type = &quot;string&quot;):void // <1>
+
+----
+
+
+    
+Sets a run report option
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$report`
+|
+
+|link:http://php.net/string[string^]
+a|`$name`
+|
+
+|link:http://php.net/string[string^]
+a|`$value`
+|
+
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getOptionByName($report, $name):void // <1>
+
+----
+
+
+    
+Gets the option of a report by name
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$report`
+|
+
+|link:http://php.net/string[string^]
+a|`$name`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getValueByName($report, $name):void // <1>
+
+----
+
+
+    
+Gets the value of a report option
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$report`
+|
+
+|link:http://php.net/string[string^]
+a|`$name`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== ElasticSyncReportRepositoryContract
+
+This interface provides methods to list reports
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Contracts\Report`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getRunReport($id):Plenty\Modules\ElasticSync\Models\Report\RunReport // <1>
+
+----
+
+
+    
+Gets a run report
+
+
+==== Return type
+    
+<1> link:elasticsync#elasticsync_report_runreport[RunReport^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getRunReportLog($id):void // <1>
+
+----
+
+
+    
+Gets a run report log
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public cancelRun($id):void // <1>
+
+----
+
+
+    
+Cancels a run
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listRunReports($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Lists run reports
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listJobReports($reportId, $page = 1, $itemsPerPage = 50, $filters = []):array // <1>
+
+----
+
+
+    
+Lists job reports for a specific run
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$reportId`
+|
+
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listJobs($reportId):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$reportId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listOutcomes($reportId, $job):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$reportId`
+|
+
+|link:http://php.net/string[string^]
+a|`$job`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[elasticsync_models]]
+= Models
+
+[[elasticsync_models_core]]
+==  Core
+=== ElasticSyncMapping
+
+The elastic sync mapping model.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Models\Core`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the elastic sync mapping
+|link:http://php.net/int[int^]
+    |syncId
+    |The ID of the elastic sync sync
+|link:http://php.net/string[string^]
+    |name
+    |The name of the elastic sync mapping
+|link:http://php.net/int[int^]
+    |position
+    |The position of the elastic sync mapping
+|link:http://php.net/bool[bool^]
+    |active
+    |The state of the elastic sync mapping
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ElasticSyncMappingFilter
+
+The elastic sync mapping filter model.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Models\Core`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the elastic sync mapping filter
+|link:http://php.net/int[int^]
+    |mappingId
+    |The ID of the elastic sync mapping
+|link:http://php.net/string[string^]
+    |type
+    |The type of the elastic sync mapping filter
+|link:http://php.net/string[string^]
+    |operator
+    |The operator of the elastic sync mapping filter
+|link:http://php.net/string[string^]
+    |source
+    |The source of the elastic sync mapping filter
+|link:http://php.net/string[string^]
+    |value
+    |The value of the elastic sync mapping filter
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ElasticSyncMappingRow
+
+The elastic sync mapping row model.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Models\Core`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the elastic sync mapping row
+|link:http://php.net/int[int^]
+    |mappingId
+    |The ID of the elastic sync mapping
+|link:http://php.net/string[string^]
+    |targetModel
+    |The target model of the elastic sync mapping row
+|link:http://php.net/string[string^]
+    |targetAttribute
+    |The target attribute of the elastic sync mapping row
+|link:http://php.net/bool[bool^]
+    |active
+    |The state of the elastic sync mapping row
+|link:http://php.net/string[string^]
+    |entityType
+    |The entity type of the elastic sync mapping row (array values: 'ownValue', 'ownAssignment', 'regularExpression', 'csvColumn')
+|link:http://php.net/string[string^]
+    |value
+    |The value of the elastic sync mapping row
+|link:http://php.net/string[string^]
+    |settings
+    |The settings of the elastic sync mapping row
+|link:http://php.net/string[string^]
+    |identifiers
+    |The identifiers of the elastic sync mapping row
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ElasticSyncMatching
+
+The elastic sync matching model.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Models\Core`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the elastic sync matching
+|link:http://php.net/int[int^]
+    |syncId
+    |The ID of the elastic sync sync
+|link:http://php.net/string[string^]
+    |target
+    |The target of the elastic sync matching
+|link:http://php.net/string[string^]
+    |source
+    |The source of the elastic sync matching
+|link:http://php.net/string[string^]
+    |additionalValue
+    |The additional value of the elastic sync matching
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ElasticSyncOption
+
+The elastic sync option model.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Models\Core`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the elastic sync option
+|link:http://php.net/int[int^]
+    |syncId
+    |The ID of the elastic sync sync
+|link:http://php.net/string[string^]
+    |optionIdentifier
+    |The option identifier of the elastic sync option
+|link:http://php.net/string[string^]
+    |key
+    |The key of the elastic sync option
+|link:http://php.net/string[string^]
+    |value
+    |The value of the elastic sync option
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the elastic sync option was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the elastic sync option was last updated
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ElasticSyncSync
+
+The elastic sync sync model.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Models\Core`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the elastic sync sync
+|link:http://php.net/string[string^]
+    |name
+    |The name of the elastic sync sync
+|link:http://php.net/string[string^]
+    |syncType
+    |The type of the elastic sync sync
+|link:http://php.net/string[string^]
+    |sourceType
+    |The source type of the elastic sync sync
+|link:http://php.net/string[string^]
+    |sourceDataType
+    |The source data type of the elastic sync sync
+|link:miscellaneous#miscellaneous__[^]
+
+    |lastRun
+    |The date when elastic sync sync was last run
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the elastic sync sync was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the elastic sync sync was last updated
+|link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    |matching
+    |The matching relation
+|link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    |options
+    |The options relation
+|link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    |mappings
+    |The mapping relation
+|link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    |reports
+    |The reports relation
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[elasticsync_models_dataprovider]]
+==  DataProvider
+=== PropertyInformation
+
+property information
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Models\DataProvider`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getType():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getName():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getDescription():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[[elasticsync_models_report]]
+==  Report
+=== RunReport
+
+The run report model.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Models\Report`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the run report
+|link:http://php.net/int[int^]
+    |sync_id
+    |The ID of the sync
+|link:http://php.net/int[int^]
+    |jobs_total
+    |The total number of jobs
+|link:http://php.net/int[int^]
+    |jobs_completed
+    |The number of completed jobs
+|link:http://php.net/int[int^]
+    |errors
+    |The number of errors
+|link:http://php.net/string[string^]
+    |children_identifier
+    |The identifier used by children job reports
+|link:http://php.net/string[string^]
+    |report_filename
+    |The name of the S3 report counterpart
+|link:http://php.net/int[int^]
+    |rows
+    |The number of rows in the file
+|link:http://php.net/int[int^]
+    |rows_successful
+    |The number of successful rows in the file
+|link:http://php.net/string[string^]
+    |date
+    |The date when this report was created
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== RunReportOption
+
+The run report option model.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Models\Report`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the run report option
+|link:http://php.net/int[int^]
+    |run_report_id
+    |The ID of the run report
+|link:http://php.net/string[string^]
+    |name
+    |The name
+|link:http://php.net/string[string^]
+    |value
+    |The value
+|link:http://php.net/string[string^]
+    |type
+    |The type
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[elasticsync_models_sync]]
+==  Sync
+=== Mapping
+
+The mapping model.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Models\Sync`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the mapping
+|link:http://php.net/string[string^]
+    |data
+    |The data of the mapping
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the mapping was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the mapping was last updated
+|link:elasticsync#elasticsync_sync_mapping[Mapping^]
+
+    |mapping
+    |The mapping from ElasticSync.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== Sync
+
+The sync model.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Models\Sync`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the sync
+|link:http://php.net/string[string^]
+    |data
+    |The data of the sync
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the sync was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the sync was last updated
+|link:elasticsync#elasticsync_sync_sync[Sync^]
+
+    |sync
+    |The sync from ElasticSync.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== SyncLog
+
+The synclog model.
+
+
+==== Namespace
+
+`Plenty\Modules\ElasticSync\Models\Sync`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the synclog
+|link:http://php.net/int[int^]
+    |syncId
+    |The syncId of the synclog
+|link:http://php.net/string[string^]
+    |syncHash
+    |The syncHash of the synclog
+|link:http://php.net/string[string^]
+    |jobHash
+    |The jobHash of the synclog
+|link:http://php.net/string[string^]
+    |hashDate
+    |The hashDate of the synclog
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the synclog was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the synclog was last updated
+|link:elasticsync#elasticsync_sync_synclog[SyncLog^]
+
+    |syncLog
+    |The sync log from ElasticSync.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

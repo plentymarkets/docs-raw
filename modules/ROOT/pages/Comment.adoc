@@ -1,0 +1,342 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[comment_comment]]
+= Comment
+
+[[comment_comment_contracts]]
+==  Contracts
+=== CommentRepositoryContract
+
+Get, create, update and delete comments.
+
+
+==== Namespace
+
+`Plenty\Modules\Comment\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getComment($commentId):Plenty\Modules\Comment\Models\Comment // <1>
+
+----
+
+
+    
+Get a comment
+
+
+==== Return type
+    
+<1> link:comment#comment_models_comment[Comment^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$commentId`
+|The ID of the comment
+|===
+
+
+[source%nowrap, php]
+----
+
+public listComments():Illuminate\Support\Collection // <1>
+
+----
+
+
+    
+List comments
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    
+
+[source%nowrap, php]
+----
+
+public createComment($data, $suppressEvent = false):Plenty\Modules\Comment\Models\Comment // <1>
+
+----
+
+
+    
+Create a comment
+
+
+==== Return type
+    
+<1> link:comment#comment_models_comment[Comment^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+
+|link:http://php.net/bool[bool^]
+a|`$suppressEvent`
+|Whether to suppress the created event or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteComment($commentId):void // <1>
+
+----
+
+
+    
+Delete a comment
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$commentId`
+|The ID of the comment
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateComment($data, $commentId):Plenty\Modules\Comment\Models\Comment // <1>
+
+----
+
+
+    
+Update a comment
+
+
+==== Return type
+    
+<1> link:comment#comment_models_comment[Comment^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/int[int^]
+a|`$commentId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[comment_comment_models]]
+==  Models
+=== Comment
+
+The comment model.
+
+
+==== Namespace
+
+`Plenty\Modules\Comment\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the comment
+|link:http://php.net/string[string^]
+    |referenceType
+    |The reference type. Valid types are:
+<ul>
+	<li>category</li>
+	<li>contact</li>
+	<li>order</li>
+ <li>item_variation</li>
+ <li>order_item</li>
+	</ul>
+|link:http://php.net/int[int^]
+    |referenceValue
+    |The reference value
+|link:http://php.net/int[int^]
+    |userId
+    |The ID of the user
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the comment was created
+|link:http://php.net/string[string^]
+    |text
+    |The comment text
+|link:http://php.net/bool[bool^]
+    |isVisibleForContact
+    |If true, the comment is visible for the associated contact.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

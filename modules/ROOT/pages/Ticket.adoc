@@ -1,0 +1,1795 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[ticket_ticket]]
+= Ticket
+
+[[ticket_ticket_contracts]]
+==  Contracts
+=== TicketMessageRepositoryContract
+
+The TicketMessageRepositoryContract is the interface for the ticket message repository. This interface allows to get one particular ticket message, list all ticket messages and list public and internal ticket messages.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($ticketMessageId):Plenty\Modules\Ticket\Models\TicketMessage // <1>
+
+----
+
+
+    
+Gets the ticket message by the given ID.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticketmessage[TicketMessage^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$ticketMessageId`
+|The ID of the ticket message
+|===
+
+
+[source%nowrap, php]
+----
+
+public list($ticketId):void // <1>
+
+----
+
+
+    
+Lists all ticket messages of a ticket.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$ticketId`
+|The ID of the ticket
+|===
+
+
+[source%nowrap, php]
+----
+
+public listInternal($ticketId):void // <1>
+
+----
+
+
+    
+Lists all internal ticket messages of a ticket.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$ticketId`
+|The ticket ID.
+|===
+
+
+[source%nowrap, php]
+----
+
+public listPublic($ticketId):void // <1>
+
+----
+
+
+    
+Lists all public ticket messages of a ticket
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$ticketId`
+|The ID of the ticket
+|===
+
+
+
+=== TicketRepositoryContract
+
+The TicketRepositoryContract is the interface for the ticket repository. This interface allows to list tickets by filters.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createTicket($data):Plenty\Modules\Ticket\Models\Ticket // <1>
+
+----
+
+
+    
+Creates a new ticket.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticket[Ticket^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The ticket data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public searchTickets($filter, $page = 1, $itemsPerPage = 50):array // <1>
+
+----
+
+
+    
+List tickets by filter options.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filter`
+|The filter
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The page to get. The default page that will be returned is page 1.
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of tickets to be displayed per page. The default number of tickets per page is 50.
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteTicket($ticketId):void // <1>
+
+----
+
+
+    
+Deletes a ticket by the ID.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$ticketId`
+|The ID of the ticket
+|===
+
+
+[source%nowrap, php]
+----
+
+public createMessage($data, $ticketId):Plenty\Modules\Ticket\Models\TicketMessage // <1>
+
+----
+
+
+    
+Creates a message for a ticket.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticketmessage[TicketMessage^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The message data as associative array
+
+|link:http://php.net/int[int^]
+a|`$ticketId`
+|The ID of the ticket
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateTicket($data, $ticketId):Plenty\Modules\Ticket\Models\Ticket // <1>
+
+----
+
+
+    
+Updates an existing ticket with given data.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticket[Ticket^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The updating data as associative array
+
+|link:http://php.net/int[int^]
+a|`$ticketId`
+|The ID of the ticket
+|===
+
+
+[source%nowrap, php]
+----
+
+public findById($ticketId, $with = []):Plenty\Modules\Ticket\Models\Ticket // <1>
+
+----
+
+
+    
+Gets a ticket by the ID.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticket[Ticket^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$ticketId`
+|The ID of the ticket
+
+|link:http://php.net/array[array^]
+a|`$with`
+|The relations to be loaded with the ticket. Possible values are 'order' and 'contact'.
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== TicketRoleNameRepositoryContract
+
+The TicketRoleNameRepositoryContract is the interface for the ticket role name repository. This interface allows to update, create and list ticket role names.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public update($data, $ticketRoleNameId):Plenty\Modules\Ticket\Models\TicketRoleName // <1>
+
+----
+
+
+    
+Updates an existing ticket role name.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticketrolename[TicketRoleName^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The ticket role name data as associative array
+
+|link:http://php.net/int[int^]
+a|`$ticketRoleNameId`
+|The ID of the ticket role name
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Ticket\Models\TicketRoleName // <1>
+
+----
+
+
+    
+Creates a ticket role name.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticketrolename[TicketRoleName^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The ticket role name data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public findByName($name, $lang):array // <1>
+
+----
+
+
+    
+Lists the ticket roles by the name.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The name of the ticket role
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language of the ticket role
+|===
+
+
+[source%nowrap, php]
+----
+
+public findByLang($lang):array // <1>
+
+----
+
+
+    
+Lists the ticket roles by the language.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language of the ticket role
+|===
+
+
+
+=== TicketRoleRepositoryContract
+
+The TicketRoleRepositoryContract is the interface for the ticket role repository. This interface allows to update and create ticket roles.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public update($data, $ticketRoleId):Plenty\Modules\Ticket\Models\TicketRole // <1>
+
+----
+
+
+    
+Update an existing ticket role.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticketrole[TicketRole^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The ticket role data as associative array
+
+|link:http://php.net/int[int^]
+a|`$ticketRoleId`
+|The ID of the ticket role
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Ticket\Models\TicketRole // <1>
+
+----
+
+
+    
+Creates a ticket role.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticketrole[TicketRole^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The ticket role data as associative array
+|===
+
+
+
+=== TicketStatusNameRepositoryContract
+
+The TicketStatusNameRepositoryContract is the interface for the ticket status names. This interface allows to update, create and list ticket status names.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public update($data, $ticketStatusNameId):Plenty\Modules\Ticket\Models\TicketStatusName // <1>
+
+----
+
+
+    
+Updates the ticket status name by the given ID.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticketstatusname[TicketStatusName^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The ticket status name data as associative array
+
+|link:http://php.net/int[int^]
+a|`$ticketStatusNameId`
+|The ID of the ticket status name
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Ticket\Models\TicketStatusName // <1>
+
+----
+
+
+    
+Creates a ticket status name.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticketstatusname[TicketStatusName^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The ticket status name data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public findByName($name, $lang):array // <1>
+
+----
+
+
+    
+Gets the ticket status name.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The name of the ticket status
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language of the ticket status name
+|===
+
+
+[source%nowrap, php]
+----
+
+public statusNameList($lang):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language of the ticket status name
+|===
+
+
+[source%nowrap, php]
+----
+
+public statusNameListWithTypeId($lang):array // <1>
+
+----
+
+
+    
+Lists the ticket status names with type ID.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language of the ticket status name
+|===
+
+
+
+=== TicketStatusRepositoryContract
+
+The TicketStatusRepositoryContract is the interface for the ticket status repository. This interface allows to update, create and list ticket statuses.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public update($data, $ticketStatusId):Plenty\Modules\Ticket\Models\TicketStatus // <1>
+
+----
+
+
+    
+Updates an existing ticket status.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticketstatus[TicketStatus^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The ticket status data as associative array
+
+|link:http://php.net/int[int^]
+a|`$ticketStatusId`
+|The ID of the ticket status
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Ticket\Models\TicketStatus // <1>
+
+----
+
+
+    
+Creates a ticket status.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticketstatus[TicketStatus^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The ticket status data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public findByTypeId($typeId):array // <1>
+
+----
+
+
+    
+Lists the ticket statuses by the type ID.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$typeId`
+|The ID of the type
+|===
+
+
+
+=== TicketTypeNameRepositoryContract
+
+The TicketTypeNameRepositoryContract is the interface for the ticket type name repository. This interface allows to update, create and list ticket type names.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public update($data, $ticketTypeNameId):Plenty\Modules\Ticket\Models\TicketTypeName // <1>
+
+----
+
+
+    
+Updates an existing ticket type name.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_tickettypename[TicketTypeName^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The ticket type name data as associative array
+
+|link:http://php.net/int[int^]
+a|`$ticketTypeNameId`
+|The ID of the ticket type name
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Ticket\Models\TicketTypeName // <1>
+
+----
+
+
+    
+Creates a ticket type name.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_tickettypename[TicketTypeName^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The ticket type name data as associative array
+|===
+
+
+[source%nowrap, php]
+----
+
+public findByName($name, $lang):array // <1>
+
+----
+
+
+    
+Lists the ticket types by the name.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The name of the ticket type
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language of the ticket type
+|===
+
+
+[source%nowrap, php]
+----
+
+public typeNameList($lang):array // <1>
+
+----
+
+
+    
+Lists the ticket types by the language.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language of the ticket type
+|===
+
+
+
+=== TicketTypeRepositoryContract
+
+The TicketTypeRepositoryContract is the interface for the ticket type repository. This interface allows to update and create ticket types.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public update($data, $ticketTypeId):Plenty\Modules\Ticket\Models\TicketType // <1>
+
+----
+
+
+    
+Updates the ticket type by the given ID.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_tickettype[TicketType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The ticket type data as associative array
+
+|link:http://php.net/int[int^]
+a|`$ticketTypeId`
+|The ID of the ticket type
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Ticket\Models\TicketType // <1>
+
+----
+
+
+    
+Creates a ticket type.
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_tickettype[TicketType^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The ticket type data as associative array
+|===
+
+
+[[ticket_ticket_models]]
+==  Models
+=== Ticket
+
+The ticket model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the ticket
+|link:http://php.net/int[int^]
+    |typeId
+    |The type ID of the ticket
+|link:http://php.net/int[int^]
+    |priorityId
+    |The priority ID of the ticket
+|link:http://php.net/int[int^]
+    |parentTicketId
+    |The ID of the parent ticket
+|link:http://php.net/int[int^]
+    |statusId
+    |The status ID of the ticket
+|link:http://php.net/array[array^]
+    |confidential
+    |The confidential value. Displays 1 if the ticket is confidential. Displays 0 if the ticket is not confidential.
+|link:http://php.net/int[int^]
+    |contactId
+    |The ID of the contact that is linked with the ticket
+|link:http://php.net/int[int^]
+    |orderId
+    |The ID of the order linked with the ticket
+|link:http://php.net/string[string^]
+    |createdAt
+    |The time the ticket was created as unix timestamp or carbon object
+|link:http://php.net/string[string^]
+    |updatedAt
+    |The time the ticket was last updated as unix timestamp or carbon object
+|link:http://php.net/string[string^]
+    |contactLastUpdateAt
+    |The time the contact was last updated
+|link:http://php.net/string[string^]
+    |deadlineAt
+    |The date of the ticket deadline
+|link:http://php.net/string[string^]
+    |finishedAt
+    |The date the ticket is solved and displays 100 percent in the progress bar
+|link:http://php.net/string[string^]
+    |title
+    |The title of the ticket
+|link:http://php.net/int[int^]
+    |progress
+    |The progress of the ticket in percent
+|link:http://php.net/int[int^]
+    |plentyId
+    |The ID of the client (store)
+|link:http://php.net/array[array^]
+    |source
+    |The source of the ticket. Possible values are 'frontend', 'backend', 'ebay' and 'email'.
+|link:http://php.net/int[int^]
+    |documentsCount
+    |The number of documents that are attached to the ticket
+|link:http://php.net/int[int^]
+    |hasDocuments
+    |Displays 1 if the ticket has one or more documents. Displays 0 if the ticket has no document.
+|link:http://php.net/int[int^]
+    |childrenCount
+    |The number of child tickets
+|link:http://php.net/string[string^]
+    |resubmissionAt
+    |The date the ticket should be resubmitted
+|link:http://php.net/string[string^]
+    |parseData
+    |The ParseData from the ticket
+|link:account#account_models_contact[Contact^]
+
+    |contact
+    |The contact instance linked with the ticket
+|link:order#order_models_order[Order^]
+
+    |order
+    |The order instance linked with the ticket
+|link:http://php.net/array[array^]
+    |owners
+    |The owners of the ticket. It is a combination of the user ID and the role ID.
+|link:http://php.net/array[array^]
+    |messages
+    |The messages of the ticket
+|link:http://php.net/array[array^]
+    |documents
+    |The docuemts of the ticket
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== TicketDocument
+
+The ticket document model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the ticket document
+|link:http://php.net/int[int^]
+    |ticketId
+    |TheID of the ticket
+|link:http://php.net/int[int^]
+    |userId
+    |The ID of the user
+|link:http://php.net/string[string^]
+    |type
+    |The type the document
+|link:http://php.net/string[string^]
+    |name
+    |The name (path) of the document storage location
+|link:http://php.net/int[int^]
+    |internal
+    |/TODO what is this for?
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== TicketMessage
+
+The ticket message model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the message
+|link:http://php.net/int[int^]
+    |ticketId
+    |The ticket ID the message belongs to
+|link:http://php.net/int[int^]
+    |userId
+    |The user of the message
+|link:http://php.net/string[string^]
+    |createdAt
+    |The time the ticket message was created as unix timestamp or carbon object
+|link:http://php.net/string[string^]
+    |text
+    |The content of the message
+|link:http://php.net/array[array^]
+    |type
+    |The type of the message. Two types are available:
+<ul>
+<li>message (visible for the customer)</li>
+<li>comment (not visible for the customer)</li>
+</ul>
+|link:http://php.net/array[array^]
+    |source
+    |The origin of the message. The following sources are available by default and cannot be deleted.
+<ul>
+<li>backend</li>
+<li>frontend</li>
+<li>ebay</li>
+<li>email</li>
+</ul>
+|link:http://php.net/int[int^]
+    |topicId
+    |The ID of the topic the message is assigned to
+|link:ticket#ticket_models_ticket[Ticket^]
+
+    |ticket
+    |The corresponding ticket instance.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== TicketMessageTopic
+
+The ticket message topic model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The id of the message
+|link:http://php.net/int[int^]
+    |position
+    |The position of the topic
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== TicketMessageTopicName
+
+The ticket message topic name model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the message
+|link:http://php.net/int[int^]
+    |topicId
+    |The ID of the topic
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the topic
+|link:http://php.net/string[string^]
+    |name
+    |The name of the topic
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== TicketOwner
+
+The ticket owner model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |ticketId
+    |The ID of the ticket
+|link:http://php.net/int[int^]
+    |userId
+    |The user ID of the owner
+|link:http://php.net/int[int^]
+    |roleId
+    |The role ID of the owner
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== TicketRole
+
+The ticket role model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the role
+|link:http://php.net/int[int^]
+    |position
+    |The position of the role
+|link:http://php.net/array[array^]
+    |names
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== TicketRoleName
+
+The ticket role name model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the role name
+|link:http://php.net/int[int^]
+    |roleId
+    |The ID of the role
+|link:http://php.net/int[int^]
+    |lang
+    |The language of the role
+|link:http://php.net/string[string^]
+    |name
+    |The name of the role
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== TicketStatus
+
+The ticket status model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the status
+|link:http://php.net/int[int^]
+    |typeId
+    |The type ID of the status
+|link:http://php.net/int[int^]
+    |position
+    |The position of the status
+|link:http://php.net/int[int^]
+    |statusGroupId
+    |The status group ID of the status
+|link:http://php.net/array[array^]
+    |names
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== TicketStatusGroup
+
+The ticket status group model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the status group
+|link:http://php.net/int[int^]
+    |position
+    |The position of the status group
+|link:http://php.net/string[string^]
+    |color
+    |The color of the status group
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== TicketStatusGroupName
+
+The ticket status group name model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the ticket
+|link:http://php.net/int[int^]
+    |lang
+    |The language of the status group
+|link:http://php.net/string[string^]
+    |name
+    |The name of the status group
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== TicketStatusName
+
+The ticket status name model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the status name
+|link:http://php.net/int[int^]
+    |statusId
+    |The status ID of the status name
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the status name
+|link:http://php.net/string[string^]
+    |name
+    |The name of the status
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== TicketType
+
+The ticket type model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the role
+|link:http://php.net/int[int^]
+    |position
+    |The position of the role
+|link:http://php.net/array[array^]
+    |names
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== TicketTypeName
+
+The ticket type name model.
+
+
+==== Namespace
+
+`Plenty\Modules\Ticket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the role name
+|link:http://php.net/int[int^]
+    |typeId
+    |The type id of the role name
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the role name
+|link:http://php.net/string[string^]
+    |name
+    |The name of the role
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

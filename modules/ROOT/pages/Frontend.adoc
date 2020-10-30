@@ -1,0 +1,3567 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[frontend_frontend]]
+= Frontend
+
+[[frontend_frontend_contracts]]
+==  Contracts
+=== Checkout
+
+The CheckoutContract is the interface for the checkout repository. This interface allows to set the shipping country ID, the payment method ID, the shipping profile ID and the currency in the checkout.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getShippingCountryId():int // <1>
+
+----
+
+
+    
+Gets the shipping country ID.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setShippingCountryId($shippingCountryId):void // <1>
+
+----
+
+
+    
+Updates the ID of the shipping country. The ID must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$shippingCountryId`
+|The ID of the shipping country
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodId():int // <1>
+
+----
+
+
+    
+Gets the payment method id of the current shopping cart.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setPaymentMethodId($paymentMethodId):void // <1>
+
+----
+
+
+    
+Updates the ID of the payment method. The ID must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentMethodId`
+|The ID of the payment method
+|===
+
+
+[source%nowrap, php]
+----
+
+public getShippingProfileId():int // <1>
+
+----
+
+
+    
+Gets the shipping profile id of the current shopping cart.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setShippingProfileId($shippingProfileId):void // <1>
+
+----
+
+
+    
+Updates the ID of the shipping profile. The ID must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$shippingProfileId`
+|The ID of the shipping profile
+|===
+
+
+[source%nowrap, php]
+----
+
+public setCurrency($currency):void // <1>
+
+----
+
+
+    
+Updates the currency. The currency must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$currency`
+|The currency
+|===
+
+
+[source%nowrap, php]
+----
+
+public setBasketReferrerId($referrerId):void // <1>
+
+----
+
+
+    
+Updates the ID of the order referrer. The ID must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$referrerId`
+|The ID of the order referrer. The <a href="https://www.plentymarkets.co.uk/manual/settings/orders/order-referrer/" target="_blank">order referrer</a> settings can be changed in the plentymarkets back end.
+|===
+
+
+[source%nowrap, php]
+----
+
+public getCustomerInvoiceAddressId():int // <1>
+
+----
+
+
+    
+Gets the invoice address id of the current shopping cart.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setCustomerInvoiceAddressId($invoiceAddressId):void // <1>
+
+----
+
+
+    
+Sets the invoice address id for the current shopping cart.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$invoiceAddressId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getCustomerShippingAddressId():int // <1>
+
+----
+
+
+    
+Gets the shipping address id of the current shopping cart.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setCustomerShippingAddressId($shippingAddressId):void // <1>
+
+----
+
+
+    
+Sets the shipping address id for the current shopping cart.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$shippingAddressId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public validateCheckout():Plenty\Modules\Frontend\Events\ValidateCheckoutEvent // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:frontend#frontend_events_validatecheckoutevent[ValidateCheckoutEvent^]
+
+    
+
+
+=== CurrencyExchangeRepositoryContract
+
+The CurrencyExchangeRatioRepositoryContract is the interface for the currency exchange repository. This interface allows you to get the default system currency, to get exchange ratios for every currency and to convert an amount from the default currency into a given currency or from a given currency into the default currency.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getExchangeRatioByCurrency($currency):float // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$currency`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getDefaultCurrency():string // <1>
+
+----
+
+
+    
+Get the default currency.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public convertFromDefaultCurrency($currency, $amount, $exchangeRatio = 0.0):float // <1>
+
+----
+
+
+    
+Converts the given value from the default currency to the given currency.
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$currency`
+|
+
+|link:http://php.net/float[float^]
+a|`$amount`
+|
+
+|link:http://php.net/float[float^]
+a|`$exchangeRatio`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public convertToDefaultCurrency($currency, $amount, $exchangeRatio = 0.0):float // <1>
+
+----
+
+
+    
+Converts the given value to the default currency from the given currency.
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$currency`
+|
+
+|link:http://php.net/float[float^]
+a|`$amount`
+|
+
+|link:http://php.net/float[float^]
+a|`$exchangeRatio`
+|
+|===
+
+
+[[frontend_frontend_events]]
+==  Events
+=== FrontendCurrencyChanged
+
+The event is triggered when the currency is changed in the online store.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getCurrency():string // <1>
+
+----
+
+
+    
+Gets the currency.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getCurrencyExchangeRatio():float // <1>
+
+----
+
+
+    
+Gets the exchange rate used for converting the currency.
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+
+=== FrontendCustomerAddressChanged
+
+The event is triggered when a customer address is changed in the online store.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+
+
+
+=== FrontendLanguageChanged
+
+The event is triggered when the language is changed in the online store.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getLanguage():string // <1>
+
+----
+
+
+    
+Gets the language of the online store.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+
+=== FrontendPaymentMethodChanged
+
+The event is triggered when the payment method is changed in the online store.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodId():void // <1>
+
+----
+
+
+    
+Gets the ID of the payment method.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setPaymentMethodId($paymentMethodId):void // <1>
+
+----
+
+
+    
+Updates the ID of the payment method. The ID must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$paymentMethodId`
+|
+|===
+
+
+
+=== FrontendReferrerChanged
+
+The event is triggered when the referrer id  is changed in the online store.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getReferrerId():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setReferrerId($referrerId):Plenty\Modules\Frontend\Events\FrontendReferrerChanged // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:frontend#frontend_events_frontendreferrerchanged[FrontendReferrerChanged^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$referrerId`
+|
+|===
+
+
+
+=== FrontendShippingCountryChanged
+
+The event is triggered when the shipping country is changed in the online store.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getShippingCountryId():int // <1>
+
+----
+
+
+    
+Gets the ID of the shipping country.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setShippingCountryId($shippingCountryId):Plenty\Modules\Frontend\Events\FrontendShippingCountryChanged // <1>
+
+----
+
+
+    
+Updates the ID of the shipping country. The ID must be specified.
+
+
+==== Return type
+    
+<1> link:frontend#frontend_events_frontendshippingcountrychanged[FrontendShippingCountryChanged^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$shippingCountryId`
+|The ID of the shipping country
+|===
+
+
+
+=== FrontendShippingProfileChanged
+
+The event is triggered when the shipping profile is changed in the online store.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getShippingProfileId():void // <1>
+
+----
+
+
+    
+Gets the ID of the shipping profile.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setShippingProfileId($shippingProfileId):void // <1>
+
+----
+
+
+    
+Updates the ID of the shipping profile. The ID must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$shippingProfileId`
+|
+|===
+
+
+
+=== FrontendUpdateDeliveryAddress
+
+The event is triggered when the delivery address is changed in the online store.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getAccountAddressId():int // <1>
+
+----
+
+
+    
+Gets the ID of the address saved for the account.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+
+=== FrontendUpdateInvoiceAddress
+
+The event is triggered when the invoice address is changed in the online store.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getAccountAddressId():int // <1>
+
+----
+
+
+    
+Gets the ID of the address saved for the account.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+
+=== FrontendUpdatePaymentSettings
+
+The event is triggered when the payment method is changed in the online store.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodId():int // <1>
+
+----
+
+
+    
+Gets the ID of the payment method.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+
+=== FrontendUpdateShippingSettings
+
+The event is triggered when the shipping method is updated in the online store.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getShippingCosts():float // <1>
+
+----
+
+
+    
+Gets the shipping costs.
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+[source%nowrap, php]
+----
+
+public getParcelServiceId():int // <1>
+
+----
+
+
+    
+Gets the ID of the shipping service provider.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public getParcelServicePresetId():int // <1>
+
+----
+
+
+    
+Gets the preset ID of the shipping service provider.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+
+=== ValidateCheckoutEvent
+
+validation event
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getErrorKeysList():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public addErrorKey($errorKey):Plenty\Modules\Frontend\Events // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:frontend#frontend_frontend_events[Events^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$errorKey`
+|
+|===
+
+
+[[frontend_frontend_factories]]
+==  Factories
+=== FrontendFactory
+
+Frontend-Factory
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Factories`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getLocale():Plenty\Modules\Frontend\Services\LocaleService // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:frontend#frontend_services_localeservice[LocaleService^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getAgent():Plenty\Modules\Frontend\Services\AgentService // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:frontend#frontend_services_agentservice[AgentService^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getSystem():Plenty\Modules\Frontend\Services\SystemService // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:frontend#frontend_services_systemservice[SystemService^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getAccount():Plenty\Modules\Frontend\Services\AccountService // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:frontend#frontend_services_accountservice[AccountService^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getFile():Plenty\Modules\Frontend\Services\FileService // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:frontend#frontend_services_fileservice[FileService^]
+
+    
+
+[[frontend_frontend_models]]
+==  Models
+=== TotalVat
+
+frontend total vat model
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |vatId
+    |
+|link:http://php.net/float[float^]
+    |vatAmount
+    |
+|link:http://php.net/float[float^]
+    |vatValue
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[frontend_frontend_services]]
+==  Services
+=== AccountService
+
+Frontend-service for customer information
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getIsAccountLoggedIn():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public getAccountContactId():int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+
+=== AgentService
+
+Frontend-Service for agent information
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getLanguages():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getBrowser():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getPlatform():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getDevice():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getIsDesktop():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public getRobotName():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getIsRobot():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public getHttpHeaders():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getIsMobile():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public getIsTablet():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+
+=== FileService
+
+Frontend-service for file information
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public addJsFile($jsFile):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$jsFile`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public get($key):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public hasGetMutator($key):bool // <1>
+
+----
+
+
+    
+Determine if a get mutator exists for an attribute.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setAttributes($attributes):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$attributes`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setAttribute($key, $value):Plenty\Repositories\Models // <1>
+
+----
+
+
+    
+Set a given attribute on the model.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public hasSetMutator($key):bool // <1>
+
+----
+
+
+    
+Determine if a set mutator exists for an attribute.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public changeValue($key, $callback):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+
+|link:http://php.net/callable[callable^]
+a|`$callback`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public offsetExists($offset):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$offset`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public offsetGet($offset):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$offset`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public offsetSet($offset, $value):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$offset`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public offsetUnset($offset):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$offset`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray($translate = false):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$translate`
+|Flag indicating if values should be translated.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toJson($options):string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$options`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public jsonSerialize():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public fill($attributes):Plenty\Repositories\Models // <1>
+
+----
+
+
+    
+Fill the model with an array of attributes.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$attributes`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public isFillable($key):bool // <1>
+
+----
+
+
+    
+Determine if the given attribute may be mass assigned.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFillable():array // <1>
+
+----
+
+
+    
+Get the fillable attributes for the model.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public fillable($fillable):Plenty\Repositories\Models // <1>
+
+----
+
+
+    
+Set the fillable attributes for the model.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$fillable`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public hasCast($key, $types = null):bool // <1>
+
+----
+
+
+    
+Determine whether an attribute should be cast to a native type.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$types`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public fromJson($value, $asObject = false):void // <1>
+
+----
+
+
+    
+Decode the given JSON back into an array or object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$value`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$asObject`
+|
+|===
+
+
+
+=== LocaleService
+
+frontend service for changing current language
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public setLanguage($newLanguage, $fireEvents = true):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$newLanguage`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$fireEvents`
+|
+|===
+
+
+
+=== OrderPropertyFileService
+
+Frontend-service for customer information
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public uploadFile($fileData):string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$fileData`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFileURL($key):string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFile($key):Plenty\Modules\Cloud\Storage\Models\StorageObject // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:cloud#cloud_models_storageobject[StorageObject^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public copyBasketFileToOrder($filename):string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$filename`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteFile($filename):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$filename`
+|
+|===
+
+
+
+=== SystemService
+
+Frontend-service for system information
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getPlentyId():int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public getWebstoreId():int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+
+=== VatService
+
+Frontend-service for vat information
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getCountryVatId():int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public getCurrentTotalVats():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getVat($taxIdNumber = &quot;&quot;):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:accounting#accounting_models_vat[Vat^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$taxIdNumber`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getLocationId($countryId = null):int // <1>
+
+----
+
+
+    
+Get the ID of the location
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$countryId`
+|
+|===
+
+
+[[frontend_legalinformation]]
+= LegalInformation
+
+[[frontend_legalinformation_contracts]]
+==  Contracts
+=== LegalInformationRepositoryContract
+
+Repository contract for LegalInformation model.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\LegalInformation\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public find($plentyId, $lang, $type):Plenty\Modules\Frontend\LegalInformation\Models\LegalInformation // <1>
+
+----
+
+
+    
+Get legal information of an online store
+
+
+==== Return type
+    
+<1> link:frontend#frontend_models_legalinformation[LegalInformation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|The ID of the online store
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language of the legal information text as ISO 639-1 code, e.g. e.g. en for English
+
+|link:http://php.net/string[string^]
+a|`$type`
+|The type of the legal information text. The types available are:
+<ul>
+<li>TermsConditions</li>
+<li>CancellationRights</li>
+<li>PrivacyPolicy</li>
+<li>LegalDisclosure</li>
+<li>WithdrawalForm</li>
+</ul>
+|===
+
+
+[source%nowrap, php]
+----
+
+public save($data, $plentyId, $lang, $type):Plenty\Modules\Frontend\LegalInformation\Models\LegalInformation // <1>
+
+----
+
+
+    
+Save legal information for an online store
+
+
+==== Return type
+    
+<1> link:frontend#frontend_models_legalinformation[LegalInformation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|Array of data for 'plainText' and 'htmlText'
+
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|The plenty ID of the online store
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language of the legal information text as ISO 639-1 code, e.g. en for English
+
+|link:http://php.net/string[string^]
+a|`$type`
+|The type of the legal information text. The types available are:
+<ul>
+<li>TermsConditions</li>
+<li>CancellationRights</li>
+<li>PrivacyPolicy</li>
+<li>LegalDisclosure</li>
+<li>WithdrawalForm</li>
+</ul>
+|===
+
+
+[[frontend_legalinformation_models]]
+==  Models
+=== LegalInformation
+
+The legal information model.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\LegalInformation\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |plentyId
+    |The unique identifier of the plenty client
+|link:http://php.net/string[string^]
+    |lang
+    |The language of the legal information text
+|link:http://php.net/string[string^]
+    |type
+    |The type of the legal information text. The types available are:
+<ul>
+<li>TermsConditions</li>
+<li>CancellationRights</li>
+<li>PrivacyPolicy</li>
+<li>LegalDisclosure</li>
+<li>WithdrawalForm</li>
+</ul>
+|link:http://php.net/string[string^]
+    |plainText
+    |The text value of the legal information text
+|link:http://php.net/string[string^]
+    |htmlText
+    |The html value of the legal information text
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[frontend_paymentmethod]]
+= PaymentMethod
+
+[[frontend_paymentmethod_contracts]]
+==  Contracts
+=== FrontendPaymentMethodRepositoryContract
+
+The FrontendPaymentMethodRepositoryContract is the interface for the front end payment method repository. Get the payment method information to be displayed in the online store.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\PaymentMethod\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getCurrentPaymentMethodsList():array // <1>
+
+----
+
+
+    
+Lists all payment methods of the current customer session.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getCurrentPaymentMethodsListForSwitch($currentPaymentMethodId, $orderId = null, $lang = &quot;de&quot;):array // <1>
+
+----
+
+
+    
+Lists all payment methods for switch.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$currentPaymentMethodId`
+|
+
+|link:http://php.net/int[int^]
+a|`$orderId`
+|
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getCurrentPaymentMethodsForExpressCheckout():array // <1>
+
+----
+
+
+    
+Lists all payment methods if express checkout is available
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodName($paymentMethod, $lang):string // <1>
+
+----
+
+
+    
+Gets the name of the payment method in the specified language.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_paymentmethod[PaymentMethod^]
+
+a|`$paymentMethod`
+|The payment method
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodFee($paymentMethod):float // <1>
+
+----
+
+
+    
+Gets additional costs for the payment method. Additional costs can be entered in the config.json.
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_paymentmethod[PaymentMethod^]
+
+a|`$paymentMethod`
+|The payment method
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodIcon($paymentMethod, $lang):string // <1>
+
+----
+
+
+    
+Gets the icon of the payment method. The path of the icon can be entered in the config.json.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_paymentmethod[PaymentMethod^]
+
+a|`$paymentMethod`
+|The payment method
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodDescription($paymentMethod, $lang):string // <1>
+
+----
+
+
+    
+Gets the description of the payment method. The description can be entered in the config.json.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_paymentmethod[PaymentMethod^]
+
+a|`$paymentMethod`
+|
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodSourceUrl($paymentMethod):string // <1>
+
+----
+
+
+    
+Gets the detail link of the payment method. The detail link can be entered in the config.json.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_paymentmethod[PaymentMethod^]
+
+a|`$paymentMethod`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getIsSwitchableTo($paymentMethod):bool // <1>
+
+----
+
+
+    
+Gets the detail link of the payment method. The detail link can be entered in the config.json.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_paymentmethod[PaymentMethod^]
+
+a|`$paymentMethod`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getIsSwitchableFrom($paymentMethod):bool // <1>
+
+----
+
+
+    
+Gets the detail link of the payment method. The detail link can be entered in the config.json.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_paymentmethod[PaymentMethod^]
+
+a|`$paymentMethod`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodIsSelectable($paymentMethod):bool // <1>
+
+----
+
+
+    
+Get true if the payment method can be selected in the payment method list
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:payment#payment_models_paymentmethod[PaymentMethod^]
+
+a|`$paymentMethod`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodNameById($paymentMethodId, $lang):string // <1>
+
+----
+
+
+    
+Gets the name of the payment method by ID and language. The ID of the payment method and the language must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentMethodId`
+|The ID of the payment method
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodFeeById($paymentMethodId):float // <1>
+
+----
+
+
+    
+Gets additional costs for the payment method by ID. The ID of the payment method must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentMethodId`
+|The ID of the payment method
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodIconById($paymentMethodId, $lang):string // <1>
+
+----
+
+
+    
+Gets the icon of the payment method by ID and language. The ID of the payment method and the language must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentMethodId`
+|The ID of the payment method
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodDescriptionById($paymentMethodId, $lang):string // <1>
+
+----
+
+
+    
+Gets the description of the payment method by ID and language. The ID of the payment method and the language must be specified.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentMethodId`
+|The ID of the payment method
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodSwitchToById($paymentMethodId, $orderId = null):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentMethodId`
+|
+
+|link:http://php.net/int[int^]
+a|`$orderId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodSwitchFromById($paymentMethodId, $orderId = null):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentMethodId`
+|
+
+|link:http://php.net/int[int^]
+a|`$orderId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodSwitchableToById($paymentMethodId, $orderId = null):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentMethodId`
+|
+
+|link:http://php.net/int[int^]
+a|`$orderId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPaymentMethodSwitchableFromById($paymentMethodId, $orderId = null):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$paymentMethodId`
+|
+
+|link:http://php.net/int[int^]
+a|`$orderId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAllowedPaymentMethodListForContact():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[frontend_session]]
+= Session
+
+[[frontend_session_events]]
+==  Events
+=== AfterSessionCreate
+
+The event is triggered after a session is created.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Session\Events`
+
+
+
+
+
+[[frontend_storage]]
+= Storage
+
+[[frontend_storage_contracts]]
+==  Contracts
+=== FrontendSessionStorageFactoryContract
+
+The FrontendSessionStorageFactoryContract is the interface for the front end session storage repository. This interface allows to get information about the locale, the customer, the order, the plugin and the forum from the session.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Session\Storage\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getLocaleSettings():Plenty\Modules\Frontend\Session\Storage\Models\LocaleSettings // <1>
+
+----
+
+
+    
+Get the locale settings from the session storage.
+
+
+==== Return type
+    
+<1> link:frontend#frontend_models_localesettings[LocaleSettings^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getCustomer():Plenty\Modules\Frontend\Session\Storage\Models\Customer // <1>
+
+----
+
+
+    
+Get the customer data from the session storage.
+
+
+==== Return type
+    
+<1> link:frontend#frontend_models_customer[Customer^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getOrder():Plenty\Modules\Frontend\Session\Storage\Models\Order // <1>
+
+----
+
+
+    
+Get the order data from the session storage.
+
+
+==== Return type
+    
+<1> link:frontend#frontend_models_order[Order^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getPlugin():Plenty\Modules\Frontend\Session\Storage\Models\Plugin // <1>
+
+----
+
+
+    
+Get the plugin data from the session storage.
+
+
+==== Return type
+    
+<1> link:frontend#frontend_models_plugin[Plugin^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getForum():Plenty\Modules\Frontend\Session\Storage\Models\Forum // <1>
+
+----
+
+
+    
+Get the forum data from the session storage.
+
+
+==== Return type
+    
+<1> link:frontend#frontend_models_forum[Forum^]
+
+    
+
+[[frontend_storage_models]]
+==  Models
+=== Customer
+
+The session storage model for customer data.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Session\Storage\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |deliveryCountryId
+    |The ID of the country of delivery
+|link:http://php.net/bool[bool^]
+    |showNetPrice
+    |Flag that indicates if the shown price is the net price
+|link:http://php.net/string[string^]
+    |ebaySellerAccount
+    |The eBay seller account
+|link:http://php.net/string[string^]
+    |accountContactSign
+    |The reference sign specified by the contact
+|link:http://php.net/int[int^]
+    |accountContactClassId
+    |The ID of the contact class
+|link:http://php.net/int[int^]
+    |sourceItemWishListAccountContactId
+    |The ID of the contact that created the wish list
+|link:http://php.net/int[int^]
+    |sourceItemWishListAccountAddressId
+    |The ID of the address that created the wish list
+|link:http://php.net/string[string^]
+    |salesAgent
+    |The sales representative
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== Forum
+
+The session storage model for forum data.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Session\Storage\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |forumGroupId
+    |The ID of the forum group
+|link:http://php.net/string[string^]
+    |forumUsername
+    |The name of the user in the forum
+|link:http://php.net/array[array^]
+    |forumConfig
+    |The forum configuration
+|link:http://php.net/array[array^]
+    |forumPermissions
+    |The forum permissions
+|link:http://php.net/int[int^]
+    |forumLastVisitTime
+    |The time the forum was visited last
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== LocaleSettings
+
+The session storage model for locale settings.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Session\Storage\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |currency
+    |The currency
+|link:http://php.net/float[float^]
+    |currencyExchange
+    |The exchange rate for the currency
+|link:http://php.net/string[string^]
+    |language
+    |The language
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== Order
+
+The session storage model for order data.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Session\Storage\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |deliveryAddressId
+    |The ID of the delivery address
+|link:http://php.net/int[int^]
+    |invoiceAddressId
+    |The ID of the invoice address
+|link:http://php.net/int[int^]
+    |parcelServiceId
+    |The ID of the parcel service
+|link:http://php.net/int[int^]
+    |parcelServicePresetId
+    |The preset ID of the parcel service
+|link:http://php.net/int[int^]
+    |methodOfPayment
+    |The payment method
+|link:http://php.net/bool[bool^]
+    |isNet
+    |Flag that indicates if the shown price is the net price
+|link:http://php.net/int[int^]
+    |shippingCosts
+    |The shipping costs
+|link:http://php.net/string[string^]
+    |orderinfoText
+    |Additional information specified by the customer in the order
+|link:http://php.net/int[int^]
+    |payDataComplete
+    |
+|link:http://php.net/array[array^]
+    |itemOrderParams
+    |The parameters of the order
+|link:http://php.net/array[array^]
+    |uploadedFileStack
+    |
+|link:http://php.net/array[array^]
+    |trustedShopBuyerProtection
+    |
+|link:http://php.net/string[string^]
+    |trustedShopApplicationId
+    |
+|link:http://php.net/string[string^]
+    |coupon
+    |The coupon code
+|link:http://php.net/string[string^]
+    |couponDisplay
+    |
+|link:order#order_models_couponcodevalidation[CouponCodeValidation^]
+
+    |couponCodeValidation
+    |
+|link:http://php.net/array[array^]
+    |activePaymentMethodsList
+    |A list of active payment methods
+|link:http://php.net/int[int^]
+    |referrerId
+    |The ID of the order referrer
+|link:http://php.net/int[int^]
+    |referrerPriceColumn
+    |The price column for the order referrer
+|link:http://php.net/int[int^]
+    |referrerItemId
+    |The ID of the item referrer
+|link:http://php.net/int[int^]
+    |schedulerId
+    |The ID of the subscription
+|link:http://php.net/int[int^]
+    |schedulerIntervalId
+    |The ID of the interval of a subscription
+|link:http://php.net/int[int^]
+    |schedulerOrderExecutionId
+    |The ID for the execution of the order
+|link:http://php.net/int[int^]
+    |schedulerFirstDeliveryDate
+    |The date for the first delivery of a subscription
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== Plugin
+
+The session storage model for plugins.
+
+
+==== Namespace
+
+`Plenty\Modules\Frontend\Session\Storage\Models`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public setValue($key, $value):void // <1>
+
+----
+
+
+    
+Updates the value of a key. The key and the new value must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getValue($key):void // <1>
+
+----
+
+
+    
+Gets a value for a key. The key must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public unsetKey($key):void // <1>
+
+----
+
+
+    
+Unsets a key. The key must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+

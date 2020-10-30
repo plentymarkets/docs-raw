@@ -1,0 +1,6068 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[plugin_plugin]]
+= Plugin
+
+[[plugin_plugin_contracts]]
+==  Contracts
+=== ConfigurationRepositoryContract
+
+Save config values for plugins
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public saveConfiguration($pluginId, $configMap, $setId = null, $resetCache = true):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginId`
+|
+
+|link:http://php.net/array[array^]
+a|`$configMap`
+|
+
+|link:http://php.net/int[int^]
+a|`$setId`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$resetCache`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public copyToPluginSetEntry($configurationOrId, $pluginSetEntryOrId):int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$configurationOrId`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$pluginSetEntryOrId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getConfigurationFile($pluginId, $setId):string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginId`
+|
+
+|link:http://php.net/int[int^]
+a|`$setId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public export($setId, $pluginId = null, $active = null):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|
+
+|link:http://php.net/int[int^]
+a|`$pluginId`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$active`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public import($setId, $data, $pluginId = null):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/int[int^]
+a|`$pluginId`
+|
+|===
+
+
+
+=== PluginLayoutContainerRepositoryContract
+
+Plugin layout container
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public all($pluginSetId):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateAll($dataList, $pluginSetId, $pluginId = null):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$dataList`
+|
+
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+
+|link:http://php.net/int[int^]
+a|`$pluginId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getActiveLinkedLayoutContainers($activeContainerKeysList, $activeDataProviderKeysList, $pluginSetId = null):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$activeContainerKeysList`
+|
+
+|link:http://php.net/array[array^]
+a|`$activeDataProviderKeysList`
+|
+
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getActiveLinkedLayoutContainersByPluginSetId($activeContainerKeysList, $activeDataProviderKeysList, $pluginSetId):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$activeContainerKeysList`
+|
+
+|link:http://php.net/array[array^]
+a|`$activeDataProviderKeysList`
+|
+
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addNew($dataList, $pluginSetId):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$dataList`
+|
+
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addOne($pluginSetId, $containerKey, $dataProviderKey, $containerPluginId = null, $dataProviderPluginId = null):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+
+|link:http://php.net/string[string^]
+a|`$containerKey`
+|
+
+|link:http://php.net/string[string^]
+a|`$dataProviderKey`
+|
+
+|link:http://php.net/int[int^]
+a|`$containerPluginId`
+|
+
+|link:http://php.net/int[int^]
+a|`$dataProviderPluginId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public removeOne($pluginSetId, $containerKey, $dataProviderKey, $containerPluginId = null, $dataProviderPluginId = null):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+
+|link:http://php.net/string[string^]
+a|`$containerKey`
+|
+
+|link:http://php.net/string[string^]
+a|`$dataProviderKey`
+|
+
+|link:http://php.net/int[int^]
+a|`$containerPluginId`
+|
+
+|link:http://php.net/int[int^]
+a|`$dataProviderPluginId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public exportByPluginSetId($pluginSetOrId):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$pluginSetOrId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public importByPluginSetId($pluginSetOrId, $containers):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$pluginSetOrId`
+|
+
+|link:http://php.net/array[array^]
+a|`$containers`
+|
+|===
+
+
+
+=== PluginRepositoryContract
+
+Search plugins according to parameters
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getPluginByName($name):Plenty\Modules\Plugin\Models\Plugin // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:plugin#plugin_models_plugin[Plugin^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public searchPlugins($params = [], $itemsPerPage = \Plenty\Modules\Plugin\Models\Plugin::DEFAULT_ITEMS_PER_PAGE):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Search plugins using filters. Example: searchPlugins([&#039;name&#039; =&gt; &#039;PluginIWantToFind&#039;])
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$params`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPluginSets($pluginId):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public isActiveInPluginSet($pluginId, $pluginSetIdOrPluginSet):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginId`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$pluginSetIdOrPluginSet`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public isActiveInPluginSetByName($pluginName, $pluginSetId):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|
+
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public isActiveInWebstore($pluginId, $webstoreId):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginId`
+|
+
+|link:http://php.net/int[int^]
+a|`$webstoreId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public isActiveInWebstoreByPluginName($pluginName, $webstoreId):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|
+
+|link:http://php.net/int[int^]
+a|`$webstoreId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public decoratePlugin($plugin, $pluginSetId = null):Plenty\Modules\Plugin\Models\Plugin // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:plugin#plugin_models_plugin[Plugin^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:plugin#plugin_models_plugin[Plugin^]
+
+a|`$plugin`
+|
+
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public installMarketplacePluginByItemId($marketplacePluginItemId, $pluginSetId = null):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$marketplacePluginItemId`
+|
+
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+|===
+
+
+[[plugin_plugin_events]]
+==  Events
+=== AfterBuildPlugins
+
+Event after plugin build has finished
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getPluginSet():Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
+
+----
+
+
+    
+Get the plugin set which have been built
+
+
+==== Return type
+    
+<1> link:plugin#plugin_models_pluginset[PluginSet^]
+
+    
+
+[source%nowrap, php]
+----
+
+public sourceHasChanged($pluginName):bool // <1>
+
+----
+
+
+    
+Check if php files of a plugin have been changed
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public resourcesHasChanged($pluginName):bool // <1>
+
+----
+
+
+    
+Check if resource files of a plugin have been changed
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|
+|===
+
+
+
+=== LoadSitemapPattern
+
+LoadSitemapPatternEvent
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\Events`
+
+
+
+
+
+
+=== PluginSendMail
+
+PluginSendMail
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getTemplate():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getContactEmail():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getCallFunction():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[plugin_plugin_models]]
+==  Models
+=== InstalledPlugins
+
+Model representing an installed Plugin
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the installed plugin instance
+|link:http://php.net/int[int^]
+    |variationId
+    |The variationId of the installed version
+|link:http://php.net/int[int^]
+    |itemId
+    |The id of the installed plugin
+|link:http://php.net/bool[bool^]
+    |removed
+    |Whether this version of the plugin has been removed by the customer
+|link:http://php.net/string[string^]
+    |lastUpdateChecksum
+    |checksum of last installed plugin code
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== Plugin
+
+Eloquent model representing a Plugin.
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the plugin
+|link:http://php.net/string[string^]
+    |name
+    |The name of the plugin
+|link:http://php.net/int[int^]
+    |position
+    |The position of the plugin. The position is used to determine the plugin
+order.
+|link:http://php.net/bool[bool^]
+    |activeStage
+    |Shows whether the plugin is active in Stage. Inactive plugins will not
+be provisioned in Stage.
+|link:http://php.net/bool[bool^]
+    |activeProductive
+    |Shows whether the plugin is active in Productive. Inactive plugins will
+not be provisioned in Productive.
+|link:http://php.net/string[string^]
+    |created_at
+    |The date that the plugin was created.
+|link:http://php.net/string[string^]
+    |updated_at
+    |The date that the plugin was updated last.
+|link:http://php.net/bool[bool^]
+    |inStage
+    |Shows whether the plugin is provisioned in Stage.
+|link:http://php.net/bool[bool^]
+    |inProductive
+    |Shows whether the plugin is provisioned in Productive.
+|link:http://php.net/bool[bool^]
+    |isConnectedWithGit
+    |
+|link:http://php.net/array[array^]
+    |updateInformation
+    |
+|link:http://php.net/string[string^]
+    |type
+    |The type of the plugin. The following plugin types are available:
+<ul>
+    <li>Template</li>
+    <li>Export</li>
+</ul>
+|link:http://php.net/bool[bool^]
+    |installed
+    |Whether or not the plugin is installed. This will be false for plugins
+that have been purchased from the marketplace but have not yet been installed in any set.
+|link:http://php.net/string[string^]
+    |version
+    |The version of the plugin
+|link:http://php.net/string[string^]
+    |versionStage
+    |The version of the plugin in stage
+|link:http://php.net/string[string^]
+    |versionProductive
+    |The version of the plugin in productive
+|link:http://php.net/array[array^]
+    |marketplaceVariations
+    |A list of available marketplace versions
+|link:http://php.net/string[string^]
+    |description
+    |The description text of the plugin
+|link:http://php.net/string[string^]
+    |namespace
+    |The namespace of the plugin
+|link:http://php.net/array[array^]
+    |dependencies
+    |A list of plugins with dependencies to the plugin
+|link:http://php.net/string[string^]
+    |author
+    |The name of the plugin author
+|link:http://php.net/float[float^]
+    |price
+    |The price of the plugin
+|link:http://php.net/array[array^]
+    |keywords
+    |A list of plugin keywords
+|link:http://php.net/array[array^]
+    |require
+    |A list of plugins that are required by the plugin
+|link:http://php.net/array[array^]
+    |notInstalledRequirements
+    |A list of required plugins that are not installed
+|link:http://php.net/array[array^]
+    |notActiveStageRequirements
+    |A list of required plugins that are not active in stage
+|link:http://php.net/array[array^]
+    |notActiveProductiveRequirements
+    |A list of required plugins that are not active in productive
+|link:http://php.net/string[string^]
+    |serviceProvider
+    |The class name of the service provider
+|link:http://php.net/array[array^]
+    |runOnBuild
+    |The list of classes to execute once on plugin build
+|link:http://php.net/array[array^]
+    |checkOnBuild
+    |The list of classes to execute on every plugin build
+|link:http://php.net/string[string^]
+    |pluginPath
+    |The plugin path
+|link:http://php.net/string[string^]
+    |authorIcon
+    |The author icon
+|link:http://php.net/string[string^]
+    |pluginIcon
+    |The plugin icon
+|link:http://php.net/string[string^]
+    |license
+    |The plugin license
+|link:http://php.net/array[array^]
+    |shortDescription
+    |
+|link:http://php.net/bool[bool^]
+    |isClosedSource
+    |is closed source
+|link:http://php.net/string[string^]
+    |inboxPath
+    |path in the inbox (closed source, open source)
+|link:http://php.net/array[array^]
+    |marketplaceName
+    |The plugin name displayed in marketplace
+|link:http://php.net/string[string^]
+    |source
+    |Whether this plugin was installed from marketplace, git or local
+|link:http://php.net/array[array^]
+    |javaScriptFiles
+    |A list of included javascript files
+|link:http://php.net/array[array^]
+    |containers
+    |A list of provided containers with name and description
+|link:http://php.net/array[array^]
+    |dataProviders
+    |A list of data providers with name and description
+|link:http://php.net/array[array^]
+    |categories
+    |
+|link:http://php.net/string[string^]
+    |webhookUrl
+    |webhookUrl
+|link:http://php.net/bool[bool^]
+    |isExternalTool
+    |is external tool
+|link:http://php.net/array[array^]
+    |directDownloadLinks
+    |A list of urls for the external tool
+|link:http://php.net/string[string^]
+    |forwardLink
+    |A forward link to the external tool developers page
+|link:http://php.net/string[string^]
+    |branch
+    |The branch to checkout for this particular Plugin
+|link:http://php.net/string[string^]
+    |commit
+    |The commit to checkout for this particular Plugin
+|link:http://php.net/array[array^]
+    |subscriptionInformation
+    |A list if subscription informations
+|link:http://php.net/bool[bool^]
+    |offerTrial
+    |Determines if the plugin offers a trial period for plentyMarketplace
+|link:http://php.net/bool[bool^]
+    |offerFreemium
+    |Determines if the plugin offers freemium functionality
+|link:http://php.net/array[array^]
+    |configurations
+    |A list of plugin configuration items
+|link:http://php.net/array[array^]
+    |webstores
+    |A list of clients (stores) activated for the plugin
+|link:http://php.net/array[array^]
+    |linkedDataProviders
+    |A list of dataProviders linked with a container of this plugin
+|link:http://php.net/array[array^]
+    |linkedContainers
+    |A list of containers linked with a data provider of this plugin
+|link:plugin#plugin_models_git[Git^]
+
+    |repository
+    |
+|link:plugin#plugin_models_installedplugins[InstalledPlugins^]
+
+    |installedPlugins
+    |
+|link:http://php.net/array[array^]
+    |pluginSetIds
+    |Array of PluginSet Ids where this plugin is contained.
+|link:http://php.net/array[array^]
+    |pluginSetEntries
+    |A list of PluginSetEntries this plugin is linked to
+|link:http://php.net/array[array^]
+    |pluginSetEntriesWithTrashed
+    |A list of PluginSetEntries this plugin is linked to, including
+trashed
+          entries
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[plugin_plugin_services]]
+==  Services
+=== PluginSendMailService
+
+The PluginSendMailService send mails in plugins
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public static getInstance($webstoreId):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$webstoreId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public sendMail($url, $template = &quot;&quot;, $email = &quot;&quot;, $callFunction = &quot;&quot;):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$url`
+|
+
+|link:http://php.net/string[string^]
+a|`$template`
+|
+
+|link:http://php.net/string[string^]
+a|`$email`
+|
+
+|link:http://php.net/string[string^]
+a|`$callFunction`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getStatus():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public setStatus($status):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$status`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public isInitialized():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public setInitialized($initialized):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$initialized`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getEmailPlaceholder():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public addEmailPlaceholder($placeholder, $value):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$placeholder`
+|
+
+|link:http://php.net/string[string^]
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setEmailPlaceholder($emailPlaceholder):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$emailPlaceholder`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getEmailPlaceholderKey($key, $default = &quot;&quot;):string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+
+|link:http://php.net/string[string^]
+a|`$default`
+|
+|===
+
+
+
+=== PluginSeoSitemapService
+
+The PluginSeoSitemapService collect the sitemap patterns.
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public loadPatterns($url):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$url`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPatterns():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public setItemPattern($pattern):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$pattern`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setBlogPattern($pattern):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$pattern`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setContentCategoryPattern($pattern):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$pattern`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setItemCategoryPattern($pattern):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$pattern`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getItemPattern():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getBlogPattern():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getItemCategoryPattern():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getContentCategoryPattern():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[[plugin_database]]
+= DataBase
+
+[[plugin_database_annotations]]
+==  Annotations
+=== Index
+
+
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\DataBase\Annotations`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== NonTableAttribute
+
+
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\DataBase\Annotations`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== Nullable
+
+
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\DataBase\Annotations`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== Relation
+
+
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\DataBase\Annotations`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[plugin_database_contracts]]
+==  Contracts
+=== CriteriaQuery
+
+database query
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\DataBase\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a basic where clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a &quot;where in&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/array[array^]
+a|`$values`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$not`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add an &quot;or where in&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/array[array^]
+a|`$values`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add an &quot;or where&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a &quot;where null&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$not`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public orWhereNull($fieldName):void // <1>
+
+----
+
+
+    
+Add an &quot;or where null&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a &quot;having&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:http://php.net/string[string^]
+a|`$value`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public orHaving($fieldName, $operator = null, $value = null):void // <1>
+
+----
+
+
+    
+Add a &quot;or having&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:http://php.net/string[string^]
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public whereHas($modelName, $callback = null, $operator = &quot;&gt;=&quot;, $count = 1):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$modelName`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$callback`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:http://php.net/int[int^]
+a|`$count`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public join($firstModelName, $callback, $as = &quot;&quot;):void // <1>
+
+----
+
+
+    
+Add a join clause to the query.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$firstModelName`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$callback`
+|
+
+|link:http://php.net/string[string^]
+a|`$as`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public leftJoin($firstModelName, $callback):void // <1>
+
+----
+
+
+    
+Add a left join to the query.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$firstModelName`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$callback`
+|
+|===
+
+
+
+=== DataBase
+
+Database contract
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\DataBase\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public save($model):Plenty\Modules\Plugin\DataBase\Contracts\Model // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:plugin#plugin_contracts_model[Model^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:plugin#plugin_contracts_model[Model^]
+
+a|`$model`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public find($modelClassName, $primaryKeyFieldValue):Plenty\Modules\Plugin\DataBase\Contracts\Model // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:plugin#plugin_contracts_model[Model^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$modelClassName`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$primaryKeyFieldValue`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public query($modelClassName):Plenty\Modules\Plugin\DataBase\Contracts\Query // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:plugin#plugin_contracts_query[Query^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$modelClassName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($model):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:plugin#plugin_contracts_model[Model^]
+
+a|`$model`
+|
+|===
+
+
+
+=== JoinClauseQuery
+
+database join query
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\DataBase\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public on($firstModelName, $first, $operator = null, $secondModelName = null, $second = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$firstModelName`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$first`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:http://php.net/string[string^]
+a|`$secondModelName`
+|
+
+|link:http://php.net/string[string^]
+a|`$second`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public where($modelName, $column, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a basic where clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$modelName`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$column`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public orWhere($modelName, $column, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add an &quot;or where&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$modelName`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$column`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public whereNull($modelName, $column, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a &quot;where null&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$modelName`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$column`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$not`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public orWhereNull($modelName, $column):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add an &quot;or where null&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$modelName`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$column`
+|
+|===
+
+
+
+=== Migrate
+
+Migrate models
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\DataBase\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createTable($modelClassName):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$modelClassName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateTable($modelClassName):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$modelClassName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteTable($modelClassName):bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$modelClassName`
+|
+|===
+
+
+
+=== Model
+
+Database model
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\DataBase\Contracts`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:miscellaneous#miscellaneous__[^]
+
+    |primaryKeyFieldName
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |primaryKeyFieldType
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |autoIncrementPrimaryKey
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |textFields
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |attributes
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |original
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |changes
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |casts
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |dates
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |dateFormat
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |mutatorCache
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getTableName():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public attributesToArray():array // <1>
+
+----
+
+
+    
+Convert the model&#039;s attributes to an array.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getAttribute($key):void // <1>
+
+----
+
+
+    
+Get an attribute from the model.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAttributeValue($key):void // <1>
+
+----
+
+
+    
+Get a plain attribute
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAttributeFromArray($key):void // <1>
+
+----
+
+
+    
+Get an attribute from the $attributes array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public hasGetMutator($key):bool // <1>
+
+----
+
+
+    
+Determine if a get mutator exists for an attribute.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public mutateAttribute($key, $value):void // <1>
+
+----
+
+
+    
+Get the value of an attribute using its mutator.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public mutateAttributeForArray($key, $value):void // <1>
+
+----
+
+
+    
+Get the value of an attribute using its mutator for array conversion.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Set a given attribute on the model.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public hasSetMutator($key):bool // <1>
+
+----
+
+
+    
+Determine if a set mutator exists for an attribute.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public fillJsonAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Set a given JSON attribute on the model.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public fromJson($value, $asObject = false):void // <1>
+
+----
+
+
+    
+Decode the given JSON back into an array or object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$value`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$asObject`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public fromDateTime($value):string // <1>
+
+----
+
+
+    
+Convert a DateTime to a storable string.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getDates():array // <1>
+
+----
+
+
+    
+Get the attributes that should be converted to dates.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public setDateFormat($format):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Set the date format used by the model.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$format`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public hasCast($key, $types = null):bool // <1>
+
+----
+
+
+    
+Determine whether an attribute should be cast to a native type.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$types`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getCasts():array // <1>
+
+----
+
+
+    
+Get the casts array.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getAttributes():array // <1>
+
+----
+
+
+    
+Get all of the current attributes on the model.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public setRawAttributes($attributes, $sync = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Set the array of model attributes. No checking is done.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$attributes`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$sync`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getOriginal($key = null, $default = null):void // <1>
+
+----
+
+
+    
+Get the model&#039;s original attribute values.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$default`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public only($attributes):array // <1>
+
+----
+
+
+    
+Get a subset of the model&#039;s attributes.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$attributes`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public syncOriginal():Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Sync the original attributes with the current.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+[source%nowrap, php]
+----
+
+public syncOriginalAttribute($attribute):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Sync a single original attribute with its current value.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$attribute`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public syncChanges():Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Sync the changed attributes.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+[source%nowrap, php]
+----
+
+public isDirty($attributes = null):bool // <1>
+
+----
+
+
+    
+Determine if the model or given attribute(s) have been modified.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$attributes`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public isClean($attributes = null):bool // <1>
+
+----
+
+
+    
+Determine if the model or given attribute(s) have remained the same.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$attributes`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public wasChanged($attributes = null):bool // <1>
+
+----
+
+
+    
+Determine if the model or given attribute(s) have been modified.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$attributes`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getDirty():array // <1>
+
+----
+
+
+    
+Get the attributes that have been changed since last sync.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getChanges():array // <1>
+
+----
+
+
+    
+Get the attributes that were changed.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getMutatedAttributes():array // <1>
+
+----
+
+
+    
+Get the mutated attributes for a given instance.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public static cacheMutatedAttributes($class):void // <1>
+
+----
+
+
+    
+Extract and cache all the mutated attributes of a class.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$class`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public relationLoaded():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== Query
+
+database query
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\DataBase\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public select($columns = []):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a basic select clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a basic where clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a &quot;where in&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/array[array^]
+a|`$values`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$not`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add an &quot;or where in&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/array[array^]
+a|`$values`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add an &quot;or where&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a &quot;where null&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$not`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public orWhereNull($fieldName):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add an &quot;or where null&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public whereBetween($column, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a where between statement to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$column`
+|
+
+|link:http://php.net/array[array^]
+a|`$values`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$not`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public whereNotBetween($column, $values, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a where not between statement to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$column`
+|
+
+|link:http://php.net/array[array^]
+a|`$values`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public whereDate($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a &quot;where date&quot; statement to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$column`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public whereMonth($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a &quot;where month&quot; statement to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$column`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public whereDay($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a &quot;where day&quot; statement to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$column`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public whereYear($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a &quot;where year&quot; statement to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$column`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$value`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public whereTime($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a &quot;where time&quot; statement to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$column`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:http://php.net/int[int^]
+a|`$value`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a &quot;having&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:http://php.net/string[string^]
+a|`$value`
+|
+
+|link:http://php.net/string[string^]
+a|`$boolean`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public orHaving($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add a &quot;or having&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/string[string^]
+a|`$operator`
+|
+
+|link:http://php.net/string[string^]
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public orderBy($fieldName, $direction = &quot;asc&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Add an &quot;order by&quot; clause to the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fieldName`
+|
+
+|link:http://php.net/string[string^]
+a|`$direction`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public forPage($page, $perPage = 15):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Set the limit and offset for a given page.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$perPage`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public count($columns = &quot;*&quot;):int // <1>
+
+----
+
+
+    
+Retrieve the &quot;count&quot; result of the query.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$columns`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public limit($value):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Set the &quot;limit&quot; value of the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public offset($value):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+
+----
+
+
+    
+Set the &quot;offset&quot; value of the query.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_database_contracts[Contracts^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$value`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getCountForPagination($columns = []):int // <1>
+
+----
+
+
+    
+Get the count of the total records for the paginator.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$columns`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public get():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public delete():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[[plugin_dynamodb]]
+= DynamoDb
+
+[[plugin_dynamodb_contracts]]
+==  Contracts
+=== DynamoDbRepositoryContract
+
+AWS DynamoDb Repository (Deprecated)
+
+[warning]
+.Deprecated! <small>(since 2017-06-30)</small>====
+Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+====
+
+==== Namespace
+
+`Plenty\Modules\Plugin\DynamoDb\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public createTable($pluginName, $tableName, $attributeDefinitions, $keySchema, $readCapacityUnits = 3, $writeCapacityUnits = 2):bool // <1>
+
+----
+
+
+[warning]
+.Deprecated! [small]#(since 2017-06-30)#====
+Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+====
+    
+Create a table
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$tableName`
+|
+
+|link:http://php.net/array[array^]
+a|`$attributeDefinitions`
+|http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_AttributeValue.html
+
+|link:http://php.net/array[array^]
+a|`$keySchema`
+|
+
+|link:http://php.net/int[int^]
+a|`$readCapacityUnits`
+|
+
+|link:http://php.net/int[int^]
+a|`$writeCapacityUnits`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateTable($pluginName, $tableName, $readCapacityUnits = 3, $writeCapacityUnits = 2):bool // <1>
+
+----
+
+
+[warning]
+.Deprecated! [small]#(since 2017-06-30)#====
+Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+====
+    
+Update a table
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$tableName`
+|
+
+|link:http://php.net/int[int^]
+a|`$readCapacityUnits`
+|
+
+|link:http://php.net/int[int^]
+a|`$writeCapacityUnits`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public putItem($pluginName, $tableName, $item):bool // <1>
+
+----
+
+
+[warning]
+.Deprecated! [small]#(since 2017-06-30)#====
+Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+====
+    
+Add item to table
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$tableName`
+|
+
+|link:http://php.net/array[array^]
+a|`$item`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getItem($pluginName, $tableName, $consistentRead, $key):array // <1>
+
+----
+
+
+[warning]
+.Deprecated! [small]#(since 2017-06-30)#====
+Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+====
+    
+Retrieving items
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$tableName`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$consistentRead`
+|
+
+|link:http://php.net/array[array^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteItem($pluginName, $tableName, $key):bool // <1>
+
+----
+
+
+[warning]
+.Deprecated! [small]#(since 2017-06-30)#====
+Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+====
+    
+Delete an item
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$tableName`
+|
+
+|link:http://php.net/array[array^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteTable($pluginName, $tableName):bool // <1>
+
+----
+
+
+[warning]
+.Deprecated! [small]#(since 2017-06-30)#====
+Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+====
+    
+Deleting a table
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$tableName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public scan($pluginName, $tableName, $returnFields = &quot;&quot;, $expressionAttributeValues = [], $filterExpression = &quot;&quot;, $limit):void // <1>
+
+----
+
+
+[warning]
+.Deprecated! [small]#(since 2017-06-30)#====
+Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+====
+    
+A scan operation scans the entire table. You can specify filters to apply to the results to refine the values returned to you, after the complete scan. Amazon DynamoDB puts a 1MB limit on the scan (the limit applies before the results are filtered).
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$tableName`
+|
+
+|link:http://php.net/string[string^]
+a|`$returnFields`
+|
+
+|link:http://php.net/array[array^]
+a|`$expressionAttributeValues`
+|
+
+|link:http://php.net/string[string^]
+a|`$filterExpression`
+|
+
+|link:http://php.net/int[int^]
+a|`$limit`
+|is taken into account when value greater than 0
+|===
+
+
+[[plugin_libs]]
+= Libs
+
+[[plugin_libs_contracts]]
+==  Contracts
+=== LibraryCallContract
+
+library call
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\Libs\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public call($libCall, $params = []):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$libCall`
+|
+
+|link:http://php.net/array[array^]
+a|`$params`
+|
+|===
+
+
+[[plugin_pluginset]]
+= PluginSet
+
+[[plugin_pluginset_contracts]]
+==  Contracts
+=== PluginSetEntryRepositoryContract
+
+get, create, update or delete plugin set entries
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\PluginSet\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public get($idOrInstance):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry // <1>
+
+----
+
+
+    
+Get a PluginSetEntry.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$idOrInstance`
+|The Id of the PluginSetEntry to retrieve or the PluginSetEntry object itself.
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry // <1>
+
+----
+
+
+    
+Create a set entry.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|Must contain a 'pluginId' field and a 'pluginSetId' field to specify which plugin should be associated with which plugin set in the
+newly created set entry: ['pluginId' => 5, 'pluginSetId' => 3]
+|===
+
+
+[source%nowrap, php]
+----
+
+public copyToPluginSet($pluginSetEntryOrId, $pluginSetOrId, $copyConfigurations):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry // <1>
+
+----
+
+
+    
+Copy a PluginSetEntry to a PluginSet
+
+
+==== Return type
+    
+<1> link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$pluginSetEntryOrId`
+|The id of the PluginSetEntry that should be copied, or the PluginSetEntry object itself
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$pluginSetOrId`
+|The id of the PluginSet the entry should be copied to, or the PluginSet object itself
+
+|link:http://php.net/bool[bool^]
+a|`$copyConfigurations`
+|true if the configurations related to the set entry should also be copied, false if not
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):bool // <1>
+
+----
+
+
+    
+Update a PluginSetEntry. Associate a set entry with a new set, a new plugin, or both.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The id of the set entry to update
+
+|link:http://php.net/array[array^]
+a|`$data`
+|Must contain EITHER a 'pluginId' field OR a 'pluginSetId' field OR both.
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($what):int // <1>
+
+----
+
+
+    
+Delete a PluginSetEntry
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$what`
+|The PluginSetEntry object to delete or a PluginSetEntry-Id
+|===
+
+
+
+=== PluginSetRepositoryContract
+
+list, create, update or delete plugin sets
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\PluginSet\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public count():int // <1>
+
+----
+
+
+    
+Count current plugin sets.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
+
+----
+
+
+    
+Create a plugin set. The data array has to contain a &#039;name&#039; field. Throws a &#039;TooManyPluginSetsException&#039; if the maximum number of sets is exceeded.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_models_pluginset[PluginSet^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The data for the newly created plugin set. Only the 'name' field is required: ['name' => 'MyNewPluginSet'].
+|===
+
+
+[source%nowrap, php]
+----
+
+public copy($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
+
+----
+
+
+    
+Copy a plugin set. All set entries from the source set will be copied into the new set.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_models_pluginset[PluginSet^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|Has to contain the Id of the plugin set to copy from and the name for the new set: ['copyPluginSetId' => 12, 'name' =>
+'NewSetWithCopiedEntries'].
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
+
+----
+
+
+    
+Update a set. Only the &#039;name&#039; field can be updated.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_models_pluginset[PluginSet^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|Id of the plugin set to update
+
+|link:http://php.net/array[array^]
+a|`$data`
+|Update data must only contain a 'name' field: ['name' => 'NewNameForMySet']
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($what):int // <1>
+
+----
+
+
+    
+Delete a set.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$what`
+|The PluginSet object to delete or a PluginSet-Id
+|===
+
+
+[source%nowrap, php]
+----
+
+public get($pluginSetOrId):Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
+
+----
+
+
+    
+Get a plugin set.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_models_pluginset[PluginSet^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$pluginSetOrId`
+|The Id of the plugin set to retrieve from the database. If a PluginSet object is passed instead of an integer, the
+object is returned without change.
+|===
+
+
+[source%nowrap, php]
+----
+
+public list():void // <1>
+
+----
+
+
+    
+List all plugin sets.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public listSetEntries($id):void // <1>
+
+----
+
+
+    
+List all set entries of a plugin set.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The Id of the plugin set to list the entries from.
+|===
+
+
+[source%nowrap, php]
+----
+
+public listWebstores($id):void // <1>
+
+----
+
+
+    
+List all webstores a plugin set is related to.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The Id of the set in question
+|===
+
+
+[source%nowrap, php]
+----
+
+public listLayoutContainers($id):void // <1>
+
+----
+
+
+    
+List all LayoutContainers for a plugin set.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The Id of the plugin set in question
+|===
+
+
+[source%nowrap, php]
+----
+
+public getOrCreatePluginSetEntry($id, $pluginId, $withTrashed = false, $resetCache = true):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry // <1>
+
+----
+
+
+    
+Get the PluginSetEntry object containing a specific plugin for a set. If a PluginSetEntry does not exist, it will be created.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|The Id of the plugin set in question
+
+|link:http://php.net/int[int^]
+a|`$pluginId`
+|The Id of the plugin in question
+
+|link:http://php.net/bool[bool^]
+a|`$withTrashed`
+|If true, deleted PluginSetEntries will be included. Default is false.
+
+|link:http://php.net/bool[bool^]
+a|`$resetCache`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public changePluginActiveStatusForSet($pluginSetId, $pluginId, $active):Plenty\Modules\Plugin\Models\Plugin // <1>
+
+----
+
+
+    
+Activates / deactivates a plugin for a set by trashing or restoring the respective set entry.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_models_plugin[Plugin^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|The id of the plugin set in question
+
+|link:http://php.net/int[int^]
+a|`$pluginId`
+|The id of the plugin in question
+
+|link:http://php.net/bool[bool^]
+a|`$active`
+|true if the plugin should be activated for the set, false if it should be deactivated.
+|===
+
+
+[source%nowrap, php]
+----
+
+public removePluginFromSet($setId, $pluginId):Plenty\Modules\Plugin\Models\Plugin // <1>
+
+----
+
+
+    
+Remove a plugin from a set.
+
+
+==== Return type
+    
+<1> link:plugin#plugin_models_plugin[Plugin^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|The Id of the plugin set in question
+
+|link:http://php.net/int[int^]
+a|`$pluginId`
+|The Id of the plugin that should be removed from the set.
+|===
+
+
+[source%nowrap, php]
+----
+
+public createPreviewHash($setId):string // <1>
+
+----
+
+
+    
+Create a preview hash for a plugin set.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|The plugin set in question
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPreviewPluginSetId($previewHash):void // <1>
+
+----
+
+
+    
+Extract a plugin set id from a preview hash.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$previewHash`
+|The preview has to extract the plugin set id from
+|===
+
+
+[source%nowrap, php]
+----
+
+public installGitPlugin($setId, $pluginId, $requestData):bool // <1>
+
+----
+
+
+    
+Install a git-plugin into a set.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|The Id of the plugin set to install the plugin into
+
+|link:http://php.net/int[int^]
+a|`$pluginId`
+|The Id of the (git-) plugin that should be installed into the set
+
+|link:http://php.net/array[array^]
+a|`$requestData`
+|Must contain a 'branch' field that specifies the branch that should be installed: ['branch' => 'stable']
+|===
+
+
+[source%nowrap, php]
+----
+
+public setPosition($setId, $pluginId, $requestData):void // <1>
+
+----
+
+
+    
+Change the position of a plugin in a set
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$setId`
+|The id of the plugin set in question
+
+|link:http://php.net/int[int^]
+a|`$pluginId`
+|The id of the plugin of which the position should be changed
+
+|link:http://php.net/array[array^]
+a|`$requestData`
+|Must contain a 'position' field with an integer specifying the new position: ['position' => 99]
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSyncState($pluginSetId):bool // <1>
+
+----
+
+
+    
+Get the sync state, to determine if Plugins have been (de-)activated since last build.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|The id of the PluginSet
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPluginSetHash($pluginSetOrId):string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$pluginSetOrId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPluginSetIdFromHash($pluginSetHash):int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginSetHash`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getCurrentPluginSetId():int // <1>
+
+----
+
+
+    
+Get the PluginSetID of the currently running plugin.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[[plugin_pluginset_models]]
+==  Models
+=== PluginSet
+
+Eloquent model representing a PluginSet.
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\PluginSet\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |
+|link:http://php.net/string[string^]
+    |hash
+    |
+|link:http://php.net/int[int^]
+    |parentPluginSetId
+    |
+|link:plugin#plugin_models_pluginset[PluginSet^]
+
+    |parentPluginSet
+    |
+|link:http://php.net/string[string^]
+    |name
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |pluginSetEntries
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |pluginSetEntriesWithTrashed
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |layoutContainers
+    |
+|link:miscellaneous#miscellaneous__[^]
+
+    |webstores
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== PluginSetEntry
+
+Eloquent model representing a PluginSetEntry.
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\PluginSet\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |
+|link:http://php.net/int[int^]
+    |pluginId
+    |
+|link:http://php.net/int[int^]
+    |pluginSetId
+    |
+|link:plugin#plugin_models_plugin[Plugin^]
+
+    |plugin
+    |
+|link:http://php.net/string[string^]
+    |branchName
+    |
+|link:http://php.net/string[string^]
+    |commit
+    |
+|link:http://php.net/int[int^]
+    |position
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[plugin_storage]]
+= Storage
+
+[[plugin_storage_contracts]]
+==  Contracts
+=== StorageRepositoryContract
+
+Storage Repository
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\Storage\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public uploadObject($pluginName, $key, $body, $publicVisible = false, $metaData = []):Plenty\Modules\Cloud\Storage\Models\StorageObject // <1>
+
+----
+
+
+    
+Create an object with content in $body
+
+
+==== Return type
+    
+<1> link:cloud#cloud_models_storageobject[StorageObject^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$key`
+|e.g. myDir/x/y/z/HelloWorld.txt
+
+|link:http://php.net/string[string^]
+a|`$body`
+|file content
+
+|link:http://php.net/bool[bool^]
+a|`$publicVisible`
+|
+
+|link:http://php.net/array[array^]
+a|`$metaData`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getObject($pluginName, $key, $publicVisible = false):Plenty\Modules\Cloud\Storage\Models\StorageObject // <1>
+
+----
+
+
+    
+Get an object
+
+
+==== Return type
+    
+<1> link:cloud#cloud_models_storageobject[StorageObject^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$key`
+|e.g. myDir/x/y/z/HelloWorld.txt
+
+|link:http://php.net/bool[bool^]
+a|`$publicVisible`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getObjectUrl($pluginName, $key, $publicVisible = false, $minutesToExpire = 5):string // <1>
+
+----
+
+
+    
+Returns the URL to an object identified by its bucket and key. The URL will be signed and set to expire at the provided time.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$key`
+|e.g. myDir/x/y/z/HelloWorld.txt
+
+|link:http://php.net/bool[bool^]
+a|`$publicVisible`
+|
+
+|link:http://php.net/int[int^]
+a|`$minutesToExpire`
+|Minutes between 1 and 15
+|===
+
+
+[source%nowrap, php]
+----
+
+public getObjectAsTemporaryFileResource($pluginName, $key, $publicVisible = false):string // <1>
+
+----
+
+
+    
+Get local file resource of an object. Use this if it is really necessary! Using getObject is the normal and effective way.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$key`
+|e.g. myDir/x/y/z/HelloWorld.txt
+
+|link:http://php.net/bool[bool^]
+a|`$publicVisible`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public doesObjectExist($pluginName, $key, $publicVisible = false):bool // <1>
+
+----
+
+
+    
+Checks if object exists
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$key`
+|e.g. myDir/x/y/z/HelloWorld.txt
+
+|link:http://php.net/bool[bool^]
+a|`$publicVisible`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteObject($pluginName, $key, $publicVisible = false):bool // <1>
+
+----
+
+
+    
+Executes the DeleteObject operation.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$key`
+|myDir/HelloWorld.txt
+
+|link:http://php.net/bool[bool^]
+a|`$publicVisible`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listObjects($pluginName, $prefix = &quot;&quot;, $limit, $startKey = &quot;&quot;, $continuationToken = &quot;&quot;, $publicVisible = false, $resultKeyWithoutPrefix = true):Plenty\Modules\Cloud\Storage\Models\StorageObjectList // <1>
+
+----
+
+
+    
+Returns some or all (up to 1000) objects
+
+
+==== Return type
+    
+<1> link:cloud#cloud_models_storageobjectlist[StorageObjectList^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|name of your plugin
+
+|link:http://php.net/string[string^]
+a|`$prefix`
+|Limits the response to keys that begin with the specified prefix.
+
+|link:http://php.net/int[int^]
+a|`$limit`
+|The total number of items to return.
+
+|link:http://php.net/string[string^]
+a|`$startKey`
+|is where you want to start listing from. $startKey can be any key in the bucket.
+
+|link:http://php.net/string[string^]
+a|`$continuationToken`
+|indicates that the list is being continued on this bucket with a token.
+
+|link:http://php.net/bool[bool^]
+a|`$publicVisible`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$resultKeyWithoutPrefix`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getPluginZip($pluginSetId, $pluginName):void // <1>
+
+----
+
+
+    
+Get all objects of a plugin as zip file
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|
+|===
+
+
+[[plugin_versioncontrol]]
+= VersionControl
+
+[[plugin_versioncontrol_models]]
+==  Models
+=== Git
+
+Model holding plugin data concerning Git version control.
+
+
+==== Namespace
+
+`Plenty\Modules\Plugin\VersionControl\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |git id
+|link:http://php.net/int[int^]
+    |pluginId
+    |plugin id
+|link:http://php.net/string[string^]
+    |username
+    |username for remote account
+|link:http://php.net/string[string^]
+    |password
+    |password for remote account
+|link:http://php.net/string[string^]
+    |remoteUrl
+    |url for remote repository
+|link:http://php.net/string[string^]
+    |branch
+    |actual selected branch
+|link:http://php.net/bool[bool^]
+    |autoFetch
+    |automatically fetch from remote repository
+|link:http://php.net/string[string^]
+    |webhookToken
+    |token needed for development
+|link:http://php.net/string[string^]
+    |createdAt
+    |created timestamp
+|link:http://php.net/string[string^]
+    |updatedAt
+    |last update timestamp
+|link:plugin#plugin_models_plugin[Plugin^]
+
+    |plugin
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

@@ -1,0 +1,1419 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[facet_facet]]
+= Facet
+
+[[facet_facet_contracts]]
+==  Contracts
+=== FacetNameRepositoryContract
+
+The contract for the facet name repository
+
+
+==== Namespace
+
+`Plenty\Modules\Facet\Facet\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findOne($facetId, $lang):Plenty\Modules\Facet\Facet\Models\FacetName // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facetname[FacetName^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$facetId`
+|
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Facet\Facet\Models\FacetName // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facetname[FacetName^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($facetId, $lang, $data):Plenty\Modules\Facet\Facet\Models\FacetName // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facetname[FacetName^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$facetId`
+|
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($facetId, $lang):Plenty\Repositories\Models\DeleteResponse // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$facetId`
+|
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+
+=== FacetRepositoryContract
+
+The contract for the facet repository
+
+
+==== Namespace
+
+`Plenty\Modules\Facet\Facet\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public search($with, $filters):Illuminate\Support\Collection // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$with`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listByPlentyId($plentyId, $lang = &quot;de&quot;):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public findOne($id):Plenty\Modules\Facet\Facet\Models\Facet // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facet[Facet^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Facet\Facet\Models\Facet // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facet[Facet^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):Plenty\Modules\Facet\Facet\Models\Facet // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facet[Facet^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== FacetValueNameRepositoryContract
+
+The contract for the facet value name repository
+
+
+==== Namespace
+
+`Plenty\Modules\Facet\Facet\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findOne($valueId, $lang):Plenty\Modules\Facet\Facet\Models\FacetValueName // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facetvaluename[FacetValueName^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$valueId`
+|
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Facet\Facet\Models\FacetValueName // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facetvaluename[FacetValueName^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($valueId, $lang, $data):Plenty\Modules\Facet\Facet\Models\FacetValueName // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facetvaluename[FacetValueName^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$valueId`
+|
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($valueId, $lang):Plenty\Repositories\Models\DeleteResponse // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$valueId`
+|
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|
+|===
+
+
+
+=== FacetValueReferenceRepositoryContract
+
+The contract for the facet value reference repository
+
+
+==== Namespace
+
+`Plenty\Modules\Facet\Facet\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public search($filters):Illuminate\Support\Collection // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Facet\Facet\Models\FacetValueReference // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facetvaluereference[FacetValueReference^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public findOne($id):Plenty\Modules\Facet\Facet\Models\FacetValueReference // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facetvaluereference[FacetValueReference^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== FacetValueRepositoryContract
+
+The contract for the facet value repository
+
+
+==== Namespace
+
+`Plenty\Modules\Facet\Facet\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public search($with, $filters):Illuminate\Support\Collection // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$with`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Facet\Facet\Models\FacetValue // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facetvalue[FacetValue^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($id, $data):Plenty\Modules\Facet\Facet\Models\FacetValue // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facetvalue[FacetValue^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public findOne($id):Plenty\Modules\Facet\Facet\Models\FacetValue // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:facet#facet_models_facetvalue[FacetValue^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$id`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[facet_facet_models]]
+==  Models
+=== Facet
+
+The facet model.
+
+
+==== Namespace
+
+`Plenty\Modules\Facet\Facet\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The unique ID of the facet
+|link:http://php.net/string[string^]
+    |cssClass
+    |
+|link:http://php.net/int[int^]
+    |position
+    |The position of the facet. Default value is 1
+|link:http://php.net/string[string^]
+    |sort
+    |Allowed sorts are "position", "rate" and "a-z". Default value is "position"
+|link:http://php.net/string[string^]
+    |createdAt
+    |Timestamp of the date and time the facet was created.
+|link:http://php.net/string[string^]
+    |updatedAt
+    |Timestamp of the last date and time the facet was updated.
+|link:http://php.net/string[string^]
+    |type
+    |Allowed types: "dynamic", "producer", "availability", "price". Default value is "dynamic"
+|link:http://php.net/int[int^]
+    |minResultCount
+    |Default value is 1
+|link:http://php.net/int[int^]
+    |maxResultCount
+    |Default value is 50
+|link:http://php.net/string[string^]
+    |filterMethod
+    |Allowed filter methods: "restrict", "multi". Default value is "strict"
+|link:http://php.net/array[array^]
+    |names
+    |
+|link:http://php.net/array[array^]
+    |values
+    |
+|link:http://php.net/array[array^]
+    |references
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FacetName
+
+The facet name model.
+
+
+==== Namespace
+
+`Plenty\Modules\Facet\Facet\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |facetId
+    |The unique ID of the facet
+|link:http://php.net/string[string^]
+    |lang
+    |The <a href="https://developers.plentymarkets.com/rest-doc/introduction#countries" target="_blank">language</a> of the facet
+|link:http://php.net/string[string^]
+    |name
+    |The name of the facet
+|link:facet#facet_models_facet[Facet^]
+
+    |facet
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FacetValue
+
+The facet value model.
+
+
+==== Namespace
+
+`Plenty\Modules\Facet\Facet\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The unique ID of the facet value
+|link:http://php.net/int[int^]
+    |facetId
+    |The unique ID of the facet
+|link:http://php.net/string[string^]
+    |cssClass
+    |The css class of the facet value
+|link:http://php.net/int[int^]
+    |position
+    |The position of the facet value
+|link:http://php.net/string[string^]
+    |createdAt
+    |Timestamp of the date and time the facet value was created.
+|link:http://php.net/string[string^]
+    |updatedAt
+    |Timestamp of the last date and time the facet value was updated.
+|link:facet#facet_models_facet[Facet^]
+
+    |facet
+    |
+|link:http://php.net/array[array^]
+    |names
+    |
+|link:http://php.net/array[array^]
+    |references
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FacetValueName
+
+The facet value name model.
+
+
+==== Namespace
+
+`Plenty\Modules\Facet\Facet\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |valueId
+    |The unique ID of the facet value
+|link:http://php.net/string[string^]
+    |lang
+    |The <a href="https://developers.plentymarkets.com/rest-doc/introduction#countries" target="_blank">language</a> of the facet value
+|link:http://php.net/string[string^]
+    |name
+    |The name of the facet value
+|link:facet#facet_models_facetvalue[FacetValue^]
+
+    |value
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== FacetValueReference
+
+The facet value reference model.
+
+
+==== Namespace
+
+`Plenty\Modules\Facet\Facet\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The unique ID of the facet value reference
+|link:http://php.net/int[int^]
+    |facetId
+    |The unique ID of the facet
+|link:http://php.net/int[int^]
+    |facetValueId
+    |The unique ID of the facet value
+|link:http://php.net/string[string^]
+    |type
+    |Allowed types are "attribute", "character", "producer" and "availability". Default value is "attribute"
+|link:http://php.net/int[int^]
+    |groupId
+    |The group ID of the facet value reference. Default value is 0
+|link:http://php.net/int[int^]
+    |valueId
+    |The value ID of the facet value reference. Default value is 0
+|link:http://php.net/string[string^]
+    |createdAt
+    |Timestamp of the date and time the facet was created.
+|link:facet#facet_models_facet[Facet^]
+
+    |facet
+    |
+|link:facet#facet_models_facetvalue[FacetValue^]
+
+    |value
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

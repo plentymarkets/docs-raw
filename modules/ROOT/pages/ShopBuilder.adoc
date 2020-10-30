@@ -1,0 +1,1621 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[shopbuilder_shopbuilder]]
+= ShopBuilder
+
+[[shopbuilder_shopbuilder_contracts]]
+==  Contracts
+=== ContentLinkRepositoryContract
+
+Get, create, delete and update links between shop builder contents and layout containers.
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getContentLinks($pluginSetId):array // <1>
+
+----
+
+
+    
+Get all linked contents for a plugin set
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getContentLink($contentLinkId):Plenty\Modules\ShopBuilder\Models\ContentLink // <1>
+
+----
+
+
+    
+Get a single connection between a content and a layout container
+
+
+==== Return type
+    
+<1> link:shopbuilder#shopbuilder_models_contentlink[ContentLink^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contentLinkId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createContentLink($data):Plenty\Modules\ShopBuilder\Models\ContentLink // <1>
+
+----
+
+
+    
+Link a content to a layout container
+
+
+==== Return type
+    
+<1> link:shopbuilder#shopbuilder_models_contentlink[ContentLink^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateContentLink($contentLinkId, $data):Plenty\Modules\ShopBuilder\Models\ContentLink // <1>
+
+----
+
+
+    
+Update a link between a content and a layout container
+
+
+==== Return type
+    
+<1> link:shopbuilder#shopbuilder_models_contentlink[ContentLink^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contentLinkId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteContentLink($contentLinkId):void // <1>
+
+----
+
+
+    
+Unlink a content from a layout container. The content itself will remain
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contentLinkId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getContentLinksForContainer($containerName, $pluginSetId = null, $lang = null, $contentType = null, $filterResults = true):void // <1>
+
+----
+
+
+    
+Get all content links for a specific layout container.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$containerName`
+|The name of the layout container to get content links for.
+
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|An id of a plugin set to get content links for. Active plugin set will be used by default.
+
+|link:http://php.net/string[string^]
+a|`$lang`
+|The language to get content links for. Current language will be get from session if not defined.
+
+|link:http://php.net/string[string^]
+a|`$contentType`
+|Type of the content to get
+
+|link:http://php.net/bool[bool^]
+a|`$filterResults`
+|
+|===
+
+
+
+=== ContentPreset
+
+Contract for content presets
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getWidgets():void // <1>
+
+----
+
+
+    
+Get the widget configurations of the presets to be assigned to the created content.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== ContentRepositoryContract
+
+Get, create, delete und update shop builder contents.
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getContents():array // <1>
+
+----
+
+
+    
+Get all contents to be edited in the shop builder.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public searchContents($itemsPerPage = 20, $page = 1, $params = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Search for contents
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|Maximum number of items to be returned on each page
+
+|link:http://php.net/int[int^]
+a|`$page`
+|Current page
+
+|link:http://php.net/array[array^]
+a|`$params`
+|Search parameters
+|===
+
+
+[source%nowrap, php]
+----
+
+public getContent($contentId, $pluginSetId, $frontendLanguage = null, $versionId = &quot;&quot;):Plenty\Modules\ShopBuilder\Models\Content // <1>
+
+----
+
+
+    
+Get a single content.
+
+
+==== Return type
+    
+<1> link:shopbuilder#shopbuilder_models_content[Content^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contentId`
+|Id of the content to get information for
+
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|Plugin set id to be used for rendering widgets.
+
+|link:http://php.net/string[string^]
+a|`$frontendLanguage`
+|The language to be used for rendering the widgets.
+
+|link:http://php.net/string[string^]
+a|`$versionId`
+|The version of the content
+|===
+
+
+[source%nowrap, php]
+----
+
+public listContentVersions($contentId, $itemsPerPage = 20, $versionIdMarker = &quot;&quot;):void // <1>
+
+----
+
+
+    
+Get a list of Versions of the specified content.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contentId`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/string[string^]
+a|`$versionIdMarker`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public restoreContentVersion($contentId, $versionId, $pluginSetId, $frontendLanguage = null):void // <1>
+
+----
+
+
+    
+Restore a specific content version
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contentId`
+|
+
+|link:http://php.net/string[string^]
+a|`$versionId`
+|
+
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|
+
+|link:miscellaneous#miscellaneous__null[null^]
+
+a|`$frontendLanguage`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createContent($pluginSetId, $data, $frontendLanguage = null):Plenty\Modules\ShopBuilder\Models\Content // <1>
+
+----
+
+
+    
+Create new content. New content will not be linked to any layout container.
+
+
+==== Return type
+    
+<1> link:shopbuilder#shopbuilder_models_content[Content^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$data`
+|The raw content data.
+
+|link:http://php.net/string[string^]
+a|`$frontendLanguage`
+|The language to be used for rendering the widgets.
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateContent($pluginSetId, $contentId, $data, $frontendLanguage = null):Plenty\Modules\ShopBuilder\Models\Content // <1>
+
+----
+
+
+    
+Update content.
+
+
+==== Return type
+    
+<1> link:shopbuilder#shopbuilder_models_content[Content^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
+
+|link:http://php.net/int[int^]
+a|`$contentId`
+|The id of the content to be updated.
+
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$data`
+|The raw data of the content.
+
+|link:http://php.net/string[string^]
+a|`$frontendLanguage`
+|The language to be used for rendering the widgets.
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteContent($pluginSetId, $contentId):void // <1>
+
+----
+
+
+    
+Delete content. Any connections to layout containers will be removed too.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
+
+|link:http://php.net/int[int^]
+a|`$contentId`
+|The id of the content to be deleted.
+|===
+
+
+[source%nowrap, php]
+----
+
+public duplicateContent($contentId, $targetPluginSetId, $language, $containerName, $contentName):Plenty\Modules\ShopBuilder\Models\Content // <1>
+
+----
+
+
+    
+Duplicate a content and its link
+
+
+==== Return type
+    
+<1> link:shopbuilder#shopbuilder_models_content[Content^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$contentId`
+|
+
+|link:http://php.net/int[int^]
+a|`$targetPluginSetId`
+|
+
+|link:http://php.net/string[string^]
+a|`$language`
+|
+
+|link:http://php.net/string[string^]
+a|`$containerName`
+|
+
+|link:http://php.net/string[string^]
+a|`$contentName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public rebuildContents($containerName = null, $pluginSetId = null):int // <1>
+
+----
+
+
+    
+Rebuild all contents linked to the current plugin set.
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$containerName`
+|Name of the layout container to rebuild contents for.
+
+|link:http://php.net/int[int^]
+a|`$pluginSetId`
+|Id of the plugin set to rebuild contents for.
+|===
+
+
+
+=== ContentWidgetRepositoryContract
+
+Register shop builder widgets.
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public registerWidget($widgetClass):void // <1>
+
+----
+
+
+    
+Register a widget to be available in the shop builder.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$widgetClass`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public overrideWidget($widgetIdentifier, $overrideWidget):void // <1>
+
+----
+
+
+    
+Override a widget class to extend data or settings of the widget.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$widgetIdentifier`
+|The identifier of the original widget to override
+
+|link:http://php.net/string[string^]
+a|`$overrideWidget`
+|The class of the new class to get information of the widget from.
+|===
+
+
+
+=== DynamicWidget
+
+Contract for widgets with dynamic settings
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getData():array // <1>
+
+----
+
+
+    
+Get basic information about the widget. Possible fields are
+- identifier
+- label
+- previewImageURL
+- type
+- categories
+- position
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getSettings():array // <1>
+
+----
+
+
+    
+Return the structure of the settings for the widget
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public getPreview($widgetSettings = [], $children = []):string // <1>
+
+----
+
+
+    
+Get the html representation of the widget
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$widgetSettings`
+|
+
+|link:http://php.net/array[array^]
+a|`$children`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public render($widgetSettings = [], $children = []):string // <1>
+
+----
+
+
+    
+Render the widget
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$widgetSettings`
+|
+
+|link:http://php.net/array[array^]
+a|`$children`
+|
+|===
+
+
+
+=== GlobalSettingsHandler
+
+Contract for classes handling global settings for the ShopBuilder.
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public readSettings():void // <1>
+
+----
+
+
+    
+Read values of global settings.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public writeSettings($values):void // <1>
+
+----
+
+
+    
+Store values of global settings.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$values`
+|
+|===
+
+
+
+=== Widget
+
+Contract for content widgets
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getPreview($widgetSettings = [], $children = []):string // <1>
+
+----
+
+
+    
+Get the html representation of the widget
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$widgetSettings`
+|
+
+|link:http://php.net/array[array^]
+a|`$children`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public render($widgetSettings = [], $children = []):string // <1>
+
+----
+
+
+    
+Render the widget
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$widgetSettings`
+|
+
+|link:http://php.net/array[array^]
+a|`$children`
+|
+|===
+
+
+[[shopbuilder_shopbuilder_helper]]
+==  Helper
+=== MappableSettingsHandler
+
+Helper to map global configurations to plugin configs.
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Helper`
+
+
+
+
+
+
+=== ShopBuilderRequest
+
+Get information about the current request made from the shop builder preview.
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Helper`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public isShopBuilder():bool // <1>
+
+----
+
+
+    
+Determine if the current request is made from the shop builder preview or while rendering a widget via REST.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public getPreviewContentType():string // <1>
+
+----
+
+
+    
+Get the type of the previewed shop builder content.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public getPreviewUri():void // <1>
+
+----
+
+
+    
+Get uri of the current preview. This might be used when rendering widgets via REST
+to know the context where the widget will be placed into after rendering.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getMainContentType():string // <1>
+
+----
+
+
+    
+Get the content type of the currently displayed main content.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setMainContentType($mainContentType):void // <1>
+
+----
+
+
+    
+Set the type of the currently displayed item content
+This will be used to determine the corresponding header/footer contents which are linked to a specific type.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$mainContentType`
+|Possible values:
+<ul>
+ <li>content</li>
+ <li>checkout</li>
+ <li>myaccount</li>
+ <li>singleitem</li>
+ <li>categoryitem</li>
+ <li>itemsearch</li>
+ <li>itemset</li>
+</ul>
+|===
+
+
+[source%nowrap, php]
+----
+
+public getMainContainerName():string // <1>
+
+----
+
+
+    
+Get the container name where the main content will be loaded into.
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setMainContainerName($mainContainerName):void // <1>
+
+----
+
+
+    
+Set the container name where the main content will be loaded into.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$mainContainerName`
+|Name of the layout container.
+|===
+
+
+[source%nowrap, php]
+----
+
+public setMainCategory($mainCategory):void // <1>
+
+----
+
+
+    
+Set the id of the currently displayed category.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:miscellaneous#miscellaneous__[^]
+
+a|`$mainCategory`
+|Id of the currently displayed category.
+|===
+
+
+[[shopbuilder_shopbuilder_models]]
+==  Models
+=== Content
+
+Content created by the shop builder. May be linked to layout containers.
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the content
+|link:http://php.net/string[string^]
+    |dataProviderName
+    |The name of the data provider
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the content was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the content was last updated
+|link:http://php.net/string[string^]
+    |type
+    |The type of the content
+|link:miscellaneous#miscellaneous__[^]
+
+    |widgets
+    |The configured widgets of the content. This attribute is deprecated. Use $dropzones instead.
+|link:http://php.net/array[array^]
+    |dropzones
+    |Dropzones of the content
+|link:shopbuilder#shopbuilder_models_contentlink[ContentLink^]
+
+    |link
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContentLink
+
+Links a content from the shop builder to a layout container of the frontend plugin.
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the content link
+|link:http://php.net/int[int^]
+    |contentId
+    |The ID of the content
+|link:http://php.net/string[string^]
+    |containerName
+    |The name of the container
+|link:http://php.net/int[int^]
+    |pluginSetId
+    |The Id of the plugin set
+|link:http://php.net/string[string^]
+    |language
+    |The language where the content is linked to.
+|link:http://php.net/bool[bool^]
+    |active
+    |Indicates if the link is active and the content should be visible for the frontend.
+|link:http://php.net/string[string^]
+    |relatedContentType
+    |The content type the content is linked to
+|link:http://php.net/string[string^]
+    |relatedContainerName
+    |The container name the content is linked to
+|link:http://php.net/bool[bool^]
+    |inherit
+    |Indicates if this content should be inherited to child contents.
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the content was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the content was last updated
+|link:shopbuilder#shopbuilder_models_content[Content^]
+
+    |content
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContentPage
+
+A content page provided by a frontend plugin.
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |identifier
+    |The identifier of the content page
+|link:http://php.net/string[string^]
+    |caption
+    |Translation key to read the caption from
+|link:http://php.net/array[array^]
+    |dropzones
+    |Available dropzones of this page to put contents into.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContentPageDropzone
+
+Layout container of a content page where to display link contents generated by the shop builder.
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |container
+    |The container where dropped contents should be linked to.
+|link:http://php.net/string[string^]
+    |type
+    |The type of contents which can be linked to this dropzone.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContentWidget
+
+Content widget provided by a frontend plugin
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |identifier
+    |The identifier of the content widget
+|link:http://php.net/string[string^]
+    |widgetClass
+    |The class of the content widget
+|link:http://php.net/string[string^]
+    |label
+    |The label of the content widget
+|link:http://php.net/string[string^]
+    |tooltip
+    |The tooltip of the content widget
+|link:http://php.net/string[string^]
+    |previewImageURL
+    |The preview image the content widget
+|link:http://php.net/string[string^]
+    |type
+    |The type of the widget
+|link:http://php.net/int[int^]
+    |maxPerPage
+    |Maximum occurrences per content of the widget
+|link:http://php.net/array[array^]
+    |categories
+    |List of categories
+|link:http://php.net/array[array^]
+    |allowedNestingTypes
+    |Allowed types to be nested inside this widget
+|link:miscellaneous#miscellaneous__[^]
+
+    |settings
+    |The settings of the content widget
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== ContentWidgetPreview
+
+The rendered preview of a content widget
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |identifier
+    |
+|link:http://php.net/string[string^]
+    |content
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[shopbuilder_shopbuilder_providers]]
+==  Providers
+=== DataFieldProvider
+
+Base class for data field providers.
+
+
+==== Namespace
+
+`Plenty\Modules\ShopBuilder\Providers`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public register():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public addField($identifier, $label, $expression):void // <1>
+
+----
+
+
+    
+Register a new data field.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$identifier`
+|
+
+|link:http://php.net/string[string^]
+a|`$label`
+|The label of the field
+
+|link:http://php.net/string[string^]
+a|`$expression`
+|The twig expression to be inserted by this field
+|===
+
+
+[source%nowrap, php]
+----
+
+public addChildProvider($label, $childProviderClass, $params = []):void // <1>
+
+----
+
+
+    
+Register a nested provider containing a list of child data fields.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$label`
+|The label of the group
+
+|link:http://php.net/string[string^]
+a|`$childProviderClass`
+|The class name of the nested data fields provider.
+
+|link:http://php.net/array[array^]
+a|`$params`
+|Additional parameters to be passed to provider constructor method.
+|===
+
+
+[source%nowrap, php]
+----
+
+public addSearchKeywords($identifier, $keywords = []):void // <1>
+
+----
+
+
+    
+Assign keywords to a field to be respected during search.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$identifier`
+|The identifier of the field to assign keywords to.
+
+|link:http://php.net/array[array^]
+a|`$keywords`
+|A list of keywords. Each keyword may contain a translation key. A single keyword could be a comma separated list of words.
+|===
+
+

@@ -1,0 +1,450 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[template_config]]
+= Config
+
+[[template_config_contracts]]
+==  Contracts
+=== DesignConfigRepositoryContract
+
+DesignConfig
+
+
+==== Namespace
+
+`Plenty\Modules\Template\Design\Config\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findByDesignName($designName):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$designName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public findByDesignAndWebStore($designName, $webStoreId):Plenty\Modules\Template\Design\Config\Models\DesignConfig // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:template#template_models_designconfig[DesignConfig^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$designName`
+|
+
+|link:http://php.net/int[int^]
+a|`$webStoreId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public findByDesign($design):array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:template#template_models_design[Design^]
+
+a|`$design`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($data, $designName, $webstoreId):Plenty\Modules\Template\Design\Config\Models\DesignConfig // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:template#template_models_designconfig[DesignConfig^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+
+|link:http://php.net/string[string^]
+a|`$designName`
+|
+
+|link:http://php.net/int[int^]
+a|`$webstoreId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public copyDesignConfig($designName, $newDesignName):Plenty\Modules\Template\Design\Config\Models\DesignConfig // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:template#template_models_designconfig[DesignConfig^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$designName`
+|
+
+|link:http://php.net/string[string^]
+a|`$newDesignName`
+|
+|===
+
+
+
+=== DesignRepositoryContract
+
+Design
+
+
+==== Namespace
+
+`Plenty\Modules\Template\Design\Config\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public loadAll():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public findByDesignName($designName, $withConfig = true):Plenty\Modules\Template\Design\Config\Models\Design // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:template#template_models_design[Design^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$designName`
+|
+
+|link:http://php.net/bool[bool^]
+a|`$withConfig`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getCheckoutType():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[[template_config_models]]
+==  Models
+=== Design
+
+Design model
+
+
+==== Namespace
+
+`Plenty\Modules\Template\Design\Config\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |designName
+    |
+|link:http://php.net/string[string^]
+    |imageDir
+    |directory of images
+|link:http://php.net/bool[bool^]
+    |export
+    |directory of images
+|link:http://php.net/string[string^]
+    |updatedAt
+    |created at date timestamp
+|link:http://php.net/string[string^]
+    |createdAt
+    |updated at date timestamp
+|link:http://php.net/array[array^]
+    |config
+    |list of configurations of each webstore
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== DesignConfig
+
+Design configuration model
+
+
+==== Namespace
+
+`Plenty\Modules\Template\Design\Config\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |webstoreId
+    |
+|link:http://php.net/int[int^]
+    |error404ContentPageId
+    |
+|link:http://php.net/int[int^]
+    |bankContentPageId
+    |
+|link:http://php.net/int[int^]
+    |cancellationRightsContentPageId
+    |
+|link:http://php.net/int[int^]
+    |termsConditionsContentPageId
+    |
+|link:http://php.net/int[int^]
+    |contactContentPageId
+    |
+|link:http://php.net/int[int^]
+    |legalDisclosureContentPageId
+    |
+|link:http://php.net/int[int^]
+    |helpContentPageId
+    |
+|link:http://php.net/int[int^]
+    |itemNotFoundContentPageId
+    |
+|link:http://php.net/int[int^]
+    |paymentMethodsContentPageId
+    |
+|link:http://php.net/int[int^]
+    |privacyPolicyContentPageId
+    |
+|link:http://php.net/int[int^]
+    |shippingContentPageId
+    |
+|link:http://php.net/int[int^]
+    |frontPageContentPageId
+    |
+|link:http://php.net/int[int^]
+    |customerRegistrationPageId
+    |
+|link:http://php.net/int[int^]
+    |orderConfirmationPageId
+    |
+|link:http://php.net/int[int^]
+    |lostPasswordPageId
+    |
+|link:http://php.net/int[int^]
+    |loginPageId
+    |
+|link:http://php.net/int[int^]
+    |logoutPageId
+    |
+|link:http://php.net/int[int^]
+    |typeOfCheckout
+    |
+|link:http://php.net/int[int^]
+    |checkoutStep1PageId
+    |
+|link:http://php.net/int[int^]
+    |checkoutStep2PageId
+    |
+|link:http://php.net/int[int^]
+    |checkoutStep3PageId
+    |
+|link:http://php.net/int[int^]
+    |checkoutStep4PageId
+    |
+|link:http://php.net/int[int^]
+    |checkoutStep5PageId
+    |
+|link:http://php.net/int[int^]
+    |checkoutStep6PageId
+    |
+|link:http://php.net/int[int^]
+    |checkoutStep7PageId
+    |
+|link:http://php.net/int[int^]
+    |checkoutStep8PageId
+    |
+|link:http://php.net/int[int^]
+    |checkoutStep9PageId
+    |
+|link:http://php.net/int[int^]
+    |checkoutStep10PageId
+    |
+|link:http://php.net/string[string^]
+    |pageDesignWebshop
+    |
+|link:http://php.net/string[string^]
+    |pageDesignCheckout
+    |
+|link:http://php.net/string[string^]
+    |pageDesignMyAccount
+    |
+|link:http://php.net/string[string^]
+    |pageDesignBlog
+    |
+|link:http://php.net/string[string^]
+    |pageDesignForum
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

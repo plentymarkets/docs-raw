@@ -1,0 +1,1432 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[basket_basket]]
+= Basket
+
+[[basket_basket_contracts]]
+==  Contracts
+=== BasketItemRepositoryContract
+
+The BasketItemRepositoryContract is the interface for the basket item repository. This interface allows to list, add, update and delete items from the shopping cart of the current customer session.
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public findOneById($basketRowId):Plenty\Modules\Basket\Models\BasketItem // <1>
+
+----
+
+
+    
+Gets an existing item by ID in the shopping cart of the current customer session.
+
+
+==== Return type
+    
+<1> link:basket#basket_models_basketitem[BasketItem^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$basketRowId`
+|The ID of the basket row
+|===
+
+
+[source%nowrap, php]
+----
+
+public findExistingOneByData($data):Plenty\Modules\Basket\Models\BasketItem // <1>
+
+----
+
+
+    
+Gets an existing item by item data in the shopping cart of the current customer session.
+
+
+==== Return type
+    
+<1> link:basket#basket_models_basketitem[BasketItem^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The item's data
+|===
+
+
+[source%nowrap, php]
+----
+
+public all():array // <1>
+
+----
+
+
+    
+Lists all items in the shopping cart of the current customer session.
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public addBasketItem($data):Plenty\Modules\Basket\Models\BasketItem // <1>
+
+----
+
+
+    
+Creates an item with the specified item data in the shopping cart.
+
+
+==== Return type
+    
+<1> link:basket#basket_models_basketitem[BasketItem^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The item's data
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateBasketItem($basketItemId, $data):void // <1>
+
+----
+
+
+    
+Updates an existing item in the shopping cart. The ID of the item and the data to be updated must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$basketItemId`
+|The ID of the item in the shopping cart
+
+|link:http://php.net/array[array^]
+a|`$data`
+|The item's data
+|===
+
+
+[source%nowrap, php]
+----
+
+public removeBasketItem($basketItemId, $dispatchAfterBasketChangedEvent = true):void // <1>
+
+----
+
+
+    
+Deletes an item from the shopping cart. The ID of the item must be specified.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$basketItemId`
+|The ID of the item in the shopping cart
+
+|link:http://php.net/bool[bool^]
+a|`$dispatchAfterBasketChangedEvent`
+|The information if the AfterBasketChanged event should be dispatched
+|===
+
+
+
+=== BasketRepositoryContract
+
+The BasketRepositoryContract is the interface for the basket repository. This interface allows to get the shopping cart of the current customer session.
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public load():Plenty\Modules\Basket\Models\Basket // <1>
+
+----
+
+
+    
+Gets the shopping cart from current customer session.
+
+
+==== Return type
+    
+<1> link:basket#basket_models_basket[Basket^]
+
+    
+
+[source%nowrap, php]
+----
+
+public save($data):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setCouponCode($couponCode):Plenty\Modules\Basket\Models\Basket // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:basket#basket_models_basket[Basket^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$couponCode`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public removeCouponCode():Plenty\Modules\Basket\Models\Basket // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:basket#basket_models_basket[Basket^]
+
+    
+
+[[basket_basket_exceptions]]
+==  Exceptions
+=== BasketCheckException
+
+Class BasketCheckException
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Exceptions`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($code, $message = &quot;&quot;, $previous = null):void // <1>
+
+----
+
+
+    
+BasketCheckException constructor.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$code`
+|
+
+|link:http://php.net/string[string^]
+a|`$message`
+|
+
+|link:miscellaneous#miscellaneous__exception[Exception^]
+
+a|`$previous`
+|
+|===
+
+
+
+=== BasketItemCheckException
+
+Created by ptopczewski, 12.05.16 09:03
+Class BasketItemCheckException
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Exceptions`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($code = 404, $message = &quot;&quot;, $previous = null, $itemId, $variationId, $stockNet = 0.0, $additionalData = []):void // <1>
+
+----
+
+
+    
+BasketItemCheckException constructor.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$code`
+|
+
+|link:http://php.net/string[string^]
+a|`$message`
+|
+
+|link:miscellaneous#miscellaneous__exception[Exception^]
+
+a|`$previous`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemId`
+|
+
+|link:http://php.net/int[int^]
+a|`$variationId`
+|
+
+|link:http://php.net/float[float^]
+a|`$stockNet`
+|
+
+|link:http://php.net/array[array^]
+a|`$additionalData`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getItemId():int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public getVariationId():int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public getStockNet():float // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+[source%nowrap, php]
+----
+
+public getAdditionalData():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+
+=== BasketItemQuantityCheckException
+
+Created by ptopczewski, 17.05.16 09:37
+Class BasketItemQuantityCheckException
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Exceptions`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public __construct($code, $message = &quot;&quot;, $previous = null, $itemId, $variationId, $requestedQuantity = 0.0, $specifiedQuantity = 0.0):void // <1>
+
+----
+
+
+    
+BasketItemQuantityCheckException constructor.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$code`
+|
+
+|link:http://php.net/string[string^]
+a|`$message`
+|
+
+|link:miscellaneous#miscellaneous__exception[Exception^]
+
+a|`$previous`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemId`
+|
+
+|link:http://php.net/int[int^]
+a|`$variationId`
+|
+
+|link:http://php.net/float[float^]
+a|`$requestedQuantity`
+|
+
+|link:http://php.net/float[float^]
+a|`$specifiedQuantity`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getRequestedQuantity():float // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+[source%nowrap, php]
+----
+
+public getSpecifiedQuantity():float // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+[[basket_basket_models]]
+==  Models
+=== Basket
+
+The basket model
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the shopping cart. The ID increases by 1 when a new customer enters the online store and adds an item to the shopping cart.
+|link:http://php.net/string[string^]
+    |sessionId
+    |The ID of the current customer session
+|link:http://php.net/int[int^]
+    |orderId
+    |The ID of the order
+|link:http://php.net/int[int^]
+    |customerId
+    |The ID of the customer
+|link:http://php.net/int[int^]
+    |customerInvoiceAddressId
+    |The ID of the customer's invoice address
+|link:http://php.net/int[int^]
+    |customerShippingAddressId
+    |The ID of the customer's shipping address
+|link:http://php.net/string[string^]
+    |currency
+    |The currency
+|link:http://php.net/float[float^]
+    |referrerId
+    |The ID of the order referrer
+|link:http://php.net/int[int^]
+    |shippingCountryId
+    |The ID of the shipping country
+|link:http://php.net/int[int^]
+    |methodOfPaymentId
+    |The ID of the payment method
+|link:http://php.net/int[int^]
+    |shippingProviderId
+    |The ID of the shipping provider
+|link:http://php.net/int[int^]
+    |shippingProfileId
+    |The ID of the shipping profile
+|link:http://php.net/float[float^]
+    |itemSum
+    |The gross value of items in the shopping cart
+|link:http://php.net/float[float^]
+    |itemSumNet
+    |The net value of items in the shopping cart
+|link:http://php.net/float[float^]
+    |basketAmount
+    |The total gross value of the shopping cart
+|link:http://php.net/float[float^]
+    |basketAmountNet
+    |The total net value of the shopping cart
+|link:http://php.net/float[float^]
+    |shippingAmount
+    |The gross shipping costs
+|link:http://php.net/float[float^]
+    |shippingAmountNet
+    |The net shipping costs
+|link:http://php.net/float[float^]
+    |paymentAmount
+    |The amount of the payment
+|link:http://php.net/string[string^]
+    |couponCode
+    |The entered coupon code
+|link:http://php.net/float[float^]
+    |couponDiscount
+    |The received discount due to the coupon code
+|link:http://php.net/bool[bool^]
+    |shippingDeleteByCoupon
+    |Shows whether the shipping costs are subtracted due to a coupon code. Shopping carts that are free of shipping costs have the value true.
+|link:http://php.net/float[float^]
+    |basketRebate
+    |The discount to the shopping cart value. The discount can either be set as a discount scale for items, as a customer class discount or as a discount based on the payment method.
+|link:http://php.net/int[int^]
+    |basketRebateType
+    |The discount type. The following types are available:
+<ul>
+    <li>Discount scale based on net value of items = 4</li>
+    <li>    Discount based on method of payment = 5</li>
+</ul>
+|link:http://php.net/int[int^]
+    |maxFsk
+    |The age rating
+|link:http://php.net/int[int^]
+    |orderTimestamp
+    |The timestamp of the order
+|link:http://php.net/string[string^]
+    |createdAt
+    |The date that the shopping cart was created.
+|link:http://php.net/string[string^]
+    |updatedAt
+    |The date that the shopping cart was updated last.
+|link:miscellaneous#miscellaneous__[^]
+
+    |basketItems
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== BasketItem
+
+The basket item model
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the item in the shopping cart
+|link:http://php.net/int[int^]
+    |basketId
+    |The ID of the shopping cart. The ID increases by 1 when a new customer enters the online store and adds an item to the shopping cart.
+|link:http://php.net/string[string^]
+    |sessionId
+    |The ID of the current customer session
+|link:http://php.net/int[int^]
+    |orderRowId
+    |
+|link:http://php.net/float[float^]
+    |quantity
+    |The current quantity of the item
+|link:http://php.net/float[float^]
+    |quantityOriginally
+    |The initial quantity of the item
+|link:http://php.net/int[int^]
+    |itemId
+    |The ID of the item
+|link:http://php.net/int[int^]
+    |priceId
+    |The ID of the item price
+|link:http://php.net/int[int^]
+    |attributeValueSetId
+    |The ID of the attribute value set
+|link:http://php.net/int[int^]
+    |rebate
+    |The discount on the item
+|link:http://php.net/float[float^]
+    |vat
+    |The VAT
+|link:http://php.net/float[float^]
+    |price
+    |The item price
+|link:http://php.net/float[float^]
+    |givenPrice
+    |
+|link:http://php.net/bool[bool^]
+    |useGivenPrice
+    |
+|link:http://php.net/int[int^]
+    |inputWidth
+    |The width of the item
+|link:http://php.net/int[int^]
+    |inputLength
+    |The length of the item
+|link:http://php.net/int[int^]
+    |inputHeight
+    |The height of the item
+|link:http://php.net/int[int^]
+    |itemType
+    |The item type
+|link:http://php.net/string[string^]
+    |externalItemId
+    |The external variation ID
+|link:http://php.net/bool[bool^]
+    |noEditByCustomer
+    |Shows whether the item was edited by the customer
+|link:http://php.net/int[int^]
+    |costCenterId
+    |
+|link:http://php.net/int[int^]
+    |giftPackageForRowId
+    |
+|link:http://php.net/int[int^]
+    |position
+    |The item position
+|link:http://php.net/string[string^]
+    |size
+    |The item size
+|link:http://php.net/int[int^]
+    |shippingProfileId
+    |The ID of the shipping profile
+|link:http://php.net/float[float^]
+    |referrerId
+    |The ID of the order referrer
+|link:http://php.net/string[string^]
+    |deliveryDate
+    |The delivery date
+|link:http://php.net/int[int^]
+    |categoryId
+    |The ID of the item category
+|link:http://php.net/int[int^]
+    |reservationDatetime
+    |
+|link:http://php.net/int[int^]
+    |variationId
+    |The ID of the item variation
+|link:http://php.net/int[int^]
+    |bundleVariationId
+    |The ID of the item bundle type
+|link:http://php.net/string[string^]
+    |createdAt
+    |The date that the shopping cart was created
+|link:http://php.net/string[string^]
+    |updatedAt
+    |The date that the shopping cart was updated last
+|link:http://php.net/float[float^]
+    |attributeTotalMarkup
+    |attribute total markup
+|link:http://php.net/array[array^]
+    |basketItemOrderParams
+    |Array of BasketItemParams
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== BasketItemParams
+
+The basket item params model
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |type
+    |
+|link:http://php.net/string[string^]
+    |name
+    |
+|link:http://php.net/string[string^]
+    |value
+    |
+|link:http://php.net/int[int^]
+    |basketItemId
+    |
+|link:http://php.net/int[int^]
+    |propertyId
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+[[basket_events]]
+= Events
+
+[[basket_events_basket]]
+==  Basket
+=== AfterBasketChanged
+
+The event is triggered after the shopping cart is changed.
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Events\Basket`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public hasValidCoupon():bool // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+[source%nowrap, php]
+----
+
+public getCouponValidationError():void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setHasValidCoupon($hasValidCoupon, $couponValidationError = null):void // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$hasValidCoupon`
+|Flag that indicates if a valid coupon has been used.
+
+|link:miscellaneous#miscellaneous_exceptions_validationexception[ValidationException^]
+
+a|`$couponValidationError`
+|Validation errors indicating the reasons for an invalid coupon.
+|===
+
+
+[source%nowrap, php]
+----
+
+public getBasket():Plenty\Modules\Basket\Models\Basket // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:basket#basket_models_basket[Basket^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getLocationId():int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setLocationId($locationId):Plenty\Modules\Basket\Events\Basket // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:basket#basket_events_basket[Basket^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$locationId`
+|The ID of the location
+|===
+
+
+[source%nowrap, php]
+----
+
+public getInvoiceAddress():Plenty\Modules\Account\Address\Models\Address // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:account#account_models_address[Address^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setInvoiceAddress($invoiceAddress):Plenty\Modules\Basket\Events\Basket // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:basket#basket_events_basket[Basket^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:account#account_models_address[Address^]
+
+a|`$invoiceAddress`
+|The invoice address
+|===
+
+
+[source%nowrap, php]
+----
+
+public getMaxFsk():int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
+[source%nowrap, php]
+----
+
+public setMaxFsk($maxFsk):Plenty\Modules\Basket\Events\Basket // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:basket#basket_events_basket[Basket^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$maxFsk`
+|The highest value for age restriction of an item in the shopping cart
+|===
+
+
+[source%nowrap, php]
+----
+
+public getShippingCosts():float // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/float[float^]
+    
+
+[source%nowrap, php]
+----
+
+public setShippingCosts($shippingCosts):Plenty\Modules\Basket\Events\Basket // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:basket#basket_events_basket[Basket^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/float[float^]
+a|`$shippingCosts`
+|The shipping costs of the shopping cart
+|===
+
+
+
+=== AfterBasketCreate
+
+The event is triggered after the shopping cart is created.
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Events\Basket`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBasket():Plenty\Modules\Basket\Models\Basket // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:basket#basket_models_basket[Basket^]
+
+    
+
+[[basket_events_basketitem]]
+==  BasketItem
+=== AfterBasketItemAdd
+
+The event is triggered after an item is added to the shopping cart.
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Events\BasketItem`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:basket#basket_models_basketitem[BasketItem^]
+
+    
+
+
+=== AfterBasketItemRemove
+
+The event is triggered after an item is deleted from the shopping cart.
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Events\BasketItem`
+
+
+
+
+
+
+=== AfterBasketItemUpdate
+
+The event is triggered after an item in the shopping cart is updated.
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Events\BasketItem`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:basket#basket_models_basketitem[BasketItem^]
+
+    
+
+
+=== BasketItemEvent
+
+BasketItemEvent
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Events\BasketItem`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:basket#basket_models_basketitem[BasketItem^]
+
+    
+
+
+=== BeforeBasketItemAdd
+
+The event is triggered before an item is created in the shopping cart.
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Events\BasketItem`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:basket#basket_models_basketitem[BasketItem^]
+
+    
+
+
+=== BeforeBasketItemRemove
+
+The event is triggered before an item is deleted from the shopping cart.
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Events\BasketItem`
+
+
+
+
+
+
+=== BeforeBasketItemUpdate
+
+The event is triggered before an item in the shopping cart is updated.
+
+
+==== Namespace
+
+`Plenty\Modules\Basket\Events\BasketItem`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:basket#basket_models_basketitem[BasketItem^]
+
+    
+

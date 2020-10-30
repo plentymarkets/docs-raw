@@ -1,0 +1,1506 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[warehouse_warehouse]]
+= Warehouse
+
+[[warehouse_warehouse_contracts]]
+==  Contracts
+=== WarehouseLocationDimensionRepositoryContract
+
+Get, create, update and delete warehouse location dimensions
+
+
+==== Namespace
+
+`Plenty\Modules\Warehouse\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getWarehouseLocationDimension($warehouseLocationDimension, $with = []):Plenty\Modules\Warehouse\Models\WarehouseLocationDimension // <1>
+
+----
+
+
+    
+Get a warehouse location dimension
+
+
+==== Return type
+    
+<1> link:warehouse#warehouse_models_warehouselocationdimension[WarehouseLocationDimension^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseLocationDimension`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listWarehouseLocationDimension($warehouseId):Plenty\Modules\Warehouse\Models\WarehouseLocationDimension // <1>
+
+----
+
+
+    
+Get all warehouse location dimensions
+
+
+==== Return type
+    
+<1> link:warehouse#warehouse_models_warehouselocationdimension[WarehouseLocationDimension^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createMultipleWarehouseLocationDimension($data):array // <1>
+
+----
+
+
+    
+Create multiple warehouse location dimensions
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public createWarehouseLocationDimension($data):Plenty\Modules\Warehouse\Models\WarehouseLocationDimension // <1>
+
+----
+
+
+    
+Create a warehouse location dimension
+
+
+==== Return type
+    
+<1> link:warehouse#warehouse_models_warehouselocationdimension[WarehouseLocationDimension^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateWarehouseLocationDimension($warehouseLocationDimension, $data):Plenty\Modules\Warehouse\Models\WarehouseLocationDimension // <1>
+
+----
+
+
+    
+Update a warehouse location dimension
+
+
+==== Return type
+    
+<1> link:warehouse#warehouse_models_warehouselocationdimension[WarehouseLocationDimension^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseLocationDimension`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteWarehouseLocationDimension($warehouseLocationDimension):void // <1>
+
+----
+
+
+    
+Delete a warehouse location dimension
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseLocationDimension`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== WarehouseLocationLevelRepositoryContract
+
+Get, create, update and delete warehouse location levels
+
+
+==== Namespace
+
+`Plenty\Modules\Warehouse\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getWarehouseLocationLevel($warehouseLocationLevel):Plenty\Modules\Warehouse\Models\WarehouseLocationLevel // <1>
+
+----
+
+
+    
+Get a warehouse location level
+
+
+==== Return type
+    
+<1> link:warehouse#warehouse_models_warehouselocationlevel[WarehouseLocationLevel^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseLocationLevel`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getWarehouseLocationLevelByName($warehouseLocationLevelName, $dimensionId, $parentId):Plenty\Modules\Warehouse\Models\WarehouseLocationLevel // <1>
+
+----
+
+
+    
+Get a warehouse location level
+
+
+==== Return type
+    
+<1> link:warehouse#warehouse_models_warehouselocationlevel[WarehouseLocationLevel^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$warehouseLocationLevelName`
+|
+
+|link:http://php.net/int[int^]
+a|`$dimensionId`
+|
+
+|link:http://php.net/int[int^]
+a|`$parentId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getWarehouseLocationLevelOnlyByName($warehouseLocationLevelName):Plenty\Modules\Warehouse\Models\WarehouseLocationLevel // <1>
+
+----
+
+
+    
+Get a warehouse location level only by name.
+
+
+==== Return type
+    
+<1> link:warehouse#warehouse_models_warehouselocationlevel[WarehouseLocationLevel^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$warehouseLocationLevelName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listWarehouseLocationLevels($filters = [], $warehouseId = null):array // <1>
+
+----
+
+
+    
+Get a list of warehouse location levels
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createWarehouseLocationLevel($data, $apiMode = false):Plenty\Modules\Warehouse\Models\WarehouseLocationLevel // <1>
+
+----
+
+
+    
+Create a warehouse location level
+
+
+==== Return type
+    
+<1> link:warehouse#warehouse_models_warehouselocationlevel[WarehouseLocationLevel^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+
+|link:http://php.net/bool[bool^]
+a|`$apiMode`
+|If the location is created using a route
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateWarehouseLocationLevel($warehouseLocationLevel, $data):Plenty\Modules\Warehouse\Models\WarehouseLocationLevel // <1>
+
+----
+
+
+    
+Update a warehouse location level
+
+
+==== Return type
+    
+<1> link:warehouse#warehouse_models_warehouselocationlevel[WarehouseLocationLevel^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseLocationLevel`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteWarehouseLocationLevel($warehouseLocationLevel):void // <1>
+
+----
+
+
+    
+Delete a warehouse location level
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseLocationLevel`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getWarehouseStructure($warehouseId, $data = []):void // <1>
+
+----
+
+
+    
+Get a warehouse structure.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public moveWarehouseLocationLevelPosition($data):void // <1>
+
+----
+
+
+    
+Move a warehouse location level position
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public getWarehouseStructureMoving($warehouseId, $data):void // <1>
+
+----
+
+
+    
+Get a warehouse structure moving.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+
+=== WarehouseLocationRepositoryContract
+
+Get, create, update and delete warehouse locations
+
+
+==== Namespace
+
+`Plenty\Modules\Warehouse\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getWarehouseLocation($warehouseLocation):Plenty\Modules\Warehouse\Models\WarehouseLocation // <1>
+
+----
+
+
+    
+Get a warehouse location
+
+
+==== Return type
+    
+<1> link:warehouse#warehouse_models_warehouselocation[WarehouseLocation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseLocation`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listWarehouseLocations($page = 1, $itemsPerPage = 50, $paginate = 1, $filters = [], $warehouseId = null, $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Get all warehouse locations
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/int[int^]
+a|`$paginate`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public listWarehouseLocationsByLevelId($warehouseId, $levelId):void // <1>
+
+----
+
+
+    
+List warehouse locations by levelId
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|
+
+|link:http://php.net/int[int^]
+a|`$levelId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getWarehouseLocationByLabel($label):Plenty\Modules\Warehouse\Models\WarehouseLocation // <1>
+
+----
+
+
+    
+Get first warehouse location matching the given label
+Gets the first warehouse location matching the given label. The label must be specified.
+
+
+==== Return type
+    
+<1> link:warehouse#warehouse_models_warehouselocation[WarehouseLocation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$label`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createWarehouseLocation($data):Plenty\Modules\Warehouse\Models\WarehouseLocation // <1>
+
+----
+
+
+    
+Create a warehouse location
+
+
+==== Return type
+    
+<1> link:warehouse#warehouse_models_warehouselocation[WarehouseLocation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateWarehouseLocation($warehouseLocation, $data):Plenty\Modules\Warehouse\Models\WarehouseLocation // <1>
+
+----
+
+
+    
+Update a warehouse location
+
+
+==== Return type
+    
+<1> link:warehouse#warehouse_models_warehouselocation[WarehouseLocation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseLocation`
+|
+
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteWarehouseLocation($warehouseLocation):void // <1>
+
+----
+
+
+    
+Delete a warehouse location
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseLocation`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteMultipleWarehouseLocations($warehouseLocationIds):void // <1>
+
+----
+
+
+    
+Delete multiple warehouse locations
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$warehouseLocationIds`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public executeGroupFunction($data):array // <1>
+
+----
+
+
+    
+Edit the purpose and status for a group of storage locations
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public generateWarehouseLocationLabel($warehouseId, $warehouseLocationIds):array // <1>
+
+----
+
+
+    
+Generate warehouse location labels
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseId`
+|
+
+|link:http://php.net/array[array^]
+a|`$warehouseLocationIds`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public moveWarehouseLocationPosition($data):void // <1>
+
+----
+
+
+    
+Move a warehouse location position
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|The request data
+|===
+
+
+[source%nowrap, php]
+----
+
+public listWarehouseLocationStock($page = 1, $itemsPerPage = 50, $paginate = 1, $filters = [], $warehouseLocationId = null, $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+
+----
+
+
+    
+Get all warehouse locations stock
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|
+
+|link:http://php.net/int[int^]
+a|`$paginate`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+
+|link:http://php.net/int[int^]
+a|`$warehouseLocationId`
+|
+
+|link:http://php.net/array[array^]
+a|`$with`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getWarehouseLocationAvailability($warehouseLocationId):array // <1>
+
+----
+
+
+    
+Get availability for storage location
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$warehouseLocationId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public clearCriteria():void // <1>
+
+----
+
+
+    
+Resets all Criteria filters by creating a new instance of the builder object.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public applyCriteriaFromFilters():void // <1>
+
+----
+
+
+    
+Applies criteria classes to the current repository.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public setFilters($filters = []):void // <1>
+
+----
+
+
+    
+Sets the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilters():void // <1>
+
+----
+
+
+    
+Returns the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getConditions():void // <1>
+
+----
+
+
+    
+Returns a collection of parsed filters as Condition object
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[source%nowrap, php]
+----
+
+public clearFilters():void // <1>
+
+----
+
+
+    
+Clears the filter array.
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+[[warehouse_warehouse_models]]
+==  Models
+=== WarehouseLocation
+
+The warehouse location model.
+
+
+==== Namespace
+
+`Plenty\Modules\Warehouse\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the warehouse location
+|link:http://php.net/int[int^]
+    |levelId
+    |The level ID of the warehouse location
+|link:http://php.net/string[string^]
+    |label
+    |The label of the warehouse location
+|link:http://php.net/string[string^]
+    |purposeKey
+    |The purpose key of the warehouse location
+|link:http://php.net/string[string^]
+    |statusKey
+    |The status key of the warehouse location
+|link:http://php.net/int[int^]
+    |position
+    |The position of the warehouse location
+|link:http://php.net/string[string^]
+    |fullLabel
+    |The label with level path name
+|link:http://php.net/string[string^]
+    |type
+    |The type of the warehouse location (array values: 'small','medium','large','europallet')
+|link:http://php.net/string[string^]
+    |notes
+    |The notes of the warehouse location
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the warehouse location was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the warehouse location was last updated
+|link:warehouse#warehouse_models_warehouselocationlevel[WarehouseLocationLevel^]
+
+    |warehouseLocationLevel
+    |The level from warehouse location.
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== WarehouseLocationDimension
+
+The warehouse location dimension model.
+
+
+==== Namespace
+
+`Plenty\Modules\Warehouse\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the warehouse location dimension
+|link:http://php.net/int[int^]
+    |parentId
+    |The parent ID of the warehouse location dimension
+|link:http://php.net/int[int^]
+    |warehouseId
+    |The warehouse ID of the warehouse location dimension
+|link:http://php.net/int[int^]
+    |level
+    |The level of the warehouse location dimension
+|link:http://php.net/string[string^]
+    |name
+    |The name of the warehouse location dimension
+|link:http://php.net/string[string^]
+    |shortcut
+    |The shortcut of the warehouse location dimension
+|link:http://php.net/string[string^]
+    |separator
+    |The separator of the warehouse location dimension
+|link:http://php.net/int[int^]
+    |displayInName
+    |If true, the dimension prefix will be shown in the storage location name
+|link:http://php.net/int[int^]
+    |isActiveForPickupPath
+    |Active flag for pickup path of the warehouse location dimension
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |Date when the warehouse location dimension was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |Date when the warehouse location dimension was last updated
+|link:http://php.net/array[array^]
+    |warehouseLocationLevel
+    |The linked warehouse location level
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== WarehouseLocationLevel
+
+The warehouse location level model.
+
+
+==== Namespace
+
+`Plenty\Modules\Warehouse\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/int[int^]
+    |id
+    |The ID of the warehouse location level
+|link:http://php.net/int[int^]
+    |parentId
+    |The parent ID of the warehouse location level
+|link:http://php.net/int[int^]
+    |dimensionId
+    |The warehouse location dimension id of the warehouse location level
+|link:http://php.net/int[int^]
+    |position
+    |The position of the warehouse location level
+|link:http://php.net/string[string^]
+    |name
+    |The name of the warehouse location level
+|link:http://php.net/string[string^]
+    |type
+    |The type of the warehouse location ['small','medium','large','europallet']
+|link:http://php.net/string[string^]
+    |pathName
+    |The complete path name from the level
+|link:miscellaneous#miscellaneous__[^]
+
+    |createdAt
+    |The date when the warehouse location level was created
+|link:miscellaneous#miscellaneous__[^]
+
+    |updatedAt
+    |The date when the warehouse location level was last updated
+|link:warehouse#warehouse_models_warehouselocationlevel[WarehouseLocationLevel^]
+
+    |parent
+    |The parent warehouse location level if existing
+|link:http://php.net/array[array^]
+    |children
+    |The children warehouse location level if existing
+|link:http://php.net/array[array^]
+    |warehouseLocation
+    |The linked warehouse location
+|link:warehouse#warehouse_models_warehouselocationdimension[WarehouseLocationDimension^]
+
+    |warehouseLocationDimension
+    |The linked warehouse location dimension
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

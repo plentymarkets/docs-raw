@@ -1,0 +1,276 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[plentymarketplace_plentymarketplace]]
+= PlentyMarketplace
+
+[[plentymarketplace_plentymarketplace_contracts]]
+==  Contracts
+=== MarketplacePurchaseInformationContract
+
+Get information about purchases on marketplace.
+
+
+==== Namespace
+
+`Plenty\Modules\PlentyMarketplace\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public isPaid($pluginName):bool // <1>
+
+----
+
+
+    
+Takes the Name of a plugin and returns true if the plugin has been paid for.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|The plugin name. Must be exactly as provided in the plugin.json.
+|===
+
+
+
+=== SubscriptionInformationServiceContract
+
+Get information about plugin subscriptions. Only suitable for subscription plugins.
+
+
+==== Namespace
+
+`Plenty\Modules\PlentyMarketplace\Contracts`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public isPaid($pluginName):bool // <1>
+
+----
+
+
+    
+Takes the Name of a subscription plugin and returns true if the subscription has been paid for
+in the current payment period on the current system.
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|The plugin name. Must be exactly as provided in the plugin.json.
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSubscriptionInfo($pluginName):Plenty\Modules\PlentyMarketplace\Models\SubscriptionOrderInformation // <1>
+
+----
+
+
+    
+Takes the Name of a subscription plugin and returns information about the subscription.
+
+
+==== Return type
+    
+<1> link:plentymarketplace#plentymarketplace_models_subscriptionorderinformation[SubscriptionOrderInformation^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$pluginName`
+|The plugin name. Must be exactly as provided in the plugin.json.
+|===
+
+
+[[plentymarketplace_plentymarketplace_models]]
+==  Models
+=== SubscriptionChildOrderInformation
+
+Eloquent model representing a SubscriptionChildOrderInformation.
+
+
+==== Namespace
+
+`Plenty\Modules\PlentyMarketplace\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |paymentStatus
+    |
+|link:http://php.net/array[array^]
+    |paymentInformation
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== SubscriptionChildPaymentInformation
+
+Eloquent model representing a SubscriptionChildPaymentInformation.
+
+
+==== Namespace
+
+`Plenty\Modules\PlentyMarketplace\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/float[float^]
+    |amount
+    |The amount of the payment
+|link:http://php.net/int[int^]
+    |status
+    |The <a href="https://developers.plentymarkets.com/rest-doc/introduction#payment-statuses"  target="_blank">status</a> of the payment
+|link:http://php.net/int[int^]
+    |unaccountable
+    |An unassigned payment. Unassigned payments have the value 1.
+|link:http://php.net/string[string^]
+    |currency
+    |The currency of the payment in ISO 4217 code.
+|link:http://php.net/string[string^]
+    |receivedAt
+    |The time the payment was received
+|link:http://php.net/string[string^]
+    |importedAt
+    |The time the payment was imported
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+
+
+=== SubscriptionOrderInformation
+
+Eloquent model representing a SubscriptionOrderInformation.
+
+
+==== Namespace
+
+`Plenty\Modules\PlentyMarketplace\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/bool[bool^]
+    |isPaid
+    |
+|link:http://php.net/string[string^]
+    |intervalType
+    |
+|link:http://php.net/string[string^]
+    |intervalValue
+    |
+|link:http://php.net/string[string^]
+    |startDate
+    |
+|link:http://php.net/string[string^]
+    |subscriptionLastRun
+    |
+|link:http://php.net/string[string^]
+    |subscriptionNextRun
+    |
+|link:http://php.net/array[array^]
+    |childOrders
+    |
+|===
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+
+    
+Returns this model as an array.
+
+
+

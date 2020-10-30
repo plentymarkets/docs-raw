@@ -1,0 +1,904 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+
+[[eventprocedures_eventprocedures]]
+= EventProcedures
+
+[[eventprocedures_eventprocedures_events]]
+==  Events
+=== EventProceduresTriggered
+
+plentymarkets event procedures triggered
+
+
+==== Namespace
+
+`Plenty\Modules\EventProcedures\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getTicket():Plenty\Modules\Ticket\Models\Ticket // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:ticket#ticket_models_ticket[Ticket^]
+
+    
+
+[source%nowrap, php]
+----
+
+public getOrder():Plenty\Modules\Order\Models\Order // <1>
+
+----
+
+
+    
+Get the order that triggered the event.
+
+
+==== Return type
+    
+<1> link:order#order_models_order[Order^]
+
+    
+
+[[eventprocedures_eventprocedures_services]]
+==  Services
+=== EventProceduresService
+
+The EventProcedureService class offers the possibility to register a procedure class and method that can be called by plentymarkets event procedures.
+
+
+==== Namespace
+
+`Plenty\Modules\EventProcedures\Services`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public registerProcedure($moduleName, $eventType, $procedureNames, $procedureClass, $procedureGroup = \Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry::PROCEDURE_GROUP_ORDER):bool // <1>
+
+----
+
+
+    
+Register a procedure class
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$moduleName`
+|The name of the module. The name of the module can be choosen freely.
+
+|link:http://php.net/string[string^]
+a|`$eventType`
+|The name of the event type. The event types are determined and can be one of the following:
+<ul>
+<li> {@see \ProcedureEntry::EVENT_TYPE_ORDER}, </li>
+        					<li> {@see \ProcedureEntry::EVENT_TYPE_REORDER} or </li>
+<li> {@see \ProcedureEntry::EVENT_TYPE_TICKET} </li>
+</ul>
+
+|link:http://php.net/array[array^]
+a|`$procedureNames`
+|The name for the procedure that will be shown in the event procedure UI. The name is unique and will be used for German and English.
+
+|link:http://php.net/string[string^]
+a|`$procedureClass`
+|The fully qualified name of the procedure class to be called by event procedures.
+                   		Each procedure class must either contain the execute method defined by plentymarkets or can contain an individual method. The individual method has to be provided along with procedure class.
+The method is separated from the class by an "@" sign. The part following the "@" will be interpreted as method name. The part in front of the "@" is the name of the procedure class.
+
+|link:http://php.net/string[string^]
+a|`$procedureGroup`
+|The name of the procedure group. The procedure groups are determined and can be one of the following:
+<ul>
+<li> {@see \ProcedureEntry::PROCEDURE_GROUP_ORDER}, </li>
+                   		<li> {@see \ProcedureEntry::PROCEDURE_GROUP_ITEM}, </li>
+<li> {@see \ProcedureEntry::PROCEDURE_GROUP_DOCUMENT}, </li>
+                   		<li> {@see \ProcedureEntry::PROCEDURE_GROUP_CONTACT}, </li>
+<li> {@see \ProcedureEntry::PROCEDURE_GROUP_SHIPPING}, </li>
+                   		<li> {@see \ProcedureEntry::PROCEDURE_GROUP_PAYMENT}, </li>
+<li> {@see \ProcedureEntry::PROCEDURE_GROUP_RETURN} or </li>
+<li> {@see \ProcedureEntry::PROCEDURE_GROUP_LISTING} </li>
+<li> [optional, default={@see \ProcedureEntry::PROCEDURE_GROUP_ORDER}] </li>
+</ul>
+|===
+
+
+[source%nowrap, php]
+----
+
+public registerFilter($moduleName, $eventType, $filterNames, $filterClass):bool // <1>
+
+----
+
+
+    
+Register a filter class
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$moduleName`
+|The name of the module. The name of the module can be choosen freely.
+
+|link:http://php.net/string[string^]
+a|`$eventType`
+|The name of the event type. The event types are determined and can be one of the following:
+<ul>
+<li>order</li>
+<li>ticket</li>
+</ul>
+
+|link:http://php.net/array[array^]
+a|`$filterNames`
+|The name for the filter that will be shown in the event procedure UI. The name is unique and will be used for German and English.
+
+|link:http://php.net/string[string^]
+a|`$filterClass`
+|The fully qualified name of the filter class to be called by event procedures.
+                    	Each procedure class must either contain the accept method defined by plentymarkets or can contain an individual method. The individual method has to be provided along with procedure class.
+The method is separated from the class by an "@" sign. The part following the "@" will be interpreted as method name. The part in front of the "@" is the name of the procedure class.
+                        The method must return a boolean.
+|===
+
+
+[source%nowrap, php]
+----
+
+public registerTrigger($moduleName, $eventType, $triggerIdentifier, $triggerNames):bool // <1>
+
+----
+
+
+    
+Register a trigger
+
+
+==== Return type
+    
+<1> link:http://php.net/bool[bool^]
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$moduleName`
+|The name of the module. The name of the module can be choosen freely.
+
+|link:http://php.net/string[string^]
+a|`$eventType`
+|The name of the event type. The event types are determined and can be one of the following:
+                       <ul>
+<li> order </li>
+                       </ul>
+
+|link:http://php.net/string[string^]
+a|`$triggerIdentifier`
+|The identifier for the trigger that will be used to identify the trigger on fire. The identifier of the trigger can be choosen freely.
+
+|link:http://php.net/array[array^]
+a|`$triggerNames`
+|The name for the trigger that will be shown in the event procedure UI. The name is unique and will be used for German and English.
+|===
+
+
+[source%nowrap, php]
+----
+
+public fireTrigger($orderId, $moduleName, $triggerIdentifier):void // <1>
+
+----
+
+
+    
+Fire a trigger
+
+
+==== Return type
+    
+<1> link:miscellaneous#miscellaneous__void[void^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$orderId`
+|The id of the order for which the trigger is fired.
+
+|link:http://php.net/string[string^]
+a|`$moduleName`
+|The name of the module. The name of the module given on register the trigger.
+
+|link:http://php.net/string[string^]
+a|`$triggerIdentifier`
+|The identifier for the trigger given on register the trigger.
+|===
+
+
+[[eventprocedures_services]]
+= Services
+
+[[eventprocedures_services_entries]]
+==  Entries
+=== FilterEntry
+
+The filter entry contains all information needed to use module filters in plentymarkets event procedures.
+
+
+==== Namespace
+
+`Plenty\Modules\EventProcedures\Services\Entries`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getModuleName():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:eventprocedures#eventprocedures_entries_filterentry[FilterEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$moduleName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getEventType():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:eventprocedures#eventprocedures_entries_filterentry[FilterEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$eventType`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilterNames():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public setFilterNames($filterNames):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:eventprocedures#eventprocedures_entries_filterentry[FilterEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filterNames`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFilterClass():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setFilterClass($filterClass):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:eventprocedures#eventprocedures_entries_filterentry[FilterEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$filterClass`
+|
+|===
+
+
+
+=== ProcedureEntry
+
+The procedure entry contains all information needed to use module procedures in plentymarkets event procedures.
+
+
+==== Namespace
+
+`Plenty\Modules\EventProcedures\Services\Entries`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getModuleName():string // <1>
+
+----
+
+
+    
+Get the
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry // <1>
+
+----
+
+
+    
+Set the
+
+
+==== Return type
+    
+<1> link:eventprocedures#eventprocedures_entries_procedureentry[ProcedureEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$moduleName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getEventType():string // <1>
+
+----
+
+
+    
+Get the
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry // <1>
+
+----
+
+
+    
+Set the
+
+
+==== Return type
+    
+<1> link:eventprocedures#eventprocedures_entries_procedureentry[ProcedureEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$eventType`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getProcedureNames():array // <1>
+
+----
+
+
+    
+Get the
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public setProcedureNames($procedureNames):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry // <1>
+
+----
+
+
+    
+Set the
+
+
+==== Return type
+    
+<1> link:eventprocedures#eventprocedures_entries_procedureentry[ProcedureEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$procedureNames`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getProcedureGroup():string // <1>
+
+----
+
+
+    
+Get the
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setProcedureGroup($procedureGroup):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry // <1>
+
+----
+
+
+    
+Set the
+
+
+==== Return type
+    
+<1> link:eventprocedures#eventprocedures_entries_procedureentry[ProcedureEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$procedureGroup`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getProcedureClass():string // <1>
+
+----
+
+
+    
+Get the
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setProcedureClass($procedureClass):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry // <1>
+
+----
+
+
+    
+Set the
+
+
+==== Return type
+    
+<1> link:eventprocedures#eventprocedures_entries_procedureentry[ProcedureEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$procedureClass`
+|
+|===
+
+
+
+=== TriggerEntry
+
+The trigger entry contains all information needed to use module triggers in plentymarkets event procedures.
+
+
+==== Namespace
+
+`Plenty\Modules\EventProcedures\Services\Entries`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getModuleName():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:eventprocedures#eventprocedures_entries_triggerentry[TriggerEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$moduleName`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getEventType():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:eventprocedures#eventprocedures_entries_triggerentry[TriggerEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$eventType`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getTriggerIdentifier():string // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/string[string^]
+    
+
+[source%nowrap, php]
+----
+
+public setTriggerIdentifier($triggerIdentifier):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:eventprocedures#eventprocedures_entries_triggerentry[TriggerEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$triggerIdentifier`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getTriggerNames():array // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/array[array^]
+    
+
+[source%nowrap, php]
+----
+
+public setTriggerNames($triggerNames):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:eventprocedures#eventprocedures_entries_triggerentry[TriggerEntry^]
+
+    
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$triggerNames`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getTrigger():int // <1>
+
+----
+
+
+    
+
+
+
+==== Return type
+    
+<1> link:http://php.net/int[int^]
+    
+
