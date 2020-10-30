@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[myview_myview]]
-= MyView
+== MyView
 
 [[myview_myview_contracts]]
-==  Contracts
-=== ViewSetNameRepositoryContract
+===  Contracts
+==== ViewSetNameRepositoryContract
 
 This interface provides a method to update ViewSetNames
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\MyView\Contracts`
 
@@ -21,7 +23,7 @@ This interface provides a method to update ViewSetNames
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public updateViewSetName($name, $id):void // <1>
 Update given view set name.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -55,12 +57,12 @@ a|`$id`
 
 
 
-=== ViewSetPermissionContract
+==== ViewSetPermissionContract
 
 This interface provides methods to create, get, update and delete ViewSets
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\MyView\Contracts`
 
@@ -69,7 +71,7 @@ This interface provides methods to create, get, update and delete ViewSets
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -83,7 +85,7 @@ public search($searchParams):void // <1>
 Search permissions
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -110,7 +112,7 @@ public save($data):bool // <1>
 Save permissions
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -136,7 +138,7 @@ public updateDefaultViewSetRelation($relations, $key):void // <1>
 Update given default view set relations.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -167,7 +169,7 @@ public updateViewSetRelation($relations, $viewSetId):void // <1>
 Update given view set relations.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -187,12 +189,12 @@ a|`$viewSetId`
 
 
 
-=== ViewSetRepositoryContract
+==== ViewSetRepositoryContract
 
 This interface provides methods to create, get, update and delete ViewSets
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\MyView\Contracts`
 
@@ -201,7 +203,7 @@ This interface provides methods to create, get, update and delete ViewSets
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -215,7 +217,7 @@ public search($searchParams):void // <1>
 Search the list of view sets.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -242,7 +244,7 @@ public get($id):void // <1>
 Get given view set.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -269,7 +271,7 @@ public create($data):void // <1>
 Create given view set.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -296,7 +298,7 @@ public update($id, $data):void // <1>
 Update given view set.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -327,7 +329,7 @@ public delete($id):void // <1>
 Delete given view set.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -354,7 +356,7 @@ public setActive($userId, $viewSetId, $viewSetKey):void // <1>
 Set the given view set active by user id
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 

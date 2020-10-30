@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[ticket_ticket]]
-= Ticket
+== Ticket
 
 [[ticket_ticket_contracts]]
-==  Contracts
-=== TicketMessageRepositoryContract
+===  Contracts
+==== TicketMessageRepositoryContract
 
 The TicketMessageRepositoryContract is the interface for the ticket message repository. This interface allows to get one particular ticket message, list all ticket messages and list public and internal ticket messages.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Contracts`
 
@@ -21,7 +23,7 @@ The TicketMessageRepositoryContract is the interface for the ticket message repo
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public get($ticketMessageId):Plenty\Modules\Ticket\Models\TicketMessage // <1>
 Gets the ticket message by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticketmessage[TicketMessage^]
 
@@ -62,7 +64,7 @@ public list($ticketId):void // <1>
 Lists all ticket messages of a ticket.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -89,7 +91,7 @@ public listInternal($ticketId):void // <1>
 Lists all internal ticket messages of a ticket.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -116,7 +118,7 @@ public listPublic($ticketId):void // <1>
 Lists all public ticket messages of a ticket
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -132,12 +134,12 @@ a|`$ticketId`
 
 
 
-=== TicketRepositoryContract
+==== TicketRepositoryContract
 
 The TicketRepositoryContract is the interface for the ticket repository. This interface allows to list tickets by filters.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Contracts`
 
@@ -146,7 +148,7 @@ The TicketRepositoryContract is the interface for the ticket repository. This in
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -160,7 +162,7 @@ public createTicket($data):Plenty\Modules\Ticket\Models\Ticket // <1>
 Creates a new ticket.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticket[Ticket^]
 
@@ -187,7 +189,7 @@ public searchTickets($filter, $page = 1, $itemsPerPage = 50):array // <1>
 List tickets by filter options.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -221,7 +223,7 @@ public deleteTicket($ticketId):void // <1>
 Deletes a ticket by the ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -248,7 +250,7 @@ public createMessage($data, $ticketId):Plenty\Modules\Ticket\Models\TicketMessag
 Creates a message for a ticket.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticketmessage[TicketMessage^]
 
@@ -279,7 +281,7 @@ public updateTicket($data, $ticketId):Plenty\Modules\Ticket\Models\Ticket // <1>
 Updates an existing ticket with given data.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticket[Ticket^]
 
@@ -310,7 +312,7 @@ public findById($ticketId, $with = []):Plenty\Modules\Ticket\Models\Ticket // <1
 Gets a ticket by the ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticket[Ticket^]
 
@@ -341,7 +343,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -359,19 +361,19 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== TicketRoleNameRepositoryContract
+==== TicketRoleNameRepositoryContract
 
 The TicketRoleNameRepositoryContract is the interface for the ticket role name repository. This interface allows to update, create and list ticket role names.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Contracts`
 
@@ -380,7 +382,7 @@ The TicketRoleNameRepositoryContract is the interface for the ticket role name r
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -394,7 +396,7 @@ public update($data, $ticketRoleNameId):Plenty\Modules\Ticket\Models\TicketRoleN
 Updates an existing ticket role name.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticketrolename[TicketRoleName^]
 
@@ -425,7 +427,7 @@ public create($data):Plenty\Modules\Ticket\Models\TicketRoleName // <1>
 Creates a ticket role name.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticketrolename[TicketRoleName^]
 
@@ -452,7 +454,7 @@ public findByName($name, $lang):array // <1>
 Lists the ticket roles by the name.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -482,7 +484,7 @@ public findByLang($lang):array // <1>
 Lists the ticket roles by the language.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -497,12 +499,12 @@ a|`$lang`
 
 
 
-=== TicketRoleRepositoryContract
+==== TicketRoleRepositoryContract
 
 The TicketRoleRepositoryContract is the interface for the ticket role repository. This interface allows to update and create ticket roles.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Contracts`
 
@@ -511,7 +513,7 @@ The TicketRoleRepositoryContract is the interface for the ticket role repository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -525,7 +527,7 @@ public update($data, $ticketRoleId):Plenty\Modules\Ticket\Models\TicketRole // <
 Update an existing ticket role.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticketrole[TicketRole^]
 
@@ -556,7 +558,7 @@ public create($data):Plenty\Modules\Ticket\Models\TicketRole // <1>
 Creates a ticket role.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticketrole[TicketRole^]
 
@@ -572,12 +574,12 @@ a|`$data`
 
 
 
-=== TicketStatusNameRepositoryContract
+==== TicketStatusNameRepositoryContract
 
 The TicketStatusNameRepositoryContract is the interface for the ticket status names. This interface allows to update, create and list ticket status names.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Contracts`
 
@@ -586,7 +588,7 @@ The TicketStatusNameRepositoryContract is the interface for the ticket status na
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -600,7 +602,7 @@ public update($data, $ticketStatusNameId):Plenty\Modules\Ticket\Models\TicketSta
 Updates the ticket status name by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticketstatusname[TicketStatusName^]
 
@@ -631,7 +633,7 @@ public create($data):Plenty\Modules\Ticket\Models\TicketStatusName // <1>
 Creates a ticket status name.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticketstatusname[TicketStatusName^]
 
@@ -658,7 +660,7 @@ public findByName($name, $lang):array // <1>
 Gets the ticket status name.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -688,7 +690,7 @@ public statusNameList($lang):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -714,7 +716,7 @@ public statusNameListWithTypeId($lang):array // <1>
 Lists the ticket status names with type ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -729,12 +731,12 @@ a|`$lang`
 
 
 
-=== TicketStatusRepositoryContract
+==== TicketStatusRepositoryContract
 
 The TicketStatusRepositoryContract is the interface for the ticket status repository. This interface allows to update, create and list ticket statuses.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Contracts`
 
@@ -743,7 +745,7 @@ The TicketStatusRepositoryContract is the interface for the ticket status reposi
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -757,7 +759,7 @@ public update($data, $ticketStatusId):Plenty\Modules\Ticket\Models\TicketStatus 
 Updates an existing ticket status.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticketstatus[TicketStatus^]
 
@@ -788,7 +790,7 @@ public create($data):Plenty\Modules\Ticket\Models\TicketStatus // <1>
 Creates a ticket status.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticketstatus[TicketStatus^]
 
@@ -815,7 +817,7 @@ public findByTypeId($typeId):array // <1>
 Lists the ticket statuses by the type ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -830,12 +832,12 @@ a|`$typeId`
 
 
 
-=== TicketTypeNameRepositoryContract
+==== TicketTypeNameRepositoryContract
 
 The TicketTypeNameRepositoryContract is the interface for the ticket type name repository. This interface allows to update, create and list ticket type names.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Contracts`
 
@@ -844,7 +846,7 @@ The TicketTypeNameRepositoryContract is the interface for the ticket type name r
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -858,7 +860,7 @@ public update($data, $ticketTypeNameId):Plenty\Modules\Ticket\Models\TicketTypeN
 Updates an existing ticket type name.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_tickettypename[TicketTypeName^]
 
@@ -889,7 +891,7 @@ public create($data):Plenty\Modules\Ticket\Models\TicketTypeName // <1>
 Creates a ticket type name.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_tickettypename[TicketTypeName^]
 
@@ -916,7 +918,7 @@ public findByName($name, $lang):array // <1>
 Lists the ticket types by the name.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -946,7 +948,7 @@ public typeNameList($lang):array // <1>
 Lists the ticket types by the language.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -961,12 +963,12 @@ a|`$lang`
 
 
 
-=== TicketTypeRepositoryContract
+==== TicketTypeRepositoryContract
 
 The TicketTypeRepositoryContract is the interface for the ticket type repository. This interface allows to update and create ticket types.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Contracts`
 
@@ -975,7 +977,7 @@ The TicketTypeRepositoryContract is the interface for the ticket type repository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -989,7 +991,7 @@ public update($data, $ticketTypeId):Plenty\Modules\Ticket\Models\TicketType // <
 Updates the ticket type by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_tickettype[TicketType^]
 
@@ -1020,7 +1022,7 @@ public create($data):Plenty\Modules\Ticket\Models\TicketType // <1>
 Creates a ticket type.
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_tickettype[TicketType^]
 
@@ -1036,13 +1038,13 @@ a|`$data`
 
 
 [[ticket_ticket_models]]
-==  Models
-=== Ticket
+===  Models
+==== Ticket
 
 The ticket model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1140,7 +1142,7 @@ The ticket model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1156,12 +1158,12 @@ Returns this model as an array.
 
 
 
-=== TicketDocument
+==== TicketDocument
 
 The ticket document model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1194,7 +1196,7 @@ The ticket document model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1210,12 +1212,12 @@ Returns this model as an array.
 
 
 
-=== TicketMessage
+==== TicketMessage
 
 The ticket message model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1268,7 +1270,7 @@ The ticket message model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1284,12 +1286,12 @@ Returns this model as an array.
 
 
 
-=== TicketMessageTopic
+==== TicketMessageTopic
 
 The ticket message topic model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1310,7 +1312,7 @@ The ticket message topic model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1326,12 +1328,12 @@ Returns this model as an array.
 
 
 
-=== TicketMessageTopicName
+==== TicketMessageTopicName
 
 The ticket message topic name model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1358,7 +1360,7 @@ The ticket message topic name model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1374,12 +1376,12 @@ Returns this model as an array.
 
 
 
-=== TicketOwner
+==== TicketOwner
 
 The ticket owner model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1403,7 +1405,7 @@ The ticket owner model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1419,12 +1421,12 @@ Returns this model as an array.
 
 
 
-=== TicketRole
+==== TicketRole
 
 The ticket role model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1448,7 +1450,7 @@ The ticket role model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1464,12 +1466,12 @@ Returns this model as an array.
 
 
 
-=== TicketRoleName
+==== TicketRoleName
 
 The ticket role name model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1496,7 +1498,7 @@ The ticket role name model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1512,12 +1514,12 @@ Returns this model as an array.
 
 
 
-=== TicketStatus
+==== TicketStatus
 
 The ticket status model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1547,7 +1549,7 @@ The ticket status model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1563,12 +1565,12 @@ Returns this model as an array.
 
 
 
-=== TicketStatusGroup
+==== TicketStatusGroup
 
 The ticket status group model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1592,7 +1594,7 @@ The ticket status group model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1608,12 +1610,12 @@ Returns this model as an array.
 
 
 
-=== TicketStatusGroupName
+==== TicketStatusGroupName
 
 The ticket status group name model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1637,7 +1639,7 @@ The ticket status group name model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1653,12 +1655,12 @@ Returns this model as an array.
 
 
 
-=== TicketStatusName
+==== TicketStatusName
 
 The ticket status name model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1685,7 +1687,7 @@ The ticket status name model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1701,12 +1703,12 @@ Returns this model as an array.
 
 
 
-=== TicketType
+==== TicketType
 
 The ticket type model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1730,7 +1732,7 @@ The ticket type model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1746,12 +1748,12 @@ Returns this model as an array.
 
 
 
-=== TicketTypeName
+==== TicketTypeName
 
 The ticket type name model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Ticket\Models`
 
@@ -1778,7 +1780,7 @@ The ticket type name model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

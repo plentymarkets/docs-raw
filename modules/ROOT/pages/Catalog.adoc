@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[catalog_catalog]]
-= Catalog
+== Catalog
 
 [[catalog_catalog_contracts]]
-==  Contracts
-=== CatalogContentRepositoryContract
+===  Contracts
+==== CatalogContentRepositoryContract
 
 The CatalogContentRepositoryContract is the interface for the catalogue content repository. This interface allows to read and update a catalogue&#039;s content. The content contains the specific catalogue data that is used in the exports.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -21,7 +23,7 @@ The CatalogContentRepositoryContract is the interface for the catalogue content 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public get($id):array // <1>
 Returns the content of the catalogue.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -61,7 +63,7 @@ public update($id, $data):array // <1>
 Updates the content of the catalogue.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -80,12 +82,12 @@ a|`$data`
 
 
 
-=== CatalogExportFilterServiceContract
+==== CatalogExportFilterServiceContract
 
 To be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -94,7 +96,7 @@ To be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -108,7 +110,7 @@ public applyFilters($documentSearch, $config):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -129,12 +131,12 @@ a|`$config`
 
 
 
-=== CatalogExportRepositoryContract
+==== CatalogExportRepositoryContract
 
 The CatalogExportRepositoryContract is the interface for the catalogue export repository. It allows to receive an instance of CatalogExportServiceContract to export a specific catalogue.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -143,7 +145,7 @@ The CatalogExportRepositoryContract is the interface for the catalogue export re
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -157,7 +159,7 @@ public exportById($id):Plenty\Modules\Catalog\Contracts\CatalogExportServiceCont
 Returns an instance of CatalogExportServiceContract to export a specific catalogue.
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_contracts_catalogexportservicecontract[CatalogExportServiceContract^]
 
@@ -184,7 +186,7 @@ public initiateQueue($id):void // <1>
 Initiates the queue which exports a specific catalogue.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -211,7 +213,7 @@ public download($id, $hash = &quot;&quot;, $extension = &quot;csv&quot;, $public
 Provides the response with file attachment to download in browser
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -242,12 +244,12 @@ a|`$token`
 
 
 
-=== CatalogExportServiceContract
+==== CatalogExportServiceContract
 
 The CatalogExportServiceContract is the interface for the catalogue export service. It allows you to configure and start the export of a catalogue.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -256,7 +258,7 @@ The CatalogExportServiceContract is the interface for the catalogue export servi
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -267,14 +269,17 @@ public setAdditionalFields($additionalFields):void // <1>
 
 
 [warning]
-.Deprecated! ====
+.Deprecated! 
+====
+
 Use fields with the attribute &#039;hidden&#039; and &#039;default&#039; in Plenty\Modules\Catalog\Contracts\DataProviderContract::getData instead
+
 ====
     
 Specifies fields that should be exported in addition to the mappings configured in the catalogue.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -298,14 +303,17 @@ public addMutator($mutator):void // <1>
 
 
 [warning]
-.Deprecated! ====
+.Deprecated! 
+====
+
 Use Plenty\Modules\Catalog\Contracts\TemplateContract::getPreMutators or Plenty\Modules\Catalog\Contracts\TemplateContract::getPostMutators instead.
+
 ====
     
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -332,7 +340,7 @@ public setSettings($settings):void // <1>
 Defines the settings that are used in the mappings and for filtering.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -356,14 +364,17 @@ public setNumberOfDocumentsPerShard($numberOfDocumentsPerShard):void // <1>
 
 
 [warning]
-.Deprecated! ====
+.Deprecated! 
+====
+
 Use Plenty\Modules\Catalog\Contracts\CatalogExportServiceContract::setItemsPerPage instead.
+
 ====
     
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -390,7 +401,7 @@ public setItemsPerPage($itemsPerPage):void // <1>
 Defines the amount of items that will be returned in each iteration of the export. In specific formats such as variation, it can have more results e.g. if items per page is set to 500, but variations 500 and 501 belong to the same item. In this case, variation 501 will also be returned.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -417,7 +428,7 @@ public setUpdatedSince($timestamp):void // <1>
 Limits the results of items to only those that were updated after the given timestamp.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -445,7 +456,7 @@ public getResult():Plenty\Modules\Catalog\Models\CatalogExportResult // <1>
 Returns an instance of CatalogExportResult, which can be iterated to receive the different pages of the exported data.
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_models_catalogexportresult[CatalogExportResult^]
 
@@ -463,19 +474,19 @@ public getPreview():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== CatalogRepositoryContract
+==== CatalogRepositoryContract
 
 The CatalogRepositoryContract is the interface for the catalogue repository. It allows you to create, read, update and delete catalogues.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -484,7 +495,7 @@ The CatalogRepositoryContract is the interface for the catalogue repository. It 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -498,7 +509,7 @@ public create($data):Plenty\Modules\Catalog\Models\Catalog // <1>
 Create a catalog
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_models_catalog[Catalog^]
 
@@ -525,7 +536,7 @@ public update($id, $data):Plenty\Modules\Catalog\Models\Catalog // <1>
 Update a catalog
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_models_catalog[Catalog^]
 
@@ -556,7 +567,7 @@ public get($id):Plenty\Modules\Catalog\Models\Catalog // <1>
 Get the latest version of a catalog
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_models_catalog[Catalog^]
 
@@ -583,7 +594,7 @@ public getByVersion($id, $version = &quot;&quot;):Plenty\Modules\Catalog\Models\
 Get a specific version of a catalog
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_models_catalog[Catalog^]
 
@@ -614,7 +625,7 @@ public restoreVersion($id, $version = &quot;&quot;):Plenty\Modules\Catalog\Model
 Restore a past version of a catalog to become latest
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_models_catalog[Catalog^]
 
@@ -645,7 +656,7 @@ public listVersions($id):Illuminate\Support\Collection // <1>
 Lists catalog versions
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_support_collection[Collection^]
 
@@ -672,7 +683,7 @@ public getArchive():array // <1>
 Gets the archive
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -689,7 +700,7 @@ public restoreArchived($id):Plenty\Modules\Catalog\Models\Catalog // <1>
 Restores an archived catalog
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_models_catalog[Catalog^]
 
@@ -716,7 +727,7 @@ public delete($id):bool // <1>
 Delete a catalog
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -742,7 +753,7 @@ public copy($data):array // <1>
 Copy a catalog or multiple catalogs
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -768,7 +779,7 @@ public copyCatalog($id, $modifiedAttributes):Plenty\Modules\Catalog\Models\Catal
 Copy a single catalog
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_models_catalog[Catalog^]
 
@@ -799,7 +810,7 @@ public copyCatalogFormat($catalogId, $data):array // <1>
 Copy a catalog format
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -829,7 +840,7 @@ public all($page = 1, $perPage = 25):Plenty\Repositories\Models\PaginatedResult 
 Get list of all catalogs
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -860,7 +871,7 @@ public activate($id, $active):array // <1>
 Activate a catalog
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -890,7 +901,7 @@ public migrate():bool // <1>
 Migrates catalogs from Dynamo DB to S3
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -907,7 +918,7 @@ public generateToken():string // <1>
 Generates an alphanumeric token
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -924,7 +935,7 @@ public buildDownloadPublicURL($id, $data):string // <1>
 Builds the catalog&#039;s public download url
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -954,7 +965,7 @@ public buildDownloadPrivateURL($id, $data):string // <1>
 Builds the catalog&#039;s private download url
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -984,7 +995,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1011,7 +1022,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1029,7 +1040,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1047,19 +1058,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== CatalogResultConverterContract
+==== CatalogResultConverterContract
 
 To be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1068,7 +1079,7 @@ To be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1082,7 +1093,7 @@ public addData($data):void // <1>
 Through this a single entry of a catalog result should be added
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1110,7 +1121,7 @@ public getConvertedResult():string // <1>
 Converts the data that was inserted into the specific output format
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1127,7 +1138,7 @@ public getType():string // <1>
 Returns the type of the converted result
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1144,19 +1155,19 @@ public clear():void // <1>
 Removes all the data that was previously added to this instance
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== CatalogRuntimeConfigContract
+==== CatalogRuntimeConfigContract
 
 To be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1165,7 +1176,7 @@ To be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1180,7 +1191,7 @@ Will be run before every export and is meant to provide filters on the template
 which can&#039;t be defined before the runtime of the export
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1214,7 +1225,7 @@ Will be run before every preview and is meant to provide filters on the template
 which can&#039;t be defined before the runtime of the preview
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1236,12 +1247,12 @@ a|`$catalog`
 
 
 
-=== CatalogRuntimeConfigProviderContract
+==== CatalogRuntimeConfigProviderContract
 
 To be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1250,7 +1261,7 @@ To be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1264,7 +1275,7 @@ public isPreviewable():bool // <1>
 Determines if a preview can be exported through catalogs that use the specific template
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1282,7 +1293,7 @@ Returns a class name through which the export can be configured with information
 the export runtime
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1299,18 +1310,18 @@ public getResultConverterClass():string // <1>
 Returns a class name through which the export result can be converted into the necessary format (e.g. json or csv)
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
 
 
-=== CatalogTemplateProviderContract
+==== CatalogTemplateProviderContract
 
 The CatalogTemplateProviderContract is the interface that has to be implemented by the catalogue template providers. Each registered template should have a catalogue template provider (multiple templates can use the same one) to avoid booting them if they are not necessary. A catalogue template provider fills a template with data at the moment the template gets booted. Whenever it is possible, use the abstract class Plenty\Modules\Catalog\Templates\BaseTemplateProvider.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1319,7 +1330,7 @@ The CatalogTemplateProviderContract is the interface that has to be implemented 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1333,7 +1344,7 @@ public getMappings():array // <1>
 Returns the different mapping sections including the information which data provider fills them. Each entry in the array represents a section of the catalogue UI.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1350,7 +1361,7 @@ public getFilter():array // <1>
 Returns the filters that will be applied in each export of templates that will be booted by this provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1367,7 +1378,7 @@ public getPreMutators():array // <1>
 Returns the callback functions that will be applied to the raw data (so before the mapping occurs) of each item in the export. Every callback function will receive an array of the raw item data and should return this array with the changes that should be applied (e.g. function (array $item){ --your code-- return $item}).
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1384,7 +1395,7 @@ public getPostMutators():array // <1>
 Returns the callback functions that will be applied to the mapped data of each item in the export. Every callback function will receive an array of the mapped item data und should return this array with the changes that should be applied (e.g. function (array $item){ --your code-- return $item}).
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1401,7 +1412,7 @@ public getSkuCallback():callable // <1>
 Returns a callback function that is called if a field with the specific key &quot;sku&quot; got mapped. The function will receive the value that got mapped, the raw data array of this item and the type of the mapped source. It should return the new value (e.g. function ($value, array $item, $mappingType){ --your code-- return $value})).
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/callable[callable^]
     
@@ -1418,7 +1429,7 @@ public getSettings():array // <1>
 Returns an array of settings that will be displayed in the UI of each catalogue with a template that uses this provider. The selected values for all those settings can then be used in the export.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1435,18 +1446,18 @@ public getMetaInfo():array // <1>
 Returns an array of meta information which can be used to forward information to the export which could otherwise not be received.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== DataProviderContract
+==== DataProviderContract
 
 The DataProviderContract is the interface for data providers. Data providers provide the available fields that can be mapped in a template to create a catalogue. Whenever it is possible, use one of the concrete implementations Plenty\Modules\Catalog\DataProviders\BaseDataProvider, Plenty\Modules\Catalog\DataProviders\KeyDataProvider or Plenty\Modules\Catalog\DataProviders\NestedKeyDataProvider.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1455,7 +1466,7 @@ The DataProviderContract is the interface for data providers. Data providers pro
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1469,7 +1480,7 @@ public getData($query = &quot;&quot;):array // <1>
 Returns the data that should be provided.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1495,7 +1506,7 @@ public setTemplate($template):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1523,7 +1534,7 @@ public setMapping($mapping):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1539,12 +1550,12 @@ a|`$mapping`
 
 
 
-=== FieldGroupRepositoryContract
+==== FieldGroupRepositoryContract
 
 The FieldGroupRepositoryContract is the contract for the field group repository. It allows to retrieve fields of a field group. Field groups represent the different groups of available sources that can be seen in the data picker component in the catalogue UI. Each field represents a mappable source.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1553,7 +1564,7 @@ The FieldGroupRepositoryContract is the contract for the field group repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1567,7 +1578,7 @@ public getFields($id, $page, $itemsPerPage, $parentId = null):Plenty\Repositorie
 Get list of fields
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -1606,7 +1617,7 @@ public getFieldById($id, $fieldId):array // <1>
 Get field by id
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1636,7 +1647,7 @@ public getFieldsByCatalogId($id, $catalogId):array // <1>
 Get Fields by id of the catalog
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1666,7 +1677,7 @@ public fieldValuesTree($id, $page, $itemsPerPage):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1689,12 +1700,12 @@ a|`$itemsPerPage`
 
 
 
-=== NestedDataProviderContract
+==== NestedDataProviderContract
 
 The NestedDataProviderContract is the interface for nested data providers. Nested data providers are used to provide nested options that can be selected for export. E.g. a list of categories of a specific marketplace. Whenever it is possible, use the concrete implementation Plenty\Modules\Catalog\DataProviders\NestedKeyDataProvider.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1703,7 +1714,7 @@ The NestedDataProviderContract is the interface for nested data providers. Neste
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1717,7 +1728,7 @@ public getNestedData($parentId, $query = &quot;&quot;, $meta = []):array // <1>
 Returns the data of a specific level, which is determined via the id of a parent value.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1751,7 +1762,7 @@ public getDataByValue($id):array // <1>
 Returns a specific value of the nested data determined by its id.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1777,7 +1788,7 @@ public getData($query = &quot;&quot;):array // <1>
 Returns the data that should be provided.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1803,7 +1814,7 @@ public setTemplate($template):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1831,7 +1842,7 @@ public setMapping($mapping):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1847,12 +1858,12 @@ a|`$mapping`
 
 
 
-=== TemplateContainerContract
+==== TemplateContainerContract
 
 The TemplateContainerContract is the interface of the template container. The template container is a singleton, which allows to register and retrieve templates.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1861,7 +1872,7 @@ The TemplateContainerContract is the interface of the template container. The te
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1875,7 +1886,7 @@ public register($name, $type, $providerClass = &quot;&quot;, $exportType = &quot
 Registers a new template that can be used to create a catalogue.
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_contracts_templatecontract[TemplateContract^]
 
@@ -1914,7 +1925,7 @@ public getTemplates():array // <1>
 Returns all registered templates.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1931,7 +1942,7 @@ public getTemplate($identifier):Plenty\Modules\Catalog\Contracts\TemplateContrac
 Returns a specific template by its identifier.
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_contracts_templatecontract[TemplateContract^]
 
@@ -1958,7 +1969,7 @@ public getTemplateWithoutBootingIt($identifier):Plenty\Modules\Catalog\Contracts
 Returns a specific template by its identifier without booting it.
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_contracts_templatecontract[TemplateContract^]
 
@@ -1974,12 +1985,12 @@ a|`$identifier`
 
 
 
-=== TemplateContract
+==== TemplateContract
 
 The TemplateContract is the interface for templates. Templates are used to define a specific schema that can be used to create and configure a catalogue.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1988,7 +1999,7 @@ The TemplateContract is the interface for templates. Templates are used to defin
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2002,7 +2013,7 @@ public getName():string // <1>
 Returns the name of the template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2019,7 +2030,7 @@ public getType():string // <1>
 Returns the type of the template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2036,7 +2047,7 @@ public getExportType():string // <1>
 Returns the export type of the template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2053,7 +2064,7 @@ public getMappings():array // <1>
 Returns the mappings of a template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2070,7 +2081,7 @@ public addMapping($mapping):void // <1>
 Adds a mapping to the template. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2094,14 +2105,17 @@ public addMutator($callback):void // <1>
 
 
 [warning]
-.Deprecated! ====
+.Deprecated! 
+====
+
 Use Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator or Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator instead.
+
 ====
     
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2128,7 +2142,7 @@ public addPreMutator($callback):void // <1>
 Adds a pre mutator to the template. Pre mutators are applied to the export data before the mapping occurs. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2155,7 +2169,7 @@ public addPostMutator($callback):void // <1>
 Adds a post mutator to the template. Post mutators are applied to the export data once the mapping occurred. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2182,7 +2196,7 @@ public getFilter():array // <1>
 Returns the filters of the template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2199,7 +2213,7 @@ public addFilter($filter):void // <1>
 Adds a filter to the template. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2226,7 +2240,7 @@ public getIdentifier():string // <1>
 Returns the unique identifier of the template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2240,14 +2254,17 @@ public getMutators():array // <1>
 
 
 [warning]
-.Deprecated! ====
+.Deprecated! 
+====
+
 Use Plenty\Modules\Catalog\Contracts\TemplateContract::getPreMutators or Plenty\Modules\Catalog\Contracts\TemplateContract::getPostMutators instead.
+
 ====
     
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2264,7 +2281,7 @@ public getPreMutators():array // <1>
 Returns the pre mutators of the template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2281,7 +2298,7 @@ public getPostMutators():array // <1>
 Returns the post mutators of the template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2298,7 +2315,7 @@ public setSkuCallback($callback):void // <1>
 Defines the callback function that will be called after the mapping is done for a field with the key &quot;sku&quot;.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2325,7 +2342,7 @@ public getSkuCallback():callable // <1>
 Retrieves the callback function that will be called after the mapping is done for a field with the key &quot;sku&quot;.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/callable[callable^]
     
@@ -2342,7 +2359,7 @@ public addSetting($setting):void // <1>
 Adds a setting to the templates. Settings create components in the UI of catalogues which use this template. The components will provide data for the export in accordance with the user input in the catalogue. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2369,7 +2386,7 @@ public getSettings():array // <1>
 Returns the settings of a template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2386,7 +2403,7 @@ public setMetaInfo($meta):void // <1>
 Sets the meta info for a template. Meta info is used to provide data which has to be known when working with the template. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2413,7 +2430,7 @@ public getMetaInfo():array // <1>
 Returns the meta info of a template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2430,7 +2447,7 @@ public isPreviewable():bool // <1>
 Determines if this template supports preview exports
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2447,7 +2464,7 @@ public allowPreview($isPreviewable):void // <1>
 Used to activate / deactivate the possibility to export previews through this template
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2474,7 +2491,7 @@ public hasRuntimeConfig():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2491,7 +2508,7 @@ public hasResultConverter():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2508,7 +2525,7 @@ public getRuntimeConfig():Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigC
 
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_contracts_catalogruntimeconfigcontract[CatalogRuntimeConfigContract^]
 
@@ -2526,7 +2543,7 @@ public getResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConver
 
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_contracts_catalogresultconvertercontract[CatalogResultConverterContract^]
 
@@ -2544,7 +2561,7 @@ public boot($provider):void // <1>
 Fills the template via the given catalogue template provider. This method is called by the template container and should not be called manually.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2572,7 +2589,7 @@ public isBooted():bool // <1>
 Returns the current boot state of the template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2589,7 +2606,7 @@ public translatedToArray($language):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2615,7 +2632,7 @@ public toArray():array // <1>
 Get the instance as an array.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2632,19 +2649,19 @@ public jsonSerialize():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== TemplateRepositoryContract
+==== TemplateRepositoryContract
 
 The TemplateRepositoryContract is the interface for the template repository. It allows to retrieve templates and their mappings.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -2653,7 +2670,7 @@ The TemplateRepositoryContract is the interface for the template repository. It 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2667,7 +2684,7 @@ public getTemplates():array // <1>
 Get list of templates
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2684,7 +2701,7 @@ public getTemplate($id, $data):array // <1>
 Get template
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2714,7 +2731,7 @@ public getMappings($id):array // <1>
 Get list of mappings
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2740,7 +2757,7 @@ public getMapping($id, $mappingId):array // <1>
 Get mapping
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2770,7 +2787,7 @@ public getMappingData($id, $mappingId, $parentId = null):array // <1>
 Get mapping data
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2804,7 +2821,7 @@ public getMappingDataById($id, $mappingId, $dataId):array // <1>
 Get mapping data by id
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2838,7 +2855,7 @@ public test($id):void // <1>
 Test export of a catalog
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2865,7 +2882,7 @@ public getAllMappings($id):array // <1>
 Get all mappings
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2880,13 +2897,13 @@ a|`$id`
 
 
 [[catalog_catalog_dataproviders]]
-==  DataProviders
-=== BaseDataProvider
+===  DataProviders
+==== BaseDataProvider
 
 The BaseDataProvider is used to define a section of simple mappings in the catalogue. A simple mapping refers to the assignment of a value in the plentymarkets system or a manually predefined value to a specific key. E.g. mapping the value of a specific text property to the key &#039;description&#039;.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\DataProviders`
 
@@ -2895,7 +2912,7 @@ The BaseDataProvider is used to define a section of simple mappings in the catal
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2909,7 +2926,7 @@ public getRows():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2926,7 +2943,7 @@ public setTemplate($template):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2954,7 +2971,7 @@ public setMapping($mapping):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2970,12 +2987,12 @@ a|`$mapping`
 
 
 
-=== KeyDataProvider
+==== KeyDataProvider
 
 The KeyDataProvider is used to define a section of a complex mapping in the catalogue. A complex mapping refers to the assignment of a value from a predefined list of possible values to a key if a specific requirement is met. E.g. put the value &#039;awesomeBrand&#039; into the key &#039;brand&#039;, if manufacturer &#039;awesomeManufacturer&#039; is linked to a variation.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\DataProviders`
 
@@ -2984,7 +3001,7 @@ The KeyDataProvider is used to define a section of a complex mapping in the cata
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2998,7 +3015,7 @@ public getKey():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -3015,7 +3032,7 @@ public getRows():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3032,7 +3049,7 @@ public setTemplate($template):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3060,7 +3077,7 @@ public setMapping($mapping):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3076,12 +3093,12 @@ a|`$mapping`
 
 
 
-=== NestedKeyDataProvider
+==== NestedKeyDataProvider
 
 The NestedKeyDataProvider is used to define a section of a complex mapping in the catalogue. It is specifically used if the list of available values contains nested values. E.g. a list of categories with sub-categories.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\DataProviders`
 
@@ -3090,7 +3107,7 @@ The NestedKeyDataProvider is used to define a section of a complex mapping in th
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3104,7 +3121,7 @@ public getKey():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -3121,7 +3138,7 @@ public getNestedRows($parentId):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3148,7 +3165,7 @@ public getMetaData():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3166,7 +3183,7 @@ public getNestedData($parentId, $query = &quot;&quot;, $meta = []):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3200,7 +3217,7 @@ public getRows():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3217,7 +3234,7 @@ public setTemplate($template):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3245,7 +3262,7 @@ public setMapping($mapping):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3272,7 +3289,7 @@ public getDataByValue($id):array // <1>
 Returns a specific value of the nested data determined by its id.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3287,13 +3304,13 @@ a|`$id`
 
 
 [[catalog_catalog_helpers]]
-==  Helpers
-=== ContentTypeHelper
+===  Helpers
+==== ContentTypeHelper
 
 Provides a list of valid content types that can be returned in a CatalogResultConverter
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Helpers`
 
@@ -3302,7 +3319,7 @@ Provides a list of valid content types that can be returned in a CatalogResultCo
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3316,7 +3333,7 @@ public static isValidType($type):bool // <1>
 Checks wether a given type is valid as return type in a CatalogResultConverter
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3331,13 +3348,13 @@ a|`$type`
 
 
 [[catalog_catalog_models]]
-==  Models
-=== Catalog
+===  Models
+==== Catalog
 
 The catalog model - stores on S3
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Models`
 
@@ -3379,7 +3396,7 @@ The catalog model - stores on S3
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3395,12 +3412,12 @@ Returns this model as an array.
 
 
 
-=== CatalogExportResult
+==== CatalogExportResult
 
 The CatalogExportResult represents the exported data in a specific catalogue export. It implements the Iterator interface and can therefore be used in a foreach loop to retrieve the different pages of the export data.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Models`
 
@@ -3409,7 +3426,7 @@ The CatalogExportResult represents the exported data in a specific catalogue exp
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3425,13 +3442,13 @@ Returns this model as an array.
 
 
 [[catalog_catalog_templates]]
-==  Templates
-=== BaseTemplateProvider
+===  Templates
+==== BaseTemplateProvider
 
 The BaseTemplateProvider is the abstract class that should be used to implement a template provider.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Templates`
 
@@ -3440,7 +3457,7 @@ The BaseTemplateProvider is the abstract class that should be used to implement 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3454,7 +3471,7 @@ public getMappings():array // <1>
 Returns the different mapping sections including the information which data provider fills them. Each entry in the array represents a section of the catalogue UI.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3471,7 +3488,7 @@ public getFilter():array // <1>
 Returns the filters that will be applied in each export of templates that will be booted by this provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3488,7 +3505,7 @@ public getPreMutators():array // <1>
 Returns the callback functions that will be applied to the raw data (so before the mapping occurs) of each item in the export. Every callback function will receive an array of the raw item data and should return this array with the changes that should be applied (e.g. function (array $item){ --your code-- return $item}).
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3505,7 +3522,7 @@ public getPostMutators():array // <1>
 Returns the callback functions that will be applied to the mapped data of each item in the export. Every callback function will receive an array of the mapped item data und should return this array with the changes that should be applied (e.g. function (array $item){ --your code-- return $item}).
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3522,7 +3539,7 @@ public getSkuCallback():callable // <1>
 Returns a callback function that is called if a field with the specific key &quot;sku&quot; got mapped. The function will receive the value that got mapped, the raw data array of this item and the type of the mapped source. It should return the new value (e.g. function ($value, array $item, $mappingType){ --your code-- return $value})).
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/callable[callable^]
     
@@ -3539,7 +3556,7 @@ public getSettings():array // <1>
 Returns an array of settings that will be displayed in the UI of each catalogue with a template that uses this provider. The selected values for all those settings can then be used in the export.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3556,18 +3573,18 @@ public getMetaInfo():array // <1>
 Returns an array of meta information which can be used to forward information to the export which could otherwise not be received.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== Template
+==== Template
 
 Templates are used to define a schema for the creation of catalogues.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Catalog\Templates`
 
@@ -3576,7 +3593,7 @@ Templates are used to define a schema for the creation of catalogues.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3590,7 +3607,7 @@ public getMappings():array // <1>
 Returns the mappings of a template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3607,7 +3624,7 @@ public addMapping($section):void // <1>
 Adds a mapping to the template. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3631,14 +3648,17 @@ public addMutator($callback):void // <1>
 
 
 [warning]
-.Deprecated! ====
+.Deprecated! 
+====
+
 Use Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator or Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator instead.
+
 ====
     
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3662,14 +3682,17 @@ public getMutators():array // <1>
 
 
 [warning]
-.Deprecated! ====
+.Deprecated! 
+====
+
 Use Plenty\Modules\Catalog\Contracts\TemplateContract::getPreMutators or Plenty\Modules\Catalog\Contracts\TemplateContract::getPostMutators instead.
+
 ====
     
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3686,7 +3709,7 @@ public addPreMutator($callback):void // <1>
 Adds a pre mutator to the template. Pre mutators are applied to the export data before the mapping occurs. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3713,7 +3736,7 @@ public addPostMutator($callback):void // <1>
 Adds a post mutator to the template. Post mutators are applied to the export data once the mapping occurred. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3740,7 +3763,7 @@ public getFilter():array // <1>
 Returns the filters of the template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3757,7 +3780,7 @@ public addFilter($filter):void // <1>
 Adds a filter to the template. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3784,7 +3807,7 @@ public getPreMutators():array // <1>
 Returns the pre mutators of the template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3801,7 +3824,7 @@ public getPostMutators():array // <1>
 Returns the post mutators of the template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3818,7 +3841,7 @@ public setSkuCallback($callback):void // <1>
 Defines the callback function that will be called after the mapping is done for a field with the key &quot;sku&quot;.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3845,7 +3868,7 @@ public getSkuCallback():callable // <1>
 Returns the callback function that will be called after the mapping is done for a field with the key &quot;sku&quot;
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/callable[callable^]
     
@@ -3862,7 +3885,7 @@ public addSetting($setting):void // <1>
 Adds a setting to the templates. Settings create components in the UI of catalogues which use this template. The components will provide data for the export in accordance with the user input in the catalogue. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3889,7 +3912,7 @@ public getSettings():array // <1>
 Returns the settings of a template.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3906,7 +3929,7 @@ public setMetaInfo($meta):void // <1>
 Sets the meta info for a template. Meta info is used to provide data which has to be known when working with the template. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3933,7 +3956,7 @@ public getMetaInfo():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3951,7 +3974,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -3968,7 +3991,7 @@ public getExportType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -3985,7 +4008,7 @@ public getType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -4002,7 +4025,7 @@ public translatedToArray($language):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4028,7 +4051,7 @@ public toArray():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4046,7 +4069,7 @@ public jsonSerialize():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4064,7 +4087,7 @@ public getIdentifier():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -4081,7 +4104,7 @@ public getFormatSettings():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4098,7 +4121,7 @@ public getExportSettings():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4115,7 +4138,7 @@ public isPreviewable():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4132,7 +4155,7 @@ public allowPreview($isPreviewable):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4159,7 +4182,7 @@ public getRuntimeConfig():Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigC
 
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_contracts_catalogruntimeconfigcontract[CatalogRuntimeConfigContract^]
 
@@ -4177,7 +4200,7 @@ public getResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConver
 
 
 
-==== Return type
+===== Return type
     
 <1> link:catalog#catalog_contracts_catalogresultconvertercontract[CatalogResultConverterContract^]
 
@@ -4195,7 +4218,7 @@ public hasRuntimeConfig():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4212,7 +4235,7 @@ public hasResultConverter():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4229,7 +4252,7 @@ public boot($provider):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4257,7 +4280,7 @@ public isBooted():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     

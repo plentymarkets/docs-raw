@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[customercontract_customercontract]]
-= CustomerContract
+== CustomerContract
 
 [[customercontract_customercontract_contracts]]
-==  Contracts
-=== ContractSigningRepositoryContract
+===  Contracts
+==== ContractSigningRepositoryContract
 
 This interface provides methods to digital sign contracts
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\CustomerContract\Contracts`
 
@@ -21,7 +23,7 @@ This interface provides methods to digital sign contracts
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public signContract($contractId, $signerName):Plenty\Modules\CustomerContract\Mo
 Sign a contract
 
 
-==== Return type
+===== Return type
     
 <1> link:customercontract#customercontract_models_signing[Signing^]
 
@@ -66,7 +68,7 @@ public getSigning($contractId):Plenty\Modules\CustomerContract\Models\Signing //
 Returns signing of a contract
 
 
-==== Return type
+===== Return type
     
 <1> link:customercontract#customercontract_models_signing[Signing^]
 
@@ -93,7 +95,7 @@ public signedDocument($contractId):void // <1>
 Download the signed contract document
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -109,12 +111,12 @@ a|`$contractId`
 
 
 
-=== CustomerContractRepositoryContract
+==== CustomerContractRepositoryContract
 
 This interface provides methods to list contracts
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\CustomerContract\Contracts`
 
@@ -123,7 +125,7 @@ This interface provides methods to list contracts
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -137,7 +139,7 @@ public list():Illuminate\Support\Collection // <1>
 List all contracts
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_support_collection[Collection^]
 
@@ -155,7 +157,7 @@ public get($contractId):Plenty\Modules\CustomerContract\Models\CustomerContract 
 Returns a single contract
 
 
-==== Return type
+===== Return type
     
 <1> link:customercontract#customercontract_models_customercontract[CustomerContract^]
 
@@ -182,7 +184,7 @@ public create($data):Plenty\Modules\CustomerContract\Models\CustomerContract // 
 Add a contract
 
 
-==== Return type
+===== Return type
     
 <1> link:customercontract#customercontract_models_customercontract[CustomerContract^]
 
@@ -209,7 +211,7 @@ public document($contractId):void // <1>
 Download contract document
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -225,13 +227,13 @@ a|`$contractId`
 
 
 [[customercontract_customercontract_models]]
-==  Models
-=== CustomerContract
+===  Models
+==== CustomerContract
 
 The customer contract model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\CustomerContract\Models`
 
@@ -258,7 +260,7 @@ The customer contract model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -274,12 +276,12 @@ Returns this model as an array.
 
 
 
-=== Signing
+==== Signing
 
 The customer contract model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\CustomerContract\Models`
 
@@ -306,7 +308,7 @@ The customer contract model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

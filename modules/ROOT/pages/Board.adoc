@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[board_board]]
-= Board
+== Board
 
 [[board_board_contracts]]
-==  Contracts
-=== BoardColumnRepositoryContract
+===  Contracts
+==== BoardColumnRepositoryContract
 
 The BoardColumnRepositoryContract is the interface for the board column repository. This interface provides methods to access, create, update or delete columns.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Contracts`
 
@@ -21,7 +23,7 @@ The BoardColumnRepositoryContract is the interface for the board column reposito
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public list($boardId):Illuminate\Support\Collection // <1>
 Lists all columns assigned to a specific board.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_support_collection[Collection^]
 
@@ -62,7 +64,7 @@ public create($boardId, $data):Plenty\Modules\Board\Models\BoardColumn // <1>
 Creates a new column and assigns it to a specific board.
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_boardcolumn[BoardColumn^]
 
@@ -93,7 +95,7 @@ public update($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardColum
 Updates a specific column.
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_boardcolumn[BoardColumn^]
 
@@ -128,7 +130,7 @@ public copy($boardId, $columnId):Plenty\Modules\Board\Models\BoardColumn // <1>
 Copies a column and all its tasks.
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_boardcolumn[BoardColumn^]
 
@@ -159,7 +161,7 @@ public updatePosition($boardId, $columnId, $newPosition):bool // <1>
 Updates the position of a specified column. This will update the position of all affected columns on the same board too.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -193,7 +195,7 @@ public delete($boardId, $columnId):bool // <1>
 Deletes a specific column.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -212,12 +214,12 @@ a|`$columnId`
 
 
 
-=== BoardRepositoryContract
+==== BoardRepositoryContract
 
 The BoardRepositoryContract is the interface for the board repository. This interface provides all methods to access, create, update or delete boards.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Contracts`
 
@@ -226,7 +228,7 @@ The BoardRepositoryContract is the interface for the board repository. This inte
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -240,7 +242,7 @@ public list($columns = []):Illuminate\Database\Eloquent\Collection // <1>
 Lists all boards.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
@@ -267,7 +269,7 @@ public get($boardId, $tasksPerPage = 20):Plenty\Modules\Board\Models\Board // <1
 Returns a single board.
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_board[Board^]
 
@@ -298,7 +300,7 @@ public create($data):Plenty\Modules\Board\Models\Board // <1>
 Creates a new board.
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_board[Board^]
 
@@ -325,7 +327,7 @@ public update($boardId, $data):Plenty\Modules\Board\Models\Board // <1>
 Updates a board.
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_board[Board^]
 
@@ -356,7 +358,7 @@ public copy($boardId):Plenty\Modules\Board\Models\Board // <1>
 Copies a board and all its columns.
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_board[Board^]
 
@@ -383,7 +385,7 @@ public updateTasksCount($boardId):bool // <1>
 Updates the tasks count value.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -409,7 +411,7 @@ public delete($boardId):bool // <1>
 Deletes a board. Returns `true` if the deletion was successful.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -424,12 +426,12 @@ a|`$boardId`
 
 
 
-=== BoardTaskReferenceRepositoryContract
+==== BoardTaskReferenceRepositoryContract
 
 The BoardTaskReferenceRepositoryContract is the interface for the board task reference repository. This interface provides methods to create or delete references from tasks to contacts or tickets.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Contracts`
 
@@ -438,7 +440,7 @@ The BoardTaskReferenceRepositoryContract is the interface for the board task ref
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -452,7 +454,7 @@ public create($taskId, $referenceValue):Plenty\Modules\Board\Models\BoardTaskRef
 Creates a new reference to a given task. A reference may either point to a contact or to a ticket.
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_boardtaskreference[BoardTaskReference^]
 
@@ -483,7 +485,7 @@ public delete($referenceId):bool // <1>
 Deletes a specific reference.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -509,7 +511,7 @@ public checkReferenceKey($referenceType, $referenceKey):bool // <1>
 Checks whether the reference key for the given reference type exists or not.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -528,12 +530,12 @@ a|`$referenceKey`
 
 
 
-=== BoardTaskRepositoryContract
+==== BoardTaskRepositoryContract
 
 The BoardTaskRepositoryContract is the interface for the board task repository. This interface provides methods to access, create, update or delete tasks.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Contracts`
 
@@ -542,7 +544,7 @@ The BoardTaskRepositoryContract is the interface for the board task repository. 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -556,7 +558,7 @@ public list($columnId, $startAt, $tasksPerPage = 20, $columns = []):Illuminate\D
 Lists tasks for a specific column. Will return at most 20 tasks starting at defined task.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
@@ -595,7 +597,7 @@ public create($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardTask 
 Creates a new task and assigns it to a specified column.
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_boardtask[BoardTask^]
 
@@ -630,7 +632,7 @@ public copy($boardId, $columnId, $taskId):Plenty\Modules\Board\Models\BoardTask 
 Copies the task with all references.
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_boardtask[BoardTask^]
 
@@ -665,7 +667,7 @@ public get($taskId):Plenty\Modules\Board\Models\BoardTask // <1>
 Returns a task for a given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_boardtask[BoardTask^]
 
@@ -692,7 +694,7 @@ public update($boardId, $columnId, $taskId, $data):Plenty\Modules\Board\Models\B
 Updates a specified task.
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_boardtask[BoardTask^]
 
@@ -731,7 +733,7 @@ public addReference($boardTaskReference):bool // <1>
 Adds a task reference to a task object.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -758,7 +760,7 @@ public removeReference($boardTaskReference):bool // <1>
 Removes a task reference from a task object.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -785,7 +787,7 @@ public updatePosition($taskId, $newColumnId, $newPosition):int // <1>
 Updates the position of a specified task. Will also update the position of all following tasks in the same column.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -819,7 +821,7 @@ public delete($taskId):bool // <1>
 Deletes a specified task.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -845,7 +847,7 @@ public deleteByColumn($boardId, $columnId):bool // <1>
 Deletes all tasks of a column.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -875,7 +877,7 @@ public allByColumnId($columnId, $referenceValue = null, $columns = []):void // <
 Gets all tasks for the given column ID having a reference with the given reference value.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -910,7 +912,7 @@ public allByBoardId($boardId, $referenceValue = null, $columns = []):void // <1>
 Gets all tasks for the given column ID having a reference with the given reference value.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -934,13 +936,13 @@ a|`$columns`
 
 
 [[board_board_events]]
-==  Events
-=== AfterBoardColumnTasksDeleted
+===  Events
+==== AfterBoardColumnTasksDeleted
 
 This event will be triggered, after all tasks of a column were deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Events`
 
@@ -949,7 +951,7 @@ This event will be triggered, after all tasks of a column were deleted.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -963,7 +965,7 @@ public getBoardId():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -980,7 +982,7 @@ public getColumnId():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -997,18 +999,18 @@ public getDeletedTaskIdList():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== AfterBoardTaskCreated
+==== AfterBoardTaskCreated
 
 This event will be triggered, when a board task was created.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Events`
 
@@ -1017,7 +1019,7 @@ This event will be triggered, when a board task was created.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1031,19 +1033,19 @@ public getBoardTask():Plenty\Modules\Board\Models\BoardTask // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_boardtask[BoardTask^]
 
     
 
 
-=== AfterBoardTaskDeleted
+==== AfterBoardTaskDeleted
 
 This event will be triggered, when a single board task was deleted. It won&#039;t be triggered, if a board column was deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Events`
 
@@ -1052,7 +1054,7 @@ This event will be triggered, when a single board task was deleted. It won&#039;
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1066,19 +1068,19 @@ public getBoardTask():Plenty\Modules\Board\Models\BoardTask // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_boardtask[BoardTask^]
 
     
 
 
-=== AfterBoardTaskReferenceCreated
+==== AfterBoardTaskReferenceCreated
 
 This event will be triggered, after a task reference was created.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Events`
 
@@ -1087,7 +1089,7 @@ This event will be triggered, after a task reference was created.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1101,19 +1103,19 @@ public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference //
 
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_boardtaskreference[BoardTaskReference^]
 
     
 
 
-=== AfterBoardTaskReferenceDeleted
+==== AfterBoardTaskReferenceDeleted
 
 This event will be triggered, after a task reference was deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Events`
 
@@ -1122,7 +1124,7 @@ This event will be triggered, after a task reference was deleted.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1136,19 +1138,19 @@ public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference //
 
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_boardtaskreference[BoardTaskReference^]
 
     
 
 
-=== BeforeBoardColumnDeleted
+==== BeforeBoardColumnDeleted
 
 This event will be triggered, before a board column will be deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Events`
 
@@ -1157,7 +1159,7 @@ This event will be triggered, before a board column will be deleted.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1171,7 +1173,7 @@ public getBoard():Plenty\Modules\Board\Models\Board // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_board[Board^]
 
@@ -1189,18 +1191,18 @@ public getColumnId():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
 
 
-=== BeforeBoardDeleted
+==== BeforeBoardDeleted
 
 This event will be triggered, before a board will be deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Events`
 
@@ -1209,7 +1211,7 @@ This event will be triggered, before a board will be deleted.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1223,19 +1225,19 @@ public getBoard():Plenty\Modules\Board\Models\Board // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_board[Board^]
 
     
 
 
-=== BeforeBoardTaskDeleted
+==== BeforeBoardTaskDeleted
 
 This event will be triggered, before a single board task was deleted. It won&#039;t be triggered, if a board column will be deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Events`
 
@@ -1244,7 +1246,7 @@ This event will be triggered, before a single board task was deleted. It won&#03
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1258,20 +1260,20 @@ public getBoardTask():Plenty\Modules\Board\Models\BoardTask // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:board#board_models_boardtask[BoardTask^]
 
     
 
 [[board_board_models]]
-==  Models
-=== Board
+===  Models
+==== Board
 
 The board model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Models`
 
@@ -1302,7 +1304,7 @@ The board model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1318,12 +1320,12 @@ Returns this model as an array.
 
 
 
-=== BoardColumn
+==== BoardColumn
 
 The board column model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Models`
 
@@ -1354,7 +1356,7 @@ The board column model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1370,12 +1372,12 @@ Returns this model as an array.
 
 
 
-=== BoardTask
+==== BoardTask
 
 The board task model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Models`
 
@@ -1416,7 +1418,7 @@ The board task model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1432,12 +1434,12 @@ Returns this model as an array.
 
 
 
-=== BoardTaskReference
+==== BoardTaskReference
 
 The task reference model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Board\Models`
 
@@ -1461,7 +1463,7 @@ The task reference model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

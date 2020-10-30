@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[plugin_plugin]]
-= Plugin
+== Plugin
 
 [[plugin_plugin_contracts]]
-==  Contracts
-=== ConfigurationRepositoryContract
+===  Contracts
+==== ConfigurationRepositoryContract
 
 Save config values for plugins
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\Contracts`
 
@@ -21,7 +23,7 @@ Save config values for plugins
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public saveConfiguration($pluginId, $configMap, $setId = null, $resetCache = tru
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -73,7 +75,7 @@ public copyToPluginSetEntry($configurationOrId, $pluginSetEntryOrId):int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -105,7 +107,7 @@ public getConfigurationFile($pluginId, $setId):string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -135,7 +137,7 @@ public export($setId, $pluginId = null, $active = null):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -169,7 +171,7 @@ public import($setId, $data, $pluginId = null):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -193,12 +195,12 @@ a|`$pluginId`
 
 
 
-=== PluginLayoutContainerRepositoryContract
+==== PluginLayoutContainerRepositoryContract
 
 Plugin layout container
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\Contracts`
 
@@ -207,7 +209,7 @@ Plugin layout container
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -221,7 +223,7 @@ public all($pluginSetId):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -248,7 +250,7 @@ public updateAll($dataList, $pluginSetId, $pluginId = null):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -283,7 +285,7 @@ public getActiveLinkedLayoutContainers($activeContainerKeysList, $activeDataProv
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -318,7 +320,7 @@ public getActiveLinkedLayoutContainersByPluginSetId($activeContainerKeysList, $a
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -353,7 +355,7 @@ public addNew($dataList, $pluginSetId):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -384,7 +386,7 @@ public addOne($pluginSetId, $containerKey, $dataProviderKey, $containerPluginId 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -427,7 +429,7 @@ public removeOne($pluginSetId, $containerKey, $dataProviderKey, $containerPlugin
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -470,7 +472,7 @@ public exportByPluginSetId($pluginSetOrId):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -497,7 +499,7 @@ public importByPluginSetId($pluginSetOrId, $containers):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -518,12 +520,12 @@ a|`$containers`
 
 
 
-=== PluginRepositoryContract
+==== PluginRepositoryContract
 
 Search plugins according to parameters
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\Contracts`
 
@@ -532,7 +534,7 @@ Search plugins according to parameters
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -546,7 +548,7 @@ public getPluginByName($name):Plenty\Modules\Plugin\Models\Plugin // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_models_plugin[Plugin^]
 
@@ -573,7 +575,7 @@ public searchPlugins($params = [], $itemsPerPage = \Plenty\Modules\Plugin\Models
 Search plugins using filters. Example: searchPlugins([&#039;name&#039; =&gt; &#039;PluginIWantToFind&#039;])
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -604,7 +606,7 @@ public getPluginSets($pluginId):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -630,7 +632,7 @@ public isActiveInPluginSet($pluginId, $pluginSetIdOrPluginSet):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -661,7 +663,7 @@ public isActiveInPluginSetByName($pluginName, $pluginSetId):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -691,7 +693,7 @@ public isActiveInWebstore($pluginId, $webstoreId):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -721,7 +723,7 @@ public isActiveInWebstoreByPluginName($pluginName, $webstoreId):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -751,7 +753,7 @@ public decoratePlugin($plugin, $pluginSetId = null):Plenty\Modules\Plugin\Models
 
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_models_plugin[Plugin^]
 
@@ -783,7 +785,7 @@ public installMarketplacePluginByItemId($marketplacePluginItemId, $pluginSetId =
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -803,13 +805,13 @@ a|`$pluginSetId`
 
 
 [[plugin_plugin_events]]
-==  Events
-=== AfterBuildPlugins
+===  Events
+==== AfterBuildPlugins
 
 Event after plugin build has finished
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\Events`
 
@@ -818,7 +820,7 @@ Event after plugin build has finished
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -832,7 +834,7 @@ public getPluginSet():Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
 Get the plugin set which have been built
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_models_pluginset[PluginSet^]
 
@@ -850,7 +852,7 @@ public sourceHasChanged($pluginName):bool // <1>
 Check if php files of a plugin have been changed
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -876,7 +878,7 @@ public resourcesHasChanged($pluginName):bool // <1>
 Check if resource files of a plugin have been changed
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -891,12 +893,12 @@ a|`$pluginName`
 
 
 
-=== LoadSitemapPattern
+==== LoadSitemapPattern
 
 LoadSitemapPatternEvent
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\Events`
 
@@ -905,12 +907,12 @@ LoadSitemapPatternEvent
 
 
 
-=== PluginSendMail
+==== PluginSendMail
 
 PluginSendMail
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\Events`
 
@@ -919,7 +921,7 @@ PluginSendMail
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -933,7 +935,7 @@ public getTemplate():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -951,7 +953,7 @@ public getContactEmail():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -969,20 +971,20 @@ public getCallFunction():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[plugin_plugin_models]]
-==  Models
-=== InstalledPlugins
+===  Models
+==== InstalledPlugins
 
 Model representing an installed Plugin
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\Models`
 
@@ -1012,7 +1014,7 @@ Model representing an installed Plugin
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1028,12 +1030,12 @@ Returns this model as an array.
 
 
 
-=== Plugin
+==== Plugin
 
 Eloquent model representing a Plugin.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\Models`
 
@@ -1243,7 +1245,7 @@ trashed
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1259,13 +1261,13 @@ Returns this model as an array.
 
 
 [[plugin_plugin_services]]
-==  Services
-=== PluginSendMailService
+===  Services
+==== PluginSendMailService
 
 The PluginSendMailService send mails in plugins
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\Services`
 
@@ -1274,7 +1276,7 @@ The PluginSendMailService send mails in plugins
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1288,7 +1290,7 @@ public static getInstance($webstoreId):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1316,7 +1318,7 @@ public sendMail($url, $template = &quot;&quot;, $email = &quot;&quot;, $callFunc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1354,7 +1356,7 @@ public getStatus():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1371,7 +1373,7 @@ public setStatus($status):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1398,7 +1400,7 @@ public isInitialized():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1415,7 +1417,7 @@ public setInitialized($initialized):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1442,7 +1444,7 @@ public getEmailPlaceholder():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1459,7 +1461,7 @@ public addEmailPlaceholder($placeholder, $value):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1490,7 +1492,7 @@ public setEmailPlaceholder($emailPlaceholder):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1517,7 +1519,7 @@ public getEmailPlaceholderKey($key, $default = &quot;&quot;):string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1536,12 +1538,12 @@ a|`$default`
 
 
 
-=== PluginSeoSitemapService
+==== PluginSeoSitemapService
 
 The PluginSeoSitemapService collect the sitemap patterns.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\Services`
 
@@ -1550,7 +1552,7 @@ The PluginSeoSitemapService collect the sitemap patterns.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1564,7 +1566,7 @@ public loadPatterns($url):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1590,7 +1592,7 @@ public getPatterns():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1607,7 +1609,7 @@ public setItemPattern($pattern):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1634,7 +1636,7 @@ public setBlogPattern($pattern):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1661,7 +1663,7 @@ public setContentCategoryPattern($pattern):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1688,7 +1690,7 @@ public setItemCategoryPattern($pattern):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1715,7 +1717,7 @@ public getItemPattern():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1732,7 +1734,7 @@ public getBlogPattern():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1749,7 +1751,7 @@ public getItemCategoryPattern():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1766,22 +1768,22 @@ public getContentCategoryPattern():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
 
 [[plugin_database]]
-= DataBase
+== DataBase
 
 [[plugin_database_annotations]]
-==  Annotations
-=== Index
+===  Annotations
+==== Index
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\DataBase\Annotations`
 
@@ -1790,7 +1792,7 @@ public getContentCategoryPattern():string // <1>
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1806,12 +1808,12 @@ Returns this model as an array.
 
 
 
-=== NonTableAttribute
+==== NonTableAttribute
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\DataBase\Annotations`
 
@@ -1820,7 +1822,7 @@ Returns this model as an array.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1836,12 +1838,12 @@ Returns this model as an array.
 
 
 
-=== Nullable
+==== Nullable
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\DataBase\Annotations`
 
@@ -1850,7 +1852,7 @@ Returns this model as an array.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1866,12 +1868,12 @@ Returns this model as an array.
 
 
 
-=== Relation
+==== Relation
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\DataBase\Annotations`
 
@@ -1880,7 +1882,7 @@ Returns this model as an array.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1896,13 +1898,13 @@ Returns this model as an array.
 
 
 [[plugin_database_contracts]]
-==  Contracts
-=== CriteriaQuery
+===  Contracts
+==== CriteriaQuery
 
 database query
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\DataBase\Contracts`
 
@@ -1911,7 +1913,7 @@ database query
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1925,7 +1927,7 @@ public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\
 Add a basic where clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -1961,7 +1963,7 @@ public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Pl
 Add a &quot;where in&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -2000,7 +2002,7 @@ public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts /
 Add an &quot;or where in&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -2031,7 +2033,7 @@ public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugi
 Add an &quot;or where&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -2067,7 +2069,7 @@ public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Mo
 Add a &quot;where null&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -2102,7 +2104,7 @@ public orWhereNull($fieldName):void // <1>
 Add an &quot;or where null&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2129,7 +2131,7 @@ public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&
 Add a &quot;having&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -2168,7 +2170,7 @@ public orHaving($fieldName, $operator = null, $value = null):void // <1>
 Add a &quot;or having&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2203,7 +2205,7 @@ public whereHas($modelName, $callback = null, $operator = &quot;&gt;=&quot;, $co
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2243,7 +2245,7 @@ public join($firstModelName, $callback, $as = &quot;&quot;):void // <1>
 Add a join clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2279,7 +2281,7 @@ public leftJoin($firstModelName, $callback):void // <1>
 Add a left join to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2300,12 +2302,12 @@ a|`$callback`
 
 
 
-=== DataBase
+==== DataBase
 
 Database contract
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\DataBase\Contracts`
 
@@ -2314,7 +2316,7 @@ Database contract
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2328,7 +2330,7 @@ public save($model):Plenty\Modules\Plugin\DataBase\Contracts\Model // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_contracts_model[Model^]
 
@@ -2356,7 +2358,7 @@ public find($modelClassName, $primaryKeyFieldValue):Plenty\Modules\Plugin\DataBa
 
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_contracts_model[Model^]
 
@@ -2388,7 +2390,7 @@ public query($modelClassName):Plenty\Modules\Plugin\DataBase\Contracts\Query // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_contracts_query[Query^]
 
@@ -2415,7 +2417,7 @@ public delete($model):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2431,12 +2433,12 @@ a|`$model`
 
 
 
-=== JoinClauseQuery
+==== JoinClauseQuery
 
 database join query
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\DataBase\Contracts`
 
@@ -2445,7 +2447,7 @@ database join query
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2459,7 +2461,7 @@ public on($firstModelName, $first, $operator = null, $secondModelName = null, $s
 
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -2507,7 +2509,7 @@ public where($modelName, $column, $operator = null, $value = null, $boolean = &q
 Add a basic where clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -2552,7 +2554,7 @@ public orWhere($modelName, $column, $operator = null, $value = null):Plenty\Modu
 Add an &quot;or where&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -2593,7 +2595,7 @@ public whereNull($modelName, $column, $boolean = &quot;and&quot;, $not = false):
 Add a &quot;where null&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -2633,7 +2635,7 @@ public orWhereNull($modelName, $column):Plenty\Modules\Plugin\DataBase\Contracts
 Add an &quot;or where null&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -2654,12 +2656,12 @@ a|`$column`
 
 
 
-=== Migrate
+==== Migrate
 
 Migrate models
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\DataBase\Contracts`
 
@@ -2668,7 +2670,7 @@ Migrate models
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2682,7 +2684,7 @@ public createTable($modelClassName):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2708,7 +2710,7 @@ public updateTable($modelClassName):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2734,7 +2736,7 @@ public deleteTable($modelClassName):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2749,12 +2751,12 @@ a|`$modelClassName`
 
 
 
-=== Model
+==== Model
 
 Database model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\DataBase\Contracts`
 
@@ -2813,7 +2815,7 @@ Database model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2827,7 +2829,7 @@ public getTableName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2844,7 +2846,7 @@ public attributesToArray():array // <1>
 Convert the model&#039;s attributes to an array.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2861,7 +2863,7 @@ public getAttribute($key):void // <1>
 Get an attribute from the model.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2888,7 +2890,7 @@ public getAttributeValue($key):void // <1>
 Get a plain attribute
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2915,7 +2917,7 @@ public getAttributeFromArray($key):void // <1>
 Get an attribute from the $attributes array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2942,7 +2944,7 @@ public hasGetMutator($key):bool // <1>
 Determine if a get mutator exists for an attribute.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2968,7 +2970,7 @@ public mutateAttribute($key, $value):void // <1>
 Get the value of an attribute using its mutator.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3000,7 +3002,7 @@ public mutateAttributeForArray($key, $value):void // <1>
 Get the value of an attribute using its mutator for array conversion.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3032,7 +3034,7 @@ public setAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts // <1
 Set a given attribute on the model.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3064,7 +3066,7 @@ public hasSetMutator($key):bool // <1>
 Determine if a set mutator exists for an attribute.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3090,7 +3092,7 @@ public fillJsonAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts 
 Set a given JSON attribute on the model.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3122,7 +3124,7 @@ public fromJson($value, $asObject = false):void // <1>
 Decode the given JSON back into an array or object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3153,7 +3155,7 @@ public fromDateTime($value):string // <1>
 Convert a DateTime to a storable string.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -3180,7 +3182,7 @@ public getDates():array // <1>
 Get the attributes that should be converted to dates.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3197,7 +3199,7 @@ public setDateFormat($format):Plenty\Modules\Plugin\DataBase\Contracts // <1>
 Set the date format used by the model.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3224,7 +3226,7 @@ public hasCast($key, $types = null):bool // <1>
 Determine whether an attribute should be cast to a native type.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3255,7 +3257,7 @@ public getCasts():array // <1>
 Get the casts array.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3272,7 +3274,7 @@ public getAttributes():array // <1>
 Get all of the current attributes on the model.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3289,7 +3291,7 @@ public setRawAttributes($attributes, $sync = false):Plenty\Modules\Plugin\DataBa
 Set the array of model attributes. No checking is done.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3320,7 +3322,7 @@ public getOriginal($key = null, $default = null):void // <1>
 Get the model&#039;s original attribute values.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3352,7 +3354,7 @@ public only($attributes):array // <1>
 Get a subset of the model&#039;s attributes.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3379,7 +3381,7 @@ public syncOriginal():Plenty\Modules\Plugin\DataBase\Contracts // <1>
 Sync the original attributes with the current.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3397,7 +3399,7 @@ public syncOriginalAttribute($attribute):Plenty\Modules\Plugin\DataBase\Contract
 Sync a single original attribute with its current value.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3424,7 +3426,7 @@ public syncChanges():Plenty\Modules\Plugin\DataBase\Contracts // <1>
 Sync the changed attributes.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3442,7 +3444,7 @@ public isDirty($attributes = null):bool // <1>
 Determine if the model or given attribute(s) have been modified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3469,7 +3471,7 @@ public isClean($attributes = null):bool // <1>
 Determine if the model or given attribute(s) have remained the same.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3496,7 +3498,7 @@ public wasChanged($attributes = null):bool // <1>
 Determine if the model or given attribute(s) have been modified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3523,7 +3525,7 @@ public getDirty():array // <1>
 Get the attributes that have been changed since last sync.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3540,7 +3542,7 @@ public getChanges():array // <1>
 Get the attributes that were changed.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3557,7 +3559,7 @@ public getMutatedAttributes():array // <1>
 Get the mutated attributes for a given instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3574,7 +3576,7 @@ public static cacheMutatedAttributes($class):void // <1>
 Extract and cache all the mutated attributes of a class.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3601,19 +3603,19 @@ public relationLoaded():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== Query
+==== Query
 
 database query
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\DataBase\Contracts`
 
@@ -3622,7 +3624,7 @@ database query
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3636,7 +3638,7 @@ public select($columns = []):Plenty\Modules\Plugin\DataBase\Contracts // <1>
 Add a basic select clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3663,7 +3665,7 @@ public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\
 Add a basic where clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3699,7 +3701,7 @@ public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Pl
 Add a &quot;where in&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3738,7 +3740,7 @@ public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts /
 Add an &quot;or where in&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3769,7 +3771,7 @@ public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugi
 Add an &quot;or where&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3805,7 +3807,7 @@ public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Mo
 Add a &quot;where null&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3840,7 +3842,7 @@ public orWhereNull($fieldName):Plenty\Modules\Plugin\DataBase\Contracts // <1>
 Add an &quot;or where null&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3867,7 +3869,7 @@ public whereBetween($column, $values, $boolean = &quot;and&quot;, $not = false):
 Add a where between statement to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3906,7 +3908,7 @@ public whereNotBetween($column, $values, $boolean = &quot;and&quot;):Plenty\Modu
 Add a where not between statement to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3941,7 +3943,7 @@ public whereDate($column, $operator, $value = null, $boolean = &quot;and&quot;):
 Add a &quot;where date&quot; statement to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -3981,7 +3983,7 @@ public whereMonth($column, $operator, $value = null, $boolean = &quot;and&quot;)
 Add a &quot;where month&quot; statement to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -4021,7 +4023,7 @@ public whereDay($column, $operator, $value = null, $boolean = &quot;and&quot;):P
 Add a &quot;where day&quot; statement to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -4061,7 +4063,7 @@ public whereYear($column, $operator, $value = null, $boolean = &quot;and&quot;):
 Add a &quot;where year&quot; statement to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -4101,7 +4103,7 @@ public whereTime($column, $operator, $value = null, $boolean = &quot;and&quot;):
 Add a &quot;where time&quot; statement to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -4140,7 +4142,7 @@ public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&
 Add a &quot;having&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -4179,7 +4181,7 @@ public orHaving($fieldName, $operator = null, $value = null):Plenty\Modules\Plug
 Add a &quot;or having&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -4214,7 +4216,7 @@ public orderBy($fieldName, $direction = &quot;asc&quot;):Plenty\Modules\Plugin\D
 Add an &quot;order by&quot; clause to the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -4245,7 +4247,7 @@ public forPage($page, $perPage = 15):Plenty\Modules\Plugin\DataBase\Contracts //
 Set the limit and offset for a given page.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -4276,7 +4278,7 @@ public count($columns = &quot;*&quot;):int // <1>
 Retrieve the &quot;count&quot; result of the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -4302,7 +4304,7 @@ public limit($value):Plenty\Modules\Plugin\DataBase\Contracts // <1>
 Set the &quot;limit&quot; value of the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -4329,7 +4331,7 @@ public offset($value):Plenty\Modules\Plugin\DataBase\Contracts // <1>
 Set the &quot;offset&quot; value of the query.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_database_contracts[Contracts^]
 
@@ -4356,7 +4358,7 @@ public getCountForPagination($columns = []):int // <1>
 Get the count of the total records for the paginator.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -4382,7 +4384,7 @@ public get():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4399,17 +4401,17 @@ public delete():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
 
 [[plugin_dynamodb]]
-= DynamoDb
+== DynamoDb
 
 [[plugin_dynamodb_contracts]]
-==  Contracts
-=== DynamoDbRepositoryContract
+===  Contracts
+==== DynamoDbRepositoryContract
 
 AWS DynamoDb Repository (Deprecated)
 
@@ -4418,7 +4420,7 @@ AWS DynamoDb Repository (Deprecated)
 Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 ====
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\DynamoDb\Contracts`
 
@@ -4427,7 +4429,7 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4438,14 +4440,17 @@ public createTable($pluginName, $tableName, $attributeDefinitions, $keySchema, $
 
 
 [warning]
-.Deprecated! [small]#(since 2017-06-30)#====
+.Deprecated! [small]#(since 2017-06-30)#
+====
+
 Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+
 ====
     
 Create a table
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4488,14 +4493,17 @@ public updateTable($pluginName, $tableName, $readCapacityUnits = 3, $writeCapaci
 
 
 [warning]
-.Deprecated! [small]#(since 2017-06-30)#====
+.Deprecated! [small]#(since 2017-06-30)#
+====
+
 Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+
 ====
     
 Update a table
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4530,14 +4538,17 @@ public putItem($pluginName, $tableName, $item):bool // <1>
 
 
 [warning]
-.Deprecated! [small]#(since 2017-06-30)#====
+.Deprecated! [small]#(since 2017-06-30)#
+====
+
 Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+
 ====
     
 Add item to table
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4568,14 +4579,17 @@ public getItem($pluginName, $tableName, $consistentRead, $key):array // <1>
 
 
 [warning]
-.Deprecated! [small]#(since 2017-06-30)#====
+.Deprecated! [small]#(since 2017-06-30)#
+====
+
 Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+
 ====
     
 Retrieving items
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4610,14 +4624,17 @@ public deleteItem($pluginName, $tableName, $key):bool // <1>
 
 
 [warning]
-.Deprecated! [small]#(since 2017-06-30)#====
+.Deprecated! [small]#(since 2017-06-30)#
+====
+
 Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+
 ====
     
 Delete an item
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4648,14 +4665,17 @@ public deleteTable($pluginName, $tableName):bool // <1>
 
 
 [warning]
-.Deprecated! [small]#(since 2017-06-30)#====
+.Deprecated! [small]#(since 2017-06-30)#
+====
+
 Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+
 ====
     
 Deleting a table
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4682,14 +4702,17 @@ public scan($pluginName, $tableName, $returnFields = &quot;&quot;, $expressionAt
 
 
 [warning]
-.Deprecated! [small]#(since 2017-06-30)#====
+.Deprecated! [small]#(since 2017-06-30)#
+====
+
 Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
+
 ====
     
 A scan operation scans the entire table. You can specify filters to apply to the results to refine the values returned to you, after the complete scan. Amazon DynamoDB puts a 1MB limit on the scan (the limit applies before the results are filtered).
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4725,16 +4748,16 @@ a|`$limit`
 
 
 [[plugin_libs]]
-= Libs
+== Libs
 
 [[plugin_libs_contracts]]
-==  Contracts
-=== LibraryCallContract
+===  Contracts
+==== LibraryCallContract
 
 library call
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\Libs\Contracts`
 
@@ -4743,7 +4766,7 @@ library call
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4757,7 +4780,7 @@ public call($libCall, $params = []):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4776,16 +4799,16 @@ a|`$params`
 
 
 [[plugin_pluginset]]
-= PluginSet
+== PluginSet
 
 [[plugin_pluginset_contracts]]
-==  Contracts
-=== PluginSetEntryRepositoryContract
+===  Contracts
+==== PluginSetEntryRepositoryContract
 
 get, create, update or delete plugin set entries
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\PluginSet\Contracts`
 
@@ -4794,7 +4817,7 @@ get, create, update or delete plugin set entries
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4808,7 +4831,7 @@ public get($idOrInstance):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry 
 Get a PluginSetEntry.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
 
@@ -4836,7 +4859,7 @@ public create($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry // <1
 Create a set entry.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
 
@@ -4864,7 +4887,7 @@ public copyToPluginSet($pluginSetEntryOrId, $pluginSetOrId, $copyConfigurations)
 Copy a PluginSetEntry to a PluginSet
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
 
@@ -4901,7 +4924,7 @@ public update($id, $data):bool // <1>
 Update a PluginSetEntry. Associate a set entry with a new set, a new plugin, or both.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4931,7 +4954,7 @@ public delete($what):int // <1>
 Delete a PluginSetEntry
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -4947,12 +4970,12 @@ a|`$what`
 
 
 
-=== PluginSetRepositoryContract
+==== PluginSetRepositoryContract
 
 list, create, update or delete plugin sets
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\PluginSet\Contracts`
 
@@ -4961,7 +4984,7 @@ list, create, update or delete plugin sets
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4975,7 +4998,7 @@ public count():int // <1>
 Count current plugin sets.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -4992,7 +5015,7 @@ public create($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
 Create a plugin set. The data array has to contain a &#039;name&#039; field. Throws a &#039;TooManyPluginSetsException&#039; if the maximum number of sets is exceeded.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_models_pluginset[PluginSet^]
 
@@ -5019,7 +5042,7 @@ public copy($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
 Copy a plugin set. All set entries from the source set will be copied into the new set.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_models_pluginset[PluginSet^]
 
@@ -5047,7 +5070,7 @@ public update($id, $data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1
 Update a set. Only the &#039;name&#039; field can be updated.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_models_pluginset[PluginSet^]
 
@@ -5078,7 +5101,7 @@ public delete($what):int // <1>
 Delete a set.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -5105,7 +5128,7 @@ public get($pluginSetOrId):Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <
 Get a plugin set.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_models_pluginset[PluginSet^]
 
@@ -5134,7 +5157,7 @@ public list():void // <1>
 List all plugin sets.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5152,7 +5175,7 @@ public listSetEntries($id):void // <1>
 List all set entries of a plugin set.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5179,7 +5202,7 @@ public listWebstores($id):void // <1>
 List all webstores a plugin set is related to.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5206,7 +5229,7 @@ public listLayoutContainers($id):void // <1>
 List all LayoutContainers for a plugin set.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5233,7 +5256,7 @@ public getOrCreatePluginSetEntry($id, $pluginId, $withTrashed = false, $resetCac
 Get the PluginSetEntry object containing a specific plugin for a set. If a PluginSetEntry does not exist, it will be created.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
 
@@ -5272,7 +5295,7 @@ public changePluginActiveStatusForSet($pluginSetId, $pluginId, $active):Plenty\M
 Activates / deactivates a plugin for a set by trashing or restoring the respective set entry.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_models_plugin[Plugin^]
 
@@ -5307,7 +5330,7 @@ public removePluginFromSet($setId, $pluginId):Plenty\Modules\Plugin\Models\Plugi
 Remove a plugin from a set.
 
 
-==== Return type
+===== Return type
     
 <1> link:plugin#plugin_models_plugin[Plugin^]
 
@@ -5338,7 +5361,7 @@ public createPreviewHash($setId):string // <1>
 Create a preview hash for a plugin set.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -5364,7 +5387,7 @@ public getPreviewPluginSetId($previewHash):void // <1>
 Extract a plugin set id from a preview hash.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5391,7 +5414,7 @@ public installGitPlugin($setId, $pluginId, $requestData):bool // <1>
 Install a git-plugin into a set.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5425,7 +5448,7 @@ public setPosition($setId, $pluginId, $requestData):void // <1>
 Change the position of a plugin in a set
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5460,7 +5483,7 @@ public getSyncState($pluginSetId):bool // <1>
 Get the sync state, to determine if Plugins have been (de-)activated since last build.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5486,7 +5509,7 @@ public getPluginSetHash($pluginSetOrId):string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -5513,7 +5536,7 @@ public getPluginSetIdFromHash($pluginSetHash):int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -5539,19 +5562,19 @@ public getCurrentPluginSetId():int // <1>
 Get the PluginSetID of the currently running plugin.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
 
 [[plugin_pluginset_models]]
-==  Models
-=== PluginSet
+===  Models
+==== PluginSet
 
 Eloquent model representing a PluginSet.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\PluginSet\Models`
 
@@ -5598,7 +5621,7 @@ Eloquent model representing a PluginSet.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5614,12 +5637,12 @@ Returns this model as an array.
 
 
 
-=== PluginSetEntry
+==== PluginSetEntry
 
 Eloquent model representing a PluginSetEntry.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\PluginSet\Models`
 
@@ -5656,7 +5679,7 @@ Eloquent model representing a PluginSetEntry.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5672,16 +5695,16 @@ Returns this model as an array.
 
 
 [[plugin_storage]]
-= Storage
+== Storage
 
 [[plugin_storage_contracts]]
-==  Contracts
-=== StorageRepositoryContract
+===  Contracts
+==== StorageRepositoryContract
 
 Storage Repository
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\Storage\Contracts`
 
@@ -5690,7 +5713,7 @@ Storage Repository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5704,7 +5727,7 @@ public uploadObject($pluginName, $key, $body, $publicVisible = false, $metaData 
 Create an object with content in $body
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_models_storageobject[StorageObject^]
 
@@ -5747,7 +5770,7 @@ public getObject($pluginName, $key, $publicVisible = false):Plenty\Modules\Cloud
 Get an object
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_models_storageobject[StorageObject^]
 
@@ -5782,7 +5805,7 @@ public getObjectUrl($pluginName, $key, $publicVisible = false, $minutesToExpire 
 Returns the URL to an object identified by its bucket and key. The URL will be signed and set to expire at the provided time.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -5820,7 +5843,7 @@ public getObjectAsTemporaryFileResource($pluginName, $key, $publicVisible = fals
 Get local file resource of an object. Use this if it is really necessary! Using getObject is the normal and effective way.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -5854,7 +5877,7 @@ public doesObjectExist($pluginName, $key, $publicVisible = false):bool // <1>
 Checks if object exists
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5888,7 +5911,7 @@ public deleteObject($pluginName, $key, $publicVisible = false):bool // <1>
 Executes the DeleteObject operation.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5922,7 +5945,7 @@ public listObjects($pluginName, $prefix = &quot;&quot;, $limit, $startKey = &quo
 Returns some or all (up to 1000) objects
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_models_storageobjectlist[StorageObjectList^]
 
@@ -5973,7 +5996,7 @@ public getPluginZip($pluginSetId, $pluginName):void // <1>
 Get all objects of a plugin as zip file
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5993,16 +6016,16 @@ a|`$pluginName`
 
 
 [[plugin_versioncontrol]]
-= VersionControl
+== VersionControl
 
 [[plugin_versioncontrol_models]]
-==  Models
-=== Git
+===  Models
+==== Git
 
 Model holding plugin data concerning Git version control.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Plugin\VersionControl\Models`
 
@@ -6051,7 +6074,7 @@ Model holding plugin data concerning Git version control.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

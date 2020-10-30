@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[notifications_notifications]]
-= Notifications
+== Notifications
 
 [[notifications_notifications_contracts]]
-==  Contracts
-=== NotificationsRepositoryContract
+===  Contracts
+==== NotificationsRepositoryContract
 
 Plugin Notifications Service
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Notifications\Contracts`
 
@@ -21,7 +23,7 @@ Plugin Notifications Service
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public addNotification($notificationBuiltWithNotificationBuilder):array // <1>
 Add a Notification in the system
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -61,7 +63,7 @@ public fetchNotifications($queryBuiltWithNotificationsQueryBuilder, $page, $item
 Fetch a list of short/incomplete notifications, containing only the subject. To be used for listing purposes.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_unspecifiedlengthpaginationresponse[UnspecifiedLengthPaginationResponse^]
 
@@ -96,7 +98,7 @@ public fetchNotificationsDetails($notificationsFetchDetailsQuery):array // <1>
 Fetch all the details of a Notification based on its id.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -122,7 +124,7 @@ public acknowledgeNotifications($queryBuiltWithNotificationsAcknowledgeQueryBuil
 Mark a Notification as acknowledged.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -148,7 +150,7 @@ public getNotificationsCount($queryBuiltWithNotificationsQueryBuilder):int // <1
 Retrieve the current unread Notifications count
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -163,13 +165,13 @@ a|`$queryBuiltWithNotificationsQueryBuilder`
 
 
 [[notifications_notifications_models]]
-==  Models
-=== Notification
+===  Models
+==== Notification
 
 The Notification Model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Notifications\Models`
 
@@ -178,7 +180,7 @@ The Notification Model
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -194,12 +196,12 @@ Returns this model as an array.
 
 
 
-=== NotificationContent
+==== NotificationContent
 
 The Notification Content model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Notifications\Models`
 
@@ -208,7 +210,7 @@ The Notification Content model
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

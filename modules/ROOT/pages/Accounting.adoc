@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[accounting_accounting]]
-= Accounting
+== Accounting
 
 [[accounting_accounting_contracts]]
-==  Contracts
-=== AccountingLocationRepositoryContract
+===  Contracts
+==== AccountingLocationRepositoryContract
 
 The repository to get, create, update and delete accounting locations.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Contracts`
 
@@ -21,7 +23,7 @@ The repository to get, create, update and delete accounting locations.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public get($id):Plenty\Modules\Accounting\Models\AccountingLocation // <1>
 Get an accounting location. The ID of the location must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_accountinglocation[AccountingLocation^]
 
@@ -63,7 +65,7 @@ List all accounting locations
 *
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_accountinglocation[AccountingLocation^]
 
@@ -81,7 +83,7 @@ public listByPlentyId($plentyId):void // <1>
 List accounting locations for a client. The plenty ID of the client must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -108,7 +110,7 @@ public create($data):Plenty\Modules\Accounting\Models\AccountingLocation // <1>
 Create an accounting location.
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_accountinglocation[AccountingLocation^]
 
@@ -135,7 +137,7 @@ public update($id, $data):Plenty\Modules\Accounting\Models\AccountingLocation //
 Update an accounting location. The ID of the location must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_accountinglocation[AccountingLocation^]
 
@@ -166,7 +168,7 @@ public delete($id):bool // <1>
 Delete an accounting location. The ID of the location must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -192,7 +194,7 @@ public getSettings($id):Plenty\Modules\Accounting\Models\AccountingLocationSetti
 Get accounting location settings. The ID of the location must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_accountinglocationsettings[AccountingLocationSettings^]
 
@@ -219,7 +221,7 @@ public updateSettings($id, $data):Plenty\Modules\Accounting\Models\AccountingLoc
 Update accounting location settings. The ID of the location must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_accountinglocationsettings[AccountingLocationSettings^]
 
@@ -239,12 +241,12 @@ a|`$data`
 
 
 
-=== AccountingServiceContract
+==== AccountingServiceContract
 
 Provides methods to detect a location ID.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Contracts`
 
@@ -253,7 +255,7 @@ Provides methods to detect a location ID.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -267,7 +269,7 @@ public detectLocationId($plentyId, $countryId = null):int // <1>
 Get a location ID for a country of delivery. The plenty ID must be specified and the ID of the country of delivery can be specified. If the ID of a country is not specified, the ID of the standard location of the specified client will be returned.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -297,7 +299,7 @@ public detectLocationIdByClientId($clientId = null, $countryId = null):int // <1
 Get the location ID for a country of delivery. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, the ID of the standard location of the default client will be returned.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -327,7 +329,7 @@ public getAccountingLocations($plentyId, $countryId = null):array // <1>
 List accounting locations. The plenty ID must be specified and the ID of a country of delivery can be specified. If the ID of the country is specified, only one accounting location will be returned. If the ID of the country is not specified, all accounting locations of the client will be returned.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -357,7 +359,7 @@ public getAccountingLocationsByClient($clientId = null, $countryId = null):array
 List accounting locations. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, all accounting locations of the default client will be returned.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -376,12 +378,12 @@ a|`$countryId`
 
 
 
-=== DebtorAccountRepositoryContract
+==== DebtorAccountRepositoryContract
 
 The DebtorAccountRepositoryContract is the interface for the DebtorAccountRepository. This interface allows you to either list debtor accounts by locationId or by locationId and mode. The mode describes the criteria that is used to assign pending amounts to debtor accounts.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Contracts`
 
@@ -390,7 +392,7 @@ The DebtorAccountRepositoryContract is the interface for the DebtorAccountReposi
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -404,7 +406,7 @@ public findByLocationId($locationId):Plenty\Modules\Accounting\Models\DebtorAcco
 Get debtor account configuration of an accounting location. The ID of the accounting location must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_debtoraccountconfiguration[DebtorAccountConfiguration^]
 
@@ -431,7 +433,7 @@ public listByLocationIdAndMode($locationId, $mode):void // <1>
 Lists debtor accounts by mode for an accounting location . The mode and the accounting location must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -458,12 +460,12 @@ The modes are described in detail in the DebtorAccountConfiguration model as wel
 
 
 
-=== DetermineShopCountryContract
+==== DetermineShopCountryContract
 
 This interface provides methods to initialise the country of a location or the country of an order as well as methods to get the ID of a client, the plenty ID of a client, the country or the ID of country.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Contracts`
 
@@ -472,7 +474,7 @@ This interface provides methods to initialise the country of a location or the c
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -486,7 +488,7 @@ public initByClientId($clientId):void // <1>
 Initialise the country of the standard location of a client. The ID of the client must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -513,7 +515,7 @@ public initByPlentyId($plentyId):void // <1>
 Initialise the country of the standard location of a client. The plenty ID of the client can be specified. If no plenty ID is specified, the standard client will be used.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -540,7 +542,7 @@ public initByLocationId($locationId):void // <1>
 Initialise the country of a location. The ID of the location must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -567,7 +569,7 @@ public initByOrderId($orderId):void // <1>
 Initialise the country for an order. The ID of the order must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -594,7 +596,7 @@ public getCountryId():int // <1>
 Get the ID of the country of the current standard location. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -611,7 +613,7 @@ public getClientId():int // <1>
 Get the ID of the current client. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -628,7 +630,7 @@ public getPlentyId():int // <1>
 Get the plenty ID of the current client. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -645,7 +647,7 @@ public getCountryIdByClientId($clientId):int // <1>
 Get the ID of the country of a client&#039;s standard location. The ID of the client must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -671,7 +673,7 @@ public getCountryIdByPlentyId($plentyId):int // <1>
 Get the ID of the country of a client&#039;s standard location. The plenty ID of the client must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -697,7 +699,7 @@ public getCountryIdByClientIdAndCountryId($clientId, $countryId):int // <1>
 Get the country of a client&#039;s standard location. The ID of the client and the ID of the country must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -727,7 +729,7 @@ public getCountryIdByLocationId($locationId):int // <1>
 Get the country of a location. The ID of the location must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -742,12 +744,12 @@ a|`$locationId`
 
 
 
-=== PostingKeyRepositoryContract
+==== PostingKeyRepositoryContract
 
 The PostingKeyRepositoryContract is the interface for the PostingKeyRepository. This interface provides the functionality to find the posting keys for an accounting location.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Contracts`
 
@@ -756,7 +758,7 @@ The PostingKeyRepositoryContract is the interface for the PostingKeyRepository. 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -770,7 +772,7 @@ public findByLocationId($locationId):Plenty\Modules\Accounting\Models\PostingKey
 Get the posting key configuration of an accounting location. The ID of the accounting location must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_postingkeyconfiguration[PostingKeyConfiguration^]
 
@@ -786,12 +788,12 @@ a|`$locationId`
 
 
 
-=== RevenueAccountRepositoryContract
+==== RevenueAccountRepositoryContract
 
 The RevenueAccountRepositoryContract is the interface for the RevenueAccountRepository. This interface allows you to either list revenue accounts by locationId, find by locationId and countryId or to least all for an accounting location.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Contracts`
 
@@ -800,7 +802,7 @@ The RevenueAccountRepositoryContract is the interface for the RevenueAccountRepo
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -814,7 +816,7 @@ public listRevenueAccounts($page = 1, $itemsPerPage = 50):Plenty\Repositories\Mo
 List revenue account configurations for all accounting locations. Each accounting location has one revenue account configuration.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -845,7 +847,7 @@ public findByLocationId($locationId):Plenty\Modules\Accounting\Models\RevenueAcc
 Get the revenue account configuration of an accounting location. The ID of the accounting location must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_revenueaccountlocationconfiguration[RevenueAccountLocationConfiguration^]
 
@@ -872,7 +874,7 @@ public findByLocationIdAndCountryId($locationId, $countryId):Plenty\Modules\Acco
 Get the revenue account configuration of a country. The country account configuration is associated with an accounting location. The ID of the accounting location that the country is associated with as well as the ID of the country must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_revenueaccountcountryconfiguration[RevenueAccountCountryConfiguration^]
 
@@ -892,13 +894,13 @@ a|`$countryId`
 
 
 [[accounting_accounting_exceptions]]
-==  Exceptions
-=== AccountingException
+===  Exceptions
+==== AccountingException
 
 Class AccountingException
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Exceptions`
 
@@ -907,13 +909,13 @@ Class AccountingException
 
 
 [[accounting_accounting_models]]
-==  Models
-=== AccountingLocation
+===  Models
+==== AccountingLocation
 
 The accounting location model. An accounting location always has a country and belongs to a client. An accounting location contains the VAT configurations. The VAT model contains the VAT configuration.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Models`
 
@@ -954,7 +956,7 @@ The accounting location model. An accounting location always has a country and b
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -970,12 +972,12 @@ Returns this model as an array.
 
 
 
-=== AccountingLocationSettings
+==== AccountingLocationSettings
 
 The accounting location settings model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Models`
 
@@ -1011,7 +1013,7 @@ The accounting location settings model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1027,12 +1029,12 @@ Returns this model as an array.
 
 
 
-=== DebtorAccount
+==== DebtorAccount
 
 The DebtorAccountValue Model which contains the actual configured debtor accounts by character, payment and country.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Models`
 
@@ -1075,7 +1077,7 @@ The DebtorAccountValue Model which contains the actual configured debtor account
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1091,12 +1093,12 @@ Returns this model as an array.
 
 
 
-=== DebtorAccountConfiguration
+==== DebtorAccountConfiguration
 
 The debtor account configuration model. The configuration is a set of debtor accounts. The actual number of debtor accounts within the configuration depends on the mode used to assign pending amounts to debtor accounts.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Models`
 
@@ -1144,7 +1146,7 @@ The debtor account configuration model. The configuration is a set of debtor acc
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1160,12 +1162,12 @@ Returns this model as an array.
 
 
 
-=== PostingKey
+==== PostingKey
 
 The Posting Key Model. A posting key is always associated with an accounting location and holds an posting key for each configured vat rate.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Models`
 
@@ -1186,7 +1188,7 @@ The Posting Key Model. A posting key is always associated with an accounting loc
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1202,12 +1204,12 @@ Returns this model as an array.
 
 
 
-=== PostingKeyConfiguration
+==== PostingKeyConfiguration
 
 The posting key configuration model. A posting key configuration is a set of 4 posting keys. A posting key configuration is always associated with an accounting location and can have a posting key per VAT rate. A posting key defines how line items are booked to accounts.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Models`
 
@@ -1233,7 +1235,7 @@ The posting key configuration model. A posting key configuration is a set of 4 p
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1249,12 +1251,12 @@ Returns this model as an array.
 
 
 
-=== RevenueAccount
+==== RevenueAccount
 
 The revenue account model provides information on a single revenue account. The ID of an account matches the ID of a VAT rate.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Models`
 
@@ -1275,7 +1277,7 @@ The revenue account model provides information on a single revenue account. The 
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1291,12 +1293,12 @@ Returns this model as an array.
 
 
 
-=== RevenueAccountCountryConfiguration
+==== RevenueAccountCountryConfiguration
 
 The revenue account country configuration model. The revenue account country configuration is a set of up to 4 revenue accounts for one country. Each country that you need to pay VAT in needs a configuration. The 4 revenue account included in the configuration are associated with VAT rates. The VAT rate that one revenue account is associated with can be identified by the ID of the VAT rate. The ID of the VAT rate is included in the account name. Furthermore, each revenue account country configuration is part of a revenue account location configuration. A revenue account country configuration is only available if a VAT configuration for the country exists.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Models`
 
@@ -1329,7 +1331,7 @@ The revenue account country configuration model. The revenue account country con
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1345,12 +1347,12 @@ Returns this model as an array.
 
 
 
-=== RevenueAccountLocationConfiguration
+==== RevenueAccountLocationConfiguration
 
 The revenue account location configuration model. A revenue account location configuration is the set of all revenue accounts that belong to one accounting location.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Models`
 
@@ -1381,7 +1383,7 @@ The revenue account location configuration model. A revenue account location con
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1397,16 +1399,16 @@ Returns this model as an array.
 
 
 [[accounting_vat]]
-= Vat
+== Vat
 
 [[accounting_vat_contracts]]
-==  Contracts
-=== VatInitContract
+===  Contracts
+==== VatInitContract
 
 This interface provides methods to initialise the detection of a VAT configuration and to actually detect VAT rates or VAT fields.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Vat\Contracts`
 
@@ -1415,7 +1417,7 @@ This interface provides methods to initialise the detection of a VAT configurati
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1429,7 +1431,7 @@ public init($billingCountryId, $taxIdNumber, $locationId, $shippingCountryId, $s
 Initialise the VAT system data
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1473,7 +1475,7 @@ public isInitialized():bool // <1>
 Get whether the VAT system is already initialised or not
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1490,7 +1492,7 @@ public getVatField($vatRate, $restrictedToDigitalItems = false):int // <1>
 Get the VAT field for a VAT rate
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -1522,7 +1524,7 @@ public getVatRate($vatField, $restrictedToDigitalItems = false):float // <1>
 Get the VAT rate of a VAT field
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/float[float^]
     
@@ -1554,7 +1556,7 @@ public getUsingVat($restrictedToDigitalItems = false):Plenty\Modules\Accounting\
 Get the VAT configuration to be used for VAT calculation
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_vat[Vat^]
 
@@ -1583,7 +1585,7 @@ public getUsingVatRates($restrictedToDigitalItems = false):array // <1>
 Get the VAT rates to be used for VAT calculation
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1611,7 +1613,7 @@ public getStandardVatByLocationId($locationId, $startedAt = null):Plenty\Modules
 Get a standard VAT configuration of an accounting location
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_vat[Vat^]
 
@@ -1631,12 +1633,12 @@ a|`$startedAt`
 
 
 
-=== VatRepositoryContract
+==== VatRepositoryContract
 
 The VatRepositoryContract is the interface for the VAT functionality. This interface allows you to get the VAT configuration for an accounting location and a country of delivery.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Vat\Contracts`
 
@@ -1645,7 +1647,7 @@ The VatRepositoryContract is the interface for the VAT functionality. This inter
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1659,7 +1661,7 @@ public findById($id):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
 Get a VAT configuration
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_vat[Vat^]
 
@@ -1686,7 +1688,7 @@ public getStandardVat($plentyId = null, $startedAt = null):Plenty\Modules\Accoun
 Get the standard VAT configuration for a plenty ID
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_vat[Vat^]
 
@@ -1717,7 +1719,7 @@ public getStandardVatByLocation($locationId, $startedAt = null):Plenty\Modules\A
 Get the standard VAT configuration for a location ID
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_vat[Vat^]
 
@@ -1748,7 +1750,7 @@ public getVat($locationId, $countryId, $startedAt = null):Plenty\Modules\Account
 
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_vat[Vat^]
 
@@ -1783,7 +1785,7 @@ public findVat($page = 1, $itemsPerPage = \Plenty\Modules\Accounting\Vat\Models\
 List VAT configurations
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1821,7 +1823,7 @@ public findVatByLocationId($locationId, $relations = [], $columns = []):array //
 List VAT configurations for an accounting location
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1855,7 +1857,7 @@ public findVatByLocationIdAndCountry($locationId, $countryId, $relations = [], $
 List VAT configuration for a country of delivery
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1893,7 +1895,7 @@ public getVatById($id):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
 Get a VAT configuration by id
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_vat[Vat^]
 
@@ -1920,7 +1922,7 @@ public createVat($data):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
 Create a VAT configuration
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_vat[Vat^]
 
@@ -1947,7 +1949,7 @@ public updateVat($id, $data):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
 Update a VAT configuration
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_vat[Vat^]
 
@@ -1978,7 +1980,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1996,7 +1998,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2014,7 +2016,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2041,7 +2043,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2059,7 +2061,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2077,19 +2079,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VatServiceContract
+==== VatServiceContract
 
 Provides methods for a quick search of VAT fields, VAT rates and VAT names of a specific VAT configuration.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Vat\Contracts`
 
@@ -2098,7 +2100,7 @@ Provides methods for a quick search of VAT fields, VAT rates and VAT names of a 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2112,7 +2114,7 @@ public getVatField($vat, $vatRate):int // <1>
 Get the VAT field for a VAT rate.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -2143,7 +2145,7 @@ public getVatRate($vat, $vatField):float // <1>
 Get the VAT rate for a VAT field.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/float[float^]
     
@@ -2174,7 +2176,7 @@ public getVatName($vat, $vatField):string // <1>
 Get the name of a VAT field.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2194,13 +2196,13 @@ a|`$vatField`
 
 
 [[accounting_vat_exceptions]]
-==  Exceptions
-=== VatException
+===  Exceptions
+==== VatException
 
 Class VatException
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Vat\Exceptions`
 
@@ -2209,13 +2211,13 @@ Class VatException
 
 
 [[accounting_vat_models]]
-==  Models
-=== Vat
+===  Models
+==== Vat
 
 The VAT model contains the complete VAT configuration in plentymarkets. The VAT configuration is based on 4 VAT rates. A VAT configuration always belongs to an accounting location. The accounting location is in a specified country and is assigned to a client. One accounting location can have several VAT configurations, but only one is active at a time. Which one is active depends on the startedAt date. This also means that only one VAT number is active per accounting location.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Vat\Models`
 
@@ -2278,7 +2280,7 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2294,12 +2296,12 @@ Returns this model as an array.
 
 
 
-=== VatRate
+==== VatRate
 
 The VAT rate model is always associated with a VAT configuration and contains the ID, name and percentage of a VAT rate. Each VAT configuration can have 4 rates.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Accounting\Vat\Models`
 
@@ -2323,7 +2325,7 @@ The VAT rate model is always associated with a VAT configuration and contains th
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

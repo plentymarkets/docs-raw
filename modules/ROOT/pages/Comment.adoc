@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[comment_comment]]
-= Comment
+== Comment
 
 [[comment_comment_contracts]]
-==  Contracts
-=== CommentRepositoryContract
+===  Contracts
+==== CommentRepositoryContract
 
 Get, create, update and delete comments.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Comment\Contracts`
 
@@ -21,7 +23,7 @@ Get, create, update and delete comments.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public getComment($commentId):Plenty\Modules\Comment\Models\Comment // <1>
 Get a comment
 
 
-==== Return type
+===== Return type
     
 <1> link:comment#comment_models_comment[Comment^]
 
@@ -62,7 +64,7 @@ public listComments():Illuminate\Support\Collection // <1>
 List comments
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_support_collection[Collection^]
 
@@ -80,7 +82,7 @@ public createComment($data, $suppressEvent = false):Plenty\Modules\Comment\Model
 Create a comment
 
 
-==== Return type
+===== Return type
     
 <1> link:comment#comment_models_comment[Comment^]
 
@@ -111,7 +113,7 @@ public deleteComment($commentId):void // <1>
 Delete a comment
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -138,7 +140,7 @@ public updateComment($data, $commentId):Plenty\Modules\Comment\Models\Comment //
 Update a comment
 
 
-==== Return type
+===== Return type
     
 <1> link:comment#comment_models_comment[Comment^]
 
@@ -169,7 +171,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -187,7 +189,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -205,7 +207,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -232,7 +234,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -250,7 +252,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -268,20 +270,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[comment_comment_models]]
-==  Models
-=== Comment
+===  Models
+==== Comment
 
 The comment model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Comment\Models`
 
@@ -325,7 +327,7 @@ The comment model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

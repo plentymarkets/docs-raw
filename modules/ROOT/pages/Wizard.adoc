@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[wizard_wizard]]
-= Wizard
+== Wizard
 
 [[wizard_wizard_contracts]]
-==  Contracts
-=== WizardActionHandler
+===  Contracts
+==== WizardActionHandler
 
 This interface provides a template for an action handler for Wizards
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Contracts`
 
@@ -21,12 +23,12 @@ This interface provides a template for an action handler for Wizards
 
 
 
-=== WizardContainerContract
+==== WizardContainerContract
 
 This interface provides methods to register, get and list all wizards.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Contracts`
 
@@ -35,7 +37,7 @@ This interface provides methods to register, get and list all wizards.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -49,7 +51,7 @@ public register($wizardKey, $wizard):void // <1>
 Register a wizard
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -80,7 +82,7 @@ public registerFolders($folderClass):void // <1>
 Register a wizard folder
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -107,7 +109,7 @@ public get($wizardKey, $skipTranslation = false):Plenty\Modules\Wizard\Models\Wi
 Get a single wizard by its key
 
 
-==== Return type
+===== Return type
     
 <1> link:wizard#wizard_models_wizard[Wizard^]
 
@@ -138,7 +140,7 @@ public all():array // <1>
 List all wizards class names
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -155,7 +157,7 @@ public folders($hierarchy = false):array // <1>
 List all wizard folders
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -170,12 +172,12 @@ a|`$hierarchy`
 
 
 
-=== WizardDataModifier
+==== WizardDataModifier
 
 This interface provides methods to modify wizard data.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Contracts`
 
@@ -184,7 +186,7 @@ This interface provides methods to modify wizard data.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -198,7 +200,7 @@ public modify($parameters):void // <1>
 Modify a wizard data for a step
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -214,12 +216,12 @@ a|`$parameters`
 
 
 
-=== WizardDataRepositoryContract
+==== WizardDataRepositoryContract
 
 This interface provides methods to create, get, list, update and delete wizard data
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Contracts`
 
@@ -228,7 +230,7 @@ This interface provides methods to create, get, list, update and delete wizard d
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -242,7 +244,7 @@ public create($wizardKey, $steps = []):void // <1>
 Creates a new WizardData.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -273,7 +275,7 @@ public createDataOption($wizardKey, $data = [], $optionId = &quot;default&quot;)
 Creates a new WizardData option
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -308,7 +310,7 @@ public get($wizardKey):void // <1>
 Get a single WizardData by its ID
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -335,7 +337,7 @@ public getByOptionId($wizardKey, $optionId = &quot;default&quot;):void // <1>
 Get a single WizardData for an option ID
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -366,7 +368,7 @@ public findByWizardKey($wizardKey):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -393,7 +395,7 @@ public list($page = 1, $itemsPerPage = 50, $filters = []):array // <1>
 List all WizardData for current plenty ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -427,7 +429,7 @@ public update($wizardKey, $properties):void // <1>
 Update data for a WizardData
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -458,7 +460,7 @@ public updateDataOption($wizardKey, $optionId, $data, $stepKey, $skipValidation 
 Update data for a WizardData option
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -501,7 +503,7 @@ public delete($wizardKey):void // <1>
 Delete a single WizardData by its ID
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -528,7 +530,7 @@ public deleteDataOption($wizardKey, $optionId):void // <1>
 Delete a single WizardData by its ID
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -559,7 +561,7 @@ public finalize($wizardKey, $optionId = &quot;default&quot;, $data = []):void //
 Finalize wizard
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -594,7 +596,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -612,7 +614,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -630,7 +632,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -657,7 +659,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -675,7 +677,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -693,19 +695,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== WizardDynamicLoader
+==== WizardDynamicLoader
 
 This interface provides methods to dynamically load data in the wizard ui.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Contracts`
 
@@ -714,12 +716,12 @@ This interface provides methods to dynamically load data in the wizard ui.
 
 
 
-=== WizardRepositoryContract
+==== WizardRepositoryContract
 
 This interface provides methods to get and list wizards.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Contracts`
 
@@ -728,12 +730,12 @@ This interface provides methods to get and list wizards.
 
 
 
-=== WizardSettingsHandler
+==== WizardSettingsHandler
 
 This interface provides methods to handle final wizard data.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Contracts`
 
@@ -742,7 +744,7 @@ This interface provides methods to handle final wizard data.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -756,7 +758,7 @@ public handle($parameters):bool // <1>
 Handle wizard data for a finalized wizard
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -771,13 +773,13 @@ a|`$parameters`
 
 
 [[wizard_wizard_models]]
-==  Models
-=== Wizard
+===  Models
+==== Wizard
 
 The wizard model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Models`
 
@@ -825,7 +827,7 @@ The wizard model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -841,12 +843,12 @@ Returns this model as an array.
 
 
 
-=== WizardData
+==== WizardData
 
 The wizard data model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Models`
 
@@ -876,7 +878,7 @@ The wizard data model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -892,12 +894,12 @@ Returns this model as an array.
 
 
 
-=== WizardFolder
+==== WizardFolder
 
 The wizard folder.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Models`
 
@@ -924,7 +926,7 @@ The wizard folder.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -940,12 +942,12 @@ Returns this model as an array.
 
 
 
-=== WizardFormOption
+==== WizardFormOption
 
 The wizard form option.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Models`
 
@@ -975,7 +977,7 @@ The wizard form option.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -991,12 +993,12 @@ Returns this model as an array.
 
 
 
-=== WizardSection
+==== WizardSection
 
 The wizard step section model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Models`
 
@@ -1020,7 +1022,7 @@ The wizard step section model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1036,12 +1038,12 @@ Returns this model as an array.
 
 
 
-=== WizardStep
+==== WizardStep
 
 The wizard step model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Models`
 
@@ -1071,7 +1073,7 @@ The wizard step model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1087,13 +1089,13 @@ Returns this model as an array.
 
 
 [[wizard_wizard_services]]
-==  Services
-=== WizardFolderProvider
+===  Services
+==== WizardFolderProvider
 
 Register a wizard folder.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Services`
 
@@ -1102,7 +1104,7 @@ Register a wizard folder.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1116,18 +1118,18 @@ public folders():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== WizardProvider
+==== WizardProvider
 
 Register a wizard.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Services`
 
@@ -1136,7 +1138,7 @@ Register a wizard.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1150,22 +1152,22 @@ public structure():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 [[wizard_services]]
-= Services
+== Services
 
 [[wizard_services_datasources]]
-==  DataSources
-=== BaseWizardDataSource
+===  DataSources
+==== BaseWizardDataSource
 
 Base data source for wizards
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Wizard\Services\DataSources`
 
@@ -1188,7 +1190,7 @@ Base data source for wizards
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1202,7 +1204,7 @@ public setWizardKey($wizardKey):void // <1>
 Sets the wizard key for this data source
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1229,7 +1231,7 @@ public getIdentifiers():array // <1>
 List of option identifiers
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1246,7 +1248,7 @@ public create($steps = []):array // <1>
 Create data
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1272,7 +1274,7 @@ public get():array // <1>
 Get data
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1289,7 +1291,7 @@ public update($properties = []):void // <1>
 Update data
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1316,7 +1318,7 @@ public delete():void // <1>
 Delete data
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1334,7 +1336,7 @@ public createDataOption($data = [], $optionId = &quot;default&quot;):array // <1
 Create data option
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1364,7 +1366,7 @@ public getByOptionId($optionId = &quot;default&quot;):array // <1>
 Get data option by its option ID
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1390,7 +1392,7 @@ public updateDataOption($optionId = &quot;default&quot;, $data = [], $stepKey = 
 Update data option
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1424,7 +1426,7 @@ public deleteDataOption($optionId):void // <1>
 Delete data option
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1451,7 +1453,7 @@ public finalize($optionId, $data = []):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 

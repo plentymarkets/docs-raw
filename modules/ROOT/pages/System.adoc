@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[system_system]]
-= System
+== System
 
 [[system_system_contracts]]
-==  Contracts
-=== SystemInformationRepositoryContract
+===  Contracts
+==== SystemInformationRepositoryContract
 
 Repository for SystemInformation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\System\Contracts`
 
@@ -21,7 +23,7 @@ Repository for SystemInformation
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public loadValue($key):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -51,12 +53,12 @@ a|`$key`
 
 
 
-=== WebstoreConfigurationRepositoryContract
+==== WebstoreConfigurationRepositoryContract
 
 Repository for Webstore Configuration
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\System\Contracts`
 
@@ -65,7 +67,7 @@ Repository for Webstore Configuration
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -79,7 +81,7 @@ public findByPlentyId($plentyId):Plenty\Modules\System\Models\WebstoreConfigurat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:system#system_models_webstoreconfiguration[WebstoreConfiguration^]
 
@@ -106,7 +108,7 @@ public findByWebstoreId($webstoreId):Plenty\Modules\System\Models\WebstoreConfig
 
 
 
-==== Return type
+===== Return type
     
 <1> link:system#system_models_webstoreconfiguration[WebstoreConfiguration^]
 
@@ -133,7 +135,7 @@ public updateByPlentyId($data, $plentyId):Plenty\Modules\System\Models\WebstoreC
 
 
 
-==== Return type
+===== Return type
     
 <1> link:system#system_models_webstoreconfiguration[WebstoreConfiguration^]
 
@@ -153,12 +155,12 @@ a|`$plentyId`
 
 
 
-=== WebstoreRepositoryContract
+==== WebstoreRepositoryContract
 
 Repository for Webstore
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\System\Contracts`
 
@@ -167,7 +169,7 @@ Repository for Webstore
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -181,7 +183,7 @@ public loadAll($columns = []):array // <1>
 Shows all webstores
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -207,7 +209,7 @@ public loadAllPreview():array // <1>
 Shows a preview of all webstores with id and name
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -224,7 +226,7 @@ public findByPlentyId($plentyId):Plenty\Modules\System\Models\Webstore // <1>
 Shows a specific webstore from type plentymarkets
 
 
-==== Return type
+===== Return type
     
 <1> link:system#system_models_webstore[Webstore^]
 
@@ -251,7 +253,7 @@ public findByStoreIdentifier($storeIdentifier):Plenty\Modules\System\Models\Webs
 Shows a specific webstore
 
 
-==== Return type
+===== Return type
     
 <1> link:system#system_models_webstore[Webstore^]
 
@@ -278,7 +280,7 @@ public findById($clientId):Plenty\Modules\System\Models\Webstore // <1>
 Shows a specific webstore
 
 
-==== Return type
+===== Return type
     
 <1> link:system#system_models_webstore[Webstore^]
 
@@ -294,13 +296,13 @@ a|`$clientId`
 
 
 [[system_system_models]]
-==  Models
-=== Webstore
+===  Models
+==== Webstore
 
 The webstore model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\System\Models`
 
@@ -342,7 +344,7 @@ The webstore model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -358,12 +360,12 @@ Returns this model as an array.
 
 
 
-=== WebstoreConfiguration
+==== WebstoreConfiguration
 
 The Webstore Configuration Model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\System\Models`
 
@@ -900,7 +902,7 @@ The Webstore Configuration Model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -916,16 +918,16 @@ Returns this model as an array.
 
 
 [[system_module]]
-= Module
+== Module
 
 [[system_module_contracts]]
-==  Contracts
-=== PlentyModuleRepositoryContract
+===  Contracts
+==== PlentyModuleRepositoryContract
 
 PlentyModuleRepositoryContract
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\System\Module\Contracts`
 
@@ -934,7 +936,7 @@ PlentyModuleRepositoryContract
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -948,7 +950,7 @@ public isActive($module):bool // <1>
 Returns whether or not a given module is active
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -974,7 +976,7 @@ public isHidden($module):bool // <1>
 Returns whether or not a given module is hidden
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1000,7 +1002,7 @@ public getQuantity($module):int // <1>
 Get the &#039;quantity&#039; attribute of the given module
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -1026,7 +1028,7 @@ public getValueForModule($module, $value):void // <1>
 Get any value for any module
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1046,16 +1048,16 @@ a|`$value`
 
 
 [[system_statistic]]
-= Statistic
+== Statistic
 
 [[system_statistic_models]]
-==  Models
-=== CloudMetrics
+===  Models
+==== CloudMetrics
 
 Represent cloud metrics for a specific day
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\System\Statistic\Models`
 
@@ -1154,7 +1156,7 @@ Represent cloud metrics for a specific day
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1170,12 +1172,12 @@ Returns this model as an array.
 
 
 
-=== CloudMetricsList
+==== CloudMetricsList
 
 Represent a list of cloud metrics objects
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\System\Statistic\Models`
 
@@ -1202,7 +1204,7 @@ Represent a list of cloud metrics objects
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[helper_automaticemail]]
-= AutomaticEmail
+== AutomaticEmail
 
 [[helper_automaticemail_contracts]]
-==  Contracts
-=== AutomaticEmailContract
+===  Contracts
+==== AutomaticEmailContract
 
 This service provides a method to initiate the automatic email delivery.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\AutomaticEmail\Contracts`
 
@@ -21,7 +23,7 @@ This service provides a method to initiate the automatic email delivery.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public sendAutomatic($email):bool // <1>
 Send the automatic email.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -51,13 +53,13 @@ a|`$email`
 
 
 [[helper_automaticemail_models]]
-==  Models
-=== AutomaticEmail
+===  Models
+==== AutomaticEmail
 
 A container with all needed data to initiate the automatic email delivery.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\AutomaticEmail\Models`
 
@@ -66,7 +68,7 @@ A container with all needed data to initiate the automatic email delivery.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -82,12 +84,12 @@ Returns this model as an array.
 
 
 
-=== AutomaticEmailContact
+==== AutomaticEmailContact
 
 The automatic email data for contact type emails.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\AutomaticEmail\Models`
 
@@ -96,7 +98,7 @@ The automatic email data for contact type emails.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -112,12 +114,12 @@ Returns this model as an array.
 
 
 
-=== AutomaticEmailData
+==== AutomaticEmailData
 
 The abstract base class for all automatic email data. Provides constants for the email type to be used.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\AutomaticEmail\Models`
 
@@ -126,7 +128,7 @@ The abstract base class for all automatic email data. Provides constants for the
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -142,12 +144,12 @@ Returns this model as an array.
 
 
 
-=== AutomaticEmailNewsletter
+==== AutomaticEmailNewsletter
 
 The automatic email data for newsletter type emails.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\AutomaticEmail\Models`
 
@@ -156,7 +158,7 @@ The automatic email data for newsletter type emails.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -172,12 +174,12 @@ Returns this model as an array.
 
 
 
-=== AutomaticEmailOrder
+==== AutomaticEmailOrder
 
 The automatic email data for order type emails.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\AutomaticEmail\Models`
 
@@ -186,7 +188,7 @@ The automatic email data for order type emails.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -202,12 +204,12 @@ Returns this model as an array.
 
 
 
-=== AutomaticEmailTemplate
+==== AutomaticEmailTemplate
 
 Provides constants for the automatic email template names.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\AutomaticEmail\Models`
 
@@ -216,7 +218,7 @@ Provides constants for the automatic email template names.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -232,16 +234,16 @@ Returns this model as an array.
 
 
 [[helper_helper]]
-= Helper
+== Helper
 
 [[helper_helper_configuration]]
-==  Configuration
-=== GetApiCallLimits
+===  Configuration
+==== GetApiCallLimits
 
 GetApiCallLimits reads the values for the API call limits from the config and returns them as an array.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\Configuration`
 
@@ -250,7 +252,7 @@ GetApiCallLimits reads the values for the API call limits from the config and re
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -264,19 +266,19 @@ public get():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 [[helper_helper_contracts]]
-==  Contracts
-=== UrlBuilderRepositoryContract
+===  Contracts
+==== UrlBuilderRepositoryContract
 
 Repository Contract for UrlBuilder
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\Contracts`
 
@@ -285,7 +287,7 @@ Repository Contract for UrlBuilder
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -299,7 +301,7 @@ public getImageUrl($path, $plentyId = null, $size = &quot;&quot;, $fileType = &q
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -341,7 +343,7 @@ public getItemUrl($itemId, $plentyId, $urlContent = &quot;&quot;, $lang = &quot;
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -372,13 +374,13 @@ a|`$useHttpsDomain`
 
 
 [[helper_helper_exceptions]]
-==  Exceptions
-=== EncryptionException
+===  Exceptions
+==== EncryptionException
 
 Class EncryptionException
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\Exceptions`
 
@@ -387,7 +389,7 @@ Class EncryptionException
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -401,7 +403,7 @@ public __construct($message, $code):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -421,13 +423,13 @@ a|`$code`
 
 
 [[helper_helper_models]]
-==  Models
-=== KeyValue
+===  Models
+==== KeyValue
 
 key value data
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\Models`
 
@@ -436,7 +438,7 @@ key value data
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -450,7 +452,7 @@ public get($key, $default = null):mixed // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/mixed[mixed^]
     
@@ -470,13 +472,13 @@ a|`$default`
 
 
 [[helper_helper_services]]
-==  Services
-=== ArrayHelper
+===  Services
+==== ArrayHelper
 
 helper class for arrays
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\Services`
 
@@ -485,7 +487,7 @@ helper class for arrays
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -499,7 +501,7 @@ public buildMapFromObjectList($list, $keyField, $valueField):Plenty\Modules\Help
 
 
 
-==== Return type
+===== Return type
     
 <1> link:helper#helper_models_keyvalue[KeyValue^]
 
@@ -524,12 +526,12 @@ a|`$valueField`
 
 
 
-=== StringEncodingService
+==== StringEncodingService
 
 Service for encoding strings
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\Services`
 
@@ -538,7 +540,7 @@ Service for encoding strings
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -552,7 +554,7 @@ public toDatabase($sString):string // <1>
 Method converts a string to self::DATABASE_ENCODING coding
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -578,7 +580,7 @@ public toEmail($sString):string // <1>
 Method converts a string to self::EMAIL_ENCODING coding
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -604,7 +606,7 @@ public toWebshop($sString, $sTargetEncoding = self::WEBSHOP_ENCODING):string // 
 Method converts a string to self::WEBSHOP_ENCODING coding
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -634,7 +636,7 @@ public toAdmin($sString, $sTargetEncoding = self::ADMIN_ENCODING):string // <1>
 Method converts a string to the sended coding. Default will be self::ADMIN_ENCODING coding used
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -664,7 +666,7 @@ public toGwt($sString):string // <1>
 Method converts a string to the sended coding
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -690,7 +692,7 @@ public toExport($sString, $sTargetEncoding = self::EXPORT_ENCODING):string // <1
 Method converts a string to the sended coding. Default will be self::EXPORT_ENCODING coding used
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -720,7 +722,7 @@ public toLegacy($sString):string // <1>
 Method converts a string to self::LEGACY_ENCODING coding
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -746,7 +748,7 @@ public toPDF($sString, $sTargetEncoding = self::PDF_ENCODING):string // <1>
 Method converts a string to self::PDF_ENCODING coding
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -776,7 +778,7 @@ public toXML($string, $targetEncoding = self::XML_ENCODING):string // <1>
 Method converts a string to self::XML_ENCODING coding.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -806,7 +808,7 @@ public detect_encoding($sString):string // <1>
 Method returns the encoding of one string
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -832,7 +834,7 @@ public convertArray($array, $sTargetEncoding = self::UTF8_ENCODING, $convertKey 
 Method converts a multidimensional array to the desired coding
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -866,7 +868,7 @@ public cutTextForDB($text, $lenghtIntoDB):string // <1>
 cut the given text to fit for db insert.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -896,7 +898,7 @@ public isValidUtf8($string):int // <1>
 Checks whether the given string is valid utf-8.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -911,12 +913,12 @@ a|`$string`
 
 
 
-=== WebstoreHelper
+==== WebstoreHelper
 
 Webstore Helper Service
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Helper\Services`
 
@@ -925,7 +927,7 @@ Webstore Helper Service
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -939,7 +941,7 @@ public getCurrentWebstoreConfiguration():Plenty\Modules\System\Models\WebstoreCo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:system#system_models_webstoreconfiguration[WebstoreConfiguration^]
 

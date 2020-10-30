@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[shopbuilder_shopbuilder]]
-= ShopBuilder
+== ShopBuilder
 
 [[shopbuilder_shopbuilder_contracts]]
-==  Contracts
-=== ContentLinkRepositoryContract
+===  Contracts
+==== ContentLinkRepositoryContract
 
 Get, create, delete and update links between shop builder contents and layout containers.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -21,7 +23,7 @@ Get, create, delete and update links between shop builder contents and layout co
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public getContentLinks($pluginSetId):array // <1>
 Get all linked contents for a plugin set
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -61,7 +63,7 @@ public getContentLink($contentLinkId):Plenty\Modules\ShopBuilder\Models\ContentL
 Get a single connection between a content and a layout container
 
 
-==== Return type
+===== Return type
     
 <1> link:shopbuilder#shopbuilder_models_contentlink[ContentLink^]
 
@@ -88,7 +90,7 @@ public createContentLink($data):Plenty\Modules\ShopBuilder\Models\ContentLink //
 Link a content to a layout container
 
 
-==== Return type
+===== Return type
     
 <1> link:shopbuilder#shopbuilder_models_contentlink[ContentLink^]
 
@@ -116,7 +118,7 @@ public updateContentLink($contentLinkId, $data):Plenty\Modules\ShopBuilder\Model
 Update a link between a content and a layout container
 
 
-==== Return type
+===== Return type
     
 <1> link:shopbuilder#shopbuilder_models_contentlink[ContentLink^]
 
@@ -147,7 +149,7 @@ public deleteContentLink($contentLinkId):void // <1>
 Unlink a content from a layout container. The content itself will remain
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -174,7 +176,7 @@ public getContentLinksForContainer($containerName, $pluginSetId = null, $lang = 
 Get all content links for a specific layout container.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -206,12 +208,12 @@ a|`$filterResults`
 
 
 
-=== ContentPreset
+==== ContentPreset
 
 Contract for content presets
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -220,7 +222,7 @@ Contract for content presets
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -234,19 +236,19 @@ public getWidgets():void // <1>
 Get the widget configurations of the presets to be assigned to the created content.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== ContentRepositoryContract
+==== ContentRepositoryContract
 
 Get, create, delete und update shop builder contents.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -255,7 +257,7 @@ Get, create, delete und update shop builder contents.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -269,7 +271,7 @@ public getContents():array // <1>
 Get all contents to be edited in the shop builder.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -286,7 +288,7 @@ public searchContents($itemsPerPage = 20, $page = 1, $params = []):Plenty\Reposi
 Search for contents
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -321,7 +323,7 @@ public getContent($contentId, $pluginSetId, $frontendLanguage = null, $versionId
 Get a single content.
 
 
-==== Return type
+===== Return type
     
 <1> link:shopbuilder#shopbuilder_models_content[Content^]
 
@@ -360,7 +362,7 @@ public listContentVersions($contentId, $itemsPerPage = 20, $versionIdMarker = &q
 Get a list of Versions of the specified content.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -395,7 +397,7 @@ public restoreContentVersion($contentId, $versionId, $pluginSetId, $frontendLang
 Restore a specific content version
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -435,7 +437,7 @@ public createContent($pluginSetId, $data, $frontendLanguage = null):Plenty\Modul
 Create new content. New content will not be linked to any layout container.
 
 
-==== Return type
+===== Return type
     
 <1> link:shopbuilder#shopbuilder_models_content[Content^]
 
@@ -471,7 +473,7 @@ public updateContent($pluginSetId, $contentId, $data, $frontendLanguage = null):
 Update content.
 
 
-==== Return type
+===== Return type
     
 <1> link:shopbuilder#shopbuilder_models_content[Content^]
 
@@ -511,7 +513,7 @@ public deleteContent($pluginSetId, $contentId):void // <1>
 Delete content. Any connections to layout containers will be removed too.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -542,7 +544,7 @@ public duplicateContent($contentId, $targetPluginSetId, $language, $containerNam
 Duplicate a content and its link
 
 
-==== Return type
+===== Return type
     
 <1> link:shopbuilder#shopbuilder_models_content[Content^]
 
@@ -585,7 +587,7 @@ public rebuildContents($containerName = null, $pluginSetId = null):int // <1>
 Rebuild all contents linked to the current plugin set.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -604,12 +606,12 @@ a|`$pluginSetId`
 
 
 
-=== ContentWidgetRepositoryContract
+==== ContentWidgetRepositoryContract
 
 Register shop builder widgets.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -618,7 +620,7 @@ Register shop builder widgets.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -632,7 +634,7 @@ public registerWidget($widgetClass):void // <1>
 Register a widget to be available in the shop builder.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -659,7 +661,7 @@ public overrideWidget($widgetIdentifier, $overrideWidget):void // <1>
 Override a widget class to extend data or settings of the widget.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -679,12 +681,12 @@ a|`$overrideWidget`
 
 
 
-=== DynamicWidget
+==== DynamicWidget
 
 Contract for widgets with dynamic settings
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -693,7 +695,7 @@ Contract for widgets with dynamic settings
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -713,7 +715,7 @@ Get basic information about the widget. Possible fields are
 - position
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -730,7 +732,7 @@ public getSettings():array // <1>
 Return the structure of the settings for the widget
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -747,7 +749,7 @@ public getPreview($widgetSettings = [], $children = []):string // <1>
 Get the html representation of the widget
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -777,7 +779,7 @@ public render($widgetSettings = [], $children = []):string // <1>
 Render the widget
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -796,12 +798,12 @@ a|`$children`
 
 
 
-=== GlobalSettingsHandler
+==== GlobalSettingsHandler
 
 Contract for classes handling global settings for the ShopBuilder.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -810,7 +812,7 @@ Contract for classes handling global settings for the ShopBuilder.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -824,7 +826,7 @@ public readSettings():void // <1>
 Read values of global settings.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -842,7 +844,7 @@ public writeSettings($values):void // <1>
 Store values of global settings.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -859,12 +861,12 @@ a|`$values`
 
 
 
-=== Widget
+==== Widget
 
 Contract for content widgets
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -873,7 +875,7 @@ Contract for content widgets
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -887,7 +889,7 @@ public getPreview($widgetSettings = [], $children = []):string // <1>
 Get the html representation of the widget
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -917,7 +919,7 @@ public render($widgetSettings = [], $children = []):string // <1>
 Render the widget
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -936,13 +938,13 @@ a|`$children`
 
 
 [[shopbuilder_shopbuilder_helper]]
-==  Helper
-=== MappableSettingsHandler
+===  Helper
+==== MappableSettingsHandler
 
 Helper to map global configurations to plugin configs.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Helper`
 
@@ -951,12 +953,12 @@ Helper to map global configurations to plugin configs.
 
 
 
-=== ShopBuilderRequest
+==== ShopBuilderRequest
 
 Get information about the current request made from the shop builder preview.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Helper`
 
@@ -965,7 +967,7 @@ Get information about the current request made from the shop builder preview.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -979,7 +981,7 @@ public isShopBuilder():bool // <1>
 Determine if the current request is made from the shop builder preview or while rendering a widget via REST.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -996,7 +998,7 @@ public getPreviewContentType():string // <1>
 Get the type of the previewed shop builder content.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1014,7 +1016,7 @@ Get uri of the current preview. This might be used when rendering widgets via RE
 to know the context where the widget will be placed into after rendering.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1032,7 +1034,7 @@ public getMainContentType():string // <1>
 Get the content type of the currently displayed main content.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1050,7 +1052,7 @@ Set the type of the currently displayed item content
 This will be used to determine the corresponding header/footer contents which are linked to a specific type.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1086,7 +1088,7 @@ public getMainContainerName():string // <1>
 Get the container name where the main content will be loaded into.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1103,7 +1105,7 @@ public setMainContainerName($mainContainerName):void // <1>
 Set the container name where the main content will be loaded into.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1130,7 +1132,7 @@ public setMainCategory($mainCategory):void // <1>
 Set the id of the currently displayed category.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1147,13 +1149,13 @@ a|`$mainCategory`
 
 
 [[shopbuilder_shopbuilder_models]]
-==  Models
-=== Content
+===  Models
+==== Content
 
 Content created by the shop builder. May be linked to layout containers.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Models`
 
@@ -1196,7 +1198,7 @@ Content created by the shop builder. May be linked to layout containers.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1212,12 +1214,12 @@ Returns this model as an array.
 
 
 
-=== ContentLink
+==== ContentLink
 
 Links a content from the shop builder to a layout container of the frontend plugin.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Models`
 
@@ -1271,7 +1273,7 @@ Links a content from the shop builder to a layout container of the frontend plug
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1287,12 +1289,12 @@ Returns this model as an array.
 
 
 
-=== ContentPage
+==== ContentPage
 
 A content page provided by a frontend plugin.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Models`
 
@@ -1316,7 +1318,7 @@ A content page provided by a frontend plugin.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1332,12 +1334,12 @@ Returns this model as an array.
 
 
 
-=== ContentPageDropzone
+==== ContentPageDropzone
 
 Layout container of a content page where to display link contents generated by the shop builder.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Models`
 
@@ -1358,7 +1360,7 @@ Layout container of a content page where to display link contents generated by t
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1374,12 +1376,12 @@ Returns this model as an array.
 
 
 
-=== ContentWidget
+==== ContentWidget
 
 Content widget provided by a frontend plugin
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Models`
 
@@ -1425,7 +1427,7 @@ Content widget provided by a frontend plugin
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1441,12 +1443,12 @@ Returns this model as an array.
 
 
 
-=== ContentWidgetPreview
+==== ContentWidgetPreview
 
 The rendered preview of a content widget
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Models`
 
@@ -1467,7 +1469,7 @@ The rendered preview of a content widget
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1483,13 +1485,13 @@ Returns this model as an array.
 
 
 [[shopbuilder_shopbuilder_providers]]
-==  Providers
-=== DataFieldProvider
+===  Providers
+==== DataFieldProvider
 
 Base class for data field providers.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ShopBuilder\Providers`
 
@@ -1498,7 +1500,7 @@ Base class for data field providers.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1512,7 +1514,7 @@ public register():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1530,7 +1532,7 @@ public addField($identifier, $label, $expression):void // <1>
 Register a new data field.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1565,7 +1567,7 @@ public addChildProvider($label, $childProviderClass, $params = []):void // <1>
 Register a nested provider containing a list of child data fields.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1600,7 +1602,7 @@ public addSearchKeywords($identifier, $keywords = []):void // <1>
 Assign keywords to a field to be respected during search.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 

@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[market_credentials]]
-= Credentials
+== Credentials
 
 [[market_credentials_contracts]]
-==  Contracts
-=== CredentialsRepositoryContract
+===  Contracts
+==== CredentialsRepositoryContract
 
 The contract for the fitment repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Credentials\Contracts`
 
@@ -21,7 +23,7 @@ The contract for the fitment repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public get($id):Plenty\Modules\Market\Credentials\Models\Credentials // <1>
 Get credentials
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_credentials[Credentials^]
 
@@ -62,7 +64,7 @@ public create($data):Plenty\Modules\Market\Credentials\Models\Credentials // <1>
 Create credentials
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_credentials[Credentials^]
 
@@ -89,7 +91,7 @@ public update($id, $data):Plenty\Modules\Market\Credentials\Models\Credentials /
 Update credentials
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_credentials[Credentials^]
 
@@ -120,7 +122,7 @@ public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
 Delete credentials
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
@@ -147,7 +149,7 @@ public all($filters = []):array // <1>
 List all credentials
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -173,7 +175,7 @@ public search($filters = [], $page, $itemsPerPage = \Plenty\Modules\Market\Crede
 List credentials
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -208,7 +210,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -226,7 +228,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -244,7 +246,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -271,7 +273,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -289,7 +291,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -307,20 +309,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[market_credentials_models]]
-==  Models
-=== Credentials
+===  Models
+==== Credentials
 
 The credentials model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Credentials\Models`
 
@@ -358,7 +360,7 @@ The credentials model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -374,16 +376,16 @@ Returns this model as an array.
 
 
 [[market_accountpolicy]]
-= AccountPolicy
+== AccountPolicy
 
 [[market_accountpolicy_contracts]]
-==  Contracts
-=== FulfillmentPolicyRepositoryContract
+===  Contracts
+==== FulfillmentPolicyRepositoryContract
 
 The contract for the eBay fulfillment policy repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Contracts`
 
@@ -392,7 +394,7 @@ The contract for the eBay fulfillment policy repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -406,7 +408,7 @@ public get($id, $filters = []):Plenty\Modules\Market\Ebay\AccountPolicy\Models\F
 Get a stored fulfillment policy based on ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
@@ -426,12 +428,12 @@ a|`$filters`
 
 
 
-=== PaymentPolicyRepositoryContract
+==== PaymentPolicyRepositoryContract
 
 The contract for the eBay payment policy repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Contracts`
 
@@ -440,7 +442,7 @@ The contract for the eBay payment policy repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -454,7 +456,7 @@ public get($id, $filters = []):Plenty\Modules\Market\Ebay\AccountPolicy\Models\P
 Get a stored payment policy based on ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_paymentpolicy[PaymentPolicy^]
 
@@ -474,12 +476,12 @@ a|`$filters`
 
 
 
-=== ReturnPolicyRepositoryContract
+==== ReturnPolicyRepositoryContract
 
 The contract for the eBay return policy repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Contracts`
 
@@ -488,7 +490,7 @@ The contract for the eBay return policy repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -502,7 +504,7 @@ public get($id, $filters = []):Plenty\Modules\Market\Ebay\AccountPolicy\Models\R
 Get a stored return policy based on ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_returnpolicy[ReturnPolicy^]
 
@@ -522,13 +524,13 @@ a|`$filters`
 
 
 [[market_accountpolicy_events]]
-==  Events
-=== FulfillmentPolicyCreated
+===  Events
+==== FulfillmentPolicyCreated
 
 An event class fired after a new fulfillment policy is created.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Events`
 
@@ -537,7 +539,7 @@ An event class fired after a new fulfillment policy is created.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -551,7 +553,7 @@ public __construct($fulfillmentPolicy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -579,19 +581,19 @@ public getFulfillmentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\Fu
 Get the FulfillmentPolicy instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
     
 
 
-=== FulfillmentPolicyDeleted
+==== FulfillmentPolicyDeleted
 
 An event class fired after a new fulfillment policy is deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Events`
 
@@ -600,7 +602,7 @@ An event class fired after a new fulfillment policy is deleted.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -614,7 +616,7 @@ public __construct($fulfillmentPolicy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -642,19 +644,19 @@ public getFulfillmentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\Fu
 Get the FulfillmentPolicy instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
     
 
 
-=== FulfillmentPolicyEvent
+==== FulfillmentPolicyEvent
 
 A base event class for all fulfillment policy events. Each fulfillment policy events expects an FulfillmentPolicy model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Events`
 
@@ -663,7 +665,7 @@ A base event class for all fulfillment policy events. Each fulfillment policy ev
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -677,7 +679,7 @@ public __construct($fulfillmentPolicy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -705,19 +707,19 @@ public getFulfillmentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\Fu
 Get the FulfillmentPolicy instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
     
 
 
-=== FulfillmentPolicyUpdated
+==== FulfillmentPolicyUpdated
 
 An event class fired after a new fulfillment policy is updated.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Events`
 
@@ -726,7 +728,7 @@ An event class fired after a new fulfillment policy is updated.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -740,7 +742,7 @@ public __construct($fulfillmentPolicy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -768,19 +770,19 @@ public getFulfillmentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\Fu
 Get the FulfillmentPolicy instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
     
 
 
-=== PaymentPolicyCreated
+==== PaymentPolicyCreated
 
 An event class fired after a new payment policy is created.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Events`
 
@@ -789,7 +791,7 @@ An event class fired after a new payment policy is created.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -803,7 +805,7 @@ public __construct($paymentPolicy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -831,19 +833,19 @@ public getPaymentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\Paymen
 Get the PaymentPolicy instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_paymentpolicy[PaymentPolicy^]
 
     
 
 
-=== PaymentPolicyDeleted
+==== PaymentPolicyDeleted
 
 An event class fired after a new payment policy is deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Events`
 
@@ -852,7 +854,7 @@ An event class fired after a new payment policy is deleted.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -866,7 +868,7 @@ public __construct($paymentPolicy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -894,19 +896,19 @@ public getPaymentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\Paymen
 Get the PaymentPolicy instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_paymentpolicy[PaymentPolicy^]
 
     
 
 
-=== PaymentPolicyEvent
+==== PaymentPolicyEvent
 
 A base event class for all payment policy events. Each payment policy events expects an PaymentPolicy model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Events`
 
@@ -915,7 +917,7 @@ A base event class for all payment policy events. Each payment policy events exp
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -929,7 +931,7 @@ public __construct($paymentPolicy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -957,19 +959,19 @@ public getPaymentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\Paymen
 Get the PaymentPolicy instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_paymentpolicy[PaymentPolicy^]
 
     
 
 
-=== PaymentPolicyUpdated
+==== PaymentPolicyUpdated
 
 An event class fired after a new payment policy is updated.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Events`
 
@@ -978,7 +980,7 @@ An event class fired after a new payment policy is updated.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -992,7 +994,7 @@ public __construct($paymentPolicy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1020,19 +1022,19 @@ public getPaymentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\Paymen
 Get the PaymentPolicy instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_paymentpolicy[PaymentPolicy^]
 
     
 
 
-=== ReturnPolicyCreated
+==== ReturnPolicyCreated
 
 An event class fired after a new return policy is created.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Events`
 
@@ -1041,7 +1043,7 @@ An event class fired after a new return policy is created.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1055,7 +1057,7 @@ public __construct($returnPolicy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1083,19 +1085,19 @@ public getReturnPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\ReturnP
 Get the ReturnPolicy instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_returnpolicy[ReturnPolicy^]
 
     
 
 
-=== ReturnPolicyDeleted
+==== ReturnPolicyDeleted
 
 An event class fired after a new return policy is deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Events`
 
@@ -1104,7 +1106,7 @@ An event class fired after a new return policy is deleted.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1118,7 +1120,7 @@ public __construct($returnPolicy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1146,19 +1148,19 @@ public getReturnPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\ReturnP
 Get the ReturnPolicy instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_returnpolicy[ReturnPolicy^]
 
     
 
 
-=== ReturnPolicyEvent
+==== ReturnPolicyEvent
 
 A base event class for all return policy events. Each return policy events expects an ReturnPolicy model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Events`
 
@@ -1167,7 +1169,7 @@ A base event class for all return policy events. Each return policy events expec
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1181,7 +1183,7 @@ public __construct($returnPolicy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1209,19 +1211,19 @@ public getReturnPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\ReturnP
 Get the ReturnPolicy instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_returnpolicy[ReturnPolicy^]
 
     
 
 
-=== ReturnPolicyUpdated
+==== ReturnPolicyUpdated
 
 An event class fired after a new return policy is updated.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Events`
 
@@ -1230,7 +1232,7 @@ An event class fired after a new return policy is updated.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1244,7 +1246,7 @@ public __construct($returnPolicy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1272,20 +1274,20 @@ public getReturnPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\ReturnP
 Get the ReturnPolicy instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_returnpolicy[ReturnPolicy^]
 
     
 
 [[market_accountpolicy_models]]
-==  Models
-=== AmountType
+===  Models
+==== AmountType
 
 The eBay amount type model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Models`
 
@@ -1306,7 +1308,7 @@ The eBay amount type model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1322,12 +1324,12 @@ Returns this model as an array.
 
 
 
-=== CategoryType
+==== CategoryType
 
 The eBay category type model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Models`
 
@@ -1348,7 +1350,7 @@ The eBay category type model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1364,12 +1366,12 @@ Returns this model as an array.
 
 
 
-=== Deposit
+==== Deposit
 
 The eBay deposit model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Models`
 
@@ -1396,7 +1398,7 @@ The eBay deposit model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1412,12 +1414,12 @@ Returns this model as an array.
 
 
 
-=== FulfillmentPolicy
+==== FulfillmentPolicy
 
 The eBay fulfillment policy model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Models`
 
@@ -1470,7 +1472,7 @@ The eBay fulfillment policy model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1486,12 +1488,12 @@ Returns this model as an array.
 
 
 
-=== PaymentMethod
+==== PaymentMethod
 
 The eBay payment method model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Models`
 
@@ -1516,7 +1518,7 @@ The eBay payment method model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1532,12 +1534,12 @@ Returns this model as an array.
 
 
 
-=== PaymentPolicy
+==== PaymentPolicy
 
 The eBay payment policy model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Models`
 
@@ -1585,7 +1587,7 @@ The eBay payment policy model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1601,12 +1603,12 @@ Returns this model as an array.
 
 
 
-=== RecipientAccountReference
+==== RecipientAccountReference
 
 The eBay recipient account reference model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Models`
 
@@ -1627,7 +1629,7 @@ The eBay recipient account reference model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1643,12 +1645,12 @@ Returns this model as an array.
 
 
 
-=== Region
+==== Region
 
 The eBay region model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Models`
 
@@ -1669,7 +1671,7 @@ The eBay region model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1685,12 +1687,12 @@ Returns this model as an array.
 
 
 
-=== RegionSet
+==== RegionSet
 
 The eBay region set model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Models`
 
@@ -1711,7 +1713,7 @@ The eBay region set model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1727,12 +1729,12 @@ Returns this model as an array.
 
 
 
-=== ReturnPolicy
+==== ReturnPolicy
 
 The eBay return policy model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Models`
 
@@ -1787,7 +1789,7 @@ The eBay return policy model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1803,12 +1805,12 @@ Returns this model as an array.
 
 
 
-=== ShippingOption
+==== ShippingOption
 
 The eBay shipping option model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Models`
 
@@ -1846,7 +1848,7 @@ The eBay shipping option model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1862,12 +1864,12 @@ Returns this model as an array.
 
 
 
-=== ShippingService
+==== ShippingService
 
 The eBay shipping service model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Models`
 
@@ -1920,7 +1922,7 @@ The eBay shipping service model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1936,12 +1938,12 @@ Returns this model as an array.
 
 
 
-=== TimeDuration
+==== TimeDuration
 
 The eBay time duration model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\AccountPolicy\Models`
 
@@ -1962,7 +1964,7 @@ The eBay time duration model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1978,16 +1980,16 @@ Returns this model as an array.
 
 
 [[market_api]]
-= Api
+== Api
 
 [[market_api_exceptions]]
-==  Exceptions
-=== InvalidEndPointException
+===  Exceptions
+==== InvalidEndPointException
 
 InvalidEndPointException.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Exceptions`
 
@@ -1996,7 +1998,7 @@ InvalidEndPointException.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2010,7 +2012,7 @@ public getMessage():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2028,7 +2030,7 @@ public getCode():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2046,7 +2048,7 @@ public getFile():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2064,7 +2066,7 @@ public getLine():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2082,7 +2084,7 @@ public getTrace():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2100,7 +2102,7 @@ public getPrevious():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2118,19 +2120,19 @@ public getTraceAsString():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== InvalidPropertyTypeException
+==== InvalidPropertyTypeException
 
 InvalidPropertyTypeException.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Exceptions`
 
@@ -2139,7 +2141,7 @@ InvalidPropertyTypeException.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2153,7 +2155,7 @@ public getMessage():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2171,7 +2173,7 @@ public getCode():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2189,7 +2191,7 @@ public getFile():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2207,7 +2209,7 @@ public getLine():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2225,7 +2227,7 @@ public getTrace():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2243,7 +2245,7 @@ public getPrevious():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2261,19 +2263,19 @@ public getTraceAsString():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== UnknownPropertyException
+==== UnknownPropertyException
 
 InvalidPropertyTypeException.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Exceptions`
 
@@ -2282,7 +2284,7 @@ InvalidPropertyTypeException.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2296,7 +2298,7 @@ public getMessage():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2314,7 +2316,7 @@ public getCode():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2332,7 +2334,7 @@ public getFile():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2350,7 +2352,7 @@ public getLine():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2368,7 +2370,7 @@ public getTrace():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2386,7 +2388,7 @@ public getPrevious():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2404,20 +2406,20 @@ public getTraceAsString():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[market_api_services]]
-==  Services
-=== BaseRestService
+===  Services
+==== BaseRestService
 
 The service for making eBay REST calls.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Services`
 
@@ -2426,7 +2428,7 @@ The service for making eBay REST calls.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2440,7 +2442,7 @@ public __construct($config):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2467,7 +2469,7 @@ public static getConfigDefinitions():array // <1>
 Returns definitions for each configuration option that is supported.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2484,7 +2486,7 @@ public getConfig($option = null, $default = null):void // <1>
 Method to get the service&#039;s configuration.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2516,7 +2518,7 @@ public callOperation($name, $request = null):Plenty\Modules\Market\Ebay\Api\Type
 Build API request and send.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_types_basetype[BaseType^]
 
@@ -2548,18 +2550,18 @@ public getEbayHeaders():array // <1>
 Derived classes must implement this method that will build the needed eBay http headers.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== BaseWsdlService
+==== BaseWsdlService
 
 The service for making eBay WSDL calls.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Services`
 
@@ -2568,7 +2570,7 @@ The service for making eBay WSDL calls.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2582,7 +2584,7 @@ public __construct($config):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2609,7 +2611,7 @@ public static getConfigDefinitions():array // <1>
 Returns definitions for each configuration option that is supported.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2626,7 +2628,7 @@ public getConfig($option = null, $default = null):void // <1>
 Method to get the service&#039;s configuration.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2658,7 +2660,7 @@ public callOperation($name, $request, $responseClass):Plenty\Modules\Market\Ebay
 Build API request and send.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_types_basetype[BaseType^]
 
@@ -2694,7 +2696,7 @@ public getEbayHeaders($operationName):array // <1>
 Derived classes must implement this method that will build the needed eBay http headers.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2709,13 +2711,13 @@ a|`$operationName`
 
 
 [[market_api_types]]
-==  Types
-=== Base64BinaryType
+===  Types
+==== Base64BinaryType
 
 The service for eBay Base64BinaryType.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
 
@@ -2742,7 +2744,7 @@ The service for eBay Base64BinaryType.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2756,7 +2758,7 @@ public __construct($values = []):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2783,7 +2785,7 @@ public static getParentValues($properties, $values):array // <1>
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2813,7 +2815,7 @@ public __get($name):void // <1>
 PHP magic function that is called when getting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2840,7 +2842,7 @@ public __set($name, $value):void // <1>
 PHP magic function that is called when setting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2872,7 +2874,7 @@ public __isset($name):bool // <1>
 PHP magic function that is called to determine if a property is set.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2898,7 +2900,7 @@ public __unset($name):void // <1>
 PHP magic function that is called to unset a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2925,7 +2927,7 @@ public toRequestXml():string // <1>
 Converts the object to a XML request string.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2942,7 +2944,7 @@ public elementMeta($elementName):void // <1>
 Returns the meta data for a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2969,7 +2971,7 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3001,7 +3003,7 @@ public hasAttachment():bool // <1>
 Helper method to check if an object has an attachment.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3018,7 +3020,7 @@ public toArray():array // <1>
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3035,7 +3037,7 @@ public search($expression):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3062,7 +3064,7 @@ public setValues($class, $values = []):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3082,12 +3084,12 @@ a|`$values`
 
 
 
-=== BaseType
+==== BaseType
 
 The service for base type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
 
@@ -3114,7 +3116,7 @@ The service for base type.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3128,7 +3130,7 @@ public __construct($values = []):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3155,7 +3157,7 @@ public __get($name):void // <1>
 PHP magic function that is called when getting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3182,7 +3184,7 @@ public __set($name, $value):void // <1>
 PHP magic function that is called when setting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3214,7 +3216,7 @@ public __isset($name):bool // <1>
 PHP magic function that is called to determine if a property is set.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3240,7 +3242,7 @@ public __unset($name):void // <1>
 PHP magic function that is called to unset a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3267,7 +3269,7 @@ public toRequestXml():string // <1>
 Converts the object to a XML request string.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -3284,7 +3286,7 @@ public elementMeta($elementName):void // <1>
 Returns the meta data for a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3311,7 +3313,7 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3343,7 +3345,7 @@ public hasAttachment():bool // <1>
 Helper method to check if an object has an attachment.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3360,7 +3362,7 @@ public toArray():array // <1>
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3377,7 +3379,7 @@ public search($expression):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3404,7 +3406,7 @@ public setValues($class, $values = []):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3435,7 +3437,7 @@ public static getParentValues($properties, $values):array // <1>
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3454,12 +3456,12 @@ a|`$values`
 
 
 
-=== BooleanType
+==== BooleanType
 
 The service for boolean type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
 
@@ -3486,7 +3488,7 @@ The service for boolean type.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3500,7 +3502,7 @@ public __construct($values = []):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3527,7 +3529,7 @@ public static getParentValues($properties, $values):array // <1>
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3557,7 +3559,7 @@ public __get($name):void // <1>
 PHP magic function that is called when getting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3584,7 +3586,7 @@ public __set($name, $value):void // <1>
 PHP magic function that is called when setting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3616,7 +3618,7 @@ public __isset($name):bool // <1>
 PHP magic function that is called to determine if a property is set.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3642,7 +3644,7 @@ public __unset($name):void // <1>
 PHP magic function that is called to unset a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3669,7 +3671,7 @@ public toRequestXml():string // <1>
 Converts the object to a XML request string.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -3686,7 +3688,7 @@ public elementMeta($elementName):void // <1>
 Returns the meta data for a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3713,7 +3715,7 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3745,7 +3747,7 @@ public hasAttachment():bool // <1>
 Helper method to check if an object has an attachment.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3762,7 +3764,7 @@ public toArray():array // <1>
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3779,7 +3781,7 @@ public search($expression):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3806,7 +3808,7 @@ public setValues($class, $values = []):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3826,12 +3828,12 @@ a|`$values`
 
 
 
-=== DecimalType
+==== DecimalType
 
 The service for decimal type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
 
@@ -3858,7 +3860,7 @@ The service for decimal type.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3872,7 +3874,7 @@ public __construct($values = []):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3899,7 +3901,7 @@ public static getParentValues($properties, $values):array // <1>
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3929,7 +3931,7 @@ public __get($name):void // <1>
 PHP magic function that is called when getting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3956,7 +3958,7 @@ public __set($name, $value):void // <1>
 PHP magic function that is called when setting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3988,7 +3990,7 @@ public __isset($name):bool // <1>
 PHP magic function that is called to determine if a property is set.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4014,7 +4016,7 @@ public __unset($name):void // <1>
 PHP magic function that is called to unset a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4041,7 +4043,7 @@ public toRequestXml():string // <1>
 Converts the object to a XML request string.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -4058,7 +4060,7 @@ public elementMeta($elementName):void // <1>
 Returns the meta data for a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4085,7 +4087,7 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4117,7 +4119,7 @@ public hasAttachment():bool // <1>
 Helper method to check if an object has an attachment.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4134,7 +4136,7 @@ public toArray():array // <1>
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4151,7 +4153,7 @@ public search($expression):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4178,7 +4180,7 @@ public setValues($class, $values = []):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4198,12 +4200,12 @@ a|`$values`
 
 
 
-=== DoubleType
+==== DoubleType
 
 The service for double type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
 
@@ -4230,7 +4232,7 @@ The service for double type.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4244,7 +4246,7 @@ public __construct($values = []):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4271,7 +4273,7 @@ public static getParentValues($properties, $values):array // <1>
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4301,7 +4303,7 @@ public __get($name):void // <1>
 PHP magic function that is called when getting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4328,7 +4330,7 @@ public __set($name, $value):void // <1>
 PHP magic function that is called when setting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4360,7 +4362,7 @@ public __isset($name):bool // <1>
 PHP magic function that is called to determine if a property is set.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4386,7 +4388,7 @@ public __unset($name):void // <1>
 PHP magic function that is called to unset a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4413,7 +4415,7 @@ public toRequestXml():string // <1>
 Converts the object to a XML request string.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -4430,7 +4432,7 @@ public elementMeta($elementName):void // <1>
 Returns the meta data for a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4457,7 +4459,7 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4489,7 +4491,7 @@ public hasAttachment():bool // <1>
 Helper method to check if an object has an attachment.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4506,7 +4508,7 @@ public toArray():array // <1>
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4523,7 +4525,7 @@ public search($expression):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4550,7 +4552,7 @@ public setValues($class, $values = []):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4570,12 +4572,12 @@ a|`$values`
 
 
 
-=== IntegerType
+==== IntegerType
 
 The service for integer type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
 
@@ -4602,7 +4604,7 @@ The service for integer type.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4616,7 +4618,7 @@ public __construct($values = []):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4643,7 +4645,7 @@ public static getParentValues($properties, $values):array // <1>
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4673,7 +4675,7 @@ public __get($name):void // <1>
 PHP magic function that is called when getting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4700,7 +4702,7 @@ public __set($name, $value):void // <1>
 PHP magic function that is called when setting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4732,7 +4734,7 @@ public __isset($name):bool // <1>
 PHP magic function that is called to determine if a property is set.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4758,7 +4760,7 @@ public __unset($name):void // <1>
 PHP magic function that is called to unset a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4785,7 +4787,7 @@ public toRequestXml():string // <1>
 Converts the object to a XML request string.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -4802,7 +4804,7 @@ public elementMeta($elementName):void // <1>
 Returns the meta data for a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4829,7 +4831,7 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4861,7 +4863,7 @@ public hasAttachment():bool // <1>
 Helper method to check if an object has an attachment.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4878,7 +4880,7 @@ public toArray():array // <1>
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4895,7 +4897,7 @@ public search($expression):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4922,7 +4924,7 @@ public setValues($class, $values = []):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4942,12 +4944,12 @@ a|`$values`
 
 
 
-=== RepeatableType
+==== RepeatableType
 
 The service for repeatable type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
 
@@ -4956,7 +4958,7 @@ The service for repeatable type.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4970,7 +4972,7 @@ public __construct($class, $property, $expectedType):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5005,7 +5007,7 @@ public offsetExists($offset):bool // <1>
 Determines if the offset exists in the array.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5031,7 +5033,7 @@ public offsetGet($offset):void // <1>
 Returns the value of the given offset.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5058,7 +5060,7 @@ public offsetSet($offset, $value):void // <1>
 Sets a value for the given offset.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5091,7 +5093,7 @@ public offsetUnset($offset):void // <1>
 Unsets the value of the given offset.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5118,7 +5120,7 @@ public count():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -5135,7 +5137,7 @@ public current():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5153,7 +5155,7 @@ public key():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -5170,7 +5172,7 @@ public next():void // <1>
 Move onto the next array index.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5188,7 +5190,7 @@ public rewind():void // <1>
 Reset the array index to the start of the array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5206,18 +5208,18 @@ public valid():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
 
 
-=== StringType
+==== StringType
 
 The service for string type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
 
@@ -5244,7 +5246,7 @@ The service for string type.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5258,7 +5260,7 @@ public __construct($values = []):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5285,7 +5287,7 @@ public static getParentValues($properties, $values):array // <1>
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5315,7 +5317,7 @@ public __get($name):void // <1>
 PHP magic function that is called when getting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5342,7 +5344,7 @@ public __set($name, $value):void // <1>
 PHP magic function that is called when setting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5374,7 +5376,7 @@ public __isset($name):bool // <1>
 PHP magic function that is called to determine if a property is set.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5400,7 +5402,7 @@ public __unset($name):void // <1>
 PHP magic function that is called to unset a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5427,7 +5429,7 @@ public toRequestXml():string // <1>
 Converts the object to a XML request string.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -5444,7 +5446,7 @@ public elementMeta($elementName):void // <1>
 Returns the meta data for a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5471,7 +5473,7 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5503,7 +5505,7 @@ public hasAttachment():bool // <1>
 Helper method to check if an object has an attachment.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5520,7 +5522,7 @@ public toArray():array // <1>
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5537,7 +5539,7 @@ public search($expression):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5564,7 +5566,7 @@ public setValues($class, $values = []):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5584,12 +5586,12 @@ a|`$values`
 
 
 
-=== TokenType
+==== TokenType
 
 The service for token type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
 
@@ -5616,7 +5618,7 @@ The service for token type.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5630,7 +5632,7 @@ public __construct($values = []):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5657,7 +5659,7 @@ public static getParentValues($properties, $values):array // <1>
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5687,7 +5689,7 @@ public __get($name):void // <1>
 PHP magic function that is called when getting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5714,7 +5716,7 @@ public __set($name, $value):void // <1>
 PHP magic function that is called when setting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5746,7 +5748,7 @@ public __isset($name):bool // <1>
 PHP magic function that is called to determine if a property is set.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5772,7 +5774,7 @@ public __unset($name):void // <1>
 PHP magic function that is called to unset a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5799,7 +5801,7 @@ public toRequestXml():string // <1>
 Converts the object to a XML request string.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -5816,7 +5818,7 @@ public elementMeta($elementName):void // <1>
 Returns the meta data for a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5843,7 +5845,7 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5875,7 +5877,7 @@ public hasAttachment():bool // <1>
 Helper method to check if an object has an attachment.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5892,7 +5894,7 @@ public toArray():array // <1>
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5909,7 +5911,7 @@ public search($expression):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5936,7 +5938,7 @@ public setValues($class, $values = []):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5956,12 +5958,12 @@ a|`$values`
 
 
 
-=== URIType
+==== URIType
 
 The service for uri type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Api\Types`
 
@@ -5988,7 +5990,7 @@ The service for uri type.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6002,7 +6004,7 @@ public __construct($values = []):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6029,7 +6031,7 @@ public static getParentValues($properties, $values):array // <1>
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6059,7 +6061,7 @@ public __get($name):void // <1>
 PHP magic function that is called when getting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6086,7 +6088,7 @@ public __set($name, $value):void // <1>
 PHP magic function that is called when setting a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6118,7 +6120,7 @@ public __isset($name):bool // <1>
 PHP magic function that is called to determine if a property is set.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -6144,7 +6146,7 @@ public __unset($name):void // <1>
 PHP magic function that is called to unset a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6171,7 +6173,7 @@ public toRequestXml():string // <1>
 Converts the object to a XML request string.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6188,7 +6190,7 @@ public elementMeta($elementName):void // <1>
 Returns the meta data for a property.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6215,7 +6217,7 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6247,7 +6249,7 @@ public hasAttachment():bool // <1>
 Helper method to check if an object has an attachment.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -6264,7 +6266,7 @@ public toArray():array // <1>
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6281,7 +6283,7 @@ public search($expression):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6308,7 +6310,7 @@ public setValues($class, $values = []):void // <1>
 Assign multiple values to an object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6328,16 +6330,16 @@ a|`$values`
 
 
 [[market_auth]]
-= Auth
+== Auth
 
 [[market_auth_contracts]]
-==  Contracts
-=== AuthServiceContract
+===  Contracts
+==== AuthServiceContract
 
 The contract for the eBay authentication service.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Auth\Contracts`
 
@@ -6346,7 +6348,7 @@ The contract for the eBay authentication service.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6360,7 +6362,7 @@ public refreshTokenByCredentialsId($credentialsId):void // <1>
 Refresh credentials token and update.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6376,16 +6378,16 @@ a|`$credentialsId`
 
 
 [[market_category]]
-= Category
+== Category
 
 [[market_category_contracts]]
-==  Contracts
-=== CategoryRepositoryContract
+===  Contracts
+==== CategoryRepositoryContract
 
 The contract for the Ebay category repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Category\Contracts`
 
@@ -6394,7 +6396,7 @@ The contract for the Ebay category repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6408,7 +6410,7 @@ public get($id, $filters = [], $with = []):Plenty\Modules\Market\Ebay\Category\M
 Get category
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_category[Category^]
 
@@ -6443,7 +6445,7 @@ public all($filters = [], $with = []):array // <1>
 List all categories
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6462,13 +6464,13 @@ a|`$with`
 
 
 [[market_category_models]]
-==  Models
-=== Category
+===  Models
+==== Category
 
 The category model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Category\Models`
 
@@ -6501,7 +6503,7 @@ The category model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6517,16 +6519,16 @@ Returns this model as an array.
 
 
 [[market_itemspecific]]
-= ItemSpecific
+== ItemSpecific
 
 [[market_itemspecific_contracts]]
-==  Contracts
-=== ItemSpecificRepositoryContract
+===  Contracts
+==== ItemSpecificRepositoryContract
 
 The contract for the Ebay category repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\ItemSpecific\Contracts`
 
@@ -6535,7 +6537,7 @@ The contract for the Ebay category repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6549,7 +6551,7 @@ public all($filters = []):array // <1>
 List item specifics.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6564,13 +6566,13 @@ a|`$filters`
 
 
 [[market_itemspecific_models]]
-==  Models
-=== ItemSpecific
+===  Models
+==== ItemSpecific
 
 The eBay item specific model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\ItemSpecific\Models`
 
@@ -6618,7 +6620,7 @@ The eBay item specific model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6634,16 +6636,16 @@ Returns this model as an array.
 
 
 [[market_marketplace]]
-= Marketplace
+== Marketplace
 
 [[market_marketplace_contracts]]
-==  Contracts
-=== MarketplaceRepositoryContract
+===  Contracts
+==== MarketplaceRepositoryContract
 
 The contract for the Ebay marketplace repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Marketplace\Contracts`
 
@@ -6652,7 +6654,7 @@ The contract for the Ebay marketplace repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6666,7 +6668,7 @@ public all($filters = []):array // <1>
 Get the list of all available eBay marketplaces.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6692,7 +6694,7 @@ public allEbay($filters = []):array // <1>
 Get the list of all available eBay marketplaces.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6707,13 +6709,13 @@ a|`$filters`
 
 
 [[market_marketplace_helpers]]
-==  Helpers
-=== MarketplaceHelper
+===  Helpers
+==== MarketplaceHelper
 
 Helper class that allows getting information about an eBay marketplace more easily.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Marketplace\Helpers`
 
@@ -6722,7 +6724,7 @@ Helper class that allows getting information about an eBay marketplace more easi
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6736,7 +6738,7 @@ public get($filters):Plenty\Modules\Market\Ebay\Marketplace\Models\Marketplace /
 Get marketplace data model based on filters.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_marketplace[Marketplace^]
 
@@ -6763,7 +6765,7 @@ public getMarketplaceId($filters):string // <1>
 Get the marketplace ID based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6789,7 +6791,7 @@ public getMarketplaceIds():array // <1>
 Get all available marketplace IDs.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6806,7 +6808,7 @@ public getReferrerId($filters):string // <1>
 Get the referrer ID based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6832,7 +6834,7 @@ public getReferrerIds():array // <1>
 Get all available referrer IDs.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6849,7 +6851,7 @@ public getSiteId($filters):string // <1>
 Get the site ID based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6875,7 +6877,7 @@ public getSiteIds():array // <1>
 Get all available site IDs.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6892,7 +6894,7 @@ public getMarketId($filters):string // <1>
 Get the market ID based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6918,7 +6920,7 @@ public getMarketIds():array // <1>
 Get all available market IDs.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6935,7 +6937,7 @@ public getCurrency($filters):string // <1>
 Get the currency based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6961,7 +6963,7 @@ public getShortcut($filters):string // <1>
 Get the shortcut based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6976,13 +6978,13 @@ a|`$filters`
 
 
 [[market_marketplace_models]]
-==  Models
-=== Marketplace
+===  Models
+==== Marketplace
 
 The eBay marketplace model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Marketplace\Models`
 
@@ -7015,7 +7017,7 @@ The eBay marketplace model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7031,16 +7033,16 @@ Returns this model as an array.
 
 
 [[market_partsfitment]]
-= PartsFitment
+== PartsFitment
 
 [[market_partsfitment_contracts]]
-==  Contracts
-=== FitmentItemPropertyRepositoryContract
+===  Contracts
+==== FitmentItemPropertyRepositoryContract
 
 The contract for the fitment item property repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\PartsFitment\Contracts`
 
@@ -7049,7 +7051,7 @@ The contract for the fitment item property repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7063,7 +7065,7 @@ public find($id):Plenty\Modules\Market\Ebay\PartsFitment\Models\FitmentItemPrope
 Returns a fitment item property by an ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fitmentitemproperty[FitmentItemProperty^]
 
@@ -7090,7 +7092,7 @@ public create($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
 Creates a new fitment item property.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fitmentitemproperty[FitmentItemProperty^]
 
@@ -7121,7 +7123,7 @@ public update($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
 Updates an existing fitment item property.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fitmentitem[FitmentItem^]
 
@@ -7152,7 +7154,7 @@ public delete($id):bool // <1>
 Deletes a fitment item property. Returns `true` if the deletion was successful, otherwise `false`.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -7167,12 +7169,12 @@ a|`$id`
 
 
 
-=== FitmentItemRepositoryContract
+==== FitmentItemRepositoryContract
 
 The contract for the fitment item repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\PartsFitment\Contracts`
 
@@ -7181,7 +7183,7 @@ The contract for the fitment item repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7195,7 +7197,7 @@ public find($id):Plenty\Modules\Market\Ebay\PartsFitment\Models\FitmentItem // <
 Returns a fitment item by an ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fitmentitem[FitmentItem^]
 
@@ -7222,7 +7224,7 @@ public create($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
 Creates a new fitment item.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fitmentitem[FitmentItem^]
 
@@ -7253,7 +7255,7 @@ public update($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
 Updates an existing fitment item.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fitmentitem[FitmentItem^]
 
@@ -7284,7 +7286,7 @@ public delete($id):bool // <1>
 Deletes a fitment item. Returns `true` if the deletion was successful, otherwise `false`.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -7299,12 +7301,12 @@ a|`$id`
 
 
 
-=== FitmentRepositoryContract
+==== FitmentRepositoryContract
 
 The contract for the fitment repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\PartsFitment\Contracts`
 
@@ -7313,7 +7315,7 @@ The contract for the fitment repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7327,7 +7329,7 @@ public find($id, $with = []):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitm
 Returns a fitment by an ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fitment[Fitment^]
 
@@ -7358,7 +7360,7 @@ public create($data):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment // <
 Creates a new fitment.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fitment[Fitment^]
 
@@ -7385,7 +7387,7 @@ public update($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
 Updates an existing fitment.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_fitment[Fitment^]
 
@@ -7416,7 +7418,7 @@ public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
 Deletes a fitment. Returns `true` if the deletion was successful, otherwise `false`.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
@@ -7443,7 +7445,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):array //
 Search fitments
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -7481,7 +7483,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7499,7 +7501,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7517,7 +7519,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7544,7 +7546,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7562,7 +7564,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7580,20 +7582,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[market_partsfitment_models]]
-==  Models
-=== Fitment
+===  Models
+==== Fitment
 
 The fitment model. This can contain multiple FitmentItems models.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\PartsFitment\Models`
 
@@ -7623,7 +7625,7 @@ The fitment model. This can contain multiple FitmentItems models.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7639,12 +7641,12 @@ Returns this model as an array.
 
 
 
-=== FitmentItem
+==== FitmentItem
 
 The fitment item model. This belongs to one fitment model and can contain multiple FitmentItemProperty models.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\PartsFitment\Models`
 
@@ -7672,7 +7674,7 @@ The fitment item model. This belongs to one fitment model and can contain multip
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7688,12 +7690,12 @@ Returns this model as an array.
 
 
 
-=== FitmentItemProperty
+==== FitmentItemProperty
 
 The fitment item property model. This bleongs to an FitmentItem model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\PartsFitment\Models`
 
@@ -7724,7 +7726,7 @@ The fitment item property model. This bleongs to an FitmentItem model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7740,16 +7742,16 @@ Returns this model as an array.
 
 
 [[market_shopcategory]]
-= ShopCategory
+== ShopCategory
 
 [[market_shopcategory_contracts]]
-==  Contracts
-=== ShopCategoryRepositoryContract
+===  Contracts
+==== ShopCategoryRepositoryContract
 
 The contract for the eBay shop categories.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\ShopCategory\Contracts`
 
@@ -7758,7 +7760,7 @@ The contract for the eBay shop categories.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7772,7 +7774,7 @@ public all($credentialsId, $viewType = &quot;list&quot;):array // <1>
 Returns a fitment by an ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -7791,16 +7793,16 @@ a|`$viewType`
 
 
 [[market_transaction]]
-= Transaction
+== Transaction
 
 [[market_transaction_contracts]]
-==  Contracts
-=== TransactionRepositoryContract
+===  Contracts
+==== TransactionRepositoryContract
 
 The contract for the ebay transaction repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Transaction\Contracts`
 
@@ -7809,7 +7811,7 @@ The contract for the ebay transaction repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7823,7 +7825,7 @@ public get($id):Plenty\Modules\Market\Ebay\Transaction\Models\Transaction // <1>
 Gets a transaction.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_transaction[Transaction^]
 
@@ -7850,7 +7852,7 @@ public search($page = 1, $itemsPerPage = 50, $filters = []):array // <1>
 Search ebay transactions
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -7884,7 +7886,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7911,7 +7913,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7929,7 +7931,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7947,7 +7949,7 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7965,7 +7967,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7983,20 +7985,20 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[market_transaction_models]]
-==  Models
-=== Transaction
+===  Models
+==== Transaction
 
 The ebay transaction model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Transaction\Models`
 
@@ -8091,7 +8093,7 @@ The ebay transaction model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8107,16 +8109,16 @@ Returns this model as an array.
 
 
 [[market_helper]]
-= Helper
+== Helper
 
 [[market_helper_contracts]]
-==  Contracts
-=== MarketAccountHelperRepositoryContract
+===  Contracts
+==== MarketAccountHelperRepositoryContract
 
 The contract for the market account helper repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Helper\Contracts`
 
@@ -8125,7 +8127,7 @@ The contract for the market account helper repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8139,7 +8141,7 @@ public listMarketAccounts($marketId):array // <1>
 List market accounts
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8154,12 +8156,12 @@ a|`$marketId`
 
 
 
-=== MarketAttributeHelperRepositoryContract
+==== MarketAttributeHelperRepositoryContract
 
 The contract for the market attribute helper repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Helper\Contracts`
 
@@ -8168,7 +8170,7 @@ The contract for the market attribute helper repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8182,7 +8184,7 @@ public getAttributeName($id, $lang):string // <1>
 Returns the attribute name for the given attribute id
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -8212,7 +8214,7 @@ public getAttributeValueName($attributeId, $valueId, $lang):string // <1>
 Returns the attribute value name for the given attribute value id
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -8246,7 +8248,7 @@ public getAttributeNames($record, $lang = &quot;de&quot;, $delimiter = &quot;,&q
 Returns all attribute names for the given language as a string delimited by the given delimiter.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -8281,7 +8283,7 @@ public getAttributeValueSetShortFrontendName($record, $lang = &quot;de&quot;, $d
 Returns the attribute value set short frontend name. Ex.: blue, XL
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -8320,7 +8322,7 @@ public getAttributeNameAndValueCombination($attributeNames, $attributeValues, $d
 Returns the combination of attribute names with their attribute values.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -8354,7 +8356,7 @@ public getVariationNameAndAttributeNameAndValueCombination($record, $lang):strin
 Returns the name for a variation with all attribute names and attribute values. Ex.: T-Shirt (Size: L, Color: red)
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -8374,12 +8376,12 @@ a|`$lang`
 
 
 
-=== MarketCategoryHelperRepositoryContract
+==== MarketCategoryHelperRepositoryContract
 
 The contract for the market category helper repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Helper\Contracts`
 
@@ -8388,7 +8390,7 @@ The contract for the market category helper repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8402,7 +8404,7 @@ public getCategoryBranchName($branchId, $lang, $plentyId, $separator = &quot;&gt
 Returns the category bread crumbs as string for a given branchId, lang and plentyId
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -8429,12 +8431,12 @@ a|`$separator`
 
 
 
-=== MarketItemHelperRepositoryContract
+==== MarketItemHelperRepositoryContract
 
 The contract for the item helper repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Helper\Contracts`
 
@@ -8443,7 +8445,7 @@ The contract for the item helper repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8457,7 +8459,7 @@ public getExternalManufacturerName($manufacturerId):string // <1>
 Get the external manufacturer name.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -8483,7 +8485,7 @@ public generateSku($variationId, $marketId, $accountId, $setLastExportedTimestam
 Generates or updates the sku
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -8521,7 +8523,7 @@ public getAvailability($availabilityId, $lang, $returnAvailabilityName):string /
 Returns the availability name or the availability average days
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -8544,12 +8546,12 @@ a|`$returnAvailabilityName`
 
 
 
-=== MarketPropertyHelperRepositoryContract
+==== MarketPropertyHelperRepositoryContract
 
 The contract for the market property helper repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Helper\Contracts`
 
@@ -8558,7 +8560,7 @@ The contract for the market property helper repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8572,7 +8574,7 @@ public getMarketProperty($referrerId):array // <1>
 Returns a list of the market properties
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8587,16 +8589,16 @@ a|`$referrerId`
 
 
 [[market_settings]]
-= Settings
+== Settings
 
 [[market_settings_contracts]]
-==  Contracts
-=== SettingsRepositoryContract
+===  Contracts
+==== SettingsRepositoryContract
 
 Use this interface to store and retrieve market specific settings.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Settings\Contracts`
 
@@ -8605,7 +8607,7 @@ Use this interface to store and retrieve market specific settings.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8619,7 +8621,7 @@ public search($filters = [], $page, $itemsPerPage = \Plenty\Modules\Market\Setti
 List settings.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -8654,7 +8656,7 @@ public create($marketplaceId, $type, $settings):Plenty\Modules\Market\Settings\M
 Create market settings.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_settings[Settings^]
 
@@ -8689,7 +8691,7 @@ public update($settingsData, $id):void // <1>
 Update one market settings entry.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8720,7 +8722,7 @@ public get($id):Plenty\Modules\Market\Settings\Models\Settings // <1>
 Return the settings for a given settings ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_models_settings[Settings^]
 
@@ -8747,7 +8749,7 @@ public find($marketplaceId, $type = null):array // <1>
 Find settings for a given marketplace ID and type.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8777,7 +8779,7 @@ public delete($id):bool // <1>
 Delete a setting.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -8803,7 +8805,7 @@ public deleteAll($marketplaceId, $type):void // <1>
 Delete all settings for a given type and marketplace ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8834,7 +8836,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8852,20 +8854,20 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[market_settings_factories]]
-==  Factories
-=== SettingsCorrelationFactory
+===  Factories
+==== SettingsCorrelationFactory
 
 Factory that allows to store correlation between market settings and plentymarkets settings.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Settings\Factories`
 
@@ -8874,7 +8876,7 @@ Factory that allows to store correlation between market settings and plentymarke
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8888,7 +8890,7 @@ public type($type):Plenty\Modules\Market\Settings\Factories\SettingsCorrelationF
 Set here the type of relation that should be created.
 
 
-==== Return type
+===== Return type
     
 <1> link:market#market_factories_settingscorrelationfactory[SettingsCorrelationFactory^]
 
@@ -8915,7 +8917,7 @@ public createRelation($settingsId, $correlationId):void // <1>
 Use this method to create a relation of the chosen type.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8946,7 +8948,7 @@ public createRelationWithParent($settingsId, $correlationId, $parentSettingsId):
 Use this method to create a relation of the chosen type.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8981,7 +8983,7 @@ public clear($marketplaceId):void // <1>
 Clear all relations for a given correlation type.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -9009,7 +9011,7 @@ public all($marketplaceId):array // <1>
 Get all correlations for a given marketplace ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9036,7 +9038,7 @@ public getSettingsByCorrelation($marketplaceId, $correlationId):void // <1>
 Get a specific settings by marketplace id and correlation id.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -9068,7 +9070,7 @@ public getAllSettingsByCorrelation($marketplaceId, $correlationId):void // <1>
 Get a specific settings by marketplace id and correlation id.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -9100,7 +9102,7 @@ public getSettingsByCorrelationAndParent($marketplaceId, $correlationId, $parent
 Get a specific settings by marketplace id and correlation id.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -9136,7 +9138,7 @@ public getSettingsByParent($marketplaceId, $parentSettingsId):void // <1>
 List settings by marketplace id and parent settings id.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -9168,7 +9170,7 @@ public getAllSettingsByCorrelationAndParent($marketplaceId, $correlationId, $par
 Get a specific settings by marketplace id and correlation id.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -9193,13 +9195,13 @@ a|`$parentSettingsId`
 
 
 [[market_settings_models]]
-==  Models
-=== Settings
+===  Models
+==== Settings
 
 The market settings model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Settings\Models`
 
@@ -9241,7 +9243,7 @@ The market settings model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -9257,16 +9259,16 @@ Returns this model as an array.
 
 
 [[market_order]]
-= Order
+== Order
 
 [[market_order_events]]
-==  Events
-=== BeforeNewOrderItemCreationEvent
+===  Events
+==== BeforeNewOrderItemCreationEvent
 
 Event which signals a new ebay order item before its creation.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Order\Events`
 
@@ -9275,7 +9277,7 @@ Event which signals a new ebay order item before its creation.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -9289,7 +9291,7 @@ public getData():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -9307,7 +9309,7 @@ public getWarehouseId():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -9325,7 +9327,7 @@ public setWarehouseId($warehouseId):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -9341,12 +9343,12 @@ a|`$warehouseId`
 
 
 
-=== OrderItemEvent
+==== OrderItemEvent
 
 Generic ebay order item event.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Market\Ebay\Order\Events`
 
@@ -9355,7 +9357,7 @@ Generic ebay order item event.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -9369,7 +9371,7 @@ public getData():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -9387,7 +9389,7 @@ public getWarehouseId():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -9405,7 +9407,7 @@ public setWarehouseId($warehouseId):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 

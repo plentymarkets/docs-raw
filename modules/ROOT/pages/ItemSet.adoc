@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[itemset_itemset]]
-= ItemSet
+== ItemSet
 
 [[itemset_itemset_contracts]]
-==  Contracts
-=== ItemSetComponentRepositoryContract
+===  Contracts
+==== ItemSetComponentRepositoryContract
 
 The contract for the item set component repository
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ItemSet\Contracts`
 
@@ -21,7 +23,7 @@ The contract for the item set component repository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public show($id, $with):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
 Gets an item set component. The ID of the item set component must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemsetcomponent[ItemSetComponent^]
 
@@ -66,7 +68,7 @@ public get($setId, $id):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
 Gets an item set component. The item ID of the item set and the component ID must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemsetcomponent[ItemSetComponent^]
 
@@ -97,7 +99,7 @@ public create($setConfigId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponen
 Creates an item set component.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemsetcomponent[ItemSetComponent^]
 
@@ -128,7 +130,7 @@ public createComponents($setId, $data):Plenty\Modules\ItemSet\Models\ItemSetComp
 Creates a link between an item and a set item and adds the item as a set component.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemsetcomponent[ItemSetComponent^]
 
@@ -159,7 +161,7 @@ public updateComponents($setId, $data):Plenty\Modules\ItemSet\Models\ItemSetComp
 Updates the item set components of a set item.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemsetcomponent[ItemSetComponent^]
 
@@ -190,7 +192,7 @@ public update($setId, $id, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent
 Updates an item set component. The item ID of the set and the ID of the set component must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemsetcomponent[ItemSetComponent^]
 
@@ -225,7 +227,7 @@ public deleteComponents($setId, $data):Plenty\Repositories\Models\DeleteResponse
 Removes all item set components from an item set.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
@@ -256,7 +258,7 @@ public delete($setId, $id):Plenty\Repositories\Models\DeleteResponse // <1>
 Deletes the link between an item set component and an item set. The item ID of the set and the ID of the set component must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
@@ -287,7 +289,7 @@ public all():array // <1>
 Lists all item set components.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -304,7 +306,7 @@ public findBySetId($setId, $with):array // <1>
 Lists the item set components of a set. The item ID of the item set must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -334,7 +336,7 @@ public findByItemId($itemId):array // <1>
 Lists the item set components of a set. The item ID of the item set component must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -360,7 +362,7 @@ public deleteOne($setConfigId, $itemId):Plenty\Repositories\Models\DeleteRespons
 Delete an item set component. The item ID of the item set component and the set config ID must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
@@ -380,12 +382,12 @@ a|`$itemId`
 
 
 
-=== ItemSetConfigRepositoryContract
+==== ItemSetConfigRepositoryContract
 
 The contract for the item set configuration repository
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ItemSet\Contracts`
 
@@ -394,7 +396,7 @@ The contract for the item set configuration repository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -408,7 +410,7 @@ public show($id):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
 Gets an item set. The ID of the item set configuration must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemsetconfig[ItemSetConfig^]
 
@@ -435,7 +437,7 @@ public create($data):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
 Creates an item set configuration.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemsetconfig[ItemSetConfig^]
 
@@ -462,7 +464,7 @@ public update($id, $data):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
 Updates an item set configuration. The ID of the item set configuration must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemsetconfig[ItemSetConfig^]
 
@@ -493,7 +495,7 @@ public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
 Deletes an item set configuration. The ID of the item set configuration must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
@@ -520,7 +522,7 @@ public get($setId, $setConfigId):Plenty\Modules\ItemSet\Models\ItemSetConfig // 
 Gets the item set configuration of an item set.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemsetconfig[ItemSetConfig^]
 
@@ -551,7 +553,7 @@ public findBySetId($setId):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
 Gets the item set configuration of an item set. The item ID of the set item must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemsetconfig[ItemSetConfig^]
 
@@ -567,12 +569,12 @@ a|`$setId`
 
 
 
-=== ItemSetRepositoryContract
+==== ItemSetRepositoryContract
 
 The contract for the item set repository
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ItemSet\Contracts`
 
@@ -581,7 +583,7 @@ The contract for the item set repository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -595,7 +597,7 @@ public show($id):Plenty\Modules\ItemSet\Models\ItemSet // <1>
 Gets an item set. The item ID of the set must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemset[ItemSet^]
 
@@ -622,7 +624,7 @@ public create($data):Plenty\Modules\ItemSet\Models\ItemSet // <1>
 Creates an item set.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemset[ItemSet^]
 
@@ -649,7 +651,7 @@ public createSets($data):Plenty\Modules\ItemSet\Models\ItemSet // <1>
 Creates item sets.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemset[ItemSet^]
 
@@ -676,7 +678,7 @@ public updateSets($data):array // <1>
 Updates item sets.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -702,7 +704,7 @@ public update($id, $data):Plenty\Modules\ItemSet\Models\ItemSet // <1>
 Updates an item set. The item ID of the set must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:itemset#itemset_models_itemset[ItemSet^]
 
@@ -733,7 +735,7 @@ public deleteSets($data):Plenty\Repositories\Models\DeleteResponse // <1>
 Deletes item sets.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
@@ -760,7 +762,7 @@ public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
 Deletes an item set configuration. The ID must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
@@ -787,19 +789,19 @@ public all():array // <1>
 Lists all item set configurations.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 [[itemset_itemset_models]]
-==  Models
-=== ItemSet
+===  Models
+==== ItemSet
 
 The ItemSet model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ItemSet\Models`
 
@@ -823,7 +825,7 @@ The ItemSet model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -839,12 +841,12 @@ Returns this model as an array.
 
 
 
-=== ItemSetComponent
+==== ItemSetComponent
 
 The ItemSetComponent model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ItemSet\Models`
 
@@ -877,7 +879,7 @@ The ItemSetComponent model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -893,12 +895,12 @@ Returns this model as an array.
 
 
 
-=== ItemSetConfig
+==== ItemSetConfig
 
 The ItemSetConfig model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ItemSet\Models`
 
@@ -919,7 +921,7 @@ The ItemSetConfig model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

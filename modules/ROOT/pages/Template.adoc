@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[template_config]]
-= Config
+== Config
 
 [[template_config_contracts]]
-==  Contracts
-=== DesignConfigRepositoryContract
+===  Contracts
+==== DesignConfigRepositoryContract
 
 DesignConfig
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Template\Design\Config\Contracts`
 
@@ -21,7 +23,7 @@ DesignConfig
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public findByDesignName($designName):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -61,7 +63,7 @@ public findByDesignAndWebStore($designName, $webStoreId):Plenty\Modules\Template
 
 
 
-==== Return type
+===== Return type
     
 <1> link:template#template_models_designconfig[DesignConfig^]
 
@@ -92,7 +94,7 @@ public findByDesign($design):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -119,7 +121,7 @@ public update($data, $designName, $webstoreId):Plenty\Modules\Template\Design\Co
 
 
 
-==== Return type
+===== Return type
     
 <1> link:template#template_models_designconfig[DesignConfig^]
 
@@ -154,7 +156,7 @@ public copyDesignConfig($designName, $newDesignName):Plenty\Modules\Template\Des
 
 
 
-==== Return type
+===== Return type
     
 <1> link:template#template_models_designconfig[DesignConfig^]
 
@@ -174,12 +176,12 @@ a|`$newDesignName`
 
 
 
-=== DesignRepositoryContract
+==== DesignRepositoryContract
 
 Design
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Template\Design\Config\Contracts`
 
@@ -188,7 +190,7 @@ Design
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -202,7 +204,7 @@ public loadAll():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -219,7 +221,7 @@ public findByDesignName($designName, $withConfig = true):Plenty\Modules\Template
 
 
 
-==== Return type
+===== Return type
     
 <1> link:template#template_models_design[Design^]
 
@@ -250,19 +252,19 @@ public getCheckoutType():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 [[template_config_models]]
-==  Models
-=== Design
+===  Models
+==== Design
 
 Design model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Template\Design\Config\Models`
 
@@ -295,7 +297,7 @@ Design model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -311,12 +313,12 @@ Returns this model as an array.
 
 
 
-=== DesignConfig
+==== DesignConfig
 
 Design configuration model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Template\Design\Config\Models`
 
@@ -433,7 +435,7 @@ Design configuration model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

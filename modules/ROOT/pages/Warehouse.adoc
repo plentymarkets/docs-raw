@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[warehouse_warehouse]]
-= Warehouse
+== Warehouse
 
 [[warehouse_warehouse_contracts]]
-==  Contracts
-=== WarehouseLocationDimensionRepositoryContract
+===  Contracts
+==== WarehouseLocationDimensionRepositoryContract
 
 Get, create, update and delete warehouse location dimensions
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Warehouse\Contracts`
 
@@ -21,7 +23,7 @@ Get, create, update and delete warehouse location dimensions
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public getWarehouseLocationDimension($warehouseLocationDimension, $with = []):Pl
 Get a warehouse location dimension
 
 
-==== Return type
+===== Return type
     
 <1> link:warehouse#warehouse_models_warehouselocationdimension[WarehouseLocationDimension^]
 
@@ -66,7 +68,7 @@ public listWarehouseLocationDimension($warehouseId):Plenty\Modules\Warehouse\Mod
 Get all warehouse location dimensions
 
 
-==== Return type
+===== Return type
     
 <1> link:warehouse#warehouse_models_warehouselocationdimension[WarehouseLocationDimension^]
 
@@ -93,7 +95,7 @@ public createMultipleWarehouseLocationDimension($data):array // <1>
 Create multiple warehouse location dimensions
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -119,7 +121,7 @@ public createWarehouseLocationDimension($data):Plenty\Modules\Warehouse\Models\W
 Create a warehouse location dimension
 
 
-==== Return type
+===== Return type
     
 <1> link:warehouse#warehouse_models_warehouselocationdimension[WarehouseLocationDimension^]
 
@@ -146,7 +148,7 @@ public updateWarehouseLocationDimension($warehouseLocationDimension, $data):Plen
 Update a warehouse location dimension
 
 
-==== Return type
+===== Return type
     
 <1> link:warehouse#warehouse_models_warehouselocationdimension[WarehouseLocationDimension^]
 
@@ -177,7 +179,7 @@ public deleteWarehouseLocationDimension($warehouseLocationDimension):void // <1>
 Delete a warehouse location dimension
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -204,7 +206,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -222,7 +224,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -240,7 +242,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -267,7 +269,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -285,7 +287,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -303,19 +305,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== WarehouseLocationLevelRepositoryContract
+==== WarehouseLocationLevelRepositoryContract
 
 Get, create, update and delete warehouse location levels
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Warehouse\Contracts`
 
@@ -324,7 +326,7 @@ Get, create, update and delete warehouse location levels
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -338,7 +340,7 @@ public getWarehouseLocationLevel($warehouseLocationLevel):Plenty\Modules\Warehou
 Get a warehouse location level
 
 
-==== Return type
+===== Return type
     
 <1> link:warehouse#warehouse_models_warehouselocationlevel[WarehouseLocationLevel^]
 
@@ -365,7 +367,7 @@ public getWarehouseLocationLevelByName($warehouseLocationLevelName, $dimensionId
 Get a warehouse location level
 
 
-==== Return type
+===== Return type
     
 <1> link:warehouse#warehouse_models_warehouselocationlevel[WarehouseLocationLevel^]
 
@@ -400,7 +402,7 @@ public getWarehouseLocationLevelOnlyByName($warehouseLocationLevelName):Plenty\M
 Get a warehouse location level only by name.
 
 
-==== Return type
+===== Return type
     
 <1> link:warehouse#warehouse_models_warehouselocationlevel[WarehouseLocationLevel^]
 
@@ -427,7 +429,7 @@ public listWarehouseLocationLevels($filters = [], $warehouseId = null):array // 
 Get a list of warehouse location levels
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -457,7 +459,7 @@ public createWarehouseLocationLevel($data, $apiMode = false):Plenty\Modules\Ware
 Create a warehouse location level
 
 
-==== Return type
+===== Return type
     
 <1> link:warehouse#warehouse_models_warehouselocationlevel[WarehouseLocationLevel^]
 
@@ -488,7 +490,7 @@ public updateWarehouseLocationLevel($warehouseLocationLevel, $data):Plenty\Modul
 Update a warehouse location level
 
 
-==== Return type
+===== Return type
     
 <1> link:warehouse#warehouse_models_warehouselocationlevel[WarehouseLocationLevel^]
 
@@ -519,7 +521,7 @@ public deleteWarehouseLocationLevel($warehouseLocationLevel):void // <1>
 Delete a warehouse location level
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -546,7 +548,7 @@ public getWarehouseStructure($warehouseId, $data = []):void // <1>
 Get a warehouse structure.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -577,7 +579,7 @@ public moveWarehouseLocationLevelPosition($data):void // <1>
 Move a warehouse location level position
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -604,7 +606,7 @@ public getWarehouseStructureMoving($warehouseId, $data):void // <1>
 Get a warehouse structure moving.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -635,7 +637,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -653,7 +655,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -671,7 +673,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -698,7 +700,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -716,7 +718,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -734,19 +736,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== WarehouseLocationRepositoryContract
+==== WarehouseLocationRepositoryContract
 
 Get, create, update and delete warehouse locations
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Warehouse\Contracts`
 
@@ -755,7 +757,7 @@ Get, create, update and delete warehouse locations
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -769,7 +771,7 @@ public getWarehouseLocation($warehouseLocation):Plenty\Modules\Warehouse\Models\
 Get a warehouse location
 
 
-==== Return type
+===== Return type
     
 <1> link:warehouse#warehouse_models_warehouselocation[WarehouseLocation^]
 
@@ -796,7 +798,7 @@ public listWarehouseLocations($page = 1, $itemsPerPage = 50, $paginate = 1, $fil
 Get all warehouse locations
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -843,7 +845,7 @@ public listWarehouseLocationsByLevelId($warehouseId, $levelId):void // <1>
 List warehouse locations by levelId
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -875,7 +877,7 @@ Get first warehouse location matching the given label
 Gets the first warehouse location matching the given label. The label must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:warehouse#warehouse_models_warehouselocation[WarehouseLocation^]
 
@@ -902,7 +904,7 @@ public createWarehouseLocation($data):Plenty\Modules\Warehouse\Models\WarehouseL
 Create a warehouse location
 
 
-==== Return type
+===== Return type
     
 <1> link:warehouse#warehouse_models_warehouselocation[WarehouseLocation^]
 
@@ -929,7 +931,7 @@ public updateWarehouseLocation($warehouseLocation, $data):Plenty\Modules\Warehou
 Update a warehouse location
 
 
-==== Return type
+===== Return type
     
 <1> link:warehouse#warehouse_models_warehouselocation[WarehouseLocation^]
 
@@ -960,7 +962,7 @@ public deleteWarehouseLocation($warehouseLocation):void // <1>
 Delete a warehouse location
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -987,7 +989,7 @@ public deleteMultipleWarehouseLocations($warehouseLocationIds):void // <1>
 Delete multiple warehouse locations
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1014,7 +1016,7 @@ public executeGroupFunction($data):array // <1>
 Edit the purpose and status for a group of storage locations
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1040,7 +1042,7 @@ public generateWarehouseLocationLabel($warehouseId, $warehouseLocationIds):array
 Generate warehouse location labels
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1070,7 +1072,7 @@ public moveWarehouseLocationPosition($data):void // <1>
 Move a warehouse location position
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1097,7 +1099,7 @@ public listWarehouseLocationStock($page = 1, $itemsPerPage = 50, $paginate = 1, 
 Get all warehouse locations stock
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -1144,7 +1146,7 @@ public getWarehouseLocationAvailability($warehouseLocationId):array // <1>
 Get availability for storage location
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1170,7 +1172,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1188,7 +1190,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1206,7 +1208,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1233,7 +1235,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1251,7 +1253,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1269,20 +1271,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[warehouse_warehouse_models]]
-==  Models
-=== WarehouseLocation
+===  Models
+==== WarehouseLocation
 
 The warehouse location model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Warehouse\Models`
 
@@ -1336,7 +1338,7 @@ The warehouse location model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1352,12 +1354,12 @@ Returns this model as an array.
 
 
 
-=== WarehouseLocationDimension
+==== WarehouseLocationDimension
 
 The warehouse location dimension model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Warehouse\Models`
 
@@ -1410,7 +1412,7 @@ The warehouse location dimension model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1426,12 +1428,12 @@ Returns this model as an array.
 
 
 
-=== WarehouseLocationLevel
+==== WarehouseLocationLevel
 
 The warehouse location level model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Warehouse\Models`
 
@@ -1489,7 +1491,7 @@ The warehouse location level model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

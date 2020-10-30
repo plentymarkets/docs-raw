@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[fulfillment_picklist]]
-= Picklist
+== Picklist
 
 [[fulfillment_picklist_contracts]]
-==  Contracts
-=== PickingOrderItemRepositoryContract
+===  Contracts
+==== PickingOrderItemRepositoryContract
 
 The PickingOrderItemRepositoryContract
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Fulfillment\Picklist\Contracts`
 
@@ -21,7 +23,7 @@ The PickingOrderItemRepositoryContract
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public getAll():Illuminate\Database\Eloquent\Collection // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
@@ -53,7 +55,7 @@ public getPickingOrderItemById($pickingOrderItemId):Plenty\Modules\Fulfillment\P
 
 
 
-==== Return type
+===== Return type
     
 <1> link:fulfillment#fulfillment_models_pickingorderitem[PickingOrderItem^]
 
@@ -69,13 +71,13 @@ a|`$pickingOrderItemId`
 
 
 [[fulfillment_picklist_events]]
-==  Events
-=== GetPickingItemConfig
+===  Events
+==== GetPickingItemConfig
 
 This event will be triggered, when an item is picked
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Fulfillment\Picklist\Events`
 
@@ -84,7 +86,7 @@ This event will be triggered, when an item is picked
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -98,7 +100,7 @@ public getPickingOrderItemId():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -115,7 +117,7 @@ public getProcessUserId():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -132,7 +134,7 @@ public addPluginConfig($identifier, $pluginConfig):Plenty\Modules\Fulfillment\Pi
 
 
 
-==== Return type
+===== Return type
     
 <1> link:fulfillment#fulfillment_picklist_events[Events^]
 
@@ -164,19 +166,19 @@ public getPluginConfigs():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 [[fulfillment_picklist_models]]
-==  Models
-=== PickingOrderItem
+===  Models
+==== PickingOrderItem
 
 PickingOrderItem
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Fulfillment\Picklist\Models`
 
@@ -228,7 +230,7 @@ PickingOrderItem
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -244,16 +246,16 @@ Returns this model as an array.
 
 
 [[fulfillment_fulfillment]]
-= Fulfillment
+== Fulfillment
 
 [[fulfillment_fulfillment_services]]
-==  Services
-=== FulfillmentReturnService
+===  Services
+==== FulfillmentReturnService
 
 The FulfillmentReturnService is the service for return shipments of an order.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Fulfillment\Services`
 
@@ -262,7 +264,7 @@ The FulfillmentReturnService is the service for return shipments of an order.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -276,7 +278,7 @@ public registerReturns($orderId):bool // <1>
 Register the return of an order.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -302,7 +304,7 @@ public registerReturn($orderId, $returnProvider):bool // <1>
 Register the return of an order
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -321,12 +323,12 @@ a|`$returnProvider`
 
 
 
-=== FulfillmentShipmentService
+==== FulfillmentShipmentService
 
 The FulfillmentShipmentService is the service for registering and cancelling shipments of an order.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Fulfillment\Services`
 
@@ -335,7 +337,7 @@ The FulfillmentShipmentService is the service for registering and cancelling shi
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -349,7 +351,7 @@ public cancelShipment($orderId):bool // <1>
 Cancel the shipment of an order.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -375,7 +377,7 @@ public registerShipment($orderId):bool // <1>
 Register the shipment of an order.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -390,12 +392,12 @@ a|`$orderId`
 
 
 
-=== GetDhlRetoureOnlineDataService
+==== GetDhlRetoureOnlineDataService
 
 The GetDhlRetoureOnlineDataService is the service that retrieves old DHL Retoure Online data.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Fulfillment\Services`
 
@@ -404,7 +406,7 @@ The GetDhlRetoureOnlineDataService is the service that retrieves old DHL Retoure
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -418,7 +420,7 @@ public getDhlRetoureOnlineData():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 

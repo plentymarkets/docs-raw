@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[webshop_consent]]
-= Consent
+== Consent
 
 [[webshop_consent_contracts]]
-==  Contracts
-=== ConsentRepositoryContract
+===  Contracts
+==== ConsentRepositoryContract
 
 Repository to register consents and check for users response.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Consent\Contracts`
 
@@ -21,7 +23,7 @@ Repository to register consents and check for users response.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public registerConsentGroup($key, $label, $options = []):void // <1>
 Register a new group of consents.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -75,7 +77,7 @@ public registerConsent($key, $label, $options = []):void // <1>
 Register a new consent.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -121,7 +123,7 @@ public getConsentGroups():Illuminate\Support\Collection // <1>
 Get all consent groups including all consents.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_support_collection[Collection^]
 
@@ -139,7 +141,7 @@ public hasResponse():bool // <1>
 Check if the user has already responded the consents.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -156,7 +158,7 @@ public setResponse($key, $isConsented = false):void // <1>
 Set the response for a consent or a group of consents.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -188,7 +190,7 @@ public isConsented($key):bool // <1>
 Check if the user has consented.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -204,16 +206,16 @@ Use "*" as consent key to check if all entries of a group has a response, e.g. "
 
 
 [[webshop_webshop]]
-= Webshop
+== Webshop
 
 [[webshop_webshop_contracts]]
-==  Contracts
-=== CheckoutRepositoryContract
+===  Contracts
+==== CheckoutRepositoryContract
 
 Repository to get and set checkout data
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Contracts`
 
@@ -222,7 +224,7 @@ Repository to get and set checkout data
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -236,7 +238,7 @@ public getCurrency():string // <1>
 Get the currently used currency.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -253,7 +255,7 @@ public setCurrency($currency):void // <1>
 Set the currency.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -280,18 +282,18 @@ public getShippingCountryId():int // <1>
 Get the id of the current shipping country. Default to the configured country id from the webstore configuration.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
 
 
-=== ContactRepositoryContract
+==== ContactRepositoryContract
 
 Repository to get and set contact information for the webshop
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Contracts`
 
@@ -300,7 +302,7 @@ Repository to get and set contact information for the webshop
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -314,7 +316,7 @@ public getContactId():int // <1>
 Get the ID of the logged in contact or 0 for guests
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -331,7 +333,7 @@ public getContact():Plenty\Modules\Account\Contact\Models\Contact // <1>
 Get the logged in contact
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contact[Contact^]
 
@@ -349,7 +351,7 @@ public getContactClassId():int // <1>
 Get the contact class ID of the logged in contact
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -366,7 +368,7 @@ public getContactClassData($contactClassId):array // <1>
 Get the contact class data for the provided contact class ID
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -392,7 +394,7 @@ public getDefaultContactClassId():int // <1>
 Get the default contact class ID of the webstore
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -409,18 +411,18 @@ public showNetPrices():bool // <1>
 Get Information if net prices should be shown
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
 
 
-=== GiftCardRepositoryContract
+==== GiftCardRepositoryContract
 
 Repository to get information about gift cards and corresponding order items
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Contracts`
 
@@ -429,7 +431,7 @@ Repository to get information about gift cards and corresponding order items
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -443,7 +445,7 @@ public hasGiftCardPdf($orderId, $orderItemId, $campaignCodeOrderId):bool // <1>
 Checks if a gift card document has already been created for this order item
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -477,7 +479,7 @@ public getGiftCardInformation($orderItemId):array // <1>
 Get Information about the gift card
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -503,7 +505,7 @@ public isReturnable($orderItemId):bool // <1>
 Return true if its not a gift card or the codes are not redeemed
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -529,7 +531,7 @@ public getReturnQuantity($orderItemId):int // <1>
 Returnable quantity for giftCard
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -544,12 +546,12 @@ a|`$orderItemId`
 
 
 
-=== LocalizationRepositoryContract
+==== LocalizationRepositoryContract
 
 Repository for webshop localization information
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Contracts`
 
@@ -558,7 +560,7 @@ Repository for webshop localization information
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -572,7 +574,7 @@ public getLanguage():string // <1>
 Get the currently used language of the webshop visitor
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -589,7 +591,7 @@ public getLocale():string // <1>
 Get the current locale
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -606,7 +608,7 @@ public getLanguageCode($countryCode = null):string // <1>
 Get a ISO language code by given country code.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -621,12 +623,12 @@ a|`$countryCode`
 
 
 
-=== SessionStorageRepositoryContract
+==== SessionStorageRepositoryContract
 
 Repository for webshop session information
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Contracts`
 
@@ -635,7 +637,7 @@ Repository for webshop session information
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -649,7 +651,7 @@ public setSessionValue($key, $value):void // <1>
 Set a value to a given key in the session
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -681,7 +683,7 @@ public getSessionValue($key):void // <1>
 Get a value from the session by a given key
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -708,7 +710,7 @@ public getCustomer():Plenty\Modules\Frontend\Session\Storage\Models\Customer // 
 Get the customer session model
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_models_customer[Customer^]
 
@@ -726,19 +728,19 @@ public getOrder():Plenty\Modules\Frontend\Session\Storage\Models\Order // <1>
 Get the order session model
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_models_order[Order^]
 
     
 
 
-=== UrlBuilderRepositoryContract
+==== UrlBuilderRepositoryContract
 
 Generate url for items, variations and categories considering all affecting configurations.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Contracts`
 
@@ -747,7 +749,7 @@ Generate url for items, variations and categories considering all affecting conf
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -761,7 +763,7 @@ public buildItemUrl($itemId, $lang = null):Plenty\Modules\Webshop\Helpers\UrlQue
 Build item url. Generate and write url to item data if not defined yet.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_helpers_urlquery[UrlQuery^]
 
@@ -792,7 +794,7 @@ public buildCategoryUrl($categoryId, $lang = null, $webstoreId = null):Plenty\Mo
 Build category url by recursively prepending url names of parent categories.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_helpers_urlquery[UrlQuery^]
 
@@ -827,7 +829,7 @@ public fillItemUrl($itemData):void // <1>
 Store item data of loaded items to be reused when generating item or variation urls.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -854,7 +856,7 @@ public buildVariationUrl($itemId, $variationId, $lang = null):Plenty\Modules\Web
 Build variation url. Variation urls equal to item urls with the variation id appended.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_helpers_urlquery[UrlQuery^]
 
@@ -889,7 +891,7 @@ public getSuffix($itemId, $variationId, $withVariationId = true):string // <1>
 Get the suffix to be appended to item or variation urls.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -912,12 +914,12 @@ a|`$withVariationId`
 
 
 
-=== WebstoreConfigurationRepositoryContract
+==== WebstoreConfigurationRepositoryContract
 
 Repository for webstore information
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Contracts`
 
@@ -926,7 +928,7 @@ Repository for webstore information
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -940,7 +942,7 @@ public getWebstoreConfiguration():Plenty\Modules\System\Models\WebstoreConfigura
 Get the webstore configuration
 
 
-==== Return type
+===== Return type
     
 <1> link:system#system_models_webstoreconfiguration[WebstoreConfiguration^]
 
@@ -958,7 +960,7 @@ public getActiveLanguageList():array // <1>
 Get the activate languages of the webstore
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -975,19 +977,19 @@ public getDefaultShippingCountryId():int // <1>
 Get the default shipping-country-Id of the webstore
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
 
 [[webshop_webshop_events]]
-==  Events
-=== AfterBasketItemToOrderItem
+===  Events
+==== AfterBasketItemToOrderItem
 
 Event for receiving or manupulating the order item
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Events`
 
@@ -996,7 +998,7 @@ Event for receiving or manupulating the order item
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1010,7 +1012,7 @@ public getOrderItem():array // <1>
 Get order item data generated from the basket item.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1027,18 +1029,18 @@ public getBasketItem():array // <1>
 Get basket item data used to generate the order item from.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== ValidateVatNumber
+==== ValidateVatNumber
 
 Event to trigger validation of a vat number while creating new addresses. Failed validation will throw an exception.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Events`
 
@@ -1047,7 +1049,7 @@ Event to trigger validation of a vat number while creating new addresses. Failed
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1061,19 +1063,19 @@ public getVatNumber():string // <1>
 Get the vat number to validate.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
 
 [[webshop_webshop_helpers]]
-==  Helpers
-=== NumberFormatter
+===  Helpers
+==== NumberFormatter
 
 Helper class for number formatting
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Helpers`
 
@@ -1082,7 +1084,7 @@ Helper class for number formatting
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1096,7 +1098,7 @@ public formatDecimal($value, $decimal_places = -1):string // <1>
 Format the given value to decimal
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1126,7 +1128,7 @@ public formatMonetary($value, $currencyISO):string // <1>
 Format the given value to currency
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1147,12 +1149,12 @@ a|`$currencyISO`
 
 
 
-=== PluginConfig
+==== PluginConfig
 
 Helper to get plugin configuration values. Provides several methods to read configuration values and cast them into required type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Helpers`
 
@@ -1161,7 +1163,7 @@ Helper to get plugin configuration values. Provides several methods to read conf
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1175,7 +1177,7 @@ public load():void // <1>
 Initially load configuration values into member variables.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1193,7 +1195,7 @@ public getPluginName():string // <1>
 Return the name of the plugin to get the configuration values for.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1210,7 +1212,7 @@ public getMultiSelectValue($key, $possibleValues = [], $default = []):array // <
 Get values of a multiselect configuration.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1244,7 +1246,7 @@ public getTextValue($key, $default = &quot;&quot;, $transformDefault = &quot;&qu
 Get the value of a text configuration.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1279,7 +1281,7 @@ public getIntegerValue($key, $default):int // <1>
 Get the value of an integer configuration.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -1309,7 +1311,7 @@ public getBooleanValue($key, $default = false):bool // <1>
 Get the value of a boolean configuration.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1339,7 +1341,7 @@ public getConfigValue($key, $default = null):void // <1>
 Get a configuration value without any cast.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1360,12 +1362,12 @@ a|`$default`
 
 
 
-=== UnitUtils
+==== UnitUtils
 
 Convert plentymarkets unit keys into common unit codes.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Helpers`
 
@@ -1374,7 +1376,7 @@ Convert plentymarkets unit keys into common unit codes.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1388,7 +1390,7 @@ public static getHTML4Unit($unit = &quot;SMM&quot;):string // <1>
 Return common code for a unit (&#039;m&#039;,&#039;cm&#039; &#039;mm&#039;).
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1403,12 +1405,12 @@ a|`$unit`
 
 
 
-=== UrlQuery
+==== UrlQuery
 
 Helper to generate and manipulate urls to be used in the webshop.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Helpers`
 
@@ -1417,7 +1419,7 @@ Helper to generate and manipulate urls to be used in the webshop.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1431,7 +1433,7 @@ public static create($path = null, $lang = null):Plenty\Modules\Webshop\Helpers\
 Create a new instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_helpers_urlquery[UrlQuery^]
 
@@ -1462,7 +1464,7 @@ public static shouldAppendTrailingSlash():bool // <1>
 Check if a trailing slash should be appended to urls.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1479,7 +1481,7 @@ public append($suffix):Plenty\Modules\Webshop\Helpers // <1>
 Append a string to the path the url without checking for slashes.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_webshop_helpers[Helpers^]
 
@@ -1506,7 +1508,7 @@ public join($path):Plenty\Modules\Webshop\Helpers // <1>
 Append a new path to the existing one. Ensure having a slash as glue between existing path and the new segment.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_webshop_helpers[Helpers^]
 
@@ -1533,7 +1535,7 @@ public toAbsoluteUrl($includeLanguage = false):string // <1>
 Return the absolute url by prepending the HTTPS domain of the current client.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1559,7 +1561,7 @@ public toRelativeUrl($includeLanguage = false):string // <1>
 Return the path as a relative url.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1585,7 +1587,7 @@ public getPath($includeLanguage = false):string // <1>
 Return the path. This equals the relative url without a leading slash.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1611,7 +1613,7 @@ public equals($path):bool // <1>
 Compare current path to a string independent of a trailing slash.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1626,13 +1628,13 @@ a|`$path`
 
 
 [[webshop_webshop_hooks]]
-==  Hooks
-=== CheckVatNumber
+===  Hooks
+==== CheckVatNumber
 
 Hook to execute validation of vat numbers. Can be triggered by emitting ValidateVatNumber while creating new addresses.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Hooks`
 
@@ -1641,7 +1643,7 @@ Hook to execute validation of vat numbers. Can be triggered by emitting Validate
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1655,7 +1657,7 @@ public handle($vatNumberEvent):void // <1>
 Validate the given vat number
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1672,16 +1674,16 @@ a|`$vatNumberEvent`
 
 
 [[webshop_itemsearch]]
-= ItemSearch
+== ItemSearch
 
 [[webshop_itemsearch_contracts]]
-==  Contracts
-=== FacetExtension
+===  Contracts
+==== FacetExtension
 
 Interface to add custom facets.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\Contracts`
 
@@ -1690,7 +1692,7 @@ Interface to add custom facets.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1704,7 +1706,7 @@ public getAggregation():Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregatio
 Get the aggregation to apply the facet to the search results.
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -1722,7 +1724,7 @@ public mergeIntoFacetsList($result):array // <1>
 Merge facet data into list of facets.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1749,7 +1751,7 @@ public extractFilterParams($filtersList):void // <1>
 Extract search filters from filter paramters to be applied to the search request.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1766,13 +1768,13 @@ a|`$filtersList`
 
 
 [[webshop_itemsearch_extensions]]
-==  Extensions
-=== ItemSearchExtension
+===  Extensions
+==== ItemSearchExtension
 
 Extend the search result by additional data or mutate raw data in search results.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\Extensions`
 
@@ -1781,13 +1783,13 @@ Extend the search result by additional data or mutate raw data in search results
 
 
 [[webshop_itemsearch_factories]]
-==  Factories
-=== BaseSearchFactory
+===  Factories
+==== BaseSearchFactory
 
 Base factory to prepare and build search requests on variation data interface
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\Factories`
 
@@ -1796,7 +1798,7 @@ Base factory to prepare and build search requests on variation data interface
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1810,7 +1812,7 @@ public inherit($inheritedProperties = []):Plenty\Modules\Webshop\ItemSearch\Fact
 Create a new factory instance based on properties of an existing factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_basesearchfactory[BaseSearchFactory^]
 
@@ -1837,7 +1839,7 @@ public withMutator($mutator, $excludeDependencies = false, $position = 1000):Ple
 Add a mutator to transform search results.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -1874,7 +1876,7 @@ public createFilter($filterClass, $params = []):void // <1>
 Add a filter. Will create a new instance of the filter class if not already created.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1905,7 +1907,7 @@ public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Add a filter. Will override existing filter instances.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -1933,7 +1935,7 @@ public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories // 
 Set fields to be contained in search result.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -1961,7 +1963,7 @@ public getResultFields():array // <1>
 Get the requested result fields for this search request.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1978,7 +1980,7 @@ public hasResultField($field):bool // <1>
 Check if result field is already included in the source of the search.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2004,7 +2006,7 @@ public getAdditionalResultFields():array // <1>
 Get additional result fields required by webshop mutators.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2021,7 +2023,7 @@ public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webs
 Add an extension.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2052,7 +2054,7 @@ public getExtensions():array // <1>
 Get all registered extensions
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2069,7 +2071,7 @@ public getMutators():array // <1>
 Get all registered mutators
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2086,7 +2088,7 @@ public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories
 Add an aggregation
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2114,7 +2116,7 @@ public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories /
 Add a suggestion
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2142,7 +2144,7 @@ public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories
 Set pagination parameters.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2173,7 +2175,7 @@ public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\Vari
 Add sorting parameters
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2204,7 +2206,7 @@ public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories 
 Add multiple sorting parameters
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2231,7 +2233,7 @@ public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Set the order of the search results by ids.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2258,7 +2260,7 @@ public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factori
 Group results by field
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2278,12 +2280,12 @@ a|`$sortings`
 
 
 
-=== FacetSearchFactory
+==== FacetSearchFactory
 
 Prepare and build search requests to query facets
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\Factories`
 
@@ -2292,7 +2294,7 @@ Prepare and build search requests to query facets
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2306,7 +2308,7 @@ public static create($facets):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Create a factory instance depending on a given set of facet values.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2334,7 +2336,7 @@ public withMinimumCount():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Register extension to filter facets by minimum hit count.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2352,7 +2354,7 @@ public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories
 Get the default configuration of a search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2383,7 +2385,7 @@ public setAdminPreview($isAdminPreview):Plenty\Modules\Webshop\ItemSearch\Factor
 Set preview mode for the search request.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2410,7 +2412,7 @@ public isActive():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter active variations
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2428,7 +2430,7 @@ public isInactive():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter inactive variations
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2446,7 +2448,7 @@ public hasItemId($itemId):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter variation by a single item id
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2473,7 +2475,7 @@ public hasItemIds($itemIds):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter variations by multiple item ids
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2500,7 +2502,7 @@ public hasVariationId($variationId):Plenty\Modules\Webshop\ItemSearch\Factories 
 Filter variation by a single variation id.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2527,7 +2529,7 @@ public hasVariationIds($variationIds):Plenty\Modules\Webshop\ItemSearch\Factorie
 Filter variations by multiple variation ids.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2554,7 +2556,7 @@ public hasAtLeastOneAvailability($availabilityIds):Plenty\Modules\Webshop\ItemSe
 Filter variations by multiple availability ids.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2581,7 +2583,7 @@ public hasSupplier($supplierId):Plenty\Modules\Webshop\ItemSearch\Factories // <
 Filter variations by multiple availability ids.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2608,7 +2610,7 @@ public hasManufacturer($manufacturerId):Plenty\Modules\Webshop\ItemSearch\Factor
 Filter manufacturers by id.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2635,7 +2637,7 @@ public hasEachProperty($propertyIds):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations by multiple property ids.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2662,7 +2664,7 @@ public isMain():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter only main variations
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2680,7 +2682,7 @@ public isChild():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter only child variations
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2698,7 +2700,7 @@ public isHiddenInCategoryList($isHidden = true):Plenty\Modules\Webshop\ItemSearc
 Filter by visibility in category list.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2725,7 +2727,7 @@ public isSalable():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter variations by isSalable flag
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2743,7 +2745,7 @@ public isVisibleForClient($clientId = null):Plenty\Modules\Webshop\ItemSearch\Fa
 Filter variations by visibility for client
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2770,7 +2772,7 @@ public hasNameInLanguage($type = &quot;hasAnyNameInLanguage&quot;, $lang = null)
 Filter variations having texts in a given language.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2801,7 +2803,7 @@ public isInCategory($categoryId):Plenty\Modules\Webshop\ItemSearch\Factories // 
 Filter variations contained in a category.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2828,7 +2830,7 @@ public hasAtLeastOnePrice($priceIds):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations having at least on price.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2855,7 +2857,7 @@ public hasPriceForCustomer():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter variations having at least one price accessible by current customer.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2873,7 +2875,7 @@ public hasPriceInRange($priceMin, $priceMax):Plenty\Modules\Webshop\ItemSearch\F
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2904,7 +2906,7 @@ public hasTag($tagId):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2931,7 +2933,7 @@ public hasAnyTag($tagIds):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2958,7 +2960,7 @@ public groupByTemplateConfig():Plenty\Modules\Webshop\ItemSearch\Factories // <1
 Group results depending on a config value.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -2976,7 +2978,7 @@ public isCrossSellingItem($itemId, $relation):Plenty\Modules\Webshop\ItemSearch\
 Filter variations having a cross selling relation to a given item.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3007,7 +3009,7 @@ public hasFacets($facetValues, $clientId = null, $lang = null):Plenty\Modules\We
 Filter variations by facets.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3043,7 +3045,7 @@ public hasSearchString($query, $lang = null, $a = &quot;&quot;, $b = &quot;&quot
 Filter variations by given search string.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3082,7 +3084,7 @@ public hasNameString($query, $lang = null):Plenty\Modules\Webshop\ItemSearch\Fac
 Filter variations by searching names
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3113,7 +3115,7 @@ public withLanguage($lang = null):Plenty\Modules\Webshop\ItemSearch\Factories //
 Only request given language.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3140,7 +3142,7 @@ public withImages($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories 
 Include images in result
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3167,7 +3169,7 @@ public withVariationAttributeMap($itemId, $initialVariationId, $afterKey = []):P
 Includes VariationAttributeMap for variation select
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3202,7 +3204,7 @@ public withPropertyGroups($displaySettings = []):Plenty\Modules\Webshop\ItemSear
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3229,7 +3231,7 @@ public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Fact
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3247,7 +3249,7 @@ public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3265,7 +3267,7 @@ public withUrls():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Append URLs to result.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3283,7 +3285,7 @@ public withPrices($quantities = [], $setPriceOnly = false):Plenty\Modules\Websho
 Append prices to result.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3314,7 +3316,7 @@ public withCurrentCategory():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Set result as current category
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3332,7 +3334,7 @@ public withDefaultImage():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Append default item image if images are requested by result fields and item does not have any image
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3350,7 +3352,7 @@ public withBundleComponents():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Add bundle component variations.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3368,7 +3370,7 @@ public withSetComponents():void // <1>
 Add set component variations to item set entries.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3386,7 +3388,7 @@ public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3404,7 +3406,7 @@ public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3422,7 +3424,7 @@ public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3440,7 +3442,7 @@ public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3458,7 +3460,7 @@ public withTags():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3476,7 +3478,7 @@ public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3494,7 +3496,7 @@ public withSuggestions($query = &quot;&quot;, $lang = null):Plenty\Modules\Websh
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3525,7 +3527,7 @@ public withDidYouMeanSuggestions($query):Plenty\Modules\Webshop\ItemSearch\Facto
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3552,7 +3554,7 @@ public withSalableVariationCount():Plenty\Modules\Webshop\ItemSearch\Factories\V
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
@@ -3570,7 +3572,7 @@ public inherit($inheritedProperties = []):Plenty\Modules\Webshop\ItemSearch\Fact
 Create a new factory instance based on properties of an existing factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_basesearchfactory[BaseSearchFactory^]
 
@@ -3597,7 +3599,7 @@ public withMutator($mutator, $excludeDependencies = false, $position = 1000):Ple
 Add a mutator to transform search results.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3634,7 +3636,7 @@ public createFilter($filterClass, $params = []):void // <1>
 Add a filter. Will create a new instance of the filter class if not already created.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3665,7 +3667,7 @@ public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Add a filter. Will override existing filter instances.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3693,7 +3695,7 @@ public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories // 
 Set fields to be contained in search result.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3721,7 +3723,7 @@ public getResultFields():array // <1>
 Get the requested result fields for this search request.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3738,7 +3740,7 @@ public hasResultField($field):bool // <1>
 Check if result field is already included in the source of the search.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3764,7 +3766,7 @@ public getAdditionalResultFields():array // <1>
 Get additional result fields required by webshop mutators.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3781,7 +3783,7 @@ public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webs
 Add an extension.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3812,7 +3814,7 @@ public getExtensions():array // <1>
 Get all registered extensions
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3829,7 +3831,7 @@ public getMutators():array // <1>
 Get all registered mutators
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3846,7 +3848,7 @@ public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories
 Add an aggregation
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3874,7 +3876,7 @@ public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories /
 Add a suggestion
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3902,7 +3904,7 @@ public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories
 Set pagination parameters.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3933,7 +3935,7 @@ public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\Vari
 Add sorting parameters
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3964,7 +3966,7 @@ public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories 
 Add multiple sorting parameters
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -3991,7 +3993,7 @@ public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Set the order of the search results by ids.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4018,7 +4020,7 @@ public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factori
 Group results by field
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4038,12 +4040,12 @@ a|`$sortings`
 
 
 
-=== VariationSearchFactory
+==== VariationSearchFactory
 
 Prepare and build search requests to query variations
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\Factories`
 
@@ -4052,7 +4054,7 @@ Prepare and build search requests to query variations
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4066,7 +4068,7 @@ public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories
 Get the default configuration of a search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4097,7 +4099,7 @@ public setAdminPreview($isAdminPreview):Plenty\Modules\Webshop\ItemSearch\Factor
 Set preview mode for the search request.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4124,7 +4126,7 @@ public isActive():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter active variations
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4142,7 +4144,7 @@ public isInactive():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter inactive variations
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4160,7 +4162,7 @@ public hasItemId($itemId):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter variation by a single item id
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4187,7 +4189,7 @@ public hasItemIds($itemIds):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter variations by multiple item ids
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4214,7 +4216,7 @@ public hasVariationId($variationId):Plenty\Modules\Webshop\ItemSearch\Factories 
 Filter variation by a single variation id.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4241,7 +4243,7 @@ public hasVariationIds($variationIds):Plenty\Modules\Webshop\ItemSearch\Factorie
 Filter variations by multiple variation ids.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4268,7 +4270,7 @@ public hasAtLeastOneAvailability($availabilityIds):Plenty\Modules\Webshop\ItemSe
 Filter variations by multiple availability ids.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4295,7 +4297,7 @@ public hasSupplier($supplierId):Plenty\Modules\Webshop\ItemSearch\Factories // <
 Filter variations by multiple availability ids.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4322,7 +4324,7 @@ public hasManufacturer($manufacturerId):Plenty\Modules\Webshop\ItemSearch\Factor
 Filter manufacturers by id.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4349,7 +4351,7 @@ public hasEachProperty($propertyIds):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations by multiple property ids.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4376,7 +4378,7 @@ public isMain():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter only main variations
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4394,7 +4396,7 @@ public isChild():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter only child variations
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4412,7 +4414,7 @@ public isHiddenInCategoryList($isHidden = true):Plenty\Modules\Webshop\ItemSearc
 Filter by visibility in category list.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4439,7 +4441,7 @@ public isSalable():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter variations by isSalable flag
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4457,7 +4459,7 @@ public isVisibleForClient($clientId = null):Plenty\Modules\Webshop\ItemSearch\Fa
 Filter variations by visibility for client
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4484,7 +4486,7 @@ public hasNameInLanguage($type = &quot;hasAnyNameInLanguage&quot;, $lang = null)
 Filter variations having texts in a given language.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4515,7 +4517,7 @@ public isInCategory($categoryId):Plenty\Modules\Webshop\ItemSearch\Factories // 
 Filter variations contained in a category.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4542,7 +4544,7 @@ public hasAtLeastOnePrice($priceIds):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations having at least on price.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4569,7 +4571,7 @@ public hasPriceForCustomer():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Filter variations having at least one price accessible by current customer.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4587,7 +4589,7 @@ public hasPriceInRange($priceMin, $priceMax):Plenty\Modules\Webshop\ItemSearch\F
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4618,7 +4620,7 @@ public hasTag($tagId):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4645,7 +4647,7 @@ public hasAnyTag($tagIds):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4672,7 +4674,7 @@ public groupByTemplateConfig():Plenty\Modules\Webshop\ItemSearch\Factories // <1
 Group results depending on a config value.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4690,7 +4692,7 @@ public isCrossSellingItem($itemId, $relation):Plenty\Modules\Webshop\ItemSearch\
 Filter variations having a cross selling relation to a given item.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4721,7 +4723,7 @@ public hasFacets($facetValues, $clientId = null, $lang = null):Plenty\Modules\We
 Filter variations by facets.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4757,7 +4759,7 @@ public hasSearchString($query, $lang = null, $a = &quot;&quot;, $b = &quot;&quot
 Filter variations by given search string.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4796,7 +4798,7 @@ public hasNameString($query, $lang = null):Plenty\Modules\Webshop\ItemSearch\Fac
 Filter variations by searching names
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4827,7 +4829,7 @@ public withLanguage($lang = null):Plenty\Modules\Webshop\ItemSearch\Factories //
 Only request given language.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4854,7 +4856,7 @@ public withImages($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories 
 Include images in result
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4881,7 +4883,7 @@ public withVariationAttributeMap($itemId, $initialVariationId, $afterKey = []):P
 Includes VariationAttributeMap for variation select
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4916,7 +4918,7 @@ public withPropertyGroups($displaySettings = []):Plenty\Modules\Webshop\ItemSear
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4943,7 +4945,7 @@ public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Fact
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4961,7 +4963,7 @@ public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4979,7 +4981,7 @@ public withUrls():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Append URLs to result.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -4997,7 +4999,7 @@ public withPrices($quantities = [], $setPriceOnly = false):Plenty\Modules\Websho
 Append prices to result.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5028,7 +5030,7 @@ public withCurrentCategory():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Set result as current category
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5046,7 +5048,7 @@ public withDefaultImage():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Append default item image if images are requested by result fields and item does not have any image
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5064,7 +5066,7 @@ public withBundleComponents():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Add bundle component variations.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5082,7 +5084,7 @@ public withSetComponents():void // <1>
 Add set component variations to item set entries.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5100,7 +5102,7 @@ public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5118,7 +5120,7 @@ public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5136,7 +5138,7 @@ public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5154,7 +5156,7 @@ public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5172,7 +5174,7 @@ public withTags():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5190,7 +5192,7 @@ public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5208,7 +5210,7 @@ public withSuggestions($query = &quot;&quot;, $lang = null):Plenty\Modules\Websh
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5239,7 +5241,7 @@ public withDidYouMeanSuggestions($query):Plenty\Modules\Webshop\ItemSearch\Facto
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5266,7 +5268,7 @@ public withSalableVariationCount():Plenty\Modules\Webshop\ItemSearch\Factories\V
 
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
@@ -5284,7 +5286,7 @@ public inherit($inheritedProperties = []):Plenty\Modules\Webshop\ItemSearch\Fact
 Create a new factory instance based on properties of an existing factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_basesearchfactory[BaseSearchFactory^]
 
@@ -5311,7 +5313,7 @@ public withMutator($mutator, $excludeDependencies = false, $position = 1000):Ple
 Add a mutator to transform search results.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5348,7 +5350,7 @@ public createFilter($filterClass, $params = []):void // <1>
 Add a filter. Will create a new instance of the filter class if not already created.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5379,7 +5381,7 @@ public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Add a filter. Will override existing filter instances.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5407,7 +5409,7 @@ public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories // 
 Set fields to be contained in search result.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5435,7 +5437,7 @@ public getResultFields():array // <1>
 Get the requested result fields for this search request.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5452,7 +5454,7 @@ public hasResultField($field):bool // <1>
 Check if result field is already included in the source of the search.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5478,7 +5480,7 @@ public getAdditionalResultFields():array // <1>
 Get additional result fields required by webshop mutators.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5495,7 +5497,7 @@ public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webs
 Add an extension.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5526,7 +5528,7 @@ public getExtensions():array // <1>
 Get all registered extensions
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5543,7 +5545,7 @@ public getMutators():array // <1>
 Get all registered mutators
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5560,7 +5562,7 @@ public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories
 Add an aggregation
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5588,7 +5590,7 @@ public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories /
 Add a suggestion
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5616,7 +5618,7 @@ public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories
 Set pagination parameters.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5647,7 +5649,7 @@ public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\Vari
 Add sorting parameters
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5678,7 +5680,7 @@ public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories 
 Add multiple sorting parameters
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5705,7 +5707,7 @@ public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 Set the order of the search results by ids.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5732,7 +5734,7 @@ public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factori
 Group results by field
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_itemsearch_factories[Factories^]
 
@@ -5752,13 +5754,13 @@ a|`$sortings`
 
 
 [[webshop_itemsearch_helpers]]
-==  Helpers
-=== FacetExtensionContainer
+===  Helpers
+==== FacetExtensionContainer
 
 Container to collect facet extensions
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\Helpers`
 
@@ -5767,7 +5769,7 @@ Container to collect facet extensions
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5781,7 +5783,7 @@ public getFacetExtensions():array // <1>
 Get all registered facet extensions.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5798,7 +5800,7 @@ public addFacetExtension($facetExtension):void // <1>
 Add an extension to provide a custom facet.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5815,12 +5817,12 @@ a|`$facetExtension`
 
 
 
-=== ResultFieldTemplate
+==== ResultFieldTemplate
 
 Collect templates to read required result fields for several views from.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\Helpers`
 
@@ -5829,7 +5831,7 @@ Collect templates to read required result fields for several views from.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5843,7 +5845,7 @@ public static get($template):string // <1>
 Get the path to result fields file from a plugin
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -5869,7 +5871,7 @@ public static load($template):array // <1>
 Load result fields from a template file. Result field templates can be registered from a plugin.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5895,7 +5897,7 @@ public setTemplate($event, $template, $overwriteExistingData = true):void // <1>
 Set the path of a template to read result fields from.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5930,7 +5932,7 @@ public setTemplates($templateMap, $overwriteExistingData = true):void // <1>
 Set multiple templates to read result fields from.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5961,7 +5963,7 @@ public requireFields($event, $field = null):void // <1>
 Add required fields to variation search requests.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5985,12 +5987,12 @@ this parameter may contain a single result field or a list of field to require.
 
 
 
-=== SortingHelper
+==== SortingHelper
 
 Helper class to convert sorting configuration values into internal sorting paramters used by variation data interface.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\Helpers`
 
@@ -5999,7 +6001,7 @@ Helper class to convert sorting configuration values into internal sorting param
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6013,7 +6015,7 @@ public getSorting($sortingConfig = null, $isCategory = true):array // <1>
 Get sorting values from plugin configuration
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6062,7 +6064,7 @@ public getCategorySorting($sortingConfig = null):array // <1>
 Get sorting values for categories from config
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6088,7 +6090,7 @@ public getSearchSorting($sortingConfig = null):array // <1>
 Get sorting values for searches from config
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6114,7 +6116,7 @@ public getUsedItemName():string // <1>
 Get the result field for the name to be displayed in the webshop.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6131,7 +6133,7 @@ public splitPathAndOrder($sorting):array // <1>
 Explode configuration entries containing the field to sort by and the sorting order joined by an &#039;_&#039;.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6157,7 +6159,7 @@ public mapToInnerSorting($sorting):string // <1>
 Map (outer) sorting from item list to (inner) sorting to be applied on grouped variations of one item.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6183,7 +6185,7 @@ public static isLanguageSupported($lang):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -6209,7 +6211,7 @@ public static isLanguageActivated($lang):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -6235,7 +6237,7 @@ public static getM10lByLanguage($lang, $fallback = &quot;en&quot;):string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6265,7 +6267,7 @@ public static getLanguageByM10l($lang, $fallback = &quot;english&quot;):string /
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6284,13 +6286,13 @@ a|`$fallback`
 
 
 [[webshop_itemsearch_searchpresets]]
-==  SearchPresets
-=== BasketItems
+===  SearchPresets
+==== BasketItems
 
 Query basket items.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\SearchPresets`
 
@@ -6299,7 +6301,7 @@ Query basket items.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6313,7 +6315,7 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
@@ -6334,12 +6336,12 @@ a|`$options`
 
 
 
-=== CategoryItems
+==== CategoryItems
 
 Query items for a single category
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\SearchPresets`
 
@@ -6348,7 +6350,7 @@ Query items for a single category
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6362,7 +6364,7 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
@@ -6387,12 +6389,12 @@ a|`$options`
 
 
 
-=== CrossSellingItems
+==== CrossSellingItems
 
 Query cross selling items related to single item.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\SearchPresets`
 
@@ -6401,7 +6403,7 @@ Query cross selling items related to single item.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6415,7 +6417,7 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
@@ -6436,12 +6438,12 @@ a|`$options`
 
 
 
-=== Facets
+==== Facets
 
 Query facets for the item search of the webstore.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\SearchPresets`
 
@@ -6450,7 +6452,7 @@ Query facets for the item search of the webstore.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6464,7 +6466,7 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_facetsearchfactory[FacetSearchFactory^]
 
@@ -6486,12 +6488,12 @@ a|`$options`
 
 
 
-=== LiveShoppingItems
+==== LiveShoppingItems
 
 Query live shopping items.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\SearchPresets`
 
@@ -6500,7 +6502,7 @@ Query live shopping items.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6514,7 +6516,7 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
@@ -6536,12 +6538,12 @@ a|`$options`
 
 
 
-=== ManufacturerItems
+==== ManufacturerItems
 
 Query items by manufacturer.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\SearchPresets`
 
@@ -6550,7 +6552,7 @@ Query items by manufacturer.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6564,7 +6566,7 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
@@ -6586,12 +6588,12 @@ a|`$options`
 
 
 
-=== SearchItems
+==== SearchItems
 
 Query items from the item search of the webstore.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\SearchPresets`
 
@@ -6600,7 +6602,7 @@ Query items from the item search of the webstore.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6614,7 +6616,7 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
@@ -6640,13 +6642,13 @@ a|`$options`
 
 
 
-=== SearchPreset
+==== SearchPreset
 
 Define a preset of search request parameters to be reused for common search requests.
  * 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\SearchPresets`
 
@@ -6655,7 +6657,7 @@ Define a preset of search request parameters to be reused for common search requ
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6669,7 +6671,7 @@ public static getSearchFactory($options):void // <1>
 Get the search factory from the preset.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6685,12 +6687,12 @@ a|`$options`
 
 
 
-=== SearchSuggestions
+==== SearchSuggestions
 
 Query items to display search suggestions
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\SearchPresets`
 
@@ -6699,7 +6701,7 @@ Query items to display search suggestions
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6713,7 +6715,7 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
@@ -6733,12 +6735,12 @@ a|`$options`
 
 
 
-=== SingleItem
+==== SingleItem
 
 Get item to be displayed on single item pages
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\SearchPresets`
 
@@ -6747,7 +6749,7 @@ Get item to be displayed on single item pages
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6761,7 +6763,7 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
@@ -6782,12 +6784,12 @@ a|`$options`
 
 
 
-=== TagItems
+==== TagItems
 
 Query items by tag id.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\SearchPresets`
 
@@ -6796,7 +6798,7 @@ Query items by tag id.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6810,7 +6812,7 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
@@ -6831,12 +6833,12 @@ a|`$options`
 
 
 
-=== VariationAttributeMap
+==== VariationAttributeMap
 
 Append list of all variations for attribute selection in item views
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\SearchPresets`
 
@@ -6845,7 +6847,7 @@ Append list of all variations for attribute selection in item views
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6859,7 +6861,7 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
@@ -6880,12 +6882,12 @@ a|`$options`
 
 
 
-=== VariationList
+==== VariationList
 
 Search for variation lists
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\SearchPresets`
 
@@ -6894,7 +6896,7 @@ Search for variation lists
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6908,7 +6910,7 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
@@ -6933,13 +6935,13 @@ a|`$options`
 
 
 [[webshop_itemsearch_services]]
-==  Services
-=== ItemSearchService
+===  Services
+==== ItemSearchService
 
 Execute item searches using the variation data interface
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\ItemSearch\Services`
 
@@ -6948,7 +6950,7 @@ Execute item searches using the variation data interface
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6962,7 +6964,7 @@ public getResults($searches):array // <1>
 Execute multiple item searches at once. Results will be mapped to the same keys as used in the given associative array of search factories.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6989,7 +6991,7 @@ public getResult($searchFactory):array // <1>
 Get result of a single search request.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -7005,16 +7007,16 @@ a|`$searchFactory`
 
 
 [[webshop_order]]
-= Order
+== Order
 
 [[webshop_order_contracts]]
-==  Contracts
-=== OrderRepositoryContract
+===  Contracts
+==== OrderRepositoryContract
 
 Create orders from the webshop
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Order\Contracts`
 
@@ -7023,7 +7025,7 @@ Create orders from the webshop
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7037,7 +7039,7 @@ public placeOrder():Plenty\Modules\Order\Models\Order // <1>
 Generate order data from current basket and place the order.
 
 
-==== Return type
+===== Return type
     
 <1> link:order#order_models_order[Order^]
 
@@ -7055,7 +7057,7 @@ public createReturnOrder($returnOrderData, $orderId = null):Plenty\Modules\Order
 Create a return order for some items of an existing order.
 
 
-==== Return type
+===== Return type
     
 <1> link:order#order_models_order[Order^]
 
@@ -7075,16 +7077,16 @@ a|`$orderId`
 
 
 [[webshop_seo]]
-= Seo
+== Seo
 
 [[webshop_seo_contracts]]
-==  Contracts
-=== RobotsRepositoryContract
+===  Contracts
+==== RobotsRepositoryContract
 
 Repository to read or write content of the robots.txt
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Seo\Contracts`
 
@@ -7093,7 +7095,7 @@ Repository to read or write content of the robots.txt
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7107,7 +7109,7 @@ public findByWebstoreId($webstoreId):Plenty\Modules\Webshop\Seo\Models\Robots //
 Get the content of the robots.txt for a single webstore.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_models_robots[Robots^]
 
@@ -7134,7 +7136,7 @@ public updateByWebstoreId($webstoreId, $data):Plenty\Modules\Webshop\Seo\Models\
 Update the content of the robots.txt of a single webstore.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_models_robots[Robots^]
 
@@ -7154,12 +7156,12 @@ a|`$data`
 
 
 
-=== SitemapConfigurationRepositoryContract
+==== SitemapConfigurationRepositoryContract
 
 Repository for sitemap configuration
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Seo\Contracts`
 
@@ -7168,7 +7170,7 @@ Repository for sitemap configuration
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7182,7 +7184,7 @@ public findByWebstoreId($webstoreId):Plenty\Modules\Webshop\Seo\Models\SitemapCo
 Get the sitemap configuration of a single webstore.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_models_sitemapconfiguration[SitemapConfiguration^]
 
@@ -7209,7 +7211,7 @@ public updateByWebstoreId($webstoreId, $data = []):Plenty\Modules\Webshop\Seo\Mo
 Update the sitemap configuration of a single webstore.
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_models_sitemapconfiguration[SitemapConfiguration^]
 
@@ -7229,13 +7231,13 @@ a|`$data`
 
 
 [[webshop_seo_models]]
-==  Models
-=== Robots
+===  Models
+==== Robots
 
 Model for the configured content of the robots.txt
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Seo\Models`
 
@@ -7253,7 +7255,7 @@ Model for the configured content of the robots.txt
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7269,12 +7271,12 @@ Returns this model as an array.
 
 
 
-=== SitemapConfiguration
+==== SitemapConfiguration
 
 The sitemap configuration model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Seo\Models`
 
@@ -7301,7 +7303,7 @@ The sitemap configuration model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7317,16 +7319,16 @@ Returns this model as an array.
 
 
 [[webshop_template]]
-= Template
+== Template
 
 [[webshop_template_contracts]]
-==  Contracts
-=== TemplateConfigRepositoryContract
+===  Contracts
+==== TemplateConfigRepositoryContract
 
 Set configuration values from the plugin to be considered in internal functions.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Template\Contracts`
 
@@ -7335,7 +7337,7 @@ Set configuration values from the plugin to be considered in internal functions.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7367,7 +7369,7 @@ Register an internal configuration. Available configuration keys are:
 &lt;/ul&gt;
 
 
-==== Return type
+===== Return type
     
 <1> link:webshop#webshop_contracts_templateconfigrepositorycontract[TemplateConfigRepositoryContract^]
 
@@ -7388,13 +7390,13 @@ a|`$value`
 
 
 [[webshop_template_providers]]
-==  Providers
-=== TemplateServiceProvider
+===  Providers
+==== TemplateServiceProvider
 
 Service provider for template plugins
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Webshop\Template\Providers`
 
@@ -7403,7 +7405,7 @@ Service provider for template plugins
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7417,7 +7419,7 @@ public overrideTemplate($original, $override):void // <1>
 Override a twig template. The new template will be used when the overridden template is going to be rendered.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7448,7 +7450,7 @@ public addTemplateAlias($original, $alias):void // <1>
 Add an alias for a template. Rendering the template will also check for overrides of the alias template.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 

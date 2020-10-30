@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[feedback_feedback]]
-= Feedback
+== Feedback
 
 [[feedback_feedback_contracts]]
-==  Contracts
-=== FeedbackAverageRepositoryContract
+===  Contracts
+==== FeedbackAverageRepositoryContract
 
 Get the feedback average.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Contracts`
 
@@ -21,7 +23,7 @@ Get the feedback average.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public getFeedbackAverage($feedbackRelationTargetId):void // <1>
 Gets the feedback average
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -62,7 +64,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -80,7 +82,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -98,7 +100,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -125,7 +127,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -143,7 +145,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -161,19 +163,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== FeedbackCommentRepositoryContract
+==== FeedbackCommentRepositoryContract
 
 Get, create and delete feedback comments.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Contracts`
 
@@ -182,7 +184,7 @@ Get, create and delete feedback comments.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -196,7 +198,7 @@ public getFeedbackComment($feedbackCommentId):Plenty\Modules\Feedback\Models\Fee
 Get a feedback comment
 
 
-==== Return type
+===== Return type
     
 <1> link:feedback#feedback_models_feedbackcomment[FeedbackComment^]
 
@@ -223,7 +225,7 @@ public listFeedbackComments():Illuminate\Support\Collection // <1>
 List feedback comments
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_support_collection[Collection^]
 
@@ -241,7 +243,7 @@ public createFeedbackComment($data):Plenty\Modules\Feedback\Models\FeedbackComme
 Create a feedback comment
 
 
-==== Return type
+===== Return type
     
 <1> link:feedback#feedback_models_feedbackcomment[FeedbackComment^]
 
@@ -268,7 +270,7 @@ public deleteFeedbackComment($feedbackCommentId):void // <1>
 Delete a feedback comment
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -295,7 +297,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -313,7 +315,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -331,7 +333,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -358,7 +360,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -376,7 +378,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -394,19 +396,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== FeedbackRatingRepositoryContract
+==== FeedbackRatingRepositoryContract
 
 Get, create and delete feedback ratings.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Contracts`
 
@@ -415,7 +417,7 @@ Get, create and delete feedback ratings.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -429,7 +431,7 @@ public getFeedbackRating($feedbackRatingId):Plenty\Modules\Feedback\Models\Feedb
 Get a feedback rating
 
 
-==== Return type
+===== Return type
     
 <1> link:feedback#feedback_models_feedbackrating[FeedbackRating^]
 
@@ -456,7 +458,7 @@ public listFeedbackRatings():Illuminate\Support\Collection // <1>
 List feedback ratings
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_support_collection[Collection^]
 
@@ -474,7 +476,7 @@ public createFeedbackRating($data):Plenty\Modules\Feedback\Models\FeedbackRating
 Create a feedback rating
 
 
-==== Return type
+===== Return type
     
 <1> link:feedback#feedback_models_feedbackrating[FeedbackRating^]
 
@@ -501,7 +503,7 @@ public deleteFeedbackRating($feedbackRatingId):void // <1>
 Delete a feedback rating
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -528,7 +530,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -546,7 +548,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -564,7 +566,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -591,7 +593,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -609,7 +611,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -627,19 +629,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== FeedbackRepositoryContract
+==== FeedbackRepositoryContract
 
 Get, create and delete feedbacks.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Contracts`
 
@@ -648,7 +650,7 @@ Get, create and delete feedbacks.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -662,7 +664,7 @@ public getFeedback($feedbackId):void // <1>
 Get a feedback
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -689,7 +691,7 @@ public listFeedbacks($page = 1, $itemsPerPage = 50, $with = [], $filters = []):P
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -728,7 +730,7 @@ public createFeedback($data):void // <1>
 Create a feedback
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -755,7 +757,7 @@ public deleteFeedback($feedbackId):void // <1>
 Delete a feedback
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -782,7 +784,7 @@ public updateFeedback($data, $feedbackId):void // <1>
 Update a feedback
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -813,7 +815,7 @@ public updateFeedbacksVisibility($feedbackIds, $isVisible):void // <1>
 Update the visibility of multiple feedbacks
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -844,7 +846,7 @@ public deleteFeedbacks($feedbackIds):void // <1>
 Delete multiple feedbacks
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -871,7 +873,7 @@ public listFeedbackReplies($feedbackId, $page = 1, $itemsPerPage = 50, $with = [
 Lists feedback replies
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -914,7 +916,7 @@ public migrateLegacyFeedbacks():void // <1>
 Migrate legacy feedbacks
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -932,7 +934,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -950,7 +952,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -968,7 +970,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -995,7 +997,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1013,7 +1015,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1031,20 +1033,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[feedback_feedback_models]]
-==  Models
-=== Feedback
+===  Models
+==== Feedback
 
 The feedback model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Models`
 
@@ -1083,7 +1085,7 @@ The feedback model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1099,12 +1101,12 @@ Returns this model as an array.
 
 
 
-=== FeedbackAverage
+==== FeedbackAverage
 
 The feedback average model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Models`
 
@@ -1157,7 +1159,7 @@ The feedback average model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1173,12 +1175,12 @@ Returns this model as an array.
 
 
 
-=== FeedbackComment
+==== FeedbackComment
 
 The feedback comment model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Models`
 
@@ -1210,7 +1212,7 @@ The feedback comment model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1226,12 +1228,12 @@ Returns this model as an array.
 
 
 
-=== FeedbackCommentSourceRelation
+==== FeedbackCommentSourceRelation
 
 The feedback comment source relation model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Models`
 
@@ -1255,7 +1257,7 @@ The feedback comment source relation model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1271,12 +1273,12 @@ Returns this model as an array.
 
 
 
-=== FeedbackCommentTargetRelation
+==== FeedbackCommentTargetRelation
 
 The feedback comment target relation model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Models`
 
@@ -1300,7 +1302,7 @@ The feedback comment target relation model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1316,12 +1318,12 @@ Returns this model as an array.
 
 
 
-=== FeedbackLegacy
+==== FeedbackLegacy
 
 The feedback legacy model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Models`
 
@@ -1350,7 +1352,7 @@ The feedback legacy model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1366,12 +1368,12 @@ Returns this model as an array.
 
 
 
-=== FeedbackRating
+==== FeedbackRating
 
 The feedback rating model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Models`
 
@@ -1403,7 +1405,7 @@ The feedback rating model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1419,12 +1421,12 @@ Returns this model as an array.
 
 
 
-=== FeedbackRatingAverage
+==== FeedbackRatingAverage
 
 The feedback rating average model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Models`
 
@@ -1462,7 +1464,7 @@ The feedback rating average model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1478,12 +1480,12 @@ Returns this model as an array.
 
 
 
-=== FeedbackRatingSourceRelation
+==== FeedbackRatingSourceRelation
 
 The feedback rating source relation model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Models`
 
@@ -1507,7 +1509,7 @@ The feedback rating source relation model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1523,12 +1525,12 @@ Returns this model as an array.
 
 
 
-=== FeedbackRatingTargetRelation
+==== FeedbackRatingTargetRelation
 
 The feedback rating target relation model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Models`
 
@@ -1552,7 +1554,7 @@ The feedback rating target relation model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1568,12 +1570,12 @@ Returns this model as an array.
 
 
 
-=== FeedbackSourceRelation
+==== FeedbackSourceRelation
 
 The feedback source relation model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Models`
 
@@ -1603,7 +1605,7 @@ The feedback source relation model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1619,12 +1621,12 @@ Returns this model as an array.
 
 
 
-=== FeedbackTargetRelation
+==== FeedbackTargetRelation
 
 The feedback target relation model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Feedback\Models`
 
@@ -1654,7 +1656,7 @@ The feedback target relation model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

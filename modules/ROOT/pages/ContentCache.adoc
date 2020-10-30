@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[contentcache_contentcachelink]]
-= ContentCacheLink
+== ContentCacheLink
 
 [[contentcache_contentcachelink_models]]
-==  Models
-=== ContentCacheLink
+===  Models
+==== ContentCacheLink
 
 Eloquent model representing a Content Cache Link.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ContentCache\ContentCacheLink\Models`
 
@@ -42,7 +44,7 @@ Eloquent model representing a Content Cache Link.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -58,16 +60,16 @@ Returns this model as an array.
 
 
 [[contentcache_contentcache]]
-= ContentCache
+== ContentCache
 
 [[contentcache_contentcache_contentcachesettings]]
-==  ContentCacheSettings
-=== ContentCacheSettings
+===  ContentCacheSettings
+==== ContentCacheSettings
 
 Eloquent model representing the Content Cache Settings.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ContentCache\ContentCacheSettings`
 
@@ -88,7 +90,7 @@ Eloquent model representing the Content Cache Settings.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -104,13 +106,13 @@ Returns this model as an array.
 
 
 [[contentcache_contentcache_contracts]]
-==  Contracts
-=== ContentCacheInvalidationRepositoryContract
+===  Contracts
+==== ContentCacheInvalidationRepositoryContract
 
 Interface for content cache invalidation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ContentCache\Contracts`
 
@@ -119,7 +121,7 @@ Interface for content cache invalidation
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -133,7 +135,7 @@ public invalidateVariationIds($variationIds, $plentyId = null):void // <1>
 Invalidate all cache entries related to given variation ids.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -164,7 +166,7 @@ public invalidateItemIds($itemIds, $plentyId = null):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -195,7 +197,7 @@ public invalidateAll($plentyId = null):void // <1>
 Invalidate all cache entries related to given plenty id.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -222,7 +224,7 @@ public invalidateUri($uri):void // <1>
 Invalidate cache entries by URI
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -249,19 +251,19 @@ public storeInvalidationStacks():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== ContentCacheRepositoryContract
+==== ContentCacheRepositoryContract
 
 Save and retrieve values to or from the content cache
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ContentCache\Contracts`
 
@@ -270,7 +272,7 @@ Save and retrieve values to or from the content cache
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -284,7 +286,7 @@ public enableCacheForResponse():void // <1>
 Enable content caching for current response so next request on this resource will be delivered from content cache.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -302,7 +304,7 @@ public linkVariationsToResponse($variationIds):void // <1>
 Link variations to current response.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -318,12 +320,12 @@ a|`$variationIds`
 
 
 
-=== ContentCacheSettingsRepositoryContract
+==== ContentCacheSettingsRepositoryContract
 
 Interface for content cache settings
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ContentCache\Contracts`
 
@@ -332,7 +334,7 @@ Interface for content cache settings
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -346,7 +348,7 @@ public getSettings($plentyId):Plenty\Modules\ContentCache\ContentCacheSettings\C
 
 
 
-==== Return type
+===== Return type
     
 <1> link:contentcache#contentcache_contentcachesettings_contentcachesettings[ContentCacheSettings^]
 
@@ -373,7 +375,7 @@ public getSettingsMultiple($plentyIds):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -400,7 +402,7 @@ public saveSettings($plentyId, $contentCacheActive):Plenty\Modules\ContentCache\
 
 
 
-==== Return type
+===== Return type
     
 <1> link:contentcache#contentcache_contentcachesettings_contentcachesettings[ContentCacheSettings^]
 

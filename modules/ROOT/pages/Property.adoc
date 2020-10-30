@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[property_property]]
-= Property
+== Property
 
 [[property_property_contracts]]
-==  Contracts
-=== PropertyAmazonRepositoryContract
+===  Contracts
+==== PropertyAmazonRepositoryContract
 
 This interface allows you to get, create, update and delete property amazons.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -21,7 +23,7 @@ This interface allows you to get, create, update and delete property amazons.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public getPropertyAmazon($propertyAmazonId):Plenty\Modules\Property\Models\Prope
 Gets a property amazon. The ID of the property amazon must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyamazon[PropertyAmazon^]
 
@@ -62,7 +64,7 @@ public listPropertyAmazons($with = [], $filters = []):array // <1>
 List property amazons
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -93,7 +95,7 @@ public createPropertyAmazon($data):Plenty\Modules\Property\Models\PropertyAmazon
 Creates one or multiple property amazon
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyamazon[PropertyAmazon^]
 
@@ -120,7 +122,7 @@ public updatePropertyAmazon($data):Plenty\Modules\Property\Models\PropertyAmazon
 Updates one or multiple property amazon.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyamazon[PropertyAmazon^]
 
@@ -147,7 +149,7 @@ public deletePropertyAmazon($propertyAmazonId):void // <1>
 Deletes a property amazon. The ID of property amazon must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -174,7 +176,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -192,7 +194,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -210,7 +212,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -237,7 +239,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -255,7 +257,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -273,19 +275,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== PropertyAvailabilityRepositoryContract
+==== PropertyAvailabilityRepositoryContract
 
 Get, create, update and delete property availability.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -294,7 +296,7 @@ Get, create, update and delete property availability.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -308,7 +310,7 @@ public getAvailability($availabilityId):Plenty\Modules\Property\Models\PropertyA
 Gets an availability. The ID of the availability must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyavailability[PropertyAvailability^]
 
@@ -335,7 +337,7 @@ public listAvailabilities():array // <1>
 Lists availabilities
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -352,7 +354,7 @@ public createAvailability($data):Plenty\Modules\Property\Models\PropertyAvailabi
 Creates an availability
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyavailability[PropertyAvailability^]
 
@@ -379,7 +381,7 @@ public updateAvailability($availabilityId, $data):Plenty\Modules\Property\Models
 Updates an availability. The ID of availability must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyavailability[PropertyAvailability^]
 
@@ -410,7 +412,7 @@ public deleteAvailability($availabilityId):array // <1>
 Deletes an availability. The ID of availability must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -436,7 +438,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -454,7 +456,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -472,7 +474,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -499,7 +501,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -517,7 +519,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -535,19 +537,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== PropertyGroupNameRepositoryContract
+==== PropertyGroupNameRepositoryContract
 
 This interface allows you to get, list, create, update and delete property group names.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -556,7 +558,7 @@ This interface allows you to get, list, create, update and delete property group
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -570,7 +572,7 @@ public getGroupName($groupNameId):Plenty\Modules\Property\Models\PropertyGroupNa
 Gets a group name. The ID of the group name must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertygroupname[PropertyGroupName^]
 
@@ -597,7 +599,7 @@ public listGroupNames():array // <1>
 Lists group names
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -614,7 +616,7 @@ public createGroupName($data):Plenty\Modules\Property\Models\PropertyGroupName /
 Creates a group name
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertygroupname[PropertyGroupName^]
 
@@ -641,7 +643,7 @@ public updateGroupName($groupNameId, $data):Plenty\Modules\Property\Models\Prope
 Updates a group name. The ID of the group name must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertygroupname[PropertyGroupName^]
 
@@ -672,7 +674,7 @@ public deleteGroupName($groupNameId):array // <1>
 Deletes a group name. The ID of group name must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -698,7 +700,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -716,7 +718,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -734,7 +736,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -761,7 +763,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -779,7 +781,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -797,19 +799,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== PropertyGroupOptionRepositoryContract
+==== PropertyGroupOptionRepositoryContract
 
 This interface allows you to get, create, update and delete property group options.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -818,7 +820,7 @@ This interface allows you to get, create, update and delete property group optio
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -832,7 +834,7 @@ public getGroupOption($groupOptionId):Plenty\Modules\Property\Models\PropertyGro
 Get a group option. The ID of the group option must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertygroupoption[PropertyGroupOption^]
 
@@ -859,7 +861,7 @@ public listGroupOptions():array // <1>
 List group options
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -876,7 +878,7 @@ public createGroupOption($data):Plenty\Modules\Property\Models\PropertyGroupOpti
 Creates a group option
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertygroupoption[PropertyGroupOption^]
 
@@ -903,7 +905,7 @@ public updateGroupOption($groupOptionId, $data):Plenty\Modules\Property\Models\P
 Updates a group option. The ID of group option must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertygroupoption[PropertyGroupOption^]
 
@@ -934,7 +936,7 @@ public deleteGroupOption($groupOptionId):array // <1>
 Deletes a group option. The ID of group option must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -960,7 +962,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -978,7 +980,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -996,7 +998,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1023,7 +1025,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1041,7 +1043,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1059,19 +1061,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== PropertyGroupRelationRepositoryContract
+==== PropertyGroupRelationRepositoryContract
 
 This interface allows you to link or unlink properties with a property group.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -1080,7 +1082,7 @@ This interface allows you to link or unlink properties with a property group.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1094,7 +1096,7 @@ public link($propertyId, $propertyGroupId):bool // <1>
 Links a property to a property group.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1124,7 +1126,7 @@ public unlink($propertyId, $propertyGroupId):bool // <1>
 Unlinks a property to a property group.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1143,12 +1145,12 @@ a|`$propertyGroupId`
 
 
 
-=== PropertyGroupRepositoryContract
+==== PropertyGroupRepositoryContract
 
 This interface allows you to get, list, create, update and delete property groups. Property groups help to structure properties.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -1157,7 +1159,7 @@ This interface allows you to get, list, create, update and delete property group
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1171,7 +1173,7 @@ public getGroup($groupId):Plenty\Modules\Property\Models\PropertyGroup // <1>
 Gets a property group. The ID of the group must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertygroup[PropertyGroup^]
 
@@ -1198,7 +1200,7 @@ public listGroups($page = 1, $itemsPerPage = 50, $with = [], $filters = [], $pag
 Lists property groups
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1249,7 +1251,7 @@ public createGroup($data):Plenty\Modules\Property\Models\PropertyGroup // <1>
 Creates a property group
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertygroup[PropertyGroup^]
 
@@ -1276,7 +1278,7 @@ public updateGroup($groupId, $data):Plenty\Modules\Property\Models\PropertyGroup
 Updates a property group. The ID of group must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertygroup[PropertyGroup^]
 
@@ -1307,7 +1309,7 @@ public deleteGroup($groupId):array // <1>
 Deletes a property group. The ID of group must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1333,7 +1335,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1351,7 +1353,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1369,7 +1371,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1396,7 +1398,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1414,7 +1416,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1432,19 +1434,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== PropertyMarketRepositoryContract
+==== PropertyMarketRepositoryContract
 
 This interface allows you to get, list, create, update and delete property markets.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -1453,7 +1455,7 @@ This interface allows you to get, list, create, update and delete property marke
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1467,7 +1469,7 @@ public getPropertyMarket($propertyMarketId):Plenty\Modules\Property\Models\Prope
 Gets a property market. The ID of the property market must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertymarket[PropertyMarket^]
 
@@ -1494,7 +1496,7 @@ public listPropertyMarkets():array // <1>
 Lists property markets
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1511,7 +1513,7 @@ public createPropertyMarket($data):Plenty\Modules\Property\Models\PropertyMarket
 Creates a property market
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertymarket[PropertyMarket^]
 
@@ -1538,7 +1540,7 @@ public updatePropertyMarket($propertyMarketId, $data):Plenty\Modules\Property\Mo
 Updates a property market. The ID of property market must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertymarket[PropertyMarket^]
 
@@ -1569,7 +1571,7 @@ public deletePropertyMarket($propertyMarketId):array // <1>
 Deletes a property market. The ID of property market must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1595,7 +1597,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1613,7 +1615,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1631,7 +1633,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1658,7 +1660,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1676,7 +1678,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1694,19 +1696,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== PropertyNameRepositoryContract
+==== PropertyNameRepositoryContract
 
 This interface allows you to get, list, create, update and delete property names.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -1715,7 +1717,7 @@ This interface allows you to get, list, create, update and delete property names
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1729,7 +1731,7 @@ public getName($nameId):Plenty\Modules\Property\Models\PropertyName // <1>
 Gets a property name. The ID of the property name must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyname[PropertyName^]
 
@@ -1756,7 +1758,7 @@ public listNames($filters = []):array // <1>
 Lists property names
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1782,7 +1784,7 @@ public createName($data):Plenty\Modules\Property\Models\PropertyName // <1>
 Creates a property name
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyname[PropertyName^]
 
@@ -1809,7 +1811,7 @@ public updateName($nameId, $data):Plenty\Modules\Property\Models\PropertyName //
 Updates a property name. The ID of property name must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyname[PropertyName^]
 
@@ -1840,7 +1842,7 @@ public deleteName($nameId):array // <1>
 Deletes a property name. The ID of property name must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1866,7 +1868,7 @@ public getPropertyByName($name):Plenty\Modules\Property\Models\PropertyName // <
 Get a property name by name
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyname[PropertyName^]
 
@@ -1893,7 +1895,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1911,7 +1913,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1929,7 +1931,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1956,7 +1958,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1974,7 +1976,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1992,19 +1994,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== PropertyOptionRepositoryContract
+==== PropertyOptionRepositoryContract
 
 This interface allows you to get, list, create, update and delete property options.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -2013,7 +2015,7 @@ This interface allows you to get, list, create, update and delete property optio
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2027,7 +2029,7 @@ public getPropertyOption($propertyOptionId):Plenty\Modules\Property\Models\Prope
 Gets a property option. The ID of the property option must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyoption[PropertyOption^]
 
@@ -2054,7 +2056,7 @@ public listPropertyOptions():array // <1>
 List property options
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2071,7 +2073,7 @@ public createPropertyOption($data):Plenty\Modules\Property\Models\PropertyOption
 Creates a property option
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyoption[PropertyOption^]
 
@@ -2098,7 +2100,7 @@ public createPropertyOptions($data):array // <1>
 Creates property options
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2124,7 +2126,7 @@ public updatePropertyOption($propertyOptionId, $data):Plenty\Modules\Property\Mo
 Updates a property option. The ID of property option must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyoption[PropertyOption^]
 
@@ -2155,7 +2157,7 @@ public deletePropertyOption($propertyOptionId):array // <1>
 Deletes a property option. The ID of property option must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2181,7 +2183,7 @@ public deletePropertyOptions($optionIds):array // <1>
 Delete one or more property options.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2207,7 +2209,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2225,7 +2227,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2243,7 +2245,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2270,7 +2272,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2288,7 +2290,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2306,19 +2308,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== PropertyRelationMarkupRepositoryContract
+==== PropertyRelationMarkupRepositoryContract
 
 This interface allows you to get, list, create, update and delete property relation markups.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -2327,7 +2329,7 @@ This interface allows you to get, list, create, update and delete property relat
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2341,7 +2343,7 @@ public getRelationMarkup($relationMarkupId):Plenty\Modules\Property\Models\Prope
 Get a property relation markup. The ID of the property relation markup must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyrelationmarkup[PropertyRelationMarkup^]
 
@@ -2368,7 +2370,7 @@ public listRelationMarkups():array // <1>
 List property relation markups
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2385,7 +2387,7 @@ public createRelationMarkup($data):Plenty\Modules\Property\Models\PropertyRelati
 Creates a property relation markup
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyrelationmarkup[PropertyRelationMarkup^]
 
@@ -2412,7 +2414,7 @@ public updateRelationMarkup($relationMarkupId, $data):Plenty\Modules\Property\Mo
 Updates a property relation markup. The ID of property relation markup must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyrelationmarkup[PropertyRelationMarkup^]
 
@@ -2443,7 +2445,7 @@ public deleteRelationMarkup($relationMarkupId):void // <1>
 Deletes a property relation markup. The ID of property relation markup must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2470,7 +2472,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2488,7 +2490,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2506,7 +2508,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2533,7 +2535,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2551,7 +2553,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2569,19 +2571,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== PropertyRelationRepositoryContract
+==== PropertyRelationRepositoryContract
 
 This interface allows you to get, create, update and delete property relations.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -2590,7 +2592,7 @@ This interface allows you to get, create, update and delete property relations.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2604,7 +2606,7 @@ public getRelation($relationId):Plenty\Modules\Property\Models\PropertyRelation 
 Gets a property relation. The ID of the property relation must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyrelation[PropertyRelation^]
 
@@ -2631,7 +2633,7 @@ public listRelations($filters = [], $page = 1, $itemsPerPage = 50, $paginate):ar
 List property relations
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2669,7 +2671,7 @@ public createRelation($data):Plenty\Modules\Property\Models\PropertyRelation // 
 Creates a property relation
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyrelation[PropertyRelation^]
 
@@ -2696,7 +2698,7 @@ public updateRelation($relationId, $data):Plenty\Modules\Property\Models\Propert
 Updates a property relation. The ID of property relation must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyrelation[PropertyRelation^]
 
@@ -2727,7 +2729,7 @@ public deleteRelation($relationId):void // <1>
 Deletes a property relation. The ID of property relation must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2754,7 +2756,7 @@ public savePropertyRelationFile($relationId, $data, $file = &quot;&quot;):string
 Save property relation file to S3
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2788,7 +2790,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2806,7 +2808,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2824,7 +2826,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2851,7 +2853,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2869,7 +2871,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2887,19 +2889,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== PropertyRelationValueRepositoryContract
+==== PropertyRelationValueRepositoryContract
 
 This interface allows you to get, create, update and delete property relation values.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -2908,7 +2910,7 @@ This interface allows you to get, create, update and delete property relation va
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2922,7 +2924,7 @@ public getPropertyRelationValue($propertyRelationValueId):Plenty\Modules\Propert
 Gets an property relation value. The ID of the property relation value must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyrelationvalue[PropertyRelationValue^]
 
@@ -2949,7 +2951,7 @@ public listPropertyRelationValues():array // <1>
 List property relation values
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2966,7 +2968,7 @@ public createPropertyRelationValue($data):Plenty\Modules\Property\Models\Propert
 Creates an property relation value
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyrelationvalue[PropertyRelationValue^]
 
@@ -2993,7 +2995,7 @@ public updatePropertyRelationValue($propertyRelationValueId, $data):Plenty\Modul
 Updates a property relation value. The ID of property relation value must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyrelationvalue[PropertyRelationValue^]
 
@@ -3024,7 +3026,7 @@ public updatePropertyRelationValues($data):Plenty\Modules\Property\Models\Proper
 Update multiple property relation values
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyrelationvalue[PropertyRelationValue^]
 
@@ -3051,7 +3053,7 @@ public deletePropertyRelationValue($propertyRelationValueId):void // <1>
 Delete a property relation value
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3078,7 +3080,7 @@ public deleteRelationsByRelationId($relationId):void // <1>
 Delete all property relation values of a specified property relation.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3105,7 +3107,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3123,7 +3125,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3141,7 +3143,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3168,7 +3170,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3186,7 +3188,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3204,19 +3206,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== PropertyRepositoryContract
+==== PropertyRepositoryContract
 
 This interface allows you to get, create, update and delete properties.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -3225,7 +3227,7 @@ This interface allows you to get, create, update and delete properties.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3239,7 +3241,7 @@ public getProperty($propertyId, $with = []):Plenty\Modules\Property\Models\Prope
 Gets a property. The ID of the property must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_property[Property^]
 
@@ -3277,7 +3279,7 @@ public listProperties($page = 1, $itemsPerPage = 50, $with = [], $filters = [], 
 Lists properties
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3336,7 +3338,7 @@ public createProperty($data):Plenty\Modules\Property\Models\Property // <1>
 Creates a property
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_property[Property^]
 
@@ -3363,7 +3365,7 @@ public updateProperty($propertyId, $data):Plenty\Modules\Property\Models\Propert
 Updates a property. The ID of property must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_property[Property^]
 
@@ -3394,7 +3396,7 @@ public deleteProperty($propertyId):void // <1>
 Deletes a property. The ID of property must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3421,7 +3423,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3439,7 +3441,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3457,7 +3459,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3484,7 +3486,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3502,7 +3504,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3520,19 +3522,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== PropertySelectionRepositoryContract
+==== PropertySelectionRepositoryContract
 
 This interface allows you to get, create, update and delete property selections.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Contracts`
 
@@ -3541,7 +3543,7 @@ This interface allows you to get, create, update and delete property selections.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3555,7 +3557,7 @@ public getPropertySelection($propertySelectionId):Plenty\Modules\Property\Models
 Gets a property selection. The ID of the property selection must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyselection[PropertySelection^]
 
@@ -3582,7 +3584,7 @@ public listPropertySelections($page = 1, $itemsPerPage = 50, $with = [], $filter
 List property selections
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3623,7 +3625,7 @@ public createPropertySelection($data):Plenty\Modules\Property\Models\PropertySel
 Creates a property selection
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyselection[PropertySelection^]
 
@@ -3650,7 +3652,7 @@ public updatePropertySelection($propertySelectionId, $data):Plenty\Modules\Prope
 Updates a property selection. The ID of property selection must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:property#property_models_propertyselection[PropertySelection^]
 
@@ -3681,7 +3683,7 @@ public deletePropertySelection($propertySelectionId):void // <1>
 Deletes a property selection. The ID of property selection must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3708,7 +3710,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3726,7 +3728,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3744,7 +3746,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3771,7 +3773,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3789,7 +3791,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3807,20 +3809,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[property_property_models]]
-==  Models
-=== Property
+===  Models
+==== Property
 
 The property model. Properties allow to further describe items, categories etc. A property can have one name per language. The property names have an own model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -3864,7 +3866,7 @@ The property model. Properties allow to further describe items, categories etc. 
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3880,12 +3882,12 @@ Returns this model as an array.
 
 
 
-=== PropertyAmazon
+==== PropertyAmazon
 
 The property amazon model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -3927,7 +3929,7 @@ The property amazon model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3943,12 +3945,12 @@ Returns this model as an array.
 
 
 
-=== PropertyAvailability
+==== PropertyAvailability
 
 The property availability model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -3983,7 +3985,7 @@ The property availability model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3999,12 +4001,12 @@ Returns this model as an array.
 
 
 
-=== PropertyGroup
+==== PropertyGroup
 
 The property group model. A property group allows to group several properties together and helps to structure properties. Property groups can have different names per language. The property group names have an own model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -4033,7 +4035,7 @@ The property group model. A property group allows to group several properties to
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4049,12 +4051,12 @@ Returns this model as an array.
 
 
 
-=== PropertyGroupName
+==== PropertyGroupName
 
 The property group name model. A property group can have several names. One name per language. Each name has a unique ID.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -4092,7 +4094,7 @@ The property group name model. A property group can have several names. One name
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4108,12 +4110,12 @@ Returns this model as an array.
 
 
 
-=== PropertyGroupOption
+==== PropertyGroupOption
 
 The property group option model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -4148,7 +4150,7 @@ The property group option model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4164,12 +4166,12 @@ Returns this model as an array.
 
 
 
-=== PropertyGroupRelation
+==== PropertyGroupRelation
 
 The property group relation model. The model shows which property is related to which property group.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -4190,7 +4192,7 @@ The property group relation model. The model shows which property is related to 
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4206,12 +4208,12 @@ Returns this model as an array.
 
 
 
-=== PropertyMarket
+==== PropertyMarket
 
 The property market model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -4249,7 +4251,7 @@ The property market model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4265,12 +4267,12 @@ Returns this model as an array.
 
 
 
-=== PropertyName
+==== PropertyName
 
 The property name model. A property can have several names. One name per language. Each name has a unique ID.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -4312,7 +4314,7 @@ The property name model. A property can have several names. One name per languag
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4328,12 +4330,12 @@ Returns this model as an array.
 
 
 
-=== PropertyOption
+==== PropertyOption
 
 The property option model. Property options allow to add further specification to a property. Each property option can have several values. The porperty option values have an own model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -4369,7 +4371,7 @@ The property option model. Property options allow to add further specification t
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4385,12 +4387,12 @@ Returns this model as an array.
 
 
 
-=== PropertyOptionValue
+==== PropertyOptionValue
 
 The property option value model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -4422,7 +4424,7 @@ The property option value model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4438,12 +4440,12 @@ Returns this model as an array.
 
 
 
-=== PropertyRelation
+==== PropertyRelation
 
 The property relation model allows to relate a property e.g. to a variation or other targets.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -4489,7 +4491,7 @@ The property relation model allows to relate a property e.g. to a variation or o
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4505,12 +4507,12 @@ Returns this model as an array.
 
 
 
-=== PropertyRelationMarkup
+==== PropertyRelationMarkup
 
 The property relation markup model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -4545,7 +4547,7 @@ The property relation markup model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4561,12 +4563,12 @@ Returns this model as an array.
 
 
 
-=== PropertyRelationValue
+==== PropertyRelationValue
 
 The property relation value model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -4604,7 +4606,7 @@ The property relation value model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4620,12 +4622,12 @@ Returns this model as an array.
 
 
 
-=== PropertySelection
+==== PropertySelection
 
 The property selection model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Property\Models`
 
@@ -4661,7 +4663,7 @@ The property selection model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

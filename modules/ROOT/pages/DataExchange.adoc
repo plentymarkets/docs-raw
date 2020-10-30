@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[dataexchange_dataexchange]]
-= DataExchange
+== DataExchange
 
 [[dataexchange_dataexchange_contracts]]
-==  Contracts
-=== CSVGenerator
+===  Contracts
+==== CSVGenerator
 
 generator for csv content
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
 
@@ -21,7 +23,7 @@ generator for csv content
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public setDelimiter($delimiter):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -62,7 +64,7 @@ public setEnclosure($enclosure):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -89,7 +91,7 @@ public addCSVContent($data):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -116,7 +118,7 @@ public addBulkCSVContent($data):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -143,7 +145,7 @@ public addContent($content):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -170,7 +172,7 @@ public generateContent($resultData, $formatSettings = []):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -191,12 +193,12 @@ a|`$formatSettings`
 
 
 
-=== CSVPluginGenerator
+==== CSVPluginGenerator
 
 generator for csv content
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
 
@@ -205,7 +207,7 @@ generator for csv content
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -219,7 +221,7 @@ public setDelimiter($delimiter):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -246,7 +248,7 @@ public setEnclosure($enclosure):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -273,7 +275,7 @@ public addCSVContent($data):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -300,7 +302,7 @@ public addBulkCSVContent($data):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -327,7 +329,7 @@ public addContent($content):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -354,7 +356,7 @@ public generatePluginContent($resultData, $formatSettings = [], $filter = []):vo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -379,12 +381,12 @@ a|`$filter`
 
 
 
-=== ExportRepositoryContract
+==== ExportRepositoryContract
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
 
@@ -393,7 +395,7 @@ a|`$filter`
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -407,7 +409,7 @@ public create($data):Plenty\Modules\DataExchange\Models\Export // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:dataexchange#dataexchange_models_export[Export^]
 
@@ -434,7 +436,7 @@ public update($data, $exportId):Plenty\Modules\DataExchange\Models\Export // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:dataexchange#dataexchange_models_export[Export^]
 
@@ -465,7 +467,7 @@ public delete($exportId):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -491,7 +493,7 @@ public search($params = [], $with = [], $columns = []):Plenty\Repositories\Model
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -526,7 +528,7 @@ public findById($exportId, $with = []):Plenty\Modules\DataExchange\Models\Export
 
 
 
-==== Return type
+===== Return type
     
 <1> link:dataexchange#dataexchange_models_export[Export^]
 
@@ -546,12 +548,12 @@ a|`$with`
 
 
 
-=== Filters
+==== Filters
 
 Filters
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
 
@@ -560,7 +562,7 @@ Filters
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -574,7 +576,7 @@ public generateFilters($formatSettings = []):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -589,12 +591,12 @@ a|`$formatSettings`
 
 
 
-=== Generator
+==== Generator
 
 Generator
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
 
@@ -603,7 +605,7 @@ Generator
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -617,7 +619,7 @@ public addContent($content):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -644,7 +646,7 @@ public generateContent($resultData, $formatSettings = []):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -665,12 +667,12 @@ a|`$formatSettings`
 
 
 
-=== Output
+==== Output
 
 Output
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
 
@@ -679,7 +681,7 @@ Output
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -693,7 +695,7 @@ public out($resource, $outputParams = [], $export = null):void // <1>
 process export output
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -718,12 +720,12 @@ a|`$export`
 
 
 
-=== PluginGenerator
+==== PluginGenerator
 
 PluginGenerator
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
 
@@ -732,7 +734,7 @@ PluginGenerator
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -746,7 +748,7 @@ public addContent($content):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -773,7 +775,7 @@ public generatePluginContent($resultData, $formatSettings = [], $filter = []):vo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -798,12 +800,12 @@ a|`$filter`
 
 
 
-=== ResultFields
+==== ResultFields
 
 ResultFields
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
 
@@ -812,7 +814,7 @@ ResultFields
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -826,7 +828,7 @@ public generateResultFields($formatSettings = []):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -852,7 +854,7 @@ public setGroupByList($groupByList):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -879,7 +881,7 @@ public setOrderByList($orderByList):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -895,12 +897,12 @@ a|`$orderByList`
 
 
 
-=== XMLGenerator
+==== XMLGenerator
 
 generator for xml content
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
 
@@ -931,7 +933,7 @@ generator for xml content
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -945,7 +947,7 @@ public init($rootName):void // <1>
 Initializes the xml document and the root element.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -972,7 +974,7 @@ public root():\DOMElement // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__domelement[DOMElement^]
 
@@ -990,7 +992,7 @@ public build():void // <1>
 Build the XML.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1008,7 +1010,7 @@ public createElement($name, $value = null):\DOMElement // <1>
 Create an XML element.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__domelement[DOMElement^]
 
@@ -1040,7 +1042,7 @@ public createCDATASection($data):\DOMCdataSection // <1>
 Create a CDATA section.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__domcdatasection[DOMCdataSection^]
 
@@ -1067,7 +1069,7 @@ public createAttribute($name, $value = null):\DOMAttr // <1>
 Create an XML attribute.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__domattr[DOMAttr^]
 
@@ -1099,7 +1101,7 @@ public createTextNode($content):\DOMText // <1>
 Create new text node.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__domtext[DOMText^]
 
@@ -1126,7 +1128,7 @@ public addContent($content):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1153,7 +1155,7 @@ public generateContent($resultData, $formatSettings = []):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1174,12 +1176,12 @@ a|`$formatSettings`
 
 
 
-=== XMLPluginGenerator
+==== XMLPluginGenerator
 
 generator for xml content
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Contracts`
 
@@ -1210,7 +1212,7 @@ generator for xml content
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1224,7 +1226,7 @@ public init($rootName):void // <1>
 Initializes the xml document and the root element.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1251,7 +1253,7 @@ public root():\DOMElement // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__domelement[DOMElement^]
 
@@ -1269,7 +1271,7 @@ public build():void // <1>
 Build the XML.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1287,7 +1289,7 @@ public createElement($name, $value = null):\DOMElement // <1>
 Create an XML element.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__domelement[DOMElement^]
 
@@ -1319,7 +1321,7 @@ public createCDATASection($data):\DOMCdataSection // <1>
 Create a CDATA section.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__domcdatasection[DOMCdataSection^]
 
@@ -1346,7 +1348,7 @@ public createAttribute($name, $value = null):\DOMAttr // <1>
 Create an XML attribute.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__domattr[DOMAttr^]
 
@@ -1378,7 +1380,7 @@ public createTextNode($content):\DOMText // <1>
 Create new text node.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__domtext[DOMText^]
 
@@ -1405,7 +1407,7 @@ public addContent($content):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1432,7 +1434,7 @@ public generatePluginContent($resultData, $formatSettings = [], $filter = []):vo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1457,13 +1459,13 @@ a|`$filter`
 
 
 [[dataexchange_dataexchange_models]]
-==  Models
-=== Export
+===  Models
+==== Export
 
 Export model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Models`
 
@@ -1514,7 +1516,7 @@ Export model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1530,12 +1532,12 @@ Returns this model as an array.
 
 
 
-=== Filter
+==== Filter
 
 export filter
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Models`
 
@@ -1568,7 +1570,7 @@ export filter
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1584,12 +1586,12 @@ Returns this model as an array.
 
 
 
-=== FormatSetting
+==== FormatSetting
 
 format setting
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Models`
 
@@ -1622,7 +1624,7 @@ format setting
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1638,12 +1640,12 @@ Returns this model as an array.
 
 
 
-=== OutputParam
+==== OutputParam
 
 output params
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Models`
 
@@ -1676,7 +1678,7 @@ output params
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1692,13 +1694,13 @@ Returns this model as an array.
 
 
 [[dataexchange_dataexchange_services]]
-==  Services
-=== ExportPresetContainer
+===  Services
+==== ExportPresetContainer
 
 Register export presets
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Services`
 
@@ -1707,7 +1709,7 @@ Register export presets
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1721,7 +1723,7 @@ public add($exportKey, $resultFieldsClass, $generatorClass, $filterClass = &quot
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1765,16 +1767,16 @@ a|`$restrictRows`
 
 
 [[dataexchange_resource]]
-= Resource
+== Resource
 
 [[dataexchange_resource_contracts]]
-==  Contracts
-=== ResourceLoaderContract
+===  Contracts
+==== ResourceLoaderContract
 
 Repository Contract for ResourceLoader
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Resource\Contracts`
 
@@ -1783,7 +1785,7 @@ Repository Contract for ResourceLoader
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1797,7 +1799,7 @@ public getResource($sourceOptions):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1824,7 +1826,7 @@ public getResourceBag($sourceOptions):Plenty\Modules\DataExchange\Resource\Model
 
 
 
-==== Return type
+===== Return type
     
 <1> link:dataexchange#dataexchange_models_resourcebag[ResourceBag^]
 
@@ -1851,7 +1853,7 @@ public validateSourceOptions($sourceOptions):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1878,7 +1880,7 @@ public archiveFile($sourceOptions):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1905,18 +1907,18 @@ public getLoaderType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
 
 
-=== ResourceParserContract
+==== ResourceParserContract
 
 Repository Contract for ResourceParser
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Resource\Contracts`
 
@@ -1925,7 +1927,7 @@ Repository Contract for ResourceParser
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1939,7 +1941,7 @@ public next($resource, $parseOptions):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1970,19 +1972,19 @@ public getParserType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
 
 [[dataexchange_resource_factories]]
-==  Factories
-=== ResourceLoaderFactory
+===  Factories
+==== ResourceLoaderFactory
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Resource\Factories`
 
@@ -1991,7 +1993,7 @@ public getParserType():string // <1>
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2005,7 +2007,7 @@ public getResourceLoaderByType($type):Plenty\Modules\DataExchange\Resource\Contr
 
 
 
-==== Return type
+===== Return type
     
 <1> link:dataexchange#dataexchange_contracts_resourceloadercontract[ResourceLoaderContract^]
 
@@ -2032,7 +2034,7 @@ public addLoader($loader):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2049,12 +2051,12 @@ a|`$loader`
 
 
 
-=== ResourceParserFactory
+==== ResourceParserFactory
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Resource\Factories`
 
@@ -2063,7 +2065,7 @@ a|`$loader`
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2077,7 +2079,7 @@ public getResourceParserByType($type):Plenty\Modules\DataExchange\Resource\Contr
 
 
 
-==== Return type
+===== Return type
     
 <1> link:dataexchange#dataexchange_contracts_resourceparsercontract[ResourceParserContract^]
 
@@ -2104,7 +2106,7 @@ public addParser($parser):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2121,13 +2123,13 @@ a|`$parser`
 
 
 [[dataexchange_resource_models]]
-==  Models
-=== ResourceBag
+===  Models
+==== ResourceBag
 
 ResourceBag
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\DataExchange\Resource\Models`
 
@@ -2136,7 +2138,7 @@ ResourceBag
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2150,7 +2152,7 @@ public getResource():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2168,7 +2170,7 @@ public getMd5():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 

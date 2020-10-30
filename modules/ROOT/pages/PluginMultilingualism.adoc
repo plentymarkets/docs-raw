@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[pluginmultilingualism_pluginmultilingualism]]
-= PluginMultilingualism
+== PluginMultilingualism
 
 [[pluginmultilingualism_pluginmultilingualism_contracts]]
-==  Contracts
-=== PluginTranslationRepositoryContract
+===  Contracts
+==== PluginTranslationRepositoryContract
 
 Get, create , update and delete plugin translations.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\PluginMultilingualism\Contracts`
 
@@ -21,7 +23,7 @@ Get, create , update and delete plugin translations.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public listTranslations($filters):array // <1>
 List translations for plugin set
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -61,7 +63,7 @@ public getTranslation($translationId):Plenty\Modules\PluginMultilingualism\Model
 Get a translation
 
 
-==== Return type
+===== Return type
     
 <1> link:pluginmultilingualism#pluginmultilingualism_models_plugintranslation[PluginTranslation^]
 
@@ -88,7 +90,7 @@ public createTranslation($data):Plenty\Modules\PluginMultilingualism\Models\Plug
 Create a translation
 
 
-==== Return type
+===== Return type
     
 <1> link:pluginmultilingualism#pluginmultilingualism_models_plugintranslation[PluginTranslation^]
 
@@ -115,7 +117,7 @@ public updateTranslation($data, $translationId):Plenty\Modules\PluginMultilingua
 Update a translation
 
 
-==== Return type
+===== Return type
     
 <1> link:pluginmultilingualism#pluginmultilingualism_models_plugintranslation[PluginTranslation^]
 
@@ -146,7 +148,7 @@ public deleteTranslation($id):void // <1>
 Delete a translation
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -173,7 +175,7 @@ public deleteTranslations($pluginSetId, $languageCode):void // <1>
 Delete multiple translation
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -204,7 +206,7 @@ public updateOrCreateTranslation($data):Plenty\Modules\PluginMultilingualism\Mod
 Update or create a translation
 
 
-==== Return type
+===== Return type
     
 <1> link:pluginmultilingualism#pluginmultilingualism_models_plugintranslation[PluginTranslation^]
 
@@ -231,7 +233,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -249,7 +251,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -267,7 +269,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -294,7 +296,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -312,7 +314,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -330,20 +332,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[pluginmultilingualism_pluginmultilingualism_models]]
-==  Models
-=== PluginTranslation
+===  Models
+==== PluginTranslation
 
 The plugin translation model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\PluginMultilingualism\Models`
 
@@ -387,7 +389,7 @@ The plugin translation model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

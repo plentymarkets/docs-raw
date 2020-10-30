@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[listing_listing]]
-= Listing
+== Listing
 
 [[listing_listing_contracts]]
-==  Contracts
-=== ListingRepositoryContract
+===  Contracts
+==== ListingRepositoryContract
 
 The contract for the listing repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Contracts`
 
@@ -21,7 +23,7 @@ The contract for the listing repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Models\Listing // <1>
 Get a listing by a given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listing[Listing^]
 
@@ -66,7 +68,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
 List listing
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -105,7 +107,7 @@ public create($data):Plenty\Modules\Listing\Models\Listing // <1>
 Create new listing
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listing[Listing^]
 
@@ -132,7 +134,7 @@ public update($id, $data):Plenty\Modules\Listing\Models\Listing // <1>
 Update listing
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listing[Listing^]
 
@@ -163,7 +165,7 @@ public delete($id):bool // <1>
 Delete listing
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -189,7 +191,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -207,7 +209,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -225,7 +227,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -252,7 +254,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -270,7 +272,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -288,20 +290,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_listing_models]]
-==  Models
-=== Listing
+===  Models
+==== Listing
 
 The listing model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Models`
 
@@ -358,7 +360,7 @@ The listing model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -374,12 +376,12 @@ Returns this model as an array.
 
 
 
-=== ListingProperty
+==== ListingProperty
 
 The listing properties model. Each listing property has a type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Models`
 
@@ -424,7 +426,7 @@ The listing properties model. Each listing property has a type.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -440,16 +442,16 @@ Returns this model as an array.
 
 
 [[listing_date]]
-= Date
+== Date
 
 [[listing_date_models]]
-==  Models
-=== ListingDateType
+===  Models
+==== ListingDateType
 
 The listing date type model. Each listing date type can have multiple names.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Date\Models`
 
@@ -481,7 +483,7 @@ The listing date type model. Each listing date type can have multiple names.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -497,12 +499,12 @@ Returns this model as an array.
 
 
 
-=== ListingDateTypeName
+==== ListingDateTypeName
 
 The listing date type name model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Date\Models`
 
@@ -529,7 +531,7 @@ The listing date type name model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -545,16 +547,16 @@ Returns this model as an array.
 
 
 [[listing_layouttemplate]]
-= LayoutTemplate
+== LayoutTemplate
 
 [[listing_layouttemplate_contracts]]
-==  Contracts
-=== LayoutTemplateRepositoryContract
+===  Contracts
+==== LayoutTemplateRepositoryContract
 
 The LayoutTemplateRepositoryContract is the interface for the layout template repository. This interface allows you to get a single layout template or lists of layout templates as well as to create, update or delete a layout tempalte.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\LayoutTemplate\Contracts`
 
@@ -563,7 +565,7 @@ The LayoutTemplateRepositoryContract is the interface for the layout template re
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -577,7 +579,7 @@ public get($id, $with = []):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutT
 Get a layout template.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_layouttemplate[LayoutTemplate^]
 
@@ -608,7 +610,7 @@ public create($data):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutTemplate
 Create a layout template.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_layouttemplate[LayoutTemplate^]
 
@@ -635,7 +637,7 @@ public delete($id):bool // <1>
 Delete layout template
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -661,7 +663,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -679,7 +681,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -697,7 +699,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -724,7 +726,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -742,7 +744,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -760,20 +762,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_layouttemplate_models]]
-==  Models
-=== LayoutTemplate
+===  Models
+==== LayoutTemplate
 
 The layout template model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\LayoutTemplate\Models`
 
@@ -809,7 +811,7 @@ The layout template model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -825,16 +827,16 @@ Returns this model as an array.
 
 
 [[listing_market]]
-= Market
+== Market
 
 [[listing_market_contracts]]
-==  Contracts
-=== ListingMarketRepositoryContract
+===  Contracts
+==== ListingMarketRepositoryContract
 
 The ListingMarketRepositoryContract is the interface for the listing market repository. This interface allows you to get a single listing market or lists of listing markets as well as to create a listing market.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Contracts`
 
@@ -848,7 +850,7 @@ It is possible to extend this repository with own search criteria.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -862,7 +864,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Market\Models\ListingMarket /
 Get a listing market
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarket[ListingMarket^]
 
@@ -893,7 +895,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
 List listing markets
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -932,7 +934,7 @@ public find($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Rep
 Find listing markets
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -971,7 +973,7 @@ public create($data):array // <1>
 Create a listing
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -997,7 +999,7 @@ public update($id, $data):Plenty\Modules\Listing\Market\Models\ListingMarket // 
 Update listing market
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarket[ListingMarket^]
 
@@ -1028,7 +1030,7 @@ public start($ids, $params = []):array // <1>
 Start listing markets on the designated markets.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1058,7 +1060,7 @@ public verify($ids):array // <1>
 Verifies listing markets.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1084,7 +1086,7 @@ public delete($id):void // <1>
 Delete a listing market
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1111,7 +1113,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1129,7 +1131,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1147,7 +1149,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1174,7 +1176,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1192,7 +1194,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1210,20 +1212,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_market_events]]
-==  Events
-=== ListingMarketBatchCreated
+===  Events
+==== ListingMarketBatchCreated
 
 An event class fired after multiple new listing markets are created.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1232,7 +1234,7 @@ An event class fired after multiple new listing markets are created.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1246,7 +1248,7 @@ public __construct($listingMarkets):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1273,18 +1275,18 @@ public getListingMarkets():array // <1>
 Get the list of ListingMarket instances.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== ListingMarketBatchDeleted
+==== ListingMarketBatchDeleted
 
 An event class fired after multiple listing markets are deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1293,7 +1295,7 @@ An event class fired after multiple listing markets are deleted.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1307,7 +1309,7 @@ public __construct($listingMarkets):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1334,18 +1336,18 @@ public getListingMarkets():array // <1>
 Get the list of ListingMarket instances.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== ListingMarketBatchEvent
+==== ListingMarketBatchEvent
 
 A base event class for all listing market events. Each listing market batch event expects an array of ListingMarket instances.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1354,7 +1356,7 @@ A base event class for all listing market events. Each listing market batch even
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1368,7 +1370,7 @@ public __construct($listingMarkets):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1395,18 +1397,18 @@ public getListingMarkets():array // <1>
 Get the list of ListingMarket instances.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== ListingMarketBatchUpdated
+==== ListingMarketBatchUpdated
 
 An event class fired after multiple listing markets are updated.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1415,7 +1417,7 @@ An event class fired after multiple listing markets are updated.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1429,7 +1431,7 @@ public __construct($listingMarkets):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1456,18 +1458,18 @@ public getListingMarkets():array // <1>
 Get the list of ListingMarket instances.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== ListingMarketCreated
+==== ListingMarketCreated
 
 An event class fired after a new listing market is created.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1476,7 +1478,7 @@ An event class fired after a new listing market is created.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1490,7 +1492,7 @@ public __construct($listingMarket):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1518,19 +1520,19 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // 
 Get the ListingMarket instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
 
-=== ListingMarketDeleted
+==== ListingMarketDeleted
 
 An event class fired after a new listing market is deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1539,7 +1541,7 @@ An event class fired after a new listing market is deleted.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1553,7 +1555,7 @@ public __construct($listingMarket):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1581,19 +1583,19 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // 
 Get the ListingMarket instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
 
-=== ListingMarketEvent
+==== ListingMarketEvent
 
 A base event class for all listing market events. Each listing market event expects an ListingMarket instance.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1602,7 +1604,7 @@ A base event class for all listing market events. Each listing market event expe
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1616,7 +1618,7 @@ public __construct($listingMarket):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1644,19 +1646,19 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // 
 Get the ListingMarket instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
 
-=== ListingMarketItemSpecificsCreated
+==== ListingMarketItemSpecificsCreated
 
 An event class fired after a new listing market item specifics are created.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1665,7 +1667,7 @@ An event class fired after a new listing market item specifics are created.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1679,7 +1681,7 @@ public __construct($listingMarket):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1707,19 +1709,19 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // 
 Get the ListingMarket instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
 
-=== ListingMarketItemSpecificsDeleted
+==== ListingMarketItemSpecificsDeleted
 
 An event class fired after a new listing market item specifics are deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1728,7 +1730,7 @@ An event class fired after a new listing market item specifics are deleted.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1742,7 +1744,7 @@ public __construct($listingMarket):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1770,19 +1772,19 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // 
 Get the ListingMarket instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
 
-=== ListingMarketUpdated
+==== ListingMarketUpdated
 
 An event class fired after a new listing market is updated.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1791,7 +1793,7 @@ An event class fired after a new listing market is updated.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1805,7 +1807,7 @@ public __construct($listingMarket):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1833,20 +1835,20 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // 
 Get the ListingMarket instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
 [[listing_market_models]]
-==  Models
-=== ListingMarket
+===  Models
+==== ListingMarket
 
 The listing market model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Models`
 
@@ -2001,7 +2003,7 @@ The listing market model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2017,12 +2019,12 @@ Returns this model as an array.
 
 
 
-=== ListingMarketDate
+==== ListingMarketDate
 
 The listing market dates model. Each listing market date has a type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Models`
 
@@ -2069,7 +2071,7 @@ The listing market dates model. Each listing market date has a type.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2085,12 +2087,12 @@ Returns this model as an array.
 
 
 
-=== ListingMarketItemSpecific
+==== ListingMarketItemSpecific
 
 The listing market item specific model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Models`
 
@@ -2118,7 +2120,7 @@ The listing market item specific model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2134,12 +2136,12 @@ Returns this model as an array.
 
 
 
-=== ListingMarketPrice
+==== ListingMarketPrice
 
 The listing market price model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Models`
 
@@ -2177,7 +2179,7 @@ The listing market price model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2193,12 +2195,12 @@ Returns this model as an array.
 
 
 
-=== ListingMarketProperty
+==== ListingMarketProperty
 
 The listing market properties model. Each listing market property has a type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Models`
 
@@ -2300,7 +2302,7 @@ The listing market properties model. Each listing market property has a type.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2316,16 +2318,16 @@ Returns this model as an array.
 
 
 [[listing_directory]]
-= Directory
+== Directory
 
 [[listing_directory_contracts]]
-==  Contracts
-=== ListingMarketDirectoryRepositoryContract
+===  Contracts
+==== ListingMarketDirectoryRepositoryContract
 
 The contract for the listing market directory repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Directory\Contracts`
 
@@ -2334,7 +2336,7 @@ The contract for the listing market directory repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2348,7 +2350,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Market\Directory\Models\Listi
 Get a listing market directory
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarketdirectory[ListingMarketDirectory^]
 
@@ -2379,7 +2381,7 @@ public all($with = [], $filters = []):array // <1>
 List all directories
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2409,7 +2411,7 @@ public create($data):array // <1>
 Create a listing market directory.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2435,7 +2437,7 @@ public update($id, $data):Plenty\Modules\Listing\Market\Directory\Models\Listing
 Update listing market directory
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarketdirectory[ListingMarketDirectory^]
 
@@ -2466,7 +2468,7 @@ public delete($id):void // <1>
 Delete a listing market directory
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2493,7 +2495,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2511,7 +2513,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2529,7 +2531,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2556,7 +2558,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2574,7 +2576,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2592,20 +2594,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_directory_models]]
-==  Models
-=== ListingMarketDirectory
+===  Models
+==== ListingMarketDirectory
 
 The listing market directory model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Directory\Models`
 
@@ -2632,7 +2634,7 @@ The listing market directory model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2648,16 +2650,16 @@ Returns this model as an array.
 
 
 [[listing_history]]
-= History
+== History
 
 [[listing_history_contracts]]
-==  Contracts
-=== ListingMarketHistoryRepositoryContract
+===  Contracts
+==== ListingMarketHistoryRepositoryContract
 
 The ListingMarketHistoryRepositoryContract is the interface for the listing market history repository. This interface allows you to get a single listing market history or to list several listing market histories.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\History\Contracts`
 
@@ -2666,7 +2668,7 @@ The ListingMarketHistoryRepositoryContract is the interface for the listing mark
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2680,7 +2682,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Market\History\Models\Listing
 Get a listing market.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarkethistory[ListingMarketHistory^]
 
@@ -2711,7 +2713,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = [], $sort = 
 List listing market histories
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -2754,7 +2756,7 @@ public end($ids, $params = []):array // <1>
 End the listing market histories on the designated markets.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2784,7 +2786,7 @@ public relist($ids):void // <1>
 Relist the listing market histories on the designated markets.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2811,7 +2813,7 @@ public update($ids, $options = []):array // <1>
 Update the listing market histories on the designated markets.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2859,7 +2861,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2877,7 +2879,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2895,7 +2897,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2922,7 +2924,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2940,7 +2942,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2958,20 +2960,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_history_models]]
-==  Models
-=== ListingMarketHistory
+===  Models
+==== ListingMarketHistory
 
 The listing market history model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\History\Models`
 
@@ -3060,7 +3062,7 @@ The listing market history model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3076,12 +3078,12 @@ Returns this model as an array.
 
 
 
-=== ListingMarketHistoryDate
+==== ListingMarketHistoryDate
 
 The listing market history dates model. Each listing market history date has a type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\History\Models`
 
@@ -3129,7 +3131,7 @@ The listing market history dates model. Each listing market history date has a t
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3145,12 +3147,12 @@ Returns this model as an array.
 
 
 
-=== ListingMarketHistoryProperty
+==== ListingMarketHistoryProperty
 
 The listing market properties model. Each listing market property has a type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\History\Models`
 
@@ -3201,7 +3203,7 @@ The listing market properties model. Each listing market property has a type.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3217,12 +3219,12 @@ Returns this model as an array.
 
 
 
-=== ListingMarketHistoryText
+==== ListingMarketHistoryText
 
 The listing market history text model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\History\Models`
 
@@ -3249,7 +3251,7 @@ The listing market history text model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3265,12 +3267,12 @@ Returns this model as an array.
 
 
 
-=== ListingMarketHistoryVariation
+==== ListingMarketHistoryVariation
 
 The listing market history model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\History\Models`
 
@@ -3327,7 +3329,7 @@ The listing market history model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3343,16 +3345,16 @@ Returns this model as an array.
 
 
 [[listing_info]]
-= Info
+== Info
 
 [[listing_info_contracts]]
-==  Contracts
-=== ListingMarketInfoRepositoryContract
+===  Contracts
+==== ListingMarketInfoRepositoryContract
 
 The ListingMarketInfoRepositoryContract is the interface for the listing market info repository. This interface allows you to get information about one or many listing markets.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Info\Contracts`
 
@@ -3361,7 +3363,7 @@ The ListingMarketInfoRepositoryContract is the interface for the listing market 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3375,7 +3377,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
 List listing market infos by filter options
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -3414,7 +3416,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3432,7 +3434,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3450,7 +3452,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3477,7 +3479,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3495,7 +3497,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3513,20 +3515,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_info_models]]
-==  Models
-=== ListingMarketInfo
+===  Models
+==== ListingMarketInfo
 
 The listing market info model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Info\Models`
 
@@ -3564,7 +3566,7 @@ The listing market info model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3580,16 +3582,16 @@ Returns this model as an array.
 
 
 [[listing_itemspecific]]
-= ItemSpecific
+== ItemSpecific
 
 [[listing_itemspecific_contracts]]
-==  Contracts
-=== ListingMarketItemSpecificRepositoryContract
+===  Contracts
+==== ListingMarketItemSpecificRepositoryContract
 
 The contract of the listing market item specific repository
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\ItemSpecific\Contracts`
 
@@ -3603,7 +3605,7 @@ It is possible to extend this repository with own search criteria.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3617,7 +3619,7 @@ public get($id):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketI
 Gets a ListingMarketItemSpecific.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarketitemspecific[ListingMarketItemSpecific^]
 
@@ -3644,7 +3646,7 @@ public search($data, $page = 1, $itemsPerPage = 50):Plenty\Modules\Listing\Marke
 Gets all ListingMarketItemSpecifics.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarketitemspecific[ListingMarketItemSpecific^]
 
@@ -3679,7 +3681,7 @@ public find($filters = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Mo
 Gets all ListingMarketItemSpecifics.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -3714,7 +3716,7 @@ public update($id, $data):Plenty\Modules\Listing\Market\ItemSpecific\Models\List
 Updates a ListingMarketItemSpecific.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarketitemspecific[ListingMarketItemSpecific^]
 
@@ -3745,7 +3747,7 @@ public delete($id):bool // <1>
 Deletes a ListingMarketItemSpecific.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3771,7 +3773,7 @@ public deleteByListingMarketId($listingMarketId):bool // <1>
 Deletes all ListingMarketItemSpecific entries by listing market id.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3797,7 +3799,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3815,7 +3817,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3833,7 +3835,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3860,7 +3862,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3878,7 +3880,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3896,20 +3898,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_itemspecific_models]]
-==  Models
-=== ListingMarketItemSpecific
+===  Models
+==== ListingMarketItemSpecific
 
 The item specific model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\ItemSpecific\Models`
 
@@ -3936,7 +3938,7 @@ The item specific model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3952,16 +3954,16 @@ Returns this model as an array.
 
 
 [[listing_text]]
-= Text
+== Text
 
 [[listing_text_contracts]]
-==  Contracts
-=== ListingMarketTextRepositoryContract
+===  Contracts
+==== ListingMarketTextRepositoryContract
 
 The contract for the listing market text repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Text\Contracts`
 
@@ -3970,7 +3972,7 @@ The contract for the listing market text repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3984,7 +3986,7 @@ public get($id):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText // <
 Get a listing market text
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarkettext[ListingMarketText^]
 
@@ -4011,7 +4013,7 @@ public create($listingMarketId, $data):Plenty\Modules\Listing\Market\Text\Models
 Create new listing market text
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarkettext[ListingMarketText^]
 
@@ -4042,7 +4044,7 @@ public update($listingMarketId, $lang, $data):Plenty\Modules\Listing\Market\Text
 Update listing market text
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarkettext[ListingMarketText^]
 
@@ -4077,7 +4079,7 @@ public updateOrCreate($listingMarketId, $lang, $data):Plenty\Modules\Listing\Mar
 Update or create listing market text
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingmarkettext[ListingMarketText^]
 
@@ -4112,7 +4114,7 @@ public delete($id):bool // <1>
 Delete listing market text
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4138,7 +4140,7 @@ public search($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\
 List listing market text
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -4173,7 +4175,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4191,7 +4193,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4209,7 +4211,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4236,7 +4238,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4254,7 +4256,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4272,20 +4274,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_text_models]]
-==  Models
-=== ListingMarketText
+===  Models
+==== ListingMarketText
 
 The listing market text model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Market\Text\Models`
 
@@ -4318,7 +4320,7 @@ The listing market text model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4334,16 +4336,16 @@ Returns this model as an array.
 
 
 [[listing_optiontemplate]]
-= OptionTemplate
+== OptionTemplate
 
 [[listing_optiontemplate_contracts]]
-==  Contracts
-=== OptionTemplateRepositoryContract
+===  Contracts
+==== OptionTemplateRepositoryContract
 
 The contract for the listing option template repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\OptionTemplate\Contracts`
 
@@ -4352,7 +4354,7 @@ The contract for the listing option template repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4366,7 +4368,7 @@ public preview():array // <1>
 Get a preview list of all listing option templates
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4383,7 +4385,7 @@ public get($id):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate // <
 Get option template
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_optiontemplate[OptionTemplate^]
 
@@ -4410,7 +4412,7 @@ public create($data):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate
 Create option template
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_optiontemplate[OptionTemplate^]
 
@@ -4437,7 +4439,7 @@ public update($id, $data):void // <1>
 Update option template
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4468,7 +4470,7 @@ public delete($id):void // <1>
 Delete option template
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4484,13 +4486,13 @@ a|`$id`
 
 
 [[listing_optiontemplate_models]]
-==  Models
-=== OptionTemplate
+===  Models
+==== OptionTemplate
 
 The option template model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\OptionTemplate\Models`
 
@@ -4520,7 +4522,7 @@ The option template model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4536,16 +4538,16 @@ Returns this model as an array.
 
 
 [[listing_price]]
-= Price
+== Price
 
 [[listing_price_models]]
-==  Models
-=== ListingPriceType
+===  Models
+==== ListingPriceType
 
 The listing price type model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Price\Models`
 
@@ -4577,7 +4579,7 @@ The listing price type model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4593,12 +4595,12 @@ Returns this model as an array.
 
 
 
-=== ListingPriceTypeName
+==== ListingPriceTypeName
 
 The listing price type name model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Price\Models`
 
@@ -4625,7 +4627,7 @@ The listing price type name model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4641,16 +4643,16 @@ Returns this model as an array.
 
 
 [[listing_property]]
-= Property
+== Property
 
 [[listing_property_models]]
-==  Models
-=== ListingPropertyType
+===  Models
+==== ListingPropertyType
 
 The listing properties model. Each listing property has a type.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Property\Models`
 
@@ -4734,7 +4736,7 @@ The listing properties model. Each listing property has a type.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4750,12 +4752,12 @@ Returns this model as an array.
 
 
 
-=== ListingPropertyTypeName
+==== ListingPropertyTypeName
 
 The listing property type name model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Property\Models`
 
@@ -4782,7 +4784,7 @@ The listing property type name model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4798,16 +4800,16 @@ Returns this model as an array.
 
 
 [[listing_shippingprofile]]
-= ShippingProfile
+== ShippingProfile
 
 [[listing_shippingprofile_contracts]]
-==  Contracts
-=== ShippingProfileRepositoryContract
+===  Contracts
+==== ShippingProfileRepositoryContract
 
 The ShippingProfileRepositoryContract is the interface for the listing shipping profile repository. This interface allows you to get a shipping profile.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Contracts`
 
@@ -4816,7 +4818,7 @@ The ShippingProfileRepositoryContract is the interface for the listing shipping 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4830,7 +4832,7 @@ public get($id, $with = []):Plenty\Modules\Listing\ShippingProfile\Models\Shippi
 Get a shipping profile
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_shippingprofile[ShippingProfile^]
 
@@ -4861,7 +4863,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
 Search shipping profiles
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -4900,7 +4902,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4918,7 +4920,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4936,7 +4938,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4963,7 +4965,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4981,7 +4983,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4999,20 +5001,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_shippingprofile_events]]
-==  Events
-=== ShippingProfileCreated
+===  Events
+==== ShippingProfileCreated
 
 An event class fired after a new listing shipping profile is created.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Events`
 
@@ -5021,7 +5023,7 @@ An event class fired after a new listing shipping profile is created.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5035,7 +5037,7 @@ public __construct($shippingProfile):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5063,19 +5065,19 @@ public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\Shippi
 Get the ShippingProfile instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_shippingprofile[ShippingProfile^]
 
     
 
 
-=== ShippingProfileDeleted
+==== ShippingProfileDeleted
 
 An event class fired after a listing shipping profile is deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Events`
 
@@ -5084,7 +5086,7 @@ An event class fired after a listing shipping profile is deleted.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5098,7 +5100,7 @@ public __construct($shippingProfile):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5126,19 +5128,19 @@ public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\Shippi
 Get the ShippingProfile instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_shippingprofile[ShippingProfile^]
 
     
 
 
-=== ShippingProfileEvent
+==== ShippingProfileEvent
 
 A base event class for all listing shipping profile events. Each shipping profile event expects an ShippingProfile instance.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Events`
 
@@ -5147,7 +5149,7 @@ A base event class for all listing shipping profile events. Each shipping profil
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5161,7 +5163,7 @@ public __construct($shippingProfile):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5189,19 +5191,19 @@ public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\Shippi
 Get the ShippingProfile instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_shippingprofile[ShippingProfile^]
 
     
 
 
-=== ShippingProfileUpdated
+==== ShippingProfileUpdated
 
 An event class fired after a listing shipping profile is updated.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Events`
 
@@ -5210,7 +5212,7 @@ An event class fired after a listing shipping profile is updated.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5224,7 +5226,7 @@ public __construct($shippingProfile):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5252,20 +5254,20 @@ public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\Shippi
 Get the ShippingProfile instance.
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_shippingprofile[ShippingProfile^]
 
     
 
 [[listing_shippingprofile_models]]
-==  Models
-=== ShippingProfile
+===  Models
+==== ShippingProfile
 
 The listing shipping profile model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Models`
 
@@ -5301,7 +5303,7 @@ The listing shipping profile model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5317,16 +5319,16 @@ Returns this model as an array.
 
 
 [[listing_status]]
-= Status
+== Status
 
 [[listing_status_models]]
-==  Models
-=== ListingStatus
+===  Models
+==== ListingStatus
 
 The listing status model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Status\Models`
 
@@ -5354,7 +5356,7 @@ The listing status model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5370,12 +5372,12 @@ Returns this model as an array.
 
 
 
-=== ListingStatusName
+==== ListingStatusName
 
 The listing status name model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Status\Models`
 
@@ -5402,7 +5404,7 @@ The listing status name model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5418,16 +5420,16 @@ Returns this model as an array.
 
 
 [[listing_stockdependencetype]]
-= StockDependenceType
+== StockDependenceType
 
 [[listing_stockdependencetype_contracts]]
-==  Contracts
-=== StockDependenceTypeRepositoryContract
+===  Contracts
+==== StockDependenceTypeRepositoryContract
 
 The contract for the listing stock dependence type repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\StockDependenceType\Contracts`
 
@@ -5436,7 +5438,7 @@ The contract for the listing stock dependence type repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5450,7 +5452,7 @@ public get($id, $with = []):Plenty\Modules\Listing\StockDependenceType\Models\St
 Get a listing stock dependence type
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_stockdependencetype[StockDependenceType^]
 
@@ -5481,7 +5483,7 @@ public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models
 List listing stock dependence types
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -5505,13 +5507,13 @@ a|`$with`
 
 
 [[listing_stockdependencetype_models]]
-==  Models
-=== StockDependenceType
+===  Models
+==== StockDependenceType
 
 The listing stock dependence type model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\StockDependenceType\Models`
 
@@ -5539,7 +5541,7 @@ The listing stock dependence type model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5555,12 +5557,12 @@ Returns this model as an array.
 
 
 
-=== StockDependenceTypeName
+==== StockDependenceTypeName
 
 The listing stock dependence type name model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\StockDependenceType\Models`
 
@@ -5587,7 +5589,7 @@ The listing stock dependence type name model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5603,16 +5605,16 @@ Returns this model as an array.
 
 
 [[listing_type]]
-= Type
+== Type
 
 [[listing_type_contracts]]
-==  Contracts
-=== ListingTypeRepositoryContract
+===  Contracts
+==== ListingTypeRepositoryContract
 
 The contract for the listing type repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Type\Contracts`
 
@@ -5621,7 +5623,7 @@ The contract for the listing type repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5635,7 +5637,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Type\Models\ListingType // <1
 Get a listing type
 
 
-==== Return type
+===== Return type
     
 <1> link:listing#listing_models_listingtype[ListingType^]
 
@@ -5666,7 +5668,7 @@ public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models
 List listing types
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -5690,13 +5692,13 @@ a|`$with`
 
 
 [[listing_type_models]]
-==  Models
-=== ListingType
+===  Models
+==== ListingType
 
 The listing type model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Type\Models`
 
@@ -5724,7 +5726,7 @@ The listing type model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5740,12 +5742,12 @@ Returns this model as an array.
 
 
 
-=== ListingTypeName
+==== ListingTypeName
 
 The listing type name model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Listing\Type\Models`
 
@@ -5772,7 +5774,7 @@ The listing type name model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[plentymarketplace_plentymarketplace]]
-= PlentyMarketplace
+== PlentyMarketplace
 
 [[plentymarketplace_plentymarketplace_contracts]]
-==  Contracts
-=== MarketplacePurchaseInformationContract
+===  Contracts
+==== MarketplacePurchaseInformationContract
 
 Get information about purchases on marketplace.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\PlentyMarketplace\Contracts`
 
@@ -21,7 +23,7 @@ Get information about purchases on marketplace.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public isPaid($pluginName):bool // <1>
 Takes the Name of a plugin and returns true if the plugin has been paid for.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -50,12 +52,12 @@ a|`$pluginName`
 
 
 
-=== SubscriptionInformationServiceContract
+==== SubscriptionInformationServiceContract
 
 Get information about plugin subscriptions. Only suitable for subscription plugins.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\PlentyMarketplace\Contracts`
 
@@ -64,7 +66,7 @@ Get information about plugin subscriptions. Only suitable for subscription plugi
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -79,7 +81,7 @@ Takes the Name of a subscription plugin and returns true if the subscription has
 in the current payment period on the current system.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -105,7 +107,7 @@ public getSubscriptionInfo($pluginName):Plenty\Modules\PlentyMarketplace\Models\
 Takes the Name of a subscription plugin and returns information about the subscription.
 
 
-==== Return type
+===== Return type
     
 <1> link:plentymarketplace#plentymarketplace_models_subscriptionorderinformation[SubscriptionOrderInformation^]
 
@@ -121,13 +123,13 @@ a|`$pluginName`
 
 
 [[plentymarketplace_plentymarketplace_models]]
-==  Models
-=== SubscriptionChildOrderInformation
+===  Models
+==== SubscriptionChildOrderInformation
 
 Eloquent model representing a SubscriptionChildOrderInformation.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\PlentyMarketplace\Models`
 
@@ -148,7 +150,7 @@ Eloquent model representing a SubscriptionChildOrderInformation.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -164,12 +166,12 @@ Returns this model as an array.
 
 
 
-=== SubscriptionChildPaymentInformation
+==== SubscriptionChildPaymentInformation
 
 Eloquent model representing a SubscriptionChildPaymentInformation.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\PlentyMarketplace\Models`
 
@@ -202,7 +204,7 @@ Eloquent model representing a SubscriptionChildPaymentInformation.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -218,12 +220,12 @@ Returns this model as an array.
 
 
 
-=== SubscriptionOrderInformation
+==== SubscriptionOrderInformation
 
 Eloquent model representing a SubscriptionOrderInformation.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\PlentyMarketplace\Models`
 
@@ -259,7 +261,7 @@ Eloquent model representing a SubscriptionOrderInformation.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

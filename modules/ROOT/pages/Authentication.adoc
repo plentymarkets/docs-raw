@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[authentication_authentication]]
-= Authentication
+== Authentication
 
 [[authentication_authentication_contracts]]
-==  Contracts
-=== ContactAuthenticationRepositoryContract
+===  Contracts
+==== ContactAuthenticationRepositoryContract
 
 The ContactAuthenticationRepositoryContract is the interface for the authentication repository. This interface allows to authenticate users in the client (store) by email and password or by contact ID and password. The interface also provides a method for logging out users from the client (store).
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Authentication\Contracts`
 
@@ -21,7 +23,7 @@ The ContactAuthenticationRepositoryContract is the interface for the authenticat
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public authenticateWithContactEmail($contactEmail, $password):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -66,7 +68,7 @@ public authenticateWithContactId($contactId, $password):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -97,7 +99,7 @@ public authenticateWithPlentyId($plentyId, $password):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -128,7 +130,7 @@ public authenticateWithToken($token):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -155,20 +157,20 @@ public logout():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[authentication_authentication_events]]
-==  Events
-=== AfterAccountAuthentication
+===  Events
+==== AfterAccountAuthentication
 
 The event is triggered after a user is authenticated in the client (store).
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Authentication\Events`
 
@@ -177,7 +179,7 @@ The event is triggered after a user is authenticated in the client (store).
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -191,7 +193,7 @@ public isSuccessful():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -208,19 +210,19 @@ public getAccountContact():Plenty\Modules\Account\Contact\Models\Contact // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contact[Contact^]
 
     
 
 
-=== AfterAccountContactLogout
+==== AfterAccountContactLogout
 
 The event is triggered after a user is logged out from the client (store).
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Authentication\Events`
 
@@ -229,13 +231,13 @@ The event is triggered after a user is logged out from the client (store).
 
 
 [[authentication_authentication_models]]
-==  Models
-=== User
+===  Models
+==== User
 
 The user authentication model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Authentication\Models`
 
@@ -316,7 +318,7 @@ The user authentication model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

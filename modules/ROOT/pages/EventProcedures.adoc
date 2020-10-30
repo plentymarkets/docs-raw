@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[eventprocedures_eventprocedures]]
-= EventProcedures
+== EventProcedures
 
 [[eventprocedures_eventprocedures_events]]
-==  Events
-=== EventProceduresTriggered
+===  Events
+==== EventProceduresTriggered
 
 plentymarkets event procedures triggered
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\EventProcedures\Events`
 
@@ -21,7 +23,7 @@ plentymarkets event procedures triggered
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public getTicket():Plenty\Modules\Ticket\Models\Ticket // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:ticket#ticket_models_ticket[Ticket^]
 
@@ -53,20 +55,20 @@ public getOrder():Plenty\Modules\Order\Models\Order // <1>
 Get the order that triggered the event.
 
 
-==== Return type
+===== Return type
     
 <1> link:order#order_models_order[Order^]
 
     
 
 [[eventprocedures_eventprocedures_services]]
-==  Services
-=== EventProceduresService
+===  Services
+==== EventProceduresService
 
 The EventProcedureService class offers the possibility to register a procedure class and method that can be called by plentymarkets event procedures.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\EventProcedures\Services`
 
@@ -75,7 +77,7 @@ The EventProcedureService class offers the possibility to register a procedure c
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -89,7 +91,7 @@ public registerProcedure($moduleName, $eventType, $procedureNames, $procedureCla
 Register a procedure class
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -149,7 +151,7 @@ public registerFilter($moduleName, $eventType, $filterNames, $filterClass):bool 
 Register a filter class
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -194,7 +196,7 @@ public registerTrigger($moduleName, $eventType, $triggerIdentifier, $triggerName
 Register a trigger
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -235,7 +237,7 @@ public fireTrigger($orderId, $moduleName, $triggerIdentifier):void // <1>
 Fire a trigger
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -259,16 +261,16 @@ a|`$triggerIdentifier`
 
 
 [[eventprocedures_services]]
-= Services
+== Services
 
 [[eventprocedures_services_entries]]
-==  Entries
-=== FilterEntry
+===  Entries
+==== FilterEntry
 
 The filter entry contains all information needed to use module filters in plentymarkets event procedures.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\EventProcedures\Services\Entries`
 
@@ -277,7 +279,7 @@ The filter entry contains all information needed to use module filters in plenty
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -291,7 +293,7 @@ public getModuleName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -308,7 +310,7 @@ public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entrie
 
 
 
-==== Return type
+===== Return type
     
 <1> link:eventprocedures#eventprocedures_entries_filterentry[FilterEntry^]
 
@@ -335,7 +337,7 @@ public getEventType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -352,7 +354,7 @@ public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\
 
 
 
-==== Return type
+===== Return type
     
 <1> link:eventprocedures#eventprocedures_entries_filterentry[FilterEntry^]
 
@@ -379,7 +381,7 @@ public getFilterNames():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -396,7 +398,7 @@ public setFilterNames($filterNames):Plenty\Modules\EventProcedures\Services\Entr
 
 
 
-==== Return type
+===== Return type
     
 <1> link:eventprocedures#eventprocedures_entries_filterentry[FilterEntry^]
 
@@ -423,7 +425,7 @@ public getFilterClass():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -440,7 +442,7 @@ public setFilterClass($filterClass):Plenty\Modules\EventProcedures\Services\Entr
 
 
 
-==== Return type
+===== Return type
     
 <1> link:eventprocedures#eventprocedures_entries_filterentry[FilterEntry^]
 
@@ -456,12 +458,12 @@ a|`$filterClass`
 
 
 
-=== ProcedureEntry
+==== ProcedureEntry
 
 The procedure entry contains all information needed to use module procedures in plentymarkets event procedures.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\EventProcedures\Services\Entries`
 
@@ -470,7 +472,7 @@ The procedure entry contains all information needed to use module procedures in 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -484,7 +486,7 @@ public getModuleName():string // <1>
 Get the
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -501,7 +503,7 @@ public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entrie
 Set the
 
 
-==== Return type
+===== Return type
     
 <1> link:eventprocedures#eventprocedures_entries_procedureentry[ProcedureEntry^]
 
@@ -528,7 +530,7 @@ public getEventType():string // <1>
 Get the
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -545,7 +547,7 @@ public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\
 Set the
 
 
-==== Return type
+===== Return type
     
 <1> link:eventprocedures#eventprocedures_entries_procedureentry[ProcedureEntry^]
 
@@ -572,7 +574,7 @@ public getProcedureNames():array // <1>
 Get the
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -589,7 +591,7 @@ public setProcedureNames($procedureNames):Plenty\Modules\EventProcedures\Service
 Set the
 
 
-==== Return type
+===== Return type
     
 <1> link:eventprocedures#eventprocedures_entries_procedureentry[ProcedureEntry^]
 
@@ -616,7 +618,7 @@ public getProcedureGroup():string // <1>
 Get the
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -633,7 +635,7 @@ public setProcedureGroup($procedureGroup):Plenty\Modules\EventProcedures\Service
 Set the
 
 
-==== Return type
+===== Return type
     
 <1> link:eventprocedures#eventprocedures_entries_procedureentry[ProcedureEntry^]
 
@@ -660,7 +662,7 @@ public getProcedureClass():string // <1>
 Get the
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -677,7 +679,7 @@ public setProcedureClass($procedureClass):Plenty\Modules\EventProcedures\Service
 Set the
 
 
-==== Return type
+===== Return type
     
 <1> link:eventprocedures#eventprocedures_entries_procedureentry[ProcedureEntry^]
 
@@ -693,12 +695,12 @@ a|`$procedureClass`
 
 
 
-=== TriggerEntry
+==== TriggerEntry
 
 The trigger entry contains all information needed to use module triggers in plentymarkets event procedures.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\EventProcedures\Services\Entries`
 
@@ -707,7 +709,7 @@ The trigger entry contains all information needed to use module triggers in plen
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -721,7 +723,7 @@ public getModuleName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -738,7 +740,7 @@ public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entrie
 
 
 
-==== Return type
+===== Return type
     
 <1> link:eventprocedures#eventprocedures_entries_triggerentry[TriggerEntry^]
 
@@ -765,7 +767,7 @@ public getEventType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -782,7 +784,7 @@ public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\
 
 
 
-==== Return type
+===== Return type
     
 <1> link:eventprocedures#eventprocedures_entries_triggerentry[TriggerEntry^]
 
@@ -809,7 +811,7 @@ public getTriggerIdentifier():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -826,7 +828,7 @@ public setTriggerIdentifier($triggerIdentifier):Plenty\Modules\EventProcedures\S
 
 
 
-==== Return type
+===== Return type
     
 <1> link:eventprocedures#eventprocedures_entries_triggerentry[TriggerEntry^]
 
@@ -853,7 +855,7 @@ public getTriggerNames():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -870,7 +872,7 @@ public setTriggerNames($triggerNames):Plenty\Modules\EventProcedures\Services\En
 
 
 
-==== Return type
+===== Return type
     
 <1> link:eventprocedures#eventprocedures_entries_triggerentry[TriggerEntry^]
 
@@ -897,7 +899,7 @@ public getTrigger():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     

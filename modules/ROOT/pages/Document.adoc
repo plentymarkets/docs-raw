@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[document_document]]
-= Document
+== Document
 
 [[document_document_contracts]]
-==  Contracts
-=== DocumentRepositoryContract
+===  Contracts
+==== DocumentRepositoryContract
 
 Download and list order documents as well as download, list, upload and delete category documents.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Document\Contracts`
 
@@ -21,7 +23,7 @@ Download and list order documents as well as download, list, upload and delete c
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public getDocumentPath($id):void // <1>
 Get the path to a document
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -62,7 +64,7 @@ public findById($id, $columns = []):Plenty\Modules\Document\Models\Document // <
 Get a document
 
 
-==== Return type
+===== Return type
     
 <1> link:document#document_models_document[Document^]
 
@@ -93,7 +95,7 @@ public find($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Rep
 List documents
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -132,7 +134,7 @@ public uploadOrderDocuments($orderId, $type, $data):array // <1>
 Upload order documents
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -166,7 +168,7 @@ public deleteOrderDocument($orderId, $documentId):bool // <1>
 Delete order document
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -196,7 +198,7 @@ public archiveOrderDocument($orderId, $documentId):void // <1>
 Archive order document
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -227,7 +229,7 @@ public uploadCategoryDocuments($categoryId, $data):array // <1>
 Upload category documents
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -257,7 +259,7 @@ public deleteCategoryDocument($categoryId, $documentId):bool // <1>
 Delete a category document.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -287,7 +289,7 @@ public uploadOrderShippingPackageDocuments($packageId, $type, $document):array /
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -321,7 +323,7 @@ public findOrderShippingPackageDocuments($packageId, $type):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -351,7 +353,7 @@ public findCurrentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\
 
 
 
-==== Return type
+===== Return type
     
 <1> link:document#document_models_document[Document^]
 
@@ -382,7 +384,7 @@ public findRecentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\D
 
 
 
-==== Return type
+===== Return type
     
 <1> link:document#document_models_document[Document^]
 
@@ -413,7 +415,7 @@ public deleteOrderShippingPackageDocuments($packageId):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -439,7 +441,7 @@ public getDocumentStorageObject($key):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -467,7 +469,7 @@ public uploadOrderReturnsDocuments($returnsId, $document):Plenty\Modules\Documen
 
 
 
-==== Return type
+===== Return type
     
 <1> link:document#document_models_document[Document^]
 
@@ -498,7 +500,7 @@ public getOrderReturnsDocumentById($returnsId, $withLabel = false):Plenty\Module
 
 
 
-==== Return type
+===== Return type
     
 <1> link:document#document_models_document[Document^]
 
@@ -529,7 +531,7 @@ public generateOrderDocument($orderId, $type, $data):bool // <1>
 Generate order document
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -563,7 +565,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -581,7 +583,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -599,7 +601,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -626,7 +628,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -644,7 +646,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -662,20 +664,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[document_document_models]]
-==  Models
-=== Document
+===  Models
+==== Document
 
 The document model contains information about actual documents.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Document\Models`
 
@@ -790,7 +792,7 @@ The document model contains information about actual documents.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -806,12 +808,12 @@ Returns this model as an array.
 
 
 
-=== DocumentReference
+==== DocumentReference
 
 The document reference model. A document reference allows you to assign a document to other models.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Document\Models`
 
@@ -850,7 +852,7 @@ The document reference model. A document reference allows you to assign a docume
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[amazon_amazon]]
-= Amazon
+== Amazon
 
 [[amazon_amazon_contracts]]
-==  Contracts
-=== AmazonClient
+===  Contracts
+==== AmazonClient
 
 The amazon client
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Amazon\Contracts`
 
@@ -21,7 +23,7 @@ The amazon client
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public sendRequest($request, $serviceVersion):Plenty\Modules\Amazon\Contracts\Am
 
 
 
-==== Return type
+===== Return type
     
 <1> link:amazon#amazon_contracts_amazonclientresponse[AmazonClientResponse^]
 
@@ -56,12 +58,12 @@ a|`$serviceVersion`
 
 
 
-=== AmazonClientFactory
+==== AmazonClientFactory
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Amazon\Contracts`
 
@@ -70,7 +72,7 @@ a|`$serviceVersion`
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -84,7 +86,7 @@ public getClient($accountId, $endpointPath):Plenty\Modules\Amazon\Contracts\Amaz
 
 
 
-==== Return type
+===== Return type
     
 <1> link:amazon#amazon_contracts_amazonclient[AmazonClient^]
 
@@ -104,12 +106,12 @@ a|`$endpointPath`
 
 
 
-=== AmazonClientRequest
+==== AmazonClientRequest
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Amazon\Contracts`
 
@@ -118,7 +120,7 @@ a|`$endpointPath`
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -132,7 +134,7 @@ public getRequestData():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -149,7 +151,7 @@ public requiresSellerId():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -166,7 +168,7 @@ public getSellerIdFieldName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -183,18 +185,18 @@ public getAction():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
 
 
-=== AmazonClientRequestPayload
+==== AmazonClientRequestPayload
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Amazon\Contracts`
 
@@ -203,7 +205,7 @@ public getAction():string // <1>
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -217,19 +219,19 @@ public getPayload():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== AmazonClientResponse
+==== AmazonClientResponse
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Amazon\Contracts`
 
@@ -238,7 +240,7 @@ public getPayload():void // <1>
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -252,7 +254,7 @@ public getResponseContent():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -270,18 +272,18 @@ public getResponseMetaData():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== AmazonFulfillmentCenterRepositoryContract
+==== AmazonFulfillmentCenterRepositoryContract
 
 AmazonFulfillmentCenterRepository
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Amazon\Contracts`
 
@@ -290,7 +292,7 @@ AmazonFulfillmentCenterRepository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -304,7 +306,7 @@ public getDeliveryAddresses():array // <1>
 Lists amazon fulfilment centers delivery addresses.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -321,7 +323,7 @@ public getDeliveryAddressByFulfillmentCenterId($amazonFulfillmentCenterId):Plent
 Get the delivery address by fulfillment center ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -348,7 +350,7 @@ public getDeliveryAddressByGLN($GLN):Plenty\Modules\Account\Address\Models\Addre
 Get the delivery address by GLN.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -375,7 +377,7 @@ public getInvoiceAddressByGLN($GLN):Plenty\Modules\Account\Address\Models\Addres
 Get the invoice address by GLN.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -402,20 +404,20 @@ public getContactId():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
 
 [[amazon_amazon_exceptions]]
-==  Exceptions
-=== AmazonClientException
+===  Exceptions
+==== AmazonClientException
 
 Created by ptopczewski, 01.02.18 11:41
 Class AmazonClientException
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Amazon\Exceptions`
 
@@ -424,13 +426,13 @@ Class AmazonClientException
 
 
 
-=== AmazonClientRequestException
+==== AmazonClientRequestException
 
 Created by ptopczewski, 07.02.18 10:34
 Class AmazonClientRequestException
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Amazon\Exceptions`
 
@@ -439,7 +441,7 @@ Class AmazonClientRequestException
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -453,7 +455,7 @@ public getType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -470,7 +472,7 @@ public getRequestId():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -487,7 +489,7 @@ public getErrorCode():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     

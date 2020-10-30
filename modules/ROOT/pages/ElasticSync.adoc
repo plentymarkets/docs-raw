@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[elasticsync_contracts]]
-= Contracts
+== Contracts
 
 [[elasticsync_contracts_core]]
-==  Core
-=== ElasticSyncMappingFilterRepositoryContract
+===  Core
+==== ElasticSyncMappingFilterRepositoryContract
 
 This interface allows you to get, list, create, update and delete elastic sync mapping filters.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Contracts\Core`
 
@@ -21,7 +23,7 @@ This interface allows you to get, list, create, update and delete elastic sync m
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public createSyncMappingFilter($mappingId, $data):void // <1>
 Create a sync mapping filter.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -66,7 +68,7 @@ public getSyncMappingFilter($filterId):void // <1>
 Get a sync mapping filter.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -93,7 +95,7 @@ public listSyncMappingFilters($mappingId, $filters = [], $with = []):void // <1>
 List sync mapping filters.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -128,7 +130,7 @@ public updateSyncMappingFilter($filterId, $data):void // <1>
 Update a sync mapping filter.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -159,7 +161,7 @@ public deleteSyncMappingFilter($filterId):void // <1>
 Delete a sync mapping filter.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -186,7 +188,7 @@ public createSyncMappingFilters($mappingId, $data):void // <1>
 Create sync mapping filters.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -217,7 +219,7 @@ public updateSyncMappingFilters($mappingId, $data):void // <1>
 Update sync mapping filters.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -248,7 +250,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -266,7 +268,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -284,7 +286,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -311,7 +313,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -329,7 +331,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -347,19 +349,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== ElasticSyncMappingRepositoryContract
+==== ElasticSyncMappingRepositoryContract
 
 This interface allows you to get, list, create, update and delete elastic sync mappings.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Contracts\Core`
 
@@ -368,7 +370,7 @@ This interface allows you to get, list, create, update and delete elastic sync m
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -382,7 +384,7 @@ public createSyncMapping($syncId, $data):void // <1>
 Create a sync mapping.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -413,7 +415,7 @@ public getSyncMapping($mappingId, $with = []):void // <1>
 Get a sync mapping.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -444,7 +446,7 @@ public listSyncMappings($syncId, $page = 1, $itemsPerPage = 50, $paginate = 1, $
 List sync mappings.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -491,7 +493,7 @@ public updateSyncMapping($mappingId, $data):void // <1>
 Update a sync mapping.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -522,7 +524,7 @@ public deleteSyncMapping($mappingId):void // <1>
 Delete a sync mapping.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -549,7 +551,7 @@ public deleteSyncMappings($mappingIds):void // <1>
 Delete one or more mappings.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -576,7 +578,7 @@ public copySyncMapping($mappingIds):array // <1>
 Copy sync mapping.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -602,7 +604,7 @@ public mappingValues($sync_type):array // <1>
 Get the mapping values.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -625,14 +627,17 @@ public fieldValuesMap():array // <1>
 
 
 [warning]
-.Deprecated! ====
+.Deprecated! 
+====
+
 This method will not be supported in the future. Please refrain from using it as soon as possible.
+
 ====
     
 Get the field value map for all sync types.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -649,7 +654,7 @@ public listVariationMatched():array // <1>
 Get a list with variation matches.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -666,7 +671,7 @@ public modelKeyToFieldValueKey($syncType):array // <1>
 Get the model key to field value key.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -692,7 +697,7 @@ public filterLabelList():array // <1>
 Get the label list for mapping filtration.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -709,7 +714,7 @@ public mappingValuesTree($data):array // <1>
 Get the mapping values tree.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -735,7 +740,7 @@ public csvColumns($syncId):array // <1>
 Get the csv columns of a sync.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -761,7 +766,7 @@ public rowCsv($syncId):array // <1>
 Get the csv rows.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -787,7 +792,7 @@ public getPlentyFieldsValueMap($syncDataType):array // <1>
 Get the plenty fields value map for a particular sync type.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -813,7 +818,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -831,7 +836,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -849,7 +854,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -876,7 +881,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -894,7 +899,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -912,19 +917,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== ElasticSyncMappingRowRepositoryContract
+==== ElasticSyncMappingRowRepositoryContract
 
 This interface allows you to get, list, create, update and delete elastic sync mapping rows.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Contracts\Core`
 
@@ -933,7 +938,7 @@ This interface allows you to get, list, create, update and delete elastic sync m
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -947,7 +952,7 @@ public createSyncMappingRow($mappingId, $data):void // <1>
 Create a sync mapping row.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -978,7 +983,7 @@ public getSyncMappingRow($rowId):void // <1>
 Get a sync mapping row.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1005,7 +1010,7 @@ public listSyncMappingRows($mappingId, $filters = [], $with = [], $page = 1, $it
 List sync mapping rows.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1048,7 +1053,7 @@ public updateSyncMappingRow($rowId, $data):void // <1>
 Update a sync mapping row.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1079,7 +1084,7 @@ public deleteSyncMappingRow($rowId):void // <1>
 Delete a sync mapping row.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1106,7 +1111,7 @@ public updateSyncMappingRows($mappingId, $data):void // <1>
 Update sync mapping rows.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1137,7 +1142,7 @@ public createSyncMappingRows($mappingId, $data):void // <1>
 Create sync mapping rows.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1168,7 +1173,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1186,7 +1191,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1204,7 +1209,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1231,7 +1236,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1249,7 +1254,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1267,19 +1272,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== ElasticSyncMatchingRepositoryContract
+==== ElasticSyncMatchingRepositoryContract
 
 This interface allows you to get, list, create, update and delete elastic sync matches.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Contracts\Core`
 
@@ -1288,7 +1293,7 @@ This interface allows you to get, list, create, update and delete elastic sync m
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1302,7 +1307,7 @@ public createSyncMatching($syncId, $data):void // <1>
 Create a sync matching.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1333,7 +1338,7 @@ public getSyncMatching($matchingId):void // <1>
 Get a sync matching.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1360,7 +1365,7 @@ public listSyncMatches($syncId, $filters = [], $with = []):void // <1>
 List sync matches.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1395,7 +1400,7 @@ public updateSyncMatching($matchingId, $data):void // <1>
 Update a sync matching.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1426,7 +1431,7 @@ public deleteSyncMatching($matchingId):void // <1>
 Delete a sync matching.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1453,7 +1458,7 @@ public getEntity($syncId):array // <1>
 Get an entity.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1479,7 +1484,7 @@ public matchingFields($syncType):array // <1>
 Get a list of all mappings for a particular sync type.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1505,7 +1510,7 @@ public createSyncMatches($syncId, $data):void // <1>
 Create sync matches.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1536,7 +1541,7 @@ public updateSyncMatches($syncId, $data):void // <1>
 Update sync matches.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1567,7 +1572,7 @@ public listDecimals():array // <1>
 Get list of decimals.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1584,7 +1589,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1602,7 +1607,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1620,7 +1625,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1647,7 +1652,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1665,7 +1670,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1683,19 +1688,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== ElasticSyncOptionRepositoryContract
+==== ElasticSyncOptionRepositoryContract
 
 This interface allows you to get, list, create, update and delete elastic sync options.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Contracts\Core`
 
@@ -1704,7 +1709,7 @@ This interface allows you to get, list, create, update and delete elastic sync o
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1718,7 +1723,7 @@ public createSyncOption($syncId, $data):void // <1>
 Create a sync option.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1749,7 +1754,7 @@ public getSyncOption($optionId):void // <1>
 Get a sync option.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1776,7 +1781,7 @@ public listSyncOptions($syncId, $filters = [], $with = []):void // <1>
 List sync options.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1811,7 +1816,7 @@ public updateSyncOption($optionId, $data):void // <1>
 Update a sync option.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1842,7 +1847,7 @@ public deleteSyncOption($optionId):void // <1>
 Delete a sync option.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1869,7 +1874,7 @@ public createSyncOptions($syncId, $data):void // <1>
 Create sync options.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1900,7 +1905,7 @@ public updateSyncOptions($syncId, $data):void // <1>
 Update sync options.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1931,7 +1936,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1949,7 +1954,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1967,7 +1972,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1994,7 +1999,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2012,7 +2017,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2030,19 +2035,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== ElasticSyncSyncRepositoryContract
+==== ElasticSyncSyncRepositoryContract
 
 This interface allows you to get, list, create, update and delete elastic sync syncs.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Contracts\Core`
 
@@ -2051,7 +2056,7 @@ This interface allows you to get, list, create, update and delete elastic sync s
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2065,7 +2070,7 @@ public createSync($data):void // <1>
 Create a sync.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2092,7 +2097,7 @@ public getSync($syncId, $with = []):array // <1>
 Get a sync.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2122,7 +2127,7 @@ public listSyncs($page = 1, $itemsPerPage = 50, $paginate = 1, $filters = [], $w
 Get all syncs
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -2165,7 +2170,7 @@ public updateSync($syncId, $data):void // <1>
 Update a sync.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2196,7 +2201,7 @@ public deleteSync($syncId):void // <1>
 Delete a sync.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2223,7 +2228,7 @@ public deleteSyncs($syncIds):void // <1>
 Delete syncs.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2250,7 +2255,7 @@ public getListTypes():array // <1>
 Get list of sync types.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2267,7 +2272,7 @@ public getListIntervals():array // <1>
 Get list of sync intervals.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2284,7 +2289,7 @@ public getListDecimals():array // <1>
 Get list of sync decimals.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2301,7 +2306,7 @@ public export($syncIds):array // <1>
 Export the syncs.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2327,7 +2332,7 @@ public copy($syncIds):array // <1>
 Copy the syncs.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2353,7 +2358,7 @@ public resetCache():array // <1>
 Reset the cache.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2370,7 +2375,7 @@ public sourcePreview($syncId):array // <1>
 Preview the syncs.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2396,7 +2401,7 @@ public scheduleTimes():string // <1>
 Get schedule times.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2413,7 +2418,7 @@ public getReportLogs($page = 1, $itemsPerPage = 50, $paginate = 1, $filters = []
 Check Report Log.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -2456,7 +2461,7 @@ public saveCsvToS3($data):void // <1>
 Save the CSV on S3.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2483,7 +2488,7 @@ public importSyncDifferent($data):void // <1>
 Import the sync with different plentyId.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2510,7 +2515,7 @@ public getPreviewValues($syncId):array // <1>
 Get preview of csv values.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2536,7 +2541,7 @@ public run($syncId, $data):void // <1>
 Execute the run procedure.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2567,7 +2572,7 @@ public newRun($syncId, $data):array // <1>
 Execute the new run procedure.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2597,7 +2602,7 @@ public report($id):array // <1>
 Get Log by ID
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2624,7 +2629,7 @@ public reportAvailable($page = 1, $itemsPerPage = 50, $paginate = 1, $filters = 
 Check Report Log.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2666,7 +2671,7 @@ public exportSync($syncId):array // <1>
 Export the sync.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2692,7 +2697,7 @@ public syncStatus():array // <1>
 Get syncs status.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2709,7 +2714,7 @@ public updateCsvSync($data):void // <1>
 Update the Csv of a Sync.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2736,7 +2741,7 @@ public importSyncJson($data):void // <1>
 Save the CSV on S3.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2763,7 +2768,7 @@ public importSyncJsonDifferent($data):void // <1>
 Import the sync with different plentyId.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2790,7 +2795,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2808,7 +2813,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2826,7 +2831,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2853,7 +2858,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2871,7 +2876,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2889,20 +2894,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[elasticsync_contracts_mapper]]
-==  Mapper
-=== PropertyDescriptor
+===  Mapper
+==== PropertyDescriptor
 
 describes properties of a Model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Contracts\Mapper`
 
@@ -2911,7 +2916,7 @@ describes properties of a Model
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2925,7 +2930,7 @@ public getPropertyInformation($modelClassName):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2940,13 +2945,13 @@ a|`$modelClassName`
 
 
 [[elasticsync_contracts_report]]
-==  Report
-=== ElasticSyncReportOptionRepositoryContract
+===  Report
+==== ElasticSyncReportOptionRepositoryContract
 
 This interface provides methods to CRUD report options
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Contracts\Report`
 
@@ -2955,7 +2960,7 @@ This interface provides methods to CRUD report options
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2969,7 +2974,7 @@ public create($data):Plenty\Modules\ElasticSync\Models\Report\RunReportOption //
 Creates a run report option
 
 
-==== Return type
+===== Return type
     
 <1> link:elasticsync#elasticsync_report_runreportoption[RunReportOption^]
 
@@ -2996,7 +3001,7 @@ public get($id):Plenty\Modules\ElasticSync\Models\Report\RunReportOption // <1>
 Gets a run report option
 
 
-==== Return type
+===== Return type
     
 <1> link:elasticsync#elasticsync_report_runreportoption[RunReportOption^]
 
@@ -3023,7 +3028,7 @@ public update($id, $data):Plenty\Modules\ElasticSync\Models\Report\RunReportOpti
 Updates a run report option
 
 
-==== Return type
+===== Return type
     
 <1> link:elasticsync#elasticsync_report_runreportoption[RunReportOption^]
 
@@ -3054,7 +3059,7 @@ public delete($id):void // <1>
 Deletes a run report option
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3081,7 +3086,7 @@ public set($report, $name, $value = null, $type = &quot;string&quot;):void // <1
 Sets a run report option
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3121,7 +3126,7 @@ public getOptionByName($report, $name):void // <1>
 Gets the option of a report by name
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3153,7 +3158,7 @@ public getValueByName($report, $name):void // <1>
 Gets the value of a report option
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3185,7 +3190,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3203,7 +3208,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3221,7 +3226,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3248,7 +3253,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3266,7 +3271,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3284,19 +3289,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== ElasticSyncReportRepositoryContract
+==== ElasticSyncReportRepositoryContract
 
 This interface provides methods to list reports
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Contracts\Report`
 
@@ -3305,7 +3310,7 @@ This interface provides methods to list reports
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3319,7 +3324,7 @@ public getRunReport($id):Plenty\Modules\ElasticSync\Models\Report\RunReport // <
 Gets a run report
 
 
-==== Return type
+===== Return type
     
 <1> link:elasticsync#elasticsync_report_runreport[RunReport^]
 
@@ -3346,7 +3351,7 @@ public getRunReportLog($id):void // <1>
 Gets a run report log
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3373,7 +3378,7 @@ public cancelRun($id):void // <1>
 Cancels a run
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3400,7 +3405,7 @@ public listRunReports($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repos
 Lists run reports
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -3435,7 +3440,7 @@ public listJobReports($reportId, $page = 1, $itemsPerPage = 50, $filters = []):a
 Lists job reports for a specific run
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3473,7 +3478,7 @@ public listJobs($reportId):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3499,7 +3504,7 @@ public listOutcomes($reportId, $job):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3529,7 +3534,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3547,7 +3552,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3565,7 +3570,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3592,7 +3597,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3610,7 +3615,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3628,23 +3633,23 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[elasticsync_models]]
-= Models
+== Models
 
 [[elasticsync_models_core]]
-==  Core
-=== ElasticSyncMapping
+===  Core
+==== ElasticSyncMapping
 
 The elastic sync mapping model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Models\Core`
 
@@ -3674,7 +3679,7 @@ The elastic sync mapping model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3690,12 +3695,12 @@ Returns this model as an array.
 
 
 
-=== ElasticSyncMappingFilter
+==== ElasticSyncMappingFilter
 
 The elastic sync mapping filter model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Models\Core`
 
@@ -3728,7 +3733,7 @@ The elastic sync mapping filter model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3744,12 +3749,12 @@ Returns this model as an array.
 
 
 
-=== ElasticSyncMappingRow
+==== ElasticSyncMappingRow
 
 The elastic sync mapping row model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Models\Core`
 
@@ -3791,7 +3796,7 @@ The elastic sync mapping row model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3807,12 +3812,12 @@ Returns this model as an array.
 
 
 
-=== ElasticSyncMatching
+==== ElasticSyncMatching
 
 The elastic sync matching model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Models\Core`
 
@@ -3842,7 +3847,7 @@ The elastic sync matching model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3858,12 +3863,12 @@ Returns this model as an array.
 
 
 
-=== ElasticSyncOption
+==== ElasticSyncOption
 
 The elastic sync option model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Models\Core`
 
@@ -3901,7 +3906,7 @@ The elastic sync option model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3917,12 +3922,12 @@ Returns this model as an array.
 
 
 
-=== ElasticSyncSync
+==== ElasticSyncSync
 
 The elastic sync sync model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Models\Core`
 
@@ -3980,7 +3985,7 @@ The elastic sync sync model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3996,13 +4001,13 @@ Returns this model as an array.
 
 
 [[elasticsync_models_dataprovider]]
-==  DataProvider
-=== PropertyInformation
+===  DataProvider
+==== PropertyInformation
 
 property information
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Models\DataProvider`
 
@@ -4011,7 +4016,7 @@ property information
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4025,7 +4030,7 @@ public getType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -4042,7 +4047,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -4059,19 +4064,19 @@ public getDescription():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
 
 [[elasticsync_models_report]]
-==  Report
-=== RunReport
+===  Report
+==== RunReport
 
 The run report model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Models\Report`
 
@@ -4116,7 +4121,7 @@ The run report model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4132,12 +4137,12 @@ Returns this model as an array.
 
 
 
-=== RunReportOption
+==== RunReportOption
 
 The run report option model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Models\Report`
 
@@ -4167,7 +4172,7 @@ The run report option model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4183,13 +4188,13 @@ Returns this model as an array.
 
 
 [[elasticsync_models_sync]]
-==  Sync
-=== Mapping
+===  Sync
+==== Mapping
 
 The mapping model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Models\Sync`
 
@@ -4222,7 +4227,7 @@ The mapping model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4238,12 +4243,12 @@ Returns this model as an array.
 
 
 
-=== Sync
+==== Sync
 
 The sync model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Models\Sync`
 
@@ -4276,7 +4281,7 @@ The sync model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4292,12 +4297,12 @@ Returns this model as an array.
 
 
 
-=== SyncLog
+==== SyncLog
 
 The synclog model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ElasticSync\Models\Sync`
 
@@ -4339,7 +4344,7 @@ The synclog model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

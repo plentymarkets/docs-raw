@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[contentbuilder_contentbuilder]]
-= ContentBuilder
+== ContentBuilder
 
 [[contentbuilder_contentbuilder_contracts]]
-==  Contracts
-=== ContentLinkRepositoryContract
+===  Contracts
+==== ContentLinkRepositoryContract
 
 This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ContentBuilder\Contracts`
 
@@ -21,7 +23,7 @@ This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public listContentsLinks($page = 1, $itemsPerPage = 50, $with = [], $filters = [
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -74,7 +76,7 @@ public getContentLink($contentLinkId):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -101,7 +103,7 @@ public createContentLink($data):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -128,7 +130,7 @@ public updateContentLink($data, $contentLinkId):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -159,7 +161,7 @@ public getContentLinksForContainer($container, $setId = null):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -190,7 +192,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -208,7 +210,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -226,7 +228,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -253,7 +255,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -271,7 +273,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -289,19 +291,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== ContentRepositoryContract
+==== ContentRepositoryContract
 
 This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ContentBuilder\Contracts`
 
@@ -310,7 +312,7 @@ This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -324,7 +326,7 @@ public listContents($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Pl
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -363,7 +365,7 @@ public listAllContents():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -380,7 +382,7 @@ public getContent($contentId):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -407,7 +409,7 @@ public getContentsByPage($pageIdentifier):Illuminate\Support\Collection // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_support_collection[Collection^]
 
@@ -434,7 +436,7 @@ public createContent($dataProviderName):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -461,7 +463,7 @@ public updateContent($data, $contentId):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -492,7 +494,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -510,7 +512,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -528,7 +530,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -555,7 +557,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -573,7 +575,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -591,19 +593,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== ContentStorageRepositoryContract
+==== ContentStorageRepositoryContract
 
 This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ContentBuilder\Contracts`
 
@@ -612,7 +614,7 @@ This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -626,7 +628,7 @@ public createContentData($contentId, $widgetData):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -657,7 +659,7 @@ public getContentData($contentId):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -673,12 +675,12 @@ a|`$contentId`
 
 
 
-=== Widget
+==== Widget
 
 This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ContentBuilder\Contracts`
 
@@ -687,7 +689,7 @@ This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -701,7 +703,7 @@ public getPreview($widgetSettings = [], $children = []):string // <1>
 Get the html representation of the widget
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -731,7 +733,7 @@ public render($widgetSettings = [], $children = []):string // <1>
 Render the widget
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -750,13 +752,13 @@ a|`$children`
 
 
 [[contentbuilder_contentbuilder_models]]
-==  Models
-=== Content
+===  Models
+==== Content
 
 This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ContentBuilder\Models`
 
@@ -791,7 +793,7 @@ This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -807,12 +809,12 @@ Returns this model as an array.
 
 
 
-=== ContentLink
+==== ContentLink
 
 This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\ContentBuilder\Models`
 
@@ -847,7 +849,7 @@ This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

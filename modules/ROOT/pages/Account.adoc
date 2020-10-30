@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[account_address]]
-= Address
+== Address
 
 [[account_address_contracts]]
-==  Contracts
-=== AddressContactRelationRepositoryContract
+===  Contracts
+==== AddressContactRelationRepositoryContract
 
 The AddressContactRelationRepositoryContract is the interface for the address contact relation repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Contracts`
 
@@ -21,7 +23,7 @@ The AddressContactRelationRepositoryContract is the interface for the address co
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public createAddressContactRelation($data):array // <1>
 Creates address contact relations.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -61,7 +63,7 @@ public updateAddressContactRelation($data):array // <1>
 Updates address contact relations.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -87,7 +89,7 @@ public findAddressContactRelation($addressContactRelationId):Plenty\Modules\Acco
 Gets address contact relation by ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addresscontactrelation[AddressContactRelation^]
 
@@ -114,7 +116,7 @@ public deleteAddressContactRelation($addressContactRelationId):bool // <1>
 Deletes an address contact relation.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -140,7 +142,7 @@ public listAddressContactRelations($filter = [], $with = [], $columns = [], $pag
 Lists address contact relations.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -183,7 +185,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -201,19 +203,19 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== AddressParamConfigurationRepositoryContract
+==== AddressParamConfigurationRepositoryContract
 
 The AddressParamConfigurationRepositoryContract is the interface for the address param configuration repository. This interface allows to create, update, delete, list and get address relation types and address option types.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Contracts`
 
@@ -222,7 +224,7 @@ The AddressParamConfigurationRepositoryContract is the interface for the address
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -236,7 +238,7 @@ public createAddressRelationType($data):Plenty\Modules\Account\Address\Models\Ad
 Creates a new address relation type.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addressrelationtype[AddressRelationType^]
 
@@ -263,7 +265,7 @@ public updateAddressRelationType($data, $addressRelationTypeId):Plenty\Modules\A
 Updates an existing address relation type.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addressrelationtype[AddressRelationType^]
 
@@ -294,7 +296,7 @@ public deleteAddressRelationType($addressRelationTypeId):bool // <1>
 Deletes an address relation type by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -320,7 +322,7 @@ public findAddressRelationTypeById($addressRelationTypeId):Plenty\Modules\Accoun
 Gets an existing address relation type by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addressrelationtype[AddressRelationType^]
 
@@ -347,7 +349,7 @@ public allAddressRelationTypes($columns = [], $perPage = 50):void // <1>
 Gets a list of address relation types.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -378,7 +380,7 @@ public createAddressOptionType($data):Plenty\Modules\Account\Address\Models\Addr
 Creates an address option type.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addressoptiontype[AddressOptionType^]
 
@@ -405,7 +407,7 @@ public updateAddressOptionType($data, $addressOptionTypeId):Plenty\Modules\Accou
 Updates an existing address option type.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addressoptiontype[AddressOptionType^]
 
@@ -436,7 +438,7 @@ public deleteAddressOptionType($addressOptionTypeId):bool // <1>
 Deletes an address option type by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -462,7 +464,7 @@ public findAddressOptionTypeById($addressOptionTypeId):Plenty\Modules\Account\Ad
 Finds an existing address option type by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addressoptiontype[AddressOptionType^]
 
@@ -489,7 +491,7 @@ public allAddressOptionType($columns = [], $perPage = 50):void // <1>
 Gets a list of address option types.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -509,12 +511,12 @@ a|`$perPage`
 
 
 
-=== AddressPosRelationRepositoryContract
+==== AddressPosRelationRepositoryContract
 
 The AddressPosRelationRepositoryContract is the interface for the address POS relation repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Contracts`
 
@@ -523,7 +525,7 @@ The AddressPosRelationRepositoryContract is the interface for the address POS re
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -537,7 +539,7 @@ public createAddressPosRelation($data):Plenty\Modules\Account\Address\Models\Add
 Creates an address POS relation.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addressposrelation[AddressPosRelation^]
 
@@ -564,7 +566,7 @@ public updateAddressPosRelation($addressPosRelationId, $data):Plenty\Modules\Acc
 Updates an address POS relation.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addressposrelation[AddressPosRelation^]
 
@@ -595,7 +597,7 @@ public findAddressPosRelation($addressPosRelationId):Plenty\Modules\Account\Addr
 Lists address POS relations.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addressposrelation[AddressPosRelation^]
 
@@ -622,7 +624,7 @@ public deleteAddressPosRelation($addressPosRelationId):void // <1>
 Deletes an address POS relation.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -649,7 +651,7 @@ public listAddressPosRelations($filter = [], $with = [], $columns = [], $page = 
 Lists address POS relations.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -692,7 +694,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -710,19 +712,19 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== AddressRepositoryContract
+==== AddressRepositoryContract
 
 The AddressRepositoryContract is the interface for the address repository contract. This interface allows to get, update, create and delete addresses and address options.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Contracts`
 
@@ -731,7 +733,7 @@ The AddressRepositoryContract is the interface for the address repository contra
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -745,7 +747,7 @@ public findAddressById($addressId):Plenty\Modules\Account\Address\Models\Address
 Gets an address. The ID of the address must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -772,7 +774,7 @@ public updateAddress($data, $addressId):Plenty\Modules\Account\Address\Models\Ad
 Updates an address. The ID of the address must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -803,7 +805,7 @@ public createAddress($data):Plenty\Modules\Account\Address\Models\Address // <1>
 Creates an address.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -830,7 +832,7 @@ public deleteAddress($addressId):bool // <1>
 Deletes an address. The ID of the address must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -856,7 +858,7 @@ public getAddressesOfWarehouse($warehouseId, $relationTypeId = null, $columns = 
 Returns a collection of addresses linked with a warehouse.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
@@ -895,7 +897,7 @@ public createAddressOfWarehouse($data):Plenty\Modules\Account\Address\Models\Add
 Creates an address and immediately links it with a warehouse.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -922,7 +924,7 @@ public findAddressOptions($addressId, $typeId):Illuminate\Database\Eloquent\Coll
 Returns a collection of address options of an address.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
@@ -953,7 +955,7 @@ public createAddressOptions($addressData, $addressId):Illuminate\Database\Eloque
 Creates address options for an address and returns all options of the address.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
@@ -984,7 +986,7 @@ public updateAddressOptions($addressData, $addressId):Illuminate\Database\Eloque
 Updates address options for an address and returns all options of the address.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
@@ -1015,7 +1017,7 @@ public deleteAddressOptions($addressId):void // <1>
 Deletes all address options of an address. The ID of the address must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1042,7 +1044,7 @@ public getAddressOption($optionId):Plenty\Modules\Account\Address\Models\Address
 Gets an address option. The ID of the option must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addressoption[AddressOption^]
 
@@ -1069,7 +1071,7 @@ public updateAddressOption($optionData, $optionId):Plenty\Modules\Account\Addres
 Updates an address option. The ID of the address option must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addressoption[AddressOption^]
 
@@ -1100,7 +1102,7 @@ public deleteAddressOption($optionId):bool // <1>
 Deletes an address option. The ID of the option must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1126,7 +1128,7 @@ public findAddressRelationTypes($application, $lang):Illuminate\Database\Eloquen
 Returns a collection of address relation types by a specific application and language. The collection may be empty.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
@@ -1157,7 +1159,7 @@ public findAddressDataByAddressId($addressId, $orderIds):Plenty\Modules\Account\
 Find address data by address id
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -1188,7 +1190,7 @@ public findExistingAddress($addressData):Plenty\Modules\Account\Address\Models\A
 Find an existing address
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -1215,7 +1217,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1233,20 +1235,20 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[account_address_models]]
-==  Models
-=== Address
+===  Models
+==== Address
 
 The address model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Models`
 
@@ -1442,7 +1444,7 @@ The address model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1458,12 +1460,12 @@ Returns this model as an array.
 
 
 
-=== AddressContactRelation
+==== AddressContactRelation
 
 The address contact relation model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Models`
 
@@ -1505,7 +1507,7 @@ The address contact relation model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1521,12 +1523,12 @@ Returns this model as an array.
 
 
 
-=== AddressOption
+==== AddressOption
 
 The address options model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Models`
 
@@ -1572,7 +1574,7 @@ The address options model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1588,12 +1590,12 @@ Returns this model as an array.
 
 
 
-=== AddressOptionType
+==== AddressOptionType
 
 The AddressOptionType model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Models`
 
@@ -1640,7 +1642,7 @@ The AddressOptionType model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1656,12 +1658,12 @@ Returns this model as an array.
 
 
 
-=== AddressOptionTypeName
+==== AddressOptionTypeName
 
 The AddressOptionTypeName model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Models`
 
@@ -1692,7 +1694,7 @@ The AddressOptionTypeName model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1708,12 +1710,12 @@ Returns this model as an array.
 
 
 
-=== AddressOrderRelation
+==== AddressOrderRelation
 
 address order relation model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Models`
 
@@ -1761,7 +1763,7 @@ address order relation model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1777,12 +1779,12 @@ Returns this model as an array.
 
 
 
-=== AddressPosRelation
+==== AddressPosRelation
 
 The address POS relation model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Models`
 
@@ -1809,7 +1811,7 @@ The address POS relation model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1825,12 +1827,12 @@ Returns this model as an array.
 
 
 
-=== AddressRelationType
+==== AddressRelationType
 
 The contact address type model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Models`
 
@@ -1872,7 +1874,7 @@ The contact address type model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1888,12 +1890,12 @@ Returns this model as an array.
 
 
 
-=== AddressRelationTypeApplication
+==== AddressRelationTypeApplication
 
 The AddressRelationTypeApplication model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Models`
 
@@ -1924,7 +1926,7 @@ The AddressRelationTypeApplication model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1940,12 +1942,12 @@ Returns this model as an array.
 
 
 
-=== AddressRelationTypeName
+==== AddressRelationTypeName
 
 The AddressRelationTypeName model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Models`
 
@@ -1976,7 +1978,7 @@ The AddressRelationTypeName model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1992,12 +1994,12 @@ Returns this model as an array.
 
 
 
-=== AddressSchedulerRelation
+==== AddressSchedulerRelation
 
 The AddressSchedulerRelation model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Models`
 
@@ -2028,7 +2030,7 @@ The AddressSchedulerRelation model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2044,12 +2046,12 @@ Returns this model as an array.
 
 
 
-=== AddressWarehouseRelation
+==== AddressWarehouseRelation
 
 The AddressWarehouseRelation model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Address\Models`
 
@@ -2080,7 +2082,7 @@ The AddressWarehouseRelation model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2096,16 +2098,16 @@ Returns this model as an array.
 
 
 [[account_contactevent]]
-= ContactEvent
+== ContactEvent
 
 [[account_contactevent_contracts]]
-==  Contracts
-=== ContactEventRepositoryContract
+===  Contracts
+==== ContactEventRepositoryContract
 
 The ContactEventRepositoryContract is the interface for the contact event repository. This interface allows to list contact events.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\ContactEvent\Contracts`
 
@@ -2114,7 +2116,7 @@ The ContactEventRepositoryContract is the interface for the contact event reposi
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2128,7 +2130,7 @@ public listEvents($columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositor
 Lists contact events identified by the contact that is currently logged into the system.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -2163,7 +2165,7 @@ public listEventsByContactId($contactId, $columns = [], $page = 1, $itemsPerPage
 Lists contact events by the contact ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -2202,7 +2204,7 @@ public createEvent($data):Plenty\Modules\Account\Contact\ContactEvent\Models\Con
 Adds an entry to the table customer events by the contact ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactevent[ContactEvent^]
 
@@ -2229,7 +2231,7 @@ public updateEvent($contactEventId, $data):Plenty\Modules\Account\Contact\Contac
 Updates an entry of the table customer events by the contact event ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactevent[ContactEvent^]
 
@@ -2260,7 +2262,7 @@ public deleteEvent($contactEventId):void // <1>
 Deletes an entry of the table customer events by the contact event ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2287,19 +2289,19 @@ public getEventTypesPreview():array // <1>
 Get the contact event types as key/pair array
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 [[account_contactevent_models]]
-==  Models
-=== ContactEvent
+===  Models
+==== ContactEvent
 
 The contact event model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\ContactEvent\Models`
 
@@ -2350,7 +2352,7 @@ The contact event model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2366,16 +2368,16 @@ Returns this model as an array.
 
 
 [[account_contact]]
-= Contact
+== Contact
 
 [[account_contact_contracts]]
-==  Contracts
-=== ContactAccessDataRepositoryContract
+===  Contracts
+==== ContactAccessDataRepositoryContract
 
 The ContactAccessDataRepositoryContract is the interface for the contact access data repository. This interface allows to reset and change contact password, get a login URL and unblock users.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -2384,7 +2386,7 @@ The ContactAccessDataRepositoryContract is the interface for the contact access 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2398,7 +2400,7 @@ public updatePassword($contactId, $data):void // <1>
 Updates the password for a contact.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2429,7 +2431,7 @@ public sendNewCustomerPassword($contactId):void // <1>
 Sends a new password to the contact.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2456,7 +2458,7 @@ public unblockUser($contactId):void // <1>
 Unblocks the user.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2483,7 +2485,7 @@ public getLoginURL($contactId):void // <1>
 Gets the login URL.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2499,12 +2501,12 @@ a|`$contactId`
 
 
 
-=== ContactAccountRepositoryContract
+==== ContactAccountRepositoryContract
 
 The ContactAccountRepositoryContract is the interface for the contact account repository. This interface allows to get, create, update and delete accounts. An account contains company-related data.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -2513,7 +2515,7 @@ The ContactAccountRepositoryContract is the interface for the contact account re
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2527,7 +2529,7 @@ public findAccount($accountId, $contactId):Plenty\Modules\Account\Models\Account
 Returns an account by an ID only if it is associated with the given contact ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_account[Account^]
 
@@ -2558,7 +2560,7 @@ public createAccount($data, $contactId):Plenty\Modules\Account\Models\Account //
 Creates an account and associates it immediately with the given ID of the contact.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_account[Account^]
 
@@ -2589,7 +2591,7 @@ public updateAccount($data, $accountId, $contactId):Plenty\Modules\Account\Model
 Updates an account. If not already associated, it will associate the account with the given contact ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_account[Account^]
 
@@ -2624,7 +2626,7 @@ public deleteAccount($accountId, $contactId):bool // <1>
 Deletes the given account of the given contact ID. Returns `true` if the deletion was successful. Returns `false` if the deletion was not successful.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2643,12 +2645,12 @@ a|`$contactId`
 
 
 
-=== ContactAddressRepositoryContract
+==== ContactAddressRepositoryContract
 
 The ContactAddressRepositoryContract is the interface for the contact address repository. This interface allows to list, get, create, update, add and delete addresses of the contact.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -2657,7 +2659,7 @@ The ContactAddressRepositoryContract is the interface for the contact address re
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2671,7 +2673,7 @@ public getPrimaryOrLastCreatedContactAddresses($contactId):array // <1>
 Returns primary or last created contact addresses
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2697,7 +2699,7 @@ public findContactAddressByTypeId($contactId, $typeId, $last = true):Plenty\Modu
 Returns an address of a given contact for the given type.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -2732,7 +2734,7 @@ public createAddress($data, $contactId, $typeId):Plenty\Modules\Account\Address\
 Creates an address, associates it immediately with the given contact ID with the given type and returns the new address.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -2767,7 +2769,7 @@ public updateAddress($data, $addressId, $contactId, $typeId):Plenty\Modules\Acco
 Updates the existing address of a given contact and type and returns it.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -2806,7 +2808,7 @@ public getAddress($addressId, $contactId, $typeId):Plenty\Modules\Account\Addres
 Returns the address of a given contact and type.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -2841,7 +2843,7 @@ public getAddresses($contactId, $typeId = null):array // <1>
 Gets all addresses for the given contact of the given type.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2871,7 +2873,7 @@ public addAddress($addressId, $contactId, $typeId):Plenty\Modules\Account\Addres
 Adds the address to the given contact as the given type.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_address[Address^]
 
@@ -2906,7 +2908,7 @@ public setPrimaryAddress($addressId, $contactId, $addressTypeId):Plenty\Modules\
 Sets a contact address per address type as the primary address.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addresscontactrelation[AddressContactRelation^]
 
@@ -2941,7 +2943,7 @@ public resetPrimaryAddress($addressId, $contactId, $addressTypeId):Plenty\Module
 Resets a contact primary address.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_addresscontactrelation[AddressContactRelation^]
 
@@ -2976,7 +2978,7 @@ public deleteAddress($addressId, $contactId, $typeId):bool // <1>
 Deletes an existing address of a given contact and type. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2999,12 +3001,12 @@ a|`$typeId`
 
 
 
-=== ContactClassRepositoryContract
+==== ContactClassRepositoryContract
 
 The ContactClassRepositoryContract is the interface for the contact class repository. This interface allows to list all contact classes or to get a contact class by the ID.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -3013,7 +3015,7 @@ The ContactClassRepositoryContract is the interface for the contact class reposi
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3027,7 +3029,7 @@ public findContactClassById($contactClassId):string // <1>
 Gets a contact class. The ID of the contact class must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -3053,7 +3055,7 @@ public findContactClassDataById($contactClassId):array // <1>
 Gets the data of a contact class. The ID of the contact class must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3079,18 +3081,18 @@ public allContactClasses():array // <1>
 Lists contact classes.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== ContactDocumentContract
+==== ContactDocumentContract
 
 The ContactDocumentContract is the interface for contact documents.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -3099,7 +3101,7 @@ The ContactDocumentContract is the interface for contact documents.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3113,7 +3115,7 @@ public listDocuments($continuationToken, $contactId):Plenty\Modules\Cloud\Storag
 List documents of a contact
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_models_storageobjectlist[StorageObjectList^]
 
@@ -3144,7 +3146,7 @@ public getDocument($key, $contactId):Plenty\Modules\Cloud\Storage\Models\Storage
 Get storage object from contact documents
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_models_storageobject[StorageObject^]
 
@@ -3175,7 +3177,7 @@ public getDocumentUrl($key, $contactId):string // <1>
 Get temporary url for document
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -3205,7 +3207,7 @@ public uploadDocument($key, $content, $contactId):Plenty\Modules\Cloud\Storage\M
 Upload document to contact directory
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_models_storageobject[StorageObject^]
 
@@ -3240,7 +3242,7 @@ public deleteDocuments($keyList, $contactId):bool // <1>
 Delete files from contact documents
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3259,12 +3261,12 @@ a|`$contactId`
 
 
 
-=== ContactGroupFunctionsRepositoryContract
+==== ContactGroupFunctionsRepositoryContract
 
 The ContactGroupFunctionsRepositoryContract is the interface for the contact account group function repository. This interface allows to execute a group function call and get group function related data.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -3273,7 +3275,7 @@ The ContactGroupFunctionsRepositoryContract is the interface for the contact acc
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3287,7 +3289,7 @@ public loadGroupFunctions():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3304,7 +3306,7 @@ public executeGroupFunction($contactList = [], $addressLabelTemplate = null, $em
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3342,7 +3344,7 @@ public executeGroupFunctionV2($data = []):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3357,12 +3359,12 @@ a|`$data`
 
 
 
-=== ContactLookupRepositoryContract
+==== ContactLookupRepositoryContract
 
 lookup repository for contacts
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -3371,7 +3373,7 @@ lookup repository for contacts
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3385,7 +3387,7 @@ public hasId($contactId):Plenty\Modules\Account\Contact\Contracts\ContactLookupR
 
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_contracts_contactlookuprepositorycontract[ContactLookupRepositoryContract^]
 
@@ -3412,7 +3414,7 @@ public hasEmail($emailAddress):Plenty\Modules\Account\Contact\Contracts\ContactL
 
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_contracts_contactlookuprepositorycontract[ContactLookupRepositoryContract^]
 
@@ -3439,7 +3441,7 @@ public hasBillingAddress($billingAddressId):Plenty\Modules\Account\Contact\Contr
 
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_contracts_contactlookuprepositorycontract[ContactLookupRepositoryContract^]
 
@@ -3466,7 +3468,7 @@ public hasDeliveryAddress($deliveryAddressId):Plenty\Modules\Account\Contact\Con
 
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_contracts_contactlookuprepositorycontract[ContactLookupRepositoryContract^]
 
@@ -3493,18 +3495,18 @@ public lookup():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== ContactOptionRepositoryContract
+==== ContactOptionRepositoryContract
 
 The ContactOptionRepositoryContract is the interface for the contact option repository. This interface allows to get, create, update and delete contact options.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -3513,7 +3515,7 @@ The ContactOptionRepositoryContract is the interface for the contact option repo
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3527,7 +3529,7 @@ public findContactOptions($contactId, $typeId, $subTypeId):Illuminate\Database\E
 Lists options of the contact. The ID of the contact must be specified. The ID of the option type and the ID of the option sub-type can be optionally used.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
@@ -3562,7 +3564,7 @@ public createContactOptions($optionData, $contactId):array // <1>
 Creates an option for the given contact and returns them.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3592,7 +3594,7 @@ public updateContactOptions($optionData, $contactId):array // <1>
 Updates options of the given contact and returns them. The ID of the contact must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3622,7 +3624,7 @@ public deleteContactOptionsByContactId($contactId):bool // <1>
 Deletes all options of the given contact. The ID of the contact must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3648,7 +3650,7 @@ public findContactOption($optionId):Plenty\Modules\Account\Contact\Models\Contac
 Gets a contact option. The ID of the option must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactoption[ContactOption^]
 
@@ -3675,7 +3677,7 @@ public updateContactOption($optionData, $optionId):Plenty\Modules\Account\Contac
 Updates an option with the given id and returns it.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactoption[ContactOption^]
 
@@ -3706,7 +3708,7 @@ public deleteContactOption($optionId):bool // <1>
 Deletes a contact option. The ID of the option must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3732,7 +3734,7 @@ public validateValue($contactId, $typeId, $subTypeId, $value):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3759,12 +3761,12 @@ a|`$value`
 
 
 
-=== ContactParamConfigurationContract
+==== ContactParamConfigurationContract
 
 The ContactParamConfigurationContract is the interface for the contact param configuration repository. This interface allows to create, update, delete, list and get contact positions, contact departments, contact option types and and contact option sub-types.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -3773,7 +3775,7 @@ The ContactParamConfigurationContract is the interface for the contact param con
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3787,7 +3789,7 @@ public createContactPosition($data):Plenty\Modules\Account\Contact\Models\Contac
 Creates a contact position.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactposition[ContactPosition^]
 
@@ -3814,7 +3816,7 @@ public updateContactPosition($data, $contactPositionId):Plenty\Modules\Account\C
 Updates an existing contact position.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactposition[ContactPosition^]
 
@@ -3845,7 +3847,7 @@ public deleteContactPosition($contactPositionId):bool // <1>
 Deletes a contact position by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3871,7 +3873,7 @@ public findContactPositionById($contactPositionId):Plenty\Modules\Account\Contac
 Finds an existing contact position by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactposition[ContactPosition^]
 
@@ -3898,7 +3900,7 @@ public allContactPositions($columns = [], $perPage = 50):void // <1>
 Gets a list of contact positions.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3929,7 +3931,7 @@ public createContactDepartment($data):Plenty\Modules\Account\Contact\Models\Cont
 Creates a contact department.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactdepartment[ContactDepartment^]
 
@@ -3956,7 +3958,7 @@ public updateContactDepartment($data, $contactDepartmentId):Plenty\Modules\Accou
 Updates an existing contact department.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactdepartment[ContactDepartment^]
 
@@ -3987,7 +3989,7 @@ public deleteContactDepartment($contactDepartmentId):bool // <1>
 Deletes a contact department by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4013,7 +4015,7 @@ public findContactDepartmentById($contactDepartmentId):Plenty\Modules\Account\Co
 Finds an existing contact department by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactdepartment[ContactDepartment^]
 
@@ -4040,7 +4042,7 @@ public allContactDepartments($columns = [], $perPage = 50):void // <1>
 Gets a list of contact departments.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4071,7 +4073,7 @@ public createContactOptionType($data):Plenty\Modules\Account\Contact\Models\Cont
 Creates a contact option type.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactoptiontype[ContactOptionType^]
 
@@ -4098,7 +4100,7 @@ public updateContactOptionType($data, $contactOptionTypeId):Plenty\Modules\Accou
 Updates an existing contact option type.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactoptiontype[ContactOptionType^]
 
@@ -4129,7 +4131,7 @@ public deleteContactOptionType($contactOptionTypeId):bool // <1>
 Deletes a contact option type by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4155,7 +4157,7 @@ public findContactOptionTypeById($contactOptionTypeId):Plenty\Modules\Account\Co
 Finds an existing contact option type by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactoptiontype[ContactOptionType^]
 
@@ -4182,7 +4184,7 @@ public allContactOptionType($columns = [], $perPage = 50, $with = []):void // <1
 Gets a list of contact option types.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4217,7 +4219,7 @@ public createContactOptionSubType($data):Plenty\Modules\Account\Contact\Models\C
 Creates a contact option sub-type.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactoptionsubtype[ContactOptionSubType^]
 
@@ -4244,7 +4246,7 @@ public updateContactOptionSubType($data, $contactOptionSubTypeId):Plenty\Modules
 Updates an existing contact option sub-type.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactoptionsubtype[ContactOptionSubType^]
 
@@ -4275,7 +4277,7 @@ public deleteContactOptionSubType($contactOptionSubTypeId):bool // <1>
 Deletes a contact option sub-type by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4301,7 +4303,7 @@ public findContactOptionSubTypeById($contactOptionSubTypeId):Plenty\Modules\Acco
 Finds an existing contact option sub-type by the given ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactoptionsubtype[ContactOptionSubType^]
 
@@ -4328,7 +4330,7 @@ public allContactOptionSubType($columns = [], $perPage = 50):void // <1>
 Gets a list of contact option sub-types.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4348,12 +4350,12 @@ a|`$perPage`
 
 
 
-=== ContactPaymentRepositoryContract
+==== ContactPaymentRepositoryContract
 
 The ContactPaymentRepositoryContract is the interface for the contact payment repository. This interface allows to list, get, create, update and delete bank details of the contact.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -4362,7 +4364,7 @@ The ContactPaymentRepositoryContract is the interface for the contact payment re
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4376,7 +4378,7 @@ public getBanksOfContact($contactId, $columns = [], $perPage = 50):array // <1>
 Gets a collection of bank accounts of a contact. The ID of the contact must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4410,7 +4412,7 @@ public getBankByOrderId($orderId, $columns = []):Plenty\Modules\Account\Contact\
 Returns bank details of an order. The ID of the order must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactbank[ContactBank^]
 
@@ -4441,7 +4443,7 @@ public createContactBank($data):Plenty\Modules\Account\Contact\Models\ContactBan
 Creates a bank account for a contact and returns it.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactbank[ContactBank^]
 
@@ -4468,7 +4470,7 @@ public updateContactBank($data, $contactBankId):Plenty\Modules\Account\Contact\M
 Updates a bank account. The ID of the bank account must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactbank[ContactBank^]
 
@@ -4499,7 +4501,7 @@ public deleteContactBank($contactBankId):bool // <1>
 Deletes a bank account. The ID of the bank account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4525,7 +4527,7 @@ public findContactBankById($contactBankId):Plenty\Modules\Account\Contact\Models
 Gets a bank account. The ID of the bank account must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactbank[ContactBank^]
 
@@ -4541,12 +4543,12 @@ a|`$contactBankId`
 
 
 
-=== ContactRepositoryContract
+==== ContactRepositoryContract
 
 The ContactRepositoryContract is the interface for the contact repository. This interface allows to list, get, create, update and delete contacts. A contact is equivalent to a person.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -4555,7 +4557,7 @@ The ContactRepositoryContract is the interface for the contact repository. This 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4569,7 +4571,7 @@ public createContact($data):Plenty\Modules\Account\Contact\Models\Contact // <1>
 Creates a contact and returns it.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contact[Contact^]
 
@@ -4596,7 +4598,7 @@ public updateContact($data, $contactId):Plenty\Modules\Account\Contact\Models\Co
 Updates a contact and returns it. The ID of the contact must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contact[Contact^]
 
@@ -4627,7 +4629,7 @@ public deleteContact($contactId, $checkExistingOrders = null):bool // <1>
 Deletes a contact. The ID of the contact must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -4657,7 +4659,7 @@ public findContactById($contactId, $with = []):Plenty\Modules\Account\Contact\Mo
 Gets a contact. The ID of the contact must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contact[Contact^]
 
@@ -4688,7 +4690,7 @@ public getContactList($filter = [], $with = [], $columns = [], $page = 1, $items
 List contacts
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -4739,7 +4741,7 @@ public getContactByOptionValue($value, $typeId, $subTypeId):Plenty\Modules\Accou
 Returns an existing contact by a contact option information.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contact[Contact^]
 
@@ -4774,7 +4776,7 @@ public getContactIdByEmail($email):int // <1>
 Returns a contact id by email. The email must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -4800,7 +4802,7 @@ public findContactDataByContactId($contactId):Plenty\Modules\Account\Contact\Mod
 Returns all contact related data.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contact[Contact^]
 
@@ -4827,7 +4829,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4845,7 +4847,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4863,7 +4865,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4890,7 +4892,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4908,7 +4910,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4926,7 +4928,7 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4944,7 +4946,7 @@ public getDataHistory($referenceType, $referenceId):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4964,12 +4966,12 @@ a|`$referenceId`
 
 
 
-=== ContactTypeRepositoryContract
+==== ContactTypeRepositoryContract
 
 The ContactTypeRepositoryContract is the interface for the contact type repository. This interface allows to list, get, create, update and delete contact types.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -4978,7 +4980,7 @@ The ContactTypeRepositoryContract is the interface for the contact type reposito
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4992,7 +4994,7 @@ public createContactType($data):Plenty\Modules\Account\Contact\Models\ContactTyp
 Creates a contact type and returns it.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contacttype[ContactType^]
 
@@ -5019,7 +5021,7 @@ public updateContactType($data, $contactTypeId):Plenty\Modules\Account\Contact\M
 Updates a contact type and returns it. The ID of the contact type must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contacttype[ContactType^]
 
@@ -5050,7 +5052,7 @@ public deleteContactType($contactTypeId):bool // <1>
 Deletes a contact type. The ID of the contact type must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5076,7 +5078,7 @@ public findContactTypeById($contactTypeId):Plenty\Modules\Account\Contact\Models
 Gets a contact type. The ID of the contact type must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contacttype[ContactType^]
 
@@ -5103,7 +5105,7 @@ public allContactTypes($columns = []):array // <1>
 Returns a collection of contact types.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5118,12 +5120,12 @@ a|`$columns`
 
 
 
-=== ContactVCardRepositoryContract
+==== ContactVCardRepositoryContract
 
 The ContractVCardRepositoryContract is the interface for the vcard repository. The interface allows you to return a vcard filestream.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -5132,7 +5134,7 @@ The ContractVCardRepositoryContract is the interface for the vcard repository. T
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5146,7 +5148,7 @@ public getVCard($contactId):array // <1>
 Gets a filestream of the vcard of a contact.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5161,12 +5163,12 @@ a|`$contactId`
 
 
 
-=== InternalContactPaymentRepositoryContract
+==== InternalContactPaymentRepositoryContract
 
 The contract for the contact payment repository.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -5175,7 +5177,7 @@ The contract for the contact payment repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5189,7 +5191,7 @@ public getBanksOfContact($contactId, $columns = [], $perPage = 50):array // <1>
 Gets a collection of bank accounts of a contact. The ID of the contact must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5223,7 +5225,7 @@ public getBankByOrderId($orderId, $columns = []):Plenty\Modules\Account\Contact\
 Returns bank details of an order. The ID of the order must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactbank[ContactBank^]
 
@@ -5254,7 +5256,7 @@ public createContactBank($data):Plenty\Modules\Account\Contact\Models\ContactBan
 Creates a bank account for a contact and returns it.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactbank[ContactBank^]
 
@@ -5281,7 +5283,7 @@ public updateContactBank($data, $contactBankId):Plenty\Modules\Account\Contact\M
 Updates a bank account. The ID of the bank account must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactbank[ContactBank^]
 
@@ -5312,7 +5314,7 @@ public deleteContactBank($contactBankId):bool // <1>
 Deletes a bank account. The ID of the bank account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5338,7 +5340,7 @@ public findContactBankById($contactBankId):Plenty\Modules\Account\Contact\Models
 Gets a bank account. The ID of the bank account must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_contactbank[ContactBank^]
 
@@ -5354,12 +5356,12 @@ a|`$contactBankId`
 
 
 
-=== SalesRepresentativeRegionRepositoryContract
+==== SalesRepresentativeRegionRepositoryContract
 
 Sales representatives region repository
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Contracts`
 
@@ -5368,7 +5370,7 @@ Sales representatives region repository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5382,7 +5384,7 @@ public createRegion($data, $contactId = null, $accountId = null):Plenty\Modules\
 Create a region for the sales representative
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_salesrepresentativeregion[SalesRepresentativeRegion^]
 
@@ -5417,7 +5419,7 @@ public find($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Rep
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -5456,7 +5458,7 @@ public getRegionById($accountContactRelationId):Plenty\Modules\Account\Models\Sa
 Get a region by the ID
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_salesrepresentativeregion[SalesRepresentativeRegion^]
 
@@ -5483,7 +5485,7 @@ public deleteRegionById($accountContactRelationId):bool // <1>
 Delete a region by the ID
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5509,7 +5511,7 @@ public updateRegionById($accountContactRelationId, $data):Plenty\Modules\Account
 Update an existing region by the ID
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_salesrepresentativeregion[SalesRepresentativeRegion^]
 
@@ -5540,7 +5542,7 @@ public getRegionByContactAndAccountId($contactId, $accountId):Plenty\Modules\Acc
 Get a region by contact ID and account ID
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_salesrepresentativeregion[SalesRepresentativeRegion^]
 
@@ -5571,7 +5573,7 @@ public getRegionsByContactId($contactId):Illuminate\Support\Collection // <1>
 Get a region by the contact ID
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_support_collection[Collection^]
 
@@ -5598,7 +5600,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5616,7 +5618,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5634,7 +5636,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5661,7 +5663,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5679,7 +5681,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5697,24 +5699,24 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[account_contact_models]]
-==  Models
-=== Contact
+===  Models
+==== Contact
 
 The contact model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
-==== Referenceable
+===== Referenceable
 id
 
 
@@ -5942,7 +5944,7 @@ id
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5958,12 +5960,12 @@ Returns this model as an array.
 
 
 
-=== ContactAllowedMethodOfPayment
+==== ContactAllowedMethodOfPayment
 
 The model of the allowed payment method for the contact
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
@@ -6003,7 +6005,7 @@ The model of the allowed payment method for the contact
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6019,12 +6021,12 @@ Returns this model as an array.
 
 
 
-=== ContactBank
+==== ContactBank
 
 The contact bank model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
@@ -6107,7 +6109,7 @@ The contact bank model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6123,12 +6125,12 @@ Returns this model as an array.
 
 
 
-=== ContactDepartment
+==== ContactDepartment
 
 contact department model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
@@ -6175,7 +6177,7 @@ contact department model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6191,12 +6193,12 @@ Returns this model as an array.
 
 
 
-=== ContactDepartmentName
+==== ContactDepartmentName
 
 contact department name model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
@@ -6223,7 +6225,7 @@ contact department name model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6239,12 +6241,12 @@ Returns this model as an array.
 
 
 
-=== ContactOption
+==== ContactOption
 
 The contact options model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
@@ -6323,7 +6325,7 @@ The contact options model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6339,12 +6341,12 @@ Returns this model as an array.
 
 
 
-=== ContactOptionSubType
+==== ContactOptionSubType
 
 contact options sub type model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
@@ -6387,7 +6389,7 @@ contact options sub type model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6403,12 +6405,12 @@ Returns this model as an array.
 
 
 
-=== ContactOptionSubTypeName
+==== ContactOptionSubTypeName
 
 contact options sub type name model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
@@ -6435,7 +6437,7 @@ contact options sub type name model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6451,12 +6453,12 @@ Returns this model as an array.
 
 
 
-=== ContactOptionType
+==== ContactOptionType
 
 contact options type model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
@@ -6497,7 +6499,7 @@ contact options type model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6513,12 +6515,12 @@ Returns this model as an array.
 
 
 
-=== ContactOptionTypeName
+==== ContactOptionTypeName
 
 The ContactOptionTypeName model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
@@ -6545,7 +6547,7 @@ The ContactOptionTypeName model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6561,12 +6563,12 @@ Returns this model as an array.
 
 
 
-=== ContactPosition
+==== ContactPosition
 
 The ContactPosition model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
@@ -6617,7 +6619,7 @@ The ContactPosition model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6633,12 +6635,12 @@ Returns this model as an array.
 
 
 
-=== ContactPositionName
+==== ContactPositionName
 
 The ContactPositionName model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
@@ -6665,7 +6667,7 @@ The ContactPositionName model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6681,12 +6683,12 @@ Returns this model as an array.
 
 
 
-=== ContactType
+==== ContactType
 
 The ContactType model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
@@ -6726,7 +6728,7 @@ The ContactType model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6742,12 +6744,12 @@ Returns this model as an array.
 
 
 
-=== ContactTypeName
+==== ContactTypeName
 
 contact type name model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Models`
 
@@ -6774,7 +6776,7 @@ contact type name model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6790,16 +6792,16 @@ Returns this model as an array.
 
 
 [[account_search]]
-= Search
+== Search
 
 [[account_search_contracts]]
-==  Contracts
-=== ContactElasticSearchAvailibilityRepositoryContract
+===  Contracts
+==== ContactElasticSearchAvailibilityRepositoryContract
 
 ContactElasticSearchAvailibilityRepositoryContract
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Search\Contracts`
 
@@ -6808,7 +6810,7 @@ ContactElasticSearchAvailibilityRepositoryContract
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6822,7 +6824,7 @@ public isReady():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -6839,18 +6841,18 @@ public isAvailable():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
 
 
-=== ContactElasticSearchScrollRepositoryContract
+==== ContactElasticSearchScrollRepositoryContract
 
 kommt noch
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Search\Contracts`
 
@@ -6859,7 +6861,7 @@ kommt noch
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6873,7 +6875,7 @@ public hasNext():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -6890,7 +6892,7 @@ public setNumberOfDocumentsPerShard($size):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6917,7 +6919,7 @@ public setIndex($index):Plenty\Modules\Cloud\ElasticSearch\Contracts\ElasticSear
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_contracts_elasticsearchsearchrepositorycontract[ElasticSearchSearchRepositoryContract^]
 
@@ -6945,7 +6947,7 @@ public addSearch($search):Plenty\Modules\Cloud\ElasticSearch\Contracts\ElasticSe
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_contracts_elasticsearchsearchrepositorycontract[ElasticSearchSearchRepositoryContract^]
 
@@ -6973,18 +6975,18 @@ public execute():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== ContactElasticSearchSearchRepositoryContract
+==== ContactElasticSearchSearchRepositoryContract
 
 Contract for search contacts
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Search\Contracts`
 
@@ -6993,7 +6995,7 @@ Contract for search contacts
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7007,7 +7009,7 @@ public search($page = 1, $itemsPerPage = 50, $filters = [], $sortBy = &quot;cont
 Search contacts with the given filters.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_filteredpaginatedresult[FilteredPaginatedResult^]
 
@@ -7043,12 +7045,12 @@ a|`$with`
 
 
 
-=== IndexContactRepositoryContract
+==== IndexContactRepositoryContract
 
 The contract for the search repository
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contact\Search\Contracts`
 
@@ -7057,7 +7059,7 @@ The contract for the search repository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7071,7 +7073,7 @@ public index($contactId):array // <1>
 Index a contact
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -7097,7 +7099,7 @@ public delete($contactIds):array // <1>
 Delete contact from index
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -7123,7 +7125,7 @@ public bulk($contactIds):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -7149,7 +7151,7 @@ public setOutput($output):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7177,23 +7179,23 @@ public execute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[account_account]]
-= Account
+== Account
 
 [[account_account_contracts]]
-==  Contracts
-=== AccountContactRelationRepositoryContract
+===  Contracts
+==== AccountContactRelationRepositoryContract
 
 The AccountContactRelationRepositoryContract is the interface for the account contact relation repository. This interface allows to find and delete an account contact relation.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contracts`
 
@@ -7202,7 +7204,7 @@ The AccountContactRelationRepositoryContract is the interface for the account co
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7216,7 +7218,7 @@ public findAccountContactRelationById($accountContactRelation):Plenty\Modules\Ac
 Gets an account contact releation. The ID of the account contact relation must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_accountcontactrelation[AccountContactRelation^]
 
@@ -7243,7 +7245,7 @@ public deleteAccountContactRelation($accountContactRelationId):bool // <1>
 Deletes an account contact relation. The ID of the account contact relation must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -7258,12 +7260,12 @@ a|`$accountContactRelationId`
 
 
 
-=== AccountRepositoryContract
+==== AccountRepositoryContract
 
 The AccountRepositoryContract is the interface for the account repository. This interface allows to list, get, create, update and delete accounts. An account contains company-related data. It is also possible to list all contacts of an account.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Contracts`
 
@@ -7272,7 +7274,7 @@ The AccountRepositoryContract is the interface for the account repository. This 
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7286,7 +7288,7 @@ public createAccount($data):Plenty\Modules\Account\Models\Account // <1>
 Creates a new account and returns it.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_account[Account^]
 
@@ -7313,7 +7315,7 @@ public updateAccount($data, $accountId):Plenty\Modules\Account\Models\Account //
 Updates an existing account and returns it. The ID of the account must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_account[Account^]
 
@@ -7344,7 +7346,7 @@ public deleteAccount($accountId):bool // <1>
 Deletes an account. The ID of the account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -7370,7 +7372,7 @@ public findAccountById($accountId):Plenty\Modules\Account\Models\Account // <1>
 Gets an account. The ID of the account must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_account[Account^]
 
@@ -7397,7 +7399,7 @@ public allAccounts($columns = [], $perPage = 50):Illuminate\Database\Eloquent\Co
 Returns a collection of all accounts.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
@@ -7428,7 +7430,7 @@ public allAccountsPaginated($columns = [], $page = 1, $itemsPerPage = 50, $with 
 Returns a collection of all accounts.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -7467,7 +7469,7 @@ public getContactsOfAccount($accountId):Illuminate\Database\Eloquent\Collection 
 Returns a collection of contacts that belong to the account.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
@@ -7494,7 +7496,7 @@ public saveAccount($data = []):void // <1>
 Creates a new or updates an existing account.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7521,7 +7523,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7548,7 +7550,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7566,7 +7568,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7584,7 +7586,7 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7602,7 +7604,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7620,20 +7622,20 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[account_account_events]]
-==  Events
-=== FrontendUpdateCustomerSettings
+===  Events
+==== FrontendUpdateCustomerSettings
 
 frontend customer settings event
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Events`
 
@@ -7642,7 +7644,7 @@ frontend customer settings event
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7656,7 +7658,7 @@ public getDeliveryCountryId():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -7673,7 +7675,7 @@ public setDeliveryCountryId($deliveryCountryId):Plenty\Modules\Account\Events\Fr
 
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
 
@@ -7700,7 +7702,7 @@ public getShowNetPrice():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -7717,7 +7719,7 @@ public setShowNetPrice($showNetPrice):Plenty\Modules\Account\Events\FrontendUpda
 
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
 
@@ -7744,7 +7746,7 @@ public getEbaySellerAccount():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -7761,7 +7763,7 @@ public setEbaySellerAccount($ebaySellerAccount):Plenty\Modules\Account\Events\Fr
 
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
 
@@ -7788,7 +7790,7 @@ public getAccountContactSign():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -7805,7 +7807,7 @@ public setAccountContactSign($accountContactSign):Plenty\Modules\Account\Events\
 
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
 
@@ -7832,7 +7834,7 @@ public getAccountContactClassId():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -7849,7 +7851,7 @@ public setAccountContactClassId($accountContactClassId):Plenty\Modules\Account\E
 
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
 
@@ -7876,7 +7878,7 @@ public getSalesAgent():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -7893,7 +7895,7 @@ public setSalesAgent($salesAgent):Plenty\Modules\Account\Events\FrontendUpdateCu
 
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
 
@@ -7920,7 +7922,7 @@ public getAccountContractClassId():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -7937,7 +7939,7 @@ public setAccountContractClassId($accountContractClassId):Plenty\Modules\Account
 
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_events_frontendupdatecustomersettings[FrontendUpdateCustomerSettings^]
 
@@ -7953,12 +7955,12 @@ a|`$accountContractClassId`
 
 
 
-=== NewsletterRecipientCreatedEvent
+==== NewsletterRecipientCreatedEvent
 
 This event will be triggered, after a recipient was created.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Events`
 
@@ -7967,7 +7969,7 @@ This event will be triggered, after a recipient was created.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7981,19 +7983,19 @@ public getRecipient():Plenty\Modules\Account\Newsletter\Models\Recipient // <1>
 returns recipient.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_recipient[Recipient^]
 
     
 
 
-=== NewsletterRecipientDeletedEvent
+==== NewsletterRecipientDeletedEvent
 
 This event will be triggered, after a recipient was deleted.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Events`
 
@@ -8002,7 +8004,7 @@ This event will be triggered, after a recipient was deleted.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8016,19 +8018,19 @@ public getRecipient():Plenty\Modules\Account\Newsletter\Models\Recipient // <1>
 returns recipient.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_recipient[Recipient^]
 
     
 
 
-=== NewsletterRecipientMovedToNewFolderEvent
+==== NewsletterRecipientMovedToNewFolderEvent
 
 This event will be triggered, after a recipient was moved to a new folder.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Events`
 
@@ -8037,7 +8039,7 @@ This event will be triggered, after a recipient was moved to a new folder.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8051,7 +8053,7 @@ public getOldFolder():int // <1>
 returns old folder id.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -8068,20 +8070,20 @@ public getRecipient():Plenty\Modules\Account\Newsletter\Models\Recipient // <1>
 returns recipient.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_recipient[Recipient^]
 
     
 
 [[account_account_models]]
-==  Models
-=== Account
+===  Models
+==== Account
 
 the account model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Models`
 
@@ -8155,7 +8157,7 @@ the account model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8171,12 +8173,12 @@ Returns this model as an array.
 
 
 
-=== AccountContactRelation
+==== AccountContactRelation
 
 account contact relation model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Models`
 
@@ -8212,7 +8214,7 @@ account contact relation model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8228,12 +8230,12 @@ Returns this model as an array.
 
 
 
-=== SalesRepresentativeRegion
+==== SalesRepresentativeRegion
 
 Sales representative region model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Models`
 
@@ -8280,7 +8282,7 @@ Sales representative region model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8296,16 +8298,16 @@ Returns this model as an array.
 
 
 [[account_newsletter]]
-= Newsletter
+== Newsletter
 
 [[account_newsletter_contracts]]
-==  Contracts
-=== NewsletterRepositoryContract
+===  Contracts
+==== NewsletterRepositoryContract
 
 The NewsletterRepositoryContract is the interface for the newsletter repository. This interface allows to assign email addresses of recipients to email folders. Depending on the settings selected for each email folder, different newsletters can be sent to different target groups.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Newsletter\Contracts`
 
@@ -8314,7 +8316,7 @@ The NewsletterRepositoryContract is the interface for the newsletter repository.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8328,7 +8330,7 @@ public createEntry($data = []):Plenty\Modules\Account\Newsletter\Models\Entry //
 Creates an entry.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_entry[Entry^]
 
@@ -8355,7 +8357,7 @@ public createRecipient($data = []):array // <1>
 Creates a recipient for an existing folder.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8381,7 +8383,7 @@ public createFolder($data = []):Plenty\Modules\Account\Newsletter\Models\Folder 
 Creates a folder.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_folder[Folder^]
 
@@ -8408,7 +8410,7 @@ public deleteAllEntries():array // <1>
 Deletes all entries.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8425,7 +8427,7 @@ public deleteAllFolders():array // <1>
 Deletes all folders.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8442,7 +8444,7 @@ public deleteAllRecipients():array // <1>
 Deletes all recipients.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8459,7 +8461,7 @@ public deleteEntryById($entryId):Plenty\Modules\Account\Newsletter\Models\Entry 
 Deletes an entry. The ID of the entry must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_entry[Entry^]
 
@@ -8486,7 +8488,7 @@ public deleteFolderById($folderId):Plenty\Modules\Account\Newsletter\Models\Fold
 Deletes a folder. The ID of the folder must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_folder[Folder^]
 
@@ -8513,7 +8515,7 @@ public deleteRecipientById($recipientId):Plenty\Modules\Account\Newsletter\Model
 Deletes a recipient. The ID of the recipient must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_recipient[Recipient^]
 
@@ -8540,7 +8542,7 @@ public listAllEntries():array // <1>
 Lists all newsletter entries.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8557,7 +8559,7 @@ public listAllFolders():array // <1>
 Lists all newsletter folders.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8574,7 +8576,7 @@ public listAllRecipients($data = []):array // <1>
 Lists all recipients.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8600,7 +8602,7 @@ public getRecipientsByEMail($email):array // <1>
 Returns recipients by the email address.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8626,7 +8628,7 @@ public listRecipients($columns, $page, $itemsPerPage, $filter, $with):Plenty\Rep
 Lists all recipients.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
@@ -8669,7 +8671,7 @@ public listEntryById($entryId):Plenty\Modules\Account\Newsletter\Models\Entry //
 Gets details by the entry ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_entry[Entry^]
 
@@ -8696,7 +8698,7 @@ public listFolderById($folderId):Plenty\Modules\Account\Newsletter\Models\Folder
 Gets details by the folder ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_folder[Folder^]
 
@@ -8723,7 +8725,7 @@ public listRecipientById($recipientId):Plenty\Modules\Account\Newsletter\Models\
 Gets details by the recipient ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_recipient[Recipient^]
 
@@ -8750,7 +8752,7 @@ public updateEntryById($entryId, $data = []):Plenty\Modules\Account\Newsletter\M
 Updates an existing entry. The ID of the entry must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_entry[Entry^]
 
@@ -8781,7 +8783,7 @@ public updateFolderById($folderId, $data = []):Plenty\Modules\Account\Newsletter
 Updates an existing folder. The ID of the folder must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_folder[Folder^]
 
@@ -8812,7 +8814,7 @@ public updateRecipientById($recipientId, $data = []):Plenty\Modules\Account\News
 Updates an existing recipient. The ID of the recipient must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_recipient[Recipient^]
 
@@ -8840,14 +8842,17 @@ public addToNewsletterList($email, $forename = &quot;&quot;, $surname = &quot;&q
 
 
 [warning]
-.Deprecated! ====
+.Deprecated! 
+====
+
 This method will not be supported in the future. Please refrain from using it as soon as possible.
+
 ====
     
 Adds the email address of a contact or an interested party to an email folder for the newsletter list.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8875,13 +8880,13 @@ a|`$emailDirIds`
 
 
 [[account_newsletter_models]]
-==  Models
-=== Entry
+===  Models
+==== Entry
 
 The newsletter entry model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Newsletter\Models`
 
@@ -8908,7 +8913,7 @@ The newsletter entry model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8924,12 +8929,12 @@ Returns this model as an array.
 
 
 
-=== Folder
+==== Folder
 
 The newsletter folder model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Newsletter\Models`
 
@@ -8959,7 +8964,7 @@ The newsletter folder model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8975,12 +8980,12 @@ Returns this model as an array.
 
 
 
-=== NewsletterEmail
+==== NewsletterEmail
 
 NewsletterEmail
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Newsletter\Models`
 
@@ -9034,7 +9039,7 @@ NewsletterEmail
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -9050,12 +9055,12 @@ Returns this model as an array.
 
 
 
-=== Recipient
+==== Recipient
 
 The newsletter recipient
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\Newsletter\Models`
 
@@ -9112,7 +9117,7 @@ The newsletter recipient
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -9128,16 +9133,16 @@ Returns this model as an array.
 
 
 [[account_ordersummary]]
-= OrderSummary
+== OrderSummary
 
 [[account_ordersummary_contracts]]
-==  Contracts
-=== OrderSummaryRepositoryContract
+===  Contracts
+==== OrderSummaryRepositoryContract
 
 The OrderSummaryRepositoryContract is the interface for the order summary repository. This interface allows to list, get, update, create and delete order summaries.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\OrderSummary\Contracts`
 
@@ -9146,7 +9151,7 @@ The OrderSummaryRepositoryContract is the interface for the order summary reposi
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -9160,7 +9165,7 @@ public findOrderSummaryById($orderSummaryId):Plenty\Modules\Account\OrderSummary
 Gets an order summary. The ID of the order summary must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_ordersummary[OrderSummary^]
 
@@ -9187,7 +9192,7 @@ public updateOrderSummary($data, $orderSummaryId):Plenty\Modules\Account\OrderSu
 Updates an order summary. The ID of the order summary must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_ordersummary[OrderSummary^]
 
@@ -9218,7 +9223,7 @@ public createOrderSummary($data):Plenty\Modules\Account\OrderSummary\Models\Orde
 Creates an order summary.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_ordersummary[OrderSummary^]
 
@@ -9245,7 +9250,7 @@ public deleteOrderSummary($orderSummaryId):bool // <1>
 Deletes an order summary. The ID of the order summary must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -9271,7 +9276,7 @@ public allOrderSummaries($columns = [], $perPage = 50):Illuminate\Database\Eloqu
 Returns a collection of all order summaries.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
@@ -9302,7 +9307,7 @@ public findOrderSummaryByContactId($contactId):Plenty\Modules\Account\OrderSumma
 Gets an order summary. The ID of the contact must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_ordersummary[OrderSummary^]
 
@@ -9329,7 +9334,7 @@ public findOrderSummaryByAddressId($addressId):Plenty\Modules\Account\OrderSumma
 Gets an order summary. The ID of the address must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:account#account_models_ordersummary[OrderSummary^]
 
@@ -9345,13 +9350,13 @@ a|`$addressId`
 
 
 [[account_ordersummary_models]]
-==  Models
-=== OrderSummary
+===  Models
+==== OrderSummary
 
 The order summary model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Account\OrderSummary\Models`
 
@@ -9390,7 +9395,7 @@ The order summary model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[pim_models]]
-= Models
+== Models
 
 [[pim_models_variation]]
-==  Variation
-=== PropertyValue
+===  Variation
+==== PropertyValue
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\DocumentService\Models\Variation`
 
@@ -39,7 +41,7 @@
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -55,16 +57,16 @@ Returns this model as an array.
 
 
 [[pim_searchservice]]
-= SearchService
+== SearchService
 
 [[pim_searchservice_aggregations]]
-==  Aggregations
-=== AttributeValueAggregation
+===  Aggregations
+==== AttributeValueAggregation
 
 Aggregate data by attributeValue ids
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -73,7 +75,7 @@ Aggregate data by attributeValue ids
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -87,7 +89,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -104,7 +106,7 @@ public getField():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -122,7 +124,7 @@ public getAggregation():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -139,7 +141,7 @@ public setInclude($string):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -166,7 +168,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -183,7 +185,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -209,7 +211,7 @@ public addAggregation($aggregation):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -237,7 +239,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -265,7 +267,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -296,19 +298,19 @@ public getSources():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== CategoryAllTermsAggregation
+==== CategoryAllTermsAggregation
 
 Aggregate data by all category ids
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -317,7 +319,7 @@ Aggregate data by all category ids
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -331,7 +333,7 @@ public getName():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -349,7 +351,7 @@ public getField():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -367,7 +369,7 @@ public getAggregation():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -384,7 +386,7 @@ public setInclude($string):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -411,7 +413,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -428,7 +430,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -454,7 +456,7 @@ public addAggregation($aggregation):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -482,7 +484,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -510,7 +512,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -541,19 +543,19 @@ public getSources():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== CategoryPathTermsAggregation
+==== CategoryPathTermsAggregation
 
 Aggregate data by all category paths
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -562,7 +564,7 @@ Aggregate data by all category paths
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -576,7 +578,7 @@ public getName():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -594,7 +596,7 @@ public getField():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -612,7 +614,7 @@ public getAggregation():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -629,7 +631,7 @@ public setInclude($string):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -656,7 +658,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -673,7 +675,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -699,7 +701,7 @@ public addAggregation($aggregation):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -727,7 +729,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -755,7 +757,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -786,19 +788,19 @@ public getSources():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== ItemCardinalityAggregation
+==== ItemCardinalityAggregation
 
 Get the count of found items
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -807,7 +809,7 @@ Get the count of found items
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -821,7 +823,7 @@ public getName():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -839,7 +841,7 @@ public getField():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -857,7 +859,7 @@ public getAggregation():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -874,7 +876,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -891,7 +893,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -917,7 +919,7 @@ public addAggregation($aggregation):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -945,7 +947,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -973,7 +975,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -1004,19 +1006,19 @@ public getSources():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== ItemIdTermsAggregation
+==== ItemIdTermsAggregation
 
 Aggregate data by item ids
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -1025,7 +1027,7 @@ Aggregate data by item ids
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1039,7 +1041,7 @@ public getName():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1057,7 +1059,7 @@ public getField():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1075,7 +1077,7 @@ public getAggregation():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1092,7 +1094,7 @@ public setInclude($string):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1119,7 +1121,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1136,7 +1138,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1162,7 +1164,7 @@ public addAggregation($aggregation):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1190,7 +1192,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -1218,7 +1220,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -1249,19 +1251,19 @@ public getSources():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== SalableFilterAggregation
+==== SalableFilterAggregation
 
 Filter Aggregated Data if variation is salable
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -1270,7 +1272,7 @@ Filter Aggregated Data if variation is salable
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1284,7 +1286,7 @@ public getName():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1302,7 +1304,7 @@ public getAggregation():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1319,7 +1321,7 @@ public addFilter($filter):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1347,7 +1349,7 @@ public setIndex($index):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1375,7 +1377,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1392,7 +1394,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1418,7 +1420,7 @@ public addAggregation($aggregation):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1446,7 +1448,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -1474,7 +1476,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -1505,19 +1507,19 @@ public getSources():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== UnitCombinationAggregation
+==== UnitCombinationAggregation
 
 Aggregate data by unit combination ids
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -1526,7 +1528,7 @@ Aggregate data by unit combination ids
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1540,7 +1542,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1557,7 +1559,7 @@ public getField():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1575,7 +1577,7 @@ public getAggregation():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1592,7 +1594,7 @@ public setInclude($string):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1619,7 +1621,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1636,7 +1638,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1662,7 +1664,7 @@ public addAggregation($aggregation):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1690,7 +1692,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -1718,7 +1720,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -1749,20 +1751,20 @@ public getSources():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[pim_searchservice_filter]]
-==  Filter
-=== AmazonFilter
+===  Filter
+==== AmazonFilter
 
 Includes filters for amazon
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -1771,7 +1773,7 @@ Includes filters for amazon
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1785,7 +1787,7 @@ public hasAnyFlatFile($flatFiles):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -1812,7 +1814,7 @@ public hasAnyProductType($productTypes):Plenty\Modules\Pim\SearchService\Filter 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -1839,7 +1841,7 @@ public hasAnyProductTypeId($productTypeIds):Plenty\Modules\Pim\SearchService\Fil
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -1866,7 +1868,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1883,7 +1885,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1911,7 +1913,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1928,12 +1930,12 @@ a|`$statement`
 
 
 
-=== AttributeFilter
+==== AttributeFilter
 
 Includes filters for attributes
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -1942,7 +1944,7 @@ Includes filters for attributes
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1956,7 +1958,7 @@ public hasAttribute($attributeId):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -1983,7 +1985,7 @@ public hasAnyAttribute($attributeIds):Plenty\Modules\Pim\SearchService\Filter //
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2010,7 +2012,7 @@ public hasAllAttributes($attributeIds):Plenty\Modules\Pim\SearchService\Filter /
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2037,7 +2039,7 @@ public hasAttributeValue($attributeValueId):Plenty\Modules\Pim\SearchService\Fil
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2064,7 +2066,7 @@ public hasAnyAttributeValue($attributeValueIds):Plenty\Modules\Pim\SearchService
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2091,7 +2093,7 @@ public hasAllAttributeValues($attributeValueIds):Plenty\Modules\Pim\SearchServic
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2118,7 +2120,7 @@ public hasNoAttributeValue():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2136,7 +2138,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2153,7 +2155,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2181,7 +2183,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2198,12 +2200,12 @@ a|`$statement`
 
 
 
-=== BarcodeFilter
+==== BarcodeFilter
 
 Includes filters for barcodes
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -2212,7 +2214,7 @@ Includes filters for barcodes
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2226,7 +2228,7 @@ public hasCode($code, $precision):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2258,7 +2260,7 @@ public hasType($type):void // <1>
 ToDo!
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2285,7 +2287,7 @@ public hasId($id):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2312,7 +2314,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2329,7 +2331,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2357,7 +2359,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2374,12 +2376,12 @@ a|`$statement`
 
 
 
-=== CategoryFilter
+==== CategoryFilter
 
 Includes filters for categories
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -2388,7 +2390,7 @@ Includes filters for categories
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2402,7 +2404,7 @@ public isInAtLeastOneCategory($categoryIds, $depth = self::DEPTH_ANY):Plenty\Mod
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2433,7 +2435,7 @@ public static getPathByDepth($depth):string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2459,7 +2461,7 @@ public isInEachCategory($categoryIds, $depth = self::DEPTH_ANY):Plenty\Modules\P
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2490,7 +2492,7 @@ public isInCategory($categoryId, $depth = self::DEPTH_ANY):Plenty\Modules\Pim\Se
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2521,7 +2523,7 @@ public isInACategory():Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2539,7 +2541,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2556,7 +2558,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2584,7 +2586,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2601,12 +2603,12 @@ a|`$statement`
 
 
 
-=== CharacteristicFilter
+==== CharacteristicFilter
 
 Includes filters for characteristics
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -2615,7 +2617,7 @@ Includes filters for characteristics
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2629,7 +2631,7 @@ public hasAtLeastOneProperty($ids):Plenty\Modules\Pim\SearchService\Filter // <1
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2656,7 +2658,7 @@ public hasEachProperty($ids):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2683,7 +2685,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2700,7 +2702,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2728,7 +2730,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2745,12 +2747,12 @@ a|`$statement`
 
 
 
-=== ClientFilter
+==== ClientFilter
 
 Includes filters for clients
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -2759,7 +2761,7 @@ Includes filters for clients
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2773,7 +2775,7 @@ public isVisibleForClient($clientId):Plenty\Modules\Pim\SearchService\Filter // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2800,7 +2802,7 @@ public isVisibleForAtLeastOneClient($clientIds):Plenty\Modules\Pim\SearchService
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2827,7 +2829,7 @@ public isVisibleForAllClients($clientIds):Plenty\Modules\Pim\SearchService\Filte
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2854,7 +2856,7 @@ public hasAutomaticClientVisibility($values):Plenty\Modules\Pim\SearchService\Fi
 -1, 0, 1, 2
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -2881,7 +2883,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2898,7 +2900,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2926,7 +2928,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2943,12 +2945,12 @@ a|`$statement`
 
 
 
-=== CrossSellingFilter
+==== CrossSellingFilter
 
 Includes filters for cross selling
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -2957,7 +2959,7 @@ Includes filters for cross selling
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2971,7 +2973,7 @@ public getPath():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2989,7 +2991,7 @@ public hasItemId($itemId):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3016,7 +3018,7 @@ public hasRelation($relation):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3043,7 +3045,7 @@ public hasAnyRelation($relations):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3070,7 +3072,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3087,7 +3089,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3115,7 +3117,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3132,12 +3134,12 @@ a|`$statement`
 
 
 
-=== FacetFilter
+==== FacetFilter
 
 Includes filters for facets
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -3146,7 +3148,7 @@ Includes filters for facets
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3160,7 +3162,7 @@ public hasAtLeastOneFacet($facetIds):Plenty\Modules\Pim\SearchService\Filter // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3187,7 +3189,7 @@ public hasEachFacet($facetIds):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3214,7 +3216,7 @@ public hasFacet($facetIds):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3241,7 +3243,7 @@ public hasFacetValue($facetValueIds):Plenty\Modules\Pim\SearchService\Filter // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3268,7 +3270,7 @@ public hasAFacet():Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3286,7 +3288,7 @@ public hasAtLeastOneFacetValue($valueIds):Plenty\Modules\Pim\SearchService\Filte
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3313,7 +3315,7 @@ public hasEachFacetValue($valueIds):Plenty\Modules\Pim\SearchService\Filter // <
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3340,7 +3342,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3357,7 +3359,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3385,7 +3387,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3402,12 +3404,12 @@ a|`$statement`
 
 
 
-=== FeedbackRangeFilter
+==== FeedbackRangeFilter
 
 Includes filters for feedback
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -3416,7 +3418,7 @@ Includes filters for feedback
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3430,7 +3432,7 @@ public hasFeedbackGreaterThan($value):Plenty\Modules\Pim\SearchService\Filter //
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3457,7 +3459,7 @@ public getType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -3474,7 +3476,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3491,7 +3493,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3519,7 +3521,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3536,12 +3538,12 @@ a|`$statement`
 
 
 
-=== ItemCreatedAtFilter
+==== ItemCreatedAtFilter
 
 Used to filter by item created at timestamp
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -3550,7 +3552,7 @@ Used to filter by item created at timestamp
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3564,7 +3566,7 @@ public getTimestamp():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -3581,7 +3583,7 @@ public getType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -3598,7 +3600,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3615,7 +3617,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3643,7 +3645,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3660,12 +3662,12 @@ a|`$statement`
 
 
 
-=== ItemFilter
+==== ItemFilter
 
 Includes filters for the item
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -3674,7 +3676,7 @@ Includes filters for the item
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3688,7 +3690,7 @@ public hasId($id):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3715,7 +3717,7 @@ public hasIds($ids):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3742,7 +3744,7 @@ public hasAnImage():Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3760,7 +3762,7 @@ public hasFlag1($flagId):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3787,7 +3789,7 @@ public hasFlag2($flagId):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3814,7 +3816,7 @@ public hasManufacturer($manufacturerId):Plenty\Modules\Pim\SearchService\Filter 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3841,7 +3843,7 @@ public hasManufacturers($manufacturerIds):Plenty\Modules\Pim\SearchService\Filte
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3868,7 +3870,7 @@ public hasAManufacturer():Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3886,7 +3888,7 @@ public isItemType($itemType):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -3913,7 +3915,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -3930,7 +3932,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3958,7 +3960,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3975,12 +3977,12 @@ a|`$statement`
 
 
 
-=== ItemLastUpdatedAtFilter
+==== ItemLastUpdatedAtFilter
 
 Used to filter by item last update timestamp
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -3989,7 +3991,7 @@ Used to filter by item last update timestamp
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4003,7 +4005,7 @@ public getTimestamp():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -4020,7 +4022,7 @@ public getType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -4037,7 +4039,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4054,7 +4056,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4082,7 +4084,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4099,12 +4101,12 @@ a|`$statement`
 
 
 
-=== ItemRangeFilter
+==== ItemRangeFilter
 
 used to filter the range between item ids
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -4113,7 +4115,7 @@ used to filter the range between item ids
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4127,7 +4129,7 @@ public getType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -4144,7 +4146,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4161,7 +4163,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4189,7 +4191,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4206,12 +4208,12 @@ a|`$statement`
 
 
 
-=== MarketFilter
+==== MarketFilter
 
 Includes filters for markets
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -4220,7 +4222,7 @@ Includes filters for markets
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4234,7 +4236,7 @@ public isVisibleForMarket($marketId):Plenty\Modules\Pim\SearchService\Filter // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -4261,7 +4263,7 @@ public isVisibleForAtLeastOneMarket($marketIds):Plenty\Modules\Pim\SearchService
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -4288,7 +4290,7 @@ public isVisibleForAllMarkets($marketIds):Plenty\Modules\Pim\SearchService\Filte
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -4315,7 +4317,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4332,7 +4334,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4360,7 +4362,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4377,12 +4379,12 @@ a|`$statement`
 
 
 
-=== PriceFilter
+==== PriceFilter
 
 Includes filters for prices
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -4391,7 +4393,7 @@ Includes filters for prices
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4405,7 +4407,7 @@ public getPath():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4423,7 +4425,7 @@ public between($min = null, $max = null):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4454,7 +4456,7 @@ public betweenByPriceId($priceIds = [], $min = null, $max = null):Plenty\Modules
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -4489,7 +4491,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4506,7 +4508,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4534,7 +4536,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4551,12 +4553,12 @@ a|`$statement`
 
 
 
-=== PropertyFilter
+==== PropertyFilter
 
 Includes filters for Properties
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -4565,7 +4567,7 @@ Includes filters for Properties
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4579,7 +4581,7 @@ public hasPropertySelection($id):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -4606,7 +4608,7 @@ public hasAtLeastOnePropertySelection($ids):Plenty\Modules\Pim\SearchService\Fil
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -4633,7 +4635,7 @@ public hasEachPropertySelection($ids):Plenty\Modules\Pim\SearchService\Filter //
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -4660,7 +4662,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4677,7 +4679,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4705,7 +4707,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4722,12 +4724,12 @@ a|`$statement`
 
 
 
-=== SalesPriceFilter
+==== SalesPriceFilter
 
 Includes filters for salesPrices
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -4736,7 +4738,7 @@ Includes filters for salesPrices
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4750,7 +4752,7 @@ public hasAtLeastOnePrice($priceIds):Plenty\Modules\Pim\SearchService\Filter // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -4777,7 +4779,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4794,7 +4796,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4822,7 +4824,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4839,12 +4841,12 @@ a|`$statement`
 
 
 
-=== SkuFilter
+==== SkuFilter
 
 Includes filters for skus
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -4853,7 +4855,7 @@ Includes filters for skus
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -4867,7 +4869,7 @@ public getPath():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -4885,7 +4887,7 @@ public hasMarketId($marketId):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -4912,7 +4914,7 @@ public hasAccountId($accountId):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -4939,7 +4941,7 @@ public hasStatus($status):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -4966,7 +4968,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -4983,7 +4985,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5011,7 +5013,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5028,12 +5030,12 @@ a|`$statement`
 
 
 
-=== TagFilter
+==== TagFilter
 
 Includes filters for tags
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -5042,7 +5044,7 @@ Includes filters for tags
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5056,7 +5058,7 @@ public hasTag($tagId):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5083,7 +5085,7 @@ public hasAnyTag($tagIds):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5110,7 +5112,7 @@ public hasAllTags($tagIds):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5137,7 +5139,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5154,7 +5156,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5182,7 +5184,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5199,12 +5201,12 @@ a|`$statement`
 
 
 
-=== TextFilter
+==== TextFilter
 
 Includes filters for texts
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -5213,7 +5215,7 @@ Includes filters for texts
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5227,7 +5229,7 @@ public hasAnyName():Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5245,7 +5247,7 @@ public hasNameInLanguage($lang = &quot;de&quot;, $filter = self::FILTER_ANY_NAME
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5276,7 +5278,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5293,7 +5295,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5321,7 +5323,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5349,7 +5351,7 @@ public static isLanguageSupported($lang):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5375,7 +5377,7 @@ public static isLanguageActivated($lang):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -5401,7 +5403,7 @@ public static getM10lByLanguage($lang, $fallback = &quot;en&quot;):string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -5431,7 +5433,7 @@ public static getLanguageByM10l($lang, $fallback = &quot;english&quot;):string /
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -5450,12 +5452,12 @@ a|`$fallback`
 
 
 
-=== VariationAvailabilityUpdatedAtFilter
+==== VariationAvailabilityUpdatedAtFilter
 
 Used to filter by variation availability last update timestamp
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -5464,7 +5466,7 @@ Used to filter by variation availability last update timestamp
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5478,7 +5480,7 @@ public getTimestamp():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -5495,7 +5497,7 @@ public getType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -5512,7 +5514,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -5529,7 +5531,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5557,7 +5559,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5574,12 +5576,12 @@ a|`$statement`
 
 
 
-=== VariationBaseFilter
+==== VariationBaseFilter
 
 Includes filters for the base variation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -5588,7 +5590,7 @@ Includes filters for the base variation
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -5602,7 +5604,7 @@ public hasNumber($number, $precision):Plenty\Modules\Pim\SearchService\Filter //
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5633,7 +5635,7 @@ public hasAnyNumber($numbers):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -5661,7 +5663,7 @@ public isActive():Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5679,7 +5681,7 @@ public isInactive():Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5697,7 +5699,7 @@ public hasId($id):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5724,7 +5726,7 @@ public hasIds($ids):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5751,7 +5753,7 @@ public hasItemId($itemId):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5778,7 +5780,7 @@ public hasAnyPriceCalculationId():Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5796,7 +5798,7 @@ public hasPriceCalculationIds($ids):Plenty\Modules\Pim\SearchService\Filter // <
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5823,7 +5825,7 @@ public hasItemIds($itemIds):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5850,7 +5852,7 @@ public isMain():Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5868,7 +5870,7 @@ public isChild():Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5886,7 +5888,7 @@ public isSalable($bool = true):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5913,7 +5915,7 @@ public isHiddenInCategoryList($bool = true):Plenty\Modules\Pim\SearchService\Fil
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5940,7 +5942,7 @@ public hasADescriptionInLanguage($language):Plenty\Modules\Pim\SearchService\Fil
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5967,7 +5969,7 @@ public hasAnImageOrItemHasAnImage():Plenty\Modules\Pim\SearchService\Filter // <
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -5985,7 +5987,7 @@ public hasAnImage():Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -6003,7 +6005,7 @@ public hasManufacturer($manufacturerId):Plenty\Modules\Pim\SearchService\Filter 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -6030,7 +6032,7 @@ public hasSupplier($supplierId):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -6057,7 +6059,7 @@ public hasAtLeastOneAvailability($availabilities):Plenty\Modules\Pim\SearchServi
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -6084,7 +6086,7 @@ public hasActiveChildren($bool = true):Plenty\Modules\Pim\SearchService\Filter /
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -6111,7 +6113,7 @@ public hasChildren($bool = true):Plenty\Modules\Pim\SearchService\Filter // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -6138,7 +6140,7 @@ public hasCustomsTariffNumber($customsTariffNumber):Plenty\Modules\Pim\SearchSer
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -6165,7 +6167,7 @@ public customsTariffNumberNotExists():Plenty\Modules\Pim\SearchService\Filter //
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -6183,7 +6185,7 @@ public customsTariffNumberExists():Plenty\Modules\Pim\SearchService\Filter // <1
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_searchservice_filter[Filter^]
 
@@ -6201,7 +6203,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6218,7 +6220,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6246,7 +6248,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6263,12 +6265,12 @@ a|`$statement`
 
 
 
-=== VariationBundleFilter
+==== VariationBundleFilter
 
 Includes filters for bundles
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -6277,7 +6279,7 @@ Includes filters for bundles
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6291,7 +6293,7 @@ public hasBundleType($bundleType):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6318,7 +6320,7 @@ public hasNoBundleType():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6336,7 +6338,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6353,7 +6355,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6381,7 +6383,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6398,12 +6400,12 @@ a|`$statement`
 
 
 
-=== VariationCreatedAtFilter
+==== VariationCreatedAtFilter
 
 Used to filter by variation created at timestamp
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -6412,7 +6414,7 @@ Used to filter by variation created at timestamp
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6426,7 +6428,7 @@ public getTimestamp():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6443,7 +6445,7 @@ public getType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6460,7 +6462,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6477,7 +6479,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6505,7 +6507,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6522,12 +6524,12 @@ a|`$statement`
 
 
 
-=== VariationLastUpdatedAtFilter
+==== VariationLastUpdatedAtFilter
 
 Used to filter by variation last update timestamp
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -6536,7 +6538,7 @@ Used to filter by variation last update timestamp
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6550,7 +6552,7 @@ public getTimestamp():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6567,7 +6569,7 @@ public getType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6584,7 +6586,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6601,7 +6603,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6629,7 +6631,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6646,12 +6648,12 @@ a|`$statement`
 
 
 
-=== VariationSalesPriceUpdatedAtFilter
+==== VariationSalesPriceUpdatedAtFilter
 
 Used to filter by variation saleyPrice last update timestamp
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -6660,7 +6662,7 @@ Used to filter by variation saleyPrice last update timestamp
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6674,7 +6676,7 @@ public getTimestamp():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6691,7 +6693,7 @@ public getType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6708,7 +6710,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6725,7 +6727,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6753,7 +6755,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6770,12 +6772,12 @@ a|`$statement`
 
 
 
-=== VariationStockUpdatedAtFilter
+==== VariationStockUpdatedAtFilter
 
 Used to filter by variation stock last update timestamp
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -6784,7 +6786,7 @@ Used to filter by variation stock last update timestamp
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6798,7 +6800,7 @@ public getTimestamp():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6815,7 +6817,7 @@ public getType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -6832,7 +6834,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -6849,7 +6851,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6877,7 +6879,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6894,13 +6896,13 @@ a|`$statement`
 
 
 [[pim_searchservice_query]]
-==  Query
-=== ManagedSearchQuery
+===  Query
+==== ManagedSearchQuery
 
 Used to search for variations by a specified term. 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Query`
 
@@ -6909,7 +6911,7 @@ Used to search for variations by a specified term.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -6923,7 +6925,7 @@ public setLang($lang):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6951,7 +6953,7 @@ public toArray():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6969,7 +6971,7 @@ public setOperator($operator):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -6997,7 +6999,7 @@ public setFuzzy($fuzzy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7025,7 +7027,7 @@ public addFilterField($field, $boost):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7056,7 +7058,7 @@ public addMultilingualField($field, $language, $boost):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7091,7 +7093,7 @@ public addOtherAnalyzedField($field, $boost):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7122,7 +7124,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7150,7 +7152,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7178,7 +7180,7 @@ public static isLanguageSupported($lang):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -7204,7 +7206,7 @@ public static isLanguageActivated($lang):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -7230,7 +7232,7 @@ public static getM10lByLanguage($lang, $fallback = &quot;en&quot;):string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -7260,7 +7262,7 @@ public static getLanguageByM10l($lang, $fallback = &quot;english&quot;):string /
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -7279,12 +7281,12 @@ a|`$fallback`
 
 
 
-=== SearchQuery
+==== SearchQuery
 
 Used to search for variations by a specified term. 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Query`
 
@@ -7293,7 +7295,7 @@ Used to search for variations by a specified term.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7307,7 +7309,7 @@ public setOperator($operator):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7335,7 +7337,7 @@ public setFuzzy($fuzzy):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7363,7 +7365,7 @@ public addFilterField($field, $boost):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7394,7 +7396,7 @@ public addMultilingualField($field, $language, $boost):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7429,7 +7431,7 @@ public addOtherAnalyzedField($field, $boost):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7460,7 +7462,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -7477,7 +7479,7 @@ public addStatement($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7505,7 +7507,7 @@ public addQuery($statement):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7533,7 +7535,7 @@ public static isLanguageSupported($lang):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -7559,7 +7561,7 @@ public static isLanguageActivated($lang):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -7585,7 +7587,7 @@ public static getM10lByLanguage($lang, $fallback = &quot;en&quot;):string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -7615,7 +7617,7 @@ public static getLanguageByM10l($lang, $fallback = &quot;english&quot;):string /
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -7634,16 +7636,16 @@ a|`$fallback`
 
 
 [[pim_aggregations]]
-= Aggregations
+== Aggregations
 
 [[pim_aggregations_facet]]
-==  Facet
-=== NestedFacetValuesAggregation
+===  Facet
+==== NestedFacetValuesAggregation
 
 To be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Facet`
 
@@ -7652,7 +7654,7 @@ To be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7666,7 +7668,7 @@ public getName():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7684,7 +7686,7 @@ public getAggregation():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7702,7 +7704,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -7719,7 +7721,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -7745,7 +7747,7 @@ public addAggregation($aggregation):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7773,7 +7775,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -7801,7 +7803,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -7832,20 +7834,20 @@ public getSources():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[pim_aggregations_feedback]]
-==  Feedback
-=== FeedbackRangeAggregation
+===  Feedback
+==== FeedbackRangeAggregation
 
 To be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Feedback`
 
@@ -7854,7 +7856,7 @@ To be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -7868,7 +7870,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -7885,7 +7887,7 @@ public getField():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -7902,7 +7904,7 @@ public getRanges():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7920,7 +7922,7 @@ public getAggregation():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -7938,7 +7940,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -7955,7 +7957,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -7981,7 +7983,7 @@ public addAggregation($aggregation):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8009,7 +8011,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -8037,7 +8039,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -8068,20 +8070,20 @@ public getSources():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[pim_aggregations_price]]
-==  Price
-=== ItemMinPriceAggregation
+===  Price
+==== ItemMinPriceAggregation
 
 Get min price by price id for found variations
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Price`
 
@@ -8090,7 +8092,7 @@ Get min price by price id for found variations
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8104,7 +8106,7 @@ public getName():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8122,7 +8124,7 @@ public getAggregation():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8140,7 +8142,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8157,7 +8159,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8183,7 +8185,7 @@ public addAggregation($aggregation):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8211,7 +8213,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -8239,7 +8241,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -8270,19 +8272,19 @@ public getSources():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== PriceRangeAggregation
+==== PriceRangeAggregation
 
 Get price range for found variations
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Price`
 
@@ -8291,7 +8293,7 @@ Get price range for found variations
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8305,7 +8307,7 @@ public getName():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8323,7 +8325,7 @@ public setPriceIds($ids):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8350,7 +8352,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8376,7 +8378,7 @@ public getAggregation():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8394,7 +8396,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8411,7 +8413,7 @@ public addAggregation($aggregation):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -8439,7 +8441,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -8467,7 +8469,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -8498,20 +8500,20 @@ public getSources():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[pim_aggregations_processors]]
-==  Processors
-=== AttributeValueAggregationProcessor
+===  Processors
+==== AttributeValueAggregationProcessor
 
 Processor for AttributeValueAggregation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -8520,7 +8522,7 @@ Processor for AttributeValueAggregation
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8534,7 +8536,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8560,7 +8562,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -8577,7 +8579,7 @@ public getDependencies():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8594,7 +8596,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -8622,7 +8624,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -8639,12 +8641,12 @@ a|`$conditions`
 
 
 
-=== CategoryAllTermsAggregationProcessor
+==== CategoryAllTermsAggregationProcessor
 
 Processor for CategoryAllTermsAggregation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -8653,7 +8655,7 @@ Processor for CategoryAllTermsAggregation
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8667,7 +8669,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8693,7 +8695,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -8710,7 +8712,7 @@ public getDependencies():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8727,7 +8729,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -8755,7 +8757,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -8772,12 +8774,12 @@ a|`$conditions`
 
 
 
-=== CategoryPathTermsAggregationProcessor
+==== CategoryPathTermsAggregationProcessor
 
 Processor for CategoryAllTermsAggregation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -8786,7 +8788,7 @@ Processor for CategoryAllTermsAggregation
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8800,7 +8802,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8826,7 +8828,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -8843,7 +8845,7 @@ public setFullPath($fullPath):Plenty\Modules\Pim\SearchService\Aggregations\Proc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_processors_categorypathtermsaggregationprocessor[CategoryPathTermsAggregationProcessor^]
 
@@ -8870,7 +8872,7 @@ public getDependencies():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8887,7 +8889,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -8915,7 +8917,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -8932,12 +8934,12 @@ a|`$conditions`
 
 
 
-=== FacetAggregationProcessor
+==== FacetAggregationProcessor
 
 To be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -8946,7 +8948,7 @@ To be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -8960,7 +8962,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -8986,7 +8988,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -9003,7 +9005,7 @@ public getDependencies():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9020,7 +9022,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9048,7 +9050,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9065,12 +9067,12 @@ a|`$conditions`
 
 
 
-=== FeedbackRangeAggregationProcessor
+==== FeedbackRangeAggregationProcessor
 
 Processor for FeedbackRangeAggregation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -9079,7 +9081,7 @@ Processor for FeedbackRangeAggregation
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -9093,7 +9095,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9119,7 +9121,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -9136,7 +9138,7 @@ public getDependencies():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9153,7 +9155,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9181,7 +9183,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9198,12 +9200,12 @@ a|`$conditions`
 
 
 
-=== ItemCardinalityAggregationProcessor
+==== ItemCardinalityAggregationProcessor
 
 Processor for ItemCardinalityAggregation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -9212,7 +9214,7 @@ Processor for ItemCardinalityAggregation
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -9226,7 +9228,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9252,7 +9254,7 @@ public getDependencies():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9269,7 +9271,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9297,7 +9299,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9314,12 +9316,12 @@ a|`$conditions`
 
 
 
-=== ItemIdTermsAggregationProcessor
+==== ItemIdTermsAggregationProcessor
 
 Processor for ItemIdTermsAggregation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -9328,7 +9330,7 @@ Processor for ItemIdTermsAggregation
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -9342,7 +9344,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9368,7 +9370,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -9385,7 +9387,7 @@ public getDependencies():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9402,7 +9404,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9430,7 +9432,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9447,12 +9449,12 @@ a|`$conditions`
 
 
 
-=== ItemMinPriceAggregationProcessor
+==== ItemMinPriceAggregationProcessor
 
 Processor for ItemMinPriceAggregation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -9461,7 +9463,7 @@ Processor for ItemMinPriceAggregation
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -9475,7 +9477,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9501,7 +9503,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -9518,7 +9520,7 @@ public getDependencies():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9535,7 +9537,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9563,7 +9565,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9580,12 +9582,12 @@ a|`$conditions`
 
 
 
-=== SalableFilterAggregationProcessor
+==== SalableFilterAggregationProcessor
 
 Processor for SalableFilterAggregation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -9594,7 +9596,7 @@ Processor for SalableFilterAggregation
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -9608,7 +9610,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9634,7 +9636,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -9651,7 +9653,7 @@ public addSubProcessor($processor):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -9679,7 +9681,7 @@ public getDependencies():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9696,7 +9698,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9724,7 +9726,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9741,12 +9743,12 @@ a|`$conditions`
 
 
 
-=== SearchSuggestionsTermsAggregationProcessor
+==== SearchSuggestionsTermsAggregationProcessor
 
 Processor for SearchSuggestionsTermsAggregation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -9755,7 +9757,7 @@ Processor for SearchSuggestionsTermsAggregation
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -9769,7 +9771,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9795,7 +9797,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -9812,7 +9814,7 @@ public getDependencies():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9829,7 +9831,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9857,7 +9859,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9874,12 +9876,12 @@ a|`$conditions`
 
 
 
-=== UnitCombinationAggregationProcessor
+==== UnitCombinationAggregationProcessor
 
 Processor for UnitCombinationAggregation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -9888,7 +9890,7 @@ Processor for UnitCombinationAggregation
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -9902,7 +9904,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9928,7 +9930,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -9945,7 +9947,7 @@ public getDependencies():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -9962,7 +9964,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor // 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -9990,7 +9992,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_processor[Processor^]
 
@@ -10007,13 +10009,13 @@ a|`$conditions`
 
 
 [[pim_aggregations_searchsuggestions]]
-==  SearchSuggestions
-=== SearchSuggestionsTermsAggregation
+===  SearchSuggestions
+==== SearchSuggestionsTermsAggregation
 
 Get suggestions for found variations, use setInclude to filter them.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\SearchSuggestions`
 
@@ -10022,7 +10024,7 @@ Get suggestions for found variations, use setInclude to filter them.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -10036,7 +10038,7 @@ public getName():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -10054,7 +10056,7 @@ public getField():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -10072,7 +10074,7 @@ public getAggregation():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -10089,7 +10091,7 @@ public setInclude($string):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -10116,7 +10118,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -10133,7 +10135,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -10159,7 +10161,7 @@ public addAggregation($aggregation):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -10187,7 +10189,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -10215,7 +10217,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
@@ -10246,7 +10248,7 @@ public getSources():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -10264,7 +10266,7 @@ public static isLanguageSupported($lang):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -10290,7 +10292,7 @@ public static isLanguageActivated($lang):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -10316,7 +10318,7 @@ public static getM10lByLanguage($lang, $fallback = &quot;en&quot;):string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -10346,7 +10348,7 @@ public static getLanguageByM10l($lang, $fallback = &quot;english&quot;):string /
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -10365,16 +10367,16 @@ a|`$fallback`
 
 
 [[pim_variationdatainterface]]
-= VariationDataInterface
+== VariationDataInterface
 
 [[pim_variationdatainterface_contracts]]
-==  Contracts
-=== AttributeInterface
+===  Contracts
+==== AttributeInterface
 
 To be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Contracts`
 
@@ -10383,7 +10385,7 @@ To be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -10397,7 +10399,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -10414,7 +10416,7 @@ public static getVariationAttribute():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -10431,7 +10433,7 @@ public addLazyLoadParts($lazyLoadParts):Plenty\Modules\Pim\VariationDataInterfac
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_variationdatainterface_contracts[Contracts^]
 
@@ -10458,18 +10460,18 @@ public getLazyLoadParts():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 
-=== VariationDataInterfaceContract
+==== VariationDataInterfaceContract
 
 Use this interface to load performant article data
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Contracts`
 
@@ -10478,7 +10480,7 @@ Use this interface to load performant article data
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -10492,7 +10494,7 @@ public getResult($context):Plenty\Modules\Pim\VariationDataInterface\Contracts\V
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_contracts_variationdatainterfaceresultinterface[VariationDataInterfaceResultInterface^]
 
@@ -10520,7 +10522,7 @@ public getMultipleResults($contextList):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -10535,12 +10537,12 @@ a|`$contextList`
 
 
 
-=== VariationDataInterfaceResultInterface
+==== VariationDataInterfaceResultInterface
 
 Result
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Contracts`
 
@@ -10549,7 +10551,7 @@ Result
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -10563,7 +10565,7 @@ public getContext():Plenty\Modules\Pim\VariationDataInterface\Model\VariationDat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_model_variationdatainterfacecontext[VariationDataInterfaceContext^]
 
@@ -10581,7 +10583,7 @@ public total():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -10598,7 +10600,7 @@ public get():void // <1>
 Get all found variations as Traversable.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -10616,19 +10618,19 @@ public getAdditionalData():array // <1>
 Get additional data provided by the elasticsearch result
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
 
 [[pim_variationdatainterface_model]]
-==  Model
-=== Variation
+===  Model
+==== Variation
 
 The Variation
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model`
 
@@ -10712,7 +10714,7 @@ The Variation
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -10728,12 +10730,12 @@ Returns this model as an array.
 
 
 
-=== VariationDataInterfaceContext
+==== VariationDataInterfaceContext
 
 The Conext to define what you get frome the VDI
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model`
 
@@ -10742,7 +10744,7 @@ The Conext to define what you get frome the VDI
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -10756,7 +10758,7 @@ public addFilter($filter):Plenty\Modules\Pim\VariationDataInterface\Model\Variat
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_model_variationdatainterfacecontext[VariationDataInterfaceContext^]
 
@@ -10784,7 +10786,7 @@ public addAggregation($aggregation):Plenty\Modules\Pim\VariationDataInterface\Mo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_model_variationdatainterfacecontext[VariationDataInterfaceContext^]
 
@@ -10812,7 +10814,7 @@ public addSuggestion($suggestion):Plenty\Modules\Pim\VariationDataInterface\Mode
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_model_variationdatainterfacecontext[VariationDataInterfaceContext^]
 
@@ -10840,7 +10842,7 @@ public addQuery($filter):Plenty\Modules\Pim\VariationDataInterface\Model\Variati
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_model_variationdatainterfacecontext[VariationDataInterfaceContext^]
 
@@ -10868,7 +10870,7 @@ public getFilter():Illuminate\Support\Collection // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_support_collection[Collection^]
 
@@ -10886,7 +10888,7 @@ public getIds():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -10904,7 +10906,7 @@ public setIds($ids):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -10932,7 +10934,7 @@ public getAggregations():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -10950,7 +10952,7 @@ public getSuggestions():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -10968,7 +10970,7 @@ public getQuery():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -10986,7 +10988,7 @@ public getParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -11004,7 +11006,7 @@ public addPart($part):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -11032,7 +11034,7 @@ public setParts($parts):Plenty\Modules\Pim\VariationDataInterface\Model\Variatio
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_model_variationdatainterfacecontext[VariationDataInterfaceContext^]
 
@@ -11059,7 +11061,7 @@ public getPlentyIds():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -11077,7 +11079,7 @@ public setPlentyIds($plentyIds):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -11105,7 +11107,7 @@ public getLanguages():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -11123,7 +11125,7 @@ public setLanguages($languages):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -11151,7 +11153,7 @@ public getPage():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -11168,7 +11170,7 @@ public setPage($page = 1, $perPage = 50):Plenty\Modules\Pim\VariationDataInterfa
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_model_variationdatainterfacecontext[VariationDataInterfaceContext^]
 
@@ -11199,7 +11201,7 @@ public getPerPage():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -11216,7 +11218,7 @@ public isGetAllFound():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -11233,7 +11235,7 @@ public setGetAllFound($getAll):Plenty\Modules\Pim\VariationDataInterface\Model /
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_variationdatainterface_model[Model^]
 
@@ -11260,7 +11262,7 @@ public getBatchSize():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -11277,7 +11279,7 @@ public setBatchSize($batchSize):Plenty\Modules\Pim\VariationDataInterface\Model\
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_model_variationdatainterfacecontext[VariationDataInterfaceContext^]
 
@@ -11304,7 +11306,7 @@ public getContextId():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -11321,7 +11323,7 @@ public getGroupBy():Plenty\Modules\Pim\VariationDataInterface\Model\Context\Grou
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_context_groupby[GroupBy^]
 
@@ -11339,7 +11341,7 @@ public setGroupBy($groupBy):Plenty\Modules\Pim\VariationDataInterface\Model\Vari
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_model_variationdatainterfacecontext[VariationDataInterfaceContext^]
 
@@ -11367,7 +11369,7 @@ public getDecoratedReturnType():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -11384,7 +11386,7 @@ public getSorting():Plenty\Modules\Cloud\ElasticSearch\Lib\Sorting\SortingInterf
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_sorting_sortinginterface[SortingInterface^]
 
@@ -11402,7 +11404,7 @@ public setSorting($sorting):Plenty\Modules\Pim\VariationDataInterface\Model\Vari
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_model_variationdatainterfacecontext[VariationDataInterfaceContext^]
 
@@ -11430,7 +11432,7 @@ public getScoreModifier():Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Type\Scor
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_scoremodifier_scoremodifierinterface[ScoreModifierInterface^]
 
@@ -11448,7 +11450,7 @@ public setScoreModifier($scoreModifier):Plenty\Modules\Pim\VariationDataInterfac
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_model_variationdatainterfacecontext[VariationDataInterfaceContext^]
 
@@ -11476,7 +11478,7 @@ public getAdditionalSource():Plenty\Modules\Cloud\ElasticSearch\Lib\Source\Indep
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_source_independentsource[IndependentSource^]
 
@@ -11494,7 +11496,7 @@ public setAdditionalSource($additionalSource):Plenty\Modules\Pim\VariationDataIn
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_model_variationdatainterfacecontext[VariationDataInterfaceContext^]
 
@@ -11522,7 +11524,7 @@ public hasAdditionalSource():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -11539,7 +11541,7 @@ public getUseInMemoryCache():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -11556,7 +11558,7 @@ public setUseInMemoryCache($useInMemoryCache):Plenty\Modules\Pim\VariationDataIn
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_model_variationdatainterfacecontext[VariationDataInterfaceContext^]
 
@@ -11583,7 +11585,7 @@ public isHasAdditionalSource():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -11600,7 +11602,7 @@ public setHasAdditionalSource($hasAdditionalSource):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -11627,7 +11629,7 @@ public getSearchAfterKey():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -11644,7 +11646,7 @@ public setSearchAfterKey($searchAfterKey):Plenty\Modules\Pim\VariationDataInterf
 
 
 
-==== Return type
+===== Return type
     
 <1> link:pim#pim_variationdatainterface_model[Model^]
 
@@ -11671,22 +11673,22 @@ public isSearchAfter():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
 
 [[pim_model]]
-= Model
+== Model
 
 [[pim_model_attributes]]
-==  Attributes
-=== VariationAdditionalSkuAttribute
+===  Attributes
+==== VariationAdditionalSkuAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11695,7 +11697,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -11709,7 +11711,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -11727,7 +11729,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -11744,7 +11746,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -11772,19 +11774,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationAttributeValueAttribute
+==== VariationAttributeValueAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11793,7 +11795,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -11807,7 +11809,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -11825,7 +11827,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -11842,7 +11844,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -11870,19 +11872,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationBarcodeAttribute
+==== VariationBarcodeAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11891,7 +11893,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -11905,7 +11907,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -11923,7 +11925,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -11940,7 +11942,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -11968,19 +11970,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationBaseAttribute
+==== VariationBaseAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11989,7 +11991,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -12003,7 +12005,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12021,7 +12023,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -12038,7 +12040,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12066,19 +12068,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationBundleComponentAttribute
+==== VariationBundleComponentAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12087,7 +12089,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -12101,7 +12103,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12119,7 +12121,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -12136,7 +12138,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12164,19 +12166,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationCategoryAttribute
+==== VariationCategoryAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12185,7 +12187,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -12199,7 +12201,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12217,7 +12219,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -12234,7 +12236,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12262,19 +12264,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationClientAttribute
+==== VariationClientAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12283,7 +12285,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -12297,7 +12299,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12315,7 +12317,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -12332,7 +12334,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12360,19 +12362,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationCommentAttribute
+==== VariationCommentAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12381,7 +12383,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -12395,7 +12397,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12413,7 +12415,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -12430,7 +12432,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12458,19 +12460,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationDefaultCategoryAttribute
+==== VariationDefaultCategoryAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12479,7 +12481,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -12493,7 +12495,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12511,7 +12513,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -12528,7 +12530,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12556,19 +12558,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationImageAttribute
+==== VariationImageAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12577,7 +12579,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -12591,7 +12593,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12609,7 +12611,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -12626,7 +12628,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12654,19 +12656,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationMarketAttribute
+==== VariationMarketAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12675,7 +12677,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -12689,7 +12691,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12707,7 +12709,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -12724,7 +12726,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12752,19 +12754,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationMarketIdentNumberAttribute
+==== VariationMarketIdentNumberAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12773,7 +12775,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -12787,7 +12789,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12805,7 +12807,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -12822,7 +12824,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12850,19 +12852,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationPropertyAttribute
+==== VariationPropertyAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12871,7 +12873,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -12885,7 +12887,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12903,7 +12905,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -12920,7 +12922,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -12948,19 +12950,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationSalesPriceAttribute
+==== VariationSalesPriceAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12969,7 +12971,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -12983,7 +12985,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13001,7 +13003,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -13018,7 +13020,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13046,19 +13048,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationSkuAttribute
+==== VariationSkuAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -13067,7 +13069,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -13081,7 +13083,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13099,7 +13101,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -13116,7 +13118,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13144,19 +13146,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationSupplierAttribute
+==== VariationSupplierAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -13165,7 +13167,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -13179,7 +13181,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13197,7 +13199,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -13214,7 +13216,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13242,19 +13244,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationTagAttribute
+==== VariationTagAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -13263,7 +13265,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -13277,7 +13279,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13295,7 +13297,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -13312,7 +13314,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13340,19 +13342,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationTimestampAttribute
+==== VariationTimestampAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -13361,7 +13363,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -13375,7 +13377,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13393,7 +13395,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -13410,7 +13412,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13438,19 +13440,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationUnitAttribute
+==== VariationUnitAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -13459,7 +13461,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -13473,7 +13475,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13491,7 +13493,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -13508,7 +13510,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13536,19 +13538,19 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== VariationWarehouseAttribute
+==== VariationWarehouseAttribute
 
 to be written
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -13557,7 +13559,7 @@ to be written
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -13571,7 +13573,7 @@ public static getVariationAttribute():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13589,7 +13591,7 @@ public getName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -13606,7 +13608,7 @@ public addLazyLoadParts($lazyLoadParts):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -13634,20 +13636,20 @@ public getLazyLoadParts():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[pim_model_context]]
-==  Context
-=== GroupBy
+===  Context
+==== GroupBy
 
 Group by the result, expects 2 params: field - the field which the result is grouped by, sorting - the inner sorting, must be instance of SortingInterface)
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Context`
 
@@ -13656,7 +13658,7 @@ Group by the result, expects 2 params: field - the field which the result is gro
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -13670,19 +13672,19 @@ public getField():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
 
 [[pim_model_decoratedattributes]]
-==  DecoratedAttributes
-=== AdditionalSku
+===  DecoratedAttributes
+==== AdditionalSku
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13709,7 +13711,7 @@ public getField():string // <1>
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -13725,12 +13727,12 @@ Returns this model as an array.
 
 
 
-=== AttributeValue
+==== AttributeValue
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13758,7 +13760,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -13774,12 +13776,12 @@ Returns this model as an array.
 
 
 
-=== Barcode
+==== Barcode
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13804,7 +13806,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -13820,12 +13822,12 @@ Returns this model as an array.
 
 
 
-=== Base
+==== Base
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14042,7 +14044,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14058,12 +14060,12 @@ Returns this model as an array.
 
 
 
-=== BundleComponent
+==== BundleComponent
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14084,7 +14086,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14100,12 +14102,12 @@ Returns this model as an array.
 
 
 
-=== Category
+==== Category
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14133,7 +14135,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14149,12 +14151,12 @@ Returns this model as an array.
 
 
 
-=== Client
+==== Client
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14172,7 +14174,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14188,12 +14190,12 @@ Returns this model as an array.
 
 
 
-=== Comment
+==== Comment
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14220,7 +14222,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14236,12 +14238,12 @@ Returns this model as an array.
 
 
 
-=== DefaultCategory
+==== DefaultCategory
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14269,7 +14271,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14285,12 +14287,12 @@ Returns this model as an array.
 
 
 
-=== Image
+==== Image
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14312,7 +14314,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14328,12 +14330,12 @@ Returns this model as an array.
 
 
 
-=== Market
+==== Market
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14351,7 +14353,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14367,12 +14369,12 @@ Returns this model as an array.
 
 
 
-=== MarketIdentNumber
+==== MarketIdentNumber
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14402,7 +14404,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14418,12 +14420,12 @@ Returns this model as an array.
 
 
 
-=== Property
+==== Property
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14448,7 +14450,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14464,12 +14466,12 @@ Returns this model as an array.
 
 
 
-=== SalesPrice
+==== SalesPrice
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14494,7 +14496,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14510,12 +14512,12 @@ Returns this model as an array.
 
 
 
-=== Sku
+==== Sku
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14566,7 +14568,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14582,12 +14584,12 @@ Returns this model as an array.
 
 
 
-=== Supplier
+==== Supplier
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14642,7 +14644,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14658,12 +14660,12 @@ Returns this model as an array.
 
 
 
-=== Tag
+==== Tag
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14685,7 +14687,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14701,12 +14703,12 @@ Returns this model as an array.
 
 
 
-=== Timestamp
+==== Timestamp
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14801,7 +14803,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14817,12 +14819,12 @@ Returns this model as an array.
 
 
 
-=== Unit
+==== Unit
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14850,7 +14852,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14866,12 +14868,12 @@ Returns this model as an array.
 
 
 
-=== Warehouse
+==== Warehouse
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -14920,7 +14922,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14936,16 +14938,16 @@ Returns this model as an array.
 
 
 [[pim_decorators]]
-= Decorators
+== Decorators
 
 [[pim_decorators_attributevalue]]
-==  AttributeValue
-=== With
+===  AttributeValue
+==== With
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\AttributeValue`
 
@@ -14968,7 +14970,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -14984,13 +14986,13 @@ Returns this model as an array.
 
 
 [[pim_decorators_barcode]]
-==  Barcode
-=== With
+===  Barcode
+==== With
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Barcode`
 
@@ -15009,7 +15011,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -15025,13 +15027,13 @@ Returns this model as an array.
 
 
 [[pim_decorators_base]]
-==  Base
-=== With
+===  Base
+==== With
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Base`
 
@@ -15085,7 +15087,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -15101,13 +15103,13 @@ Returns this model as an array.
 
 
 [[pim_decorators_category]]
-==  Category
-=== With
+===  Category
+==== With
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Category`
 
@@ -15130,7 +15132,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -15146,13 +15148,13 @@ Returns this model as an array.
 
 
 [[pim_decorators_defaultcategory]]
-==  DefaultCategory
-=== With
+===  DefaultCategory
+==== With
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\DefaultCategory`
 
@@ -15171,7 +15173,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -15187,13 +15189,13 @@ Returns this model as an array.
 
 
 [[pim_decorators_images]]
-==  Images
-=== With
+===  Images
+==== With
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Images`
 
@@ -15212,7 +15214,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -15228,13 +15230,13 @@ Returns this model as an array.
 
 
 [[pim_decorators_property]]
-==  Property
-=== With
+===  Property
+==== With
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Property`
 
@@ -15253,7 +15255,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -15269,13 +15271,13 @@ Returns this model as an array.
 
 
 [[pim_decorators_salesprice]]
-==  SalesPrice
-=== With
+===  SalesPrice
+==== With
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\SalesPrice`
 
@@ -15294,7 +15296,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -15310,13 +15312,13 @@ Returns this model as an array.
 
 
 [[pim_decorators_supplier]]
-==  Supplier
-=== With
+===  Supplier
+==== With
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Supplier`
 
@@ -15335,7 +15337,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -15351,13 +15353,13 @@ Returns this model as an array.
 
 
 [[pim_decorators_tag]]
-==  Tag
-=== With
+===  Tag
+==== With
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Tag`
 
@@ -15376,7 +15378,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -15392,13 +15394,13 @@ Returns this model as an array.
 
 
 [[pim_decorators_unit]]
-==  Unit
-=== With
+===  Unit
+==== With
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Unit`
 
@@ -15417,7 +15419,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -15433,13 +15435,13 @@ Returns this model as an array.
 
 
 [[pim_decorators_warehouse]]
-==  Warehouse
-=== With
+===  Warehouse
+==== With
 
 
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Warehouse`
 
@@ -15458,7 +15460,7 @@ Returns this model as an array.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

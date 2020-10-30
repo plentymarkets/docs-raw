@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[facet_facet]]
-= Facet
+== Facet
 
 [[facet_facet_contracts]]
-==  Contracts
-=== FacetNameRepositoryContract
+===  Contracts
+==== FacetNameRepositoryContract
 
 The contract for the facet name repository
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Facet\Facet\Contracts`
 
@@ -21,7 +23,7 @@ The contract for the facet name repository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public findOne($facetId, $lang):Plenty\Modules\Facet\Facet\Models\FacetName // <
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facetname[FacetName^]
 
@@ -66,7 +68,7 @@ public create($data):Plenty\Modules\Facet\Facet\Models\FacetName // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facetname[FacetName^]
 
@@ -93,7 +95,7 @@ public update($facetId, $lang, $data):Plenty\Modules\Facet\Facet\Models\FacetNam
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facetname[FacetName^]
 
@@ -128,7 +130,7 @@ public delete($facetId, $lang):Plenty\Repositories\Models\DeleteResponse // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
@@ -148,12 +150,12 @@ a|`$lang`
 
 
 
-=== FacetRepositoryContract
+==== FacetRepositoryContract
 
 The contract for the facet repository
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Facet\Facet\Contracts`
 
@@ -162,7 +164,7 @@ The contract for the facet repository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -176,7 +178,7 @@ public search($with, $filters):Illuminate\Support\Collection // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_support_collection[Collection^]
 
@@ -207,7 +209,7 @@ public listByPlentyId($plentyId, $lang = &quot;de&quot;):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -237,7 +239,7 @@ public findOne($id):Plenty\Modules\Facet\Facet\Models\Facet // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facet[Facet^]
 
@@ -264,7 +266,7 @@ public create($data):Plenty\Modules\Facet\Facet\Models\Facet // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facet[Facet^]
 
@@ -291,7 +293,7 @@ public update($id, $data):Plenty\Modules\Facet\Facet\Models\Facet // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facet[Facet^]
 
@@ -322,7 +324,7 @@ public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
@@ -349,7 +351,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -367,7 +369,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -385,7 +387,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -412,7 +414,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -430,7 +432,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -448,19 +450,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== FacetValueNameRepositoryContract
+==== FacetValueNameRepositoryContract
 
 The contract for the facet value name repository
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Facet\Facet\Contracts`
 
@@ -469,7 +471,7 @@ The contract for the facet value name repository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -483,7 +485,7 @@ public findOne($valueId, $lang):Plenty\Modules\Facet\Facet\Models\FacetValueName
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facetvaluename[FacetValueName^]
 
@@ -514,7 +516,7 @@ public create($data):Plenty\Modules\Facet\Facet\Models\FacetValueName // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facetvaluename[FacetValueName^]
 
@@ -541,7 +543,7 @@ public update($valueId, $lang, $data):Plenty\Modules\Facet\Facet\Models\FacetVal
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facetvaluename[FacetValueName^]
 
@@ -576,7 +578,7 @@ public delete($valueId, $lang):Plenty\Repositories\Models\DeleteResponse // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
@@ -596,12 +598,12 @@ a|`$lang`
 
 
 
-=== FacetValueReferenceRepositoryContract
+==== FacetValueReferenceRepositoryContract
 
 The contract for the facet value reference repository
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Facet\Facet\Contracts`
 
@@ -610,7 +612,7 @@ The contract for the facet value reference repository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -624,7 +626,7 @@ public search($filters):Illuminate\Support\Collection // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_support_collection[Collection^]
 
@@ -651,7 +653,7 @@ public create($data):Plenty\Modules\Facet\Facet\Models\FacetValueReference // <1
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facetvaluereference[FacetValueReference^]
 
@@ -678,7 +680,7 @@ public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
@@ -705,7 +707,7 @@ public findOne($id):Plenty\Modules\Facet\Facet\Models\FacetValueReference // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facetvaluereference[FacetValueReference^]
 
@@ -732,7 +734,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -750,7 +752,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -768,7 +770,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -795,7 +797,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -813,7 +815,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -831,19 +833,19 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
-=== FacetValueRepositoryContract
+==== FacetValueRepositoryContract
 
 The contract for the facet value repository
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Facet\Facet\Contracts`
 
@@ -852,7 +854,7 @@ The contract for the facet value repository
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -866,7 +868,7 @@ public search($with, $filters):Illuminate\Support\Collection // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_support_collection[Collection^]
 
@@ -897,7 +899,7 @@ public create($data):Plenty\Modules\Facet\Facet\Models\FacetValue // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facetvalue[FacetValue^]
 
@@ -924,7 +926,7 @@ public update($id, $data):Plenty\Modules\Facet\Facet\Models\FacetValue // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facetvalue[FacetValue^]
 
@@ -955,7 +957,7 @@ public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
@@ -982,7 +984,7 @@ public findOne($id):Plenty\Modules\Facet\Facet\Models\FacetValue // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:facet#facet_models_facetvalue[FacetValue^]
 
@@ -1009,7 +1011,7 @@ public clearCriteria():void // <1>
 Resets all Criteria filters by creating a new instance of the builder object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1027,7 +1029,7 @@ public applyCriteriaFromFilters():void // <1>
 Applies criteria classes to the current repository.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1045,7 +1047,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1072,7 +1074,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1090,7 +1092,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1108,20 +1110,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[facet_facet_models]]
-==  Models
-=== Facet
+===  Models
+==== Facet
 
 The facet model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Facet\Facet\Models`
 
@@ -1175,7 +1177,7 @@ The facet model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1191,12 +1193,12 @@ Returns this model as an array.
 
 
 
-=== FacetName
+==== FacetName
 
 The facet name model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Facet\Facet\Models`
 
@@ -1224,7 +1226,7 @@ The facet name model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1240,12 +1242,12 @@ Returns this model as an array.
 
 
 
-=== FacetValue
+==== FacetValue
 
 The facet value model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Facet\Facet\Models`
 
@@ -1288,7 +1290,7 @@ The facet value model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1304,12 +1306,12 @@ Returns this model as an array.
 
 
 
-=== FacetValueName
+==== FacetValueName
 
 The facet value name model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Facet\Facet\Models`
 
@@ -1337,7 +1339,7 @@ The facet value name model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1353,12 +1355,12 @@ Returns this model as an array.
 
 
 
-=== FacetValueReference
+==== FacetValueReference
 
 The facet value reference model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Facet\Facet\Models`
 
@@ -1402,7 +1404,7 @@ The facet value reference model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----

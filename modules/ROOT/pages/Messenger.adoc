@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[messenger_messenger]]
-= Messenger
+== Messenger
 
 [[messenger_messenger_contracts]]
-==  Contracts
-=== MessengerRepositoryContract
+===  Contracts
+==== MessengerRepositoryContract
 
 The MessengerRepositoryContract is the interface for the messenger repository. This interface defines methods to add and show/list messages.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Contracts`
 
@@ -21,7 +23,7 @@ The MessengerRepositoryContract is the interface for the messenger repository. T
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public add($data):Plenty\Modules\Messenger\Models\Message // <1>
 Creates a new message.
 
 
-==== Return type
+===== Return type
     
 <1> link:messenger#messenger_models_message[Message^]
 
@@ -62,7 +64,7 @@ public show($uuid):void // <1>
 Gets a message with all its successors.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -89,7 +91,7 @@ public list($uuid = null, $successors = true, $amount = self::DEFAULT_MESSAGES_A
 Lists messages. If no reference UUID5 is given, the method returns the $amount first messages. If $successor is set to FALSE, the messages older than the referenced message will be returned.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -124,7 +126,7 @@ public getMessages($page = self::DEFAULT_PAGE_OF_MESSAGES, $itemsPerPage = self:
 Lists messages.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -154,7 +156,7 @@ public updateReadBy($readBy, $uuid):void // <1>
 Updates the readBy array of the message.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -185,7 +187,7 @@ public updateTags($tags, $uuid):void // <1>
 Updates the tags of the message.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -216,7 +218,7 @@ public updateVisibility($data, $uuid):void // <1>
 Updates the visibility of the message. Attributes that are updated are Message.visibility, Message.linkedTo and Message.accessFor.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -247,7 +249,7 @@ public updateControls($data, $uuid):Plenty\Modules\Messenger\Models\Message // <
 Updates the message ui control options in the message meta data and returns the message.
 
 
-==== Return type
+===== Return type
     
 <1> link:messenger#messenger_models_message[Message^]
 
@@ -278,7 +280,7 @@ public setDone($doneAt = null, $uuid):void // <1>
 Sets the doneAt date in the message. If $doneAt is NULL, the doneAt date will be reset.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -309,7 +311,7 @@ public delete($uuid):int // <1>
 Deletes a message stream by the UUID. Returns the count of messages deleted.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -335,7 +337,7 @@ public getAttachment($uuid, $filename):Plenty\Modules\Messenger\Models\Attachmen
 Gets a message attachment.
 
 
-==== Return type
+===== Return type
     
 <1> link:messenger#messenger_models_attachment[Attachment^]
 
@@ -366,7 +368,7 @@ public updateMetaData($uuid, $metaData):Plenty\Modules\Messenger\Models\Message 
 Updates the meta data of the message.
 
 
-==== Return type
+===== Return type
     
 <1> link:messenger#messenger_models_message[Message^]
 
@@ -397,7 +399,7 @@ public getTotalEntries():int // <1>
 Returns total message entries
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -414,7 +416,7 @@ public setFilters($filters = []):void // <1>
 Sets the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -441,7 +443,7 @@ public getFilters():void // <1>
 Returns the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -459,7 +461,7 @@ public getConditions():void // <1>
 Returns a collection of parsed filters as Condition object
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -477,20 +479,20 @@ public clearFilters():void // <1>
 Clears the filter array.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[messenger_messenger_events]]
-==  Events
-=== MessageCreated
+===  Events
+==== MessageCreated
 
 The event is triggered after a new message was created.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Events`
 
@@ -499,7 +501,7 @@ The event is triggered after a new message was created.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -513,7 +515,7 @@ public isFirstMessage():bool // <1>
 If TRUE, the message is the first one. Otherwise, it is a reply message.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -530,20 +532,20 @@ public getMessage():Plenty\Modules\Messenger\Models\Message // <1>
 Get the message.
 
 
-==== Return type
+===== Return type
     
 <1> link:messenger#messenger_models_message[Message^]
 
     
 
 [[messenger_messenger_models]]
-==  Models
-=== Attachment
+===  Models
+==== Attachment
 
 The Attachment model of the messenger.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -576,7 +578,7 @@ The Attachment model of the messenger.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -592,12 +594,12 @@ Returns this model as an array.
 
 
 
-=== Message
+==== Message
 
 The Message model of the messenger.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -676,7 +678,7 @@ The Message model of the messenger.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -692,12 +694,12 @@ Returns this model as an array.
 
 
 
-=== MessageFrom
+==== MessageFrom
 
 The MessageFrom model of the messenger.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -724,7 +726,7 @@ and the id of the user or the contact otherwise.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -740,12 +742,12 @@ Returns this model as an array.
 
 
 
-=== MessageLinkedTo
+==== MessageLinkedTo
 
 The MessageLinkedTo model of the messenger.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -774,7 +776,7 @@ and an integer otherwise.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -790,12 +792,12 @@ Returns this model as an array.
 
 
 
-=== MessageMetaData
+==== MessageMetaData
 
 The MessageMetaData model of the messenger.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -831,7 +833,7 @@ The MessageMetaData model of the messenger.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -847,7 +849,7 @@ Returns this model as an array.
 
 
 
-=== MessageMetaDataControls
+==== MessageMetaDataControls
 
 The message controls model. Currently supported controls:
  * &lt;ul&gt;
@@ -863,7 +865,7 @@ The message controls model. Currently supported controls:
  * &lt;/ul&gt;
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -887,7 +889,7 @@ The message controls model. Currently supported controls:
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -903,12 +905,12 @@ Returns this model as an array.
 
 
 
-=== MessageMetaDataNotDone
+==== MessageMetaDataNotDone
 
 The MessageMetaDataNotDone model of the messenger.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -929,7 +931,7 @@ The MessageMetaDataNotDone model of the messenger.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -945,12 +947,12 @@ Returns this model as an array.
 
 
 
-=== MessageMetaDataTimeCapture
+==== MessageMetaDataTimeCapture
 
 The MessageMetaDataTimeCapture model of the messenger.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -971,7 +973,7 @@ The MessageMetaDataTimeCapture model of the messenger.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -987,12 +989,12 @@ Returns this model as an array.
 
 
 
-=== MessageMetaLink
+==== MessageMetaLink
 
 The MessageMetaLink model of the messenger.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -1034,7 +1036,7 @@ The MessageMetaLink model of the messenger.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1050,12 +1052,12 @@ Returns this model as an array.
 
 
 
-=== MessageReferrer
+==== MessageReferrer
 
 The MessageReferrer model of the messenger.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -1086,7 +1088,7 @@ the plugin namespace, the user name otherwise.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1102,12 +1104,12 @@ Returns this model as an array.
 
 
 
-=== MessageTo
+==== MessageTo
 
 The MessageTo model of the messenger.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -1134,7 +1136,7 @@ The MessageTo model of the messenger.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1150,13 +1152,13 @@ Returns this model as an array.
 
 
 [[messenger_messenger_services]]
-==  Services
-=== MessageTypesService
+===  Services
+==== MessageTypesService
 
 Types and type validation for several types in the messenger.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Services`
 
@@ -1165,7 +1167,7 @@ Types and type validation for several types in the messenger.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1179,7 +1181,7 @@ public static getValidLinkedToTypes():array // <1>
 Gets the valid types for &quot;linked to&quot; references.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1196,7 +1198,7 @@ public static isValidLinkedTo($linkType, $linkValue):bool // <1>
 Checks whether the given link is valid or not.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1227,7 +1229,7 @@ public static getValidFromTypes():array // <1>
 Gets the valid types for &quot;from&quot; references.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1244,7 +1246,7 @@ public static isValidFrom($fromType, $fromValue):bool // <1>
 Checks whether the given from is valid or not.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1275,7 +1277,7 @@ public static getValidReferrerTypes():array // <1>
 Gets the valid types for &quot;referrer&quot; references.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1292,7 +1294,7 @@ public static isValidReferrer($referrerType, $referrerValue, $referrerName = nul
 Checks whether the given referrer reference is valid or not.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1327,7 +1329,7 @@ public static getValidToTypes():array // <1>
 Gets the valid key types for the &#039;to&#039; array.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1344,7 +1346,7 @@ public static isValidTo($toKey):bool // <1>
 Checks whether the given key has a valid value for to.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1359,12 +1361,12 @@ a|`$toKey`
 
 
 
-=== MessagesSearchService
+==== MessagesSearchService
 
 Search service for the messenger.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Messenger\Services`
 
@@ -1373,7 +1375,7 @@ Search service for the messenger.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1387,7 +1389,7 @@ public find($uuid):Plenty\Modules\Messenger\Models\Message // <1>
 Gets the message with the given uuid.
 
 
-==== Return type
+===== Return type
     
 <1> link:messenger#messenger_models_message[Message^]
 
@@ -1414,7 +1416,7 @@ public findOrFail($uuid):Plenty\Modules\Messenger\Models\Message // <1>
 Gets the message with the given UUID.
 
 
-==== Return type
+===== Return type
     
 <1> link:messenger#messenger_models_message[Message^]
 
@@ -1441,7 +1443,7 @@ public findMany($uuid):array // <1>
 Gets a stream of messages. The given UUID can be the UUID of the first message in the stream or one of the replied messages.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1467,7 +1469,7 @@ public navigate($page = 1, $itemsPerPage = 50):array // <1>
 Lists the messages for the given navigation page.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1497,7 +1499,7 @@ public getTotalEntries():int // <1>
 Returns total entries
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -1514,7 +1516,7 @@ public toArray():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1531,7 +1533,7 @@ public process($data):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1557,7 +1559,7 @@ public getFilter():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1574,7 +1576,7 @@ public getPostFilter():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1591,7 +1593,7 @@ public getQuery():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1608,7 +1610,7 @@ public getAggregations():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1625,7 +1627,7 @@ public getSuggestions():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1642,7 +1644,7 @@ public getSources():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1660,7 +1662,7 @@ public addDependenciesToSource($sources):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1688,7 +1690,7 @@ public getName():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1706,7 +1708,7 @@ public setName($name):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1734,7 +1736,7 @@ public setIsSourceDisabled($isSourceDisabled):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1761,7 +1763,7 @@ public addFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_search[Search^]
 
@@ -1789,7 +1791,7 @@ public addPostFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_search[Search^]
 
@@ -1817,7 +1819,7 @@ public addQuery($query):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_search[Search^]
 
@@ -1845,7 +1847,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_search[Search^]
 
@@ -1873,7 +1875,7 @@ public setSorting($sorting):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_search[Search^]
 
@@ -1901,7 +1903,7 @@ public addAggregation($aggregation):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_search[Search^]
 
@@ -1929,7 +1931,7 @@ public addSuggestion($suggestion):Plenty\Modules\Cloud\ElasticSearch\Lib\Search 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_search[Search^]
 
@@ -1957,7 +1959,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_search[Search^]
 
@@ -1988,7 +1990,7 @@ public setPagination($pagination):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2016,7 +2018,7 @@ public setCollapse($collapse):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2044,7 +2046,7 @@ public setScoreModifier($scoreModifier):Plenty\Modules\Cloud\ElasticSearch\Lib\S
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_lib_search[Search^]
 
@@ -2072,7 +2074,7 @@ public setMaxResultWindow($maxResults = 10000):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2099,7 +2101,7 @@ public setIndex($index):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2127,7 +2129,7 @@ public isSearchAfter():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2145,7 +2147,7 @@ public getFilterRaw():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2163,7 +2165,7 @@ public getQueriesRaw():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2181,7 +2183,7 @@ public getAggregationsRaw():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2198,7 +2200,7 @@ public getSorting():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2216,7 +2218,7 @@ public getScoreModifier():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 

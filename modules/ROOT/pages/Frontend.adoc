@@ -1,18 +1,20 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+= Plentymarkets interface documentation
+
 
 [[frontend_frontend]]
-= Frontend
+== Frontend
 
 [[frontend_frontend_contracts]]
-==  Contracts
-=== Checkout
+===  Contracts
+==== Checkout
 
 The CheckoutContract is the interface for the checkout repository. This interface allows to set the shipping country ID, the payment method ID, the shipping profile ID and the currency in the checkout.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Contracts`
 
@@ -21,7 +23,7 @@ The CheckoutContract is the interface for the checkout repository. This interfac
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -35,7 +37,7 @@ public getShippingCountryId():int // <1>
 Gets the shipping country ID.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -52,7 +54,7 @@ public setShippingCountryId($shippingCountryId):void // <1>
 Updates the ID of the shipping country. The ID must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -79,7 +81,7 @@ public getPaymentMethodId():int // <1>
 Gets the payment method id of the current shopping cart.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -96,7 +98,7 @@ public setPaymentMethodId($paymentMethodId):void // <1>
 Updates the ID of the payment method. The ID must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -123,7 +125,7 @@ public getShippingProfileId():int // <1>
 Gets the shipping profile id of the current shopping cart.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -140,7 +142,7 @@ public setShippingProfileId($shippingProfileId):void // <1>
 Updates the ID of the shipping profile. The ID must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -167,7 +169,7 @@ public setCurrency($currency):void // <1>
 Updates the currency. The currency must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -194,7 +196,7 @@ public setBasketReferrerId($referrerId):void // <1>
 Updates the ID of the order referrer. The ID must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -221,7 +223,7 @@ public getCustomerInvoiceAddressId():int // <1>
 Gets the invoice address id of the current shopping cart.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -238,7 +240,7 @@ public setCustomerInvoiceAddressId($invoiceAddressId):void // <1>
 Sets the invoice address id for the current shopping cart.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -265,7 +267,7 @@ public getCustomerShippingAddressId():int // <1>
 Gets the shipping address id of the current shopping cart.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -282,7 +284,7 @@ public setCustomerShippingAddressId($shippingAddressId):void // <1>
 Sets the shipping address id for the current shopping cart.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -309,19 +311,19 @@ public validateCheckout():Plenty\Modules\Frontend\Events\ValidateCheckoutEvent /
 
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_events_validatecheckoutevent[ValidateCheckoutEvent^]
 
     
 
 
-=== CurrencyExchangeRepositoryContract
+==== CurrencyExchangeRepositoryContract
 
 The CurrencyExchangeRatioRepositoryContract is the interface for the currency exchange repository. This interface allows you to get the default system currency, to get exchange ratios for every currency and to convert an amount from the default currency into a given currency or from a given currency into the default currency.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Contracts`
 
@@ -330,7 +332,7 @@ The CurrencyExchangeRatioRepositoryContract is the interface for the currency ex
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -344,7 +346,7 @@ public getExchangeRatioByCurrency($currency):float // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/float[float^]
     
@@ -370,7 +372,7 @@ public getDefaultCurrency():string // <1>
 Get the default currency.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -387,7 +389,7 @@ public convertFromDefaultCurrency($currency, $amount, $exchangeRatio = 0.0):floa
 Converts the given value from the default currency to the given currency.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/float[float^]
     
@@ -421,7 +423,7 @@ public convertToDefaultCurrency($currency, $amount, $exchangeRatio = 0.0):float 
 Converts the given value to the default currency from the given currency.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/float[float^]
     
@@ -444,13 +446,13 @@ a|`$exchangeRatio`
 
 
 [[frontend_frontend_events]]
-==  Events
-=== FrontendCurrencyChanged
+===  Events
+==== FrontendCurrencyChanged
 
 The event is triggered when the currency is changed in the online store.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -459,7 +461,7 @@ The event is triggered when the currency is changed in the online store.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -473,7 +475,7 @@ public getCurrency():string // <1>
 Gets the currency.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -490,18 +492,18 @@ public getCurrencyExchangeRatio():float // <1>
 Gets the exchange rate used for converting the currency.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/float[float^]
     
 
 
-=== FrontendCustomerAddressChanged
+==== FrontendCustomerAddressChanged
 
 The event is triggered when a customer address is changed in the online store.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -510,12 +512,12 @@ The event is triggered when a customer address is changed in the online store.
 
 
 
-=== FrontendLanguageChanged
+==== FrontendLanguageChanged
 
 The event is triggered when the language is changed in the online store.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -524,7 +526,7 @@ The event is triggered when the language is changed in the online store.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -538,18 +540,18 @@ public getLanguage():string // <1>
 Gets the language of the online store.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
 
 
-=== FrontendPaymentMethodChanged
+==== FrontendPaymentMethodChanged
 
 The event is triggered when the payment method is changed in the online store.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -558,7 +560,7 @@ The event is triggered when the payment method is changed in the online store.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -572,7 +574,7 @@ public getPaymentMethodId():void // <1>
 Gets the ID of the payment method.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -590,7 +592,7 @@ public setPaymentMethodId($paymentMethodId):void // <1>
 Updates the ID of the payment method. The ID must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -607,12 +609,12 @@ a|`$paymentMethodId`
 
 
 
-=== FrontendReferrerChanged
+==== FrontendReferrerChanged
 
 The event is triggered when the referrer id  is changed in the online store.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -621,7 +623,7 @@ The event is triggered when the referrer id  is changed in the online store.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -635,7 +637,7 @@ public getReferrerId():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -653,7 +655,7 @@ public setReferrerId($referrerId):Plenty\Modules\Frontend\Events\FrontendReferre
 
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_events_frontendreferrerchanged[FrontendReferrerChanged^]
 
@@ -670,12 +672,12 @@ a|`$referrerId`
 
 
 
-=== FrontendShippingCountryChanged
+==== FrontendShippingCountryChanged
 
 The event is triggered when the shipping country is changed in the online store.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -684,7 +686,7 @@ The event is triggered when the shipping country is changed in the online store.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -698,7 +700,7 @@ public getShippingCountryId():int // <1>
 Gets the ID of the shipping country.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -715,7 +717,7 @@ public setShippingCountryId($shippingCountryId):Plenty\Modules\Frontend\Events\F
 Updates the ID of the shipping country. The ID must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_events_frontendshippingcountrychanged[FrontendShippingCountryChanged^]
 
@@ -731,12 +733,12 @@ a|`$shippingCountryId`
 
 
 
-=== FrontendShippingProfileChanged
+==== FrontendShippingProfileChanged
 
 The event is triggered when the shipping profile is changed in the online store.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -745,7 +747,7 @@ The event is triggered when the shipping profile is changed in the online store.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -759,7 +761,7 @@ public getShippingProfileId():void // <1>
 Gets the ID of the shipping profile.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -777,7 +779,7 @@ public setShippingProfileId($shippingProfileId):void // <1>
 Updates the ID of the shipping profile. The ID must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -794,12 +796,12 @@ a|`$shippingProfileId`
 
 
 
-=== FrontendUpdateDeliveryAddress
+==== FrontendUpdateDeliveryAddress
 
 The event is triggered when the delivery address is changed in the online store.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -808,7 +810,7 @@ The event is triggered when the delivery address is changed in the online store.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -822,18 +824,18 @@ public getAccountAddressId():int // <1>
 Gets the ID of the address saved for the account.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
 
 
-=== FrontendUpdateInvoiceAddress
+==== FrontendUpdateInvoiceAddress
 
 The event is triggered when the invoice address is changed in the online store.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -842,7 +844,7 @@ The event is triggered when the invoice address is changed in the online store.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -856,18 +858,18 @@ public getAccountAddressId():int // <1>
 Gets the ID of the address saved for the account.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
 
 
-=== FrontendUpdatePaymentSettings
+==== FrontendUpdatePaymentSettings
 
 The event is triggered when the payment method is changed in the online store.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -876,7 +878,7 @@ The event is triggered when the payment method is changed in the online store.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -890,18 +892,18 @@ public getPaymentMethodId():int // <1>
 Gets the ID of the payment method.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
 
 
-=== FrontendUpdateShippingSettings
+==== FrontendUpdateShippingSettings
 
 The event is triggered when the shipping method is updated in the online store.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -910,7 +912,7 @@ The event is triggered when the shipping method is updated in the online store.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -924,7 +926,7 @@ public getShippingCosts():float // <1>
 Gets the shipping costs.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/float[float^]
     
@@ -941,7 +943,7 @@ public getParcelServiceId():int // <1>
 Gets the ID of the shipping service provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -958,18 +960,18 @@ public getParcelServicePresetId():int // <1>
 Gets the preset ID of the shipping service provider.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
 
 
-=== ValidateCheckoutEvent
+==== ValidateCheckoutEvent
 
 validation event
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -978,7 +980,7 @@ validation event
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -992,7 +994,7 @@ public getErrorKeysList():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1009,7 +1011,7 @@ public addErrorKey($errorKey):Plenty\Modules\Frontend\Events // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_frontend_events[Events^]
 
@@ -1025,13 +1027,13 @@ a|`$errorKey`
 
 
 [[frontend_frontend_factories]]
-==  Factories
-=== FrontendFactory
+===  Factories
+==== FrontendFactory
 
 Frontend-Factory
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Factories`
 
@@ -1040,7 +1042,7 @@ Frontend-Factory
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1054,7 +1056,7 @@ public getLocale():Plenty\Modules\Frontend\Services\LocaleService // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_services_localeservice[LocaleService^]
 
@@ -1072,7 +1074,7 @@ public getAgent():Plenty\Modules\Frontend\Services\AgentService // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_services_agentservice[AgentService^]
 
@@ -1090,7 +1092,7 @@ public getSystem():Plenty\Modules\Frontend\Services\SystemService // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_services_systemservice[SystemService^]
 
@@ -1108,7 +1110,7 @@ public getAccount():Plenty\Modules\Frontend\Services\AccountService // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_services_accountservice[AccountService^]
 
@@ -1126,20 +1128,20 @@ public getFile():Plenty\Modules\Frontend\Services\FileService // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_services_fileservice[FileService^]
 
     
 
 [[frontend_frontend_models]]
-==  Models
-=== TotalVat
+===  Models
+==== TotalVat
 
 frontend total vat model
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Models`
 
@@ -1163,7 +1165,7 @@ frontend total vat model
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1179,13 +1181,13 @@ Returns this model as an array.
 
 
 [[frontend_frontend_services]]
-==  Services
-=== AccountService
+===  Services
+==== AccountService
 
 Frontend-service for customer information
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -1194,7 +1196,7 @@ Frontend-service for customer information
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1208,7 +1210,7 @@ public getIsAccountLoggedIn():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1225,18 +1227,18 @@ public getAccountContactId():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
 
 
-=== AgentService
+==== AgentService
 
 Frontend-Service for agent information
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -1245,7 +1247,7 @@ Frontend-Service for agent information
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1259,7 +1261,7 @@ public getLanguages():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1276,7 +1278,7 @@ public getBrowser():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1293,7 +1295,7 @@ public getPlatform():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1310,7 +1312,7 @@ public getDevice():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1327,7 +1329,7 @@ public getIsDesktop():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1344,7 +1346,7 @@ public getRobotName():string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1361,7 +1363,7 @@ public getIsRobot():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1378,7 +1380,7 @@ public getHttpHeaders():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1395,7 +1397,7 @@ public getIsMobile():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1412,18 +1414,18 @@ public getIsTablet():bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
 
 
-=== FileService
+==== FileService
 
 Frontend-service for file information
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -1432,7 +1434,7 @@ Frontend-service for file information
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -1446,7 +1448,7 @@ public addJsFile($jsFile):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1473,7 +1475,7 @@ public get($key):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1500,7 +1502,7 @@ public hasGetMutator($key):bool // <1>
 Determine if a get mutator exists for an attribute.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1526,7 +1528,7 @@ public setAttributes($attributes):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1554,7 +1556,7 @@ public setAttribute($key, $value):Plenty\Repositories\Models // <1>
 Set a given attribute on the model.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_repositories_models[Models^]
 
@@ -1586,7 +1588,7 @@ public hasSetMutator($key):bool // <1>
 Determine if a set mutator exists for an attribute.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1612,7 +1614,7 @@ public changeValue($key, $callback):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1643,7 +1645,7 @@ public offsetExists($offset):bool // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1670,7 +1672,7 @@ public offsetGet($offset):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1698,7 +1700,7 @@ public offsetSet($offset, $value):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1731,7 +1733,7 @@ public offsetUnset($offset):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1759,7 +1761,7 @@ public toArray($translate = false):array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1785,7 +1787,7 @@ public toJson($options):string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -1811,7 +1813,7 @@ public jsonSerialize():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1829,7 +1831,7 @@ public fill($attributes):Plenty\Repositories\Models // <1>
 Fill the model with an array of attributes.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_repositories_models[Models^]
 
@@ -1856,7 +1858,7 @@ public isFillable($key):bool // <1>
 Determine if the given attribute may be mass assigned.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1882,7 +1884,7 @@ public getFillable():array // <1>
 Get the fillable attributes for the model.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -1899,7 +1901,7 @@ public fillable($fillable):Plenty\Repositories\Models // <1>
 Set the fillable attributes for the model.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous_repositories_models[Models^]
 
@@ -1926,7 +1928,7 @@ public hasCast($key, $types = null):bool // <1>
 Determine whether an attribute should be cast to a native type.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -1957,7 +1959,7 @@ public fromJson($value, $asObject = false):void // <1>
 Decode the given JSON back into an array or object.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -1977,12 +1979,12 @@ a|`$asObject`
 
 
 
-=== LocaleService
+==== LocaleService
 
 frontend service for changing current language
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -1991,7 +1993,7 @@ frontend service for changing current language
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2005,7 +2007,7 @@ public setLanguage($newLanguage, $fireEvents = true):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2025,12 +2027,12 @@ a|`$fireEvents`
 
 
 
-=== OrderPropertyFileService
+==== OrderPropertyFileService
 
 Frontend-service for customer information
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -2039,7 +2041,7 @@ Frontend-service for customer information
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2053,7 +2055,7 @@ public uploadFile($fileData):string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2079,7 +2081,7 @@ public getFileURL($key):string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2105,7 +2107,7 @@ public getFile($key):Plenty\Modules\Cloud\Storage\Models\StorageObject // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:cloud#cloud_models_storageobject[StorageObject^]
 
@@ -2132,7 +2134,7 @@ public copyBasketFileToOrder($filename):string // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2158,7 +2160,7 @@ public deleteFile($filename):void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -2174,12 +2176,12 @@ a|`$filename`
 
 
 
-=== SystemService
+==== SystemService
 
 Frontend-service for system information
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -2188,7 +2190,7 @@ Frontend-service for system information
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2202,7 +2204,7 @@ public getPlentyId():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -2219,18 +2221,18 @@ public getWebstoreId():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
 
 
-=== VatService
+==== VatService
 
 Frontend-service for vat information
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -2239,7 +2241,7 @@ Frontend-service for vat information
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2253,7 +2255,7 @@ public getCountryVatId():int // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -2270,7 +2272,7 @@ public getCurrentTotalVats():array // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2287,7 +2289,7 @@ public getVat($taxIdNumber = &quot;&quot;):Plenty\Modules\Accounting\Vat\Models\
 
 
 
-==== Return type
+===== Return type
     
 <1> link:accounting#accounting_models_vat[Vat^]
 
@@ -2314,7 +2316,7 @@ public getLocationId($countryId = null):int // <1>
 Get the ID of the location
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/int[int^]
     
@@ -2329,16 +2331,16 @@ a|`$countryId`
 
 
 [[frontend_legalinformation]]
-= LegalInformation
+== LegalInformation
 
 [[frontend_legalinformation_contracts]]
-==  Contracts
-=== LegalInformationRepositoryContract
+===  Contracts
+==== LegalInformationRepositoryContract
 
 Repository contract for LegalInformation model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\LegalInformation\Contracts`
 
@@ -2347,7 +2349,7 @@ Repository contract for LegalInformation model.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2361,7 +2363,7 @@ public find($plentyId, $lang, $type):Plenty\Modules\Frontend\LegalInformation\Mo
 Get legal information of an online store
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_models_legalinformation[LegalInformation^]
 
@@ -2403,7 +2405,7 @@ public save($data, $plentyId, $lang, $type):Plenty\Modules\Frontend\LegalInforma
 Save legal information for an online store
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_models_legalinformation[LegalInformation^]
 
@@ -2438,13 +2440,13 @@ a|`$type`
 
 
 [[frontend_legalinformation_models]]
-==  Models
-=== LegalInformation
+===  Models
+==== LegalInformation
 
 The legal information model.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\LegalInformation\Models`
 
@@ -2481,7 +2483,7 @@ The legal information model.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2497,16 +2499,16 @@ Returns this model as an array.
 
 
 [[frontend_paymentmethod]]
-= PaymentMethod
+== PaymentMethod
 
 [[frontend_paymentmethod_contracts]]
-==  Contracts
-=== FrontendPaymentMethodRepositoryContract
+===  Contracts
+==== FrontendPaymentMethodRepositoryContract
 
 The FrontendPaymentMethodRepositoryContract is the interface for the front end payment method repository. Get the payment method information to be displayed in the online store.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\PaymentMethod\Contracts`
 
@@ -2515,7 +2517,7 @@ The FrontendPaymentMethodRepositoryContract is the interface for the front end p
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -2529,7 +2531,7 @@ public getCurrentPaymentMethodsList():array // <1>
 Lists all payment methods of the current customer session.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2546,7 +2548,7 @@ public getCurrentPaymentMethodsListForSwitch($currentPaymentMethodId, $orderId =
 Lists all payment methods for switch.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2580,7 +2582,7 @@ public getCurrentPaymentMethodsForExpressCheckout():array // <1>
 Lists all payment methods if express checkout is available
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/array[array^]
     
@@ -2597,7 +2599,7 @@ public getPaymentMethodName($paymentMethod, $lang):string // <1>
 Gets the name of the payment method in the specified language.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2628,7 +2630,7 @@ public getPaymentMethodFee($paymentMethod):float // <1>
 Gets additional costs for the payment method. Additional costs can be entered in the config.json.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/float[float^]
     
@@ -2655,7 +2657,7 @@ public getPaymentMethodIcon($paymentMethod, $lang):string // <1>
 Gets the icon of the payment method. The path of the icon can be entered in the config.json.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2686,7 +2688,7 @@ public getPaymentMethodDescription($paymentMethod, $lang):string // <1>
 Gets the description of the payment method. The description can be entered in the config.json.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2717,7 +2719,7 @@ public getPaymentMethodSourceUrl($paymentMethod):string // <1>
 Gets the detail link of the payment method. The detail link can be entered in the config.json.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2744,7 +2746,7 @@ public getIsSwitchableTo($paymentMethod):bool // <1>
 Gets the detail link of the payment method. The detail link can be entered in the config.json.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2771,7 +2773,7 @@ public getIsSwitchableFrom($paymentMethod):bool // <1>
 Gets the detail link of the payment method. The detail link can be entered in the config.json.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2798,7 +2800,7 @@ public getPaymentMethodIsSelectable($paymentMethod):bool // <1>
 Get true if the payment method can be selected in the payment method list
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2825,7 +2827,7 @@ public getPaymentMethodNameById($paymentMethodId, $lang):string // <1>
 Gets the name of the payment method by ID and language. The ID of the payment method and the language must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2855,7 +2857,7 @@ public getPaymentMethodFeeById($paymentMethodId):float // <1>
 Gets additional costs for the payment method by ID. The ID of the payment method must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/float[float^]
     
@@ -2881,7 +2883,7 @@ public getPaymentMethodIconById($paymentMethodId, $lang):string // <1>
 Gets the icon of the payment method by ID and language. The ID of the payment method and the language must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2911,7 +2913,7 @@ public getPaymentMethodDescriptionById($paymentMethodId, $lang):string // <1>
 Gets the description of the payment method by ID and language. The ID of the payment method and the language must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/string[string^]
     
@@ -2941,7 +2943,7 @@ public getPaymentMethodSwitchToById($paymentMethodId, $orderId = null):bool // <
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -2971,7 +2973,7 @@ public getPaymentMethodSwitchFromById($paymentMethodId, $orderId = null):bool //
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3001,7 +3003,7 @@ public getPaymentMethodSwitchableToById($paymentMethodId, $orderId = null):bool 
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3031,7 +3033,7 @@ public getPaymentMethodSwitchableFromById($paymentMethodId, $orderId = null):boo
 
 
 
-==== Return type
+===== Return type
     
 <1> link:http://php.net/bool[bool^]
     
@@ -3061,23 +3063,23 @@ public getAllowedPaymentMethodListForContact():void // <1>
 
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[frontend_session]]
-= Session
+== Session
 
 [[frontend_session_events]]
-==  Events
-=== AfterSessionCreate
+===  Events
+==== AfterSessionCreate
 
 The event is triggered after a session is created.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Session\Events`
 
@@ -3086,16 +3088,16 @@ The event is triggered after a session is created.
 
 
 [[frontend_storage]]
-= Storage
+== Storage
 
 [[frontend_storage_contracts]]
-==  Contracts
-=== FrontendSessionStorageFactoryContract
+===  Contracts
+==== FrontendSessionStorageFactoryContract
 
 The FrontendSessionStorageFactoryContract is the interface for the front end session storage repository. This interface allows to get information about the locale, the customer, the order, the plugin and the forum from the session.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Contracts`
 
@@ -3104,7 +3106,7 @@ The FrontendSessionStorageFactoryContract is the interface for the front end ses
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3118,7 +3120,7 @@ public getLocaleSettings():Plenty\Modules\Frontend\Session\Storage\Models\Locale
 Get the locale settings from the session storage.
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_models_localesettings[LocaleSettings^]
 
@@ -3136,7 +3138,7 @@ public getCustomer():Plenty\Modules\Frontend\Session\Storage\Models\Customer // 
 Get the customer data from the session storage.
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_models_customer[Customer^]
 
@@ -3154,7 +3156,7 @@ public getOrder():Plenty\Modules\Frontend\Session\Storage\Models\Order // <1>
 Get the order data from the session storage.
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_models_order[Order^]
 
@@ -3172,7 +3174,7 @@ public getPlugin():Plenty\Modules\Frontend\Session\Storage\Models\Plugin // <1>
 Get the plugin data from the session storage.
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_models_plugin[Plugin^]
 
@@ -3190,20 +3192,20 @@ public getForum():Plenty\Modules\Frontend\Session\Storage\Models\Forum // <1>
 Get the forum data from the session storage.
 
 
-==== Return type
+===== Return type
     
 <1> link:frontend#frontend_models_forum[Forum^]
 
     
 
 [[frontend_storage_models]]
-==  Models
-=== Customer
+===  Models
+==== Customer
 
 The session storage model for customer data.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
 
@@ -3242,7 +3244,7 @@ The session storage model for customer data.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3258,12 +3260,12 @@ Returns this model as an array.
 
 
 
-=== Forum
+==== Forum
 
 The session storage model for forum data.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
 
@@ -3293,7 +3295,7 @@ The session storage model for forum data.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3309,12 +3311,12 @@ Returns this model as an array.
 
 
 
-=== LocaleSettings
+==== LocaleSettings
 
 The session storage model for locale settings.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
 
@@ -3338,7 +3340,7 @@ The session storage model for locale settings.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3354,12 +3356,12 @@ Returns this model as an array.
 
 
 
-=== Order
+==== Order
 
 The session storage model for order data.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
 
@@ -3447,7 +3449,7 @@ The session storage model for order data.
 |===
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3463,12 +3465,12 @@ Returns this model as an array.
 
 
 
-=== Plugin
+==== Plugin
 
 The session storage model for plugins.
 
 
-==== Namespace
+===== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
 
@@ -3477,7 +3479,7 @@ The session storage model for plugins.
 
 
 
-==== Methods
+===== Methods
 
 [source%nowrap, php]
 ----
@@ -3491,7 +3493,7 @@ public setValue($key, $value):void // <1>
 Updates the value of a key. The key and the new value must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3523,7 +3525,7 @@ public getValue($key):void // <1>
 Gets a value for a key. The key must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
@@ -3550,7 +3552,7 @@ public unsetKey($key):void // <1>
 Unsets a key. The key must be specified.
 
 
-==== Return type
+===== Return type
     
 <1> link:miscellaneous#miscellaneous__void[void^]
 
