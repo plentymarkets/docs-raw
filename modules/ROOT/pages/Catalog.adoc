@@ -14,6 +14,7 @@
 The CatalogContentRepositoryContract is the interface for the catalogue content repository. This interface allows to read and update a catalogue&#039;s content. The content contains the specific catalogue data that is used in the exports.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
@@ -87,6 +88,7 @@ a|`$data`
 To be written
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
@@ -134,6 +136,7 @@ a|`$config`
 ==== CatalogExportRepositoryContract
 
 The CatalogExportRepositoryContract is the interface for the catalogue export repository. It allows to receive an instance of CatalogExportServiceContract to export a specific catalogue.
+
 
 
 ===== Namespace
@@ -247,6 +250,7 @@ a|`$token`
 ==== CatalogExportServiceContract
 
 The CatalogExportServiceContract is the interface for the catalogue export service. It allows you to configure and start the export of a catalogue.
+
 
 
 ===== Namespace
@@ -484,6 +488,7 @@ public getPreview():void // <1>
 ==== CatalogRepositoryContract
 
 The CatalogRepositoryContract is the interface for the catalogue repository. It allows you to create, read, update and delete catalogues.
+
 
 
 ===== Namespace
@@ -1070,6 +1075,7 @@ Clears the filter array.
 To be written
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
@@ -1167,6 +1173,7 @@ Removes all the data that was previously added to this instance
 To be written
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
@@ -1252,6 +1259,7 @@ a|`$catalog`
 To be written
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
@@ -1319,6 +1327,7 @@ Returns a class name through which the export result can be converted into the n
 ==== CatalogTemplateProviderContract
 
 The CatalogTemplateProviderContract is the interface that has to be implemented by the catalogue template providers. Each registered template should have a catalogue template provider (multiple templates can use the same one) to avoid booting them if they are not necessary. A catalogue template provider fills a template with data at the moment the template gets booted. Whenever it is possible, use the abstract class Plenty\Modules\Catalog\Templates\BaseTemplateProvider.
+
 
 
 ===== Namespace
@@ -1457,6 +1466,7 @@ Returns an array of meta information which can be used to forward information to
 The DataProviderContract is the interface for data providers. Data providers provide the available fields that can be mapped in a template to create a catalogue. Whenever it is possible, use one of the concrete implementations Plenty\Modules\Catalog\DataProviders\BaseDataProvider, Plenty\Modules\Catalog\DataProviders\KeyDataProvider or Plenty\Modules\Catalog\DataProviders\NestedKeyDataProvider.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
@@ -1553,6 +1563,7 @@ a|`$mapping`
 ==== FieldGroupRepositoryContract
 
 The FieldGroupRepositoryContract is the contract for the field group repository. It allows to retrieve fields of a field group. Field groups represent the different groups of available sources that can be seen in the data picker component in the catalogue UI. Each field represents a mappable source.
+
 
 
 ===== Namespace
@@ -1703,6 +1714,7 @@ a|`$itemsPerPage`
 ==== NestedDataProviderContract
 
 The NestedDataProviderContract is the interface for nested data providers. Nested data providers are used to provide nested options that can be selected for export. E.g. a list of categories of a specific marketplace. Whenever it is possible, use the concrete implementation Plenty\Modules\Catalog\DataProviders\NestedKeyDataProvider.
+
 
 
 ===== Namespace
@@ -1863,6 +1875,7 @@ a|`$mapping`
 The TemplateContainerContract is the interface of the template container. The template container is a singleton, which allows to register and retrieve templates.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
@@ -1988,6 +2001,7 @@ a|`$identifier`
 ==== TemplateContract
 
 The TemplateContract is the interface for templates. Templates are used to define a specific schema that can be used to create and configure a catalogue.
+
 
 
 ===== Namespace
@@ -2661,6 +2675,7 @@ public jsonSerialize():void // <1>
 The TemplateRepositoryContract is the interface for the template repository. It allows to retrieve templates and their mappings.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
@@ -2903,6 +2918,7 @@ a|`$id`
 The BaseDataProvider is used to define a section of simple mappings in the catalogue. A simple mapping refers to the assignment of a value in the plentymarkets system or a manually predefined value to a specific key. E.g. mapping the value of a specific text property to the key &#039;description&#039;.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Catalog\DataProviders`
@@ -2990,6 +3006,7 @@ a|`$mapping`
 ==== KeyDataProvider
 
 The KeyDataProvider is used to define a section of a complex mapping in the catalogue. A complex mapping refers to the assignment of a value from a predefined list of possible values to a key if a specific requirement is met. E.g. put the value &#039;awesomeBrand&#039; into the key &#039;brand&#039;, if manufacturer &#039;awesomeManufacturer&#039; is linked to a variation.
+
 
 
 ===== Namespace
@@ -3096,6 +3113,7 @@ a|`$mapping`
 ==== NestedKeyDataProvider
 
 The NestedKeyDataProvider is used to define a section of a complex mapping in the catalogue. It is specifically used if the list of available values contains nested values. E.g. a list of categories with sub-categories.
+
 
 
 ===== Namespace
@@ -3310,6 +3328,7 @@ a|`$id`
 Provides a list of valid content types that can be returned in a CatalogResultConverter
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Catalog\Helpers`
@@ -3352,6 +3371,7 @@ a|`$type`
 ==== Catalog
 
 The catalog model - stores on S3
+
 
 
 ===== Namespace
@@ -3417,6 +3437,7 @@ Returns this model as an array.
 The CatalogExportResult represents the exported data in a specific catalogue export. It implements the Iterator interface and can therefore be used in a foreach loop to retrieve the different pages of the export data.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Catalog\Models`
@@ -3446,6 +3467,7 @@ Returns this model as an array.
 ==== BaseTemplateProvider
 
 The BaseTemplateProvider is the abstract class that should be used to implement a template provider.
+
 
 
 ===== Namespace
@@ -3582,6 +3604,7 @@ Returns an array of meta information which can be used to forward information to
 ==== Template
 
 Templates are used to define a schema for the creation of catalogues.
+
 
 
 ===== Namespace

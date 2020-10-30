@@ -14,6 +14,7 @@
 The repository to get, create, update and delete accounting locations.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Accounting\Contracts`
@@ -246,6 +247,7 @@ a|`$data`
 Provides methods to detect a location ID.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Accounting\Contracts`
@@ -383,6 +385,7 @@ a|`$countryId`
 The DebtorAccountRepositoryContract is the interface for the DebtorAccountRepository. This interface allows you to either list debtor accounts by locationId or by locationId and mode. The mode describes the criteria that is used to assign pending amounts to debtor accounts.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Accounting\Contracts`
@@ -463,6 +466,7 @@ The modes are described in detail in the DebtorAccountConfiguration model as wel
 ==== DetermineShopCountryContract
 
 This interface provides methods to initialise the country of a location or the country of an order as well as methods to get the ID of a client, the plenty ID of a client, the country or the ID of country.
+
 
 
 ===== Namespace
@@ -749,6 +753,7 @@ a|`$locationId`
 The PostingKeyRepositoryContract is the interface for the PostingKeyRepository. This interface provides the functionality to find the posting keys for an accounting location.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Accounting\Contracts`
@@ -791,6 +796,7 @@ a|`$locationId`
 ==== RevenueAccountRepositoryContract
 
 The RevenueAccountRepositoryContract is the interface for the RevenueAccountRepository. This interface allows you to either list revenue accounts by locationId, find by locationId and countryId or to least all for an accounting location.
+
 
 
 ===== Namespace
@@ -900,6 +906,7 @@ a|`$countryId`
 Class AccountingException
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Accounting\Exceptions`
@@ -913,6 +920,7 @@ Class AccountingException
 ==== AccountingLocation
 
 The accounting location model. An accounting location always has a country and belongs to a client. An accounting location contains the VAT configurations. The VAT model contains the VAT configuration.
+
 
 
 ===== Namespace
@@ -977,6 +985,7 @@ Returns this model as an array.
 The accounting location settings model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Accounting\Models`
@@ -1032,6 +1041,7 @@ Returns this model as an array.
 ==== DebtorAccount
 
 The DebtorAccountValue Model which contains the actual configured debtor accounts by character, payment and country.
+
 
 
 ===== Namespace
@@ -1096,6 +1106,7 @@ Returns this model as an array.
 ==== DebtorAccountConfiguration
 
 The debtor account configuration model. The configuration is a set of debtor accounts. The actual number of debtor accounts within the configuration depends on the mode used to assign pending amounts to debtor accounts.
+
 
 
 ===== Namespace
@@ -1167,6 +1178,7 @@ Returns this model as an array.
 The Posting Key Model. A posting key is always associated with an accounting location and holds an posting key for each configured vat rate.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Accounting\Models`
@@ -1207,6 +1219,7 @@ Returns this model as an array.
 ==== PostingKeyConfiguration
 
 The posting key configuration model. A posting key configuration is a set of 4 posting keys. A posting key configuration is always associated with an accounting location and can have a posting key per VAT rate. A posting key defines how line items are booked to accounts.
+
 
 
 ===== Namespace
@@ -1256,6 +1269,7 @@ Returns this model as an array.
 The revenue account model provides information on a single revenue account. The ID of an account matches the ID of a VAT rate.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Accounting\Models`
@@ -1296,6 +1310,7 @@ Returns this model as an array.
 ==== RevenueAccountCountryConfiguration
 
 The revenue account country configuration model. The revenue account country configuration is a set of up to 4 revenue accounts for one country. Each country that you need to pay VAT in needs a configuration. The 4 revenue account included in the configuration are associated with VAT rates. The VAT rate that one revenue account is associated with can be identified by the ID of the VAT rate. The ID of the VAT rate is included in the account name. Furthermore, each revenue account country configuration is part of a revenue account location configuration. A revenue account country configuration is only available if a VAT configuration for the country exists.
+
 
 
 ===== Namespace
@@ -1352,6 +1367,7 @@ Returns this model as an array.
 The revenue account location configuration model. A revenue account location configuration is the set of all revenue accounts that belong to one accounting location.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Accounting\Models`
@@ -1406,6 +1422,7 @@ Returns this model as an array.
 ==== VatInitContract
 
 This interface provides methods to initialise the detection of a VAT configuration and to actually detect VAT rates or VAT fields.
+
 
 
 ===== Namespace
@@ -1636,6 +1653,7 @@ a|`$startedAt`
 ==== VatRepositoryContract
 
 The VatRepositoryContract is the interface for the VAT functionality. This interface allows you to get the VAT configuration for an accounting location and a country of delivery.
+
 
 
 ===== Namespace
@@ -2091,6 +2109,7 @@ Clears the filter array.
 Provides methods for a quick search of VAT fields, VAT rates and VAT names of a specific VAT configuration.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Accounting\Vat\Contracts`
@@ -2202,6 +2221,7 @@ a|`$vatField`
 Class VatException
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Accounting\Vat\Exceptions`
@@ -2215,6 +2235,7 @@ Class VatException
 ==== Vat
 
 The VAT model contains the complete VAT configuration in plentymarkets. The VAT configuration is based on 4 VAT rates. A VAT configuration always belongs to an accounting location. The accounting location is in a specified country and is assigned to a client. One accounting location can have several VAT configurations, but only one is active at a time. Which one is active depends on the startedAt date. This also means that only one VAT number is active per accounting location.
+
 
 
 ===== Namespace
@@ -2299,6 +2320,7 @@ Returns this model as an array.
 ==== VatRate
 
 The VAT rate model is always associated with a VAT configuration and contains the ID, name and percentage of a VAT rate. Each VAT configuration can have 4 rates.
+
 
 
 ===== Namespace

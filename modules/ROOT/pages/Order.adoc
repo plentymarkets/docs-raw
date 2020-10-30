@@ -14,6 +14,7 @@
 This interface allows you to get and create coupon codes.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Coupon\Campaign\Code\Contracts`
@@ -149,6 +150,7 @@ a|`$disabled`
 The CouponCodeRepositoryContract is the interface for the coupon code repository. This interface allows you to redeem coupons.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Coupon\Code\Contracts`
@@ -195,6 +197,7 @@ a|`$coupon`
 ==== CouponCampaignCode
 
 The CouponCampaignCode model contains information about coupon codes. Each code belongs to one campaign only.
+
 
 
 ===== Namespace
@@ -282,6 +285,7 @@ Returns this model as an array.
 Model that holds gift card codes.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Coupon\Campaign\Code\Order\Models`
@@ -337,6 +341,7 @@ Returns this model as an array.
 ==== CouponCodeOrder
 
 The CouponCodeOrder model.
+
 
 
 ===== Namespace
@@ -398,6 +403,7 @@ Returns this model as an array.
 ==== Order
 
 The order model.
+
 
 
 ===== Namespace
@@ -650,6 +656,7 @@ Returns this model as an array.
 The order amount model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Models`
@@ -749,6 +756,7 @@ Returns this model as an array.
 The order amount vat model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Models`
@@ -819,6 +827,7 @@ Returns this model as an array.
 ==== OrderItem
 
 The order item model. Items, shipping costs, coupons, surcharges etc. are all displayed as order items.
+
 
 
 ===== Namespace
@@ -1014,6 +1023,7 @@ Returns this model as an array.
 The order item amount model. Order item amount refers to amounts of money.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Models`
@@ -1101,6 +1111,7 @@ Returns this model as an array.
 This model contains the order properties that are assigned to order items.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Models`
@@ -1153,6 +1164,7 @@ Returns this model as an array.
 ==== OrderItemTransactionSums
 
 The order item transaction sums model.
+
 
 
 ===== Namespace
@@ -1224,6 +1236,7 @@ Returns this model as an array.
 The order item type model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Models`
@@ -1286,6 +1299,7 @@ Returns this model as an array.
 The order item type name model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Models`
@@ -1337,6 +1351,7 @@ Returns this model as an array.
 
 &lt;b&gt;DEPRECATED&lt;/b&gt; The order item warehouse location model. Order item warehouse locations
  *                                             refer to the location of an order item, in a specific warehouse.
+
 
 
 ===== Namespace
@@ -1394,6 +1409,7 @@ Returns this model as an array.
 ==== OrderPaymentTerms
 
 The order payment terms model.
+
 
 
 ===== Namespace
@@ -1462,6 +1478,7 @@ Returns this model as an array.
 The order reference model. Each OrderReference has an origin order (the most top order) and a referenced order (&#039;parent&#039; or &#039;reorder&#039;).
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Models`
@@ -1523,6 +1540,7 @@ Returns this model as an array.
 ==== OrderTransactionSums
 
 The order transaction sums model.
+
 
 
 ===== Namespace
@@ -1597,6 +1615,7 @@ Returns this model as an array.
 The order type model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Models`
@@ -1644,6 +1663,7 @@ Returns this model as an array.
 ==== OrderTypeName
 
 The order type name model.
+
 
 
 ===== Namespace
@@ -1696,6 +1716,7 @@ Returns this model as an array.
 ==== PriceCalculationResultItem
 
 price calculation result item
+
 
 
 ===== Namespace
@@ -1754,6 +1775,7 @@ Returns this model as an array.
 ==== OrderAmountRepositoryContract
 
 This interface allows you to get and list order amounts and their vats.
+
 
 
 ===== Namespace
@@ -1855,6 +1877,7 @@ a|`$orderId`
 ==== OrderItemRepositoryContract
 
 The OrderItemRepositoryContract is the interface for the order item repository. This interface allows you to find, create and update order items. An order item can be e.g. items, surcharges and coupons. Each order item is given a unique id, which links it to a specific order.
+
 
 
 ===== Namespace
@@ -2093,6 +2116,7 @@ Applies criteria classes to the current repository.
 ==== OrderRepositoryContract
 
 The OrderRepositoryContract is the interface for the order repository. This interface allows you to find, create and update orders. There are many different order types and the data returned depends on the order type.
+
 
 
 ===== Namespace
@@ -2812,6 +2836,7 @@ An event class fired after a new order is created. The order type is not relevan
  * 	At the same time also type depended events will be fired, like ReturnsCreated or CreditNoteCreated.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Events`
@@ -2873,6 +2898,7 @@ Get the order instance.
 ==== OrderEvent
 
 A base event class for all order events. Each order event expects an order instance.
+
 
 
 ===== Namespace
@@ -2938,6 +2964,7 @@ Get the order instance.
 An Event class fired after a payment assignment when the order is fully paid.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Events`
@@ -2999,6 +3026,7 @@ Get the order instance.
 ==== OrderOverpaid
 
 An event class will be fired after a payment is assigned and if the order is overpaid.
+
 
 
 ===== Namespace
@@ -3064,6 +3092,7 @@ Get the order instance.
 A base Event class for all order paid events.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Events`
@@ -3125,6 +3154,7 @@ Get the order instance.
 ==== OrderPartlyPaid
 
 An Event class fired after a payment is assigned and if the order is only partly paid.
+
 
 
 ===== Namespace
@@ -3190,6 +3220,7 @@ Get the order instance.
 An Event class fired after a payment was assigned to an order.
  * After this event one of the following events will be fired, depending the payment status of the order:
  *	 OrderPrepaid, OrderPartlyPaid, OrderFullyPaid, OrderOverpaid.
+
 
 
 ===== Namespace
@@ -3278,6 +3309,7 @@ Get the order instance.
 An Event class fired after a payment is assigned and if the order is paid in advance.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Events`
@@ -3342,6 +3374,7 @@ An event class fired after a new order for a subscription is created. The order 
  * 	At the same time also type depended events will be fired, like ReturnsCreated or CreditNoteCreated.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Events`
@@ -3404,6 +3437,7 @@ Get the order instance.
 ==== OrderDuplicateException
 
 Exception when duplicate order is created.
+
 
 
 ===== Namespace
@@ -3550,6 +3584,7 @@ public getTraceAsString():void // <1>
 This class is used as an event listener as well as a service for registering events. The class allows to register event classes to extend the OrderCreated event for custom order types.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Services`
@@ -3659,6 +3694,7 @@ a|`$className`
 ==== CouponCampaignRepositoryContract
 
 This is the contract for the coupon campaign repository. It allows you to get coupon campaigns.
+
 
 
 ===== Namespace
@@ -3903,6 +3939,7 @@ a|`$data`
 The CouponCampaign model contains all information of a campaign.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Coupon\Campaign\Models`
@@ -4048,6 +4085,7 @@ Returns this model as an array.
 This is the contract for the coupon campaign reference repository. It allows you to get and create coupon campaigns references.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Coupon\Campaign\Reference\Contracts`
@@ -4120,6 +4158,7 @@ a|`$data`
 The CouponCampaignReference model contains all information of a campaign reference.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Coupon\Campaign\Reference\Models`
@@ -4174,6 +4213,7 @@ Returns this model as an array.
 ==== CouponCodeContactRepositoryContract
 
 This is the contract for the coupon codes by contacts repository. It allows you to list coupon codes redeemed by a contact as well as to create, update and delete redeemed coupon codes.
+
 
 
 ===== Namespace
@@ -4400,6 +4440,7 @@ a|`$itemsPerPage`
 The CouponCodeContact model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Coupon\Code\Contact\Models`
@@ -4462,6 +4503,7 @@ Returns this model as an array.
 CouponCodeValidatorContract is the interface for the coupon code validation repository. This interface provides the functionality to validate coupon data.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Coupon\Code\Validation\Contracts`
@@ -4506,6 +4548,7 @@ a|`$validationData`
 ==== CouponCodeValidation
 
 The CouponCodeValidation data model contains all data necessary for validating a coupon.
+
 
 
 ===== Namespace
@@ -4599,6 +4642,7 @@ Returns this model as an array.
 The CouponCodeValidationItem model contains all item data needed for validating whether the coupon can be redeemed for these items or not.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Coupon\Code\Validation\Models`
@@ -4657,6 +4701,7 @@ Returns this model as an array.
 Provides methods for currency conversion data.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Currency\Contracts`
@@ -4689,6 +4734,7 @@ Gets the currency conversion setting.
 ==== CurrencyRepositoryContract
 
 Provides methods for currency data.
+
 
 
 ===== Namespace
@@ -4920,6 +4966,7 @@ a|`$currencyIso`
 The currency model. The model includes information like the ISO 4217 code and the related currency symbols as well as the countries that a currency is used in.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Currency\Models`
@@ -4982,6 +5029,7 @@ Returns this model as an array.
 The CurrencyCountryRelation model indicates which currency is related to which country.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Currency\Models`
@@ -5035,6 +5083,7 @@ Returns this model as an array.
 The currency exchange rate model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Currency\Models`
@@ -5072,6 +5121,7 @@ Returns this model as an array.
 ==== CurrencyName
 
 The currency name model.
+
 
 
 ===== Namespace
@@ -5128,6 +5178,7 @@ Returns this model as an array.
 ==== Export
 
 The export model for IDEA exports.
+
 
 
 ===== Namespace
@@ -5204,6 +5255,7 @@ Returns this model as an array.
 Repository Contract for PaymentMethod
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Payment\Method\Contracts`
@@ -5254,6 +5306,7 @@ a|`$lang`
 ==== PaymentMethod
 
 The payment method model
+
 
 
 ===== Namespace
@@ -5353,6 +5406,7 @@ Returns this model as an array.
 The payment method information model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Payment\Method\Models`
@@ -5415,6 +5469,7 @@ Returns this model as an array.
 ==== OrderPdfGenerationEvent
 
 OrderPdfGenerationEvent
+
 
 
 ===== Namespace
@@ -5498,6 +5553,7 @@ a|`$orderPdfGeneration`
 OrderPdfGeneration Model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Pdf\Models`
@@ -5557,6 +5613,7 @@ Returns this model as an array.
 ==== OrderReferrerRepositoryContract
 
 Provides methods for processing order referrers. An order referrer indicates where a purchase was made originally. 
+
 
 
 ===== Namespace
@@ -5759,6 +5816,7 @@ Applies criteria classes to the current repository.
 The order referrer model. An order referrer shows where a purchase was originally made.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Referrer\Models`
@@ -5822,6 +5880,7 @@ Returns this model as an array.
 ==== OrderScheduler
 
 The legacy order model
+
 
 
 ===== Namespace
@@ -5901,6 +5960,7 @@ Returns this model as an array.
 List serial numbers for orders
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\SerialNumber\Contracts`
@@ -5973,6 +6033,7 @@ a|`$orderItemId`
 The order serial number model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\SerialNumber\Models`
@@ -6027,6 +6088,7 @@ Returns this model as an array.
 ==== EUCountryCodesServiceContract
 
 The EUCountryCodesServiceContract
+
 
 
 ===== Namespace
@@ -6204,6 +6266,7 @@ a|`$merchandCountryId`
 ==== ParcelServicePresetRepositoryContract
 
 The ParcelServicePresetRepositoryContract is the interface for the shipping profile repository. This interface allows to get a shipping profile by the ID or list all shipping profiles.
+
 
 
 ===== Namespace
@@ -6588,6 +6651,7 @@ An event class fired after the shipping calculation is done. Listeners can add f
  * The shipping provider type name is mandatory. The ID of the order is optional.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\Events`
@@ -6763,6 +6827,7 @@ a|`$shippingProfileId`
 The Default Shipping model is used to define the standard referrer, the standard shipping region and the payment methods. 
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\Models`
@@ -6822,6 +6887,7 @@ Returns this model as an array.
 ==== CountryRepositoryContract
 
 Repository for Country
+
 
 
 ===== Namespace
@@ -7090,6 +7156,7 @@ a|`$countryId`
 The country model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\Countries\Models`
@@ -7159,6 +7226,7 @@ Returns this model as an array.
 country name
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\Countries\Models`
@@ -7202,6 +7270,7 @@ Returns this model as an array.
 ==== CountryState
 
 country state
+
 
 
 ===== Namespace
@@ -7259,6 +7328,7 @@ Returns this model as an array.
 The ExportDocumentsContract
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\ExportDocuments\Contracts`
@@ -7302,6 +7372,7 @@ a|`$orderId`
 ==== ExportDocument
 
 The Export Document model
+
 
 
 ===== Namespace
@@ -7354,6 +7425,7 @@ Returns this model as an array.
 ==== ShippingInformationRepositoryContract
 
 The ShippingInformationRepositoryContract is the interface for the shipping information repository. This interface allows to get shipping information by order ID, create new shipping information or update shipping information.
+
 
 
 ===== Namespace
@@ -7543,6 +7615,7 @@ a|`$orderId`
 ShippingInformationModel
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\Information\Models`
@@ -7605,6 +7678,7 @@ Returns this model as an array.
 ==== OrderShippingPackageItemsRepositoryContract
 
 Create and get items in packages from order
+
 
 
 ===== Namespace
@@ -7966,6 +8040,7 @@ a|`$variationId`
 Create, get, update and delete order shipping packages.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\Package\Contracts`
@@ -8208,6 +8283,7 @@ a|`$data`
 The order shipping package model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\Package\Models`
@@ -8334,6 +8410,7 @@ Returns this model as an array.
 The relation between package, item and variation model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\Package\Models`
@@ -8387,6 +8464,7 @@ Returns this model as an array.
 ==== ShippingPackageTypeRepositoryContract
 
 The ShippingPackageTypeRepositoryContract is the interface for the shipping package type repository. This interface allows to list all shipping package types or to get a shipping package type by the ID.
+
 
 
 ===== Namespace
@@ -8449,6 +8527,7 @@ Lists shipping packages types.
 ==== ShippingPackageType
 
 The shipping package type model.
+
 
 
 ===== Namespace
@@ -8516,6 +8595,7 @@ Returns this model as an array.
 ==== OrderShippingPalletRepositoryContract
 
 Create, get, update and delete order shipping pallet.
+
 
 
 ===== Namespace
@@ -8825,6 +8905,7 @@ Clears the filter array.
 The order shipping pallet model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\Pallet\Models`
@@ -8893,6 +8974,7 @@ Returns this model as an array.
 ==== ParcelServiceConstraintRepositoryContract
 
 The ParcelServiceConstraintRepositoryContract is the interface for the parcel service constraint type repository.
+
 
 
 ===== Namespace
@@ -8997,6 +9079,7 @@ a|`$id`
 The Parcel Service Model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelService\Models`
@@ -9062,6 +9145,7 @@ Returns this model as an array.
 The Parcel Service Constraint Model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelService\Models`
@@ -9116,6 +9200,7 @@ Returns this model as an array.
 The Parcel Service Name Model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelService\Models`
@@ -9159,6 +9244,7 @@ Returns this model as an array.
 ==== ParcelServicePreset
 
 The Parcel Service Preset Model
+
 
 
 ===== Namespace
@@ -9298,6 +9384,7 @@ Returns this model as an array.
 The Parcel Service Preset Name Model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelService\Models`
@@ -9345,6 +9432,7 @@ Returns this model as an array.
 ==== ParcelServiceRegionNameRepositoryContract
 
 Get parcel service region name
+
 
 
 ===== Namespace
@@ -9406,6 +9494,7 @@ Return all the regions
 ==== ParcelServiceRegionRepositoryContract
 
 Get parcel service region
+
 
 
 ===== Namespace
@@ -9541,6 +9630,7 @@ a|`$columns`
 The parcel service region model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelServiceRegion\Models`
@@ -9592,6 +9682,7 @@ Returns this model as an array.
 The parcel service region name model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelServiceRegion\Models`
@@ -9636,6 +9727,7 @@ Returns this model as an array.
 ==== ReturnsRepositoryContract
 
 The ReturnsRepositoryContract is the interface for the order returns repository. This interface allows to register, assign to order and list order returns.
+
 
 
 ===== Namespace
@@ -9785,6 +9877,7 @@ a|`$itemsPerPage`
 ==== ReturnsServiceProviderRepositoryContract
 
 The ReturnsServiceProviderRepositoryContract is the interface for the returns service provider repository. This interface allows to list returns service providers.
+
 
 
 ===== Namespace
@@ -9975,6 +10068,7 @@ public pluginList():void // <1>
 ==== FailedRegisterOrderReturns
 
 The FailedRegisterOrderReturns model.
+
 
 
 ===== Namespace
@@ -10591,6 +10685,7 @@ a|`$asObject`
 The model for OrderReturns
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Models`
@@ -10654,6 +10749,7 @@ Returns this model as an array.
 ==== RegisterOrderReturnsResponse
 
 The RegisterOrderReturnsResponse model.
+
 
 
 ===== Namespace
@@ -11244,6 +11340,7 @@ a|`$asObject`
 The model for RegisterReturnsResult
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Models`
@@ -11284,6 +11381,7 @@ Returns this model as an array.
 ==== ReturnsServiceProvider
 
 ReturnsServiceProvider
+
 
 
 ===== Namespace
@@ -11337,6 +11435,7 @@ Returns this model as an array.
 ==== SuccessfullyRegisteredOrderReturns
 
 The model for SuccessfullyRegisteredOrderReturns
+
 
 
 ===== Namespace
@@ -12061,6 +12160,7 @@ a|`$asObject`
 The RegisterReturnsService class offers the possibility to register returns, get returns label and persist returns label.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Services`
@@ -12166,6 +12266,7 @@ a|`$orderReturns`
 ==== ReturnsServiceProviderService
 
 The ReturnsServiceProviderService class offers the possibility to register a returns service provider class and method that can be called by plentymarkets returns controllers.
+
 
 
 ===== Namespace
@@ -12282,6 +12383,7 @@ a|`$methodName`
 ==== ReturnsServiceProviderEntry
 
 The returns provider entry contains all information needed to use module returns in plentymarkets returns .
+
 
 
 ===== Namespace
@@ -12475,6 +12577,7 @@ public getUseParentOrderId():bool // <1>
 The shipping provider entry contains all information needed to use module shipping in plentymarkets shipping .
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\ServiceProvider\Services\Entries`
@@ -12654,6 +12757,7 @@ a|`$methodName`
 The ShippingServiceProviderPluginRepositoryContract is the interface for the shipping service provider plugin repository. This interface allows to list shipping service provider plugins.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\ServiceProvider\Contracts`
@@ -12714,6 +12818,7 @@ a|`$filter`
 ==== ShippingServiceProviderRepositoryContract
 
 The ShippingServiceProviderRepositoryContract is the interface for the shipping service provider repository. This interface allows to list shipping service providers.
+
 
 
 ===== Namespace
@@ -12900,6 +13005,7 @@ Applies criteria classes to the current repository.
 ==== FailedRegisterShipment
 
 FailedRegisterShipment model.
+
 
 
 ===== Namespace
@@ -13516,6 +13622,7 @@ a|`$asObject`
 RegisterShipmentResponse model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\ServiceProvider\Models`
@@ -14104,6 +14211,7 @@ a|`$asObject`
 The service provider model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\ServiceProvider\Models`
@@ -14158,6 +14266,7 @@ Returns this model as an array.
 ==== SuccessfullyRegisteredShipment
 
 SuccessfullyRegisteredShipment model.
+
 
 
 ===== Namespace
@@ -14802,6 +14911,7 @@ a|`$asObject`
 The ShippingServiceProviderService class offers the possibility to register a shipping provider class and method that can be called by plentymarkets shipping controllers.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Shipping\ServiceProvider\Services`
@@ -14887,6 +14997,7 @@ a|`$methodName`
 ==== OrderAddressRepositoryContract
 
 The OrderAddressRepositoryContract is the interface for the order address repository. This interface allows you to get, create, update and delete addresses of an order.
+
 
 
 ===== Namespace
@@ -15348,6 +15459,7 @@ a|`$typeId`
 Book orders, order items and order item transactions.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Booking\Contracts`
@@ -15463,6 +15575,7 @@ a|`$deliveryNoteNumber`
 The order booking model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Booking\Models`
@@ -15507,6 +15620,7 @@ Returns this model as an array.
 ==== ContactWishRepositoryContract
 
 This interface allows you to get and create contact wishes.
+
 
 
 ===== Namespace
@@ -15585,6 +15699,7 @@ a|`$text`
 The contact wish model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\ContactWish\Models`
@@ -15626,6 +15741,7 @@ Returns this model as an array.
 ==== OrderDateRepositoryContract
 
 The OrderDateRepositoryContract contains the functionality to find available OrderDateTypes with their names in a specific language. Furthermore it is possible to create new OrderDateTypes, to update or delete existing date types and to create date type names for a language.
+
 
 
 ===== Namespace
@@ -15957,6 +16073,7 @@ a|`$orderId`
 The OrderItemDateRepositoryContract contains the functionality to get, create, update and delete OrderItemDate instances.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Date\Contracts`
@@ -16271,6 +16388,7 @@ a|`$orderItemId`
 The OrderDate model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Date\Models`
@@ -16351,6 +16469,7 @@ Returns this model as an array.
 The OrderDateType model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Date\Models`
@@ -16421,6 +16540,7 @@ Returns this model as an array.
 The OrderDateTypeName model. Order date types can have several names. One name per language. Each name has a unique ID.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Date\Models`
@@ -16485,6 +16605,7 @@ Returns this model as an array.
 ==== OrderItemDate
 
 The OrderItemDate model.
+
 
 
 ===== Namespace
@@ -16573,6 +16694,7 @@ Returns this model as an array.
 ==== DeliveryOrderRepositoryContract
 
 The DeliveryOrderRepositoryContract is the interface for the delivery order repository. This interface allows you to create, update or delete delivery orders. A delivery order will be created according to a parent order and can either be created manually or automatically.
+
 
 
 ===== Namespace
@@ -16796,6 +16918,7 @@ a|`$data`
 Get document accounting summaries.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Documents\Contracts`
@@ -16923,6 +17046,7 @@ Clears the filter array.
 ==== OrderDocumentStorageContract
 
 Provides methods to store, get and delete order document files. The files are stored on an AWS S3 storage by default. The implementation for this contract can be replaced by your own implementation.
+
 
 
 ===== Namespace
@@ -17056,6 +17180,7 @@ a|`$path`
 An event class fired after an order is canceled.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Events\Canceled`
@@ -17117,6 +17242,7 @@ Get the order instance.
 ==== BeforeOrderCanceled
 
 An event class fired before an order will be canceled.
+
 
 
 ===== Namespace
@@ -17181,6 +17307,7 @@ Get the order instance.
 ==== OrderStatusChanged
 
 An event class fired after the status of an order has changed.
+
 
 
 ===== Namespace
@@ -17268,6 +17395,7 @@ Get the order instance.
 An event class fired after a new credit note is created.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Events\Created`
@@ -17329,6 +17457,7 @@ Get the order instance.
 ==== DeliveryOrderCreated
 
 An event class fired after a new delivery order is created.
+
 
 
 ===== Namespace
@@ -17394,6 +17523,7 @@ Get the order instance.
 An event class fired after a new multi credit note is created.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Events\Created`
@@ -17455,6 +17585,7 @@ Get the order instance.
 ==== MultiOrderCreated
 
 An event class fired after a new multi order is created.
+
 
 
 ===== Namespace
@@ -17520,6 +17651,7 @@ Get the order instance.
 An event class fired after a new repair is created.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Events\Created`
@@ -17581,6 +17713,7 @@ Get the order instance.
 ==== ReturnCreated
 
 An event class fired after a new returns is created.
+
 
 
 ===== Namespace
@@ -17646,6 +17779,7 @@ Get the order instance.
 An event class fired after a new sales order is created.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Events\Created`
@@ -17707,6 +17841,7 @@ Get the order instance.
 ==== WarrantyCreated
 
 An event class fired after a new warranty is created.
+
 
 
 ===== Namespace
@@ -17776,6 +17911,7 @@ Get the order instance.
 Contract for injections on create.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Injection\Contracts`
@@ -17817,6 +17953,7 @@ a|`$data`
 ==== OrderInjectionOnUpdateContract
 
 Contract for injections on update.
+
 
 
 ===== Namespace
@@ -17865,6 +18002,7 @@ a|`$data`
 ==== OrderInjectionServiceContract
 
 Service to register injections for order creation.
+
 
 
 ===== Namespace
@@ -18113,6 +18251,7 @@ a|`$order`
 The legacy order model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Models\Legacy`
@@ -18197,6 +18336,7 @@ Returns this model as an array.
 ==== OrderItemPropertyRepositoryContract
 
 The OrderItemPropertyRepositoryContract contains the functionality to find, create, update and delete OrderItemProperty instances.
+
 
 
 ===== Namespace
@@ -18512,6 +18652,7 @@ a|`$orderItemId`
 The OrderPropertyRepositoryContract contains the functionality to get, list, create, update and delete  OrderPropertyTypes and OrderProperties as well as OrderProperties. Order properties contain information that are additional to an order. Each property has a type and each type can have several names, but only one name per language. An order can only have one property of each property type.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Property\Contracts`
@@ -18788,6 +18929,7 @@ a|`$id`
 The order item property model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Property\Models`
@@ -18886,6 +19028,7 @@ Returns this model as an array.
 The order properties model. Each order property has a type.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Property\Models`
@@ -18981,6 +19124,7 @@ Returns this model as an array.
 The OrderPropertyType model. Each order property must have a property type. An order can have one property of each property type. The default property types provided by plentymarkets are listed here.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Property\Models`
@@ -19039,6 +19183,7 @@ Returns this model as an array.
 The order property type name model. Each order property type can have one name per language.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Property\Models`
@@ -19093,6 +19238,7 @@ Returns this model as an array.
 ==== RedistributionRepositoryContract
 
 Create and update redistributions.
+
 
 
 ===== Namespace
@@ -19256,6 +19402,7 @@ a|`$data`
 ==== OrderRelationReferenceRepositoryContract
 
 Get, create, update and delete order relation references.
+
 
 
 ===== Namespace
@@ -19591,6 +19738,7 @@ a|`$relation`
 The order relation reference model specifies how references and orders are related to one another.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\RelationReference\Models`
@@ -19675,6 +19823,7 @@ Returns this model as an array.
 ==== ReorderRepositoryContract
 
 Create and update reorders.
+
 
 
 ===== Namespace
@@ -19894,6 +20043,7 @@ a|`$orderId`
 Use this interface to retrieve order return reasons.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\ReturnReason\Contracts`
@@ -19956,6 +20106,7 @@ a|`$id`
 The return reason model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\ReturnReason\Models`
@@ -20002,9 +20153,13 @@ Returns this model as an array.
 ...
 
 [warning]
-.Deprecated! ====
-This class will not be supported in the future. Please refrain from using it as soon as possible.
+.Deprecated! 
 ====
+
+This class will not be supported in the future. Please refrain from using it as soon as possible.
+
+====
+
 
 ===== Namespace
 
@@ -20142,6 +20297,7 @@ public execute():array // <1>
 ==== OrderStatusRepositoryContract
 
 The OrderStatusRepositoryContract is the interface for the order status repository. This interface allows you to get a single order status or to list order statuses as well as to create, update or delete.
+
 
 
 ===== Namespace
@@ -20404,6 +20560,7 @@ Clears the filter array.
 The order status model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\Status\Models`
@@ -20472,6 +20629,7 @@ Returns this model as an array.
 ==== StatusHistoryRepositoryContract
 
 This interface allows you to get the status history of an order and to list the status histories of all orders.
+
 
 
 ===== Namespace
@@ -20675,6 +20833,7 @@ Clears the filter array.
 The status history entry model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\StatusHistory\Models`
@@ -20732,6 +20891,7 @@ Returns this model as an array.
 ==== SubscriptionOrderRepositoryContract
 
 The SubscriptionOrderRepositoryContract allows you to find subscriptions, that due either today or on any given date, so that corresponding orders are created for them.
+
 
 
 ===== Namespace
@@ -20827,6 +20987,7 @@ a|`$skipNextRun`
 ==== TaricVatAssignmentRepositoryContract
 
 The TaricVatAssignmentRepositoryContract contains the functionality to get, list, create, update, and delete the taricVatAssignment. Taric identifiers contain information that are necessary to determine the exact vat rate. Taric codes are linked in a variation. A taric vat assignment can only have one entry of each taric code / country ID combination.
+
 
 
 ===== Namespace
@@ -21110,6 +21271,7 @@ Clears the filter array.
 The taric vat assignment model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\TaricVatAssignment\Models`
@@ -21170,6 +21332,7 @@ Returns this model as an array.
 The taric code use model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Order\TaricVatAssignment\Models`
@@ -21214,6 +21377,7 @@ Returns this model as an array.
 ==== OrderItemTransactionRepositoryContract
 
 List and create order item transactions.
+
 
 
 ===== Namespace
@@ -21546,6 +21710,7 @@ Clears the filter array.
 ==== OrderItemTransaction
 
 The order item transaction model.
+
 
 
 ===== Namespace

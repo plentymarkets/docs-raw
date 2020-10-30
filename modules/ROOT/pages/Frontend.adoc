@@ -14,6 +14,7 @@
 The CheckoutContract is the interface for the checkout repository. This interface allows to set the shipping country ID, the payment method ID, the shipping profile ID and the currency in the checkout.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Contracts`
@@ -323,6 +324,7 @@ public validateCheckout():Plenty\Modules\Frontend\Events\ValidateCheckoutEvent /
 The CurrencyExchangeRatioRepositoryContract is the interface for the currency exchange repository. This interface allows you to get the default system currency, to get exchange ratios for every currency and to convert an amount from the default currency into a given currency or from a given currency into the default currency.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Contracts`
@@ -452,6 +454,7 @@ a|`$exchangeRatio`
 The event is triggered when the currency is changed in the online store.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Events`
@@ -503,6 +506,7 @@ Gets the exchange rate used for converting the currency.
 The event is triggered when a customer address is changed in the online store.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Events`
@@ -515,6 +519,7 @@ The event is triggered when a customer address is changed in the online store.
 ==== FrontendLanguageChanged
 
 The event is triggered when the language is changed in the online store.
+
 
 
 ===== Namespace
@@ -549,6 +554,7 @@ Gets the language of the online store.
 ==== FrontendPaymentMethodChanged
 
 The event is triggered when the payment method is changed in the online store.
+
 
 
 ===== Namespace
@@ -614,6 +620,7 @@ a|`$paymentMethodId`
 The event is triggered when the referrer id  is changed in the online store.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Events`
@@ -677,6 +684,7 @@ a|`$referrerId`
 The event is triggered when the shipping country is changed in the online store.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Events`
@@ -736,6 +744,7 @@ a|`$shippingCountryId`
 ==== FrontendShippingProfileChanged
 
 The event is triggered when the shipping profile is changed in the online store.
+
 
 
 ===== Namespace
@@ -801,6 +810,7 @@ a|`$shippingProfileId`
 The event is triggered when the delivery address is changed in the online store.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Events`
@@ -833,6 +843,7 @@ Gets the ID of the address saved for the account.
 ==== FrontendUpdateInvoiceAddress
 
 The event is triggered when the invoice address is changed in the online store.
+
 
 
 ===== Namespace
@@ -869,6 +880,7 @@ Gets the ID of the address saved for the account.
 The event is triggered when the payment method is changed in the online store.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Events`
@@ -901,6 +913,7 @@ Gets the ID of the payment method.
 ==== FrontendUpdateShippingSettings
 
 The event is triggered when the shipping method is updated in the online store.
+
 
 
 ===== Namespace
@@ -971,6 +984,7 @@ Gets the preset ID of the shipping service provider.
 validation event
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Events`
@@ -1031,6 +1045,7 @@ a|`$errorKey`
 ==== FrontendFactory
 
 Frontend-Factory
+
 
 
 ===== Namespace
@@ -1141,6 +1156,7 @@ public getFile():Plenty\Modules\Frontend\Services\FileService // <1>
 frontend total vat model
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Models`
@@ -1185,6 +1201,7 @@ Returns this model as an array.
 ==== AccountService
 
 Frontend-service for customer information
+
 
 
 ===== Namespace
@@ -1236,6 +1253,7 @@ public getAccountContactId():int // <1>
 ==== AgentService
 
 Frontend-Service for agent information
+
 
 
 ===== Namespace
@@ -1423,6 +1441,7 @@ public getIsTablet():bool // <1>
 ==== FileService
 
 Frontend-service for file information
+
 
 
 ===== Namespace
@@ -1984,6 +2003,7 @@ a|`$asObject`
 frontend service for changing current language
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Services`
@@ -2030,6 +2050,7 @@ a|`$fireEvents`
 ==== OrderPropertyFileService
 
 Frontend-service for customer information
+
 
 
 ===== Namespace
@@ -2181,6 +2202,7 @@ a|`$filename`
 Frontend-service for system information
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Services`
@@ -2230,6 +2252,7 @@ public getWebstoreId():int // <1>
 ==== VatService
 
 Frontend-service for vat information
+
 
 
 ===== Namespace
@@ -2340,6 +2363,7 @@ a|`$countryId`
 Repository contract for LegalInformation model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\LegalInformation\Contracts`
@@ -2446,6 +2470,7 @@ a|`$type`
 The legal information model.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\LegalInformation\Models`
@@ -2506,6 +2531,7 @@ Returns this model as an array.
 ==== FrontendPaymentMethodRepositoryContract
 
 The FrontendPaymentMethodRepositoryContract is the interface for the front end payment method repository. Get the payment method information to be displayed in the online store.
+
 
 
 ===== Namespace
@@ -3079,6 +3105,7 @@ public getAllowedPaymentMethodListForContact():void // <1>
 The event is triggered after a session is created.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Session\Events`
@@ -3095,6 +3122,7 @@ The event is triggered after a session is created.
 ==== FrontendSessionStorageFactoryContract
 
 The FrontendSessionStorageFactoryContract is the interface for the front end session storage repository. This interface allows to get information about the locale, the customer, the order, the plugin and the forum from the session.
+
 
 
 ===== Namespace
@@ -3205,6 +3233,7 @@ Get the forum data from the session storage.
 The session storage model for customer data.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
@@ -3265,6 +3294,7 @@ Returns this model as an array.
 The session storage model for forum data.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
@@ -3316,6 +3346,7 @@ Returns this model as an array.
 The session storage model for locale settings.
 
 
+
 ===== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
@@ -3359,6 +3390,7 @@ Returns this model as an array.
 ==== Order
 
 The session storage model for order data.
+
 
 
 ===== Namespace
@@ -3468,6 +3500,7 @@ Returns this model as an array.
 ==== Plugin
 
 The session storage model for plugins.
+
 
 
 ===== Namespace
