@@ -6,12 +6,14 @@ on:
 
 jobs:
   publish:
-    runs-on: self-hosted
+    runs-on: ubuntu-latest
     
-    steps:      
+    steps:
+      - uses: actions/checkout@v2
+            
       - name: Rebuild site
         run: |
           curl -X POST https://api.github.com/repos/plentymarkets/plenty-developers-docs/dispatches \
           -H 'Accept: application/vnd.github.v3+json' \
-          -u ${{ secrets.PLENTY_ACTION_TOKEN }} \
+          -u 'plentymarkets:'${{ secrets.PLENTY_ACTION_TOKEN }} \
           --data '{"event_type": "ContentSourceUpdate", "client_payload": { "repository": "'"$GITHUB_REPOSITORY"'" }}'
