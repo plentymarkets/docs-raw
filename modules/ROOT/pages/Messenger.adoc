@@ -42,8 +42,7 @@ Creates a new message.
 
 ===== Return type
     
-<1> link:messenger#messenger_models_message[Message^]
-
+<1>         xref:messenger.adoc#messenger_models_message[Message]
     
 
 .*Parameters*
@@ -69,8 +68,7 @@ Gets a message with all its successors.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 .*Parameters*
@@ -161,8 +159,7 @@ Updates the readBy array of the message.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 .*Parameters*
@@ -192,8 +189,7 @@ Updates the tags of the message.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 .*Parameters*
@@ -223,8 +219,7 @@ Updates the visibility of the message. Attributes that are updated are Message.v
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 .*Parameters*
@@ -254,8 +249,7 @@ Updates the message ui control options in the message meta data and returns the 
 
 ===== Return type
     
-<1> link:messenger#messenger_models_message[Message^]
-
+<1>         xref:messenger.adoc#messenger_models_message[Message]
     
 
 .*Parameters*
@@ -285,8 +279,7 @@ Sets the doneAt date in the message. If $doneAt is NULL, the doneAt date will be
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 .*Parameters*
@@ -342,8 +335,7 @@ Gets a message attachment.
 
 ===== Return type
     
-<1> link:messenger#messenger_models_attachment[Attachment^]
-
+<1>         xref:messenger.adoc#messenger_models_attachment[Attachment]
     
 
 .*Parameters*
@@ -373,8 +365,7 @@ Updates the meta data of the message.
 
 ===== Return type
     
-<1> link:messenger#messenger_models_message[Message^]
-
+<1>         xref:messenger.adoc#messenger_models_message[Message]
     
 
 .*Parameters*
@@ -421,8 +412,7 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 .*Parameters*
@@ -448,8 +438,7 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 [source%nowrap, php]
@@ -466,8 +455,7 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 [source%nowrap, php]
@@ -484,8 +472,7 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 [[messenger_messenger_events]]
@@ -539,8 +526,7 @@ Get the message.
 
 ===== Return type
     
-<1> link:messenger#messenger_models_message[Message^]
-
+<1>         xref:messenger.adoc#messenger_models_message[Message]
     
 
 [[messenger_messenger_models]]
@@ -632,12 +618,10 @@ The Message model of the messenger.
 |link:http://php.net/array[array^]
     |linkedTo
     |An array with MessageLinkedTo instances
-|link:messenger#messenger_models_messagefrom[MessageFrom^]
-
+|        xref:messenger.adoc#messenger_models_messagefrom[MessageFrom]
     |from
     |The sender of the message as MessageFrom instance.
-|link:messenger#messenger_models_messageto[MessageTo^]
-
+|        xref:messenger.adoc#messenger_models_messageto[MessageTo]
     |to
     |The user and role IDs and emails receiving the message
 |link:http://php.net/bool[bool^]
@@ -658,12 +642,10 @@ The Message model of the messenger.
 |link:http://php.net/int[int^]
     |attachedFilesCount
     |The amount of attached files (readonly)
-|link:messenger#messenger_models_messagereferrer[MessageReferrer^]
-
+|        xref:messenger.adoc#messenger_models_messagereferrer[MessageReferrer]
     |referrer
     |The message referrer
-|link:messenger#messenger_models_messagemetadata[MessageMetaData^]
-
+|        xref:messenger.adoc#messenger_models_messagemetadata[MessageMetaData]
     |metaData
     |The meta data of the message
 |link:http://php.net/string[string^]
@@ -726,8 +708,7 @@ The MessageFrom model of the messenger.
     |type
     |The type of the from instance (one of {@link MessageTypesService::FROM_TYPE_USER},
 {@link MessageTypesService::FROM_TYPE_CONTACT} and {@link MessageTypesService::FROM_TYPE_EMAIL})
-|link:miscellaneous#miscellaneous__[^]
-
+|
     |value
     |The value of the instance. For type {@link MessageTypesService::FROM_TYPE_EMAIL} it is a string (the email)
 and the id of the user or the contact otherwise.
@@ -777,13 +758,11 @@ The MessageLinkedTo model of the messenger.
     |The type of the link (one of {@link MessageTypesService::LINKED_TO_TYPE_MESSAGE},
 {@link MessageTypesService::LINKED_TO_TYPE_ORDER}, {@link MessageTypesService::LINKED_TO_TYPE_CONTACT}
 and {@link MessageTypesService::LINKED_TO_TYPE_PAYMENT})
-|link:miscellaneous#miscellaneous__[^]
-
+|
     |value
     |The value of the link. For type {@link MessageTypesService::LINKED_TO_TYPE_MESSAGE} it is a string (uuid5)
 and an integer otherwise.
-|link:miscellaneous#miscellaneous__[^]
-
+|
     |typeId
     |This can be the ID of a sub-type (e.g. the order subTypeId). (optional)
 |===
@@ -830,16 +809,13 @@ The MessageMetaData model of the messenger.
 |link:http://php.net/array[array^]
     |links
     |Array with links
-|link:messenger#messenger_models_messagemetadatanotdone[MessageMetaDataNotDone^]
-
+|        xref:messenger.adoc#messenger_models_messagemetadatanotdone[MessageMetaDataNotDone]
     |notDoneByBackend
     |deactivates the toggle button in the messenger ui (backend) also has optional tooltips (reason for the deactivated toggle)
-|link:messenger#messenger_models_messagemetadatacontrols[MessageMetaDataControls^]
-
+|        xref:messenger.adoc#messenger_models_messagemetadatacontrols[MessageMetaDataControls]
     |controls
     |An object with control options for the ui.
-|link:messenger#messenger_models_messagemetadatatimecapture[MessageMetaDataTimeCapture^]
-
+|        xref:messenger.adoc#messenger_models_messagemetadatatimecapture[MessageMetaDataTimeCapture]
     |timeCapture
     |An object of the message time capture data
 |link:http://php.net/int[int^]
@@ -1099,8 +1075,7 @@ The MessageReferrer model of the messenger.
     |The type of the from instance (one of {@link MessageTypesService::REFERRER_TYPE_SYSTEM},
 {@link MessageTypesService::REFERRER_TYPE_BACKEND}, {@link MessageTypesService::REFERRER_TYPE_REST}
 and {@link MessageTypesService::REFERRER_TYPE_PLUGIN})
-|link:miscellaneous#miscellaneous__[^]
-
+|
     |value
     |The value of the instance. It is an integer (the user id) for type
 {@link MessageTypesService::REFERRER_TYPE_SYSTEM}, {@link MessageTypesService::REFERRER_TYPE_BACKEND}
@@ -1239,8 +1214,7 @@ Checks whether the given link is valid or not.
 a|`$linkType`
 |The link type
 
-|link:miscellaneous#miscellaneous__[^]
-
+|
 a|`$linkValue`
 |The link value
 |===
@@ -1287,8 +1261,7 @@ Checks whether the given from is valid or not.
 a|`$fromType`
 |The from type
 
-|link:miscellaneous#miscellaneous__[^]
-
+|
 a|`$fromValue`
 |The from value
 |===
@@ -1335,8 +1308,7 @@ Checks whether the given referrer reference is valid or not.
 a|`$referrerType`
 |The reference to be checked
 
-|link:miscellaneous#miscellaneous__[^]
-
+|
 a|`$referrerValue`
 |The value of the reference
 
@@ -1422,8 +1394,7 @@ Gets the message with the given uuid.
 
 ===== Return type
     
-<1> link:messenger#messenger_models_message[Message^]
-
+<1>         xref:messenger.adoc#messenger_models_message[Message]
     
 
 .*Parameters*
@@ -1449,8 +1420,7 @@ Gets the message with the given UUID.
 
 ===== Return type
     
-<1> link:messenger#messenger_models_message[Message^]
-
+<1>         xref:messenger.adoc#messenger_models_message[Message]
     
 
 .*Parameters*
@@ -1677,8 +1647,7 @@ public getSources():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 [source%nowrap, php]
@@ -1695,15 +1664,13 @@ public addDependenciesToSource($sources):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
-
+|
 a|`$sources`
 |
 |===
@@ -1723,8 +1690,7 @@ public getName():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 [source%nowrap, php]
@@ -1741,15 +1707,13 @@ public setName($name):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
-
+|
 a|`$name`
 |
 |===
@@ -1769,8 +1733,7 @@ public setIsSourceDisabled($isSourceDisabled):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 .*Parameters*
@@ -1796,15 +1759,13 @@ public addFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
 
 ===== Return type
     
-<1> link:cloud#cloud_lib_search[Search^]
-
+<1>         xref:cloud.adoc#cloud_lib_search[Search]
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_type_typeinterface[TypeInterface^]
-
+|        xref:cloud.adoc#cloud_type_typeinterface[TypeInterface]
 a|`$filter`
 |
 |===
@@ -1824,15 +1785,13 @@ public addPostFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <
 
 ===== Return type
     
-<1> link:cloud#cloud_lib_search[Search^]
-
+<1>         xref:cloud.adoc#cloud_lib_search[Search]
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_type_typeinterface[TypeInterface^]
-
+|        xref:cloud.adoc#cloud_type_typeinterface[TypeInterface]
 a|`$filter`
 |
 |===
@@ -1852,15 +1811,13 @@ public addQuery($query):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
 
 ===== Return type
     
-<1> link:cloud#cloud_lib_search[Search^]
-
+<1>         xref:cloud.adoc#cloud_lib_search[Search]
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_type_typeinterface[TypeInterface^]
-
+|        xref:cloud.adoc#cloud_type_typeinterface[TypeInterface]
 a|`$query`
 |
 |===
@@ -1880,15 +1837,13 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
 
 ===== Return type
     
-<1> link:cloud#cloud_lib_search[Search^]
-
+<1>         xref:cloud.adoc#cloud_lib_search[Search]
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_source_sourceinterface[SourceInterface^]
-
+|        xref:cloud.adoc#cloud_source_sourceinterface[SourceInterface]
 a|`$source`
 |
 |===
@@ -1908,15 +1863,13 @@ public setSorting($sorting):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
 
 ===== Return type
     
-<1> link:cloud#cloud_lib_search[Search^]
-
+<1>         xref:cloud.adoc#cloud_lib_search[Search]
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_sorting_sortinginterface[SortingInterface^]
-
+|        xref:cloud.adoc#cloud_sorting_sortinginterface[SortingInterface]
 a|`$sorting`
 |
 |===
@@ -1936,15 +1889,13 @@ public addAggregation($aggregation):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 ===== Return type
     
-<1> link:cloud#cloud_lib_search[Search^]
-
+<1>         xref:cloud.adoc#cloud_lib_search[Search]
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
-
+|        xref:cloud.adoc#cloud_aggregation_aggregationinterface[AggregationInterface]
 a|`$aggregation`
 |
 |===
@@ -1964,15 +1915,13 @@ public addSuggestion($suggestion):Plenty\Modules\Cloud\ElasticSearch\Lib\Search 
 
 ===== Return type
     
-<1> link:cloud#cloud_lib_search[Search^]
-
+<1>         xref:cloud.adoc#cloud_lib_search[Search]
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_suggestion_suggestioninterface[SuggestionInterface^]
-
+|        xref:cloud.adoc#cloud_suggestion_suggestioninterface[SuggestionInterface]
 a|`$suggestion`
 |
 |===
@@ -1992,8 +1941,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 ===== Return type
     
-<1> link:cloud#cloud_lib_search[Search^]
-
+<1>         xref:cloud.adoc#cloud_lib_search[Search]
     
 
 .*Parameters*
@@ -2023,15 +1971,13 @@ public setPagination($pagination):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
-
+|
 a|`$pagination`
 |
 |===
@@ -2051,15 +1997,13 @@ public setCollapse($collapse):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_collapse_collapseinterface[CollapseInterface^]
-
+|        xref:cloud.adoc#cloud_collapse_collapseinterface[CollapseInterface]
 a|`$collapse`
 |
 |===
@@ -2079,15 +2023,13 @@ public setScoreModifier($scoreModifier):Plenty\Modules\Cloud\ElasticSearch\Lib\S
 
 ===== Return type
     
-<1> link:cloud#cloud_lib_search[Search^]
-
+<1>         xref:cloud.adoc#cloud_lib_search[Search]
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_scoremodifier_scoremodifierinterface[ScoreModifierInterface^]
-
+|        xref:cloud.adoc#cloud_scoremodifier_scoremodifierinterface[ScoreModifierInterface]
 a|`$scoreModifier`
 |
 |===
@@ -2107,8 +2049,7 @@ public setMaxResultWindow($maxResults = 10000):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 .*Parameters*
@@ -2134,15 +2075,13 @@ public setIndex($index):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
-
+|
 a|`$index`
 |
 |===
@@ -2162,8 +2101,7 @@ public isSearchAfter():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 [source%nowrap, php]
@@ -2180,8 +2118,7 @@ public getFilterRaw():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 [source%nowrap, php]
@@ -2198,8 +2135,7 @@ public getQueriesRaw():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 [source%nowrap, php]
@@ -2233,8 +2169,7 @@ public getSorting():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
 [source%nowrap, php]
@@ -2251,7 +2186,6 @@ public getScoreModifier():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
-
+<1> 
     
 
