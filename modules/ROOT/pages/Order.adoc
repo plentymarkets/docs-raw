@@ -42,7 +42,7 @@ Gets a coupon code. The code string must be specified.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_couponcampaigncode[CouponCampaignCode]
+<1>         xref:Order.adoc#order_models_couponcampaigncode[CouponCampaignCode]
     
 
 .*Parameters*
@@ -102,7 +102,7 @@ Creates a coupon code.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_couponcampaigncode[CouponCampaignCode]
+<1>         xref:Order.adoc#order_models_couponcampaigncode[CouponCampaignCode]
     
 
 .*Parameters*
@@ -236,22 +236,22 @@ The CouponCampaignCode model contains information about coupon codes. Each code 
 |link:http://php.net/float[float^]
     |usedAmount
     |The amount that is already redeemed. The total amount that can be redeemed is defined in the campaign as coupon value, because the value applies to all codes of a campaign.
-|        xref:miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
     |generatedAt
     |The date and time that the code was generated
-|        xref:miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
     |lastUsedAt
     |The date and time that the code was redeemed last. This date will be set if the coupon amount has not been fully used.
-|        xref:miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
     |consumedAt
     |The date and time that the coupon amount of this code was fully consumed
-|        xref:miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
     |expiresAt
     |The date and time that the code will expire or has expired
 |link:http://php.net/float[float^]
     |value
     |The value of the coupon if it differs from the campaign value. The value is null if the campaign value is used.
-|        xref:order.adoc#order_models_couponcampaign[CouponCampaign]
+|        xref:Order.adoc#order_models_couponcampaign[CouponCampaign]
     |campaign
     |The coupon campaign and all information about the campaign that this code belongs to
 |===
@@ -493,13 +493,13 @@ The order model.
 |link:http://php.net/bool[bool^]
     |hasTaxRelevantDocuments
     |
-|        xref:account.adoc#account_models_address[Address]
+|        xref:Account.adoc#account_models_address[Address]
     |billingAddress
     |The invoice address of the order
-|        xref:account.adoc#account_models_address[Address]
+|        xref:Account.adoc#account_models_address[Address]
     |deliveryAddress
     |The delivery address of the order
-|        xref:authentication.adoc#authentication_models_user[User]
+|        xref:Authentication.adoc#authentication_models_user[User]
     |owner
     |The owner of the order
 |link:http://php.net/bool[bool^]
@@ -526,7 +526,7 @@ The order model.
 |
     |comments
     |The order comments.
-|        xref:accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
+|        xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
     |location
     |The accounting location of the order.
 |
@@ -559,10 +559,10 @@ The order model.
 <li>3 = Payment date</li>
 <li>4 = Delivery date</li>
 </ul>
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
     |originOrder
     |The origin order of this order. If this order is the origin, this attribute is null. (deprecated)
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
     |parentOrder
     |The parent order of this order. If this order has no parent, this attribute is null. (deprecated)
 |
@@ -574,28 +574,28 @@ The order model.
 |
     |childOrders
     |All orders referencing the current order as parent.
-|        xref:order.adoc#order_models_orderamount[OrderAmount]
+|        xref:Order.adoc#order_models_orderamount[OrderAmount]
     |systemAmount
     |The order amount in the system currency.
-|        xref:order.adoc#order_models_orderamount[OrderAmount]
+|        xref:Order.adoc#order_models_orderamount[OrderAmount]
     |amount
     |The order amount in foreign currency if exists. Otherwise the amount in system currency.
-|        xref:account.adoc#account_models_contact[Contact]
+|        xref:Account.adoc#account_models_contact[Contact]
     |contactSender
     |The associated contact for the contact-sender relation.
-|        xref:account.adoc#account_models_contact[Contact]
+|        xref:Account.adoc#account_models_contact[Contact]
     |contactReceiver
     |The associated contact for the contact-receiver relation.
-|        xref:stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
+|        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
     |warehouseSender
     |The associated warehouse for the warehouse-sender relation.
-|        xref:stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
+|        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
     |warehouseReceiver
     |The associated warehouse for the warehouse-receiver relation.
-|        xref:order.adoc#order_models_ordertransactionsums[OrderTransactionSums]
+|        xref:Order.adoc#order_models_ordertransactionsums[OrderTransactionSums]
     |transactionSums
     |The sums of all order item transactions.
-|        xref:order.adoc#order_models_orderpaymentterms[OrderPaymentTerms]
+|        xref:Order.adoc#order_models_orderpaymentterms[OrderPaymentTerms]
     |paymentTerms
     |The payment terms of this order.
 |===
@@ -689,7 +689,7 @@ The amount that still needs to paid is not an own parameter because the amount c
 |
     |updatedAt
     |The date that the amount was updated last.
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
     |order
     |The order that this amount belongs to.
 |
@@ -763,7 +763,7 @@ The order amount vat model.
 |
     |updatedAt
     |The date that the VAT was updated last.
-|        xref:order.adoc#order_models_orderamount[OrderAmount]
+|        xref:Order.adoc#order_models_orderamount[OrderAmount]
     |orderAmount
     |The OrderAmount model that the OrderAmountVat belongs to.
 |===
@@ -868,22 +868,22 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 |
     |updatedAt
     |The date that the order item was last updated.
-|        xref:order.adoc#order_models_orderitemamount[OrderItemAmount]
+|        xref:Order.adoc#order_models_orderitemamount[OrderItemAmount]
     |systemAmount
     |The order item's amount in the system currency.
-|        xref:order.adoc#order_models_orderitemamount[OrderItemAmount]
+|        xref:Order.adoc#order_models_orderitemamount[OrderItemAmount]
     |amount
     |The order item's amount in the order currency. If the order currency is the same as the system currency this amount is the same.
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
     |order
     |The order that the property belongs to.
-|        xref:order.adoc#order_models_orderitemtype[OrderItemType]
+|        xref:Order.adoc#order_models_orderitemtype[OrderItemType]
     |type
     |The order item type
-|        xref:accounting.adoc#accounting_models_vat[Vat]
+|        xref:Accounting.adoc#accounting_models_vat[Vat]
     |countryVat
     |The country vat instance.
-|        xref:item.adoc#item_models_variation[Variation]
+|        xref:Item.adoc#item_models_variation[Variation]
     |variation
     |The item variation in the position.
 |
@@ -939,7 +939,7 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 |
     |warehouselocations
     |<b>DEPRECATED</b> The order items warehouse locations.
-|        xref:order.adoc#order_models_orderitemtransactionsums[OrderItemTransactionSums]
+|        xref:Order.adoc#order_models_orderitemtransactionsums[OrderItemTransactionSums]
     |transactionSums
     |The sums of all order item transactions.
 |===
@@ -1025,7 +1025,7 @@ The order item amount model. Order item amount refers to amounts of money.
 |
     |updatedAt
     |The date that the amount was last updated.
-|        xref:order.adoc#order_models_orderitem[OrderItem]
+|        xref:Order.adoc#order_models_orderitem[OrderItem]
     |orderItem
     |The order item that the amount belongs to.
 |===
@@ -1268,7 +1268,7 @@ The order item type name model.
 |link:http://php.net/string[string^]
     |lang
     |The ISO 639-1 language code for the name, e.g. "en" for English
-|        xref:order.adoc#order_models_orderitemtype[OrderItemType]
+|        xref:Order.adoc#order_models_orderitemtype[OrderItemType]
     |type
     |The order item type instance.
 |===
@@ -1327,7 +1327,7 @@ with.
 |link:http://php.net/string[string^]
     |batch
     |The batch
-|        xref:warehouse.adoc#warehouse_models_warehouselocation[WarehouseLocation]
+|        xref:Warehouse.adoc#warehouse_models_warehouselocation[WarehouseLocation]
     |warehouseLocation
     |The warehouse location of the item
 |===
@@ -1392,7 +1392,7 @@ The order payment terms model.
 |
     |updatedAt
     |The date the model was last updated.
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
     |order
     |The order of this early payment discount.
 |===
@@ -1448,13 +1448,13 @@ The order reference model. Each OrderReference has an origin order (the most top
 |link:http://php.net/string[string^]
     |referenceType
     |The reference type ("parent" or "reorder") of the referenced order.
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
     |order
     |
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
     |originOrder
     |The origin order of the order.
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
     |referenceOrder
     |The referenced order of the order.
 |===
@@ -1631,7 +1631,7 @@ The order type name model.
 |link:http://php.net/string[string^]
     |lang
     |The ISO 639-1 language code for the name, e.g. "en" for English
-|        xref:order.adoc#order_models_ordertype[OrderType]
+|        xref:Order.adoc#order_models_ordertype[OrderType]
     |type
     |The order type instance.
 |===
@@ -1745,7 +1745,7 @@ Get an order amount for an order in a currency. The ID of the order must be spec
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderamount[OrderAmount]
+<1>         xref:Order.adoc#order_models_orderamount[OrderAmount]
     
 
 .*Parameters*
@@ -1775,7 +1775,7 @@ Get an order amount. The ID of the order amount must be specified.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderamount[OrderAmount]
+<1>         xref:Order.adoc#order_models_orderamount[OrderAmount]
     
 
 .*Parameters*
@@ -1846,7 +1846,7 @@ Get an order item
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitem[OrderItem]
+<1>         xref:Order.adoc#order_models_orderitem[OrderItem]
     
 
 .*Parameters*
@@ -1902,7 +1902,7 @@ Search order items
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -2078,7 +2078,7 @@ Get an order
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -2108,7 +2108,7 @@ Get an order by external order ID
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -2138,7 +2138,7 @@ Create an order
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -2168,7 +2168,7 @@ Update an order
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -2224,7 +2224,7 @@ Restore an order
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -2280,7 +2280,7 @@ Get a scheduler order
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderscheduler[OrderScheduler]
+<1>         xref:Order.adoc#order_models_orderscheduler[OrderScheduler]
     
 
 .*Parameters*
@@ -2306,7 +2306,7 @@ List orders of a contact
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -2344,7 +2344,7 @@ List orders that include one or more variations from a supplier
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -2382,7 +2382,7 @@ List orders sent by a contact
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -2420,7 +2420,7 @@ Get latest order of a contact
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -2451,7 +2451,7 @@ List orders
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -2541,7 +2541,7 @@ Find the order for the given order ID and access key.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -2597,7 +2597,7 @@ Complete an incomplete order.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -2627,7 +2627,7 @@ Creates a multi order for a specific contact
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -2653,7 +2653,7 @@ Deprecated : Set order status to 4 or 5
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -2783,7 +2783,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -2803,7 +2803,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -2845,7 +2845,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -2865,7 +2865,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -2907,7 +2907,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -2927,7 +2927,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -2969,7 +2969,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -2989,7 +2989,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -3031,7 +3031,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -3051,7 +3051,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -3093,7 +3093,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -3113,7 +3113,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -3157,11 +3157,11 @@ OrderPaymentAssigned constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 
-|        xref:payment.adoc#payment_models_payment[Payment]
+|        xref:Payment.adoc#payment_models_payment[Payment]
 a|`$payment`
 |
 |===
@@ -3181,7 +3181,7 @@ Get the payment.
 
 ===== Return type
     
-<1>         xref:payment.adoc#payment_models_payment[Payment]
+<1>         xref:Payment.adoc#payment_models_payment[Payment]
     
 
 [source%nowrap, php]
@@ -3198,7 +3198,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -3240,7 +3240,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -3260,7 +3260,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -3303,7 +3303,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -3323,7 +3323,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 [[order_order_exceptions]]
@@ -3505,7 +3505,7 @@ Reacts upon the OrderCreated event
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_events_ordercreated[OrderCreated]
+|        xref:Order.adoc#order_events_ordercreated[OrderCreated]
 a|`$created`
 |The event instance.
 |===
@@ -3608,7 +3608,7 @@ Get a coupon campaign
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_couponcampaign[CouponCampaign]
+<1>         xref:Order.adoc#order_models_couponcampaign[CouponCampaign]
     
 
 .*Parameters*
@@ -3634,7 +3634,7 @@ Get the CouponCampaign model from the database by emailPlaceholder.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_couponcampaign[CouponCampaign]
+<1>         xref:Order.adoc#order_models_couponcampaign[CouponCampaign]
     
 
 .*Parameters*
@@ -3660,7 +3660,7 @@ Get the coupon campaign of a coupon code
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_couponcampaign[CouponCampaign]
+<1>         xref:Order.adoc#order_models_couponcampaign[CouponCampaign]
     
 
 .*Parameters*
@@ -3692,7 +3692,7 @@ Get the display type of a coupon
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_couponcodevalidation[CouponCodeValidation]
+|        xref:Order.adoc#order_models_couponcodevalidation[CouponCodeValidation]
 a|`$couponCodeValidation`
 |
 |===
@@ -3712,7 +3712,7 @@ Create a coupon campaign
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_couponcampaign[CouponCampaign]
+<1>         xref:Order.adoc#order_models_couponcampaign[CouponCampaign]
     
 
 .*Parameters*
@@ -3798,7 +3798,7 @@ update a coupon campaign
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_couponcampaign[CouponCampaign]
+<1>         xref:Order.adoc#order_models_couponcampaign[CouponCampaign]
     
 
 .*Parameters*
@@ -3921,10 +3921,10 @@ The redeem type interacts with the concept. Pay attention to the combination the
 |link:http://php.net/float[float^]
     |value
     |The actual discount value of a coupon. The value needs to be set for the two discount types fixed and percent.
-|        xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+|        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     |codes
     |The codes and information about the codes that belong to this CouponCampaign
-|        xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+|        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     |references
     |These references are available
 <ul>
@@ -3989,7 +3989,7 @@ Get a coupon campaign
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_support_collection[Collection]
+<1>         xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
     
 
 .*Parameters*
@@ -4015,7 +4015,7 @@ Create a Coupon Campaign reference
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_support_collection[Collection]
+<1>         xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
     
 
 .*Parameters*
@@ -4119,7 +4119,7 @@ Create redeemed coupons for a contact.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_couponcodecontact[CouponCodeContact]
+<1>         xref:Order.adoc#order_models_couponcodecontact[CouponCodeContact]
     
 
 .*Parameters*
@@ -4145,7 +4145,7 @@ Update a redeemed coupon of a contact.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_couponcodecontact[CouponCodeContact]
+<1>         xref:Order.adoc#order_models_couponcodecontact[CouponCodeContact]
     
 
 .*Parameters*
@@ -4183,7 +4183,7 @@ Get a redeemed coupon for a contact
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_couponcodecontact[CouponCodeContact]
+<1>         xref:Order.adoc#order_models_couponcodecontact[CouponCodeContact]
     
 
 .*Parameters*
@@ -4217,7 +4217,7 @@ List redeemed coupons for a contact
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -4251,7 +4251,7 @@ List redeemed coupons of a campaign.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -4285,7 +4285,7 @@ List redeemed coupons of a coupon code
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -4402,13 +4402,13 @@ Validate a coupon code
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_couponcodevalidation[CouponCodeValidation]
+<1>         xref:Order.adoc#order_models_couponcodevalidation[CouponCodeValidation]
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_couponcodevalidation[CouponCodeValidation]
+|        xref:Order.adoc#order_models_couponcodevalidation[CouponCodeValidation]
 a|`$validationData`
 |The data to validate a coupon
 |===
@@ -4636,7 +4636,7 @@ Get a currency
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_currency[Currency]
+<1>         xref:Order.adoc#order_models_currency[Currency]
     
 
 .*Parameters*
@@ -4730,7 +4730,7 @@ Get a currency for a country
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_currency[Currency]
+<1>         xref:Order.adoc#order_models_currency[Currency]
     
 
 .*Parameters*
@@ -4764,7 +4764,7 @@ Get the exchange rate for a currency
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_currencyexchangerate[CurrencyExchangeRate]
+<1>         xref:Order.adoc#order_models_currencyexchangerate[CurrencyExchangeRate]
     
 
 .*Parameters*
@@ -4920,10 +4920,10 @@ The CurrencyCountryRelation model indicates which currency is related to which c
 |link:http://php.net/int[int^]
     |countryId
     |The ID of the country
-|        xref:order.adoc#order_models_country[Country]
+|        xref:Order.adoc#order_models_country[Country]
     |country
     |The related country information
-|        xref:order.adoc#order_models_currency[Currency]
+|        xref:Order.adoc#order_models_currency[Currency]
     |currencyInstance
     |The related currency information
 |===
@@ -5017,7 +5017,7 @@ The currency name model.
 |link:http://php.net/string[string^]
     |name
     |The name in the language
-|        xref:order.adoc#order_models_currency[Currency]
+|        xref:Order.adoc#order_models_currency[Currency]
     |currencyInstance
     |The currency instance.
 |===
@@ -5080,16 +5080,16 @@ The export model for IDEA exports.
 |link:http://php.net/string[string^]
     |filename
     |The filename of the export content.
-|        xref:miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
     |createdAt
     |Specifies the creation date of the export entry.
-|        xref:miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
     |updatedAt
     |Specifies the last update date of the export entry.
-|        xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+|        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     |modules
     |The modules to be used by the export process.
-|        xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+|        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     |options
     |The options for the export process. Currently only "year" is supported as option key.
 |===
@@ -5245,7 +5245,7 @@ The payment method model
 |link:http://php.net/array[array^]
     |coutries
     |
-|        xref:order.adoc#order_models_paymentmethodinformation[PaymentMethodInformation]
+|        xref:Order.adoc#order_models_paymentmethodinformation[PaymentMethodInformation]
     |information
     |
 |===
@@ -5365,7 +5365,7 @@ Get the
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 [source%nowrap, php]
@@ -5399,13 +5399,13 @@ public addOrderPdfGeneration($orderPdfGeneration):Plenty\Modules\Order\Pdf\Event
 
 ===== Return type
     
-<1>         xref:order.adoc#order_pdf_events[Events]
+<1>         xref:Order.adoc#order_pdf_events[Events]
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_orderpdfgeneration[OrderPdfGeneration]
+|        xref:Order.adoc#order_models_orderpdfgeneration[OrderPdfGeneration]
 a|`$orderPdfGeneration`
 |
 |===
@@ -5534,7 +5534,7 @@ Create an order referrer
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderreferrer[OrderReferrer]
+<1>         xref:Order.adoc#order_models_orderreferrer[OrderReferrer]
     
 
 .*Parameters*
@@ -5564,7 +5564,7 @@ Update an order referrer
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderreferrer[OrderReferrer]
+<1>         xref:Order.adoc#order_models_orderreferrer[OrderReferrer]
     
 
 .*Parameters*
@@ -5594,7 +5594,7 @@ Get an order referrer
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderreferrer[OrderReferrer]
+<1>         xref:Order.adoc#order_models_orderreferrer[OrderReferrer]
     
 
 .*Parameters*
@@ -5776,16 +5776,16 @@ The legacy order model
 |
     |end
     |
-|        xref:account.adoc#account_models_address[Address]
+|        xref:Account.adoc#account_models_address[Address]
     |deliveryAddress
     |
-|        xref:account.adoc#account_models_address[Address]
+|        xref:Account.adoc#account_models_address[Address]
     |billingAddress
     |
-|        xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+|        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     |addresses
     |
-|        xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+|        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     |addressRelations
     |
 |===
@@ -5914,7 +5914,7 @@ The order serial number model
 |link:http://php.net/string[string^]
     |serialNumber
     |The serial number
-|        xref:item.adoc#item_models_itemserialnumber[ItemSerialNumber]
+|        xref:Item.adoc#item_models_itemserialnumber[ItemSerialNumber]
     |itemSerialNumber
     |
 |===
@@ -6189,7 +6189,7 @@ Gets a shipping profile. The ID of the shipping profile must be specified.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_parcelservicepreset[ParcelServicePreset]
+<1>         xref:Order.adoc#order_models_parcelservicepreset[ParcelServicePreset]
     
 
 .*Parameters*
@@ -6251,7 +6251,7 @@ Calculate shipping costs and list last weighted preset combinations.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:basket.adoc#basket_models_basket[Basket]
+|        xref:Basket.adoc#basket_models_basket[Basket]
 a|`$basket`
 |The basket
 
@@ -6309,7 +6309,7 @@ Creates an parcel service preset
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_parcelservicepreset[ParcelServicePreset]
+<1>         xref:Order.adoc#order_models_parcelservicepreset[ParcelServicePreset]
     
 
 .*Parameters*
@@ -6335,7 +6335,7 @@ Update an parcel service preset
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_parcelservicepreset[ParcelServicePreset]
+<1>         xref:Order.adoc#order_models_parcelservicepreset[ParcelServicePreset]
     
 
 .*Parameters*
@@ -6365,7 +6365,7 @@ Delete a parcel service preset
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_parcelservicepreset[ParcelServicePreset]
+<1>         xref:Order.adoc#order_models_parcelservicepreset[ParcelServicePreset]
     
 
 .*Parameters*
@@ -6608,7 +6608,7 @@ Set the additional fee.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_events_aftershippingcostcalculated[AfterShippingCostCalculated]
+<1>         xref:Order.adoc#order_events_aftershippingcostcalculated[AfterShippingCostCalculated]
     
 
 .*Parameters*
@@ -6790,7 +6790,7 @@ public getCountryById($countryId):Plenty\Modules\Order\Shipping\Countries\Models
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_country[Country]
+<1>         xref:Order.adoc#order_models_country[Country]
     
 
 .*Parameters*
@@ -6816,7 +6816,7 @@ public getCountriesList($active, $with):Illuminate\Support\Collection // <1>
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_support_collection[Collection]
+<1>         xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
     
 
 .*Parameters*
@@ -6846,7 +6846,7 @@ public getActiveCountriesList():Illuminate\Support\Collection // <1>
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_support_collection[Collection]
+<1>         xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
     
 
 [source%nowrap, php]
@@ -6919,7 +6919,7 @@ public getCountryStateByIso($countryId, $isoCode):Plenty\Modules\Order\Shipping\
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_countrystate[CountryState]
+<1>         xref:Order.adoc#order_models_countrystate[CountryState]
     
 
 .*Parameters*
@@ -6949,7 +6949,7 @@ Activates a country by a given ID.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_country[Country]
+<1>         xref:Order.adoc#order_models_country[Country]
     
 
 .*Parameters*
@@ -6975,7 +6975,7 @@ Deactivates a country by a given ID.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_country[Country]
+<1>         xref:Order.adoc#order_models_country[Country]
     
 
 .*Parameters*
@@ -7196,7 +7196,7 @@ List export documents by order ID
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_exportdocument[ExportDocument]
+<1>         xref:Order.adoc#order_models_exportdocument[ExportDocument]
     
 
 .*Parameters*
@@ -7296,7 +7296,7 @@ Get Shipping Information by an order ID
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_shippinginformation[ShippingInformation]
+<1>         xref:Order.adoc#order_models_shippinginformation[ShippingInformation]
     
 
 .*Parameters*
@@ -7374,7 +7374,7 @@ Create Shipping Information
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_shippinginformation[ShippingInformation]
+<1>         xref:Order.adoc#order_models_shippinginformation[ShippingInformation]
     
 
 .*Parameters*
@@ -7400,7 +7400,7 @@ Update Additional Data of Shipping Information by Order ID
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_shippinginformation[ShippingInformation]
+<1>         xref:Order.adoc#order_models_shippinginformation[ShippingInformation]
     
 
 .*Parameters*
@@ -7430,7 +7430,7 @@ Update Shipping Status of Shipping Information by Order ID
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_shippinginformation[ShippingInformation]
+<1>         xref:Order.adoc#order_models_shippinginformation[ShippingInformation]
     
 
 .*Parameters*
@@ -7546,7 +7546,7 @@ Get items for a package
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_ordershippingpackageitems[OrderShippingPackageItems]
+<1>         xref:Order.adoc#order_models_ordershippingpackageitems[OrderShippingPackageItems]
     
 
 .*Parameters*
@@ -7588,7 +7588,7 @@ Get all the packed items in the packages in the pallets in the order
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_ordershippingpackageitems[OrderShippingPackageItems]
+<1>         xref:Order.adoc#order_models_ordershippingpackageitems[OrderShippingPackageItems]
     
 
 .*Parameters*
@@ -7630,7 +7630,7 @@ Get items for an order
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_ordershippingpackageitems[OrderShippingPackageItems]
+<1>         xref:Order.adoc#order_models_ordershippingpackageitems[OrderShippingPackageItems]
     
 
 .*Parameters*
@@ -7850,7 +7850,7 @@ Delete a variation of an item from package in order
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
     
 
 .*Parameters*
@@ -7903,7 +7903,7 @@ Get an order shipping package
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_ordershippingpackage[OrderShippingPackage]
+<1>         xref:Order.adoc#order_models_ordershippingpackage[OrderShippingPackage]
     
 
 .*Parameters*
@@ -7971,7 +7971,7 @@ Create an order shipping package
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_ordershippingpackage[OrderShippingPackage]
+<1>         xref:Order.adoc#order_models_ordershippingpackage[OrderShippingPackage]
     
 
 .*Parameters*
@@ -8001,7 +8001,7 @@ Update an order shipping package
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_ordershippingpackage[OrderShippingPackage]
+<1>         xref:Order.adoc#order_models_ordershippingpackage[OrderShippingPackage]
     
 
 .*Parameters*
@@ -8214,7 +8214,7 @@ The order shipping package model
 |link:http://php.net/string[string^]
     |updatedAt
     |
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
     |order
     |The order the package belongs to
 |===
@@ -8325,7 +8325,7 @@ Gets a shipping package type. The ID of the shipping package type must be specif
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_shippingpackagetype[ShippingPackageType]
+<1>         xref:Order.adoc#order_models_shippingpackagetype[ShippingPackageType]
     
 
 .*Parameters*
@@ -8457,7 +8457,7 @@ Get an order shipping pallet
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_ordershippingpallet[OrderShippingPallet]
+<1>         xref:Order.adoc#order_models_ordershippingpallet[OrderShippingPallet]
     
 
 .*Parameters*
@@ -8543,7 +8543,7 @@ Create an order shipping pallet
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_ordershippingpallet[OrderShippingPallet]
+<1>         xref:Order.adoc#order_models_ordershippingpallet[OrderShippingPallet]
     
 
 .*Parameters*
@@ -8569,7 +8569,7 @@ Update an order shipping pallet
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_ordershippingpallet[OrderShippingPallet]
+<1>         xref:Order.adoc#order_models_ordershippingpallet[OrderShippingPallet]
     
 
 .*Parameters*
@@ -8599,7 +8599,7 @@ Delete an order shipping pallet
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_ordershippingpallet[OrderShippingPallet]
+<1>         xref:Order.adoc#order_models_ordershippingpallet[OrderShippingPallet]
     
 
 .*Parameters*
@@ -8934,7 +8934,7 @@ The Parcel Service Model
 |link:http://php.net/string[string^]
     |splitDelimiter
     |
-|        xref:order.adoc#order_models_shippingserviceprovider[ShippingServiceProvider]
+|        xref:Order.adoc#order_models_shippingserviceprovider[ShippingServiceProvider]
     |shippingServiceProvider
     |
 |
@@ -9174,10 +9174,10 @@ The Parcel Service Preset Model
 |link:http://php.net/int[int^]
     |isPostOffice
     |Indicates whether the e.g. postfiliale is supported
-|        xref:order.adoc#order_models_parcelservice[ParcelService]
+|        xref:Order.adoc#order_models_parcelservice[ParcelService]
     |parcelService
     |The parcel service.
-|        xref:order.adoc#order_models_parcelserviceregion[ParcelServiceRegion]
+|        xref:Order.adoc#order_models_parcelserviceregion[ParcelServiceRegion]
     |parcelServiceRegionConstraint
     |The parcel service region constraint
 |===
@@ -9282,7 +9282,7 @@ Creates a Region
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_parcelserviceregionname[ParcelServiceRegionName]
+<1>         xref:Order.adoc#order_models_parcelserviceregionname[ParcelServiceRegionName]
     
 
 .*Parameters*
@@ -9344,7 +9344,7 @@ Creates a ParcelServiceRegion
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_parcelserviceregion[ParcelServiceRegion]
+<1>         xref:Order.adoc#order_models_parcelserviceregion[ParcelServiceRegion]
     
 
 .*Parameters*
@@ -9396,7 +9396,7 @@ Get a parcel service region
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_parcelserviceregion[ParcelServiceRegion]
+<1>         xref:Order.adoc#order_models_parcelserviceregion[ParcelServiceRegion]
     
 
 .*Parameters*
@@ -9577,7 +9577,7 @@ public registerReturns($pluginName, $orderIds):Plenty\Modules\Order\Shipping\Ret
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_registerreturnsresult[RegisterReturnsResult]
+<1>         xref:Order.adoc#order_models_registerreturnsresult[RegisterReturnsResult]
     
 
 .*Parameters*
@@ -9607,7 +9607,7 @@ public getReturnsLabelById($labelId, $with):Plenty\Repositories\Models\Paginated
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -9637,7 +9637,7 @@ public assignLabel2Return($orderId, $returnsId):Plenty\Modules\Order\Shipping\Re
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderreturns[OrderReturns]
+<1>         xref:Order.adoc#order_models_orderreturns[OrderReturns]
     
 
 .*Parameters*
@@ -9667,7 +9667,7 @@ public getOrderReturns($orderId, $with = [], $page = 1, $itemsPerPage = 50):Plen
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -9724,7 +9724,7 @@ public getReturnsServiceProviderList($columns = [], $page = 1, $itemsPerPage = 5
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -9766,7 +9766,7 @@ public findById($returnsServiceProviderId):Plenty\Modules\Order\Shipping\Returns
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_returnsserviceprovider[ReturnsServiceProvider]
+<1>         xref:Order.adoc#order_models_returnsserviceprovider[ReturnsServiceProvider]
     
 
 .*Parameters*
@@ -9818,7 +9818,7 @@ public saveReturnsServiceProvider($pluginName, $returnProviderAlias = null):Plen
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_returnsserviceprovider[ReturnsServiceProvider]
+<1>         xref:Order.adoc#order_models_returnsserviceprovider[ReturnsServiceProvider]
     
 
 .*Parameters*
@@ -9848,7 +9848,7 @@ public getReturnsServiceProvider($orderId):Plenty\Modules\Order\Shipping\Returns
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_returnsserviceprovider[ReturnsServiceProvider]
+<1>         xref:Order.adoc#order_models_returnsserviceprovider[ReturnsServiceProvider]
     
 
 .*Parameters*
@@ -10067,7 +10067,7 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -10330,7 +10330,7 @@ Fill the model with an array of attributes.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -10399,7 +10399,7 @@ Set the fillable attributes for the model.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -10503,7 +10503,7 @@ The model for OrderReturns
 |link:http://php.net/int[int^]
     |providerId
     |
-|        xref:miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
     |createdAt
     |
 |link:http://php.net/string[string^]
@@ -10515,7 +10515,7 @@ The model for OrderReturns
 |link:http://php.net/string[string^]
     |externalData
     |
-|        xref:miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
     |availableUntil
     |
 |===
@@ -10575,7 +10575,7 @@ public addSuccessfullyRegisteredReturns($successfullyRegisteredReturn):void // <
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_successfullyregisteredorderreturns[SuccessfullyRegisteredOrderReturns]
+|        xref:Order.adoc#order_models_successfullyregisteredorderreturns[SuccessfullyRegisteredOrderReturns]
 a|`$successfullyRegisteredReturn`
 |
 |===
@@ -10601,7 +10601,7 @@ public addFailedRegisterOrderReturns($failedRegisterOrderReturn):void // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_failedregisterorderreturns[FailedRegisterOrderReturns]
+|        xref:Order.adoc#order_models_failedregisterorderreturns[FailedRegisterOrderReturns]
 a|`$failedRegisterOrderReturn`
 |
 |===
@@ -10699,7 +10699,7 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -10962,7 +10962,7 @@ Fill the model with an array of attributes.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -11031,7 +11031,7 @@ Set the fillable attributes for the model.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -11493,7 +11493,7 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -11756,7 +11756,7 @@ Fill the model with an array of attributes.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -11825,7 +11825,7 @@ Set the fillable attributes for the model.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -11931,7 +11931,7 @@ public registerReturns($pluginName, $orderIds):Plenty\Modules\Order\Shipping\Ret
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_registerreturnsresult[RegisterReturnsResult]
+<1>         xref:Order.adoc#order_models_registerreturnsresult[RegisterReturnsResult]
     
 
 .*Parameters*
@@ -11961,7 +11961,7 @@ public persistLabel($labelBase64, $returns):Plenty\Modules\Document\Models\Docum
 
 ===== Return type
     
-<1>         xref:document.adoc#document_models_document[Document]
+<1>         xref:Document.adoc#document_models_document[Document]
     
 
 .*Parameters*
@@ -11971,7 +11971,7 @@ public persistLabel($labelBase64, $returns):Plenty\Modules\Document\Models\Docum
 a|`$labelBase64`
 |
 
-|        xref:order.adoc#order_models_orderreturns[OrderReturns]
+|        xref:Order.adoc#order_models_orderreturns[OrderReturns]
 a|`$returns`
 |
 |===
@@ -11997,7 +11997,7 @@ public getLabel($orderReturns):string // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_orderreturns[OrderReturns]
+|        xref:Order.adoc#order_models_orderreturns[OrderReturns]
 a|`$orderReturns`
 |
 |===
@@ -12074,7 +12074,7 @@ Get returns service provider by id
 
 ===== Return type
     
-<1>         xref:order.adoc#order_entries_returnsserviceproviderentry[ReturnsServiceProviderEntry]
+<1>         xref:Order.adoc#order_entries_returnsserviceproviderentry[ReturnsServiceProviderEntry]
     
 
 .*Parameters*
@@ -12170,7 +12170,7 @@ Set the
 
 ===== Return type
     
-<1>         xref:order.adoc#order_entries_returnsserviceproviderentry[ReturnsServiceProviderEntry]
+<1>         xref:Order.adoc#order_entries_returnsserviceproviderentry[ReturnsServiceProviderEntry]
     
 
 .*Parameters*
@@ -12213,7 +12213,7 @@ Set the
 
 ===== Return type
     
-<1>         xref:order.adoc#order_entries_returnsserviceproviderentry[ReturnsServiceProviderEntry]
+<1>         xref:Order.adoc#order_entries_returnsserviceproviderentry[ReturnsServiceProviderEntry]
     
 
 .*Parameters*
@@ -12378,7 +12378,7 @@ Set the
 
 ===== Return type
     
-<1>         xref:order.adoc#order_entries_shippingserviceproviderentry[ShippingServiceProviderEntry]
+<1>         xref:Order.adoc#order_entries_shippingserviceproviderentry[ShippingServiceProviderEntry]
     
 
 .*Parameters*
@@ -12421,7 +12421,7 @@ Set the
 
 ===== Return type
     
-<1>         xref:order.adoc#order_entries_shippingserviceproviderentry[ShippingServiceProviderEntry]
+<1>         xref:Order.adoc#order_entries_shippingserviceproviderentry[ShippingServiceProviderEntry]
     
 
 .*Parameters*
@@ -12626,7 +12626,7 @@ Gets a shipping service provider. The ID of the shipping service provider must b
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_shippingserviceprovider[ShippingServiceProvider]
+<1>         xref:Order.adoc#order_models_shippingserviceprovider[ShippingServiceProvider]
     
 
 .*Parameters*
@@ -12652,7 +12652,7 @@ Gets a shipping service provider. The name of the shipping service provider must
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_shippingserviceprovider[ShippingServiceProvider]
+<1>         xref:Order.adoc#order_models_shippingserviceprovider[ShippingServiceProvider]
     
 
 .*Parameters*
@@ -12678,7 +12678,7 @@ Creates a shipping service provider or updates it if already existing
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_shippingserviceprovider[ShippingServiceProvider]
+<1>         xref:Order.adoc#order_models_shippingserviceprovider[ShippingServiceProvider]
     
 
 .*Parameters*
@@ -12922,7 +12922,7 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -13185,7 +13185,7 @@ Fill the model with an array of attributes.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -13254,7 +13254,7 @@ Set the fillable attributes for the model.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -13365,7 +13365,7 @@ public addSuccessfullyRegisteredShipment($successfullyRegisteredShipment):void /
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_successfullyregisteredshipment[SuccessfullyRegisteredShipment]
+|        xref:Order.adoc#order_models_successfullyregisteredshipment[SuccessfullyRegisteredShipment]
 a|`$successfullyRegisteredShipment`
 |Object containing data for successfully registering a shipment
 |===
@@ -13391,7 +13391,7 @@ public addFailedRegisterShipment($failedRegisterShipment):void // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_failedregistershipment[FailedRegisterShipment]
+|        xref:Order.adoc#order_models_failedregistershipment[FailedRegisterShipment]
 a|`$failedRegisterShipment`
 |Object containing data when shipment registration was not successful, e.g. incorrect or missing postcode
 |===
@@ -13489,7 +13489,7 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -13752,7 +13752,7 @@ Fill the model with an array of attributes.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -13821,7 +13821,7 @@ Set the fillable attributes for the model.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -14066,7 +14066,7 @@ Add a package.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_ordershippingpackage[OrderShippingPackage]
+|        xref:Order.adoc#order_models_ordershippingpackage[OrderShippingPackage]
 a|`$package`
 |The order shipping package
 |===
@@ -14164,7 +14164,7 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -14427,7 +14427,7 @@ Fill the model with an array of attributes.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -14496,7 +14496,7 @@ Set the fillable attributes for the model.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_repositories_models[Models]
+<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
     
 
 .*Parameters*
@@ -14689,7 +14689,7 @@ Get an address of an order
 
 ===== Return type
     
-<1>         xref:account.adoc#account_models_address[Address]
+<1>         xref:Account.adoc#account_models_address[Address]
     
 
 .*Parameters*
@@ -14719,7 +14719,7 @@ Get an address of a scheduler order
 
 ===== Return type
     
-<1>         xref:account.adoc#account_models_address[Address]
+<1>         xref:Account.adoc#account_models_address[Address]
     
 
 .*Parameters*
@@ -14749,7 +14749,7 @@ Create an address for an order
 
 ===== Return type
     
-<1>         xref:account.adoc#account_models_address[Address]
+<1>         xref:Account.adoc#account_models_address[Address]
     
 
 .*Parameters*
@@ -14793,7 +14793,7 @@ Update an address of an order
 
 ===== Return type
     
-<1>         xref:account.adoc#account_models_address[Address]
+<1>         xref:Account.adoc#account_models_address[Address]
     
 
 .*Parameters*
@@ -14841,7 +14841,7 @@ Get an address
 
 ===== Return type
     
-<1>         xref:account.adoc#account_models_address[Address]
+<1>         xref:Account.adoc#account_models_address[Address]
     
 
 .*Parameters*
@@ -14871,7 +14871,7 @@ List addresses of an an order
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+<1>         xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     
 
 .*Parameters*
@@ -14897,7 +14897,7 @@ Get an address of an order
 
 ===== Return type
     
-<1>         xref:account.adoc#account_models_address[Address]
+<1>         xref:Account.adoc#account_models_address[Address]
     
 
 .*Parameters*
@@ -14941,7 +14941,7 @@ Get an address of a scheduler
 
 ===== Return type
     
-<1>         xref:account.adoc#account_models_address[Address]
+<1>         xref:Account.adoc#account_models_address[Address]
     
 
 .*Parameters*
@@ -15140,7 +15140,7 @@ Book an order
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderbooking[OrderBooking]
+<1>         xref:Order.adoc#order_models_orderbooking[OrderBooking]
     
 
 .*Parameters*
@@ -15170,7 +15170,7 @@ Book an order item
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderbooking[OrderBooking]
+<1>         xref:Order.adoc#order_models_orderbooking[OrderBooking]
     
 
 .*Parameters*
@@ -15200,7 +15200,7 @@ Book order item transactions
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderbooking[OrderBooking]
+<1>         xref:Order.adoc#order_models_orderbooking[OrderBooking]
     
 
 .*Parameters*
@@ -15302,7 +15302,7 @@ Get the contact wish
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_contactwish[ContactWish]
+<1>         xref:Order.adoc#order_models_contactwish[ContactWish]
     
 
 .*Parameters*
@@ -15328,7 +15328,7 @@ Create a contact wish
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_contactwish[ContactWish]
+<1>         xref:Order.adoc#order_models_contactwish[ContactWish]
     
 
 .*Parameters*
@@ -15449,7 +15449,7 @@ Get a name of a date type
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderdatetypename[OrderDateTypeName]
+<1>         xref:Order.adoc#order_models_orderdatetypename[OrderDateTypeName]
     
 
 .*Parameters*
@@ -15505,7 +15505,7 @@ Get a date type
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderdatetype[OrderDateType]
+<1>         xref:Order.adoc#order_models_orderdatetype[OrderDateType]
     
 
 .*Parameters*
@@ -15531,7 +15531,7 @@ Create an order date
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderdate[OrderDate]
+<1>         xref:Order.adoc#order_models_orderdate[OrderDate]
     
 
 .*Parameters*
@@ -15557,7 +15557,7 @@ Update a date
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderdate[OrderDate]
+<1>         xref:Order.adoc#order_models_orderdate[OrderDate]
     
 
 .*Parameters*
@@ -15587,7 +15587,7 @@ Create or update an order date
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderdate[OrderDate]
+<1>         xref:Order.adoc#order_models_orderdate[OrderDate]
     
 
 .*Parameters*
@@ -15669,7 +15669,7 @@ Get an order date from an order by the type of the order date
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderdate[OrderDate]
+<1>         xref:Order.adoc#order_models_orderdate[OrderDate]
     
 
 .*Parameters*
@@ -15744,7 +15744,7 @@ Get an order item date
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemdate[OrderItemDate]
+<1>         xref:Order.adoc#order_models_orderitemdate[OrderItemDate]
     
 
 .*Parameters*
@@ -15770,7 +15770,7 @@ Create an order item date
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemdate[OrderItemDate]
+<1>         xref:Order.adoc#order_models_orderitemdate[OrderItemDate]
     
 
 .*Parameters*
@@ -15796,7 +15796,7 @@ Update an order date
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemdate[OrderItemDate]
+<1>         xref:Order.adoc#order_models_orderitemdate[OrderItemDate]
     
 
 .*Parameters*
@@ -15826,7 +15826,7 @@ Create or update an order item date
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemdate[OrderItemDate]
+<1>         xref:Order.adoc#order_models_orderitemdate[OrderItemDate]
     
 
 .*Parameters*
@@ -15878,7 +15878,7 @@ Get an order item date by an order item and an order date type.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemdate[OrderItemDate]
+<1>         xref:Order.adoc#order_models_orderitemdate[OrderItemDate]
     
 
 .*Parameters*
@@ -15908,7 +15908,7 @@ Create an order item date by an order item and an order date type.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemdate[OrderItemDate]
+<1>         xref:Order.adoc#order_models_orderitemdate[OrderItemDate]
     
 
 .*Parameters*
@@ -15942,7 +15942,7 @@ Update an order item date by an order item and an order date type.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemdate[OrderItemDate]
+<1>         xref:Order.adoc#order_models_orderitemdate[OrderItemDate]
     
 
 .*Parameters*
@@ -16067,7 +16067,7 @@ The OrderDate model.
 <li>Purchase date = 16</li>
 <li>Finish date = 17</li>
 </ul>
-|        xref:miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
     |date
     |The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
 |
@@ -16076,7 +16076,7 @@ The OrderDate model.
 |
     |updatedAt
     |The date when the date was last updated
-|        xref:order.adoc#order_models_orderdatetype[OrderDateType]
+|        xref:Order.adoc#order_models_orderdatetype[OrderDateType]
     |type
     |The type of date
 |===
@@ -16213,7 +16213,7 @@ The OrderDateTypeName model. Order date types can have several names. One name p
 |link:http://php.net/string[string^]
     |name
     |The name of the order date type
-|        xref:order.adoc#order_models_orderdatetype[OrderDateType]
+|        xref:Order.adoc#order_models_orderdatetype[OrderDateType]
     |type
     |The date type that this name belongs to
 |===
@@ -16268,7 +16268,7 @@ The OrderItemDate model.
 <li>End date = 10</li>
 <li>Estimated delivery date = 11</li>
 </ul>
-|        xref:miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
     |date
     |The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
 |
@@ -16277,7 +16277,7 @@ The OrderItemDate model.
 |
     |updatedAt
     |The date when the date was last updated
-|        xref:order.adoc#order_models_orderdatetype[OrderDateType]
+|        xref:Order.adoc#order_models_orderdatetype[OrderDateType]
     |type
     |The type of the date.  The following date types are available:
 <ul>
@@ -16294,7 +16294,7 @@ The OrderItemDate model.
 <li>Possible delivery date = 11</li>
 <li>Market transfer date = 12</li>
 </ul>
-|        xref:order.adoc#order_models_orderitem[OrderItem]
+|        xref:Order.adoc#order_models_orderitem[OrderItem]
     |orderItem
     |The order item the date belongs to.
 |===
@@ -16352,7 +16352,7 @@ Create a delivery order
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -16378,7 +16378,7 @@ Update a delivery order
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -16460,7 +16460,7 @@ Create a delivery order from a parent order
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -16490,7 +16490,7 @@ Create delivery orders automatically for all order items
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_support_collection[Collection]
+<1>         xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
     
 
 .*Parameters*
@@ -16516,7 +16516,7 @@ Update currency
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -16569,7 +16569,7 @@ Lists document accounting summaries. A document accounting summary is saved alon
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -16751,7 +16751,7 @@ Get a file from the storage
 
 ===== Return type
     
-<1>         xref:cloud.adoc#cloud_models_storageobject[StorageObject]
+<1>         xref:Cloud.adoc#cloud_models_storageobject[StorageObject]
     
 
 .*Parameters*
@@ -16832,7 +16832,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -16852,7 +16852,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -16894,7 +16894,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -16914,7 +16914,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 [[order_events_changed]]
@@ -16957,7 +16957,7 @@ OrderStatusChanged constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 
@@ -16998,7 +16998,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 [[order_events_created]]
@@ -17041,7 +17041,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -17061,7 +17061,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -17103,7 +17103,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -17123,7 +17123,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -17165,7 +17165,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -17185,7 +17185,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -17227,7 +17227,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -17247,7 +17247,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -17289,7 +17289,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -17309,7 +17309,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -17351,7 +17351,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -17371,7 +17371,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -17413,7 +17413,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -17433,7 +17433,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 
@@ -17475,7 +17475,7 @@ OrderEvent constructor.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -17495,7 +17495,7 @@ Get the order instance.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 [[order_injection]]
@@ -17586,7 +17586,7 @@ Manipulate the order data on update.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 
@@ -17827,7 +17827,7 @@ a|`$injectionPoint`
 a|`$data`
 |
 
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
 a|`$order`
 |
 |===
@@ -17887,16 +17887,16 @@ The legacy order model
 |link:http://php.net/string[string^]
     |sellerAccount
     |The seller account
-|        xref:account.adoc#account_models_address[Address]
+|        xref:Account.adoc#account_models_address[Address]
     |deliveryAddress
     |
-|        xref:account.adoc#account_models_address[Address]
+|        xref:Account.adoc#account_models_address[Address]
     |billingAddress
     |
-|        xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+|        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     |addresses
     |
-|        xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+|        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     |addressRelations
     |
 |===
@@ -17954,7 +17954,7 @@ Find an order item property by its ID.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemproperty[OrderItemProperty]
+<1>         xref:Order.adoc#order_models_orderitemproperty[OrderItemProperty]
     
 
 .*Parameters*
@@ -17980,7 +17980,7 @@ Create an order item property
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemproperty[OrderItemProperty]
+<1>         xref:Order.adoc#order_models_orderitemproperty[OrderItemProperty]
     
 
 .*Parameters*
@@ -18006,7 +18006,7 @@ Update an order item property
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemproperty[OrderItemProperty]
+<1>         xref:Order.adoc#order_models_orderitemproperty[OrderItemProperty]
     
 
 .*Parameters*
@@ -18036,7 +18036,7 @@ Create or update an order item property
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemproperty[OrderItemProperty]
+<1>         xref:Order.adoc#order_models_orderitemproperty[OrderItemProperty]
     
 
 .*Parameters*
@@ -18088,7 +18088,7 @@ Get an order item property by an order item ID and an order property type ID.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemproperty[OrderItemProperty]
+<1>         xref:Order.adoc#order_models_orderitemproperty[OrderItemProperty]
     
 
 .*Parameters*
@@ -18118,7 +18118,7 @@ Create an order item property by an order item ID and an order property type ID.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemproperty[OrderItemProperty]
+<1>         xref:Order.adoc#order_models_orderitemproperty[OrderItemProperty]
     
 
 .*Parameters*
@@ -18152,7 +18152,7 @@ Update an order item property by an order item ID and an order property type ID.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemproperty[OrderItemProperty]
+<1>         xref:Order.adoc#order_models_orderitemproperty[OrderItemProperty]
     
 
 .*Parameters*
@@ -18261,7 +18261,7 @@ Create an order property
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderproperty[OrderProperty]
+<1>         xref:Order.adoc#order_models_orderproperty[OrderProperty]
     
 
 .*Parameters*
@@ -18287,7 +18287,7 @@ Update an order property
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderproperty[OrderProperty]
+<1>         xref:Order.adoc#order_models_orderproperty[OrderProperty]
     
 
 .*Parameters*
@@ -18373,7 +18373,7 @@ Get a property type
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderpropertytype[OrderPropertyType]
+<1>         xref:Order.adoc#order_models_orderpropertytype[OrderPropertyType]
     
 
 .*Parameters*
@@ -18429,7 +18429,7 @@ Create an order property type
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderpropertytype[OrderPropertyType]
+<1>         xref:Order.adoc#order_models_orderpropertytype[OrderPropertyType]
     
 
 .*Parameters*
@@ -18455,7 +18455,7 @@ Update an order property type
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderpropertytype[OrderPropertyType]
+<1>         xref:Order.adoc#order_models_orderpropertytype[OrderPropertyType]
     
 
 .*Parameters*
@@ -18570,10 +18570,10 @@ The order item property model.
 |
     |updatedAt
     |The date that the property was last updated.
-|        xref:order.adoc#order_models_orderitem[OrderItem]
+|        xref:Order.adoc#order_models_orderitem[OrderItem]
     |orderItem
     |The order item that the property belongs to.
-|        xref:order.adoc#order_models_orderpropertytype[OrderPropertyType]
+|        xref:Order.adoc#order_models_orderpropertytype[OrderPropertyType]
     |type
     |The type of the property.
 |===
@@ -18663,10 +18663,10 @@ The order properties model. Each order property has a type.
 |
     |updatedAt
     |The date that the property was updated last.
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
     |order
     |The order that the property belongs to.
-|        xref:order.adoc#order_models_orderpropertytype[OrderPropertyType]
+|        xref:Order.adoc#order_models_orderpropertytype[OrderPropertyType]
     |type
     |The property type instance
 |===
@@ -18779,7 +18779,7 @@ The order property type name model. Each order property type can have one name p
 |link:http://php.net/string[string^]
     |lang
     |The language of the type name
-|        xref:order.adoc#order_models_orderpropertytype[OrderPropertyType]
+|        xref:Order.adoc#order_models_orderpropertytype[OrderPropertyType]
     |type
     |The property type instance.
 |===
@@ -18837,7 +18837,7 @@ Create a redistribution
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -18863,7 +18863,7 @@ Update a redistribution
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -18945,7 +18945,7 @@ Update currency
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -18998,7 +18998,7 @@ Get a relation reference by ID
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderrelationreference[OrderRelationReference]
+<1>         xref:Order.adoc#order_models_orderrelationreference[OrderRelationReference]
     
 
 .*Parameters*
@@ -19024,7 +19024,7 @@ Get a relation reference by composite key
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderrelationreference[OrderRelationReference]
+<1>         xref:Order.adoc#order_models_orderrelationreference[OrderRelationReference]
     
 
 .*Parameters*
@@ -19093,7 +19093,7 @@ List relation references by any values
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -19134,7 +19134,7 @@ Create a relation reference
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderrelationreference[OrderRelationReference]
+<1>         xref:Order.adoc#order_models_orderrelationreference[OrderRelationReference]
     
 
 .*Parameters*
@@ -19160,7 +19160,7 @@ Update a relation reference by ID
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderrelationreference[OrderRelationReference]
+<1>         xref:Order.adoc#order_models_orderrelationreference[OrderRelationReference]
     
 
 .*Parameters*
@@ -19190,7 +19190,7 @@ Update a relation reference by composite key
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderrelationreference[OrderRelationReference]
+<1>         xref:Order.adoc#order_models_orderrelationreference[OrderRelationReference]
     
 
 .*Parameters*
@@ -19339,19 +19339,19 @@ The order relation reference model specifies how references and orders are relat
 <li>sender</li>
 <li>receiver</li>
 </ul>
-|        xref:order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[Order]
     |order
     |The order that the reference belongs to.
-|        xref:account.adoc#account_models_contact[Contact]
+|        xref:Account.adoc#account_models_contact[Contact]
     |contactReceiver
     |The Contact referenced with relation "receiver".
-|        xref:account.adoc#account_models_contact[Contact]
+|        xref:Account.adoc#account_models_contact[Contact]
     |contactSender
     |The Contact referenced with relation "sender".
-|        xref:account.adoc#account_models_account[Account]
+|        xref:Account.adoc#account_models_account[Account]
     |accountReceiver
     |The Account referenced with relation "receiver".
-|        xref:account.adoc#account_models_account[Account]
+|        xref:Account.adoc#account_models_account[Account]
     |accountSender
     |The Account referenced with relation "sender".
 |===
@@ -19409,7 +19409,7 @@ Create a reorder
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -19435,7 +19435,7 @@ Update a reorder
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -19517,7 +19517,7 @@ Update currency
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -19547,7 +19547,7 @@ Get the date when the reorder will probably be delivered.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
+<1>         xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[Carbon]
     
 
 .*Parameters*
@@ -19573,7 +19573,7 @@ Calculate and save the delivery dates
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -19639,7 +19639,7 @@ Get a return reason.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_returnreason[ReturnReason]
+<1>         xref:Order.adoc#order_models_returnreason[ReturnReason]
     
 
 .*Parameters*
@@ -19783,13 +19783,13 @@ public setIndex($index):Plenty\Modules\Cloud\ElasticSearch\Contracts\ElasticSear
 
 ===== Return type
     
-<1>         xref:cloud.adoc#cloud_contracts_elasticsearchsearchrepositorycontract[ElasticSearchSearchRepositoryContract]
+<1>         xref:Cloud.adoc#cloud_contracts_elasticsearchsearchrepositorycontract[ElasticSearchSearchRepositoryContract]
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:cloud.adoc#cloud_index_indexinterface[IndexInterface]
+|        xref:Cloud.adoc#cloud_index_indexinterface[IndexInterface]
 a|`$index`
 |
 |===
@@ -19809,7 +19809,7 @@ public addSearch($search):Plenty\Modules\Cloud\ElasticSearch\Contracts\ElasticSe
 
 ===== Return type
     
-<1>         xref:cloud.adoc#cloud_contracts_elasticsearchsearchrepositorycontract[ElasticSearchSearchRepositoryContract]
+<1>         xref:Cloud.adoc#cloud_contracts_elasticsearchsearchrepositorycontract[ElasticSearchSearchRepositoryContract]
     
 
 .*Parameters*
@@ -19875,7 +19875,7 @@ Get an order status.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderstatus[OrderStatus]
+<1>         xref:Order.adoc#order_models_orderstatus[OrderStatus]
     
 
 .*Parameters*
@@ -19901,7 +19901,7 @@ Search order status.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -19931,7 +19931,7 @@ List order statuses.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+<1>         xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     
 
 [source%nowrap, php]
@@ -19948,7 +19948,7 @@ Create an order status.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderstatus[OrderStatus]
+<1>         xref:Order.adoc#order_models_orderstatus[OrderStatus]
     
 
 .*Parameters*
@@ -19974,7 +19974,7 @@ Update an order status.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderstatus[OrderStatus]
+<1>         xref:Order.adoc#order_models_orderstatus[OrderStatus]
     
 
 .*Parameters*
@@ -20138,7 +20138,7 @@ The order status model
 |link:http://php.net/string[string^]
     |color
     |The color of the status.
-|        xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+|        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     |names
     |The names of the order status.
 |===
@@ -20196,7 +20196,7 @@ Get the status history of an order
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+<1>         xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     
 
 .*Parameters*
@@ -20226,7 +20226,7 @@ List status histories
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -20494,7 +20494,7 @@ Create an order for today for a given subscription.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_order[Order]
+<1>         xref:Order.adoc#order_models_order[Order]
     
 
 .*Parameters*
@@ -20547,7 +20547,7 @@ Create a taric vat assignment.
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_taricvatassignment[TaricVatAssignment]
+<1>         xref:Order.adoc#order_models_taricvatassignment[TaricVatAssignment]
     
 
 .*Parameters*
@@ -20573,7 +20573,7 @@ Update a taric vat assignment
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_taricvatassignment[TaricVatAssignment]
+<1>         xref:Order.adoc#order_models_taricvatassignment[TaricVatAssignment]
     
 
 .*Parameters*
@@ -20625,7 +20625,7 @@ Search taric vat assignments.
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -20659,7 +20659,7 @@ List taric vat assignment of a taric code
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_taricvatassignment[TaricVatAssignment]
+<1>         xref:Order.adoc#order_models_taricvatassignment[TaricVatAssignment]
     
 
 .*Parameters*
@@ -20825,7 +20825,7 @@ The taric vat assignment model.
 |
     |updatedAt
     |The date that the taric vat assignment was updated last.
-|        xref:order.adoc#order_models_taricvatassignmentused[TaricVatAssignmentUsed]
+|        xref:Order.adoc#order_models_taricvatassignmentused[TaricVatAssignmentUsed]
     |taricVatAssignmentUsed
     |Is the Taric code is used by a variation
 |===
@@ -20927,7 +20927,7 @@ List transactions
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+<1>         xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     
 
 .*Parameters*
@@ -20961,7 +20961,7 @@ Create a transaction
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemtransaction[OrderItemTransaction]
+<1>         xref:Order.adoc#order_models_orderitemtransaction[OrderItemTransaction]
     
 
 .*Parameters*
@@ -20987,7 +20987,7 @@ Update a transaction
 
 ===== Return type
     
-<1>         xref:order.adoc#order_models_orderitemtransaction[OrderItemTransaction]
+<1>         xref:Order.adoc#order_models_orderitemtransaction[OrderItemTransaction]
     
 
 .*Parameters*
@@ -21043,7 +21043,7 @@ Search transactions
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
     
 
 .*Parameters*
@@ -21089,7 +21089,7 @@ Create transactions for order
 
 ===== Return type
     
-<1>         xref:miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+<1>         xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
     
 
 .*Parameters*
@@ -21279,7 +21279,7 @@ The order item transaction model.
 |
     |updatedAt
     |The date the transaction was last updated
-|        xref:order.adoc#order_models_orderitem[OrderItem]
+|        xref:Order.adoc#order_models_orderitem[OrderItem]
     |orderItem
     |The order item the transaction belongs to
 |===
