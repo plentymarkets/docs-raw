@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[accounting_accounting_contracts]]
 ===  Contracts
+[[accounting_contracts_accountinglocationrepositorycontract]]
 ==== AccountingLocationRepositoryContract
 
 The repository to get, create, update and delete accounting locations.
@@ -40,7 +42,9 @@ Get an accounting location. The ID of the location must be specified.
 
 ===== Return type
     
-<1> link:accounting#accounting_models_accountinglocation[AccountingLocation^]
+<1> [[__plenty\modules\accounting\models\accountinglocation]]
+
+    link:accounting#accounting_models_accountinglocation[AccountingLocation^]
 
     
 
@@ -68,7 +72,9 @@ List all accounting locations
 
 ===== Return type
     
-<1> link:accounting#accounting_models_accountinglocation[AccountingLocation^]
+<1> [[__plenty\modules\accounting\models\accountinglocation]]
+
+    link:accounting#accounting_models_accountinglocation[AccountingLocation^]
 
     
 
@@ -86,7 +92,9 @@ List accounting locations for a client. The plenty ID of the client must be spec
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -113,7 +121,9 @@ Create an accounting location.
 
 ===== Return type
     
-<1> link:accounting#accounting_models_accountinglocation[AccountingLocation^]
+<1> [[__plenty\modules\accounting\models\accountinglocation]]
+
+    link:accounting#accounting_models_accountinglocation[AccountingLocation^]
 
     
 
@@ -140,7 +150,9 @@ Update an accounting location. The ID of the location must be specified.
 
 ===== Return type
     
-<1> link:accounting#accounting_models_accountinglocation[AccountingLocation^]
+<1> [[__plenty\modules\accounting\models\accountinglocation]]
+
+    link:accounting#accounting_models_accountinglocation[AccountingLocation^]
 
     
 
@@ -197,7 +209,9 @@ Get accounting location settings. The ID of the location must be specified.
 
 ===== Return type
     
-<1> link:accounting#accounting_models_accountinglocationsettings[AccountingLocationSettings^]
+<1> [[__plenty\modules\accounting\models\accountinglocationsettings]]
+
+    link:accounting#accounting_models_accountinglocationsettings[AccountingLocationSettings^]
 
     
 
@@ -224,7 +238,9 @@ Update accounting location settings. The ID of the location must be specified.
 
 ===== Return type
     
-<1> link:accounting#accounting_models_accountinglocationsettings[AccountingLocationSettings^]
+<1> [[__plenty\modules\accounting\models\accountinglocationsettings]]
+
+    link:accounting#accounting_models_accountinglocationsettings[AccountingLocationSettings^]
 
     
 
@@ -242,6 +258,7 @@ a|`$data`
 
 
 
+[[accounting_contracts_accountingservicecontract]]
 ==== AccountingServiceContract
 
 Provides methods to detect a location ID.
@@ -380,6 +397,7 @@ a|`$countryId`
 
 
 
+[[accounting_contracts_debtoraccountrepositorycontract]]
 ==== DebtorAccountRepositoryContract
 
 The DebtorAccountRepositoryContract is the interface for the DebtorAccountRepository. This interface allows you to either list debtor accounts by locationId or by locationId and mode. The mode describes the criteria that is used to assign pending amounts to debtor accounts.
@@ -411,7 +429,9 @@ Get debtor account configuration of an accounting location. The ID of the accoun
 
 ===== Return type
     
-<1> link:accounting#accounting_models_debtoraccountconfiguration[DebtorAccountConfiguration^]
+<1> [[__plenty\modules\accounting\models\debtoraccountconfiguration]]
+
+    link:accounting#accounting_models_debtoraccountconfiguration[DebtorAccountConfiguration^]
 
     
 
@@ -438,7 +458,9 @@ Lists debtor accounts by mode for an accounting location . The mode and the acco
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -463,6 +485,7 @@ The modes are described in detail in the DebtorAccountConfiguration model as wel
 
 
 
+[[accounting_contracts_determineshopcountrycontract]]
 ==== DetermineShopCountryContract
 
 This interface provides methods to initialise the country of a location or the country of an order as well as methods to get the ID of a client, the plenty ID of a client, the country or the ID of country.
@@ -494,7 +517,9 @@ Initialise the country of the standard location of a client. The ID of the clien
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -521,7 +546,9 @@ Initialise the country of the standard location of a client. The plenty ID of th
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -548,7 +575,9 @@ Initialise the country of a location. The ID of the location must be specified.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -575,7 +604,9 @@ Initialise the country for an order. The ID of the order must be specified.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -748,6 +779,7 @@ a|`$locationId`
 
 
 
+[[accounting_contracts_postingkeyrepositorycontract]]
 ==== PostingKeyRepositoryContract
 
 The PostingKeyRepositoryContract is the interface for the PostingKeyRepository. This interface provides the functionality to find the posting keys for an accounting location.
@@ -779,7 +811,9 @@ Get the posting key configuration of an accounting location. The ID of the accou
 
 ===== Return type
     
-<1> link:accounting#accounting_models_postingkeyconfiguration[PostingKeyConfiguration^]
+<1> [[__plenty\modules\accounting\models\postingkeyconfiguration]]
+
+    link:accounting#accounting_models_postingkeyconfiguration[PostingKeyConfiguration^]
 
     
 
@@ -793,6 +827,7 @@ a|`$locationId`
 
 
 
+[[accounting_contracts_revenueaccountrepositorycontract]]
 ==== RevenueAccountRepositoryContract
 
 The RevenueAccountRepositoryContract is the interface for the RevenueAccountRepository. This interface allows you to either list revenue accounts by locationId, find by locationId and countryId or to least all for an accounting location.
@@ -824,7 +859,9 @@ List revenue account configurations for all accounting locations. Each accountin
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -855,7 +892,9 @@ Get the revenue account configuration of an accounting location. The ID of the a
 
 ===== Return type
     
-<1> link:accounting#accounting_models_revenueaccountlocationconfiguration[RevenueAccountLocationConfiguration^]
+<1> [[__plenty\modules\accounting\models\revenueaccountlocationconfiguration]]
+
+    link:accounting#accounting_models_revenueaccountlocationconfiguration[RevenueAccountLocationConfiguration^]
 
     
 
@@ -882,7 +921,9 @@ Get the revenue account configuration of a country. The country account configur
 
 ===== Return type
     
-<1> link:accounting#accounting_models_revenueaccountcountryconfiguration[RevenueAccountCountryConfiguration^]
+<1> [[__plenty\modules\accounting\models\revenueaccountcountryconfiguration]]
+
+    link:accounting#accounting_models_revenueaccountcountryconfiguration[RevenueAccountCountryConfiguration^]
 
     
 
@@ -901,6 +942,7 @@ a|`$countryId`
 
 [[accounting_accounting_exceptions]]
 ===  Exceptions
+[[accounting_exceptions_accountingexception]]
 ==== AccountingException
 
 Class AccountingException
@@ -917,6 +959,7 @@ Class AccountingException
 
 [[accounting_accounting_models]]
 ===  Models
+[[accounting_models_accountinglocation]]
 ==== AccountingLocation
 
 The accounting location model. An accounting location always has a country and belongs to a client. An accounting location contains the VAT configurations. The VAT model contains the VAT configuration.
@@ -953,11 +996,15 @@ The accounting location model. An accounting location always has a country and b
 |link:http://php.net/array[array^]
     |vats
     |A collection of VAT configurations that are related to the accounting location
-|link:order#order_models_country[Country^]
+|[[__plenty\modules\order\shipping\countries\models\country]]
+
+    link:order#order_models_country[Country^]
 
     |country
     |The country that the accounting location belongs to
-|link:system#system_models_webstore[Webstore^]
+|[[__plenty\modules\system\models\webstore]]
+
+    link:system#system_models_webstore[Webstore^]
 
     |client
     |The client (store) this accounting location belongs to
@@ -980,6 +1027,7 @@ Returns this model as an array.
 
 
 
+[[accounting_models_accountinglocationsettings]]
 ==== AccountingLocationSettings
 
 The accounting location settings model.
@@ -1038,6 +1086,7 @@ Returns this model as an array.
 
 
 
+[[accounting_models_debtoraccount]]
 ==== DebtorAccount
 
 The DebtorAccountValue Model which contains the actual configured debtor accounts by character, payment and country.
@@ -1080,7 +1129,9 @@ The DebtorAccountValue Model which contains the actual configured debtor account
 |link:http://php.net/string[string^]
     |value
     |The actual debtor account.
-|link:accounting#accounting_models_debtoraccountconfiguration[DebtorAccountConfiguration^]
+|[[__plenty\modules\accounting\models\debtoraccountconfiguration]]
+
+    link:accounting#accounting_models_debtoraccountconfiguration[DebtorAccountConfiguration^]
 
     |account
     |The debtor account configuration this account is associated with.
@@ -1103,6 +1154,7 @@ Returns this model as an array.
 
 
 
+[[accounting_models_debtoraccountconfiguration]]
 ==== DebtorAccountConfiguration
 
 The debtor account configuration model. The configuration is a set of debtor accounts. The actual number of debtor accounts within the configuration depends on the mode used to assign pending amounts to debtor accounts.
@@ -1150,7 +1202,9 @@ The debtor account configuration model. The configuration is a set of debtor acc
 |link:http://php.net/bool[bool^]
     |save
     |Flag that indicates if the debtor account shall be saved within the contact data.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |accounts
     |The actual debtor accounts
@@ -1173,6 +1227,7 @@ Returns this model as an array.
 
 
 
+[[accounting_models_postingkey]]
 ==== PostingKey
 
 The Posting Key Model. A posting key is always associated with an accounting location and holds an posting key for each configured vat rate.
@@ -1216,6 +1271,7 @@ Returns this model as an array.
 
 
 
+[[accounting_models_postingkeyconfiguration]]
 ==== PostingKeyConfiguration
 
 The posting key configuration model. A posting key configuration is a set of 4 posting keys. A posting key configuration is always associated with an accounting location and can have a posting key per VAT rate. A posting key defines how line items are booked to accounts.
@@ -1237,11 +1293,15 @@ The posting key configuration model. A posting key configuration is a set of 4 p
 |link:http://php.net/int[int^]
     |locationId
     |The ID of the accounting location that the configuration belongs to
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |postingKeys
     |The posting keys for this configuration
-|link:accounting#accounting_models_accountinglocation[AccountingLocation^]
+|[[__plenty\modules\accounting\models\accountinglocation]]
+
+    link:accounting#accounting_models_accountinglocation[AccountingLocation^]
 
     |location
     |The name of the accounting location that the configuration belongs to
@@ -1264,6 +1324,7 @@ Returns this model as an array.
 
 
 
+[[accounting_models_revenueaccount]]
 ==== RevenueAccount
 
 The revenue account model provides information on a single revenue account. The ID of an account matches the ID of a VAT rate.
@@ -1307,6 +1368,7 @@ Returns this model as an array.
 
 
 
+[[accounting_models_revenueaccountcountryconfiguration]]
 ==== RevenueAccountCountryConfiguration
 
 The revenue account country configuration model. The revenue account country configuration is a set of up to 4 revenue accounts for one country. Each country that you need to pay VAT in needs a configuration. The 4 revenue account included in the configuration are associated with VAT rates. The VAT rate that one revenue account is associated with can be identified by the ID of the VAT rate. The ID of the VAT rate is included in the account name. Furthermore, each revenue account country configuration is part of a revenue account location configuration. A revenue account country configuration is only available if a VAT configuration for the country exists.
@@ -1331,15 +1393,21 @@ The revenue account country configuration model. The revenue account country con
 |link:http://php.net/int[int^]
     |revenueAccountLocationId
     |The ID configuration of the revenue account that these accounts are for.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |revenueAccounts
     |A list of the actual revenue accounts. The accounts are associated with VAT rate. The association can be identified by
-|link:order#order_models_country[Country^]
+|[[__plenty\modules\order\shipping\countries\models\country]]
+
+    link:order#order_models_country[Country^]
 
     |country
     |The country these accounts are associated with.
-|link:accounting#accounting_models_revenueaccountlocationconfiguration[RevenueAccountLocationConfiguration^]
+|[[__plenty\modules\accounting\models\revenueaccountlocationconfiguration]]
+
+    link:accounting#accounting_models_revenueaccountlocationconfiguration[RevenueAccountLocationConfiguration^]
 
     |locationConfiguration
     |The revenue account configuration these accounts are associated with
@@ -1362,6 +1430,7 @@ Returns this model as an array.
 
 
 
+[[accounting_models_revenueaccountlocationconfiguration]]
 ==== RevenueAccountLocationConfiguration
 
 The revenue account location configuration model. A revenue account location configuration is the set of all revenue accounts that belong to one accounting location.
@@ -1392,7 +1461,9 @@ The revenue account location configuration model. A revenue account location con
 |link:http://php.net/string[string^]
     |accountExport
     |The account used for revenues that are exempt from VAT and that were sold to outside the European Union
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |revenueAccountCountryConfigurations
     |The set of revenue accounts of one country
@@ -1419,6 +1490,7 @@ Returns this model as an array.
 
 [[accounting_vat_contracts]]
 ===  Contracts
+[[accounting_contracts_vatinitcontract]]
 ==== VatInitContract
 
 This interface provides methods to initialise the detection of a VAT configuration and to actually detect VAT rates or VAT fields.
@@ -1450,7 +1522,9 @@ Initialise the VAT system data
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1575,7 +1649,9 @@ Get the VAT configuration to be used for VAT calculation
 
 ===== Return type
     
-<1> link:accounting#accounting_models_vat[Vat^]
+<1> [[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
     
 
@@ -1632,7 +1708,9 @@ Get a standard VAT configuration of an accounting location
 
 ===== Return type
     
-<1> link:accounting#accounting_models_vat[Vat^]
+<1> [[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
     
 
@@ -1650,6 +1728,7 @@ a|`$startedAt`
 
 
 
+[[accounting_contracts_vatrepositorycontract]]
 ==== VatRepositoryContract
 
 The VatRepositoryContract is the interface for the VAT functionality. This interface allows you to get the VAT configuration for an accounting location and a country of delivery.
@@ -1681,7 +1760,9 @@ Get a VAT configuration
 
 ===== Return type
     
-<1> link:accounting#accounting_models_vat[Vat^]
+<1> [[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
     
 
@@ -1708,7 +1789,9 @@ Get the standard VAT configuration for a plenty ID
 
 ===== Return type
     
-<1> link:accounting#accounting_models_vat[Vat^]
+<1> [[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
     
 
@@ -1739,7 +1822,9 @@ Get the standard VAT configuration for a location ID
 
 ===== Return type
     
-<1> link:accounting#accounting_models_vat[Vat^]
+<1> [[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
     
 
@@ -1770,7 +1855,9 @@ public getVat($locationId, $countryId, $startedAt = null):Plenty\Modules\Account
 
 ===== Return type
     
-<1> link:accounting#accounting_models_vat[Vat^]
+<1> [[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
     
 
@@ -1915,7 +2002,9 @@ Get a VAT configuration by id
 
 ===== Return type
     
-<1> link:accounting#accounting_models_vat[Vat^]
+<1> [[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
     
 
@@ -1942,7 +2031,9 @@ Create a VAT configuration
 
 ===== Return type
     
-<1> link:accounting#accounting_models_vat[Vat^]
+<1> [[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
     
 
@@ -1969,7 +2060,9 @@ Update a VAT configuration
 
 ===== Return type
     
-<1> link:accounting#accounting_models_vat[Vat^]
+<1> [[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
     
 
@@ -2000,7 +2093,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2018,7 +2113,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2036,7 +2133,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2063,7 +2162,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2081,7 +2182,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2099,11 +2202,14 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
+[[accounting_contracts_vatservicecontract]]
 ==== VatServiceContract
 
 Provides methods for a quick search of VAT fields, VAT rates and VAT names of a specific VAT configuration.
@@ -2141,7 +2247,9 @@ Get the VAT field for a VAT rate.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:accounting#accounting_models_vat[Vat^]
+|[[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
 a|`$vat`
 |The VAT configuration of a country
@@ -2172,7 +2280,9 @@ Get the VAT rate for a VAT field.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:accounting#accounting_models_vat[Vat^]
+|[[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
 a|`$vat`
 |The VAT configuration of a country
@@ -2203,7 +2313,9 @@ Get the name of a VAT field.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:accounting#accounting_models_vat[Vat^]
+|[[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
 a|`$vat`
 |The VAT configuration of a country
@@ -2216,6 +2328,7 @@ a|`$vatField`
 
 [[accounting_vat_exceptions]]
 ===  Exceptions
+[[accounting_exceptions_vatexception]]
 ==== VatException
 
 Class VatException
@@ -2232,6 +2345,7 @@ Class VatException
 
 [[accounting_vat_models]]
 ===  Models
+[[accounting_models_vat]]
 ==== Vat
 
 The VAT model contains the complete VAT configuration in plentymarkets. The VAT configuration is based on 4 VAT rates. A VAT configuration always belongs to an accounting location. The accounting location is in a specified country and is assigned to a client. One accounting location can have several VAT configurations, but only one is active at a time. Which one is active depends on the startedAt date. This also means that only one VAT number is active per accounting location.
@@ -2259,11 +2373,15 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
 |link:http://php.net/string[string^]
     |taxIdNumber
     |The tax id number of VAT configuration.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |startedAt
     |The date when the VAT configuration went into effect
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |invalidFrom
     |The date when the VAT configuration should not be used any more
@@ -2279,19 +2397,27 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
 |link:http://php.net/bool[bool^]
     |isStandard
     |Flag that indicates if the VAT configuration is the standard VAT configuration for the location
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date at which the VAT configuration was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the VAT configuration was last updated.
-|link:accounting#accounting_models_accountinglocation[AccountingLocation^]
+|[[__plenty\modules\accounting\models\accountinglocation]]
+
+    link:accounting#accounting_models_accountinglocation[AccountingLocation^]
 
     |location
     |The accounting location that the VAT configuration belongs to. Each accounting location is assigned to a country and only one accounting location is allowed per country.
-|link:order#order_models_country[Country^]
+|[[__plenty\modules\order\shipping\countries\models\country]]
+
+    link:order#order_models_country[Country^]
 
     |country
     |The country that the VAT configuration belongs to
@@ -2317,6 +2443,7 @@ Returns this model as an array.
 
 
 
+[[accounting_models_vatrate]]
 ==== VatRate
 
 The VAT rate model is always associated with a VAT configuration and contains the ID, name and percentage of a VAT rate. Each VAT configuration can have 4 rates.

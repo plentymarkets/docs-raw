@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[catalog_catalog_contracts]]
 ===  Contracts
+[[catalog_contracts_catalogcontentrepositorycontract]]
 ==== CatalogContentRepositoryContract
 
 The CatalogContentRepositoryContract is the interface for the catalogue content repository. This interface allows to read and update a catalogue&#039;s content. The content contains the specific catalogue data that is used in the exports.
@@ -83,6 +85,7 @@ a|`$data`
 
 
 
+[[catalog_contracts_catalogexportfilterservicecontract]]
 ==== CatalogExportFilterServiceContract
 
 To be written
@@ -114,14 +117,18 @@ public applyFilters($documentSearch, $config):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_document_documentsearch[DocumentSearch^]
+|[[__plenty\modules\cloud\elasticsearch\lib\search\document\documentsearch]]
+
+    link:cloud#cloud_document_documentsearch[DocumentSearch^]
 
 a|`$documentSearch`
 |
@@ -133,6 +140,7 @@ a|`$config`
 
 
 
+[[catalog_contracts_catalogexportrepositorycontract]]
 ==== CatalogExportRepositoryContract
 
 The CatalogExportRepositoryContract is the interface for the catalogue export repository. It allows to receive an instance of CatalogExportServiceContract to export a specific catalogue.
@@ -164,7 +172,9 @@ Returns an instance of CatalogExportServiceContract to export a specific catalog
 
 ===== Return type
     
-<1> link:catalog#catalog_contracts_catalogexportservicecontract[CatalogExportServiceContract^]
+<1> [[__plenty\modules\catalog\contracts\catalogexportservicecontract]]
+
+    link:catalog#catalog_contracts_catalogexportservicecontract[CatalogExportServiceContract^]
 
     
 
@@ -191,7 +201,9 @@ Initiates the queue which exports a specific catalogue.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -247,6 +259,7 @@ a|`$token`
 
 
 
+[[catalog_contracts_catalogexportservicecontract]]
 ==== CatalogExportServiceContract
 
 The CatalogExportServiceContract is the interface for the catalogue export service. It allows you to configure and start the export of a catalogue.
@@ -272,7 +285,7 @@ public setAdditionalFields($additionalFields):void // <1>
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! 
 ====
 
@@ -285,7 +298,9 @@ Specifies fields that should be exported in addition to the mappings configured 
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -306,7 +321,7 @@ public addMutator($mutator):void // <1>
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! 
 ====
 
@@ -319,7 +334,9 @@ Use Plenty\Modules\Catalog\Contracts\TemplateContract::getPreMutators or Plenty\
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -346,7 +363,9 @@ Defines the settings that are used in the mappings and for filtering.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -367,7 +386,7 @@ public setNumberOfDocumentsPerShard($numberOfDocumentsPerShard):void // <1>
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! 
 ====
 
@@ -380,7 +399,9 @@ Use Plenty\Modules\Catalog\Contracts\CatalogExportServiceContract::setItemsPerPa
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -407,7 +428,9 @@ Defines the amount of items that will be returned in each iteration of the expor
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -434,14 +457,18 @@ Limits the results of items to only those that were updated after the given time
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+|[[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
 a|`$timestamp`
 |
@@ -462,7 +489,9 @@ Returns an instance of CatalogExportResult, which can be iterated to receive the
 
 ===== Return type
     
-<1> link:catalog#catalog_models_catalogexportresult[CatalogExportResult^]
+<1> [[__plenty\modules\catalog\models\catalogexportresult]]
+
+    link:catalog#catalog_models_catalogexportresult[CatalogExportResult^]
 
     
 
@@ -480,11 +509,14 @@ public getPreview():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
+[[catalog_contracts_catalogrepositorycontract]]
 ==== CatalogRepositoryContract
 
 The CatalogRepositoryContract is the interface for the catalogue repository. It allows you to create, read, update and delete catalogues.
@@ -516,7 +548,9 @@ Create a catalog
 
 ===== Return type
     
-<1> link:catalog#catalog_models_catalog[Catalog^]
+<1> [[__plenty\modules\catalog\models\catalog]]
+
+    link:catalog#catalog_models_catalog[Catalog^]
 
     
 
@@ -543,7 +577,9 @@ Update a catalog
 
 ===== Return type
     
-<1> link:catalog#catalog_models_catalog[Catalog^]
+<1> [[__plenty\modules\catalog\models\catalog]]
+
+    link:catalog#catalog_models_catalog[Catalog^]
 
     
 
@@ -574,7 +610,9 @@ Get the latest version of a catalog
 
 ===== Return type
     
-<1> link:catalog#catalog_models_catalog[Catalog^]
+<1> [[__plenty\modules\catalog\models\catalog]]
+
+    link:catalog#catalog_models_catalog[Catalog^]
 
     
 
@@ -601,7 +639,9 @@ Get a specific version of a catalog
 
 ===== Return type
     
-<1> link:catalog#catalog_models_catalog[Catalog^]
+<1> [[__plenty\modules\catalog\models\catalog]]
+
+    link:catalog#catalog_models_catalog[Catalog^]
 
     
 
@@ -632,7 +672,9 @@ Restore a past version of a catalog to become latest
 
 ===== Return type
     
-<1> link:catalog#catalog_models_catalog[Catalog^]
+<1> [[__plenty\modules\catalog\models\catalog]]
+
+    link:catalog#catalog_models_catalog[Catalog^]
 
     
 
@@ -663,7 +705,9 @@ Lists catalog versions
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+<1> [[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     
 
@@ -707,7 +751,9 @@ Restores an archived catalog
 
 ===== Return type
     
-<1> link:catalog#catalog_models_catalog[Catalog^]
+<1> [[__plenty\modules\catalog\models\catalog]]
+
+    link:catalog#catalog_models_catalog[Catalog^]
 
     
 
@@ -786,7 +832,9 @@ Copy a single catalog
 
 ===== Return type
     
-<1> link:catalog#catalog_models_catalog[Catalog^]
+<1> [[__plenty\modules\catalog\models\catalog]]
+
+    link:catalog#catalog_models_catalog[Catalog^]
 
     
 
@@ -847,7 +895,9 @@ Get list of all catalogs
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -1002,7 +1052,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1029,7 +1081,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1047,7 +1101,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1065,11 +1121,14 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
+[[catalog_contracts_catalogresultconvertercontract]]
 ==== CatalogResultConverterContract
 
 To be written
@@ -1101,14 +1160,18 @@ Through this a single entry of a catalog result should be added
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |
@@ -1163,11 +1226,14 @@ Removes all the data that was previously added to this instance
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
+[[catalog_contracts_catalogruntimeconfigcontract]]
 ==== CatalogRuntimeConfigContract
 
 To be written
@@ -1200,19 +1266,25 @@ which can&#039;t be defined before the runtime of the export
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:catalog#catalog_contracts_templatecontract[TemplateContract^]
+|[[__plenty\modules\catalog\contracts\templatecontract]]
+
+    link:catalog#catalog_contracts_templatecontract[TemplateContract^]
 
 a|`$template`
 |
 
-|link:catalog#catalog_models_catalog[Catalog^]
+|[[__plenty\modules\catalog\models\catalog]]
+
+    link:catalog#catalog_models_catalog[Catalog^]
 
 a|`$catalog`
 |
@@ -1234,19 +1306,25 @@ which can&#039;t be defined before the runtime of the preview
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:catalog#catalog_contracts_templatecontract[TemplateContract^]
+|[[__plenty\modules\catalog\contracts\templatecontract]]
+
+    link:catalog#catalog_contracts_templatecontract[TemplateContract^]
 
 a|`$template`
 |
 
-|link:catalog#catalog_models_catalog[Catalog^]
+|[[__plenty\modules\catalog\models\catalog]]
+
+    link:catalog#catalog_models_catalog[Catalog^]
 
 a|`$catalog`
 |
@@ -1254,6 +1332,7 @@ a|`$catalog`
 
 
 
+[[catalog_contracts_catalogruntimeconfigprovidercontract]]
 ==== CatalogRuntimeConfigProviderContract
 
 To be written
@@ -1324,6 +1403,7 @@ Returns a class name through which the export result can be converted into the n
     
 
 
+[[catalog_contracts_catalogtemplateprovidercontract]]
 ==== CatalogTemplateProviderContract
 
 The CatalogTemplateProviderContract is the interface that has to be implemented by the catalogue template providers. Each registered template should have a catalogue template provider (multiple templates can use the same one) to avoid booting them if they are not necessary. A catalogue template provider fills a template with data at the moment the template gets booted. Whenever it is possible, use the abstract class Plenty\Modules\Catalog\Templates\BaseTemplateProvider.
@@ -1461,6 +1541,7 @@ Returns an array of meta information which can be used to forward information to
     
 
 
+[[catalog_contracts_dataprovidercontract]]
 ==== DataProviderContract
 
 The DataProviderContract is the interface for data providers. Data providers provide the available fields that can be mapped in a template to create a catalogue. Whenever it is possible, use one of the concrete implementations Plenty\Modules\Catalog\DataProviders\BaseDataProvider, Plenty\Modules\Catalog\DataProviders\KeyDataProvider or Plenty\Modules\Catalog\DataProviders\NestedKeyDataProvider.
@@ -1518,14 +1599,18 @@ public setTemplate($template):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:catalog#catalog_contracts_templatecontract[TemplateContract^]
+|[[__plenty\modules\catalog\contracts\templatecontract]]
+
+    link:catalog#catalog_contracts_templatecontract[TemplateContract^]
 
 a|`$template`
 |
@@ -1546,7 +1631,9 @@ public setMapping($mapping):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1560,6 +1647,7 @@ a|`$mapping`
 
 
 
+[[catalog_contracts_fieldgrouprepositorycontract]]
 ==== FieldGroupRepositoryContract
 
 The FieldGroupRepositoryContract is the contract for the field group repository. It allows to retrieve fields of a field group. Field groups represent the different groups of available sources that can be seen in the data picker component in the catalogue UI. Each field represents a mappable source.
@@ -1591,7 +1679,9 @@ Get list of fields
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -1711,6 +1801,7 @@ a|`$itemsPerPage`
 
 
 
+[[catalog_contracts_nesteddataprovidercontract]]
 ==== NestedDataProviderContract
 
 The NestedDataProviderContract is the interface for nested data providers. Nested data providers are used to provide nested options that can be selected for export. E.g. a list of categories of a specific marketplace. Whenever it is possible, use the concrete implementation Plenty\Modules\Catalog\DataProviders\NestedKeyDataProvider.
@@ -1828,14 +1919,18 @@ public setTemplate($template):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:catalog#catalog_contracts_templatecontract[TemplateContract^]
+|[[__plenty\modules\catalog\contracts\templatecontract]]
+
+    link:catalog#catalog_contracts_templatecontract[TemplateContract^]
 
 a|`$template`
 |
@@ -1856,7 +1951,9 @@ public setMapping($mapping):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1870,6 +1967,7 @@ a|`$mapping`
 
 
 
+[[catalog_contracts_templatecontainercontract]]
 ==== TemplateContainerContract
 
 The TemplateContainerContract is the interface of the template container. The template container is a singleton, which allows to register and retrieve templates.
@@ -1901,7 +1999,9 @@ Registers a new template that can be used to create a catalogue.
 
 ===== Return type
     
-<1> link:catalog#catalog_contracts_templatecontract[TemplateContract^]
+<1> [[__plenty\modules\catalog\contracts\templatecontract]]
+
+    link:catalog#catalog_contracts_templatecontract[TemplateContract^]
 
     
 
@@ -1957,7 +2057,9 @@ Returns a specific template by its identifier.
 
 ===== Return type
     
-<1> link:catalog#catalog_contracts_templatecontract[TemplateContract^]
+<1> [[__plenty\modules\catalog\contracts\templatecontract]]
+
+    link:catalog#catalog_contracts_templatecontract[TemplateContract^]
 
     
 
@@ -1984,7 +2086,9 @@ Returns a specific template by its identifier without booting it.
 
 ===== Return type
     
-<1> link:catalog#catalog_contracts_templatecontract[TemplateContract^]
+<1> [[__plenty\modules\catalog\contracts\templatecontract]]
+
+    link:catalog#catalog_contracts_templatecontract[TemplateContract^]
 
     
 
@@ -1998,6 +2102,7 @@ a|`$identifier`
 
 
 
+[[catalog_contracts_templatecontract]]
 ==== TemplateContract
 
 The TemplateContract is the interface for templates. Templates are used to define a specific schema that can be used to create and configure a catalogue.
@@ -2097,7 +2202,9 @@ Adds a mapping to the template. If possible, don&#039;t use this directly and le
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2118,7 +2225,7 @@ public addMutator($callback):void // <1>
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! 
 ====
 
@@ -2131,7 +2238,9 @@ Use Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator or Plenty\M
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2158,7 +2267,9 @@ Adds a pre mutator to the template. Pre mutators are applied to the export data 
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2185,7 +2296,9 @@ Adds a post mutator to the template. Post mutators are applied to the export dat
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2229,7 +2342,9 @@ Adds a filter to the template. If possible, don&#039;t use this directly and let
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2267,7 +2382,7 @@ public getMutators():array // <1>
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! 
 ====
 
@@ -2331,7 +2446,9 @@ Defines the callback function that will be called after the mapping is done for 
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2375,7 +2492,9 @@ Adds a setting to the templates. Settings create components in the UI of catalog
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2419,7 +2538,9 @@ Sets the meta info for a template. Meta info is used to provide data which has t
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2480,7 +2601,9 @@ Used to activate / deactivate the possibility to export previews through this te
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2541,7 +2664,9 @@ public getRuntimeConfig():Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigC
 
 ===== Return type
     
-<1> link:catalog#catalog_contracts_catalogruntimeconfigcontract[CatalogRuntimeConfigContract^]
+<1> [[__plenty\modules\catalog\contracts\catalogruntimeconfigcontract]]
+
+    link:catalog#catalog_contracts_catalogruntimeconfigcontract[CatalogRuntimeConfigContract^]
 
     
 
@@ -2559,7 +2684,9 @@ public getResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConver
 
 ===== Return type
     
-<1> link:catalog#catalog_contracts_catalogresultconvertercontract[CatalogResultConverterContract^]
+<1> [[__plenty\modules\catalog\contracts\catalogresultconvertercontract]]
+
+    link:catalog#catalog_contracts_catalogresultconvertercontract[CatalogResultConverterContract^]
 
     
 
@@ -2577,14 +2704,18 @@ Fills the template via the given catalogue template provider. This method is cal
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:catalog#catalog_contracts_catalogtemplateprovidercontract[CatalogTemplateProviderContract^]
+|[[__plenty\modules\catalog\contracts\catalogtemplateprovidercontract]]
+
+    link:catalog#catalog_contracts_catalogtemplateprovidercontract[CatalogTemplateProviderContract^]
 
 a|`$provider`
 |
@@ -2665,11 +2796,14 @@ public jsonSerialize():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
+[[catalog_contracts_templaterepositorycontract]]
 ==== TemplateRepositoryContract
 
 The TemplateRepositoryContract is the interface for the template repository. It allows to retrieve templates and their mappings.
@@ -2872,7 +3006,9 @@ Test export of a catalog
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2913,6 +3049,7 @@ a|`$id`
 
 [[catalog_catalog_dataproviders]]
 ===  DataProviders
+[[catalog_dataproviders_basedataprovider]]
 ==== BaseDataProvider
 
 The BaseDataProvider is used to define a section of simple mappings in the catalogue. A simple mapping refers to the assignment of a value in the plentymarkets system or a manually predefined value to a specific key. E.g. mapping the value of a specific text property to the key &#039;description&#039;.
@@ -2961,14 +3098,18 @@ public setTemplate($template):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:catalog#catalog_contracts_templatecontract[TemplateContract^]
+|[[__plenty\modules\catalog\contracts\templatecontract]]
+
+    link:catalog#catalog_contracts_templatecontract[TemplateContract^]
 
 a|`$template`
 |
@@ -2989,7 +3130,9 @@ public setMapping($mapping):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3003,6 +3146,7 @@ a|`$mapping`
 
 
 
+[[catalog_dataproviders_keydataprovider]]
 ==== KeyDataProvider
 
 The KeyDataProvider is used to define a section of a complex mapping in the catalogue. A complex mapping refers to the assignment of a value from a predefined list of possible values to a key if a specific requirement is met. E.g. put the value &#039;awesomeBrand&#039; into the key &#039;brand&#039;, if manufacturer &#039;awesomeManufacturer&#039; is linked to a variation.
@@ -3068,14 +3212,18 @@ public setTemplate($template):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:catalog#catalog_contracts_templatecontract[TemplateContract^]
+|[[__plenty\modules\catalog\contracts\templatecontract]]
+
+    link:catalog#catalog_contracts_templatecontract[TemplateContract^]
 
 a|`$template`
 |
@@ -3096,7 +3244,9 @@ public setMapping($mapping):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3110,6 +3260,7 @@ a|`$mapping`
 
 
 
+[[catalog_dataproviders_nestedkeydataprovider]]
 ==== NestedKeyDataProvider
 
 The NestedKeyDataProvider is used to define a section of a complex mapping in the catalogue. It is specifically used if the list of available values contains nested values. E.g. a list of categories with sub-categories.
@@ -3164,7 +3315,9 @@ public getNestedRows($parentId):array // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$parentId`
 |
@@ -3185,7 +3338,9 @@ public getMetaData():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3254,14 +3409,18 @@ public setTemplate($template):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:catalog#catalog_contracts_templatecontract[TemplateContract^]
+|[[__plenty\modules\catalog\contracts\templatecontract]]
+
+    link:catalog#catalog_contracts_templatecontract[TemplateContract^]
 
 a|`$template`
 |
@@ -3282,7 +3441,9 @@ public setMapping($mapping):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3323,6 +3484,7 @@ a|`$id`
 
 [[catalog_catalog_helpers]]
 ===  Helpers
+[[catalog_helpers_contenttypehelper]]
 ==== ContentTypeHelper
 
 Provides a list of valid content types that can be returned in a CatalogResultConverter
@@ -3368,6 +3530,7 @@ a|`$type`
 
 [[catalog_catalog_models]]
 ===  Models
+[[catalog_models_catalog]]
 ==== Catalog
 
 The catalog model - stores on S3
@@ -3432,6 +3595,7 @@ Returns this model as an array.
 
 
 
+[[catalog_models_catalogexportresult]]
 ==== CatalogExportResult
 
 The CatalogExportResult represents the exported data in a specific catalogue export. It implements the Iterator interface and can therefore be used in a foreach loop to retrieve the different pages of the export data.
@@ -3464,6 +3628,7 @@ Returns this model as an array.
 
 [[catalog_catalog_templates]]
 ===  Templates
+[[catalog_templates_basetemplateprovider]]
 ==== BaseTemplateProvider
 
 The BaseTemplateProvider is the abstract class that should be used to implement a template provider.
@@ -3601,6 +3766,7 @@ Returns an array of meta information which can be used to forward information to
     
 
 
+[[catalog_templates_template]]
 ==== Template
 
 Templates are used to define a schema for the creation of catalogues.
@@ -3649,7 +3815,9 @@ Adds a mapping to the template. If possible, don&#039;t use this directly and le
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3670,7 +3838,7 @@ public addMutator($callback):void // <1>
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! 
 ====
 
@@ -3683,7 +3851,9 @@ Use Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator or Plenty\M
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3704,7 +3874,7 @@ public getMutators():array // <1>
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! 
 ====
 
@@ -3734,7 +3904,9 @@ Adds a pre mutator to the template. Pre mutators are applied to the export data 
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3761,7 +3933,9 @@ Adds a post mutator to the template. Post mutators are applied to the export dat
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3805,7 +3979,9 @@ Adds a filter to the template. If possible, don&#039;t use this directly and let
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3866,7 +4042,9 @@ Defines the callback function that will be called after the mapping is done for 
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3910,7 +4088,9 @@ Adds a setting to the templates. Settings create components in the UI of catalog
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3954,7 +4134,9 @@ Sets the meta info for a template. Meta info is used to provide data which has t
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3981,7 +4163,9 @@ public getMetaInfo():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4076,7 +4260,9 @@ public toArray():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4094,7 +4280,9 @@ public jsonSerialize():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4180,7 +4368,9 @@ public allowPreview($isPreviewable):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4207,7 +4397,9 @@ public getRuntimeConfig():Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigC
 
 ===== Return type
     
-<1> link:catalog#catalog_contracts_catalogruntimeconfigcontract[CatalogRuntimeConfigContract^]
+<1> [[__plenty\modules\catalog\contracts\catalogruntimeconfigcontract]]
+
+    link:catalog#catalog_contracts_catalogruntimeconfigcontract[CatalogRuntimeConfigContract^]
 
     
 
@@ -4225,7 +4417,9 @@ public getResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConver
 
 ===== Return type
     
-<1> link:catalog#catalog_contracts_catalogresultconvertercontract[CatalogResultConverterContract^]
+<1> [[__plenty\modules\catalog\contracts\catalogresultconvertercontract]]
+
+    link:catalog#catalog_contracts_catalogresultconvertercontract[CatalogResultConverterContract^]
 
     
 
@@ -4277,14 +4471,18 @@ public boot($provider):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:catalog#catalog_contracts_catalogtemplateprovidercontract[CatalogTemplateProviderContract^]
+|[[__plenty\modules\catalog\contracts\catalogtemplateprovidercontract]]
+
+    link:catalog#catalog_contracts_catalogtemplateprovidercontract[CatalogTemplateProviderContract^]
 
 a|`$provider`
 |

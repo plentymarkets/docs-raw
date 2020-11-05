@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[payment_payment_contracts]]
 ===  Contracts
+[[payment_contracts_paymentcontactrelationrepositorycontract]]
 ==== PaymentContactRelationRepositoryContract
 
 The PaymentContactRelationRepositoryContract is the interface for the payment contact relation repository. Create and delete relations between payments and contact.
@@ -40,19 +42,25 @@ Creates a payment contact relation.
 
 ===== Return type
     
-<1> link:payment#payment_models_paymentcontactrelation[PaymentContactRelation^]
+<1> [[__plenty\modules\payment\models\paymentcontactrelation]]
+
+    link:payment#payment_models_paymentcontactrelation[PaymentContactRelation^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_payment[Payment^]
+|[[__plenty\modules\payment\models\payment]]
+
+    link:payment#payment_models_payment[Payment^]
 
 a|`$payment`
 |The ID of the payment
 
-|link:account#account_models_contact[Contact^]
+|[[__plenty\modules\account\contact\models\contact]]
+
+    link:account#account_models_contact[Contact^]
 
 a|`$contact`
 |The ID of the contact
@@ -73,14 +81,18 @@ Deletes a payment contact relation.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_payment[Payment^]
+|[[__plenty\modules\payment\models\payment]]
+
+    link:payment#payment_models_payment[Payment^]
 
 a|`$payment`
 |The ID of the payment
@@ -88,6 +100,7 @@ a|`$payment`
 
 
 
+[[payment_contracts_paymentmatcherrepositorycontract]]
 ==== PaymentMatcherRepositoryContract
 
 The PaymentMatcherRepositoryContract
@@ -129,7 +142,9 @@ public checkMapFindAssignPayment($mopId, $data):string // <1>
 a|`$mopId`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |
@@ -150,14 +165,18 @@ public findAssignPayment($payment):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_payment[Payment^]
+|[[__plenty\modules\payment\models\payment]]
+
+    link:payment#payment_models_payment[Payment^]
 
 a|`$payment`
 |
@@ -191,6 +210,7 @@ a|`$paymentId`
 
 
 
+[[payment_contracts_paymentorderrelationrepositorycontract]]
 ==== PaymentOrderRelationRepositoryContract
 
 The PaymentOrderRelationRepositoryContract is the interface for the payment order relation repository. Create and delete relations between payments and orders.
@@ -222,19 +242,25 @@ Creates a payment order relation.
 
 ===== Return type
     
-<1> link:payment#payment_models_paymentorderrelation[PaymentOrderRelation^]
+<1> [[__plenty\modules\payment\models\paymentorderrelation]]
+
+    link:payment#payment_models_paymentorderrelation[PaymentOrderRelation^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_payment[Payment^]
+|[[__plenty\modules\payment\models\payment]]
+
+    link:payment#payment_models_payment[Payment^]
 
 a|`$payment`
 |The ID of the payment
 
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |The ID of the order
@@ -255,14 +281,18 @@ Gets the payment order relation.
 
 ===== Return type
     
-<1> link:payment#payment_models_paymentorderrelation[PaymentOrderRelation^]
+<1> [[__plenty\modules\payment\models\paymentorderrelation]]
+
+    link:payment#payment_models_paymentorderrelation[PaymentOrderRelation^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_payment[Payment^]
+|[[__plenty\modules\payment\models\payment]]
+
+    link:payment#payment_models_payment[Payment^]
 
 a|`$payment`
 |
@@ -283,14 +313,18 @@ Deletes a payment order relation.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_payment[Payment^]
+|[[__plenty\modules\payment\models\payment]]
+
+    link:payment#payment_models_payment[Payment^]
 
 a|`$payment`
 |The ID of the payment
@@ -311,7 +345,9 @@ Assign a payment to an order ID if order ID is valid and order ID doesn&#039;t h
 
 ===== Return type
     
-<1> link:payment#payment_models_paymentorderrelation[PaymentOrderRelation^]
+<1> [[__plenty\modules\payment\models\paymentorderrelation]]
+
+    link:payment#payment_models_paymentorderrelation[PaymentOrderRelation^]
 
     
 
@@ -355,6 +391,7 @@ a|`$paymentIds`
 
 
 
+[[payment_contracts_paymentpropertyrepositorycontract]]
 ==== PaymentPropertyRepositoryContract
 
 The PaymentPropertyRepositoryContract is the interface for the payment property repository. List, get, create and update payment properties.
@@ -543,14 +580,18 @@ Creates a payment property.
 
 ===== Return type
     
-<1> link:payment#payment_models_paymentproperty[PaymentProperty^]
+<1> [[__plenty\modules\payment\models\paymentproperty]]
+
+    link:payment#payment_models_paymentproperty[PaymentProperty^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |
@@ -571,14 +612,18 @@ Updates a payment property.
 
 ===== Return type
     
-<1> link:payment#payment_models_paymentproperty[PaymentProperty^]
+<1> [[__plenty\modules\payment\models\paymentproperty]]
+
+    link:payment#payment_models_paymentproperty[PaymentProperty^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_paymentproperty[PaymentProperty^]
+|[[__plenty\modules\payment\models\paymentproperty]]
+
+    link:payment#payment_models_paymentproperty[PaymentProperty^]
 
 a|`$data`
 |
@@ -586,6 +631,7 @@ a|`$data`
 
 
 
+[[payment_contracts_paymentpropertytypenamerepositorycontract]]
 ==== PaymentPropertyTypeNameRepositoryContract
 
 The PaymentPropertyTypeNameRepositoryContract is the interface for the repository of payment property type names. List, get, create and update payment property names.
@@ -669,14 +715,18 @@ Creates a payment property type name.
 
 ===== Return type
     
-<1> link:payment#payment_models_paymentpropertytypename[PaymentPropertyTypeName^]
+<1> [[__plenty\modules\payment\models\paymentpropertytypename]]
+
+    link:payment#payment_models_paymentpropertytypename[PaymentPropertyTypeName^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |
@@ -703,7 +753,9 @@ Updates a payment property type name.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |
@@ -711,6 +763,7 @@ a|`$data`
 
 
 
+[[payment_contracts_paymentpropertytyperepositorycontract]]
 ==== PaymentPropertyTypeRepositoryContract
 
 The PaymentPropertyTypeRepositoryContract is the interface for the payment property type repository. List, get, create and update payment properties.
@@ -830,14 +883,18 @@ Creates a payment property type.
 
 ===== Return type
     
-<1> link:payment#payment_models_paymentpropertytype[PaymentPropertyType^]
+<1> [[__plenty\modules\payment\models\paymentpropertytype]]
+
+    link:payment#payment_models_paymentpropertytype[PaymentPropertyType^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |
@@ -858,14 +915,18 @@ Updates a payment property type.
 
 ===== Return type
     
-<1> link:payment#payment_models_paymentpropertytype[PaymentPropertyType^]
+<1> [[__plenty\modules\payment\models\paymentpropertytype]]
+
+    link:payment#payment_models_paymentpropertytype[PaymentPropertyType^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |
@@ -873,6 +934,7 @@ a|`$data`
 
 
 
+[[payment_contracts_paymentrepositorycontract]]
 ==== PaymentRepositoryContract
 
 The PaymentRepositoryContract is the interface for the payment repository. List, get, create and update payments. Payments can come into plentymarkets automatically or can be booked manually. Existing payments can be filtered by payment method, by ID, by payment status, by transaction type, by order or by date. Existing payments can also be updated.
@@ -934,7 +996,9 @@ public search($page = 1, $itemsPerPage = \Plenty\Modules\Payment\Models\Payment:
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -969,7 +1033,9 @@ Gets a payment. The ID of the payment must be specified.
 
 ===== Return type
     
-<1> link:payment#payment_models_payment[Payment^]
+<1> [[__plenty\modules\payment\models\payment]]
+
+    link:payment#payment_models_payment[Payment^]
 
     
 
@@ -1200,7 +1266,9 @@ Lists payments by payment property type and value.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1211,7 +1279,9 @@ Lists payments by payment property type and value.
 a|`$propertyTypeId`
 |The property type
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$propertyValue`
 |The property value
@@ -1240,14 +1310,18 @@ Creates a payment.
 
 ===== Return type
     
-<1> link:payment#payment_models_payment[Payment^]
+<1> [[__plenty\modules\payment\models\payment]]
+
+    link:payment#payment_models_payment[Payment^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |
@@ -1268,14 +1342,18 @@ Updates a payment.
 
 ===== Return type
     
-<1> link:payment#payment_models_payment[Payment^]
+<1> [[__plenty\modules\payment\models\payment]]
+
+    link:payment#payment_models_payment[Payment^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |
@@ -1330,7 +1408,9 @@ public deletePayment($paymentId):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1413,7 +1493,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1431,7 +1513,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1449,7 +1533,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1476,7 +1562,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1494,7 +1582,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1512,12 +1602,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[payment_payment_models]]
 ===  Models
+[[payment_models_payment]]
 ==== Payment
 
 The payment model
@@ -1596,19 +1689,27 @@ The payment model
 |link:http://php.net/int[int^]
     |mopId
     |The ID of the payment method
-|link:payment#payment_models_payment[Payment^]
+|[[__plenty\modules\payment\models\payment]]
+
+    link:payment#payment_models_payment[Payment^]
 
     |parent
     |The parent payment
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |children
     |
-|link:payment#payment_models_paymentmethod[PaymentMethod^]
+|[[__plenty\modules\payment\method\models\paymentmethod]]
+
+    link:payment#payment_models_paymentmethod[PaymentMethod^]
 
     |method
     |The payment method
-|link:payment#payment_models_paymentorderrelation[PaymentOrderRelation^]
+|[[__plenty\modules\payment\models\paymentorderrelation]]
+
+    link:payment#payment_models_paymentorderrelation[PaymentOrderRelation^]
 
     |order
     |
@@ -1646,6 +1747,7 @@ Returns this model as an array.
 
 
 
+[[payment_models_paymentcontactrelation]]
 ==== PaymentContactRelation
 
 The payment contact relation model
@@ -1695,6 +1797,7 @@ Returns this model as an array.
 
 
 
+[[payment_models_paymentorderrelation]]
 ==== PaymentOrderRelation
 
 The payment order relation model
@@ -1744,6 +1847,7 @@ Returns this model as an array.
 
 
 
+[[payment_models_paymentproperty]]
 ==== PaymentProperty
 
 The payment property model
@@ -1811,11 +1915,15 @@ The payment property model
 |link:http://php.net/string[string^]
     |value
     |The value of the property type
-|link:payment#payment_models_payment[Payment^]
+|[[__plenty\modules\payment\models\payment]]
+
+    link:payment#payment_models_payment[Payment^]
 
     |payment
     |
-|link:payment#payment_models_paymentpropertytype[PaymentPropertyType^]
+|[[__plenty\modules\payment\models\paymentpropertytype]]
+
+    link:payment#payment_models_paymentpropertytype[PaymentPropertyType^]
 
     |type
     |
@@ -1838,6 +1946,7 @@ Returns this model as an array.
 
 
 
+[[payment_models_paymentpropertytype]]
 ==== PaymentPropertyType
 
 The payment property type model
@@ -1865,7 +1974,9 @@ The payment property type model
 |link:http://php.net/int[int^]
     |position
     |The position number of the property type
-|link:payment#payment_models_paymentpropertytypename[PaymentPropertyTypeName^]
+|[[__plenty\modules\payment\models\paymentpropertytypename]]
+
+    link:payment#payment_models_paymentpropertytypename[PaymentPropertyTypeName^]
 
     |name
     |The name of the property type
@@ -1888,6 +1999,7 @@ Returns this model as an array.
 
 
 
+[[payment_models_paymentpropertytypename]]
 ==== PaymentPropertyTypeName
 
 The payment property type name model
@@ -1941,6 +2053,7 @@ Returns this model as an array.
 
 [[payment_events_checkout]]
 ===  Checkout
+[[payment_checkout_executepayment]]
 ==== ExecutePayment
 
 The event is triggered when a payment is executed.
@@ -1972,7 +2085,9 @@ Updates the ID of the order in the checkout. The ID must be specified.
 
 ===== Return type
     
-<1> link:payment#payment_events_checkout[Checkout^]
+<1> [[__plenty\modules\payment\events\checkout]]
+
+    link:payment#payment_events_checkout[Checkout^]
 
     
 
@@ -2016,7 +2131,9 @@ Updates the ID of the payment method. The ID must be specified.
 
 ===== Return type
     
-<1> link:payment#payment_events_checkout[Checkout^]
+<1> [[__plenty\modules\payment\events\checkout]]
+
+    link:payment#payment_events_checkout[Checkout^]
 
     
 
@@ -2060,7 +2177,9 @@ Updates the content type.
 
 ===== Return type
     
-<1> link:payment#payment_events_checkout[Checkout^]
+<1> [[__plenty\modules\payment\events\checkout]]
+
+    link:payment#payment_events_checkout[Checkout^]
 
     
 
@@ -2104,7 +2223,9 @@ Updates the value of the content type.
 
 ===== Return type
     
-<1> link:payment#payment_events_checkout[Checkout^]
+<1> [[__plenty\modules\payment\events\checkout]]
+
+    link:payment#payment_events_checkout[Checkout^]
 
     
 
@@ -2135,6 +2256,7 @@ Gets the value of the content type.
     
 
 
+[[payment_checkout_getpaymentmethodcontent]]
 ==== GetPaymentMethodContent
 
 The event is triggered after the payment method is selected in the checkout.
@@ -2166,7 +2288,9 @@ Updates the ID of the payment method. The ID must be specified.
 
 ===== Return type
     
-<1> link:payment#payment_events_checkout[Checkout^]
+<1> [[__plenty\modules\payment\events\checkout]]
+
+    link:payment#payment_events_checkout[Checkout^]
 
     
 
@@ -2210,7 +2334,9 @@ Updates the content type.
 
 ===== Return type
     
-<1> link:payment#payment_events_checkout[Checkout^]
+<1> [[__plenty\modules\payment\events\checkout]]
+
+    link:payment#payment_events_checkout[Checkout^]
 
     
 
@@ -2254,7 +2380,9 @@ Updates the value of the content type.
 
 ===== Return type
     
-<1> link:payment#payment_events_checkout[Checkout^]
+<1> [[__plenty\modules\payment\events\checkout]]
+
+    link:payment#payment_events_checkout[Checkout^]
 
     
 
@@ -2298,14 +2426,18 @@ Updates the parameters. The parameters must be specified.
 
 ===== Return type
     
-<1> link:payment#payment_events_checkout[Checkout^]
+<1> [[__plenty\modules\payment\events\checkout]]
+
+    link:payment#payment_events_checkout[Checkout^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$params`
 |The parameters
@@ -2326,7 +2458,9 @@ Gets the parameters.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2335,6 +2469,7 @@ Gets the parameters.
 
 [[payment_history_contracts]]
 ===  Contracts
+[[payment_contracts_paymenthistoryrepositorycontract]]
 ==== PaymentHistoryRepositoryContract
 
 The PaymentHistoryRepositoryContract is the interface for the payment history repository. Get and create the payment history.
@@ -2404,14 +2539,18 @@ Creates the payment history.
 
 ===== Return type
     
-<1> link:payment#payment_models_paymenthistory[PaymentHistory^]
+<1> [[__plenty\modules\payment\history\models\paymenthistory]]
+
+    link:payment#payment_models_paymenthistory[PaymentHistory^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |
@@ -2420,6 +2559,7 @@ a|`$data`
 
 [[payment_history_models]]
 ===  Models
+[[payment_models_paymenthistory]]
 ==== PaymentHistory
 
 The payment history model
@@ -2484,6 +2624,7 @@ Returns this model as an array.
 
 [[payment_method_contracts]]
 ===  Contracts
+[[payment_contracts_paymentmethodcontainer]]
 ==== PaymentMethodContainer
 
 The payment method container
@@ -2515,7 +2656,9 @@ public register($paymentKey, $paymentMethodServiceClass, $rebuildEventClassesLis
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2526,7 +2669,9 @@ public register($paymentKey, $paymentMethodServiceClass, $rebuildEventClassesLis
 a|`$paymentKey`
 |The unique key of a payment plugin
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$paymentMethodServiceClass`
 |The class of the payment method. This class contains information of the payment plugin, such as the name and whether the payment method is active.
@@ -2564,6 +2709,7 @@ a|`$paymentKey`
 
 
 
+[[payment_contracts_paymentmethodrepositorycontract]]
 ==== PaymentMethodRepositoryContract
 
 The PaymentMethodRepositoryContract is the interface for the payment method repository. List, get, create and update payment methods.
@@ -2672,7 +2818,9 @@ Gets a payment method. The ID of the payment method must be specified.
 
 ===== Return type
     
-<1> link:payment#payment_models_paymentmethod[PaymentMethod^]
+<1> [[__plenty\modules\payment\method\models\paymentmethod]]
+
+    link:payment#payment_models_paymentmethod[PaymentMethod^]
 
     
 
@@ -2725,14 +2873,18 @@ Creates a payment method.
 
 ===== Return type
     
-<1> link:payment#payment_models_paymentmethod[PaymentMethod^]
+<1> [[__plenty\modules\payment\method\models\paymentmethod]]
+
+    link:payment#payment_models_paymentmethod[PaymentMethod^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$paymentMethodData`
 |
@@ -2753,14 +2905,18 @@ Updates the payment method name.
 
 ===== Return type
     
-<1> link:payment#payment_models_paymentmethod[PaymentMethod^]
+<1> [[__plenty\modules\payment\method\models\paymentmethod]]
+
+    link:payment#payment_models_paymentmethod[PaymentMethod^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$paymentMethodData`
 |
@@ -2945,6 +3101,7 @@ a|`$lang`
 
 
 
+[[payment_contracts_paymentmethodservice]]
 ==== PaymentMethodService
 
 Deprecated: The payment method service
@@ -3041,6 +3198,7 @@ Can this payment method handle subscriptions?
 
 [[payment_method_models]]
 ===  Models
+[[payment_models_paymentmethod]]
 ==== PaymentMethod
 
 The payment method model
@@ -3091,6 +3249,7 @@ Returns this model as an array.
 
 [[payment_method_services]]
 ===  Services
+[[payment_services_paymentmethodbaseservice]]
 ==== PaymentMethodBaseService
 
 The payment method service
@@ -3379,6 +3538,7 @@ Return the icon for the backend, shown in the payments ui
 
 [[payment_methodname_models]]
 ===  Models
+[[payment_models_paymentmethodname]]
 ==== PaymentMethodName
 
 The payment method name model

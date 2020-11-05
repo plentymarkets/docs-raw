@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[basket_basket_contracts]]
 ===  Contracts
+[[basket_contracts_basketitemrepositorycontract]]
 ==== BasketItemRepositoryContract
 
 The BasketItemRepositoryContract is the interface for the basket item repository. This interface allows to list, add, update and delete items from the shopping cart of the current customer session.
@@ -40,7 +42,9 @@ Gets an existing item by ID in the shopping cart of the current customer session
 
 ===== Return type
     
-<1> link:basket#basket_models_basketitem[BasketItem^]
+<1> [[__plenty\modules\basket\models\basketitem]]
+
+    link:basket#basket_models_basketitem[BasketItem^]
 
     
 
@@ -67,7 +71,9 @@ Gets an existing item by item data in the shopping cart of the current customer 
 
 ===== Return type
     
-<1> link:basket#basket_models_basketitem[BasketItem^]
+<1> [[__plenty\modules\basket\models\basketitem]]
+
+    link:basket#basket_models_basketitem[BasketItem^]
 
     
 
@@ -111,7 +117,9 @@ Creates an item with the specified item data in the shopping cart.
 
 ===== Return type
     
-<1> link:basket#basket_models_basketitem[BasketItem^]
+<1> [[__plenty\modules\basket\models\basketitem]]
+
+    link:basket#basket_models_basketitem[BasketItem^]
 
     
 
@@ -138,7 +146,9 @@ Updates an existing item in the shopping cart. The ID of the item and the data t
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -169,7 +179,9 @@ Deletes an item from the shopping cart. The ID of the item must be specified.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -187,6 +199,7 @@ a|`$dispatchAfterBasketChangedEvent`
 
 
 
+[[basket_contracts_basketrepositorycontract]]
 ==== BasketRepositoryContract
 
 The BasketRepositoryContract is the interface for the basket repository. This interface allows to get the shopping cart of the current customer session.
@@ -218,7 +231,9 @@ Gets the shopping cart from current customer session.
 
 ===== Return type
     
-<1> link:basket#basket_models_basket[Basket^]
+<1> [[__plenty\modules\basket\models\basket]]
+
+    link:basket#basket_models_basket[Basket^]
 
     
 
@@ -236,7 +251,9 @@ public save($data):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -263,7 +280,9 @@ public setCouponCode($couponCode):Plenty\Modules\Basket\Models\Basket // <1>
 
 ===== Return type
     
-<1> link:basket#basket_models_basket[Basket^]
+<1> [[__plenty\modules\basket\models\basket]]
+
+    link:basket#basket_models_basket[Basket^]
 
     
 
@@ -290,12 +309,15 @@ public removeCouponCode():Plenty\Modules\Basket\Models\Basket // <1>
 
 ===== Return type
     
-<1> link:basket#basket_models_basket[Basket^]
+<1> [[__plenty\modules\basket\models\basket]]
+
+    link:basket#basket_models_basket[Basket^]
 
     
 
 [[basket_basket_exceptions]]
 ===  Exceptions
+[[basket_exceptions_basketcheckexception]]
 ==== BasketCheckException
 
 Class BasketCheckException
@@ -327,7 +349,9 @@ BasketCheckException constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -342,7 +366,9 @@ a|`$code`
 a|`$message`
 |
 
-|link:miscellaneous#miscellaneous__exception[Exception^]
+|[[__\exception]]
+
+    link:miscellaneous#miscellaneous__exception[Exception^]
 
 a|`$previous`
 |
@@ -350,6 +376,7 @@ a|`$previous`
 
 
 
+[[basket_exceptions_basketitemcheckexception]]
 ==== BasketItemCheckException
 
 Created by ptopczewski, 12.05.16 09:03
@@ -382,7 +409,9 @@ BasketItemCheckException constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -397,7 +426,9 @@ a|`$code`
 a|`$message`
 |
 
-|link:miscellaneous#miscellaneous__exception[Exception^]
+|[[__\exception]]
+
+    link:miscellaneous#miscellaneous__exception[Exception^]
 
 a|`$previous`
 |
@@ -489,6 +520,7 @@ public getAdditionalData():array // <1>
     
 
 
+[[basket_exceptions_basketitemquantitycheckexception]]
 ==== BasketItemQuantityCheckException
 
 Created by ptopczewski, 17.05.16 09:37
@@ -521,7 +553,9 @@ BasketItemQuantityCheckException constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -536,7 +570,9 @@ a|`$code`
 a|`$message`
 |
 
-|link:miscellaneous#miscellaneous__exception[Exception^]
+|[[__\exception]]
+
+    link:miscellaneous#miscellaneous__exception[Exception^]
 
 a|`$previous`
 |
@@ -595,6 +631,7 @@ public getSpecifiedQuantity():float // <1>
 
 [[basket_basket_models]]
 ===  Models
+[[basket_models_basket]]
 ==== Basket
 
 The basket model
@@ -701,7 +738,9 @@ The basket model
 |link:http://php.net/string[string^]
     |updatedAt
     |The date that the shopping cart was updated last.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |basketItems
     |
@@ -724,6 +763,7 @@ Returns this model as an array.
 
 
 
+[[basket_models_basketitem]]
 ==== BasketItem
 
 The basket item model
@@ -866,6 +906,7 @@ Returns this model as an array.
 
 
 
+[[basket_models_basketitemparams]]
 ==== BasketItemParams
 
 The basket item params model
@@ -922,6 +963,7 @@ Returns this model as an array.
 
 [[basket_events_basket]]
 ===  Basket
+[[basket_basket_afterbasketchanged]]
 ==== AfterBasketChanged
 
 The event is triggered after the shopping cart is changed.
@@ -970,7 +1012,9 @@ public getCouponValidationError():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -988,7 +1032,9 @@ public setHasValidCoupon($hasValidCoupon, $couponValidationError = null):void //
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -999,7 +1045,9 @@ public setHasValidCoupon($hasValidCoupon, $couponValidationError = null):void //
 a|`$hasValidCoupon`
 |Flag that indicates if a valid coupon has been used.
 
-|link:miscellaneous#miscellaneous_exceptions_validationexception[ValidationException^]
+|[[__plenty\exceptions\validationexception]]
+
+    link:miscellaneous#miscellaneous_exceptions_validationexception[ValidationException^]
 
 a|`$couponValidationError`
 |Validation errors indicating the reasons for an invalid coupon.
@@ -1020,7 +1068,9 @@ public getBasket():Plenty\Modules\Basket\Models\Basket // <1>
 
 ===== Return type
     
-<1> link:basket#basket_models_basket[Basket^]
+<1> [[__plenty\modules\basket\models\basket]]
+
+    link:basket#basket_models_basket[Basket^]
 
     
 
@@ -1055,7 +1105,9 @@ public setLocationId($locationId):Plenty\Modules\Basket\Events\Basket // <1>
 
 ===== Return type
     
-<1> link:basket#basket_events_basket[Basket^]
+<1> [[__plenty\modules\basket\events\basket]]
+
+    link:basket#basket_events_basket[Basket^]
 
     
 
@@ -1082,7 +1134,9 @@ public getInvoiceAddress():Plenty\Modules\Account\Address\Models\Address // <1>
 
 ===== Return type
     
-<1> link:account#account_models_address[Address^]
+<1> [[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     
 
@@ -1100,14 +1154,18 @@ public setInvoiceAddress($invoiceAddress):Plenty\Modules\Basket\Events\Basket //
 
 ===== Return type
     
-<1> link:basket#basket_events_basket[Basket^]
+<1> [[__plenty\modules\basket\events\basket]]
+
+    link:basket#basket_events_basket[Basket^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:account#account_models_address[Address^]
+|[[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
 a|`$invoiceAddress`
 |The invoice address
@@ -1145,7 +1203,9 @@ public setMaxFsk($maxFsk):Plenty\Modules\Basket\Events\Basket // <1>
 
 ===== Return type
     
-<1> link:basket#basket_events_basket[Basket^]
+<1> [[__plenty\modules\basket\events\basket]]
+
+    link:basket#basket_events_basket[Basket^]
 
     
 
@@ -1189,7 +1249,9 @@ public setShippingCosts($shippingCosts):Plenty\Modules\Basket\Events\Basket // <
 
 ===== Return type
     
-<1> link:basket#basket_events_basket[Basket^]
+<1> [[__plenty\modules\basket\events\basket]]
+
+    link:basket#basket_events_basket[Basket^]
 
     
 
@@ -1203,6 +1265,7 @@ a|`$shippingCosts`
 
 
 
+[[basket_basket_afterbasketcreate]]
 ==== AfterBasketCreate
 
 The event is triggered after the shopping cart is created.
@@ -1234,12 +1297,15 @@ public getBasket():Plenty\Modules\Basket\Models\Basket // <1>
 
 ===== Return type
     
-<1> link:basket#basket_models_basket[Basket^]
+<1> [[__plenty\modules\basket\models\basket]]
+
+    link:basket#basket_models_basket[Basket^]
 
     
 
 [[basket_events_basketitem]]
 ===  BasketItem
+[[basket_basketitem_afterbasketitemadd]]
 ==== AfterBasketItemAdd
 
 The event is triggered after an item is added to the shopping cart.
@@ -1271,11 +1337,14 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
 
 ===== Return type
     
-<1> link:basket#basket_models_basketitem[BasketItem^]
+<1> [[__plenty\modules\basket\models\basketitem]]
+
+    link:basket#basket_models_basketitem[BasketItem^]
 
     
 
 
+[[basket_basketitem_afterbasketitemremove]]
 ==== AfterBasketItemRemove
 
 The event is triggered after an item is deleted from the shopping cart.
@@ -1291,6 +1360,7 @@ The event is triggered after an item is deleted from the shopping cart.
 
 
 
+[[basket_basketitem_afterbasketitemupdate]]
 ==== AfterBasketItemUpdate
 
 The event is triggered after an item in the shopping cart is updated.
@@ -1322,11 +1392,14 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
 
 ===== Return type
     
-<1> link:basket#basket_models_basketitem[BasketItem^]
+<1> [[__plenty\modules\basket\models\basketitem]]
+
+    link:basket#basket_models_basketitem[BasketItem^]
 
     
 
 
+[[basket_basketitem_basketitemevent]]
 ==== BasketItemEvent
 
 BasketItemEvent
@@ -1358,11 +1431,14 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
 
 ===== Return type
     
-<1> link:basket#basket_models_basketitem[BasketItem^]
+<1> [[__plenty\modules\basket\models\basketitem]]
+
+    link:basket#basket_models_basketitem[BasketItem^]
 
     
 
 
+[[basket_basketitem_beforebasketitemadd]]
 ==== BeforeBasketItemAdd
 
 The event is triggered before an item is created in the shopping cart.
@@ -1394,11 +1470,14 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
 
 ===== Return type
     
-<1> link:basket#basket_models_basketitem[BasketItem^]
+<1> [[__plenty\modules\basket\models\basketitem]]
+
+    link:basket#basket_models_basketitem[BasketItem^]
 
     
 
 
+[[basket_basketitem_beforebasketitemremove]]
 ==== BeforeBasketItemRemove
 
 The event is triggered before an item is deleted from the shopping cart.
@@ -1414,6 +1493,7 @@ The event is triggered before an item is deleted from the shopping cart.
 
 
 
+[[basket_basketitem_beforebasketitemupdate]]
 ==== BeforeBasketItemUpdate
 
 The event is triggered before an item in the shopping cart is updated.
@@ -1445,7 +1525,9 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
 
 ===== Return type
     
-<1> link:basket#basket_models_basketitem[BasketItem^]
+<1> [[__plenty\modules\basket\models\basketitem]]
+
+    link:basket#basket_models_basketitem[BasketItem^]
 
     
 

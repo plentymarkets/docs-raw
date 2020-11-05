@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[listing_listing_contracts]]
 ===  Contracts
+[[listing_contracts_listingrepositorycontract]]
 ==== ListingRepositoryContract
 
 The contract for the listing repository.
@@ -40,7 +42,9 @@ Get a listing by a given ID.
 
 ===== Return type
     
-<1> link:listing#listing_models_listing[Listing^]
+<1> [[__plenty\modules\listing\models\listing]]
+
+    link:listing#listing_models_listing[Listing^]
 
     
 
@@ -71,7 +75,9 @@ List listing
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -110,7 +116,9 @@ Create new listing
 
 ===== Return type
     
-<1> link:listing#listing_models_listing[Listing^]
+<1> [[__plenty\modules\listing\models\listing]]
+
+    link:listing#listing_models_listing[Listing^]
 
     
 
@@ -137,7 +145,9 @@ Update listing
 
 ===== Return type
     
-<1> link:listing#listing_models_listing[Listing^]
+<1> [[__plenty\modules\listing\models\listing]]
+
+    link:listing#listing_models_listing[Listing^]
 
     
 
@@ -194,7 +204,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -212,7 +224,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -230,7 +244,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -257,7 +273,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -275,7 +293,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -293,12 +313,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_listing_models]]
 ===  Models
+[[listing_models_listing]]
 ==== Listing
 
 The listing model.
@@ -343,19 +366,27 @@ The listing model.
 |link:http://php.net/int[int^]
     |unitCombinationId
     |The ID of the unit combination.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |The listing properties of the listing.
-|link:listing#listing_models_listingtype[ListingType^]
+|[[__plenty\modules\listing\type\models\listingtype]]
+
+    link:listing#listing_models_listingtype[ListingType^]
 
     |type
     |The type of the listing.
-|link:listing#listing_models_stockdependencetype[StockDependenceType^]
+|[[__plenty\modules\listing\stockdependencetype\models\stockdependencetype]]
+
+    link:listing#listing_models_stockdependencetype[StockDependenceType^]
 
     |stockDependenceType
     |The stock dependence type of the listing.
-|link:listing#listing_models_listingmarket[ListingMarket^]
+|[[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     |markets
     |The listing markets of the listing
@@ -378,6 +409,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingproperty]]
 ==== ListingProperty
 
 The listing properties model. Each listing property has a type.
@@ -410,19 +442,27 @@ The listing properties model. Each listing property has a type.
 <li>11 = Number per lot</li>
 <li>12 = Transmit item number type</li>
 </ul>
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |value
     |The value of the listing property. The value depends on the type.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the property was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the property was last updated.
-|link:listing#listing_models_listing[Listing^]
+|[[__plenty\modules\listing\models\listing]]
+
+    link:listing#listing_models_listing[Listing^]
 
     |listing
     |The listing that the property belongs to.
@@ -449,6 +489,7 @@ Returns this model as an array.
 
 [[listing_date_models]]
 ===  Models
+[[listing_models_listingdatetype]]
 ==== ListingDateType
 
 The listing date type model. Each listing date type can have multiple names.
@@ -503,6 +544,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingdatetypename]]
 ==== ListingDateTypeName
 
 The listing date type name model.
@@ -556,6 +598,7 @@ Returns this model as an array.
 
 [[listing_layouttemplate_contracts]]
 ===  Contracts
+[[listing_contracts_layouttemplaterepositorycontract]]
 ==== LayoutTemplateRepositoryContract
 
 The LayoutTemplateRepositoryContract is the interface for the layout template repository. This interface allows you to get a single layout template or lists of layout templates as well as to create, update or delete a layout tempalte.
@@ -587,7 +630,9 @@ Get a layout template.
 
 ===== Return type
     
-<1> link:listing#listing_models_layouttemplate[LayoutTemplate^]
+<1> [[__plenty\modules\listing\layouttemplate\models\layouttemplate]]
+
+    link:listing#listing_models_layouttemplate[LayoutTemplate^]
 
     
 
@@ -618,7 +663,9 @@ Create a layout template.
 
 ===== Return type
     
-<1> link:listing#listing_models_layouttemplate[LayoutTemplate^]
+<1> [[__plenty\modules\listing\layouttemplate\models\layouttemplate]]
+
+    link:listing#listing_models_layouttemplate[LayoutTemplate^]
 
     
 
@@ -671,7 +718,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -689,7 +738,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -707,7 +758,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -734,7 +787,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -752,7 +807,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -770,12 +827,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_layouttemplate_models]]
 ===  Models
+[[listing_models_layouttemplate]]
 ==== LayoutTemplate
 
 The layout template model.
@@ -838,6 +898,7 @@ Returns this model as an array.
 
 [[listing_market_contracts]]
 ===  Contracts
+[[listing_contracts_listingmarketrepositorycontract]]
 ==== ListingMarketRepositoryContract
 
 The ListingMarketRepositoryContract is the interface for the listing market repository. This interface allows you to get a single listing market or lists of listing markets as well as to create a listing market.
@@ -874,7 +935,9 @@ Get a listing market
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarket[ListingMarket^]
+<1> [[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
@@ -905,7 +968,9 @@ List listing markets
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -944,7 +1009,9 @@ Find listing markets
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -1009,7 +1076,9 @@ Update listing market
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarket[ListingMarket^]
+<1> [[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
@@ -1096,7 +1165,9 @@ Delete a listing market
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1123,7 +1194,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1141,7 +1214,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1159,7 +1234,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1186,7 +1263,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1204,7 +1283,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1222,12 +1303,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_market_events]]
 ===  Events
+[[listing_events_listingmarketbatchcreated]]
 ==== ListingMarketBatchCreated
 
 An event class fired after multiple new listing markets are created.
@@ -1259,7 +1343,9 @@ public __construct($listingMarkets):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1290,6 +1376,7 @@ Get the list of ListingMarket instances.
     
 
 
+[[listing_events_listingmarketbatchdeleted]]
 ==== ListingMarketBatchDeleted
 
 An event class fired after multiple listing markets are deleted.
@@ -1321,7 +1408,9 @@ public __construct($listingMarkets):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1352,6 +1441,7 @@ Get the list of ListingMarket instances.
     
 
 
+[[listing_events_listingmarketbatchevent]]
 ==== ListingMarketBatchEvent
 
 A base event class for all listing market events. Each listing market batch event expects an array of ListingMarket instances.
@@ -1383,7 +1473,9 @@ public __construct($listingMarkets):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1414,6 +1506,7 @@ Get the list of ListingMarket instances.
     
 
 
+[[listing_events_listingmarketbatchupdated]]
 ==== ListingMarketBatchUpdated
 
 An event class fired after multiple listing markets are updated.
@@ -1445,7 +1538,9 @@ public __construct($listingMarkets):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1476,6 +1571,7 @@ Get the list of ListingMarket instances.
     
 
 
+[[listing_events_listingmarketcreated]]
 ==== ListingMarketCreated
 
 An event class fired after a new listing market is created.
@@ -1507,14 +1603,18 @@ public __construct($listingMarket):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:listing#listing_models_listingmarket[ListingMarket^]
+|[[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
 a|`$listingMarket`
 |
@@ -1535,11 +1635,14 @@ Get the ListingMarket instance.
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarket[ListingMarket^]
+<1> [[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
 
+[[listing_events_listingmarketdeleted]]
 ==== ListingMarketDeleted
 
 An event class fired after a new listing market is deleted.
@@ -1571,14 +1674,18 @@ public __construct($listingMarket):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:listing#listing_models_listingmarket[ListingMarket^]
+|[[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
 a|`$listingMarket`
 |
@@ -1599,11 +1706,14 @@ Get the ListingMarket instance.
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarket[ListingMarket^]
+<1> [[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
 
+[[listing_events_listingmarketevent]]
 ==== ListingMarketEvent
 
 A base event class for all listing market events. Each listing market event expects an ListingMarket instance.
@@ -1635,14 +1745,18 @@ public __construct($listingMarket):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:listing#listing_models_listingmarket[ListingMarket^]
+|[[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
 a|`$listingMarket`
 |
@@ -1663,11 +1777,14 @@ Get the ListingMarket instance.
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarket[ListingMarket^]
+<1> [[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
 
+[[listing_events_listingmarketitemspecificscreated]]
 ==== ListingMarketItemSpecificsCreated
 
 An event class fired after a new listing market item specifics are created.
@@ -1699,14 +1816,18 @@ public __construct($listingMarket):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:listing#listing_models_listingmarket[ListingMarket^]
+|[[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
 a|`$listingMarket`
 |
@@ -1727,11 +1848,14 @@ Get the ListingMarket instance.
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarket[ListingMarket^]
+<1> [[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
 
+[[listing_events_listingmarketitemspecificsdeleted]]
 ==== ListingMarketItemSpecificsDeleted
 
 An event class fired after a new listing market item specifics are deleted.
@@ -1763,14 +1887,18 @@ public __construct($listingMarket):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:listing#listing_models_listingmarket[ListingMarket^]
+|[[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
 a|`$listingMarket`
 |
@@ -1791,11 +1919,14 @@ Get the ListingMarket instance.
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarket[ListingMarket^]
+<1> [[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
 
+[[listing_events_listingmarketupdated]]
 ==== ListingMarketUpdated
 
 An event class fired after a new listing market is updated.
@@ -1827,14 +1958,18 @@ public __construct($listingMarket):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:listing#listing_models_listingmarket[ListingMarket^]
+|[[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
 a|`$listingMarket`
 |
@@ -1855,12 +1990,15 @@ Get the ListingMarket instance.
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarket[ListingMarket^]
+<1> [[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     
 
 [[listing_market_models]]
 ===  Models
+[[listing_models_listingmarket]]
 ==== ListingMarket
 
 The listing market model.
@@ -1912,19 +2050,27 @@ The listing market model.
 |link:http://php.net/bool[bool^]
     |allVariations
     |Indicates if all variations should be included.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the listing was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the listing was last updated.
-|link:listing#listing_models_listing[Listing^]
+|[[__plenty\modules\listing\models\listing]]
+
+    link:listing#listing_models_listing[Listing^]
 
     |listing
     |The listing that the listing market belongs to.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |The listing market properties of the listing market. The following properties are available:
@@ -1991,31 +2137,45 @@ The listing market model.
 <li>311 = Ricardo template ID</li>
 <li>312 = Ricardo is relist sold out</li>
 </ul>
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |itemSpecifics
     |The listing market item specifics of the listing market.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |prices
     |The listing market prices of the listing market.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |dates
     |The listing market dates of the listing market.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |texts
     |The listing market texts of the listing market.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |infos
     |The listing market infos of the listing market.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |lister
     |The listing market lister of the listing market.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |histories
     |The listing market histories of the listing market.
@@ -2038,6 +2198,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingmarketdate]]
 ==== ListingMarketDate
 
 The listing market dates model. Each listing market date has a type.
@@ -2072,19 +2233,27 @@ The listing market dates model. Each listing market date has a type.
 <li>4 = End time</li>
 <li>5 = Last market update</li>
 </ul>
-|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+|[[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
     |date
     |The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the date was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the date was last updated.
-|link:listing#listing_models_listingmarket[ListingMarket^]
+|[[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     |listingMarket
     |The listing market that the date belongs to.
@@ -2107,6 +2276,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingmarketitemspecific]]
 ==== ListingMarketItemSpecific
 
 The listing market item specific model.
@@ -2134,7 +2304,9 @@ The listing market item specific model.
 |link:http://php.net/string[string^]
     |name
     |The name of the listing market item specific.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |value
     |The value of the listing market item specific.
@@ -2157,6 +2329,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingmarketprice]]
 ==== ListingMarketPrice
 
 The listing market price model.
@@ -2190,11 +2363,15 @@ The listing market price model.
 |link:http://php.net/string[string^]
     |currency
     |The currency of the listing market price.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |listingMarket
     |The listing market.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |type
     |The listing price type.
@@ -2217,6 +2394,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingmarketproperty]]
 ==== ListingMarketProperty
 
 The listing market properties model. Each listing market property has a type.
@@ -2310,15 +2488,21 @@ The listing market properties model. Each listing market property has a type.
 |link:http://php.net/string[string^]
     |value
     |The value of the listing market property. The value depends on the type.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the property was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the property was updated last.
-|link:listing#listing_models_listingmarket[ListingMarket^]
+|[[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     |listingMarket
     |The listing market that the property belongs to.
@@ -2345,6 +2529,7 @@ Returns this model as an array.
 
 [[listing_directory_contracts]]
 ===  Contracts
+[[listing_contracts_listingmarketdirectoryrepositorycontract]]
 ==== ListingMarketDirectoryRepositoryContract
 
 The contract for the listing market directory repository.
@@ -2376,7 +2561,9 @@ Get a listing market directory
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarketdirectory[ListingMarketDirectory^]
+<1> [[__plenty\modules\listing\market\directory\models\listingmarketdirectory]]
+
+    link:listing#listing_models_listingmarketdirectory[ListingMarketDirectory^]
 
     
 
@@ -2463,7 +2650,9 @@ Update listing market directory
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarketdirectory[ListingMarketDirectory^]
+<1> [[__plenty\modules\listing\market\directory\models\listingmarketdirectory]]
+
+    link:listing#listing_models_listingmarketdirectory[ListingMarketDirectory^]
 
     
 
@@ -2494,7 +2683,9 @@ Delete a listing market directory
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2521,7 +2712,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2539,7 +2732,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2557,7 +2752,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2584,7 +2781,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2602,7 +2801,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2620,12 +2821,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_directory_models]]
 ===  Models
+[[listing_models_listingmarketdirectory]]
 ==== ListingMarketDirectory
 
 The listing market directory model.
@@ -2679,6 +2883,7 @@ Returns this model as an array.
 
 [[listing_history_contracts]]
 ===  Contracts
+[[listing_contracts_listingmarkethistoryrepositorycontract]]
 ==== ListingMarketHistoryRepositoryContract
 
 The ListingMarketHistoryRepositoryContract is the interface for the listing market history repository. This interface allows you to get a single listing market history or to list several listing market histories.
@@ -2710,7 +2915,9 @@ Get a listing market.
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarkethistory[ListingMarketHistory^]
+<1> [[__plenty\modules\listing\market\history\models\listingmarkethistory]]
+
+    link:listing#listing_models_listingmarkethistory[ListingMarketHistory^]
 
     
 
@@ -2741,7 +2948,9 @@ List listing market histories
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -2814,7 +3023,9 @@ Relist the listing market histories on the designated markets.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2889,7 +3100,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2907,7 +3120,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2925,7 +3140,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2952,7 +3169,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2970,7 +3189,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2988,12 +3209,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_history_models]]
 ===  Models
+[[listing_models_listingmarkethistory]]
 ==== ListingMarketHistory
 
 The listing market history model.
@@ -3054,35 +3278,51 @@ The listing market history model.
 |link:http://php.net/string[string^]
     |sku
     |The stock keeping unit of this listing market history.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the entry was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the entry was updated last.
-|link:listing#listing_models_listingmarket[ListingMarket^]
+|[[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     |listingMarket
     |The listing market that the listing market history belongs to.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |variations
     |The listing market history variations that belong to this listing market history.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |The listing market history properties of the listing market.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |dates
     |The listing market history dates of the listing market history.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |texts
     |The listing market history texts of the listing market history.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |status
     |The listing market history status of the listing market history.
@@ -3105,6 +3345,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingmarkethistorydate]]
 ==== ListingMarketHistoryDate
 
 The listing market history dates model. Each listing market history date has a type.
@@ -3140,19 +3381,27 @@ The listing market history dates model. Each listing market history date has a t
 <li>Last market update = 5</li>
 <li>Last sale = 6</li>
 </ul>
-|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+|[[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
     |date
     |The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the date was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the date was last updated.
-|link:listing#listing_models_listingmarket[ListingMarket^]
+|[[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     |listingMarket
     |The listing market that the date belongs to.
@@ -3175,6 +3424,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingmarkethistoryproperty]]
 ==== ListingMarketHistoryProperty
 
 The listing market properties model. Each listing market property has a type.
@@ -3217,15 +3467,21 @@ The listing market properties model. Each listing market property has a type.
 |link:http://php.net/string[string^]
     |value
     |The value of the listing market history property. The value depends on the type.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the property was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the property was updated last.
-|link:listing#listing_models_listingmarkethistory[ListingMarketHistory^]
+|[[__plenty\modules\listing\market\history\models\listingmarkethistory]]
+
+    link:listing#listing_models_listingmarkethistory[ListingMarketHistory^]
 
     |history
     |The listing market history that the property belongs to.
@@ -3248,6 +3504,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingmarkethistorytext]]
 ==== ListingMarketHistoryText
 
 The listing market history text model.
@@ -3297,6 +3554,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingmarkethistoryvariation]]
 ==== ListingMarketHistoryVariation
 
 The listing market history model.
@@ -3345,15 +3603,21 @@ The listing market history model.
 |link:http://php.net/float[float^]
     |price
     |The price offered for this listing market history variation.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the entry was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the entry was updated last.
-|link:listing#listing_models_listingmarkethistory[ListingMarketHistory^]
+|[[__plenty\modules\listing\market\history\models\listingmarkethistory]]
+
+    link:listing#listing_models_listingmarkethistory[ListingMarketHistory^]
 
     |history
     |The listing market history variations that belong to this listing market history.
@@ -3380,6 +3644,7 @@ Returns this model as an array.
 
 [[listing_info_contracts]]
 ===  Contracts
+[[listing_contracts_listingmarketinforepositorycontract]]
 ==== ListingMarketInfoRepositoryContract
 
 The ListingMarketInfoRepositoryContract is the interface for the listing market info repository. This interface allows you to get information about one or many listing markets.
@@ -3411,7 +3676,9 @@ List listing market infos by filter options
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -3450,7 +3717,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3468,7 +3737,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3486,7 +3757,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3513,7 +3786,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3531,7 +3806,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3549,12 +3826,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_info_models]]
 ===  Models
+[[listing_models_listingmarketinfo]]
 ==== ListingMarketInfo
 
 The listing market info model.
@@ -3588,11 +3868,15 @@ The listing market info model.
 |link:http://php.net/string[string^]
     |message
     |The information message.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the listing market info was created.
-|link:listing#listing_models_listingmarket[ListingMarket^]
+|[[__plenty\modules\listing\market\models\listingmarket]]
+
+    link:listing#listing_models_listingmarket[ListingMarket^]
 
     |listingMarket
     |The listing market that the listing market info belongs to.
@@ -3619,6 +3903,7 @@ Returns this model as an array.
 
 [[listing_itemspecific_contracts]]
 ===  Contracts
+[[listing_contracts_listingmarketitemspecificrepositorycontract]]
 ==== ListingMarketItemSpecificRepositoryContract
 
 The contract of the listing market item specific repository
@@ -3655,7 +3940,9 @@ Gets a ListingMarketItemSpecific.
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarketitemspecific[ListingMarketItemSpecific^]
+<1> [[__plenty\modules\listing\market\itemspecific\models\listingmarketitemspecific]]
+
+    link:listing#listing_models_listingmarketitemspecific[ListingMarketItemSpecific^]
 
     
 
@@ -3682,7 +3969,9 @@ Gets all ListingMarketItemSpecifics.
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarketitemspecific[ListingMarketItemSpecific^]
+<1> [[__plenty\modules\listing\market\itemspecific\models\listingmarketitemspecific]]
+
+    link:listing#listing_models_listingmarketitemspecific[ListingMarketItemSpecific^]
 
     
 
@@ -3717,7 +4006,9 @@ Gets all ListingMarketItemSpecifics.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -3752,7 +4043,9 @@ Updates a ListingMarketItemSpecific.
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarketitemspecific[ListingMarketItemSpecific^]
+<1> [[__plenty\modules\listing\market\itemspecific\models\listingmarketitemspecific]]
+
+    link:listing#listing_models_listingmarketitemspecific[ListingMarketItemSpecific^]
 
     
 
@@ -3835,7 +4128,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3853,7 +4148,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3871,7 +4168,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3898,7 +4197,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3916,7 +4217,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3934,12 +4237,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_itemspecific_models]]
 ===  Models
+[[listing_models_listingmarketitemspecific]]
 ==== ListingMarketItemSpecific
 
 The item specific model.
@@ -3993,6 +4299,7 @@ Returns this model as an array.
 
 [[listing_text_contracts]]
 ===  Contracts
+[[listing_contracts_listingmarkettextrepositorycontract]]
 ==== ListingMarketTextRepositoryContract
 
 The contract for the listing market text repository.
@@ -4024,7 +4331,9 @@ Get a listing market text
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarkettext[ListingMarketText^]
+<1> [[__plenty\modules\listing\market\text\models\listingmarkettext]]
+
+    link:listing#listing_models_listingmarkettext[ListingMarketText^]
 
     
 
@@ -4051,7 +4360,9 @@ Create new listing market text
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarkettext[ListingMarketText^]
+<1> [[__plenty\modules\listing\market\text\models\listingmarkettext]]
+
+    link:listing#listing_models_listingmarkettext[ListingMarketText^]
 
     
 
@@ -4082,7 +4393,9 @@ Update listing market text
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarkettext[ListingMarketText^]
+<1> [[__plenty\modules\listing\market\text\models\listingmarkettext]]
+
+    link:listing#listing_models_listingmarkettext[ListingMarketText^]
 
     
 
@@ -4117,7 +4430,9 @@ Update or create listing market text
 
 ===== Return type
     
-<1> link:listing#listing_models_listingmarkettext[ListingMarketText^]
+<1> [[__plenty\modules\listing\market\text\models\listingmarkettext]]
+
+    link:listing#listing_models_listingmarkettext[ListingMarketText^]
 
     
 
@@ -4178,7 +4493,9 @@ List listing market text
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -4213,7 +4530,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4231,7 +4550,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4249,7 +4570,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4276,7 +4599,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4294,7 +4619,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4312,12 +4639,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_text_models]]
 ===  Models
+[[listing_models_listingmarkettext]]
 ==== ListingMarketText
 
 The listing market text model.
@@ -4377,6 +4707,7 @@ Returns this model as an array.
 
 [[listing_optiontemplate_contracts]]
 ===  Contracts
+[[listing_contracts_optiontemplaterepositorycontract]]
 ==== OptionTemplateRepositoryContract
 
 The contract for the listing option template repository.
@@ -4425,7 +4756,9 @@ Get option template
 
 ===== Return type
     
-<1> link:listing#listing_models_optiontemplate[OptionTemplate^]
+<1> [[__plenty\modules\listing\optiontemplate\models\optiontemplate]]
+
+    link:listing#listing_models_optiontemplate[OptionTemplate^]
 
     
 
@@ -4452,7 +4785,9 @@ Create option template
 
 ===== Return type
     
-<1> link:listing#listing_models_optiontemplate[OptionTemplate^]
+<1> [[__plenty\modules\listing\optiontemplate\models\optiontemplate]]
+
+    link:listing#listing_models_optiontemplate[OptionTemplate^]
 
     
 
@@ -4479,7 +4814,9 @@ Update option template
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4510,7 +4847,9 @@ Delete option template
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4525,6 +4864,7 @@ a|`$id`
 
 [[listing_optiontemplate_models]]
 ===  Models
+[[listing_models_optiontemplate]]
 ==== OptionTemplate
 
 The option template model.
@@ -4581,6 +4921,7 @@ Returns this model as an array.
 
 [[listing_price_models]]
 ===  Models
+[[listing_models_listingpricetype]]
 ==== ListingPriceType
 
 The listing price type model.
@@ -4612,7 +4953,9 @@ The listing price type model.
 |link:http://php.net/bool[bool^]
     |isErasable
     |Flag that states if this type can be deleted or not.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |names
     |The listing price type names.
@@ -4635,6 +4978,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingpricetypename]]
 ==== ListingPriceTypeName
 
 The listing price type name model.
@@ -4688,6 +5032,7 @@ Returns this model as an array.
 
 [[listing_property_models]]
 ===  Models
+[[listing_models_listingpropertytype]]
 ==== ListingPropertyType
 
 The listing properties model. Each listing property has a type.
@@ -4794,6 +5139,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingpropertytypename]]
 ==== ListingPropertyTypeName
 
 The listing property type name model.
@@ -4847,6 +5193,7 @@ Returns this model as an array.
 
 [[listing_shippingprofile_contracts]]
 ===  Contracts
+[[listing_contracts_shippingprofilerepositorycontract]]
 ==== ShippingProfileRepositoryContract
 
 The ShippingProfileRepositoryContract is the interface for the listing shipping profile repository. This interface allows you to get a shipping profile.
@@ -4878,7 +5225,9 @@ Get a shipping profile
 
 ===== Return type
     
-<1> link:listing#listing_models_shippingprofile[ShippingProfile^]
+<1> [[__plenty\modules\listing\shippingprofile\models\shippingprofile]]
+
+    link:listing#listing_models_shippingprofile[ShippingProfile^]
 
     
 
@@ -4909,7 +5258,9 @@ Search shipping profiles
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -4948,7 +5299,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4966,7 +5319,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4984,7 +5339,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5011,7 +5368,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5029,7 +5388,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5047,12 +5408,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[listing_shippingprofile_events]]
 ===  Events
+[[listing_events_shippingprofilecreated]]
 ==== ShippingProfileCreated
 
 An event class fired after a new listing shipping profile is created.
@@ -5084,14 +5448,18 @@ public __construct($shippingProfile):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:listing#listing_models_shippingprofile[ShippingProfile^]
+|[[__plenty\modules\listing\shippingprofile\models\shippingprofile]]
+
+    link:listing#listing_models_shippingprofile[ShippingProfile^]
 
 a|`$shippingProfile`
 |
@@ -5112,11 +5480,14 @@ Get the ShippingProfile instance.
 
 ===== Return type
     
-<1> link:listing#listing_models_shippingprofile[ShippingProfile^]
+<1> [[__plenty\modules\listing\shippingprofile\models\shippingprofile]]
+
+    link:listing#listing_models_shippingprofile[ShippingProfile^]
 
     
 
 
+[[listing_events_shippingprofiledeleted]]
 ==== ShippingProfileDeleted
 
 An event class fired after a listing shipping profile is deleted.
@@ -5148,14 +5519,18 @@ public __construct($shippingProfile):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:listing#listing_models_shippingprofile[ShippingProfile^]
+|[[__plenty\modules\listing\shippingprofile\models\shippingprofile]]
+
+    link:listing#listing_models_shippingprofile[ShippingProfile^]
 
 a|`$shippingProfile`
 |
@@ -5176,11 +5551,14 @@ Get the ShippingProfile instance.
 
 ===== Return type
     
-<1> link:listing#listing_models_shippingprofile[ShippingProfile^]
+<1> [[__plenty\modules\listing\shippingprofile\models\shippingprofile]]
+
+    link:listing#listing_models_shippingprofile[ShippingProfile^]
 
     
 
 
+[[listing_events_shippingprofileevent]]
 ==== ShippingProfileEvent
 
 A base event class for all listing shipping profile events. Each shipping profile event expects an ShippingProfile instance.
@@ -5212,14 +5590,18 @@ public __construct($shippingProfile):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:listing#listing_models_shippingprofile[ShippingProfile^]
+|[[__plenty\modules\listing\shippingprofile\models\shippingprofile]]
+
+    link:listing#listing_models_shippingprofile[ShippingProfile^]
 
 a|`$shippingProfile`
 |
@@ -5240,11 +5622,14 @@ Get the ShippingProfile instance.
 
 ===== Return type
     
-<1> link:listing#listing_models_shippingprofile[ShippingProfile^]
+<1> [[__plenty\modules\listing\shippingprofile\models\shippingprofile]]
+
+    link:listing#listing_models_shippingprofile[ShippingProfile^]
 
     
 
 
+[[listing_events_shippingprofileupdated]]
 ==== ShippingProfileUpdated
 
 An event class fired after a listing shipping profile is updated.
@@ -5276,14 +5661,18 @@ public __construct($shippingProfile):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:listing#listing_models_shippingprofile[ShippingProfile^]
+|[[__plenty\modules\listing\shippingprofile\models\shippingprofile]]
+
+    link:listing#listing_models_shippingprofile[ShippingProfile^]
 
 a|`$shippingProfile`
 |
@@ -5304,12 +5693,15 @@ Get the ShippingProfile instance.
 
 ===== Return type
     
-<1> link:listing#listing_models_shippingprofile[ShippingProfile^]
+<1> [[__plenty\modules\listing\shippingprofile\models\shippingprofile]]
+
+    link:listing#listing_models_shippingprofile[ShippingProfile^]
 
     
 
 [[listing_shippingprofile_models]]
 ===  Models
+[[listing_models_shippingprofile]]
 ==== ShippingProfile
 
 The listing shipping profile model.
@@ -5372,6 +5764,7 @@ Returns this model as an array.
 
 [[listing_status_models]]
 ===  Models
+[[listing_models_listingstatus]]
 ==== ListingStatus
 
 The listing status model.
@@ -5399,7 +5792,9 @@ The listing status model.
 |link:http://php.net/int[int^]
     |position
     |The position for sorting.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |names
     |The listing status names.
@@ -5422,6 +5817,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingstatusname]]
 ==== ListingStatusName
 
 The listing status name model.
@@ -5475,6 +5871,7 @@ Returns this model as an array.
 
 [[listing_stockdependencetype_contracts]]
 ===  Contracts
+[[listing_contracts_stockdependencetyperepositorycontract]]
 ==== StockDependenceTypeRepositoryContract
 
 The contract for the listing stock dependence type repository.
@@ -5506,7 +5903,9 @@ Get a listing stock dependence type
 
 ===== Return type
     
-<1> link:listing#listing_models_stockdependencetype[StockDependenceType^]
+<1> [[__plenty\modules\listing\stockdependencetype\models\stockdependencetype]]
+
+    link:listing#listing_models_stockdependencetype[StockDependenceType^]
 
     
 
@@ -5537,7 +5936,9 @@ List listing stock dependence types
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -5560,6 +5961,7 @@ a|`$with`
 
 [[listing_stockdependencetype_models]]
 ===  Models
+[[listing_models_stockdependencetype]]
 ==== StockDependenceType
 
 The listing stock dependence type model.
@@ -5587,7 +5989,9 @@ The listing stock dependence type model.
 |link:http://php.net/int[int^]
     |position
     |The position for sorting.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |names
     |The listing stock dependence type names.
@@ -5610,6 +6014,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_stockdependencetypename]]
 ==== StockDependenceTypeName
 
 The listing stock dependence type name model.
@@ -5663,6 +6068,7 @@ Returns this model as an array.
 
 [[listing_type_contracts]]
 ===  Contracts
+[[listing_contracts_listingtyperepositorycontract]]
 ==== ListingTypeRepositoryContract
 
 The contract for the listing type repository.
@@ -5694,7 +6100,9 @@ Get a listing type
 
 ===== Return type
     
-<1> link:listing#listing_models_listingtype[ListingType^]
+<1> [[__plenty\modules\listing\type\models\listingtype]]
+
+    link:listing#listing_models_listingtype[ListingType^]
 
     
 
@@ -5725,7 +6133,9 @@ List listing types
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -5748,6 +6158,7 @@ a|`$with`
 
 [[listing_type_models]]
 ===  Models
+[[listing_models_listingtype]]
 ==== ListingType
 
 The listing type model.
@@ -5775,7 +6186,9 @@ The listing type model.
 |link:http://php.net/int[int^]
     |position
     |The position for sorting.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |names
     |The listing type names.
@@ -5798,6 +6211,7 @@ Returns this model as an array.
 
 
 
+[[listing_models_listingtypename]]
 ==== ListingTypeName
 
 The listing type name model.

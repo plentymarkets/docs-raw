@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[template_config_contracts]]
 ===  Contracts
+[[template_contracts_designconfigrepositorycontract]]
 ==== DesignConfigRepositoryContract
 
 DesignConfig
@@ -66,7 +68,9 @@ public findByDesignAndWebStore($designName, $webStoreId):Plenty\Modules\Template
 
 ===== Return type
     
-<1> link:template#template_models_designconfig[DesignConfig^]
+<1> [[__plenty\modules\template\design\config\models\designconfig]]
+
+    link:template#template_models_designconfig[DesignConfig^]
 
     
 
@@ -103,7 +107,9 @@ public findByDesign($design):array // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:template#template_models_design[Design^]
+|[[__plenty\modules\template\design\config\models\design]]
+
+    link:template#template_models_design[Design^]
 
 a|`$design`
 |
@@ -124,7 +130,9 @@ public update($data, $designName, $webstoreId):Plenty\Modules\Template\Design\Co
 
 ===== Return type
     
-<1> link:template#template_models_designconfig[DesignConfig^]
+<1> [[__plenty\modules\template\design\config\models\designconfig]]
+
+    link:template#template_models_designconfig[DesignConfig^]
 
     
 
@@ -159,7 +167,9 @@ public copyDesignConfig($designName, $newDesignName):Plenty\Modules\Template\Des
 
 ===== Return type
     
-<1> link:template#template_models_designconfig[DesignConfig^]
+<1> [[__plenty\modules\template\design\config\models\designconfig]]
+
+    link:template#template_models_designconfig[DesignConfig^]
 
     
 
@@ -177,6 +187,7 @@ a|`$newDesignName`
 
 
 
+[[template_contracts_designrepositorycontract]]
 ==== DesignRepositoryContract
 
 Design
@@ -225,7 +236,9 @@ public findByDesignName($designName, $withConfig = true):Plenty\Modules\Template
 
 ===== Return type
     
-<1> link:template#template_models_design[Design^]
+<1> [[__plenty\modules\template\design\config\models\design]]
+
+    link:template#template_models_design[Design^]
 
     
 
@@ -261,6 +274,7 @@ public getCheckoutType():array // <1>
 
 [[template_config_models]]
 ===  Models
+[[template_models_design]]
 ==== Design
 
 Design model
@@ -316,6 +330,7 @@ Returns this model as an array.
 
 
 
+[[template_models_designconfig]]
 ==== DesignConfig
 
 Design configuration model

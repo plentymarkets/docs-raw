@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[board_board_contracts]]
 ===  Contracts
+[[board_contracts_boardcolumnrepositorycontract]]
 ==== BoardColumnRepositoryContract
 
 The BoardColumnRepositoryContract is the interface for the board column repository. This interface provides methods to access, create, update or delete columns.
@@ -40,7 +42,9 @@ Lists all columns assigned to a specific board.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+<1> [[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     
 
@@ -67,7 +71,9 @@ Creates a new column and assigns it to a specific board.
 
 ===== Return type
     
-<1> link:board#board_models_boardcolumn[BoardColumn^]
+<1> [[__plenty\modules\board\models\boardcolumn]]
+
+    link:board#board_models_boardcolumn[BoardColumn^]
 
     
 
@@ -98,7 +104,9 @@ Updates a specific column.
 
 ===== Return type
     
-<1> link:board#board_models_boardcolumn[BoardColumn^]
+<1> [[__plenty\modules\board\models\boardcolumn]]
+
+    link:board#board_models_boardcolumn[BoardColumn^]
 
     
 
@@ -133,7 +141,9 @@ Copies a column and all its tasks.
 
 ===== Return type
     
-<1> link:board#board_models_boardcolumn[BoardColumn^]
+<1> [[__plenty\modules\board\models\boardcolumn]]
+
+    link:board#board_models_boardcolumn[BoardColumn^]
 
     
 
@@ -215,6 +225,7 @@ a|`$columnId`
 
 
 
+[[board_contracts_boardrepositorycontract]]
 ==== BoardRepositoryContract
 
 The BoardRepositoryContract is the interface for the board repository. This interface provides all methods to access, create, update or delete boards.
@@ -246,7 +257,9 @@ Lists all boards.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+<1> [[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     
 
@@ -273,7 +286,9 @@ Returns a single board.
 
 ===== Return type
     
-<1> link:board#board_models_board[Board^]
+<1> [[__plenty\modules\board\models\board]]
+
+    link:board#board_models_board[Board^]
 
     
 
@@ -304,7 +319,9 @@ Creates a new board.
 
 ===== Return type
     
-<1> link:board#board_models_board[Board^]
+<1> [[__plenty\modules\board\models\board]]
+
+    link:board#board_models_board[Board^]
 
     
 
@@ -331,7 +348,9 @@ Updates a board.
 
 ===== Return type
     
-<1> link:board#board_models_board[Board^]
+<1> [[__plenty\modules\board\models\board]]
+
+    link:board#board_models_board[Board^]
 
     
 
@@ -362,7 +381,9 @@ Copies a board and all its columns.
 
 ===== Return type
     
-<1> link:board#board_models_board[Board^]
+<1> [[__plenty\modules\board\models\board]]
+
+    link:board#board_models_board[Board^]
 
     
 
@@ -428,6 +449,7 @@ a|`$boardId`
 
 
 
+[[board_contracts_boardtaskreferencerepositorycontract]]
 ==== BoardTaskReferenceRepositoryContract
 
 The BoardTaskReferenceRepositoryContract is the interface for the board task reference repository. This interface provides methods to create or delete references from tasks to contacts or tickets.
@@ -459,7 +481,9 @@ Creates a new reference to a given task. A reference may either point to a conta
 
 ===== Return type
     
-<1> link:board#board_models_boardtaskreference[BoardTaskReference^]
+<1> [[__plenty\modules\board\models\boardtaskreference]]
+
+    link:board#board_models_boardtaskreference[BoardTaskReference^]
 
     
 
@@ -533,6 +557,7 @@ a|`$referenceKey`
 
 
 
+[[board_contracts_boardtaskrepositorycontract]]
 ==== BoardTaskRepositoryContract
 
 The BoardTaskRepositoryContract is the interface for the board task repository. This interface provides methods to access, create, update or delete tasks.
@@ -564,7 +589,9 @@ Lists tasks for a specific column. Will return at most 20 tasks starting at defi
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+<1> [[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     
 
@@ -603,7 +630,9 @@ Creates a new task and assigns it to a specified column.
 
 ===== Return type
     
-<1> link:board#board_models_boardtask[BoardTask^]
+<1> [[__plenty\modules\board\models\boardtask]]
+
+    link:board#board_models_boardtask[BoardTask^]
 
     
 
@@ -638,7 +667,9 @@ Copies the task with all references.
 
 ===== Return type
     
-<1> link:board#board_models_boardtask[BoardTask^]
+<1> [[__plenty\modules\board\models\boardtask]]
+
+    link:board#board_models_boardtask[BoardTask^]
 
     
 
@@ -673,7 +704,9 @@ Returns a task for a given ID.
 
 ===== Return type
     
-<1> link:board#board_models_boardtask[BoardTask^]
+<1> [[__plenty\modules\board\models\boardtask]]
+
+    link:board#board_models_boardtask[BoardTask^]
 
     
 
@@ -700,7 +733,9 @@ Updates a specified task.
 
 ===== Return type
     
-<1> link:board#board_models_boardtask[BoardTask^]
+<1> [[__plenty\modules\board\models\boardtask]]
+
+    link:board#board_models_boardtask[BoardTask^]
 
     
 
@@ -745,7 +780,9 @@ Adds a task reference to a task object.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:board#board_models_boardtaskreference[BoardTaskReference^]
+|[[__plenty\modules\board\models\boardtaskreference]]
+
+    link:board#board_models_boardtaskreference[BoardTaskReference^]
 
 a|`$boardTaskReference`
 |The board task reference
@@ -772,7 +809,9 @@ Removes a task reference from a task object.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:board#board_models_boardtaskreference[BoardTaskReference^]
+|[[__plenty\modules\board\models\boardtaskreference]]
+
+    link:board#board_models_boardtaskreference[BoardTaskReference^]
 
 a|`$boardTaskReference`
 |The board task reference
@@ -883,7 +922,9 @@ Gets all tasks for the given column ID having a reference with the given referen
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -918,7 +959,9 @@ Gets all tasks for the given column ID having a reference with the given referen
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -941,6 +984,7 @@ a|`$columns`
 
 [[board_board_events]]
 ===  Events
+[[board_events_afterboardcolumntasksdeleted]]
 ==== AfterBoardColumnTasksDeleted
 
 This event will be triggered, after all tasks of a column were deleted.
@@ -1010,6 +1054,7 @@ public getDeletedTaskIdList():array // <1>
     
 
 
+[[board_events_afterboardtaskcreated]]
 ==== AfterBoardTaskCreated
 
 This event will be triggered, when a board task was created.
@@ -1041,11 +1086,14 @@ public getBoardTask():Plenty\Modules\Board\Models\BoardTask // <1>
 
 ===== Return type
     
-<1> link:board#board_models_boardtask[BoardTask^]
+<1> [[__plenty\modules\board\models\boardtask]]
+
+    link:board#board_models_boardtask[BoardTask^]
 
     
 
 
+[[board_events_afterboardtaskdeleted]]
 ==== AfterBoardTaskDeleted
 
 This event will be triggered, when a single board task was deleted. It won&#039;t be triggered, if a board column was deleted.
@@ -1077,11 +1125,14 @@ public getBoardTask():Plenty\Modules\Board\Models\BoardTask // <1>
 
 ===== Return type
     
-<1> link:board#board_models_boardtask[BoardTask^]
+<1> [[__plenty\modules\board\models\boardtask]]
+
+    link:board#board_models_boardtask[BoardTask^]
 
     
 
 
+[[board_events_afterboardtaskreferencecreated]]
 ==== AfterBoardTaskReferenceCreated
 
 This event will be triggered, after a task reference was created.
@@ -1113,11 +1164,14 @@ public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference //
 
 ===== Return type
     
-<1> link:board#board_models_boardtaskreference[BoardTaskReference^]
+<1> [[__plenty\modules\board\models\boardtaskreference]]
+
+    link:board#board_models_boardtaskreference[BoardTaskReference^]
 
     
 
 
+[[board_events_afterboardtaskreferencedeleted]]
 ==== AfterBoardTaskReferenceDeleted
 
 This event will be triggered, after a task reference was deleted.
@@ -1149,11 +1203,14 @@ public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference //
 
 ===== Return type
     
-<1> link:board#board_models_boardtaskreference[BoardTaskReference^]
+<1> [[__plenty\modules\board\models\boardtaskreference]]
+
+    link:board#board_models_boardtaskreference[BoardTaskReference^]
 
     
 
 
+[[board_events_beforeboardcolumndeleted]]
 ==== BeforeBoardColumnDeleted
 
 This event will be triggered, before a board column will be deleted.
@@ -1185,7 +1242,9 @@ public getBoard():Plenty\Modules\Board\Models\Board // <1>
 
 ===== Return type
     
-<1> link:board#board_models_board[Board^]
+<1> [[__plenty\modules\board\models\board]]
+
+    link:board#board_models_board[Board^]
 
     
 
@@ -1207,6 +1266,7 @@ public getColumnId():string // <1>
     
 
 
+[[board_events_beforeboarddeleted]]
 ==== BeforeBoardDeleted
 
 This event will be triggered, before a board will be deleted.
@@ -1238,11 +1298,14 @@ public getBoard():Plenty\Modules\Board\Models\Board // <1>
 
 ===== Return type
     
-<1> link:board#board_models_board[Board^]
+<1> [[__plenty\modules\board\models\board]]
+
+    link:board#board_models_board[Board^]
 
     
 
 
+[[board_events_beforeboardtaskdeleted]]
 ==== BeforeBoardTaskDeleted
 
 This event will be triggered, before a single board task was deleted. It won&#039;t be triggered, if a board column will be deleted.
@@ -1274,12 +1337,15 @@ public getBoardTask():Plenty\Modules\Board\Models\BoardTask // <1>
 
 ===== Return type
     
-<1> link:board#board_models_boardtask[BoardTask^]
+<1> [[__plenty\modules\board\models\boardtask]]
+
+    link:board#board_models_boardtask[BoardTask^]
 
     
 
 [[board_board_models]]
 ===  Models
+[[board_models_board]]
 ==== Board
 
 The board model.
@@ -1304,7 +1370,9 @@ The board model.
 |link:http://php.net/string[string^]
     |boardName
     |The name of the board
-|link:miscellaneous#miscellaneous_support_collection[Collection^]
+|[[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     |boardColumns
     |The columns of the board
@@ -1333,6 +1401,7 @@ Returns this model as an array.
 
 
 
+[[board_models_boardcolumn]]
 ==== BoardColumn
 
 The board column model.
@@ -1363,7 +1432,9 @@ The board column model.
 |link:http://php.net/int[int^]
     |position
     |The position
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |tasks
     |The tasks
@@ -1386,6 +1457,7 @@ Returns this model as an array.
 
 
 
+[[board_models_boardtask]]
 ==== BoardTask
 
 The board task model.
@@ -1422,11 +1494,15 @@ The board task model.
 |link:http://php.net/string[string^]
     |boardId
     |The ID of the board
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |tags
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |references
     |
@@ -1449,6 +1525,7 @@ Returns this model as an array.
 
 
 
+[[board_models_boardtaskreference]]
 ==== BoardTaskReference
 
 The task reference model.

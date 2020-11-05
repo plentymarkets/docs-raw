@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[webshop_consent_contracts]]
 ===  Contracts
+[[webshop_contracts_consentrepositorycontract]]
 ==== ConsentRepositoryContract
 
 Repository to register consents and check for users response.
@@ -40,7 +42,9 @@ Register a new group of consents.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -80,7 +84,9 @@ Register a new consent.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -126,7 +132,9 @@ Get all consent groups including all consents.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+<1> [[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     
 
@@ -161,7 +169,9 @@ Set the response for a consent or a group of consents.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -211,6 +221,7 @@ Use "*" as consent key to check if all entries of a group has a response, e.g. "
 
 [[webshop_webshop_contracts]]
 ===  Contracts
+[[webshop_contracts_checkoutrepositorycontract]]
 ==== CheckoutRepositoryContract
 
 Repository to get and set checkout data
@@ -259,7 +270,9 @@ Set the currency.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -290,6 +303,7 @@ Get the id of the current shipping country. Default to the configured country id
     
 
 
+[[webshop_contracts_contactrepositorycontract]]
 ==== ContactRepositoryContract
 
 Repository to get and set contact information for the webshop
@@ -338,7 +352,9 @@ Get the logged in contact
 
 ===== Return type
     
-<1> link:account#account_models_contact[Contact^]
+<1> [[__plenty\modules\account\contact\models\contact]]
+
+    link:account#account_models_contact[Contact^]
 
     
 
@@ -420,6 +436,7 @@ Get Information if net prices should be shown
     
 
 
+[[webshop_contracts_giftcardrepositorycontract]]
 ==== GiftCardRepositoryContract
 
 Repository to get information about gift cards and corresponding order items
@@ -550,6 +567,7 @@ a|`$orderItemId`
 
 
 
+[[webshop_contracts_localizationrepositorycontract]]
 ==== LocalizationRepositoryContract
 
 Repository for webshop localization information
@@ -628,6 +646,7 @@ a|`$countryCode`
 
 
 
+[[webshop_contracts_sessionstoragerepositorycontract]]
 ==== SessionStorageRepositoryContract
 
 Repository for webshop session information
@@ -659,7 +678,9 @@ Set a value to a given key in the session
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -670,7 +691,9 @@ Set a value to a given key in the session
 a|`$key`
 |The key from session
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |The value will set to given key
@@ -691,7 +714,9 @@ Get a value from the session by a given key
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -718,7 +743,9 @@ Get the customer session model
 
 ===== Return type
     
-<1> link:frontend#frontend_models_customer[Customer^]
+<1> [[__plenty\modules\frontend\session\storage\models\customer]]
+
+    link:frontend#frontend_models_customer[Customer^]
 
     
 
@@ -736,11 +763,14 @@ Get the order session model
 
 ===== Return type
     
-<1> link:frontend#frontend_models_order[Order^]
+<1> [[__plenty\modules\frontend\session\storage\models\order]]
+
+    link:frontend#frontend_models_order[Order^]
 
     
 
 
+[[webshop_contracts_urlbuilderrepositorycontract]]
 ==== UrlBuilderRepositoryContract
 
 Generate url for items, variations and categories considering all affecting configurations.
@@ -772,7 +802,9 @@ Build item url. Generate and write url to item data if not defined yet.
 
 ===== Return type
     
-<1> link:webshop#webshop_helpers_urlquery[UrlQuery^]
+<1> [[__plenty\modules\webshop\helpers\urlquery]]
+
+    link:webshop#webshop_helpers_urlquery[UrlQuery^]
 
     
 
@@ -803,7 +835,9 @@ Build category url by recursively prepending url names of parent categories.
 
 ===== Return type
     
-<1> link:webshop#webshop_helpers_urlquery[UrlQuery^]
+<1> [[__plenty\modules\webshop\helpers\urlquery]]
+
+    link:webshop#webshop_helpers_urlquery[UrlQuery^]
 
     
 
@@ -838,7 +872,9 @@ Store item data of loaded items to be reused when generating item or variation u
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -865,7 +901,9 @@ Build variation url. Variation urls equal to item urls with the variation id app
 
 ===== Return type
     
-<1> link:webshop#webshop_helpers_urlquery[UrlQuery^]
+<1> [[__plenty\modules\webshop\helpers\urlquery]]
+
+    link:webshop#webshop_helpers_urlquery[UrlQuery^]
 
     
 
@@ -921,6 +959,7 @@ a|`$withVariationId`
 
 
 
+[[webshop_contracts_webstoreconfigurationrepositorycontract]]
 ==== WebstoreConfigurationRepositoryContract
 
 Repository for webstore information
@@ -952,7 +991,9 @@ Get the webstore configuration
 
 ===== Return type
     
-<1> link:system#system_models_webstoreconfiguration[WebstoreConfiguration^]
+<1> [[__plenty\modules\system\models\webstoreconfiguration]]
+
+    link:system#system_models_webstoreconfiguration[WebstoreConfiguration^]
 
     
 
@@ -992,6 +1033,7 @@ Get the default shipping-country-Id of the webstore
 
 [[webshop_webshop_events]]
 ===  Events
+[[webshop_events_afterbasketitemtoorderitem]]
 ==== AfterBasketItemToOrderItem
 
 Event for receiving or manupulating the order item
@@ -1044,6 +1086,7 @@ Get basket item data used to generate the order item from.
     
 
 
+[[webshop_events_validatevatnumber]]
 ==== ValidateVatNumber
 
 Event to trigger validation of a vat number while creating new addresses. Failed validation will throw an exception.
@@ -1080,6 +1123,7 @@ Get the vat number to validate.
 
 [[webshop_webshop_helpers]]
 ===  Helpers
+[[webshop_helpers_numberformatter]]
 ==== NumberFormatter
 
 Helper class for number formatting
@@ -1147,12 +1191,16 @@ Format the given value to currency
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$currencyISO`
 |
@@ -1160,6 +1208,7 @@ a|`$currencyISO`
 
 
 
+[[webshop_helpers_pluginconfig]]
 ==== PluginConfig
 
 Helper to get plugin configuration values. Provides several methods to read configuration values and cast them into required type.
@@ -1191,7 +1240,9 @@ Initially load configuration values into member variables.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1355,7 +1406,9 @@ Get a configuration value without any cast.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1366,7 +1419,9 @@ Get a configuration value without any cast.
 a|`$key`
 |The key of the configuration to read.
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$default`
 |A default value to return if the configuration is not set yet.
@@ -1374,6 +1429,7 @@ a|`$default`
 
 
 
+[[webshop_helpers_unitutils]]
 ==== UnitUtils
 
 Convert plentymarkets unit keys into common unit codes.
@@ -1418,6 +1474,7 @@ a|`$unit`
 
 
 
+[[webshop_helpers_urlquery]]
 ==== UrlQuery
 
 Helper to generate and manipulate urls to be used in the webshop.
@@ -1449,7 +1506,9 @@ Create a new instance.
 
 ===== Return type
     
-<1> link:webshop#webshop_helpers_urlquery[UrlQuery^]
+<1> [[__plenty\modules\webshop\helpers\urlquery]]
+
+    link:webshop#webshop_helpers_urlquery[UrlQuery^]
 
     
 
@@ -1497,7 +1556,9 @@ Append a string to the path the url without checking for slashes.
 
 ===== Return type
     
-<1> link:webshop#webshop_webshop_helpers[Helpers^]
+<1> [[__plenty\modules\webshop\helpers]]
+
+    link:webshop#webshop_webshop_helpers[Helpers^]
 
     
 
@@ -1524,7 +1585,9 @@ Append a new path to the existing one. Ensure having a slash as glue between exi
 
 ===== Return type
     
-<1> link:webshop#webshop_webshop_helpers[Helpers^]
+<1> [[__plenty\modules\webshop\helpers]]
+
+    link:webshop#webshop_webshop_helpers[Helpers^]
 
     
 
@@ -1643,6 +1706,7 @@ a|`$path`
 
 [[webshop_webshop_hooks]]
 ===  Hooks
+[[webshop_hooks_checkvatnumber]]
 ==== CheckVatNumber
 
 Hook to execute validation of vat numbers. Can be triggered by emitting ValidateVatNumber while creating new addresses.
@@ -1674,14 +1738,18 @@ Validate the given vat number
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:webshop#webshop_events_validatevatnumber[ValidateVatNumber^]
+|[[__plenty\modules\webshop\events\validatevatnumber]]
+
+    link:webshop#webshop_events_validatevatnumber[ValidateVatNumber^]
 
 a|`$vatNumberEvent`
 |Event emitted while creating new addresses.
@@ -1693,6 +1761,7 @@ a|`$vatNumberEvent`
 
 [[webshop_itemsearch_contracts]]
 ===  Contracts
+[[webshop_contracts_facetextension]]
 ==== FacetExtension
 
 Interface to add custom facets.
@@ -1724,7 +1793,9 @@ Get the aggregation to apply the facet to the search results.
 
 ===== Return type
     
-<1> link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
+<1> [[__plenty\modules\cloud\elasticsearch\lib\search\aggregation\aggregationinterface]]
+
+    link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
     
 
@@ -1748,7 +1819,9 @@ Merge facet data into list of facets.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$result`
 |Facet data
@@ -1769,14 +1842,18 @@ Extract search filters from filter paramters to be applied to the search request
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$filtersList`
 |List of value ids for this facet. Possible values can be set by mergeIntoFacetsList()
@@ -1785,6 +1862,7 @@ a|`$filtersList`
 
 [[webshop_itemsearch_extensions]]
 ===  Extensions
+[[webshop_extensions_itemsearchextension]]
 ==== ItemSearchExtension
 
 Extend the search result by additional data or mutate raw data in search results.
@@ -1801,6 +1879,7 @@ Extend the search result by additional data or mutate raw data in search results
 
 [[webshop_itemsearch_factories]]
 ===  Factories
+[[webshop_factories_basesearchfactory]]
 ==== BaseSearchFactory
 
 Base factory to prepare and build search requests on variation data interface
@@ -1832,7 +1911,9 @@ Create a new factory instance based on properties of an existing factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_basesearchfactory[BaseSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\basesearchfactory]]
+
+    link:webshop#webshop_factories_basesearchfactory[BaseSearchFactory^]
 
     
 
@@ -1859,14 +1940,18 @@ Add a mutator to transform search results.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_mutator_mutatorinterface[MutatorInterface^]
+|[[__plenty\modules\cloud\elasticsearch\lib\source\mutator\mutatorinterface]]
+
+    link:cloud#cloud_mutator_mutatorinterface[MutatorInterface^]
 
 a|`$mutator`
 |The mutator itself
@@ -1896,7 +1981,9 @@ Add a filter. Will create a new instance of the filter class if not already crea
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1927,14 +2014,18 @@ Add a filter. Will override existing filter instances.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_type_typeinterface[TypeInterface^]
+|[[__plenty\modules\cloud\elasticsearch\lib\query\type\typeinterface]]
+
+    link:cloud#cloud_type_typeinterface[TypeInterface^]
 
 a|`$filter`
 |
@@ -1955,14 +2046,18 @@ Set fields to be contained in search result.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$fields`
 |Reference to a json file to load fields from or a list of field names.
@@ -2043,7 +2138,9 @@ Add an extension.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2108,14 +2205,18 @@ Add an aggregation
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
+|[[__plenty\modules\cloud\elasticsearch\lib\search\aggregation\aggregationinterface]]
+
+    link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
 a|`$aggregation`
 |
@@ -2136,14 +2237,18 @@ Add a suggestion
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_suggestion_suggestioninterface[SuggestionInterface^]
+|[[__plenty\modules\cloud\elasticsearch\lib\search\suggestion\suggestioninterface]]
+
+    link:cloud#cloud_suggestion_suggestioninterface[SuggestionInterface^]
 
 a|`$suggestion`
 |
@@ -2164,7 +2269,9 @@ Set pagination parameters.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2195,7 +2302,9 @@ Add sorting parameters
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2226,7 +2335,9 @@ Add multiple sorting parameters
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2253,7 +2364,9 @@ Set the order of the search results by ids.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2280,7 +2393,9 @@ Group results by field
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2298,6 +2413,7 @@ a|`$sortings`
 
 
 
+[[webshop_factories_facetsearchfactory]]
 ==== FacetSearchFactory
 
 Prepare and build search requests to query facets
@@ -2329,14 +2445,18 @@ Create a factory instance depending on a given set of facet values.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$facets`
 |List of active facet values. If string is given, it will be exploded by ',' to a list of values.
@@ -2357,7 +2477,9 @@ Register extension to filter facets by minimum hit count.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2375,7 +2497,9 @@ Get the default configuration of a search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2406,7 +2530,9 @@ Set preview mode for the search request.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2433,7 +2559,9 @@ Filter active variations
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2451,7 +2579,9 @@ Filter inactive variations
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2469,7 +2599,9 @@ Filter variation by a single item id
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2496,7 +2628,9 @@ Filter variations by multiple item ids
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2523,7 +2657,9 @@ Filter variation by a single variation id.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2550,7 +2686,9 @@ Filter variations by multiple variation ids.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2577,7 +2715,9 @@ Filter variations by multiple availability ids.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2604,7 +2744,9 @@ Filter variations by multiple availability ids.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2631,7 +2773,9 @@ Filter manufacturers by id.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2658,7 +2802,9 @@ Filter variations by multiple property ids.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2685,7 +2831,9 @@ Filter only main variations
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2703,7 +2851,9 @@ Filter only child variations
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2721,7 +2871,9 @@ Filter by visibility in category list.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2748,7 +2900,9 @@ Filter variations by isSalable flag
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2766,7 +2920,9 @@ Filter variations by visibility for client
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2793,7 +2949,9 @@ Filter variations having texts in a given language.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2824,7 +2982,9 @@ Filter variations contained in a category.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2851,7 +3011,9 @@ Filter variations having at least on price.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2878,7 +3040,9 @@ Filter variations having at least one price accessible by current customer.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2896,7 +3060,9 @@ public hasPriceInRange($priceMin, $priceMax):Plenty\Modules\Webshop\ItemSearch\F
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2927,7 +3093,9 @@ public hasTag($tagId):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2954,7 +3122,9 @@ public hasAnyTag($tagIds):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2981,7 +3151,9 @@ Group results depending on a config value.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -2999,7 +3171,9 @@ Filter variations having a cross selling relation to a given item.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3030,14 +3204,18 @@ Filter variations by facets.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$facetValues`
 |List of facet values. If string is given, it will be exploded by ';'
@@ -3066,7 +3244,9 @@ Filter variations by given search string.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3105,7 +3285,9 @@ Filter variations by searching names
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3136,7 +3318,9 @@ Only request given language.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3163,7 +3347,9 @@ Include images in result
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3190,7 +3376,9 @@ Includes VariationAttributeMap for variation select
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3225,7 +3413,9 @@ public withPropertyGroups($displaySettings = []):Plenty\Modules\Webshop\ItemSear
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3252,7 +3442,9 @@ public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Fact
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3270,7 +3462,9 @@ public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories // 
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3288,7 +3482,9 @@ Append URLs to result.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3306,7 +3502,9 @@ Append prices to result.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3337,7 +3535,9 @@ Set result as current category
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3355,7 +3555,9 @@ Append default item image if images are requested by result fields and item does
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3373,7 +3575,9 @@ Add bundle component variations.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3391,7 +3595,9 @@ Add set component variations to item set entries.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3409,7 +3615,9 @@ public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3427,7 +3635,9 @@ public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories 
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3445,7 +3655,9 @@ public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3463,7 +3675,9 @@ public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3481,7 +3695,9 @@ public withTags():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3499,7 +3715,9 @@ public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3517,7 +3735,9 @@ public withSuggestions($query = &quot;&quot;, $lang = null):Plenty\Modules\Websh
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3548,7 +3768,9 @@ public withDidYouMeanSuggestions($query):Plenty\Modules\Webshop\ItemSearch\Facto
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3575,7 +3797,9 @@ public withSalableVariationCount():Plenty\Modules\Webshop\ItemSearch\Factories\V
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\variationsearchfactory]]
+
+    link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
     
 
@@ -3593,7 +3817,9 @@ Create a new factory instance based on properties of an existing factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_basesearchfactory[BaseSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\basesearchfactory]]
+
+    link:webshop#webshop_factories_basesearchfactory[BaseSearchFactory^]
 
     
 
@@ -3620,14 +3846,18 @@ Add a mutator to transform search results.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_mutator_mutatorinterface[MutatorInterface^]
+|[[__plenty\modules\cloud\elasticsearch\lib\source\mutator\mutatorinterface]]
+
+    link:cloud#cloud_mutator_mutatorinterface[MutatorInterface^]
 
 a|`$mutator`
 |The mutator itself
@@ -3657,7 +3887,9 @@ Add a filter. Will create a new instance of the filter class if not already crea
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3688,14 +3920,18 @@ Add a filter. Will override existing filter instances.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_type_typeinterface[TypeInterface^]
+|[[__plenty\modules\cloud\elasticsearch\lib\query\type\typeinterface]]
+
+    link:cloud#cloud_type_typeinterface[TypeInterface^]
 
 a|`$filter`
 |
@@ -3716,14 +3952,18 @@ Set fields to be contained in search result.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$fields`
 |Reference to a json file to load fields from or a list of field names.
@@ -3804,7 +4044,9 @@ Add an extension.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3869,14 +4111,18 @@ Add an aggregation
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
+|[[__plenty\modules\cloud\elasticsearch\lib\search\aggregation\aggregationinterface]]
+
+    link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
 a|`$aggregation`
 |
@@ -3897,14 +4143,18 @@ Add a suggestion
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_suggestion_suggestioninterface[SuggestionInterface^]
+|[[__plenty\modules\cloud\elasticsearch\lib\search\suggestion\suggestioninterface]]
+
+    link:cloud#cloud_suggestion_suggestioninterface[SuggestionInterface^]
 
 a|`$suggestion`
 |
@@ -3925,7 +4175,9 @@ Set pagination parameters.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3956,7 +4208,9 @@ Add sorting parameters
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -3987,7 +4241,9 @@ Add multiple sorting parameters
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4014,7 +4270,9 @@ Set the order of the search results by ids.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4041,7 +4299,9 @@ Group results by field
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4059,6 +4319,7 @@ a|`$sortings`
 
 
 
+[[webshop_factories_variationsearchfactory]]
 ==== VariationSearchFactory
 
 Prepare and build search requests to query variations
@@ -4090,7 +4351,9 @@ Get the default configuration of a search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4121,7 +4384,9 @@ Set preview mode for the search request.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4148,7 +4413,9 @@ Filter active variations
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4166,7 +4433,9 @@ Filter inactive variations
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4184,7 +4453,9 @@ Filter variation by a single item id
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4211,7 +4482,9 @@ Filter variations by multiple item ids
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4238,7 +4511,9 @@ Filter variation by a single variation id.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4265,7 +4540,9 @@ Filter variations by multiple variation ids.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4292,7 +4569,9 @@ Filter variations by multiple availability ids.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4319,7 +4598,9 @@ Filter variations by multiple availability ids.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4346,7 +4627,9 @@ Filter manufacturers by id.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4373,7 +4656,9 @@ Filter variations by multiple property ids.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4400,7 +4685,9 @@ Filter only main variations
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4418,7 +4705,9 @@ Filter only child variations
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4436,7 +4725,9 @@ Filter by visibility in category list.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4463,7 +4754,9 @@ Filter variations by isSalable flag
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4481,7 +4774,9 @@ Filter variations by visibility for client
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4508,7 +4803,9 @@ Filter variations having texts in a given language.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4539,7 +4836,9 @@ Filter variations contained in a category.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4566,7 +4865,9 @@ Filter variations having at least on price.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4593,7 +4894,9 @@ Filter variations having at least one price accessible by current customer.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4611,7 +4914,9 @@ public hasPriceInRange($priceMin, $priceMax):Plenty\Modules\Webshop\ItemSearch\F
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4642,7 +4947,9 @@ public hasTag($tagId):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4669,7 +4976,9 @@ public hasAnyTag($tagIds):Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4696,7 +5005,9 @@ Group results depending on a config value.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4714,7 +5025,9 @@ Filter variations having a cross selling relation to a given item.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4745,14 +5058,18 @@ Filter variations by facets.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$facetValues`
 |List of facet values. If string is given, it will be exploded by ';'
@@ -4781,7 +5098,9 @@ Filter variations by given search string.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4820,7 +5139,9 @@ Filter variations by searching names
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4851,7 +5172,9 @@ Only request given language.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4878,7 +5201,9 @@ Include images in result
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4905,7 +5230,9 @@ Includes VariationAttributeMap for variation select
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4940,7 +5267,9 @@ public withPropertyGroups($displaySettings = []):Plenty\Modules\Webshop\ItemSear
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4967,7 +5296,9 @@ public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Fact
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -4985,7 +5316,9 @@ public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories // 
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5003,7 +5336,9 @@ Append URLs to result.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5021,7 +5356,9 @@ Append prices to result.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5052,7 +5389,9 @@ Set result as current category
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5070,7 +5409,9 @@ Append default item image if images are requested by result fields and item does
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5088,7 +5429,9 @@ Add bundle component variations.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5106,7 +5449,9 @@ Add set component variations to item set entries.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5124,7 +5469,9 @@ public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5142,7 +5489,9 @@ public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories 
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5160,7 +5509,9 @@ public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5178,7 +5529,9 @@ public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5196,7 +5549,9 @@ public withTags():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5214,7 +5569,9 @@ public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories // <1>
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5232,7 +5589,9 @@ public withSuggestions($query = &quot;&quot;, $lang = null):Plenty\Modules\Websh
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5263,7 +5622,9 @@ public withDidYouMeanSuggestions($query):Plenty\Modules\Webshop\ItemSearch\Facto
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5290,7 +5651,9 @@ public withSalableVariationCount():Plenty\Modules\Webshop\ItemSearch\Factories\V
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\variationsearchfactory]]
+
+    link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
     
 
@@ -5308,7 +5671,9 @@ Create a new factory instance based on properties of an existing factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_basesearchfactory[BaseSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\basesearchfactory]]
+
+    link:webshop#webshop_factories_basesearchfactory[BaseSearchFactory^]
 
     
 
@@ -5335,14 +5700,18 @@ Add a mutator to transform search results.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_mutator_mutatorinterface[MutatorInterface^]
+|[[__plenty\modules\cloud\elasticsearch\lib\source\mutator\mutatorinterface]]
+
+    link:cloud#cloud_mutator_mutatorinterface[MutatorInterface^]
 
 a|`$mutator`
 |The mutator itself
@@ -5372,7 +5741,9 @@ Add a filter. Will create a new instance of the filter class if not already crea
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5403,14 +5774,18 @@ Add a filter. Will override existing filter instances.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_type_typeinterface[TypeInterface^]
+|[[__plenty\modules\cloud\elasticsearch\lib\query\type\typeinterface]]
+
+    link:cloud#cloud_type_typeinterface[TypeInterface^]
 
 a|`$filter`
 |
@@ -5431,14 +5806,18 @@ Set fields to be contained in search result.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$fields`
 |Reference to a json file to load fields from or a list of field names.
@@ -5519,7 +5898,9 @@ Add an extension.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5584,14 +5965,18 @@ Add an aggregation
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
+|[[__plenty\modules\cloud\elasticsearch\lib\search\aggregation\aggregationinterface]]
+
+    link:cloud#cloud_aggregation_aggregationinterface[AggregationInterface^]
 
 a|`$aggregation`
 |
@@ -5612,14 +5997,18 @@ Add a suggestion
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_suggestion_suggestioninterface[SuggestionInterface^]
+|[[__plenty\modules\cloud\elasticsearch\lib\search\suggestion\suggestioninterface]]
+
+    link:cloud#cloud_suggestion_suggestioninterface[SuggestionInterface^]
 
 a|`$suggestion`
 |
@@ -5640,7 +6029,9 @@ Set pagination parameters.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5671,7 +6062,9 @@ Add sorting parameters
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5702,7 +6095,9 @@ Add multiple sorting parameters
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5729,7 +6124,9 @@ Set the order of the search results by ids.
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5756,7 +6153,9 @@ Group results by field
 
 ===== Return type
     
-<1> link:webshop#webshop_itemsearch_factories[Factories^]
+<1> [[__plenty\modules\webshop\itemsearch\factories]]
+
+    link:webshop#webshop_itemsearch_factories[Factories^]
 
     
 
@@ -5775,6 +6174,7 @@ a|`$sortings`
 
 [[webshop_itemsearch_helpers]]
 ===  Helpers
+[[webshop_helpers_facetextensioncontainer]]
 ==== FacetExtensionContainer
 
 Container to collect facet extensions
@@ -5823,14 +6223,18 @@ Add an extension to provide a custom facet.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:webshop#webshop_contracts_facetextension[FacetExtension^]
+|[[__plenty\modules\webshop\itemsearch\contracts\facetextension]]
+
+    link:webshop#webshop_contracts_facetextension[FacetExtension^]
 
 a|`$facetExtension`
 |The extension describing the facet behavior
@@ -5838,6 +6242,7 @@ a|`$facetExtension`
 
 
 
+[[webshop_helpers_resultfieldtemplate]]
 ==== ResultFieldTemplate
 
 Collect templates to read required result fields for several views from.
@@ -5921,7 +6326,9 @@ Set the path of a template to read result fields from.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5956,7 +6363,9 @@ Set multiple templates to read result fields from.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5987,20 +6396,26 @@ Add required fields to variation search requests.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$event`
 |A single template event to set required fields for
 or a map between template events and list of required fields
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$field`
 |If first parameter describes a single template event
@@ -6009,6 +6424,7 @@ this parameter may contain a single result field or a list of field to require.
 
 
 
+[[webshop_helpers_sortinghelper]]
 ==== SortingHelper
 
 Helper class to convert sorting configuration values into internal sorting paramters used by variation data interface.
@@ -6310,6 +6726,7 @@ a|`$fallback`
 
 [[webshop_itemsearch_searchpresets]]
 ===  SearchPresets
+[[webshop_searchpresets_basketitems]]
 ==== BasketItems
 
 Query basket items.
@@ -6341,7 +6758,9 @@ Get preset search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\variationsearchfactory]]
+
+    link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
     
 
@@ -6360,6 +6779,7 @@ a|`$options`
 
 
 
+[[webshop_searchpresets_categoryitems]]
 ==== CategoryItems
 
 Query items for a single category
@@ -6391,7 +6811,9 @@ Get preset search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\variationsearchfactory]]
+
+    link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
     
 
@@ -6414,6 +6836,7 @@ a|`$options`
 
 
 
+[[webshop_searchpresets_crosssellingitems]]
 ==== CrossSellingItems
 
 Query cross selling items related to single item.
@@ -6445,7 +6868,9 @@ Get preset search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\variationsearchfactory]]
+
+    link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
     
 
@@ -6464,6 +6889,7 @@ a|`$options`
 
 
 
+[[webshop_searchpresets_facets]]
 ==== Facets
 
 Query facets for the item search of the webstore.
@@ -6495,7 +6921,9 @@ Get preset search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_facetsearchfactory[FacetSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\facetsearchfactory]]
+
+    link:webshop#webshop_factories_facetsearchfactory[FacetSearchFactory^]
 
     
 
@@ -6515,6 +6943,7 @@ a|`$options`
 
 
 
+[[webshop_searchpresets_liveshoppingitems]]
 ==== LiveShoppingItems
 
 Query live shopping items.
@@ -6546,7 +6975,9 @@ Get preset search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\variationsearchfactory]]
+
+    link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
     
 
@@ -6566,6 +6997,7 @@ a|`$options`
 
 
 
+[[webshop_searchpresets_manufactureritems]]
 ==== ManufacturerItems
 
 Query items by manufacturer.
@@ -6597,7 +7029,9 @@ Get preset search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\variationsearchfactory]]
+
+    link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
     
 
@@ -6617,6 +7051,7 @@ a|`$options`
 
 
 
+[[webshop_searchpresets_searchitems]]
 ==== SearchItems
 
 Query items from the item search of the webstore.
@@ -6648,7 +7083,9 @@ Get preset search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\variationsearchfactory]]
+
+    link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
     
 
@@ -6672,6 +7109,7 @@ a|`$options`
 
 
 
+[[webshop_searchpresets_searchpreset]]
 ==== SearchPreset
 
 Define a preset of search request parameters to be reused for common search requests.
@@ -6704,7 +7142,9 @@ Get the search factory from the preset.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6718,6 +7158,7 @@ a|`$options`
 
 
 
+[[webshop_searchpresets_searchsuggestions]]
 ==== SearchSuggestions
 
 Query items to display search suggestions
@@ -6749,7 +7190,9 @@ Get preset search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\variationsearchfactory]]
+
+    link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
     
 
@@ -6767,6 +7210,7 @@ a|`$options`
 
 
 
+[[webshop_searchpresets_singleitem]]
 ==== SingleItem
 
 Get item to be displayed on single item pages
@@ -6798,7 +7242,9 @@ Get preset search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\variationsearchfactory]]
+
+    link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
     
 
@@ -6817,6 +7263,7 @@ a|`$options`
 
 
 
+[[webshop_searchpresets_tagitems]]
 ==== TagItems
 
 Query items by tag id.
@@ -6848,7 +7295,9 @@ Get preset search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\variationsearchfactory]]
+
+    link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
     
 
@@ -6867,6 +7316,7 @@ a|`$options`
 
 
 
+[[webshop_searchpresets_variationattributemap]]
 ==== VariationAttributeMap
 
 Append list of all variations for attribute selection in item views
@@ -6898,7 +7348,9 @@ Get preset search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\variationsearchfactory]]
+
+    link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
     
 
@@ -6917,6 +7369,7 @@ a|`$options`
 
 
 
+[[webshop_searchpresets_variationlist]]
 ==== VariationList
 
 Search for variation lists
@@ -6948,7 +7401,9 @@ Get preset search factory.
 
 ===== Return type
     
-<1> link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
+<1> [[__plenty\modules\webshop\itemsearch\factories\variationsearchfactory]]
+
+    link:webshop#webshop_factories_variationsearchfactory[VariationSearchFactory^]
 
     
 
@@ -6972,6 +7427,7 @@ a|`$options`
 
 [[webshop_itemsearch_services]]
 ===  Services
+[[webshop_services_itemsearchservice]]
 ==== ItemSearchService
 
 Execute item searches using the variation data interface
@@ -7009,7 +7465,9 @@ Execute multiple item searches at once. Results will be mapped to the same keys 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$searches`
 |Associative array of search factories to execute. Result of each search request will be mapped to the key defined in this array.
@@ -7036,7 +7494,9 @@ Get result of a single search request.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$searchFactory`
 |The factory to get results for.
@@ -7048,6 +7508,7 @@ a|`$searchFactory`
 
 [[webshop_order_contracts]]
 ===  Contracts
+[[webshop_contracts_orderrepositorycontract]]
 ==== OrderRepositoryContract
 
 Create orders from the webshop
@@ -7079,7 +7540,9 @@ Generate order data from current basket and place the order.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -7097,7 +7560,9 @@ Create a return order for some items of an existing order.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -7119,6 +7584,7 @@ a|`$orderId`
 
 [[webshop_seo_contracts]]
 ===  Contracts
+[[webshop_contracts_robotsrepositorycontract]]
 ==== RobotsRepositoryContract
 
 Repository to read or write content of the robots.txt
@@ -7150,7 +7616,9 @@ Get the content of the robots.txt for a single webstore.
 
 ===== Return type
     
-<1> link:webshop#webshop_models_robots[Robots^]
+<1> [[__plenty\modules\webshop\seo\models\robots]]
+
+    link:webshop#webshop_models_robots[Robots^]
 
     
 
@@ -7177,7 +7645,9 @@ Update the content of the robots.txt of a single webstore.
 
 ===== Return type
     
-<1> link:webshop#webshop_models_robots[Robots^]
+<1> [[__plenty\modules\webshop\seo\models\robots]]
+
+    link:webshop#webshop_models_robots[Robots^]
 
     
 
@@ -7195,6 +7665,7 @@ a|`$data`
 
 
 
+[[webshop_contracts_sitemapconfigurationrepositorycontract]]
 ==== SitemapConfigurationRepositoryContract
 
 Repository for sitemap configuration
@@ -7226,7 +7697,9 @@ Get the sitemap configuration of a single webstore.
 
 ===== Return type
     
-<1> link:webshop#webshop_models_sitemapconfiguration[SitemapConfiguration^]
+<1> [[__plenty\modules\webshop\seo\models\sitemapconfiguration]]
+
+    link:webshop#webshop_models_sitemapconfiguration[SitemapConfiguration^]
 
     
 
@@ -7253,7 +7726,9 @@ Update the sitemap configuration of a single webstore.
 
 ===== Return type
     
-<1> link:webshop#webshop_models_sitemapconfiguration[SitemapConfiguration^]
+<1> [[__plenty\modules\webshop\seo\models\sitemapconfiguration]]
+
+    link:webshop#webshop_models_sitemapconfiguration[SitemapConfiguration^]
 
     
 
@@ -7272,6 +7747,7 @@ a|`$data`
 
 [[webshop_seo_models]]
 ===  Models
+[[webshop_models_robots]]
 ==== Robots
 
 Model for the configured content of the robots.txt
@@ -7312,6 +7788,7 @@ Returns this model as an array.
 
 
 
+[[webshop_models_sitemapconfiguration]]
 ==== SitemapConfiguration
 
 The sitemap configuration model
@@ -7365,6 +7842,7 @@ Returns this model as an array.
 
 [[webshop_template_contracts]]
 ===  Contracts
+[[webshop_contracts_templateconfigrepositorycontract]]
 ==== TemplateConfigRepositoryContract
 
 Set configuration values from the plugin to be considered in internal functions.
@@ -7414,7 +7892,9 @@ Register an internal configuration. Available configuration keys are:
 
 ===== Return type
     
-<1> link:webshop#webshop_contracts_templateconfigrepositorycontract[TemplateConfigRepositoryContract^]
+<1> [[__plenty\modules\webshop\template\contracts\templateconfigrepositorycontract]]
+
+    link:webshop#webshop_contracts_templateconfigrepositorycontract[TemplateConfigRepositoryContract^]
 
     
 
@@ -7425,7 +7905,9 @@ Register an internal configuration. Available configuration keys are:
 a|`$key`
 |Configuration key to set value for
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |Configuration value to set
@@ -7434,6 +7916,7 @@ a|`$value`
 
 [[webshop_template_providers]]
 ===  Providers
+[[webshop_providers_templateserviceprovider]]
 ==== TemplateServiceProvider
 
 Service provider for template plugins
@@ -7465,7 +7948,9 @@ Override a twig template. The new template will be used when the overridden temp
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -7496,7 +7981,9 @@ Add an alias for a template. Rendering the template will also check for override
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 

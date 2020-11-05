@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[plugin_plugin_contracts]]
 ===  Contracts
+[[plugin_contracts_configurationrepositorycontract]]
 ==== ConfigurationRepositoryContract
 
 Save config values for plugins
@@ -84,12 +86,16 @@ public copyToPluginSetEntry($configurationOrId, $pluginSetEntryOrId):int // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$configurationOrId`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$pluginSetEntryOrId`
 |
@@ -174,7 +180,9 @@ public import($setId, $data, $pluginId = null):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -196,6 +204,7 @@ a|`$pluginId`
 
 
 
+[[plugin_contracts_pluginlayoutcontainerrepositorycontract]]
 ==== PluginLayoutContainerRepositoryContract
 
 Plugin layout container
@@ -227,7 +236,9 @@ public all($pluginSetId):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -254,7 +265,9 @@ public updateAll($dataList, $pluginSetId, $pluginId = null):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -289,7 +302,9 @@ public getActiveLinkedLayoutContainers($activeContainerKeysList, $activeDataProv
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -324,7 +339,9 @@ public getActiveLinkedLayoutContainersByPluginSetId($activeContainerKeysList, $a
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -359,7 +376,9 @@ public addNew($dataList, $pluginSetId):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -390,7 +409,9 @@ public addOne($pluginSetId, $containerKey, $dataProviderKey, $containerPluginId 
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -433,7 +454,9 @@ public removeOne($pluginSetId, $containerKey, $dataProviderKey, $containerPlugin
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -482,7 +505,9 @@ public exportByPluginSetId($pluginSetOrId):array // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$pluginSetOrId`
 |
@@ -503,14 +528,18 @@ public importByPluginSetId($pluginSetOrId, $containers):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$pluginSetOrId`
 |
@@ -522,6 +551,7 @@ a|`$containers`
 
 
 
+[[plugin_contracts_pluginrepositorycontract]]
 ==== PluginRepositoryContract
 
 Search plugins according to parameters
@@ -553,7 +583,9 @@ public getPluginByName($name):Plenty\Modules\Plugin\Models\Plugin // <1>
 
 ===== Return type
     
-<1> link:plugin#plugin_models_plugin[Plugin^]
+<1> [[__plenty\modules\plugin\models\plugin]]
+
+    link:plugin#plugin_models_plugin[Plugin^]
 
     
 
@@ -580,7 +612,9 @@ Search plugins using filters. Example: searchPlugins([&#039;name&#039; =&gt; &#0
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -647,7 +681,9 @@ public isActiveInPluginSet($pluginId, $pluginSetIdOrPluginSet):bool // <1>
 a|`$pluginId`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$pluginSetIdOrPluginSet`
 |
@@ -758,14 +794,18 @@ public decoratePlugin($plugin, $pluginSetId = null):Plenty\Modules\Plugin\Models
 
 ===== Return type
     
-<1> link:plugin#plugin_models_plugin[Plugin^]
+<1> [[__plenty\modules\plugin\models\plugin]]
+
+    link:plugin#plugin_models_plugin[Plugin^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:plugin#plugin_models_plugin[Plugin^]
+|[[__plenty\modules\plugin\models\plugin]]
+
+    link:plugin#plugin_models_plugin[Plugin^]
 
 a|`$plugin`
 |
@@ -790,7 +830,9 @@ public installMarketplacePluginByItemId($marketplacePluginItemId, $pluginSetId =
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -809,6 +851,7 @@ a|`$pluginSetId`
 
 [[plugin_plugin_events]]
 ===  Events
+[[plugin_events_afterbuildplugins]]
 ==== AfterBuildPlugins
 
 Event after plugin build has finished
@@ -840,7 +883,9 @@ Get the plugin set which have been built
 
 ===== Return type
     
-<1> link:plugin#plugin_models_pluginset[PluginSet^]
+<1> [[__plenty\modules\plugin\pluginset\models\pluginset]]
+
+    link:plugin#plugin_models_pluginset[PluginSet^]
 
     
 
@@ -897,6 +942,7 @@ a|`$pluginName`
 
 
 
+[[plugin_events_loadsitemappattern]]
 ==== LoadSitemapPattern
 
 LoadSitemapPatternEvent
@@ -912,6 +958,7 @@ LoadSitemapPatternEvent
 
 
 
+[[plugin_events_pluginsendmail]]
 ==== PluginSendMail
 
 PluginSendMail
@@ -943,7 +990,9 @@ public getTemplate():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -961,7 +1010,9 @@ public getContactEmail():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -979,12 +1030,15 @@ public getCallFunction():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[plugin_plugin_models]]
 ===  Models
+[[plugin_models_installedplugins]]
 ==== InstalledPlugins
 
 Model representing an installed Plugin
@@ -1037,6 +1091,7 @@ Returns this model as an array.
 
 
 
+[[plugin_models_plugin]]
 ==== Plugin
 
 Eloquent model representing a Plugin.
@@ -1231,11 +1286,15 @@ that have been purchased from the marketplace but have not yet been installed in
 |link:http://php.net/array[array^]
     |linkedContainers
     |A list of containers linked with a data provider of this plugin
-|link:plugin#plugin_models_git[Git^]
+|[[__plenty\modules\plugin\versioncontrol\models\git]]
+
+    link:plugin#plugin_models_git[Git^]
 
     |repository
     |
-|link:plugin#plugin_models_installedplugins[InstalledPlugins^]
+|[[__plenty\modules\plugin\models\installedplugins]]
+
+    link:plugin#plugin_models_installedplugins[InstalledPlugins^]
 
     |installedPlugins
     |
@@ -1270,6 +1329,7 @@ Returns this model as an array.
 
 [[plugin_plugin_services]]
 ===  Services
+[[plugin_services_pluginsendmailservice]]
 ==== PluginSendMailService
 
 The PluginSendMailService send mails in plugins
@@ -1301,14 +1361,18 @@ public static getInstance($webstoreId):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$webstoreId`
 |
@@ -1384,7 +1448,9 @@ public setStatus($status):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1428,7 +1494,9 @@ public setInitialized($initialized):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1472,7 +1540,9 @@ public addEmailPlaceholder($placeholder, $value):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1503,7 +1573,9 @@ public setEmailPlaceholder($emailPlaceholder):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1547,6 +1619,7 @@ a|`$default`
 
 
 
+[[plugin_services_pluginseositemapservice]]
 ==== PluginSeoSitemapService
 
 The PluginSeoSitemapService collect the sitemap patterns.
@@ -1621,7 +1694,9 @@ public setItemPattern($pattern):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1648,7 +1723,9 @@ public setBlogPattern($pattern):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1675,7 +1752,9 @@ public setContentCategoryPattern($pattern):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1702,7 +1781,9 @@ public setItemCategoryPattern($pattern):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1788,6 +1869,7 @@ public getContentCategoryPattern():string // <1>
 
 [[plugin_database_annotations]]
 ===  Annotations
+[[plugin_annotations_index]]
 ==== Index
 
 
@@ -1819,6 +1901,7 @@ Returns this model as an array.
 
 
 
+[[plugin_annotations_nontableattribute]]
 ==== NonTableAttribute
 
 
@@ -1850,6 +1933,7 @@ Returns this model as an array.
 
 
 
+[[plugin_annotations_nullable]]
 ==== Nullable
 
 
@@ -1881,6 +1965,7 @@ Returns this model as an array.
 
 
 
+[[plugin_annotations_relation]]
 ==== Relation
 
 
@@ -1913,6 +1998,7 @@ Returns this model as an array.
 
 [[plugin_database_contracts]]
 ===  Contracts
+[[plugin_contracts_criteriaquery]]
 ==== CriteriaQuery
 
 database query
@@ -1944,7 +2030,9 @@ Add a basic where clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -1959,7 +2047,9 @@ a|`$fieldName`
 a|`$operator`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -1980,7 +2070,9 @@ Add a &quot;where in&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -2019,7 +2111,9 @@ Add an &quot;or where in&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -2050,7 +2144,9 @@ Add an &quot;or where&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -2065,7 +2161,9 @@ a|`$fieldName`
 a|`$operator`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -2086,7 +2184,9 @@ Add a &quot;where null&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -2121,7 +2221,9 @@ Add an &quot;or where null&quot; clause to the query.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2148,7 +2250,9 @@ Add a &quot;having&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -2187,7 +2291,9 @@ Add a &quot;or having&quot; clause to the query.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2222,7 +2328,9 @@ public whereHas($modelName, $callback = null, $operator = &quot;&gt;=&quot;, $co
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2233,7 +2341,9 @@ public whereHas($modelName, $callback = null, $operator = &quot;&gt;=&quot;, $co
 a|`$modelName`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$callback`
 |
@@ -2262,7 +2372,9 @@ Add a join clause to the query.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2273,7 +2385,9 @@ Add a join clause to the query.
 a|`$firstModelName`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$callback`
 |
@@ -2298,7 +2412,9 @@ Add a left join to the query.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2309,7 +2425,9 @@ Add a left join to the query.
 a|`$firstModelName`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$callback`
 |
@@ -2317,6 +2435,7 @@ a|`$callback`
 
 
 
+[[plugin_contracts_database]]
 ==== DataBase
 
 Database contract
@@ -2348,14 +2467,18 @@ public save($model):Plenty\Modules\Plugin\DataBase\Contracts\Model // <1>
 
 ===== Return type
     
-<1> link:plugin#plugin_contracts_model[Model^]
+<1> [[__plenty\modules\plugin\database\contracts\model]]
+
+    link:plugin#plugin_contracts_model[Model^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:plugin#plugin_contracts_model[Model^]
+|[[__plenty\modules\plugin\database\contracts\model]]
+
+    link:plugin#plugin_contracts_model[Model^]
 
 a|`$model`
 |
@@ -2376,7 +2499,9 @@ public find($modelClassName, $primaryKeyFieldValue):Plenty\Modules\Plugin\DataBa
 
 ===== Return type
     
-<1> link:plugin#plugin_contracts_model[Model^]
+<1> [[__plenty\modules\plugin\database\contracts\model]]
+
+    link:plugin#plugin_contracts_model[Model^]
 
     
 
@@ -2387,7 +2512,9 @@ public find($modelClassName, $primaryKeyFieldValue):Plenty\Modules\Plugin\DataBa
 a|`$modelClassName`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$primaryKeyFieldValue`
 |
@@ -2408,7 +2535,9 @@ public query($modelClassName):Plenty\Modules\Plugin\DataBase\Contracts\Query // 
 
 ===== Return type
     
-<1> link:plugin#plugin_contracts_query[Query^]
+<1> [[__plenty\modules\plugin\database\contracts\query]]
+
+    link:plugin#plugin_contracts_query[Query^]
 
     
 
@@ -2441,7 +2570,9 @@ public delete($model):bool // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:plugin#plugin_contracts_model[Model^]
+|[[__plenty\modules\plugin\database\contracts\model]]
+
+    link:plugin#plugin_contracts_model[Model^]
 
 a|`$model`
 |
@@ -2449,6 +2580,7 @@ a|`$model`
 
 
 
+[[plugin_contracts_joinclausequery]]
 ==== JoinClauseQuery
 
 database join query
@@ -2480,7 +2612,9 @@ public on($firstModelName, $first, $operator = null, $secondModelName = null, $s
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -2491,7 +2625,9 @@ public on($firstModelName, $first, $operator = null, $secondModelName = null, $s
 a|`$firstModelName`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$first`
 |
@@ -2528,7 +2664,9 @@ Add a basic where clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -2539,7 +2677,9 @@ Add a basic where clause to the query.
 a|`$modelName`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$column`
 |
@@ -2548,7 +2688,9 @@ a|`$column`
 a|`$operator`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -2573,7 +2715,9 @@ Add an &quot;or where&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -2584,7 +2728,9 @@ Add an &quot;or where&quot; clause to the query.
 a|`$modelName`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$column`
 |
@@ -2593,7 +2739,9 @@ a|`$column`
 a|`$operator`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -2614,7 +2762,9 @@ Add a &quot;where null&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -2625,7 +2775,9 @@ Add a &quot;where null&quot; clause to the query.
 a|`$modelName`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$column`
 |
@@ -2654,7 +2806,9 @@ Add an &quot;or where null&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -2665,7 +2819,9 @@ Add an &quot;or where null&quot; clause to the query.
 a|`$modelName`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$column`
 |
@@ -2673,6 +2829,7 @@ a|`$column`
 
 
 
+[[plugin_contracts_migrate]]
 ==== Migrate
 
 Migrate models
@@ -2769,6 +2926,7 @@ a|`$modelClassName`
 
 
 
+[[plugin_contracts_model]]
 ==== Model
 
 Database model
@@ -2787,47 +2945,69 @@ Database model
 |===
 |Type |Name |Description
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |primaryKeyFieldName
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |primaryKeyFieldType
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |autoIncrementPrimaryKey
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |textFields
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |attributes
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |original
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |changes
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |casts
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |dates
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |dateFormat
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |mutatorCache
     |
@@ -2884,7 +3064,9 @@ Get an attribute from the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2911,7 +3093,9 @@ Get a plain attribute
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2938,7 +3122,9 @@ Get an attribute from the $attributes array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2991,7 +3177,9 @@ Get the value of an attribute using its mutator.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3002,7 +3190,9 @@ Get the value of an attribute using its mutator.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -3023,7 +3213,9 @@ Get the value of an attribute using its mutator for array conversion.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3034,7 +3226,9 @@ Get the value of an attribute using its mutator for array conversion.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -3055,7 +3249,9 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3066,7 +3262,9 @@ Set a given attribute on the model.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -3113,7 +3311,9 @@ Set a given JSON attribute on the model.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3124,7 +3324,9 @@ Set a given JSON attribute on the model.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -3145,7 +3347,9 @@ Decode the given JSON back into an array or object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3182,7 +3386,9 @@ Convert a DateTime to a storable string.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -3220,7 +3426,9 @@ Set the date format used by the model.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3257,7 +3465,9 @@ Determine whether an attribute should be cast to a native type.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$types`
 |
@@ -3312,7 +3522,9 @@ Set the array of model attributes. No checking is done.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3343,7 +3555,9 @@ Get the model&#039;s original attribute values.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3354,7 +3568,9 @@ Get the model&#039;s original attribute values.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$default`
 |
@@ -3381,7 +3597,9 @@ Get a subset of the model&#039;s attributes.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$attributes`
 |
@@ -3402,7 +3620,9 @@ Sync the original attributes with the current.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3420,7 +3640,9 @@ Sync a single original attribute with its current value.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3447,7 +3669,9 @@ Sync the changed attributes.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3471,7 +3695,9 @@ Determine if the model or given attribute(s) have been modified.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$attributes`
 |
@@ -3498,7 +3724,9 @@ Determine if the model or given attribute(s) have remained the same.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$attributes`
 |
@@ -3525,7 +3753,9 @@ Determine if the model or given attribute(s) have been modified.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$attributes`
 |
@@ -3597,7 +3827,9 @@ Extract and cache all the mutated attributes of a class.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3624,11 +3856,14 @@ public relationLoaded():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
+[[plugin_contracts_query]]
 ==== Query
 
 database query
@@ -3660,7 +3895,9 @@ Add a basic select clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3687,7 +3924,9 @@ Add a basic where clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3702,7 +3941,9 @@ a|`$fieldName`
 a|`$operator`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -3723,7 +3964,9 @@ Add a &quot;where in&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3762,7 +4005,9 @@ Add an &quot;or where in&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3793,7 +4038,9 @@ Add an &quot;or where&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3808,7 +4055,9 @@ a|`$fieldName`
 a|`$operator`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -3829,7 +4078,9 @@ Add a &quot;where null&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3864,7 +4115,9 @@ Add an &quot;or where null&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3891,7 +4144,9 @@ Add a where between statement to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3930,7 +4185,9 @@ Add a where not between statement to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3965,7 +4222,9 @@ Add a &quot;where date&quot; statement to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -3980,7 +4239,9 @@ a|`$column`
 a|`$operator`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -4005,7 +4266,9 @@ Add a &quot;where month&quot; statement to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -4020,7 +4283,9 @@ a|`$column`
 a|`$operator`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -4045,7 +4310,9 @@ Add a &quot;where day&quot; statement to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -4060,7 +4327,9 @@ a|`$column`
 a|`$operator`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -4085,7 +4354,9 @@ Add a &quot;where year&quot; statement to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -4100,7 +4371,9 @@ a|`$column`
 a|`$operator`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -4125,7 +4398,9 @@ Add a &quot;where time&quot; statement to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -4164,7 +4439,9 @@ Add a &quot;having&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -4203,7 +4480,9 @@ Add a &quot;or having&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -4238,7 +4517,9 @@ Add an &quot;order by&quot; clause to the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -4269,7 +4550,9 @@ Set the limit and offset for a given page.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -4326,7 +4609,9 @@ Set the &quot;limit&quot; value of the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -4353,7 +4638,9 @@ Set the &quot;offset&quot; value of the query.
 
 ===== Return type
     
-<1> link:plugin#plugin_database_contracts[Contracts^]
+<1> [[__plenty\modules\plugin\database\contracts]]
+
+    link:plugin#plugin_database_contracts[Contracts^]
 
     
 
@@ -4431,11 +4718,12 @@ public delete():bool // <1>
 
 [[plugin_dynamodb_contracts]]
 ===  Contracts
+[[plugin_contracts_dynamodbrepositorycontract]]
 ==== DynamoDbRepositoryContract
 
 AWS DynamoDb Repository (Deprecated)
 
-[warning]
+[WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
 ====
 
@@ -4463,7 +4751,7 @@ public createTable($pluginName, $tableName, $attributeDefinitions, $keySchema, $
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
 ====
 
@@ -4516,7 +4804,7 @@ public updateTable($pluginName, $tableName, $readCapacityUnits = 3, $writeCapaci
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
 ====
 
@@ -4561,7 +4849,7 @@ public putItem($pluginName, $tableName, $item):bool // <1>
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
 ====
 
@@ -4602,7 +4890,7 @@ public getItem($pluginName, $tableName, $consistentRead, $key):array // <1>
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
 ====
 
@@ -4647,7 +4935,7 @@ public deleteItem($pluginName, $tableName, $key):bool // <1>
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
 ====
 
@@ -4688,7 +4976,7 @@ public deleteTable($pluginName, $tableName):bool // <1>
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
 ====
 
@@ -4725,7 +5013,7 @@ public scan($pluginName, $tableName, $returnFields = &quot;&quot;, $expressionAt
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
 ====
 
@@ -4738,7 +5026,9 @@ A scan operation scans the entire table. You can specify filters to apply to the
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4776,6 +5066,7 @@ a|`$limit`
 
 [[plugin_libs_contracts]]
 ===  Contracts
+[[plugin_contracts_librarycallcontract]]
 ==== LibraryCallContract
 
 library call
@@ -4828,6 +5119,7 @@ a|`$params`
 
 [[plugin_pluginset_contracts]]
 ===  Contracts
+[[plugin_contracts_pluginsetentryrepositorycontract]]
 ==== PluginSetEntryRepositoryContract
 
 get, create, update or delete plugin set entries
@@ -4859,14 +5151,18 @@ Get a PluginSetEntry.
 
 ===== Return type
     
-<1> link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
+<1> [[__plenty\modules\plugin\pluginset\models\pluginsetentry]]
+
+    link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$idOrInstance`
 |The Id of the PluginSetEntry to retrieve or the PluginSetEntry object itself.
@@ -4887,7 +5183,9 @@ Create a set entry.
 
 ===== Return type
     
-<1> link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
+<1> [[__plenty\modules\plugin\pluginset\models\pluginsetentry]]
+
+    link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
 
     
 
@@ -4915,19 +5213,25 @@ Copy a PluginSetEntry to a PluginSet
 
 ===== Return type
     
-<1> link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
+<1> [[__plenty\modules\plugin\pluginset\models\pluginsetentry]]
+
+    link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$pluginSetEntryOrId`
 |The id of the PluginSetEntry that should be copied, or the PluginSetEntry object itself
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$pluginSetOrId`
 |The id of the PluginSet the entry should be copied to, or the PluginSet object itself
@@ -4988,7 +5292,9 @@ Delete a PluginSetEntry
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$what`
 |The PluginSetEntry object to delete or a PluginSetEntry-Id
@@ -4996,6 +5302,7 @@ a|`$what`
 
 
 
+[[plugin_contracts_pluginsetrepositorycontract]]
 ==== PluginSetRepositoryContract
 
 list, create, update or delete plugin sets
@@ -5044,7 +5351,9 @@ Create a plugin set. The data array has to contain a &#039;name&#039; field. Thr
 
 ===== Return type
     
-<1> link:plugin#plugin_models_pluginset[PluginSet^]
+<1> [[__plenty\modules\plugin\pluginset\models\pluginset]]
+
+    link:plugin#plugin_models_pluginset[PluginSet^]
 
     
 
@@ -5071,7 +5380,9 @@ Copy a plugin set. All set entries from the source set will be copied into the n
 
 ===== Return type
     
-<1> link:plugin#plugin_models_pluginset[PluginSet^]
+<1> [[__plenty\modules\plugin\pluginset\models\pluginset]]
+
+    link:plugin#plugin_models_pluginset[PluginSet^]
 
     
 
@@ -5099,7 +5410,9 @@ Update a set. Only the &#039;name&#039; field can be updated.
 
 ===== Return type
     
-<1> link:plugin#plugin_models_pluginset[PluginSet^]
+<1> [[__plenty\modules\plugin\pluginset\models\pluginset]]
+
+    link:plugin#plugin_models_pluginset[PluginSet^]
 
     
 
@@ -5136,7 +5449,9 @@ Delete a set.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$what`
 |The PluginSet object to delete or a PluginSet-Id
@@ -5157,14 +5472,18 @@ Get a plugin set.
 
 ===== Return type
     
-<1> link:plugin#plugin_models_pluginset[PluginSet^]
+<1> [[__plenty\modules\plugin\pluginset\models\pluginset]]
+
+    link:plugin#plugin_models_pluginset[PluginSet^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$pluginSetOrId`
 |The Id of the plugin set to retrieve from the database. If a PluginSet object is passed instead of an integer, the
@@ -5186,7 +5505,9 @@ List all plugin sets.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5204,7 +5525,9 @@ List all set entries of a plugin set.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5231,7 +5554,9 @@ List all webstores a plugin set is related to.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5258,7 +5583,9 @@ List all LayoutContainers for a plugin set.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5285,7 +5612,9 @@ Get the PluginSetEntry object containing a specific plugin for a set. If a Plugi
 
 ===== Return type
     
-<1> link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
+<1> [[__plenty\modules\plugin\pluginset\models\pluginsetentry]]
+
+    link:plugin#plugin_models_pluginsetentry[PluginSetEntry^]
 
     
 
@@ -5324,7 +5653,9 @@ Activates / deactivates a plugin for a set by trashing or restoring the respecti
 
 ===== Return type
     
-<1> link:plugin#plugin_models_plugin[Plugin^]
+<1> [[__plenty\modules\plugin\models\plugin]]
+
+    link:plugin#plugin_models_plugin[Plugin^]
 
     
 
@@ -5359,7 +5690,9 @@ Remove a plugin from a set.
 
 ===== Return type
     
-<1> link:plugin#plugin_models_plugin[Plugin^]
+<1> [[__plenty\modules\plugin\models\plugin]]
+
+    link:plugin#plugin_models_plugin[Plugin^]
 
     
 
@@ -5416,7 +5749,9 @@ Extract a plugin set id from a preview hash.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5477,7 +5812,9 @@ Change the position of a plugin in a set
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5544,7 +5881,9 @@ public getPluginSetHash($pluginSetOrId):string // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$pluginSetOrId`
 |
@@ -5596,6 +5935,7 @@ Get the PluginSetID of the currently running plugin.
 
 [[plugin_pluginset_models]]
 ===  Models
+[[plugin_models_pluginset]]
 ==== PluginSet
 
 Eloquent model representing a PluginSet.
@@ -5623,26 +5963,36 @@ Eloquent model representing a PluginSet.
 |link:http://php.net/int[int^]
     |parentPluginSetId
     |
-|link:plugin#plugin_models_pluginset[PluginSet^]
+|[[__plenty\modules\plugin\pluginset\models\pluginset]]
+
+    link:plugin#plugin_models_pluginset[PluginSet^]
 
     |parentPluginSet
     |
 |link:http://php.net/string[string^]
     |name
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |pluginSetEntries
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |pluginSetEntriesWithTrashed
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |layoutContainers
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |webstores
     |
@@ -5665,6 +6015,7 @@ Returns this model as an array.
 
 
 
+[[plugin_models_pluginsetentry]]
 ==== PluginSetEntry
 
 Eloquent model representing a PluginSetEntry.
@@ -5692,7 +6043,9 @@ Eloquent model representing a PluginSetEntry.
 |link:http://php.net/int[int^]
     |pluginSetId
     |
-|link:plugin#plugin_models_plugin[Plugin^]
+|[[__plenty\modules\plugin\models\plugin]]
+
+    link:plugin#plugin_models_plugin[Plugin^]
 
     |plugin
     |
@@ -5728,6 +6081,7 @@ Returns this model as an array.
 
 [[plugin_storage_contracts]]
 ===  Contracts
+[[plugin_contracts_storagerepositorycontract]]
 ==== StorageRepositoryContract
 
 Storage Repository
@@ -5759,7 +6113,9 @@ Create an object with content in $body
 
 ===== Return type
     
-<1> link:cloud#cloud_models_storageobject[StorageObject^]
+<1> [[__plenty\modules\cloud\storage\models\storageobject]]
+
+    link:cloud#cloud_models_storageobject[StorageObject^]
 
     
 
@@ -5802,7 +6158,9 @@ Get an object
 
 ===== Return type
     
-<1> link:cloud#cloud_models_storageobject[StorageObject^]
+<1> [[__plenty\modules\cloud\storage\models\storageobject]]
+
+    link:cloud#cloud_models_storageobject[StorageObject^]
 
     
 
@@ -5977,7 +6335,9 @@ Returns some or all (up to 1000) objects
 
 ===== Return type
     
-<1> link:cloud#cloud_models_storageobjectlist[StorageObjectList^]
+<1> [[__plenty\modules\cloud\storage\models\storageobjectlist]]
+
+    link:cloud#cloud_models_storageobjectlist[StorageObjectList^]
 
     
 
@@ -6028,7 +6388,9 @@ Get all objects of a plugin as zip file
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6050,6 +6412,7 @@ a|`$pluginName`
 
 [[plugin_versioncontrol_models]]
 ===  Models
+[[plugin_models_git]]
 ==== Git
 
 Model holding plugin data concerning Git version control.
@@ -6098,7 +6461,9 @@ Model holding plugin data concerning Git version control.
 |link:http://php.net/string[string^]
     |updatedAt
     |last update timestamp
-|link:plugin#plugin_models_plugin[Plugin^]
+|[[__plenty\modules\plugin\models\plugin]]
+
+    link:plugin#plugin_models_plugin[Plugin^]
 
     |plugin
     |

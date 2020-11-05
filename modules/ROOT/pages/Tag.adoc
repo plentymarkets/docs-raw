@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[tag_tag_contracts]]
 ===  Contracts
+[[tag_contracts_tagavailabilityrepositorycontract]]
 ==== TagAvailabilityRepositoryContract
 
 The TagAvailabilityRepositoryContract is the interface for the tag availability repository. This interface allows to update and create tag availabilities.
@@ -40,7 +42,9 @@ public update($data, $tagId, $availabilityType):Plenty\Modules\Tag\Models\TagAva
 
 ===== Return type
     
-<1> link:tag#tag_models_tagavailability[TagAvailability^]
+<1> [[__plenty\modules\tag\models\tagavailability]]
+
+    link:tag#tag_models_tagavailability[TagAvailability^]
 
     
 
@@ -82,7 +86,9 @@ public create($data):Plenty\Modules\Tag\Models\TagAvailability // <1>
 
 ===== Return type
     
-<1> link:tag#tag_models_tagavailability[TagAvailability^]
+<1> [[__plenty\modules\tag\models\tagavailability]]
+
+    link:tag#tag_models_tagavailability[TagAvailability^]
 
     
 
@@ -109,7 +115,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -127,11 +135,14 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
+[[tag_contracts_tagnamerepositorycontract]]
 ==== TagNameRepositoryContract
 
 The TagNameRepositoryContract is the interface for the tag name repository. This interface allows to update, create and list tag names.
@@ -163,7 +174,9 @@ public update($data, $tagId, $lang):Plenty\Modules\Tag\Models\TagName // <1>
 
 ===== Return type
     
-<1> link:tag#tag_models_tagname[TagName^]
+<1> [[__plenty\modules\tag\models\tagname]]
+
+    link:tag#tag_models_tagname[TagName^]
 
     
 
@@ -198,7 +211,9 @@ public create($data):Plenty\Modules\Tag\Models\TagName // <1>
 
 ===== Return type
     
-<1> link:tag#tag_models_tagname[TagName^]
+<1> [[__plenty\modules\tag\models\tagname]]
+
+    link:tag#tag_models_tagname[TagName^]
 
     
 
@@ -255,7 +270,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -273,11 +290,14 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
+[[tag_contracts_tagrelationshiprepositorycontract]]
 ==== TagRelationshipRepositoryContract
 
 The TagRelationshipRepositoryContract is the interface for the tag relationship repository. This interface allows to update, create, delete and list tag relationships.
@@ -309,7 +329,9 @@ public update($data, $tagId, $availabilityType, $relationshipValue):Plenty\Modul
 
 ===== Return type
     
-<1> link:tag#tag_models_tagrelationship[TagRelationship^]
+<1> [[__plenty\modules\tag\models\tagrelationship]]
+
+    link:tag#tag_models_tagrelationship[TagRelationship^]
 
     
 
@@ -353,7 +375,9 @@ public create($data):Plenty\Modules\Tag\Models\TagRelationship // <1>
 
 ===== Return type
     
-<1> link:tag#tag_models_tagrelationship[TagRelationship^]
+<1> [[__plenty\modules\tag\models\tagrelationship]]
+
+    link:tag#tag_models_tagrelationship[TagRelationship^]
 
     
 
@@ -380,7 +404,9 @@ public deleteRelation($relationshipValue, $tagId):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -411,7 +437,9 @@ public deleteOneRelation($relationshipValue, $relationshipType, $tagId):void // 
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -532,7 +560,9 @@ Gets a specific tag relationship or returns null.
 
 ===== Return type
     
-<1> link:tag#tag_models_tagrelationship[TagRelationship^]
+<1> [[__plenty\modules\tag\models\tagrelationship]]
+
+    link:tag#tag_models_tagrelationship[TagRelationship^]
 
     
 
@@ -567,7 +597,9 @@ Deletes tag links by reference value and relationship type.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+<1> [[__plenty\repositories\models\deleteresponse]]
+
+    link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
     
 
@@ -598,7 +630,9 @@ Deletes tag links by uuid5 reference value and relationship type.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+<1> [[__plenty\repositories\models\deleteresponse]]
+
+    link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
     
 
@@ -629,7 +663,9 @@ Deletes a list of tag relationships. The tag ID, tag type and relation value mus
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+<1> [[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     
 
@@ -656,7 +692,9 @@ Returns all tag relationships.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+<1> [[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     
 
@@ -683,7 +721,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -701,7 +741,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -719,7 +761,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -746,7 +790,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -764,7 +810,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -782,11 +830,14 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
+[[tag_contracts_tagrepositorycontract]]
 ==== TagRepositoryContract
 
 The TagRepositoryContract is the interface for the tag repository. This interface allows to create, update and delete tags.
@@ -818,7 +869,9 @@ Creates a new tag.
 
 ===== Return type
     
-<1> link:tag#tag_models_tag[Tag^]
+<1> [[__plenty\modules\tag\models\tag]]
+
+    link:tag#tag_models_tag[Tag^]
 
     
 
@@ -845,7 +898,9 @@ Updates a tag.
 
 ===== Return type
     
-<1> link:tag#tag_models_tag[Tag^]
+<1> [[__plenty\modules\tag\models\tag]]
+
+    link:tag#tag_models_tag[Tag^]
 
     
 
@@ -876,7 +931,9 @@ Deletes a tag by the given tag ID.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -903,7 +960,9 @@ public getTagByName($name):Plenty\Modules\Tag\Models\Tag // <1>
 
 ===== Return type
     
-<1> link:tag#tag_models_tag[Tag^]
+<1> [[__plenty\modules\tag\models\tag]]
+
+    link:tag#tag_models_tag[Tag^]
 
     
 
@@ -956,7 +1015,9 @@ public getTagById($id, $with = []):Plenty\Modules\Tag\Models\Tag // <1>
 
 ===== Return type
     
-<1> link:tag#tag_models_tag[Tag^]
+<1> [[__plenty\modules\tag\models\tag]]
+
+    link:tag#tag_models_tag[Tag^]
 
     
 
@@ -1031,7 +1092,9 @@ public getTagsByRelationship($relationshipType, $value, $isUUID = false):array /
 a|`$relationshipType`
 |The relationship type
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |The relationship value (string if UUID, otherwise int)
@@ -1056,7 +1119,9 @@ Returns all tags.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+<1> [[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     
 
@@ -1083,7 +1148,9 @@ Creates a new tag.
 
 ===== Return type
     
-<1> link:tag#tag_models_tag[Tag^]
+<1> [[__plenty\modules\tag\models\tag]]
+
+    link:tag#tag_models_tag[Tag^]
 
     
 
@@ -1162,7 +1229,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1180,7 +1249,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1198,7 +1269,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1225,7 +1298,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1243,7 +1318,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1261,12 +1338,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[tag_tag_models]]
 ===  Models
+[[tag_models_tag]]
 ==== Tag
 
 The Tag model
@@ -1331,6 +1411,7 @@ Returns this model as an array.
 
 
 
+[[tag_models_tagavailability]]
 ==== TagAvailability
 
 The tag availability model.
@@ -1383,6 +1464,7 @@ Returns this model as an array.
 
 
 
+[[tag_models_tagclient]]
 ==== TagClient
 
 The tag client model.
@@ -1429,6 +1511,7 @@ Returns this model as an array.
 
 
 
+[[tag_models_tagname]]
 ==== TagName
 
 The tag name model.
@@ -1478,6 +1561,7 @@ Returns this model as an array.
 
 
 
+[[tag_models_tagrelationship]]
 ==== TagRelationship
 
 The tag relationship model.

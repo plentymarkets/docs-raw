@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[bi_keyfigure_contracts]]
 ===  Contracts
+[[bi_contracts_keyfigureresultrepositorycontract]]
 ==== KeyFigureResultRepositoryContract
 
 This interface allows you to search for key figures results.
@@ -40,14 +42,18 @@ Search for key figure calculation results
 
 ===== Return type
     
-<1> link:bi#bi_models_keyfigureresultsearchresponse[KeyFigureResultSearchResponse^]
+<1> [[__plenty\modules\bi\keyfigure\models\keyfigureresultsearchresponse]]
+
+    link:bi#bi_models_keyfigureresultsearchresponse[KeyFigureResultSearchResponse^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:bi#bi_models_keyfiguresearchrequests[KeyFigureSearchRequests^]
+|[[__plenty\modules\bi\keyfigure\models\keyfiguresearchrequests]]
+
+    link:bi#bi_models_keyfiguresearchrequests[KeyFigureSearchRequests^]
 
 a|`$searchRequests`
 |Several key figure search requests
@@ -56,6 +62,7 @@ a|`$searchRequests`
 
 [[bi_keyfigure_models]]
 ===  Models
+[[bi_models_keyfigureconfig]]
 ==== KeyFigureConfig
 
 The key figure config model represents the configuration of a key figure.
@@ -89,15 +96,21 @@ The key figure config model represents the configuration of a key figure.
 |link:http://php.net/string[string^]
     |keyFigureName
     |User defined name
-|link:bi#bi_models_keyfigurefilter[KeyFigureFilter^]
+|[[__plenty\modules\bi\keyfigure\models\keyfigurefilter]]
+
+    link:bi#bi_models_keyfigurefilter[KeyFigureFilter^]
 
     |filter
     |Filter for calculating this key figure
-|link:bi#bi_models_keyfiguretarget[KeyFigureTarget^]
+|[[__plenty\modules\bi\keyfigure\models\keyfiguretarget]]
+
+    link:bi#bi_models_keyfiguretarget[KeyFigureTarget^]
 
     |target
     |Contains the target figures
-|link:bi#bi_models_keyfiguremeta[KeyFigureMeta^]
+|[[__plenty\modules\bi\keyfigure\models\keyfiguremeta]]
+
+    link:bi#bi_models_keyfiguremeta[KeyFigureMeta^]
 
     |meta
     |Additional data
@@ -135,6 +148,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_keyfigurefilter]]
 ==== KeyFigureFilter
 
 The key figure filter holds configured filters for a key figure calculation.
@@ -181,6 +195,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_keyfiguremeta]]
 ==== KeyFigureMeta
 
 The key figure meta holds additional data.
@@ -230,6 +245,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_keyfigureresult]]
 ==== KeyFigureResult
 
 Represents a key figure result
@@ -294,6 +310,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_keyfigureresultresponse]]
 ==== KeyFigureResultResponse
 
 The model represent a key figure result in condensed form to the presentation.
@@ -352,6 +369,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_keyfigureresultsearchresponse]]
 ==== KeyFigureResultSearchResponse
 
 The model represent search result of key figure result search.
@@ -392,6 +410,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_keyfigureresultsearchresult]]
 ==== KeyFigureResultSearchResult
 
 The key figure result search result model combine key figure information with key figure search result.
@@ -444,6 +463,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_keyfiguresearchrequest]]
 ==== KeyFigureSearchRequest
 
 The model holds filter information for a search query for key figures.
@@ -523,6 +543,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_keyfiguresearchrequests]]
 ==== KeyFigureSearchRequests
 
 The model represent several key figure search requests.
@@ -563,6 +584,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_keyfiguretarget]]
 ==== KeyFigureTarget
 
 The key figure target day model contains the target figures for each weekday, week, month, quarter and year, which were stored for a key figure configuration
@@ -678,6 +700,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_keyfiguretemplate]]
 ==== KeyFigureTemplate
 
 The key figure template model contains preview data of a key figure template
@@ -728,6 +751,7 @@ Returns this model as an array.
 
 [[bi_rawdata_contracts]]
 ===  Contracts
+[[bi_contracts_rawdatarepositorycontract]]
 ==== RawDataRepositoryContract
 
 This interface allows you to get a list of generated raw data files
@@ -759,7 +783,9 @@ Get list of raw data. Valid filter combinations: (dataName), (dataName &amp; pro
 
 ===== Return type
     
-<1> link:bi#bi_models_rawdatasearchresult[RawDataSearchResult^]
+<1> [[__plenty\modules\bi\rawdata\models\rawdatasearchresult]]
+
+    link:bi#bi_models_rawdatasearchresult[RawDataSearchResult^]
 
     
 
@@ -806,7 +832,9 @@ Get a raw data file from the storage, the storage path of the file must be speci
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -833,7 +861,9 @@ public deleteRawData($dataName, $primaryIds):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -881,7 +911,9 @@ Returns list of all saved configurations
 
 ===== Return type
     
-<1> link:bi#bi_models_rawdataconfigs[RawDataConfigs^]
+<1> [[__plenty\modules\bi\rawdata\models\rawdataconfigs]]
+
+    link:bi#bi_models_rawdataconfigs[RawDataConfigs^]
 
     
 
@@ -899,7 +931,9 @@ Resets all saved raw data configurations with given data
 
 ===== Return type
     
-<1> link:bi#bi_models_rawdataconfigs[RawDataConfigs^]
+<1> [[__plenty\modules\bi\rawdata\models\rawdataconfigs]]
+
+    link:bi#bi_models_rawdataconfigs[RawDataConfigs^]
 
     
 
@@ -914,6 +948,7 @@ a|`$data`
 
 [[bi_rawdata_models]]
 ===  Models
+[[bi_models_rawdataconfig]]
 ==== RawDataConfig
 
 The BI raw data config model
@@ -957,6 +992,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_rawdataconfigs]]
 ==== RawDataConfigs
 
 List of all saved raw data configurations
@@ -1000,6 +1036,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_rawdatacreator]]
 ==== RawDataCreator
 
 The BI raw data creator model
@@ -1073,6 +1110,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_rawdatafile]]
 ==== RawDataFile
 
 The BI raw model
@@ -1134,6 +1172,7 @@ Returns this model as an array.
 
 
 
+[[bi_models_rawdatasearchresult]]
 ==== RawDataSearchResult
 
 The BI raw data search result model

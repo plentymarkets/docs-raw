@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[order_code_contracts]]
 ===  Contracts
+[[order_contracts_couponcampaigncoderepositorycontract]]
 ==== CouponCampaignCodeRepositoryContract
 
 This interface allows you to get and create coupon codes.
@@ -40,7 +42,9 @@ Gets a coupon code. The code string must be specified.
 
 ===== Return type
     
-<1> link:order#order_models_couponcampaigncode[CouponCampaignCode^]
+<1> [[__plenty\modules\order\coupon\campaign\code\models\couponcampaigncode]]
+
+    link:order#order_models_couponcampaigncode[CouponCampaignCode^]
 
     
 
@@ -101,7 +105,9 @@ Creates a coupon code.
 
 ===== Return type
     
-<1> link:order#order_models_couponcampaigncode[CouponCampaignCode^]
+<1> [[__plenty\modules\order\coupon\campaign\code\models\couponcampaigncode]]
+
+    link:order#order_models_couponcampaigncode[CouponCampaignCode^]
 
     
 
@@ -145,6 +151,7 @@ a|`$disabled`
 
 
 
+[[order_contracts_couponcoderepositorycontract]]
 ==== CouponCodeRepositoryContract
 
 The CouponCodeRepositoryContract is the interface for the coupon code repository. This interface allows you to redeem coupons.
@@ -194,6 +201,7 @@ a|`$coupon`
 
 [[order_code_models]]
 ===  Models
+[[order_models_couponcampaigncode]]
 ==== CouponCampaignCode
 
 The CouponCampaignCode model contains information about coupon codes. Each code belongs to one campaign only.
@@ -234,26 +242,36 @@ The CouponCampaignCode model contains information about coupon codes. Each code 
 |link:http://php.net/float[float^]
     |usedAmount
     |The amount that is already redeemed. The total amount that can be redeemed is defined in the campaign as coupon value, because the value applies to all codes of a campaign.
-|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+|[[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
     |generatedAt
     |The date and time that the code was generated
-|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+|[[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
     |lastUsedAt
     |The date and time that the code was redeemed last. This date will be set if the coupon amount has not been fully used.
-|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+|[[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
     |consumedAt
     |The date and time that the coupon amount of this code was fully consumed
-|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+|[[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
     |expiresAt
     |The date and time that the code will expire or has expired
 |link:http://php.net/float[float^]
     |value
     |The value of the coupon if it differs from the campaign value. The value is null if the campaign value is used.
-|link:order#order_models_couponcampaign[CouponCampaign^]
+|[[__plenty\modules\order\coupon\campaign\models\couponcampaign]]
+
+    link:order#order_models_couponcampaign[CouponCampaign^]
 
     |campaign
     |The coupon campaign and all information about the campaign that this code belongs to
@@ -280,6 +298,7 @@ Returns this model as an array.
 
 [[order_order_models]]
 ===  Models
+[[order_models_giftcardcode]]
 ==== GiftCardCode
 
 Model that holds gift card codes.
@@ -338,6 +357,7 @@ Returns this model as an array.
 
 
 
+[[order_models_couponcodeorder]]
 ==== CouponCodeOrder
 
 The CouponCodeOrder model.
@@ -400,6 +420,7 @@ Returns this model as an array.
 
 
 
+[[order_models_order]]
 ==== Order
 
 The order model.
@@ -464,11 +485,15 @@ The order model.
 |link:http://php.net/float[float^]
     |referrerId
     |The referrer ID of the order
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the order was created
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the order was updated last
@@ -495,82 +520,120 @@ The order model.
 |link:http://php.net/bool[bool^]
     |hasTaxRelevantDocuments
     |
-|link:account#account_models_address[Address^]
+|[[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     |billingAddress
     |The invoice address of the order
-|link:account#account_models_address[Address^]
+|[[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     |deliveryAddress
     |The delivery address of the order
-|link:authentication#authentication_models_user[User^]
+|[[__plenty\modules\authentication\models\user]]
+
+    link:authentication#authentication_models_user[User^]
 
     |owner
     |The owner of the order
 |link:http://php.net/bool[bool^]
     |hasDeliveryOrders
     |Has the order delivery orders?
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |addresses
     |The address objects that are associated with the order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |addressRelations
     |The address relations for this order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |orderItems
     |The order items that are associated with the order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |The order properties that are associated with the order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |relations
     |The order relation reference instances that are associated with the order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |amounts
     |The order amounts that are associated with the order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |comments
     |The order comments.
-|link:accounting#accounting_models_accountinglocation[AccountingLocation^]
+|[[__plenty\modules\accounting\models\accountinglocation]]
+
+    link:accounting#accounting_models_accountinglocation[AccountingLocation^]
 
     |location
     |The accounting location of the order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |payments
     |The payments that are associated with the order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |orderReferences
     |The order references.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |reverseOrderReferences
     |The sub order references showing on the current order .
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |originOrderReferences
     |The references of other orders, e.g. returns or credit notes, associated with the order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |shippingPackages
     |The shipping packages that are associated with the order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |documents
     |The documents that are associated with the order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |returnLabels
     |The order returns documents that are associated with the order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |dates
     |The dates of the order. Can contain many different dates with their types like:
@@ -580,55 +643,81 @@ The order model.
 <li>3 = Payment date</li>
 <li>4 = Delivery date</li>
 </ul>
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     |originOrder
     |The origin order of this order. If this order is the origin, this attribute is null. (deprecated)
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     |parentOrder
     |The parent order of this order. If this order has no parent, this attribute is null. (deprecated)
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |originOrders
     |The origin orders of this order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |parentOrders
     |The parent orders of this order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |childOrders
     |All orders referencing the current order as parent.
-|link:order#order_models_orderamount[OrderAmount^]
+|[[__plenty\modules\order\models\orderamount]]
+
+    link:order#order_models_orderamount[OrderAmount^]
 
     |systemAmount
     |The order amount in the system currency.
-|link:order#order_models_orderamount[OrderAmount^]
+|[[__plenty\modules\order\models\orderamount]]
+
+    link:order#order_models_orderamount[OrderAmount^]
 
     |amount
     |The order amount in foreign currency if exists. Otherwise the amount in system currency.
-|link:account#account_models_contact[Contact^]
+|[[__plenty\modules\account\contact\models\contact]]
+
+    link:account#account_models_contact[Contact^]
 
     |contactSender
     |The associated contact for the contact-sender relation.
-|link:account#account_models_contact[Contact^]
+|[[__plenty\modules\account\contact\models\contact]]
+
+    link:account#account_models_contact[Contact^]
 
     |contactReceiver
     |The associated contact for the contact-receiver relation.
-|link:stockmanagement#stockmanagement_models_warehouse[Warehouse^]
+|[[__plenty\modules\stockmanagement\warehouse\models\warehouse]]
+
+    link:stockmanagement#stockmanagement_models_warehouse[Warehouse^]
 
     |warehouseSender
     |The associated warehouse for the warehouse-sender relation.
-|link:stockmanagement#stockmanagement_models_warehouse[Warehouse^]
+|[[__plenty\modules\stockmanagement\warehouse\models\warehouse]]
+
+    link:stockmanagement#stockmanagement_models_warehouse[Warehouse^]
 
     |warehouseReceiver
     |The associated warehouse for the warehouse-receiver relation.
-|link:order#order_models_ordertransactionsums[OrderTransactionSums^]
+|[[__plenty\modules\order\models\ordertransactionsums]]
+
+    link:order#order_models_ordertransactionsums[OrderTransactionSums^]
 
     |transactionSums
     |The sums of all order item transactions.
-|link:order#order_models_orderpaymentterms[OrderPaymentTerms^]
+|[[__plenty\modules\order\models\orderpaymentterms]]
+
+    link:order#order_models_orderpaymentterms[OrderPaymentTerms^]
 
     |paymentTerms
     |The payment terms of this order.
@@ -651,6 +740,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderamount]]
 ==== OrderAmount
 
 The order amount model.
@@ -716,19 +806,27 @@ The amount that still needs to paid is not an own parameter because the amount c
 |link:http://php.net/float[float^]
     |shippingCostsNet
     |The net shipping costs.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the amount was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the amount was updated last.
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     |order
     |The order that this amount belongs to.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |vats
     |The vat amounts
@@ -751,6 +849,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderamountvat]]
 ==== OrderAmountVat
 
 The order amount vat model.
@@ -793,15 +892,21 @@ The order amount vat model.
 |link:http://php.net/float[float^]
     |grossTotal
     |The gross amount for the current vat rate.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the VAT was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the VAT was updated last.
-|link:order#order_models_orderamount[OrderAmount^]
+|[[__plenty\modules\order\models\orderamount]]
+
+    link:order#order_models_orderamount[OrderAmount^]
 
     |orderAmount
     |The OrderAmount model that the OrderAmountVat belongs to.
@@ -824,6 +929,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderitem]]
 ==== OrderItem
 
 The order item model. Items, shipping costs, coupons, surcharges etc. are all displayed as order items.
@@ -900,55 +1006,81 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 |link:http://php.net/int[int^]
     |warehouseId
     |The ID of the warehouse.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date at which the order item was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the order item was last updated.
-|link:order#order_models_orderitemamount[OrderItemAmount^]
+|[[__plenty\modules\order\models\orderitemamount]]
+
+    link:order#order_models_orderitemamount[OrderItemAmount^]
 
     |systemAmount
     |The order item's amount in the system currency.
-|link:order#order_models_orderitemamount[OrderItemAmount^]
+|[[__plenty\modules\order\models\orderitemamount]]
+
+    link:order#order_models_orderitemamount[OrderItemAmount^]
 
     |amount
     |The order item's amount in the order currency. If the order currency is the same as the system currency this amount is the same.
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     |order
     |The order that the property belongs to.
-|link:order#order_models_orderitemtype[OrderItemType^]
+|[[__plenty\modules\order\models\orderitemtype]]
+
+    link:order#order_models_orderitemtype[OrderItemType^]
 
     |type
     |The order item type
-|link:accounting#accounting_models_vat[Vat^]
+|[[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
     |countryVat
     |The country vat instance.
-|link:item#item_models_variation[Variation^]
+|[[__plenty\modules\item\variation\models\variation]]
+
+    link:item#item_models_variation[Variation^]
 
     |variation
     |The item variation in the position.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |amounts
     |The order item amounts that belong to the order item.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |The order item properties that belong to the order item.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |orderProperties
     |The order item order properties that belong to the order item.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |orderDates
     |The dates of the associated order.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |dates
     |The dates of the order item. Can contain many different dates with their types. The following types are currently available:
@@ -966,15 +1098,21 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 <li>Possible delivery date = 11</li>
 <li>Market transfer date = 12</li>
 </ul>
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |references
     |The order item references.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |referencedBy
     |The order item references which reference this order item.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |giftCardCodes
     |The gift card codes that belong to the order item.
@@ -987,15 +1125,21 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 |link:http://php.net/array[array^]
     |variationBarcodes
     |The barcodes that belong to the variation of the order item
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |comments
     |The order item comments.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |warehouselocations
     |<b>DEPRECATED</b> The order items warehouse locations.
-|link:order#order_models_orderitemtransactionsums[OrderItemTransactionSums^]
+|[[__plenty\modules\order\models\orderitemtransactionsums]]
+
+    link:order#order_models_orderitemtransactionsums[OrderItemTransactionSums^]
 
     |transactionSums
     |The sums of all order item transactions.
@@ -1018,6 +1162,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderitemamount]]
 ==== OrderItemAmount
 
 The order item amount model. Order item amount refers to amounts of money.
@@ -1075,15 +1220,21 @@ The order item amount model. Order item amount refers to amounts of money.
 |link:http://php.net/bool[bool^]
     |isPercentage
     |Flag that indicates if a discount is given as a percentage or as a fixed value.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the amount was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the amount was last updated.
-|link:order#order_models_orderitem[OrderItem^]
+|[[__plenty\modules\order\models\orderitem]]
+
+    link:order#order_models_orderitem[OrderItem^]
 
     |orderItem
     |The order item that the amount belongs to.
@@ -1106,6 +1257,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderitemorderproperty]]
 ==== OrderItemOrderProperty
 
 This model contains the order properties that are assigned to order items.
@@ -1161,6 +1313,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderitemtransactionsums]]
 ==== OrderItemTransactionSums
 
 The order item transaction sums model.
@@ -1231,6 +1384,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderitemtype]]
 ==== OrderItemType
 
 The order item type model.
@@ -1271,7 +1425,9 @@ The order item type model.
 |link:http://php.net/int[int^]
     |position
     |The position for sorting
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |names
     |The names of the order item types
@@ -1294,6 +1450,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderitemtypename]]
 ==== OrderItemTypeName
 
 The order item type name model.
@@ -1324,7 +1481,9 @@ The order item type name model.
 |link:http://php.net/string[string^]
     |lang
     |The ISO 639-1 language code for the name, e.g. "en" for English
-|link:order#order_models_orderitemtype[OrderItemType^]
+|[[__plenty\modules\order\models\orderitemtype]]
+
+    link:order#order_models_orderitemtype[OrderItemType^]
 
     |type
     |The order item type instance.
@@ -1347,6 +1506,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderitemwarehouselocation]]
 ==== OrderItemWarehouseLocation
 
 &lt;b&gt;DEPRECATED&lt;/b&gt; The order item warehouse location model. Order item warehouse locations
@@ -1383,7 +1543,9 @@ with.
 |link:http://php.net/string[string^]
     |batch
     |The batch
-|link:warehouse#warehouse_models_warehouselocation[WarehouseLocation^]
+|[[__plenty\modules\warehouse\models\warehouselocation]]
+
+    link:warehouse#warehouse_models_warehouselocation[WarehouseLocation^]
 
     |warehouseLocation
     |The warehouse location of the item
@@ -1406,6 +1568,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderpaymentterms]]
 ==== OrderPaymentTerms
 
 The order payment terms model.
@@ -1442,15 +1605,21 @@ The order payment terms model.
 |link:http://php.net/int[int^]
     |paymentAllowedDays
     |The allowed number of days for the payment.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date the model was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date the model was last updated.
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     |order
     |The order of this early payment discount.
@@ -1473,6 +1642,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderreference]]
 ==== OrderReference
 
 The order reference model. Each OrderReference has an origin order (the most top order) and a referenced order (&#039;parent&#039; or &#039;reorder&#039;).
@@ -1506,15 +1676,21 @@ The order reference model. Each OrderReference has an origin order (the most top
 |link:http://php.net/string[string^]
     |referenceType
     |The reference type ("parent" or "reorder") of the referenced order.
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     |order
     |
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     |originOrder
     |The origin order of the order.
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     |referenceOrder
     |The referenced order of the order.
@@ -1537,6 +1713,7 @@ Returns this model as an array.
 
 
 
+[[order_models_ordertransactionsums]]
 ==== OrderTransactionSums
 
 The order transaction sums model.
@@ -1610,6 +1787,7 @@ Returns this model as an array.
 
 
 
+[[order_models_ordertype]]
 ==== OrderType
 
 The order type model.
@@ -1637,7 +1815,9 @@ The order type model.
 |link:http://php.net/int[int^]
     |position
     |The position for sorting
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |names
     |The names of the order item types.
@@ -1660,6 +1840,7 @@ Returns this model as an array.
 
 
 
+[[order_models_ordertypename]]
 ==== OrderTypeName
 
 The order type name model.
@@ -1690,7 +1871,9 @@ The order type name model.
 |link:http://php.net/string[string^]
     |lang
     |The ISO 639-1 language code for the name, e.g. "en" for English
-|link:order#order_models_ordertype[OrderType^]
+|[[__plenty\modules\order\models\ordertype]]
+
+    link:order#order_models_ordertype[OrderType^]
 
     |type
     |The order type instance.
@@ -1713,6 +1896,7 @@ Returns this model as an array.
 
 
 
+[[order_models_pricecalculationresultitem]]
 ==== PriceCalculationResultItem
 
 price calculation result item
@@ -1772,6 +1956,7 @@ Returns this model as an array.
 
 [[order_order_contracts]]
 ===  Contracts
+[[order_contracts_orderamountrepositorycontract]]
 ==== OrderAmountRepositoryContract
 
 This interface allows you to get and list order amounts and their vats.
@@ -1803,7 +1988,9 @@ Get an order amount for an order in a currency. The ID of the order must be spec
 
 ===== Return type
     
-<1> link:order#order_models_orderamount[OrderAmount^]
+<1> [[__plenty\modules\order\models\orderamount]]
+
+    link:order#order_models_orderamount[OrderAmount^]
 
     
 
@@ -1834,7 +2021,9 @@ Get an order amount. The ID of the order amount must be specified.
 
 ===== Return type
     
-<1> link:order#order_models_orderamount[OrderAmount^]
+<1> [[__plenty\modules\order\models\orderamount]]
+
+    link:order#order_models_orderamount[OrderAmount^]
 
     
 
@@ -1874,6 +2063,7 @@ a|`$orderId`
 
 
 
+[[order_contracts_orderitemrepositorycontract]]
 ==== OrderItemRepositoryContract
 
 The OrderItemRepositoryContract is the interface for the order item repository. This interface allows you to find, create and update order items. An order item can be e.g. items, surcharges and coupons. Each order item is given a unique id, which links it to a specific order.
@@ -1905,7 +2095,9 @@ Get an order item
 
 ===== Return type
     
-<1> link:order#order_models_orderitem[OrderItem^]
+<1> [[__plenty\modules\order\models\orderitem]]
+
+    link:order#order_models_orderitem[OrderItem^]
 
     
 
@@ -1962,7 +2154,9 @@ Search order items
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -2009,7 +2203,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2036,7 +2232,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2054,7 +2252,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2072,7 +2272,9 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2090,7 +2292,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2108,11 +2312,14 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
+[[order_contracts_orderrepositorycontract]]
 ==== OrderRepositoryContract
 
 The OrderRepositoryContract is the interface for the order repository. This interface allows you to find, create and update orders. There are many different order types and the data returned depends on the order type.
@@ -2144,7 +2351,9 @@ Get an order
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -2175,7 +2384,9 @@ Get an order by external order ID
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -2206,7 +2417,9 @@ Create an order
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -2237,7 +2450,9 @@ Update an order
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -2294,7 +2509,9 @@ Restore an order
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -2351,7 +2568,9 @@ Get a scheduler order
 
 ===== Return type
     
-<1> link:order#order_models_orderscheduler[OrderScheduler^]
+<1> [[__plenty\modules\order\scheduler\models\orderscheduler]]
+
+    link:order#order_models_orderscheduler[OrderScheduler^]
 
     
 
@@ -2378,7 +2597,9 @@ List orders of a contact
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -2417,7 +2638,9 @@ List orders that include one or more variations from a supplier
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -2456,7 +2679,9 @@ List orders sent by a contact
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -2495,7 +2720,9 @@ Get latest order of a contact
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -2527,7 +2754,9 @@ List orders
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -2588,7 +2817,9 @@ Cancel an order
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2619,7 +2850,9 @@ Find the order for the given order ID and access key.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -2676,7 +2909,9 @@ Complete an incomplete order.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -2707,7 +2942,9 @@ Creates a multi order for a specific contact
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -2734,7 +2971,9 @@ Deprecated : Set order status to 4 or 5
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -2761,7 +3000,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2788,7 +3029,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2806,7 +3049,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2824,12 +3069,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[order_order_events]]
 ===  Events
+[[order_events_ordercreated]]
 ==== OrderCreated
 
 An event class fired after a new order is created. The order type is not relevant.
@@ -2862,14 +3110,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -2890,11 +3142,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_events_orderevent]]
 ==== OrderEvent
 
 A base event class for all order events. Each order event expects an order instance.
@@ -2926,14 +3181,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -2954,11 +3213,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_events_orderfullypaid]]
 ==== OrderFullyPaid
 
 An Event class fired after a payment assignment when the order is fully paid.
@@ -2990,14 +3252,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -3018,11 +3284,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_events_orderoverpaid]]
 ==== OrderOverpaid
 
 An event class will be fired after a payment is assigned and if the order is overpaid.
@@ -3054,14 +3323,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -3082,11 +3355,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_events_orderpaidevent]]
 ==== OrderPaidEvent
 
 A base Event class for all order paid events.
@@ -3118,14 +3394,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -3146,11 +3426,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_events_orderpartlypaid]]
 ==== OrderPartlyPaid
 
 An Event class fired after a payment is assigned and if the order is only partly paid.
@@ -3182,14 +3465,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -3210,11 +3497,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_events_orderpaymentassigned]]
 ==== OrderPaymentAssigned
 
 An Event class fired after a payment was assigned to an order.
@@ -3248,19 +3538,25 @@ OrderPaymentAssigned constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
 
-|link:payment#payment_models_payment[Payment^]
+|[[__plenty\modules\payment\models\payment]]
+
+    link:payment#payment_models_payment[Payment^]
 
 a|`$payment`
 |
@@ -3281,7 +3577,9 @@ Get the payment.
 
 ===== Return type
     
-<1> link:payment#payment_models_payment[Payment^]
+<1> [[__plenty\modules\payment\models\payment]]
+
+    link:payment#payment_models_payment[Payment^]
 
     
 
@@ -3299,11 +3597,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_events_orderprepaid]]
 ==== OrderPrepaid
 
 An Event class fired after a payment is assigned and if the order is paid in advance.
@@ -3335,14 +3636,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -3363,11 +3668,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_events_subscriptionchildordercreated]]
 ==== SubscriptionChildOrderCreated
 
 An event class fired after a new order for a subscription is created. The order type is not relevant.
@@ -3400,14 +3708,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -3428,12 +3740,15 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 [[order_order_exceptions]]
 ===  Exceptions
+[[order_exceptions_orderduplicateexception]]
 ==== OrderDuplicateException
 
 Exception when duplicate order is created.
@@ -3465,7 +3780,9 @@ public getMessage():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3483,7 +3800,9 @@ public getCode():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3501,7 +3820,9 @@ public getFile():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3519,7 +3840,9 @@ public getLine():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3537,7 +3860,9 @@ public getTrace():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3555,7 +3880,9 @@ public getPrevious():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3573,12 +3900,15 @@ public getTraceAsString():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[order_order_services]]
 ===  Services
+[[order_services_ordercreatedtypeservice]]
 ==== OrderCreatedTypeService
 
 This class is used as an event listener as well as a service for registering events. The class allows to register event classes to extend the OrderCreated event for custom order types.
@@ -3610,14 +3940,18 @@ Reacts upon the OrderCreated event
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_events_ordercreated[OrderCreated^]
+|[[__plenty\modules\order\events\ordercreated]]
+
+    link:order#order_events_ordercreated[OrderCreated^]
 
 a|`$created`
 |The event instance.
@@ -3638,7 +3972,9 @@ Create event class for a custom order type
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3669,7 +4005,9 @@ Delete event class from a custom order type
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3691,6 +4029,7 @@ a|`$className`
 
 [[order_campaign_contracts]]
 ===  Contracts
+[[order_contracts_couponcampaignrepositorycontract]]
 ==== CouponCampaignRepositoryContract
 
 This is the contract for the coupon campaign repository. It allows you to get coupon campaigns.
@@ -3722,14 +4061,18 @@ Get a coupon campaign
 
 ===== Return type
     
-<1> link:order#order_models_couponcampaign[CouponCampaign^]
+<1> [[__plenty\modules\order\coupon\campaign\models\couponcampaign]]
+
+    link:order#order_models_couponcampaign[CouponCampaign^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$id`
 |The ID of the coupon campaign
@@ -3750,7 +4093,9 @@ Get the CouponCampaign model from the database by emailPlaceholder.
 
 ===== Return type
     
-<1> link:order#order_models_couponcampaign[CouponCampaign^]
+<1> [[__plenty\modules\order\coupon\campaign\models\couponcampaign]]
+
+    link:order#order_models_couponcampaign[CouponCampaign^]
 
     
 
@@ -3777,7 +4122,9 @@ Get the coupon campaign of a coupon code
 
 ===== Return type
     
-<1> link:order#order_models_couponcampaign[CouponCampaign^]
+<1> [[__plenty\modules\order\coupon\campaign\models\couponcampaign]]
+
+    link:order#order_models_couponcampaign[CouponCampaign^]
 
     
 
@@ -3810,7 +4157,9 @@ Get the display type of a coupon
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_couponcodevalidation[CouponCodeValidation^]
+|[[__plenty\modules\order\coupon\code\validation\models\couponcodevalidation]]
+
+    link:order#order_models_couponcodevalidation[CouponCodeValidation^]
 
 a|`$couponCodeValidation`
 |
@@ -3831,7 +4180,9 @@ Create a coupon campaign
 
 ===== Return type
     
-<1> link:order#order_models_couponcampaign[CouponCampaign^]
+<1> [[__plenty\modules\order\coupon\campaign\models\couponcampaign]]
+
+    link:order#order_models_couponcampaign[CouponCampaign^]
 
     
 
@@ -3858,7 +4209,9 @@ Modifies the two counter &#039;used&#039; and &#039;unused&#039;
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3919,7 +4272,9 @@ update a coupon campaign
 
 ===== Return type
     
-<1> link:order#order_models_couponcampaign[CouponCampaign^]
+<1> [[__plenty\modules\order\coupon\campaign\models\couponcampaign]]
+
+    link:order#order_models_couponcampaign[CouponCampaign^]
 
     
 
@@ -3934,6 +4289,7 @@ a|`$data`
 
 [[order_campaign_models]]
 ===  Models
+[[order_models_couponcampaign]]
 ==== CouponCampaign
 
 The CouponCampaign model contains all information of a campaign.
@@ -4042,11 +4398,15 @@ The redeem type interacts with the concept. Pay attention to the combination the
 |link:http://php.net/float[float^]
     |value
     |The actual discount value of a coupon. The value needs to be set for the two discount types fixed and percent.
-|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+|[[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     |codes
     |The codes and information about the codes that belong to this CouponCampaign
-|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+|[[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     |references
     |These references are available
@@ -4080,6 +4440,7 @@ Returns this model as an array.
 
 [[order_reference_contracts]]
 ===  Contracts
+[[order_contracts_couponcampaignreferencerepositorycontract]]
 ==== CouponCampaignReferenceRepositoryContract
 
 This is the contract for the coupon campaign reference repository. It allows you to get and create coupon campaigns references.
@@ -4111,7 +4472,9 @@ Get a coupon campaign
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+<1> [[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     
 
@@ -4138,7 +4501,9 @@ Create a Coupon Campaign reference
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+<1> [[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     
 
@@ -4153,6 +4518,7 @@ a|`$data`
 
 [[order_reference_models]]
 ===  Models
+[[order_models_couponcampaignreference]]
 ==== CouponCampaignReference
 
 The CouponCampaignReference model contains all information of a campaign reference.
@@ -4210,6 +4576,7 @@ Returns this model as an array.
 
 [[order_contact_contracts]]
 ===  Contracts
+[[order_contracts_couponcodecontactrepositorycontract]]
 ==== CouponCodeContactRepositoryContract
 
 This is the contract for the coupon codes by contacts repository. It allows you to list coupon codes redeemed by a contact as well as to create, update and delete redeemed coupon codes.
@@ -4241,7 +4608,9 @@ Create redeemed coupons for a contact.
 
 ===== Return type
     
-<1> link:order#order_models_couponcodecontact[CouponCodeContact^]
+<1> [[__plenty\modules\order\coupon\code\contact\models\couponcodecontact]]
+
+    link:order#order_models_couponcodecontact[CouponCodeContact^]
 
     
 
@@ -4268,7 +4637,9 @@ Update a redeemed coupon of a contact.
 
 ===== Return type
     
-<1> link:order#order_models_couponcodecontact[CouponCodeContact^]
+<1> [[__plenty\modules\order\coupon\code\contact\models\couponcodecontact]]
+
+    link:order#order_models_couponcodecontact[CouponCodeContact^]
 
     
 
@@ -4307,7 +4678,9 @@ Get a redeemed coupon for a contact
 
 ===== Return type
     
-<1> link:order#order_models_couponcodecontact[CouponCodeContact^]
+<1> [[__plenty\modules\order\coupon\code\contact\models\couponcodecontact]]
+
+    link:order#order_models_couponcodecontact[CouponCodeContact^]
 
     
 
@@ -4342,7 +4715,9 @@ List redeemed coupons for a contact
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -4377,7 +4752,9 @@ List redeemed coupons of a campaign.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -4412,7 +4789,9 @@ List redeemed coupons of a coupon code
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -4435,6 +4814,7 @@ a|`$itemsPerPage`
 
 [[order_contact_models]]
 ===  Models
+[[order_models_couponcodecontact]]
 ==== CouponCodeContact
 
 The CouponCodeContact model.
@@ -4465,7 +4845,9 @@ The CouponCodeContact model.
 |link:http://php.net/int[int^]
     |redeemCount
     |How many times a coupon code has already been redeemed
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the coupon code was updated last.
@@ -4498,6 +4880,7 @@ Returns this model as an array.
 
 [[order_validation_contracts]]
 ===  Contracts
+[[order_contracts_couponcodevalidatorcontract]]
 ==== CouponCodeValidatorContract
 
 CouponCodeValidatorContract is the interface for the coupon code validation repository. This interface provides the functionality to validate coupon data.
@@ -4529,14 +4912,18 @@ Validate a coupon code
 
 ===== Return type
     
-<1> link:order#order_models_couponcodevalidation[CouponCodeValidation^]
+<1> [[__plenty\modules\order\coupon\code\validation\models\couponcodevalidation]]
+
+    link:order#order_models_couponcodevalidation[CouponCodeValidation^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_couponcodevalidation[CouponCodeValidation^]
+|[[__plenty\modules\order\coupon\code\validation\models\couponcodevalidation]]
+
+    link:order#order_models_couponcodevalidation[CouponCodeValidation^]
 
 a|`$validationData`
 |The data to validate a coupon
@@ -4545,6 +4932,7 @@ a|`$validationData`
 
 [[order_validation_models]]
 ===  Models
+[[order_models_couponcodevalidation]]
 ==== CouponCodeValidation
 
 The CouponCodeValidation data model contains all data necessary for validating a coupon.
@@ -4569,7 +4957,9 @@ The CouponCodeValidation data model contains all data necessary for validating a
 |link:http://php.net/string[string^]
     |validationType
     |The type of the campaign. Currently the only type available is plentymarkets.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |items
     |The list of items or variations to be validated
@@ -4637,6 +5027,7 @@ Returns this model as an array.
 
 
 
+[[order_models_couponcodevalidationitem]]
 ==== CouponCodeValidationItem
 
 The CouponCodeValidationItem model contains all item data needed for validating whether the coupon can be redeemed for these items or not.
@@ -4696,6 +5087,7 @@ Returns this model as an array.
 
 [[order_currency_contracts]]
 ===  Contracts
+[[order_contracts_currencyconversionsettingsrepositorycontract]]
 ==== CurrencyConversionSettingsRepositoryContract
 
 Provides methods for currency conversion data.
@@ -4731,6 +5123,7 @@ Gets the currency conversion setting.
     
 
 
+[[order_contracts_currencyrepositorycontract]]
 ==== CurrencyRepositoryContract
 
 Provides methods for currency data.
@@ -4762,7 +5155,9 @@ Get a currency
 
 ===== Return type
     
-<1> link:order#order_models_currency[Currency^]
+<1> [[__plenty\modules\order\currency\models\currency]]
+
+    link:order#order_models_currency[Currency^]
 
     
 
@@ -4797,7 +5192,9 @@ Get all currencies supported in the system.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4828,7 +5225,9 @@ List countries for a currency
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4859,7 +5258,9 @@ Get a currency for a country
 
 ===== Return type
     
-<1> link:order#order_models_currency[Currency^]
+<1> [[__plenty\modules\order\currency\models\currency]]
+
+    link:order#order_models_currency[Currency^]
 
     
 
@@ -4894,7 +5295,9 @@ Get the exchange rate for a currency
 
 ===== Return type
     
-<1> link:order#order_models_currencyexchangerate[CurrencyExchangeRate^]
+<1> [[__plenty\modules\order\currency\models\currencyexchangerate]]
+
+    link:order#order_models_currencyexchangerate[CurrencyExchangeRate^]
 
     
 
@@ -4961,6 +5364,7 @@ a|`$currencyIso`
 
 [[order_currency_models]]
 ===  Models
+[[order_models_currency]]
 ==== Currency
 
 The currency model. The model includes information like the ISO 4217 code and the related currency symbols as well as the countries that a currency is used in.
@@ -4997,11 +5401,15 @@ The currency model. The model includes information like the ISO 4217 code and th
 |link:http://php.net/float[float^]
     |exchangeRate
     |The current exchange rate for this currency.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |countries
     |A list of countries that use the currency.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |names
     |A list of names in different languages for the currency.
@@ -5024,6 +5432,7 @@ Returns this model as an array.
 
 
 
+[[order_models_currencycountryrelation]]
 ==== CurrencyCountryRelation
 
 The CurrencyCountryRelation model indicates which currency is related to which country.
@@ -5051,11 +5460,15 @@ The CurrencyCountryRelation model indicates which currency is related to which c
 |link:http://php.net/int[int^]
     |countryId
     |The ID of the country
-|link:order#order_models_country[Country^]
+|[[__plenty\modules\order\shipping\countries\models\country]]
+
+    link:order#order_models_country[Country^]
 
     |country
     |The related country information
-|link:order#order_models_currency[Currency^]
+|[[__plenty\modules\order\currency\models\currency]]
+
+    link:order#order_models_currency[Currency^]
 
     |currencyInstance
     |The related currency information
@@ -5078,6 +5491,7 @@ Returns this model as an array.
 
 
 
+[[order_models_currencyexchangerate]]
 ==== CurrencyExchangeRate
 
 The currency exchange rate model.
@@ -5118,6 +5532,7 @@ Returns this model as an array.
 
 
 
+[[order_models_currencyname]]
 ==== CurrencyName
 
 The currency name model.
@@ -5148,7 +5563,9 @@ The currency name model.
 |link:http://php.net/string[string^]
     |name
     |The name in the language
-|link:order#order_models_currency[Currency^]
+|[[__plenty\modules\order\currency\models\currency]]
+
+    link:order#order_models_currency[Currency^]
 
     |currencyInstance
     |The currency instance.
@@ -5175,6 +5592,7 @@ Returns this model as an array.
 
 [[order_idea_models]]
 ===  Models
+[[order_models_export]]
 ==== Export
 
 The export model for IDEA exports.
@@ -5211,19 +5629,27 @@ The export model for IDEA exports.
 |link:http://php.net/string[string^]
     |filename
     |The filename of the export content.
-|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+|[[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
     |createdAt
     |Specifies the creation date of the export entry.
-|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+|[[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
     |updatedAt
     |Specifies the last update date of the export entry.
-|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+|[[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     |modules
     |The modules to be used by the export process.
-|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+|[[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     |options
     |The options for the export process. Currently only "year" is supported as option key.
@@ -5250,6 +5676,7 @@ Returns this model as an array.
 
 [[order_method_contracts]]
 ===  Contracts
+[[order_contracts_paymentmethodrepositorycontract]]
 ==== PaymentMethodRepositoryContract
 
 Repository Contract for PaymentMethod
@@ -5303,6 +5730,7 @@ a|`$lang`
 
 [[order_method_models]]
 ===  Models
+[[order_models_paymentmethod]]
 ==== PaymentMethod
 
 The payment method model
@@ -5378,7 +5806,9 @@ The payment method model
 |link:http://php.net/array[array^]
     |coutries
     |
-|link:order#order_models_paymentmethodinformation[PaymentMethodInformation^]
+|[[__plenty\modules\order\payment\method\models\paymentmethodinformation]]
+
+    link:order#order_models_paymentmethodinformation[PaymentMethodInformation^]
 
     |information
     |
@@ -5401,6 +5831,7 @@ Returns this model as an array.
 
 
 
+[[order_models_paymentmethodinformation]]
 ==== PaymentMethodInformation
 
 The payment method information model
@@ -5466,6 +5897,7 @@ Returns this model as an array.
 
 [[order_pdf_events]]
 ===  Events
+[[order_events_orderpdfgenerationevent]]
 ==== OrderPdfGenerationEvent
 
 OrderPdfGenerationEvent
@@ -5497,7 +5929,9 @@ Get the
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -5532,14 +5966,18 @@ public addOrderPdfGeneration($orderPdfGeneration):Plenty\Modules\Order\Pdf\Event
 
 ===== Return type
     
-<1> link:order#order_pdf_events[Events^]
+<1> [[__plenty\modules\order\pdf\events]]
+
+    link:order#order_pdf_events[Events^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_orderpdfgeneration[OrderPdfGeneration^]
+|[[__plenty\modules\order\pdf\models\orderpdfgeneration]]
+
+    link:order#order_models_orderpdfgeneration[OrderPdfGeneration^]
 
 a|`$orderPdfGeneration`
 |
@@ -5548,6 +5986,7 @@ a|`$orderPdfGeneration`
 
 [[order_pdf_models]]
 ===  Models
+[[order_models_orderpdfgeneration]]
 ==== OrderPdfGeneration
 
 OrderPdfGeneration Model
@@ -5610,6 +6049,7 @@ Returns this model as an array.
 
 [[order_referrer_contracts]]
 ===  Contracts
+[[order_contracts_orderreferrerrepositorycontract]]
 ==== OrderReferrerRepositoryContract
 
 Provides methods for processing order referrers. An order referrer indicates where a purchase was made originally. 
@@ -5641,7 +6081,9 @@ List order referrers
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5668,7 +6110,9 @@ Create an order referrer
 
 ===== Return type
     
-<1> link:order#order_models_orderreferrer[OrderReferrer^]
+<1> [[__plenty\modules\order\referrer\models\orderreferrer]]
+
+    link:order#order_models_orderreferrer[OrderReferrer^]
 
     
 
@@ -5699,7 +6143,9 @@ Update an order referrer
 
 ===== Return type
     
-<1> link:order#order_models_orderreferrer[OrderReferrer^]
+<1> [[__plenty\modules\order\referrer\models\orderreferrer]]
+
+    link:order#order_models_orderreferrer[OrderReferrer^]
 
     
 
@@ -5730,7 +6176,9 @@ Get an order referrer
 
 ===== Return type
     
-<1> link:order#order_models_orderreferrer[OrderReferrer^]
+<1> [[__plenty\modules\order\referrer\models\orderreferrer]]
+
+    link:order#order_models_orderreferrer[OrderReferrer^]
 
     
 
@@ -5787,7 +6235,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5805,12 +6255,15 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[order_referrer_models]]
 ===  Models
+[[order_models_orderreferrer]]
 ==== OrderReferrer
 
 The order referrer model. An order referrer shows where a purchase was originally made.
@@ -5877,6 +6330,7 @@ Returns this model as an array.
 
 [[order_scheduler_models]]
 ===  Models
+[[order_models_orderscheduler]]
 ==== OrderScheduler
 
 The legacy order model
@@ -5904,31 +6358,45 @@ The legacy order model
 |link:http://php.net/int[int^]
     |methodOfPayment
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |start
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |last
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |end
     |
-|link:account#account_models_address[Address^]
+|[[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     |deliveryAddress
     |
-|link:account#account_models_address[Address^]
+|[[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     |billingAddress
     |
-|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+|[[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     |addresses
     |
-|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+|[[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     |addressRelations
     |
@@ -5955,6 +6423,7 @@ Returns this model as an array.
 
 [[order_serialnumber_contracts]]
 ===  Contracts
+[[order_contracts_orderserialnumberrepositorycontract]]
 ==== OrderSerialNumberRepositoryContract
 
 List serial numbers for orders
@@ -5986,7 +6455,9 @@ List serial numbers of an order
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6013,7 +6484,9 @@ List serial numbers if an order item
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6028,6 +6501,7 @@ a|`$orderItemId`
 
 [[order_serialnumber_models]]
 ===  Models
+[[order_models_orderserialnumber]]
 ==== OrderSerialNumber
 
 The order serial number model
@@ -6058,7 +6532,9 @@ The order serial number model
 |link:http://php.net/string[string^]
     |serialNumber
     |The serial number
-|link:item#item_models_itemserialnumber[ItemSerialNumber^]
+|[[__plenty\modules\item\itemserialnumber\models\itemserialnumber]]
+
+    link:item#item_models_itemserialnumber[ItemSerialNumber^]
 
     |itemSerialNumber
     |
@@ -6085,6 +6561,7 @@ Returns this model as an array.
 
 [[order_shipping_contracts]]
 ===  Contracts
+[[order_contracts_eucountrycodesservicecontract]]
 ==== EUCountryCodesServiceContract
 
 The EUCountryCodesServiceContract
@@ -6263,6 +6740,7 @@ a|`$merchandCountryId`
 
 
 
+[[order_contracts_parcelservicepresetrepositorycontract]]
 ==== ParcelServicePresetRepositoryContract
 
 The ParcelServicePresetRepositoryContract is the interface for the shipping profile repository. This interface allows to get a shipping profile by the ID or list all shipping profiles.
@@ -6294,7 +6772,9 @@ Lists shipping profiles.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6333,7 +6813,9 @@ Gets a shipping profile. The ID of the shipping profile must be specified.
 
 ===== Return type
     
-<1> link:order#order_models_parcelservicepreset[ParcelServicePreset^]
+<1> [[__plenty\modules\order\shipping\parcelservice\models\parcelservicepreset]]
+
+    link:order#order_models_parcelservicepreset[ParcelServicePreset^]
 
     
 
@@ -6396,7 +6878,9 @@ Calculate shipping costs and list last weighted preset combinations.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:basket#basket_models_basket[Basket^]
+|[[__plenty\modules\basket\models\basket]]
+
+    link:basket#basket_models_basket[Basket^]
 
 a|`$basket`
 |The basket
@@ -6455,7 +6939,9 @@ Creates an parcel service preset
 
 ===== Return type
     
-<1> link:order#order_models_parcelservicepreset[ParcelServicePreset^]
+<1> [[__plenty\modules\order\shipping\parcelservice\models\parcelservicepreset]]
+
+    link:order#order_models_parcelservicepreset[ParcelServicePreset^]
 
     
 
@@ -6482,7 +6968,9 @@ Update an parcel service preset
 
 ===== Return type
     
-<1> link:order#order_models_parcelservicepreset[ParcelServicePreset^]
+<1> [[__plenty\modules\order\shipping\parcelservice\models\parcelservicepreset]]
+
+    link:order#order_models_parcelservicepreset[ParcelServicePreset^]
 
     
 
@@ -6513,7 +7001,9 @@ Delete a parcel service preset
 
 ===== Return type
     
-<1> link:order#order_models_parcelservicepreset[ParcelServicePreset^]
+<1> [[__plenty\modules\order\shipping\parcelservice\models\parcelservicepreset]]
+
+    link:order#order_models_parcelservicepreset[ParcelServicePreset^]
 
     
 
@@ -6540,7 +7030,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6558,7 +7050,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6576,7 +7070,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6603,7 +7099,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6621,7 +7119,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6639,12 +7139,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[order_shipping_events]]
 ===  Events
+[[order_events_aftershippingcostcalculated]]
 ==== AfterShippingCostCalculated
 
 An event class fired after the shipping calculation is done. Listeners can add fees to the shipping costs.
@@ -6694,7 +7197,9 @@ AfterShippingCostCalculated constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6763,7 +7268,9 @@ Set the additional fee.
 
 ===== Return type
     
-<1> link:order#order_events_aftershippingcostcalculated[AfterShippingCostCalculated^]
+<1> [[__plenty\modules\order\shipping\events\aftershippingcostcalculated]]
+
+    link:order#order_events_aftershippingcostcalculated[AfterShippingCostCalculated^]
 
     
 
@@ -6807,7 +7314,9 @@ Set the ID of the shipping profile.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6822,6 +7331,7 @@ a|`$shippingProfileId`
 
 [[order_shipping_models]]
 ===  Models
+[[order_models_defaultshipping]]
 ==== DefaultShipping
 
 The Default Shipping model is used to define the standard referrer, the standard shipping region and the payment methods. 
@@ -6884,6 +7394,7 @@ Returns this model as an array.
 
 [[order_countries_contracts]]
 ===  Contracts
+[[order_contracts_countryrepositorycontract]]
 ==== CountryRepositoryContract
 
 Repository for Country
@@ -6945,7 +7456,9 @@ public getCountryById($countryId):Plenty\Modules\Order\Shipping\Countries\Models
 
 ===== Return type
     
-<1> link:order#order_models_country[Country^]
+<1> [[__plenty\modules\order\shipping\countries\models\country]]
+
+    link:order#order_models_country[Country^]
 
     
 
@@ -6972,7 +7485,9 @@ public getCountriesList($active, $with):Illuminate\Support\Collection // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+<1> [[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     
 
@@ -7003,7 +7518,9 @@ public getActiveCountriesList():Illuminate\Support\Collection // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+<1> [[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     
 
@@ -7047,7 +7564,9 @@ public getCountryByIso($isoCode, $isoType):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -7078,7 +7597,9 @@ public getCountryStateByIso($countryId, $isoCode):Plenty\Modules\Order\Shipping\
 
 ===== Return type
     
-<1> link:order#order_models_countrystate[CountryState^]
+<1> [[__plenty\modules\order\shipping\countries\models\countrystate]]
+
+    link:order#order_models_countrystate[CountryState^]
 
     
 
@@ -7109,7 +7630,9 @@ Activates a country by a given ID.
 
 ===== Return type
     
-<1> link:order#order_models_country[Country^]
+<1> [[__plenty\modules\order\shipping\countries\models\country]]
+
+    link:order#order_models_country[Country^]
 
     
 
@@ -7136,7 +7659,9 @@ Deactivates a country by a given ID.
 
 ===== Return type
     
-<1> link:order#order_models_country[Country^]
+<1> [[__plenty\modules\order\shipping\countries\models\country]]
+
+    link:order#order_models_country[Country^]
 
     
 
@@ -7151,6 +7676,7 @@ a|`$countryId`
 
 [[order_countries_models]]
 ===  Models
+[[order_models_country]]
 ==== Country
 
 The country model
@@ -7221,6 +7747,7 @@ Returns this model as an array.
 
 
 
+[[order_models_countryname]]
 ==== CountryName
 
 country name
@@ -7267,6 +7794,7 @@ Returns this model as an array.
 
 
 
+[[order_models_countrystate]]
 ==== CountryState
 
 country state
@@ -7323,6 +7851,7 @@ Returns this model as an array.
 
 [[order_exportdocuments_contracts]]
 ===  Contracts
+[[order_contracts_exportdocumentscontract]]
 ==== ExportDocumentsContract
 
 The ExportDocumentsContract
@@ -7354,7 +7883,9 @@ List export documents by order ID
 
 ===== Return type
     
-<1> link:order#order_models_exportdocument[ExportDocument^]
+<1> [[__plenty\modules\order\shipping\exportdocuments\models\exportdocument]]
+
+    link:order#order_models_exportdocument[ExportDocument^]
 
     
 
@@ -7369,6 +7900,7 @@ a|`$orderId`
 
 [[order_exportdocuments_models]]
 ===  Models
+[[order_models_exportdocument]]
 ==== ExportDocument
 
 The Export Document model
@@ -7422,6 +7954,7 @@ Returns this model as an array.
 
 [[order_information_contracts]]
 ===  Contracts
+[[order_contracts_shippinginformationrepositorycontract]]
 ==== ShippingInformationRepositoryContract
 
 The ShippingInformationRepositoryContract is the interface for the shipping information repository. This interface allows to get shipping information by order ID, create new shipping information or update shipping information.
@@ -7453,7 +7986,9 @@ Get Shipping Information by an order ID
 
 ===== Return type
     
-<1> link:order#order_models_shippinginformation[ShippingInformation^]
+<1> [[__plenty\modules\order\shipping\information\models\shippinginformation]]
+
+    link:order#order_models_shippinginformation[ShippingInformation^]
 
     
 
@@ -7506,7 +8041,9 @@ Delete Shipping Information by an order ID
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -7533,7 +8070,9 @@ Create Shipping Information
 
 ===== Return type
     
-<1> link:order#order_models_shippinginformation[ShippingInformation^]
+<1> [[__plenty\modules\order\shipping\information\models\shippinginformation]]
+
+    link:order#order_models_shippinginformation[ShippingInformation^]
 
     
 
@@ -7560,7 +8099,9 @@ Update Additional Data of Shipping Information by Order ID
 
 ===== Return type
     
-<1> link:order#order_models_shippinginformation[ShippingInformation^]
+<1> [[__plenty\modules\order\shipping\information\models\shippinginformation]]
+
+    link:order#order_models_shippinginformation[ShippingInformation^]
 
     
 
@@ -7591,7 +8132,9 @@ Update Shipping Status of Shipping Information by Order ID
 
 ===== Return type
     
-<1> link:order#order_models_shippinginformation[ShippingInformation^]
+<1> [[__plenty\modules\order\shipping\information\models\shippinginformation]]
+
+    link:order#order_models_shippinginformation[ShippingInformation^]
 
     
 
@@ -7610,6 +8153,7 @@ a|`$orderId`
 
 [[order_information_models]]
 ===  Models
+[[order_models_shippinginformation]]
 ==== ShippingInformation
 
 ShippingInformationModel
@@ -7675,6 +8219,7 @@ Returns this model as an array.
 
 [[order_package_contracts]]
 ===  Contracts
+[[order_contracts_ordershippingpackageitemsrepositorycontract]]
 ==== OrderShippingPackageItemsRepositoryContract
 
 Create and get items in packages from order
@@ -7706,7 +8251,9 @@ Get items for a package
 
 ===== Return type
     
-<1> link:order#order_models_ordershippingpackageitems[OrderShippingPackageItems^]
+<1> [[__plenty\modules\order\shipping\package\models\ordershippingpackageitems]]
+
+    link:order#order_models_ordershippingpackageitems[OrderShippingPackageItems^]
 
     
 
@@ -7749,7 +8296,9 @@ Get all the packed items in the packages in the pallets in the order
 
 ===== Return type
     
-<1> link:order#order_models_ordershippingpackageitems[OrderShippingPackageItems^]
+<1> [[__plenty\modules\order\shipping\package\models\ordershippingpackageitems]]
+
+    link:order#order_models_ordershippingpackageitems[OrderShippingPackageItems^]
 
     
 
@@ -7792,7 +8341,9 @@ Get items for an order
 
 ===== Return type
     
-<1> link:order#order_models_ordershippingpackageitems[OrderShippingPackageItems^]
+<1> [[__plenty\modules\order\shipping\package\models\ordershippingpackageitems]]
+
+    link:order#order_models_ordershippingpackageitems[OrderShippingPackageItems^]
 
     
 
@@ -7955,7 +8506,7 @@ public updateItemsFromPackage($packageId, $itemId, $variationId, $data):int // <
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! 
 ====
 
@@ -8000,7 +8551,7 @@ public deleteItemsFromPackage($packageId, $itemId, $variationId):Plenty\Reposito
 ----
 
 
-[warning]
+[WARNING]
 .Deprecated! 
 ====
 
@@ -8013,7 +8564,9 @@ Delete a variation of an item from package in order
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+<1> [[__plenty\repositories\models\deleteresponse]]
+
+    link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
     
 
@@ -8035,6 +8588,7 @@ a|`$variationId`
 
 
 
+[[order_contracts_ordershippingpackagerepositorycontract]]
 ==== OrderShippingPackageRepositoryContract
 
 Create, get, update and delete order shipping packages.
@@ -8066,7 +8620,9 @@ Get an order shipping package
 
 ===== Return type
     
-<1> link:order#order_models_ordershippingpackage[OrderShippingPackage^]
+<1> [[__plenty\modules\order\shipping\package\models\ordershippingpackage]]
+
+    link:order#order_models_ordershippingpackage[OrderShippingPackage^]
 
     
 
@@ -8135,7 +8691,9 @@ Create an order shipping package
 
 ===== Return type
     
-<1> link:order#order_models_ordershippingpackage[OrderShippingPackage^]
+<1> [[__plenty\modules\order\shipping\package\models\ordershippingpackage]]
+
+    link:order#order_models_ordershippingpackage[OrderShippingPackage^]
 
     
 
@@ -8166,7 +8724,9 @@ Update an order shipping package
 
 ===== Return type
     
-<1> link:order#order_models_ordershippingpackage[OrderShippingPackage^]
+<1> [[__plenty\modules\order\shipping\package\models\ordershippingpackage]]
+
+    link:order#order_models_ordershippingpackage[OrderShippingPackage^]
 
     
 
@@ -8197,7 +8757,9 @@ Delete an order shipping package
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8224,7 +8786,9 @@ Delete all order shipping packages in a pallet
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8255,7 +8819,9 @@ Update all the packages in a pallet.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8278,6 +8844,7 @@ a|`$data`
 
 [[order_package_models]]
 ===  Models
+[[order_models_ordershippingpackage]]
 ==== OrderShippingPackage
 
 The order shipping package model
@@ -8382,7 +8949,9 @@ The order shipping package model
 |link:http://php.net/string[string^]
     |updatedAt
     |
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     |order
     |The order the package belongs to
@@ -8405,6 +8974,7 @@ Returns this model as an array.
 
 
 
+[[order_models_ordershippingpackageitems]]
 ==== OrderShippingPackageItems
 
 The relation between package, item and variation model
@@ -8461,6 +9031,7 @@ Returns this model as an array.
 
 [[order_packagetype_contracts]]
 ===  Contracts
+[[order_contracts_shippingpackagetyperepositorycontract]]
 ==== ShippingPackageTypeRepositoryContract
 
 The ShippingPackageTypeRepositoryContract is the interface for the shipping package type repository. This interface allows to list all shipping package types or to get a shipping package type by the ID.
@@ -8492,7 +9063,9 @@ Gets a shipping package type. The ID of the shipping package type must be specif
 
 ===== Return type
     
-<1> link:order#order_models_shippingpackagetype[ShippingPackageType^]
+<1> [[__plenty\modules\order\shipping\packagetype\models\shippingpackagetype]]
+
+    link:order#order_models_shippingpackagetype[ShippingPackageType^]
 
     
 
@@ -8524,6 +9097,7 @@ Lists shipping packages types.
 
 [[order_packagetype_models]]
 ===  Models
+[[order_models_shippingpackagetype]]
 ==== ShippingPackageType
 
 The shipping package type model.
@@ -8592,6 +9166,7 @@ Returns this model as an array.
 
 [[order_pallet_contracts]]
 ===  Contracts
+[[order_contracts_ordershippingpalletrepositorycontract]]
 ==== OrderShippingPalletRepositoryContract
 
 Create, get, update and delete order shipping pallet.
@@ -8623,7 +9198,9 @@ Get an order shipping pallet
 
 ===== Return type
     
-<1> link:order#order_models_ordershippingpallet[OrderShippingPallet^]
+<1> [[__plenty\modules\order\shipping\pallet\models\ordershippingpallet]]
+
+    link:order#order_models_ordershippingpallet[OrderShippingPallet^]
 
     
 
@@ -8710,7 +9287,9 @@ Create an order shipping pallet
 
 ===== Return type
     
-<1> link:order#order_models_ordershippingpallet[OrderShippingPallet^]
+<1> [[__plenty\modules\order\shipping\pallet\models\ordershippingpallet]]
+
+    link:order#order_models_ordershippingpallet[OrderShippingPallet^]
 
     
 
@@ -8737,7 +9316,9 @@ Update an order shipping pallet
 
 ===== Return type
     
-<1> link:order#order_models_ordershippingpallet[OrderShippingPallet^]
+<1> [[__plenty\modules\order\shipping\pallet\models\ordershippingpallet]]
+
+    link:order#order_models_ordershippingpallet[OrderShippingPallet^]
 
     
 
@@ -8768,7 +9349,9 @@ Delete an order shipping pallet
 
 ===== Return type
     
-<1> link:order#order_models_ordershippingpallet[OrderShippingPallet^]
+<1> [[__plenty\modules\order\shipping\pallet\models\ordershippingpallet]]
+
+    link:order#order_models_ordershippingpallet[OrderShippingPallet^]
 
     
 
@@ -8795,7 +9378,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8813,7 +9398,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8831,7 +9418,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8858,7 +9447,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8876,7 +9467,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8894,12 +9487,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[order_pallet_models]]
 ===  Models
+[[order_models_ordershippingpallet]]
 ==== OrderShippingPallet
 
 The order shipping pallet model.
@@ -8971,6 +9567,7 @@ Returns this model as an array.
 
 [[order_parcelservice_contracts]]
 ===  Contracts
+[[order_contracts_parcelserviceconstraintrepositorycontract]]
 ==== ParcelServiceConstraintRepositoryContract
 
 The ParcelServiceConstraintRepositoryContract is the interface for the parcel service constraint type repository.
@@ -9002,14 +9599,18 @@ public create($data):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |
@@ -9030,14 +9631,18 @@ public getById($id):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$id`
 |
@@ -9058,14 +9663,18 @@ public delete($id):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$id`
 |
@@ -9074,6 +9683,7 @@ a|`$id`
 
 [[order_parcelservice_models]]
 ===  Models
+[[order_models_parcelservice]]
 ==== ParcelService
 
 The Parcel Service Model
@@ -9113,11 +9723,15 @@ The Parcel Service Model
 |link:http://php.net/string[string^]
     |splitDelimiter
     |
-|link:order#order_models_shippingserviceprovider[ShippingServiceProvider^]
+|[[__plenty\modules\order\shipping\serviceprovider\models\shippingserviceprovider]]
+
+    link:order#order_models_shippingserviceprovider[ShippingServiceProvider^]
 
     |shippingServiceProvider
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |parcelServiceNames
     |
@@ -9140,6 +9754,7 @@ Returns this model as an array.
 
 
 
+[[order_models_parcelserviceconstraint]]
 ==== ParcelServiceConstraint
 
 The Parcel Service Constraint Model
@@ -9195,6 +9810,7 @@ Returns this model as an array.
 
 
 
+[[order_models_parcelservicename]]
 ==== ParcelServiceName
 
 The Parcel Service Name Model
@@ -9241,6 +9857,7 @@ Returns this model as an array.
 
 
 
+[[order_models_parcelservicepreset]]
 ==== ParcelServicePreset
 
 The Parcel Service Preset Model
@@ -9352,11 +9969,15 @@ The Parcel Service Preset Model
 |link:http://php.net/int[int^]
     |isPostOffice
     |Indicates whether the e.g. postfiliale is supported
-|link:order#order_models_parcelservice[ParcelService^]
+|[[__plenty\modules\order\shipping\parcelservice\models\parcelservice]]
+
+    link:order#order_models_parcelservice[ParcelService^]
 
     |parcelService
     |The parcel service.
-|link:order#order_models_parcelserviceregion[ParcelServiceRegion^]
+|[[__plenty\modules\order\shipping\parcelserviceregion\models\parcelserviceregion]]
+
+    link:order#order_models_parcelserviceregion[ParcelServiceRegion^]
 
     |parcelServiceRegionConstraint
     |The parcel service region constraint
@@ -9379,6 +10000,7 @@ Returns this model as an array.
 
 
 
+[[order_models_parcelservicepresetname]]
 ==== ParcelServicePresetName
 
 The Parcel Service Preset Name Model
@@ -9429,6 +10051,7 @@ Returns this model as an array.
 
 [[order_parcelserviceregion_contracts]]
 ===  Contracts
+[[order_contracts_parcelserviceregionnamerepositorycontract]]
 ==== ParcelServiceRegionNameRepositoryContract
 
 Get parcel service region name
@@ -9460,7 +10083,9 @@ Creates a Region
 
 ===== Return type
     
-<1> link:order#order_models_parcelserviceregionname[ParcelServiceRegionName^]
+<1> [[__plenty\modules\order\shipping\parcelserviceregion\models\parcelserviceregionname]]
+
+    link:order#order_models_parcelserviceregionname[ParcelServiceRegionName^]
 
     
 
@@ -9491,6 +10116,7 @@ Return all the regions
     
 
 
+[[order_contracts_parcelserviceregionrepositorycontract]]
 ==== ParcelServiceRegionRepositoryContract
 
 Get parcel service region
@@ -9522,7 +10148,9 @@ Creates a ParcelServiceRegion
 
 ===== Return type
     
-<1> link:order#order_models_parcelserviceregion[ParcelServiceRegion^]
+<1> [[__plenty\modules\order\shipping\parcelserviceregion\models\parcelserviceregion]]
+
+    link:order#order_models_parcelserviceregion[ParcelServiceRegion^]
 
     
 
@@ -9549,7 +10177,9 @@ Deletes a ParcelServiceRegion
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -9576,7 +10206,9 @@ Get a parcel service region
 
 ===== Return type
     
-<1> link:order#order_models_parcelserviceregion[ParcelServiceRegion^]
+<1> [[__plenty\modules\order\shipping\parcelserviceregion\models\parcelserviceregion]]
+
+    link:order#order_models_parcelserviceregion[ParcelServiceRegion^]
 
     
 
@@ -9625,6 +10257,7 @@ a|`$columns`
 
 [[order_parcelserviceregion_models]]
 ===  Models
+[[order_models_parcelserviceregion]]
 ==== ParcelServiceRegion
 
 The parcel service region model.
@@ -9677,6 +10310,7 @@ Returns this model as an array.
 
 
 
+[[order_models_parcelserviceregionname]]
 ==== ParcelServiceRegionName
 
 The parcel service region name model.
@@ -9724,6 +10358,7 @@ Returns this model as an array.
 
 [[order_returns_contracts]]
 ===  Contracts
+[[order_contracts_returnsrepositorycontract]]
 ==== ReturnsRepositoryContract
 
 The ReturnsRepositoryContract is the interface for the order returns repository. This interface allows to register, assign to order and list order returns.
@@ -9755,7 +10390,9 @@ public registerReturns($pluginName, $orderIds):Plenty\Modules\Order\Shipping\Ret
 
 ===== Return type
     
-<1> link:order#order_models_registerreturnsresult[RegisterReturnsResult^]
+<1> [[__plenty\modules\order\shipping\returns\models\registerreturnsresult]]
+
+    link:order#order_models_registerreturnsresult[RegisterReturnsResult^]
 
     
 
@@ -9786,7 +10423,9 @@ public getReturnsLabelById($labelId, $with):Plenty\Repositories\Models\Paginated
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -9817,7 +10456,9 @@ public assignLabel2Return($orderId, $returnsId):Plenty\Modules\Order\Shipping\Re
 
 ===== Return type
     
-<1> link:order#order_models_orderreturns[OrderReturns^]
+<1> [[__plenty\modules\order\shipping\returns\models\orderreturns]]
+
+    link:order#order_models_orderreturns[OrderReturns^]
 
     
 
@@ -9848,7 +10489,9 @@ public getOrderReturns($orderId, $with = [], $page = 1, $itemsPerPage = 50):Plen
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -9874,6 +10517,7 @@ a|`$itemsPerPage`
 
 
 
+[[order_contracts_returnsserviceproviderrepositorycontract]]
 ==== ReturnsServiceProviderRepositoryContract
 
 The ReturnsServiceProviderRepositoryContract is the interface for the returns service provider repository. This interface allows to list returns service providers.
@@ -9905,7 +10549,9 @@ public getReturnsServiceProviderList($columns = [], $page = 1, $itemsPerPage = 5
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -9948,7 +10594,9 @@ public findById($returnsServiceProviderId):Plenty\Modules\Order\Shipping\Returns
 
 ===== Return type
     
-<1> link:order#order_models_returnsserviceprovider[ReturnsServiceProvider^]
+<1> [[__plenty\modules\order\shipping\returns\models\returnsserviceprovider]]
+
+    link:order#order_models_returnsserviceprovider[ReturnsServiceProvider^]
 
     
 
@@ -10001,7 +10649,9 @@ public saveReturnsServiceProvider($pluginName, $returnProviderAlias = null):Plen
 
 ===== Return type
     
-<1> link:order#order_models_returnsserviceprovider[ReturnsServiceProvider^]
+<1> [[__plenty\modules\order\shipping\returns\models\returnsserviceprovider]]
+
+    link:order#order_models_returnsserviceprovider[ReturnsServiceProvider^]
 
     
 
@@ -10032,7 +10682,9 @@ public getReturnsServiceProvider($orderId):Plenty\Modules\Order\Shipping\Returns
 
 ===== Return type
     
-<1> link:order#order_models_returnsserviceprovider[ReturnsServiceProvider^]
+<1> [[__plenty\modules\order\shipping\returns\models\returnsserviceprovider]]
+
+    link:order#order_models_returnsserviceprovider[ReturnsServiceProvider^]
 
     
 
@@ -10059,12 +10711,15 @@ public pluginList():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[order_returns_models]]
 ===  Models
+[[order_models_failedregisterorderreturns]]
 ==== FailedRegisterOrderReturns
 
 The FailedRegisterOrderReturns model.
@@ -10096,7 +10751,9 @@ public addErrorMessage($errorMessage):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -10123,7 +10780,9 @@ public setOrderId($orderId):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -10150,14 +10809,18 @@ public addException($exception):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__exception[Exception^]
+|[[__\exception]]
+
+    link:miscellaneous#miscellaneous__exception[Exception^]
 
 a|`$exception`
 |
@@ -10178,7 +10841,9 @@ public get($key):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -10231,14 +10896,18 @@ public setAttributes($attributes):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$attributes`
 |
@@ -10259,7 +10928,9 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -10270,7 +10941,9 @@ Set a given attribute on the model.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -10317,7 +10990,9 @@ public changeValue($key, $callback):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -10354,7 +11029,9 @@ public offsetExists($offset):bool // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -10375,14 +11052,18 @@ public offsetGet($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -10403,19 +11084,25 @@ public offsetSet($offset, $value):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -10436,14 +11123,18 @@ public offsetUnset($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -10516,7 +11207,9 @@ public jsonSerialize():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -10534,7 +11227,9 @@ Fill the model with an array of attributes.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -10604,7 +11299,9 @@ Set the fillable attributes for the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -10641,7 +11338,9 @@ Determine whether an attribute should be cast to a native type.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$types`
 |
@@ -10662,7 +11361,9 @@ Decode the given JSON back into an array or object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -10680,6 +11381,7 @@ a|`$asObject`
 
 
 
+[[order_models_orderreturns]]
 ==== OrderReturns
 
 The model for OrderReturns
@@ -10710,7 +11412,9 @@ The model for OrderReturns
 |link:http://php.net/int[int^]
     |providerId
     |
-|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+|[[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
     |createdAt
     |
@@ -10723,7 +11427,9 @@ The model for OrderReturns
 |link:http://php.net/string[string^]
     |externalData
     |
-|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+|[[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
     |availableUntil
     |
@@ -10746,6 +11452,7 @@ Returns this model as an array.
 
 
 
+[[order_models_registerorderreturnsresponse]]
 ==== RegisterOrderReturnsResponse
 
 The RegisterOrderReturnsResponse model.
@@ -10777,14 +11484,18 @@ public addSuccessfullyRegisteredReturns($successfullyRegisteredReturn):void // <
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_successfullyregisteredorderreturns[SuccessfullyRegisteredOrderReturns^]
+|[[__plenty\modules\order\shipping\returns\models\successfullyregisteredorderreturns]]
+
+    link:order#order_models_successfullyregisteredorderreturns[SuccessfullyRegisteredOrderReturns^]
 
 a|`$successfullyRegisteredReturn`
 |
@@ -10805,14 +11516,18 @@ public addFailedRegisterOrderReturns($failedRegisterOrderReturn):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_failedregisterorderreturns[FailedRegisterOrderReturns^]
+|[[__plenty\modules\order\shipping\returns\models\failedregisterorderreturns]]
+
+    link:order#order_models_failedregisterorderreturns[FailedRegisterOrderReturns^]
 
 a|`$failedRegisterOrderReturn`
 |
@@ -10833,7 +11548,9 @@ public get($key):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -10886,14 +11603,18 @@ public setAttributes($attributes):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$attributes`
 |
@@ -10914,7 +11635,9 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -10925,7 +11648,9 @@ Set a given attribute on the model.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -10972,7 +11697,9 @@ public changeValue($key, $callback):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -11009,7 +11736,9 @@ public offsetExists($offset):bool // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -11030,14 +11759,18 @@ public offsetGet($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -11058,19 +11791,25 @@ public offsetSet($offset, $value):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -11091,14 +11830,18 @@ public offsetUnset($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -11171,7 +11914,9 @@ public jsonSerialize():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -11189,7 +11934,9 @@ Fill the model with an array of attributes.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -11259,7 +12006,9 @@ Set the fillable attributes for the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -11296,7 +12045,9 @@ Determine whether an attribute should be cast to a native type.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$types`
 |
@@ -11317,7 +12068,9 @@ Decode the given JSON back into an array or object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -11335,6 +12088,7 @@ a|`$asObject`
 
 
 
+[[order_models_registerreturnsresult]]
 ==== RegisterReturnsResult
 
 The model for RegisterReturnsResult
@@ -11378,6 +12132,7 @@ Returns this model as an array.
 
 
 
+[[order_models_returnsserviceprovider]]
 ==== ReturnsServiceProvider
 
 ReturnsServiceProvider
@@ -11405,11 +12160,15 @@ ReturnsServiceProvider
 |link:http://php.net/int[int^]
     |pluginId
     |The optional ID of the plugin when the returns service provider is registered as a plugin
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The time the returns service provider was created
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The time the returns service provider was updated
@@ -11432,6 +12191,7 @@ Returns this model as an array.
 
 
 
+[[order_models_successfullyregisteredorderreturns]]
 ==== SuccessfullyRegisteredOrderReturns
 
 The model for SuccessfullyRegisteredOrderReturns
@@ -11463,7 +12223,9 @@ public setOrderId($orderId):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -11490,7 +12252,9 @@ public setFileName($fileName):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -11517,7 +12281,9 @@ public setExternalNumber($externalNumber):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -11544,7 +12310,9 @@ public setExternalData($externalData):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -11571,7 +12339,9 @@ public setAvailableUntil($availiableUntil):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -11598,7 +12368,9 @@ public setLabelBase64($labelBase64):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -11625,7 +12397,9 @@ public setReturnsOrderId($returnsOrderId):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -11652,7 +12426,9 @@ public get($key):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -11705,14 +12481,18 @@ public setAttributes($attributes):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$attributes`
 |
@@ -11733,7 +12513,9 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -11744,7 +12526,9 @@ Set a given attribute on the model.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -11791,7 +12575,9 @@ public changeValue($key, $callback):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -11828,7 +12614,9 @@ public offsetExists($offset):bool // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -11849,14 +12637,18 @@ public offsetGet($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -11877,19 +12669,25 @@ public offsetSet($offset, $value):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -11910,14 +12708,18 @@ public offsetUnset($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -11990,7 +12792,9 @@ public jsonSerialize():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -12008,7 +12812,9 @@ Fill the model with an array of attributes.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -12078,7 +12884,9 @@ Set the fillable attributes for the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -12115,7 +12923,9 @@ Determine whether an attribute should be cast to a native type.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$types`
 |
@@ -12136,7 +12946,9 @@ Decode the given JSON back into an array or object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -12155,6 +12967,7 @@ a|`$asObject`
 
 [[order_returns_services]]
 ===  Services
+[[order_services_registerreturnsservice]]
 ==== RegisterReturnsService
 
 The RegisterReturnsService class offers the possibility to register returns, get returns label and persist returns label.
@@ -12186,7 +12999,9 @@ public registerReturns($pluginName, $orderIds):Plenty\Modules\Order\Shipping\Ret
 
 ===== Return type
     
-<1> link:order#order_models_registerreturnsresult[RegisterReturnsResult^]
+<1> [[__plenty\modules\order\shipping\returns\models\registerreturnsresult]]
+
+    link:order#order_models_registerreturnsresult[RegisterReturnsResult^]
 
     
 
@@ -12217,7 +13032,9 @@ public persistLabel($labelBase64, $returns):Plenty\Modules\Document\Models\Docum
 
 ===== Return type
     
-<1> link:document#document_models_document[Document^]
+<1> [[__plenty\modules\document\models\document]]
+
+    link:document#document_models_document[Document^]
 
     
 
@@ -12228,7 +13045,9 @@ public persistLabel($labelBase64, $returns):Plenty\Modules\Document\Models\Docum
 a|`$labelBase64`
 |
 
-|link:order#order_models_orderreturns[OrderReturns^]
+|[[__plenty\modules\order\shipping\returns\models\orderreturns]]
+
+    link:order#order_models_orderreturns[OrderReturns^]
 
 a|`$returns`
 |
@@ -12255,7 +13074,9 @@ public getLabel($orderReturns):string // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_orderreturns[OrderReturns^]
+|[[__plenty\modules\order\shipping\returns\models\orderreturns]]
+
+    link:order#order_models_orderreturns[OrderReturns^]
 
 a|`$orderReturns`
 |
@@ -12263,6 +13084,7 @@ a|`$orderReturns`
 
 
 
+[[order_services_returnsserviceproviderservice]]
 ==== ReturnsServiceProviderService
 
 The ReturnsServiceProviderService class offers the possibility to register a returns service provider class and method that can be called by plentymarkets returns controllers.
@@ -12332,7 +13154,9 @@ Get returns service provider by id
 
 ===== Return type
     
-<1> link:order#order_entries_returnsserviceproviderentry[ReturnsServiceProviderEntry^]
+<1> [[__plenty\modules\order\shipping\returns\services\entries\returnsserviceproviderentry]]
+
+    link:order#order_entries_returnsserviceproviderentry[ReturnsServiceProviderEntry^]
 
     
 
@@ -12380,6 +13204,7 @@ a|`$methodName`
 
 [[order_services_entries]]
 ===  Entries
+[[order_entries_returnsserviceproviderentry]]
 ==== ReturnsServiceProviderEntry
 
 The returns provider entry contains all information needed to use module returns in plentymarkets returns .
@@ -12428,7 +13253,9 @@ Set the
 
 ===== Return type
     
-<1> link:order#order_entries_returnsserviceproviderentry[ReturnsServiceProviderEntry^]
+<1> [[__plenty\modules\order\shipping\returns\services\entries\returnsserviceproviderentry]]
+
+    link:order#order_entries_returnsserviceproviderentry[ReturnsServiceProviderEntry^]
 
     
 
@@ -12472,7 +13299,9 @@ Set the
 
 ===== Return type
     
-<1> link:order#order_entries_returnsserviceproviderentry[ReturnsServiceProviderEntry^]
+<1> [[__plenty\modules\order\shipping\returns\services\entries\returnsserviceproviderentry]]
+
+    link:order#order_entries_returnsserviceproviderentry[ReturnsServiceProviderEntry^]
 
     
 
@@ -12572,6 +13401,7 @@ public getUseParentOrderId():bool // <1>
     
 
 
+[[order_entries_shippingserviceproviderentry]]
 ==== ShippingServiceProviderEntry
 
 The shipping provider entry contains all information needed to use module shipping in plentymarkets shipping .
@@ -12620,7 +13450,9 @@ Get the
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -12638,7 +13470,9 @@ Set the
 
 ===== Return type
     
-<1> link:order#order_entries_shippingserviceproviderentry[ShippingServiceProviderEntry^]
+<1> [[__plenty\modules\order\shipping\serviceprovider\services\entries\shippingserviceproviderentry]]
+
+    link:order#order_entries_shippingserviceproviderentry[ShippingServiceProviderEntry^]
 
     
 
@@ -12682,7 +13516,9 @@ Set the
 
 ===== Return type
     
-<1> link:order#order_entries_shippingserviceproviderentry[ShippingServiceProviderEntry^]
+<1> [[__plenty\modules\order\shipping\serviceprovider\services\entries\shippingserviceproviderentry]]
+
+    link:order#order_entries_shippingserviceproviderentry[ShippingServiceProviderEntry^]
 
     
 
@@ -12752,6 +13588,7 @@ a|`$methodName`
 
 [[order_serviceprovider_contracts]]
 ===  Contracts
+[[order_contracts_shippingserviceproviderpluginrepositorycontract]]
 ==== ShippingServiceProviderPluginRepositoryContract
 
 The ShippingServiceProviderPluginRepositoryContract is the interface for the shipping service provider plugin repository. This interface allows to list shipping service provider plugins.
@@ -12783,7 +13620,9 @@ public plugins():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -12801,7 +13640,9 @@ public filteredPluginList($filter):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -12815,6 +13656,7 @@ a|`$filter`
 
 
 
+[[order_contracts_shippingserviceproviderrepositorycontract]]
 ==== ShippingServiceProviderRepositoryContract
 
 The ShippingServiceProviderRepositoryContract is the interface for the shipping service provider repository. This interface allows to list shipping service providers.
@@ -12846,7 +13688,9 @@ Lists shipping service providers.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -12889,7 +13733,9 @@ Gets a shipping service provider. The ID of the shipping service provider must b
 
 ===== Return type
     
-<1> link:order#order_models_shippingserviceprovider[ShippingServiceProvider^]
+<1> [[__plenty\modules\order\shipping\serviceprovider\models\shippingserviceprovider]]
+
+    link:order#order_models_shippingserviceprovider[ShippingServiceProvider^]
 
     
 
@@ -12916,7 +13762,9 @@ Gets a shipping service provider. The name of the shipping service provider must
 
 ===== Return type
     
-<1> link:order#order_models_shippingserviceprovider[ShippingServiceProvider^]
+<1> [[__plenty\modules\order\shipping\serviceprovider\models\shippingserviceprovider]]
+
+    link:order#order_models_shippingserviceprovider[ShippingServiceProvider^]
 
     
 
@@ -12943,7 +13791,9 @@ Creates a shipping service provider or updates it if already existing
 
 ===== Return type
     
-<1> link:order#order_models_shippingserviceprovider[ShippingServiceProvider^]
+<1> [[__plenty\modules\order\shipping\serviceprovider\models\shippingserviceprovider]]
+
+    link:order#order_models_shippingserviceprovider[ShippingServiceProvider^]
 
     
 
@@ -12978,7 +13828,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -12996,12 +13848,15 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[order_serviceprovider_models]]
 ===  Models
+[[order_models_failedregistershipment]]
 ==== FailedRegisterShipment
 
 FailedRegisterShipment model.
@@ -13033,7 +13888,9 @@ public addErrorMessage($errorMessage):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -13060,14 +13917,18 @@ public addException($exception):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__exception[Exception^]
+|[[__\exception]]
+
+    link:miscellaneous#miscellaneous__exception[Exception^]
 
 a|`$exception`
 |
@@ -13088,7 +13949,9 @@ public setOrderId($orderId):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -13115,7 +13978,9 @@ public get($key):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -13168,14 +14033,18 @@ public setAttributes($attributes):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$attributes`
 |
@@ -13196,7 +14065,9 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -13207,7 +14078,9 @@ Set a given attribute on the model.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -13254,7 +14127,9 @@ public changeValue($key, $callback):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -13291,7 +14166,9 @@ public offsetExists($offset):bool // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -13312,14 +14189,18 @@ public offsetGet($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -13340,19 +14221,25 @@ public offsetSet($offset, $value):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -13373,14 +14260,18 @@ public offsetUnset($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -13453,7 +14344,9 @@ public jsonSerialize():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -13471,7 +14364,9 @@ Fill the model with an array of attributes.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -13541,7 +14436,9 @@ Set the fillable attributes for the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -13578,7 +14475,9 @@ Determine whether an attribute should be cast to a native type.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$types`
 |
@@ -13599,7 +14498,9 @@ Decode the given JSON back into an array or object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -13617,6 +14518,7 @@ a|`$asObject`
 
 
 
+[[order_models_registershipmentresponse]]
 ==== RegisterShipmentResponse
 
 RegisterShipmentResponse model.
@@ -13648,14 +14550,18 @@ public addSuccessfullyRegisteredShipment($successfullyRegisteredShipment):void /
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_successfullyregisteredshipment[SuccessfullyRegisteredShipment^]
+|[[__plenty\modules\order\shipping\serviceprovider\models\successfullyregisteredshipment]]
+
+    link:order#order_models_successfullyregisteredshipment[SuccessfullyRegisteredShipment^]
 
 a|`$successfullyRegisteredShipment`
 |Object containing data for successfully registering a shipment
@@ -13676,14 +14582,18 @@ public addFailedRegisterShipment($failedRegisterShipment):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_failedregistershipment[FailedRegisterShipment^]
+|[[__plenty\modules\order\shipping\serviceprovider\models\failedregistershipment]]
+
+    link:order#order_models_failedregistershipment[FailedRegisterShipment^]
 
 a|`$failedRegisterShipment`
 |Object containing data when shipment registration was not successful, e.g. incorrect or missing postcode
@@ -13704,7 +14614,9 @@ public get($key):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -13757,14 +14669,18 @@ public setAttributes($attributes):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$attributes`
 |
@@ -13785,7 +14701,9 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -13796,7 +14714,9 @@ Set a given attribute on the model.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -13843,7 +14763,9 @@ public changeValue($key, $callback):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -13880,7 +14802,9 @@ public offsetExists($offset):bool // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -13901,14 +14825,18 @@ public offsetGet($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -13929,19 +14857,25 @@ public offsetSet($offset, $value):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -13962,14 +14896,18 @@ public offsetUnset($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -14042,7 +14980,9 @@ public jsonSerialize():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -14060,7 +15000,9 @@ Fill the model with an array of attributes.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -14130,7 +15072,9 @@ Set the fillable attributes for the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -14167,7 +15111,9 @@ Determine whether an attribute should be cast to a native type.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$types`
 |
@@ -14188,7 +15134,9 @@ Decode the given JSON back into an array or object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -14206,6 +15154,7 @@ a|`$asObject`
 
 
 
+[[order_models_shippingserviceprovider]]
 ==== ShippingServiceProvider
 
 The service provider model
@@ -14236,11 +15185,15 @@ The service provider model
 |link:http://php.net/string[string^]
     |icon
     |The optional path of the icon
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The time the shipping service provider was created
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The time the shipping service provider was updated
@@ -14263,6 +15216,7 @@ Returns this model as an array.
 
 
 
+[[order_models_successfullyregisteredshipment]]
 ==== SuccessfullyRegisteredShipment
 
 SuccessfullyRegisteredShipment model.
@@ -14294,7 +15248,9 @@ Set the order ID.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -14321,7 +15277,9 @@ Set the variable $hasNewPackageNumber.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -14348,7 +15306,9 @@ Add a message.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -14375,14 +15335,18 @@ Add a package.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_ordershippingpackage[OrderShippingPackage^]
+|[[__plenty\modules\order\shipping\package\models\ordershippingpackage]]
+
+    link:order#order_models_ordershippingpackage[OrderShippingPackage^]
 
 a|`$package`
 |The order shipping package
@@ -14403,7 +15367,9 @@ public get($key):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -14456,14 +15422,18 @@ public setAttributes($attributes):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$attributes`
 |
@@ -14484,7 +15454,9 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -14495,7 +15467,9 @@ Set a given attribute on the model.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -14542,7 +15516,9 @@ public changeValue($key, $callback):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -14579,7 +15555,9 @@ public offsetExists($offset):bool // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -14600,14 +15578,18 @@ public offsetGet($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -14628,19 +15610,25 @@ public offsetSet($offset, $value):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -14661,14 +15649,18 @@ public offsetUnset($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -14741,7 +15733,9 @@ public jsonSerialize():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -14759,7 +15753,9 @@ Fill the model with an array of attributes.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -14829,7 +15825,9 @@ Set the fillable attributes for the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -14866,7 +15864,9 @@ Determine whether an attribute should be cast to a native type.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$types`
 |
@@ -14887,7 +15887,9 @@ Decode the given JSON back into an array or object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -14906,6 +15908,7 @@ a|`$asObject`
 
 [[order_serviceprovider_services]]
 ===  Services
+[[order_services_shippingserviceproviderservice]]
 ==== ShippingServiceProviderService
 
 The ShippingServiceProviderService class offers the possibility to register a shipping provider class and method that can be called by plentymarkets shipping controllers.
@@ -14947,12 +15950,16 @@ public registerShippingProvider($shippingServiceProviderCode, $shippingServicePr
 a|`$shippingServiceProviderCode`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$shippingServiceProviderNames`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$shippingServiceProviderClasses`
 |
@@ -14994,6 +16001,7 @@ a|`$methodName`
 
 [[order_address_contracts]]
 ===  Contracts
+[[order_contracts_orderaddressrepositorycontract]]
 ==== OrderAddressRepositoryContract
 
 The OrderAddressRepositoryContract is the interface for the order address repository. This interface allows you to get, create, update and delete addresses of an order.
@@ -15025,7 +16033,9 @@ Get an address of an order
 
 ===== Return type
     
-<1> link:account#account_models_address[Address^]
+<1> [[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     
 
@@ -15056,7 +16066,9 @@ Get an address of a scheduler order
 
 ===== Return type
     
-<1> link:account#account_models_address[Address^]
+<1> [[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     
 
@@ -15087,7 +16099,9 @@ Create an address for an order
 
 ===== Return type
     
-<1> link:account#account_models_address[Address^]
+<1> [[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     
 
@@ -15132,7 +16146,9 @@ Update an address of an order
 
 ===== Return type
     
-<1> link:account#account_models_address[Address^]
+<1> [[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     
 
@@ -15181,7 +16197,9 @@ Get an address
 
 ===== Return type
     
-<1> link:account#account_models_address[Address^]
+<1> [[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     
 
@@ -15212,7 +16230,9 @@ List addresses of an an order
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+<1> [[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     
 
@@ -15239,7 +16259,9 @@ Get an address of an order
 
 ===== Return type
     
-<1> link:account#account_models_address[Address^]
+<1> [[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     
 
@@ -15284,7 +16306,9 @@ Get an address of a scheduler
 
 ===== Return type
     
-<1> link:account#account_models_address[Address^]
+<1> [[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     
 
@@ -15329,7 +16353,9 @@ Create an address relation from an order to an address
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -15374,7 +16400,9 @@ Create an address relation from a scheduler to an address
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -15454,6 +16482,7 @@ a|`$typeId`
 
 [[order_booking_contracts]]
 ===  Contracts
+[[order_contracts_orderbookingrepositorycontract]]
 ==== OrderBookingRepositoryContract
 
 Book orders, order items and order item transactions.
@@ -15485,7 +16514,9 @@ Book an order
 
 ===== Return type
     
-<1> link:order#order_models_orderbooking[OrderBooking^]
+<1> [[__plenty\modules\order\booking\models\orderbooking]]
+
+    link:order#order_models_orderbooking[OrderBooking^]
 
     
 
@@ -15516,7 +16547,9 @@ Book an order item
 
 ===== Return type
     
-<1> link:order#order_models_orderbooking[OrderBooking^]
+<1> [[__plenty\modules\order\booking\models\orderbooking]]
+
+    link:order#order_models_orderbooking[OrderBooking^]
 
     
 
@@ -15547,7 +16580,9 @@ Book order item transactions
 
 ===== Return type
     
-<1> link:order#order_models_orderbooking[OrderBooking^]
+<1> [[__plenty\modules\order\booking\models\orderbooking]]
+
+    link:order#order_models_orderbooking[OrderBooking^]
 
     
 
@@ -15570,6 +16605,7 @@ a|`$deliveryNoteNumber`
 
 [[order_booking_models]]
 ===  Models
+[[order_models_orderbooking]]
 ==== OrderBooking
 
 The order booking model.
@@ -15617,6 +16653,7 @@ Returns this model as an array.
 
 [[order_contactwish_contracts]]
 ===  Contracts
+[[order_contracts_contactwishrepositorycontract]]
 ==== ContactWishRepositoryContract
 
 This interface allows you to get and create contact wishes.
@@ -15648,7 +16685,9 @@ Get the contact wish
 
 ===== Return type
     
-<1> link:order#order_models_contactwish[ContactWish^]
+<1> [[__plenty\modules\order\contactwish\models\contactwish]]
+
+    link:order#order_models_contactwish[ContactWish^]
 
     
 
@@ -15675,7 +16714,9 @@ Create a contact wish
 
 ===== Return type
     
-<1> link:order#order_models_contactwish[ContactWish^]
+<1> [[__plenty\modules\order\contactwish\models\contactwish]]
+
+    link:order#order_models_contactwish[ContactWish^]
 
     
 
@@ -15694,6 +16735,7 @@ a|`$text`
 
 [[order_contactwish_models]]
 ===  Models
+[[order_models_contactwish]]
 ==== ContactWish
 
 The contact wish model.
@@ -15738,6 +16780,7 @@ Returns this model as an array.
 
 [[order_date_contracts]]
 ===  Contracts
+[[order_contracts_orderdaterepositorycontract]]
 ==== OrderDateRepositoryContract
 
 The OrderDateRepositoryContract contains the functionality to find available OrderDateTypes with their names in a specific language. Furthermore it is possible to create new OrderDateTypes, to update or delete existing date types and to create date type names for a language.
@@ -15769,7 +16812,9 @@ List names of a date type
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -15796,7 +16841,9 @@ Get a name of a date type
 
 ===== Return type
     
-<1> link:order#order_models_orderdatetypename[OrderDateTypeName^]
+<1> [[__plenty\modules\order\date\models\orderdatetypename]]
+
+    link:order#order_models_orderdatetypename[OrderDateTypeName^]
 
     
 
@@ -15827,7 +16874,9 @@ List date types
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -15854,7 +16903,9 @@ Get a date type
 
 ===== Return type
     
-<1> link:order#order_models_orderdatetype[OrderDateType^]
+<1> [[__plenty\modules\order\date\models\orderdatetype]]
+
+    link:order#order_models_orderdatetype[OrderDateType^]
 
     
 
@@ -15881,7 +16932,9 @@ Create an order date
 
 ===== Return type
     
-<1> link:order#order_models_orderdate[OrderDate^]
+<1> [[__plenty\modules\order\date\models\orderdate]]
+
+    link:order#order_models_orderdate[OrderDate^]
 
     
 
@@ -15908,7 +16961,9 @@ Update a date
 
 ===== Return type
     
-<1> link:order#order_models_orderdate[OrderDate^]
+<1> [[__plenty\modules\order\date\models\orderdate]]
+
+    link:order#order_models_orderdate[OrderDate^]
 
     
 
@@ -15939,7 +16994,9 @@ Create or update an order date
 
 ===== Return type
     
-<1> link:order#order_models_orderdate[OrderDate^]
+<1> [[__plenty\modules\order\date\models\orderdate]]
+
+    link:order#order_models_orderdate[OrderDate^]
 
     
 
@@ -15992,7 +17049,9 @@ Delete an order date from an order by the type of the order date
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -16023,7 +17082,9 @@ Get an order date from an order by the type of the order date
 
 ===== Return type
     
-<1> link:order#order_models_orderdate[OrderDate^]
+<1> [[__plenty\modules\order\date\models\orderdate]]
+
+    link:order#order_models_orderdate[OrderDate^]
 
     
 
@@ -16054,7 +17115,9 @@ List order dates of an order
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -16068,6 +17131,7 @@ a|`$orderId`
 
 
 
+[[order_contracts_orderitemdaterepositorycontract]]
 ==== OrderItemDateRepositoryContract
 
 The OrderItemDateRepositoryContract contains the functionality to get, create, update and delete OrderItemDate instances.
@@ -16099,7 +17163,9 @@ Get an order item date
 
 ===== Return type
     
-<1> link:order#order_models_orderitemdate[OrderItemDate^]
+<1> [[__plenty\modules\order\date\models\orderitemdate]]
+
+    link:order#order_models_orderitemdate[OrderItemDate^]
 
     
 
@@ -16126,7 +17192,9 @@ Create an order item date
 
 ===== Return type
     
-<1> link:order#order_models_orderitemdate[OrderItemDate^]
+<1> [[__plenty\modules\order\date\models\orderitemdate]]
+
+    link:order#order_models_orderitemdate[OrderItemDate^]
 
     
 
@@ -16153,7 +17221,9 @@ Update an order date
 
 ===== Return type
     
-<1> link:order#order_models_orderitemdate[OrderItemDate^]
+<1> [[__plenty\modules\order\date\models\orderitemdate]]
+
+    link:order#order_models_orderitemdate[OrderItemDate^]
 
     
 
@@ -16184,7 +17254,9 @@ Create or update an order item date
 
 ===== Return type
     
-<1> link:order#order_models_orderitemdate[OrderItemDate^]
+<1> [[__plenty\modules\order\date\models\orderitemdate]]
+
+    link:order#order_models_orderitemdate[OrderItemDate^]
 
     
 
@@ -16237,7 +17309,9 @@ Get an order item date by an order item and an order date type.
 
 ===== Return type
     
-<1> link:order#order_models_orderitemdate[OrderItemDate^]
+<1> [[__plenty\modules\order\date\models\orderitemdate]]
+
+    link:order#order_models_orderitemdate[OrderItemDate^]
 
     
 
@@ -16268,7 +17342,9 @@ Create an order item date by an order item and an order date type.
 
 ===== Return type
     
-<1> link:order#order_models_orderitemdate[OrderItemDate^]
+<1> [[__plenty\modules\order\date\models\orderitemdate]]
+
+    link:order#order_models_orderitemdate[OrderItemDate^]
 
     
 
@@ -16303,7 +17379,9 @@ Update an order item date by an order item and an order date type.
 
 ===== Return type
     
-<1> link:order#order_models_orderitemdate[OrderItemDate^]
+<1> [[__plenty\modules\order\date\models\orderitemdate]]
+
+    link:order#order_models_orderitemdate[OrderItemDate^]
 
     
 
@@ -16368,7 +17446,9 @@ List order item dates of an order item.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -16383,6 +17463,7 @@ a|`$orderItemId`
 
 [[order_date_models]]
 ===  Models
+[[order_models_orderdate]]
 ==== OrderDate
 
 The OrderDate model.
@@ -16429,19 +17510,27 @@ The OrderDate model.
 <li>Purchase date = 16</li>
 <li>Finish date = 17</li>
 </ul>
-|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+|[[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
     |date
     |The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date when the date was created
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date when the date was last updated
-|link:order#order_models_orderdatetype[OrderDateType^]
+|[[__plenty\modules\order\date\models\orderdatetype]]
+
+    link:order#order_models_orderdatetype[OrderDateType^]
 
     |type
     |The type of date
@@ -16464,6 +17553,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderdatetype]]
 ==== OrderDateType
 
 The OrderDateType model.
@@ -16508,11 +17598,15 @@ The OrderDateType model.
 |link:http://php.net/int[int^]
     |position
     |The position for sorting
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |names
     |The names for this OrderDateType
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |orderDates
     |The actual dates that belong to the order date type
@@ -16535,6 +17629,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderdatetypename]]
 ==== OrderDateTypeName
 
 The OrderDateTypeName model. Order date types can have several names. One name per language. Each name has a unique ID.
@@ -16579,7 +17674,9 @@ The OrderDateTypeName model. Order date types can have several names. One name p
 |link:http://php.net/string[string^]
     |name
     |The name of the order date type
-|link:order#order_models_orderdatetype[OrderDateType^]
+|[[__plenty\modules\order\date\models\orderdatetype]]
+
+    link:order#order_models_orderdatetype[OrderDateType^]
 
     |type
     |The date type that this name belongs to
@@ -16602,6 +17699,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderitemdate]]
 ==== OrderItemDate
 
 The OrderItemDate model.
@@ -16634,19 +17732,27 @@ The OrderItemDate model.
 <li>End date = 10</li>
 <li>Estimated delivery date = 11</li>
 </ul>
-|link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+|[[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
     |date
     |The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date when the date was created
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date when the date was last updated
-|link:order#order_models_orderdatetype[OrderDateType^]
+|[[__plenty\modules\order\date\models\orderdatetype]]
+
+    link:order#order_models_orderdatetype[OrderDateType^]
 
     |type
     |The type of the date.  The following date types are available:
@@ -16664,7 +17770,9 @@ The OrderItemDate model.
 <li>Possible delivery date = 11</li>
 <li>Market transfer date = 12</li>
 </ul>
-|link:order#order_models_orderitem[OrderItem^]
+|[[__plenty\modules\order\models\orderitem]]
+
+    link:order#order_models_orderitem[OrderItem^]
 
     |orderItem
     |The order item the date belongs to.
@@ -16691,6 +17799,7 @@ Returns this model as an array.
 
 [[order_deliveryorder_contracts]]
 ===  Contracts
+[[order_contracts_deliveryorderrepositorycontract]]
 ==== DeliveryOrderRepositoryContract
 
 The DeliveryOrderRepositoryContract is the interface for the delivery order repository. This interface allows you to create, update or delete delivery orders. A delivery order will be created according to a parent order and can either be created manually or automatically.
@@ -16722,7 +17831,9 @@ Create a delivery order
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -16749,7 +17860,9 @@ Update a delivery order
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -16780,7 +17893,9 @@ Delete a delivery order
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -16833,7 +17948,9 @@ Create a delivery order from a parent order
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -16864,7 +17981,9 @@ Create delivery orders automatically for all order items
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_support_collection[Collection^]
+<1> [[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     
 
@@ -16891,7 +18010,9 @@ Update currency
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -16913,6 +18034,7 @@ a|`$data`
 
 [[order_documents_contracts]]
 ===  Contracts
+[[order_contracts_documentaccountingsummaryrepositorycontract]]
 ==== DocumentAccountingSummaryRepositoryContract
 
 Get document accounting summaries.
@@ -16944,7 +18066,9 @@ Lists document accounting summaries. A document accounting summary is saved alon
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -16975,7 +18099,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -17002,7 +18128,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -17020,7 +18148,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -17038,11 +18168,14 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
+[[order_contracts_orderdocumentstoragecontract]]
 ==== OrderDocumentStorageContract
 
 Provides methods to store, get and delete order document files. The files are stored on an AWS S3 storage by default. The implementation for this contract can be replaced by your own implementation.
@@ -17100,7 +18233,9 @@ Store a file on the storage.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -17131,7 +18266,9 @@ Get a file from the storage
 
 ===== Return type
     
-<1> link:cloud#cloud_models_storageobject[StorageObject^]
+<1> [[__plenty\modules\cloud\storage\models\storageobject]]
+
+    link:cloud#cloud_models_storageobject[StorageObject^]
 
     
 
@@ -17175,6 +18312,7 @@ a|`$path`
 
 [[order_events_canceled]]
 ===  Canceled
+[[order_canceled_afterordercanceled]]
 ==== AfterOrderCanceled
 
 An event class fired after an order is canceled.
@@ -17206,14 +18344,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -17234,11 +18376,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_canceled_beforeordercanceled]]
 ==== BeforeOrderCanceled
 
 An event class fired before an order will be canceled.
@@ -17270,14 +18415,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -17298,12 +18447,15 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 [[order_events_changed]]
 ===  Changed
+[[order_changed_orderstatuschanged]]
 ==== OrderStatusChanged
 
 An event class fired after the status of an order has changed.
@@ -17335,14 +18487,18 @@ OrderStatusChanged constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -17384,12 +18540,15 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 [[order_events_created]]
 ===  Created
+[[order_created_creditnotecreated]]
 ==== CreditNoteCreated
 
 An event class fired after a new credit note is created.
@@ -17421,14 +18580,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -17449,11 +18612,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_created_deliveryordercreated]]
 ==== DeliveryOrderCreated
 
 An event class fired after a new delivery order is created.
@@ -17485,14 +18651,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -17513,11 +18683,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_created_multicreditnotecreated]]
 ==== MultiCreditNoteCreated
 
 An event class fired after a new multi credit note is created.
@@ -17549,14 +18722,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -17577,11 +18754,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_created_multiordercreated]]
 ==== MultiOrderCreated
 
 An event class fired after a new multi order is created.
@@ -17613,14 +18793,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -17641,11 +18825,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_created_repaircreated]]
 ==== RepairCreated
 
 An event class fired after a new repair is created.
@@ -17677,14 +18864,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -17705,11 +18896,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_created_returncreated]]
 ==== ReturnCreated
 
 An event class fired after a new returns is created.
@@ -17741,14 +18935,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -17769,11 +18967,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_created_salesordercreated]]
 ==== SalesOrderCreated
 
 An event class fired after a new sales order is created.
@@ -17805,14 +19006,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -17833,11 +19038,14 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
 
+[[order_created_warrantycreated]]
 ==== WarrantyCreated
 
 An event class fired after a new warranty is created.
@@ -17869,14 +19077,18 @@ OrderEvent constructor.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -17897,7 +19109,9 @@ Get the order instance.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -17906,6 +19120,7 @@ Get the order instance.
 
 [[order_injection_contracts]]
 ===  Contracts
+[[order_contracts_orderinjectiononcreatecontract]]
 ==== OrderInjectionOnCreateContract
 
 Contract for injections on create.
@@ -17950,6 +19165,7 @@ a|`$data`
 
 
 
+[[order_contracts_orderinjectiononupdatecontract]]
 ==== OrderInjectionOnUpdateContract
 
 Contract for injections on update.
@@ -17987,7 +19203,9 @@ Manipulate the order data on update.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -17999,6 +19217,7 @@ a|`$data`
 
 
 
+[[order_contracts_orderinjectionservicecontract]]
 ==== OrderInjectionServiceContract
 
 Service to register injections for order creation.
@@ -18030,7 +19249,9 @@ Register an injection on create before the validation.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -18061,7 +19282,9 @@ Register an injection on create before the sums calculation.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -18092,7 +19315,9 @@ Register an injection on create after the sums calculation.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -18123,7 +19348,9 @@ Register an injection on update before the validation.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -18154,7 +19381,9 @@ Register an injection on update before the sums calculation.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -18185,7 +19414,9 @@ Register an injection on update after the sums calculation.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -18234,7 +19465,9 @@ a|`$injectionPoint`
 a|`$data`
 |
 
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
 a|`$order`
 |
@@ -18246,6 +19479,7 @@ a|`$order`
 
 [[order_models_legacy]]
 ===  Legacy
+[[order_legacy_order]]
 ==== Order
 
 The legacy order model
@@ -18294,19 +19528,27 @@ The legacy order model
 |link:http://php.net/string[string^]
     |sellerAccount
     |The seller account
-|link:account#account_models_address[Address^]
+|[[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     |deliveryAddress
     |
-|link:account#account_models_address[Address^]
+|[[__plenty\modules\account\address\models\address]]
+
+    link:account#account_models_address[Address^]
 
     |billingAddress
     |
-|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+|[[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     |addresses
     |
-|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+|[[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     |addressRelations
     |
@@ -18333,6 +19575,7 @@ Returns this model as an array.
 
 [[order_property_contracts]]
 ===  Contracts
+[[order_contracts_orderitempropertyrepositorycontract]]
 ==== OrderItemPropertyRepositoryContract
 
 The OrderItemPropertyRepositoryContract contains the functionality to find, create, update and delete OrderItemProperty instances.
@@ -18364,7 +19607,9 @@ Find an order item property by its ID.
 
 ===== Return type
     
-<1> link:order#order_models_orderitemproperty[OrderItemProperty^]
+<1> [[__plenty\modules\order\property\models\orderitemproperty]]
+
+    link:order#order_models_orderitemproperty[OrderItemProperty^]
 
     
 
@@ -18391,7 +19636,9 @@ Create an order item property
 
 ===== Return type
     
-<1> link:order#order_models_orderitemproperty[OrderItemProperty^]
+<1> [[__plenty\modules\order\property\models\orderitemproperty]]
+
+    link:order#order_models_orderitemproperty[OrderItemProperty^]
 
     
 
@@ -18418,7 +19665,9 @@ Update an order item property
 
 ===== Return type
     
-<1> link:order#order_models_orderitemproperty[OrderItemProperty^]
+<1> [[__plenty\modules\order\property\models\orderitemproperty]]
+
+    link:order#order_models_orderitemproperty[OrderItemProperty^]
 
     
 
@@ -18449,7 +19698,9 @@ Create or update an order item property
 
 ===== Return type
     
-<1> link:order#order_models_orderitemproperty[OrderItemProperty^]
+<1> [[__plenty\modules\order\property\models\orderitemproperty]]
+
+    link:order#order_models_orderitemproperty[OrderItemProperty^]
 
     
 
@@ -18502,7 +19753,9 @@ Get an order item property by an order item ID and an order property type ID.
 
 ===== Return type
     
-<1> link:order#order_models_orderitemproperty[OrderItemProperty^]
+<1> [[__plenty\modules\order\property\models\orderitemproperty]]
+
+    link:order#order_models_orderitemproperty[OrderItemProperty^]
 
     
 
@@ -18533,7 +19786,9 @@ Create an order item property by an order item ID and an order property type ID.
 
 ===== Return type
     
-<1> link:order#order_models_orderitemproperty[OrderItemProperty^]
+<1> [[__plenty\modules\order\property\models\orderitemproperty]]
+
+    link:order#order_models_orderitemproperty[OrderItemProperty^]
 
     
 
@@ -18568,7 +19823,9 @@ Update an order item property by an order item ID and an order property type ID.
 
 ===== Return type
     
-<1> link:order#order_models_orderitemproperty[OrderItemProperty^]
+<1> [[__plenty\modules\order\property\models\orderitemproperty]]
+
+    link:order#order_models_orderitemproperty[OrderItemProperty^]
 
     
 
@@ -18633,7 +19890,9 @@ List order item properties of an order item.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -18647,6 +19906,7 @@ a|`$orderItemId`
 
 
 
+[[order_contracts_orderpropertyrepositorycontract]]
 ==== OrderPropertyRepositoryContract
 
 The OrderPropertyRepositoryContract contains the functionality to get, list, create, update and delete  OrderPropertyTypes and OrderProperties as well as OrderProperties. Order properties contain information that are additional to an order. Each property has a type and each type can have several names, but only one name per language. An order can only have one property of each property type.
@@ -18678,7 +19938,9 @@ Create an order property
 
 ===== Return type
     
-<1> link:order#order_models_orderproperty[OrderProperty^]
+<1> [[__plenty\modules\order\property\models\orderproperty]]
+
+    link:order#order_models_orderproperty[OrderProperty^]
 
     
 
@@ -18705,7 +19967,9 @@ Update an order property
 
 ===== Return type
     
-<1> link:order#order_models_orderproperty[OrderProperty^]
+<1> [[__plenty\modules\order\property\models\orderproperty]]
+
+    link:order#order_models_orderproperty[OrderProperty^]
 
     
 
@@ -18742,7 +20006,9 @@ Deletes an order property. The ID of the order property must be specified.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |Either the ID of the property or an array holding the composite key composed of the order ID and the type ID.
@@ -18763,7 +20029,9 @@ List order properties of an order
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -18794,7 +20062,9 @@ Get a property type
 
 ===== Return type
     
-<1> link:order#order_models_orderpropertytype[OrderPropertyType^]
+<1> [[__plenty\modules\order\property\models\orderpropertytype]]
+
+    link:order#order_models_orderpropertytype[OrderPropertyType^]
 
     
 
@@ -18825,7 +20095,9 @@ List order property types
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -18852,7 +20124,9 @@ Create an order property type
 
 ===== Return type
     
-<1> link:order#order_models_orderpropertytype[OrderPropertyType^]
+<1> [[__plenty\modules\order\property\models\orderpropertytype]]
+
+    link:order#order_models_orderpropertytype[OrderPropertyType^]
 
     
 
@@ -18879,7 +20153,9 @@ Update an order property type
 
 ===== Return type
     
-<1> link:order#order_models_orderpropertytype[OrderPropertyType^]
+<1> [[__plenty\modules\order\property\models\orderpropertytype]]
+
+    link:order#order_models_orderpropertytype[OrderPropertyType^]
 
     
 
@@ -18924,6 +20200,7 @@ a|`$id`
 
 [[order_property_models]]
 ===  Models
+[[order_models_orderitemproperty]]
 ==== OrderItemProperty
 
 The order item property model.
@@ -18988,19 +20265,27 @@ The order item property model.
 |link:http://php.net/string[string^]
     |value
     |The value of the property. The value depends on type.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the property was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the property was last updated.
-|link:order#order_models_orderitem[OrderItem^]
+|[[__plenty\modules\order\models\orderitem]]
+
+    link:order#order_models_orderitem[OrderItem^]
 
     |orderItem
     |The order item that the property belongs to.
-|link:order#order_models_orderpropertytype[OrderPropertyType^]
+|[[__plenty\modules\order\property\models\orderpropertytype]]
+
+    link:order#order_models_orderpropertytype[OrderPropertyType^]
 
     |type
     |The type of the property.
@@ -19023,6 +20308,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderproperty]]
 ==== OrderProperty
 
 The order properties model. Each order property has a type.
@@ -19084,19 +20370,27 @@ The order properties model. Each order property has a type.
 |link:http://php.net/string[string^]
     |value
     |The value of the property. The value depends on the type.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the property was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the property was updated last.
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     |order
     |The order that the property belongs to.
-|link:order#order_models_orderpropertytype[OrderPropertyType^]
+|[[__plenty\modules\order\property\models\orderpropertytype]]
+
+    link:order#order_models_orderpropertytype[OrderPropertyType^]
 
     |type
     |The property type instance
@@ -19119,6 +20413,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderpropertytype]]
 ==== OrderPropertyType
 
 The OrderPropertyType model. Each order property must have a property type. An order can have one property of each property type. The default property types provided by plentymarkets are listed here.
@@ -19178,6 +20473,7 @@ Returns this model as an array.
 
 
 
+[[order_models_orderpropertytypename]]
 ==== OrderPropertyTypeName
 
 The order property type name model. Each order property type can have one name per language.
@@ -19208,7 +20504,9 @@ The order property type name model. Each order property type can have one name p
 |link:http://php.net/string[string^]
     |lang
     |The language of the type name
-|link:order#order_models_orderpropertytype[OrderPropertyType^]
+|[[__plenty\modules\order\property\models\orderpropertytype]]
+
+    link:order#order_models_orderpropertytype[OrderPropertyType^]
 
     |type
     |The property type instance.
@@ -19235,6 +20533,7 @@ Returns this model as an array.
 
 [[order_redistribution_contracts]]
 ===  Contracts
+[[order_contracts_redistributionrepositorycontract]]
 ==== RedistributionRepositoryContract
 
 Create and update redistributions.
@@ -19266,7 +20565,9 @@ Create a redistribution
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -19293,7 +20594,9 @@ Update a redistribution
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -19324,7 +20627,9 @@ Delete a redistribution
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -19377,7 +20682,9 @@ Update currency
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -19399,6 +20706,7 @@ a|`$data`
 
 [[order_relationreference_contracts]]
 ===  Contracts
+[[order_contracts_orderrelationreferencerepositorycontract]]
 ==== OrderRelationReferenceRepositoryContract
 
 Get, create, update and delete order relation references.
@@ -19430,7 +20738,9 @@ Get a relation reference by ID
 
 ===== Return type
     
-<1> link:order#order_models_orderrelationreference[OrderRelationReference^]
+<1> [[__plenty\modules\order\relationreference\models\orderrelationreference]]
+
+    link:order#order_models_orderrelationreference[OrderRelationReference^]
 
     
 
@@ -19457,7 +20767,9 @@ Get a relation reference by composite key
 
 ===== Return type
     
-<1> link:order#order_models_orderrelationreference[OrderRelationReference^]
+<1> [[__plenty\modules\order\relationreference\models\orderrelationreference]]
+
+    link:order#order_models_orderrelationreference[OrderRelationReference^]
 
     
 
@@ -19501,7 +20813,9 @@ List relation references by order ID
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -19528,7 +20842,9 @@ List relation references by any values
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -19570,7 +20886,9 @@ Create a relation reference
 
 ===== Return type
     
-<1> link:order#order_models_orderrelationreference[OrderRelationReference^]
+<1> [[__plenty\modules\order\relationreference\models\orderrelationreference]]
+
+    link:order#order_models_orderrelationreference[OrderRelationReference^]
 
     
 
@@ -19597,7 +20915,9 @@ Update a relation reference by ID
 
 ===== Return type
     
-<1> link:order#order_models_orderrelationreference[OrderRelationReference^]
+<1> [[__plenty\modules\order\relationreference\models\orderrelationreference]]
+
+    link:order#order_models_orderrelationreference[OrderRelationReference^]
 
     
 
@@ -19628,7 +20948,9 @@ Update a relation reference by composite key
 
 ===== Return type
     
-<1> link:order#order_models_orderrelationreference[OrderRelationReference^]
+<1> [[__plenty\modules\order\relationreference\models\orderrelationreference]]
+
+    link:order#order_models_orderrelationreference[OrderRelationReference^]
 
     
 
@@ -19733,6 +21055,7 @@ a|`$relation`
 
 [[order_relationreference_models]]
 ===  Models
+[[order_models_orderrelationreference]]
 ==== OrderRelationReference
 
 The order relation reference model specifies how references and orders are related to one another.
@@ -19777,23 +21100,33 @@ The order relation reference model specifies how references and orders are relat
 <li>sender</li>
 <li>receiver</li>
 </ul>
-|link:order#order_models_order[Order^]
+|[[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     |order
     |The order that the reference belongs to.
-|link:account#account_models_contact[Contact^]
+|[[__plenty\modules\account\contact\models\contact]]
+
+    link:account#account_models_contact[Contact^]
 
     |contactReceiver
     |The Contact referenced with relation "receiver".
-|link:account#account_models_contact[Contact^]
+|[[__plenty\modules\account\contact\models\contact]]
+
+    link:account#account_models_contact[Contact^]
 
     |contactSender
     |The Contact referenced with relation "sender".
-|link:account#account_models_account[Account^]
+|[[__plenty\modules\account\models\account]]
+
+    link:account#account_models_account[Account^]
 
     |accountReceiver
     |The Account referenced with relation "receiver".
-|link:account#account_models_account[Account^]
+|[[__plenty\modules\account\models\account]]
+
+    link:account#account_models_account[Account^]
 
     |accountSender
     |The Account referenced with relation "sender".
@@ -19820,6 +21153,7 @@ Returns this model as an array.
 
 [[order_reorder_contracts]]
 ===  Contracts
+[[order_contracts_reorderrepositorycontract]]
 ==== ReorderRepositoryContract
 
 Create and update reorders.
@@ -19851,7 +21185,9 @@ Create a reorder
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -19878,7 +21214,9 @@ Update a reorder
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -19909,7 +21247,9 @@ Delete a reorder
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -19962,7 +21302,9 @@ Update currency
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -19993,7 +21335,9 @@ Get the date when the reorder will probably be delivered.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
+<1> [[__carbon\carbon]]
+
+    link:miscellaneous#miscellaneous_carbon_carbon[Carbon^]
 
     
 
@@ -20020,7 +21364,9 @@ Calculate and save the delivery dates
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -20038,6 +21384,7 @@ a|`$orderId`
 
 [[order_returnreason_contracts]]
 ===  Contracts
+[[order_contracts_returnreasonrepositorycontract]]
 ==== ReturnReasonRepositoryContract
 
 Use this interface to retrieve order return reasons.
@@ -20086,7 +21433,9 @@ Get a return reason.
 
 ===== Return type
     
-<1> link:order#order_models_returnreason[ReturnReason^]
+<1> [[__plenty\modules\order\returnreason\models\returnreason]]
+
+    link:order#order_models_returnreason[ReturnReason^]
 
     
 
@@ -20101,6 +21450,7 @@ a|`$id`
 
 [[order_returnreason_models]]
 ===  Models
+[[order_models_returnreason]]
 ==== ReturnReason
 
 The return reason model.
@@ -20148,11 +21498,12 @@ Returns this model as an array.
 
 [[order_search_contracts]]
 ===  Contracts
+[[order_contracts_orderelasticsearchscrollrepositorycontract]]
 ==== OrderElasticSearchScrollRepositoryContract
 
 ...
 
-[warning]
+[WARNING]
 .Deprecated! 
 ====
 
@@ -20203,7 +21554,9 @@ public setNumberOfDocumentsPerShard($size):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -20230,14 +21583,18 @@ public setIndex($index):Plenty\Modules\Cloud\ElasticSearch\Contracts\ElasticSear
 
 ===== Return type
     
-<1> link:cloud#cloud_contracts_elasticsearchsearchrepositorycontract[ElasticSearchSearchRepositoryContract^]
+<1> [[__plenty\modules\cloud\elasticsearch\contracts\elasticsearchsearchrepositorycontract]]
+
+    link:cloud#cloud_contracts_elasticsearchsearchrepositorycontract[ElasticSearchSearchRepositoryContract^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:cloud#cloud_index_indexinterface[IndexInterface^]
+|[[__plenty\modules\cloud\elasticsearch\lib\index\indexinterface]]
+
+    link:cloud#cloud_index_indexinterface[IndexInterface^]
 
 a|`$index`
 |
@@ -20258,14 +21615,18 @@ public addSearch($search):Plenty\Modules\Cloud\ElasticSearch\Contracts\ElasticSe
 
 ===== Return type
     
-<1> link:cloud#cloud_contracts_elasticsearchsearchrepositorycontract[ElasticSearchSearchRepositoryContract^]
+<1> [[__plenty\modules\cloud\elasticsearch\contracts\elasticsearchsearchrepositorycontract]]
+
+    link:cloud#cloud_contracts_elasticsearchsearchrepositorycontract[ElasticSearchSearchRepositoryContract^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$search`
 |
@@ -20294,6 +21655,7 @@ public execute():array // <1>
 
 [[order_status_contracts]]
 ===  Contracts
+[[order_contracts_orderstatusrepositorycontract]]
 ==== OrderStatusRepositoryContract
 
 The OrderStatusRepositoryContract is the interface for the order status repository. This interface allows you to get a single order status or to list order statuses as well as to create, update or delete.
@@ -20325,7 +21687,9 @@ Get an order status.
 
 ===== Return type
     
-<1> link:order#order_models_orderstatus[OrderStatus^]
+<1> [[__plenty\modules\order\status\models\orderstatus]]
+
+    link:order#order_models_orderstatus[OrderStatus^]
 
     
 
@@ -20352,7 +21716,9 @@ Search order status.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -20383,7 +21749,9 @@ List order statuses.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+<1> [[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     
 
@@ -20401,7 +21769,9 @@ Create an order status.
 
 ===== Return type
     
-<1> link:order#order_models_orderstatus[OrderStatus^]
+<1> [[__plenty\modules\order\status\models\orderstatus]]
+
+    link:order#order_models_orderstatus[OrderStatus^]
 
     
 
@@ -20428,7 +21798,9 @@ Update an order status.
 
 ===== Return type
     
-<1> link:order#order_models_orderstatus[OrderStatus^]
+<1> [[__plenty\modules\order\status\models\orderstatus]]
+
+    link:order#order_models_orderstatus[OrderStatus^]
 
     
 
@@ -20459,7 +21831,9 @@ Delete an order status.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -20486,7 +21860,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -20513,7 +21889,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -20531,7 +21909,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -20549,12 +21929,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[order_status_models]]
 ===  Models
+[[order_models_orderstatus]]
 ==== OrderStatus
 
 The order status model
@@ -20579,11 +21962,15 @@ The order status model
 |link:http://php.net/bool[bool^]
     |isErasable
     |Flag that indicates whether the status is erasable or not.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date, when the status was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date, when the status was updated.
@@ -20599,7 +21986,9 @@ The order status model
 |link:http://php.net/string[string^]
     |color
     |The color of the status.
-|link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+|[[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     |names
     |The names of the order status.
@@ -20626,6 +22015,7 @@ Returns this model as an array.
 
 [[order_statushistory_contracts]]
 ===  Contracts
+[[order_contracts_statushistoryrepositorycontract]]
 ==== StatusHistoryRepositoryContract
 
 This interface allows you to get the status history of an order and to list the status histories of all orders.
@@ -20657,7 +22047,9 @@ Get the status history of an order
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+<1> [[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     
 
@@ -20688,7 +22080,9 @@ List status histories
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -20723,7 +22117,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -20741,7 +22137,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -20759,7 +22157,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -20786,7 +22186,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -20804,7 +22206,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -20822,12 +22226,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[order_statushistory_models]]
 ===  Models
+[[order_models_statushistoryentry]]
 ==== StatusHistoryEntry
 
 The status history entry model
@@ -20855,7 +22262,9 @@ The status history entry model
 |link:http://php.net/float[float^]
     |statusId
     |The ID of the status
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date when the entry was created
@@ -20888,6 +22297,7 @@ Returns this model as an array.
 
 [[order_subscription_contracts]]
 ===  Contracts
+[[order_contracts_subscriptionorderrepositorycontract]]
 ==== SubscriptionOrderRepositoryContract
 
 The SubscriptionOrderRepositoryContract allows you to find subscriptions, that due either today or on any given date, so that corresponding orders are created for them.
@@ -20962,7 +22372,9 @@ Create an order for today for a given subscription.
 
 ===== Return type
     
-<1> link:order#order_models_order[Order^]
+<1> [[__plenty\modules\order\models\order]]
+
+    link:order#order_models_order[Order^]
 
     
 
@@ -20984,6 +22396,7 @@ a|`$skipNextRun`
 
 [[order_taricvatassignment_contracts]]
 ===  Contracts
+[[order_contracts_taricvatassignmentrepositorycontract]]
 ==== TaricVatAssignmentRepositoryContract
 
 The TaricVatAssignmentRepositoryContract contains the functionality to get, list, create, update, and delete the taricVatAssignment. Taric identifiers contain information that are necessary to determine the exact vat rate. Taric codes are linked in a variation. A taric vat assignment can only have one entry of each taric code / country ID combination.
@@ -21015,7 +22428,9 @@ Create a taric vat assignment.
 
 ===== Return type
     
-<1> link:order#order_models_taricvatassignment[TaricVatAssignment^]
+<1> [[__plenty\modules\order\taricvatassignment\models\taricvatassignment]]
+
+    link:order#order_models_taricvatassignment[TaricVatAssignment^]
 
     
 
@@ -21042,7 +22457,9 @@ Update a taric vat assignment
 
 ===== Return type
     
-<1> link:order#order_models_taricvatassignment[TaricVatAssignment^]
+<1> [[__plenty\modules\order\taricvatassignment\models\taricvatassignment]]
+
+    link:order#order_models_taricvatassignment[TaricVatAssignment^]
 
     
 
@@ -21095,7 +22512,9 @@ Search taric vat assignments.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -21130,7 +22549,9 @@ List taric vat assignment of a taric code
 
 ===== Return type
     
-<1> link:order#order_models_taricvatassignment[TaricVatAssignment^]
+<1> [[__plenty\modules\order\taricvatassignment\models\taricvatassignment]]
+
+    link:order#order_models_taricvatassignment[TaricVatAssignment^]
 
     
 
@@ -21161,7 +22582,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -21179,7 +22602,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -21197,7 +22622,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -21224,7 +22651,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -21242,7 +22671,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -21260,12 +22691,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[order_taricvatassignment_models]]
 ===  Models
+[[order_models_taricvatassignment]]
 ==== TaricVatAssignment
 
 The taric vat assignment model.
@@ -21296,15 +22730,21 @@ The taric vat assignment model.
 |link:http://php.net/string[string^]
     |vatField
     |The ID of the VAT rate of the taric code / country id combination.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the taric vat assignment was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the taric vat assignment was updated last.
-|link:order#order_models_taricvatassignmentused[TaricVatAssignmentUsed^]
+|[[__plenty\modules\order\taricvatassignment\models\taricvatassignmentused]]
+
+    link:order#order_models_taricvatassignmentused[TaricVatAssignmentUsed^]
 
     |taricVatAssignmentUsed
     |Is the Taric code is used by a variation
@@ -21327,6 +22767,7 @@ Returns this model as an array.
 
 
 
+[[order_models_taricvatassignmentused]]
 ==== TaricVatAssignmentUsed
 
 The taric code use model.
@@ -21374,6 +22815,7 @@ Returns this model as an array.
 
 [[order_transaction_contracts]]
 ===  Contracts
+[[order_contracts_orderitemtransactionrepositorycontract]]
 ==== OrderItemTransactionRepositoryContract
 
 List and create order item transactions.
@@ -21405,7 +22847,9 @@ List transactions
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+<1> [[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     
 
@@ -21440,7 +22884,9 @@ Create a transaction
 
 ===== Return type
     
-<1> link:order#order_models_orderitemtransaction[OrderItemTransaction^]
+<1> [[__plenty\modules\order\transaction\models\orderitemtransaction]]
+
+    link:order#order_models_orderitemtransaction[OrderItemTransaction^]
 
     
 
@@ -21467,7 +22913,9 @@ Update a transaction
 
 ===== Return type
     
-<1> link:order#order_models_orderitemtransaction[OrderItemTransaction^]
+<1> [[__plenty\modules\order\transaction\models\orderitemtransaction]]
+
+    link:order#order_models_orderitemtransaction[OrderItemTransaction^]
 
     
 
@@ -21524,7 +22972,9 @@ Search transactions
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -21571,7 +23021,9 @@ Create transactions for order
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
+<1> [[__illuminate\database\eloquent\collection]]
+
+    link:miscellaneous#miscellaneous_eloquent_collection[Collection^]
 
     
 
@@ -21602,7 +23054,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -21620,7 +23074,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -21638,7 +23094,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -21665,7 +23123,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -21683,7 +23143,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -21701,12 +23163,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[order_transaction_models]]
 ===  Models
+[[order_models_orderitemtransaction]]
 ==== OrderItemTransaction
 
 The order item transaction model.
@@ -21761,15 +23226,21 @@ The order item transaction model.
 |link:http://php.net/int[int^]
     |batchBestBeforeDateId
     |Deprecated. Replaced by $batch and $bestBeforeDate.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date the transaction was created
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date the transaction was last updated
-|link:order#order_models_orderitem[OrderItem^]
+|[[__plenty\modules\order\models\orderitem]]
+
+    link:order#order_models_orderitem[OrderItem^]
 
     |orderItem
     |The order item the transaction belongs to

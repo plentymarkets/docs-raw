@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[document_document_contracts]]
 ===  Contracts
+[[document_contracts_documentrepositorycontract]]
 ==== DocumentRepositoryContract
 
 Download and list order documents as well as download, list, upload and delete category documents.
@@ -40,7 +42,9 @@ Get the path to a document
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -67,7 +71,9 @@ Get a document
 
 ===== Return type
     
-<1> link:document#document_models_document[Document^]
+<1> [[__plenty\modules\document\models\document]]
+
+    link:document#document_models_document[Document^]
 
     
 
@@ -98,7 +104,9 @@ List documents
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -201,7 +209,9 @@ Archive order document
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -356,7 +366,9 @@ public findCurrentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\
 
 ===== Return type
     
-<1> link:document#document_models_document[Document^]
+<1> [[__plenty\modules\document\models\document]]
+
+    link:document#document_models_document[Document^]
 
     
 
@@ -387,7 +399,9 @@ public findRecentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\D
 
 ===== Return type
     
-<1> link:document#document_models_document[Document^]
+<1> [[__plenty\modules\document\models\document]]
+
+    link:document#document_models_document[Document^]
 
     
 
@@ -444,14 +458,18 @@ public getDocumentStorageObject($key):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$key`
 |
@@ -472,7 +490,9 @@ public uploadOrderReturnsDocuments($returnsId, $document):Plenty\Modules\Documen
 
 ===== Return type
     
-<1> link:document#document_models_document[Document^]
+<1> [[__plenty\modules\document\models\document]]
+
+    link:document#document_models_document[Document^]
 
     
 
@@ -503,7 +523,9 @@ public getOrderReturnsDocumentById($returnsId, $withLabel = false):Plenty\Module
 
 ===== Return type
     
-<1> link:document#document_models_document[Document^]
+<1> [[__plenty\modules\document\models\document]]
+
+    link:document#document_models_document[Document^]
 
     
 
@@ -568,7 +590,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -586,7 +610,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -604,7 +630,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -631,7 +659,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -649,7 +679,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -667,12 +699,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[document_document_models]]
 ===  Models
+[[document_models_document]]
 ==== Document
 
 The document model contains information about actual documents.
@@ -757,15 +792,21 @@ The document model contains information about actual documents.
 |link:http://php.net/string[string^]
     |content
     |The base64 encodedcontent of the document.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The time the document was created
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The time the document was last updated
-|link:miscellaneous#miscellaneous_support_collection[Collection^]
+|[[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     |references
     |Collection of document references. The references available are:
@@ -775,19 +816,27 @@ The document model contains information about actual documents.
     <li>webstores = refers to clients</li>
     <li>categories</li>
 </ul>
-|link:miscellaneous#miscellaneous_support_collection[Collection^]
+|[[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     |contacts
     |Collection of contacts that are associated with the document
-|link:miscellaneous#miscellaneous_support_collection[Collection^]
+|[[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     |orders
     |Collection of orders that are associated with the document
-|link:miscellaneous#miscellaneous_support_collection[Collection^]
+|[[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     |webstores
     |Collection of webstores that are associated with the document
-|link:miscellaneous#miscellaneous_support_collection[Collection^]
+|[[__illuminate\support\collection]]
+
+    link:miscellaneous#miscellaneous_support_collection[Collection^]
 
     |categories
     |Collection of categories that are associated with the document
@@ -810,6 +859,7 @@ Returns this model as an array.
 
 
 
+[[document_models_documentreference]]
 ==== DocumentReference
 
 The document reference model. A document reference allows you to assign a document to other models.

@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[frontend_frontend_contracts]]
 ===  Contracts
+[[frontend_contracts_checkout]]
 ==== Checkout
 
 The CheckoutContract is the interface for the checkout repository. This interface allows to set the shipping country ID, the payment method ID, the shipping profile ID and the currency in the checkout.
@@ -57,7 +59,9 @@ Updates the ID of the shipping country. The ID must be specified.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -101,7 +105,9 @@ Updates the ID of the payment method. The ID must be specified.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -145,7 +151,9 @@ Updates the ID of the shipping profile. The ID must be specified.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -172,7 +180,9 @@ Updates the currency. The currency must be specified.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -199,7 +209,9 @@ Updates the ID of the order referrer. The ID must be specified.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -243,7 +255,9 @@ Sets the invoice address id for the current shopping cart.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -287,7 +301,9 @@ Sets the shipping address id for the current shopping cart.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -314,11 +330,14 @@ public validateCheckout():Plenty\Modules\Frontend\Events\ValidateCheckoutEvent /
 
 ===== Return type
     
-<1> link:frontend#frontend_events_validatecheckoutevent[ValidateCheckoutEvent^]
+<1> [[__plenty\modules\frontend\events\validatecheckoutevent]]
+
+    link:frontend#frontend_events_validatecheckoutevent[ValidateCheckoutEvent^]
 
     
 
 
+[[frontend_contracts_currencyexchangerepositorycontract]]
 ==== CurrencyExchangeRepositoryContract
 
 The CurrencyExchangeRatioRepositoryContract is the interface for the currency exchange repository. This interface allows you to get the default system currency, to get exchange ratios for every currency and to convert an amount from the default currency into a given currency or from a given currency into the default currency.
@@ -449,6 +468,7 @@ a|`$exchangeRatio`
 
 [[frontend_frontend_events]]
 ===  Events
+[[frontend_events_frontendcurrencychanged]]
 ==== FrontendCurrencyChanged
 
 The event is triggered when the currency is changed in the online store.
@@ -501,6 +521,7 @@ Gets the exchange rate used for converting the currency.
     
 
 
+[[frontend_events_frontendcustomeraddresschanged]]
 ==== FrontendCustomerAddressChanged
 
 The event is triggered when a customer address is changed in the online store.
@@ -516,6 +537,7 @@ The event is triggered when a customer address is changed in the online store.
 
 
 
+[[frontend_events_frontendlanguagechanged]]
 ==== FrontendLanguageChanged
 
 The event is triggered when the language is changed in the online store.
@@ -551,6 +573,7 @@ Gets the language of the online store.
     
 
 
+[[frontend_events_frontendpaymentmethodchanged]]
 ==== FrontendPaymentMethodChanged
 
 The event is triggered when the payment method is changed in the online store.
@@ -582,7 +605,9 @@ Gets the ID of the payment method.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -600,14 +625,18 @@ Updates the ID of the payment method. The ID must be specified.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$paymentMethodId`
 |
@@ -615,6 +644,7 @@ a|`$paymentMethodId`
 
 
 
+[[frontend_events_frontendreferrerchanged]]
 ==== FrontendReferrerChanged
 
 The event is triggered when the referrer id  is changed in the online store.
@@ -646,7 +676,9 @@ public getReferrerId():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -664,14 +696,18 @@ public setReferrerId($referrerId):Plenty\Modules\Frontend\Events\FrontendReferre
 
 ===== Return type
     
-<1> link:frontend#frontend_events_frontendreferrerchanged[FrontendReferrerChanged^]
+<1> [[__plenty\modules\frontend\events\frontendreferrerchanged]]
+
+    link:frontend#frontend_events_frontendreferrerchanged[FrontendReferrerChanged^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$referrerId`
 |
@@ -679,6 +715,7 @@ a|`$referrerId`
 
 
 
+[[frontend_events_frontendshippingcountrychanged]]
 ==== FrontendShippingCountryChanged
 
 The event is triggered when the shipping country is changed in the online store.
@@ -727,7 +764,9 @@ Updates the ID of the shipping country. The ID must be specified.
 
 ===== Return type
     
-<1> link:frontend#frontend_events_frontendshippingcountrychanged[FrontendShippingCountryChanged^]
+<1> [[__plenty\modules\frontend\events\frontendshippingcountrychanged]]
+
+    link:frontend#frontend_events_frontendshippingcountrychanged[FrontendShippingCountryChanged^]
 
     
 
@@ -741,6 +780,7 @@ a|`$shippingCountryId`
 
 
 
+[[frontend_events_frontendshippingprofilechanged]]
 ==== FrontendShippingProfileChanged
 
 The event is triggered when the shipping profile is changed in the online store.
@@ -772,7 +812,9 @@ Gets the ID of the shipping profile.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -790,14 +832,18 @@ Updates the ID of the shipping profile. The ID must be specified.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$shippingProfileId`
 |
@@ -805,6 +851,7 @@ a|`$shippingProfileId`
 
 
 
+[[frontend_events_frontendupdatedeliveryaddress]]
 ==== FrontendUpdateDeliveryAddress
 
 The event is triggered when the delivery address is changed in the online store.
@@ -840,6 +887,7 @@ Gets the ID of the address saved for the account.
     
 
 
+[[frontend_events_frontendupdateinvoiceaddress]]
 ==== FrontendUpdateInvoiceAddress
 
 The event is triggered when the invoice address is changed in the online store.
@@ -875,6 +923,7 @@ Gets the ID of the address saved for the account.
     
 
 
+[[frontend_events_frontendupdatepaymentsettings]]
 ==== FrontendUpdatePaymentSettings
 
 The event is triggered when the payment method is changed in the online store.
@@ -910,6 +959,7 @@ Gets the ID of the payment method.
     
 
 
+[[frontend_events_frontendupdateshippingsettings]]
 ==== FrontendUpdateShippingSettings
 
 The event is triggered when the shipping method is updated in the online store.
@@ -979,6 +1029,7 @@ Gets the preset ID of the shipping service provider.
     
 
 
+[[frontend_events_validatecheckoutevent]]
 ==== ValidateCheckoutEvent
 
 validation event
@@ -1027,7 +1078,9 @@ public addErrorKey($errorKey):Plenty\Modules\Frontend\Events // <1>
 
 ===== Return type
     
-<1> link:frontend#frontend_frontend_events[Events^]
+<1> [[__plenty\modules\frontend\events]]
+
+    link:frontend#frontend_frontend_events[Events^]
 
     
 
@@ -1042,6 +1095,7 @@ a|`$errorKey`
 
 [[frontend_frontend_factories]]
 ===  Factories
+[[frontend_factories_frontendfactory]]
 ==== FrontendFactory
 
 Frontend-Factory
@@ -1073,7 +1127,9 @@ public getLocale():Plenty\Modules\Frontend\Services\LocaleService // <1>
 
 ===== Return type
     
-<1> link:frontend#frontend_services_localeservice[LocaleService^]
+<1> [[__plenty\modules\frontend\services\localeservice]]
+
+    link:frontend#frontend_services_localeservice[LocaleService^]
 
     
 
@@ -1091,7 +1147,9 @@ public getAgent():Plenty\Modules\Frontend\Services\AgentService // <1>
 
 ===== Return type
     
-<1> link:frontend#frontend_services_agentservice[AgentService^]
+<1> [[__plenty\modules\frontend\services\agentservice]]
+
+    link:frontend#frontend_services_agentservice[AgentService^]
 
     
 
@@ -1109,7 +1167,9 @@ public getSystem():Plenty\Modules\Frontend\Services\SystemService // <1>
 
 ===== Return type
     
-<1> link:frontend#frontend_services_systemservice[SystemService^]
+<1> [[__plenty\modules\frontend\services\systemservice]]
+
+    link:frontend#frontend_services_systemservice[SystemService^]
 
     
 
@@ -1127,7 +1187,9 @@ public getAccount():Plenty\Modules\Frontend\Services\AccountService // <1>
 
 ===== Return type
     
-<1> link:frontend#frontend_services_accountservice[AccountService^]
+<1> [[__plenty\modules\frontend\services\accountservice]]
+
+    link:frontend#frontend_services_accountservice[AccountService^]
 
     
 
@@ -1145,12 +1207,15 @@ public getFile():Plenty\Modules\Frontend\Services\FileService // <1>
 
 ===== Return type
     
-<1> link:frontend#frontend_services_fileservice[FileService^]
+<1> [[__plenty\modules\frontend\services\fileservice]]
+
+    link:frontend#frontend_services_fileservice[FileService^]
 
     
 
 [[frontend_frontend_models]]
 ===  Models
+[[frontend_models_totalvat]]
 ==== TotalVat
 
 frontend total vat model
@@ -1198,6 +1263,7 @@ Returns this model as an array.
 
 [[frontend_frontend_services]]
 ===  Services
+[[frontend_services_accountservice]]
 ==== AccountService
 
 Frontend-service for customer information
@@ -1250,6 +1316,7 @@ public getAccountContactId():int // <1>
     
 
 
+[[frontend_services_agentservice]]
 ==== AgentService
 
 Frontend-Service for agent information
@@ -1438,6 +1505,7 @@ public getIsTablet():bool // <1>
     
 
 
+[[frontend_services_fileservice]]
 ==== FileService
 
 Frontend-service for file information
@@ -1469,7 +1537,9 @@ public addJsFile($jsFile):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1496,7 +1566,9 @@ public get($key):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1549,14 +1621,18 @@ public setAttributes($attributes):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$attributes`
 |
@@ -1577,7 +1653,9 @@ Set a given attribute on the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -1588,7 +1666,9 @@ Set a given attribute on the model.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -1635,7 +1715,9 @@ public changeValue($key, $callback):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1672,7 +1754,9 @@ public offsetExists($offset):bool // <1>
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -1693,14 +1777,18 @@ public offsetGet($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -1721,19 +1809,25 @@ public offsetSet($offset, $value):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -1754,14 +1848,18 @@ public offsetUnset($offset):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |
@@ -1834,7 +1932,9 @@ public jsonSerialize():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1852,7 +1952,9 @@ Fill the model with an array of attributes.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -1922,7 +2024,9 @@ Set the fillable attributes for the model.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_repositories_models[Models^]
+<1> [[__plenty\repositories\models]]
+
+    link:miscellaneous#miscellaneous_repositories_models[Models^]
 
     
 
@@ -1959,7 +2063,9 @@ Determine whether an attribute should be cast to a native type.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$types`
 |
@@ -1980,7 +2086,9 @@ Decode the given JSON back into an array or object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -1998,6 +2106,7 @@ a|`$asObject`
 
 
 
+[[frontend_services_localeservice]]
 ==== LocaleService
 
 frontend service for changing current language
@@ -2029,7 +2138,9 @@ public setLanguage($newLanguage, $fireEvents = true):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2047,6 +2158,7 @@ a|`$fireEvents`
 
 
 
+[[frontend_services_orderpropertyfileservice]]
 ==== OrderPropertyFileService
 
 Frontend-service for customer information
@@ -2130,7 +2242,9 @@ public getFile($key):Plenty\Modules\Cloud\Storage\Models\StorageObject // <1>
 
 ===== Return type
     
-<1> link:cloud#cloud_models_storageobject[StorageObject^]
+<1> [[__plenty\modules\cloud\storage\models\storageobject]]
+
+    link:cloud#cloud_models_storageobject[StorageObject^]
 
     
 
@@ -2183,7 +2297,9 @@ public deleteFile($filename):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2197,6 +2313,7 @@ a|`$filename`
 
 
 
+[[frontend_services_systemservice]]
 ==== SystemService
 
 Frontend-service for system information
@@ -2249,6 +2366,7 @@ public getWebstoreId():int // <1>
     
 
 
+[[frontend_services_vatservice]]
 ==== VatService
 
 Frontend-service for vat information
@@ -2314,7 +2432,9 @@ public getVat($taxIdNumber = &quot;&quot;):Plenty\Modules\Accounting\Vat\Models\
 
 ===== Return type
     
-<1> link:accounting#accounting_models_vat[Vat^]
+<1> [[__plenty\modules\accounting\vat\models\vat]]
+
+    link:accounting#accounting_models_vat[Vat^]
 
     
 
@@ -2358,6 +2478,7 @@ a|`$countryId`
 
 [[frontend_legalinformation_contracts]]
 ===  Contracts
+[[frontend_contracts_legalinformationrepositorycontract]]
 ==== LegalInformationRepositoryContract
 
 Repository contract for LegalInformation model.
@@ -2389,7 +2510,9 @@ Get legal information of an online store
 
 ===== Return type
     
-<1> link:frontend#frontend_models_legalinformation[LegalInformation^]
+<1> [[__plenty\modules\frontend\legalinformation\models\legalinformation]]
+
+    link:frontend#frontend_models_legalinformation[LegalInformation^]
 
     
 
@@ -2431,7 +2554,9 @@ Save legal information for an online store
 
 ===== Return type
     
-<1> link:frontend#frontend_models_legalinformation[LegalInformation^]
+<1> [[__plenty\modules\frontend\legalinformation\models\legalinformation]]
+
+    link:frontend#frontend_models_legalinformation[LegalInformation^]
 
     
 
@@ -2465,6 +2590,7 @@ a|`$type`
 
 [[frontend_legalinformation_models]]
 ===  Models
+[[frontend_models_legalinformation]]
 ==== LegalInformation
 
 The legal information model.
@@ -2528,6 +2654,7 @@ Returns this model as an array.
 
 [[frontend_paymentmethod_contracts]]
 ===  Contracts
+[[frontend_contracts_frontendpaymentmethodrepositorycontract]]
 ==== FrontendPaymentMethodRepositoryContract
 
 The FrontendPaymentMethodRepositoryContract is the interface for the front end payment method repository. Get the payment method information to be displayed in the online store.
@@ -2633,7 +2760,9 @@ Gets the name of the payment method in the specified language.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_paymentmethod[PaymentMethod^]
+|[[__plenty\modules\payment\method\models\paymentmethod]]
+
+    link:payment#payment_models_paymentmethod[PaymentMethod^]
 
 a|`$paymentMethod`
 |The payment method
@@ -2664,7 +2793,9 @@ Gets additional costs for the payment method. Additional costs can be entered in
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_paymentmethod[PaymentMethod^]
+|[[__plenty\modules\payment\method\models\paymentmethod]]
+
+    link:payment#payment_models_paymentmethod[PaymentMethod^]
 
 a|`$paymentMethod`
 |The payment method
@@ -2691,7 +2822,9 @@ Gets the icon of the payment method. The path of the icon can be entered in the 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_paymentmethod[PaymentMethod^]
+|[[__plenty\modules\payment\method\models\paymentmethod]]
+
+    link:payment#payment_models_paymentmethod[PaymentMethod^]
 
 a|`$paymentMethod`
 |The payment method
@@ -2722,7 +2855,9 @@ Gets the description of the payment method. The description can be entered in th
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_paymentmethod[PaymentMethod^]
+|[[__plenty\modules\payment\method\models\paymentmethod]]
+
+    link:payment#payment_models_paymentmethod[PaymentMethod^]
 
 a|`$paymentMethod`
 |
@@ -2753,7 +2888,9 @@ Gets the detail link of the payment method. The detail link can be entered in th
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_paymentmethod[PaymentMethod^]
+|[[__plenty\modules\payment\method\models\paymentmethod]]
+
+    link:payment#payment_models_paymentmethod[PaymentMethod^]
 
 a|`$paymentMethod`
 |
@@ -2780,7 +2917,9 @@ Gets the detail link of the payment method. The detail link can be entered in th
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_paymentmethod[PaymentMethod^]
+|[[__plenty\modules\payment\method\models\paymentmethod]]
+
+    link:payment#payment_models_paymentmethod[PaymentMethod^]
 
 a|`$paymentMethod`
 |
@@ -2807,7 +2946,9 @@ Gets the detail link of the payment method. The detail link can be entered in th
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_paymentmethod[PaymentMethod^]
+|[[__plenty\modules\payment\method\models\paymentmethod]]
+
+    link:payment#payment_models_paymentmethod[PaymentMethod^]
 
 a|`$paymentMethod`
 |
@@ -2834,7 +2975,9 @@ Get true if the payment method can be selected in the payment method list
 .*Parameters*
 |===
 |Type |Name |Description
-|link:payment#payment_models_paymentmethod[PaymentMethod^]
+|[[__plenty\modules\payment\method\models\paymentmethod]]
+
+    link:payment#payment_models_paymentmethod[PaymentMethod^]
 
 a|`$paymentMethod`
 |
@@ -3091,7 +3234,9 @@ public getAllowedPaymentMethodListForContact():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3100,6 +3245,7 @@ public getAllowedPaymentMethodListForContact():void // <1>
 
 [[frontend_session_events]]
 ===  Events
+[[frontend_events_aftersessioncreate]]
 ==== AfterSessionCreate
 
 The event is triggered after a session is created.
@@ -3119,6 +3265,7 @@ The event is triggered after a session is created.
 
 [[frontend_storage_contracts]]
 ===  Contracts
+[[frontend_contracts_frontendsessionstoragefactorycontract]]
 ==== FrontendSessionStorageFactoryContract
 
 The FrontendSessionStorageFactoryContract is the interface for the front end session storage repository. This interface allows to get information about the locale, the customer, the order, the plugin and the forum from the session.
@@ -3150,7 +3297,9 @@ Get the locale settings from the session storage.
 
 ===== Return type
     
-<1> link:frontend#frontend_models_localesettings[LocaleSettings^]
+<1> [[__plenty\modules\frontend\session\storage\models\localesettings]]
+
+    link:frontend#frontend_models_localesettings[LocaleSettings^]
 
     
 
@@ -3168,7 +3317,9 @@ Get the customer data from the session storage.
 
 ===== Return type
     
-<1> link:frontend#frontend_models_customer[Customer^]
+<1> [[__plenty\modules\frontend\session\storage\models\customer]]
+
+    link:frontend#frontend_models_customer[Customer^]
 
     
 
@@ -3186,7 +3337,9 @@ Get the order data from the session storage.
 
 ===== Return type
     
-<1> link:frontend#frontend_models_order[Order^]
+<1> [[__plenty\modules\frontend\session\storage\models\order]]
+
+    link:frontend#frontend_models_order[Order^]
 
     
 
@@ -3204,7 +3357,9 @@ Get the plugin data from the session storage.
 
 ===== Return type
     
-<1> link:frontend#frontend_models_plugin[Plugin^]
+<1> [[__plenty\modules\frontend\session\storage\models\plugin]]
+
+    link:frontend#frontend_models_plugin[Plugin^]
 
     
 
@@ -3222,12 +3377,15 @@ Get the forum data from the session storage.
 
 ===== Return type
     
-<1> link:frontend#frontend_models_forum[Forum^]
+<1> [[__plenty\modules\frontend\session\storage\models\forum]]
+
+    link:frontend#frontend_models_forum[Forum^]
 
     
 
 [[frontend_storage_models]]
 ===  Models
+[[frontend_models_customer]]
 ==== Customer
 
 The session storage model for customer data.
@@ -3289,6 +3447,7 @@ Returns this model as an array.
 
 
 
+[[frontend_models_forum]]
 ==== Forum
 
 The session storage model for forum data.
@@ -3341,6 +3500,7 @@ Returns this model as an array.
 
 
 
+[[frontend_models_localesettings]]
 ==== LocaleSettings
 
 The session storage model for locale settings.
@@ -3387,6 +3547,7 @@ Returns this model as an array.
 
 
 
+[[frontend_models_order]]
 ==== Order
 
 The session storage model for order data.
@@ -3450,7 +3611,9 @@ The session storage model for order data.
 |link:http://php.net/string[string^]
     |couponDisplay
     |
-|link:order#order_models_couponcodevalidation[CouponCodeValidation^]
+|[[__plenty\modules\order\coupon\code\validation\models\couponcodevalidation]]
+
+    link:order#order_models_couponcodevalidation[CouponCodeValidation^]
 
     |couponCodeValidation
     |
@@ -3497,6 +3660,7 @@ Returns this model as an array.
 
 
 
+[[frontend_models_plugin]]
 ==== Plugin
 
 The session storage model for plugins.
@@ -3528,7 +3692,9 @@ Updates the value of a key. The key and the new value must be specified.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3539,7 +3705,9 @@ Updates the value of a key. The key and the new value must be specified.
 a|`$key`
 |
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |
@@ -3560,7 +3728,9 @@ Gets a value for a key. The key must be specified.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3587,7 +3757,9 @@ Unsets a key. The key must be specified.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 

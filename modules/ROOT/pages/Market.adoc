@@ -1,6 +1,7 @@
 :table-caption!:
 :example-caption!:
 :source-highlighter: prettify
+:sectids!:
 = Plentymarkets interface documentation
 
 
@@ -9,6 +10,7 @@
 
 [[market_credentials_contracts]]
 ===  Contracts
+[[market_contracts_credentialsrepositorycontract]]
 ==== CredentialsRepositoryContract
 
 The contract for the fitment repository.
@@ -40,7 +42,9 @@ Get credentials
 
 ===== Return type
     
-<1> link:market#market_models_credentials[Credentials^]
+<1> [[__plenty\modules\market\credentials\models\credentials]]
+
+    link:market#market_models_credentials[Credentials^]
 
     
 
@@ -67,7 +71,9 @@ Create credentials
 
 ===== Return type
     
-<1> link:market#market_models_credentials[Credentials^]
+<1> [[__plenty\modules\market\credentials\models\credentials]]
+
+    link:market#market_models_credentials[Credentials^]
 
     
 
@@ -94,7 +100,9 @@ Update credentials
 
 ===== Return type
     
-<1> link:market#market_models_credentials[Credentials^]
+<1> [[__plenty\modules\market\credentials\models\credentials]]
+
+    link:market#market_models_credentials[Credentials^]
 
     
 
@@ -125,7 +133,9 @@ Delete credentials
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+<1> [[__plenty\repositories\models\deleteresponse]]
+
+    link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
     
 
@@ -178,7 +188,9 @@ List credentials
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -213,7 +225,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -231,7 +245,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -249,7 +265,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -276,7 +294,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -294,7 +314,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -312,12 +334,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[market_credentials_models]]
 ===  Models
+[[market_models_credentials]]
 ==== Credentials
 
 The credentials model
@@ -351,11 +376,15 @@ The credentials model
 |link:http://php.net/string[string^]
     |market
     |The market for the current credentials.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the credentials was created.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |updatedAt
     |The date that the credentials was updated last.
@@ -382,6 +411,7 @@ Returns this model as an array.
 
 [[market_accountpolicy_contracts]]
 ===  Contracts
+[[market_contracts_fulfillmentpolicyrepositorycontract]]
 ==== FulfillmentPolicyRepositoryContract
 
 The contract for the eBay fulfillment policy repository.
@@ -413,7 +443,9 @@ Get a stored fulfillment policy based on ID.
 
 ===== Return type
     
-<1> link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\fulfillmentpolicy]]
+
+    link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
     
 
@@ -431,6 +463,7 @@ a|`$filters`
 
 
 
+[[market_contracts_paymentpolicyrepositorycontract]]
 ==== PaymentPolicyRepositoryContract
 
 The contract for the eBay payment policy repository.
@@ -462,7 +495,9 @@ Get a stored payment policy based on ID.
 
 ===== Return type
     
-<1> link:market#market_models_paymentpolicy[PaymentPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\paymentpolicy]]
+
+    link:market#market_models_paymentpolicy[PaymentPolicy^]
 
     
 
@@ -480,6 +515,7 @@ a|`$filters`
 
 
 
+[[market_contracts_returnpolicyrepositorycontract]]
 ==== ReturnPolicyRepositoryContract
 
 The contract for the eBay return policy repository.
@@ -511,7 +547,9 @@ Get a stored return policy based on ID.
 
 ===== Return type
     
-<1> link:market#market_models_returnpolicy[ReturnPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\returnpolicy]]
+
+    link:market#market_models_returnpolicy[ReturnPolicy^]
 
     
 
@@ -530,6 +568,7 @@ a|`$filters`
 
 [[market_accountpolicy_events]]
 ===  Events
+[[market_events_fulfillmentpolicycreated]]
 ==== FulfillmentPolicyCreated
 
 An event class fired after a new fulfillment policy is created.
@@ -561,14 +600,18 @@ public __construct($fulfillmentPolicy):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\fulfillmentpolicy]]
+
+    link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
 a|`$fulfillmentPolicy`
 |
@@ -589,11 +632,14 @@ Get the FulfillmentPolicy instance.
 
 ===== Return type
     
-<1> link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\fulfillmentpolicy]]
+
+    link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
     
 
 
+[[market_events_fulfillmentpolicydeleted]]
 ==== FulfillmentPolicyDeleted
 
 An event class fired after a new fulfillment policy is deleted.
@@ -625,14 +671,18 @@ public __construct($fulfillmentPolicy):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\fulfillmentpolicy]]
+
+    link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
 a|`$fulfillmentPolicy`
 |
@@ -653,11 +703,14 @@ Get the FulfillmentPolicy instance.
 
 ===== Return type
     
-<1> link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\fulfillmentpolicy]]
+
+    link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
     
 
 
+[[market_events_fulfillmentpolicyevent]]
 ==== FulfillmentPolicyEvent
 
 A base event class for all fulfillment policy events. Each fulfillment policy events expects an FulfillmentPolicy model.
@@ -689,14 +742,18 @@ public __construct($fulfillmentPolicy):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\fulfillmentpolicy]]
+
+    link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
 a|`$fulfillmentPolicy`
 |
@@ -717,11 +774,14 @@ Get the FulfillmentPolicy instance.
 
 ===== Return type
     
-<1> link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\fulfillmentpolicy]]
+
+    link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
     
 
 
+[[market_events_fulfillmentpolicyupdated]]
 ==== FulfillmentPolicyUpdated
 
 An event class fired after a new fulfillment policy is updated.
@@ -753,14 +813,18 @@ public __construct($fulfillmentPolicy):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\fulfillmentpolicy]]
+
+    link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
 a|`$fulfillmentPolicy`
 |
@@ -781,11 +845,14 @@ Get the FulfillmentPolicy instance.
 
 ===== Return type
     
-<1> link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\fulfillmentpolicy]]
+
+    link:market#market_models_fulfillmentpolicy[FulfillmentPolicy^]
 
     
 
 
+[[market_events_paymentpolicycreated]]
 ==== PaymentPolicyCreated
 
 An event class fired after a new payment policy is created.
@@ -817,14 +884,18 @@ public __construct($paymentPolicy):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:market#market_models_paymentpolicy[PaymentPolicy^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\paymentpolicy]]
+
+    link:market#market_models_paymentpolicy[PaymentPolicy^]
 
 a|`$paymentPolicy`
 |
@@ -845,11 +916,14 @@ Get the PaymentPolicy instance.
 
 ===== Return type
     
-<1> link:market#market_models_paymentpolicy[PaymentPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\paymentpolicy]]
+
+    link:market#market_models_paymentpolicy[PaymentPolicy^]
 
     
 
 
+[[market_events_paymentpolicydeleted]]
 ==== PaymentPolicyDeleted
 
 An event class fired after a new payment policy is deleted.
@@ -881,14 +955,18 @@ public __construct($paymentPolicy):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:market#market_models_paymentpolicy[PaymentPolicy^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\paymentpolicy]]
+
+    link:market#market_models_paymentpolicy[PaymentPolicy^]
 
 a|`$paymentPolicy`
 |
@@ -909,11 +987,14 @@ Get the PaymentPolicy instance.
 
 ===== Return type
     
-<1> link:market#market_models_paymentpolicy[PaymentPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\paymentpolicy]]
+
+    link:market#market_models_paymentpolicy[PaymentPolicy^]
 
     
 
 
+[[market_events_paymentpolicyevent]]
 ==== PaymentPolicyEvent
 
 A base event class for all payment policy events. Each payment policy events expects an PaymentPolicy model.
@@ -945,14 +1026,18 @@ public __construct($paymentPolicy):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:market#market_models_paymentpolicy[PaymentPolicy^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\paymentpolicy]]
+
+    link:market#market_models_paymentpolicy[PaymentPolicy^]
 
 a|`$paymentPolicy`
 |
@@ -973,11 +1058,14 @@ Get the PaymentPolicy instance.
 
 ===== Return type
     
-<1> link:market#market_models_paymentpolicy[PaymentPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\paymentpolicy]]
+
+    link:market#market_models_paymentpolicy[PaymentPolicy^]
 
     
 
 
+[[market_events_paymentpolicyupdated]]
 ==== PaymentPolicyUpdated
 
 An event class fired after a new payment policy is updated.
@@ -1009,14 +1097,18 @@ public __construct($paymentPolicy):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:market#market_models_paymentpolicy[PaymentPolicy^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\paymentpolicy]]
+
+    link:market#market_models_paymentpolicy[PaymentPolicy^]
 
 a|`$paymentPolicy`
 |
@@ -1037,11 +1129,14 @@ Get the PaymentPolicy instance.
 
 ===== Return type
     
-<1> link:market#market_models_paymentpolicy[PaymentPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\paymentpolicy]]
+
+    link:market#market_models_paymentpolicy[PaymentPolicy^]
 
     
 
 
+[[market_events_returnpolicycreated]]
 ==== ReturnPolicyCreated
 
 An event class fired after a new return policy is created.
@@ -1073,14 +1168,18 @@ public __construct($returnPolicy):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:market#market_models_returnpolicy[ReturnPolicy^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\returnpolicy]]
+
+    link:market#market_models_returnpolicy[ReturnPolicy^]
 
 a|`$returnPolicy`
 |
@@ -1101,11 +1200,14 @@ Get the ReturnPolicy instance.
 
 ===== Return type
     
-<1> link:market#market_models_returnpolicy[ReturnPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\returnpolicy]]
+
+    link:market#market_models_returnpolicy[ReturnPolicy^]
 
     
 
 
+[[market_events_returnpolicydeleted]]
 ==== ReturnPolicyDeleted
 
 An event class fired after a new return policy is deleted.
@@ -1137,14 +1239,18 @@ public __construct($returnPolicy):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:market#market_models_returnpolicy[ReturnPolicy^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\returnpolicy]]
+
+    link:market#market_models_returnpolicy[ReturnPolicy^]
 
 a|`$returnPolicy`
 |
@@ -1165,11 +1271,14 @@ Get the ReturnPolicy instance.
 
 ===== Return type
     
-<1> link:market#market_models_returnpolicy[ReturnPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\returnpolicy]]
+
+    link:market#market_models_returnpolicy[ReturnPolicy^]
 
     
 
 
+[[market_events_returnpolicyevent]]
 ==== ReturnPolicyEvent
 
 A base event class for all return policy events. Each return policy events expects an ReturnPolicy model.
@@ -1201,14 +1310,18 @@ public __construct($returnPolicy):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:market#market_models_returnpolicy[ReturnPolicy^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\returnpolicy]]
+
+    link:market#market_models_returnpolicy[ReturnPolicy^]
 
 a|`$returnPolicy`
 |
@@ -1229,11 +1342,14 @@ Get the ReturnPolicy instance.
 
 ===== Return type
     
-<1> link:market#market_models_returnpolicy[ReturnPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\returnpolicy]]
+
+    link:market#market_models_returnpolicy[ReturnPolicy^]
 
     
 
 
+[[market_events_returnpolicyupdated]]
 ==== ReturnPolicyUpdated
 
 An event class fired after a new return policy is updated.
@@ -1265,14 +1381,18 @@ public __construct($returnPolicy):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:market#market_models_returnpolicy[ReturnPolicy^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\returnpolicy]]
+
+    link:market#market_models_returnpolicy[ReturnPolicy^]
 
 a|`$returnPolicy`
 |
@@ -1293,12 +1413,15 @@ Get the ReturnPolicy instance.
 
 ===== Return type
     
-<1> link:market#market_models_returnpolicy[ReturnPolicy^]
+<1> [[__plenty\modules\market\ebay\accountpolicy\models\returnpolicy]]
+
+    link:market#market_models_returnpolicy[ReturnPolicy^]
 
     
 
 [[market_accountpolicy_models]]
 ===  Models
+[[market_models_amounttype]]
 ==== AmountType
 
 The eBay amount type model
@@ -1342,6 +1465,7 @@ Returns this model as an array.
 
 
 
+[[market_models_categorytype]]
 ==== CategoryType
 
 The eBay category type model
@@ -1385,6 +1509,7 @@ Returns this model as an array.
 
 
 
+[[market_models_deposit]]
 ==== Deposit
 
 The eBay deposit model
@@ -1403,15 +1528,21 @@ The eBay deposit model
 |===
 |Type |Name |Description
 
-|link:market#market_models_amounttype[AmountType^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\amounttype]]
+
+    link:market#market_models_amounttype[AmountType^]
 
     |amount
     |Deposits are used only with Motors listings and the amount value indicates the initial deposit that a buyer must make to purchase a motor vehicle. Deposits on motor vehicles can only be paid using PayPal, so if you specify a deposit amount, then you must also set the paymetMethodType value to 'PayPal'.
-|link:market#market_models_timeduration[TimeDuration^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\timeduration]]
+
+    link:market#market_models_timeduration[TimeDuration^]
 
     |dueIn
     |Indicates the number of hours the buyer has (after they commit to buy) to make an initial deposit to the seller as a down payment on a motor vehicle.
-|link:market#market_models_paymentmethod[PaymentMethod^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\paymentmethod]]
+
+    link:market#market_models_paymentmethod[PaymentMethod^]
 
     |paymentMethods
     |A list of accepted payment methods. For deposits (which are applicable to only motor listings), the paymentMethodType must be set to 'PayPal'
@@ -1434,6 +1565,7 @@ Returns this model as an array.
 
 
 
+[[market_models_fulfillmentpolicy]]
 ==== FulfillmentPolicy
 
 The eBay fulfillment policy model
@@ -1467,7 +1599,9 @@ The eBay fulfillment policy model
 |link:http://php.net/bool[bool^]
     |globalShipping
     |If this value is set to true, it indicates the seller has opted-in to the eBay Global Shipping Program and that they use that service for thier internation shipments.
-|link:market#market_models_timeduration[TimeDuration^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\timeduration]]
+
+    link:market#market_models_timeduration[TimeDuration^]
 
     |handlingTime
     |Specifies the maximum number of business days the seller commits to for preparing and shipping an order after receiving a cleared payment for the order.
@@ -1486,7 +1620,9 @@ The eBay fulfillment policy model
 |link:http://php.net/array[array^]
     |shippingOptions
     |A list that defines the seller's shipping configurations for DOMESTIC and INTERNATIONAL order shipments.
-|link:market#market_models_regionset[RegionSet^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\regionset]]
+
+    link:market#market_models_regionset[RegionSet^]
 
     |shipToLocations
     |This object contains the regionIncluded and regionExcluded fields, which indicate the areas to where the seller does and dosen't ship.
@@ -1509,6 +1645,7 @@ Returns this model as an array.
 
 
 
+[[market_models_paymentmethod]]
 ==== PaymentMethod
 
 The eBay payment method model
@@ -1533,7 +1670,9 @@ The eBay payment method model
 |link:http://php.net/string[string^]
     |paymentMethodType
     |The payment method, selected from the supported payment method types..
-|link:market#market_models_recipientaccountreference[RecipientAccountReference^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\recipientaccountreference]]
+
+    link:market#market_models_recipientaccountreference[RecipientAccountReference^]
 
     |recipientAccountReference
     |Information that is used to identify the recipient's account to which electronic funds are sent. This field is required if the payment method is set to PAYPAL, and the field must contain the email address associated with the PayPal account selected by the seller.
@@ -1556,6 +1695,7 @@ Returns this model as an array.
 
 
 
+[[market_models_paymentpolicy]]
 ==== PaymentPolicy
 
 The eBay payment policy model
@@ -1580,14 +1720,18 @@ The eBay payment policy model
 |link:http://php.net/array[array^]
     |categoryTypes
     |The CategoryTypeEnum value to which this policy applies. The category type discerns whether the policy covers the sale of motor vehicles (via eBay Motors), or the sale of everything except motor vehicles.
-|link:market#market_models_deposit[Deposit^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\deposit]]
+
+    link:market#market_models_deposit[Deposit^]
 
     |deposit
     |A container that describes the details of a deposit. Used only with motor listings.
 |link:http://php.net/string[string^]
     |description
     |An optional seller-defined description of the payment policy. (Max length: 250)
-|link:market#market_models_timeduration[TimeDuration^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\timeduration]]
+
+    link:market#market_models_timeduration[TimeDuration^]
 
     |fullPaymentDueIn
     |Indicates the number of days that a buyer has to make their full payment to the seller, and close the remaining balance on a motor vehicle transaction. The period starts when the buyer commits to buy.
@@ -1603,7 +1747,9 @@ The eBay payment policy model
 |link:http://php.net/string[string^]
     |paymentInstructions
     |Allows the seller to give payment instructions to the buyer. These instructions appear on the eBay View Item and Checkout pages.
-|link:market#market_models_paymentmethod[PaymentMethod^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\paymentmethod]]
+
+    link:market#market_models_paymentmethod[PaymentMethod^]
 
     |paymentMethods
     |A list of the payment methods accepted by the seller. Each payment policy must specify at least one payment method.
@@ -1626,6 +1772,7 @@ Returns this model as an array.
 
 
 
+[[market_models_recipientaccountreference]]
 ==== RecipientAccountReference
 
 The eBay recipient account reference model
@@ -1669,6 +1816,7 @@ Returns this model as an array.
 
 
 
+[[market_models_region]]
 ==== Region
 
 The eBay region model
@@ -1712,6 +1860,7 @@ Returns this model as an array.
 
 
 
+[[market_models_regionset]]
 ==== RegionSet
 
 The eBay region set model
@@ -1755,6 +1904,7 @@ Returns this model as an array.
 
 
 
+[[market_models_returnpolicy]]
 ==== ReturnPolicy
 
 The eBay return policy model
@@ -1803,7 +1953,9 @@ The eBay return policy model
 |link:http://php.net/string[string^]
     |returnMethod
     |This field indicates the method in which the seller handles non-money back return requests for remorse returns. Sellers can specify they either exchange or replace items. Available options: `EXCHANGE`, `REPLACEMENT`.
-|link:market#market_models_timeduration[TimeDuration^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\timeduration]]
+
+    link:market#market_models_timeduration[TimeDuration^]
 
     |returnPeriod
     |This value indicates the length of time the seller accepts returns, the duration of which starts when the buyer receives the item.
@@ -1832,6 +1984,7 @@ Returns this model as an array.
 
 
 
+[[market_models_shippingoption]]
 ==== ShippingOption
 
 The eBay shipping option model
@@ -1853,7 +2006,9 @@ The eBay shipping option model
 |link:http://php.net/string[string^]
     |costType
     |Defines whether the shipping cost is `FLAT_RATE`, `CALCULATED`, or `NOT_SPECIFIED` (for use with freight shipping and local pickup)
-|link:market#market_models_amounttype[AmountType^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\amounttype]]
+
+    link:market#market_models_amounttype[AmountType^]
 
     |insuranceFee
     |Sellers can offer international shipping insurance only when they ship to AU, FR, or IT. This value indicates the cost the buyer must pay to purchase shipping insurance for the items being shipped.
@@ -1863,7 +2018,9 @@ The eBay shipping option model
 |link:http://php.net/string[string^]
     |optionType
     |Use this field to set the ShippingOption element to either `DOMESTIC` or `INTERNATIONAL`
-|link:market#market_models_amounttype[AmountType^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\amounttype]]
+
+    link:market#market_models_amounttype[AmountType^]
 
     |packageHandlingCost
     |A fee a seller can add to cover package and handling costs. This fee is in addition to the amount of the selected shipping service and this fee is included in the final shipping service costs in the output.
@@ -1892,6 +2049,7 @@ Returns this model as an array.
 
 
 
+[[market_models_shippingservice]]
 ==== ShippingService
 
 The eBay shipping service model
@@ -1910,7 +2068,9 @@ The eBay shipping service model
 |===
 |Type |Name |Description
 
-|link:market#market_models_amounttype[AmountType^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\amounttype]]
+
+    link:market#market_models_amounttype[AmountType^]
 
     |additionalShippingCost
     |The cost of shipping each additional item if the same buyer purchases a multiple quantity of the same line item. This field is applicable for policies that cover multiple-quantity, fixed-price listings and is not applicable for policies that apply to single-quantity listings.
@@ -1920,7 +2080,9 @@ The eBay shipping service model
 |link:http://php.net/bool[bool^]
     |buyerResponsibleForShipping
     |This field is applicable for only items listed in vehicle categories on eBay Motors (US and Canada). If set to true, the buyer is responsible for the shipment of the vehicle. Otherwise, the seller should specify the vehicle shipping arrangements in the item description.
-|link:market#market_models_amounttype[AmountType^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\amounttype]]
+
+    link:market#market_models_amounttype[AmountType^]
 
     |cashOnDeliveryFee
     |The value indicates the Cash on Delivery (COD) fee that the seller charges if the buyer uses the CASH_ON_DELIVERY payment method.
@@ -1930,21 +2092,27 @@ The eBay shipping service model
 |link:http://php.net/string[string^]
     |shippingCarrierCode
     |The shipping carrier, such as 'USPS', 'FedEx', 'UPS', and so on.
-|link:market#market_models_amounttype[AmountType^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\amounttype]]
+
+    link:market#market_models_amounttype[AmountType^]
 
     |shippingCost
     |For shipping options that use a FLAT_RATE cost type, the amount is the shipping cost for the selected shipping carrier and service. The amount supplied must exclude any additional shipping charges (such as the seller's handling charges or insurance).
 |link:http://php.net/string[string^]
     |shippingServiceCode
     |The shipping service that the shipping carrier uses to ship an item. For example, an overnight, two-day delivery, or other type of service.
-|link:market#market_models_regionset[RegionSet^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\regionset]]
+
+    link:market#market_models_regionset[RegionSet^]
 
     |shipToLocations
     |This object contains the regionIncluded and regionExcluded fields that define the list of geographical regions that the seller ships to and the list of regions where they do not ship.
 |link:http://php.net/int[int^]
     |sortOrder
     |This integer value controls the order that this shipping service option appears in the View Item and Checkout pages, as related to the other specified shipping service options.
-|link:market#market_models_amounttype[AmountType^]
+|[[__plenty\modules\market\ebay\accountpolicy\models\amounttype]]
+
+    link:market#market_models_amounttype[AmountType^]
 
     |surcharge
     |A fee that can be charged to US buyers when they have an item shipped via UPS or FedEx to Alaska, Hawaii or Puerto Rico.
@@ -1967,6 +2135,7 @@ Returns this model as an array.
 
 
 
+[[market_models_timeduration]]
 ==== TimeDuration
 
 The eBay time duration model
@@ -2014,6 +2183,7 @@ Returns this model as an array.
 
 [[market_api_exceptions]]
 ===  Exceptions
+[[market_exceptions_invalidendpointexception]]
 ==== InvalidEndPointException
 
 InvalidEndPointException.
@@ -2045,7 +2215,9 @@ public getMessage():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2063,7 +2235,9 @@ public getCode():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2081,7 +2255,9 @@ public getFile():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2099,7 +2275,9 @@ public getLine():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2117,7 +2295,9 @@ public getTrace():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2135,7 +2315,9 @@ public getPrevious():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2153,11 +2335,14 @@ public getTraceAsString():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
+[[market_exceptions_invalidpropertytypeexception]]
 ==== InvalidPropertyTypeException
 
 InvalidPropertyTypeException.
@@ -2189,7 +2374,9 @@ public getMessage():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2207,7 +2394,9 @@ public getCode():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2225,7 +2414,9 @@ public getFile():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2243,7 +2434,9 @@ public getLine():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2261,7 +2454,9 @@ public getTrace():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2279,7 +2474,9 @@ public getPrevious():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2297,11 +2494,14 @@ public getTraceAsString():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 
+[[market_exceptions_unknownpropertyexception]]
 ==== UnknownPropertyException
 
 InvalidPropertyTypeException.
@@ -2333,7 +2533,9 @@ public getMessage():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2351,7 +2553,9 @@ public getCode():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2369,7 +2573,9 @@ public getFile():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2387,7 +2593,9 @@ public getLine():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2405,7 +2613,9 @@ public getTrace():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2423,7 +2633,9 @@ public getPrevious():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2441,12 +2653,15 @@ public getTraceAsString():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[market_api_services]]
 ===  Services
+[[market_services_baserestservice]]
 ==== BaseRestService
 
 The service for making eBay REST calls.
@@ -2478,7 +2693,9 @@ public __construct($config):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2522,7 +2739,9 @@ Method to get the service&#039;s configuration.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2533,7 +2752,9 @@ Method to get the service&#039;s configuration.
 a|`$option`
 |The name of the option whos value will be returned.
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$default`
 |
@@ -2554,7 +2775,9 @@ Build API request and send.
 
 ===== Return type
     
-<1> link:market#market_types_basetype[BaseType^]
+<1> [[__plenty\modules\market\ebay\api\types\basetype]]
+
+    link:market#market_types_basetype[BaseType^]
 
     
 
@@ -2565,7 +2788,9 @@ Build API request and send.
 a|`$name`
 |The name of the operation.
 
-|link:market#market_types_basetype[BaseType^]
+|[[__plenty\modules\market\ebay\api\types\basetype]]
+
+    link:market#market_types_basetype[BaseType^]
 
 a|`$request`
 |Request object containing the request information.
@@ -2590,6 +2815,7 @@ Derived classes must implement this method that will build the needed eBay http 
     
 
 
+[[market_services_basewsdlservice]]
 ==== BaseWsdlService
 
 The service for making eBay WSDL calls.
@@ -2621,7 +2847,9 @@ public __construct($config):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2665,7 +2893,9 @@ Method to get the service&#039;s configuration.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2676,7 +2906,9 @@ Method to get the service&#039;s configuration.
 a|`$option`
 |The name of the option whos value will be returned.
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$default`
 |
@@ -2697,7 +2929,9 @@ Build API request and send.
 
 ===== Return type
     
-<1> link:market#market_types_basetype[BaseType^]
+<1> [[__plenty\modules\market\ebay\api\types\basetype]]
+
+    link:market#market_types_basetype[BaseType^]
 
     
 
@@ -2708,7 +2942,9 @@ Build API request and send.
 a|`$name`
 |The name of the operation.
 
-|link:market#market_types_basetype[BaseType^]
+|[[__plenty\modules\market\ebay\api\types\basetype]]
+
+    link:market#market_types_basetype[BaseType^]
 
 a|`$request`
 |Request object containing the request information.
@@ -2747,6 +2983,7 @@ a|`$operationName`
 
 [[market_api_types]]
 ===  Types
+[[market_types_base64binarytype]]
 ==== Base64BinaryType
 
 The service for eBay Base64BinaryType.
@@ -2765,15 +3002,21 @@ The service for eBay Base64BinaryType.
 |===
 |Type |Name |Description
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |xmlNamespaces
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |requestXmlRootElementNames
     |
@@ -2796,7 +3039,9 @@ public __construct($values = []):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2853,7 +3098,9 @@ PHP magic function that is called when getting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2880,7 +3127,9 @@ PHP magic function that is called when setting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2891,7 +3140,9 @@ PHP magic function that is called when setting a property.
 a|`$name`
 |The property name.
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |Value assigned to the property.
@@ -2938,7 +3189,9 @@ PHP magic function that is called to unset a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -2982,7 +3235,9 @@ Returns the meta data for a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3009,14 +3264,18 @@ Method to get or set the object&#039;s attachment. Overrides any existing attach
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |If a string it is assumed to be the contents of the attachment. If an array copy its values across.
@@ -3075,7 +3334,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3102,7 +3363,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3120,6 +3383,7 @@ a|`$values`
 
 
 
+[[market_types_basetype]]
 ==== BaseType
 
 The service for base type.
@@ -3138,15 +3402,21 @@ The service for base type.
 |===
 |Type |Name |Description
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |xmlNamespaces
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |requestXmlRootElementNames
     |
@@ -3169,7 +3439,9 @@ public __construct($values = []):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3196,7 +3468,9 @@ PHP magic function that is called when getting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3223,7 +3497,9 @@ PHP magic function that is called when setting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3234,7 +3510,9 @@ PHP magic function that is called when setting a property.
 a|`$name`
 |The property name.
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |Value assigned to the property.
@@ -3281,7 +3559,9 @@ PHP magic function that is called to unset a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3325,7 +3605,9 @@ Returns the meta data for a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3352,14 +3634,18 @@ Method to get or set the object&#039;s attachment. Overrides any existing attach
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |If a string it is assumed to be the contents of the attachment. If an array copy its values across.
@@ -3418,7 +3704,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3445,7 +3733,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3493,6 +3783,7 @@ a|`$values`
 
 
 
+[[market_types_booleantype]]
 ==== BooleanType
 
 The service for boolean type.
@@ -3511,15 +3802,21 @@ The service for boolean type.
 |===
 |Type |Name |Description
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |xmlNamespaces
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |requestXmlRootElementNames
     |
@@ -3542,7 +3839,9 @@ public __construct($values = []):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3599,7 +3898,9 @@ PHP magic function that is called when getting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3626,7 +3927,9 @@ PHP magic function that is called when setting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3637,7 +3940,9 @@ PHP magic function that is called when setting a property.
 a|`$name`
 |The property name.
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |Value assigned to the property.
@@ -3684,7 +3989,9 @@ PHP magic function that is called to unset a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3728,7 +4035,9 @@ Returns the meta data for a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3755,14 +4064,18 @@ Method to get or set the object&#039;s attachment. Overrides any existing attach
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |If a string it is assumed to be the contents of the attachment. If an array copy its values across.
@@ -3821,7 +4134,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3848,7 +4163,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3866,6 +4183,7 @@ a|`$values`
 
 
 
+[[market_types_decimaltype]]
 ==== DecimalType
 
 The service for decimal type.
@@ -3884,15 +4202,21 @@ The service for decimal type.
 |===
 |Type |Name |Description
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |xmlNamespaces
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |requestXmlRootElementNames
     |
@@ -3915,7 +4239,9 @@ public __construct($values = []):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3972,7 +4298,9 @@ PHP magic function that is called when getting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -3999,7 +4327,9 @@ PHP magic function that is called when setting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4010,7 +4340,9 @@ PHP magic function that is called when setting a property.
 a|`$name`
 |The property name.
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |Value assigned to the property.
@@ -4057,7 +4389,9 @@ PHP magic function that is called to unset a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4101,7 +4435,9 @@ Returns the meta data for a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4128,14 +4464,18 @@ Method to get or set the object&#039;s attachment. Overrides any existing attach
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |If a string it is assumed to be the contents of the attachment. If an array copy its values across.
@@ -4194,7 +4534,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4221,7 +4563,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4239,6 +4583,7 @@ a|`$values`
 
 
 
+[[market_types_doubletype]]
 ==== DoubleType
 
 The service for double type.
@@ -4257,15 +4602,21 @@ The service for double type.
 |===
 |Type |Name |Description
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |xmlNamespaces
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |requestXmlRootElementNames
     |
@@ -4288,7 +4639,9 @@ public __construct($values = []):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4345,7 +4698,9 @@ PHP magic function that is called when getting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4372,7 +4727,9 @@ PHP magic function that is called when setting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4383,7 +4740,9 @@ PHP magic function that is called when setting a property.
 a|`$name`
 |The property name.
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |Value assigned to the property.
@@ -4430,7 +4789,9 @@ PHP magic function that is called to unset a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4474,7 +4835,9 @@ Returns the meta data for a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4501,14 +4864,18 @@ Method to get or set the object&#039;s attachment. Overrides any existing attach
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |If a string it is assumed to be the contents of the attachment. If an array copy its values across.
@@ -4567,7 +4934,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4594,7 +4963,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4612,6 +4983,7 @@ a|`$values`
 
 
 
+[[market_types_integertype]]
 ==== IntegerType
 
 The service for integer type.
@@ -4630,15 +5002,21 @@ The service for integer type.
 |===
 |Type |Name |Description
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |xmlNamespaces
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |requestXmlRootElementNames
     |
@@ -4661,7 +5039,9 @@ public __construct($values = []):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4718,7 +5098,9 @@ PHP magic function that is called when getting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4745,7 +5127,9 @@ PHP magic function that is called when setting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4756,7 +5140,9 @@ PHP magic function that is called when setting a property.
 a|`$name`
 |The property name.
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |Value assigned to the property.
@@ -4803,7 +5189,9 @@ PHP magic function that is called to unset a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4847,7 +5235,9 @@ Returns the meta data for a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4874,14 +5264,18 @@ Method to get or set the object&#039;s attachment. Overrides any existing attach
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |If a string it is assumed to be the contents of the attachment. If an array copy its values across.
@@ -4940,7 +5334,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4967,7 +5363,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -4985,6 +5383,7 @@ a|`$values`
 
 
 
+[[market_types_repeatabletype]]
 ==== RepeatableType
 
 The service for repeatable type.
@@ -5016,7 +5415,9 @@ public __construct($class, $property, $expectedType):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5077,7 +5478,9 @@ Returns the value of the given offset.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5104,19 +5507,25 @@ Sets a value for the given offset.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$offset`
 |The array index or null to add the value to the end of the array.
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |The value to add.
@@ -5137,7 +5546,9 @@ Unsets the value of the given offset.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5181,7 +5592,9 @@ public current():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5216,7 +5629,9 @@ Move onto the next array index.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5234,7 +5649,9 @@ Reset the array index to the start of the array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5256,6 +5673,7 @@ public valid():bool // <1>
     
 
 
+[[market_types_stringtype]]
 ==== StringType
 
 The service for string type.
@@ -5274,15 +5692,21 @@ The service for string type.
 |===
 |Type |Name |Description
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |xmlNamespaces
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |requestXmlRootElementNames
     |
@@ -5305,7 +5729,9 @@ public __construct($values = []):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5362,7 +5788,9 @@ PHP magic function that is called when getting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5389,7 +5817,9 @@ PHP magic function that is called when setting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5400,7 +5830,9 @@ PHP magic function that is called when setting a property.
 a|`$name`
 |The property name.
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |Value assigned to the property.
@@ -5447,7 +5879,9 @@ PHP magic function that is called to unset a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5491,7 +5925,9 @@ Returns the meta data for a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5518,14 +5954,18 @@ Method to get or set the object&#039;s attachment. Overrides any existing attach
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |If a string it is assumed to be the contents of the attachment. If an array copy its values across.
@@ -5584,7 +6024,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5611,7 +6053,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5629,6 +6073,7 @@ a|`$values`
 
 
 
+[[market_types_tokentype]]
 ==== TokenType
 
 The service for token type.
@@ -5647,15 +6092,21 @@ The service for token type.
 |===
 |Type |Name |Description
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |xmlNamespaces
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |requestXmlRootElementNames
     |
@@ -5678,7 +6129,9 @@ public __construct($values = []):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5735,7 +6188,9 @@ PHP magic function that is called when getting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5762,7 +6217,9 @@ PHP magic function that is called when setting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5773,7 +6230,9 @@ PHP magic function that is called when setting a property.
 a|`$name`
 |The property name.
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |Value assigned to the property.
@@ -5820,7 +6279,9 @@ PHP magic function that is called to unset a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5864,7 +6325,9 @@ Returns the meta data for a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5891,14 +6354,18 @@ Method to get or set the object&#039;s attachment. Overrides any existing attach
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |If a string it is assumed to be the contents of the attachment. If an array copy its values across.
@@ -5957,7 +6424,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -5984,7 +6453,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6002,6 +6473,7 @@ a|`$values`
 
 
 
+[[market_types_uritype]]
 ==== URIType
 
 The service for uri type.
@@ -6020,15 +6492,21 @@ The service for uri type.
 |===
 |Type |Name |Description
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |properties
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |xmlNamespaces
     |
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |requestXmlRootElementNames
     |
@@ -6051,7 +6529,9 @@ public __construct($values = []):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6108,7 +6588,9 @@ PHP magic function that is called when getting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6135,7 +6617,9 @@ PHP magic function that is called when setting a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6146,7 +6630,9 @@ PHP magic function that is called when setting a property.
 a|`$name`
 |The property name.
 
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$value`
 |Value assigned to the property.
@@ -6193,7 +6679,9 @@ PHP magic function that is called to unset a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6237,7 +6725,9 @@ Returns the meta data for a property.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6264,14 +6754,18 @@ Method to get or set the object&#039;s attachment. Overrides any existing attach
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$data`
 |If a string it is assumed to be the contents of the attachment. If an array copy its values across.
@@ -6330,7 +6824,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6357,7 +6853,9 @@ Assign multiple values to an object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6379,6 +6877,7 @@ a|`$values`
 
 [[market_auth_contracts]]
 ===  Contracts
+[[market_contracts_authservicecontract]]
 ==== AuthServiceContract
 
 The contract for the eBay authentication service.
@@ -6410,7 +6909,9 @@ Refresh credentials token and update.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -6428,6 +6929,7 @@ a|`$credentialsId`
 
 [[market_category_contracts]]
 ===  Contracts
+[[market_contracts_categoryrepositorycontract]]
 ==== CategoryRepositoryContract
 
 The contract for the Ebay category repository.
@@ -6459,7 +6961,9 @@ Get category
 
 ===== Return type
     
-<1> link:market#market_models_category[Category^]
+<1> [[__plenty\modules\market\ebay\category\models\category]]
+
+    link:market#market_models_category[Category^]
 
     
 
@@ -6512,6 +7016,7 @@ a|`$with`
 
 [[market_category_models]]
 ===  Models
+[[market_models_category]]
 ==== Category
 
 The category model
@@ -6571,6 +7076,7 @@ Returns this model as an array.
 
 [[market_itemspecific_contracts]]
 ===  Contracts
+[[market_contracts_itemspecificrepositorycontract]]
 ==== ItemSpecificRepositoryContract
 
 The contract for the Ebay category repository.
@@ -6616,6 +7122,7 @@ a|`$filters`
 
 [[market_itemspecific_models]]
 ===  Models
+[[market_models_itemspecific]]
 ==== ItemSpecific
 
 The eBay item specific model.
@@ -6690,6 +7197,7 @@ Returns this model as an array.
 
 [[market_marketplace_contracts]]
 ===  Contracts
+[[market_contracts_marketplacerepositorycontract]]
 ==== MarketplaceRepositoryContract
 
 The contract for the Ebay marketplace repository.
@@ -6761,6 +7269,7 @@ a|`$filters`
 
 [[market_marketplace_helpers]]
 ===  Helpers
+[[market_helpers_marketplacehelper]]
 ==== MarketplaceHelper
 
 Helper class that allows getting information about an eBay marketplace more easily.
@@ -6792,7 +7301,9 @@ Get marketplace data model based on filters.
 
 ===== Return type
     
-<1> link:market#market_models_marketplace[Marketplace^]
+<1> [[__plenty\modules\market\ebay\marketplace\models\marketplace]]
+
+    link:market#market_models_marketplace[Marketplace^]
 
     
 
@@ -7031,6 +7542,7 @@ a|`$filters`
 
 [[market_marketplace_models]]
 ===  Models
+[[market_models_marketplace]]
 ==== Marketplace
 
 The eBay marketplace model.
@@ -7090,6 +7602,7 @@ Returns this model as an array.
 
 [[market_partsfitment_contracts]]
 ===  Contracts
+[[market_contracts_fitmentitempropertyrepositorycontract]]
 ==== FitmentItemPropertyRepositoryContract
 
 The contract for the fitment item property repository.
@@ -7121,7 +7634,9 @@ Returns a fitment item property by an ID.
 
 ===== Return type
     
-<1> link:market#market_models_fitmentitemproperty[FitmentItemProperty^]
+<1> [[__plenty\modules\market\ebay\partsfitment\models\fitmentitemproperty]]
+
+    link:market#market_models_fitmentitemproperty[FitmentItemProperty^]
 
     
 
@@ -7148,7 +7663,9 @@ Creates a new fitment item property.
 
 ===== Return type
     
-<1> link:market#market_models_fitmentitemproperty[FitmentItemProperty^]
+<1> [[__plenty\modules\market\ebay\partsfitment\models\fitmentitemproperty]]
+
+    link:market#market_models_fitmentitemproperty[FitmentItemProperty^]
 
     
 
@@ -7179,7 +7696,9 @@ Updates an existing fitment item property.
 
 ===== Return type
     
-<1> link:market#market_models_fitmentitem[FitmentItem^]
+<1> [[__plenty\modules\market\ebay\partsfitment\models\fitmentitem]]
+
+    link:market#market_models_fitmentitem[FitmentItem^]
 
     
 
@@ -7223,6 +7742,7 @@ a|`$id`
 
 
 
+[[market_contracts_fitmentitemrepositorycontract]]
 ==== FitmentItemRepositoryContract
 
 The contract for the fitment item repository.
@@ -7254,7 +7774,9 @@ Returns a fitment item by an ID.
 
 ===== Return type
     
-<1> link:market#market_models_fitmentitem[FitmentItem^]
+<1> [[__plenty\modules\market\ebay\partsfitment\models\fitmentitem]]
+
+    link:market#market_models_fitmentitem[FitmentItem^]
 
     
 
@@ -7281,7 +7803,9 @@ Creates a new fitment item.
 
 ===== Return type
     
-<1> link:market#market_models_fitmentitem[FitmentItem^]
+<1> [[__plenty\modules\market\ebay\partsfitment\models\fitmentitem]]
+
+    link:market#market_models_fitmentitem[FitmentItem^]
 
     
 
@@ -7312,7 +7836,9 @@ Updates an existing fitment item.
 
 ===== Return type
     
-<1> link:market#market_models_fitmentitem[FitmentItem^]
+<1> [[__plenty\modules\market\ebay\partsfitment\models\fitmentitem]]
+
+    link:market#market_models_fitmentitem[FitmentItem^]
 
     
 
@@ -7356,6 +7882,7 @@ a|`$id`
 
 
 
+[[market_contracts_fitmentrepositorycontract]]
 ==== FitmentRepositoryContract
 
 The contract for the fitment repository.
@@ -7387,7 +7914,9 @@ Returns a fitment by an ID.
 
 ===== Return type
     
-<1> link:market#market_models_fitment[Fitment^]
+<1> [[__plenty\modules\market\ebay\partsfitment\models\fitment]]
+
+    link:market#market_models_fitment[Fitment^]
 
     
 
@@ -7418,7 +7947,9 @@ Creates a new fitment.
 
 ===== Return type
     
-<1> link:market#market_models_fitment[Fitment^]
+<1> [[__plenty\modules\market\ebay\partsfitment\models\fitment]]
+
+    link:market#market_models_fitment[Fitment^]
 
     
 
@@ -7445,7 +7976,9 @@ Updates an existing fitment.
 
 ===== Return type
     
-<1> link:market#market_models_fitment[Fitment^]
+<1> [[__plenty\modules\market\ebay\partsfitment\models\fitment]]
+
+    link:market#market_models_fitment[Fitment^]
 
     
 
@@ -7476,7 +8009,9 @@ Deletes a fitment. Returns `true` if the deletion was successful, otherwise `fal
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
+<1> [[__plenty\repositories\models\deleteresponse]]
+
+    link:miscellaneous#miscellaneous_models_deleteresponse[DeleteResponse^]
 
     
 
@@ -7541,7 +8076,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -7559,7 +8096,9 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -7577,7 +8116,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -7604,7 +8145,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -7622,7 +8165,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -7640,12 +8185,15 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[market_partsfitment_models]]
 ===  Models
+[[market_models_fitment]]
 ==== Fitment
 
 The fitment model. This can contain multiple FitmentItems models.
@@ -7698,6 +8246,7 @@ Returns this model as an array.
 
 
 
+[[market_models_fitmentitem]]
 ==== FitmentItem
 
 The fitment item model. This belongs to one fitment model and can contain multiple FitmentItemProperty models.
@@ -7722,7 +8271,9 @@ The fitment item model. This belongs to one fitment model and can contain multip
 |link:http://php.net/int[int^]
     |fitmentId
     |The id of the fitment.
-|link:market#market_models_fitment[Fitment^]
+|[[__plenty\modules\market\ebay\partsfitment\models\fitment]]
+
+    link:market#market_models_fitment[Fitment^]
 
     |fitment
     |The fitment this fitment item belongs to.
@@ -7748,6 +8299,7 @@ Returns this model as an array.
 
 
 
+[[market_models_fitmentitemproperty]]
 ==== FitmentItemProperty
 
 The fitment item property model. This bleongs to an FitmentItem model.
@@ -7778,7 +8330,9 @@ The fitment item property model. This bleongs to an FitmentItem model.
 |link:http://php.net/string[string^]
     |value
     |The value of the property.
-|link:market#market_models_fitmentitem[FitmentItem^]
+|[[__plenty\modules\market\ebay\partsfitment\models\fitmentitem]]
+
+    link:market#market_models_fitmentitem[FitmentItem^]
 
     |fitmentItem
     |The fitment item this property belongs to.
@@ -7805,6 +8359,7 @@ Returns this model as an array.
 
 [[market_shopcategory_contracts]]
 ===  Contracts
+[[market_contracts_shopcategoryrepositorycontract]]
 ==== ShopCategoryRepositoryContract
 
 The contract for the eBay shop categories.
@@ -7857,6 +8412,7 @@ a|`$viewType`
 
 [[market_transaction_contracts]]
 ===  Contracts
+[[market_contracts_transactionrepositorycontract]]
 ==== TransactionRepositoryContract
 
 The contract for the ebay transaction repository.
@@ -7888,7 +8444,9 @@ Gets a transaction.
 
 ===== Return type
     
-<1> link:market#market_models_transaction[Transaction^]
+<1> [[__plenty\modules\market\ebay\transaction\models\transaction]]
+
+    link:market#market_models_transaction[Transaction^]
 
     
 
@@ -7949,7 +8507,9 @@ Sets the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -7976,7 +8536,9 @@ Returns the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -7994,7 +8556,9 @@ Returns a collection of parsed filters as Condition object
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8012,7 +8576,9 @@ Clears the filter array.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8030,7 +8596,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8048,12 +8616,15 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[market_transaction_models]]
 ===  Models
+[[market_models_transaction]]
 ==== Transaction
 
 The ebay transaction model.
@@ -8096,7 +8667,9 @@ The ebay transaction model.
 |link:http://php.net/string[string^]
     |transactionId
     |The ID of the ebay transaction.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |endTime
     |The date that the item was bought.
@@ -8115,7 +8688,9 @@ The ebay transaction model.
 |link:http://php.net/int[int^]
     |referrerId
     |The ID of the order referrer.
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
     |createdAt
     |The date that the transaction was created.
@@ -8175,6 +8750,7 @@ Returns this model as an array.
 
 [[market_helper_contracts]]
 ===  Contracts
+[[market_contracts_marketaccounthelperrepositorycontract]]
 ==== MarketAccountHelperRepositoryContract
 
 The contract for the market account helper repository.
@@ -8219,6 +8795,7 @@ a|`$marketId`
 
 
 
+[[market_contracts_marketattributehelperrepositorycontract]]
 ==== MarketAttributeHelperRepositoryContract
 
 The contract for the market attribute helper repository.
@@ -8320,7 +8897,9 @@ Returns all attribute names for the given language as a string delimited by the 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:item#item_models_record[Record^]
+|[[__plenty\modules\item\datalayer\models\record]]
+
+    link:item#item_models_record[Record^]
 
 a|`$record`
 |
@@ -8355,7 +8934,9 @@ Returns the attribute value set short frontend name. Ex.: blue, XL
 .*Parameters*
 |===
 |Type |Name |Description
-|link:item#item_models_record[Record^]
+|[[__plenty\modules\item\datalayer\models\record]]
+
+    link:item#item_models_record[Record^]
 
 a|`$record`
 |
@@ -8428,7 +9009,9 @@ Returns the name for a variation with all attribute names and attribute values. 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:item#item_models_record[Record^]
+|[[__plenty\modules\item\datalayer\models\record]]
+
+    link:item#item_models_record[Record^]
 
 a|`$record`
 |
@@ -8440,6 +9023,7 @@ a|`$lang`
 
 
 
+[[market_contracts_marketcategoryhelperrepositorycontract]]
 ==== MarketCategoryHelperRepositoryContract
 
 The contract for the market category helper repository.
@@ -8496,6 +9080,7 @@ a|`$separator`
 
 
 
+[[market_contracts_marketitemhelperrepositorycontract]]
 ==== MarketItemHelperRepositoryContract
 
 The contract for the item helper repository.
@@ -8612,6 +9197,7 @@ a|`$returnAvailabilityName`
 
 
 
+[[market_contracts_marketpropertyhelperrepositorycontract]]
 ==== MarketPropertyHelperRepositoryContract
 
 The contract for the market property helper repository.
@@ -8660,6 +9246,7 @@ a|`$referrerId`
 
 [[market_settings_contracts]]
 ===  Contracts
+[[market_contracts_settingsrepositorycontract]]
 ==== SettingsRepositoryContract
 
 Use this interface to store and retrieve market specific settings.
@@ -8691,7 +9278,9 @@ List settings.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
+<1> [[__plenty\repositories\models\paginatedresult]]
+
+    link:miscellaneous#miscellaneous_models_paginatedresult[PaginatedResult^]
 
     
 
@@ -8726,7 +9315,9 @@ Create market settings.
 
 ===== Return type
     
-<1> link:market#market_models_settings[Settings^]
+<1> [[__plenty\modules\market\settings\models\settings]]
+
+    link:market#market_models_settings[Settings^]
 
     
 
@@ -8761,7 +9352,9 @@ Update one market settings entry.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8792,7 +9385,9 @@ Return the settings for a given settings ID.
 
 ===== Return type
     
-<1> link:market#market_models_settings[Settings^]
+<1> [[__plenty\modules\market\settings\models\settings]]
+
+    link:market#market_models_settings[Settings^]
 
     
 
@@ -8875,7 +9470,9 @@ Delete all settings for a given type and marketplace ID.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8906,7 +9503,9 @@ Resets all Criteria filters by creating a new instance of the builder object.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -8924,12 +9523,15 @@ Applies criteria classes to the current repository.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 [[market_settings_factories]]
 ===  Factories
+[[market_factories_settingscorrelationfactory]]
 ==== SettingsCorrelationFactory
 
 Factory that allows to store correlation between market settings and plentymarkets settings.
@@ -8961,7 +9563,9 @@ Set here the type of relation that should be created.
 
 ===== Return type
     
-<1> link:market#market_factories_settingscorrelationfactory[SettingsCorrelationFactory^]
+<1> [[__plenty\modules\market\settings\factories\settingscorrelationfactory]]
+
+    link:market#market_factories_settingscorrelationfactory[SettingsCorrelationFactory^]
 
     
 
@@ -8988,7 +9592,9 @@ Use this method to create a relation of the chosen type.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -9019,7 +9625,9 @@ Use this method to create a relation of the chosen type.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -9054,14 +9662,18 @@ Clear all relations for a given correlation type.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$marketplaceId`
 |
@@ -9088,7 +9700,9 @@ Get all correlations for a given marketplace ID.
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$marketplaceId`
 |
@@ -9109,14 +9723,18 @@ Get a specific settings by marketplace id and correlation id.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$marketplaceId`
 |
@@ -9141,14 +9759,18 @@ Get a specific settings by marketplace id and correlation id.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$marketplaceId`
 |
@@ -9173,14 +9795,18 @@ Get a specific settings by marketplace id and correlation id.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$marketplaceId`
 |
@@ -9209,14 +9835,18 @@ List settings by marketplace id and parent settings id.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$marketplaceId`
 |
@@ -9241,14 +9871,18 @@ Get a specific settings by marketplace id and correlation id.
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
 .*Parameters*
 |===
 |Type |Name |Description
-|link:miscellaneous#miscellaneous__[^]
+|[[__]]
+
+    link:miscellaneous#miscellaneous__[^]
 
 a|`$marketplaceId`
 |
@@ -9265,6 +9899,7 @@ a|`$parentSettingsId`
 
 [[market_settings_models]]
 ===  Models
+[[market_models_settings]]
 ==== Settings
 
 The market settings model.
@@ -9333,6 +9968,7 @@ Returns this model as an array.
 
 [[market_order_events]]
 ===  Events
+[[market_events_beforeneworderitemcreationevent]]
 ==== BeforeNewOrderItemCreationEvent
 
 Event which signals a new ebay order item before its creation.
@@ -9364,7 +10000,9 @@ public getData():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -9382,7 +10020,9 @@ public getWarehouseId():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -9400,7 +10040,9 @@ public setWarehouseId($warehouseId):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -9414,6 +10056,7 @@ a|`$warehouseId`
 
 
 
+[[market_events_orderitemevent]]
 ==== OrderItemEvent
 
 Generic ebay order item event.
@@ -9445,7 +10088,9 @@ public getData():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -9463,7 +10108,9 @@ public getWarehouseId():void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
@@ -9481,7 +10128,9 @@ public setWarehouseId($warehouseId):void // <1>
 
 ===== Return type
     
-<1> link:miscellaneous#miscellaneous__void[void^]
+<1> [[__void]]
+
+    link:miscellaneous#miscellaneous__void[void^]
 
     
 
