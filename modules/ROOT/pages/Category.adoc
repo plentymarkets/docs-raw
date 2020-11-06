@@ -31,19 +31,17 @@ Repository for CategoryBranchMarketplace
 [source%nowrap, php]
 ----
 
-public findCategoryBranchMarketplace($branchId, $webstoreId, $marketplaceId, $marketplaceSubId = 0.0):Plenty\Modules\Category\Models\CategoryBranchMarketplace // <1>
+public findCategoryBranchMarketplace($branchId, $webstoreId, $marketplaceId, $marketplaceSubId = 0.0):Plenty\Modules\Category\Models\CategoryBranchMarketplace
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Category.adoc#category_models_categorybranchmarketplace[CategoryBranchMarketplace]
 
-===== Return type
-    
-<1>         xref:Category.adoc#category_models_categorybranchmarketplace[CategoryBranchMarketplace]
-    
+
+
 
 .*Parameters*
 |===
@@ -88,19 +86,17 @@ Repository Contract for CategoryBranch
 [source%nowrap, php]
 ----
 
-public find($id):Plenty\Modules\Category\Models\CategoryBranch // <1>
+public find($id):Plenty\Modules\Category\Models\CategoryBranch
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Category.adoc#category_models_categorybranch[CategoryBranch]
 
-===== Return type
-    
-<1>         xref:Category.adoc#category_models_categorybranch[CategoryBranch]
-    
+
+
 
 .*Parameters*
 |===
@@ -114,19 +110,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public get($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\Contracts\PaginationResponseContract // <1>
+public get($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\Contracts\PaginationResponseContract
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_contracts_paginationresponsecontract[PaginationResponseContract]
+
+
 Get category trees
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_contracts_paginationresponsecontract[PaginationResponseContract]
-    
 
 .*Parameters*
 |===
@@ -148,53 +142,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -208,53 +196,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[category_contracts_categorypropertyrepositorycontract]]
@@ -278,20 +260,18 @@ Repository Contract for CategoryProperty
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Category\Models\CategoryProperty // <1>
+public create($data):Plenty\Modules\Category\Models\CategoryProperty
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Category.adoc#category_models_categoryproperty[CategoryProperty]
+
+
 Link a category to an Elmar category
 
-
-===== Return type
-    
-<1>         xref:Category.adoc#category_models_categoryproperty[CategoryProperty]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -304,20 +284,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public update($categoryId, $marketId, $plentyId, $data):Plenty\Modules\Category\Models\CategoryProperty // <1>
+public update($categoryId, $marketId, $plentyId, $data):Plenty\Modules\Category\Models\CategoryProperty
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Category.adoc#category_models_categoryproperty[CategoryProperty]
+
+
 Update a link between a category and an Elmar category
 
-
-===== Return type
-    
-<1>         xref:Category.adoc#category_models_categoryproperty[CategoryProperty]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -342,19 +320,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($categoryId, $marketId, $plentyId):Plenty\Repositories\Models\DeleteResponse // <1>
+public delete($categoryId, $marketId, $plentyId):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
+
+
 Delete the link between a category and an Elmar category
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
-    
 
 .*Parameters*
 |===
@@ -376,53 +352,47 @@ a|`$plentyId`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -436,53 +406,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[category_contracts_categoryrepositorycontract]]
@@ -506,19 +470,17 @@ Repository for categories
 [source%nowrap, php]
 ----
 
-public get($categoryId, $lang = &quot;de&quot;, $webstoreId = null):Plenty\Modules\Category\Models\Category // <1>
+public get($categoryId, $lang = &quot;de&quot;, $webstoreId = null):Plenty\Modules\Category\Models\Category
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Category.adoc#category_models_category[Category]
+
+
 Returns one category by id.
-
-
-===== Return type
-    
-<1>         xref:Category.adoc#category_models_category[Category]
-    
 
 .*Parameters*
 |===
@@ -540,19 +502,17 @@ a|`$webstoreId`
 [source%nowrap, php]
 ----
 
-public getLinklistTree($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId = null, $maxLevel = 6, $customerClassId):array // <1>
+public getLinklistTree($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId = null, $maxLevel = 6, $customerClassId):array
 
 ----
 
-
     
+
+
+
+
+
 Returns all linklist categories as tree.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -582,19 +542,17 @@ a|`$customerClassId`
 [source%nowrap, php]
 ----
 
-public getArrayTree($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId = null, $maxLevel = 6, $customerClassId, $filter = null):array // <1>
+public getArrayTree($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId = null, $maxLevel = 6, $customerClassId, $filter = null):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -628,19 +586,17 @@ a|`$filter`
 [source%nowrap, php]
 ----
 
-public findCategoryByUrl($level1, $level2 = null, $level3 = null, $level4 = null, $level5 = null, $level6 = null, $webstoreId = null, $lang = null):Plenty\Modules\Category\Models\Category // <1>
+public findCategoryByUrl($level1, $level2 = null, $level3 = null, $level4 = null, $level5 = null, $level6 = null, $webstoreId = null, $lang = null):Plenty\Modules\Category\Models\Category
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Category.adoc#category_models_category[Category]
+
+
 Get the category by url.
-
-
-===== Return type
-    
-<1>         xref:Category.adoc#category_models_category[Category]
-    
 
 .*Parameters*
 |===
@@ -682,19 +638,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public buildCache($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId, $customerClassId):void // <1>
+public buildCache($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId, $customerClassId):void
 
 ----
 
-
     
+
+
+
+
+
 Rebuild the category tree cache
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -720,19 +674,17 @@ a|`$customerClassId`
 [source%nowrap, php]
 ----
 
-public getLinklistList($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId = null, $maxLevel = 6):array // <1>
+public getLinklistList($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId = null, $maxLevel = 6):array
 
 ----
 
-
     
+
+
+
+
+
 Returns all linklist categories as list.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -758,19 +710,17 @@ a|`$maxLevel`
 [source%nowrap, php]
 ----
 
-public hasChildren($categoryId, $onlySiteMapped = false, $onlyLinkListed = false):bool // <1>
+public hasChildren($categoryId, $onlySiteMapped = false, $onlyLinkListed = false):bool
 
 ----
 
-
     
+
+
+
+
+
 Returns true if category has children.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -792,19 +742,17 @@ a|`$onlyLinkListed`
 [source%nowrap, php]
 ----
 
-public getChildren($categoryId, $lang = &quot;de&quot;):array // <1>
+public getChildren($categoryId, $lang = &quot;de&quot;):array
 
 ----
 
-
     
+
+
+
+
+
 Returns children of the category.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -822,19 +770,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public getUrl($categoryId, $lang = &quot;de&quot;, $onlySitemaps = false, $webstoreId = null):string // <1>
+public getUrl($categoryId, $lang = &quot;de&quot;, $onlySitemaps = false, $webstoreId = null):string
 
 ----
 
-
     
+
+
+
+
+
 Retrieves the url for a category.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -860,19 +806,17 @@ a|`$webstoreId`
 [source%nowrap, php]
 ----
 
-public search($categoryId = null, $page, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public search($categoryId = null, $page, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 Search for categories
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -902,19 +846,17 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public createCategories($data):array // <1>
+public createCategories($data):array
 
 ----
 
-
     
+
+
+
+
+
 Creates new categories, including CategoryDetails. At least one CategoryDetails object for the default language is required. The data fields &#039;plentyId&#039;,&#039;lang&#039; and &#039;name&#039; are required. Client objects can also be specified to activate visibility for a client.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -928,19 +870,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public updateCategories($data):array // <1>
+public updateCategories($data):array
 
 ----
 
-
     
+
+
+
+
+
 Update categories, including optional CategoryDetails. The data fields &#039;plentyId&#039;,&#039;lang&#039; are required for the CategoryDetails object. Client objects can also be specified to change visibility for a client.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -954,20 +894,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public createCategory($data):Plenty\Modules\Category\Models\Category // <1>
+public createCategory($data):Plenty\Modules\Category\Models\Category
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Category.adoc#category_models_category[Category]
+
+
 Creates a new category
 
-
-===== Return type
-    
-<1>         xref:Category.adoc#category_models_category[Category]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -980,20 +918,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($categoryId):Plenty\Repositories\Models\DeleteResponse // <1>
+public delete($categoryId):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
+
+
 Deletes a category. The ID of the category must be specified.
 
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1006,20 +942,18 @@ a|`$categoryId`
 [source%nowrap, php]
 ----
 
-public deleteCategoryDetails($categoryId, $data):Plenty\Repositories\Models\DeleteResponse // <1>
+public deleteCategoryDetails($categoryId, $data):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
+
+
 Delete the category details for the languages specified.
 
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1036,20 +970,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public deleteCategoryClients($categoryId, $data):Plenty\Repositories\Models\DeleteResponse // <1>
+public deleteCategoryClients($categoryId, $data):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
+
+
 Deactivate availability for clients
 
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1066,53 +998,47 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1126,53 +1052,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[category_contracts_categorytemplaterepositorycontract]]
@@ -1196,19 +1116,17 @@ Repository for category templates
 [source%nowrap, php]
 ----
 
-public find($params):Plenty\Modules\Category\Models\CategoryTemplate // <1>
+public find($params):Plenty\Modules\Category\Models\CategoryTemplate
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Category.adoc#category_models_categorytemplate[CategoryTemplate]
 
-===== Return type
-    
-<1>         xref:Category.adoc#category_models_categorytemplate[CategoryTemplate]
-    
+
+
 
 .*Parameters*
 |===
@@ -1222,19 +1140,17 @@ a|`$params`
 [source%nowrap, php]
 ----
 
-public put($data):Plenty\Modules\Category\Models\CategoryTemplate // <1>
+public put($data):Plenty\Modules\Category\Models\CategoryTemplate
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Category.adoc#category_models_categorytemplate[CategoryTemplate]
 
-===== Return type
-    
-<1>         xref:Category.adoc#category_models_categorytemplate[CategoryTemplate]
-    
+
+
 
 .*Parameters*
 |===
@@ -1248,19 +1164,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($data):Plenty\Modules\Category\Models\CategoryTemplate // <1>
+public delete($data):Plenty\Modules\Category\Models\CategoryTemplate
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Category.adoc#category_models_categorytemplate[CategoryTemplate]
 
-===== Return type
-    
-<1>         xref:Category.adoc#category_models_categorytemplate[CategoryTemplate]
-    
+
+
 
 .*Parameters*
 |===
@@ -1339,11 +1253,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[category_models_categorybranch]]
@@ -1398,11 +1314,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[category_models_categorybranchmarketplace]]
@@ -1463,11 +1381,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[category_models_categoryclient]]
@@ -1504,11 +1424,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[category_models_categorydetails]]
@@ -1621,11 +1543,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[category_models_categoryitemcount]]
@@ -1680,11 +1604,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[category_models_categoryproperty]]
@@ -1730,11 +1656,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[category_models_categorytemplate]]
@@ -1780,9 +1708,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

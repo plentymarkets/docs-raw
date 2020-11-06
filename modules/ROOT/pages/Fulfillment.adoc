@@ -31,36 +31,32 @@ The PickingOrderItemRepositoryContract
 [source%nowrap, php]
 ----
 
-public getAll():Illuminate\Database\Eloquent\Collection // <1>
+public getAll():Illuminate\Database\Eloquent\Collection
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
 
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
-    
+
+
 
 [source%nowrap, php]
 ----
 
-public getPickingOrderItemById($pickingOrderItemId):Plenty\Modules\Fulfillment\Picklist\Models\PickingOrderItem // <1>
+public getPickingOrderItemById($pickingOrderItemId):Plenty\Modules\Fulfillment\Picklist\Models\PickingOrderItem
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Fulfillment.adoc#fulfillment_models_pickingorderitem[PickingOrderItem]
 
-===== Return type
-    
-<1>         xref:Fulfillment.adoc#fulfillment_models_pickingorderitem[PickingOrderItem]
-    
+
+
 
 .*Parameters*
 |===
@@ -94,53 +90,47 @@ This event will be triggered, when an item is picked
 [source%nowrap, php]
 ----
 
-public getPickingOrderItemId():int // <1>
+public getPickingOrderItemId():int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getProcessUserId():int // <1>
+public getProcessUserId():int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public addPluginConfig($identifier, $pluginConfig):Plenty\Modules\Fulfillment\Picklist\Events // <1>
+public addPluginConfig($identifier, $pluginConfig):Plenty\Modules\Fulfillment\Picklist\Events
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Fulfillment.adoc#fulfillment_picklist_events[Events]
 
-===== Return type
-    
-<1>         xref:Fulfillment.adoc#fulfillment_picklist_events[Events]
-    
+
+
 
 .*Parameters*
 |===
@@ -158,19 +148,17 @@ a|`$pluginConfig`
 [source%nowrap, php]
 ----
 
-public getPluginConfigs():array // <1>
+public getPluginConfigs():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [[fulfillment_picklist_models]]
 ===  Models
@@ -241,11 +229,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[fulfillment_fulfillment]]
 == Fulfillment
@@ -273,19 +263,17 @@ The FulfillmentReturnService is the service for return shipments of an order.
 [source%nowrap, php]
 ----
 
-public registerReturns($orderId):bool // <1>
+public registerReturns($orderId):bool
 
 ----
 
-
     
+
+
+
+
+
 Register the return of an order.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -299,19 +287,17 @@ a|`$orderId`
 [source%nowrap, php]
 ----
 
-public registerReturn($orderId, $returnProvider):bool // <1>
+public registerReturn($orderId, $returnProvider):bool
 
 ----
 
-
     
+
+
+
+
+
 Register the return of an order
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -348,19 +334,17 @@ The FulfillmentShipmentService is the service for registering and cancelling shi
 [source%nowrap, php]
 ----
 
-public cancelShipment($orderId):bool // <1>
+public cancelShipment($orderId):bool
 
 ----
 
-
     
+
+
+
+
+
 Cancel the shipment of an order.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -374,19 +358,17 @@ a|`$orderId`
 [source%nowrap, php]
 ----
 
-public registerShipment($orderId):bool // <1>
+public registerShipment($orderId):bool
 
 ----
 
-
     
+
+
+
+
+
 Register the shipment of an order.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -419,17 +401,15 @@ The GetDhlRetoureOnlineDataService is the service that retrieves old DHL Retoure
 [source%nowrap, php]
 ----
 
-public getDhlRetoureOnlineData():void // <1>
+public getDhlRetoureOnlineData():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 

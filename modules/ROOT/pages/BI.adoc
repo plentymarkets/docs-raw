@@ -31,19 +31,17 @@ This interface allows you to search for key figures results.
 [source%nowrap, php]
 ----
 
-public searchKeyFigureResults($searchRequests):Plenty\Modules\BI\KeyFigure\Models\KeyFigureResultSearchResponse // <1>
+public searchKeyFigureResults($searchRequests):Plenty\Modules\BI\KeyFigure\Models\KeyFigureResultSearchResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Bi.adoc#bi_models_keyfigureresultsearchresponse[KeyFigureResultSearchResponse]
+
+
 Search for key figure calculation results
-
-
-===== Return type
-    
-<1>         xref:Bi.adoc#bi_models_keyfigureresultsearchresponse[KeyFigureResultSearchResponse]
-    
 
 .*Parameters*
 |===
@@ -126,11 +124,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_keyfigurefilter]]
@@ -173,11 +173,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_keyfiguremeta]]
@@ -223,11 +225,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_keyfigureresult]]
@@ -288,11 +292,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_keyfigureresultresponse]]
@@ -347,11 +353,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_keyfigureresultsearchresponse]]
@@ -388,11 +396,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_keyfigureresultsearchresult]]
@@ -441,11 +451,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_keyfiguresearchrequest]]
@@ -521,11 +533,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_keyfiguresearchrequests]]
@@ -562,11 +576,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_keyfiguretarget]]
@@ -678,11 +694,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_keyfiguretemplate]]
@@ -725,11 +743,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[bi_rawdata]]
 == RawData
@@ -757,19 +777,17 @@ This interface allows you to get a list of generated raw data files
 [source%nowrap, php]
 ----
 
-public searchRawData($dataName, $createdAtTimestamp, $processStatus, $itemsPerPage = 20, $sortOrder = &quot;asc&quot;, $page = 1):Plenty\Modules\BI\RawData\Models\RawDataSearchResult // <1>
+public searchRawData($dataName, $createdAtTimestamp, $processStatus, $itemsPerPage = 20, $sortOrder = &quot;asc&quot;, $page = 1):Plenty\Modules\BI\RawData\Models\RawDataSearchResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Bi.adoc#bi_models_rawdatasearchresult[RawDataSearchResult]
+
+
 Get list of raw data. Valid filter combinations: (dataName), (dataName &amp; processStatus), (createdAtTimestamp)
-
-
-===== Return type
-    
-<1>         xref:Bi.adoc#bi_models_rawdatasearchresult[RawDataSearchResult]
-    
 
 .*Parameters*
 |===
@@ -803,19 +821,17 @@ a|`$page`
 [source%nowrap, php]
 ----
 
-public getRawDataFile($path):void // <1>
+public getRawDataFile($path):void
 
 ----
 
-
     
+
+
+
+
+
 Get a raw data file from the storage, the storage path of the file must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -829,19 +845,17 @@ a|`$path`
 [source%nowrap, php]
 ----
 
-public deleteRawData($dataName, $primaryIds):void // <1>
+public deleteRawData($dataName, $primaryIds):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -859,53 +873,47 @@ a|`$primaryIds`
 [source%nowrap, php]
 ----
 
-public getRawDataCreatorModels():array // <1>
+public getRawDataCreatorModels():array
 
 ----
 
-
     
+
+
+
+
+
 Get list of all raw data creators
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 [source%nowrap, php]
 ----
 
-public getRawDataConfigs():Plenty\Modules\BI\RawData\Models\RawDataConfigs // <1>
+public getRawDataConfigs():Plenty\Modules\BI\RawData\Models\RawDataConfigs
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Bi.adoc#bi_models_rawdataconfigs[RawDataConfigs]
+
+
 Returns list of all saved configurations
 
-
-===== Return type
-    
-<1>         xref:Bi.adoc#bi_models_rawdataconfigs[RawDataConfigs]
-    
-
 [source%nowrap, php]
 ----
 
-public updateRawDataConfigs($data):Plenty\Modules\BI\RawData\Models\RawDataConfigs // <1>
+public updateRawDataConfigs($data):Plenty\Modules\BI\RawData\Models\RawDataConfigs
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Bi.adoc#bi_models_rawdataconfigs[RawDataConfigs]
+
+
 Resets all saved raw data configurations with given data
-
-
-===== Return type
-    
-<1>         xref:Bi.adoc#bi_models_rawdataconfigs[RawDataConfigs]
-    
 
 .*Parameters*
 |===
@@ -955,11 +963,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_rawdataconfigs]]
@@ -999,11 +1009,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_rawdatacreator]]
@@ -1073,11 +1085,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_rawdatafile]]
@@ -1135,11 +1149,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[bi_models_rawdatasearchresult]]
@@ -1179,9 +1195,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

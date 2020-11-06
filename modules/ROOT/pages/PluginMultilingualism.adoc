@@ -31,19 +31,17 @@ Get, create , update and delete plugin translations.
 [source%nowrap, php]
 ----
 
-public listTranslations($filters):array // <1>
+public listTranslations($filters):array
 
 ----
 
-
     
+
+
+
+
+
 List translations for plugin set
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -57,20 +55,18 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getTranslation($translationId):Plenty\Modules\PluginMultilingualism\Models\PluginTranslation // <1>
+public getTranslation($translationId):Plenty\Modules\PluginMultilingualism\Models\PluginTranslation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Pluginmultilingualism.adoc#pluginmultilingualism_models_plugintranslation[PluginTranslation]
+
+
 Get a translation
 
-
-===== Return type
-    
-<1>         xref:Pluginmultilingualism.adoc#pluginmultilingualism_models_plugintranslation[PluginTranslation]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -83,20 +79,18 @@ a|`$translationId`
 [source%nowrap, php]
 ----
 
-public createTranslation($data):Plenty\Modules\PluginMultilingualism\Models\PluginTranslation // <1>
+public createTranslation($data):Plenty\Modules\PluginMultilingualism\Models\PluginTranslation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Pluginmultilingualism.adoc#pluginmultilingualism_models_plugintranslation[PluginTranslation]
+
+
 Create a translation
 
-
-===== Return type
-    
-<1>         xref:Pluginmultilingualism.adoc#pluginmultilingualism_models_plugintranslation[PluginTranslation]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -109,19 +103,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public updateTranslation($data, $translationId):Plenty\Modules\PluginMultilingualism\Models\PluginTranslation // <1>
+public updateTranslation($data, $translationId):Plenty\Modules\PluginMultilingualism\Models\PluginTranslation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Pluginmultilingualism.adoc#pluginmultilingualism_models_plugintranslation[PluginTranslation]
+
+
 Update a translation
-
-
-===== Return type
-    
-<1>         xref:Pluginmultilingualism.adoc#pluginmultilingualism_models_plugintranslation[PluginTranslation]
-    
 
 .*Parameters*
 |===
@@ -139,19 +131,17 @@ a|`$translationId`
 [source%nowrap, php]
 ----
 
-public deleteTranslation($id):void // <1>
+public deleteTranslation($id):void
 
 ----
 
-
     
+
+
+
+
+
 Delete a translation
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -165,19 +155,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public deleteTranslations($pluginSetId, $languageCode):void // <1>
+public deleteTranslations($pluginSetId, $languageCode):void
 
 ----
 
-
     
+
+
+
+
+
 Delete multiple translation
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -195,19 +183,17 @@ a|`$languageCode`
 [source%nowrap, php]
 ----
 
-public updateOrCreateTranslation($data):Plenty\Modules\PluginMultilingualism\Models\PluginTranslation // <1>
+public updateOrCreateTranslation($data):Plenty\Modules\PluginMultilingualism\Models\PluginTranslation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Pluginmultilingualism.adoc#pluginmultilingualism_models_plugintranslation[PluginTranslation]
+
+
 Update or create a translation
-
-
-===== Return type
-    
-<1>         xref:Pluginmultilingualism.adoc#pluginmultilingualism_models_plugintranslation[PluginTranslation]
-    
 
 .*Parameters*
 |===
@@ -221,53 +207,47 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -281,53 +261,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[pluginmultilingualism_pluginmultilingualism_models]]
 ===  Models
@@ -389,9 +363,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

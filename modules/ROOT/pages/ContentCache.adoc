@@ -56,11 +56,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[contentcache_contentcache]]
 == ContentCache
@@ -104,11 +106,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[contentcache_contentcache_contracts]]
 ===  Contracts
@@ -133,19 +137,17 @@ Interface for content cache invalidation
 [source%nowrap, php]
 ----
 
-public invalidateVariationIds($variationIds, $plentyId = null):void // <1>
+public invalidateVariationIds($variationIds, $plentyId = null):void
 
 ----
 
-
     
+
+
+
+
+
 Invalidate all cache entries related to given variation ids.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -163,19 +165,17 @@ a|`$plentyId`
 [source%nowrap, php]
 ----
 
-public invalidateItemIds($itemIds, $plentyId = null):void // <1>
+public invalidateItemIds($itemIds, $plentyId = null):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -193,19 +193,17 @@ a|`$plentyId`
 [source%nowrap, php]
 ----
 
-public invalidateAll($plentyId = null):void // <1>
+public invalidateAll($plentyId = null):void
 
 ----
 
-
     
+
+
+
+
+
 Invalidate all cache entries related to given plenty id.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -219,19 +217,17 @@ a|`$plentyId`
 [source%nowrap, php]
 ----
 
-public invalidateUri($uri):void // <1>
+public invalidateUri($uri):void
 
 ----
 
-
     
+
+
+
+
+
 Invalidate cache entries by URI
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -245,19 +241,17 @@ a|`$uri`
 [source%nowrap, php]
 ----
 
-public storeInvalidationStacks():void // <1>
+public storeInvalidationStacks():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 
 [[contentcache_contracts_contentcacherepositorycontract]]
@@ -281,36 +275,32 @@ Save and retrieve values to or from the content cache
 [source%nowrap, php]
 ----
 
-public enableCacheForResponse():void // <1>
+public enableCacheForResponse():void
 
 ----
 
-
     
+
+
+
+
+
 Enable content caching for current response so next request on this resource will be delivered from content cache.
-
-
-===== Return type
-    
-<1> 
-    
 
 [source%nowrap, php]
 ----
 
-public linkVariationsToResponse($variationIds):void // <1>
+public linkVariationsToResponse($variationIds):void
 
 ----
 
-
     
+
+
+
+
+
 Link variations to current response.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -343,19 +333,17 @@ Interface for content cache settings
 [source%nowrap, php]
 ----
 
-public getSettings($plentyId):Plenty\Modules\ContentCache\ContentCacheSettings\ContentCacheSettings // <1>
+public getSettings($plentyId):Plenty\Modules\ContentCache\ContentCacheSettings\ContentCacheSettings
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Contentcache.adoc#contentcache_contentcachesettings_contentcachesettings[ContentCacheSettings]
 
-===== Return type
-    
-<1>         xref:Contentcache.adoc#contentcache_contentcachesettings_contentcachesettings[ContentCacheSettings]
-    
+
+
 
 .*Parameters*
 |===
@@ -369,19 +357,17 @@ a|`$plentyId`
 [source%nowrap, php]
 ----
 
-public getSettingsMultiple($plentyIds):void // <1>
+public getSettingsMultiple($plentyIds):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -395,19 +381,17 @@ a|`$plentyIds`
 [source%nowrap, php]
 ----
 
-public saveSettings($plentyId, $contentCacheActive):Plenty\Modules\ContentCache\ContentCacheSettings\ContentCacheSettings // <1>
+public saveSettings($plentyId, $contentCacheActive):Plenty\Modules\ContentCache\ContentCacheSettings\ContentCacheSettings
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Contentcache.adoc#contentcache_contentcachesettings_contentcachesettings[ContentCacheSettings]
 
-===== Return type
-    
-<1>         xref:Contentcache.adoc#contentcache_contentcachesettings_contentcachesettings[ContentCacheSettings]
-    
+
+
 
 .*Parameters*
 |===

@@ -31,36 +31,32 @@ The CheckoutContract is the interface for the checkout repository. This interfac
 [source%nowrap, php]
 ----
 
-public getShippingCountryId():int // <1>
+public getShippingCountryId():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the shipping country ID.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 [source%nowrap, php]
 ----
 
-public setShippingCountryId($shippingCountryId):void // <1>
+public setShippingCountryId($shippingCountryId):void
 
 ----
 
-
     
+
+
+
+
+
 Updates the ID of the shipping country. The ID must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -74,36 +70,32 @@ a|`$shippingCountryId`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodId():int // <1>
+public getPaymentMethodId():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the payment method id of the current shopping cart.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 [source%nowrap, php]
 ----
 
-public setPaymentMethodId($paymentMethodId):void // <1>
+public setPaymentMethodId($paymentMethodId):void
 
 ----
 
-
     
+
+
+
+
+
 Updates the ID of the payment method. The ID must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -117,36 +109,32 @@ a|`$paymentMethodId`
 [source%nowrap, php]
 ----
 
-public getShippingProfileId():int // <1>
+public getShippingProfileId():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the shipping profile id of the current shopping cart.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 [source%nowrap, php]
 ----
 
-public setShippingProfileId($shippingProfileId):void // <1>
+public setShippingProfileId($shippingProfileId):void
 
 ----
 
-
     
+
+
+
+
+
 Updates the ID of the shipping profile. The ID must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -160,19 +148,17 @@ a|`$shippingProfileId`
 [source%nowrap, php]
 ----
 
-public setCurrency($currency):void // <1>
+public setCurrency($currency):void
 
 ----
 
-
     
+
+
+
+
+
 Updates the currency. The currency must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -186,19 +172,17 @@ a|`$currency`
 [source%nowrap, php]
 ----
 
-public setBasketReferrerId($referrerId):void // <1>
+public setBasketReferrerId($referrerId):void
 
 ----
 
-
     
+
+
+
+
+
 Updates the ID of the order referrer. The ID must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -212,36 +196,32 @@ a|`$referrerId`
 [source%nowrap, php]
 ----
 
-public getCustomerInvoiceAddressId():int // <1>
+public getCustomerInvoiceAddressId():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the invoice address id of the current shopping cart.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 [source%nowrap, php]
 ----
 
-public setCustomerInvoiceAddressId($invoiceAddressId):void // <1>
+public setCustomerInvoiceAddressId($invoiceAddressId):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the invoice address id for the current shopping cart.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -255,36 +235,32 @@ a|`$invoiceAddressId`
 [source%nowrap, php]
 ----
 
-public getCustomerShippingAddressId():int // <1>
+public getCustomerShippingAddressId():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the shipping address id of the current shopping cart.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 [source%nowrap, php]
 ----
 
-public setCustomerShippingAddressId($shippingAddressId):void // <1>
+public setCustomerShippingAddressId($shippingAddressId):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the shipping address id for the current shopping cart.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -298,19 +274,17 @@ a|`$shippingAddressId`
 [source%nowrap, php]
 ----
 
-public validateCheckout():Plenty\Modules\Frontend\Events\ValidateCheckoutEvent // <1>
+public validateCheckout():Plenty\Modules\Frontend\Events\ValidateCheckoutEvent
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Frontend.adoc#frontend_events_validatecheckoutevent[ValidateCheckoutEvent]
 
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_events_validatecheckoutevent[ValidateCheckoutEvent]
-    
+
+
 
 
 [[frontend_contracts_currencyexchangerepositorycontract]]
@@ -334,19 +308,17 @@ The CurrencyExchangeRatioRepositoryContract is the interface for the currency ex
 [source%nowrap, php]
 ----
 
-public getExchangeRatioByCurrency($currency):float // <1>
+public getExchangeRatioByCurrency($currency):float
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -360,36 +332,32 @@ a|`$currency`
 [source%nowrap, php]
 ----
 
-public getDefaultCurrency():string // <1>
+public getDefaultCurrency():string
 
 ----
 
-
     
+
+
+
+
+
 Get the default currency.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 [source%nowrap, php]
 ----
 
-public convertFromDefaultCurrency($currency, $amount, $exchangeRatio = 0.0):float // <1>
+public convertFromDefaultCurrency($currency, $amount, $exchangeRatio = 0.0):float
 
 ----
 
-
     
+
+
+
+
+
 Converts the given value from the default currency to the given currency.
-
-
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
 
 .*Parameters*
 |===
@@ -411,19 +379,17 @@ a|`$exchangeRatio`
 [source%nowrap, php]
 ----
 
-public convertToDefaultCurrency($currency, $amount, $exchangeRatio = 0.0):float // <1>
+public convertToDefaultCurrency($currency, $amount, $exchangeRatio = 0.0):float
 
 ----
 
-
     
+
+
+
+
+
 Converts the given value to the default currency from the given currency.
-
-
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
 
 .*Parameters*
 |===
@@ -465,36 +431,32 @@ The event is triggered when the currency is changed in the online store.
 [source%nowrap, php]
 ----
 
-public getCurrency():string // <1>
+public getCurrency():string
 
 ----
 
-
     
+
+
+
+
+
 Gets the currency.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 [source%nowrap, php]
 ----
 
-public getCurrencyExchangeRatio():float // <1>
+public getCurrencyExchangeRatio():float
 
 ----
 
-
     
+
+
+
+
+
 Gets the exchange rate used for converting the currency.
-
-
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
 
 
 [[frontend_events_frontendcustomeraddresschanged]]
@@ -534,19 +496,17 @@ The event is triggered when the language is changed in the online store.
 [source%nowrap, php]
 ----
 
-public getLanguage():string // <1>
+public getLanguage():string
 
 ----
 
-
     
+
+
+
+
+
 Gets the language of the online store.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 
 [[frontend_events_frontendpaymentmethodchanged]]
@@ -570,36 +530,32 @@ The event is triggered when the payment method is changed in the online store.
 [source%nowrap, php]
 ----
 
-public getPaymentMethodId():void // <1>
+public getPaymentMethodId():void
 
 ----
 
-
     
+
+
+
+
+
 Gets the ID of the payment method.
-
-
-===== Return type
-    
-<1> 
-    
 
 [source%nowrap, php]
 ----
 
-public setPaymentMethodId($paymentMethodId):void // <1>
+public setPaymentMethodId($paymentMethodId):void
 
 ----
 
-
     
+
+
+
+
+
 Updates the ID of the payment method. The ID must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -632,36 +588,32 @@ The event is triggered when the referrer id  is changed in the online store.
 [source%nowrap, php]
 ----
 
-public getReferrerId():void // <1>
+public getReferrerId():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setReferrerId($referrerId):Plenty\Modules\Frontend\Events\FrontendReferrerChanged // <1>
+public setReferrerId($referrerId):Plenty\Modules\Frontend\Events\FrontendReferrerChanged
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Frontend.adoc#frontend_events_frontendreferrerchanged[FrontendReferrerChanged]
 
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_events_frontendreferrerchanged[FrontendReferrerChanged]
-    
+
+
 
 .*Parameters*
 |===
@@ -694,36 +646,32 @@ The event is triggered when the shipping country is changed in the online store.
 [source%nowrap, php]
 ----
 
-public getShippingCountryId():int // <1>
+public getShippingCountryId():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the ID of the shipping country.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 [source%nowrap, php]
 ----
 
-public setShippingCountryId($shippingCountryId):Plenty\Modules\Frontend\Events\FrontendShippingCountryChanged // <1>
+public setShippingCountryId($shippingCountryId):Plenty\Modules\Frontend\Events\FrontendShippingCountryChanged
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Frontend.adoc#frontend_events_frontendshippingcountrychanged[FrontendShippingCountryChanged]
+
+
 Updates the ID of the shipping country. The ID must be specified.
-
-
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_events_frontendshippingcountrychanged[FrontendShippingCountryChanged]
-    
 
 .*Parameters*
 |===
@@ -756,36 +704,32 @@ The event is triggered when the shipping profile is changed in the online store.
 [source%nowrap, php]
 ----
 
-public getShippingProfileId():void // <1>
+public getShippingProfileId():void
 
 ----
 
-
     
+
+
+
+
+
 Gets the ID of the shipping profile.
-
-
-===== Return type
-    
-<1> 
-    
 
 [source%nowrap, php]
 ----
 
-public setShippingProfileId($shippingProfileId):void // <1>
+public setShippingProfileId($shippingProfileId):void
 
 ----
 
-
     
+
+
+
+
+
 Updates the ID of the shipping profile. The ID must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -818,19 +762,17 @@ The event is triggered when the delivery address is changed in the online store.
 [source%nowrap, php]
 ----
 
-public getAccountAddressId():int // <1>
+public getAccountAddressId():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the ID of the address saved for the account.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 
 [[frontend_events_frontendupdateinvoiceaddress]]
@@ -854,19 +796,17 @@ The event is triggered when the invoice address is changed in the online store.
 [source%nowrap, php]
 ----
 
-public getAccountAddressId():int // <1>
+public getAccountAddressId():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the ID of the address saved for the account.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 
 [[frontend_events_frontendupdatepaymentsettings]]
@@ -890,19 +830,17 @@ The event is triggered when the payment method is changed in the online store.
 [source%nowrap, php]
 ----
 
-public getPaymentMethodId():int // <1>
+public getPaymentMethodId():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the ID of the payment method.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 
 [[frontend_events_frontendupdateshippingsettings]]
@@ -926,53 +864,47 @@ The event is triggered when the shipping method is updated in the online store.
 [source%nowrap, php]
 ----
 
-public getShippingCosts():float // <1>
+public getShippingCosts():float
 
 ----
 
-
     
+
+
+
+
+
 Gets the shipping costs.
 
-
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
-
 [source%nowrap, php]
 ----
 
-public getParcelServiceId():int // <1>
+public getParcelServiceId():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the ID of the shipping service provider.
 
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
-
 [source%nowrap, php]
 ----
 
-public getParcelServicePresetId():int // <1>
+public getParcelServicePresetId():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the preset ID of the shipping service provider.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 
 [[frontend_events_validatecheckoutevent]]
@@ -996,36 +928,32 @@ validation event
 [source%nowrap, php]
 ----
 
-public getErrorKeysList():array // <1>
+public getErrorKeysList():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public addErrorKey($errorKey):Plenty\Modules\Frontend\Events // <1>
+public addErrorKey($errorKey):Plenty\Modules\Frontend\Events
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Frontend.adoc#frontend_frontend_events[Events]
 
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_frontend_events[Events]
-    
+
+
 
 .*Parameters*
 |===
@@ -1059,87 +987,77 @@ Frontend-Factory
 [source%nowrap, php]
 ----
 
-public getLocale():Plenty\Modules\Frontend\Services\LocaleService // <1>
+public getLocale():Plenty\Modules\Frontend\Services\LocaleService
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Frontend.adoc#frontend_services_localeservice[LocaleService]
 
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_services_localeservice[LocaleService]
-    
+
+
 
 [source%nowrap, php]
 ----
 
-public getAgent():Plenty\Modules\Frontend\Services\AgentService // <1>
+public getAgent():Plenty\Modules\Frontend\Services\AgentService
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Frontend.adoc#frontend_services_agentservice[AgentService]
 
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_services_agentservice[AgentService]
-    
+
+
 
 [source%nowrap, php]
 ----
 
-public getSystem():Plenty\Modules\Frontend\Services\SystemService // <1>
+public getSystem():Plenty\Modules\Frontend\Services\SystemService
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Frontend.adoc#frontend_services_systemservice[SystemService]
 
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_services_systemservice[SystemService]
-    
+
+
 
 [source%nowrap, php]
 ----
 
-public getAccount():Plenty\Modules\Frontend\Services\AccountService // <1>
+public getAccount():Plenty\Modules\Frontend\Services\AccountService
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Frontend.adoc#frontend_services_accountservice[AccountService]
 
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_services_accountservice[AccountService]
-    
+
+
 
 [source%nowrap, php]
 ----
 
-public getFile():Plenty\Modules\Frontend\Services\FileService // <1>
+public getFile():Plenty\Modules\Frontend\Services\FileService
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Frontend.adoc#frontend_services_fileservice[FileService]
 
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_services_fileservice[FileService]
-    
+
+
 
 [[frontend_frontend_models]]
 ===  Models
@@ -1183,11 +1101,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[frontend_frontend_services]]
 ===  Services
@@ -1212,36 +1132,32 @@ Frontend-service for customer information
 [source%nowrap, php]
 ----
 
-public getIsAccountLoggedIn():bool // <1>
+public getIsAccountLoggedIn():bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getAccountContactId():int // <1>
+public getAccountContactId():int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 
 
 [[frontend_services_agentservice]]
@@ -1265,172 +1181,152 @@ Frontend-Service for agent information
 [source%nowrap, php]
 ----
 
-public getLanguages():array // <1>
+public getLanguages():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getBrowser():string // <1>
+public getBrowser():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getPlatform():string // <1>
+public getPlatform():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getDevice():string // <1>
+public getDevice():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getIsDesktop():bool // <1>
+public getIsDesktop():bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getRobotName():string // <1>
+public getRobotName():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getIsRobot():bool // <1>
+public getIsRobot():bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getHttpHeaders():array // <1>
+public getHttpHeaders():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getIsMobile():bool // <1>
+public getIsMobile():bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getIsTablet():bool // <1>
+public getIsTablet():bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 
 [[frontend_services_fileservice]]
@@ -1454,19 +1350,17 @@ Frontend-service for file information
 [source%nowrap, php]
 ----
 
-public addJsFile($jsFile):void // <1>
+public addJsFile($jsFile):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1480,19 +1374,17 @@ a|`$jsFile`
 [source%nowrap, php]
 ----
 
-public get($key):void // <1>
+public get($key):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1506,20 +1398,18 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public hasGetMutator($key):bool // <1>
+public hasGetMutator($key):bool
 
 ----
 
-
     
+
+
+
+
+
 Determine if a get mutator exists for an attribute.
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1532,19 +1422,17 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public setAttributes($attributes):void // <1>
+public setAttributes($attributes):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1558,19 +1446,17 @@ a|`$attributes`
 [source%nowrap, php]
 ----
 
-public setAttribute($key, $value):Plenty\Repositories\Models // <1>
+public setAttribute($key, $value):Plenty\Repositories\Models
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
+
+
 Set a given attribute on the model.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
-    
 
 .*Parameters*
 |===
@@ -1588,19 +1474,17 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public hasSetMutator($key):bool // <1>
+public hasSetMutator($key):bool
 
 ----
 
-
     
+
+
+
+
+
 Determine if a set mutator exists for an attribute.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -1614,19 +1498,17 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public changeValue($key, $callback):void // <1>
+public changeValue($key, $callback):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1644,19 +1526,17 @@ a|`$callback`
 [source%nowrap, php]
 ----
 
-public offsetExists($offset):bool // <1>
+public offsetExists($offset):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1670,19 +1550,17 @@ a|`$offset`
 [source%nowrap, php]
 ----
 
-public offsetGet($offset):void // <1>
+public offsetGet($offset):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1696,19 +1574,17 @@ a|`$offset`
 [source%nowrap, php]
 ----
 
-public offsetSet($offset, $value):void // <1>
+public offsetSet($offset, $value):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1726,19 +1602,17 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public offsetUnset($offset):void // <1>
+public offsetUnset($offset):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1752,19 +1626,17 @@ a|`$offset`
 [source%nowrap, php]
 ----
 
-public toArray($translate = false):array // <1>
+public toArray($translate = false):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1778,19 +1650,17 @@ a|`$translate`
 [source%nowrap, php]
 ----
 
-public toJson($options):string // <1>
+public toJson($options):string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1804,36 +1674,32 @@ a|`$options`
 [source%nowrap, php]
 ----
 
-public jsonSerialize():void // <1>
+public jsonSerialize():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public fill($attributes):Plenty\Repositories\Models // <1>
+public fill($attributes):Plenty\Repositories\Models
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
+
+
 Fill the model with an array of attributes.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
-    
 
 .*Parameters*
 |===
@@ -1847,19 +1713,17 @@ a|`$attributes`
 [source%nowrap, php]
 ----
 
-public isFillable($key):bool // <1>
+public isFillable($key):bool
 
 ----
 
-
     
+
+
+
+
+
 Determine if the given attribute may be mass assigned.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -1873,36 +1737,32 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public getFillable():array // <1>
+public getFillable():array
 
 ----
 
-
     
+
+
+
+
+
 Get the fillable attributes for the model.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public fillable($fillable):Plenty\Repositories\Models // <1>
+public fillable($fillable):Plenty\Repositories\Models
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
+
+
 Set the fillable attributes for the model.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_repositories_models[Models]
-    
 
 .*Parameters*
 |===
@@ -1916,19 +1776,17 @@ a|`$fillable`
 [source%nowrap, php]
 ----
 
-public hasCast($key, $types = null):bool // <1>
+public hasCast($key, $types = null):bool
 
 ----
 
-
     
+
+
+
+
+
 Determine whether an attribute should be cast to a native type.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -1946,19 +1804,17 @@ a|`$types`
 [source%nowrap, php]
 ----
 
-public fromJson($value, $asObject = false):void // <1>
+public fromJson($value, $asObject = false):void
 
 ----
 
-
     
+
+
+
+
+
 Decode the given JSON back into an array or object.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1995,19 +1851,17 @@ frontend service for changing current language
 [source%nowrap, php]
 ----
 
-public setLanguage($newLanguage, $fireEvents = true):void // <1>
+public setLanguage($newLanguage, $fireEvents = true):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2044,19 +1898,17 @@ Frontend-service for customer information
 [source%nowrap, php]
 ----
 
-public uploadFile($fileData):string // <1>
+public uploadFile($fileData):string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2070,19 +1922,17 @@ a|`$fileData`
 [source%nowrap, php]
 ----
 
-public getFileURL($key):string // <1>
+public getFileURL($key):string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2096,19 +1946,17 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public getFile($key):Plenty\Modules\Cloud\Storage\Models\StorageObject // <1>
+public getFile($key):Plenty\Modules\Cloud\Storage\Models\StorageObject
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Cloud.adoc#cloud_models_storageobject[StorageObject]
 
-===== Return type
-    
-<1>         xref:Cloud.adoc#cloud_models_storageobject[StorageObject]
-    
+
+
 
 .*Parameters*
 |===
@@ -2122,19 +1970,17 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public copyBasketFileToOrder($filename):string // <1>
+public copyBasketFileToOrder($filename):string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2148,19 +1994,17 @@ a|`$filename`
 [source%nowrap, php]
 ----
 
-public deleteFile($filename):void // <1>
+public deleteFile($filename):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2193,36 +2037,32 @@ Frontend-service for system information
 [source%nowrap, php]
 ----
 
-public getPlentyId():int // <1>
+public getPlentyId():int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getWebstoreId():int // <1>
+public getWebstoreId():int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 
 
 [[frontend_services_vatservice]]
@@ -2246,53 +2086,47 @@ Frontend-service for vat information
 [source%nowrap, php]
 ----
 
-public getCountryVatId():int // <1>
+public getCountryVatId():int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getCurrentTotalVats():array // <1>
+public getCurrentTotalVats():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getVat($taxIdNumber = &quot;&quot;):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+public getVat($taxIdNumber = &quot;&quot;):Plenty\Modules\Accounting\Vat\Models\Vat
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
 
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_vat[Vat]
-    
+
+
 
 .*Parameters*
 |===
@@ -2306,19 +2140,17 @@ a|`$taxIdNumber`
 [source%nowrap, php]
 ----
 
-public getLocationId($countryId = null):int // <1>
+public getLocationId($countryId = null):int
 
 ----
 
-
     
+
+
+
+
+
 Get the ID of the location
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -2355,19 +2187,17 @@ Repository contract for LegalInformation model.
 [source%nowrap, php]
 ----
 
-public find($plentyId, $lang, $type):Plenty\Modules\Frontend\LegalInformation\Models\LegalInformation // <1>
+public find($plentyId, $lang, $type):Plenty\Modules\Frontend\LegalInformation\Models\LegalInformation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Frontend.adoc#frontend_models_legalinformation[LegalInformation]
+
+
 Get legal information of an online store
-
-
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_models_legalinformation[LegalInformation]
-    
 
 .*Parameters*
 |===
@@ -2396,19 +2226,17 @@ a|`$type`
 [source%nowrap, php]
 ----
 
-public save($data, $plentyId, $lang, $type):Plenty\Modules\Frontend\LegalInformation\Models\LegalInformation // <1>
+public save($data, $plentyId, $lang, $type):Plenty\Modules\Frontend\LegalInformation\Models\LegalInformation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Frontend.adoc#frontend_models_legalinformation[LegalInformation]
+
+
 Save legal information for an online store
-
-
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_models_legalinformation[LegalInformation]
-    
 
 .*Parameters*
 |===
@@ -2493,11 +2321,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[frontend_paymentmethod]]
 == PaymentMethod
@@ -2525,36 +2355,32 @@ The FrontendPaymentMethodRepositoryContract is the interface for the front end p
 [source%nowrap, php]
 ----
 
-public getCurrentPaymentMethodsList():array // <1>
+public getCurrentPaymentMethodsList():array
 
 ----
 
-
     
+
+
+
+
+
 Lists all payment methods of the current customer session.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public getCurrentPaymentMethodsListForSwitch($currentPaymentMethodId, $orderId = null, $lang = &quot;de&quot;):array // <1>
+public getCurrentPaymentMethodsListForSwitch($currentPaymentMethodId, $orderId = null, $lang = &quot;de&quot;):array
 
 ----
 
-
     
+
+
+
+
+
 Lists all payment methods for switch.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -2576,37 +2402,33 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public getCurrentPaymentMethodsForExpressCheckout():array // <1>
+public getCurrentPaymentMethodsForExpressCheckout():array
 
 ----
 
-
     
+
+
+
+
+
 Lists all payment methods if express checkout is available
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 [source%nowrap, php]
 ----
 
-public getPaymentMethodName($paymentMethod, $lang):string // <1>
+public getPaymentMethodName($paymentMethod, $lang):string
 
 ----
 
-
     
+
+
+
+
+
 Gets the name of the payment method in the specified language.
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2623,20 +2445,18 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodFee($paymentMethod):float // <1>
+public getPaymentMethodFee($paymentMethod):float
 
 ----
 
-
     
+
+
+
+
+
 Gets additional costs for the payment method. Additional costs can be entered in the config.json.
 
-
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2649,20 +2469,18 @@ a|`$paymentMethod`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodIcon($paymentMethod, $lang):string // <1>
+public getPaymentMethodIcon($paymentMethod, $lang):string
 
 ----
 
-
     
+
+
+
+
+
 Gets the icon of the payment method. The path of the icon can be entered in the config.json.
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2679,20 +2497,18 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodDescription($paymentMethod, $lang):string // <1>
+public getPaymentMethodDescription($paymentMethod, $lang):string
 
 ----
 
-
     
+
+
+
+
+
 Gets the description of the payment method. The description can be entered in the config.json.
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2709,19 +2525,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodSourceUrl($paymentMethod):string // <1>
+public getPaymentMethodSourceUrl($paymentMethod):string
 
 ----
 
-
     
+
+
+
+
+
 Gets the detail link of the payment method. The detail link can be entered in the config.json.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -2735,19 +2549,17 @@ a|`$paymentMethod`
 [source%nowrap, php]
 ----
 
-public getIsSwitchableTo($paymentMethod):bool // <1>
+public getIsSwitchableTo($paymentMethod):bool
 
 ----
 
-
     
+
+
+
+
+
 Gets the detail link of the payment method. The detail link can be entered in the config.json.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -2761,19 +2573,17 @@ a|`$paymentMethod`
 [source%nowrap, php]
 ----
 
-public getIsSwitchableFrom($paymentMethod):bool // <1>
+public getIsSwitchableFrom($paymentMethod):bool
 
 ----
 
-
     
+
+
+
+
+
 Gets the detail link of the payment method. The detail link can be entered in the config.json.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -2787,20 +2597,18 @@ a|`$paymentMethod`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodIsSelectable($paymentMethod):bool // <1>
+public getPaymentMethodIsSelectable($paymentMethod):bool
 
 ----
 
-
     
+
+
+
+
+
 Get true if the payment method can be selected in the payment method list
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2813,20 +2621,18 @@ a|`$paymentMethod`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodNameById($paymentMethodId, $lang):string // <1>
+public getPaymentMethodNameById($paymentMethodId, $lang):string
 
 ----
 
-
     
+
+
+
+
+
 Gets the name of the payment method by ID and language. The ID of the payment method and the language must be specified.
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2843,20 +2649,18 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodFeeById($paymentMethodId):float // <1>
+public getPaymentMethodFeeById($paymentMethodId):float
 
 ----
 
-
     
+
+
+
+
+
 Gets additional costs for the payment method by ID. The ID of the payment method must be specified.
 
-
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2869,20 +2673,18 @@ a|`$paymentMethodId`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodIconById($paymentMethodId, $lang):string // <1>
+public getPaymentMethodIconById($paymentMethodId, $lang):string
 
 ----
 
-
     
+
+
+
+
+
 Gets the icon of the payment method by ID and language. The ID of the payment method and the language must be specified.
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2899,20 +2701,18 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodDescriptionById($paymentMethodId, $lang):string // <1>
+public getPaymentMethodDescriptionById($paymentMethodId, $lang):string
 
 ----
 
-
     
+
+
+
+
+
 Gets the description of the payment method by ID and language. The ID of the payment method and the language must be specified.
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2929,19 +2729,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodSwitchToById($paymentMethodId, $orderId = null):bool // <1>
+public getPaymentMethodSwitchToById($paymentMethodId, $orderId = null):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2959,19 +2757,17 @@ a|`$orderId`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodSwitchFromById($paymentMethodId, $orderId = null):bool // <1>
+public getPaymentMethodSwitchFromById($paymentMethodId, $orderId = null):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2989,19 +2785,17 @@ a|`$orderId`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodSwitchableToById($paymentMethodId, $orderId = null):bool // <1>
+public getPaymentMethodSwitchableToById($paymentMethodId, $orderId = null):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -3019,19 +2813,17 @@ a|`$orderId`
 [source%nowrap, php]
 ----
 
-public getPaymentMethodSwitchableFromById($paymentMethodId, $orderId = null):bool // <1>
+public getPaymentMethodSwitchableFromById($paymentMethodId, $orderId = null):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -3049,19 +2841,17 @@ a|`$orderId`
 [source%nowrap, php]
 ----
 
-public getAllowedPaymentMethodListForContact():void // <1>
+public getAllowedPaymentMethodListForContact():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [[frontend_session]]
 == Session
@@ -3109,87 +2899,77 @@ The FrontendSessionStorageFactoryContract is the interface for the front end ses
 [source%nowrap, php]
 ----
 
-public getLocaleSettings():Plenty\Modules\Frontend\Session\Storage\Models\LocaleSettings // <1>
+public getLocaleSettings():Plenty\Modules\Frontend\Session\Storage\Models\LocaleSettings
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Frontend.adoc#frontend_models_localesettings[LocaleSettings]
+
+
 Get the locale settings from the session storage.
 
-
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_models_localesettings[LocaleSettings]
-    
-
 [source%nowrap, php]
 ----
 
-public getCustomer():Plenty\Modules\Frontend\Session\Storage\Models\Customer // <1>
+public getCustomer():Plenty\Modules\Frontend\Session\Storage\Models\Customer
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Frontend.adoc#frontend_models_customer[Customer]
+
+
 Get the customer data from the session storage.
 
-
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_models_customer[Customer]
-    
-
 [source%nowrap, php]
 ----
 
-public getOrder():Plenty\Modules\Frontend\Session\Storage\Models\Order // <1>
+public getOrder():Plenty\Modules\Frontend\Session\Storage\Models\Order
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Frontend.adoc#frontend_models_order[Order]
+
+
 Get the order data from the session storage.
 
-
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_models_order[Order]
-    
-
 [source%nowrap, php]
 ----
 
-public getPlugin():Plenty\Modules\Frontend\Session\Storage\Models\Plugin // <1>
+public getPlugin():Plenty\Modules\Frontend\Session\Storage\Models\Plugin
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Frontend.adoc#frontend_models_plugin[Plugin]
+
+
 Get the plugin data from the session storage.
 
-
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_models_plugin[Plugin]
-    
-
 [source%nowrap, php]
 ----
 
-public getForum():Plenty\Modules\Frontend\Session\Storage\Models\Forum // <1>
+public getForum():Plenty\Modules\Frontend\Session\Storage\Models\Forum
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Frontend.adoc#frontend_models_forum[Forum]
+
+
 Get the forum data from the session storage.
-
-
-===== Return type
-    
-<1>         xref:Frontend.adoc#frontend_models_forum[Forum]
-    
 
 [[frontend_storage_models]]
 ===  Models
@@ -3248,11 +3028,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[frontend_models_forum]]
@@ -3301,11 +3083,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[frontend_models_localesettings]]
@@ -3348,11 +3132,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[frontend_models_order]]
@@ -3458,11 +3244,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[frontend_models_plugin]]
@@ -3486,19 +3274,17 @@ The session storage model for plugins.
 [source%nowrap, php]
 ----
 
-public setValue($key, $value):void // <1>
+public setValue($key, $value):void
 
 ----
 
-
     
+
+
+
+
+
 Updates the value of a key. The key and the new value must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -3516,19 +3302,17 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public getValue($key):void // <1>
+public getValue($key):void
 
 ----
 
-
     
+
+
+
+
+
 Gets a value for a key. The key must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -3542,19 +3326,17 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public unsetKey($key):void // <1>
+public unsetKey($key):void
 
 ----
 
-
     
+
+
+
+
+
 Unsets a key. The key must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===

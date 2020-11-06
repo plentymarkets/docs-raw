@@ -47,19 +47,17 @@ This interface provides methods to register, get and list all wizards.
 [source%nowrap, php]
 ----
 
-public register($wizardKey, $wizard):void // <1>
+public register($wizardKey, $wizard):void
 
 ----
 
-
     
+
+
+
+
+
 Register a wizard
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -77,19 +75,17 @@ a|`$wizard`
 [source%nowrap, php]
 ----
 
-public registerFolders($folderClass):void // <1>
+public registerFolders($folderClass):void
 
 ----
 
-
     
+
+
+
+
+
 Register a wizard folder
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -103,19 +99,17 @@ a|`$folderClass`
 [source%nowrap, php]
 ----
 
-public get($wizardKey, $skipTranslation = false):Plenty\Modules\Wizard\Models\Wizard // <1>
+public get($wizardKey, $skipTranslation = false):Plenty\Modules\Wizard\Models\Wizard
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Wizard.adoc#wizard_models_wizard[Wizard]
+
+
 Get a single wizard by its key
-
-
-===== Return type
-    
-<1>         xref:Wizard.adoc#wizard_models_wizard[Wizard]
-    
 
 .*Parameters*
 |===
@@ -133,36 +127,32 @@ a|`$skipTranslation`
 [source%nowrap, php]
 ----
 
-public all():array // <1>
+public all():array
 
 ----
 
-
     
+
+
+
+
+
 List all wizards class names
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public folders($hierarchy = false):array // <1>
+public folders($hierarchy = false):array
 
 ----
 
-
     
+
+
+
+
+
 List all wizard folders
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -195,19 +185,17 @@ This interface provides methods to modify wizard data.
 [source%nowrap, php]
 ----
 
-public modify($parameters):void // <1>
+public modify($parameters):void
 
 ----
 
-
     
+
+
+
+
+
 Modify a wizard data for a step
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -240,19 +228,17 @@ This interface provides methods to create, get, list, update and delete wizard d
 [source%nowrap, php]
 ----
 
-public create($wizardKey, $steps = []):void // <1>
+public create($wizardKey, $steps = []):void
 
 ----
 
-
     
+
+
+
+
+
 Creates a new WizardData.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -270,19 +256,17 @@ a|`$steps`
 [source%nowrap, php]
 ----
 
-public createDataOption($wizardKey, $data = [], $optionId = &quot;default&quot;):void // <1>
+public createDataOption($wizardKey, $data = [], $optionId = &quot;default&quot;):void
 
 ----
 
-
     
+
+
+
+
+
 Creates a new WizardData option
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -304,19 +288,17 @@ a|`$optionId`
 [source%nowrap, php]
 ----
 
-public get($wizardKey):void // <1>
+public get($wizardKey):void
 
 ----
 
-
     
+
+
+
+
+
 Get a single WizardData by its ID
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -330,19 +312,17 @@ a|`$wizardKey`
 [source%nowrap, php]
 ----
 
-public getByOptionId($wizardKey, $optionId = &quot;default&quot;):void // <1>
+public getByOptionId($wizardKey, $optionId = &quot;default&quot;):void
 
 ----
 
-
     
+
+
+
+
+
 Get a single WizardData for an option ID
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -360,19 +340,17 @@ a|`$optionId`
 [source%nowrap, php]
 ----
 
-public findByWizardKey($wizardKey):void // <1>
+public findByWizardKey($wizardKey):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -386,19 +364,17 @@ a|`$wizardKey`
 [source%nowrap, php]
 ----
 
-public list($page = 1, $itemsPerPage = 50, $filters = []):array // <1>
+public list($page = 1, $itemsPerPage = 50, $filters = []):array
 
 ----
 
-
     
+
+
+
+
+
 List all WizardData for current plenty ID.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -420,19 +396,17 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public update($wizardKey, $properties):void // <1>
+public update($wizardKey, $properties):void
 
 ----
 
-
     
+
+
+
+
+
 Update data for a WizardData
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -450,19 +424,17 @@ a|`$properties`
 [source%nowrap, php]
 ----
 
-public updateDataOption($wizardKey, $optionId, $data, $stepKey, $skipValidation = false):void // <1>
+public updateDataOption($wizardKey, $optionId, $data, $stepKey, $skipValidation = false):void
 
 ----
 
-
     
+
+
+
+
+
 Update data for a WizardData option
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -492,19 +464,17 @@ a|`$skipValidation`
 [source%nowrap, php]
 ----
 
-public delete($wizardKey):void // <1>
+public delete($wizardKey):void
 
 ----
 
-
     
+
+
+
+
+
 Delete a single WizardData by its ID
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -518,19 +488,17 @@ a|`$wizardKey`
 [source%nowrap, php]
 ----
 
-public deleteDataOption($wizardKey, $optionId):void // <1>
+public deleteDataOption($wizardKey, $optionId):void
 
 ----
 
-
     
+
+
+
+
+
 Delete a single WizardData by its ID
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -548,19 +516,17 @@ a|`$optionId`
 [source%nowrap, php]
 ----
 
-public finalize($wizardKey, $optionId = &quot;default&quot;, $data = []):void // <1>
+public finalize($wizardKey, $optionId = &quot;default&quot;, $data = []):void
 
 ----
 
-
     
+
+
+
+
+
 Finalize wizard
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -582,53 +548,47 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -642,53 +602,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[wizard_contracts_wizarddynamicloader]]
@@ -744,19 +698,17 @@ This interface provides methods to handle final wizard data.
 [source%nowrap, php]
 ----
 
-public handle($parameters):bool // <1>
+public handle($parameters):bool
 
 ----
 
-
     
+
+
+
+
+
 Handle wizard data for a finalized wizard
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -833,11 +785,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[wizard_models_wizarddata]]
@@ -886,11 +840,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[wizard_models_wizardfolder]]
@@ -936,11 +892,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[wizard_models_wizardformoption]]
@@ -989,11 +947,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[wizard_models_wizardsection]]
@@ -1036,11 +996,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[wizard_models_wizardstep]]
@@ -1089,11 +1051,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[wizard_wizard_services]]
 ===  Services
@@ -1118,19 +1082,17 @@ Register a wizard folder.
 [source%nowrap, php]
 ----
 
-public folders():array // <1>
+public folders():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 
 [[wizard_services_wizardprovider]]
@@ -1154,19 +1116,17 @@ Register a wizard.
 [source%nowrap, php]
 ----
 
-public structure():array // <1>
+public structure():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [[wizard_services]]
 == Services
@@ -1206,19 +1166,17 @@ Base data source for wizards
 [source%nowrap, php]
 ----
 
-public setWizardKey($wizardKey):void // <1>
+public setWizardKey($wizardKey):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the wizard key for this data source
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1232,36 +1190,32 @@ a|`$wizardKey`
 [source%nowrap, php]
 ----
 
-public getIdentifiers():array // <1>
+public getIdentifiers():array
 
 ----
 
-
     
+
+
+
+
+
 List of option identifiers
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public create($steps = []):array // <1>
+public create($steps = []):array
 
 ----
 
-
     
+
+
+
+
+
 Create data
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1275,36 +1229,32 @@ a|`$steps`
 [source%nowrap, php]
 ----
 
-public get():array // <1>
+public get():array
 
 ----
 
-
     
+
+
+
+
+
 Get data
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public update($properties = []):void // <1>
+public update($properties = []):void
 
 ----
 
-
     
+
+
+
+
+
 Update data
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1318,36 +1268,32 @@ a|`$properties`
 [source%nowrap, php]
 ----
 
-public delete():void // <1>
+public delete():void
 
 ----
 
-
     
+
+
+
+
+
 Delete data
-
-
-===== Return type
-    
-<1> 
-    
 
 [source%nowrap, php]
 ----
 
-public createDataOption($data = [], $optionId = &quot;default&quot;):array // <1>
+public createDataOption($data = [], $optionId = &quot;default&quot;):array
 
 ----
 
-
     
+
+
+
+
+
 Create data option
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1365,19 +1311,17 @@ a|`$optionId`
 [source%nowrap, php]
 ----
 
-public getByOptionId($optionId = &quot;default&quot;):array // <1>
+public getByOptionId($optionId = &quot;default&quot;):array
 
 ----
 
-
     
+
+
+
+
+
 Get data option by its option ID
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1391,19 +1335,17 @@ a|`$optionId`
 [source%nowrap, php]
 ----
 
-public updateDataOption($optionId = &quot;default&quot;, $data = [], $stepKey = &quot;&quot;):array // <1>
+public updateDataOption($optionId = &quot;default&quot;, $data = [], $stepKey = &quot;&quot;):array
 
 ----
 
-
     
+
+
+
+
+
 Update data option
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1425,19 +1367,17 @@ a|`$stepKey`
 [source%nowrap, php]
 ----
 
-public deleteDataOption($optionId):void // <1>
+public deleteDataOption($optionId):void
 
 ----
 
-
     
+
+
+
+
+
 Delete data option
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1451,19 +1391,17 @@ a|`$optionId`
 [source%nowrap, php]
 ----
 
-public finalize($optionId, $data = []):void // <1>
+public finalize($optionId, $data = []):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===

@@ -31,19 +31,17 @@ Get, create, delete and update links between shop builder contents and layout co
 [source%nowrap, php]
 ----
 
-public getContentLinks($pluginSetId):array // <1>
+public getContentLinks($pluginSetId):array
 
 ----
 
-
     
+
+
+
+
+
 Get all linked contents for a plugin set
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -57,19 +55,17 @@ a|`$pluginSetId`
 [source%nowrap, php]
 ----
 
-public getContentLink($contentLinkId):Plenty\Modules\ShopBuilder\Models\ContentLink // <1>
+public getContentLink($contentLinkId):Plenty\Modules\ShopBuilder\Models\ContentLink
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[ContentLink]
+
+
 Get a single connection between a content and a layout container
-
-
-===== Return type
-    
-<1>         xref:Shopbuilder.adoc#shopbuilder_models_contentlink[ContentLink]
-    
 
 .*Parameters*
 |===
@@ -83,19 +79,17 @@ a|`$contentLinkId`
 [source%nowrap, php]
 ----
 
-public createContentLink($data):Plenty\Modules\ShopBuilder\Models\ContentLink // <1>
+public createContentLink($data):Plenty\Modules\ShopBuilder\Models\ContentLink
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[ContentLink]
+
+
 Link a content to a layout container
-
-
-===== Return type
-    
-<1>         xref:Shopbuilder.adoc#shopbuilder_models_contentlink[ContentLink]
-    
 
 .*Parameters*
 |===
@@ -109,19 +103,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public updateContentLink($contentLinkId, $data):Plenty\Modules\ShopBuilder\Models\ContentLink // <1>
+public updateContentLink($contentLinkId, $data):Plenty\Modules\ShopBuilder\Models\ContentLink
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[ContentLink]
+
+
 Update a link between a content and a layout container
-
-
-===== Return type
-    
-<1>         xref:Shopbuilder.adoc#shopbuilder_models_contentlink[ContentLink]
-    
 
 .*Parameters*
 |===
@@ -139,19 +131,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public deleteContentLink($contentLinkId):void // <1>
+public deleteContentLink($contentLinkId):void
 
 ----
 
-
     
+
+
+
+
+
 Unlink a content from a layout container. The content itself will remain
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -165,19 +155,17 @@ a|`$contentLinkId`
 [source%nowrap, php]
 ----
 
-public getContentLinksForContainer($containerName, $pluginSetId = null, $lang = null, $contentType = null, $filterResults = true):void // <1>
+public getContentLinksForContainer($containerName, $pluginSetId = null, $lang = null, $contentType = null, $filterResults = true):void
 
 ----
 
-
     
+
+
+
+
+
 Get all content links for a specific layout container.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -226,19 +214,17 @@ Contract for content presets
 [source%nowrap, php]
 ----
 
-public getWidgets():void // <1>
+public getWidgets():void
 
 ----
 
-
     
+
+
+
+
+
 Get the widget configurations of the presets to be assigned to the created content.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[shopbuilder_contracts_contentrepositorycontract]]
@@ -262,36 +248,32 @@ Get, create, delete und update shop builder contents.
 [source%nowrap, php]
 ----
 
-public getContents():array // <1>
+public getContents():array
 
 ----
 
-
     
+
+
+
+
+
 Get all contents to be edited in the shop builder.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public searchContents($itemsPerPage = 20, $page = 1, $params = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public searchContents($itemsPerPage = 20, $page = 1, $params = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 Search for contents
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -313,19 +295,17 @@ a|`$params`
 [source%nowrap, php]
 ----
 
-public getContent($contentId, $pluginSetId, $frontendLanguage = null, $versionId = &quot;&quot;):Plenty\Modules\ShopBuilder\Models\Content // <1>
+public getContent($contentId, $pluginSetId, $frontendLanguage = null, $versionId = &quot;&quot;):Plenty\Modules\ShopBuilder\Models\Content
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[Content]
+
+
 Get a single content.
-
-
-===== Return type
-    
-<1>         xref:Shopbuilder.adoc#shopbuilder_models_content[Content]
-    
 
 .*Parameters*
 |===
@@ -351,19 +331,17 @@ a|`$versionId`
 [source%nowrap, php]
 ----
 
-public listContentVersions($contentId, $itemsPerPage = 20, $versionIdMarker = &quot;&quot;):void // <1>
+public listContentVersions($contentId, $itemsPerPage = 20, $versionIdMarker = &quot;&quot;):void
 
 ----
 
-
     
+
+
+
+
+
 Get a list of Versions of the specified content.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -385,19 +363,17 @@ a|`$versionIdMarker`
 [source%nowrap, php]
 ----
 
-public restoreContentVersion($contentId, $versionId, $pluginSetId, $frontendLanguage = null):void // <1>
+public restoreContentVersion($contentId, $versionId, $pluginSetId, $frontendLanguage = null):void
 
 ----
 
-
     
+
+
+
+
+
 Restore a specific content version
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -423,19 +399,17 @@ a|`$frontendLanguage`
 [source%nowrap, php]
 ----
 
-public createContent($pluginSetId, $data, $frontendLanguage = null):Plenty\Modules\ShopBuilder\Models\Content // <1>
+public createContent($pluginSetId, $data, $frontendLanguage = null):Plenty\Modules\ShopBuilder\Models\Content
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[Content]
+
+
 Create new content. New content will not be linked to any layout container.
-
-
-===== Return type
-    
-<1>         xref:Shopbuilder.adoc#shopbuilder_models_content[Content]
-    
 
 .*Parameters*
 |===
@@ -457,19 +431,17 @@ a|`$frontendLanguage`
 [source%nowrap, php]
 ----
 
-public updateContent($pluginSetId, $contentId, $data, $frontendLanguage = null):Plenty\Modules\ShopBuilder\Models\Content // <1>
+public updateContent($pluginSetId, $contentId, $data, $frontendLanguage = null):Plenty\Modules\ShopBuilder\Models\Content
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[Content]
+
+
 Update content.
-
-
-===== Return type
-    
-<1>         xref:Shopbuilder.adoc#shopbuilder_models_content[Content]
-    
 
 .*Parameters*
 |===
@@ -495,19 +467,17 @@ a|`$frontendLanguage`
 [source%nowrap, php]
 ----
 
-public deleteContent($pluginSetId, $contentId):void // <1>
+public deleteContent($pluginSetId, $contentId):void
 
 ----
 
-
     
+
+
+
+
+
 Delete content. Any connections to layout containers will be removed too.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -525,19 +495,17 @@ a|`$contentId`
 [source%nowrap, php]
 ----
 
-public duplicateContent($contentId, $targetPluginSetId, $language, $containerName, $contentName):Plenty\Modules\ShopBuilder\Models\Content // <1>
+public duplicateContent($contentId, $targetPluginSetId, $language, $containerName, $contentName):Plenty\Modules\ShopBuilder\Models\Content
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[Content]
+
+
 Duplicate a content and its link
-
-
-===== Return type
-    
-<1>         xref:Shopbuilder.adoc#shopbuilder_models_content[Content]
-    
 
 .*Parameters*
 |===
@@ -567,19 +535,17 @@ a|`$contentName`
 [source%nowrap, php]
 ----
 
-public rebuildContents($containerName = null, $pluginSetId = null):int // <1>
+public rebuildContents($containerName = null, $pluginSetId = null):int
 
 ----
 
-
     
+
+
+
+
+
 Rebuild all contents linked to the current plugin set.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -616,19 +582,17 @@ Register shop builder widgets.
 [source%nowrap, php]
 ----
 
-public registerWidget($widgetClass):void // <1>
+public registerWidget($widgetClass):void
 
 ----
 
-
     
+
+
+
+
+
 Register a widget to be available in the shop builder.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -642,19 +606,17 @@ a|`$widgetClass`
 [source%nowrap, php]
 ----
 
-public overrideWidget($widgetIdentifier, $overrideWidget):void // <1>
+public overrideWidget($widgetIdentifier, $overrideWidget):void
 
 ----
 
-
     
+
+
+
+
+
 Override a widget class to extend data or settings of the widget.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -691,12 +653,16 @@ Contract for widgets with dynamic settings
 [source%nowrap, php]
 ----
 
-public getData():array // <1>
+public getData():array
 
 ----
 
-
     
+
+
+
+
+
 Get basic information about the widget. Possible fields are
 - identifier
 - label
@@ -705,45 +671,35 @@ Get basic information about the widget. Possible fields are
 - categories
 - position
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 [source%nowrap, php]
 ----
 
-public getSettings():array // <1>
+public getSettings():array
 
 ----
 
-
     
+
+
+
+
+
 Return the structure of the settings for the widget
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 [source%nowrap, php]
 ----
 
-public getPreview($widgetSettings = [], $children = []):string // <1>
+public getPreview($widgetSettings = [], $children = []):string
 
 ----
 
-
     
+
+
+
+
+
 Get the html representation of the widget
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -761,19 +717,17 @@ a|`$children`
 [source%nowrap, php]
 ----
 
-public render($widgetSettings = [], $children = []):string // <1>
+public render($widgetSettings = [], $children = []):string
 
 ----
 
-
     
+
+
+
+
+
 Render the widget
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -810,36 +764,32 @@ Contract for classes handling global settings for the ShopBuilder.
 [source%nowrap, php]
 ----
 
-public readSettings():void // <1>
+public readSettings():void
 
 ----
 
-
     
+
+
+
+
+
 Read values of global settings.
-
-
-===== Return type
-    
-<1> 
-    
 
 [source%nowrap, php]
 ----
 
-public writeSettings($values):void // <1>
+public writeSettings($values):void
 
 ----
 
-
     
+
+
+
+
+
 Store values of global settings.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -872,19 +822,17 @@ Contract for content widgets
 [source%nowrap, php]
 ----
 
-public getPreview($widgetSettings = [], $children = []):string // <1>
+public getPreview($widgetSettings = [], $children = []):string
 
 ----
 
-
     
+
+
+
+
+
 Get the html representation of the widget
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -902,19 +850,17 @@ a|`$children`
 [source%nowrap, php]
 ----
 
-public render($widgetSettings = [], $children = []):string // <1>
+public render($widgetSettings = [], $children = []):string
 
 ----
 
-
     
+
+
+
+
+
 Render the widget
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -968,89 +914,79 @@ Get information about the current request made from the shop builder preview.
 [source%nowrap, php]
 ----
 
-public isShopBuilder():bool // <1>
+public isShopBuilder():bool
 
 ----
 
-
     
+
+
+
+
+
 Determine if the current request is made from the shop builder preview or while rendering a widget via REST.
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 [source%nowrap, php]
 ----
 
-public getPreviewContentType():string // <1>
+public getPreviewContentType():string
 
 ----
 
-
     
+
+
+
+
+
 Get the type of the previewed shop builder content.
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 [source%nowrap, php]
 ----
 
-public getPreviewUri():void // <1>
+public getPreviewUri():void
 
 ----
 
-
     
+
+
+
+
+
 Get uri of the current preview. This might be used when rendering widgets via REST
 to know the context where the widget will be placed into after rendering.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getMainContentType():string // <1>
+public getMainContentType():string
 
 ----
 
-
     
+
+
+
+
+
 Get the content type of the currently displayed main content.
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 [source%nowrap, php]
 ----
 
-public setMainContentType($mainContentType):void // <1>
+public setMainContentType($mainContentType):void
 
 ----
 
-
     
+
+
+
+
+
 Set the type of the currently displayed item content
 This will be used to determine the corresponding header/footer contents which are linked to a specific type.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1073,36 +1009,32 @@ a|`$mainContentType`
 [source%nowrap, php]
 ----
 
-public getMainContainerName():string // <1>
+public getMainContainerName():string
 
 ----
 
-
     
+
+
+
+
+
 Get the container name where the main content will be loaded into.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 [source%nowrap, php]
 ----
 
-public setMainContainerName($mainContainerName):void // <1>
+public setMainContainerName($mainContainerName):void
 
 ----
 
-
     
+
+
+
+
+
 Set the container name where the main content will be loaded into.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1116,19 +1048,17 @@ a|`$mainContainerName`
 [source%nowrap, php]
 ----
 
-public setMainCategory($mainCategory):void // <1>
+public setMainCategory($mainCategory):void
 
 ----
 
-
     
+
+
+
+
+
 Set the id of the currently displayed category.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1196,11 +1126,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[shopbuilder_models_contentlink]]
@@ -1270,11 +1202,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[shopbuilder_models_contentpage]]
@@ -1317,11 +1251,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[shopbuilder_models_contentpagedropzone]]
@@ -1361,11 +1297,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[shopbuilder_models_contentwidget]]
@@ -1429,11 +1367,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[shopbuilder_models_contentwidgetpreview]]
@@ -1473,11 +1413,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[shopbuilder_shopbuilder_providers]]
 ===  Providers
@@ -1502,36 +1444,32 @@ Base class for data field providers.
 [source%nowrap, php]
 ----
 
-public register():void // <1>
+public register():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public addField($identifier, $label, $expression):void // <1>
+public addField($identifier, $label, $expression):void
 
 ----
 
-
     
+
+
+
+
+
 Register a new data field.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1553,19 +1491,17 @@ a|`$expression`
 [source%nowrap, php]
 ----
 
-public addChildProvider($label, $childProviderClass, $params = []):void // <1>
+public addChildProvider($label, $childProviderClass, $params = []):void
 
 ----
 
-
     
+
+
+
+
+
 Register a nested provider containing a list of child data fields.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1587,19 +1523,17 @@ a|`$params`
 [source%nowrap, php]
 ----
 
-public addSearchKeywords($identifier, $keywords = []):void // <1>
+public addSearchKeywords($identifier, $keywords = []):void
 
 ----
 
-
     
+
+
+
+
+
 Assign keywords to a field to be respected during search.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===

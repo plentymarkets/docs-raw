@@ -31,19 +31,17 @@ The StockRepositoryContract is the interface for the stock repository. This inte
 [source%nowrap, php]
 ----
 
-public listStockByWarehouseId($warehouseId, $columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+public listStockByWarehouseId($warehouseId, $columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List stock of a warehouse
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -69,19 +67,17 @@ a|`$itemsPerPage`
 [source%nowrap, php]
 ----
 
-public listStock($columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+public listStock($columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List stock
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -103,19 +99,17 @@ a|`$itemsPerPage`
 [source%nowrap, php]
 ----
 
-public listStockByWarehouseType($type, $columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+public listStockByWarehouseType($type, $columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List stock by warehouse type
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -141,19 +135,17 @@ a|`$itemsPerPage`
 [source%nowrap, php]
 ----
 
-public correctStock($warehouseId, $data):void // <1>
+public correctStock($warehouseId, $data):void
 
 ----
 
-
     
+
+
+
+
+
 Corrects stock. The ID of the warehouse has to be provided.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -171,20 +163,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public bookIncomingItems($warehouseId, $data):void // <1>
+public bookIncomingItems($warehouseId, $data):void
 
 ----
 
-
     
+
+
+
+
+
 Book incoming stock
 
-
-===== Return type
-    
-<1> 
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -201,20 +191,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public bookOutgoingItems($warehouseId, $data):void // <1>
+public bookOutgoingItems($warehouseId, $data):void
 
 ----
 
-
     
+
+
+
+
+
 Book outgoing stock
 
-
-===== Return type
-    
-<1> 
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -231,19 +219,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public redistributeStock($data):void // <1>
+public redistributeStock($data):void
 
 ----
 
-
     
+
+
+
+
+
 Redistribute stock
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -257,19 +243,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public listStockMovements($warehouseId, $columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+public listStockMovements($warehouseId, $columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List stock movements
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -295,19 +279,17 @@ a|`$itemsPerPage`
 [source%nowrap, php]
 ----
 
-public unpackVariation($warehouseId, $variationStockIntake, $variationStockCorrection):Plenty\Modules\StockManagement\Warehouse\Models\Warehouse // <1>
+public unpackVariation($warehouseId, $variationStockIntake, $variationStockCorrection):Plenty\Modules\StockManagement\Warehouse\Models\Warehouse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
+
+
 Unpack variation
-
-
-===== Return type
-    
-<1>         xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
-    
 
 .*Parameters*
 |===
@@ -329,53 +311,47 @@ a|`$variationStockCorrection`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -389,53 +365,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[stockmanagement_contracts_stockstoragelocationrepositorycontract]]
@@ -459,19 +429,17 @@ The StockStorageLocationRepositoryContract is the interface for the stock storag
 [source%nowrap, php]
 ----
 
-public listStockStorageLocationsByWarehouseId($warehouseId, $columns = [], $page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public listStockStorageLocationsByWarehouseId($warehouseId, $columns = [], $page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List stock of all storage locations of a warehouse
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -501,19 +469,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public listStockStorageLocationsByVariationId($variationId, $columns = [], $page = 1, $itemsPerPage = 50, $with = [], $sortBy = &quot;id&quot;, $sortOrder = &quot;asc&quot;):Plenty\Repositories\Models\PaginatedResult // <1>
+public listStockStorageLocationsByVariationId($variationId, $columns = [], $page = 1, $itemsPerPage = 50, $with = [], $sortBy = &quot;id&quot;, $sortOrder = &quot;asc&quot;):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List stock of a variation per storage location
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -551,53 +517,47 @@ a|`$sortOrder`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -611,53 +571,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[stockmanagement_stock_models]]
 ===  Models
@@ -731,11 +685,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[stockmanagement_models_stockbatchbestbeforedate]]
@@ -775,11 +731,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[stockmanagement_models_stockstoragelocation]]
@@ -846,11 +804,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[stockmanagement_warehouse]]
 == Warehouse
@@ -878,19 +838,17 @@ The WarehouseRepositoryContract is the interface for the warehouse repository. T
 [source%nowrap, php]
 ----
 
-public findById($warehouseId, $with = []):Plenty\Modules\StockManagement\Warehouse\Models\Warehouse // <1>
+public findById($warehouseId, $with = []):Plenty\Modules\StockManagement\Warehouse\Models\Warehouse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
+
+
 Get a warehouse
-
-
-===== Return type
-    
-<1>         xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
-    
 
 .*Parameters*
 |===
@@ -908,19 +866,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public all($with = [], $columns = []):array // <1>
+public all($with = [], $columns = []):array
 
 ----
 
-
     
+
+
+
+
+
 List warehouses
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -938,19 +894,17 @@ a|`$columns`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\StockManagement\Warehouse\Models\Warehouse // <1>
+public create($data):Plenty\Modules\StockManagement\Warehouse\Models\Warehouse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
+
+
 Create a warehouse
-
-
-===== Return type
-    
-<1>         xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
-    
 
 .*Parameters*
 |===
@@ -1058,11 +1012,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[stockmanagement_management]]
 == Management
@@ -1097,19 +1053,17 @@ Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationDimensionReposito
 [source%nowrap, php]
 ----
 
-public getRackById($rackId, $columns = [], $with = []):Plenty\Modules\StockManagement\Warehouse\Management\Models\Rack // <1>
+public getRackById($rackId, $columns = [], $with = []):Plenty\Modules\StockManagement\Warehouse\Management\Models\Rack
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_rack[Rack]
+
+
 Find a rack by id.
-
-
-===== Return type
-    
-<1>         xref:Stockmanagement.adoc#stockmanagement_models_rack[Rack]
-    
 
 .*Parameters*
 |===
@@ -1131,19 +1085,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public findRacks($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public findRacks($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 Find racks. The results can be filtered by warehouse id.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -1169,19 +1121,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public createRack($data, $warehouseId):Plenty\Modules\StockManagement\Warehouse\Management\Models\Rack // <1>
+public createRack($data, $warehouseId):Plenty\Modules\StockManagement\Warehouse\Management\Models\Rack
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_rack[Rack]
+
+
 Create a new rack.
-
-
-===== Return type
-    
-<1>         xref:Stockmanagement.adoc#stockmanagement_models_rack[Rack]
-    
 
 .*Parameters*
 |===
@@ -1199,53 +1149,47 @@ a|`$warehouseId`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1259,53 +1203,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[stockmanagement_contracts_shelfmanagementrepositorycontract]]
@@ -1336,19 +1274,17 @@ Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationDimensionReposito
 [source%nowrap, php]
 ----
 
-public getShelfById($shelfId, $columns = [], $with = []):Plenty\Modules\StockManagement\Warehouse\Management\Models\Shelf // <1>
+public getShelfById($shelfId, $columns = [], $with = []):Plenty\Modules\StockManagement\Warehouse\Management\Models\Shelf
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_shelf[Shelf]
+
+
 Find a shelf by id.
-
-
-===== Return type
-    
-<1>         xref:Stockmanagement.adoc#stockmanagement_models_shelf[Shelf]
-    
 
 .*Parameters*
 |===
@@ -1370,19 +1306,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public findShelves($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public findShelves($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 Find shelves. The results can be filtered by warehouse id and rack id.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -1408,19 +1342,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public createShelf($data, $warehouseId, $rackId):Plenty\Modules\StockManagement\Warehouse\Management\Models\Shelf // <1>
+public createShelf($data, $warehouseId, $rackId):Plenty\Modules\StockManagement\Warehouse\Management\Models\Shelf
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_shelf[Shelf]
+
+
 Create a new shelf.
-
-
-===== Return type
-    
-<1>         xref:Stockmanagement.adoc#stockmanagement_models_shelf[Shelf]
-    
 
 .*Parameters*
 |===
@@ -1442,53 +1374,47 @@ a|`$rackId`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1502,53 +1428,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[stockmanagement_contracts_storagelocationmanagementrepositorycontract]]
@@ -1579,19 +1499,17 @@ Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationRepositoryContrac
 [source%nowrap, php]
 ----
 
-public getStorageLocationById($storageLocationId, $columns = [], $with = []):Plenty\Modules\StockManagement\Warehouse\Management\Models\StorageLocation // <1>
+public getStorageLocationById($storageLocationId, $columns = [], $with = []):Plenty\Modules\StockManagement\Warehouse\Management\Models\StorageLocation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[StorageLocation]
+
+
 Find a storage location by id.
-
-
-===== Return type
-    
-<1>         xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[StorageLocation]
-    
 
 .*Parameters*
 |===
@@ -1613,19 +1531,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public findStorageLocations($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public findStorageLocations($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 Find storage locations. The results can be filtered by warehouse id, rack id and shelf id.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -1651,19 +1567,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public createStorageLocation($data, $warehouseId, $rackId, $shelfId):Plenty\Modules\StockManagement\Warehouse\Management\Models\StorageLocation // <1>
+public createStorageLocation($data, $warehouseId, $rackId, $shelfId):Plenty\Modules\StockManagement\Warehouse\Management\Models\StorageLocation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[StorageLocation]
+
+
 Create a new storage location.
-
-
-===== Return type
-    
-<1>         xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[StorageLocation]
-    
 
 .*Parameters*
 |===
@@ -1689,53 +1603,47 @@ a|`$shelfId`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1749,53 +1657,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[stockmanagement_management_models]]
 ===  Models
@@ -1854,11 +1756,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[stockmanagement_models_shelf]]
@@ -1910,11 +1814,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[stockmanagement_models_storagelocation]]
@@ -1978,9 +1884,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

@@ -31,19 +31,17 @@ The BoardColumnRepositoryContract is the interface for the board column reposito
 [source%nowrap, php]
 ----
 
-public list($boardId):Illuminate\Support\Collection // <1>
+public list($boardId):Illuminate\Support\Collection
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
+
+
 Lists all columns assigned to a specific board.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
-    
 
 .*Parameters*
 |===
@@ -57,19 +55,17 @@ a|`$boardId`
 [source%nowrap, php]
 ----
 
-public create($boardId, $data):Plenty\Modules\Board\Models\BoardColumn // <1>
+public create($boardId, $data):Plenty\Modules\Board\Models\BoardColumn
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Board.adoc#board_models_boardcolumn[BoardColumn]
+
+
 Creates a new column and assigns it to a specific board.
-
-
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_boardcolumn[BoardColumn]
-    
 
 .*Parameters*
 |===
@@ -87,19 +83,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public update($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardColumn // <1>
+public update($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardColumn
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Board.adoc#board_models_boardcolumn[BoardColumn]
+
+
 Updates a specific column.
-
-
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_boardcolumn[BoardColumn]
-    
 
 .*Parameters*
 |===
@@ -121,19 +115,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public copy($boardId, $columnId):Plenty\Modules\Board\Models\BoardColumn // <1>
+public copy($boardId, $columnId):Plenty\Modules\Board\Models\BoardColumn
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Board.adoc#board_models_boardcolumn[BoardColumn]
+
+
 Copies a column and all its tasks.
-
-
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_boardcolumn[BoardColumn]
-    
 
 .*Parameters*
 |===
@@ -151,19 +143,17 @@ a|`$columnId`
 [source%nowrap, php]
 ----
 
-public updatePosition($boardId, $columnId, $newPosition):bool // <1>
+public updatePosition($boardId, $columnId, $newPosition):bool
 
 ----
 
-
     
+
+
+
+
+
 Updates the position of a specified column. This will update the position of all affected columns on the same board too.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -185,19 +175,17 @@ a|`$newPosition`
 [source%nowrap, php]
 ----
 
-public delete($boardId, $columnId):bool // <1>
+public delete($boardId, $columnId):bool
 
 ----
 
-
     
+
+
+
+
+
 Deletes a specific column.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -234,19 +222,17 @@ The BoardRepositoryContract is the interface for the board repository. This inte
 [source%nowrap, php]
 ----
 
-public list($columns = []):Illuminate\Database\Eloquent\Collection // <1>
+public list($columns = []):Illuminate\Database\Eloquent\Collection
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+
+
 Lists all boards.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
-    
 
 .*Parameters*
 |===
@@ -260,19 +246,17 @@ a|`$columns`
 [source%nowrap, php]
 ----
 
-public get($boardId, $tasksPerPage = 20):Plenty\Modules\Board\Models\Board // <1>
+public get($boardId, $tasksPerPage = 20):Plenty\Modules\Board\Models\Board
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Board.adoc#board_models_board[Board]
+
+
 Returns a single board.
-
-
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_board[Board]
-    
 
 .*Parameters*
 |===
@@ -290,19 +274,17 @@ a|`$tasksPerPage`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Board\Models\Board // <1>
+public create($data):Plenty\Modules\Board\Models\Board
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Board.adoc#board_models_board[Board]
+
+
 Creates a new board.
-
-
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_board[Board]
-    
 
 .*Parameters*
 |===
@@ -316,19 +298,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public update($boardId, $data):Plenty\Modules\Board\Models\Board // <1>
+public update($boardId, $data):Plenty\Modules\Board\Models\Board
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Board.adoc#board_models_board[Board]
+
+
 Updates a board.
-
-
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_board[Board]
-    
 
 .*Parameters*
 |===
@@ -346,19 +326,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public copy($boardId):Plenty\Modules\Board\Models\Board // <1>
+public copy($boardId):Plenty\Modules\Board\Models\Board
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Board.adoc#board_models_board[Board]
+
+
 Copies a board and all its columns.
-
-
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_board[Board]
-    
 
 .*Parameters*
 |===
@@ -372,19 +350,17 @@ a|`$boardId`
 [source%nowrap, php]
 ----
 
-public updateTasksCount($boardId):bool // <1>
+public updateTasksCount($boardId):bool
 
 ----
 
-
     
+
+
+
+
+
 Updates the tasks count value.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -398,19 +374,17 @@ a|`$boardId`
 [source%nowrap, php]
 ----
 
-public delete($boardId):bool // <1>
+public delete($boardId):bool
 
 ----
 
-
     
+
+
+
+
+
 Deletes a board. Returns `true` if the deletion was successful.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -443,19 +417,17 @@ The BoardTaskReferenceRepositoryContract is the interface for the board task ref
 [source%nowrap, php]
 ----
 
-public create($taskId, $referenceValue):Plenty\Modules\Board\Models\BoardTaskReference // <1>
+public create($taskId, $referenceValue):Plenty\Modules\Board\Models\BoardTaskReference
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Board.adoc#board_models_boardtaskreference[BoardTaskReference]
+
+
 Creates a new reference to a given task. A reference may either point to a contact or to a ticket.
-
-
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_boardtaskreference[BoardTaskReference]
-    
 
 .*Parameters*
 |===
@@ -473,19 +445,17 @@ a|`$referenceValue`
 [source%nowrap, php]
 ----
 
-public delete($referenceId):bool // <1>
+public delete($referenceId):bool
 
 ----
 
-
     
+
+
+
+
+
 Deletes a specific reference.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -499,19 +469,17 @@ a|`$referenceId`
 [source%nowrap, php]
 ----
 
-public checkReferenceKey($referenceType, $referenceKey):bool // <1>
+public checkReferenceKey($referenceType, $referenceKey):bool
 
 ----
 
-
     
+
+
+
+
+
 Checks whether the reference key for the given reference type exists or not.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -548,19 +516,17 @@ The BoardTaskRepositoryContract is the interface for the board task repository. 
 [source%nowrap, php]
 ----
 
-public list($columnId, $startAt, $tasksPerPage = 20, $columns = []):Illuminate\Database\Eloquent\Collection // <1>
+public list($columnId, $startAt, $tasksPerPage = 20, $columns = []):Illuminate\Database\Eloquent\Collection
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+
+
 Lists tasks for a specific column. Will return at most 20 tasks starting at defined task.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
-    
 
 .*Parameters*
 |===
@@ -586,19 +552,17 @@ a|`$columns`
 [source%nowrap, php]
 ----
 
-public create($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardTask // <1>
+public create($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardTask
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
+
+
 Creates a new task and assigns it to a specified column.
-
-
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_boardtask[BoardTask]
-    
 
 .*Parameters*
 |===
@@ -620,19 +584,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public copy($boardId, $columnId, $taskId):Plenty\Modules\Board\Models\BoardTask // <1>
+public copy($boardId, $columnId, $taskId):Plenty\Modules\Board\Models\BoardTask
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
+
+
 Copies the task with all references.
-
-
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_boardtask[BoardTask]
-    
 
 .*Parameters*
 |===
@@ -654,19 +616,17 @@ a|`$taskId`
 [source%nowrap, php]
 ----
 
-public get($taskId):Plenty\Modules\Board\Models\BoardTask // <1>
+public get($taskId):Plenty\Modules\Board\Models\BoardTask
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
+
+
 Returns a task for a given ID.
-
-
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_boardtask[BoardTask]
-    
 
 .*Parameters*
 |===
@@ -680,19 +640,17 @@ a|`$taskId`
 [source%nowrap, php]
 ----
 
-public update($boardId, $columnId, $taskId, $data):Plenty\Modules\Board\Models\BoardTask // <1>
+public update($boardId, $columnId, $taskId, $data):Plenty\Modules\Board\Models\BoardTask
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
+
+
 Updates a specified task.
-
-
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_boardtask[BoardTask]
-    
 
 .*Parameters*
 |===
@@ -718,20 +676,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public addReference($boardTaskReference):bool // <1>
+public addReference($boardTaskReference):bool
 
 ----
 
-
     
+
+
+
+
+
 Adds a task reference to a task object.
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -744,20 +700,18 @@ a|`$boardTaskReference`
 [source%nowrap, php]
 ----
 
-public removeReference($boardTaskReference):bool // <1>
+public removeReference($boardTaskReference):bool
 
 ----
 
-
     
+
+
+
+
+
 Removes a task reference from a task object.
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -770,19 +724,17 @@ a|`$boardTaskReference`
 [source%nowrap, php]
 ----
 
-public updatePosition($taskId, $newColumnId, $newPosition):int // <1>
+public updatePosition($taskId, $newColumnId, $newPosition):int
 
 ----
 
-
     
+
+
+
+
+
 Updates the position of a specified task. Will also update the position of all following tasks in the same column.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -804,19 +756,17 @@ a|`$newPosition`
 [source%nowrap, php]
 ----
 
-public delete($taskId):bool // <1>
+public delete($taskId):bool
 
 ----
 
-
     
+
+
+
+
+
 Deletes a specified task.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -830,19 +780,17 @@ a|`$taskId`
 [source%nowrap, php]
 ----
 
-public deleteByColumn($boardId, $columnId):bool // <1>
+public deleteByColumn($boardId, $columnId):bool
 
 ----
 
-
     
+
+
+
+
+
 Deletes all tasks of a column.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -860,19 +808,17 @@ a|`$columnId`
 [source%nowrap, php]
 ----
 
-public allByColumnId($columnId, $referenceValue = null, $columns = []):void // <1>
+public allByColumnId($columnId, $referenceValue = null, $columns = []):void
 
 ----
 
-
     
+
+
+
+
+
 Gets all tasks for the given column ID having a reference with the given reference value.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -894,19 +840,17 @@ a|`$columns`
 [source%nowrap, php]
 ----
 
-public allByBoardId($boardId, $referenceValue = null, $columns = []):void // <1>
+public allByBoardId($boardId, $referenceValue = null, $columns = []):void
 
 ----
 
-
     
+
+
+
+
+
 Gets all tasks for the given column ID having a reference with the given reference value.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -948,53 +892,47 @@ This event will be triggered, after all tasks of a column were deleted.
 [source%nowrap, php]
 ----
 
-public getBoardId():string // <1>
+public getBoardId():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getColumnId():string // <1>
+public getColumnId():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getDeletedTaskIdList():array // <1>
+public getDeletedTaskIdList():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 
 [[board_events_afterboardtaskcreated]]
@@ -1018,19 +956,17 @@ This event will be triggered, when a board task was created.
 [source%nowrap, php]
 ----
 
-public getBoardTask():Plenty\Modules\Board\Models\BoardTask // <1>
+public getBoardTask():Plenty\Modules\Board\Models\BoardTask
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
 
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_boardtask[BoardTask]
-    
+
+
 
 
 [[board_events_afterboardtaskdeleted]]
@@ -1054,19 +990,17 @@ This event will be triggered, when a single board task was deleted. It won&#039;
 [source%nowrap, php]
 ----
 
-public getBoardTask():Plenty\Modules\Board\Models\BoardTask // <1>
+public getBoardTask():Plenty\Modules\Board\Models\BoardTask
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
 
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_boardtask[BoardTask]
-    
+
+
 
 
 [[board_events_afterboardtaskreferencecreated]]
@@ -1090,19 +1024,17 @@ This event will be triggered, after a task reference was created.
 [source%nowrap, php]
 ----
 
-public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference // <1>
+public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Board.adoc#board_models_boardtaskreference[BoardTaskReference]
 
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_boardtaskreference[BoardTaskReference]
-    
+
+
 
 
 [[board_events_afterboardtaskreferencedeleted]]
@@ -1126,19 +1058,17 @@ This event will be triggered, after a task reference was deleted.
 [source%nowrap, php]
 ----
 
-public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference // <1>
+public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Board.adoc#board_models_boardtaskreference[BoardTaskReference]
 
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_boardtaskreference[BoardTaskReference]
-    
+
+
 
 
 [[board_events_beforeboardcolumndeleted]]
@@ -1162,36 +1092,32 @@ This event will be triggered, before a board column will be deleted.
 [source%nowrap, php]
 ----
 
-public getBoard():Plenty\Modules\Board\Models\Board // <1>
+public getBoard():Plenty\Modules\Board\Models\Board
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Board.adoc#board_models_board[Board]
 
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_board[Board]
-    
+
+
 
 [source%nowrap, php]
 ----
 
-public getColumnId():string // <1>
+public getColumnId():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 
 [[board_events_beforeboarddeleted]]
@@ -1215,19 +1141,17 @@ This event will be triggered, before a board will be deleted.
 [source%nowrap, php]
 ----
 
-public getBoard():Plenty\Modules\Board\Models\Board // <1>
+public getBoard():Plenty\Modules\Board\Models\Board
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Board.adoc#board_models_board[Board]
 
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_board[Board]
-    
+
+
 
 
 [[board_events_beforeboardtaskdeleted]]
@@ -1251,19 +1175,17 @@ This event will be triggered, before a single board task was deleted. It won&#03
 [source%nowrap, php]
 ----
 
-public getBoardTask():Plenty\Modules\Board\Models\BoardTask // <1>
+public getBoardTask():Plenty\Modules\Board\Models\BoardTask
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
 
-===== Return type
-    
-<1>         xref:Board.adoc#board_models_boardtask[BoardTask]
-    
+
+
 
 [[board_board_models]]
 ===  Models
@@ -1313,11 +1235,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[board_models_boardcolumn]]
@@ -1366,11 +1290,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[board_models_boardtask]]
@@ -1428,11 +1354,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[board_models_boardtaskreference]]
@@ -1475,9 +1403,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

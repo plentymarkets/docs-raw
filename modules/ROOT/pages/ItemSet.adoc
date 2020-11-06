@@ -31,19 +31,17 @@ The contract for the item set component repository
 [source%nowrap, php]
 ----
 
-public show($id, $with):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
+public show($id, $with):Plenty\Modules\ItemSet\Models\ItemSetComponent
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemsetcomponent[ItemSetComponent]
+
+
 Gets an item set component. The ID of the item set component must be specified.
-
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemsetcomponent[ItemSetComponent]
-    
 
 .*Parameters*
 |===
@@ -61,19 +59,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public get($setId, $id):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
+public get($setId, $id):Plenty\Modules\ItemSet\Models\ItemSetComponent
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemsetcomponent[ItemSetComponent]
+
+
 Gets an item set component. The item ID of the item set and the component ID must be specified.
-
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemsetcomponent[ItemSetComponent]
-    
 
 .*Parameters*
 |===
@@ -91,19 +87,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public create($setConfigId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
+public create($setConfigId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemsetcomponent[ItemSetComponent]
+
+
 Creates an item set component.
-
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemsetcomponent[ItemSetComponent]
-    
 
 .*Parameters*
 |===
@@ -121,20 +115,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public createComponents($setId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
+public createComponents($setId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemsetcomponent[ItemSetComponent]
+
+
 Creates a link between an item and a set item and adds the item as a set component.
 
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemsetcomponent[ItemSetComponent]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -151,20 +143,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public updateComponents($setId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
+public updateComponents($setId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemsetcomponent[ItemSetComponent]
+
+
 Updates the item set components of a set item.
 
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemsetcomponent[ItemSetComponent]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -181,20 +171,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public update($setId, $id, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent // <1>
+public update($setId, $id, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemsetcomponent[ItemSetComponent]
+
+
 Updates an item set component. The item ID of the set and the ID of the set component must be specified.
 
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemsetcomponent[ItemSetComponent]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -215,20 +203,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public deleteComponents($setId, $data):Plenty\Repositories\Models\DeleteResponse // <1>
+public deleteComponents($setId, $data):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
+
+
 Removes all item set components from an item set.
 
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -245,19 +231,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($setId, $id):Plenty\Repositories\Models\DeleteResponse // <1>
+public delete($setId, $id):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
+
+
 Deletes the link between an item set component and an item set. The item ID of the set and the ID of the set component must be specified.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
-    
 
 .*Parameters*
 |===
@@ -275,36 +259,32 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public all():array // <1>
+public all():array
 
 ----
 
-
     
+
+
+
+
+
 Lists all item set components.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public findBySetId($setId, $with):array // <1>
+public findBySetId($setId, $with):array
 
 ----
 
-
     
+
+
+
+
+
 Lists the item set components of a set. The item ID of the item set must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -322,19 +302,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public findByItemId($itemId):array // <1>
+public findByItemId($itemId):array
 
 ----
 
-
     
+
+
+
+
+
 Lists the item set components of a set. The item ID of the item set component must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -348,19 +326,17 @@ a|`$itemId`
 [source%nowrap, php]
 ----
 
-public deleteOne($setConfigId, $itemId):Plenty\Repositories\Models\DeleteResponse // <1>
+public deleteOne($setConfigId, $itemId):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
+
+
 Delete an item set component. The item ID of the item set component and the set config ID must be specified.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
-    
 
 .*Parameters*
 |===
@@ -397,20 +373,18 @@ The contract for the item set configuration repository
 [source%nowrap, php]
 ----
 
-public show($id):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
+public show($id):Plenty\Modules\ItemSet\Models\ItemSetConfig
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemsetconfig[ItemSetConfig]
+
+
 Gets an item set. The ID of the item set configuration must be specified.
 
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemsetconfig[ItemSetConfig]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -423,20 +397,18 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
+public create($data):Plenty\Modules\ItemSet\Models\ItemSetConfig
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemsetconfig[ItemSetConfig]
+
+
 Creates an item set configuration.
 
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemsetconfig[ItemSetConfig]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -449,19 +421,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public update($id, $data):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
+public update($id, $data):Plenty\Modules\ItemSet\Models\ItemSetConfig
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemsetconfig[ItemSetConfig]
+
+
 Updates an item set configuration. The ID of the item set configuration must be specified.
-
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemsetconfig[ItemSetConfig]
-    
 
 .*Parameters*
 |===
@@ -479,19 +449,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
+public delete($id):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
+
+
 Deletes an item set configuration. The ID of the item set configuration must be specified.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
-    
 
 .*Parameters*
 |===
@@ -505,19 +473,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public get($setId, $setConfigId):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
+public get($setId, $setConfigId):Plenty\Modules\ItemSet\Models\ItemSetConfig
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemsetconfig[ItemSetConfig]
+
+
 Gets the item set configuration of an item set.
-
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemsetconfig[ItemSetConfig]
-    
 
 .*Parameters*
 |===
@@ -535,19 +501,17 @@ a|`$setConfigId`
 [source%nowrap, php]
 ----
 
-public findBySetId($setId):Plenty\Modules\ItemSet\Models\ItemSetConfig // <1>
+public findBySetId($setId):Plenty\Modules\ItemSet\Models\ItemSetConfig
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemsetconfig[ItemSetConfig]
+
+
 Gets the item set configuration of an item set. The item ID of the set item must be specified.
-
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemsetconfig[ItemSetConfig]
-    
 
 .*Parameters*
 |===
@@ -580,19 +544,17 @@ The contract for the item set repository
 [source%nowrap, php]
 ----
 
-public show($id):Plenty\Modules\ItemSet\Models\ItemSet // <1>
+public show($id):Plenty\Modules\ItemSet\Models\ItemSet
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemset[ItemSet]
+
+
 Gets an item set. The item ID of the set must be specified.
-
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemset[ItemSet]
-    
 
 .*Parameters*
 |===
@@ -606,20 +568,18 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\ItemSet\Models\ItemSet // <1>
+public create($data):Plenty\Modules\ItemSet\Models\ItemSet
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemset[ItemSet]
+
+
 Creates an item set.
 
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemset[ItemSet]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -632,20 +592,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public createSets($data):Plenty\Modules\ItemSet\Models\ItemSet // <1>
+public createSets($data):Plenty\Modules\ItemSet\Models\ItemSet
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemset[ItemSet]
+
+
 Creates item sets.
 
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemset[ItemSet]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -658,20 +616,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public updateSets($data):array // <1>
+public updateSets($data):array
 
 ----
 
-
     
+
+
+
+
+
 Updates item sets.
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -684,19 +640,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public update($id, $data):Plenty\Modules\ItemSet\Models\ItemSet // <1>
+public update($id, $data):Plenty\Modules\ItemSet\Models\ItemSet
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Itemset.adoc#itemset_models_itemset[ItemSet]
+
+
 Updates an item set. The item ID of the set must be specified.
-
-
-===== Return type
-    
-<1>         xref:Itemset.adoc#itemset_models_itemset[ItemSet]
-    
 
 .*Parameters*
 |===
@@ -714,19 +668,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public deleteSets($data):Plenty\Repositories\Models\DeleteResponse // <1>
+public deleteSets($data):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
+
+
 Deletes item sets.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
-    
 
 .*Parameters*
 |===
@@ -740,19 +692,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($id):Plenty\Repositories\Models\DeleteResponse // <1>
+public delete($id):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
+
+
 Deletes an item set configuration. The ID must be specified.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
-    
 
 .*Parameters*
 |===
@@ -766,19 +716,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public all():array // <1>
+public all():array
 
 ----
 
-
     
+
+
+
+
+
 Lists all item set configurations.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [[itemset_itemset_models]]
 ===  Models
@@ -822,11 +770,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[itemset_models_itemsetcomponent]]
@@ -878,11 +828,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[itemset_models_itemsetconfig]]
@@ -922,9 +874,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

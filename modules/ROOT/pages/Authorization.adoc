@@ -31,19 +31,17 @@ service to get current authorized user
 [source%nowrap, php]
 ----
 
-public getCurrentAuthorizedUser():Plenty\Modules\Authorization\Models\AuthorizedUser // <1>
+public getCurrentAuthorizedUser():Plenty\Modules\Authorization\Models\AuthorizedUser
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Authorization.adoc#authorization_models_authorizeduser[AuthorizedUser]
 
-===== Return type
-    
-<1>         xref:Authorization.adoc#authorization_models_authorizeduser[AuthorizedUser]
-    
+
+
 
 [[authorization_authorization_exception]]
 ===  Exception
@@ -68,19 +66,17 @@ Class AuthorizationException
 [source%nowrap, php]
 ----
 
-public __construct($message = &quot;&quot;, $code, $previous = null):void // <1>
+public __construct($message = &quot;&quot;, $code, $previous = null):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -102,36 +98,32 @@ a|`$previous`
 [source%nowrap, php]
 ----
 
-public missingPermissions():Illuminate\Support\Collection // <1>
+public missingPermissions():Illuminate\Support\Collection
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
 
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
-    
+
+
 
 [source%nowrap, php]
 ----
 
-public addMissingPermission($permissionKey):void // <1>
+public addMissingPermission($permissionKey):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -190,11 +182,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[authorization_models_permission]]
@@ -237,11 +231,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[authorization_models_role]]
@@ -296,11 +292,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[authorization_authorization_services]]
 ===  Services
@@ -325,19 +323,17 @@ Service to process unguarded php code
 [source%nowrap, php]
 ----
 
-public processUnguarded($callable):void // <1>
+public processUnguarded($callable):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===

@@ -31,19 +31,17 @@ This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 [source%nowrap, php]
 ----
 
-public listContentsLinks($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public listContentsLinks($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
 
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
+
+
 
 .*Parameters*
 |===
@@ -69,19 +67,17 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getContentLink($contentLinkId):void // <1>
+public getContentLink($contentLinkId):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -95,19 +91,17 @@ a|`$contentLinkId`
 [source%nowrap, php]
 ----
 
-public createContentLink($data):void // <1>
+public createContentLink($data):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -121,19 +115,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public updateContentLink($data, $contentLinkId):void // <1>
+public updateContentLink($data, $contentLinkId):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -151,19 +143,17 @@ a|`$contentLinkId`
 [source%nowrap, php]
 ----
 
-public getContentLinksForContainer($container, $setId = null):void // <1>
+public getContentLinksForContainer($container, $setId = null):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -181,53 +171,47 @@ a|`$setId`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -241,53 +225,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[contentbuilder_contracts_contentrepositorycontract]]
@@ -311,19 +289,17 @@ This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 [source%nowrap, php]
 ----
 
-public listContents($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public listContents($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
 
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
+
+
 
 .*Parameters*
 |===
@@ -349,36 +325,32 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public listAllContents():array // <1>
+public listAllContents():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getContent($contentId):void // <1>
+public getContent($contentId):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -392,19 +364,17 @@ a|`$contentId`
 [source%nowrap, php]
 ----
 
-public getContentsByPage($pageIdentifier):Illuminate\Support\Collection // <1>
+public getContentsByPage($pageIdentifier):Illuminate\Support\Collection
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
 
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
-    
+
+
 
 .*Parameters*
 |===
@@ -418,19 +388,17 @@ a|`$pageIdentifier`
 [source%nowrap, php]
 ----
 
-public createContent($dataProviderName):void // <1>
+public createContent($dataProviderName):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -444,19 +412,17 @@ a|`$dataProviderName`
 [source%nowrap, php]
 ----
 
-public updateContent($data, $contentId):void // <1>
+public updateContent($data, $contentId):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -474,53 +440,47 @@ a|`$contentId`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -534,53 +494,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[contentbuilder_contracts_contentstoragerepositorycontract]]
@@ -604,19 +558,17 @@ This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 [source%nowrap, php]
 ----
 
-public createContentData($contentId, $widgetData):void // <1>
+public createContentData($contentId, $widgetData):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -634,19 +586,17 @@ a|`$widgetData`
 [source%nowrap, php]
 ----
 
-public getContentData($contentId):void // <1>
+public getContentData($contentId):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -679,19 +629,17 @@ This module is deprecated. Use module &#039;Shop Builder&#039; instead.
 [source%nowrap, php]
 ----
 
-public getPreview($widgetSettings = [], $children = []):string // <1>
+public getPreview($widgetSettings = [], $children = []):string
 
 ----
 
-
     
+
+
+
+
+
 Get the html representation of the widget
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -709,19 +657,17 @@ a|`$children`
 [source%nowrap, php]
 ----
 
-public render($widgetSettings = [], $children = []):string // <1>
+public render($widgetSettings = [], $children = []):string
 
 ----
 
-
     
+
+
+
+
+
 Render the widget
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -787,11 +733,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[contentbuilder_models_contentlink]]
@@ -843,9 +791,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

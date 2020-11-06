@@ -31,19 +31,17 @@ This service provides a method to initiate the automatic email delivery.
 [source%nowrap, php]
 ----
 
-public sendAutomatic($email):bool // <1>
+public sendAutomatic($email):bool
 
 ----
 
-
     
+
+
+
+
+
 Send the automatic email.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -81,11 +79,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[helper_models_automaticemailcontact]]
@@ -113,11 +113,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[helper_models_automaticemaildata]]
@@ -145,11 +147,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[helper_models_automaticemailnewsletter]]
@@ -177,11 +181,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[helper_models_automaticemailorder]]
@@ -209,11 +215,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[helper_models_automaticemailtemplate]]
@@ -241,11 +249,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[helper_helper]]
 == Helper
@@ -273,19 +283,17 @@ GetApiCallLimits reads the values for the API call limits from the config and re
 [source%nowrap, php]
 ----
 
-public get():array // <1>
+public get():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [[helper_helper_contracts]]
 ===  Contracts
@@ -310,19 +318,17 @@ Repository Contract for UrlBuilder
 [source%nowrap, php]
 ----
 
-public getImageUrl($path, $plentyId = null, $size = &quot;&quot;, $fileType = &quot;&quot;, $isExternalImage = false):string // <1>
+public getImageUrl($path, $plentyId = null, $size = &quot;&quot;, $fileType = &quot;&quot;, $isExternalImage = false):string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -352,19 +358,17 @@ a|`$isExternalImage`
 [source%nowrap, php]
 ----
 
-public getItemUrl($itemId, $plentyId, $urlContent = &quot;&quot;, $lang = &quot;de&quot;, $useHttpsDomain = true):string // <1>
+public getItemUrl($itemId, $plentyId, $urlContent = &quot;&quot;, $lang = &quot;de&quot;, $useHttpsDomain = true):string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -414,19 +418,17 @@ Class EncryptionException
 [source%nowrap, php]
 ----
 
-public __construct($message, $code):void // <1>
+public __construct($message, $code):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -464,19 +466,17 @@ key value data
 [source%nowrap, php]
 ----
 
-public get($key, $default = null):mixed // <1>
+public get($key, $default = null):mixed
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/mixed[mixed^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -514,19 +514,17 @@ helper class for arrays
 [source%nowrap, php]
 ----
 
-public buildMapFromObjectList($list, $keyField, $valueField):Plenty\Modules\Helper\Models\KeyValue // <1>
+public buildMapFromObjectList($list, $keyField, $valueField):Plenty\Modules\Helper\Models\KeyValue
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Helper.adoc#helper_models_keyvalue[KeyValue]
 
-===== Return type
-    
-<1>         xref:Helper.adoc#helper_models_keyvalue[KeyValue]
-    
+
+
 
 .*Parameters*
 |===
@@ -567,20 +565,18 @@ Service for encoding strings
 [source%nowrap, php]
 ----
 
-public toDatabase($sString):string // <1>
+public toDatabase($sString):string
 
 ----
 
-
     
+
+
+
+
+
 Method converts a string to self::DATABASE_ENCODING coding
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -593,20 +589,18 @@ a|`$sString`
 [source%nowrap, php]
 ----
 
-public toEmail($sString):string // <1>
+public toEmail($sString):string
 
 ----
 
-
     
+
+
+
+
+
 Method converts a string to self::EMAIL_ENCODING coding
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -619,19 +613,17 @@ a|`$sString`
 [source%nowrap, php]
 ----
 
-public toWebshop($sString, $sTargetEncoding = self::WEBSHOP_ENCODING):string // <1>
+public toWebshop($sString, $sTargetEncoding = self::WEBSHOP_ENCODING):string
 
 ----
 
-
     
+
+
+
+
+
 Method converts a string to self::WEBSHOP_ENCODING coding
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -649,19 +641,17 @@ a|`$sTargetEncoding`
 [source%nowrap, php]
 ----
 
-public toAdmin($sString, $sTargetEncoding = self::ADMIN_ENCODING):string // <1>
+public toAdmin($sString, $sTargetEncoding = self::ADMIN_ENCODING):string
 
 ----
 
-
     
+
+
+
+
+
 Method converts a string to the sended coding. Default will be self::ADMIN_ENCODING coding used
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -679,19 +669,17 @@ a|`$sTargetEncoding`
 [source%nowrap, php]
 ----
 
-public toGwt($sString):string // <1>
+public toGwt($sString):string
 
 ----
 
-
     
+
+
+
+
+
 Method converts a string to the sended coding
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -705,19 +693,17 @@ a|`$sString`
 [source%nowrap, php]
 ----
 
-public toExport($sString, $sTargetEncoding = self::EXPORT_ENCODING):string // <1>
+public toExport($sString, $sTargetEncoding = self::EXPORT_ENCODING):string
 
 ----
 
-
     
+
+
+
+
+
 Method converts a string to the sended coding. Default will be self::EXPORT_ENCODING coding used
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -735,19 +721,17 @@ a|`$sTargetEncoding`
 [source%nowrap, php]
 ----
 
-public toLegacy($sString):string // <1>
+public toLegacy($sString):string
 
 ----
 
-
     
+
+
+
+
+
 Method converts a string to self::LEGACY_ENCODING coding
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -761,19 +745,17 @@ a|`$sString`
 [source%nowrap, php]
 ----
 
-public toPDF($sString, $sTargetEncoding = self::PDF_ENCODING):string // <1>
+public toPDF($sString, $sTargetEncoding = self::PDF_ENCODING):string
 
 ----
 
-
     
+
+
+
+
+
 Method converts a string to self::PDF_ENCODING coding
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -791,19 +773,17 @@ a|`$sTargetEncoding`
 [source%nowrap, php]
 ----
 
-public toXML($string, $targetEncoding = self::XML_ENCODING):string // <1>
+public toXML($string, $targetEncoding = self::XML_ENCODING):string
 
 ----
 
-
     
+
+
+
+
+
 Method converts a string to self::XML_ENCODING coding.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -821,19 +801,17 @@ a|`$targetEncoding`
 [source%nowrap, php]
 ----
 
-public detect_encoding($sString):string // <1>
+public detect_encoding($sString):string
 
 ----
 
-
     
+
+
+
+
+
 Method returns the encoding of one string
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -847,19 +825,17 @@ a|`$sString`
 [source%nowrap, php]
 ----
 
-public convertArray($array, $sTargetEncoding = self::UTF8_ENCODING, $convertKey = false):array // <1>
+public convertArray($array, $sTargetEncoding = self::UTF8_ENCODING, $convertKey = false):array
 
 ----
 
-
     
+
+
+
+
+
 Method converts a multidimensional array to the desired coding
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -881,19 +857,17 @@ a|`$convertKey`
 [source%nowrap, php]
 ----
 
-public cutTextForDB($text, $lenghtIntoDB):string // <1>
+public cutTextForDB($text, $lenghtIntoDB):string
 
 ----
 
-
     
+
+
+
+
+
 cut the given text to fit for db insert.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -911,19 +885,17 @@ a|`$lenghtIntoDB`
 [source%nowrap, php]
 ----
 
-public isValidUtf8($string):int // <1>
+public isValidUtf8($string):int
 
 ----
 
-
     
+
+
+
+
+
 Checks whether the given string is valid utf-8.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -956,17 +928,15 @@ Webstore Helper Service
 [source%nowrap, php]
 ----
 
-public getCurrentWebstoreConfiguration():Plenty\Modules\System\Models\WebstoreConfiguration // <1>
+public getCurrentWebstoreConfiguration():Plenty\Modules\System\Models\WebstoreConfiguration
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:System.adoc#system_models_webstoreconfiguration[WebstoreConfiguration]
 
-===== Return type
-    
-<1>         xref:System.adoc#system_models_webstoreconfiguration[WebstoreConfiguration]
-    
+
+
 

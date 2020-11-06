@@ -31,19 +31,17 @@ The PaymentContactRelationRepositoryContract is the interface for the payment co
 [source%nowrap, php]
 ----
 
-public createContactRelation($payment, $contact):Plenty\Modules\Payment\Models\PaymentContactRelation // <1>
+public createContactRelation($payment, $contact):Plenty\Modules\Payment\Models\PaymentContactRelation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentcontactrelation[PaymentContactRelation]
+
+
 Creates a payment contact relation.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_paymentcontactrelation[PaymentContactRelation]
-    
 
 .*Parameters*
 |===
@@ -61,19 +59,17 @@ a|`$contact`
 [source%nowrap, php]
 ----
 
-public deleteContactRelation($payment):void // <1>
+public deleteContactRelation($payment):void
 
 ----
 
-
     
+
+
+
+
+
 Deletes a payment contact relation.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -106,19 +102,17 @@ The PaymentMatcherRepositoryContract
 [source%nowrap, php]
 ----
 
-public checkMapFindAssignPayment($mopId, $data):string // <1>
+public checkMapFindAssignPayment($mopId, $data):string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -136,19 +130,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public findAssignPayment($payment):void // <1>
+public findAssignPayment($payment):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -162,19 +154,17 @@ a|`$payment`
 [source%nowrap, php]
 ----
 
-public getMatchingRatesForPayment($paymentId):array // <1>
+public getMatchingRatesForPayment($paymentId):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -207,19 +197,17 @@ The PaymentOrderRelationRepositoryContract is the interface for the payment orde
 [source%nowrap, php]
 ----
 
-public createOrderRelation($payment, $order):Plenty\Modules\Payment\Models\PaymentOrderRelation // <1>
+public createOrderRelation($payment, $order):Plenty\Modules\Payment\Models\PaymentOrderRelation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[PaymentOrderRelation]
+
+
 Creates a payment order relation.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_paymentorderrelation[PaymentOrderRelation]
-    
 
 .*Parameters*
 |===
@@ -237,19 +225,17 @@ a|`$order`
 [source%nowrap, php]
 ----
 
-public findOrderRelation($payment):Plenty\Modules\Payment\Models\PaymentOrderRelation // <1>
+public findOrderRelation($payment):Plenty\Modules\Payment\Models\PaymentOrderRelation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[PaymentOrderRelation]
+
+
 Gets the payment order relation.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_paymentorderrelation[PaymentOrderRelation]
-    
 
 .*Parameters*
 |===
@@ -263,19 +249,17 @@ a|`$payment`
 [source%nowrap, php]
 ----
 
-public deleteOrderRelation($payment):void // <1>
+public deleteOrderRelation($payment):void
 
 ----
 
-
     
+
+
+
+
+
 Deletes a payment order relation.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -289,19 +273,17 @@ a|`$payment`
 [source%nowrap, php]
 ----
 
-public createOrderRelationWithValidation($paymentId, $orderId):Plenty\Modules\Payment\Models\PaymentOrderRelation // <1>
+public createOrderRelationWithValidation($paymentId, $orderId):Plenty\Modules\Payment\Models\PaymentOrderRelation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[PaymentOrderRelation]
+
+
 Assign a payment to an order ID if order ID is valid and order ID doesn&#039;t have a payment assigned.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_paymentorderrelation[PaymentOrderRelation]
-    
 
 .*Parameters*
 |===
@@ -319,19 +301,17 @@ a|`$orderId`
 [source%nowrap, php]
 ----
 
-public autoAssignPayments($paymentIds):array // <1>
+public autoAssignPayments($paymentIds):array
 
 ----
 
-
     
+
+
+
+
+
 Bulk auto assign payments
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -364,36 +344,32 @@ The PaymentPropertyRepositoryContract is the interface for the payment property 
 [source%nowrap, php]
 ----
 
-public all():array // <1>
+public all():array
 
 ----
 
-
     
+
+
+
+
+
 Lists properties.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public findByPropertyId($propertyId):array // <1>
+public findByPropertyId($propertyId):array
 
 ----
 
-
     
+
+
+
+
+
 Gets a property. The ID of the payment property must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -407,19 +383,17 @@ a|`$propertyId`
 [source%nowrap, php]
 ----
 
-public allByPaymentId($paymentId):array // <1>
+public allByPaymentId($paymentId):array
 
 ----
 
-
     
+
+
+
+
+
 Lists properties of a payment. The ID of the payment must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -433,19 +407,17 @@ a|`$paymentId`
 [source%nowrap, php]
 ----
 
-public allByTypeId($typeId):array // <1>
+public allByTypeId($typeId):array
 
 ----
 
-
     
+
+
+
+
+
 Lists properties of a property type. The ID of the property type must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -491,19 +463,17 @@ a|`$typeId`
 [source%nowrap, php]
 ----
 
-public findByCreatedDateInterval($startDate, $endDate):array // <1>
+public findByCreatedDateInterval($startDate, $endDate):array
 
 ----
 
-
     
+
+
+
+
+
 Lists properties by creation date. The start and the end of the date range must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -521,19 +491,17 @@ a|`$endDate`
 [source%nowrap, php]
 ----
 
-public createProperty($data):Plenty\Modules\Payment\Models\PaymentProperty // <1>
+public createProperty($data):Plenty\Modules\Payment\Models\PaymentProperty
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentproperty[PaymentProperty]
+
+
 Creates a payment property.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_paymentproperty[PaymentProperty]
-    
 
 .*Parameters*
 |===
@@ -547,19 +515,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public changeProperty($data):Plenty\Modules\Payment\Models\PaymentProperty // <1>
+public changeProperty($data):Plenty\Modules\Payment\Models\PaymentProperty
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentproperty[PaymentProperty]
+
+
 Updates a payment property.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_paymentproperty[PaymentProperty]
-    
 
 .*Parameters*
 |===
@@ -592,19 +558,17 @@ The PaymentPropertyTypeNameRepositoryContract is the interface for the repositor
 [source%nowrap, php]
 ----
 
-public allTypeNames($lang):array // <1>
+public allTypeNames($lang):array
 
 ----
 
-
     
+
+
+
+
+
 Lists payment property type names. The language of the property type names must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -618,19 +582,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public findByNameId($nameId):array // <1>
+public findByNameId($nameId):array
 
 ----
 
-
     
+
+
+
+
+
 Finds a payment property type name. The ID of the payment property type name must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -644,19 +606,17 @@ a|`$nameId`
 [source%nowrap, php]
 ----
 
-public createTypeName($data):Plenty\Modules\Payment\Models\PaymentPropertyTypeName // <1>
+public createTypeName($data):Plenty\Modules\Payment\Models\PaymentPropertyTypeName
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytypename[PaymentPropertyTypeName]
+
+
 Creates a payment property type name.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_paymentpropertytypename[PaymentPropertyTypeName]
-    
 
 .*Parameters*
 |===
@@ -670,19 +630,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public changeProperty($data):array // <1>
+public changeProperty($data):array
 
 ----
 
-
     
+
+
+
+
+
 Updates a payment property type name.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -715,19 +673,17 @@ The PaymentPropertyTypeRepositoryContract is the interface for the payment prope
 [source%nowrap, php]
 ----
 
-public allTypes($lang):array // <1>
+public allTypes($lang):array
 
 ----
 
-
     
+
+
+
+
+
 Lists payment property types. The language of the property type must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -741,19 +697,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public findTypesById($id, $lang):array // <1>
+public findTypesById($id, $lang):array
 
 ----
 
-
     
+
+
+
+
+
 Gets a payment property type. The ID of the property type must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -803,19 +757,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public createType($data):Plenty\Modules\Payment\Models\PaymentPropertyType // <1>
+public createType($data):Plenty\Modules\Payment\Models\PaymentPropertyType
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytype[PaymentPropertyType]
+
+
 Creates a payment property type.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_paymentpropertytype[PaymentPropertyType]
-    
 
 .*Parameters*
 |===
@@ -829,19 +781,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public changeProperty($data):Plenty\Modules\Payment\Models\PaymentPropertyType // <1>
+public changeProperty($data):Plenty\Modules\Payment\Models\PaymentPropertyType
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytype[PaymentPropertyType]
+
+
 Updates a payment property type.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_paymentpropertytype[PaymentPropertyType]
-    
 
 .*Parameters*
 |===
@@ -874,19 +824,17 @@ The PaymentRepositoryContract is the interface for the payment repository. List,
 [source%nowrap, php]
 ----
 
-public getAll($itemsPerPage = 50, $page = 1):array // <1>
+public getAll($itemsPerPage = 50, $page = 1):array
 
 ----
 
-
     
+
+
+
+
+
 Lists payments.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -904,19 +852,17 @@ a|`$page`
 [source%nowrap, php]
 ----
 
-public search($page = 1, $itemsPerPage = \Plenty\Modules\Payment\Models\Payment::MAX_ITEMS_PER_PAGE, $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public search($page = 1, $itemsPerPage = \Plenty\Modules\Payment\Models\Payment::MAX_ITEMS_PER_PAGE, $with = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
 
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
+
+
 
 .*Parameters*
 |===
@@ -938,19 +884,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public getPaymentById($paymentId):Plenty\Modules\Payment\Models\Payment // <1>
+public getPaymentById($paymentId):Plenty\Modules\Payment\Models\Payment
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_payment[Payment]
+
+
 Gets a payment. The ID of the payment must be specified.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_payment[Payment]
-    
 
 .*Parameters*
 |===
@@ -964,19 +908,17 @@ a|`$paymentId`
 [source%nowrap, php]
 ----
 
-public getPaymentsByMethodId($methodId, $itemsPerPage = 50, $page = 1):array // <1>
+public getPaymentsByMethodId($methodId, $itemsPerPage = 50, $page = 1):array
 
 ----
 
-
     
+
+
+
+
+
 Lists payments of a payment method. The ID of the payment method must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -998,19 +940,17 @@ a|`$page`
 [source%nowrap, php]
 ----
 
-public getPaymentsByStatusId($statusId, $itemsPerPage = 50, $page = 1):array // <1>
+public getPaymentsByStatusId($statusId, $itemsPerPage = 50, $page = 1):array
 
 ----
 
-
     
+
+
+
+
+
 Lists payments of a payment status. The ID of the payment status must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1032,19 +972,17 @@ a|`$page`
 [source%nowrap, php]
 ----
 
-public getPaymentsByTransactionType($transactionType, $itemsPerPage = 50, $page = 1):array // <1>
+public getPaymentsByTransactionType($transactionType, $itemsPerPage = 50, $page = 1):array
 
 ----
 
-
     
+
+
+
+
+
 Lists payments of a transaction type. The transaction type must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1066,19 +1004,17 @@ a|`$page`
 [source%nowrap, php]
 ----
 
-public getPaymentsByOrderId($orderId):array // <1>
+public getPaymentsByOrderId($orderId):array
 
 ----
 
-
     
+
+
+
+
+
 Lists payments of an order. The ID of the order must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1092,19 +1028,17 @@ a|`$orderId`
 [source%nowrap, php]
 ----
 
-public getPaymentsByImportDateInterval($startDate, $endDate, $itemsPerPage = 50, $page = 1):array // <1>
+public getPaymentsByImportDateInterval($startDate, $endDate, $itemsPerPage = 50, $page = 1):array
 
 ----
 
-
     
+
+
+
+
+
 Lists payments by import date. The start and the end of the date range must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1130,19 +1064,17 @@ a|`$page`
 [source%nowrap, php]
 ----
 
-public getPaymentsByEntryDateInterval($startDate, $endDate, $itemsPerPage = 50, $page = 1):array // <1>
+public getPaymentsByEntryDateInterval($startDate, $endDate, $itemsPerPage = 50, $page = 1):array
 
 ----
 
-
     
+
+
+
+
+
 Lists payments by entry date. The start and the end of the date range must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1168,19 +1100,17 @@ a|`$page`
 [source%nowrap, php]
 ----
 
-public getPaymentsByPropertyTypeAndValue($propertyTypeId, $propertyValue, $itemsPerPage = 50, $page = 1):void // <1>
+public getPaymentsByPropertyTypeAndValue($propertyTypeId, $propertyValue, $itemsPerPage = 50, $page = 1):void
 
 ----
 
-
     
+
+
+
+
+
 Lists payments by payment property type and value.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1206,20 +1136,18 @@ a|`$page`
 [source%nowrap, php]
 ----
 
-public createPayment($data):Plenty\Modules\Payment\Models\Payment // <1>
+public createPayment($data):Plenty\Modules\Payment\Models\Payment
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_payment[Payment]
+
+
 Creates a payment.
 
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_payment[Payment]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1232,20 +1160,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public updatePayment($data):Plenty\Modules\Payment\Models\Payment // <1>
+public updatePayment($data):Plenty\Modules\Payment\Models\Payment
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_payment[Payment]
+
+
 Updates a payment.
 
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_payment[Payment]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1258,53 +1184,47 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public getStatusConstants():array // <1>
+public getStatusConstants():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getOriginConstants():array // <1>
+public getOriginConstants():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public deletePayment($paymentId):void // <1>
+public deletePayment($paymentId):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1318,19 +1238,17 @@ a|`$paymentId`
 [source%nowrap, php]
 ----
 
-public splitAndAssignPayment($paymentId, $orderIds):bool // <1>
+public splitAndAssignPayment($paymentId, $orderIds):bool
 
 ----
 
-
     
+
+
+
+
+
 Split and assign a payment to given order IDs
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -1348,19 +1266,17 @@ a|`$orderIds`
 [source%nowrap, php]
 ----
 
-public deletePayments($paymentIds):array // <1>
+public deletePayments($paymentIds):array
 
 ----
 
-
     
+
+
+
+
+
 Bulk delete payments.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1374,53 +1290,47 @@ a|`$paymentIds`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1434,53 +1344,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[payment_payment_models]]
 ===  Models
@@ -1602,11 +1506,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[payment_models_paymentcontactrelation]]
@@ -1652,11 +1558,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[payment_models_paymentorderrelation]]
@@ -1702,11 +1610,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[payment_models_paymentproperty]]
@@ -1795,11 +1705,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[payment_models_paymentpropertytype]]
@@ -1845,11 +1757,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[payment_models_paymentpropertytypename]]
@@ -1895,11 +1809,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[payment_events]]
 == Events
@@ -1927,19 +1843,17 @@ The event is triggered when a payment is executed.
 [source%nowrap, php]
 ----
 
-public setOrderId($orderId):Plenty\Modules\Payment\Events\Checkout // <1>
+public setOrderId($orderId):Plenty\Modules\Payment\Events\Checkout
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+
+
 Updates the ID of the order in the checkout. The ID must be specified.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_events_checkout[Checkout]
-    
 
 .*Parameters*
 |===
@@ -1953,36 +1867,32 @@ a|`$orderId`
 [source%nowrap, php]
 ----
 
-public getOrderId():int // <1>
+public getOrderId():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the ID of the order.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 [source%nowrap, php]
 ----
 
-public setMop($mop):Plenty\Modules\Payment\Events\Checkout // <1>
+public setMop($mop):Plenty\Modules\Payment\Events\Checkout
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+
+
 Updates the ID of the payment method. The ID must be specified.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_events_checkout[Checkout]
-    
 
 .*Parameters*
 |===
@@ -1996,36 +1906,32 @@ a|`$mop`
 [source%nowrap, php]
 ----
 
-public getMop():int // <1>
+public getMop():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the ID of the payment method.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 [source%nowrap, php]
 ----
 
-public setType($type):Plenty\Modules\Payment\Events\Checkout // <1>
+public setType($type):Plenty\Modules\Payment\Events\Checkout
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+
+
 Updates the content type.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_events_checkout[Checkout]
-    
 
 .*Parameters*
 |===
@@ -2039,36 +1945,32 @@ a|`$type`
 [source%nowrap, php]
 ----
 
-public getType():string // <1>
+public getType():string
 
 ----
 
-
     
+
+
+
+
+
 Gets the content type.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 [source%nowrap, php]
 ----
 
-public setValue($value):Plenty\Modules\Payment\Events\Checkout // <1>
+public setValue($value):Plenty\Modules\Payment\Events\Checkout
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+
+
 Updates the value of the content type.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_events_checkout[Checkout]
-    
 
 .*Parameters*
 |===
@@ -2082,19 +1984,17 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public getValue():string // <1>
+public getValue():string
 
 ----
 
-
     
+
+
+
+
+
 Gets the value of the content type.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 
 [[payment_checkout_getpaymentmethodcontent]]
@@ -2118,19 +2018,17 @@ The event is triggered after the payment method is selected in the checkout.
 [source%nowrap, php]
 ----
 
-public setMop($mop):Plenty\Modules\Payment\Events\Checkout // <1>
+public setMop($mop):Plenty\Modules\Payment\Events\Checkout
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+
+
 Updates the ID of the payment method. The ID must be specified.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_events_checkout[Checkout]
-    
 
 .*Parameters*
 |===
@@ -2144,36 +2042,32 @@ a|`$mop`
 [source%nowrap, php]
 ----
 
-public getMop():int // <1>
+public getMop():int
 
 ----
 
-
     
+
+
+
+
+
 Gets the ID of the payment method.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 [source%nowrap, php]
 ----
 
-public setType($type):Plenty\Modules\Payment\Events\Checkout // <1>
+public setType($type):Plenty\Modules\Payment\Events\Checkout
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+
+
 Updates the content type.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_events_checkout[Checkout]
-    
 
 .*Parameters*
 |===
@@ -2187,36 +2081,32 @@ a|`$type`
 [source%nowrap, php]
 ----
 
-public getType():string // <1>
+public getType():string
 
 ----
 
-
     
+
+
+
+
+
 Gets the content type.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 [source%nowrap, php]
 ----
 
-public setValue($value):Plenty\Modules\Payment\Events\Checkout // <1>
+public setValue($value):Plenty\Modules\Payment\Events\Checkout
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+
+
 Updates the value of the content type.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_events_checkout[Checkout]
-    
 
 .*Parameters*
 |===
@@ -2230,36 +2120,32 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public getValue():string // <1>
+public getValue():string
 
 ----
 
-
     
+
+
+
+
+
 Gets the value of the content type.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 [source%nowrap, php]
 ----
 
-public setParams($params):Plenty\Modules\Payment\Events\Checkout // <1>
+public setParams($params):Plenty\Modules\Payment\Events\Checkout
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+
+
 Updates the parameters. The parameters must be specified.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_events_checkout[Checkout]
-    
 
 .*Parameters*
 |===
@@ -2273,19 +2159,17 @@ a|`$params`
 [source%nowrap, php]
 ----
 
-public getParams():void // <1>
+public getParams():void
 
 ----
 
-
     
+
+
+
+
+
 Gets the parameters.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[payment_history]]
 == History
@@ -2313,19 +2197,17 @@ The PaymentHistoryRepositoryContract is the interface for the payment history re
 [source%nowrap, php]
 ----
 
-public getByPaymentId($paymentId, $typeId):array // <1>
+public getByPaymentId($paymentId, $typeId):array
 
 ----
 
-
     
+
+
+
+
+
 Gets the payment history for a payment. The ID of the payment and the ID of the payment type must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -2351,19 +2233,17 @@ a|`$typeId`
 [source%nowrap, php]
 ----
 
-public createHistory($data):Plenty\Modules\Payment\History\Models\PaymentHistory // <1>
+public createHistory($data):Plenty\Modules\Payment\History\Models\PaymentHistory
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymenthistory[PaymentHistory]
+
+
 Creates the payment history.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_paymenthistory[PaymentHistory]
-    
 
 .*Parameters*
 |===
@@ -2430,11 +2310,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[payment_method]]
 == Method
@@ -2462,19 +2344,17 @@ The payment method container
 [source%nowrap, php]
 ----
 
-public register($paymentKey, $paymentMethodServiceClass, $rebuildEventClassesList):void // <1>
+public register($paymentKey, $paymentMethodServiceClass, $rebuildEventClassesList):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2496,19 +2376,17 @@ a|`$rebuildEventClassesList`
 [source%nowrap, php]
 ----
 
-public isRegistered($paymentKey):bool // <1>
+public isRegistered($paymentKey):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2541,36 +2419,32 @@ The PaymentMethodRepositoryContract is the interface for the payment method repo
 [source%nowrap, php]
 ----
 
-public all():array // <1>
+public all():array
 
 ----
 
-
     
+
+
+
+
+
 Lists payment methods.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public allForPlugin($pluginKey):array // <1>
+public allForPlugin($pluginKey):array
 
 ----
 
-
     
+
+
+
+
+
 Lists payment methods for a plugin key. The plugin key must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -2584,53 +2458,47 @@ a|`$pluginKey`
 [source%nowrap, php]
 ----
 
-public allPluginPaymentMethods():array // <1>
+public allPluginPaymentMethods():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public allOldPaymentMethods():array // <1>
+public allOldPaymentMethods():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public findByPaymentMethodId($paymentMethodId):Plenty\Modules\Payment\Method\Models\PaymentMethod // <1>
+public findByPaymentMethodId($paymentMethodId):Plenty\Modules\Payment\Method\Models\PaymentMethod
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[PaymentMethod]
+
+
 Gets a payment method. The ID of the payment method must be specified.
-
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_paymentmethod[PaymentMethod]
-    
 
 .*Parameters*
 |===
@@ -2644,19 +2512,17 @@ a|`$paymentMethodId`
 [source%nowrap, php]
 ----
 
-public getPreviewList($language = null):array // <1>
+public getPreviewList($language = null):array
 
 ----
 
-
     
+
+
+
+
+
 Get an array with all payment methods with the ID as key and the name as value.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -2670,20 +2536,18 @@ a|`$language`
 [source%nowrap, php]
 ----
 
-public createPaymentMethod($paymentMethodData):Plenty\Modules\Payment\Method\Models\PaymentMethod // <1>
+public createPaymentMethod($paymentMethodData):Plenty\Modules\Payment\Method\Models\PaymentMethod
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[PaymentMethod]
+
+
 Creates a payment method.
 
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_paymentmethod[PaymentMethod]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2696,20 +2560,18 @@ a|`$paymentMethodData`
 [source%nowrap, php]
 ----
 
-public updateName($paymentMethodData):Plenty\Modules\Payment\Method\Models\PaymentMethod // <1>
+public updateName($paymentMethodData):Plenty\Modules\Payment\Method\Models\PaymentMethod
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[PaymentMethod]
+
+
 Updates the payment method name.
 
-
-===== Return type
-    
-<1>         xref:Payment.adoc#payment_models_paymentmethod[PaymentMethod]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2722,19 +2584,17 @@ a|`$paymentMethodData`
 [source%nowrap, php]
 ----
 
-public preparePaymentMethod($mop):array // <1>
+public preparePaymentMethod($mop):array
 
 ----
 
-
     
+
+
+
+
+
 Prepares a payment method. The ID of the payment method must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -2748,19 +2608,17 @@ a|`$mop`
 [source%nowrap, php]
 ----
 
-public executePayment($mop, $orderId):array // <1>
+public executePayment($mop, $orderId):array
 
 ----
 
-
     
+
+
+
+
+
 Executes a payment. The ID of the payment method and the ID of the order must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -2778,20 +2636,18 @@ a|`$orderId`
 [source%nowrap, php]
 ----
 
-public listBackendSearchable($lang):array // <1>
+public listBackendSearchable($lang):array
 
 ----
 
-
     
+
+
+
+
+
 List all payment methods which are searchable for the backend
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2804,20 +2660,18 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public listBackendActive($lang):array // <1>
+public listBackendActive($lang):array
 
 ----
 
-
     
+
+
+
+
+
 List all payment methods which are active for the backend
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2830,36 +2684,32 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public listBackendIcon():array // <1>
+public listBackendIcon():array
 
 ----
 
-
     
+
+
+
+
+
 List all payment methods backend icon
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 [source%nowrap, php]
 ----
 
-public listCanHandleSubscriptions($lang):array // <1>
+public listCanHandleSubscriptions($lang):array
 
 ----
 
-
     
+
+
+
+
+
 List all payment methods which can handle subscriptions
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -2873,19 +2723,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public listAllActive($lang):array // <1>
+public listAllActive($lang):array
 
 ----
 
-
     
+
+
+
+
+
 List all payment methods which are active
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -2918,53 +2766,47 @@ Deprecated: The payment method service
 [source%nowrap, php]
 ----
 
-public isBackendSearchable():bool // <1>
+public isBackendSearchable():bool
 
 ----
 
-
     
+
+
+
+
+
 Is this payment method searchable in the backend?
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 [source%nowrap, php]
 ----
 
-public isBackendActive():bool // <1>
+public isBackendActive():bool
 
 ----
 
-
     
+
+
+
+
+
 Is this payment method active in the backend?
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 [source%nowrap, php]
 ----
 
-public getBackendName($lang):string // <1>
+public getBackendName($lang):string
 
 ----
 
-
     
+
+
+
+
+
 Get the backend name of the payment method
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -2978,19 +2820,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public canHandleSubscriptions():bool // <1>
+public canHandleSubscriptions():bool
 
 ----
 
-
     
+
+
+
+
+
 Can this payment method handle subscriptions?
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 [[payment_method_models]]
 ===  Models
@@ -3037,11 +2877,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[payment_method_services]]
 ===  Services
@@ -3066,37 +2908,33 @@ The payment method service
 [source%nowrap, php]
 ----
 
-public isActive():bool // <1>
+public isActive():bool
 
 ----
 
-
     
+
+
+
+
+
 Determine if the payment method is active for the frontend
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 [source%nowrap, php]
 ----
 
-public getName($lang = &quot;&quot;):string // <1>
+public getName($lang = &quot;&quot;):string
 
 ----
 
-
     
+
+
+
+
+
 Return the frontend name of the payment method according to the language
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3109,37 +2947,33 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public getFee():float // <1>
+public getFee():float
 
 ----
 
-
     
+
+
+
+
+
 Return an additional payment fee for the payment method
 
-
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
-
 [source%nowrap, php]
 ----
 
-public getIcon($lang = &quot;&quot;):string // <1>
+public getIcon($lang = &quot;&quot;):string
 
 ----
 
-
     
+
+
+
+
+
 Return the frontend icon of the payment method according to the language
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3152,20 +2986,18 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public getDescription($lang = &quot;&quot;):string // <1>
+public getDescription($lang = &quot;&quot;):string
 
 ----
 
-
     
+
+
+
+
+
 Return the frontend description of the payment method according to the language
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3178,20 +3010,18 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public getSourceUrl($lang = &quot;&quot;):string // <1>
+public getSourceUrl($lang = &quot;&quot;):string
 
 ----
 
-
     
+
+
+
+
+
 Return an url with additional information shown in the frontend about the payment method according to the language
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3204,87 +3034,77 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public isSwitchableTo():bool // <1>
+public isSwitchableTo():bool
 
 ----
 
-
     
+
+
+
+
+
 Check if it is allowed to switch to this payment method after the order is placed
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 [source%nowrap, php]
 ----
 
-public isSwitchableFrom():bool // <1>
+public isSwitchableFrom():bool
 
 ----
 
-
     
+
+
+
+
+
 Check if it is allowed to switch from this payment method after the order is placed
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 [source%nowrap, php]
 ----
 
-public isBackendSearchable():bool // <1>
+public isBackendSearchable():bool
 
 ----
 
-
     
+
+
+
+
+
 Is this payment method searchable in the backend?
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 [source%nowrap, php]
 ----
 
-public isBackendActive():bool // <1>
+public isBackendActive():bool
 
 ----
 
-
     
+
+
+
+
+
 Is this payment method active in the backend to used for existing orders?
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 [source%nowrap, php]
 ----
 
-public getBackendName($lang = &quot;&quot;):string // <1>
+public getBackendName($lang = &quot;&quot;):string
 
 ----
 
-
     
+
+
+
+
+
 Get the backend name of the payment method according to the language
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -3298,36 +3118,32 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public canHandleSubscriptions():bool // <1>
+public canHandleSubscriptions():bool
 
 ----
 
-
     
+
+
+
+
+
 Can this payment method handle subscriptions?
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 [source%nowrap, php]
 ----
 
-public getBackendIcon():string // <1>
+public getBackendIcon():string
 
 ----
 
-
     
+
+
+
+
+
 Return the icon for the backend, shown in the payments ui
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 [[payment_methodname]]
 == MethodName
@@ -3374,9 +3190,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

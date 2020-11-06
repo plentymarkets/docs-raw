@@ -31,19 +31,17 @@ The repository to get, create, update and delete accounting locations.
 [source%nowrap, php]
 ----
 
-public get($id):Plenty\Modules\Accounting\Models\AccountingLocation // <1>
+public get($id):Plenty\Modules\Accounting\Models\AccountingLocation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
+
+
 Get an accounting location. The ID of the location must be specified.
-
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
-    
 
 .*Parameters*
 |===
@@ -57,37 +55,33 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public getAll():Plenty\Modules\Accounting\Models\AccountingLocation // <1>
+public getAll():Plenty\Modules\Accounting\Models\AccountingLocation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
+
+
 List all accounting locations
 *
-
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
-    
 
 [source%nowrap, php]
 ----
 
-public listByPlentyId($plentyId):void // <1>
+public listByPlentyId($plentyId):void
 
 ----
 
-
     
+
+
+
+
+
 List accounting locations for a client. The plenty ID of the client must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -101,20 +95,18 @@ a|`$plentyId`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Accounting\Models\AccountingLocation // <1>
+public create($data):Plenty\Modules\Accounting\Models\AccountingLocation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
+
+
 Create an accounting location.
 
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -127,20 +119,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public update($id, $data):Plenty\Modules\Accounting\Models\AccountingLocation // <1>
+public update($id, $data):Plenty\Modules\Accounting\Models\AccountingLocation
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
+
+
 Update an accounting location. The ID of the location must be specified.
 
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -157,19 +147,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($id):bool // <1>
+public delete($id):bool
 
 ----
 
-
     
+
+
+
+
+
 Delete an accounting location. The ID of the location must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -183,19 +171,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public getSettings($id):Plenty\Modules\Accounting\Models\AccountingLocationSettings // <1>
+public getSettings($id):Plenty\Modules\Accounting\Models\AccountingLocationSettings
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocationsettings[AccountingLocationSettings]
+
+
 Get accounting location settings. The ID of the location must be specified.
-
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_accountinglocationsettings[AccountingLocationSettings]
-    
 
 .*Parameters*
 |===
@@ -209,19 +195,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public updateSettings($id, $data):Plenty\Modules\Accounting\Models\AccountingLocationSettings // <1>
+public updateSettings($id, $data):Plenty\Modules\Accounting\Models\AccountingLocationSettings
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocationsettings[AccountingLocationSettings]
+
+
 Update accounting location settings. The ID of the location must be specified.
-
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_accountinglocationsettings[AccountingLocationSettings]
-    
 
 .*Parameters*
 |===
@@ -258,19 +242,17 @@ Provides methods to detect a location ID.
 [source%nowrap, php]
 ----
 
-public detectLocationId($plentyId, $countryId = null):int // <1>
+public detectLocationId($plentyId, $countryId = null):int
 
 ----
 
-
     
+
+
+
+
+
 Get a location ID for a country of delivery. The plenty ID must be specified and the ID of the country of delivery can be specified. If the ID of a country is not specified, the ID of the standard location of the specified client will be returned.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -288,19 +270,17 @@ a|`$countryId`
 [source%nowrap, php]
 ----
 
-public detectLocationIdByClientId($clientId = null, $countryId = null):int // <1>
+public detectLocationIdByClientId($clientId = null, $countryId = null):int
 
 ----
 
-
     
+
+
+
+
+
 Get the location ID for a country of delivery. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, the ID of the standard location of the default client will be returned.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -318,19 +298,17 @@ a|`$countryId`
 [source%nowrap, php]
 ----
 
-public getAccountingLocations($plentyId, $countryId = null):array // <1>
+public getAccountingLocations($plentyId, $countryId = null):array
 
 ----
 
-
     
+
+
+
+
+
 List accounting locations. The plenty ID must be specified and the ID of a country of delivery can be specified. If the ID of the country is specified, only one accounting location will be returned. If the ID of the country is not specified, all accounting locations of the client will be returned.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -348,19 +326,17 @@ a|`$countryId`
 [source%nowrap, php]
 ----
 
-public getAccountingLocationsByClient($clientId = null, $countryId = null):array // <1>
+public getAccountingLocationsByClient($clientId = null, $countryId = null):array
 
 ----
 
-
     
+
+
+
+
+
 List accounting locations. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, all accounting locations of the default client will be returned.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -397,19 +373,17 @@ The DebtorAccountRepositoryContract is the interface for the DebtorAccountReposi
 [source%nowrap, php]
 ----
 
-public findByLocationId($locationId):Plenty\Modules\Accounting\Models\DebtorAccountConfiguration // <1>
+public findByLocationId($locationId):Plenty\Modules\Accounting\Models\DebtorAccountConfiguration
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_debtoraccountconfiguration[DebtorAccountConfiguration]
+
+
 Get debtor account configuration of an accounting location. The ID of the accounting location must be specified.
-
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_debtoraccountconfiguration[DebtorAccountConfiguration]
-    
 
 .*Parameters*
 |===
@@ -423,19 +397,17 @@ a|`$locationId`
 [source%nowrap, php]
 ----
 
-public listByLocationIdAndMode($locationId, $mode):void // <1>
+public listByLocationIdAndMode($locationId, $mode):void
 
 ----
 
-
     
+
+
+
+
+
 Lists debtor accounts by mode for an accounting location . The mode and the accounting location must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -479,19 +451,17 @@ This interface provides methods to initialise the country of a location or the c
 [source%nowrap, php]
 ----
 
-public initByClientId($clientId):void // <1>
+public initByClientId($clientId):void
 
 ----
 
-
     
+
+
+
+
+
 Initialise the country of the standard location of a client. The ID of the client must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -505,19 +475,17 @@ a|`$clientId`
 [source%nowrap, php]
 ----
 
-public initByPlentyId($plentyId):void // <1>
+public initByPlentyId($plentyId):void
 
 ----
 
-
     
+
+
+
+
+
 Initialise the country of the standard location of a client. The plenty ID of the client can be specified. If no plenty ID is specified, the standard client will be used.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -531,19 +499,17 @@ a|`$plentyId`
 [source%nowrap, php]
 ----
 
-public initByLocationId($locationId):void // <1>
+public initByLocationId($locationId):void
 
 ----
 
-
     
+
+
+
+
+
 Initialise the country of a location. The ID of the location must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -557,19 +523,17 @@ a|`$locationId`
 [source%nowrap, php]
 ----
 
-public initByOrderId($orderId):void // <1>
+public initByOrderId($orderId):void
 
 ----
 
-
     
+
+
+
+
+
 Initialise the country for an order. The ID of the order must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -583,70 +547,62 @@ a|`$orderId`
 [source%nowrap, php]
 ----
 
-public getCountryId():int // <1>
+public getCountryId():int
 
 ----
 
-
     
+
+
+
+
+
 Get the ID of the country of the current standard location. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
 
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
-
 [source%nowrap, php]
 ----
 
-public getClientId():int // <1>
+public getClientId():int
 
 ----
 
-
     
+
+
+
+
+
 Get the ID of the current client. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
 
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
-
 [source%nowrap, php]
 ----
 
-public getPlentyId():int // <1>
+public getPlentyId():int
 
 ----
 
-
     
+
+
+
+
+
 Get the plenty ID of the current client. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
 
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
-
 [source%nowrap, php]
 ----
 
-public getCountryIdByClientId($clientId):int // <1>
+public getCountryIdByClientId($clientId):int
 
 ----
 
-
     
+
+
+
+
+
 Get the ID of the country of a client&#039;s standard location. The ID of the client must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -660,19 +616,17 @@ a|`$clientId`
 [source%nowrap, php]
 ----
 
-public getCountryIdByPlentyId($plentyId):int // <1>
+public getCountryIdByPlentyId($plentyId):int
 
 ----
 
-
     
+
+
+
+
+
 Get the ID of the country of a client&#039;s standard location. The plenty ID of the client must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -686,19 +640,17 @@ a|`$plentyId`
 [source%nowrap, php]
 ----
 
-public getCountryIdByClientIdAndCountryId($clientId, $countryId):int // <1>
+public getCountryIdByClientIdAndCountryId($clientId, $countryId):int
 
 ----
 
-
     
+
+
+
+
+
 Get the country of a client&#039;s standard location. The ID of the client and the ID of the country must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -716,19 +668,17 @@ a|`$countryId`
 [source%nowrap, php]
 ----
 
-public getCountryIdByLocationId($locationId):int // <1>
+public getCountryIdByLocationId($locationId):int
 
 ----
 
-
     
+
+
+
+
+
 Get the country of a location. The ID of the location must be specified.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -761,19 +711,17 @@ The PostingKeyRepositoryContract is the interface for the PostingKeyRepository. 
 [source%nowrap, php]
 ----
 
-public findByLocationId($locationId):Plenty\Modules\Accounting\Models\PostingKeyConfiguration // <1>
+public findByLocationId($locationId):Plenty\Modules\Accounting\Models\PostingKeyConfiguration
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_postingkeyconfiguration[PostingKeyConfiguration]
+
+
 Get the posting key configuration of an accounting location. The ID of the accounting location must be specified.
-
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_postingkeyconfiguration[PostingKeyConfiguration]
-    
 
 .*Parameters*
 |===
@@ -806,19 +754,17 @@ The RevenueAccountRepositoryContract is the interface for the RevenueAccountRepo
 [source%nowrap, php]
 ----
 
-public listRevenueAccounts($page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+public listRevenueAccounts($page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List revenue account configurations for all accounting locations. Each accounting location has one revenue account configuration.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -836,19 +782,17 @@ a|`$itemsPerPage`
 [source%nowrap, php]
 ----
 
-public findByLocationId($locationId):Plenty\Modules\Accounting\Models\RevenueAccountLocationConfiguration // <1>
+public findByLocationId($locationId):Plenty\Modules\Accounting\Models\RevenueAccountLocationConfiguration
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_revenueaccountlocationconfiguration[RevenueAccountLocationConfiguration]
+
+
 Get the revenue account configuration of an accounting location. The ID of the accounting location must be specified.
-
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_revenueaccountlocationconfiguration[RevenueAccountLocationConfiguration]
-    
 
 .*Parameters*
 |===
@@ -862,19 +806,17 @@ a|`$locationId`
 [source%nowrap, php]
 ----
 
-public findByLocationIdAndCountryId($locationId, $countryId):Plenty\Modules\Accounting\Models\RevenueAccountCountryConfiguration // <1>
+public findByLocationIdAndCountryId($locationId, $countryId):Plenty\Modules\Accounting\Models\RevenueAccountCountryConfiguration
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_revenueaccountcountryconfiguration[RevenueAccountCountryConfiguration]
+
+
 Get the revenue account configuration of a country. The country account configuration is associated with an accounting location. The ID of the accounting location that the country is associated with as well as the ID of the country must be specified.
-
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_revenueaccountcountryconfiguration[RevenueAccountCountryConfiguration]
-    
 
 .*Parameters*
 |===
@@ -963,11 +905,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[accounting_models_accountinglocationsettings]]
@@ -1022,11 +966,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[accounting_models_debtoraccount]]
@@ -1087,11 +1033,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[accounting_models_debtoraccountconfiguration]]
@@ -1157,11 +1105,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[accounting_models_postingkey]]
@@ -1201,11 +1151,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[accounting_models_postingkeyconfiguration]]
@@ -1248,11 +1200,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[accounting_models_revenueaccount]]
@@ -1292,11 +1246,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[accounting_models_revenueaccountcountryconfiguration]]
@@ -1345,11 +1301,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[accounting_models_revenueaccountlocationconfiguration]]
@@ -1398,11 +1356,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[accounting_vat]]
 == Vat
@@ -1430,19 +1390,17 @@ This interface provides methods to initialise the detection of a VAT configurati
 [source%nowrap, php]
 ----
 
-public init($billingCountryId, $taxIdNumber, $locationId, $shippingCountryId, $startedAt = null):void // <1>
+public init($billingCountryId, $taxIdNumber, $locationId, $shippingCountryId, $startedAt = null):void
 
 ----
 
-
     
+
+
+
+
+
 Initialise the VAT system data
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1473,36 +1431,32 @@ a|`$startedAt`
 [source%nowrap, php]
 ----
 
-public isInitialized():bool // <1>
+public isInitialized():bool
 
 ----
 
-
     
+
+
+
+
+
 Get whether the VAT system is already initialised or not
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 [source%nowrap, php]
 ----
 
-public getVatField($vatRate, $restrictedToDigitalItems = false):int // <1>
+public getVatField($vatRate, $restrictedToDigitalItems = false):int
 
 ----
 
-
     
+
+
+
+
+
 Get the VAT field for a VAT rate
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -1522,19 +1476,17 @@ a|`$restrictedToDigitalItems`
 [source%nowrap, php]
 ----
 
-public getVatRate($vatField, $restrictedToDigitalItems = false):float // <1>
+public getVatRate($vatField, $restrictedToDigitalItems = false):float
 
 ----
 
-
     
+
+
+
+
+
 Get the VAT rate of a VAT field
-
-
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
 
 .*Parameters*
 |===
@@ -1554,20 +1506,18 @@ a|`$restrictedToDigitalItems`
 [source%nowrap, php]
 ----
 
-public getUsingVat($restrictedToDigitalItems = false):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+public getUsingVat($restrictedToDigitalItems = false):Plenty\Modules\Accounting\Vat\Models\Vat
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+
+
 Get the VAT configuration to be used for VAT calculation
 
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_vat[Vat]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1582,20 +1532,18 @@ a|`$restrictedToDigitalItems`
 [source%nowrap, php]
 ----
 
-public getUsingVatRates($restrictedToDigitalItems = false):array // <1>
+public getUsingVatRates($restrictedToDigitalItems = false):array
 
 ----
 
-
     
+
+
+
+
+
 Get the VAT rates to be used for VAT calculation
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1610,19 +1558,17 @@ a|`$restrictedToDigitalItems`
 [source%nowrap, php]
 ----
 
-public getStandardVatByLocationId($locationId, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+public getStandardVatByLocationId($locationId, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+
+
 Get a standard VAT configuration of an accounting location
-
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_vat[Vat]
-    
 
 .*Parameters*
 |===
@@ -1659,19 +1605,17 @@ The VatRepositoryContract is the interface for the VAT functionality. This inter
 [source%nowrap, php]
 ----
 
-public findById($id):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+public findById($id):Plenty\Modules\Accounting\Vat\Models\Vat
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+
+
 Get a VAT configuration
-
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_vat[Vat]
-    
 
 .*Parameters*
 |===
@@ -1685,19 +1629,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public getStandardVat($plentyId = null, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+public getStandardVat($plentyId = null, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+
+
 Get the standard VAT configuration for a plenty ID
-
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_vat[Vat]
-    
 
 .*Parameters*
 |===
@@ -1715,19 +1657,17 @@ a|`$startedAt`
 [source%nowrap, php]
 ----
 
-public getStandardVatByLocation($locationId, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+public getStandardVatByLocation($locationId, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+
+
 Get the standard VAT configuration for a location ID
-
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_vat[Vat]
-    
 
 .*Parameters*
 |===
@@ -1745,19 +1685,17 @@ a|`$startedAt`
 [source%nowrap, php]
 ----
 
-public getVat($locationId, $countryId, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+public getVat($locationId, $countryId, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
 
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_vat[Vat]
-    
+
+
 
 .*Parameters*
 |===
@@ -1779,19 +1717,17 @@ a|`$startedAt`
 [source%nowrap, php]
 ----
 
-public findVat($page = 1, $itemsPerPage = \Plenty\Modules\Accounting\Vat\Models\Vat::ITEMS_PER_PAGE, $relations = [], $columns = []):array // <1>
+public findVat($page = 1, $itemsPerPage = \Plenty\Modules\Accounting\Vat\Models\Vat::ITEMS_PER_PAGE, $relations = [], $columns = []):array
 
 ----
 
-
     
+
+
+
+
+
 List VAT configurations
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1817,19 +1753,17 @@ a|`$columns`
 [source%nowrap, php]
 ----
 
-public findVatByLocationId($locationId, $relations = [], $columns = []):array // <1>
+public findVatByLocationId($locationId, $relations = [], $columns = []):array
 
 ----
 
-
     
+
+
+
+
+
 List VAT configurations for an accounting location
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1851,19 +1785,17 @@ a|`$columns`
 [source%nowrap, php]
 ----
 
-public findVatByLocationIdAndCountry($locationId, $countryId, $relations = [], $columns = []):array // <1>
+public findVatByLocationIdAndCountry($locationId, $countryId, $relations = [], $columns = []):array
 
 ----
 
-
     
+
+
+
+
+
 List VAT configuration for a country of delivery
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1889,20 +1821,18 @@ a|`$columns`
 [source%nowrap, php]
 ----
 
-public getVatById($id):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+public getVatById($id):Plenty\Modules\Accounting\Vat\Models\Vat
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+
+
 Get a VAT configuration by id
 
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_vat[Vat]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1915,20 +1845,18 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public createVat($data):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+public createVat($data):Plenty\Modules\Accounting\Vat\Models\Vat
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+
+
 Create a VAT configuration
 
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_vat[Vat]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1941,19 +1869,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public updateVat($id, $data):Plenty\Modules\Accounting\Vat\Models\Vat // <1>
+public updateVat($id, $data):Plenty\Modules\Accounting\Vat\Models\Vat
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+
+
 Update a VAT configuration
-
-
-===== Return type
-    
-<1>         xref:Accounting.adoc#accounting_models_vat[Vat]
-    
 
 .*Parameters*
 |===
@@ -1971,53 +1897,47 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -2031,53 +1951,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[accounting_contracts_vatservicecontract]]
@@ -2101,19 +2015,17 @@ Provides methods for a quick search of VAT fields, VAT rates and VAT names of a 
 [source%nowrap, php]
 ----
 
-public getVatField($vat, $vatRate):int // <1>
+public getVatField($vat, $vatRate):int
 
 ----
 
-
     
+
+
+
+
+
 Get the VAT field for a VAT rate.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -2131,19 +2043,17 @@ a|`$vatRate`
 [source%nowrap, php]
 ----
 
-public getVatRate($vat, $vatField):float // <1>
+public getVatRate($vat, $vatField):float
 
 ----
 
-
     
+
+
+
+
+
 Get the VAT rate for a VAT field.
-
-
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
 
 .*Parameters*
 |===
@@ -2161,19 +2071,17 @@ a|`$vatField`
 [source%nowrap, php]
 ----
 
-public getVatName($vat, $vatField):string // <1>
+public getVatName($vat, $vatField):string
 
 ----
 
-
     
+
+
+
+
+
 Get the name of a VAT field.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -2280,11 +2188,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[accounting_models_vatrate]]
@@ -2327,9 +2237,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

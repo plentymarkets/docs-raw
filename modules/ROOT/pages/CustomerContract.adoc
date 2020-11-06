@@ -31,19 +31,17 @@ This interface provides methods to digital sign contracts
 [source%nowrap, php]
 ----
 
-public signContract($contractId, $signerName):Plenty\Modules\CustomerContract\Models\Signing // <1>
+public signContract($contractId, $signerName):Plenty\Modules\CustomerContract\Models\Signing
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Customercontract.adoc#customercontract_models_signing[Signing]
+
+
 Sign a contract
-
-
-===== Return type
-    
-<1>         xref:Customercontract.adoc#customercontract_models_signing[Signing]
-    
 
 .*Parameters*
 |===
@@ -61,19 +59,17 @@ a|`$signerName`
 [source%nowrap, php]
 ----
 
-public getSigning($contractId):Plenty\Modules\CustomerContract\Models\Signing // <1>
+public getSigning($contractId):Plenty\Modules\CustomerContract\Models\Signing
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Customercontract.adoc#customercontract_models_signing[Signing]
+
+
 Returns signing of a contract
-
-
-===== Return type
-    
-<1>         xref:Customercontract.adoc#customercontract_models_signing[Signing]
-    
 
 .*Parameters*
 |===
@@ -87,19 +83,17 @@ a|`$contractId`
 [source%nowrap, php]
 ----
 
-public signedDocument($contractId):void // <1>
+public signedDocument($contractId):void
 
 ----
 
-
     
+
+
+
+
+
 Download the signed contract document
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -132,36 +126,32 @@ This interface provides methods to list contracts
 [source%nowrap, php]
 ----
 
-public list():Illuminate\Support\Collection // <1>
+public list():Illuminate\Support\Collection
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
+
+
 List all contracts
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
-    
 
 [source%nowrap, php]
 ----
 
-public get($contractId):Plenty\Modules\CustomerContract\Models\CustomerContract // <1>
+public get($contractId):Plenty\Modules\CustomerContract\Models\CustomerContract
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Customercontract.adoc#customercontract_models_customercontract[CustomerContract]
+
+
 Returns a single contract
-
-
-===== Return type
-    
-<1>         xref:Customercontract.adoc#customercontract_models_customercontract[CustomerContract]
-    
 
 .*Parameters*
 |===
@@ -175,19 +165,17 @@ a|`$contractId`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\CustomerContract\Models\CustomerContract // <1>
+public create($data):Plenty\Modules\CustomerContract\Models\CustomerContract
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Customercontract.adoc#customercontract_models_customercontract[CustomerContract]
+
+
 Add a contract
-
-
-===== Return type
-    
-<1>         xref:Customercontract.adoc#customercontract_models_customercontract[CustomerContract]
-    
 
 .*Parameters*
 |===
@@ -201,19 +189,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public document($contractId):void // <1>
+public document($contractId):void
 
 ----
 
-
     
+
+
+
+
+
 Download contract document
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -269,11 +255,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[customercontract_models_signing]]
@@ -319,9 +307,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

@@ -31,19 +31,17 @@ Get, create, update and delete comments.
 [source%nowrap, php]
 ----
 
-public getComment($commentId):Plenty\Modules\Comment\Models\Comment // <1>
+public getComment($commentId):Plenty\Modules\Comment\Models\Comment
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Comment.adoc#comment_models_comment[Comment]
+
+
 Get a comment
-
-
-===== Return type
-    
-<1>         xref:Comment.adoc#comment_models_comment[Comment]
-    
 
 .*Parameters*
 |===
@@ -57,36 +55,32 @@ a|`$commentId`
 [source%nowrap, php]
 ----
 
-public listComments():Illuminate\Support\Collection // <1>
+public listComments():Illuminate\Support\Collection
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
+
+
 List comments
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
-    
 
 [source%nowrap, php]
 ----
 
-public createComment($data, $suppressEvent = false):Plenty\Modules\Comment\Models\Comment // <1>
+public createComment($data, $suppressEvent = false):Plenty\Modules\Comment\Models\Comment
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Comment.adoc#comment_models_comment[Comment]
+
+
 Create a comment
-
-
-===== Return type
-    
-<1>         xref:Comment.adoc#comment_models_comment[Comment]
-    
 
 .*Parameters*
 |===
@@ -104,19 +98,17 @@ a|`$suppressEvent`
 [source%nowrap, php]
 ----
 
-public deleteComment($commentId):void // <1>
+public deleteComment($commentId):void
 
 ----
 
-
     
+
+
+
+
+
 Delete a comment
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -130,19 +122,17 @@ a|`$commentId`
 [source%nowrap, php]
 ----
 
-public updateComment($data, $commentId):Plenty\Modules\Comment\Models\Comment // <1>
+public updateComment($data, $commentId):Plenty\Modules\Comment\Models\Comment
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Comment.adoc#comment_models_comment[Comment]
+
+
 Update a comment
-
-
-===== Return type
-    
-<1>         xref:Comment.adoc#comment_models_comment[Comment]
-    
 
 .*Parameters*
 |===
@@ -160,53 +150,47 @@ a|`$commentId`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -220,53 +204,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[comment_comment_models]]
 ===  Models
@@ -329,9 +307,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

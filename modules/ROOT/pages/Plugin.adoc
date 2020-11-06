@@ -31,19 +31,17 @@ Save config values for plugins
 [source%nowrap, php]
 ----
 
-public saveConfiguration($pluginId, $configMap, $setId = null, $resetCache = true):array // <1>
+public saveConfiguration($pluginId, $configMap, $setId = null, $resetCache = true):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -69,19 +67,17 @@ a|`$resetCache`
 [source%nowrap, php]
 ----
 
-public copyToPluginSetEntry($configurationOrId, $pluginSetEntryOrId):int // <1>
+public copyToPluginSetEntry($configurationOrId, $pluginSetEntryOrId):int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -99,19 +95,17 @@ a|`$pluginSetEntryOrId`
 [source%nowrap, php]
 ----
 
-public getConfigurationFile($pluginId, $setId):string // <1>
+public getConfigurationFile($pluginId, $setId):string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -129,19 +123,17 @@ a|`$setId`
 [source%nowrap, php]
 ----
 
-public export($setId, $pluginId = null, $active = null):array // <1>
+public export($setId, $pluginId = null, $active = null):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -163,19 +155,17 @@ a|`$active`
 [source%nowrap, php]
 ----
 
-public import($setId, $data, $pluginId = null):void // <1>
+public import($setId, $data, $pluginId = null):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -216,19 +206,17 @@ Plugin layout container
 [source%nowrap, php]
 ----
 
-public all($pluginSetId):void // <1>
+public all($pluginSetId):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -242,19 +230,17 @@ a|`$pluginSetId`
 [source%nowrap, php]
 ----
 
-public updateAll($dataList, $pluginSetId, $pluginId = null):void // <1>
+public updateAll($dataList, $pluginSetId, $pluginId = null):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -276,19 +262,17 @@ a|`$pluginId`
 [source%nowrap, php]
 ----
 
-public getActiveLinkedLayoutContainers($activeContainerKeysList, $activeDataProviderKeysList, $pluginSetId = null):void // <1>
+public getActiveLinkedLayoutContainers($activeContainerKeysList, $activeDataProviderKeysList, $pluginSetId = null):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -310,19 +294,17 @@ a|`$pluginSetId`
 [source%nowrap, php]
 ----
 
-public getActiveLinkedLayoutContainersByPluginSetId($activeContainerKeysList, $activeDataProviderKeysList, $pluginSetId):void // <1>
+public getActiveLinkedLayoutContainersByPluginSetId($activeContainerKeysList, $activeDataProviderKeysList, $pluginSetId):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -344,19 +326,17 @@ a|`$pluginSetId`
 [source%nowrap, php]
 ----
 
-public addNew($dataList, $pluginSetId):void // <1>
+public addNew($dataList, $pluginSetId):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -374,19 +354,17 @@ a|`$pluginSetId`
 [source%nowrap, php]
 ----
 
-public addOne($pluginSetId, $containerKey, $dataProviderKey, $containerPluginId = null, $dataProviderPluginId = null):void // <1>
+public addOne($pluginSetId, $containerKey, $dataProviderKey, $containerPluginId = null, $dataProviderPluginId = null):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -416,19 +394,17 @@ a|`$dataProviderPluginId`
 [source%nowrap, php]
 ----
 
-public removeOne($pluginSetId, $containerKey, $dataProviderKey, $containerPluginId = null, $dataProviderPluginId = null):void // <1>
+public removeOne($pluginSetId, $containerKey, $dataProviderKey, $containerPluginId = null, $dataProviderPluginId = null):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -458,19 +434,17 @@ a|`$dataProviderPluginId`
 [source%nowrap, php]
 ----
 
-public exportByPluginSetId($pluginSetOrId):array // <1>
+public exportByPluginSetId($pluginSetOrId):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -484,19 +458,17 @@ a|`$pluginSetOrId`
 [source%nowrap, php]
 ----
 
-public importByPluginSetId($pluginSetOrId, $containers):void // <1>
+public importByPluginSetId($pluginSetOrId, $containers):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -533,19 +505,17 @@ Search plugins according to parameters
 [source%nowrap, php]
 ----
 
-public getPluginByName($name):Plenty\Modules\Plugin\Models\Plugin // <1>
+public getPluginByName($name):Plenty\Modules\Plugin\Models\Plugin
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Plugin.adoc#plugin_models_plugin[Plugin]
 
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_plugin[Plugin]
-    
+
+
 
 .*Parameters*
 |===
@@ -559,19 +529,17 @@ a|`$name`
 [source%nowrap, php]
 ----
 
-public searchPlugins($params = [], $itemsPerPage = \Plenty\Modules\Plugin\Models\Plugin::DEFAULT_ITEMS_PER_PAGE):Plenty\Repositories\Models\PaginatedResult // <1>
+public searchPlugins($params = [], $itemsPerPage = \Plenty\Modules\Plugin\Models\Plugin::DEFAULT_ITEMS_PER_PAGE):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 Search plugins using filters. Example: searchPlugins([&#039;name&#039; =&gt; &#039;PluginIWantToFind&#039;])
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -589,19 +557,17 @@ a|`$itemsPerPage`
 [source%nowrap, php]
 ----
 
-public getPluginSets($pluginId):array // <1>
+public getPluginSets($pluginId):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -615,19 +581,17 @@ a|`$pluginId`
 [source%nowrap, php]
 ----
 
-public isActiveInPluginSet($pluginId, $pluginSetIdOrPluginSet):bool // <1>
+public isActiveInPluginSet($pluginId, $pluginSetIdOrPluginSet):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -645,19 +609,17 @@ a|`$pluginSetIdOrPluginSet`
 [source%nowrap, php]
 ----
 
-public isActiveInPluginSetByName($pluginName, $pluginSetId):bool // <1>
+public isActiveInPluginSetByName($pluginName, $pluginSetId):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -675,19 +637,17 @@ a|`$pluginSetId`
 [source%nowrap, php]
 ----
 
-public isActiveInWebstore($pluginId, $webstoreId):bool // <1>
+public isActiveInWebstore($pluginId, $webstoreId):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -705,19 +665,17 @@ a|`$webstoreId`
 [source%nowrap, php]
 ----
 
-public isActiveInWebstoreByPluginName($pluginName, $webstoreId):bool // <1>
+public isActiveInWebstoreByPluginName($pluginName, $webstoreId):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -735,19 +693,17 @@ a|`$webstoreId`
 [source%nowrap, php]
 ----
 
-public decoratePlugin($plugin, $pluginSetId = null):Plenty\Modules\Plugin\Models\Plugin // <1>
+public decoratePlugin($plugin, $pluginSetId = null):Plenty\Modules\Plugin\Models\Plugin
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Plugin.adoc#plugin_models_plugin[Plugin]
 
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_plugin[Plugin]
-    
+
+
 
 .*Parameters*
 |===
@@ -765,19 +721,17 @@ a|`$pluginSetId`
 [source%nowrap, php]
 ----
 
-public installMarketplacePluginByItemId($marketplacePluginItemId, $pluginSetId = null):void // <1>
+public installMarketplacePluginByItemId($marketplacePluginItemId, $pluginSetId = null):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -815,36 +769,32 @@ Event after plugin build has finished
 [source%nowrap, php]
 ----
 
-public getPluginSet():Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
+public getPluginSet():Plenty\Modules\Plugin\PluginSet\Models\PluginSet
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_models_pluginset[PluginSet]
+
+
 Get the plugin set which have been built
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_pluginset[PluginSet]
-    
 
 [source%nowrap, php]
 ----
 
-public sourceHasChanged($pluginName):bool // <1>
+public sourceHasChanged($pluginName):bool
 
 ----
 
-
     
+
+
+
+
+
 Check if php files of a plugin have been changed
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -858,19 +808,17 @@ a|`$pluginName`
 [source%nowrap, php]
 ----
 
-public resourcesHasChanged($pluginName):bool // <1>
+public resourcesHasChanged($pluginName):bool
 
 ----
 
-
     
+
+
+
+
+
 Check if resource files of a plugin have been changed
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -919,53 +867,47 @@ PluginSendMail
 [source%nowrap, php]
 ----
 
-public getTemplate():void // <1>
+public getTemplate():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getContactEmail():void // <1>
+public getContactEmail():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getCallFunction():void // <1>
+public getCallFunction():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [[plugin_plugin_models]]
 ===  Models
@@ -1015,11 +957,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[plugin_models_plugin]]
@@ -1246,11 +1190,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[plugin_plugin_services]]
 ===  Services
@@ -1275,19 +1221,17 @@ The PluginSendMailService send mails in plugins
 [source%nowrap, php]
 ----
 
-public static getInstance($webstoreId):void // <1>
+public static getInstance($webstoreId):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1301,19 +1245,17 @@ a|`$webstoreId`
 [source%nowrap, php]
 ----
 
-public sendMail($url, $template = &quot;&quot;, $email = &quot;&quot;, $callFunction = &quot;&quot;):bool // <1>
+public sendMail($url, $template = &quot;&quot;, $email = &quot;&quot;, $callFunction = &quot;&quot;):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1339,36 +1281,32 @@ a|`$callFunction`
 [source%nowrap, php]
 ----
 
-public getStatus():bool // <1>
+public getStatus():bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setStatus($status):void // <1>
+public setStatus($status):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1382,36 +1320,32 @@ a|`$status`
 [source%nowrap, php]
 ----
 
-public isInitialized():bool // <1>
+public isInitialized():bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setInitialized($initialized):void // <1>
+public setInitialized($initialized):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1425,36 +1359,32 @@ a|`$initialized`
 [source%nowrap, php]
 ----
 
-public getEmailPlaceholder():array // <1>
+public getEmailPlaceholder():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public addEmailPlaceholder($placeholder, $value):void // <1>
+public addEmailPlaceholder($placeholder, $value):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1472,19 +1402,17 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public setEmailPlaceholder($emailPlaceholder):void // <1>
+public setEmailPlaceholder($emailPlaceholder):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1498,19 +1426,17 @@ a|`$emailPlaceholder`
 [source%nowrap, php]
 ----
 
-public getEmailPlaceholderKey($key, $default = &quot;&quot;):string // <1>
+public getEmailPlaceholderKey($key, $default = &quot;&quot;):string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1547,19 +1473,17 @@ The PluginSeoSitemapService collect the sitemap patterns.
 [source%nowrap, php]
 ----
 
-public loadPatterns($url):bool // <1>
+public loadPatterns($url):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1573,36 +1497,32 @@ a|`$url`
 [source%nowrap, php]
 ----
 
-public getPatterns():array // <1>
+public getPatterns():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setItemPattern($pattern):void // <1>
+public setItemPattern($pattern):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1616,19 +1536,17 @@ a|`$pattern`
 [source%nowrap, php]
 ----
 
-public setBlogPattern($pattern):void // <1>
+public setBlogPattern($pattern):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1642,19 +1560,17 @@ a|`$pattern`
 [source%nowrap, php]
 ----
 
-public setContentCategoryPattern($pattern):void // <1>
+public setContentCategoryPattern($pattern):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1668,19 +1584,17 @@ a|`$pattern`
 [source%nowrap, php]
 ----
 
-public setItemCategoryPattern($pattern):void // <1>
+public setItemCategoryPattern($pattern):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1694,70 +1608,62 @@ a|`$pattern`
 [source%nowrap, php]
 ----
 
-public getItemPattern():string // <1>
+public getItemPattern():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getBlogPattern():string // <1>
+public getBlogPattern():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getItemCategoryPattern():string // <1>
+public getItemCategoryPattern():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getContentCategoryPattern():string // <1>
+public getContentCategoryPattern():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [[plugin_database]]
 == DataBase
@@ -1789,11 +1695,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[plugin_annotations_nontableattribute]]
@@ -1821,11 +1729,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[plugin_annotations_nullable]]
@@ -1853,11 +1763,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[plugin_annotations_relation]]
@@ -1885,11 +1797,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[plugin_database_contracts]]
 ===  Contracts
@@ -1914,20 +1828,18 @@ database query
 [source%nowrap, php]
 ----
 
-public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a basic where clause to the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1948,20 +1860,18 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a &quot;where in&quot; clause to the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1986,20 +1896,18 @@ a|`$not`
 [source%nowrap, php]
 ----
 
-public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add an &quot;or where in&quot; clause to the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2016,19 +1924,17 @@ a|`$values`
 [source%nowrap, php]
 ----
 
-public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add an &quot;or where&quot; clause to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -2050,19 +1956,17 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a &quot;where null&quot; clause to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -2084,19 +1988,17 @@ a|`$not`
 [source%nowrap, php]
 ----
 
-public orWhereNull($fieldName):void // <1>
+public orWhereNull($fieldName):void
 
 ----
 
-
     
+
+
+
+
+
 Add an &quot;or where null&quot; clause to the query.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -2110,19 +2012,17 @@ a|`$fieldName`
 [source%nowrap, php]
 ----
 
-public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a &quot;having&quot; clause to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -2148,19 +2048,17 @@ a|`$boolean`
 [source%nowrap, php]
 ----
 
-public orHaving($fieldName, $operator = null, $value = null):void // <1>
+public orHaving($fieldName, $operator = null, $value = null):void
 
 ----
 
-
     
+
+
+
+
+
 Add a &quot;or having&quot; clause to the query.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -2182,19 +2080,17 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public whereHas($modelName, $callback = null, $operator = &quot;&gt;=&quot;, $count = 1):void // <1>
+public whereHas($modelName, $callback = null, $operator = &quot;&gt;=&quot;, $count = 1):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2220,19 +2116,17 @@ a|`$count`
 [source%nowrap, php]
 ----
 
-public join($firstModelName, $callback, $as = &quot;&quot;):void // <1>
+public join($firstModelName, $callback, $as = &quot;&quot;):void
 
 ----
 
-
     
+
+
+
+
+
 Add a join clause to the query.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -2254,19 +2148,17 @@ a|`$as`
 [source%nowrap, php]
 ----
 
-public leftJoin($firstModelName, $callback):void // <1>
+public leftJoin($firstModelName, $callback):void
 
 ----
 
-
     
+
+
+
+
+
 Add a left join to the query.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -2303,19 +2195,17 @@ Database contract
 [source%nowrap, php]
 ----
 
-public save($model):Plenty\Modules\Plugin\DataBase\Contracts\Model // <1>
+public save($model):Plenty\Modules\Plugin\DataBase\Contracts\Model
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_model[Model]
 
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_contracts_model[Model]
-    
+
+
 
 .*Parameters*
 |===
@@ -2329,19 +2219,17 @@ a|`$model`
 [source%nowrap, php]
 ----
 
-public find($modelClassName, $primaryKeyFieldValue):Plenty\Modules\Plugin\DataBase\Contracts\Model // <1>
+public find($modelClassName, $primaryKeyFieldValue):Plenty\Modules\Plugin\DataBase\Contracts\Model
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_model[Model]
 
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_contracts_model[Model]
-    
+
+
 
 .*Parameters*
 |===
@@ -2359,19 +2247,17 @@ a|`$primaryKeyFieldValue`
 [source%nowrap, php]
 ----
 
-public query($modelClassName):Plenty\Modules\Plugin\DataBase\Contracts\Query // <1>
+public query($modelClassName):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[Query]
 
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_contracts_query[Query]
-    
+
+
 
 .*Parameters*
 |===
@@ -2385,19 +2271,17 @@ a|`$modelClassName`
 [source%nowrap, php]
 ----
 
-public delete($model):bool // <1>
+public delete($model):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2430,19 +2314,17 @@ database join query
 [source%nowrap, php]
 ----
 
-public on($firstModelName, $first, $operator = null, $secondModelName = null, $second = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public on($firstModelName, $first, $operator = null, $secondModelName = null, $second = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
 
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
+
+
 
 .*Parameters*
 |===
@@ -2476,19 +2358,17 @@ a|`$boolean`
 [source%nowrap, php]
 ----
 
-public where($modelName, $column, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public where($modelName, $column, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a basic where clause to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -2518,19 +2398,17 @@ a|`$boolean`
 [source%nowrap, php]
 ----
 
-public orWhere($modelName, $column, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public orWhere($modelName, $column, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add an &quot;or where&quot; clause to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -2556,19 +2434,17 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public whereNull($modelName, $column, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public whereNull($modelName, $column, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a &quot;where null&quot; clause to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -2594,19 +2470,17 @@ a|`$not`
 [source%nowrap, php]
 ----
 
-public orWhereNull($modelName, $column):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public orWhereNull($modelName, $column):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add an &quot;or where null&quot; clause to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -2643,19 +2517,17 @@ Migrate models
 [source%nowrap, php]
 ----
 
-public createTable($modelClassName):bool // <1>
+public createTable($modelClassName):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2669,19 +2541,17 @@ a|`$modelClassName`
 [source%nowrap, php]
 ----
 
-public updateTable($modelClassName):bool // <1>
+public updateTable($modelClassName):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2695,19 +2565,17 @@ a|`$modelClassName`
 [source%nowrap, php]
 ----
 
-public deleteTable($modelClassName):bool // <1>
+public deleteTable($modelClassName):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2779,54 +2647,48 @@ Database model
 [source%nowrap, php]
 ----
 
-public getTableName():string // <1>
+public getTableName():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public attributesToArray():array // <1>
+public attributesToArray():array
 
 ----
 
-
     
+
+
+
+
+
 Convert the model&#039;s attributes to an array.
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 [source%nowrap, php]
 ----
 
-public getAttribute($key):void // <1>
+public getAttribute($key):void
 
 ----
 
-
     
+
+
+
+
+
 Get an attribute from the model.
 
-
-===== Return type
-    
-<1> 
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2839,20 +2701,18 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public getAttributeValue($key):void // <1>
+public getAttributeValue($key):void
 
 ----
 
-
     
+
+
+
+
+
 Get a plain attribute
 
-
-===== Return type
-    
-<1> 
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2865,20 +2725,18 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public getAttributeFromArray($key):void // <1>
+public getAttributeFromArray($key):void
 
 ----
 
-
     
+
+
+
+
+
 Get an attribute from the $attributes array.
 
-
-===== Return type
-    
-<1> 
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2891,20 +2749,18 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public hasGetMutator($key):bool // <1>
+public hasGetMutator($key):bool
 
 ----
 
-
     
+
+
+
+
+
 Determine if a get mutator exists for an attribute.
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2917,20 +2773,18 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public mutateAttribute($key, $value):void // <1>
+public mutateAttribute($key, $value):void
 
 ----
 
-
     
+
+
+
+
+
 Get the value of an attribute using its mutator.
 
-
-===== Return type
-    
-<1> 
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2947,20 +2801,18 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public mutateAttributeForArray($key, $value):void // <1>
+public mutateAttributeForArray($key, $value):void
 
 ----
 
-
     
+
+
+
+
+
 Get the value of an attribute using its mutator for array conversion.
 
-
-===== Return type
-    
-<1> 
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2977,20 +2829,18 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public setAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public setAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Set a given attribute on the model.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3007,20 +2857,18 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public hasSetMutator($key):bool // <1>
+public hasSetMutator($key):bool
 
 ----
 
-
     
+
+
+
+
+
 Determine if a set mutator exists for an attribute.
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3033,19 +2881,17 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public fillJsonAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public fillJsonAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Set a given JSON attribute on the model.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -3063,19 +2909,17 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public fromJson($value, $asObject = false):void // <1>
+public fromJson($value, $asObject = false):void
 
 ----
 
-
     
+
+
+
+
+
 Decode the given JSON back into an array or object.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -3093,19 +2937,17 @@ a|`$asObject`
 [source%nowrap, php]
 ----
 
-public fromDateTime($value):string // <1>
+public fromDateTime($value):string
 
 ----
 
-
     
+
+
+
+
+
 Convert a DateTime to a storable string.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -3119,36 +2961,32 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public getDates():array // <1>
+public getDates():array
 
 ----
 
-
     
+
+
+
+
+
 Get the attributes that should be converted to dates.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public setDateFormat($format):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public setDateFormat($format):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Set the date format used by the model.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -3162,19 +3000,17 @@ a|`$format`
 [source%nowrap, php]
 ----
 
-public hasCast($key, $types = null):bool // <1>
+public hasCast($key, $types = null):bool
 
 ----
 
-
     
+
+
+
+
+
 Determine whether an attribute should be cast to a native type.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -3192,53 +3028,47 @@ a|`$types`
 [source%nowrap, php]
 ----
 
-public getCasts():array // <1>
+public getCasts():array
 
 ----
 
-
     
+
+
+
+
+
 Get the casts array.
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 [source%nowrap, php]
 ----
 
-public getAttributes():array // <1>
+public getAttributes():array
 
 ----
 
-
     
+
+
+
+
+
 Get all of the current attributes on the model.
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 [source%nowrap, php]
 ----
 
-public setRawAttributes($attributes, $sync = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public setRawAttributes($attributes, $sync = false):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Set the array of model attributes. No checking is done.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -3256,19 +3086,17 @@ a|`$sync`
 [source%nowrap, php]
 ----
 
-public getOriginal($key = null, $default = null):void // <1>
+public getOriginal($key = null, $default = null):void
 
 ----
 
-
     
+
+
+
+
+
 Get the model&#039;s original attribute values.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -3286,19 +3114,17 @@ a|`$default`
 [source%nowrap, php]
 ----
 
-public only($attributes):array // <1>
+public only($attributes):array
 
 ----
 
-
     
+
+
+
+
+
 Get a subset of the model&#039;s attributes.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -3312,36 +3138,32 @@ a|`$attributes`
 [source%nowrap, php]
 ----
 
-public syncOriginal():Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public syncOriginal():Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Sync the original attributes with the current.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 [source%nowrap, php]
 ----
 
-public syncOriginalAttribute($attribute):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public syncOriginalAttribute($attribute):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Sync a single original attribute with its current value.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -3355,36 +3177,32 @@ a|`$attribute`
 [source%nowrap, php]
 ----
 
-public syncChanges():Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public syncChanges():Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Sync the changed attributes.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 [source%nowrap, php]
 ----
 
-public isDirty($attributes = null):bool // <1>
+public isDirty($attributes = null):bool
 
 ----
 
-
     
+
+
+
+
+
 Determine if the model or given attribute(s) have been modified.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -3398,20 +3216,18 @@ a|`$attributes`
 [source%nowrap, php]
 ----
 
-public isClean($attributes = null):bool // <1>
+public isClean($attributes = null):bool
 
 ----
 
-
     
+
+
+
+
+
 Determine if the model or given attribute(s) have remained the same.
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3424,20 +3240,18 @@ a|`$attributes`
 [source%nowrap, php]
 ----
 
-public wasChanged($attributes = null):bool // <1>
+public wasChanged($attributes = null):bool
 
 ----
 
-
     
+
+
+
+
+
 Determine if the model or given attribute(s) have been modified.
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3450,70 +3264,62 @@ a|`$attributes`
 [source%nowrap, php]
 ----
 
-public getDirty():array // <1>
+public getDirty():array
 
 ----
 
-
     
+
+
+
+
+
 Get the attributes that have been changed since last sync.
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 [source%nowrap, php]
 ----
 
-public getChanges():array // <1>
+public getChanges():array
 
 ----
 
-
     
+
+
+
+
+
 Get the attributes that were changed.
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 [source%nowrap, php]
 ----
 
-public getMutatedAttributes():array // <1>
+public getMutatedAttributes():array
 
 ----
 
-
     
+
+
+
+
+
 Get the mutated attributes for a given instance.
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 [source%nowrap, php]
 ----
 
-public static cacheMutatedAttributes($class):void // <1>
+public static cacheMutatedAttributes($class):void
 
 ----
 
-
     
+
+
+
+
+
 Extract and cache all the mutated attributes of a class.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -3527,19 +3333,17 @@ a|`$class`
 [source%nowrap, php]
 ----
 
-public relationLoaded():void // <1>
+public relationLoaded():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 
 [[plugin_contracts_query]]
@@ -3563,19 +3367,17 @@ database query
 [source%nowrap, php]
 ----
 
-public select($columns = []):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public select($columns = []):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a basic select clause to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -3589,20 +3391,18 @@ a|`$columns`
 [source%nowrap, php]
 ----
 
-public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a basic where clause to the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3623,20 +3423,18 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a &quot;where in&quot; clause to the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3661,20 +3459,18 @@ a|`$not`
 [source%nowrap, php]
 ----
 
-public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add an &quot;or where in&quot; clause to the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3691,20 +3487,18 @@ a|`$values`
 [source%nowrap, php]
 ----
 
-public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add an &quot;or where&quot; clause to the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3725,20 +3519,18 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a &quot;where null&quot; clause to the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3759,20 +3551,18 @@ a|`$not`
 [source%nowrap, php]
 ----
 
-public orWhereNull($fieldName):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public orWhereNull($fieldName):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add an &quot;or where null&quot; clause to the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3785,19 +3575,17 @@ a|`$fieldName`
 [source%nowrap, php]
 ----
 
-public whereBetween($column, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public whereBetween($column, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a where between statement to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -3823,19 +3611,17 @@ a|`$not`
 [source%nowrap, php]
 ----
 
-public whereNotBetween($column, $values, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public whereNotBetween($column, $values, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a where not between statement to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -3857,20 +3643,18 @@ a|`$boolean`
 [source%nowrap, php]
 ----
 
-public whereDate($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public whereDate($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a &quot;where date&quot; statement to the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3895,20 +3679,18 @@ a|`$boolean`
 [source%nowrap, php]
 ----
 
-public whereMonth($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public whereMonth($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a &quot;where month&quot; statement to the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3933,20 +3715,18 @@ a|`$boolean`
 [source%nowrap, php]
 ----
 
-public whereDay($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public whereDay($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a &quot;where day&quot; statement to the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -3971,20 +3751,18 @@ a|`$boolean`
 [source%nowrap, php]
 ----
 
-public whereYear($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public whereYear($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a &quot;where year&quot; statement to the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -4009,19 +3787,17 @@ a|`$boolean`
 [source%nowrap, php]
 ----
 
-public whereTime($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public whereTime($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a &quot;where time&quot; statement to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -4047,19 +3823,17 @@ a|`$boolean`
 [source%nowrap, php]
 ----
 
-public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a &quot;having&quot; clause to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -4085,19 +3859,17 @@ a|`$boolean`
 [source%nowrap, php]
 ----
 
-public orHaving($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public orHaving($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add a &quot;or having&quot; clause to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -4119,19 +3891,17 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public orderBy($fieldName, $direction = &quot;asc&quot;):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public orderBy($fieldName, $direction = &quot;asc&quot;):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Add an &quot;order by&quot; clause to the query.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -4149,19 +3919,17 @@ a|`$direction`
 [source%nowrap, php]
 ----
 
-public forPage($page, $perPage = 15):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public forPage($page, $perPage = 15):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Set the limit and offset for a given page.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
 
 .*Parameters*
 |===
@@ -4179,19 +3947,17 @@ a|`$perPage`
 [source%nowrap, php]
 ----
 
-public count($columns = &quot;*&quot;):int // <1>
+public count($columns = &quot;*&quot;):int
 
 ----
 
-
     
+
+
+
+
+
 Retrieve the &quot;count&quot; result of the query.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -4205,20 +3971,18 @@ a|`$columns`
 [source%nowrap, php]
 ----
 
-public limit($value):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public limit($value):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Set the &quot;limit&quot; value of the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -4231,20 +3995,18 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public offset($value):Plenty\Modules\Plugin\DataBase\Contracts // <1>
+public offset($value):Plenty\Modules\Plugin\DataBase\Contracts
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[Contracts]
+
+
 Set the &quot;offset&quot; value of the query.
 
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_database_contracts[Contracts]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -4257,19 +4019,17 @@ a|`$value`
 [source%nowrap, php]
 ----
 
-public getCountForPagination($columns = []):int // <1>
+public getCountForPagination($columns = []):int
 
 ----
 
-
     
+
+
+
+
+
 Get the count of the total records for the paginator.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -4283,36 +4043,32 @@ a|`$columns`
 [source%nowrap, php]
 ----
 
-public get():array // <1>
+public get():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public delete():bool // <1>
+public delete():bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 [[plugin_dynamodb]]
 == DynamoDb
@@ -4347,10 +4103,9 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 [source%nowrap, php]
 ----
 
-public createTable($pluginName, $tableName, $attributeDefinitions, $keySchema, $readCapacityUnits = 3, $writeCapacityUnits = 2):bool // <1>
+public createTable($pluginName, $tableName, $attributeDefinitions, $keySchema, $readCapacityUnits = 3, $writeCapacityUnits = 2):bool
 
 ----
-
 
 [WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
@@ -4360,13 +4115,12 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 
 ====
     
+
+
+
+
+
 Create a table
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -4400,10 +4154,9 @@ a|`$writeCapacityUnits`
 [source%nowrap, php]
 ----
 
-public updateTable($pluginName, $tableName, $readCapacityUnits = 3, $writeCapacityUnits = 2):bool // <1>
+public updateTable($pluginName, $tableName, $readCapacityUnits = 3, $writeCapacityUnits = 2):bool
 
 ----
-
 
 [WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
@@ -4413,13 +4166,12 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 
 ====
     
+
+
+
+
+
 Update a table
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -4445,10 +4197,9 @@ a|`$writeCapacityUnits`
 [source%nowrap, php]
 ----
 
-public putItem($pluginName, $tableName, $item):bool // <1>
+public putItem($pluginName, $tableName, $item):bool
 
 ----
-
 
 [WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
@@ -4458,13 +4209,12 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 
 ====
     
+
+
+
+
+
 Add item to table
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -4486,10 +4236,9 @@ a|`$item`
 [source%nowrap, php]
 ----
 
-public getItem($pluginName, $tableName, $consistentRead, $key):array // <1>
+public getItem($pluginName, $tableName, $consistentRead, $key):array
 
 ----
-
 
 [WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
@@ -4499,13 +4248,12 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 
 ====
     
+
+
+
+
+
 Retrieving items
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -4531,10 +4279,9 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public deleteItem($pluginName, $tableName, $key):bool // <1>
+public deleteItem($pluginName, $tableName, $key):bool
 
 ----
-
 
 [WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
@@ -4544,13 +4291,12 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 
 ====
     
+
+
+
+
+
 Delete an item
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -4572,10 +4318,9 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public deleteTable($pluginName, $tableName):bool // <1>
+public deleteTable($pluginName, $tableName):bool
 
 ----
-
 
 [WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
@@ -4585,13 +4330,12 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 
 ====
     
+
+
+
+
+
 Deleting a table
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -4609,10 +4353,9 @@ a|`$tableName`
 [source%nowrap, php]
 ----
 
-public scan($pluginName, $tableName, $returnFields = &quot;&quot;, $expressionAttributeValues = [], $filterExpression = &quot;&quot;, $limit):void // <1>
+public scan($pluginName, $tableName, $returnFields = &quot;&quot;, $expressionAttributeValues = [], $filterExpression = &quot;&quot;, $limit):void
 
 ----
-
 
 [WARNING]
 .Deprecated! [small]#(since 2017-06-30)#
@@ -4622,13 +4365,12 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 
 ====
     
+
+
+
+
+
 A scan operation scans the entire table. You can specify filters to apply to the results to refine the values returned to you, after the complete scan. Amazon DynamoDB puts a 1MB limit on the scan (the limit applies before the results are filtered).
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -4685,19 +4427,17 @@ library call
 [source%nowrap, php]
 ----
 
-public call($libCall, $params = []):array // <1>
+public call($libCall, $params = []):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -4738,19 +4478,17 @@ get, create, update or delete plugin set entries
 [source%nowrap, php]
 ----
 
-public get($idOrInstance):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry // <1>
+public get($idOrInstance):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_models_pluginsetentry[PluginSetEntry]
+
+
 Get a PluginSetEntry.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_pluginsetentry[PluginSetEntry]
-    
 
 .*Parameters*
 |===
@@ -4764,19 +4502,17 @@ a|`$idOrInstance`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry // <1>
+public create($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_models_pluginsetentry[PluginSetEntry]
+
+
 Create a set entry.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_pluginsetentry[PluginSetEntry]
-    
 
 .*Parameters*
 |===
@@ -4791,19 +4527,17 @@ newly created set entry: ['pluginId' => 5, 'pluginSetId' => 3]
 [source%nowrap, php]
 ----
 
-public copyToPluginSet($pluginSetEntryOrId, $pluginSetOrId, $copyConfigurations):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry // <1>
+public copyToPluginSet($pluginSetEntryOrId, $pluginSetOrId, $copyConfigurations):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_models_pluginsetentry[PluginSetEntry]
+
+
 Copy a PluginSetEntry to a PluginSet
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_pluginsetentry[PluginSetEntry]
-    
 
 .*Parameters*
 |===
@@ -4825,19 +4559,17 @@ a|`$copyConfigurations`
 [source%nowrap, php]
 ----
 
-public update($id, $data):bool // <1>
+public update($id, $data):bool
 
 ----
 
-
     
+
+
+
+
+
 Update a PluginSetEntry. Associate a set entry with a new set, a new plugin, or both.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -4855,19 +4587,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($what):int // <1>
+public delete($what):int
 
 ----
 
-
     
+
+
+
+
+
 Delete a PluginSetEntry
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -4900,36 +4630,32 @@ list, create, update or delete plugin sets
 [source%nowrap, php]
 ----
 
-public count():int // <1>
+public count():int
 
 ----
 
-
     
+
+
+
+
+
 Count current plugin sets.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
+public create($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_models_pluginset[PluginSet]
+
+
 Create a plugin set. The data array has to contain a &#039;name&#039; field. Throws a &#039;TooManyPluginSetsException&#039; if the maximum number of sets is exceeded.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_pluginset[PluginSet]
-    
 
 .*Parameters*
 |===
@@ -4943,19 +4669,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public copy($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
+public copy($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_models_pluginset[PluginSet]
+
+
 Copy a plugin set. All set entries from the source set will be copied into the new set.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_pluginset[PluginSet]
-    
 
 .*Parameters*
 |===
@@ -4970,19 +4694,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public update($id, $data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
+public update($id, $data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_models_pluginset[PluginSet]
+
+
 Update a set. Only the &#039;name&#039; field can be updated.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_pluginset[PluginSet]
-    
 
 .*Parameters*
 |===
@@ -5000,19 +4722,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($what):int // <1>
+public delete($what):int
 
 ----
 
-
     
+
+
+
+
+
 Delete a set.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -5026,19 +4746,17 @@ a|`$what`
 [source%nowrap, php]
 ----
 
-public get($pluginSetOrId):Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
+public get($pluginSetOrId):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_models_pluginset[PluginSet]
+
+
 Get a plugin set.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_pluginset[PluginSet]
-    
 
 .*Parameters*
 |===
@@ -5053,36 +4771,32 @@ object is returned without change.
 [source%nowrap, php]
 ----
 
-public list():void // <1>
+public list():void
 
 ----
 
-
     
+
+
+
+
+
 List all plugin sets.
-
-
-===== Return type
-    
-<1> 
-    
 
 [source%nowrap, php]
 ----
 
-public listSetEntries($id):void // <1>
+public listSetEntries($id):void
 
 ----
 
-
     
+
+
+
+
+
 List all set entries of a plugin set.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -5096,19 +4810,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public listWebstores($id):void // <1>
+public listWebstores($id):void
 
 ----
 
-
     
+
+
+
+
+
 List all webstores a plugin set is related to.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -5122,19 +4834,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public listLayoutContainers($id):void // <1>
+public listLayoutContainers($id):void
 
 ----
 
-
     
+
+
+
+
+
 List all LayoutContainers for a plugin set.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -5148,19 +4858,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public getOrCreatePluginSetEntry($id, $pluginId, $withTrashed = false, $resetCache = true):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry // <1>
+public getOrCreatePluginSetEntry($id, $pluginId, $withTrashed = false, $resetCache = true):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_models_pluginsetentry[PluginSetEntry]
+
+
 Get the PluginSetEntry object containing a specific plugin for a set. If a PluginSetEntry does not exist, it will be created.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_pluginsetentry[PluginSetEntry]
-    
 
 .*Parameters*
 |===
@@ -5186,19 +4894,17 @@ a|`$resetCache`
 [source%nowrap, php]
 ----
 
-public changePluginActiveStatusForSet($pluginSetId, $pluginId, $active):Plenty\Modules\Plugin\Models\Plugin // <1>
+public changePluginActiveStatusForSet($pluginSetId, $pluginId, $active):Plenty\Modules\Plugin\Models\Plugin
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_models_plugin[Plugin]
+
+
 Activates / deactivates a plugin for a set by trashing or restoring the respective set entry.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_plugin[Plugin]
-    
 
 .*Parameters*
 |===
@@ -5220,19 +4926,17 @@ a|`$active`
 [source%nowrap, php]
 ----
 
-public removePluginFromSet($setId, $pluginId):Plenty\Modules\Plugin\Models\Plugin // <1>
+public removePluginFromSet($setId, $pluginId):Plenty\Modules\Plugin\Models\Plugin
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_models_plugin[Plugin]
+
+
 Remove a plugin from a set.
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_plugin[Plugin]
-    
 
 .*Parameters*
 |===
@@ -5250,19 +4954,17 @@ a|`$pluginId`
 [source%nowrap, php]
 ----
 
-public createPreviewHash($setId):string // <1>
+public createPreviewHash($setId):string
 
 ----
 
-
     
+
+
+
+
+
 Create a preview hash for a plugin set.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -5276,19 +4978,17 @@ a|`$setId`
 [source%nowrap, php]
 ----
 
-public getPreviewPluginSetId($previewHash):void // <1>
+public getPreviewPluginSetId($previewHash):void
 
 ----
 
-
     
+
+
+
+
+
 Extract a plugin set id from a preview hash.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -5302,19 +5002,17 @@ a|`$previewHash`
 [source%nowrap, php]
 ----
 
-public installGitPlugin($setId, $pluginId, $requestData):bool // <1>
+public installGitPlugin($setId, $pluginId, $requestData):bool
 
 ----
 
-
     
+
+
+
+
+
 Install a git-plugin into a set.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -5336,19 +5034,17 @@ a|`$requestData`
 [source%nowrap, php]
 ----
 
-public setPosition($setId, $pluginId, $requestData):void // <1>
+public setPosition($setId, $pluginId, $requestData):void
 
 ----
 
-
     
+
+
+
+
+
 Change the position of a plugin in a set
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -5370,19 +5066,17 @@ a|`$requestData`
 [source%nowrap, php]
 ----
 
-public getSyncState($pluginSetId):bool // <1>
+public getSyncState($pluginSetId):bool
 
 ----
 
-
     
+
+
+
+
+
 Get the sync state, to determine if Plugins have been (de-)activated since last build.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -5396,19 +5090,17 @@ a|`$pluginSetId`
 [source%nowrap, php]
 ----
 
-public getPluginSetHash($pluginSetOrId):string // <1>
+public getPluginSetHash($pluginSetOrId):string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -5422,19 +5114,17 @@ a|`$pluginSetOrId`
 [source%nowrap, php]
 ----
 
-public getPluginSetIdFromHash($pluginSetHash):int // <1>
+public getPluginSetIdFromHash($pluginSetHash):int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -5448,19 +5138,17 @@ a|`$pluginSetHash`
 [source%nowrap, php]
 ----
 
-public getCurrentPluginSetId():int // <1>
+public getCurrentPluginSetId():int
 
 ----
 
-
     
+
+
+
+
+
 Get the PluginSetID of the currently running plugin.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 [[plugin_pluginset_models]]
 ===  Models
@@ -5522,11 +5210,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[plugin_models_pluginsetentry]]
@@ -5581,11 +5271,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[plugin_storage]]
 == Storage
@@ -5613,19 +5305,17 @@ Storage Repository
 [source%nowrap, php]
 ----
 
-public uploadObject($pluginName, $key, $body, $publicVisible = false, $metaData = []):Plenty\Modules\Cloud\Storage\Models\StorageObject // <1>
+public uploadObject($pluginName, $key, $body, $publicVisible = false, $metaData = []):Plenty\Modules\Cloud\Storage\Models\StorageObject
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Cloud.adoc#cloud_models_storageobject[StorageObject]
+
+
 Create an object with content in $body
-
-
-===== Return type
-    
-<1>         xref:Cloud.adoc#cloud_models_storageobject[StorageObject]
-    
 
 .*Parameters*
 |===
@@ -5655,19 +5345,17 @@ a|`$metaData`
 [source%nowrap, php]
 ----
 
-public getObject($pluginName, $key, $publicVisible = false):Plenty\Modules\Cloud\Storage\Models\StorageObject // <1>
+public getObject($pluginName, $key, $publicVisible = false):Plenty\Modules\Cloud\Storage\Models\StorageObject
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Cloud.adoc#cloud_models_storageobject[StorageObject]
+
+
 Get an object
-
-
-===== Return type
-    
-<1>         xref:Cloud.adoc#cloud_models_storageobject[StorageObject]
-    
 
 .*Parameters*
 |===
@@ -5689,19 +5377,17 @@ a|`$publicVisible`
 [source%nowrap, php]
 ----
 
-public getObjectUrl($pluginName, $key, $publicVisible = false, $minutesToExpire = 5):string // <1>
+public getObjectUrl($pluginName, $key, $publicVisible = false, $minutesToExpire = 5):string
 
 ----
 
-
     
+
+
+
+
+
 Returns the URL to an object identified by its bucket and key. The URL will be signed and set to expire at the provided time.
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 .*Parameters*
 |===
@@ -5727,20 +5413,18 @@ a|`$minutesToExpire`
 [source%nowrap, php]
 ----
 
-public getObjectAsTemporaryFileResource($pluginName, $key, $publicVisible = false):string // <1>
+public getObjectAsTemporaryFileResource($pluginName, $key, $publicVisible = false):string
 
 ----
 
-
     
+
+
+
+
+
 Get local file resource of an object. Use this if it is really necessary! Using getObject is the normal and effective way.
 
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -5761,20 +5445,18 @@ a|`$publicVisible`
 [source%nowrap, php]
 ----
 
-public doesObjectExist($pluginName, $key, $publicVisible = false):bool // <1>
+public doesObjectExist($pluginName, $key, $publicVisible = false):bool
 
 ----
 
-
     
+
+
+
+
+
 Checks if object exists
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -5795,19 +5477,17 @@ a|`$publicVisible`
 [source%nowrap, php]
 ----
 
-public deleteObject($pluginName, $key, $publicVisible = false):bool // <1>
+public deleteObject($pluginName, $key, $publicVisible = false):bool
 
 ----
 
-
     
+
+
+
+
+
 Executes the DeleteObject operation.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -5829,19 +5509,17 @@ a|`$publicVisible`
 [source%nowrap, php]
 ----
 
-public listObjects($pluginName, $prefix = &quot;&quot;, $limit, $startKey = &quot;&quot;, $continuationToken = &quot;&quot;, $publicVisible = false, $resultKeyWithoutPrefix = true):Plenty\Modules\Cloud\Storage\Models\StorageObjectList // <1>
+public listObjects($pluginName, $prefix = &quot;&quot;, $limit, $startKey = &quot;&quot;, $continuationToken = &quot;&quot;, $publicVisible = false, $resultKeyWithoutPrefix = true):Plenty\Modules\Cloud\Storage\Models\StorageObjectList
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Cloud.adoc#cloud_models_storageobjectlist[StorageObjectList]
+
+
 Returns some or all (up to 1000) objects
-
-
-===== Return type
-    
-<1>         xref:Cloud.adoc#cloud_models_storageobjectlist[StorageObjectList]
-    
 
 .*Parameters*
 |===
@@ -5879,19 +5557,17 @@ a|`$resultKeyWithoutPrefix`
 [source%nowrap, php]
 ----
 
-public getPluginZip($pluginSetId, $pluginName):void // <1>
+public getPluginZip($pluginSetId, $pluginName):void
 
 ----
 
-
     
+
+
+
+
+
 Get all objects of a plugin as zip file
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -5975,9 +5651,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

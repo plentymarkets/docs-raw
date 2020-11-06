@@ -31,19 +31,17 @@ Plugin Notifications Service
 [source%nowrap, php]
 ----
 
-public addNotification($notificationBuiltWithNotificationBuilder):array // <1>
+public addNotification($notificationBuiltWithNotificationBuilder):array
 
 ----
 
-
     
+
+
+
+
+
 Add a Notification in the system
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -57,19 +55,17 @@ a|`$notificationBuiltWithNotificationBuilder`
 [source%nowrap, php]
 ----
 
-public fetchNotifications($queryBuiltWithNotificationsQueryBuilder, $page, $itemsPerPage):Plenty\Repositories\Models\UnspecifiedLengthPaginationResponse // <1>
+public fetchNotifications($queryBuiltWithNotificationsQueryBuilder, $page, $itemsPerPage):Plenty\Repositories\Models\UnspecifiedLengthPaginationResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_unspecifiedlengthpaginationresponse[UnspecifiedLengthPaginationResponse]
+
+
 Fetch a list of short/incomplete notifications, containing only the subject. To be used for listing purposes.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_unspecifiedlengthpaginationresponse[UnspecifiedLengthPaginationResponse]
-    
 
 .*Parameters*
 |===
@@ -91,19 +87,17 @@ a|`$itemsPerPage`
 [source%nowrap, php]
 ----
 
-public fetchNotificationsDetails($notificationsFetchDetailsQuery):array // <1>
+public fetchNotificationsDetails($notificationsFetchDetailsQuery):array
 
 ----
 
-
     
+
+
+
+
+
 Fetch all the details of a Notification based on its id.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -117,19 +111,17 @@ a|`$notificationsFetchDetailsQuery`
 [source%nowrap, php]
 ----
 
-public acknowledgeNotifications($queryBuiltWithNotificationsAcknowledgeQueryBuilder):bool // <1>
+public acknowledgeNotifications($queryBuiltWithNotificationsAcknowledgeQueryBuilder):bool
 
 ----
 
-
     
+
+
+
+
+
 Mark a Notification as acknowledged.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -143,19 +135,17 @@ a|`$queryBuiltWithNotificationsAcknowledgeQueryBuilder`
 [source%nowrap, php]
 ----
 
-public getNotificationsCount($queryBuiltWithNotificationsQueryBuilder):int // <1>
+public getNotificationsCount($queryBuiltWithNotificationsQueryBuilder):int
 
 ----
 
-
     
+
+
+
+
+
 Retrieve the current unread Notifications count
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -193,11 +183,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[notifications_models_notificationcontent]]
@@ -225,9 +217,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

@@ -31,19 +31,17 @@ The amazon client
 [source%nowrap, php]
 ----
 
-public sendRequest($request, $serviceVersion):Plenty\Modules\Amazon\Contracts\AmazonClientResponse // <1>
+public sendRequest($request, $serviceVersion):Plenty\Modules\Amazon\Contracts\AmazonClientResponse
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Amazon.adoc#amazon_contracts_amazonclientresponse[AmazonClientResponse]
 
-===== Return type
-    
-<1>         xref:Amazon.adoc#amazon_contracts_amazonclientresponse[AmazonClientResponse]
-    
+
+
 
 .*Parameters*
 |===
@@ -80,19 +78,17 @@ a|`$serviceVersion`
 [source%nowrap, php]
 ----
 
-public getClient($accountId, $endpointPath):Plenty\Modules\Amazon\Contracts\AmazonClient // <1>
+public getClient($accountId, $endpointPath):Plenty\Modules\Amazon\Contracts\AmazonClient
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Amazon.adoc#amazon_contracts_amazonclient[AmazonClient]
 
-===== Return type
-    
-<1>         xref:Amazon.adoc#amazon_contracts_amazonclient[AmazonClient]
-    
+
+
 
 .*Parameters*
 |===
@@ -129,70 +125,62 @@ a|`$endpointPath`
 [source%nowrap, php]
 ----
 
-public getRequestData():array // <1>
+public getRequestData():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public requiresSellerId():bool // <1>
+public requiresSellerId():bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getSellerIdFieldName():string // <1>
+public getSellerIdFieldName():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getAction():string // <1>
+public getAction():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 
 [[amazon_contracts_amazonclientrequestpayload]]
@@ -216,19 +204,17 @@ public getAction():string // <1>
 [source%nowrap, php]
 ----
 
-public getPayload():void // <1>
+public getPayload():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 
 [[amazon_contracts_amazonclientresponse]]
@@ -252,36 +238,32 @@ public getPayload():void // <1>
 [source%nowrap, php]
 ----
 
-public getResponseContent():void // <1>
+public getResponseContent():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getResponseMetaData():array // <1>
+public getResponseMetaData():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 
 [[amazon_contracts_amazonfulfillmentcenterrepositorycontract]]
@@ -305,36 +287,32 @@ AmazonFulfillmentCenterRepository
 [source%nowrap, php]
 ----
 
-public getDeliveryAddresses():array // <1>
+public getDeliveryAddresses():array
 
 ----
 
-
     
+
+
+
+
+
 Lists amazon fulfilment centers delivery addresses.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public getDeliveryAddressByFulfillmentCenterId($amazonFulfillmentCenterId):Plenty\Modules\Account\Address\Models\Address // <1>
+public getDeliveryAddressByFulfillmentCenterId($amazonFulfillmentCenterId):Plenty\Modules\Account\Address\Models\Address
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Account.adoc#account_models_address[Address]
+
+
 Get the delivery address by fulfillment center ID.
-
-
-===== Return type
-    
-<1>         xref:Account.adoc#account_models_address[Address]
-    
 
 .*Parameters*
 |===
@@ -348,20 +326,18 @@ a|`$amazonFulfillmentCenterId`
 [source%nowrap, php]
 ----
 
-public getDeliveryAddressByGLN($GLN):Plenty\Modules\Account\Address\Models\Address // <1>
+public getDeliveryAddressByGLN($GLN):Plenty\Modules\Account\Address\Models\Address
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Account.adoc#account_models_address[Address]
+
+
 Get the delivery address by GLN.
 
-
-===== Return type
-    
-<1>         xref:Account.adoc#account_models_address[Address]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -374,20 +350,18 @@ a|`$GLN`
 [source%nowrap, php]
 ----
 
-public getInvoiceAddressByGLN($GLN):Plenty\Modules\Account\Address\Models\Address // <1>
+public getInvoiceAddressByGLN($GLN):Plenty\Modules\Account\Address\Models\Address
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Account.adoc#account_models_address[Address]
+
+
 Get the invoice address by GLN.
 
-
-===== Return type
-    
-<1>         xref:Account.adoc#account_models_address[Address]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -400,19 +374,17 @@ a|`$GLN`
 [source%nowrap, php]
 ----
 
-public getContactId():int // <1>
+public getContactId():int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 
 [[amazon_amazon_exceptions]]
 ===  Exceptions
@@ -455,51 +427,45 @@ Class AmazonClientRequestException
 [source%nowrap, php]
 ----
 
-public getType():string // <1>
+public getType():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getRequestId():string // <1>
+public getRequestId():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getErrorCode():string // <1>
+public getErrorCode():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 

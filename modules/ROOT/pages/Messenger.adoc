@@ -31,19 +31,17 @@ The MessengerRepositoryContract is the interface for the messenger repository. T
 [source%nowrap, php]
 ----
 
-public add($data):Plenty\Modules\Messenger\Models\Message // <1>
+public add($data):Plenty\Modules\Messenger\Models\Message
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_message[Message]
+
+
 Creates a new message.
-
-
-===== Return type
-    
-<1>         xref:Messenger.adoc#messenger_models_message[Message]
-    
 
 .*Parameters*
 |===
@@ -57,19 +55,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public show($uuid):void // <1>
+public show($uuid):void
 
 ----
 
-
     
+
+
+
+
+
 Gets a message with all its successors.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -83,19 +79,17 @@ a|`$uuid`
 [source%nowrap, php]
 ----
 
-public list($uuid = null, $successors = true, $amount = self::DEFAULT_MESSAGES_AMOUNT):array // <1>
+public list($uuid = null, $successors = true, $amount = self::DEFAULT_MESSAGES_AMOUNT):array
 
 ----
 
-
     
+
+
+
+
+
 Lists messages. If no reference UUID5 is given, the method returns the $amount first messages. If $successor is set to FALSE, the messages older than the referenced message will be returned.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -118,19 +112,17 @@ a|`$amount`
 [source%nowrap, php]
 ----
 
-public getMessages($page = self::DEFAULT_PAGE_OF_MESSAGES, $itemsPerPage = self::DEFAULT_ITEMS_PER_PAGE_OF_MESSAGES):array // <1>
+public getMessages($page = self::DEFAULT_PAGE_OF_MESSAGES, $itemsPerPage = self::DEFAULT_ITEMS_PER_PAGE_OF_MESSAGES):array
 
 ----
 
-
     
+
+
+
+
+
 Lists messages.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -148,19 +140,17 @@ a|`$itemsPerPage`
 [source%nowrap, php]
 ----
 
-public updateReadBy($readBy, $uuid):void // <1>
+public updateReadBy($readBy, $uuid):void
 
 ----
 
-
     
+
+
+
+
+
 Updates the readBy array of the message.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -178,19 +168,17 @@ a|`$uuid`
 [source%nowrap, php]
 ----
 
-public updateTags($tags, $uuid):void // <1>
+public updateTags($tags, $uuid):void
 
 ----
 
-
     
+
+
+
+
+
 Updates the tags of the message.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -208,19 +196,17 @@ a|`$uuid`
 [source%nowrap, php]
 ----
 
-public updateVisibility($data, $uuid):void // <1>
+public updateVisibility($data, $uuid):void
 
 ----
 
-
     
+
+
+
+
+
 Updates the visibility of the message. Attributes that are updated are Message.visibility, Message.linkedTo and Message.accessFor.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -238,19 +224,17 @@ a|`$uuid`
 [source%nowrap, php]
 ----
 
-public updateControls($data, $uuid):Plenty\Modules\Messenger\Models\Message // <1>
+public updateControls($data, $uuid):Plenty\Modules\Messenger\Models\Message
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_message[Message]
+
+
 Updates the message ui control options in the message meta data and returns the message.
-
-
-===== Return type
-    
-<1>         xref:Messenger.adoc#messenger_models_message[Message]
-    
 
 .*Parameters*
 |===
@@ -268,19 +252,17 @@ a|`$uuid`
 [source%nowrap, php]
 ----
 
-public setDone($doneAt = null, $uuid):void // <1>
+public setDone($doneAt = null, $uuid):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the doneAt date in the message. If $doneAt is NULL, the doneAt date will be reset.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -298,19 +280,17 @@ a|`$uuid`
 [source%nowrap, php]
 ----
 
-public delete($uuid):int // <1>
+public delete($uuid):int
 
 ----
 
-
     
+
+
+
+
+
 Deletes a message stream by the UUID. Returns the count of messages deleted.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -324,19 +304,17 @@ a|`$uuid`
 [source%nowrap, php]
 ----
 
-public getAttachment($uuid, $filename):Plenty\Modules\Messenger\Models\Attachment // <1>
+public getAttachment($uuid, $filename):Plenty\Modules\Messenger\Models\Attachment
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_attachment[Attachment]
+
+
 Gets a message attachment.
-
-
-===== Return type
-    
-<1>         xref:Messenger.adoc#messenger_models_attachment[Attachment]
-    
 
 .*Parameters*
 |===
@@ -354,19 +332,17 @@ a|`$filename`
 [source%nowrap, php]
 ----
 
-public updateMetaData($uuid, $metaData):Plenty\Modules\Messenger\Models\Message // <1>
+public updateMetaData($uuid, $metaData):Plenty\Modules\Messenger\Models\Message
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_message[Message]
+
+
 Updates the meta data of the message.
-
-
-===== Return type
-    
-<1>         xref:Messenger.adoc#messenger_models_message[Message]
-    
 
 .*Parameters*
 |===
@@ -384,36 +360,32 @@ a|`$metaData`
 [source%nowrap, php]
 ----
 
-public getTotalEntries():int // <1>
+public getTotalEntries():int
 
 ----
 
-
     
+
+
+
+
+
 Returns total message entries
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -427,53 +399,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[messenger_messenger_events]]
 ===  Events
@@ -498,36 +464,32 @@ The event is triggered after a new message was created.
 [source%nowrap, php]
 ----
 
-public isFirstMessage():bool // <1>
+public isFirstMessage():bool
 
 ----
 
-
     
+
+
+
+
+
 If TRUE, the message is the first one. Otherwise, it is a reply message.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 [source%nowrap, php]
 ----
 
-public getMessage():Plenty\Modules\Messenger\Models\Message // <1>
+public getMessage():Plenty\Modules\Messenger\Models\Message
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_message[Message]
+
+
 Get the message.
-
-
-===== Return type
-    
-<1>         xref:Messenger.adoc#messenger_models_message[Message]
-    
 
 [[messenger_messenger_models]]
 ===  Models
@@ -580,11 +542,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[messenger_models_message]]
@@ -678,11 +642,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[messenger_models_messagefrom]]
@@ -727,11 +693,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[messenger_models_messagelinkedto]]
@@ -777,11 +745,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[messenger_models_messagemetadata]]
@@ -833,11 +803,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[messenger_models_messagemetadatacontrols]]
@@ -891,11 +863,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[messenger_models_messagemetadatanotdone]]
@@ -935,11 +909,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[messenger_models_messagemetadatatimecapture]]
@@ -979,11 +955,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[messenger_models_messagemetalink]]
@@ -1044,11 +1022,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[messenger_models_messagereferrer]]
@@ -1097,11 +1077,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[messenger_models_messageto]]
@@ -1147,11 +1129,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[messenger_messenger_services]]
 ===  Services
@@ -1176,36 +1160,32 @@ Types and type validation for several types in the messenger.
 [source%nowrap, php]
 ----
 
-public static getValidLinkedToTypes():array // <1>
+public static getValidLinkedToTypes():array
 
 ----
 
-
     
+
+
+
+
+
 Gets the valid types for &quot;linked to&quot; references.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public static isValidLinkedTo($linkType, $linkValue):bool // <1>
+public static isValidLinkedTo($linkType, $linkValue):bool
 
 ----
 
-
     
+
+
+
+
+
 Checks whether the given link is valid or not.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -1223,36 +1203,32 @@ a|`$linkValue`
 [source%nowrap, php]
 ----
 
-public static getValidFromTypes():array // <1>
+public static getValidFromTypes():array
 
 ----
 
-
     
+
+
+
+
+
 Gets the valid types for &quot;from&quot; references.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public static isValidFrom($fromType, $fromValue):bool // <1>
+public static isValidFrom($fromType, $fromValue):bool
 
 ----
 
-
     
+
+
+
+
+
 Checks whether the given from is valid or not.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -1270,36 +1246,32 @@ a|`$fromValue`
 [source%nowrap, php]
 ----
 
-public static getValidReferrerTypes():array // <1>
+public static getValidReferrerTypes():array
 
 ----
 
-
     
+
+
+
+
+
 Gets the valid types for &quot;referrer&quot; references.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public static isValidReferrer($referrerType, $referrerValue, $referrerName = null):bool // <1>
+public static isValidReferrer($referrerType, $referrerValue, $referrerName = null):bool
 
 ----
 
-
     
+
+
+
+
+
 Checks whether the given referrer reference is valid or not.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -1321,36 +1293,32 @@ a|`$referrerName`
 [source%nowrap, php]
 ----
 
-public static getValidToTypes():array // <1>
+public static getValidToTypes():array
 
 ----
 
-
     
+
+
+
+
+
 Gets the valid key types for the &#039;to&#039; array.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public static isValidTo($toKey):bool // <1>
+public static isValidTo($toKey):bool
 
 ----
 
-
     
+
+
+
+
+
 Checks whether the given key has a valid value for to.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -1383,20 +1351,18 @@ Search service for the messenger.
 [source%nowrap, php]
 ----
 
-public find($uuid):Plenty\Modules\Messenger\Models\Message // <1>
+public find($uuid):Plenty\Modules\Messenger\Models\Message
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_message[Message]
+
+
 Gets the message with the given uuid.
 
-
-===== Return type
-    
-<1>         xref:Messenger.adoc#messenger_models_message[Message]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1409,20 +1375,18 @@ a|`$uuid`
 [source%nowrap, php]
 ----
 
-public findOrFail($uuid):Plenty\Modules\Messenger\Models\Message // <1>
+public findOrFail($uuid):Plenty\Modules\Messenger\Models\Message
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_message[Message]
+
+
 Gets the message with the given UUID.
 
-
-===== Return type
-    
-<1>         xref:Messenger.adoc#messenger_models_message[Message]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1435,20 +1399,18 @@ a|`$uuid`
 [source%nowrap, php]
 ----
 
-public findMany($uuid):array // <1>
+public findMany($uuid):array
 
 ----
 
-
     
+
+
+
+
+
 Gets a stream of messages. The given UUID can be the UUID of the first message in the stream or one of the replied messages.
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1461,19 +1423,17 @@ a|`$uuid`
 [source%nowrap, php]
 ----
 
-public navigate($page = 1, $itemsPerPage = 50):array // <1>
+public navigate($page = 1, $itemsPerPage = 50):array
 
 ----
 
-
     
+
+
+
+
+
 Lists the messages for the given navigation page.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1491,53 +1451,47 @@ a|`$itemsPerPage`
 [source%nowrap, php]
 ----
 
-public getTotalEntries():int // <1>
+public getTotalEntries():int
 
 ----
 
-
     
+
+
+
+
+
 Returns total entries
 
+[source%nowrap, php]
+----
 
-===== Return type
+public toArray():array
+
+----
+
     
-<1> link:http://php.net/int[int^]
-    
+
+
+
+
+
+
 
 [source%nowrap, php]
 ----
 
-public toArray():array // <1>
+public process($data):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
-[source%nowrap, php]
-----
-
-public process($data):array // <1>
-
-----
-
-
-    
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1551,121 +1505,107 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public getFilter():array // <1>
+public getFilter():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getPostFilter():array // <1>
+public getPostFilter():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getQuery():array // <1>
+public getQuery():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getAggregations():array // <1>
+public getAggregations():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getSuggestions():array // <1>
+public getSuggestions():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getSources():void // <1>
+public getSources():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public addDependenciesToSource($sources):void // <1>
+public addDependenciesToSource($sources):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1679,36 +1619,32 @@ a|`$sources`
 [source%nowrap, php]
 ----
 
-public getName():void // <1>
+public getName():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setName($name):void // <1>
+public setName($name):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1722,19 +1658,17 @@ a|`$name`
 [source%nowrap, php]
 ----
 
-public setIsSourceDisabled($isSourceDisabled):void // <1>
+public setIsSourceDisabled($isSourceDisabled):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1748,19 +1682,17 @@ a|`$isSourceDisabled`
 [source%nowrap, php]
 ----
 
-public addFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+public addFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[Search]
 
-===== Return type
-    
-<1>         xref:Cloud.adoc#cloud_lib_search[Search]
-    
+
+
 
 .*Parameters*
 |===
@@ -1774,19 +1706,17 @@ a|`$filter`
 [source%nowrap, php]
 ----
 
-public addPostFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+public addPostFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[Search]
 
-===== Return type
-    
-<1>         xref:Cloud.adoc#cloud_lib_search[Search]
-    
+
+
 
 .*Parameters*
 |===
@@ -1800,19 +1730,17 @@ a|`$filter`
 [source%nowrap, php]
 ----
 
-public addQuery($query):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+public addQuery($query):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[Search]
 
-===== Return type
-    
-<1>         xref:Cloud.adoc#cloud_lib_search[Search]
-    
+
+
 
 .*Parameters*
 |===
@@ -1826,19 +1754,17 @@ a|`$query`
 [source%nowrap, php]
 ----
 
-public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[Search]
 
-===== Return type
-    
-<1>         xref:Cloud.adoc#cloud_lib_search[Search]
-    
+
+
 
 .*Parameters*
 |===
@@ -1852,19 +1778,17 @@ a|`$source`
 [source%nowrap, php]
 ----
 
-public setSorting($sorting):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+public setSorting($sorting):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[Search]
 
-===== Return type
-    
-<1>         xref:Cloud.adoc#cloud_lib_search[Search]
-    
+
+
 
 .*Parameters*
 |===
@@ -1878,19 +1802,17 @@ a|`$sorting`
 [source%nowrap, php]
 ----
 
-public addAggregation($aggregation):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+public addAggregation($aggregation):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[Search]
 
-===== Return type
-    
-<1>         xref:Cloud.adoc#cloud_lib_search[Search]
-    
+
+
 
 .*Parameters*
 |===
@@ -1904,19 +1826,17 @@ a|`$aggregation`
 [source%nowrap, php]
 ----
 
-public addSuggestion($suggestion):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+public addSuggestion($suggestion):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[Search]
 
-===== Return type
-    
-<1>         xref:Cloud.adoc#cloud_lib_search[Search]
-    
+
+
 
 .*Parameters*
 |===
@@ -1930,19 +1850,17 @@ a|`$suggestion`
 [source%nowrap, php]
 ----
 
-public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[Search]
 
-===== Return type
-    
-<1>         xref:Cloud.adoc#cloud_lib_search[Search]
-    
+
+
 
 .*Parameters*
 |===
@@ -1960,19 +1878,17 @@ a|`$rowsPerPage`
 [source%nowrap, php]
 ----
 
-public setPagination($pagination):void // <1>
+public setPagination($pagination):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1986,19 +1902,17 @@ a|`$pagination`
 [source%nowrap, php]
 ----
 
-public setCollapse($collapse):void // <1>
+public setCollapse($collapse):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2012,19 +1926,17 @@ a|`$collapse`
 [source%nowrap, php]
 ----
 
-public setScoreModifier($scoreModifier):Plenty\Modules\Cloud\ElasticSearch\Lib\Search // <1>
+public setScoreModifier($scoreModifier):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[Search]
 
-===== Return type
-    
-<1>         xref:Cloud.adoc#cloud_lib_search[Search]
-    
+
+
 
 .*Parameters*
 |===
@@ -2038,19 +1950,17 @@ a|`$scoreModifier`
 [source%nowrap, php]
 ----
 
-public setMaxResultWindow($maxResults = 10000):void // <1>
+public setMaxResultWindow($maxResults = 10000):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2064,19 +1974,17 @@ a|`$maxResults`
 [source%nowrap, php]
 ----
 
-public setIndex($index):void // <1>
+public setIndex($index):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -2090,102 +1998,90 @@ a|`$index`
 [source%nowrap, php]
 ----
 
-public isSearchAfter():void // <1>
+public isSearchAfter():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getFilterRaw():void // <1>
+public getFilterRaw():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getQueriesRaw():void // <1>
+public getQueriesRaw():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getAggregationsRaw():array // <1>
+public getAggregationsRaw():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getSorting():void // <1>
+public getSorting():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getScoreModifier():void // <1>
+public getScoreModifier():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 

@@ -31,19 +31,17 @@ Download and list order documents as well as download, list, upload and delete c
 [source%nowrap, php]
 ----
 
-public getDocumentPath($id):void // <1>
+public getDocumentPath($id):void
 
 ----
 
-
     
+
+
+
+
+
 Get the path to a document
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -57,19 +55,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public findById($id, $columns = []):Plenty\Modules\Document\Models\Document // <1>
+public findById($id, $columns = []):Plenty\Modules\Document\Models\Document
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Document.adoc#document_models_document[Document]
+
+
 Get a document
-
-
-===== Return type
-    
-<1>         xref:Document.adoc#document_models_document[Document]
-    
 
 .*Parameters*
 |===
@@ -87,19 +83,17 @@ a|`$columns`
 [source%nowrap, php]
 ----
 
-public find($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public find($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List documents
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -125,19 +119,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public uploadOrderDocuments($orderId, $type, $data):array // <1>
+public uploadOrderDocuments($orderId, $type, $data):array
 
 ----
 
-
     
+
+
+
+
+
 Upload order documents
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -159,20 +151,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public deleteOrderDocument($orderId, $documentId):bool // <1>
+public deleteOrderDocument($orderId, $documentId):bool
 
 ----
 
-
     
+
+
+
+
+
 Delete order document
 
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -189,20 +179,18 @@ a|`$documentId`
 [source%nowrap, php]
 ----
 
-public archiveOrderDocument($orderId, $documentId):void // <1>
+public archiveOrderDocument($orderId, $documentId):void
 
 ----
 
-
     
+
+
+
+
+
 Archive order document
 
-
-===== Return type
-    
-<1> 
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -219,19 +207,17 @@ a|`$documentId`
 [source%nowrap, php]
 ----
 
-public uploadCategoryDocuments($categoryId, $data):array // <1>
+public uploadCategoryDocuments($categoryId, $data):array
 
 ----
 
-
     
+
+
+
+
+
 Upload category documents
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -249,19 +235,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public deleteCategoryDocument($categoryId, $documentId):bool // <1>
+public deleteCategoryDocument($categoryId, $documentId):bool
 
 ----
 
-
     
+
+
+
+
+
 Delete a category document.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -279,19 +263,17 @@ a|`$documentId`
 [source%nowrap, php]
 ----
 
-public uploadOrderShippingPackageDocuments($packageId, $type, $document):array // <1>
+public uploadOrderShippingPackageDocuments($packageId, $type, $document):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -313,19 +295,17 @@ a|`$document`
 [source%nowrap, php]
 ----
 
-public findOrderShippingPackageDocuments($packageId, $type):array // <1>
+public findOrderShippingPackageDocuments($packageId, $type):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -343,19 +323,17 @@ a|`$type`
 [source%nowrap, php]
 ----
 
-public findCurrentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\Document // <1>
+public findCurrentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\Document
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Document.adoc#document_models_document[Document]
 
-===== Return type
-    
-<1>         xref:Document.adoc#document_models_document[Document]
-    
+
+
 
 .*Parameters*
 |===
@@ -373,19 +351,17 @@ a|`$type`
 [source%nowrap, php]
 ----
 
-public findRecentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\Document // <1>
+public findRecentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\Document
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Document.adoc#document_models_document[Document]
 
-===== Return type
-    
-<1>         xref:Document.adoc#document_models_document[Document]
-    
+
+
 
 .*Parameters*
 |===
@@ -403,19 +379,17 @@ a|`$type`
 [source%nowrap, php]
 ----
 
-public deleteOrderShippingPackageDocuments($packageId):bool // <1>
+public deleteOrderShippingPackageDocuments($packageId):bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -429,19 +403,17 @@ a|`$packageId`
 [source%nowrap, php]
 ----
 
-public getDocumentStorageObject($key):void // <1>
+public getDocumentStorageObject($key):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -455,19 +427,17 @@ a|`$key`
 [source%nowrap, php]
 ----
 
-public uploadOrderReturnsDocuments($returnsId, $document):Plenty\Modules\Document\Models\Document // <1>
+public uploadOrderReturnsDocuments($returnsId, $document):Plenty\Modules\Document\Models\Document
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Document.adoc#document_models_document[Document]
 
-===== Return type
-    
-<1>         xref:Document.adoc#document_models_document[Document]
-    
+
+
 
 .*Parameters*
 |===
@@ -485,19 +455,17 @@ a|`$document`
 [source%nowrap, php]
 ----
 
-public getOrderReturnsDocumentById($returnsId, $withLabel = false):Plenty\Modules\Document\Models\Document // <1>
+public getOrderReturnsDocumentById($returnsId, $withLabel = false):Plenty\Modules\Document\Models\Document
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Document.adoc#document_models_document[Document]
 
-===== Return type
-    
-<1>         xref:Document.adoc#document_models_document[Document]
-    
+
+
 
 .*Parameters*
 |===
@@ -515,19 +483,17 @@ a|`$withLabel`
 [source%nowrap, php]
 ----
 
-public generateOrderDocument($orderId, $type, $data):bool // <1>
+public generateOrderDocument($orderId, $type, $data):bool
 
 ----
 
-
     
+
+
+
+
+
 Generate order document
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -549,53 +515,47 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -609,53 +569,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[document_document_models]]
 ===  Models
@@ -783,11 +737,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[document_models_documentreference]]
@@ -845,9 +801,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

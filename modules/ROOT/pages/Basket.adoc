@@ -31,19 +31,17 @@ The BasketItemRepositoryContract is the interface for the basket item repository
 [source%nowrap, php]
 ----
 
-public findOneById($basketRowId):Plenty\Modules\Basket\Models\BasketItem // <1>
+public findOneById($basketRowId):Plenty\Modules\Basket\Models\BasketItem
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[BasketItem]
+
+
 Gets an existing item by ID in the shopping cart of the current customer session.
-
-
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_models_basketitem[BasketItem]
-    
 
 .*Parameters*
 |===
@@ -57,20 +55,18 @@ a|`$basketRowId`
 [source%nowrap, php]
 ----
 
-public findExistingOneByData($data):Plenty\Modules\Basket\Models\BasketItem // <1>
+public findExistingOneByData($data):Plenty\Modules\Basket\Models\BasketItem
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[BasketItem]
+
+
 Gets an existing item by item data in the shopping cart of the current customer session.
 
-
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_models_basketitem[BasketItem]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -83,36 +79,32 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public all():array // <1>
+public all():array
 
 ----
 
-
     
+
+
+
+
+
 Lists all items in the shopping cart of the current customer session.
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 [source%nowrap, php]
 ----
 
-public addBasketItem($data):Plenty\Modules\Basket\Models\BasketItem // <1>
+public addBasketItem($data):Plenty\Modules\Basket\Models\BasketItem
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[BasketItem]
+
+
 Creates an item with the specified item data in the shopping cart.
-
-
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_models_basketitem[BasketItem]
-    
 
 .*Parameters*
 |===
@@ -126,19 +118,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public updateBasketItem($basketItemId, $data):void // <1>
+public updateBasketItem($basketItemId, $data):void
 
 ----
 
-
     
+
+
+
+
+
 Updates an existing item in the shopping cart. The ID of the item and the data to be updated must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -156,19 +146,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public removeBasketItem($basketItemId, $dispatchAfterBasketChangedEvent = true):void // <1>
+public removeBasketItem($basketItemId, $dispatchAfterBasketChangedEvent = true):void
 
 ----
 
-
     
+
+
+
+
+
 Deletes an item from the shopping cart. The ID of the item must be specified.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -205,36 +193,32 @@ The BasketRepositoryContract is the interface for the basket repository. This in
 [source%nowrap, php]
 ----
 
-public load():Plenty\Modules\Basket\Models\Basket // <1>
+public load():Plenty\Modules\Basket\Models\Basket
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Basket.adoc#basket_models_basket[Basket]
+
+
 Gets the shopping cart from current customer session.
-
-
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_models_basket[Basket]
-    
 
 [source%nowrap, php]
 ----
 
-public save($data):void // <1>
+public save($data):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -248,19 +232,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public setCouponCode($couponCode):Plenty\Modules\Basket\Models\Basket // <1>
+public setCouponCode($couponCode):Plenty\Modules\Basket\Models\Basket
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Basket.adoc#basket_models_basket[Basket]
 
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_models_basket[Basket]
-    
+
+
 
 .*Parameters*
 |===
@@ -274,19 +256,17 @@ a|`$couponCode`
 [source%nowrap, php]
 ----
 
-public removeCouponCode():Plenty\Modules\Basket\Models\Basket // <1>
+public removeCouponCode():Plenty\Modules\Basket\Models\Basket
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Basket.adoc#basket_models_basket[Basket]
 
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_models_basket[Basket]
-    
+
+
 
 [[basket_basket_exceptions]]
 ===  Exceptions
@@ -311,19 +291,17 @@ Class BasketCheckException
 [source%nowrap, php]
 ----
 
-public __construct($code, $message = &quot;&quot;, $previous = null):void // <1>
+public __construct($code, $message = &quot;&quot;, $previous = null):void
 
 ----
 
-
     
+
+
+
+
+
 BasketCheckException constructor.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -365,19 +343,17 @@ Class BasketItemCheckException
 [source%nowrap, php]
 ----
 
-public __construct($code = 404, $message = &quot;&quot;, $previous = null, $itemId, $variationId, $stockNet = 0.0, $additionalData = []):void // <1>
+public __construct($code = 404, $message = &quot;&quot;, $previous = null, $itemId, $variationId, $stockNet = 0.0, $additionalData = []):void
 
 ----
 
-
     
+
+
+
+
+
 BasketItemCheckException constructor.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -415,70 +391,62 @@ a|`$additionalData`
 [source%nowrap, php]
 ----
 
-public getItemId():int // <1>
+public getItemId():int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getVariationId():int // <1>
+public getVariationId():int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getStockNet():float // <1>
+public getStockNet():float
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getAdditionalData():array // <1>
+public getAdditionalData():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 
 [[basket_exceptions_basketitemquantitycheckexception]]
@@ -503,19 +471,17 @@ Class BasketItemQuantityCheckException
 [source%nowrap, php]
 ----
 
-public __construct($code, $message = &quot;&quot;, $previous = null, $itemId, $variationId, $requestedQuantity = 0.0, $specifiedQuantity = 0.0):void // <1>
+public __construct($code, $message = &quot;&quot;, $previous = null, $itemId, $variationId, $requestedQuantity = 0.0, $specifiedQuantity = 0.0):void
 
 ----
 
-
     
+
+
+
+
+
 BasketItemQuantityCheckException constructor.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -553,36 +519,32 @@ a|`$specifiedQuantity`
 [source%nowrap, php]
 ----
 
-public getRequestedQuantity():float // <1>
+public getRequestedQuantity():float
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getSpecifiedQuantity():float // <1>
+public getSpecifiedQuantity():float
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
+
+
+
 
 [[basket_basket_models]]
 ===  Models
@@ -708,11 +670,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[basket_models_basketitem]]
@@ -851,11 +815,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[basket_models_basketitemparams]]
@@ -904,11 +870,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[basket_events]]
 == Events
@@ -936,53 +904,47 @@ The event is triggered after the shopping cart is changed.
 [source%nowrap, php]
 ----
 
-public hasValidCoupon():bool // <1>
+public hasValidCoupon():bool
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public getCouponValidationError():void // <1>
+public getCouponValidationError():void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setHasValidCoupon($hasValidCoupon, $couponValidationError = null):void // <1>
+public setHasValidCoupon($hasValidCoupon, $couponValidationError = null):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1000,53 +962,47 @@ a|`$couponValidationError`
 [source%nowrap, php]
 ----
 
-public getBasket():Plenty\Modules\Basket\Models\Basket // <1>
+public getBasket():Plenty\Modules\Basket\Models\Basket
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Basket.adoc#basket_models_basket[Basket]
 
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_models_basket[Basket]
-    
+
+
 
 [source%nowrap, php]
 ----
 
-public getLocationId():int // <1>
+public getLocationId():int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setLocationId($locationId):Plenty\Modules\Basket\Events\Basket // <1>
+public setLocationId($locationId):Plenty\Modules\Basket\Events\Basket
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Basket.adoc#basket_events_basket[Basket]
 
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_events_basket[Basket]
-    
+
+
 
 .*Parameters*
 |===
@@ -1060,36 +1016,32 @@ a|`$locationId`
 [source%nowrap, php]
 ----
 
-public getInvoiceAddress():Plenty\Modules\Account\Address\Models\Address // <1>
+public getInvoiceAddress():Plenty\Modules\Account\Address\Models\Address
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Account.adoc#account_models_address[Address]
 
-===== Return type
-    
-<1>         xref:Account.adoc#account_models_address[Address]
-    
+
+
 
 [source%nowrap, php]
 ----
 
-public setInvoiceAddress($invoiceAddress):Plenty\Modules\Basket\Events\Basket // <1>
+public setInvoiceAddress($invoiceAddress):Plenty\Modules\Basket\Events\Basket
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Basket.adoc#basket_events_basket[Basket]
 
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_events_basket[Basket]
-    
+
+
 
 .*Parameters*
 |===
@@ -1103,36 +1055,32 @@ a|`$invoiceAddress`
 [source%nowrap, php]
 ----
 
-public getMaxFsk():int // <1>
+public getMaxFsk():int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setMaxFsk($maxFsk):Plenty\Modules\Basket\Events\Basket // <1>
+public setMaxFsk($maxFsk):Plenty\Modules\Basket\Events\Basket
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Basket.adoc#basket_events_basket[Basket]
 
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_events_basket[Basket]
-    
+
+
 
 .*Parameters*
 |===
@@ -1146,36 +1094,32 @@ a|`$maxFsk`
 [source%nowrap, php]
 ----
 
-public getShippingCosts():float // <1>
+public getShippingCosts():float
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/float[float^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setShippingCosts($shippingCosts):Plenty\Modules\Basket\Events\Basket // <1>
+public setShippingCosts($shippingCosts):Plenty\Modules\Basket\Events\Basket
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Basket.adoc#basket_events_basket[Basket]
 
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_events_basket[Basket]
-    
+
+
 
 .*Parameters*
 |===
@@ -1208,19 +1152,17 @@ The event is triggered after the shopping cart is created.
 [source%nowrap, php]
 ----
 
-public getBasket():Plenty\Modules\Basket\Models\Basket // <1>
+public getBasket():Plenty\Modules\Basket\Models\Basket
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Basket.adoc#basket_models_basket[Basket]
 
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_models_basket[Basket]
-    
+
+
 
 [[basket_events_basketitem]]
 ===  BasketItem
@@ -1245,19 +1187,17 @@ The event is triggered after an item is added to the shopping cart.
 [source%nowrap, php]
 ----
 
-public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
+public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[BasketItem]
 
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_models_basketitem[BasketItem]
-    
+
+
 
 
 [[basket_basketitem_afterbasketitemremove]]
@@ -1297,19 +1237,17 @@ The event is triggered after an item in the shopping cart is updated.
 [source%nowrap, php]
 ----
 
-public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
+public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[BasketItem]
 
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_models_basketitem[BasketItem]
-    
+
+
 
 
 [[basket_basketitem_basketitemevent]]
@@ -1333,19 +1271,17 @@ BasketItemEvent
 [source%nowrap, php]
 ----
 
-public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
+public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[BasketItem]
 
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_models_basketitem[BasketItem]
-    
+
+
 
 
 [[basket_basketitem_beforebasketitemadd]]
@@ -1369,19 +1305,17 @@ The event is triggered before an item is created in the shopping cart.
 [source%nowrap, php]
 ----
 
-public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
+public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[BasketItem]
 
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_models_basketitem[BasketItem]
-    
+
+
 
 
 [[basket_basketitem_beforebasketitemremove]]
@@ -1421,17 +1355,15 @@ The event is triggered before an item in the shopping cart is updated.
 [source%nowrap, php]
 ----
 
-public getBasketItem():Plenty\Modules\Basket\Models\BasketItem // <1>
+public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[BasketItem]
 
-===== Return type
-    
-<1>         xref:Basket.adoc#basket_models_basketitem[BasketItem]
-    
+
+
 

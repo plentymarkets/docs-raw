@@ -31,19 +31,17 @@ The TicketMessageRepositoryContract is the interface for the ticket message repo
 [source%nowrap, php]
 ----
 
-public get($ticketMessageId):Plenty\Modules\Ticket\Models\TicketMessage // <1>
+public get($ticketMessageId):Plenty\Modules\Ticket\Models\TicketMessage
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticketmessage[TicketMessage]
+
+
 Gets the ticket message by the given ID.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticketmessage[TicketMessage]
-    
 
 .*Parameters*
 |===
@@ -57,19 +55,17 @@ a|`$ticketMessageId`
 [source%nowrap, php]
 ----
 
-public list($ticketId):void // <1>
+public list($ticketId):void
 
 ----
 
-
     
+
+
+
+
+
 Lists all ticket messages of a ticket.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -83,19 +79,17 @@ a|`$ticketId`
 [source%nowrap, php]
 ----
 
-public listInternal($ticketId):void // <1>
+public listInternal($ticketId):void
 
 ----
 
-
     
+
+
+
+
+
 Lists all internal ticket messages of a ticket.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -109,19 +103,17 @@ a|`$ticketId`
 [source%nowrap, php]
 ----
 
-public listPublic($ticketId):void // <1>
+public listPublic($ticketId):void
 
 ----
 
-
     
+
+
+
+
+
 Lists all public ticket messages of a ticket
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -154,19 +146,17 @@ The TicketRepositoryContract is the interface for the ticket repository. This in
 [source%nowrap, php]
 ----
 
-public createTicket($data):Plenty\Modules\Ticket\Models\Ticket // <1>
+public createTicket($data):Plenty\Modules\Ticket\Models\Ticket
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticket[Ticket]
+
+
 Creates a new ticket.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticket[Ticket]
-    
 
 .*Parameters*
 |===
@@ -180,19 +170,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public searchTickets($filter, $page = 1, $itemsPerPage = 50):array // <1>
+public searchTickets($filter, $page = 1, $itemsPerPage = 50):array
 
 ----
 
-
     
+
+
+
+
+
 List tickets by filter options.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -214,19 +202,17 @@ a|`$itemsPerPage`
 [source%nowrap, php]
 ----
 
-public deleteTicket($ticketId):void // <1>
+public deleteTicket($ticketId):void
 
 ----
 
-
     
+
+
+
+
+
 Deletes a ticket by the ID.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -240,19 +226,17 @@ a|`$ticketId`
 [source%nowrap, php]
 ----
 
-public createMessage($data, $ticketId):Plenty\Modules\Ticket\Models\TicketMessage // <1>
+public createMessage($data, $ticketId):Plenty\Modules\Ticket\Models\TicketMessage
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticketmessage[TicketMessage]
+
+
 Creates a message for a ticket.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticketmessage[TicketMessage]
-    
 
 .*Parameters*
 |===
@@ -270,19 +254,17 @@ a|`$ticketId`
 [source%nowrap, php]
 ----
 
-public updateTicket($data, $ticketId):Plenty\Modules\Ticket\Models\Ticket // <1>
+public updateTicket($data, $ticketId):Plenty\Modules\Ticket\Models\Ticket
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticket[Ticket]
+
+
 Updates an existing ticket with given data.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticket[Ticket]
-    
 
 .*Parameters*
 |===
@@ -300,19 +282,17 @@ a|`$ticketId`
 [source%nowrap, php]
 ----
 
-public findById($ticketId, $with = []):Plenty\Modules\Ticket\Models\Ticket // <1>
+public findById($ticketId, $with = []):Plenty\Modules\Ticket\Models\Ticket
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticket[Ticket]
+
+
 Gets a ticket by the ID.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticket[Ticket]
-    
 
 .*Parameters*
 |===
@@ -330,36 +310,32 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
-
-
-===== Return type
-    
-<1> 
-    
 
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[ticket_contracts_ticketrolenamerepositorycontract]]
@@ -383,19 +359,17 @@ The TicketRoleNameRepositoryContract is the interface for the ticket role name r
 [source%nowrap, php]
 ----
 
-public update($data, $ticketRoleNameId):Plenty\Modules\Ticket\Models\TicketRoleName // <1>
+public update($data, $ticketRoleNameId):Plenty\Modules\Ticket\Models\TicketRoleName
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticketrolename[TicketRoleName]
+
+
 Updates an existing ticket role name.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticketrolename[TicketRoleName]
-    
 
 .*Parameters*
 |===
@@ -413,19 +387,17 @@ a|`$ticketRoleNameId`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Ticket\Models\TicketRoleName // <1>
+public create($data):Plenty\Modules\Ticket\Models\TicketRoleName
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticketrolename[TicketRoleName]
+
+
 Creates a ticket role name.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticketrolename[TicketRoleName]
-    
 
 .*Parameters*
 |===
@@ -439,19 +411,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public findByName($name, $lang):array // <1>
+public findByName($name, $lang):array
 
 ----
 
-
     
+
+
+
+
+
 Lists the ticket roles by the name.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -469,19 +439,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public findByLang($lang):array // <1>
+public findByLang($lang):array
 
 ----
 
-
     
+
+
+
+
+
 Lists the ticket roles by the language.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -514,19 +482,17 @@ The TicketRoleRepositoryContract is the interface for the ticket role repository
 [source%nowrap, php]
 ----
 
-public update($data, $ticketRoleId):Plenty\Modules\Ticket\Models\TicketRole // <1>
+public update($data, $ticketRoleId):Plenty\Modules\Ticket\Models\TicketRole
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticketrole[TicketRole]
+
+
 Update an existing ticket role.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticketrole[TicketRole]
-    
 
 .*Parameters*
 |===
@@ -544,19 +510,17 @@ a|`$ticketRoleId`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Ticket\Models\TicketRole // <1>
+public create($data):Plenty\Modules\Ticket\Models\TicketRole
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticketrole[TicketRole]
+
+
 Creates a ticket role.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticketrole[TicketRole]
-    
 
 .*Parameters*
 |===
@@ -589,19 +553,17 @@ The TicketStatusNameRepositoryContract is the interface for the ticket status na
 [source%nowrap, php]
 ----
 
-public update($data, $ticketStatusNameId):Plenty\Modules\Ticket\Models\TicketStatusName // <1>
+public update($data, $ticketStatusNameId):Plenty\Modules\Ticket\Models\TicketStatusName
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticketstatusname[TicketStatusName]
+
+
 Updates the ticket status name by the given ID.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticketstatusname[TicketStatusName]
-    
 
 .*Parameters*
 |===
@@ -619,19 +581,17 @@ a|`$ticketStatusNameId`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Ticket\Models\TicketStatusName // <1>
+public create($data):Plenty\Modules\Ticket\Models\TicketStatusName
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticketstatusname[TicketStatusName]
+
+
 Creates a ticket status name.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticketstatusname[TicketStatusName]
-    
 
 .*Parameters*
 |===
@@ -645,19 +605,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public findByName($name, $lang):array // <1>
+public findByName($name, $lang):array
 
 ----
 
-
     
+
+
+
+
+
 Gets the ticket status name.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -675,19 +633,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public statusNameList($lang):array // <1>
+public statusNameList($lang):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -701,19 +657,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public statusNameListWithTypeId($lang):array // <1>
+public statusNameListWithTypeId($lang):array
 
 ----
 
-
     
+
+
+
+
+
 Lists the ticket status names with type ID.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -746,19 +700,17 @@ The TicketStatusRepositoryContract is the interface for the ticket status reposi
 [source%nowrap, php]
 ----
 
-public update($data, $ticketStatusId):Plenty\Modules\Ticket\Models\TicketStatus // <1>
+public update($data, $ticketStatusId):Plenty\Modules\Ticket\Models\TicketStatus
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticketstatus[TicketStatus]
+
+
 Updates an existing ticket status.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticketstatus[TicketStatus]
-    
 
 .*Parameters*
 |===
@@ -776,19 +728,17 @@ a|`$ticketStatusId`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Ticket\Models\TicketStatus // <1>
+public create($data):Plenty\Modules\Ticket\Models\TicketStatus
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticketstatus[TicketStatus]
+
+
 Creates a ticket status.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticketstatus[TicketStatus]
-    
 
 .*Parameters*
 |===
@@ -802,19 +752,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public findByTypeId($typeId):array // <1>
+public findByTypeId($typeId):array
 
 ----
 
-
     
+
+
+
+
+
 Lists the ticket statuses by the type ID.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -847,19 +795,17 @@ The TicketTypeNameRepositoryContract is the interface for the ticket type name r
 [source%nowrap, php]
 ----
 
-public update($data, $ticketTypeNameId):Plenty\Modules\Ticket\Models\TicketTypeName // <1>
+public update($data, $ticketTypeNameId):Plenty\Modules\Ticket\Models\TicketTypeName
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_tickettypename[TicketTypeName]
+
+
 Updates an existing ticket type name.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_tickettypename[TicketTypeName]
-    
 
 .*Parameters*
 |===
@@ -877,19 +823,17 @@ a|`$ticketTypeNameId`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Ticket\Models\TicketTypeName // <1>
+public create($data):Plenty\Modules\Ticket\Models\TicketTypeName
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_tickettypename[TicketTypeName]
+
+
 Creates a ticket type name.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_tickettypename[TicketTypeName]
-    
 
 .*Parameters*
 |===
@@ -903,19 +847,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public findByName($name, $lang):array // <1>
+public findByName($name, $lang):array
 
 ----
 
-
     
+
+
+
+
+
 Lists the ticket types by the name.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -933,19 +875,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public typeNameList($lang):array // <1>
+public typeNameList($lang):array
 
 ----
 
-
     
+
+
+
+
+
 Lists the ticket types by the language.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -978,19 +918,17 @@ The TicketTypeRepositoryContract is the interface for the ticket type repository
 [source%nowrap, php]
 ----
 
-public update($data, $ticketTypeId):Plenty\Modules\Ticket\Models\TicketType // <1>
+public update($data, $ticketTypeId):Plenty\Modules\Ticket\Models\TicketType
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_tickettype[TicketType]
+
+
 Updates the ticket type by the given ID.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_tickettype[TicketType]
-    
 
 .*Parameters*
 |===
@@ -1008,19 +946,17 @@ a|`$ticketTypeId`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Ticket\Models\TicketType // <1>
+public create($data):Plenty\Modules\Ticket\Models\TicketType
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Ticket.adoc#ticket_models_tickettype[TicketType]
+
+
 Creates a ticket type.
-
-
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_tickettype[TicketType]
-    
 
 .*Parameters*
 |===
@@ -1145,11 +1081,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[ticket_models_ticketdocument]]
@@ -1201,11 +1139,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[ticket_models_ticketmessage]]
@@ -1276,11 +1216,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[ticket_models_ticketmessagetopic]]
@@ -1320,11 +1262,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[ticket_models_ticketmessagetopicname]]
@@ -1370,11 +1314,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[ticket_models_ticketowner]]
@@ -1417,11 +1363,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[ticket_models_ticketrole]]
@@ -1464,11 +1412,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[ticket_models_ticketrolename]]
@@ -1514,11 +1464,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[ticket_models_ticketstatus]]
@@ -1567,11 +1519,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[ticket_models_ticketstatusgroup]]
@@ -1614,11 +1568,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[ticket_models_ticketstatusgroupname]]
@@ -1661,11 +1617,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[ticket_models_ticketstatusname]]
@@ -1711,11 +1669,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[ticket_models_tickettype]]
@@ -1758,11 +1718,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[ticket_models_tickettypename]]
@@ -1808,9 +1770,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

@@ -31,36 +31,32 @@ plentymarkets event procedures triggered
 [source%nowrap, php]
 ----
 
-public getTicket():Plenty\Modules\Ticket\Models\Ticket // <1>
+public getTicket():Plenty\Modules\Ticket\Models\Ticket
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Ticket.adoc#ticket_models_ticket[Ticket]
 
-===== Return type
-    
-<1>         xref:Ticket.adoc#ticket_models_ticket[Ticket]
-    
+
+
 
 [source%nowrap, php]
 ----
 
-public getOrder():Plenty\Modules\Order\Models\Order // <1>
+public getOrder():Plenty\Modules\Order\Models\Order
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[Order]
+
+
 Get the order that triggered the event.
-
-
-===== Return type
-    
-<1>         xref:Order.adoc#order_models_order[Order]
-    
 
 [[eventprocedures_eventprocedures_services]]
 ===  Services
@@ -85,19 +81,17 @@ The EventProcedureService class offers the possibility to register a procedure c
 [source%nowrap, php]
 ----
 
-public registerProcedure($moduleName, $eventType, $procedureNames, $procedureClass, $procedureGroup = \Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry::PROCEDURE_GROUP_ORDER):bool // <1>
+public registerProcedure($moduleName, $eventType, $procedureNames, $procedureClass, $procedureGroup = \Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry::PROCEDURE_GROUP_ORDER):bool
 
 ----
 
-
     
+
+
+
+
+
 Register a procedure class
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -145,19 +139,17 @@ a|`$procedureGroup`
 [source%nowrap, php]
 ----
 
-public registerFilter($moduleName, $eventType, $filterNames, $filterClass):bool // <1>
+public registerFilter($moduleName, $eventType, $filterNames, $filterClass):bool
 
 ----
 
-
     
+
+
+
+
+
 Register a filter class
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -190,19 +182,17 @@ The method is separated from the class by an "@" sign. The part following the "@
 [source%nowrap, php]
 ----
 
-public registerTrigger($moduleName, $eventType, $triggerIdentifier, $triggerNames):bool // <1>
+public registerTrigger($moduleName, $eventType, $triggerIdentifier, $triggerNames):bool
 
 ----
 
-
     
+
+
+
+
+
 Register a trigger
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -231,19 +221,17 @@ a|`$triggerNames`
 [source%nowrap, php]
 ----
 
-public fireTrigger($orderId, $moduleName, $triggerIdentifier):void // <1>
+public fireTrigger($orderId, $moduleName, $triggerIdentifier):void
 
 ----
 
-
     
+
+
+
+
+
 Fire a trigger
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -288,36 +276,32 @@ The filter entry contains all information needed to use module filters in plenty
 [source%nowrap, php]
 ----
 
-public getModuleName():string // <1>
+public getModuleName():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry // <1>
+public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Eventprocedures.adoc#eventprocedures_entries_filterentry[FilterEntry]
 
-===== Return type
-    
-<1>         xref:Eventprocedures.adoc#eventprocedures_entries_filterentry[FilterEntry]
-    
+
+
 
 .*Parameters*
 |===
@@ -331,36 +315,32 @@ a|`$moduleName`
 [source%nowrap, php]
 ----
 
-public getEventType():string // <1>
+public getEventType():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry // <1>
+public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Eventprocedures.adoc#eventprocedures_entries_filterentry[FilterEntry]
 
-===== Return type
-    
-<1>         xref:Eventprocedures.adoc#eventprocedures_entries_filterentry[FilterEntry]
-    
+
+
 
 .*Parameters*
 |===
@@ -374,36 +354,32 @@ a|`$eventType`
 [source%nowrap, php]
 ----
 
-public getFilterNames():array // <1>
+public getFilterNames():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setFilterNames($filterNames):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry // <1>
+public setFilterNames($filterNames):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Eventprocedures.adoc#eventprocedures_entries_filterentry[FilterEntry]
 
-===== Return type
-    
-<1>         xref:Eventprocedures.adoc#eventprocedures_entries_filterentry[FilterEntry]
-    
+
+
 
 .*Parameters*
 |===
@@ -417,36 +393,32 @@ a|`$filterNames`
 [source%nowrap, php]
 ----
 
-public getFilterClass():string // <1>
+public getFilterClass():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setFilterClass($filterClass):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry // <1>
+public setFilterClass($filterClass):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Eventprocedures.adoc#eventprocedures_entries_filterentry[FilterEntry]
 
-===== Return type
-    
-<1>         xref:Eventprocedures.adoc#eventprocedures_entries_filterentry[FilterEntry]
-    
+
+
 
 .*Parameters*
 |===
@@ -479,36 +451,32 @@ The procedure entry contains all information needed to use module procedures in 
 [source%nowrap, php]
 ----
 
-public getModuleName():string // <1>
+public getModuleName():string
 
 ----
 
-
     
+
+
+
+
+
 Get the
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 [source%nowrap, php]
 ----
 
-public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry // <1>
+public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Eventprocedures.adoc#eventprocedures_entries_procedureentry[ProcedureEntry]
+
+
 Set the
-
-
-===== Return type
-    
-<1>         xref:Eventprocedures.adoc#eventprocedures_entries_procedureentry[ProcedureEntry]
-    
 
 .*Parameters*
 |===
@@ -522,36 +490,32 @@ a|`$moduleName`
 [source%nowrap, php]
 ----
 
-public getEventType():string // <1>
+public getEventType():string
 
 ----
 
-
     
+
+
+
+
+
 Get the
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 [source%nowrap, php]
 ----
 
-public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry // <1>
+public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Eventprocedures.adoc#eventprocedures_entries_procedureentry[ProcedureEntry]
+
+
 Set the
-
-
-===== Return type
-    
-<1>         xref:Eventprocedures.adoc#eventprocedures_entries_procedureentry[ProcedureEntry]
-    
 
 .*Parameters*
 |===
@@ -565,36 +529,32 @@ a|`$eventType`
 [source%nowrap, php]
 ----
 
-public getProcedureNames():array // <1>
+public getProcedureNames():array
 
 ----
 
-
     
+
+
+
+
+
 Get the
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 [source%nowrap, php]
 ----
 
-public setProcedureNames($procedureNames):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry // <1>
+public setProcedureNames($procedureNames):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Eventprocedures.adoc#eventprocedures_entries_procedureentry[ProcedureEntry]
+
+
 Set the
-
-
-===== Return type
-    
-<1>         xref:Eventprocedures.adoc#eventprocedures_entries_procedureentry[ProcedureEntry]
-    
 
 .*Parameters*
 |===
@@ -608,36 +568,32 @@ a|`$procedureNames`
 [source%nowrap, php]
 ----
 
-public getProcedureGroup():string // <1>
+public getProcedureGroup():string
 
 ----
 
-
     
+
+
+
+
+
 Get the
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 [source%nowrap, php]
 ----
 
-public setProcedureGroup($procedureGroup):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry // <1>
+public setProcedureGroup($procedureGroup):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Eventprocedures.adoc#eventprocedures_entries_procedureentry[ProcedureEntry]
+
+
 Set the
-
-
-===== Return type
-    
-<1>         xref:Eventprocedures.adoc#eventprocedures_entries_procedureentry[ProcedureEntry]
-    
 
 .*Parameters*
 |===
@@ -651,36 +607,32 @@ a|`$procedureGroup`
 [source%nowrap, php]
 ----
 
-public getProcedureClass():string // <1>
+public getProcedureClass():string
 
 ----
 
-
     
+
+
+
+
+
 Get the
-
-
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
 
 [source%nowrap, php]
 ----
 
-public setProcedureClass($procedureClass):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry // <1>
+public setProcedureClass($procedureClass):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Eventprocedures.adoc#eventprocedures_entries_procedureentry[ProcedureEntry]
+
+
 Set the
-
-
-===== Return type
-    
-<1>         xref:Eventprocedures.adoc#eventprocedures_entries_procedureentry[ProcedureEntry]
-    
 
 .*Parameters*
 |===
@@ -713,36 +665,32 @@ The trigger entry contains all information needed to use module triggers in plen
 [source%nowrap, php]
 ----
 
-public getModuleName():string // <1>
+public getModuleName():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry // <1>
+public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Eventprocedures.adoc#eventprocedures_entries_triggerentry[TriggerEntry]
 
-===== Return type
-    
-<1>         xref:Eventprocedures.adoc#eventprocedures_entries_triggerentry[TriggerEntry]
-    
+
+
 
 .*Parameters*
 |===
@@ -756,36 +704,32 @@ a|`$moduleName`
 [source%nowrap, php]
 ----
 
-public getEventType():string // <1>
+public getEventType():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry // <1>
+public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Eventprocedures.adoc#eventprocedures_entries_triggerentry[TriggerEntry]
 
-===== Return type
-    
-<1>         xref:Eventprocedures.adoc#eventprocedures_entries_triggerentry[TriggerEntry]
-    
+
+
 
 .*Parameters*
 |===
@@ -799,36 +743,32 @@ a|`$eventType`
 [source%nowrap, php]
 ----
 
-public getTriggerIdentifier():string // <1>
+public getTriggerIdentifier():string
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/string[string^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setTriggerIdentifier($triggerIdentifier):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry // <1>
+public setTriggerIdentifier($triggerIdentifier):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Eventprocedures.adoc#eventprocedures_entries_triggerentry[TriggerEntry]
 
-===== Return type
-    
-<1>         xref:Eventprocedures.adoc#eventprocedures_entries_triggerentry[TriggerEntry]
-    
+
+
 
 .*Parameters*
 |===
@@ -842,36 +782,32 @@ a|`$triggerIdentifier`
 [source%nowrap, php]
 ----
 
-public getTriggerNames():array // <1>
+public getTriggerNames():array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 [source%nowrap, php]
 ----
 
-public setTriggerNames($triggerNames):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry // <1>
+public setTriggerNames($triggerNames):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Eventprocedures.adoc#eventprocedures_entries_triggerentry[TriggerEntry]
 
-===== Return type
-    
-<1>         xref:Eventprocedures.adoc#eventprocedures_entries_triggerentry[TriggerEntry]
-    
+
+
 
 .*Parameters*
 |===
@@ -885,17 +821,15 @@ a|`$triggerNames`
 [source%nowrap, php]
 ----
 
-public getTrigger():int // <1>
+public getTrigger():int
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
+
+
+
 

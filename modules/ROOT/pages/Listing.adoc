@@ -31,19 +31,17 @@ The contract for the listing repository.
 [source%nowrap, php]
 ----
 
-public get($id, $with = []):Plenty\Modules\Listing\Models\Listing // <1>
+public get($id, $with = []):Plenty\Modules\Listing\Models\Listing
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listing[Listing]
+
+
 Get a listing by a given ID.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listing[Listing]
-    
 
 .*Parameters*
 |===
@@ -61,19 +59,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List listing
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -99,20 +95,18 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Listing\Models\Listing // <1>
+public create($data):Plenty\Modules\Listing\Models\Listing
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listing[Listing]
+
+
 Create new listing
 
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listing[Listing]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -125,20 +119,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public update($id, $data):Plenty\Modules\Listing\Models\Listing // <1>
+public update($id, $data):Plenty\Modules\Listing\Models\Listing
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listing[Listing]
+
+
 Update listing
 
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listing[Listing]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -155,19 +147,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($id):bool // <1>
+public delete($id):bool
 
 ----
 
-
     
+
+
+
+
+
 Delete listing
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -181,53 +171,47 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -241,53 +225,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[listing_listing_models]]
 ===  Models
@@ -360,11 +338,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingproperty]]
@@ -424,11 +404,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_date]]
 == Date
@@ -483,11 +465,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingdatetypename]]
@@ -533,11 +517,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_layouttemplate]]
 == LayoutTemplate
@@ -565,19 +551,17 @@ The LayoutTemplateRepositoryContract is the interface for the layout template re
 [source%nowrap, php]
 ----
 
-public get($id, $with = []):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutTemplate // <1>
+public get($id, $with = []):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutTemplate
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_layouttemplate[LayoutTemplate]
+
+
 Get a layout template.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_layouttemplate[LayoutTemplate]
-    
 
 .*Parameters*
 |===
@@ -595,19 +579,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutTemplate // <1>
+public create($data):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutTemplate
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_layouttemplate[LayoutTemplate]
+
+
 Create a layout template.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_layouttemplate[LayoutTemplate]
-    
 
 .*Parameters*
 |===
@@ -621,19 +603,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($id):bool // <1>
+public delete($id):bool
 
 ----
 
-
     
+
+
+
+
+
 Delete layout template
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -647,53 +627,47 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -707,53 +681,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[listing_layouttemplate_models]]
 ===  Models
@@ -809,11 +777,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_market]]
 == Market
@@ -832,7 +802,7 @@ The ListingMarketRepositoryContract is the interface for the listing market repo
 `Plenty\Modules\Listing\Market\Contracts`
 
 
-[note, caption=]
+[NOTE, caption=]
 .Repository can be extended!
 ====
 It is possible to extend this repository with own search criteria.
@@ -846,19 +816,17 @@ It is possible to extend this repository with own search criteria.
 [source%nowrap, php]
 ----
 
-public get($id, $with = []):Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+public get($id, $with = []):Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
+
+
 Get a listing market
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
-    
 
 .*Parameters*
 |===
@@ -876,20 +844,18 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List listing markets
 
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -914,20 +880,18 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public find($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public find($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 Find listing markets
 
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -952,19 +916,17 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public create($data):array // <1>
+public create($data):array
 
 ----
 
-
     
+
+
+
+
+
 Create a listing
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -978,19 +940,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public update($id, $data):Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+public update($id, $data):Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
+
+
 Update listing market
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
-    
 
 .*Parameters*
 |===
@@ -1008,19 +968,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public start($ids, $params = []):array // <1>
+public start($ids, $params = []):array
 
 ----
 
-
     
+
+
+
+
+
 Start listing markets on the designated markets.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1038,19 +996,17 @@ a|`$params`
 [source%nowrap, php]
 ----
 
-public verify($ids):array // <1>
+public verify($ids):array
 
 ----
 
-
     
+
+
+
+
+
 Verifies listing markets.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -1064,19 +1020,17 @@ a|`$ids`
 [source%nowrap, php]
 ----
 
-public delete($id):void // <1>
+public delete($id):void
 
 ----
 
-
     
+
+
+
+
+
 Delete a listing market
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1090,53 +1044,47 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1150,53 +1098,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[listing_market_events]]
 ===  Events
@@ -1221,19 +1163,17 @@ An event class fired after multiple new listing markets are created.
 [source%nowrap, php]
 ----
 
-public __construct($listingMarkets):void // <1>
+public __construct($listingMarkets):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1247,19 +1187,17 @@ a|`$listingMarkets`
 [source%nowrap, php]
 ----
 
-public getListingMarkets():array // <1>
+public getListingMarkets():array
 
 ----
 
-
     
+
+
+
+
+
 Get the list of ListingMarket instances.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 
 [[listing_events_listingmarketbatchdeleted]]
@@ -1283,19 +1221,17 @@ An event class fired after multiple listing markets are deleted.
 [source%nowrap, php]
 ----
 
-public __construct($listingMarkets):void // <1>
+public __construct($listingMarkets):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1309,19 +1245,17 @@ a|`$listingMarkets`
 [source%nowrap, php]
 ----
 
-public getListingMarkets():array // <1>
+public getListingMarkets():array
 
 ----
 
-
     
+
+
+
+
+
 Get the list of ListingMarket instances.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 
 [[listing_events_listingmarketbatchevent]]
@@ -1345,19 +1279,17 @@ A base event class for all listing market events. Each listing market batch even
 [source%nowrap, php]
 ----
 
-public __construct($listingMarkets):void // <1>
+public __construct($listingMarkets):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1371,19 +1303,17 @@ a|`$listingMarkets`
 [source%nowrap, php]
 ----
 
-public getListingMarkets():array // <1>
+public getListingMarkets():array
 
 ----
 
-
     
+
+
+
+
+
 Get the list of ListingMarket instances.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 
 [[listing_events_listingmarketbatchupdated]]
@@ -1407,19 +1337,17 @@ An event class fired after multiple listing markets are updated.
 [source%nowrap, php]
 ----
 
-public __construct($listingMarkets):void // <1>
+public __construct($listingMarkets):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1433,19 +1361,17 @@ a|`$listingMarkets`
 [source%nowrap, php]
 ----
 
-public getListingMarkets():array // <1>
+public getListingMarkets():array
 
 ----
 
-
     
+
+
+
+
+
 Get the list of ListingMarket instances.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 
 [[listing_events_listingmarketcreated]]
@@ -1469,19 +1395,17 @@ An event class fired after a new listing market is created.
 [source%nowrap, php]
 ----
 
-public __construct($listingMarket):void // <1>
+public __construct($listingMarket):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1495,19 +1419,17 @@ a|`$listingMarket`
 [source%nowrap, php]
 ----
 
-public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
+
+
 Get the ListingMarket instance.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
-    
 
 
 [[listing_events_listingmarketdeleted]]
@@ -1531,19 +1453,17 @@ An event class fired after a new listing market is deleted.
 [source%nowrap, php]
 ----
 
-public __construct($listingMarket):void // <1>
+public __construct($listingMarket):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1557,19 +1477,17 @@ a|`$listingMarket`
 [source%nowrap, php]
 ----
 
-public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
+
+
 Get the ListingMarket instance.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
-    
 
 
 [[listing_events_listingmarketevent]]
@@ -1593,19 +1511,17 @@ A base event class for all listing market events. Each listing market event expe
 [source%nowrap, php]
 ----
 
-public __construct($listingMarket):void // <1>
+public __construct($listingMarket):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1619,19 +1535,17 @@ a|`$listingMarket`
 [source%nowrap, php]
 ----
 
-public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
+
+
 Get the ListingMarket instance.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
-    
 
 
 [[listing_events_listingmarketitemspecificscreated]]
@@ -1655,19 +1569,17 @@ An event class fired after a new listing market item specifics are created.
 [source%nowrap, php]
 ----
 
-public __construct($listingMarket):void // <1>
+public __construct($listingMarket):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1681,19 +1593,17 @@ a|`$listingMarket`
 [source%nowrap, php]
 ----
 
-public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
+
+
 Get the ListingMarket instance.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
-    
 
 
 [[listing_events_listingmarketitemspecificsdeleted]]
@@ -1717,19 +1627,17 @@ An event class fired after a new listing market item specifics are deleted.
 [source%nowrap, php]
 ----
 
-public __construct($listingMarket):void // <1>
+public __construct($listingMarket):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1743,19 +1651,17 @@ a|`$listingMarket`
 [source%nowrap, php]
 ----
 
-public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
+
+
 Get the ListingMarket instance.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
-    
 
 
 [[listing_events_listingmarketupdated]]
@@ -1779,19 +1685,17 @@ An event class fired after a new listing market is updated.
 [source%nowrap, php]
 ----
 
-public __construct($listingMarket):void // <1>
+public __construct($listingMarket):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1805,19 +1709,17 @@ a|`$listingMarket`
 [source%nowrap, php]
 ----
 
-public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket // <1>
+public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
+
+
 Get the ListingMarket instance.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarket[ListingMarket]
-    
 
 [[listing_market_models]]
 ===  Models
@@ -1981,11 +1883,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingmarketdate]]
@@ -2047,11 +1951,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingmarketitemspecific]]
@@ -2097,11 +2003,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingmarketprice]]
@@ -2156,11 +2064,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingmarketproperty]]
@@ -2278,11 +2188,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_directory]]
 == Directory
@@ -2310,19 +2222,17 @@ The contract for the listing market directory repository.
 [source%nowrap, php]
 ----
 
-public get($id, $with = []):Plenty\Modules\Listing\Market\Directory\Models\ListingMarketDirectory // <1>
+public get($id, $with = []):Plenty\Modules\Listing\Market\Directory\Models\ListingMarketDirectory
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketdirectory[ListingMarketDirectory]
+
+
 Get a listing market directory
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarketdirectory[ListingMarketDirectory]
-    
 
 .*Parameters*
 |===
@@ -2340,19 +2250,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public all($with = [], $filters = []):array // <1>
+public all($with = [], $filters = []):array
 
 ----
 
-
     
+
+
+
+
+
 List all directories
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -2370,20 +2278,18 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public create($data):array // <1>
+public create($data):array
 
 ----
 
-
     
+
+
+
+
+
 Create a listing market directory.
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2396,20 +2302,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public update($id, $data):Plenty\Modules\Listing\Market\Directory\Models\ListingMarketDirectory // <1>
+public update($id, $data):Plenty\Modules\Listing\Market\Directory\Models\ListingMarketDirectory
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketdirectory[ListingMarketDirectory]
+
+
 Update listing market directory
 
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarketdirectory[ListingMarketDirectory]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -2426,19 +2330,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($id):void // <1>
+public delete($id):void
 
 ----
 
-
     
+
+
+
+
+
 Delete a listing market directory
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -2452,53 +2354,47 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -2512,53 +2408,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[listing_directory_models]]
 ===  Models
@@ -2605,11 +2495,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_history]]
 == History
@@ -2637,19 +2529,17 @@ The ListingMarketHistoryRepositoryContract is the interface for the listing mark
 [source%nowrap, php]
 ----
 
-public get($id, $with = []):Plenty\Modules\Listing\Market\History\Models\ListingMarketHistory // <1>
+public get($id, $with = []):Plenty\Modules\Listing\Market\History\Models\ListingMarketHistory
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkethistory[ListingMarketHistory]
+
+
 Get a listing market.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarkethistory[ListingMarketHistory]
-    
 
 .*Parameters*
 |===
@@ -2667,19 +2557,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public search($page = 1, $itemsPerPage = 50, $with = [], $filters = [], $sort = &quot;&quot;):Plenty\Repositories\Models\PaginatedResult // <1>
+public search($page = 1, $itemsPerPage = 50, $with = [], $filters = [], $sort = &quot;&quot;):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List listing market histories
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -2709,19 +2597,17 @@ a|`$sort`
 [source%nowrap, php]
 ----
 
-public end($ids, $params = []):array // <1>
+public end($ids, $params = []):array
 
 ----
 
-
     
+
+
+
+
+
 End the listing market histories on the designated markets.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -2739,19 +2625,17 @@ a|`$params`
 [source%nowrap, php]
 ----
 
-public relist($ids):void // <1>
+public relist($ids):void
 
 ----
 
-
     
+
+
+
+
+
 Relist the listing market histories on the designated markets.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -2765,19 +2649,17 @@ a|`$ids`
 [source%nowrap, php]
 ----
 
-public update($ids, $options = []):array // <1>
+public update($ids, $options = []):array
 
 ----
 
-
     
+
+
+
+
+
 Update the listing market histories on the designated markets.
-
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
 
 .*Parameters*
 |===
@@ -2813,53 +2695,47 @@ a|`$options`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -2873,53 +2749,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[listing_history_models]]
 ===  Models
@@ -3020,11 +2890,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingmarkethistorydate]]
@@ -3087,11 +2959,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingmarkethistoryproperty]]
@@ -3158,11 +3032,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingmarkethistorytext]]
@@ -3208,11 +3084,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingmarkethistoryvariation]]
@@ -3285,11 +3163,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_info]]
 == Info
@@ -3317,19 +3197,17 @@ The ListingMarketInfoRepositoryContract is the interface for the listing market 
 [source%nowrap, php]
 ----
 
-public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List listing market infos by filter options
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -3355,53 +3233,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -3415,53 +3287,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[listing_info_models]]
 ===  Models
@@ -3517,11 +3383,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_itemspecific]]
 == ItemSpecific
@@ -3540,7 +3408,7 @@ The contract of the listing market item specific repository
 `Plenty\Modules\Listing\Market\ItemSpecific\Contracts`
 
 
-[note, caption=]
+[NOTE, caption=]
 .Repository can be extended!
 ====
 It is possible to extend this repository with own search criteria.
@@ -3554,19 +3422,17 @@ It is possible to extend this repository with own search criteria.
 [source%nowrap, php]
 ----
 
-public get($id):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketItemSpecific // <1>
+public get($id):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketItemSpecific
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketitemspecific[ListingMarketItemSpecific]
+
+
 Gets a ListingMarketItemSpecific.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarketitemspecific[ListingMarketItemSpecific]
-    
 
 .*Parameters*
 |===
@@ -3580,19 +3446,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public search($data, $page = 1, $itemsPerPage = 50):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketItemSpecific // <1>
+public search($data, $page = 1, $itemsPerPage = 50):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketItemSpecific
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketitemspecific[ListingMarketItemSpecific]
+
+
 Gets all ListingMarketItemSpecifics.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarketitemspecific[ListingMarketItemSpecific]
-    
 
 .*Parameters*
 |===
@@ -3614,19 +3478,17 @@ a|`$itemsPerPage`
 [source%nowrap, php]
 ----
 
-public find($filters = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult // <1>
+public find($filters = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 Gets all ListingMarketItemSpecifics.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -3648,19 +3510,17 @@ a|`$itemsPerPage`
 [source%nowrap, php]
 ----
 
-public update($id, $data):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketItemSpecific // <1>
+public update($id, $data):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketItemSpecific
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketitemspecific[ListingMarketItemSpecific]
+
+
 Updates a ListingMarketItemSpecific.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarketitemspecific[ListingMarketItemSpecific]
-    
 
 .*Parameters*
 |===
@@ -3678,19 +3538,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($id):bool // <1>
+public delete($id):bool
 
 ----
 
-
     
+
+
+
+
+
 Deletes a ListingMarketItemSpecific.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -3704,19 +3562,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public deleteByListingMarketId($listingMarketId):bool // <1>
+public deleteByListingMarketId($listingMarketId):bool
 
 ----
 
-
     
+
+
+
+
+
 Deletes all ListingMarketItemSpecific entries by listing market id.
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -3730,53 +3586,47 @@ a|`$listingMarketId`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -3790,53 +3640,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[listing_itemspecific_models]]
 ===  Models
@@ -3883,11 +3727,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_text]]
 == Text
@@ -3915,19 +3761,17 @@ The contract for the listing market text repository.
 [source%nowrap, php]
 ----
 
-public get($id):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText // <1>
+public get($id):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[ListingMarketText]
+
+
 Get a listing market text
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarkettext[ListingMarketText]
-    
 
 .*Parameters*
 |===
@@ -3941,19 +3785,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public create($listingMarketId, $data):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText // <1>
+public create($listingMarketId, $data):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[ListingMarketText]
+
+
 Create new listing market text
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarkettext[ListingMarketText]
-    
 
 .*Parameters*
 |===
@@ -3971,20 +3813,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public update($listingMarketId, $lang, $data):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText // <1>
+public update($listingMarketId, $lang, $data):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[ListingMarketText]
+
+
 Update listing market text
 
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarkettext[ListingMarketText]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -4005,20 +3845,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public updateOrCreate($listingMarketId, $lang, $data):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText // <1>
+public updateOrCreate($listingMarketId, $lang, $data):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[ListingMarketText]
+
+
 Update or create listing market text
 
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingmarkettext[ListingMarketText]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -4039,19 +3877,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($id):bool // <1>
+public delete($id):bool
 
 ----
 
-
     
+
+
+
+
+
 Delete listing market text
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -4065,19 +3901,17 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public search($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public search($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List listing market text
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -4099,53 +3933,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -4159,53 +3987,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[listing_text_models]]
 ===  Models
@@ -4258,11 +4080,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_optiontemplate]]
 == OptionTemplate
@@ -4290,37 +4114,33 @@ The contract for the listing option template repository.
 [source%nowrap, php]
 ----
 
-public preview():array // <1>
+public preview():array
 
 ----
 
-
     
+
+
+
+
+
 Get a preview list of all listing option templates
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 [source%nowrap, php]
 ----
 
-public get($id):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate // <1>
+public get($id):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_optiontemplate[OptionTemplate]
+
+
 Get option template
 
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_optiontemplate[OptionTemplate]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -4333,20 +4153,18 @@ a|`$id`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate // <1>
+public create($data):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_optiontemplate[OptionTemplate]
+
+
 Create option template
 
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_optiontemplate[OptionTemplate]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -4359,19 +4177,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public update($id, $data):void // <1>
+public update($id, $data):void
 
 ----
 
-
     
+
+
+
+
+
 Update option template
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -4389,19 +4205,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public delete($id):void // <1>
+public delete($id):void
 
 ----
 
-
     
+
+
+
+
+
 Delete option template
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -4460,11 +4274,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_price]]
 == Price
@@ -4518,11 +4334,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingpricetypename]]
@@ -4568,11 +4386,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_property]]
 == Property
@@ -4679,11 +4499,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingpropertytypename]]
@@ -4729,11 +4551,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_shippingprofile]]
 == ShippingProfile
@@ -4761,19 +4585,17 @@ The ShippingProfileRepositoryContract is the interface for the listing shipping 
 [source%nowrap, php]
 ----
 
-public get($id, $with = []):Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile // <1>
+public get($id, $with = []):Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[ShippingProfile]
+
+
 Get a shipping profile
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_shippingprofile[ShippingProfile]
-    
 
 .*Parameters*
 |===
@@ -4791,19 +4613,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 Search shipping profiles
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -4829,53 +4649,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -4889,53 +4703,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[listing_shippingprofile_events]]
 ===  Events
@@ -4960,19 +4768,17 @@ An event class fired after a new listing shipping profile is created.
 [source%nowrap, php]
 ----
 
-public __construct($shippingProfile):void // <1>
+public __construct($shippingProfile):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -4986,19 +4792,17 @@ a|`$shippingProfile`
 [source%nowrap, php]
 ----
 
-public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile // <1>
+public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[ShippingProfile]
+
+
 Get the ShippingProfile instance.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_shippingprofile[ShippingProfile]
-    
 
 
 [[listing_events_shippingprofiledeleted]]
@@ -5022,19 +4826,17 @@ An event class fired after a listing shipping profile is deleted.
 [source%nowrap, php]
 ----
 
-public __construct($shippingProfile):void // <1>
+public __construct($shippingProfile):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -5048,19 +4850,17 @@ a|`$shippingProfile`
 [source%nowrap, php]
 ----
 
-public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile // <1>
+public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[ShippingProfile]
+
+
 Get the ShippingProfile instance.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_shippingprofile[ShippingProfile]
-    
 
 
 [[listing_events_shippingprofileevent]]
@@ -5084,19 +4884,17 @@ A base event class for all listing shipping profile events. Each shipping profil
 [source%nowrap, php]
 ----
 
-public __construct($shippingProfile):void // <1>
+public __construct($shippingProfile):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -5110,19 +4908,17 @@ a|`$shippingProfile`
 [source%nowrap, php]
 ----
 
-public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile // <1>
+public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[ShippingProfile]
+
+
 Get the ShippingProfile instance.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_shippingprofile[ShippingProfile]
-    
 
 
 [[listing_events_shippingprofileupdated]]
@@ -5146,19 +4942,17 @@ An event class fired after a listing shipping profile is updated.
 [source%nowrap, php]
 ----
 
-public __construct($shippingProfile):void // <1>
+public __construct($shippingProfile):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -5172,19 +4966,17 @@ a|`$shippingProfile`
 [source%nowrap, php]
 ----
 
-public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile // <1>
+public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[ShippingProfile]
+
+
 Get the ShippingProfile instance.
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_shippingprofile[ShippingProfile]
-    
 
 [[listing_shippingprofile_models]]
 ===  Models
@@ -5240,11 +5032,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_status]]
 == Status
@@ -5294,11 +5088,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingstatusname]]
@@ -5344,11 +5140,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_stockdependencetype]]
 == StockDependenceType
@@ -5376,19 +5174,17 @@ The contract for the listing stock dependence type repository.
 [source%nowrap, php]
 ----
 
-public get($id, $with = []):Plenty\Modules\Listing\StockDependenceType\Models\StockDependenceType // <1>
+public get($id, $with = []):Plenty\Modules\Listing\StockDependenceType\Models\StockDependenceType
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_stockdependencetype[StockDependenceType]
+
+
 Get a listing stock dependence type
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_stockdependencetype[StockDependenceType]
-    
 
 .*Parameters*
 |===
@@ -5406,19 +5202,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List listing stock dependence types
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -5482,11 +5276,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_stockdependencetypename]]
@@ -5532,11 +5328,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 [[listing_type]]
 == Type
@@ -5564,19 +5362,17 @@ The contract for the listing type repository.
 [source%nowrap, php]
 ----
 
-public get($id, $with = []):Plenty\Modules\Listing\Type\Models\ListingType // <1>
+public get($id, $with = []):Plenty\Modules\Listing\Type\Models\ListingType
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Listing.adoc#listing_models_listingtype[ListingType]
+
+
 Get a listing type
-
-
-===== Return type
-    
-<1>         xref:Listing.adoc#listing_models_listingtype[ListingType]
-    
 
 .*Parameters*
 |===
@@ -5594,19 +5390,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult // <1>
+public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+
+
 List listing types
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
-    
 
 .*Parameters*
 |===
@@ -5670,11 +5464,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[listing_models_listingtypename]]
@@ -5720,9 +5516,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

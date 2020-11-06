@@ -31,53 +31,47 @@ UserRepositoryContract
 [source%nowrap, php]
 ----
 
-public getAll():Illuminate\Database\Eloquent\Collection // <1>
+public getAll():Illuminate\Database\Eloquent\Collection
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+
+
 Get all users
 
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
-    
-
 [source%nowrap, php]
 ----
 
-public getCurrentUser():Plenty\Modules\User\Models\User // <1>
+public getCurrentUser():Plenty\Modules\User\Models\User
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:User.adoc#user_models_user[User]
+
+
 Get current user
 
-
-===== Return type
-    
-<1>         xref:User.adoc#user_models_user[User]
-    
-
 [source%nowrap, php]
 ----
 
-public getUserById($userId):Plenty\Modules\User\Models\User // <1>
+public getUserById($userId):Plenty\Modules\User\Models\User
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:User.adoc#user_models_user[User]
+
+
 Get user by given user id
-
-
-===== Return type
-    
-<1>         xref:User.adoc#user_models_user[User]
-    
 
 .*Parameters*
 |===
@@ -91,19 +85,17 @@ a|`$userId`
 [source%nowrap, php]
 ----
 
-public getUserByStatus($status):Illuminate\Database\Eloquent\Collection // <1>
+public getUserByStatus($status):Illuminate\Database\Eloquent\Collection
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+
+
 Get all users by given status
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
-    
 
 .*Parameters*
 |===
@@ -117,19 +109,17 @@ a|`$status`
 [source%nowrap, php]
 ----
 
-public getAllPinUsers($clientName = null, $clientSecret = null):Illuminate\Database\Eloquent\Collection // <1>
+public getAllPinUsers($clientName = null, $clientSecret = null):Illuminate\Database\Eloquent\Collection
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+
+
 Get all users with a pin
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
-    
 
 .*Parameters*
 |===
@@ -147,19 +137,17 @@ a|`$clientSecret`
 [source%nowrap, php]
 ----
 
-public findByName($name):Illuminate\Database\Eloquent\Collection // <1>
+public findByName($name):Illuminate\Database\Eloquent\Collection
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
 
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
-    
+
+
 
 .*Parameters*
 |===
@@ -173,19 +161,17 @@ a|`$name`
 [source%nowrap, php]
 ----
 
-public setBackendPluginSet($userId, $setId):bool // <1>
+public setBackendPluginSet($userId, $setId):bool
 
 ----
 
-
     
+
+
+
+
+
 Sets the selected PluginSet for a given user&#039;s backend
-
-
-===== Return type
-    
-<1> link:http://php.net/bool[bool^]
-    
 
 .*Parameters*
 |===
@@ -203,19 +189,17 @@ a|`$setId`
 [source%nowrap, php]
 ----
 
-public getBackendPluginSet($userId):Plenty\Modules\Plugin\PluginSet\Models\PluginSet // <1>
+public getBackendPluginSet($userId):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_models_pluginset[PluginSet]
+
+
 Gets the selected PluginSet for a given user&#039;s backend
-
-
-===== Return type
-    
-<1>         xref:Plugin.adoc#plugin_models_pluginset[PluginSet]
-    
 
 .*Parameters*
 |===
@@ -460,9 +444,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 

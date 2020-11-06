@@ -31,19 +31,17 @@ The TagAvailabilityRepositoryContract is the interface for the tag availability 
 [source%nowrap, php]
 ----
 
-public update($data, $tagId, $availabilityType):Plenty\Modules\Tag\Models\TagAvailability // <1>
+public update($data, $tagId, $availabilityType):Plenty\Modules\Tag\Models\TagAvailability
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Tag.adoc#tag_models_tagavailability[TagAvailability]
 
-===== Return type
-    
-<1>         xref:Tag.adoc#tag_models_tagavailability[TagAvailability]
-    
+
+
 
 .*Parameters*
 |===
@@ -72,19 +70,17 @@ a|`$availabilityType`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Tag\Models\TagAvailability // <1>
+public create($data):Plenty\Modules\Tag\Models\TagAvailability
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Tag.adoc#tag_models_tagavailability[TagAvailability]
 
-===== Return type
-    
-<1>         xref:Tag.adoc#tag_models_tagavailability[TagAvailability]
-    
+
+
 
 .*Parameters*
 |===
@@ -98,36 +94,32 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
-
-
-===== Return type
-    
-<1> 
-    
 
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[tag_contracts_tagnamerepositorycontract]]
@@ -151,19 +143,17 @@ The TagNameRepositoryContract is the interface for the tag name repository. This
 [source%nowrap, php]
 ----
 
-public update($data, $tagId, $lang):Plenty\Modules\Tag\Models\TagName // <1>
+public update($data, $tagId, $lang):Plenty\Modules\Tag\Models\TagName
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Tag.adoc#tag_models_tagname[TagName]
 
-===== Return type
-    
-<1>         xref:Tag.adoc#tag_models_tagname[TagName]
-    
+
+
 
 .*Parameters*
 |===
@@ -185,19 +175,17 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Tag\Models\TagName // <1>
+public create($data):Plenty\Modules\Tag\Models\TagName
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Tag.adoc#tag_models_tagname[TagName]
 
-===== Return type
-    
-<1>         xref:Tag.adoc#tag_models_tagname[TagName]
-    
+
+
 
 .*Parameters*
 |===
@@ -211,19 +199,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public findByName($name, $lang):array // <1>
+public findByName($name, $lang):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -241,36 +227,32 @@ a|`$lang`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
-
-
-===== Return type
-    
-<1> 
-    
 
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[tag_contracts_tagrelationshiprepositorycontract]]
@@ -294,19 +276,17 @@ The TagRelationshipRepositoryContract is the interface for the tag relationship 
 [source%nowrap, php]
 ----
 
-public update($data, $tagId, $availabilityType, $relationshipValue):Plenty\Modules\Tag\Models\TagRelationship // <1>
+public update($data, $tagId, $availabilityType, $relationshipValue):Plenty\Modules\Tag\Models\TagRelationship
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Tag.adoc#tag_models_tagrelationship[TagRelationship]
 
-===== Return type
-    
-<1>         xref:Tag.adoc#tag_models_tagrelationship[TagRelationship]
-    
+
+
 
 .*Parameters*
 |===
@@ -337,19 +317,17 @@ a|`$relationshipValue`
 [source%nowrap, php]
 ----
 
-public create($data):Plenty\Modules\Tag\Models\TagRelationship // <1>
+public create($data):Plenty\Modules\Tag\Models\TagRelationship
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Tag.adoc#tag_models_tagrelationship[TagRelationship]
 
-===== Return type
-    
-<1>         xref:Tag.adoc#tag_models_tagrelationship[TagRelationship]
-    
+
+
 
 .*Parameters*
 |===
@@ -363,19 +341,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public deleteRelation($relationshipValue, $tagId):void // <1>
+public deleteRelation($relationshipValue, $tagId):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -393,19 +369,17 @@ a|`$tagId`
 [source%nowrap, php]
 ----
 
-public deleteOneRelation($relationshipValue, $relationshipType, $tagId):void // <1>
+public deleteOneRelation($relationshipValue, $relationshipType, $tagId):void
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> 
-    
+
+
+
 
 .*Parameters*
 |===
@@ -427,19 +401,17 @@ a|`$tagId`
 [source%nowrap, php]
 ----
 
-public deleteOneRelationByUUID($relationshipUUID, $relationshipType, $tagId):int // <1>
+public deleteOneRelationByUUID($relationshipUUID, $relationshipType, $tagId):int
 
 ----
 
-
     
+
+
+
+
+
 Delete a tag relationship by the uuid5 value.
-
-
-===== Return type
-    
-<1> link:http://php.net/int[int^]
-    
 
 .*Parameters*
 |===
@@ -461,19 +433,17 @@ a|`$tagId`
 [source%nowrap, php]
 ----
 
-public findByValueId($valueId):array // <1>
+public findByValueId($valueId):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -487,19 +457,17 @@ a|`$valueId`
 [source%nowrap, php]
 ----
 
-public findByTagId($tagId):array // <1>
+public findByTagId($tagId):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -513,20 +481,18 @@ a|`$tagId`
 [source%nowrap, php]
 ----
 
-public findRelationship($tagId, $relationshipValue, $relationshipType):Plenty\Modules\Tag\Models\TagRelationship // <1>
+public findRelationship($tagId, $relationshipValue, $relationshipType):Plenty\Modules\Tag\Models\TagRelationship
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Tag.adoc#tag_models_tagrelationship[TagRelationship]
+
+
 Gets a specific tag relationship or returns null.
 
-
-===== Return type
-    
-<1>         xref:Tag.adoc#tag_models_tagrelationship[TagRelationship]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -547,19 +513,17 @@ a|`$relationshipType`
 [source%nowrap, php]
 ----
 
-public delete($relationshipValue, $relationshipType):Plenty\Repositories\Models\DeleteResponse // <1>
+public delete($relationshipValue, $relationshipType):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
+
+
 Deletes tag links by reference value and relationship type.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
-    
 
 .*Parameters*
 |===
@@ -577,19 +541,17 @@ a|`$relationshipType`
 [source%nowrap, php]
 ----
 
-public deleteByUUID($relationshipValue, $relationshipType):Plenty\Repositories\Models\DeleteResponse // <1>
+public deleteByUUID($relationshipValue, $relationshipType):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
+
+
 Deletes tag links by uuid5 reference value and relationship type.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[DeleteResponse]
-    
 
 .*Parameters*
 |===
@@ -607,19 +569,17 @@ a|`$relationshipType`
 [source%nowrap, php]
 ----
 
-public deleteBulk($data):Illuminate\Support\Collection // <1>
+public deleteBulk($data):Illuminate\Support\Collection
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
+
+
 Deletes a list of tag relationships. The tag ID, tag type and relation value must be specified.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
-    
 
 .*Parameters*
 |===
@@ -633,19 +593,17 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public listRelationships($with = []):Illuminate\Support\Collection // <1>
+public listRelationships($with = []):Illuminate\Support\Collection
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
+
+
 Returns all tag relationships.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
-    
 
 .*Parameters*
 |===
@@ -659,53 +617,47 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -719,53 +671,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 
 [[tag_contracts_tagrepositorycontract]]
@@ -789,19 +735,17 @@ The TagRepositoryContract is the interface for the tag repository. This interfac
 [source%nowrap, php]
 ----
 
-public create($name):Plenty\Modules\Tag\Models\Tag // <1>
+public create($name):Plenty\Modules\Tag\Models\Tag
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Tag.adoc#tag_models_tag[Tag]
+
+
 Creates a new tag.
-
-
-===== Return type
-    
-<1>         xref:Tag.adoc#tag_models_tag[Tag]
-    
 
 .*Parameters*
 |===
@@ -815,19 +759,17 @@ a|`$name`
 [source%nowrap, php]
 ----
 
-public update($data, $tagId):Plenty\Modules\Tag\Models\Tag // <1>
+public update($data, $tagId):Plenty\Modules\Tag\Models\Tag
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Tag.adoc#tag_models_tag[Tag]
+
+
 Updates a tag.
-
-
-===== Return type
-    
-<1>         xref:Tag.adoc#tag_models_tag[Tag]
-    
 
 .*Parameters*
 |===
@@ -845,19 +787,17 @@ a|`$tagId`
 [source%nowrap, php]
 ----
 
-public delete($tagId):void // <1>
+public delete($tagId):void
 
 ----
 
-
     
+
+
+
+
+
 Deletes a tag by the given tag ID.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -871,19 +811,17 @@ a|`$tagId`
 [source%nowrap, php]
 ----
 
-public getTagByName($name):Plenty\Modules\Tag\Models\Tag // <1>
+public getTagByName($name):Plenty\Modules\Tag\Models\Tag
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Tag.adoc#tag_models_tag[Tag]
 
-===== Return type
-    
-<1>         xref:Tag.adoc#tag_models_tag[Tag]
-    
+
+
 
 .*Parameters*
 |===
@@ -897,19 +835,17 @@ a|`$name`
 [source%nowrap, php]
 ----
 
-public getTagsByIds($ids):array // <1>
+public getTagsByIds($ids):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -923,19 +859,17 @@ a|`$ids`
 [source%nowrap, php]
 ----
 
-public getTagById($id, $with = []):Plenty\Modules\Tag\Models\Tag // <1>
+public getTagById($id, $with = []):Plenty\Modules\Tag\Models\Tag
 
 ----
 
-
     
 
 
+====== *Return type:*        xref:Tag.adoc#tag_models_tag[Tag]
 
-===== Return type
-    
-<1>         xref:Tag.adoc#tag_models_tag[Tag]
-    
+
+
 
 .*Parameters*
 |===
@@ -953,19 +887,17 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public getTagsByAvailability($availabilityType):array // <1>
+public getTagsByAvailability($availabilityType):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -987,19 +919,17 @@ a|`$availabilityType`
 [source%nowrap, php]
 ----
 
-public getTagsByRelationship($relationshipType, $value, $isUUID = false):array // <1>
+public getTagsByRelationship($relationshipType, $value, $isUUID = false):array
 
 ----
 
-
     
 
 
 
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
+
+
+
 
 .*Parameters*
 |===
@@ -1021,19 +951,17 @@ a|`$isUUID`
 [source%nowrap, php]
 ----
 
-public listTags($with = []):Illuminate\Support\Collection // <1>
+public listTags($with = []):Illuminate\Support\Collection
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
+
+
 Returns all tags.
-
-
-===== Return type
-    
-<1>         xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
-    
 
 .*Parameters*
 |===
@@ -1047,20 +975,18 @@ a|`$with`
 [source%nowrap, php]
 ----
 
-public createTag($data):Plenty\Modules\Tag\Models\Tag // <1>
+public createTag($data):Plenty\Modules\Tag\Models\Tag
 
 ----
 
-
     
+
+
+====== *Return type:*        xref:Tag.adoc#tag_models_tag[Tag]
+
+
 Creates a new tag.
 
-
-===== Return type
-    
-<1>         xref:Tag.adoc#tag_models_tag[Tag]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1073,20 +999,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public createBulk($data):array // <1>
+public createBulk($data):array
 
 ----
 
-
     
+
+
+
+
+
 Creates up to 50 new tags.
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1099,20 +1023,18 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public updateBulk($data):array // <1>
+public updateBulk($data):array
 
 ----
 
-
     
+
+
+
+
+
 Updates up to 50 tags.
 
-
-===== Return type
-    
-<1> link:http://php.net/array[array^]
-    
-
 .*Parameters*
 |===
 |Type |Name |Description
@@ -1125,53 +1047,47 @@ a|`$data`
 [source%nowrap, php]
 ----
 
-public clearCriteria():void // <1>
+public clearCriteria():void
 
 ----
 
-
     
+
+
+
+
+
 Resets all Criteria filters by creating a new instance of the builder object.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public applyCriteriaFromFilters():void // <1>
+public applyCriteriaFromFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Applies criteria classes to the current repository.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public setFilters($filters = []):void // <1>
+public setFilters($filters = []):void
 
 ----
 
-
     
+
+
+
+
+
 Sets the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 .*Parameters*
 |===
@@ -1185,53 +1101,47 @@ a|`$filters`
 [source%nowrap, php]
 ----
 
-public getFilters():void // <1>
+public getFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Returns the filter array.
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public getConditions():void // <1>
+public getConditions():void
 
 ----
 
-
     
+
+
+
+
+
 Returns a collection of parsed filters as Condition object
 
-
-===== Return type
-    
-<1> 
-    
-
 [source%nowrap, php]
 ----
 
-public clearFilters():void // <1>
+public clearFilters():void
 
 ----
 
-
     
+
+
+
+
+
 Clears the filter array.
-
-
-===== Return type
-    
-<1> 
-    
 
 [[tag_tag_models]]
 ===  Models
@@ -1293,11 +1203,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[tag_models_tagavailability]]
@@ -1346,11 +1258,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[tag_models_tagclient]]
@@ -1393,11 +1307,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[tag_models_tagname]]
@@ -1443,11 +1359,13 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
 
 [[tag_models_tagrelationship]]
@@ -1493,9 +1411,11 @@ public toArray()
 
 ----
 
-
     
+
+
+
+
+
 Returns this model as an array.
-
-
 
