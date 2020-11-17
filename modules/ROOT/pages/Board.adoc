@@ -1,8 +1,3 @@
-:table-caption!:
-:example-caption!:
-:source-highlighter: prettify
-:sectids!:
-= Plentymarkets interface documentation
 
 
 [[board_board]]
@@ -44,11 +39,12 @@ public list($boardId):Illuminate\Support\Collection
 Lists all columns assigned to a specific board.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board to get columns for
+a|The ID of the board to get columns for
 |===
 
 
@@ -68,15 +64,16 @@ public create($boardId, $data):Plenty\Modules\Board\Models\BoardColumn
 Creates a new column and assigns it to a specific board.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board to assign the new column to
+a|The ID of the board to assign the new column to
 
 |link:http://php.net/array[array^]
 a|`$data`
-|The data of the new column
+a|The data of the new column
 |===
 
 
@@ -96,19 +93,20 @@ public update($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardColum
 Updates a specific column.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board the column belongs to
+a|The ID of the board the column belongs to
 
 |link:http://php.net/string[string^]
 a|`$columnId`
-|The ID of the column to be updated
+a|The ID of the column to be updated
 
 |link:http://php.net/array[array^]
 a|`$data`
-|The data to assign to the specified column
+a|The data to assign to the specified column
 |===
 
 
@@ -128,15 +126,16 @@ public copy($boardId, $columnId):Plenty\Modules\Board\Models\BoardColumn
 Copies a column and all its tasks.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board the column belongs to
+a|The ID of the board the column belongs to
 
 |link:http://php.net/string[string^]
 a|`$columnId`
-|The ID of the column to be copied
+a|The ID of the column to be copied
 |===
 
 
@@ -156,19 +155,20 @@ public updatePosition($boardId, $columnId, $newPosition):bool
 Updates the position of a specified column. This will update the position of all affected columns on the same board too.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board the column belongs to
+a|The ID of the board the column belongs to
 
 |link:http://php.net/string[string^]
 a|`$columnId`
-|The ID of the column to update the position for
+a|The ID of the column to update the position for
 
 |link:http://php.net/int[int^]
 a|`$newPosition`
-|The new position
+a|The new position
 |===
 
 
@@ -188,15 +188,16 @@ public delete($boardId, $columnId):bool
 Deletes a specific column.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board the column belongs to
+a|The ID of the board the column belongs to
 
 |link:http://php.net/string[string^]
 a|`$columnId`
-|The ID of the column to be deleted
+a|The ID of the column to be deleted
 |===
 
 
@@ -235,11 +236,12 @@ public list($columns = []):Illuminate\Database\Eloquent\Collection
 Lists all boards.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$columns`
-|Fields to load for each board
+a|Fields to load for each board
 |===
 
 
@@ -259,15 +261,16 @@ public get($boardId, $tasksPerPage = 20):Plenty\Modules\Board\Models\Board
 Returns a single board.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board to get
+a|The ID of the board to get
 
 |link:http://php.net/int[int^]
 a|`$tasksPerPage`
-|The maximum number of tasks to load for each column
+a|The maximum number of tasks to load for each column
 |===
 
 
@@ -287,11 +290,12 @@ public create($data):Plenty\Modules\Board\Models\Board
 Creates a new board.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-|The data of the new board
+a|The data of the new board
 |===
 
 
@@ -311,15 +315,16 @@ public update($boardId, $data):Plenty\Modules\Board\Models\Board
 Updates a board.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board to be updated
+a|The ID of the board to be updated
 
 |link:http://php.net/array[array^]
 a|`$data`
-|New data to be assigned to the board if it exists
+a|New data to be assigned to the board if it exists
 |===
 
 
@@ -339,11 +344,12 @@ public copy($boardId):Plenty\Modules\Board\Models\Board
 Copies a board and all its columns.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board to be copied
+a|The ID of the board to be copied
 |===
 
 
@@ -363,11 +369,12 @@ public updateTasksCount($boardId):bool
 Updates the tasks count value.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board to update the tasks count
+a|The ID of the board to update the tasks count
 |===
 
 
@@ -387,11 +394,12 @@ public delete($boardId):bool
 Deletes a board. Returns `true` if the deletion was successful.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board to be deleted
+a|The ID of the board to be deleted
 |===
 
 
@@ -430,15 +438,16 @@ public create($taskId, $referenceValue):Plenty\Modules\Board\Models\BoardTaskRef
 Creates a new reference to a given task. A reference may either point to a contact or to a ticket.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$taskId`
-|The ID of the task to create a reference for
+a|The ID of the task to create a reference for
 
 |link:http://php.net/string[string^]
 a|`$referenceValue`
-|Reference type followed by foreign ID of the referenced object. Syntax: TYPE-ID Example: user-123456 Types: user,ticket,contact,order,item
+a|Reference type followed by foreign ID of the referenced object. Syntax: TYPE-ID Example: user-123456 Types: user,ticket,contact,order,item
 |===
 
 
@@ -458,11 +467,12 @@ public delete($referenceId):bool
 Deletes a specific reference.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$referenceId`
-|The ID of the reference
+a|The ID of the reference
 |===
 
 
@@ -482,15 +492,16 @@ public checkReferenceKey($referenceType, $referenceKey):bool
 Checks whether the reference key for the given reference type exists or not.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$referenceType`
-|The reference type (one of 'contact', 'order', 'item', 'ticket' or 'user')
+a|The reference type (one of 'contact', 'order', 'item', 'ticket' or 'user')
 
 |link:http://php.net/int[int^]
 a|`$referenceKey`
-|The ID of the corresponding reference type
+a|The ID of the corresponding reference type
 |===
 
 
@@ -529,23 +540,24 @@ public list($columnId, $startAt, $tasksPerPage = 20, $columns = []):Illuminate\D
 Lists tasks for a specific column. Will return at most 20 tasks starting at defined task.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$columnId`
-|The ID of the column to get tasks for
+a|The ID of the column to get tasks for
 
 |link:http://php.net/int[int^]
 a|`$startAt`
-|The position of a task to start listing at
+a|The position of a task to start listing at
 
 |link:http://php.net/int[int^]
 a|`$tasksPerPage`
-|The number of tasks to get per page
+a|The number of tasks to get per page
 
 |link:http://php.net/array[array^]
 a|`$columns`
-|Fields to load for each task
+a|Fields to load for each task
 |===
 
 
@@ -565,19 +577,20 @@ public create($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardTask
 Creates a new task and assigns it to a specified column.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board the column belongs to
+a|The ID of the board the column belongs to
 
 |link:http://php.net/string[string^]
 a|`$columnId`
-|The ID of the column to assign the created task to
+a|The ID of the column to assign the created task to
 
 |link:http://php.net/array[array^]
 a|`$data`
-|The data of the new task
+a|The data of the new task
 |===
 
 
@@ -597,19 +610,20 @@ public copy($boardId, $columnId, $taskId):Plenty\Modules\Board\Models\BoardTask
 Copies the task with all references.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board the column belongs to
+a|The ID of the board the column belongs to
 
 |link:http://php.net/string[string^]
 a|`$columnId`
-|The ID of the column to assign the copied task to
+a|The ID of the column to assign the copied task to
 
 |link:http://php.net/string[string^]
 a|`$taskId`
-|The ID of the task to be copied
+a|The ID of the task to be copied
 |===
 
 
@@ -629,11 +643,12 @@ public get($taskId):Plenty\Modules\Board\Models\BoardTask
 Returns a task for a given ID.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$taskId`
-|The ID of the task
+a|The ID of the task
 |===
 
 
@@ -653,23 +668,24 @@ public update($boardId, $columnId, $taskId, $data):Plenty\Modules\Board\Models\B
 Updates a specified task.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board the column belongs to
+a|The ID of the board the column belongs to
 
 |link:http://php.net/string[string^]
 a|`$columnId`
-|The ID of the column the task belongs to
+a|The ID of the column the task belongs to
 
 |link:http://php.net/string[string^]
 a|`$taskId`
-|The ID of the task to be updated
+a|The ID of the task to be updated
 
 |link:http://php.net/array[array^]
 a|`$data`
-|Data to set at the task
+a|Data to set at the task
 |===
 
 
@@ -689,11 +705,12 @@ public addReference($boardTaskReference):bool
 Adds a task reference to a task object.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Board.adoc#board_models_boardtaskreference[`BoardTaskReference`]
 a|`$boardTaskReference`
-|The board task reference
+a|The board task reference
 |===
 
 
@@ -713,11 +730,12 @@ public removeReference($boardTaskReference):bool
 Removes a task reference from a task object.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Board.adoc#board_models_boardtaskreference[`BoardTaskReference`]
 a|`$boardTaskReference`
-|The board task reference
+a|The board task reference
 |===
 
 
@@ -737,19 +755,20 @@ public updatePosition($taskId, $newColumnId, $newPosition):int
 Updates the position of a specified task. Will also update the position of all following tasks in the same column.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$taskId`
-|The ID of the task to update the position for
+a|The ID of the task to update the position for
 
 |link:http://php.net/string[string^]
 a|`$newColumnId`
-|The ID of the column the task now belongs to
+a|The ID of the column the task now belongs to
 
 |link:http://php.net/int[int^]
 a|`$newPosition`
-|The new position
+a|The new position
 |===
 
 
@@ -769,11 +788,12 @@ public delete($taskId):bool
 Deletes a specified task.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$taskId`
-|The ID of the task to be deleted
+a|The ID of the task to be deleted
 |===
 
 
@@ -793,15 +813,16 @@ public deleteByColumn($boardId, $columnId):bool
 Deletes all tasks of a column.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board the column belongs to
+a|The ID of the board the column belongs to
 
 |link:http://php.net/string[string^]
 a|`$columnId`
-|The ID of the column the task belongs to
+a|The ID of the column the task belongs to
 |===
 
 
@@ -821,19 +842,20 @@ public allByColumnId($columnId, $referenceValue = null, $columns = []):void
 Gets all tasks for the given column ID having a reference with the given reference value.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$columnId`
-|The ID of the column
+a|The ID of the column
 
 |link:http://php.net/string[string^]
 a|`$referenceValue`
-|The reference value that has to be contained in the task. Can be NULL.
+a|The reference value that has to be contained in the task. Can be NULL.
 
 |link:http://php.net/array[array^]
 a|`$columns`
-|The attributes of the task to load
+a|The attributes of the task to load
 |===
 
 
@@ -853,19 +875,20 @@ public allByBoardId($boardId, $referenceValue = null, $columns = []):void
 Gets all tasks for the given column ID having a reference with the given reference value.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$boardId`
-|The ID of the board
+a|The ID of the board
 
 |link:http://php.net/string[string^]
 a|`$referenceValue`
-|The reference value that has to be contained in the task. Can be NULL.
+a|The reference value that has to be contained in the task. Can be NULL.
 
 |link:http://php.net/array[array^]
 a|`$columns`
-|The attributes of the task to load
+a|The attributes of the task to load
 |===
 
 
@@ -1205,24 +1228,25 @@ The board model.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |id
-    |The ID of the board
+    a|id
+    a|The ID of the board
 |link:http://php.net/string[string^]
-    |boardName
-    |The name of the board
+    a|boardName
+    a|The name of the board
 |        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
-    |boardColumns
-    |The columns of the board
+    a|boardColumns
+    a|The columns of the board
 |link:http://php.net/int[int^]
-    |columnsCount
-    |The number of columns
+    a|columnsCount
+    a|The number of columns
 |link:http://php.net/int[int^]
-    |tasksCount
-    |The number of tasks
+    a|tasksCount
+    a|The number of tasks
 |===
 
 
@@ -1260,24 +1284,25 @@ The board column model.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |id
-    |The ID of the board column
+    a|id
+    a|The ID of the board column
 |link:http://php.net/string[string^]
-    |boardId
-    |The ID of the board
+    a|boardId
+    a|The ID of the board
 |link:http://php.net/string[string^]
-    |columnName
-    |The name of the column
+    a|columnName
+    a|The name of the column
 |link:http://php.net/int[int^]
-    |position
-    |The position
+    a|position
+    a|The position
 |
-    |tasks
-    |The tasks
+    a|tasks
+    a|The tasks
 |===
 
 
@@ -1315,33 +1340,34 @@ The board task model.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |id
-    |The ID of the board task
+    a|id
+    a|The ID of the board task
 |link:http://php.net/string[string^]
-    |taskName
-    |The name of the task
+    a|taskName
+    a|The name of the task
 |link:http://php.net/string[string^]
-    |description
-    |The description of the task
+    a|description
+    a|The description of the task
 |link:http://php.net/int[int^]
-    |position
-    |The position of the task
+    a|position
+    a|The position of the task
 |link:http://php.net/string[string^]
-    |columnId
-    |The ID of the column
+    a|columnId
+    a|The ID of the column
 |link:http://php.net/string[string^]
-    |boardId
-    |The ID of the board
+    a|boardId
+    a|The ID of the board
 |
-    |tags
-    |
+    a|tags
+    a|
 |
-    |references
-    |
+    a|references
+    a|
 |===
 
 
@@ -1379,18 +1405,19 @@ The task reference model.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |id
-    |The ID of the board task reference
+    a|id
+    a|The ID of the board task reference
 |link:http://php.net/string[string^]
-    |taskId
-    |The ID of the task to create a reference for
+    a|taskId
+    a|The ID of the task to create a reference for
 |link:http://php.net/string[string^]
-    |referenceValue
-    |Reference type followed by foreign ID of the referenced object. Syntax: TYPE-ID Example: user-123456 Types: user,ticket,contact,order,item
+    a|referenceValue
+    a|Reference type followed by foreign ID of the referenced object. Syntax: TYPE-ID Example: user-123456 Types: user,ticket,contact,order,item
 |===
 
 

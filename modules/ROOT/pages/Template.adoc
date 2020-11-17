@@ -1,8 +1,3 @@
-:table-caption!:
-:example-caption!:
-:source-highlighter: prettify
-:sectids!:
-= Plentymarkets interface documentation
 
 
 [[template_config]]
@@ -13,7 +8,7 @@
 [[template_contracts_designconfigrepositorycontract]]
 ==== DesignConfigRepositoryContract
 
-DesignConfig
+Repository for DesignConfig of the deprecated CMS
 
 
 
@@ -44,11 +39,12 @@ public findByDesignName($designName):array
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$designName`
-|
+a|
 |===
 
 
@@ -68,15 +64,16 @@ public findByDesignAndWebStore($designName, $webStoreId):Plenty\Modules\Template
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$designName`
-|
+a|
 
 |link:http://php.net/int[int^]
 a|`$webStoreId`
-|
+a|
 |===
 
 
@@ -96,11 +93,12 @@ public findByDesign($design):array
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Template.adoc#template_models_design[`Design`]
 a|`$design`
-|
+a|
 |===
 
 
@@ -120,19 +118,20 @@ public update($data, $designName, $webstoreId):Plenty\Modules\Template\Design\Co
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-|
+a|
 
 |link:http://php.net/string[string^]
 a|`$designName`
-|
+a|
 
 |link:http://php.net/int[int^]
 a|`$webstoreId`
-|
+a|
 |===
 
 
@@ -152,15 +151,16 @@ public copyDesignConfig($designName, $newDesignName):Plenty\Modules\Template\Des
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$designName`
-|
+a|
 
 |link:http://php.net/string[string^]
 a|`$newDesignName`
-|
+a|
 |===
 
 
@@ -168,7 +168,7 @@ a|`$newDesignName`
 [[template_contracts_designrepositorycontract]]
 ==== DesignRepositoryContract
 
-Design
+Repository for Design of the deprecated CMS
 
 
 
@@ -214,15 +214,16 @@ public findByDesignName($designName, $withConfig = true):Plenty\Modules\Template
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$designName`
-|
+a|
 
 |link:http://php.net/bool[bool^]
 a|`$withConfig`
-|
+a|
 |===
 
 
@@ -246,7 +247,7 @@ public getCheckoutType():array
 [[template_models_design]]
 ==== Design
 
-Design model
+Design model of the deprecated CMS
 
 
 
@@ -259,27 +260,28 @@ Design model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |designName
-    |
+    a|designName
+    a|
 |link:http://php.net/string[string^]
-    |imageDir
-    |directory of images
+    a|imageDir
+    a|directory of images
 |link:http://php.net/bool[bool^]
-    |export
-    |directory of images
+    a|export
+    a|directory of images
 |link:http://php.net/string[string^]
-    |updatedAt
-    |created at date timestamp
+    a|updatedAt
+    a|created at date timestamp
 |link:http://php.net/string[string^]
-    |createdAt
-    |updated at date timestamp
+    a|createdAt
+    a|updated at date timestamp
 |link:http://php.net/array[array^]
-    |config
-    |list of configurations of each webstore
+    a|config
+    a|list of configurations of each webstore
 |===
 
 
@@ -317,111 +319,112 @@ Design configuration model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |webstoreId
-    |
+    a|webstoreId
+    a|
 |link:http://php.net/int[int^]
-    |error404ContentPageId
-    |
+    a|error404ContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |bankContentPageId
-    |
+    a|bankContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |cancellationRightsContentPageId
-    |
+    a|cancellationRightsContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |termsConditionsContentPageId
-    |
+    a|termsConditionsContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |contactContentPageId
-    |
+    a|contactContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |legalDisclosureContentPageId
-    |
+    a|legalDisclosureContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |helpContentPageId
-    |
+    a|helpContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |itemNotFoundContentPageId
-    |
+    a|itemNotFoundContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |paymentMethodsContentPageId
-    |
+    a|paymentMethodsContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |privacyPolicyContentPageId
-    |
+    a|privacyPolicyContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |shippingContentPageId
-    |
+    a|shippingContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |frontPageContentPageId
-    |
+    a|frontPageContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |customerRegistrationPageId
-    |
+    a|customerRegistrationPageId
+    a|
 |link:http://php.net/int[int^]
-    |orderConfirmationPageId
-    |
+    a|orderConfirmationPageId
+    a|
 |link:http://php.net/int[int^]
-    |lostPasswordPageId
-    |
+    a|lostPasswordPageId
+    a|
 |link:http://php.net/int[int^]
-    |loginPageId
-    |
+    a|loginPageId
+    a|
 |link:http://php.net/int[int^]
-    |logoutPageId
-    |
+    a|logoutPageId
+    a|
 |link:http://php.net/int[int^]
-    |typeOfCheckout
-    |
+    a|typeOfCheckout
+    a|
 |link:http://php.net/int[int^]
-    |checkoutStep1PageId
-    |
+    a|checkoutStep1PageId
+    a|
 |link:http://php.net/int[int^]
-    |checkoutStep2PageId
-    |
+    a|checkoutStep2PageId
+    a|
 |link:http://php.net/int[int^]
-    |checkoutStep3PageId
-    |
+    a|checkoutStep3PageId
+    a|
 |link:http://php.net/int[int^]
-    |checkoutStep4PageId
-    |
+    a|checkoutStep4PageId
+    a|
 |link:http://php.net/int[int^]
-    |checkoutStep5PageId
-    |
+    a|checkoutStep5PageId
+    a|
 |link:http://php.net/int[int^]
-    |checkoutStep6PageId
-    |
+    a|checkoutStep6PageId
+    a|
 |link:http://php.net/int[int^]
-    |checkoutStep7PageId
-    |
+    a|checkoutStep7PageId
+    a|
 |link:http://php.net/int[int^]
-    |checkoutStep8PageId
-    |
+    a|checkoutStep8PageId
+    a|
 |link:http://php.net/int[int^]
-    |checkoutStep9PageId
-    |
+    a|checkoutStep9PageId
+    a|
 |link:http://php.net/int[int^]
-    |checkoutStep10PageId
-    |
+    a|checkoutStep10PageId
+    a|
 |link:http://php.net/string[string^]
-    |pageDesignWebshop
-    |
+    a|pageDesignWebshop
+    a|
 |link:http://php.net/string[string^]
-    |pageDesignCheckout
-    |
+    a|pageDesignCheckout
+    a|
 |link:http://php.net/string[string^]
-    |pageDesignMyAccount
-    |
+    a|pageDesignMyAccount
+    a|
 |link:http://php.net/string[string^]
-    |pageDesignBlog
-    |
+    a|pageDesignBlog
+    a|
 |link:http://php.net/string[string^]
-    |pageDesignForum
-    |
+    a|pageDesignForum
+    a|
 |===
 
 

@@ -1,8 +1,3 @@
-:table-caption!:
-:example-caption!:
-:source-highlighter: prettify
-:sectids!:
-= Plentymarkets interface documentation
 
 
 [[helper_automaticemail]]
@@ -44,11 +39,12 @@ public sendAutomatic($email):bool
 Send the automatic email.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Helper.adoc#helper_models_automaticemail[`AutomaticEmail`]
 a|`$email`
-|
+a|
 |===
 
 
@@ -331,27 +327,28 @@ public getImageUrl($path, $plentyId = null, $size = &quot;&quot;, $fileType = &q
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$path`
-|
+a|
 
 |link:http://php.net/int[int^]
 a|`$plentyId`
-|
+a|
 
 |link:http://php.net/string[string^]
 a|`$size`
-|
+a|
 
 |link:http://php.net/string[string^]
 a|`$fileType`
-|
+a|
 
 |link:http://php.net/bool[bool^]
 a|`$isExternalImage`
-|
+a|
 |===
 
 
@@ -371,27 +368,28 @@ public getItemUrl($itemId, $plentyId, $urlContent = &quot;&quot;, $lang = &quot;
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$itemId`
-|
+a|
 
 |link:http://php.net/int[int^]
 a|`$plentyId`
-|
+a|
 
 |link:http://php.net/string[string^]
 a|`$urlContent`
-|
+a|
 
 |link:http://php.net/string[string^]
 a|`$lang`
-|
+a|
 
 |link:http://php.net/bool[bool^]
 a|`$useHttpsDomain`
-|
+a|
 |===
 
 
@@ -431,15 +429,16 @@ public __construct($message, $code):void
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$message`
-|
+a|
 
 |link:http://php.net/int[int^]
 a|`$code`
-|
+a|
 |===
 
 
@@ -479,15 +478,16 @@ public get($key, $default = null):mixed
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-|
+a|
 
 |
 a|`$default`
-|
+a|
 |===
 
 
@@ -527,19 +527,20 @@ public buildMapFromObjectList($list, $keyField, $valueField):Plenty\Modules\Help
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$list`
-|
+a|
 
 |link:http://php.net/string[string^]
 a|`$keyField`
-|
+a|
 
 |link:http://php.net/string[string^]
 a|`$valueField`
-|
+a|
 |===
 
 
@@ -578,11 +579,12 @@ public toDatabase($sString):string
 Method converts a string to self::DATABASE_ENCODING coding
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sString`
-|
+a|
 |===
 
 
@@ -602,11 +604,12 @@ public toEmail($sString):string
 Method converts a string to self::EMAIL_ENCODING coding
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sString`
-|
+a|
 |===
 
 
@@ -626,15 +629,16 @@ public toWebshop($sString, $sTargetEncoding = self::WEBSHOP_ENCODING):string
 Method converts a string to self::WEBSHOP_ENCODING coding
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sString`
-|
+a|
 
 |link:http://php.net/string[string^]
 a|`$sTargetEncoding`
-|[optional default=PlentyCoding::WEBSHOP_ENCODING]
+a|[optional default=PlentyCoding::WEBSHOP_ENCODING]
 |===
 
 
@@ -654,15 +658,16 @@ public toAdmin($sString, $sTargetEncoding = self::ADMIN_ENCODING):string
 Method converts a string to the sended coding. Default will be self::ADMIN_ENCODING coding used
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sString`
-|
+a|
 
 |link:http://php.net/string[string^]
 a|`$sTargetEncoding`
-|[optional default=PlentyCoding::ADMIN_ENCODING]
+a|[optional default=PlentyCoding::ADMIN_ENCODING]
 |===
 
 
@@ -682,11 +687,12 @@ public toGwt($sString):string
 Method converts a string to the sended coding
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sString`
-|
+a|
 |===
 
 
@@ -706,15 +712,16 @@ public toExport($sString, $sTargetEncoding = self::EXPORT_ENCODING):string
 Method converts a string to the sended coding. Default will be self::EXPORT_ENCODING coding used
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sString`
-|
+a|
 
 |link:http://php.net/string[string^]
 a|`$sTargetEncoding`
-|[optional default=PlentyCoding::EXPORT_ENCODING]
+a|[optional default=PlentyCoding::EXPORT_ENCODING]
 |===
 
 
@@ -734,11 +741,12 @@ public toLegacy($sString):string
 Method converts a string to self::LEGACY_ENCODING coding
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sString`
-|
+a|
 |===
 
 
@@ -758,15 +766,16 @@ public toPDF($sString, $sTargetEncoding = self::PDF_ENCODING):string
 Method converts a string to self::PDF_ENCODING coding
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sString`
-|The string to be encoded.
+a|The string to be encoded.
 
 |link:http://php.net/string[string^]
 a|`$sTargetEncoding`
-|The target encoding (since plentymarkets version 5.100). [optional, default=PlentyCoding::PDF_ENCODING]
+a|The target encoding (since plentymarkets version 5.100). [optional, default=PlentyCoding::PDF_ENCODING]
 |===
 
 
@@ -786,15 +795,16 @@ public toXML($string, $targetEncoding = self::XML_ENCODING):string
 Method converts a string to self::XML_ENCODING coding.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$string`
-|The string to be encoded.
+a|The string to be encoded.
 
 |link:http://php.net/string[string^]
 a|`$targetEncoding`
-|The target encoding (since plentymarkets version 5.100). [optional, default=PlentyCoding::XML_ENCODING]
+a|The target encoding (since plentymarkets version 5.100). [optional, default=PlentyCoding::XML_ENCODING]
 |===
 
 
@@ -814,11 +824,12 @@ public detect_encoding($sString):string
 Method returns the encoding of one string
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sString`
-|
+a|
 |===
 
 
@@ -838,19 +849,20 @@ public convertArray($array, $sTargetEncoding = self::UTF8_ENCODING, $convertKey 
 Method converts a multidimensional array to the desired coding
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$array`
-|
+a|
 
 |link:http://php.net/string[string^]
 a|`$sTargetEncoding`
-|[optional, default=PlentyCoding::UTF8_ENCODING]
+a|[optional, default=PlentyCoding::UTF8_ENCODING]
 
 |link:http://php.net/bool[bool^]
 a|`$convertKey`
-|[optional, default=false]
+a|[optional, default=false]
 |===
 
 
@@ -870,15 +882,16 @@ public cutTextForDB($text, $lenghtIntoDB):string
 cut the given text to fit for db insert.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$text`
-|
+a|
 
 |link:http://php.net/int[int^]
 a|`$lenghtIntoDB`
-|
+a|
 |===
 
 
@@ -898,11 +911,12 @@ public isValidUtf8($string):int
 Checks whether the given string is valid utf-8.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$string`
-|
+a|
 |===
 
 

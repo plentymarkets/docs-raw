@@ -1,8 +1,3 @@
-:table-caption!:
-:example-caption!:
-:source-highlighter: prettify
-:sectids!:
-= Plentymarkets interface documentation
 
 
 [[bi_keyfigure]]
@@ -44,11 +39,12 @@ public searchKeyFigureResults($searchRequests):Plenty\Modules\BI\KeyFigure\Model
 Search for key figure calculation results
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Bi.adoc#bi_models_keyfiguresearchrequests[`KeyFigureSearchRequests`]
 a|`$searchRequests`
-|Several key figure search requests
+a|Several key figure search requests
 |===
 
 
@@ -70,48 +66,49 @@ The key figure config model represents the configuration of a key figure.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |id
-    |Id of this configuration
+    a|id
+    a|Id of this configuration
 |link:http://php.net/string[string^]
-    |plentyIdHash
-    |The plentymarkets system id hash
+    a|plentyIdHash
+    a|The plentymarkets system id hash
 |link:http://php.net/string[string^]
-    |keyFigure
-    |Key figure identifier
+    a|keyFigure
+    a|Key figure identifier
 |link:http://php.net/string[string^]
-    |keyFigureCaption
-    |Key figure caption
+    a|keyFigureCaption
+    a|Key figure caption
 |link:http://php.net/string[string^]
-    |keyFigureName
-    |User defined name
+    a|keyFigureName
+    a|User defined name
 |        xref:Bi.adoc#bi_models_keyfigurefilter[`KeyFigureFilter`]
-    |filter
-    |Filter for calculating this key figure
+    a|filter
+    a|Filter for calculating this key figure
 |        xref:Bi.adoc#bi_models_keyfiguretarget[`KeyFigureTarget`]
-    |target
-    |Contains the target figures
+    a|target
+    a|Contains the target figures
 |        xref:Bi.adoc#bi_models_keyfiguremeta[`KeyFigureMeta`]
-    |meta
-    |Additional data
+    a|meta
+    a|Additional data
 |link:http://php.net/string[string^]
-    |updatedAt
-    |Time of last change
+    a|updatedAt
+    a|Time of last change
 |link:http://php.net/string[string^]
-    |createdAt
-    |Time of creation
+    a|createdAt
+    a|Time of creation
 |link:http://php.net/string[string^]
-    |externalId
-    |Identifier to assign the model
+    a|externalId
+    a|Identifier to assign the model
 |link:http://php.net/array[array^]
-    |dimensions
-    |List of existing dimensions
+    a|dimensions
+    a|List of existing dimensions
 |link:http://php.net/array[array^]
-    |dimensionValues
-    |List of dimension values
+    a|dimensionValues
+    a|List of dimension values
 |===
 
 
@@ -149,18 +146,19 @@ The key figure filter holds configured filters for a key figure calculation.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/array[array^]
-    |dataFilters
-    |Filters in notation ['filterName' => ['operator' => 'eq', 'value' => 123]]
+    a|dataFilters
+    a|Filters in notation ['filterName' => ['operator' => 'eq', 'value' => 123]]
 |link:http://php.net/string[string^]
-    |calculation
-    |Selected calculation method
+    a|calculation
+    a|Selected calculation method
 |link:http://php.net/string[string^]
-    |dimension
-    |Data group to group the result
+    a|dimension
+    a|Data group to group the result
 |===
 
 
@@ -198,21 +196,22 @@ The key figure meta holds additional data.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |comment
-    |User comment
+    a|comment
+    a|User comment
 |link:http://php.net/int[int^]
-    |creatorUserId
-    |Id of the user who created this key figure
+    a|creatorUserId
+    a|Id of the user who created this key figure
 |link:http://php.net/string[string^]
-    |creatorRealName
-    |Real name of the user who created this key figure
+    a|creatorRealName
+    a|Real name of the user who created this key figure
 |link:http://php.net/bool[bool^]
-    |isLimitEditing
-    |If true, then the key figure may only be edited by the creator
+    a|isLimitEditing
+    a|If true, then the key figure may only be edited by the creator
 |===
 
 
@@ -250,36 +249,37 @@ Represents a key figure result
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |id
-    |Primary key
+    a|id
+    a|Primary key
 |link:http://php.net/string[string^]
-    |plentyIdHash
-    |System ID hash
+    a|plentyIdHash
+    a|System ID hash
 |link:http://php.net/string[string^]
-    |configId
-    |Id of the configuration of the key figure, followed by the calculation interval and  The usage should be the exception, so this field usually resembles the content of idInterval.
+    a|configId
+    a|Id of the configuration of the key figure, followed by the calculation interval and  The usage should be the exception, so this field usually resembles the content of idInterval.
 |link:http://php.net/string[string^]
-    |scaleBasis
-    |Time reference value of the key figure result.
+    a|scaleBasis
+    a|Time reference value of the key figure result.
 |link:http://php.net/string[string^]
-    |dimension
-    |The name of the dimension.
+    a|dimension
+    a|The name of the dimension.
 |link:http://php.net/string[string^]
-    |interval
-    |Calculation interval.
+    a|interval
+    a|Calculation interval.
 |link:http://php.net/float[float^]
-    |primaryResult
-    |The actual calculation result of the primary result data field.
+    a|primaryResult
+    a|The actual calculation result of the primary result data field.
 |link:http://php.net/string[string^]
-    |furtherResult
-    |If further results were calculated in addition to the primary result, these are included in this field as a JSON object. The fields are defined in the KeyFigure class.
+    a|furtherResult
+    a|If further results were calculated in addition to the primary result, these are included in this field as a JSON object. The fields are defined in the KeyFigure class.
 |link:http://php.net/string[string^]
-    |calculatedAt
-    |Date of calculation.
+    a|calculatedAt
+    a|Date of calculation.
 |===
 
 
@@ -317,30 +317,31 @@ The model represent a key figure result in condensed form to the presentation.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |scaleBasis
-    |Time reference value of the key figure result. The structure of scaleBasis depends on the time interval of the key figure. At the interval day is the structure: YYYYMMDD. For the interval month: YYYYMMM. In the case of year: YYYYY.
+    a|scaleBasis
+    a|Time reference value of the key figure result. The structure of scaleBasis depends on the time interval of the key figure. At the interval day is the structure: YYYYMMDD. For the interval month: YYYYMMM. In the case of year: YYYYY.
 |link:http://php.net/string[string^]
-    |dimension
-    |The name of the dimension.
+    a|dimension
+    a|The name of the dimension.
 |link:http://php.net/float[float^]
-    |primaryResult
-    |The actual calculation result of the primary result data field.
+    a|primaryResult
+    a|The actual calculation result of the primary result data field.
 |link:http://php.net/string[string^]
-    |furtherResult
-    |If further results were calculated in addition to the primary result, these are included in this field as a JSON object. The fields are defined in the KeyFigure class.
+    a|furtherResult
+    a|If further results were calculated in addition to the primary result, these are included in this field as a JSON object. The fields are defined in the KeyFigure class.
 |link:http://php.net/string[string^]
-    |resultUnit
-    |Unit of the primary result.
+    a|resultUnit
+    a|Unit of the primary result.
 |link:http://php.net/float[float^]
-    |target
-    |Key figure target figure.
+    a|target
+    a|Key figure target figure.
 |link:http://php.net/string[string^]
-    |calculatedAt
-    |Date of calculation.
+    a|calculatedAt
+    a|Date of calculation.
 |===
 
 
@@ -378,12 +379,13 @@ The model represent search result of key figure result search.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/array[array^]
-    |searchResultList
-    |The list of found key figure result search result
+    a|searchResultList
+    a|The list of found key figure result search result
 |===
 
 
@@ -421,24 +423,25 @@ The key figure result search result model combine key figure information with ke
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/array[array^]
-    |keyFigureResults
-    |Key figure result list
+    a|keyFigureResults
+    a|Key figure result list
 |link:http://php.net/string[string^]
-    |interval
-    |Calculation interval.
+    a|interval
+    a|Calculation interval.
 |link:http://php.net/string[string^]
-    |searchId
-    |Identification string to assign the result
+    a|searchId
+    a|Identification string to assign the result
 |link:http://php.net/string[string^]
-    |keyFigure
-    |Key figure identifier
+    a|keyFigure
+    a|Key figure identifier
 |link:http://php.net/array[array^]
-    |error
-    |Error occurred
+    a|error
+    a|Error occurred
 |===
 
 
@@ -476,51 +479,52 @@ The model holds filter information for a search query for key figures.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |configId
-    |Filter that restricts the search result to key figure results of key figure configuration id. The id of the key figure configuration is mandatory and must be specified, if no value is passed for id.
+    a|configId
+    a|Filter that restricts the search result to key figure results of key figure configuration id. The id of the key figure configuration is mandatory and must be specified, if no value is passed for id.
 |link:http://php.net/string[string^]
-    |interval
-    |Time interval in which the result was calculated: day, week, month, quarter, year.
+    a|interval
+    a|Time interval in which the result was calculated: day, week, month, quarter, year.
 |link:http://php.net/string[string^]
-    |dimension
-    |This field will be removed until 11.2020
+    a|dimension
+    a|This field will be removed until 11.2020
 |link:http://php.net/array[array^]
-    |dimensions
-    |Filter that restricts the search result to key figure results of one data group. The dimension must be specified.
+    a|dimensions
+    a|Filter that restricts the search result to key figure results of one data group. The dimension must be specified.
 |link:http://php.net/string[string^]
-    |scaleBasis
-    |Filter restricts the list of results to items with a scale base time during the specified period. For the time interval day, a date or comma separated two dates (format: YYYYMMDD) can be specified. For the time interval week, several comma-separated days (YYYYMMDD) of different weeks can be specified. For the interval month, a comma separated list of months is expected e.g. 2020-01, 2020-02.
+    a|scaleBasis
+    a|Filter restricts the list of results to items with a scale base time during the specified period. For the time interval day, a date or comma separated two dates (format: YYYYMMDD) can be specified. For the time interval week, several comma-separated days (YYYYMMDD) of different weeks can be specified. For the interval month, a comma separated list of months is expected e.g. 2020-01, 2020-02.
 |link:http://php.net/bool[bool^]
-    |resultUnit
-    |Return unit of the primary result.
+    a|resultUnit
+    a|Return unit of the primary result.
 |link:http://php.net/bool[bool^]
-    |target
-    |Return key figure target figure.
+    a|target
+    a|Return key figure target figure.
 |link:http://php.net/bool[bool^]
-    |groupByDimension
-    |Groups the results by dimension
+    a|groupByDimension
+    a|Groups the results by dimension
 |link:http://php.net/string[string^]
-    |aggregateFunction
-    |Define aggregate (group) function that will operate on key figure results. Default function: sum. Allowed values: sum, avg, count, max, min
+    a|aggregateFunction
+    a|Define aggregate (group) function that will operate on key figure results. Default function: sum. Allowed values: sum, avg, count, max, min
 |link:http://php.net/int[int^]
-    |itemsPerPage
-    |Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. The default number of results is 12 and the maximum is 100.
+    a|itemsPerPage
+    a|Limits the number of results listed per page to a specific number. The number of variations to be listed per page must be specified. The default number of results is 12 and the maximum is 100.
 |link:http://php.net/int[int^]
-    |page
-    |Number of the requested page, default value: 1
+    a|page
+    a|Number of the requested page, default value: 1
 |link:http://php.net/string[string^]
-    |scaleBasisSortOrder
-    |Sort the results using scaleBasis if a sort order has been defined, possible values are: asc, desc.
+    a|scaleBasisSortOrder
+    a|Sort the results using scaleBasis if a sort order has been defined, possible values are: asc, desc.
 |link:http://php.net/string[string^]
-    |primaryResultSortOrder
-    |Sort the results using primaryResult if a sort order has been defined, possible values are: asc, desc.
+    a|primaryResultSortOrder
+    a|Sort the results using primaryResult if a sort order has been defined, possible values are: asc, desc.
 |link:http://php.net/string[string^]
-    |searchId
-    |Identification string to assign the result
+    a|searchId
+    a|Identification string to assign the result
 |===
 
 
@@ -558,12 +562,13 @@ The model represent several key figure search requests.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/array[array^]
-    |searchRequests
-    |The list of key figure search requests
+    a|searchRequests
+    a|The list of key figure search requests
 |===
 
 
@@ -601,87 +606,88 @@ The key figure target day model contains the target figures for each weekday, we
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/float[float^]
-    |d1
-    |Target value for Monday
+    a|d1
+    a|Target value for Monday
 |link:http://php.net/float[float^]
-    |d2
-    |Target value for Tuesday
+    a|d2
+    a|Target value for Tuesday
 |link:http://php.net/float[float^]
-    |d3
-    |Target value for Wednesday
+    a|d3
+    a|Target value for Wednesday
 |link:http://php.net/float[float^]
-    |d4
-    |Target value for Thursday
+    a|d4
+    a|Target value for Thursday
 |link:http://php.net/float[float^]
-    |d5
-    |Target value for Friday
+    a|d5
+    a|Target value for Friday
 |link:http://php.net/float[float^]
-    |d6
-    |Target value for Saturday
+    a|d6
+    a|Target value for Saturday
 |link:http://php.net/float[float^]
-    |d7
-    |Target value for Sunday
+    a|d7
+    a|Target value for Sunday
 |link:http://php.net/float[float^]
-    |w
-    |Target value for weeks
+    a|w
+    a|Target value for weeks
 |link:http://php.net/float[float^]
-    |m1
-    |Target value for January
+    a|m1
+    a|Target value for January
 |link:http://php.net/float[float^]
-    |m2
-    |Target value for February
+    a|m2
+    a|Target value for February
 |link:http://php.net/float[float^]
-    |m3
-    |Target value for March
+    a|m3
+    a|Target value for March
 |link:http://php.net/float[float^]
-    |m4
-    |Target value for April
+    a|m4
+    a|Target value for April
 |link:http://php.net/float[float^]
-    |m5
-    |Target value for May
+    a|m5
+    a|Target value for May
 |link:http://php.net/float[float^]
-    |m6
-    |Target value for June
+    a|m6
+    a|Target value for June
 |link:http://php.net/float[float^]
-    |m7
-    |Target value for July
+    a|m7
+    a|Target value for July
 |link:http://php.net/float[float^]
-    |m8
-    |Target value for August
+    a|m8
+    a|Target value for August
 |link:http://php.net/float[float^]
-    |m9
-    |Target value for September
+    a|m9
+    a|Target value for September
 |link:http://php.net/float[float^]
-    |m10
-    |Target value for October
+    a|m10
+    a|Target value for October
 |link:http://php.net/float[float^]
-    |m11
-    |Target value for November
+    a|m11
+    a|Target value for November
 |link:http://php.net/float[float^]
-    |m12
-    |Target value for December
+    a|m12
+    a|Target value for December
 |link:http://php.net/float[float^]
-    |q1
-    |Target value for first quarter
+    a|q1
+    a|Target value for first quarter
 |link:http://php.net/float[float^]
-    |q2
-    |Target value for second quarter
+    a|q2
+    a|Target value for second quarter
 |link:http://php.net/float[float^]
-    |q3
-    |Target value for third quarter
+    a|q3
+    a|Target value for third quarter
 |link:http://php.net/float[float^]
-    |q4
-    |Target value for fourth quarter
+    a|q4
+    a|Target value for fourth quarter
 |link:http://php.net/float[float^]
-    |yl
-    |Target value for last year
+    a|yl
+    a|Target value for last year
 |link:http://php.net/float[float^]
-    |y
-    |Target value for this year
+    a|y
+    a|Target value for this year
 |===
 
 
@@ -719,18 +725,19 @@ The key figure template model contains preview data of a key figure template
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |keyFigureName
-    |User defined name
+    a|keyFigureName
+    a|User defined name
 |link:http://php.net/string[string^]
-    |keyFigure
-    |Key figure identifier
+    a|keyFigure
+    a|Key figure identifier
 |link:http://php.net/string[string^]
-    |className
-    |Template class name
+    a|className
+    a|Template class name
 |===
 
 
@@ -790,31 +797,32 @@ public searchRawData($dataName, $createdAtTimestamp, $processStatus, $itemsPerPa
 Get list of raw data. Valid filter combinations: (dataName), (dataName &amp; processStatus), (createdAtTimestamp)
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$dataName`
-|Filter that restricts the search result to raw data files.
+a|Filter that restricts the search result to raw data files.
 
 |link:http://php.net/int[int^]
 a|`$createdAtTimestamp`
-|Timestamp from when daily generated raw data are to be filtered. The maximum distance may not exceed one year.
+a|Timestamp from when daily generated raw data are to be filtered. The maximum distance may not exceed one year.
 
 |link:http://php.net/string[string^]
 a|`$processStatus`
-|Process status after which filtering is to take place
+a|Process status after which filtering is to take place
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-|The number of raw data files to be returned. The default number of files is 20 and the maximum is 100.
+a|The number of raw data files to be returned. The default number of files is 20 and the maximum is 100.
 
 |link:http://php.net/string[string^]
 a|`$sortOrder`
-|Defines the sort order, possible values are: asc, desc. With simultaneous filtering to dataName, only the current result is sorted.
+a|Defines the sort order, possible values are: asc, desc. With simultaneous filtering to dataName, only the current result is sorted.
 
 |link:http://php.net/int[int^]
 a|`$page`
-|
+a|
 |===
 
 
@@ -834,11 +842,12 @@ public getRawDataFile($path):void
 Get a raw data file from the storage, the storage path of the file must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$path`
-|The raw data file path
+a|The raw data file path
 |===
 
 
@@ -858,15 +867,16 @@ public deleteRawData($dataName, $primaryIds):void
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$dataName`
-|
+a|
 
 |link:http://php.net/array[array^]
 a|`$primaryIds`
-|
+a|
 |===
 
 
@@ -916,11 +926,12 @@ public updateRawDataConfigs($data):Plenty\Modules\BI\RawData\Models\RawDataConfi
 Resets all saved raw data configurations with given data
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-|The configs data
+a|The configs data
 |===
 
 
@@ -942,15 +953,16 @@ The BI raw data config model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |dataName
-    |The raw data name
+    a|dataName
+    a|The raw data name
 |link:http://php.net/int[int^]
-    |active
-    |If active, raw data is generated daily
+    a|active
+    a|If active, raw data is generated daily
 |===
 
 
@@ -988,15 +1000,16 @@ List of all saved raw data configurations
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |plentyIdHash
-    |The plentymarkets system id hash
+    a|plentyIdHash
+    a|The plentymarkets system id hash
 |link:http://php.net/array[array^]
-    |configs
-    |List of all saved configurations
+    a|configs
+    a|List of all saved configurations
 |===
 
 
@@ -1034,45 +1047,46 @@ The BI raw data creator model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |dataName
-    |Exclusive identifier for this raw data.
+    a|dataName
+    a|Exclusive identifier for this raw data.
 |link:http://php.net/string[string^]
-    |fileFormat
-    |File format
+    a|fileFormat
+    a|File format
 |link:http://php.net/int[int^]
-    |limitPage
-    |Number of data rows to be queried maximum per request.
+    a|limitPage
+    a|Number of data rows to be queried maximum per request.
 |link:http://php.net/int[int^]
-    |limitDay
-    |Number of data rows to be queried maximum per day.
+    a|limitDay
+    a|Number of data rows to be queried maximum per day.
 |link:http://php.net/string[string^]
-    |earliestPossibleDataDate
-    |Earliest possible date from which data should be requested.
+    a|earliestPossibleDataDate
+    a|Earliest possible date from which data should be requested.
 |link:http://php.net/int[int^]
-    |deleteRawDataAfterDaysMinimum
-    |Minimum number of days after the generated raw data is deleted
+    a|deleteRawDataAfterDaysMinimum
+    a|Minimum number of days after the generated raw data is deleted
 |link:http://php.net/int[int^]
-    |deleteRawDataAfterDaysMaximum
-    |Maximum number of days after the generated raw data is deleted
+    a|deleteRawDataAfterDaysMaximum
+    a|Maximum number of days after the generated raw data is deleted
 |link:http://php.net/string[string^]
-    |filterType
-    |Defines how this raw data is filtered.
+    a|filterType
+    a|Defines how this raw data is filtered.
 |link:http://php.net/string[string^]
-    |dataUpdatedAtColumnName
-    |Name of the column that contains the date of the last change to a data row.
+    a|dataUpdatedAtColumnName
+    a|Name of the column that contains the date of the last change to a data row.
 |link:http://php.net/bool[bool^]
-    |defaultActive
-    |If true, then these raw data are collected independently of the user configuration.
+    a|defaultActive
+    a|If true, then these raw data are collected independently of the user configuration.
 |link:http://php.net/string[string^]
-    |interval
-    |Interval in which this creator runs through
+    a|interval
+    a|Interval in which this creator runs through
 |link:http://php.net/bool[bool^]
-    |shouldProcess
-    |Internal value, indicates whether this data should be transferred to the data warehouse database
+    a|shouldProcess
+    a|Internal value, indicates whether this data should be transferred to the data warehouse database
 |===
 
 
@@ -1110,33 +1124,34 @@ The BI raw model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |id
-    |The raw data id
+    a|id
+    a|The raw data id
 |link:http://php.net/string[string^]
-    |plentyIdHash
-    |The plentymarkets system id hash
+    a|plentyIdHash
+    a|The plentymarkets system id hash
 |link:http://php.net/string[string^]
-    |dataName
-    |The raw data name
+    a|dataName
+    a|The raw data name
 |link:http://php.net/string[string^]
-    |processStatus
-    |Status of data warehouse processing
+    a|processStatus
+    a|Status of data warehouse processing
 |link:http://php.net/int[int^]
-    |shouldProcess
-    |Specifies whether this file should be transferred to the data warehouse
+    a|shouldProcess
+    a|Specifies whether this file should be transferred to the data warehouse
 |link:http://php.net/string[string^]
-    |path
-    |Storage path to raw data file
+    a|path
+    a|Storage path to raw data file
 |link:http://php.net/string[string^]
-    |createdAt
-    |Creation time of this raw data file
+    a|createdAt
+    a|Creation time of this raw data file
 |link:http://php.net/string[string^]
-    |dataCreatedAt
-    |Creation date of the data
+    a|dataCreatedAt
+    a|Creation date of the data
 |===
 
 
@@ -1174,15 +1189,16 @@ The BI raw data search result model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |after
-    |The last evaluated key as base64, provide that as the starting point for the next query (pagination).
+    a|after
+    a|The last evaluated key as base64, provide that as the starting point for the next query (pagination).
 |link:http://php.net/array[array^]
-    |searchResult
-    |The raw data search result
+    a|searchResult
+    a|The raw data search result
 |===
 
 

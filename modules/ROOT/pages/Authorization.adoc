@@ -1,8 +1,3 @@
-:table-caption!:
-:example-caption!:
-:source-highlighter: prettify
-:sectids!:
-= Plentymarkets interface documentation
 
 
 [[authorization_authorization]]
@@ -79,19 +74,20 @@ public __construct($message = &quot;&quot;, $code, $previous = null):void
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$message`
-|The exception message
+a|The exception message
 
 |link:http://php.net/int[int^]
 a|`$code`
-|The exception code
+a|The exception code
 
 |
 a|`$previous`
-|
+a|
 |===
 
 
@@ -126,12 +122,28 @@ public addMissingPermission($permissionKey):void
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$permissionKey`
-|The permission key
+a|The permission key
 |===
+
+
+[source%nowrap, php]
+----
+
+public jsonSerialize():void
+
+----
+
+    
+
+
+
+
+
 
 
 [[authorization_authorization_models]]
@@ -152,24 +164,25 @@ The current authorized user
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    |realName
-    |The real name of the authorized user
+    a|realName
+    a|The real name of the authorized user
 |link:http://php.net/string[string^]
-    |lang
-    |The back end language used by the authorized user
+    a|lang
+    a|The back end language used by the authorized user
 |link:http://php.net/string[string^]
-    |isSupportUser
-    |Shows whether the authorized user is a support user
+    a|isSupportUser
+    a|Shows whether the authorized user is a support user
 |        xref:Authentication.adoc#authentication_models_user[`User`]
-    |user
-    |Further information about the user's class, roles and rights
+    a|user
+    a|Further information about the user's class, roles and rights
 |link:http://php.net/string[string^]
-    |oauthAccessTokensId
-    |The access token for OAUTH authentication
+    a|oauthAccessTokensId
+    a|The access token for OAUTH authentication
 |===
 
 
@@ -207,18 +220,19 @@ The authentication Permission (REST) model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |id
-    |permission id
+    a|id
+    a|permission id
 |link:http://php.net/string[string^]
-    |permissionKey
-    |permission key
+    a|permissionKey
+    a|permission key
 |link:http://php.net/array[array^]
-    |roles
-    |
+    a|roles
+    a|
 |===
 
 
@@ -256,30 +270,31 @@ The Role authentication model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |id
-    |role id
+    a|id
+    a|role id
 |link:http://php.net/string[string^]
-    |name
-    |role name
+    a|name
+    a|role name
 |link:http://php.net/bool[bool^]
-    |holdParents
-    |hold parents if there is a new child
+    a|holdParents
+    a|hold parents if there is a new child
 |link:http://php.net/bool[bool^]
-    |hidden
-    |hidden status for internal roles
+    a|hidden
+    a|hidden status for internal roles
 |link:http://php.net/array[array^]
-    |users
-    |
+    a|users
+    a|
 |link:http://php.net/array[array^]
-    |permissions
-    |
+    a|permissions
+    a|
 |link:http://php.net/array[array^]
-    |accessControl
-    |
+    a|accessControl
+    a|
 |===
 
 
@@ -336,11 +351,12 @@ public processUnguarded($callable):void
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/callable[callable^]
 a|`$callable`
-|
+a|
 |===
 
 

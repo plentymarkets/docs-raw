@@ -1,8 +1,3 @@
-:table-caption!:
-:example-caption!:
-:source-highlighter: prettify
-:sectids!:
-= Plentymarkets interface documentation
 
 
 [[contentcache_contentcachelink]]
@@ -26,24 +21,25 @@ Eloquent model representing a Content Cache Link.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |id
-    |
+    a|id
+    a|
 |link:http://php.net/int[int^]
-    |plentyId
-    |
+    a|plentyId
+    a|
 |link:http://php.net/string[string^]
-    |linkType
-    |
+    a|linkType
+    a|
 |link:http://php.net/string[string^]
-    |cacheKey
-    |
+    a|cacheKey
+    a|
 |link:http://php.net/int[int^]
-    |linkId
-    |
+    a|linkId
+    a|
 |===
 
 
@@ -85,15 +81,16 @@ Eloquent model representing the Content Cache Settings.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |plentyId
-    |
+    a|plentyId
+    a|
 |link:http://php.net/bool[bool^]
-    |contentCacheActive
-    |
+    a|contentCacheActive
+    a|
 |===
 
 
@@ -150,15 +147,16 @@ public invalidateVariationIds($variationIds, $plentyId = null):void
 Invalidate all cache entries related to given variation ids.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$variationIds`
-|Ids of the variation to invalidate cache entries for
+a|Ids of the variation to invalidate cache entries for
 
 |link:http://php.net/int[int^]
 a|`$plentyId`
-|
+a|
 |===
 
 
@@ -178,15 +176,16 @@ public invalidateItemIds($itemIds, $plentyId = null):void
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$itemIds`
-|
+a|
 
 |link:http://php.net/int[int^]
 a|`$plentyId`
-|
+a|
 |===
 
 
@@ -206,11 +205,12 @@ public invalidateAll($plentyId = null):void
 Invalidate all cache entries related to given plenty id.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-|
+a|
 |===
 
 
@@ -230,11 +230,12 @@ public invalidateUri($uri):void
 Invalidate cache entries by URI
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$uri`
-|
+a|
 |===
 
 
@@ -303,11 +304,12 @@ public linkVariationsToResponse($variationIds):void
 Link variations to current response.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$variationIds`
-|Ids of variations referenced by the current response.
+a|Ids of variations referenced by the current response.
 |===
 
 
@@ -346,11 +348,12 @@ public getSettings($plentyId):Plenty\Modules\ContentCache\ContentCacheSettings\C
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-|
+a|
 |===
 
 
@@ -370,11 +373,12 @@ public getSettingsMultiple($plentyIds):void
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$plentyIds`
-|
+a|
 |===
 
 
@@ -394,15 +398,16 @@ public saveSettings($plentyId, $contentCacheActive):Plenty\Modules\ContentCache\
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-|
+a|
 
 |link:http://php.net/bool[bool^]
 a|`$contentCacheActive`
-|
+a|
 |===
 
 

@@ -1,8 +1,3 @@
-:table-caption!:
-:example-caption!:
-:source-highlighter: prettify
-:sectids!:
-= Plentymarkets interface documentation
 
 
 [[payment_payment]]
@@ -44,15 +39,16 @@ public createContactRelation($payment, $contact):Plenty\Modules\Payment\Models\P
 Creates a payment contact relation.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Payment.adoc#payment_models_payment[`Payment`]
 a|`$payment`
-|The ID of the payment
+a|The ID of the payment
 
 |        xref:Account.adoc#account_models_contact[`Contact`]
 a|`$contact`
-|The ID of the contact
+a|The ID of the contact
 |===
 
 
@@ -72,11 +68,12 @@ public deleteContactRelation($payment):void
 Deletes a payment contact relation.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Payment.adoc#payment_models_payment[`Payment`]
 a|`$payment`
-|The ID of the payment
+a|The ID of the payment
 |===
 
 
@@ -84,7 +81,7 @@ a|`$payment`
 [[payment_contracts_paymentmatcherrepositorycontract]]
 ==== PaymentMatcherRepositoryContract
 
-The PaymentMatcherRepositoryContract
+The PaymentMatcherRepositoryContract automatically matching payments to an order.
 
 
 
@@ -112,18 +109,19 @@ public checkMapFindAssignPayment($mopId, $data):string
 
 
 
-
+Checks and assigns payment data.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$mopId`
-|
+a|
 
 |
 a|`$data`
-|
+a|
 |===
 
 
@@ -140,14 +138,15 @@ public findAssignPayment($payment):void
 
 
 
-
+Finds and assigns payment data
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Payment.adoc#payment_models_payment[`Payment`]
 a|`$payment`
-|
+a|
 |===
 
 
@@ -164,14 +163,15 @@ public getMatchingRatesForPayment($paymentId):array
 
 
 
-
+Gets the matching of payment data with orders.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$paymentId`
-|
+a|
 |===
 
 
@@ -210,15 +210,16 @@ public createOrderRelation($payment, $order):Plenty\Modules\Payment\Models\Payme
 Creates a payment order relation.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Payment.adoc#payment_models_payment[`Payment`]
 a|`$payment`
-|The ID of the payment
+a|The ID of the payment
 
 |        xref:Order.adoc#order_models_order[`Order`]
 a|`$order`
-|The ID of the order
+a|The ID of the order
 |===
 
 
@@ -238,11 +239,12 @@ public findOrderRelation($payment):Plenty\Modules\Payment\Models\PaymentOrderRel
 Gets the payment order relation.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Payment.adoc#payment_models_payment[`Payment`]
 a|`$payment`
-|
+a|
 |===
 
 
@@ -262,11 +264,12 @@ public deleteOrderRelation($payment):void
 Deletes a payment order relation.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Payment.adoc#payment_models_payment[`Payment`]
 a|`$payment`
-|The ID of the payment
+a|The ID of the payment
 |===
 
 
@@ -286,15 +289,16 @@ public createOrderRelationWithValidation($paymentId, $orderId):Plenty\Modules\Pa
 Assign a payment to an order ID if order ID is valid and order ID doesn&#039;t have a payment assigned.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$paymentId`
-|
+a|
 
 |link:http://php.net/int[int^]
 a|`$orderId`
-|
+a|
 |===
 
 
@@ -314,11 +318,12 @@ public autoAssignPayments($paymentIds):array
 Bulk auto assign payments
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$paymentIds`
-|
+a|
 |===
 
 
@@ -372,11 +377,12 @@ public findByPropertyId($propertyId):array
 Gets a property. The ID of the payment property must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$propertyId`
-|The ID of the payment property
+a|The ID of the payment property
 |===
 
 
@@ -396,11 +402,12 @@ public allByPaymentId($paymentId):array
 Lists properties of a payment. The ID of the payment must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$paymentId`
-|The ID of the payment
+a|The ID of the payment
 |===
 
 
@@ -420,11 +427,12 @@ public allByTypeId($typeId):array
 Lists properties of a property type. The ID of the property type must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$typeId`
-|The ID of the payment property type. The following property types are available:
+a|The ID of the payment property type. The following property types are available:
 <ul>
     <li>Transaction ID = 1</li>
     <li>Reference ID = 2</li>
@@ -476,15 +484,16 @@ public findByCreatedDateInterval($startDate, $endDate):array
 Lists properties by creation date. The start and the end of the date range must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$startDate`
-|The start date of the date range for the date of creation of the property
+a|The start date of the date range for the date of creation of the property
 
 |link:http://php.net/string[string^]
 a|`$endDate`
-|The end date of the date range for the date of creation of the property
+a|The end date of the date range for the date of creation of the property
 |===
 
 
@@ -504,11 +513,12 @@ public createProperty($data):Plenty\Modules\Payment\Models\PaymentProperty
 Creates a payment property.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-|
+a|
 |===
 
 
@@ -528,11 +538,12 @@ public changeProperty($data):Plenty\Modules\Payment\Models\PaymentProperty
 Updates a payment property.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Payment.adoc#payment_models_paymentproperty[`PaymentProperty`]
 a|`$data`
-|
+a|
 |===
 
 
@@ -571,11 +582,12 @@ public allTypeNames($lang):array
 Lists payment property type names. The language of the property type names must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-|The language of the payment property type name
+a|The language of the payment property type name
 |===
 
 
@@ -595,11 +607,12 @@ public findByNameId($nameId):array
 Finds a payment property type name. The ID of the payment property type name must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$nameId`
-|The ID of the payment property type name
+a|The ID of the payment property type name
 |===
 
 
@@ -619,11 +632,12 @@ public createTypeName($data):Plenty\Modules\Payment\Models\PaymentPropertyTypeNa
 Creates a payment property type name.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-|
+a|
 |===
 
 
@@ -643,11 +657,12 @@ public changeProperty($data):array
 Updates a payment property type name.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-|
+a|
 |===
 
 
@@ -686,11 +701,12 @@ public allTypes($lang):array
 Lists payment property types. The language of the property type must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-|The language of the payment property type
+a|The language of the payment property type
 |===
 
 
@@ -710,11 +726,12 @@ public findTypesById($id, $lang):array
 Gets a payment property type. The ID of the property type must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-|The ID of the payment property type. The following property types are available:
+a|The ID of the payment property type. The following property types are available:
 <ul>
     <li>Transaction ID = 1</li>
     <li>Reference ID = 2</li>
@@ -750,7 +767,7 @@ a|`$id`
 
 |link:http://php.net/string[string^]
 a|`$lang`
-|The language of the payment property type
+a|The language of the payment property type
 |===
 
 
@@ -770,11 +787,12 @@ public createType($data):Plenty\Modules\Payment\Models\PaymentPropertyType
 Creates a payment property type.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-|
+a|
 |===
 
 
@@ -794,11 +812,12 @@ public changeProperty($data):Plenty\Modules\Payment\Models\PaymentPropertyType
 Updates a payment property type.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-|
+a|
 |===
 
 
@@ -837,15 +856,16 @@ public getAll($itemsPerPage = 50, $page = 1):array
 Lists payments.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-|The number of items to list per page
+a|The number of items to list per page
 
 |link:http://php.net/int[int^]
 a|`$page`
-|The page of results to search for
+a|The page of results to search for
 |===
 
 
@@ -862,22 +882,23 @@ public search($page = 1, $itemsPerPage = \Plenty\Modules\Payment\Models\Payment:
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
-
+Searches for a list of payments.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-|The shown page. Default value is 1.
+a|The shown page. Default value is 1.
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-|The items shown per page. Default value is 50.
+a|The items shown per page. Default value is 50.
 
 |link:http://php.net/array[array^]
 a|`$with`
-|The relations to be loaded.
+a|The relations to be loaded.
 |===
 
 
@@ -897,11 +918,12 @@ public getPaymentById($paymentId):Plenty\Modules\Payment\Models\Payment
 Gets a payment. The ID of the payment must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$paymentId`
-|The ID of the payment
+a|The ID of the payment
 |===
 
 
@@ -921,19 +943,20 @@ public getPaymentsByMethodId($methodId, $itemsPerPage = 50, $page = 1):array
 Lists payments of a payment method. The ID of the payment method must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$methodId`
-|The ID of the payment method
+a|The ID of the payment method
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-|The number of items to list per page
+a|The number of items to list per page
 
 |link:http://php.net/int[int^]
 a|`$page`
-|The page of results to search for
+a|The page of results to search for
 |===
 
 
@@ -953,19 +976,20 @@ public getPaymentsByStatusId($statusId, $itemsPerPage = 50, $page = 1):array
 Lists payments of a payment status. The ID of the payment status must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$statusId`
-|The ID of the payment status
+a|The ID of the payment status
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-|The number of items to list per page
+a|The number of items to list per page
 
 |link:http://php.net/int[int^]
 a|`$page`
-|The page of results to search for
+a|The page of results to search for
 |===
 
 
@@ -985,19 +1009,20 @@ public getPaymentsByTransactionType($transactionType, $itemsPerPage = 50, $page 
 Lists payments of a transaction type. The transaction type must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$transactionType`
-|The transaction type of the payment
+a|The transaction type of the payment
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-|The number of items to list per page
+a|The number of items to list per page
 
 |link:http://php.net/int[int^]
 a|`$page`
-|The page of results to search for
+a|The page of results to search for
 |===
 
 
@@ -1017,11 +1042,12 @@ public getPaymentsByOrderId($orderId):array
 Lists payments of an order. The ID of the order must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$orderId`
-|The ID of the order
+a|The ID of the order
 |===
 
 
@@ -1041,23 +1067,24 @@ public getPaymentsByImportDateInterval($startDate, $endDate, $itemsPerPage = 50,
 Lists payments by import date. The start and the end of the date range must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$startDate`
-|The start date of the date range for the import date of the payment
+a|The start date of the date range for the import date of the payment
 
 |link:http://php.net/string[string^]
 a|`$endDate`
-|The end date of the date range for the import date of the payment
+a|The end date of the date range for the import date of the payment
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-|The number of items to list per page
+a|The number of items to list per page
 
 |link:http://php.net/int[int^]
 a|`$page`
-|The page of results to search for
+a|The page of results to search for
 |===
 
 
@@ -1077,23 +1104,24 @@ public getPaymentsByEntryDateInterval($startDate, $endDate, $itemsPerPage = 50, 
 Lists payments by entry date. The start and the end of the date range must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$startDate`
-|The start date of the date range for the entry date of the payment
+a|The start date of the date range for the entry date of the payment
 
 |link:http://php.net/string[string^]
 a|`$endDate`
-|The end date of the date range for the entry date of the payment
+a|The end date of the date range for the entry date of the payment
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-|The number of items to list per page
+a|The number of items to list per page
 
 |link:http://php.net/int[int^]
 a|`$page`
-|The page of results to search for
+a|The page of results to search for
 |===
 
 
@@ -1113,23 +1141,24 @@ public getPaymentsByPropertyTypeAndValue($propertyTypeId, $propertyValue, $items
 Lists payments by payment property type and value.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$propertyTypeId`
-|The property type
+a|The property type
 
 |
 a|`$propertyValue`
-|The property value
+a|The property value
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-|The number of items to list per page
+a|The number of items to list per page
 
 |link:http://php.net/int[int^]
 a|`$page`
-|The page of results to search for
+a|The page of results to search for
 |===
 
 
@@ -1149,11 +1178,12 @@ public createPayment($data):Plenty\Modules\Payment\Models\Payment
 Creates a payment.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-|
+a|
 |===
 
 
@@ -1173,11 +1203,12 @@ public updatePayment($data):Plenty\Modules\Payment\Models\Payment
 Updates a payment.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-|
+a|
 |===
 
 
@@ -1227,11 +1258,12 @@ public deletePayment($paymentId):void
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$paymentId`
-|
+a|
 |===
 
 
@@ -1251,15 +1283,16 @@ public splitAndAssignPayment($paymentId, $orderIds):bool
 Split and assign a payment to given order IDs
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$paymentId`
-|
+a|
 
 |link:http://php.net/array[array^]
 a|`$orderIds`
-|
+a|
 |===
 
 
@@ -1279,11 +1312,12 @@ public deletePayments($paymentIds):array
 Bulk delete payments.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$paymentIds`
-|An array containing payment ids. Eg: [ids => [1, 2, 3]]
+a|An array containing payment ids. Eg: [ids => [1, 2, 3]]
 |===
 
 
@@ -1333,11 +1367,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-|
+a|
 |===
 
 
@@ -1391,7 +1426,7 @@ Clears the filter array.
 [[payment_models_payment]]
 ==== Payment
 
-The payment model
+The payment model representing a received payment by a payment service provider.
 
 
 
@@ -1404,39 +1439,40 @@ The payment model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |id
-    |The ID of the payment
+    a|id
+    a|The ID of the payment
 |link:http://php.net/float[float^]
-    |amount
-    |The amount of the payment
+    a|amount
+    a|The amount of the payment
 |link:http://php.net/float[float^]
-    |exchangeRatio
-    |The exchange rate. Exchange rates are used if the default currency saved in plentymarkets differs from the currency of the order.
+    a|exchangeRatio
+    a|The exchange rate. Exchange rates are used if the default currency saved in plentymarkets differs from the currency of the order.
 |link:http://php.net/int[int^]
-    |parentId
-    |The ID of the parent payment
+    a|parentId
+    a|The ID of the parent payment
 |link:http://php.net/int[int^]
-    |deleted
-    |A deleted payment. Deleted payments have the value 1 and are not displayed in the plentymarkets back end.
+    a|deleted
+    a|A deleted payment. Deleted payments have the value 1 and are not displayed in the plentymarkets back end.
 |link:http://php.net/int[int^]
-    |unaccountable
-    |An unassigned payment. Unassigned payments have the value 1.
+    a|unaccountable
+    a|An unassigned payment. Unassigned payments have the value 1.
 |link:http://php.net/string[string^]
-    |currency
-    |The currency of the payment in ISO 4217 code.
+    a|currency
+    a|The currency of the payment in ISO 4217 code.
 |link:http://php.net/string[string^]
-    |type
-    |The payment type. Available types are credit and debit.
+    a|type
+    a|The payment type. Available types are credit and debit.
 |link:http://php.net/string[string^]
-    |hash
-    |The hash code of the payment. The hash code consists of 32 characters and is automatically generated.
+    a|hash
+    a|The hash code of the payment. The hash code consists of 32 characters and is automatically generated.
 |link:http://php.net/int[int^]
-    |origin
-    |The origin of the payment. The following origins are available:
+    a|origin
+    a|The origin of the payment. The following origins are available:
 <ul>
     <li>Undefined = 0</li>
     <li>System = 1</li>
@@ -1448,52 +1484,52 @@ The payment model
     <li>POS = 7</li>
 </ul>
 |link:http://php.net/string[string^]
-    |receivedAt
-    |The time the payment was received
+    a|receivedAt
+    a|The time the payment was received
 |link:http://php.net/string[string^]
-    |importedAt
-    |The time the payment was imported
+    a|importedAt
+    a|The time the payment was imported
 |link:http://php.net/int[int^]
-    |status
-    |The <a href="https://developers.plentymarkets.com/rest-doc/introduction#payment-statuses"  target="_blank">status</a> of the payment
+    a|status
+    a|The <a href="https://developers.plentymarkets.com/rest-doc/introduction#payment-statuses"  target="_blank">status</a> of the payment
 |link:http://php.net/int[int^]
-    |transactionType
-    |The transaction type of the payment. The following transaction types are available:
+    a|transactionType
+    a|The transaction type of the payment. The following transaction types are available:
 <ul>
     <li>Interim transaction report = 1</li>
     <li>Booked payment = 2</li>
     <li>Split payment = 3</li>
 </ul>
 |link:http://php.net/int[int^]
-    |mopId
-    |The ID of the payment method
+    a|mopId
+    a|The ID of the payment method
 |        xref:Payment.adoc#payment_models_payment[`Payment`]
-    |parent
-    |The parent payment
+    a|parent
+    a|The parent payment
 |
-    |children
-    |
+    a|children
+    a|
 |        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
-    |method
-    |The payment method
+    a|method
+    a|The payment method
 |        xref:Payment.adoc#payment_models_paymentorderrelation[`PaymentOrderRelation`]
-    |order
-    |
+    a|order
+    a|
 |link:http://php.net/array[array^]
-    |histories
-    |The payment history
+    a|histories
+    a|The payment history
 |link:http://php.net/array[array^]
-    |properties
-    |The properties of the payment
+    a|properties
+    a|The properties of the payment
 |link:http://php.net/bool[bool^]
-    |regenerateHash
-    |If $regenerateHash is true, regenerate the payment hash value. Default is false.
+    a|regenerateHash
+    a|If $regenerateHash is true, regenerate the payment hash value. Default is false.
 |link:http://php.net/bool[bool^]
-    |updateOrderPaymentStatus
-    |If $updateOrderPaymentStatus is true, update the order payment status. Default is false.
+    a|updateOrderPaymentStatus
+    a|If $updateOrderPaymentStatus is true, update the order payment status. Default is false.
 |link:http://php.net/bool[bool^]
-    |isSystemCurrency
-    |If $isSystemCurrency is false, the value will be converted to the standard currency with the provided exchange rate. If $isSystemCurrency is false, the value is not converted. Default is true.
+    a|isSystemCurrency
+    a|If $isSystemCurrency is false, the value will be converted to the standard currency with the provided exchange rate. If $isSystemCurrency is false, the value is not converted. Default is true.
 |===
 
 
@@ -1531,21 +1567,22 @@ The payment contact relation model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |id
-    |The ID of the payment order relation
+    a|id
+    a|The ID of the payment order relation
 |link:http://php.net/int[int^]
-    |paymentId
-    |The ID of the payment
+    a|paymentId
+    a|The ID of the payment
 |link:http://php.net/int[int^]
-    |contactId
-    |The ID of the contact
+    a|contactId
+    a|The ID of the contact
 |link:http://php.net/string[string^]
-    |assignedAt
-    |The time the payment contact relation was assigned
+    a|assignedAt
+    a|The time the payment contact relation was assigned
 |===
 
 
@@ -1583,21 +1620,22 @@ The payment order relation model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |id
-    |The ID of the payment order relation
+    a|id
+    a|The ID of the payment order relation
 |link:http://php.net/int[int^]
-    |paymentId
-    |The ID of the payment
+    a|paymentId
+    a|The ID of the payment
 |link:http://php.net/int[int^]
-    |orderId
-    |The ID of the order
+    a|orderId
+    a|The ID of the order
 |link:http://php.net/string[string^]
-    |assignedAt
-    |The time the payment order relation was assigned
+    a|assignedAt
+    a|The time the payment order relation was assigned
 |===
 
 
@@ -1635,18 +1673,19 @@ The payment property model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |id
-    |The ID of the payment property
+    a|id
+    a|The ID of the payment property
 |link:http://php.net/int[int^]
-    |paymentId
-    |The ID of the payment
+    a|paymentId
+    a|The ID of the payment
 |link:http://php.net/int[int^]
-    |typeId
-    |The ID of the property type. The following property types are available:
+    a|typeId
+    a|The ID of the property type. The following property types are available:
 <ul>
     <li>Transaction ID = 1</li>
     <li>Reference ID = 2</li>
@@ -1685,14 +1724,14 @@ The payment property model
     <li>Matching rate = 36</li>
 </ul>
 |link:http://php.net/string[string^]
-    |value
-    |The value of the property type
+    a|value
+    a|The value of the property type
 |        xref:Payment.adoc#payment_models_payment[`Payment`]
-    |payment
-    |
+    a|payment
+    a|
 |        xref:Payment.adoc#payment_models_paymentpropertytype[`PaymentPropertyType`]
-    |type
-    |
+    a|type
+    a|
 |===
 
 
@@ -1730,21 +1769,22 @@ The payment property type model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |id
-    |The ID of the property type
+    a|id
+    a|The ID of the property type
 |link:http://php.net/int[int^]
-    |erasable
-    |Specifies whether the property type can be deleted. Property types that can be deleted have the value 1. Default property types cannot be deleted.
+    a|erasable
+    a|Specifies whether the property type can be deleted. Property types that can be deleted have the value 1. Default property types cannot be deleted.
 |link:http://php.net/int[int^]
-    |position
-    |The position number of the property type
+    a|position
+    a|The position number of the property type
 |        xref:Payment.adoc#payment_models_paymentpropertytypename[`PaymentPropertyTypeName`]
-    |name
-    |The name of the property type
+    a|name
+    a|The name of the property type
 |===
 
 
@@ -1782,21 +1822,22 @@ The payment property type name model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |id
-    |The ID of the name of the property type
+    a|id
+    a|The ID of the name of the property type
 |link:http://php.net/int[int^]
-    |typeId
-    |The ID of the property type
+    a|typeId
+    a|The ID of the property type
 |link:http://php.net/string[string^]
-    |lang
-    |The language of the name of the property type
+    a|lang
+    a|The language of the name of the property type
 |link:http://php.net/string[string^]
-    |name
-    |The name of the property type
+    a|name
+    a|The name of the property type
 |===
 
 
@@ -1856,11 +1897,12 @@ public setOrderId($orderId):Plenty\Modules\Payment\Events\Checkout
 Updates the ID of the order in the checkout. The ID must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$orderId`
-|The ID of the order
+a|The ID of the order
 |===
 
 
@@ -1895,11 +1937,12 @@ public setMop($mop):Plenty\Modules\Payment\Events\Checkout
 Updates the ID of the payment method. The ID must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$mop`
-|The ID of the payment method
+a|The ID of the payment method
 |===
 
 
@@ -1934,11 +1977,12 @@ public setType($type):Plenty\Modules\Payment\Events\Checkout
 Updates the content type.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$type`
-|The <a href="https://developers.plentymarkets.com/dev-doc/payment-plugins#payment-prepare-payment">content type</a> of the payment plugin
+a|The <a href="https://developers.plentymarkets.com/dev-doc/payment-plugins#payment-prepare-payment">content type</a> of the payment plugin
 |===
 
 
@@ -1973,11 +2017,12 @@ public setValue($value):Plenty\Modules\Payment\Events\Checkout
 Updates the value of the content type.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$value`
-|The value of the content type
+a|The value of the content type
 |===
 
 
@@ -2031,11 +2076,12 @@ public setMop($mop):Plenty\Modules\Payment\Events\Checkout
 Updates the ID of the payment method. The ID must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$mop`
-|The ID of the payment method
+a|The ID of the payment method
 |===
 
 
@@ -2070,11 +2116,12 @@ public setType($type):Plenty\Modules\Payment\Events\Checkout
 Updates the content type.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$type`
-|The <a href="https://developers.plentymarkets.com/dev-doc/payment-plugins#payment-prepare-payment">content type</a> of the payment plugin
+a|The <a href="https://developers.plentymarkets.com/dev-doc/payment-plugins#payment-prepare-payment">content type</a> of the payment plugin
 |===
 
 
@@ -2109,11 +2156,12 @@ public setValue($value):Plenty\Modules\Payment\Events\Checkout
 Updates the value of the content type.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$value`
-|The value of the content type
+a|The value of the content type
 |===
 
 
@@ -2148,11 +2196,12 @@ public setParams($params):Plenty\Modules\Payment\Events\Checkout
 Updates the parameters. The parameters must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$params`
-|The parameters
+a|The parameters
 |===
 
 
@@ -2210,15 +2259,16 @@ public getByPaymentId($paymentId, $typeId):array
 Gets the payment history for a payment. The ID of the payment and the ID of the payment type must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$paymentId`
-|The ID of the payment
+a|The ID of the payment
 
 |link:http://php.net/int[int^]
 a|`$typeId`
-|The ID of the history type. The following types are available:
+a|The ID of the history type. The following types are available:
 <ul>
     <li>Created = 1</li>
     <li>Status updated = 2</li>
@@ -2246,11 +2296,12 @@ public createHistory($data):Plenty\Modules\Payment\History\Models\PaymentHistory
 Creates the payment history.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-|
+a|
 |===
 
 
@@ -2272,18 +2323,19 @@ The payment history model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |id
-    |The ID of the payment history
+    a|id
+    a|The ID of the payment history
 |link:http://php.net/int[int^]
-    |paymentId
-    |The ID of the payment
+    a|paymentId
+    a|The ID of the payment
 |link:http://php.net/int[int^]
-    |typeId
-    |The ID of the history type. The following types are available:
+    a|typeId
+    a|The ID of the history type. The following types are available:
 <ul>
     <li>Created = 1</li>
     <li>Status updated = 2</li>
@@ -2293,11 +2345,11 @@ The payment history model
     <li>Updated = 6</li>
 </ul>
 |link:http://php.net/string[string^]
-    |value
-    |The value of the payment history
+    a|value
+    a|The value of the payment history
 |link:http://php.net/string[string^]
-    |user
-    |The user who initiated the action
+    a|user
+    a|The user who initiated the action
 |===
 
 
@@ -2354,22 +2406,23 @@ public register($paymentKey, $paymentMethodServiceClass, $rebuildEventClassesLis
 
 
 
-
+Registers a payment method
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$paymentKey`
-|The unique key of a payment plugin
+a|The unique key of a payment plugin
 
 |
 a|`$paymentMethodServiceClass`
-|The class of the payment method. This class contains information of the payment plugin, such as the name and whether the payment method is active.
+a|The class of the payment method. This class contains information of the payment plugin, such as the name and whether the payment method is active.
 
 |link:http://php.net/array[array^]
 a|`$rebuildEventClassesList`
-|A list of events. It is checked again for the list of events whether the payment method is active.
+a|A list of events. It is checked again for the list of events whether the payment method is active.
 |===
 
 
@@ -2386,14 +2439,15 @@ public isRegistered($paymentKey):bool
 
 
 
-
+Checks registered payment method
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$paymentKey`
-|
+a|
 |===
 
 
@@ -2447,11 +2501,12 @@ public allForPlugin($pluginKey):array
 Lists payment methods for a plugin key. The plugin key must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginKey`
-|The plugin key
+a|The plugin key
 |===
 
 
@@ -2468,7 +2523,7 @@ public allPluginPaymentMethods():array
 
 
 
-
+Get all plugin payment methods.
 
 [source%nowrap, php]
 ----
@@ -2483,7 +2538,7 @@ public allOldPaymentMethods():array
 
 
 
-
+Get all old payment methods.
 
 [source%nowrap, php]
 ----
@@ -2501,11 +2556,12 @@ public findByPaymentMethodId($paymentMethodId):Plenty\Modules\Payment\Method\Mod
 Gets a payment method. The ID of the payment method must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$paymentMethodId`
-|The ID of the payment method
+a|The ID of the payment method
 |===
 
 
@@ -2525,11 +2581,12 @@ public getPreviewList($language = null):array
 Get an array with all payment methods with the ID as key and the name as value.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$language`
-|The names will be returned in this language.
+a|The names will be returned in this language.
 |===
 
 
@@ -2549,11 +2606,12 @@ public createPaymentMethod($paymentMethodData):Plenty\Modules\Payment\Method\Mod
 Creates a payment method.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$paymentMethodData`
-|
+a|
 |===
 
 
@@ -2573,11 +2631,12 @@ public updateName($paymentMethodData):Plenty\Modules\Payment\Method\Models\Payme
 Updates the payment method name.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$paymentMethodData`
-|
+a|
 |===
 
 
@@ -2597,11 +2656,12 @@ public preparePaymentMethod($mop):array
 Prepares a payment method. The ID of the payment method must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$mop`
-|The ID of the payment method
+a|The ID of the payment method
 |===
 
 
@@ -2621,15 +2681,16 @@ public executePayment($mop, $orderId):array
 Executes a payment. The ID of the payment method and the ID of the order must be specified.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$mop`
-|The ID of the payment method
+a|The ID of the payment method
 
 |link:http://php.net/int[int^]
 a|`$orderId`
-|The ID of the order
+a|The ID of the order
 |===
 
 
@@ -2649,11 +2710,12 @@ public listBackendSearchable($lang):array
 List all payment methods which are searchable for the backend
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-|
+a|
 |===
 
 
@@ -2673,11 +2735,12 @@ public listBackendActive($lang):array
 List all payment methods which are active for the backend
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-|
+a|
 |===
 
 
@@ -2712,11 +2775,12 @@ public listCanHandleSubscriptions($lang):array
 List all payment methods which can handle subscriptions
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-|
+a|
 |===
 
 
@@ -2736,11 +2800,12 @@ public listAllActive($lang):array
 List all payment methods which are active
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-|
+a|
 |===
 
 
@@ -2809,11 +2874,12 @@ public getBackendName($lang):string
 Get the backend name of the payment method
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-|
+a|
 |===
 
 
@@ -2850,21 +2916,22 @@ The payment method model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |id
-    |The ID of the payment method
+    a|id
+    a|The ID of the payment method
 |link:http://php.net/string[string^]
-    |pluginKey
-    |The plugin key of the payment method
+    a|pluginKey
+    a|The plugin key of the payment method
 |link:http://php.net/string[string^]
-    |paymentKey
-    |The payment key of the payment method
+    a|paymentKey
+    a|The payment key of the payment method
 |link:http://php.net/string[string^]
-    |name
-    |The name of the payment method
+    a|name
+    a|The name of the payment method
 |===
 
 
@@ -2936,11 +3003,12 @@ public getName($lang = &quot;&quot;):string
 Return the frontend name of the payment method according to the language
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-|
+a|
 |===
 
 
@@ -2975,11 +3043,12 @@ public getIcon($lang = &quot;&quot;):string
 Return the frontend icon of the payment method according to the language
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-|
+a|
 |===
 
 
@@ -2999,11 +3068,12 @@ public getDescription($lang = &quot;&quot;):string
 Return the frontend description of the payment method according to the language
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-|
+a|
 |===
 
 
@@ -3023,11 +3093,12 @@ public getSourceUrl($lang = &quot;&quot;):string
 Return an url with additional information shown in the frontend about the payment method according to the language
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-|
+a|
 |===
 
 
@@ -3107,11 +3178,12 @@ public getBackendName($lang = &quot;&quot;):string
 Get the backend name of the payment method according to the language
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-|
+a|
 |===
 
 
@@ -3166,18 +3238,19 @@ The payment method name model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |paymentMethodId
-    |
+    a|paymentMethodId
+    a|
 |link:http://php.net/string[string^]
-    |lang
-    |
+    a|lang
+    a|
 |link:http://php.net/string[string^]
-    |name
-    |
+    a|name
+    a|
 |===
 
 

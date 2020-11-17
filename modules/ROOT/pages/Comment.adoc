@@ -1,8 +1,3 @@
-:table-caption!:
-:example-caption!:
-:source-highlighter: prettify
-:sectids!:
-= Plentymarkets interface documentation
 
 
 [[comment_comment]]
@@ -44,11 +39,12 @@ public getComment($commentId):Plenty\Modules\Comment\Models\Comment
 Get a comment
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$commentId`
-|The ID of the comment
+a|The ID of the comment
 |===
 
 
@@ -83,15 +79,16 @@ public createComment($data, $suppressEvent = false):Plenty\Modules\Comment\Model
 Create a comment
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-|The request data
+a|The request data
 
 |link:http://php.net/bool[bool^]
 a|`$suppressEvent`
-|Whether to suppress the created event or not.
+a|Whether to suppress the created event or not.
 |===
 
 
@@ -111,11 +108,12 @@ public deleteComment($commentId):void
 Delete a comment
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$commentId`
-|The ID of the comment
+a|The ID of the comment
 |===
 
 
@@ -135,15 +133,16 @@ public updateComment($data, $commentId):Plenty\Modules\Comment\Models\Comment
 Update a comment
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-|
+a|
 
 |link:http://php.net/int[int^]
 a|`$commentId`
-|
+a|
 |===
 
 
@@ -193,11 +192,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-|
+a|
 |===
 
 
@@ -251,7 +251,7 @@ Clears the filter array.
 [[comment_models_comment]]
 ==== Comment
 
-The comment model.
+The comment model can be one of the following types: category, contact, order, item_variation, order_item, specified by the referenceType.
 
 
 
@@ -264,15 +264,16 @@ The comment model.
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |id
-    |The ID of the comment
+    a|id
+    a|The ID of the comment
 |link:http://php.net/string[string^]
-    |referenceType
-    |The reference type. Valid types are:
+    a|referenceType
+    a|The reference type. Valid types are:
 <ul>
 	<li>category</li>
 	<li>contact</li>
@@ -281,20 +282,20 @@ The comment model.
  <li>order_item</li>
 	</ul>
 |link:http://php.net/int[int^]
-    |referenceValue
-    |The reference value
+    a|referenceValue
+    a|The reference value
 |link:http://php.net/int[int^]
-    |userId
-    |The ID of the user
+    a|userId
+    a|The ID of the user
 |
-    |createdAt
-    |The date when the comment was created
+    a|createdAt
+    a|The date when the comment was created
 |link:http://php.net/string[string^]
-    |text
-    |The comment text
+    a|text
+    a|The comment text
 |link:http://php.net/bool[bool^]
-    |isVisibleForContact
-    |If true, the comment is visible for the associated contact.
+    a|isVisibleForContact
+    a|If true, the comment is visible for the associated contact.
 |===
 
 

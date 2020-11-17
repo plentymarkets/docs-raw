@@ -1,8 +1,3 @@
-:table-caption!:
-:example-caption!:
-:source-highlighter: prettify
-:sectids!:
-= Plentymarkets interface documentation
 
 
 [[system_system]]
@@ -41,14 +36,15 @@ public loadValue($key):void
 
 
 
-
+Loads a system information value by key
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-|
+a|
 |===
 
 
@@ -84,14 +80,15 @@ public findByPlentyId($plentyId):Plenty\Modules\System\Models\WebstoreConfigurat
 ====== *Return type:*        xref:System.adoc#system_models_webstoreconfiguration[`WebstoreConfiguration`]
 
 
-
+Get the WebstoreConfiguration by plentyId
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-|
+a|
 |===
 
 
@@ -108,14 +105,15 @@ public findByWebstoreId($webstoreId):Plenty\Modules\System\Models\WebstoreConfig
 ====== *Return type:*        xref:System.adoc#system_models_webstoreconfiguration[`WebstoreConfiguration`]
 
 
-
+Get the WebstoreConfiguration by webstoreId
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$webstoreId`
-|
+a|
 |===
 
 
@@ -135,15 +133,16 @@ public updateByPlentyId($data, $plentyId):Plenty\Modules\System\Models\WebstoreC
 
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-|
+a|
 
 |link:http://php.net/int[int^]
 a|`$plentyId`
-|
+a|
 |===
 
 
@@ -182,11 +181,12 @@ public loadAll($columns = []):array
 Shows all webstores
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$columns`
-|
+a|
 |===
 
 
@@ -221,11 +221,12 @@ public findByPlentyId($plentyId):Plenty\Modules\System\Models\Webstore
 Shows a specific webstore from type plentymarkets
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-|
+a|
 |===
 
 
@@ -245,11 +246,12 @@ public findByStoreIdentifier($storeIdentifier):Plenty\Modules\System\Models\Webs
 Shows a specific webstore
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$storeIdentifier`
-|
+a|
 |===
 
 
@@ -269,11 +271,12 @@ public findById($clientId):Plenty\Modules\System\Models\Webstore
 Shows a specific webstore
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$clientId`
-|The client ID (webstore ID).
+a|The client ID (webstore ID).
 |===
 
 
@@ -282,7 +285,7 @@ a|`$clientId`
 [[system_models_webstore]]
 ==== Webstore
 
-The webstore model
+The webstore model appending the WebstoreConfiguration
 
 
 
@@ -295,33 +298,34 @@ The webstore model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |id
-    |The ID of the client (store)
+    a|id
+    a|The ID of the client (store)
 |link:http://php.net/string[string^]
-    |name
-    |The name of the client (store)
+    a|name
+    a|The name of the client (store)
 |link:http://php.net/string[string^]
-    |type
-    |The type of the client (store)
+    a|type
+    a|The type of the client (store)
 |link:http://php.net/int[int^]
-    |storeIdentifier
-    |The identifier of the client (store)
+    a|storeIdentifier
+    a|The identifier of the client (store)
 |        xref:System.adoc#system_models_webstoreconfiguration[`WebstoreConfiguration`]
-    |configuration
-    |The configuration information of the client (store)
+    a|configuration
+    a|The configuration information of the client (store)
 |
-    |locations
-    |The accounting locations of the client (store)
+    a|locations
+    a|The accounting locations of the client (store)
 |        xref:Plugin.adoc#plugin_models_pluginset[`PluginSet`]
-    |pluginSet
-    |The plugin set of the client (store)
+    a|pluginSet
+    a|The plugin set of the client (store)
 |link:http://php.net/int[int^]
-    |pluginSetId
-    |The plugin set id of the client (store)
+    a|pluginSetId
+    a|The plugin set id of the client (store)
 |===
 
 
@@ -359,531 +363,532 @@ The Webstore Configuration Model
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |webstoreId
-    |
+    a|webstoreId
+    a|
 |link:http://php.net/int[int^]
-    |error404ContentPageId
-    |
+    a|error404ContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |attributesDropDown
-    |
+    a|attributesDropDown
+    a|
 |link:http://php.net/int[int^]
-    |attributeSelectDefaultOption
-    |
+    a|attributeSelectDefaultOption
+    a|
 |link:http://php.net/int[int^]
-    |attributeVariantCheck
-    |
+    a|attributeVariantCheck
+    a|
 |link:http://php.net/int[int^]
-    |attributeWithMarkup
-    |
+    a|attributeWithMarkup
+    a|
 |link:http://php.net/int[int^]
-    |bankContentPageId
-    |
+    a|bankContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |basketReservationTime
-    |
+    a|basketReservationTime
+    a|
 |link:http://php.net/int[int^]
-    |cancellationRightsContentPageId
-    |
+    a|cancellationRightsContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |categoryItemCount
-    |
+    a|categoryItemCount
+    a|
 |link:http://php.net/int[int^]
-    |categoryLevelLimit
-    |
+    a|categoryLevelLimit
+    a|
 |link:http://php.net/int[int^]
-    |closed
-    |
+    a|closed
+    a|
 |link:http://php.net/int[int^]
-    |defaultAccountingLocation
-    |
+    a|defaultAccountingLocation
+    a|
 |link:http://php.net/string[string^]
-    |defaultCurrency
-    |
+    a|defaultCurrency
+    a|
 |link:http://php.net/string[string^]
-    |defaultLanguage
-    |
+    a|defaultLanguage
+    a|
 |link:http://php.net/string[string^]
-    |defaultLayout
-    |
+    a|defaultLayout
+    a|
 |link:http://php.net/int[int^]
-    |defaultShippingCountryId
-    |
+    a|defaultShippingCountryId
+    a|
 |link:http://php.net/array[array^]
-    |defaultShippingCountryList
-    |
+    a|defaultShippingCountryList
+    a|
 |link:http://php.net/array[array^]
-    |defaultCurrencyList
-    |
+    a|defaultCurrencyList
+    a|
 |link:http://php.net/int[int^]
-    |defaultParcelServiceId
-    |
+    a|defaultParcelServiceId
+    a|
 |link:http://php.net/int[int^]
-    |defaultParcelServicePresetId
-    |
+    a|defaultParcelServicePresetId
+    a|
 |link:http://php.net/int[int^]
-    |defaultMethodOfPaymentId
-    |
+    a|defaultMethodOfPaymentId
+    a|
 |link:http://php.net/int[int^]
-    |defaultCustomerClassId
-    |
+    a|defaultCustomerClassId
+    a|
 |link:http://php.net/int[int^]
-    |dhlPackstationValidation
-    |
+    a|dhlPackstationValidation
+    a|
 |link:http://php.net/int[int^]
-    |dhlAllowPackstationActive
-    |
+    a|dhlAllowPackstationActive
+    a|
 |link:http://php.net/float[float^]
-    |dhlLimitOrderAmountForPackstation
-    |
+    a|dhlLimitOrderAmountForPackstation
+    a|
 |link:http://php.net/int[int^]
-    |dhlAllowPostidentActive
-    |
+    a|dhlAllowPostidentActive
+    a|
 |link:http://php.net/float[float^]
-    |displayAttributeMarkup
-    |
+    a|displayAttributeMarkup
+    a|
 |link:http://php.net/string[string^]
-    |displayItemName
-    |
+    a|displayItemName
+    a|
 |link:http://php.net/int[int^]
-    |displayItemOnly4Customer
-    |
+    a|displayItemOnly4Customer
+    a|
 |link:http://php.net/int[int^]
-    |displayPriceColumn
-    |
+    a|displayPriceColumn
+    a|
 |link:http://php.net/int[int^]
-    |displayPriceNetto
-    |
+    a|displayPriceNetto
+    a|
 |link:http://php.net/string[string^]
-    |doctype
-    |
+    a|doctype
+    a|
 |link:http://php.net/string[string^]
-    |domain
-    |
+    a|domain
+    a|
 |link:http://php.net/string[string^]
-    |domainSsl
-    |
+    a|domainSsl
+    a|
 |link:http://php.net/int[int^]
-    |dontSplitItemBundle
-    |
+    a|dontSplitItemBundle
+    a|
 |link:http://php.net/string[string^]
-    |faviconPath
-    |
+    a|faviconPath
+    a|
 |link:http://php.net/int[int^]
-    |frontPageContentPageId
-    |
+    a|frontPageContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |helpContentPageId
-    |
+    a|helpContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |itemNotFoundContentPageId
-    |
+    a|itemNotFoundContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |paymentMethodsContentPageId
-    |
+    a|paymentMethodsContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |contactContentPageId
-    |
+    a|contactContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |legalDisclosureContentPageId
-    |
+    a|legalDisclosureContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |blogRatingActive
-    |
+    a|blogRatingActive
+    a|
 |link:http://php.net/int[int^]
-    |blogMaxRatingPoints
-    |
+    a|blogMaxRatingPoints
+    a|
 |link:http://php.net/int[int^]
-    |blogCommentsActive
-    |
+    a|blogCommentsActive
+    a|
 |link:http://php.net/int[int^]
-    |blogNewFeedbackVisibility
-    |
+    a|blogNewFeedbackVisibility
+    a|
 |link:http://php.net/int[int^]
-    |blogCustomerNameVisibility
-    |
+    a|blogCustomerNameVisibility
+    a|
 |link:http://php.net/int[int^]
-    |itemMaxRatingPoints
-    |
+    a|itemMaxRatingPoints
+    a|
 |link:http://php.net/int[int^]
-    |itemCommentsActive
-    |
+    a|itemCommentsActive
+    a|
 |link:http://php.net/int[int^]
-    |itemNewFeedbackVisibility
-    |
+    a|itemNewFeedbackVisibility
+    a|
 |link:http://php.net/int[int^]
-    |itemCustomerNameVisibility
-    |
+    a|itemCustomerNameVisibility
+    a|
 |link:http://php.net/int[int^]
-    |categoryRatingActive
-    |
+    a|categoryRatingActive
+    a|
 |link:http://php.net/int[int^]
-    |categoryMaxRatingPoints
-    |
+    a|categoryMaxRatingPoints
+    a|
 |link:http://php.net/int[int^]
-    |categoryCommentsActive
-    |
+    a|categoryCommentsActive
+    a|
 |link:http://php.net/int[int^]
-    |categoryNewFeedbackVisibility
-    |
+    a|categoryNewFeedbackVisibility
+    a|
 |link:http://php.net/int[int^]
-    |categoryCustomerNameVisibility
-    |
+    a|categoryCustomerNameVisibility
+    a|
 |link:http://php.net/int[int^]
-    |choiceNominationRatingActive
-    |
+    a|choiceNominationRatingActive
+    a|
 |link:http://php.net/int[int^]
-    |choiceNominationMaxRatingPoints
-    |
+    a|choiceNominationMaxRatingPoints
+    a|
 |link:http://php.net/int[int^]
-    |choiceNominationCommentsActive
-    |
+    a|choiceNominationCommentsActive
+    a|
 |link:http://php.net/int[int^]
-    |choiceNominationNewFeedbackVisibility
-    |
+    a|choiceNominationNewFeedbackVisibility
+    a|
 |link:http://php.net/int[int^]
-    |choiceNominationCustomerNameVisibility
-    |
+    a|choiceNominationCustomerNameVisibility
+    a|
 |link:http://php.net/int[int^]
-    |feedbackRatingActive
-    |
+    a|feedbackRatingActive
+    a|
 |link:http://php.net/int[int^]
-    |feedbackMaxRatingPoints
-    |
+    a|feedbackMaxRatingPoints
+    a|
 |link:http://php.net/int[int^]
-    |feedbackCommentsActive
-    |
+    a|feedbackCommentsActive
+    a|
 |link:http://php.net/int[int^]
-    |feedbackNewFeedbackVisibility
-    |
+    a|feedbackNewFeedbackVisibility
+    a|
 |link:http://php.net/int[int^]
-    |feedbackCustomerNameVisibility
-    |
+    a|feedbackCustomerNameVisibility
+    a|
 |link:http://php.net/array[array^]
-    |languageList
-    |
+    a|languageList
+    a|
 |link:http://php.net/int[int^]
-    |languageMode
-    |
+    a|languageMode
+    a|
 |link:http://php.net/int[int^]
-    |loginMode
-    |
+    a|loginMode
+    a|
 |link:http://php.net/int[int^]
-    |oversellingWarning
-    |
+    a|oversellingWarning
+    a|
 |link:http://php.net/int[int^]
-    |maxLoginAttempts
-    |
+    a|maxLoginAttempts
+    a|
 |link:http://php.net/int[int^]
-    |mobileRedirectActive
-    |
+    a|mobileRedirectActive
+    a|
 |link:http://php.net/int[int^]
-    |mobileRedirectUrl
-    |
+    a|mobileRedirectUrl
+    a|
 |link:http://php.net/int[int^]
-    |mobileRedirectItemUrl
-    |
+    a|mobileRedirectItemUrl
+    a|
 |link:http://php.net/string[string^]
-    |name
-    |
+    a|name
+    a|
 |link:http://php.net/int[int^]
-    |newsletterDirId
-    |
+    a|newsletterDirId
+    a|
 |link:http://php.net/int[int^]
-    |paypalAccount
-    |
+    a|paypalAccount
+    a|
 |link:http://php.net/array[array^]
-    |ebayAccount
-    |
+    a|ebayAccount
+    a|
 |link:http://php.net/int[int^]
-    |privacyPolicyContentPageId
-    |
+    a|privacyPolicyContentPageId
+    a|
 |link:http://php.net/string[string^]
-    |rootDir
-    |
+    a|rootDir
+    a|
 |link:http://php.net/int[int^]
-    |sessionLifetime
-    |
+    a|sessionLifetime
+    a|
 |link:http://php.net/int[int^]
-    |shippingContentPageId
-    |
+    a|shippingContentPageId
+    a|
 |link:http://php.net/int[int^]
-    |socialMedia
-    |
+    a|socialMedia
+    a|
 |link:http://php.net/int[int^]
-    |termsConditionsContentPageId
-    |
+    a|termsConditionsContentPageId
+    a|
 |link:http://php.net/string[string^]
-    |trustedShopsCertificationDeSealHtml
-    |
+    a|trustedShopsCertificationDeSealHtml
+    a|
 |link:http://php.net/string[string^]
-    |trustedShopsCertificationDeTrustedShopsId
-    |
+    a|trustedShopsCertificationDeTrustedShopsId
+    a|
 |link:http://php.net/string[string^]
-    |trustedShopsCertificationEnSealHtml
-    |
+    a|trustedShopsCertificationEnSealHtml
+    a|
 |link:http://php.net/string[string^]
-    |trustedShopsCertificationEnTrustedShopsId
-    |
+    a|trustedShopsCertificationEnTrustedShopsId
+    a|
 |link:http://php.net/string[string^]
-    |trustedShopsCertificationFrSealHtml
-    |
+    a|trustedShopsCertificationFrSealHtml
+    a|
 |link:http://php.net/string[string^]
-    |trustedShopsCertificationFrTrustedShopsId
-    |
+    a|trustedShopsCertificationFrTrustedShopsId
+    a|
 |link:http://php.net/string[string^]
-    |urlFacebook
-    |
+    a|urlFacebook
+    a|
 |link:http://php.net/string[string^]
-    |urlFileExtension
-    |
+    a|urlFileExtension
+    a|
 |link:http://php.net/string[string^]
-    |urlGooglePlus
-    |
+    a|urlGooglePlus
+    a|
 |link:http://php.net/string[string^]
-    |urlItemCategory
-    |
+    a|urlItemCategory
+    a|
 |link:http://php.net/string[string^]
-    |urlItemContent
-    |
+    a|urlItemContent
+    a|
 |link:http://php.net/string[string^]
-    |urlLinking
-    |
+    a|urlLinking
+    a|
 |link:http://php.net/string[string^]
-    |urlNeedle
-    |
+    a|urlNeedle
+    a|
 |link:http://php.net/string[string^]
-    |urlTitleItemContent
-    |
+    a|urlTitleItemContent
+    a|
 |link:http://php.net/string[string^]
-    |urlTitleItemName
-    |
+    a|urlTitleItemName
+    a|
 |link:http://php.net/string[string^]
-    |urlTwitter
-    |
+    a|urlTwitter
+    a|
 |link:http://php.net/int[int^]
-    |useCharacterCrossSelling
-    |
+    a|useCharacterCrossSelling
+    a|
 |link:http://php.net/int[int^]
-    |useDefaultShippingCountryAsShopCountry
-    |
+    a|useDefaultShippingCountryAsShopCountry
+    a|
 |link:http://php.net/int[int^]
-    |calcEbayShippingCostsActive
-    |
+    a|calcEbayShippingCostsActive
+    a|
 |link:http://php.net/int[int^]
-    |autoGroupOpenEbayTransactions
-    |
+    a|autoGroupOpenEbayTransactions
+    a|
 |link:http://php.net/int[int^]
-    |calcRicardoShippingCostsActive
-    |
+    a|calcRicardoShippingCostsActive
+    a|
 |link:http://php.net/int[int^]
-    |calcHoodShippingCostsActive
-    |
+    a|calcHoodShippingCostsActive
+    a|
 |link:http://php.net/int[int^]
-    |ebayDownsellingActive
-    |
+    a|ebayDownsellingActive
+    a|
 |link:http://php.net/int[int^]
-    |addressCheckRegistrationSave
-    |
+    a|addressCheckRegistrationSave
+    a|
 |link:http://php.net/int[int^]
-    |addressCheckRegistrationInput
-    |
+    a|addressCheckRegistrationInput
+    a|
 |link:http://php.net/int[int^]
-    |addressCheckInvoiceDetailsSave
-    |
+    a|addressCheckInvoiceDetailsSave
+    a|
 |link:http://php.net/int[int^]
-    |addressCheckInvoiceDetailsInput
-    |
+    a|addressCheckInvoiceDetailsInput
+    a|
 |link:http://php.net/int[int^]
-    |addressCheckShippingDetailsSave
-    |
+    a|addressCheckShippingDetailsSave
+    a|
 |link:http://php.net/int[int^]
-    |addressCheckShippingDetailsInput
-    |
+    a|addressCheckShippingDetailsInput
+    a|
 |link:http://php.net/int[int^]
-    |addressCheckCustomerDetailsSave
-    |
+    a|addressCheckCustomerDetailsSave
+    a|
 |link:http://php.net/int[int^]
-    |addressCheckCustomerDetailsInput
-    |
+    a|addressCheckCustomerDetailsInput
+    a|
 |link:http://php.net/int[int^]
-    |addressCheckAfterDays
-    |
+    a|addressCheckAfterDays
+    a|
 |link:http://php.net/int[int^]
-    |facebookLoginActive
-    |
+    a|facebookLoginActive
+    a|
 |link:http://php.net/int[int^]
-    |itemCategorySorting1
-    |
+    a|itemCategorySorting1
+    a|
 |link:http://php.net/int[int^]
-    |itemCategorySorting2
-    |
+    a|itemCategorySorting2
+    a|
 |link:http://php.net/int[int^]
-    |itemSortByMonthlySales
-    |
+    a|itemSortByMonthlySales
+    a|
 |link:http://php.net/int[int^]
-    |showBasePriceActive
-    |
+    a|showBasePriceActive
+    a|
 |link:http://php.net/int[int^]
-    |jumpPaymentActive
-    |
+    a|jumpPaymentActive
+    a|
 |link:http://php.net/int[int^]
-    |jumpShippingActive
-    |
+    a|jumpShippingActive
+    a|
 |link:http://php.net/int[int^]
-    |showContentTermsFsk
-    |
+    a|showContentTermsFsk
+    a|
 |link:http://php.net/int[int^]
-    |newsletterRegistrationActive
-    |
+    a|newsletterRegistrationActive
+    a|
 |link:http://php.net/int[int^]
-    |ignoreCouponMinOrderValueActive
-    |
+    a|ignoreCouponMinOrderValueActive
+    a|
 |link:http://php.net/int[int^]
-    |ipAddressSaveInactive
-    |
+    a|ipAddressSaveInactive
+    a|
 |link:http://php.net/int[int^]
-    |reuseOrderActive
-    |
+    a|reuseOrderActive
+    a|
 |link:http://php.net/int[int^]
-    |editOrderActive
-    |
+    a|editOrderActive
+    a|
 |link:http://php.net/int[int^]
-    |currencySymbol
-    |
+    a|currencySymbol
+    a|
 |link:http://php.net/int[int^]
-    |externalVatCheckInactive
-    |
+    a|externalVatCheckInactive
+    a|
 |link:http://php.net/int[int^]
-    |customerRegistrationCheck
-    |
+    a|customerRegistrationCheck
+    a|
 |link:http://php.net/int[int^]
-    |schedulerPropertyID
-    |
+    a|schedulerPropertyID
+    a|
 |link:http://php.net/int[int^]
-    |customerLoginMethod
-    |
+    a|customerLoginMethod
+    a|
 |link:http://php.net/int[int^]
-    |watchlistActive
-    |
+    a|watchlistActive
+    a|
 |link:http://php.net/int[int^]
-    |itemwishlistActive
-    |
+    a|itemwishlistActive
+    a|
 |link:http://php.net/int[int^]
-    |documentsActive
-    |
+    a|documentsActive
+    a|
 |link:http://php.net/int[int^]
-    |dynamicExportActive
-    |
+    a|dynamicExportActive
+    a|
 |link:http://php.net/int[int^]
-    |couponVisibilityActive
-    |
+    a|couponVisibilityActive
+    a|
 |link:http://php.net/int[int^]
-    |retoureMethod
-    |
+    a|retoureMethod
+    a|
 |link:http://php.net/int[int^]
-    |itemlistPrice
-    |
+    a|itemlistPrice
+    a|
 |link:http://php.net/int[int^]
-    |itemlistWeight
-    |
+    a|itemlistWeight
+    a|
 |link:http://php.net/int[int^]
-    |schedulerActive
-    |
+    a|schedulerActive
+    a|
 |link:http://php.net/int[int^]
-    |editSchedulerPaymentMethodActive
-    |
+    a|editSchedulerPaymentMethodActive
+    a|
 |link:http://php.net/int[int^]
-    |showSEPAMandateDownload
-    |
+    a|showSEPAMandateDownload
+    a|
 |link:http://php.net/int[int^]
-    |changeEmailActive
-    |
+    a|changeEmailActive
+    a|
 |link:http://php.net/int[int^]
-    |changePasswordActive
-    |
+    a|changePasswordActive
+    a|
 |link:http://php.net/int[int^]
-    |changePasswordSendmail
-    |
+    a|changePasswordSendmail
+    a|
 |link:http://php.net/int[int^]
-    |logoutHiddenActive
-    |
+    a|logoutHiddenActive
+    a|
 |link:http://php.net/int[int^]
-    |displayStatusInactive
-    |
+    a|displayStatusInactive
+    a|
 |link:http://php.net/int[int^]
-    |displayMyAccountPaymentDateInactive
-    |
+    a|displayMyAccountPaymentDateInactive
+    a|
 |link:http://php.net/int[int^]
-    |displayMyAccountDeliveryDateInactive
-    |
+    a|displayMyAccountDeliveryDateInactive
+    a|
 |link:http://php.net/int[int^]
-    |displayWeightInactive
-    |
+    a|displayWeightInactive
+    a|
 |link:http://php.net/int[int^]
-    |displayInvoiceDownload
-    |
+    a|displayInvoiceDownload
+    a|
 |link:http://php.net/int[int^]
-    |displayShippingDateActive
-    |
+    a|displayShippingDateActive
+    a|
 |link:http://php.net/int[int^]
-    |minimumOrderValue
-    |
+    a|minimumOrderValue
+    a|
 |link:http://php.net/array[array^]
-    |itemAvailabilityDisabledList
-    |
+    a|itemAvailabilityDisabledList
+    a|
 |link:http://php.net/array[array^]
-    |itemMeasureUnit
-    |
+    a|itemMeasureUnit
+    a|
 |link:http://php.net/int[int^]
-    |quickloginValidDays
-    |
+    a|quickloginValidDays
+    a|
 |link:http://php.net/int[int^]
-    |captchaCodeInactive
-    |
+    a|captchaCodeInactive
+    a|
 |link:http://php.net/int[int^]
-    |itemListingOrderImportItemName
-    |
+    a|itemListingOrderImportItemName
+    a|
 |link:http://php.net/int[int^]
-    |orderRowDeliveryDate
-    |
+    a|orderRowDeliveryDate
+    a|
 |link:http://php.net/array[array^]
-    |browserLanguage
-    |
+    a|browserLanguage
+    a|
 |link:http://php.net/int[int^]
-    |categoryRedirectActive
-    |
+    a|categoryRedirectActive
+    a|
 |link:http://php.net/int[int^]
-    |itemRedirectActive
-    |
+    a|itemRedirectActive
+    a|
 |link:http://php.net/string[string^]
-    |googleRecaptchaApiWebsitekey
-    |
+    a|googleRecaptchaApiWebsitekey
+    a|
 |link:http://php.net/string[string^]
-    |itemSearchEngine
-    |
+    a|itemSearchEngine
+    a|
 |link:http://php.net/bool[bool^]
-    |itemRatingAllowComments
-    |
+    a|itemRatingAllowComments
+    a|
 |link:http://php.net/bool[bool^]
-    |itemRatingMaxRatingPoints
-    |
+    a|itemRatingMaxRatingPoints
+    a|
 |link:http://php.net/bool[bool^]
-    |itemRatingActive
-    |
+    a|itemRatingActive
+    a|
 |link:http://php.net/int[int^]
-    |currencyConversion
-    |
+    a|currencyConversion
+    a|
 |link:http://php.net/int[int^]
-    |urlTrailingSlash
-    |
+    a|urlTrailingSlash
+    a|
 |link:http://php.net/bool[bool^]
-    |isCookieSubdomainIndependent
-    |
+    a|isCookieSubdomainIndependent
+    a|
 |===
 
 
@@ -912,7 +917,7 @@ Returns this model as an array.
 [[system_contracts_plentymodulerepositorycontract]]
 ==== PlentyModuleRepositoryContract
 
-PlentyModuleRepositoryContract
+Repository for PlentyModule
 
 
 
@@ -943,11 +948,12 @@ public isActive($module):bool
 Returns whether or not a given module is active
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$module`
-|The keyPath for the module
+a|The keyPath for the module
 |===
 
 
@@ -967,11 +973,12 @@ public isHidden($module):bool
 Returns whether or not a given module is hidden
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$module`
-|The keyPath for the module
+a|The keyPath for the module
 |===
 
 
@@ -991,11 +998,12 @@ public getQuantity($module):int
 Get the &#039;quantity&#039; attribute of the given module
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$module`
-|keyPath of the module in Question
+a|keyPath of the module in Question
 |===
 
 
@@ -1015,15 +1023,16 @@ public getValueForModule($module, $value):void
 Get any value for any module
 
 .*Parameters*
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$module`
-|The keyPath of the module
+a|The keyPath of the module
 
 |link:http://php.net/string[string^]
 a|`$value`
-|The key for the value
+a|The key for the value
 |===
 
 
@@ -1048,93 +1057,94 @@ Represent cloud metrics for a specific day
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |plentyId
-    |
+    a|plentyId
+    a|
 |link:http://php.net/string[string^]
-    |date
-    |
+    a|date
+    a|
 |link:http://php.net/int[int^]
-    |webspaceMB
-    |
+    a|webspaceMB
+    a|
 |link:http://php.net/int[int^]
-    |webspaceDocumentsMB
-    |
+    a|webspaceDocumentsMB
+    a|
 |link:http://php.net/int[int^]
-    |websiteContentMB
-    |
+    a|websiteContentMB
+    a|
 |link:http://php.net/int[int^]
-    |cloudSpaceDocumentsMB
-    |
+    a|cloudSpaceDocumentsMB
+    a|
 |link:http://php.net/int[int^]
-    |cloudSpaceItemsMB
-    |
+    a|cloudSpaceItemsMB
+    a|
 |link:http://php.net/int[int^]
-    |cloudSpacePrivateMB
-    |
+    a|cloudSpacePrivateMB
+    a|
 |link:http://php.net/int[int^]
-    |cloudSpacePublicMB
-    |
+    a|cloudSpacePublicMB
+    a|
 |link:http://php.net/int[int^]
-    |dbSpaceMb
-    |
+    a|dbSpaceMb
+    a|
 |link:http://php.net/int[int^]
-    |websiteTrafficMB
-    |
+    a|websiteTrafficMB
+    a|
 |link:http://php.net/int[int^]
-    |cdnTrafficMB
-    |
+    a|cdnTrafficMB
+    a|
 |link:http://php.net/int[int^]
-    |cdnTrafficCount
-    |
+    a|cdnTrafficCount
+    a|
 |link:http://php.net/int[int^]
-    |contentCachingPutRequests
-    |
+    a|contentCachingPutRequests
+    a|
 |link:http://php.net/int[int^]
-    |contentCachingGetRequests
-    |
+    a|contentCachingGetRequests
+    a|
 |link:http://php.net/int[int^]
-    |userAccounts
-    |
+    a|userAccounts
+    a|
 |link:http://php.net/int[int^]
-    |warehouses
-    |
+    a|warehouses
+    a|
 |link:http://php.net/int[int^]
-    |warehousesSales
-    |
+    a|warehousesSales
+    a|
 |link:http://php.net/int[int^]
-    |facetSearchItems
-    |
+    a|facetSearchItems
+    a|
 |link:http://php.net/int[int^]
-    |facetSearchCalls
-    |
+    a|facetSearchCalls
+    a|
 |link:http://php.net/int[int^]
-    |items
-    |
+    a|items
+    a|
 |link:http://php.net/int[int^]
-    |itemVariations
-    |
+    a|itemVariations
+    a|
 |link:http://php.net/int[int^]
-    |hbciDailyAccounts
-    |
+    a|hbciDailyAccounts
+    a|
 |link:http://php.net/int[int^]
-    |hbciHourlyAccounts
-    |
+    a|hbciHourlyAccounts
+    a|
 |link:http://php.net/int[int^]
-    |ebicsDailyAccounts
-    |
+    a|ebicsDailyAccounts
+    a|
 |link:http://php.net/int[int^]
-    |ebicsHourlyAccounts
-    |
+    a|ebicsHourlyAccounts
+    a|
 |link:http://php.net/int[int^]
-    |emailAccountsWithTicketGeneration
-    |
+    a|emailAccountsWithTicketGeneration
+    a|
 |link:http://php.net/int[int^]
-    |ebayAccountsWithTicketGeneration
-    |
+    a|ebayAccountsWithTicketGeneration
+    a|
 |===
 
 
@@ -1172,21 +1182,22 @@ Represent a list of cloud metrics objects
 
 
 .Properties
+[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    |page
-    |
+    a|page
+    a|
 |link:http://php.net/int[int^]
-    |totalsCount
-    |
+    a|totalsCount
+    a|
 |link:http://php.net/bool[bool^]
-    |isLastPage
-    |
+    a|isLastPage
+    a|
 |link:http://php.net/array[array^]
-    |objects
-    |
+    a|objects
+    a|
 |===
 
 
