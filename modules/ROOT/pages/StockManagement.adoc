@@ -38,7 +38,7 @@ public listStockByWarehouseId($warehouseId, $columns = [], $page = 1, $itemsPerP
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List stock of a warehouse
@@ -74,7 +74,7 @@ public listStock($columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositori
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List stock
@@ -106,7 +106,7 @@ public listStockByWarehouseType($type, $columns = [], $page = 1, $itemsPerPage =
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List stock by warehouse type
@@ -250,7 +250,7 @@ public listStockMovements($warehouseId, $columns = [], $page = 1, $itemsPerPage 
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List stock movements
@@ -286,7 +286,7 @@ public unpackVariation($warehouseId, $variationStockIntake, $variationStockCorre
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
 
 
 Unpack variation
@@ -436,7 +436,7 @@ public listStockStorageLocationsByWarehouseId($warehouseId, $columns = [], $page
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List stock of all storage locations of a warehouse
@@ -476,7 +476,7 @@ public listStockStorageLocationsByVariationId($variationId, $columns = [], $page
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List stock of a variation per storage location
@@ -783,13 +783,13 @@ The stock storage location model contains all information about the stock that i
 |
     |updatedAt
     |The day and time the stock was last updated
-|        xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[StorageLocation]
+|        xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[`StorageLocation`]
     |storageLocation
     |Deprecated! Use warehouseLocation instead
-|        xref:Warehouse.adoc#warehouse_models_warehouselocation[WarehouseLocation]
+|        xref:Warehouse.adoc#warehouse_models_warehouselocation[`WarehouseLocation`]
     |warehouseLocation
     |The warehouse location of the item
-|        xref:Item.adoc#item_models_variation[Variation]
+|        xref:Item.adoc#item_models_variation[`Variation`]
     |variation
     |The variation of the item
 |===
@@ -845,7 +845,7 @@ public findById($warehouseId, $with = []):Plenty\Modules\StockManagement\Warehou
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
 
 
 Get a warehouse
@@ -901,7 +901,7 @@ public create($data):Plenty\Modules\StockManagement\Warehouse\Models\Warehouse
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
 
 
 Create a warehouse
@@ -988,10 +988,10 @@ The warehouse model in plentymarkets represents actual warehouses. Every warehou
 <li>amazon</li>
 <li>dhlFulfillment</li>
 </ul>
-|        xref:Account.adoc#account_models_address[Address]
+|        xref:Account.adoc#account_models_address[`Address`]
     |address
     |The address that the warehouse is located at
-|        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
+|        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
     |repairWarehouse
     |All information about the repair warehouse if a repair warehouse is linked to the sales warehouse
 |link:http://php.net/string[string^]
@@ -1060,7 +1060,7 @@ public getRackById($rackId, $columns = [], $with = []):Plenty\Modules\StockManag
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_rack[Rack]
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_rack[`Rack`]
 
 
 Find a rack by id.
@@ -1092,7 +1092,7 @@ public findRacks($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plent
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Find racks. The results can be filtered by warehouse id.
@@ -1128,7 +1128,7 @@ public createRack($data, $warehouseId):Plenty\Modules\StockManagement\Warehouse\
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_rack[Rack]
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_rack[`Rack`]
 
 
 Create a new rack.
@@ -1281,7 +1281,7 @@ public getShelfById($shelfId, $columns = [], $with = []):Plenty\Modules\StockMan
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_shelf[Shelf]
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_shelf[`Shelf`]
 
 
 Find a shelf by id.
@@ -1313,7 +1313,7 @@ public findShelves($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Ple
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Find shelves. The results can be filtered by warehouse id and rack id.
@@ -1349,7 +1349,7 @@ public createShelf($data, $warehouseId, $rackId):Plenty\Modules\StockManagement\
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_shelf[Shelf]
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_shelf[`Shelf`]
 
 
 Create a new shelf.
@@ -1506,7 +1506,7 @@ public getStorageLocationById($storageLocationId, $columns = [], $with = []):Ple
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[StorageLocation]
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[`StorageLocation`]
 
 
 Find a storage location by id.
@@ -1538,7 +1538,7 @@ public findStorageLocations($page = 1, $itemsPerPage = 50, $columns = [], $with 
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Find storage locations. The results can be filtered by warehouse id, rack id and shelf id.
@@ -1574,7 +1574,7 @@ public createStorageLocation($data, $warehouseId, $rackId, $shelfId):Plenty\Modu
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[StorageLocation]
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[`StorageLocation`]
 
 
 Create a new storage location.
@@ -1735,7 +1735,7 @@ The storage rack model
 |link:http://php.net/int[int^]
     |zone
     |The zone of the rack. Numbers between 1 and 20 are valid.
-|        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
+|        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
     |warehouse
     |The warehouse this rack belongs to.
 |
@@ -1796,7 +1796,7 @@ The storage shelf model
 |link:http://php.net/int[int^]
     |level
     |The level of the shelf. Numbers between 1 and 25 are valid.
-|        xref:Stockmanagement.adoc#stockmanagement_models_rack[Rack]
+|        xref:Stockmanagement.adoc#stockmanagement_models_rack[`Rack`]
     |rack
     |The rack this shelf belongs to.
 |
@@ -1863,13 +1863,13 @@ The storage location model
 |link:http://php.net/int[int^]
     |position
     |The position of the storage location.
-|        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[Warehouse]
+|        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
     |warehouse
     |The warehouse this storage location belongs to.
-|        xref:Stockmanagement.adoc#stockmanagement_models_rack[Rack]
+|        xref:Stockmanagement.adoc#stockmanagement_models_rack[`Rack`]
     |rack
     |The rack this storage location belongs to.
-|        xref:Stockmanagement.adoc#stockmanagement_models_shelf[Shelf]
+|        xref:Stockmanagement.adoc#stockmanagement_models_shelf[`Shelf`]
     |shelf
     |The shelf this storage location belongs to.
 |===

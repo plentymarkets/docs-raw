@@ -38,7 +38,7 @@ public getCurrentAuthorizedUser():Plenty\Modules\Authorization\Models\Authorized
     
 
 
-====== *Return type:*        xref:Authorization.adoc#authorization_models_authorizeduser[AuthorizedUser]
+====== *Return type:*        xref:Authorization.adoc#authorization_models_authorizeduser[`AuthorizedUser`]
 
 
 
@@ -105,7 +105,7 @@ public missingPermissions():Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 
@@ -132,6 +132,21 @@ public addMissingPermission($permissionKey):void
 a|`$permissionKey`
 |The permission key
 |===
+
+
+[source%nowrap, php]
+----
+
+public jsonSerialize():void
+
+----
+
+    
+
+
+
+
+
 
 
 [[authorization_authorization_models]]
@@ -164,7 +179,7 @@ The current authorized user
 |link:http://php.net/string[string^]
     |isSupportUser
     |Shows whether the authorized user is a support user
-|        xref:Authentication.adoc#authentication_models_user[User]
+|        xref:Authentication.adoc#authentication_models_user[`User`]
     |user
     |Further information about the user's class, roles and rights
 |link:http://php.net/string[string^]

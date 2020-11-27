@@ -38,7 +38,7 @@ public searchKeyFigureResults($searchRequests):Plenty\Modules\BI\KeyFigure\Model
     
 
 
-====== *Return type:*        xref:Bi.adoc#bi_models_keyfigureresultsearchresponse[KeyFigureResultSearchResponse]
+====== *Return type:*        xref:Bi.adoc#bi_models_keyfigureresultsearchresponse[`KeyFigureResultSearchResponse`]
 
 
 Search for key figure calculation results
@@ -46,7 +46,7 @@ Search for key figure calculation results
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:Bi.adoc#bi_models_keyfiguresearchrequests[KeyFigureSearchRequests]
+|        xref:Bi.adoc#bi_models_keyfiguresearchrequests[`KeyFigureSearchRequests`]
 a|`$searchRequests`
 |Several key figure search requests
 |===
@@ -88,15 +88,18 @@ The key figure config model represents the configuration of a key figure.
 |link:http://php.net/string[string^]
     |keyFigureName
     |User defined name
-|        xref:Bi.adoc#bi_models_keyfigurefilter[KeyFigureFilter]
+|        xref:Bi.adoc#bi_models_keyfigurefilter[`KeyFigureFilter`]
     |filter
     |Filter for calculating this key figure
-|        xref:Bi.adoc#bi_models_keyfiguretarget[KeyFigureTarget]
-    |target
+|link:http://php.net/array[array^]
+    |targets
     |Contains the target figures
-|        xref:Bi.adoc#bi_models_keyfiguremeta[KeyFigureMeta]
+|        xref:Bi.adoc#bi_models_keyfiguremeta[`KeyFigureMeta`]
     |meta
     |Additional data
+|link:http://php.net/bool[bool^]
+    |direct
+    |This key figure triggers a direct calculation without saving the result
 |link:http://php.net/string[string^]
     |updatedAt
     |Time of last change
@@ -784,7 +787,7 @@ public searchRawData($dataName, $createdAtTimestamp, $processStatus, $itemsPerPa
     
 
 
-====== *Return type:*        xref:Bi.adoc#bi_models_rawdatasearchresult[RawDataSearchResult]
+====== *Return type:*        xref:Bi.adoc#bi_models_rawdatasearchresult[`RawDataSearchResult`]
 
 
 Get list of raw data. Valid filter combinations: (dataName), (dataName &amp; processStatus), (createdAtTimestamp)
@@ -895,7 +898,7 @@ public getRawDataConfigs():Plenty\Modules\BI\RawData\Models\RawDataConfigs
     
 
 
-====== *Return type:*        xref:Bi.adoc#bi_models_rawdataconfigs[RawDataConfigs]
+====== *Return type:*        xref:Bi.adoc#bi_models_rawdataconfigs[`RawDataConfigs`]
 
 
 Returns list of all saved configurations
@@ -910,7 +913,7 @@ public updateRawDataConfigs($data):Plenty\Modules\BI\RawData\Models\RawDataConfi
     
 
 
-====== *Return type:*        xref:Bi.adoc#bi_models_rawdataconfigs[RawDataConfigs]
+====== *Return type:*        xref:Bi.adoc#bi_models_rawdataconfigs[`RawDataConfigs`]
 
 
 Resets all saved raw data configurations with given data
@@ -946,9 +949,15 @@ The BI raw data config model
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
+    |id
+    |The raw data config id
+|link:http://php.net/string[string^]
+    |plentyIdHash
+    |The plentymarkets system id hash
+|link:http://php.net/string[string^]
     |dataName
     |The raw data name
-|link:http://php.net/int[int^]
+|link:http://php.net/bool[bool^]
     |active
     |If active, raw data is generated daily
 |===
@@ -1052,12 +1061,6 @@ The BI raw data creator model
 |link:http://php.net/string[string^]
     |earliestPossibleDataDate
     |Earliest possible date from which data should be requested.
-|link:http://php.net/int[int^]
-    |deleteRawDataAfterDaysMinimum
-    |Minimum number of days after the generated raw data is deleted
-|link:http://php.net/int[int^]
-    |deleteRawDataAfterDaysMaximum
-    |Maximum number of days after the generated raw data is deleted
 |link:http://php.net/string[string^]
     |filterType
     |Defines how this raw data is filtered.
@@ -1070,9 +1073,12 @@ The BI raw data creator model
 |link:http://php.net/string[string^]
     |interval
     |Interval in which this creator runs through
-|link:http://php.net/bool[bool^]
-    |shouldProcess
-    |Internal value, indicates whether this data should be transferred to the data warehouse database
+|link:http://php.net/string[string^]
+    |storableFromPlan
+    |From which plan is this format created and provided.
+|link:http://php.net/string[string^]
+    |processableFromPlan
+    |From which plan will this data be transferred to plentyBI data warehouse database.
 |===
 
 
@@ -1128,6 +1134,9 @@ The BI raw model
 |link:http://php.net/int[int^]
     |shouldProcess
     |Specifies whether this file should be transferred to the data warehouse
+|link:http://php.net/int[int^]
+    |cloudId
+    |ID of source cloud
 |link:http://php.net/string[string^]
     |path
     |Storage path to raw data file

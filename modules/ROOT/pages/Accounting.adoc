@@ -38,7 +38,7 @@ public get($id):Plenty\Modules\Accounting\Models\AccountingLocation
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocation[`AccountingLocation`]
 
 
 Get an accounting location. The ID of the location must be specified.
@@ -62,7 +62,7 @@ public getAll():Plenty\Modules\Accounting\Models\AccountingLocation
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocation[`AccountingLocation`]
 
 
 List all accounting locations
@@ -102,7 +102,7 @@ public create($data):Plenty\Modules\Accounting\Models\AccountingLocation
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocation[`AccountingLocation`]
 
 
 Create an accounting location.
@@ -126,7 +126,7 @@ public update($id, $data):Plenty\Modules\Accounting\Models\AccountingLocation
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocation[`AccountingLocation`]
 
 
 Update an accounting location. The ID of the location must be specified.
@@ -178,7 +178,7 @@ public getSettings($id):Plenty\Modules\Accounting\Models\AccountingLocationSetti
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocationsettings[AccountingLocationSettings]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocationsettings[`AccountingLocationSettings`]
 
 
 Get accounting location settings. The ID of the location must be specified.
@@ -202,7 +202,7 @@ public updateSettings($id, $data):Plenty\Modules\Accounting\Models\AccountingLoc
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocationsettings[AccountingLocationSettings]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_accountinglocationsettings[`AccountingLocationSettings`]
 
 
 Update accounting location settings. The ID of the location must be specified.
@@ -380,7 +380,7 @@ public findByLocationId($locationId):Plenty\Modules\Accounting\Models\DebtorAcco
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_debtoraccountconfiguration[DebtorAccountConfiguration]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_debtoraccountconfiguration[`DebtorAccountConfiguration`]
 
 
 Get debtor account configuration of an accounting location. The ID of the accounting location must be specified.
@@ -718,7 +718,7 @@ public findByLocationId($locationId):Plenty\Modules\Accounting\Models\PostingKey
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_postingkeyconfiguration[PostingKeyConfiguration]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_postingkeyconfiguration[`PostingKeyConfiguration`]
 
 
 Get the posting key configuration of an accounting location. The ID of the accounting location must be specified.
@@ -761,7 +761,7 @@ public listRevenueAccounts($page = 1, $itemsPerPage = 50):Plenty\Repositories\Mo
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List revenue account configurations for all accounting locations. Each accounting location has one revenue account configuration.
@@ -789,7 +789,7 @@ public findByLocationId($locationId):Plenty\Modules\Accounting\Models\RevenueAcc
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_revenueaccountlocationconfiguration[RevenueAccountLocationConfiguration]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_revenueaccountlocationconfiguration[`RevenueAccountLocationConfiguration`]
 
 
 Get the revenue account configuration of an accounting location. The ID of the accounting location must be specified.
@@ -813,7 +813,7 @@ public findByLocationIdAndCountryId($locationId, $countryId):Plenty\Modules\Acco
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_revenueaccountcountryconfiguration[RevenueAccountCountryConfiguration]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_revenueaccountcountryconfiguration[`RevenueAccountCountryConfiguration`]
 
 
 Get the revenue account configuration of a country. The country account configuration is associated with an accounting location. The ID of the accounting location that the country is associated with as well as the ID of the country must be specified.
@@ -887,10 +887,10 @@ The accounting location model. An accounting location always has a country and b
 |link:http://php.net/array[array^]
     |vats
     |A collection of VAT configurations that are related to the accounting location
-|        xref:Order.adoc#order_models_country[Country]
+|        xref:Order.adoc#order_models_country[`Country`]
     |country
     |The country that the accounting location belongs to
-|        xref:System.adoc#system_models_webstore[Webstore]
+|        xref:System.adoc#system_models_webstore[`Webstore`]
     |client
     |The client (store) this accounting location belongs to
 |===
@@ -1018,7 +1018,7 @@ The DebtorAccountValue Model which contains the actual configured debtor account
 |link:http://php.net/string[string^]
     |value
     |The actual debtor account.
-|        xref:Accounting.adoc#accounting_models_debtoraccountconfiguration[DebtorAccountConfiguration]
+|        xref:Accounting.adoc#accounting_models_debtoraccountconfiguration[`DebtorAccountConfiguration`]
     |account
     |The debtor account configuration this account is associated with.
 |===
@@ -1185,7 +1185,7 @@ The posting key configuration model. A posting key configuration is a set of 4 p
 |
     |postingKeys
     |The posting keys for this configuration
-|        xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
+|        xref:Accounting.adoc#accounting_models_accountinglocation[`AccountingLocation`]
     |location
     |The name of the accounting location that the configuration belongs to
 |===
@@ -1283,10 +1283,10 @@ The revenue account country configuration model. The revenue account country con
 |
     |revenueAccounts
     |A list of the actual revenue accounts. The accounts are associated with VAT rate. The association can be identified by
-|        xref:Order.adoc#order_models_country[Country]
+|        xref:Order.adoc#order_models_country[`Country`]
     |country
     |The country these accounts are associated with.
-|        xref:Accounting.adoc#accounting_models_revenueaccountlocationconfiguration[RevenueAccountLocationConfiguration]
+|        xref:Accounting.adoc#accounting_models_revenueaccountlocationconfiguration[`RevenueAccountLocationConfiguration`]
     |locationConfiguration
     |The revenue account configuration these accounts are associated with
 |===
@@ -1513,7 +1513,7 @@ public getUsingVat($restrictedToDigitalItems = false):Plenty\Modules\Accounting\
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 
 
 Get the VAT configuration to be used for VAT calculation
@@ -1565,7 +1565,7 @@ public getStandardVatByLocationId($locationId, $startedAt = null):Plenty\Modules
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 
 
 Get a standard VAT configuration of an accounting location
@@ -1612,7 +1612,7 @@ public findById($id):Plenty\Modules\Accounting\Vat\Models\Vat
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 
 
 Get a VAT configuration
@@ -1636,7 +1636,7 @@ public getStandardVat($plentyId = null, $startedAt = null):Plenty\Modules\Accoun
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 
 
 Get the standard VAT configuration for a plenty ID
@@ -1664,7 +1664,7 @@ public getStandardVatByLocation($locationId, $startedAt = null):Plenty\Modules\A
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 
 
 Get the standard VAT configuration for a location ID
@@ -1692,25 +1692,25 @@ public getVat($locationId, $countryId, $startedAt = null):Plenty\Modules\Account
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 
 
-
+Gets the VAT configuration
 
 .*Parameters*
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-|
+|The ID of the location.
 
 |link:http://php.net/int[int^]
 a|`$countryId`
-|
+|The ID of the country.
 
 |link:http://php.net/string[string^]
 a|`$startedAt`
-|
+|The date when the VAT configuration went into effect. The date is given in W3C format.
 |===
 
 
@@ -1828,7 +1828,7 @@ public getVatById($id):Plenty\Modules\Accounting\Vat\Models\Vat
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 
 
 Get a VAT configuration by id
@@ -1852,7 +1852,7 @@ public createVat($data):Plenty\Modules\Accounting\Vat\Models\Vat
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 
 
 Create a VAT configuration
@@ -1876,7 +1876,7 @@ public updateVat($id, $data):Plenty\Modules\Accounting\Vat\Models\Vat
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[Vat]
+====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 
 
 Update a VAT configuration
@@ -2030,7 +2030,7 @@ Get the VAT field for a VAT rate.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:Accounting.adoc#accounting_models_vat[Vat]
+|        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 a|`$vat`
 |The VAT configuration of a country
 
@@ -2058,7 +2058,7 @@ Get the VAT rate for a VAT field.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:Accounting.adoc#accounting_models_vat[Vat]
+|        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 a|`$vat`
 |The VAT configuration of a country
 
@@ -2086,7 +2086,7 @@ Get the name of a VAT field.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:Accounting.adoc#accounting_models_vat[Vat]
+|        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 a|`$vat`
 |The VAT configuration of a country
 
@@ -2167,10 +2167,10 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
 |
     |updatedAt
     |The date that the VAT configuration was last updated.
-|        xref:Accounting.adoc#accounting_models_accountinglocation[AccountingLocation]
+|        xref:Accounting.adoc#accounting_models_accountinglocation[`AccountingLocation`]
     |location
     |The accounting location that the VAT configuration belongs to. Each accounting location is assigned to a country and only one accounting location is allowed per country.
-|        xref:Order.adoc#order_models_country[Country]
+|        xref:Order.adoc#order_models_country[`Country`]
     |country
     |The country that the VAT configuration belongs to
 |link:http://php.net/array[array^]
