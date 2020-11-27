@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[shopbuilder_shopbuilder]]
@@ -39,12 +44,11 @@ public getContentLinks($pluginSetId):array
 Get all linked contents for a plugin set
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|
+|
 |===
 
 
@@ -64,12 +68,11 @@ public getContentLink($contentLinkId):Plenty\Modules\ShopBuilder\Models\ContentL
 Get a single connection between a content and a layout container
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$contentLinkId`
-a|
+|
 |===
 
 
@@ -89,12 +92,11 @@ public createContentLink($data):Plenty\Modules\ShopBuilder\Models\ContentLink
 Link a content to a layout container
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-a|
+|
 |===
 
 
@@ -114,16 +116,15 @@ public updateContentLink($contentLinkId, $data):Plenty\Modules\ShopBuilder\Model
 Update a link between a content and a layout container
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$contentLinkId`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -143,12 +144,11 @@ public deleteContentLink($contentLinkId):void
 Unlink a content from a layout container. The content itself will remain
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$contentLinkId`
-a|
+|
 |===
 
 
@@ -168,28 +168,27 @@ public getContentLinksForContainer($containerName, $pluginSetId = null, $lang = 
 Get all content links for a specific layout container.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$containerName`
-a|The name of the layout container to get content links for.
+|The name of the layout container to get content links for.
 
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|An id of a plugin set to get content links for. Active plugin set will be used by default.
+|An id of a plugin set to get content links for. Active plugin set will be used by default.
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language to get content links for. Current language will be get from session if not defined.
+|The language to get content links for. Current language will be get from session if not defined.
 
 |link:http://php.net/string[string^]
 a|`$contentType`
-a|Type of the content to get
+|Type of the content to get
 
 |link:http://php.net/bool[bool^]
 a|`$filterResults`
-a|
+|
 |===
 
 
@@ -277,20 +276,19 @@ public searchContents($itemsPerPage = 20, $page = 1, $params = []):Plenty\Reposi
 Search for contents
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|Maximum number of items to be returned on each page
+|Maximum number of items to be returned on each page
 
 |link:http://php.net/int[int^]
 a|`$page`
-a|Current page
+|Current page
 
 |link:http://php.net/array[array^]
 a|`$params`
-a|Search parameters
+|Search parameters
 |===
 
 
@@ -310,24 +308,23 @@ public getContent($contentId, $pluginSetId, $frontendLanguage = null, $versionId
 Get a single content.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$contentId`
-a|Id of the content to get information for
+|Id of the content to get information for
 
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|Plugin set id to be used for rendering widgets.
+|Plugin set id to be used for rendering widgets.
 
 |link:http://php.net/string[string^]
 a|`$frontendLanguage`
-a|The language to be used for rendering the widgets.
+|The language to be used for rendering the widgets.
 
 |link:http://php.net/string[string^]
 a|`$versionId`
-a|The version of the content
+|The version of the content
 |===
 
 
@@ -347,20 +344,19 @@ public listContentVersions($contentId, $itemsPerPage = 20, $versionIdMarker = &q
 Get a list of Versions of the specified content.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$contentId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$versionIdMarker`
-a|
+|
 |===
 
 
@@ -380,24 +376,23 @@ public restoreContentVersion($contentId, $versionId, $pluginSetId, $frontendLang
 Restore a specific content version
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$contentId`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$versionId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|
+|
 
 |
 a|`$frontendLanguage`
-a|
+|
 |===
 
 
@@ -417,20 +412,19 @@ public createContent($pluginSetId, $data, $frontendLanguage = null):Plenty\Modul
 Create new content. New content will not be linked to any layout container.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
+|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
 
 |
 a|`$data`
-a|The raw content data.
+|The raw content data.
 
 |link:http://php.net/string[string^]
 a|`$frontendLanguage`
-a|The language to be used for rendering the widgets.
+|The language to be used for rendering the widgets.
 |===
 
 
@@ -450,24 +444,23 @@ public updateContent($pluginSetId, $contentId, $data, $frontendLanguage = null):
 Update content.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
+|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
 
 |link:http://php.net/int[int^]
 a|`$contentId`
-a|The id of the content to be updated.
+|The id of the content to be updated.
 
 |
 a|`$data`
-a|The raw data of the content.
+|The raw data of the content.
 
 |link:http://php.net/string[string^]
 a|`$frontendLanguage`
-a|The language to be used for rendering the widgets.
+|The language to be used for rendering the widgets.
 |===
 
 
@@ -487,16 +480,15 @@ public deleteContent($pluginSetId, $contentId):void
 Delete content. Any connections to layout containers will be removed too.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
+|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
 
 |link:http://php.net/int[int^]
 a|`$contentId`
-a|The id of the content to be deleted.
+|The id of the content to be deleted.
 |===
 
 
@@ -516,28 +508,27 @@ public duplicateContent($contentId, $targetPluginSetId, $language, $containerNam
 Duplicate a content and its link
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$contentId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$targetPluginSetId`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$language`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$containerName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$contentName`
-a|
+|
 |===
 
 
@@ -557,16 +548,15 @@ public rebuildContents($containerName = null, $pluginSetId = null):int
 Rebuild all contents linked to the current plugin set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$containerName`
-a|Name of the layout container to rebuild contents for.
+|Name of the layout container to rebuild contents for.
 
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|Id of the plugin set to rebuild contents for.
+|Id of the plugin set to rebuild contents for.
 |===
 
 
@@ -605,12 +595,11 @@ public registerWidget($widgetClass):void
 Register a widget to be available in the shop builder.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$widgetClass`
-a|
+|
 |===
 
 
@@ -630,16 +619,15 @@ public overrideWidget($widgetIdentifier, $overrideWidget):void
 Override a widget class to extend data or settings of the widget.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$widgetIdentifier`
-a|The identifier of the original widget to override
+|The identifier of the original widget to override
 
 |link:http://php.net/string[string^]
 a|`$overrideWidget`
-a|The class of the new class to get information of the widget from.
+|The class of the new class to get information of the widget from.
 |===
 
 
@@ -714,16 +702,15 @@ public getPreview($widgetSettings = [], $children = []):string
 Get the html representation of the widget
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$widgetSettings`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$children`
-a|
+|
 |===
 
 
@@ -743,16 +730,15 @@ public render($widgetSettings = [], $children = []):string
 Render the widget
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$widgetSettings`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$children`
-a|
+|
 |===
 
 
@@ -806,12 +792,11 @@ public writeSettings($values):void
 Store values of global settings.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$values`
-a|
+|
 |===
 
 
@@ -850,16 +835,15 @@ public getPreview($widgetSettings = [], $children = []):string
 Get the html representation of the widget
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$widgetSettings`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$children`
-a|
+|
 |===
 
 
@@ -879,16 +863,15 @@ public render($widgetSettings = [], $children = []):string
 Render the widget
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$widgetSettings`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$children`
-a|
+|
 |===
 
 
@@ -1006,12 +989,11 @@ Set the type of the currently displayed item content
 This will be used to determine the corresponding header/footer contents which are linked to a specific type.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$mainContentType`
-a|Possible values:
+|Possible values:
 <ul>
  <li>content</li>
  <li>checkout</li>
@@ -1055,12 +1037,11 @@ public setMainContainerName($mainContainerName):void
 Set the container name where the main content will be loaded into.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$mainContainerName`
-a|Name of the layout container.
+|Name of the layout container.
 |===
 
 
@@ -1080,12 +1061,11 @@ public setMainCategory($mainCategory):void
 Set the id of the currently displayed category.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$mainCategory`
-a|Id of the currently displayed category.
+|Id of the currently displayed category.
 |===
 
 
@@ -1107,34 +1087,33 @@ Content created by the shop builder. May be linked to layout containers.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the content
+    |id
+    |The ID of the content
 |link:http://php.net/string[string^]
-    a|dataProviderName
-    a|The name of the data provider
+    |dataProviderName
+    |The name of the data provider
 |
-    a|createdAt
-    a|The date when the content was created
+    |createdAt
+    |The date when the content was created
 |
-    a|updatedAt
-    a|The date when the content was last updated
+    |updatedAt
+    |The date when the content was last updated
 |link:http://php.net/string[string^]
-    a|type
-    a|The type of the content
+    |type
+    |The type of the content
 |
-    a|widgets
-    a|The configured widgets of the content. This attribute is deprecated. Use $dropzones instead.
+    |widgets
+    |The configured widgets of the content. This attribute is deprecated. Use $dropzones instead.
 |link:http://php.net/array[array^]
-    a|dropzones
-    a|Dropzones of the content
+    |dropzones
+    |Dropzones of the content
 |        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
-    a|link
-    a|
+    |link
+    |
 |===
 
 
@@ -1172,46 +1151,48 @@ Links a content from the shop builder to a layout container of the frontend plug
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the content link
+    |id
+    |The ID of the content link
 |link:http://php.net/int[int^]
-    a|contentId
-    a|The ID of the content
+    |contentId
+    |The ID of the content
 |link:http://php.net/string[string^]
-    a|containerName
-    a|The name of the container
+    |containerName
+    |The name of the container
 |link:http://php.net/int[int^]
-    a|pluginSetId
-    a|The Id of the plugin set
+    |pluginSetId
+    |The Id of the plugin set
 |link:http://php.net/string[string^]
-    a|language
-    a|The language where the content is linked to.
+    |language
+    |The language where the content is linked to.
 |link:http://php.net/bool[bool^]
-    a|active
-    a|Indicates if the link is active and the content should be visible for the frontend.
+    |active
+    |Indicates if the link is active and the content should be visible for the frontend.
 |link:http://php.net/string[string^]
-    a|relatedContentType
-    a|The content type the content is linked to
+    |relatedContentType
+    |The content type the content is linked to
 |link:http://php.net/string[string^]
-    a|relatedContainerName
-    a|The container name the content is linked to
+    |relatedContainerName
+    |The container name the content is linked to
 |link:http://php.net/bool[bool^]
-    a|inherit
-    a|Indicates if this content should be inherited to child contents.
+    |inherit
+    |Indicates if this content should be inherited to child contents.
+|link:http://php.net/bool[bool^]
+    |invalid
+    |Indicate if the content is invalid and should be regenerated on next request.
 |
-    a|createdAt
-    a|The date when the content was created
+    |createdAt
+    |The date when the content was created
 |
-    a|updatedAt
-    a|The date when the content was last updated
+    |updatedAt
+    |The date when the content was last updated
 |        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
-    a|content
-    a|
+    |content
+    |
 |===
 
 
@@ -1249,19 +1230,18 @@ A content page provided by a frontend plugin.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|identifier
-    a|The identifier of the content page
+    |identifier
+    |The identifier of the content page
 |link:http://php.net/string[string^]
-    a|caption
-    a|Translation key to read the caption from
+    |caption
+    |Translation key to read the caption from
 |link:http://php.net/array[array^]
-    a|dropzones
-    a|Available dropzones of this page to put contents into.
+    |dropzones
+    |Available dropzones of this page to put contents into.
 |===
 
 
@@ -1299,16 +1279,15 @@ Layout container of a content page where to display link contents generated by t
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|container
-    a|The container where dropped contents should be linked to.
+    |container
+    |The container where dropped contents should be linked to.
 |link:http://php.net/string[string^]
-    a|type
-    a|The type of contents which can be linked to this dropzone.
+    |type
+    |The type of contents which can be linked to this dropzone.
 |===
 
 
@@ -1346,40 +1325,39 @@ Content widget provided by a frontend plugin
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|identifier
-    a|The identifier of the content widget
+    |identifier
+    |The identifier of the content widget
 |link:http://php.net/string[string^]
-    a|widgetClass
-    a|The class of the content widget
+    |widgetClass
+    |The class of the content widget
 |link:http://php.net/string[string^]
-    a|label
-    a|The label of the content widget
+    |label
+    |The label of the content widget
 |link:http://php.net/string[string^]
-    a|tooltip
-    a|The tooltip of the content widget
+    |tooltip
+    |The tooltip of the content widget
 |link:http://php.net/string[string^]
-    a|previewImageURL
-    a|The preview image the content widget
+    |previewImageURL
+    |The preview image the content widget
 |link:http://php.net/string[string^]
-    a|type
-    a|The type of the widget
+    |type
+    |The type of the widget
 |link:http://php.net/int[int^]
-    a|maxPerPage
-    a|Maximum occurrences per content of the widget
+    |maxPerPage
+    |Maximum occurrences per content of the widget
 |link:http://php.net/array[array^]
-    a|categories
-    a|List of categories
+    |categories
+    |List of categories
 |link:http://php.net/array[array^]
-    a|allowedNestingTypes
-    a|Allowed types to be nested inside this widget
+    |allowedNestingTypes
+    |Allowed types to be nested inside this widget
 |
-    a|settings
-    a|The settings of the content widget
+    |settings
+    |The settings of the content widget
 |===
 
 
@@ -1417,16 +1395,15 @@ The rendered preview of a content widget
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|identifier
-    a|
+    |identifier
+    |
 |link:http://php.net/string[string^]
-    a|content
-    a|
+    |content
+    |
 |===
 
 
@@ -1498,20 +1475,19 @@ public addField($identifier, $label, $expression):void
 Register a new data field.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$identifier`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$label`
-a|The label of the field
+|The label of the field
 
 |link:http://php.net/string[string^]
 a|`$expression`
-a|The twig expression to be inserted by this field
+|The twig expression to be inserted by this field
 |===
 
 
@@ -1531,20 +1507,19 @@ public addChildProvider($label, $childProviderClass, $params = []):void
 Register a nested provider containing a list of child data fields.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$label`
-a|The label of the group
+|The label of the group
 
 |link:http://php.net/string[string^]
 a|`$childProviderClass`
-a|The class name of the nested data fields provider.
+|The class name of the nested data fields provider.
 
 |link:http://php.net/array[array^]
 a|`$params`
-a|Additional parameters to be passed to provider constructor method.
+|Additional parameters to be passed to provider constructor method.
 |===
 
 
@@ -1564,16 +1539,15 @@ public addSearchKeywords($identifier, $keywords = []):void
 Assign keywords to a field to be respected during search.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$identifier`
-a|The identifier of the field to assign keywords to.
+|The identifier of the field to assign keywords to.
 
 |link:http://php.net/array[array^]
 a|`$keywords`
-a|A list of keywords. Each keyword may contain a translation key. A single keyword could be a comma separated list of words.
+|A list of keywords. Each keyword may contain a translation key. A single keyword could be a comma separated list of words.
 |===
 
 

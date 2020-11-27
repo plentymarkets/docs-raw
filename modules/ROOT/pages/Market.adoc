@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[market_credentials]]
@@ -39,12 +44,11 @@ public get($id):Plenty\Modules\Market\Credentials\Models\Credentials
 Get credentials
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the credentials.
+|The ID of the credentials.
 |===
 
 
@@ -64,12 +68,11 @@ public create($data):Plenty\Modules\Market\Credentials\Models\Credentials
 Create credentials
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The credentials data. The properties that are required to update credentials can be found in the credentials model.
+|The credentials data. The properties that are required to update credentials can be found in the credentials model.
 |===
 
 
@@ -89,16 +92,15 @@ public update($id, $data):Plenty\Modules\Market\Credentials\Models\Credentials
 Update credentials
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the credentials.
+|The ID of the credentials.
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|The credentials data. The properties that are required to update credentials can be found in the credentials model.
+|The credentials data. The properties that are required to update credentials can be found in the credentials model.
 |===
 
 
@@ -118,12 +120,11 @@ public delete($id):Plenty\Repositories\Models\DeleteResponse
 Delete credentials
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the credentials.
+|The ID of the credentials.
 |===
 
 
@@ -143,12 +144,11 @@ public all($filters = []):array
 List all credentials
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|Credentials can be filtered by ID, market, status, environment.
+|Credentials can be filtered by ID, market, status, environment.
 |===
 
 
@@ -168,20 +168,19 @@ public search($filters = [], $page, $itemsPerPage = \Plenty\Modules\Market\Crede
 List credentials
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|Credentials can be filtered by ID, market, status, environment.
+|Credentials can be filtered by ID, market, status, environment.
 
 |link:http://php.net/int[int^]
 a|`$page`
-a|Current page of the response.
+|Current page of the response.
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The requested amount of credentials per result page.
+|The requested amount of credentials per result page.
 |===
 
 
@@ -231,12 +230,11 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -303,31 +301,30 @@ The credentials model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the credentials.
+    |id
+    |The ID of the credentials.
 |link:http://php.net/string[string^]
-    a|environment
-    a|The environment for the credentials. Possible values: sandbox, production
+    |environment
+    |The environment for the credentials. Possible values: sandbox, production
 |link:http://php.net/string[string^]
-    a|status
-    a|The status of the credentials. Possible values: active, inactive, pending
+    |status
+    |The status of the credentials. Possible values: active, inactive, pending
 |link:http://php.net/array[array^]
-    a|data
-    a|The data of the credentials.
+    |data
+    |The data of the credentials.
 |link:http://php.net/string[string^]
-    a|market
-    a|The market for the current credentials.
+    |market
+    |The market for the current credentials.
 |
-    a|createdAt
-    a|The date that the credentials was created.
+    |createdAt
+    |The date that the credentials was created.
 |
-    a|updatedAt
-    a|The date that the credentials was updated last.
+    |updatedAt
+    |The date that the credentials was updated last.
 |===
 
 
@@ -387,16 +384,15 @@ public get($id, $filters = []):Plenty\Modules\Market\Ebay\AccountPolicy\Models\F
 Get a stored fulfillment policy based on ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$id`
-a|The ID of the policy that we want to get
+|The ID of the policy that we want to get
 
 |link:http://php.net/array[array^]
 a|`$filters`
-a|A list of filters that are needed to get the corresponding policy. Available: `marketplaceId´, `credentialsId´.
+|A list of filters that are needed to get the corresponding policy. Available: `marketplaceId´, `credentialsId´.
 |===
 
 
@@ -435,16 +431,15 @@ public get($id, $filters = []):Plenty\Modules\Market\Ebay\AccountPolicy\Models\P
 Get a stored payment policy based on ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$id`
-a|The ID of the payment policy.
+|The ID of the payment policy.
 
 |link:http://php.net/array[array^]
 a|`$filters`
-a|A list of filters that are needed to get the corresponding policy. Available: `marketplaceId´, `credentialsId´.
+|A list of filters that are needed to get the corresponding policy. Available: `marketplaceId´, `credentialsId´.
 |===
 
 
@@ -483,16 +478,15 @@ public get($id, $filters = []):Plenty\Modules\Market\Ebay\AccountPolicy\Models\R
 Get a stored return policy based on ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$id`
-a|The ID of the policy that we want to get
+|The ID of the policy that we want to get
 
 |link:http://php.net/array[array^]
 a|`$filters`
-a|A list of filters that are needed to get the corresponding policy. Available: `marketplaceId´, `credentialsId´.
+|A list of filters that are needed to get the corresponding policy. Available: `marketplaceId´, `credentialsId´.
 |===
 
 
@@ -532,12 +526,11 @@ public __construct($fulfillmentPolicy):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Market.adoc#market_models_fulfillmentpolicy[`FulfillmentPolicy`]
 a|`$fulfillmentPolicy`
-a|
+|
 |===
 
 
@@ -591,12 +584,11 @@ public __construct($fulfillmentPolicy):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Market.adoc#market_models_fulfillmentpolicy[`FulfillmentPolicy`]
 a|`$fulfillmentPolicy`
-a|
+|
 |===
 
 
@@ -650,12 +642,11 @@ public __construct($fulfillmentPolicy):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Market.adoc#market_models_fulfillmentpolicy[`FulfillmentPolicy`]
 a|`$fulfillmentPolicy`
-a|
+|
 |===
 
 
@@ -709,12 +700,11 @@ public __construct($fulfillmentPolicy):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Market.adoc#market_models_fulfillmentpolicy[`FulfillmentPolicy`]
 a|`$fulfillmentPolicy`
-a|
+|
 |===
 
 
@@ -768,12 +758,11 @@ public __construct($paymentPolicy):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Market.adoc#market_models_paymentpolicy[`PaymentPolicy`]
 a|`$paymentPolicy`
-a|
+|
 |===
 
 
@@ -827,12 +816,11 @@ public __construct($paymentPolicy):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Market.adoc#market_models_paymentpolicy[`PaymentPolicy`]
 a|`$paymentPolicy`
-a|
+|
 |===
 
 
@@ -886,12 +874,11 @@ public __construct($paymentPolicy):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Market.adoc#market_models_paymentpolicy[`PaymentPolicy`]
 a|`$paymentPolicy`
-a|
+|
 |===
 
 
@@ -945,12 +932,11 @@ public __construct($paymentPolicy):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Market.adoc#market_models_paymentpolicy[`PaymentPolicy`]
 a|`$paymentPolicy`
-a|
+|
 |===
 
 
@@ -1004,12 +990,11 @@ public __construct($returnPolicy):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Market.adoc#market_models_returnpolicy[`ReturnPolicy`]
 a|`$returnPolicy`
-a|
+|
 |===
 
 
@@ -1063,12 +1048,11 @@ public __construct($returnPolicy):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Market.adoc#market_models_returnpolicy[`ReturnPolicy`]
 a|`$returnPolicy`
-a|
+|
 |===
 
 
@@ -1122,12 +1106,11 @@ public __construct($returnPolicy):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Market.adoc#market_models_returnpolicy[`ReturnPolicy`]
 a|`$returnPolicy`
-a|
+|
 |===
 
 
@@ -1181,12 +1164,11 @@ public __construct($returnPolicy):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Market.adoc#market_models_returnpolicy[`ReturnPolicy`]
 a|`$returnPolicy`
-a|
+|
 |===
 
 
@@ -1223,16 +1205,15 @@ The eBay amount type model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|currency
-    a|The base currency applied to the value field to establish a monetary amount. The currency is represented as a 3-letter ISO4217 currency code. For example, the code for the Canadian Dollar is CAD.
+    |currency
+    |The base currency applied to the value field to establish a monetary amount. The currency is represented as a 3-letter ISO4217 currency code. For example, the code for the Canadian Dollar is CAD.
 |link:http://php.net/float[float^]
-    a|value
-    a|The value of the monetary amount in the specified currency.
+    |value
+    |The value of the monetary amount in the specified currency.
 |===
 
 
@@ -1270,16 +1251,15 @@ The eBay category type model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/bool[bool^]
-    a|default
-    a|If this value is set to true, it indicates that this policy is the default policy for the associated categoryTypes.name and marketplaceId pair
+    |default
+    |If this value is set to true, it indicates that this policy is the default policy for the associated categoryTypes.name and marketplaceId pair
 |link:http://php.net/string[string^]
-    a|name
-    a|The category type to which the policy applies (motor vehicles or non-motor vehicles). Available values: `MOTORS_VEHICLES`, `ALL_EXCLUDING_MOTORS_VEHICLES`
+    |name
+    |The category type to which the policy applies (motor vehicles or non-motor vehicles). Available values: `MOTORS_VEHICLES`, `ALL_EXCLUDING_MOTORS_VEHICLES`
 |===
 
 
@@ -1317,19 +1297,18 @@ The eBay deposit model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |        xref:Market.adoc#market_models_amounttype[`AmountType`]
-    a|amount
-    a|Deposits are used only with Motors listings and the amount value indicates the initial deposit that a buyer must make to purchase a motor vehicle. Deposits on motor vehicles can only be paid using PayPal, so if you specify a deposit amount, then you must also set the paymetMethodType value to 'PayPal'.
+    |amount
+    |Deposits are used only with Motors listings and the amount value indicates the initial deposit that a buyer must make to purchase a motor vehicle. Deposits on motor vehicles can only be paid using PayPal, so if you specify a deposit amount, then you must also set the paymetMethodType value to 'PayPal'.
 |        xref:Market.adoc#market_models_timeduration[`TimeDuration`]
-    a|dueIn
-    a|Indicates the number of hours the buyer has (after they commit to buy) to make an initial deposit to the seller as a down payment on a motor vehicle.
+    |dueIn
+    |Indicates the number of hours the buyer has (after they commit to buy) to make an initial deposit to the seller as a down payment on a motor vehicle.
 |        xref:Market.adoc#market_models_paymentmethod[`PaymentMethod`]
-    a|paymentMethods
-    a|A list of accepted payment methods. For deposits (which are applicable to only motor listings), the paymentMethodType must be set to 'PayPal'
+    |paymentMethods
+    |A list of accepted payment methods. For deposits (which are applicable to only motor listings), the paymentMethodType must be set to 'PayPal'
 |===
 
 
@@ -1367,46 +1346,45 @@ The eBay fulfillment policy model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|fulfillmentPolicyId
-    a|The ID of the fulfillment policy.
+    |fulfillmentPolicyId
+    |The ID of the fulfillment policy.
 |link:http://php.net/array[array^]
-    a|categoryTypes
-    a|The CategoryTypeEnum value to which this policy applies. Used to discern accounts that sell motor vehicles from those that don't. (Currently, each policy can be set to only one categoryTypes value at a time.)
+    |categoryTypes
+    |The CategoryTypeEnum value to which this policy applies. Used to discern accounts that sell motor vehicles from those that don't. (Currently, each policy can be set to only one categoryTypes value at a time.)
 |link:http://php.net/string[string^]
-    a|description
-    a|An optional seller-defined description of the fulfillment policy.
+    |description
+    |An optional seller-defined description of the fulfillment policy.
 |link:http://php.net/bool[bool^]
-    a|freightShipping
-    a|Set this value to true to indicate the seller offers freight shipping.
+    |freightShipping
+    |Set this value to true to indicate the seller offers freight shipping.
 |link:http://php.net/bool[bool^]
-    a|globalShipping
-    a|If this value is set to true, it indicates the seller has opted-in to the eBay Global Shipping Program and that they use that service for thier internation shipments.
+    |globalShipping
+    |If this value is set to true, it indicates the seller has opted-in to the eBay Global Shipping Program and that they use that service for thier internation shipments.
 |        xref:Market.adoc#market_models_timeduration[`TimeDuration`]
-    a|handlingTime
-    a|Specifies the maximum number of business days the seller commits to for preparing and shipping an order after receiving a cleared payment for the order.
+    |handlingTime
+    |Specifies the maximum number of business days the seller commits to for preparing and shipping an order after receiving a cleared payment for the order.
 |link:http://php.net/bool[bool^]
-    a|localPickup
-    a|If this value is set to true, it indicates the seller offers local pickup of their items.
+    |localPickup
+    |If this value is set to true, it indicates the seller offers local pickup of their items.
 |link:http://php.net/string[string^]
-    a|marketplaceId
-    a|The ID of the eBay marketplace to which this fulfillment policy applies. If this value is not specified, value defaults to the seller's eBay registration site.
+    |marketplaceId
+    |The ID of the eBay marketplace to which this fulfillment policy applies. If this value is not specified, value defaults to the seller's eBay registration site.
 |link:http://php.net/string[string^]
-    a|name
-    a|A user-defined name for this fulfillment policy. Names must be unique for policies assigned to the same marketplace.
+    |name
+    |A user-defined name for this fulfillment policy. Names must be unique for policies assigned to the same marketplace.
 |link:http://php.net/bool[bool^]
-    a|pickupDropOff
-    a|If this value is set to true, it indicates the seller offers the "Click and Collect" feature.
+    |pickupDropOff
+    |If this value is set to true, it indicates the seller offers the "Click and Collect" feature.
 |link:http://php.net/array[array^]
-    a|shippingOptions
-    a|A list that defines the seller's shipping configurations for DOMESTIC and INTERNATIONAL order shipments.
+    |shippingOptions
+    |A list that defines the seller's shipping configurations for DOMESTIC and INTERNATIONAL order shipments.
 |        xref:Market.adoc#market_models_regionset[`RegionSet`]
-    a|shipToLocations
-    a|This object contains the regionIncluded and regionExcluded fields, which indicate the areas to where the seller does and dosen't ship.
+    |shipToLocations
+    |This object contains the regionIncluded and regionExcluded fields, which indicate the areas to where the seller does and dosen't ship.
 |===
 
 
@@ -1444,19 +1422,18 @@ The eBay payment method model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/array[array^]
-    a|brands
-    a|A list of credit card brands accepted by the seller. This field is required if the paymentMethodType is set to CREDIT_CARD.
+    |brands
+    |A list of credit card brands accepted by the seller. This field is required if the paymentMethodType is set to CREDIT_CARD.
 |link:http://php.net/string[string^]
-    a|paymentMethodType
-    a|The payment method, selected from the supported payment method types..
+    |paymentMethodType
+    |The payment method, selected from the supported payment method types..
 |        xref:Market.adoc#market_models_recipientaccountreference[`RecipientAccountReference`]
-    a|recipientAccountReference
-    a|Information that is used to identify the recipient's account to which electronic funds are sent. This field is required if the payment method is set to PAYPAL, and the field must contain the email address associated with the PayPal account selected by the seller.
+    |recipientAccountReference
+    |Information that is used to identify the recipient's account to which electronic funds are sent. This field is required if the payment method is set to PAYPAL, and the field must contain the email address associated with the PayPal account selected by the seller.
 |===
 
 
@@ -1494,40 +1471,39 @@ The eBay payment policy model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|paymentPolicyId
-    a|The ID of the payment policy.
+    |paymentPolicyId
+    |The ID of the payment policy.
 |link:http://php.net/array[array^]
-    a|categoryTypes
-    a|The CategoryTypeEnum value to which this policy applies. The category type discerns whether the policy covers the sale of motor vehicles (via eBay Motors), or the sale of everything except motor vehicles.
+    |categoryTypes
+    |The CategoryTypeEnum value to which this policy applies. The category type discerns whether the policy covers the sale of motor vehicles (via eBay Motors), or the sale of everything except motor vehicles.
 |        xref:Market.adoc#market_models_deposit[`Deposit`]
-    a|deposit
-    a|A container that describes the details of a deposit. Used only with motor listings.
+    |deposit
+    |A container that describes the details of a deposit. Used only with motor listings.
 |link:http://php.net/string[string^]
-    a|description
-    a|An optional seller-defined description of the payment policy. (Max length: 250)
+    |description
+    |An optional seller-defined description of the payment policy. (Max length: 250)
 |        xref:Market.adoc#market_models_timeduration[`TimeDuration`]
-    a|fullPaymentDueIn
-    a|Indicates the number of days that a buyer has to make their full payment to the seller, and close the remaining balance on a motor vehicle transaction. The period starts when the buyer commits to buy.
+    |fullPaymentDueIn
+    |Indicates the number of days that a buyer has to make their full payment to the seller, and close the remaining balance on a motor vehicle transaction. The period starts when the buyer commits to buy.
 |link:http://php.net/bool[bool^]
-    a|immediatePay
-    a|Indicate if the payment is due upon receipt or not. (eBay generates a receipt when the buyer agrees to purchase an item)
+    |immediatePay
+    |Indicate if the payment is due upon receipt or not. (eBay generates a receipt when the buyer agrees to purchase an item)
 |link:http://php.net/string[string^]
-    a|marketplaceId
-    a|The ID of the eBay marketplace to which this return policy applies. If this value is not specified, value defaults to the seller's eBay registration site.
+    |marketplaceId
+    |The ID of the eBay marketplace to which this return policy applies. If this value is not specified, value defaults to the seller's eBay registration site.
 |link:http://php.net/string[string^]
-    a|name
-    a|A user-defined name for this payment policy. Names must be unique for policies assigned to the same marketplace. (Max length: 64)
+    |name
+    |A user-defined name for this payment policy. Names must be unique for policies assigned to the same marketplace. (Max length: 64)
 |link:http://php.net/string[string^]
-    a|paymentInstructions
-    a|Allows the seller to give payment instructions to the buyer. These instructions appear on the eBay View Item and Checkout pages.
+    |paymentInstructions
+    |Allows the seller to give payment instructions to the buyer. These instructions appear on the eBay View Item and Checkout pages.
 |        xref:Market.adoc#market_models_paymentmethod[`PaymentMethod`]
-    a|paymentMethods
-    a|A list of the payment methods accepted by the seller. Each payment policy must specify at least one payment method.
+    |paymentMethods
+    |A list of the payment methods accepted by the seller. Each payment policy must specify at least one payment method.
 |===
 
 
@@ -1565,16 +1541,15 @@ The eBay recipient account reference model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|referenceId
-    a|The recipient's reference.
+    |referenceId
+    |The recipient's reference.
 |link:http://php.net/string[string^]
-    a|referenceType
-    a|The reference type of a recipient's account.
+    |referenceType
+    |The reference type of a recipient's account.
 |===
 
 
@@ -1612,16 +1587,15 @@ The eBay region model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|regionName
-    a|A string that indicates the name of a region, as defined by eBay. A "region" can be either a 'world region' (e.g., the "Middle East" or "Southeast Asia") or a country, as represented with a two-letter country code.
+    |regionName
+    |A string that indicates the name of a region, as defined by eBay. A "region" can be either a 'world region' (e.g., the "Middle East" or "Southeast Asia") or a country, as represented with a two-letter country code.
 |link:http://php.net/string[string^]
-    a|regionType
-    a|Available values: `COUNTRY`, `COUNTRY_REGION`, `STATE_OR_PROVINCE`, `WORLD_REGION`, `WORLDWIDE`.
+    |regionType
+    |Available values: `COUNTRY`, `COUNTRY_REGION`, `STATE_OR_PROVINCE`, `WORLD_REGION`, `WORLDWIDE`.
 |===
 
 
@@ -1659,16 +1633,15 @@ The eBay region set model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/array[array^]
-    a|regionExcluded
-    a|A list of one or more regionsName fields that specify the areas to where a seller does not ship. Populate regionExcluded in only the top-level shipToLocations container.
+    |regionExcluded
+    |A list of one or more regionsName fields that specify the areas to where a seller does not ship. Populate regionExcluded in only the top-level shipToLocations container.
 |link:http://php.net/array[array^]
-    a|regionIncluded
-    a|A list of one or more regionsName fields that specify the areas to where a seller ships.
+    |regionIncluded
+    |A list of one or more regionsName fields that specify the areas to where a seller ships.
 |===
 
 
@@ -1706,49 +1679,48 @@ The eBay return policy model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|returnPolicyId
-    a|The ID of the return policy.
+    |returnPolicyId
+    |The ID of the return policy.
 |link:http://php.net/array[array^]
-    a|categoryTypes
-    a|For return policies, this field can be set to only `ALL_EXCLUDING_MOTORS_VEHICLES (returns on motor vehicles are not processed through eBay flows.)
+    |categoryTypes
+    |For return policies, this field can be set to only `ALL_EXCLUDING_MOTORS_VEHICLES (returns on motor vehicles are not processed through eBay flows.)
 |link:http://php.net/string[string^]
-    a|description
-    a|An optional seller-defined description of the return policy.
+    |description
+    |An optional seller-defined description of the return policy.
 |link:http://php.net/bool[bool^]
-    a|extendedHolidayReturnsOffered
-    a|If this value is set to true, it indicates the seller offers an Extended Holiday Returns policy for their listings.
+    |extendedHolidayReturnsOffered
+    |If this value is set to true, it indicates the seller offers an Extended Holiday Returns policy for their listings.
 |link:http://php.net/string[string^]
-    a|marketplaceId
-    a|The ID of the eBay marketplace to which this return policy applies. If this value is not specified, value defaults to the seller's eBay registration site.
+    |marketplaceId
+    |The ID of the eBay marketplace to which this return policy applies. If this value is not specified, value defaults to the seller's eBay registration site.
 |link:http://php.net/string[string^]
-    a|name
-    a|A user-defined name for this fulfillment policy. Names must be unique for policies assigned to the same marketplace.
+    |name
+    |A user-defined name for this fulfillment policy. Names must be unique for policies assigned to the same marketplace.
 |link:http://php.net/string[string^]
-    a|refundMethod
-    a|Indicates the method the seller uses to compensate the buyer for returned items. The return method specified applies only to remorse returns. Available options: `MERCHANDISE_CREDIT`, `MONEY_BACK`.
+    |refundMethod
+    |Indicates the method the seller uses to compensate the buyer for returned items. The return method specified applies only to remorse returns. Available options: `MERCHANDISE_CREDIT`, `MONEY_BACK`.
 |link:http://php.net/string[string^]
-    a|restockingFeePercentage
-    a|Sellers who accept returns should include this field if they charge buyers a restocking fee when items are returned.
+    |restockingFeePercentage
+    |Sellers who accept returns should include this field if they charge buyers a restocking fee when items are returned.
 |link:http://php.net/string[string^]
-    a|returnInstruction
-    a|This optional free-form string field lets the seller provide a detailed explanation of the return policy.
+    |returnInstruction
+    |This optional free-form string field lets the seller provide a detailed explanation of the return policy.
 |link:http://php.net/string[string^]
-    a|returnMethod
-    a|This field indicates the method in which the seller handles non-money back return requests for remorse returns. Sellers can specify they either exchange or replace items. Available options: `EXCHANGE`, `REPLACEMENT`.
+    |returnMethod
+    |This field indicates the method in which the seller handles non-money back return requests for remorse returns. Sellers can specify they either exchange or replace items. Available options: `EXCHANGE`, `REPLACEMENT`.
 |        xref:Market.adoc#market_models_timeduration[`TimeDuration`]
-    a|returnPeriod
-    a|This value indicates the length of time the seller accepts returns, the duration of which starts when the buyer receives the item.
+    |returnPeriod
+    |This value indicates the length of time the seller accepts returns, the duration of which starts when the buyer receives the item.
 |link:http://php.net/bool[bool^]
-    a|returnsAccepted
-    a|Set this value to true to indicate the seller accepts returns.
+    |returnsAccepted
+    |Set this value to true to indicate the seller accepts returns.
 |link:http://php.net/string[string^]
-    a|returnShippingCostPayer
-    a|The seller uses this value to specify whether the buyer or the seller is responsible for paying return shipping charges. The field can be set to either `BUYER` or `SELLER`.
+    |returnShippingCostPayer
+    |The seller uses this value to specify whether the buyer or the seller is responsible for paying return shipping charges. The field can be set to either `BUYER` or `SELLER`.
 |===
 
 
@@ -1786,31 +1758,30 @@ The eBay shipping option model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|costType
-    a|Defines whether the shipping cost is `FLAT_RATE`, `CALCULATED`, or `NOT_SPECIFIED` (for use with freight shipping and local pickup)
+    |costType
+    |Defines whether the shipping cost is `FLAT_RATE`, `CALCULATED`, or `NOT_SPECIFIED` (for use with freight shipping and local pickup)
 |        xref:Market.adoc#market_models_amounttype[`AmountType`]
-    a|insuranceFee
-    a|Sellers can offer international shipping insurance only when they ship to AU, FR, or IT. This value indicates the cost the buyer must pay to purchase shipping insurance for the items being shipped.
+    |insuranceFee
+    |Sellers can offer international shipping insurance only when they ship to AU, FR, or IT. This value indicates the cost the buyer must pay to purchase shipping insurance for the items being shipped.
 |link:http://php.net/bool[bool^]
-    a|insuranceOffered
-    a|When set to true, it indicates the seller offers shipping insurance.
+    |insuranceOffered
+    |When set to true, it indicates the seller offers shipping insurance.
 |link:http://php.net/string[string^]
-    a|optionType
-    a|Use this field to set the ShippingOption element to either `DOMESTIC` or `INTERNATIONAL`
+    |optionType
+    |Use this field to set the ShippingOption element to either `DOMESTIC` or `INTERNATIONAL`
 |        xref:Market.adoc#market_models_amounttype[`AmountType`]
-    a|packageHandlingCost
-    a|A fee a seller can add to cover package and handling costs. This fee is in addition to the amount of the selected shipping service and this fee is included in the final shipping service costs in the output.
+    |packageHandlingCost
+    |A fee a seller can add to cover package and handling costs. This fee is in addition to the amount of the selected shipping service and this fee is included in the final shipping service costs in the output.
 |link:http://php.net/string[string^]
-    a|rateTableId
-    a|A unique eBay-assigned ID associated with a user-created shipping rate table.
+    |rateTableId
+    |A unique eBay-assigned ID associated with a user-created shipping rate table.
 |link:http://php.net/array[array^]
-    a|shippingServices
-    a|Contains a list of shipping services offered for either `DOMESTIC` or `INTERNATIONAL` shipments.
+    |shippingServices
+    |Contains a list of shipping services offered for either `DOMESTIC` or `INTERNATIONAL` shipments.
 |===
 
 
@@ -1848,43 +1819,42 @@ The eBay shipping service model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |        xref:Market.adoc#market_models_amounttype[`AmountType`]
-    a|additionalShippingCost
-    a|The cost of shipping each additional item if the same buyer purchases a multiple quantity of the same line item. This field is applicable for policies that cover multiple-quantity, fixed-price listings and is not applicable for policies that apply to single-quantity listings.
+    |additionalShippingCost
+    |The cost of shipping each additional item if the same buyer purchases a multiple quantity of the same line item. This field is applicable for policies that cover multiple-quantity, fixed-price listings and is not applicable for policies that apply to single-quantity listings.
 |link:http://php.net/bool[bool^]
-    a|buyerResponsibleForPickup
-    a|This field is only applicable to vehicle categories on eBay Motors (US and Canada). If set to true, the buyer is responsible for picking up the vehicle. Otherwise, the seller should specify the vehicle pickup arrangements in the item description.
+    |buyerResponsibleForPickup
+    |This field is only applicable to vehicle categories on eBay Motors (US and Canada). If set to true, the buyer is responsible for picking up the vehicle. Otherwise, the seller should specify the vehicle pickup arrangements in the item description.
 |link:http://php.net/bool[bool^]
-    a|buyerResponsibleForShipping
-    a|This field is applicable for only items listed in vehicle categories on eBay Motors (US and Canada). If set to true, the buyer is responsible for the shipment of the vehicle. Otherwise, the seller should specify the vehicle shipping arrangements in the item description.
+    |buyerResponsibleForShipping
+    |This field is applicable for only items listed in vehicle categories on eBay Motors (US and Canada). If set to true, the buyer is responsible for the shipment of the vehicle. Otherwise, the seller should specify the vehicle shipping arrangements in the item description.
 |        xref:Market.adoc#market_models_amounttype[`AmountType`]
-    a|cashOnDeliveryFee
-    a|The value indicates the Cash on Delivery (COD) fee that the seller charges if the buyer uses the CASH_ON_DELIVERY payment method.
+    |cashOnDeliveryFee
+    |The value indicates the Cash on Delivery (COD) fee that the seller charges if the buyer uses the CASH_ON_DELIVERY payment method.
 |link:http://php.net/bool[bool^]
-    a|freeShipping
-    a|The seller can set this flag to true if they want to offer free shipping to the buyer. This field can only be included and set to 'true' for the first domestic shipping service option specified in the shippingServices container
+    |freeShipping
+    |The seller can set this flag to true if they want to offer free shipping to the buyer. This field can only be included and set to 'true' for the first domestic shipping service option specified in the shippingServices container
 |link:http://php.net/string[string^]
-    a|shippingCarrierCode
-    a|The shipping carrier, such as 'USPS', 'FedEx', 'UPS', and so on.
+    |shippingCarrierCode
+    |The shipping carrier, such as 'USPS', 'FedEx', 'UPS', and so on.
 |        xref:Market.adoc#market_models_amounttype[`AmountType`]
-    a|shippingCost
-    a|For shipping options that use a FLAT_RATE cost type, the amount is the shipping cost for the selected shipping carrier and service. The amount supplied must exclude any additional shipping charges (such as the seller's handling charges or insurance).
+    |shippingCost
+    |For shipping options that use a FLAT_RATE cost type, the amount is the shipping cost for the selected shipping carrier and service. The amount supplied must exclude any additional shipping charges (such as the seller's handling charges or insurance).
 |link:http://php.net/string[string^]
-    a|shippingServiceCode
-    a|The shipping service that the shipping carrier uses to ship an item. For example, an overnight, two-day delivery, or other type of service.
+    |shippingServiceCode
+    |The shipping service that the shipping carrier uses to ship an item. For example, an overnight, two-day delivery, or other type of service.
 |        xref:Market.adoc#market_models_regionset[`RegionSet`]
-    a|shipToLocations
-    a|This object contains the regionIncluded and regionExcluded fields that define the list of geographical regions that the seller ships to and the list of regions where they do not ship.
+    |shipToLocations
+    |This object contains the regionIncluded and regionExcluded fields that define the list of geographical regions that the seller ships to and the list of regions where they do not ship.
 |link:http://php.net/int[int^]
-    a|sortOrder
-    a|This integer value controls the order that this shipping service option appears in the View Item and Checkout pages, as related to the other specified shipping service options.
+    |sortOrder
+    |This integer value controls the order that this shipping service option appears in the View Item and Checkout pages, as related to the other specified shipping service options.
 |        xref:Market.adoc#market_models_amounttype[`AmountType`]
-    a|surcharge
-    a|A fee that can be charged to US buyers when they have an item shipped via UPS or FedEx to Alaska, Hawaii or Puerto Rico.
+    |surcharge
+    |A fee that can be charged to US buyers when they have an item shipped via UPS or FedEx to Alaska, Hawaii or Puerto Rico.
 |===
 
 
@@ -1922,16 +1892,15 @@ The eBay time duration model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|unit
-    a|A time-measurement unit used to specify a period of time. Available values: `MONTH`, `DAY`, `HOUR`, `CALENDAR_DAY`, `BUSINESS_DAY`, `MINUTE`, `SECOND`, `MILLISECOND`
+    |unit
+    |A time-measurement unit used to specify a period of time. Available values: `MONTH`, `DAY`, `HOUR`, `CALENDAR_DAY`, `BUSINESS_DAY`, `MINUTE`, `SECOND`, `MILLISECOND`
 |link:http://php.net/string[string^]
-    a|value
-    a|An amount of time, as measured by the time-measurement units specified in the unit field.
+    |value
+    |An amount of time, as measured by the time-measurement units specified in the unit field.
 |===
 
 
@@ -2364,12 +2333,11 @@ public __construct($config):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$config`
-a|Configuration option values.
+|Configuration option values.
 |===
 
 
@@ -2404,16 +2372,15 @@ public getConfig($option = null, $default = null):void
 Method to get the service&#039;s configuration.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$option`
-a|The name of the option whos value will be returned.
+|The name of the option whos value will be returned.
 
 |
 a|`$default`
-a|
+|
 |===
 
 
@@ -2433,16 +2400,15 @@ public callOperation($name, $request = null):Plenty\Modules\Market\Ebay\Api\Type
 Build API request and send.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The name of the operation.
+|The name of the operation.
 
 |        xref:Market.adoc#market_types_basetype[`BaseType`]
 a|`$request`
-a|Request object containing the request information.
+|Request object containing the request information.
 |===
 
 
@@ -2496,12 +2462,11 @@ public __construct($config):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$config`
-a|Configuration option values.
+|Configuration option values.
 |===
 
 
@@ -2536,16 +2501,15 @@ public getConfig($option = null, $default = null):void
 Method to get the service&#039;s configuration.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$option`
-a|The name of the option whos value will be returned.
+|The name of the option whos value will be returned.
 
 |
 a|`$default`
-a|
+|
 |===
 
 
@@ -2565,20 +2529,19 @@ public callOperation($name, $request, $responseClass):Plenty\Modules\Market\Ebay
 Build API request and send.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The name of the operation.
+|The name of the operation.
 
 |        xref:Market.adoc#market_types_basetype[`BaseType`]
 a|`$request`
-a|Request object containing the request information.
+|Request object containing the request information.
 
 |link:http://php.net/string[string^]
 a|`$responseClass`
-a|The name of the PHP class that will be created from the XML response.
+|The name of the PHP class that will be created from the XML response.
 |===
 
 
@@ -2598,12 +2561,11 @@ public getEbayHeaders($operationName):array
 Derived classes must implement this method that will build the needed eBay http headers.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$operationName`
-a|The name of the operation been called.
+|The name of the operation been called.
 |===
 
 
@@ -2625,19 +2587,18 @@ The service for eBay Base64BinaryType.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |
-    a|properties
-    a|
+    |properties
+    |
 |
-    a|xmlNamespaces
-    a|
+    |xmlNamespaces
+    |
 |
-    a|requestXmlRootElementNames
-    a|
+    |requestXmlRootElementNames
+    |
 |===
 
 
@@ -2659,12 +2620,11 @@ public __construct($values = []):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$values`
-a|Optional properties and values to assign to the object.
+|Optional properties and values to assign to the object.
 |===
 
 
@@ -2684,16 +2644,15 @@ public static getParentValues($properties, $values):array
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$properties`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 |===
 
 
@@ -2713,12 +2672,11 @@ public __get($name):void
 PHP magic function that is called when getting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -2738,16 +2696,15 @@ public __set($name, $value):void
 PHP magic function that is called when setting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 
 |
 a|`$value`
-a|Value assigned to the property.
+|Value assigned to the property.
 |===
 
 
@@ -2767,12 +2724,11 @@ public __isset($name):bool
 PHP magic function that is called to determine if a property is set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -2792,12 +2748,11 @@ public __unset($name):void
 PHP magic function that is called to unset a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -2832,12 +2787,11 @@ public elementMeta($elementName):void
 Returns the meta data for a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$elementName`
-a|The element name.
+|The element name.
 |===
 
 
@@ -2857,16 +2811,15 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-a|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
+|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
 
 |link:http://php.net/string[string^]
 a|`$mimeType`
-a|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
+|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
 |===
 
 
@@ -2916,12 +2869,11 @@ public search($expression):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$expression`
-a|A valid JMESPath expression
+|A valid JMESPath expression
 |===
 
 
@@ -2941,16 +2893,15 @@ public setValues($class, $values = []):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$class`
-a|The name of the class the properties belong to.
+|The name of the class the properties belong to.
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|Associative array of property names and their values.
+|Associative array of property names and their values.
 |===
 
 
@@ -2971,19 +2922,18 @@ The service for base type.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |
-    a|properties
-    a|
+    |properties
+    |
 |
-    a|xmlNamespaces
-    a|
+    |xmlNamespaces
+    |
 |
-    a|requestXmlRootElementNames
-    a|
+    |requestXmlRootElementNames
+    |
 |===
 
 
@@ -3005,12 +2955,11 @@ public __construct($values = []):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$values`
-a|Can pass an associative array that will set the objects properties.
+|Can pass an associative array that will set the objects properties.
 |===
 
 
@@ -3030,12 +2979,11 @@ public __get($name):void
 PHP magic function that is called when getting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -3055,16 +3003,15 @@ public __set($name, $value):void
 PHP magic function that is called when setting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 
 |
 a|`$value`
-a|Value assigned to the property.
+|Value assigned to the property.
 |===
 
 
@@ -3084,12 +3031,11 @@ public __isset($name):bool
 PHP magic function that is called to determine if a property is set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -3109,12 +3055,11 @@ public __unset($name):void
 PHP magic function that is called to unset a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -3149,12 +3094,11 @@ public elementMeta($elementName):void
 Returns the meta data for a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$elementName`
-a|The element name.
+|The element name.
 |===
 
 
@@ -3174,16 +3118,15 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-a|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
+|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
 
 |link:http://php.net/string[string^]
 a|`$mimeType`
-a|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
+|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
 |===
 
 
@@ -3233,12 +3176,11 @@ public search($expression):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$expression`
-a|A valid JMESPath expression
+|A valid JMESPath expression
 |===
 
 
@@ -3258,16 +3200,15 @@ public setValues($class, $values = []):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$class`
-a|The name of the class the properties belong to.
+|The name of the class the properties belong to.
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|Associative array of property names and their values.
+|Associative array of property names and their values.
 |===
 
 
@@ -3287,16 +3228,15 @@ public static getParentValues($properties, $values):array
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$properties`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 |===
 
 
@@ -3317,19 +3257,18 @@ The service for boolean type.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |
-    a|properties
-    a|
+    |properties
+    |
 |
-    a|xmlNamespaces
-    a|
+    |xmlNamespaces
+    |
 |
-    a|requestXmlRootElementNames
-    a|
+    |requestXmlRootElementNames
+    |
 |===
 
 
@@ -3351,12 +3290,11 @@ public __construct($values = []):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$values`
-a|Optional properties and values to assign to the object.
+|Optional properties and values to assign to the object.
 |===
 
 
@@ -3376,16 +3314,15 @@ public static getParentValues($properties, $values):array
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$properties`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 |===
 
 
@@ -3405,12 +3342,11 @@ public __get($name):void
 PHP magic function that is called when getting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -3430,16 +3366,15 @@ public __set($name, $value):void
 PHP magic function that is called when setting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 
 |
 a|`$value`
-a|Value assigned to the property.
+|Value assigned to the property.
 |===
 
 
@@ -3459,12 +3394,11 @@ public __isset($name):bool
 PHP magic function that is called to determine if a property is set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -3484,12 +3418,11 @@ public __unset($name):void
 PHP magic function that is called to unset a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -3524,12 +3457,11 @@ public elementMeta($elementName):void
 Returns the meta data for a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$elementName`
-a|The element name.
+|The element name.
 |===
 
 
@@ -3549,16 +3481,15 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-a|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
+|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
 
 |link:http://php.net/string[string^]
 a|`$mimeType`
-a|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
+|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
 |===
 
 
@@ -3608,12 +3539,11 @@ public search($expression):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$expression`
-a|A valid JMESPath expression
+|A valid JMESPath expression
 |===
 
 
@@ -3633,16 +3563,15 @@ public setValues($class, $values = []):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$class`
-a|The name of the class the properties belong to.
+|The name of the class the properties belong to.
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|Associative array of property names and their values.
+|Associative array of property names and their values.
 |===
 
 
@@ -3663,19 +3592,18 @@ The service for decimal type.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |
-    a|properties
-    a|
+    |properties
+    |
 |
-    a|xmlNamespaces
-    a|
+    |xmlNamespaces
+    |
 |
-    a|requestXmlRootElementNames
-    a|
+    |requestXmlRootElementNames
+    |
 |===
 
 
@@ -3697,12 +3625,11 @@ public __construct($values = []):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$values`
-a|Optional properties and values to assign to the object.
+|Optional properties and values to assign to the object.
 |===
 
 
@@ -3722,16 +3649,15 @@ public static getParentValues($properties, $values):array
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$properties`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 |===
 
 
@@ -3751,12 +3677,11 @@ public __get($name):void
 PHP magic function that is called when getting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -3776,16 +3701,15 @@ public __set($name, $value):void
 PHP magic function that is called when setting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 
 |
 a|`$value`
-a|Value assigned to the property.
+|Value assigned to the property.
 |===
 
 
@@ -3805,12 +3729,11 @@ public __isset($name):bool
 PHP magic function that is called to determine if a property is set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -3830,12 +3753,11 @@ public __unset($name):void
 PHP magic function that is called to unset a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -3870,12 +3792,11 @@ public elementMeta($elementName):void
 Returns the meta data for a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$elementName`
-a|The element name.
+|The element name.
 |===
 
 
@@ -3895,16 +3816,15 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-a|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
+|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
 
 |link:http://php.net/string[string^]
 a|`$mimeType`
-a|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
+|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
 |===
 
 
@@ -3954,12 +3874,11 @@ public search($expression):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$expression`
-a|A valid JMESPath expression
+|A valid JMESPath expression
 |===
 
 
@@ -3979,16 +3898,15 @@ public setValues($class, $values = []):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$class`
-a|The name of the class the properties belong to.
+|The name of the class the properties belong to.
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|Associative array of property names and their values.
+|Associative array of property names and their values.
 |===
 
 
@@ -4009,19 +3927,18 @@ The service for double type.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |
-    a|properties
-    a|
+    |properties
+    |
 |
-    a|xmlNamespaces
-    a|
+    |xmlNamespaces
+    |
 |
-    a|requestXmlRootElementNames
-    a|
+    |requestXmlRootElementNames
+    |
 |===
 
 
@@ -4043,12 +3960,11 @@ public __construct($values = []):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$values`
-a|Optional properties and values to assign to the object.
+|Optional properties and values to assign to the object.
 |===
 
 
@@ -4068,16 +3984,15 @@ public static getParentValues($properties, $values):array
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$properties`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 |===
 
 
@@ -4097,12 +4012,11 @@ public __get($name):void
 PHP magic function that is called when getting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -4122,16 +4036,15 @@ public __set($name, $value):void
 PHP magic function that is called when setting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 
 |
 a|`$value`
-a|Value assigned to the property.
+|Value assigned to the property.
 |===
 
 
@@ -4151,12 +4064,11 @@ public __isset($name):bool
 PHP magic function that is called to determine if a property is set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -4176,12 +4088,11 @@ public __unset($name):void
 PHP magic function that is called to unset a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -4216,12 +4127,11 @@ public elementMeta($elementName):void
 Returns the meta data for a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$elementName`
-a|The element name.
+|The element name.
 |===
 
 
@@ -4241,16 +4151,15 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-a|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
+|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
 
 |link:http://php.net/string[string^]
 a|`$mimeType`
-a|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
+|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
 |===
 
 
@@ -4300,12 +4209,11 @@ public search($expression):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$expression`
-a|A valid JMESPath expression
+|A valid JMESPath expression
 |===
 
 
@@ -4325,16 +4233,15 @@ public setValues($class, $values = []):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$class`
-a|The name of the class the properties belong to.
+|The name of the class the properties belong to.
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|Associative array of property names and their values.
+|Associative array of property names and their values.
 |===
 
 
@@ -4355,19 +4262,18 @@ The service for integer type.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |
-    a|properties
-    a|
+    |properties
+    |
 |
-    a|xmlNamespaces
-    a|
+    |xmlNamespaces
+    |
 |
-    a|requestXmlRootElementNames
-    a|
+    |requestXmlRootElementNames
+    |
 |===
 
 
@@ -4389,12 +4295,11 @@ public __construct($values = []):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$values`
-a|Optional properties and values to assign to the object.
+|Optional properties and values to assign to the object.
 |===
 
 
@@ -4414,16 +4319,15 @@ public static getParentValues($properties, $values):array
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$properties`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 |===
 
 
@@ -4443,12 +4347,11 @@ public __get($name):void
 PHP magic function that is called when getting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -4468,16 +4371,15 @@ public __set($name, $value):void
 PHP magic function that is called when setting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 
 |
 a|`$value`
-a|Value assigned to the property.
+|Value assigned to the property.
 |===
 
 
@@ -4497,12 +4399,11 @@ public __isset($name):bool
 PHP magic function that is called to determine if a property is set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -4522,12 +4423,11 @@ public __unset($name):void
 PHP magic function that is called to unset a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -4562,12 +4462,11 @@ public elementMeta($elementName):void
 Returns the meta data for a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$elementName`
-a|The element name.
+|The element name.
 |===
 
 
@@ -4587,16 +4486,15 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-a|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
+|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
 
 |link:http://php.net/string[string^]
 a|`$mimeType`
-a|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
+|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
 |===
 
 
@@ -4646,12 +4544,11 @@ public search($expression):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$expression`
-a|A valid JMESPath expression
+|A valid JMESPath expression
 |===
 
 
@@ -4671,16 +4568,15 @@ public setValues($class, $values = []):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$class`
-a|The name of the class the properties belong to.
+|The name of the class the properties belong to.
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|Associative array of property names and their values.
+|Associative array of property names and their values.
 |===
 
 
@@ -4719,20 +4615,19 @@ public __construct($class, $property, $expectedType):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$class`
-a|The name of the class that the property is a member of.
+|The name of the class that the property is a member of.
 
 |link:http://php.net/string[string^]
 a|`$property`
-a|The name of the property that acts like an array.
+|The name of the property that acts like an array.
 
 |link:http://php.net/string[string^]
 a|`$expectedType`
-a|The type that values assigned to the array should be.
+|The type that values assigned to the array should be.
 |===
 
 
@@ -4752,12 +4647,11 @@ public offsetExists($offset):bool
 Determines if the offset exists in the array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$offset`
-a|The array index to check.
+|The array index to check.
 |===
 
 
@@ -4777,12 +4671,11 @@ public offsetGet($offset):void
 Returns the value of the given offset.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$offset`
-a|The array index.
+|The array index.
 |===
 
 
@@ -4802,16 +4695,15 @@ public offsetSet($offset, $value):void
 Sets a value for the given offset.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$offset`
-a|The array index or null to add the value to the end of the array.
+|The array index or null to add the value to the end of the array.
 
 |
 a|`$value`
-a|The value to add.
+|The value to add.
 |===
 
 
@@ -4831,12 +4723,11 @@ public offsetUnset($offset):void
 Unsets the value of the given offset.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$offset`
-a|The array index.
+|The array index.
 |===
 
 
@@ -4947,19 +4838,18 @@ The service for string type.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |
-    a|properties
-    a|
+    |properties
+    |
 |
-    a|xmlNamespaces
-    a|
+    |xmlNamespaces
+    |
 |
-    a|requestXmlRootElementNames
-    a|
+    |requestXmlRootElementNames
+    |
 |===
 
 
@@ -4981,12 +4871,11 @@ public __construct($values = []):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$values`
-a|Optional properties and values to assign to the object.
+|Optional properties and values to assign to the object.
 |===
 
 
@@ -5006,16 +4895,15 @@ public static getParentValues($properties, $values):array
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$properties`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 |===
 
 
@@ -5035,12 +4923,11 @@ public __get($name):void
 PHP magic function that is called when getting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -5060,16 +4947,15 @@ public __set($name, $value):void
 PHP magic function that is called when setting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 
 |
 a|`$value`
-a|Value assigned to the property.
+|Value assigned to the property.
 |===
 
 
@@ -5089,12 +4975,11 @@ public __isset($name):bool
 PHP magic function that is called to determine if a property is set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -5114,12 +4999,11 @@ public __unset($name):void
 PHP magic function that is called to unset a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -5154,12 +5038,11 @@ public elementMeta($elementName):void
 Returns the meta data for a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$elementName`
-a|The element name.
+|The element name.
 |===
 
 
@@ -5179,16 +5062,15 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-a|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
+|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
 
 |link:http://php.net/string[string^]
 a|`$mimeType`
-a|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
+|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
 |===
 
 
@@ -5238,12 +5120,11 @@ public search($expression):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$expression`
-a|A valid JMESPath expression
+|A valid JMESPath expression
 |===
 
 
@@ -5263,16 +5144,15 @@ public setValues($class, $values = []):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$class`
-a|The name of the class the properties belong to.
+|The name of the class the properties belong to.
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|Associative array of property names and their values.
+|Associative array of property names and their values.
 |===
 
 
@@ -5293,19 +5173,18 @@ The service for token type.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |
-    a|properties
-    a|
+    |properties
+    |
 |
-    a|xmlNamespaces
-    a|
+    |xmlNamespaces
+    |
 |
-    a|requestXmlRootElementNames
-    a|
+    |requestXmlRootElementNames
+    |
 |===
 
 
@@ -5327,12 +5206,11 @@ public __construct($values = []):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$values`
-a|Optional properties and values to assign to the object.
+|Optional properties and values to assign to the object.
 |===
 
 
@@ -5352,16 +5230,15 @@ public static getParentValues($properties, $values):array
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$properties`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 |===
 
 
@@ -5381,12 +5258,11 @@ public __get($name):void
 PHP magic function that is called when getting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -5406,16 +5282,15 @@ public __set($name, $value):void
 PHP magic function that is called when setting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 
 |
 a|`$value`
-a|Value assigned to the property.
+|Value assigned to the property.
 |===
 
 
@@ -5435,12 +5310,11 @@ public __isset($name):bool
 PHP magic function that is called to determine if a property is set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -5460,12 +5334,11 @@ public __unset($name):void
 PHP magic function that is called to unset a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -5500,12 +5373,11 @@ public elementMeta($elementName):void
 Returns the meta data for a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$elementName`
-a|The element name.
+|The element name.
 |===
 
 
@@ -5525,16 +5397,15 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-a|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
+|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
 
 |link:http://php.net/string[string^]
 a|`$mimeType`
-a|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
+|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
 |===
 
 
@@ -5584,12 +5455,11 @@ public search($expression):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$expression`
-a|A valid JMESPath expression
+|A valid JMESPath expression
 |===
 
 
@@ -5609,16 +5479,15 @@ public setValues($class, $values = []):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$class`
-a|The name of the class the properties belong to.
+|The name of the class the properties belong to.
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|Associative array of property names and their values.
+|Associative array of property names and their values.
 |===
 
 
@@ -5639,19 +5508,18 @@ The service for uri type.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |
-    a|properties
-    a|
+    |properties
+    |
 |
-    a|xmlNamespaces
-    a|
+    |xmlNamespaces
+    |
 |
-    a|requestXmlRootElementNames
-    a|
+    |requestXmlRootElementNames
+    |
 |===
 
 
@@ -5673,12 +5541,11 @@ public __construct($values = []):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$values`
-a|Optional properties and values to assign to the object.
+|Optional properties and values to assign to the object.
 |===
 
 
@@ -5698,16 +5565,15 @@ public static getParentValues($properties, $values):array
 Helper function to remove the properties and values that belong to a object&#039;s parent.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$properties`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 |===
 
 
@@ -5727,12 +5593,11 @@ public __get($name):void
 PHP magic function that is called when getting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -5752,16 +5617,15 @@ public __set($name, $value):void
 PHP magic function that is called when setting a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 
 |
 a|`$value`
-a|Value assigned to the property.
+|Value assigned to the property.
 |===
 
 
@@ -5781,12 +5645,11 @@ public __isset($name):bool
 PHP magic function that is called to determine if a property is set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -5806,12 +5669,11 @@ public __unset($name):void
 PHP magic function that is called to unset a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The property name.
+|The property name.
 |===
 
 
@@ -5846,12 +5708,11 @@ public elementMeta($elementName):void
 Returns the meta data for a property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$elementName`
-a|The element name.
+|The element name.
 |===
 
 
@@ -5871,16 +5732,15 @@ public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;
 Method to get or set the object&#039;s attachment. Overrides any existing attachment is setting.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$data`
-a|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
+|If a string it is assumed to be the contents of the attachment. If an array copy its values across.
 
 |link:http://php.net/string[string^]
 a|`$mimeType`
-a|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
+|The MIME type of the attachment that will be used in the request. Defaults to application/octet-stream.
 |===
 
 
@@ -5930,12 +5790,11 @@ public search($expression):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$expression`
-a|A valid JMESPath expression
+|A valid JMESPath expression
 |===
 
 
@@ -5955,16 +5814,15 @@ public setValues($class, $values = []):void
 Assign multiple values to an object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$class`
-a|The name of the class the properties belong to.
+|The name of the class the properties belong to.
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|Associative array of property names and their values.
+|Associative array of property names and their values.
 |===
 
 
@@ -6007,12 +5865,11 @@ public refreshTokenByCredentialsId($credentialsId):void
 Refresh credentials token and update.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$credentialsId`
-a|
+|
 |===
 
 
@@ -6055,20 +5912,19 @@ public get($id, $filters = [], $with = []):Plenty\Modules\Market\Ebay\Category\M
 Get category
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the category.
+|The ID of the category.
 
 |link:http://php.net/array[array^]
 a|`$filters`
-a|The filters that could be applied: 'marketplaceId'.
+|The filters that could be applied: 'marketplaceId'.
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations that should be loaded: 'path'
+|The relations that should be loaded: 'path'
 |===
 
 
@@ -6088,16 +5944,15 @@ public all($filters = [], $with = []):array
 List all categories
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|Categories can be filtered by ID and marketplace ID. The filters that could be applied: 'marketplaceId', 'categoryId'.
+|Categories can be filtered by ID and marketplace ID. The filters that could be applied: 'marketplaceId', 'categoryId'.
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations that should be loaded: 'path'
+|The relations that should be loaded: 'path'
 |===
 
 
@@ -6119,28 +5974,27 @@ The category model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the category.
+    |id
+    |The ID of the category.
 |link:http://php.net/int[int^]
-    a|parentId
-    a|The parent category ID.
+    |parentId
+    |The parent category ID.
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the category.
+    |name
+    |The name of the category.
 |link:http://php.net/bool[bool^]
-    a|isLeaf
-    a|Tells if the category is leaf.
+    |isLeaf
+    |Tells if the category is leaf.
 |link:http://php.net/array[array^]
-    a|children
-    a|Child categories.
+    |children
+    |Child categories.
 |link:http://php.net/array[array^]
-    a|path
-    a|The category path.
+    |path
+    |The category path.
 |===
 
 
@@ -6200,12 +6054,11 @@ public all($filters = []):array
 List item specifics.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|The filters that could be applied: 'categoryId', 'marketplaceId'.
+|The filters that could be applied: 'categoryId', 'marketplaceId'.
 |===
 
 
@@ -6227,43 +6080,42 @@ The eBay item specific model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|name
-    a|A recommended Item Specific name.
+    |name
+    |A recommended Item Specific name.
 |link:http://php.net/int[int^]
-    a|minValues
-    a|Minimum number of values that you can specify for this Item Specific.
+    |minValues
+    |Minimum number of values that you can specify for this Item Specific.
 |link:http://php.net/int[int^]
-    a|maxValues
-    a|Maximum number of values that you can specify for this Item Specific.
+    |maxValues
+    |Maximum number of values that you can specify for this Item Specific.
 |link:http://php.net/string[string^]
-    a|selectionMode
-    a|Controls whether you can specify your own name and value in listing requests, or if you need to use a name and/or value that eBay has defined.
+    |selectionMode
+    |Controls whether you can specify your own name and value in listing requests, or if you need to use a name and/or value that eBay has defined.
 |link:http://php.net/string[string^]
-    a|valueType
-    a|The data type (e.g., date) that eBay expects the value to adhere to in listing requests. Only returned if the data type is not Text. In some cases, more details about the data type are returned in the `valueFormat` field.
+    |valueType
+    |The data type (e.g., date) that eBay expects the value to adhere to in listing requests. Only returned if the data type is not Text. In some cases, more details about the data type are returned in the `valueFormat` field.
 |link:http://php.net/string[string^]
-    a|valueFormat
-    a|The format of the data type (e.g., date format) that eBay expects the item specific's value to adhere to in listing requests. A data type identified by the `valueType` field may have different representations, and `valueFormat` specifies the precise format that is required.
+    |valueFormat
+    |The format of the data type (e.g., date format) that eBay expects the item specific's value to adhere to in listing requests. A data type identified by the `valueType` field may have different representations, and `valueFormat` specifies the precise format that is required.
 |link:http://php.net/string[string^]
-    a|helpText
-    a|Help-text defines the purpose of the Item Specific. The help text will be shown only when it is available for the particular Item Specific.
+    |helpText
+    |Help-text defines the purpose of the Item Specific. The help text will be shown only when it is available for the particular Item Specific.
 |link:http://php.net/string[string^]
-    a|helpUrl
-    a|A page on the eBay Web site with context-specific help tips that provide useful information about this Item Specific. Only returned when an applicable page is available in the system.
+    |helpUrl
+    |A page on the eBay Web site with context-specific help tips that provide useful information about this Item Specific. Only returned when an applicable page is available in the system.
 |link:http://php.net/string[string^]
-    a|variationPicture
-    a|Indicates whether the name (e.g., Color) can (or must) be used to classify the variation pictures
+    |variationPicture
+    |Indicates whether the name (e.g., Color) can (or must) be used to classify the variation pictures
 |link:http://php.net/string[string^]
-    a|variationSpecifics
-    a|Indicates whether the recommended name/value pair can be used as variation attributes in a fixed-price listing call. For example, a given category could disable a name like Brand in variation specifics (if Brand is only allowed in the item specifics at the Item level). The same category could enable a name like Size for variation specifics (in addition to recommending it for item specifics). If not returned, then the name/value can be used for both variation specifics and item specifics.
+    |variationSpecifics
+    |Indicates whether the recommended name/value pair can be used as variation attributes in a fixed-price listing call. For example, a given category could disable a name like Brand in variation specifics (if Brand is only allowed in the item specifics at the Item level). The same category could enable a name like Size for variation specifics (in addition to recommending it for item specifics). If not returned, then the name/value can be used for both variation specifics and item specifics.
 |link:http://php.net/array[array^]
-    a|values
-    a|The available values.
+    |values
+    |The available values.
 |===
 
 
@@ -6323,12 +6175,11 @@ public all($filters = []):array
 Get the list of all available eBay marketplaces.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|You can pass multiple filters to search only custom marketplaces. Available filters: `referrerId`, `marketplaceId`, `marketId`, `siteId`.
+|You can pass multiple filters to search only custom marketplaces. Available filters: `referrerId`, `marketplaceId`, `marketId`, `siteId`.
 |===
 
 
@@ -6348,12 +6199,11 @@ public allEbay($filters = []):array
 Get the list of all available eBay marketplaces.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|You can pass multiple filters to search only custom marketplaces. Available filters: `referrerId`, `marketplaceId`, `marketId`, `siteId`.
+|You can pass multiple filters to search only custom marketplaces. Available filters: `referrerId`, `marketplaceId`, `marketId`, `siteId`.
 |===
 
 
@@ -6393,12 +6243,11 @@ public get($filters):Plenty\Modules\Market\Ebay\Marketplace\Models\Marketplace
 Get marketplace data model based on filters.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -6418,12 +6267,11 @@ public getMarketplaceId($filters):string
 Get the marketplace ID based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -6458,12 +6306,11 @@ public getReferrerId($filters):string
 Get the referrer ID based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -6498,12 +6345,11 @@ public getSiteId($filters):string
 Get the site ID based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -6538,12 +6384,11 @@ public getMarketId($filters):string
 Get the market ID based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -6578,12 +6423,11 @@ public getCurrency($filters):string
 Get the currency based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -6603,12 +6447,11 @@ public getShortcut($filters):string
 Get the shortcut based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -6630,28 +6473,27 @@ The eBay marketplace model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|siteId
-    a|The ID of the site exactly as eBay specifies it in the docs. This value is/was used in the old eBay SOAP APIs
+    |siteId
+    |The ID of the site exactly as eBay specifies it in the docs. This value is/was used in the old eBay SOAP APIs
 |link:http://php.net/string[string^]
-    a|marketplaceId
-    a|The ID of the marketplace exactly as eBay specifies it in the docs. This value is used in the new eBay REST APIs. Eg. `EBAY_DE` or `EBAY-DE`
+    |marketplaceId
+    |The ID of the marketplace exactly as eBay specifies it in the docs. This value is used in the new eBay REST APIs. Eg. `EBAY_DE` or `EBAY-DE`
 |link:http://php.net/int[int^]
-    a|marketId
-    a|System-Listing wide internal ID for the listing marketplace. This id occurs only in correlation with the listing DB tables.
+    |marketId
+    |System-Listing wide internal ID for the listing marketplace. This id occurs only in correlation with the listing DB tables.
 |link:http://php.net/float[float^]
-    a|referrerId
-    a|System wide internal ID for the marketplace. Use this instead of `marketId` whenever possible!
+    |referrerId
+    |System wide internal ID for the marketplace. Use this instead of `marketId` whenever possible!
 |link:http://php.net/string[string^]
-    a|shortcut
-    a|The marketplace shortcut name.
+    |shortcut
+    |The marketplace shortcut name.
 |link:http://php.net/string[string^]
-    a|currency
-    a|The currency used for the marketplace
+    |currency
+    |The currency used for the marketplace
 |===
 
 
@@ -6711,12 +6553,11 @@ public find($id):Plenty\Modules\Market\Ebay\PartsFitment\Models\FitmentItemPrope
 Returns a fitment item property by an ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the fitment item property that should be found.
+|The ID of the fitment item property that should be found.
 |===
 
 
@@ -6736,16 +6577,15 @@ public create($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
 Creates a new fitment item property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The fitment item property data as associative array.
+|The fitment item property data as associative array.
 
 |link:http://php.net/int[int^]
 a|`$id`
-a|The fitment item ID that the current property should belong to.
+|The fitment item ID that the current property should belong to.
 |===
 
 
@@ -6765,16 +6605,15 @@ public update($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
 Updates an existing fitment item property.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The fitment item property data to update as associative array.
+|The fitment item property data to update as associative array.
 
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the fitment item property that should be updated.
+|The ID of the fitment item property that should be updated.
 |===
 
 
@@ -6794,12 +6633,11 @@ public delete($id):bool
 Deletes a fitment item property. Returns `true` if the deletion was successful, otherwise `false`.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the fitment item property that should be deleted.
+|The ID of the fitment item property that should be deleted.
 |===
 
 
@@ -6838,12 +6676,11 @@ public find($id):Plenty\Modules\Market\Ebay\PartsFitment\Models\FitmentItem
 Returns a fitment item by an ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The id of the fitment item that should be found.
+|The id of the fitment item that should be found.
 |===
 
 
@@ -6863,16 +6700,15 @@ public create($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
 Creates a new fitment item.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The fitment item data as associative array.
+|The fitment item data as associative array.
 
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the fitment that the current fitment item belongs to.
+|The ID of the fitment that the current fitment item belongs to.
 |===
 
 
@@ -6892,16 +6728,15 @@ public update($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
 Updates an existing fitment item.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The fitment item data to update as associative array.
+|The fitment item data to update as associative array.
 
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the fitment item that should be updated.
+|The ID of the fitment item that should be updated.
 |===
 
 
@@ -6921,12 +6756,11 @@ public delete($id):bool
 Deletes a fitment item. Returns `true` if the deletion was successful, otherwise `false`.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the fitment item that should be deleted.
+|The ID of the fitment item that should be deleted.
 |===
 
 
@@ -6965,16 +6799,15 @@ public find($id, $with = []):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitm
 Returns a fitment by an ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the fitment that should be found.
+|The ID of the fitment that should be found.
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations to load in the Fitment instance. The relations available are 'items', 'items.properties'.
+|The relations to load in the Fitment instance. The relations available are 'items', 'items.properties'.
 |===
 
 
@@ -6994,12 +6827,11 @@ public create($data):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
 Creates a new fitment.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The fitment data as associative array.
+|The fitment data as associative array.
 |===
 
 
@@ -7019,16 +6851,15 @@ public update($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
 Updates an existing fitment.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The fitment data to update as associative array.
+|The fitment data to update as associative array.
 
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the fitment that should be updated.
+|The ID of the fitment that should be updated.
 |===
 
 
@@ -7048,12 +6879,11 @@ public delete($id):Plenty\Repositories\Models\DeleteResponse
 Deletes a fitment. Returns `true` if the deletion was successful, otherwise `false`.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the fitment that should be deleted.
+|The ID of the fitment that should be deleted.
 |===
 
 
@@ -7073,24 +6903,23 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):array
 Search fitments
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|The default page that will be returned is page 1.
+|The default page that will be returned is page 1.
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The number of entries to be displayed per page. The default number of entries per page is 50.
+|The number of entries to be displayed per page. The default number of entries per page is 50.
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations to load in the Fitment instance. The relations available are 'items', 'items.properties'.
+|The relations to load in the Fitment instance. The relations available are 'items', 'items.properties'.
 
 |link:http://php.net/array[array^]
 a|`$filters`
-a|The filters that could be applied: 'id', 'categoryId', 'marketId', 'name', 'property', 'propertyName', 'propertyValue'.
+|The filters that could be applied: 'id', 'categoryId', 'marketId', 'name', 'property', 'propertyName', 'propertyValue'.
 |===
 
 
@@ -7140,12 +6969,11 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -7212,25 +7040,24 @@ The fitment model. This can contain multiple FitmentItems models.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The id of the fitment.
+    |id
+    |The id of the fitment.
 |link:http://php.net/int[int^]
-    a|marketId
-    a|The id of the market the fitment belongs to.
+    |marketId
+    |The id of the market the fitment belongs to.
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the fitment.
+    |name
+    |The name of the fitment.
 |link:http://php.net/int[int^]
-    a|categoryId
-    a|The id of the category the fitment belongs to.
+    |categoryId
+    |The id of the category the fitment belongs to.
 |link:http://php.net/array[array^]
-    a|items
-    a|The list of the items that belong to the fitment.
+    |items
+    |The list of the items that belong to the fitment.
 |===
 
 
@@ -7268,22 +7095,21 @@ The fitment item model. This belongs to one fitment model and can contain multip
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The id of the item that belongs to the fitment.
+    |id
+    |The id of the item that belongs to the fitment.
 |link:http://php.net/int[int^]
-    a|fitmentId
-    a|The id of the fitment.
+    |fitmentId
+    |The id of the fitment.
 |        xref:Market.adoc#market_models_fitment[`Fitment`]
-    a|fitment
-    a|The fitment this fitment item belongs to.
+    |fitment
+    |The fitment this fitment item belongs to.
 |link:http://php.net/array[array^]
-    a|properties
-    a|A collection of this fitment item properties. Available names are 'Make', 'Model', 'Platform', 'Type', 'Production Period', 'Engine', 'FitmentComments', 'KType'.
+    |properties
+    |A collection of this fitment item properties. Available names are 'Make', 'Model', 'Platform', 'Type', 'Production Period', 'Engine', 'FitmentComments', 'KType'.
 |===
 
 
@@ -7321,25 +7147,24 @@ The fitment item property model. This bleongs to an FitmentItem model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the fitment item property.
+    |id
+    |The ID of the fitment item property.
 |link:http://php.net/int[int^]
-    a|fitmentItemId
-    a|The ID that the fitment item this property belongs to.
+    |fitmentItemId
+    |The ID that the fitment item this property belongs to.
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the property
+    |name
+    |The name of the property
 |link:http://php.net/string[string^]
-    a|value
-    a|The value of the property.
+    |value
+    |The value of the property.
 |        xref:Market.adoc#market_models_fitmentitem[`FitmentItem`]
-    a|fitmentItem
-    a|The fitment item this property belongs to.
+    |fitmentItem
+    |The fitment item this property belongs to.
 |===
 
 
@@ -7399,16 +7224,15 @@ public all($credentialsId, $viewType = &quot;list&quot;):array
 Returns a fitment by an ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$credentialsId`
-a|The credentials ID for whom we want to load the eBay shop categories.
+|The credentials ID for whom we want to load the eBay shop categories.
 
 |link:http://php.net/string[string^]
 a|`$viewType`
-a|How should the eBay shop categories be returned. Possible values: 'list' or 'tree'. Default is 'list'.
+|How should the eBay shop categories be returned. Possible values: 'list' or 'tree'. Default is 'list'.
 |===
 
 
@@ -7451,12 +7275,11 @@ public get($id):Plenty\Modules\Market\Ebay\Transaction\Models\Transaction
 Gets a transaction.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the ebay transaction.
+|The ID of the ebay transaction.
 |===
 
 
@@ -7476,20 +7299,19 @@ public search($page = 1, $itemsPerPage = 50, $filters = []):array
 Search ebay transactions
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|The default page that will be returned is page 1.
+|The default page that will be returned is page 1.
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The number of entries to be displayed per page. The default number of entries per page is 50.
+|The number of entries to be displayed per page. The default number of entries per page is 50.
 
 |link:http://php.net/array[array^]
 a|`$filters`
-a|The filters that could be applied: 'orderId', 'externalOrderId'.
+|The filters that could be applied: 'orderId', 'externalOrderId'.
 |===
 
 
@@ -7509,12 +7331,11 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -7611,88 +7432,87 @@ The ebay transaction model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the transaction.
+    |id
+    |The ID of the transaction.
 |link:http://php.net/int[int^]
-    a|orderId
-    a|The ID of the plentymarkets order.
+    |orderId
+    |The ID of the plentymarkets order.
 |link:http://php.net/string[string^]
-    a|market
-    a|The market. Possible values are: 'ebay', 'hood', 'ricardo'
+    |market
+    |The market. Possible values are: 'ebay', 'hood', 'ricardo'
 |link:http://php.net/string[string^]
-    a|externalListingId
-    a|The ID of the external listing.
+    |externalListingId
+    |The ID of the external listing.
 |link:http://php.net/string[string^]
-    a|credentialsId
-    a|The ID of the credentials.
+    |credentialsId
+    |The ID of the credentials.
 |link:http://php.net/string[string^]
-    a|buyerUserId
-    a|The ID of the ebay buyer.
+    |buyerUserId
+    |The ID of the ebay buyer.
 |link:http://php.net/int[int^]
-    a|feedback
-    a|The feedback.
+    |feedback
+    |The feedback.
 |link:http://php.net/string[string^]
-    a|transactionId
-    a|The ID of the ebay transaction.
+    |transactionId
+    |The ID of the ebay transaction.
 |
-    a|endTime
-    a|The date that the item was bought.
+    |endTime
+    |The date that the item was bought.
 |link:http://php.net/int[int^]
-    a|quantity
-    a|The purchased quantity.
+    |quantity
+    |The purchased quantity.
 |link:http://php.net/string[string^]
-    a|title
-    a|The title of the purchased item.
+    |title
+    |The title of the purchased item.
 |link:http://php.net/float[float^]
-    a|price
-    a|The price of the transaction.
+    |price
+    |The price of the transaction.
 |link:http://php.net/string[string^]
-    a|shippingAddressCountry
-    a|The shipping address country.
+    |shippingAddressCountry
+    |The shipping address country.
 |link:http://php.net/int[int^]
-    a|referrerId
-    a|The ID of the order referrer.
+    |referrerId
+    |The ID of the order referrer.
 |
-    a|createdAt
-    a|The date that the transaction was created.
+    |createdAt
+    |The date that the transaction was created.
 |link:http://php.net/int[int^]
-    a|notification
-    a|Flag that indicates if the transaction import was by notification.
+    |notification
+    |Flag that indicates if the transaction import was by notification.
 |link:http://php.net/int[int^]
-    a|orderRowId
-    a|The ID of the order row.
+    |orderRowId
+    |The ID of the order row.
 |link:http://php.net/string[string^]
-    a|sku
-    a|The SKU.
+    |sku
+    |The SKU.
 |link:http://php.net/int[int^]
-    a|lastUpdate
-    a|The date that the transaction was last updated.
+    |lastUpdate
+    |The date that the transaction was last updated.
 |link:http://php.net/string[string^]
-    a|externalOrderId
-    a|The ID of the external order.
+    |externalOrderId
+    |The ID of the external order.
 |link:http://php.net/string[string^]
-    a|externalReferenceNo
-    a|The external reference number.
+    |externalReferenceNo
+    |The external reference number.
 |link:http://php.net/string[string^]
-    a|cancelId
-    a|The ID of the cancellation.
+    |cancelId
+    |The ID of the cancellation.
 |link:http://php.net/string[string^]
-    a|isEbayPlus
-    a|The transaction is ebay plus. Possible values are: 'YES', 'NO'.
+    |isEbayPlus
+    |The transaction is ebay plus. Possible values are: 'YES', 'NO'.
 |link:http://php.net/string[string^]
-    a|isClickAndCollect
-    a|The transaction is click and collect. Possible values are: 'YES', 'NO'.
+    |isClickAndCollect
+    |The transaction is click and collect. Possible values are: 'YES', 'NO'.
 |link:http://php.net/string[string^]
-    a|extendedOrderId
-    a|The extended order ID of eBay.
+    |extendedOrderId
+    |The extended order ID of eBay.
 |link:http://php.net/string[string^]
-    a|importStatus
-    a|The current status of the order. Possible values are: 'NEW', 'IN_PROGRESS' and 'DONE'. Default is 'NEW'.
+    |importStatus
+    |The current status of the order. Possible values are: 'NEW', 'IN_PROGRESS' and 'DONE'. Default is 'NEW'.
 |===
 
 
@@ -7752,12 +7572,11 @@ public listMarketAccounts($marketId):array
 List market accounts
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/float[float^]
 a|`$marketId`
-a|
+|
 |===
 
 
@@ -7796,16 +7615,15 @@ public getAttributeName($id, $lang):string
 Returns the attribute name for the given attribute id
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|
+|
 |===
 
 
@@ -7825,20 +7643,19 @@ public getAttributeValueName($attributeId, $valueId, $lang):string
 Returns the attribute value name for the given attribute value id
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$attributeId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$valueId`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|
+|
 |===
 
 
@@ -7858,20 +7675,19 @@ public getAttributeNames($record, $lang = &quot;de&quot;, $delimiter = &quot;,&q
 Returns all attribute names for the given language as a string delimited by the given delimiter.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Item.adoc#item_models_record[`Record`]
 a|`$record`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$delimiter`
-a|
+|
 |===
 
 
@@ -7891,24 +7707,23 @@ public getAttributeValueSetShortFrontendName($record, $lang = &quot;de&quot;, $d
 Returns the attribute value set short frontend name. Ex.: blue, XL
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Item.adoc#item_models_record[`Record`]
 a|`$record`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$delimiter`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$attributeNameCombination`
-a|
+|
 |===
 
 
@@ -7928,20 +7743,19 @@ public getAttributeNameAndValueCombination($attributeNames, $attributeValues, $d
 Returns the combination of attribute names with their attribute values.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$attributeNames`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$attributeValues`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$delimiter`
-a|
+|
 |===
 
 
@@ -7961,16 +7775,15 @@ public getVariationNameAndAttributeNameAndValueCombination($record, $lang):strin
 Returns the name for a variation with all attribute names and attribute values. Ex.: T-Shirt (Size: L, Color: red)
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Item.adoc#item_models_record[`Record`]
 a|`$record`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|
+|
 |===
 
 
@@ -8009,24 +7822,23 @@ public getCategoryBranchName($branchId, $lang, $plentyId, $separator = &quot;&gt
 Returns the category bread crumbs as string for a given branchId, lang and plentyId
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$branchId`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$separator`
-a|default
+|default
 |===
 
 
@@ -8065,12 +7877,11 @@ public getExternalManufacturerName($manufacturerId):string
 Get the external manufacturer name.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$manufacturerId`
-a|
+|
 |===
 
 
@@ -8090,24 +7901,23 @@ public generateSku($variationId, $marketId, $accountId, $setLastExportedTimestam
 Generates or updates the sku
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$variationId`
-a|
+|
 
 |link:http://php.net/float[float^]
 a|`$marketId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$accountId`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$setLastExportedTimestamp`
-a|
+|
 |===
 
 
@@ -8127,20 +7937,19 @@ public getAvailability($availabilityId, $lang, $returnAvailabilityName):string
 Returns the availability name or the availability average days
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$availabilityId`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$returnAvailabilityName`
-a|
+|
 |===
 
 
@@ -8179,12 +7988,11 @@ public getMarketProperty($referrerId):array
 Returns a list of the market properties
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/float[float^]
 a|`$referrerId`
-a|
+|
 |===
 
 
@@ -8227,20 +8035,19 @@ public search($filters = [], $page, $itemsPerPage = \Plenty\Modules\Market\Setti
 List settings.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|Settings can be filtered by ID, marketplace ID.
+|Settings can be filtered by ID, marketplace ID.
 
 |link:http://php.net/int[int^]
 a|`$page`
-a|Current page of the response.
+|Current page of the response.
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The requested amount of settings per result page.
+|The requested amount of settings per result page.
 |===
 
 
@@ -8260,20 +8067,19 @@ public create($marketplaceId, $type, $settings):Plenty\Modules\Market\Settings\M
 Create market settings.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$marketplaceId`
-a|The marketplace ID that the settings belong to
+|The marketplace ID that the settings belong to
 
 |link:http://php.net/string[string^]
 a|`$type`
-a|The type of settings. Possible values: shipping, attribute, category, property.
+|The type of settings. Possible values: shipping, attribute, category, property.
 
 |link:http://php.net/array[array^]
 a|`$settings`
-a|The settings that will be saved.
+|The settings that will be saved.
 |===
 
 
@@ -8293,16 +8099,15 @@ public update($settingsData, $id):void
 Update one market settings entry.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$settingsData`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$id`
-a|
+|
 |===
 
 
@@ -8322,12 +8127,11 @@ public get($id):Plenty\Modules\Market\Settings\Models\Settings
 Return the settings for a given settings ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The settings id.
+|The settings id.
 |===
 
 
@@ -8347,16 +8151,15 @@ public find($marketplaceId, $type = null):array
 Find settings for a given marketplace ID and type.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$marketplaceId`
-a|The marketplace id for which to retrieve the settings
+|The marketplace id for which to retrieve the settings
 
 |link:http://php.net/string[string^]
 a|`$type`
-a|The typo of settings that should be searched for. Possible values: shipping, attribute, category, property.
+|The typo of settings that should be searched for. Possible values: shipping, attribute, category, property.
 |===
 
 
@@ -8376,12 +8179,11 @@ public delete($id):bool
 Delete a setting.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|
+|
 |===
 
 
@@ -8401,16 +8203,15 @@ public deleteAll($marketplaceId, $type):void
 Delete all settings for a given type and marketplace ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$marketplaceId`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$type`
-a|
+|
 |===
 
 
@@ -8480,12 +8281,11 @@ public type($type):Plenty\Modules\Market\Settings\Factories\SettingsCorrelationF
 Set here the type of relation that should be created.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$type`
-a|The relation type. Possible values: shipping, attribute, category, property
+|The relation type. Possible values: shipping, attribute, category, property
 |===
 
 
@@ -8505,16 +8305,15 @@ public createRelation($settingsId, $correlationId):void
 Use this method to create a relation of the chosen type.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$settingsId`
-a|The id of the market settings we want to create the relation for.
+|The id of the market settings we want to create the relation for.
 
 |link:http://php.net/int[int^]
 a|`$correlationId`
-a|The id of the plentymarkets settings we want to create the relation to.
+|The id of the plentymarkets settings we want to create the relation to.
 |===
 
 
@@ -8534,20 +8333,19 @@ public createRelationWithParent($settingsId, $correlationId, $parentSettingsId):
 Use this method to create a relation of the chosen type.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$settingsId`
-a|The id of the market settings we want to create the relation for.
+|The id of the market settings we want to create the relation for.
 
 |link:http://php.net/int[int^]
 a|`$correlationId`
-a|The id of the plentymarkets settings we want to create the relation to.
+|The id of the plentymarkets settings we want to create the relation to.
 
 |link:http://php.net/int[int^]
 a|`$parentSettingsId`
-a|The id of the parent market settings we want to create the relation to.
+|The id of the parent market settings we want to create the relation to.
 |===
 
 
@@ -8567,12 +8365,11 @@ public clear($marketplaceId):void
 Clear all relations for a given correlation type.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$marketplaceId`
-a|
+|
 |===
 
 
@@ -8592,12 +8389,11 @@ public all($marketplaceId):array
 Get all correlations for a given marketplace ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$marketplaceId`
-a|
+|
 |===
 
 
@@ -8617,16 +8413,15 @@ public getSettingsByCorrelation($marketplaceId, $correlationId):void
 Get a specific settings by marketplace id and correlation id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$marketplaceId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$correlationId`
-a|
+|
 |===
 
 
@@ -8646,16 +8441,15 @@ public getAllSettingsByCorrelation($marketplaceId, $correlationId):void
 Get a specific settings by marketplace id and correlation id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$marketplaceId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$correlationId`
-a|
+|
 |===
 
 
@@ -8675,20 +8469,19 @@ public getSettingsByCorrelationAndParent($marketplaceId, $correlationId, $parent
 Get a specific settings by marketplace id and correlation id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$marketplaceId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$correlationId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$parentSettingsId`
-a|
+|
 |===
 
 
@@ -8708,16 +8501,15 @@ public getSettingsByParent($marketplaceId, $parentSettingsId):void
 List settings by marketplace id and parent settings id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$marketplaceId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$parentSettingsId`
-a|
+|
 |===
 
 
@@ -8737,20 +8529,19 @@ public getAllSettingsByCorrelationAndParent($marketplaceId, $correlationId, $par
 Get a specific settings by marketplace id and correlation id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$marketplaceId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$correlationId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$parentSettingsId`
-a|
+|
 |===
 
 
@@ -8772,37 +8563,36 @@ The market settings model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the market settings.
+    |id
+    |The ID of the market settings.
 |link:http://php.net/int[int^]
-    a|marketplaceId
-    a|The ID of the marketplace.
+    |marketplaceId
+    |The ID of the marketplace.
 |link:http://php.net/string[string^]
-    a|type
-    a|The type of the current market settings. Possible values are: attribute, attributeValue, property, category, shipping.
+    |type
+    |The type of the current market settings. Possible values are: attribute, attributeValue, property, category, shipping.
 |link:http://php.net/array[array^]
-    a|settings
-    a|The market settings for the current marketplace.
+    |settings
+    |The market settings for the current marketplace.
 |link:http://php.net/array[array^]
-    a|category
-    a|The category that these market settings are related to.
+    |category
+    |The category that these market settings are related to.
 |link:http://php.net/array[array^]
-    a|parcelServicePreset
-    a|The parcel service preset that these market settings are related to.
+    |parcelServicePreset
+    |The parcel service preset that these market settings are related to.
 |link:http://php.net/array[array^]
-    a|attribute
-    a|The attribute that these market settings are related to.
+    |attribute
+    |The attribute that these market settings are related to.
 |link:http://php.net/array[array^]
-    a|property
-    a|The property item that these market settings are related to.
+    |property
+    |The property item that these market settings are related to.
 |link:http://php.net/array[array^]
-    a|attributeValue
-    a|The attributeValue that these market settings are related to.
+    |attributeValue
+    |The attributeValue that these market settings are related to.
 |===
 
 
@@ -8892,12 +8682,11 @@ public setWarehouseId($warehouseId):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$warehouseId`
-a|
+|
 |===
 
 
@@ -8966,12 +8755,11 @@ public setWarehouseId($warehouseId):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$warehouseId`
-a|
+|
 |===
 
 

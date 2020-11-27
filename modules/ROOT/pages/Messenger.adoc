@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[messenger_messenger]]
@@ -39,12 +44,11 @@ public add($data):Plenty\Modules\Messenger\Models\Message
 Creates a new message.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The message data to be loaded
+|The message data to be loaded
 |===
 
 
@@ -64,12 +68,11 @@ public show($uuid):void
 Gets a message with all its successors.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$uuid`
-a|The UUID5 of the message
+|The UUID5 of the message
 |===
 
 
@@ -89,21 +92,20 @@ public list($uuid = null, $successors = true, $amount = self::DEFAULT_MESSAGES_A
 Lists messages. If no reference UUID5 is given, the method returns the $amount first messages. If $successor is set to FALSE, the messages older than the referenced message will be returned.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$uuid`
-a|The reference UUID5 of the message to start from (excluding).
+|The reference UUID5 of the message to start from (excluding).
 If not set, the uuid of the newest message will be used.
 
 |link:http://php.net/bool[bool^]
 a|`$successors`
-a|If set to FALSE, the messages older than the referenced message will be returned.
+|If set to FALSE, the messages older than the referenced message will be returned.
 
 |link:http://php.net/int[int^]
 a|`$amount`
-a|The amount of messages to list (defaults to 50)
+|The amount of messages to list (defaults to 50)
 |===
 
 
@@ -123,16 +125,15 @@ public getMessages($page = self::DEFAULT_PAGE_OF_MESSAGES, $itemsPerPage = self:
 Lists messages.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|The number of the returned page of messages, default is 1 (the first)
+|The number of the returned page of messages, default is 1 (the first)
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The amount of messages to list (defaults to 50)
+|The amount of messages to list (defaults to 50)
 |===
 
 
@@ -152,16 +153,15 @@ public updateReadBy($readBy, $uuid):void
 Updates the readBy array of the message.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$readBy`
-a|The ID of the user who read the message
+|The ID of the user who read the message
 
 |link:http://php.net/string[string^]
 a|`$uuid`
-a|The UUID of the message
+|The UUID of the message
 |===
 
 
@@ -181,16 +181,15 @@ public updateTags($tags, $uuid):void
 Updates the tags of the message.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$tags`
-a|Array of tag IDs of the message
+|Array of tag IDs of the message
 
 |link:http://php.net/string[string^]
 a|`$uuid`
-a|The UUID of the message
+|The UUID of the message
 |===
 
 
@@ -210,16 +209,15 @@ public updateVisibility($data, $uuid):void
 Updates the visibility of the message. Attributes that are updated are Message.visibility, Message.linkedTo and Message.accessFor.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The message with the data to be updated
+|The message with the data to be updated
 
 |link:http://php.net/string[string^]
 a|`$uuid`
-a|The UUID of the messages
+|The UUID of the messages
 |===
 
 
@@ -239,16 +237,15 @@ public updateControls($data, $uuid):Plenty\Modules\Messenger\Models\Message
 Updates the message ui control options in the message meta data and returns the message.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The controls data to be updated.
+|The controls data to be updated.
 
 |link:http://php.net/string[string^]
 a|`$uuid`
-a|The uuid of the message.
+|The uuid of the message.
 |===
 
 
@@ -268,16 +265,15 @@ public setDone($doneAt = null, $uuid):void
 Sets the doneAt date in the message. If $doneAt is NULL, the doneAt date will be reset.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$doneAt`
-a|The doneAt date as ISO date string
+|The doneAt date as ISO date string
 
 |link:http://php.net/string[string^]
 a|`$uuid`
-a|The UUID of the message
+|The UUID of the message
 |===
 
 
@@ -297,12 +293,11 @@ public delete($uuid):int
 Deletes a message stream by the UUID. Returns the count of messages deleted.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$uuid`
-a|The UUID of the message
+|The UUID of the message
 |===
 
 
@@ -322,16 +317,15 @@ public getAttachment($uuid, $filename):Plenty\Modules\Messenger\Models\Attachmen
 Gets a message attachment.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$uuid`
-a|The UUID of the message
+|The UUID of the message
 
 |link:http://php.net/string[string^]
 a|`$filename`
-a|The file name of the attachment
+|The file name of the attachment
 |===
 
 
@@ -351,16 +345,15 @@ public updateMetaData($uuid, $metaData):Plenty\Modules\Messenger\Models\Message
 Updates the meta data of the message.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$uuid`
-a|The UUID of the message
+|The UUID of the message
 
 |link:http://php.net/array[array^]
 a|`$metaData`
-a|The meta data of the message
+|The meta data of the message
 |===
 
 
@@ -395,12 +388,11 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -517,28 +509,27 @@ The Attachment model of the messenger.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|name
-    a|The file name of the attachment
+    |name
+    |The file name of the attachment
 |link:http://php.net/string[string^]
-    a|message
-    a|The UUID of the message the attachment belongs to
+    |message
+    |The UUID of the message the attachment belongs to
 |link:http://php.net/int[int^]
-    a|size
-    a|The size of the attachment in bytes
+    |size
+    |The size of the attachment in bytes
 |link:http://php.net/string[string^]
-    a|contentType
-    a|The content type fo the attachment
+    |contentType
+    |The content type fo the attachment
 |link:http://php.net/string[string^]
-    a|content
-    a|The content of the attachment
+    |content
+    |The content of the attachment
 |link:http://php.net/string[string^]
-    a|createdAt
-    a|The createdAt date of the attachment
+    |createdAt
+    |The createdAt date of the attachment
 |===
 
 
@@ -576,70 +567,69 @@ The Message model of the messenger.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|uuid
-    a|The UUID5 identifier of the message
+    |uuid
+    |The UUID5 identifier of the message
 |link:http://php.net/string[string^]
-    a|plentyIdHash
-    a|The plenty ID hash
+    |plentyIdHash
+    |The plenty ID hash
 |link:http://php.net/string[string^]
-    a|parentUuid
-    a|The UUID5 of the parent message
+    |parentUuid
+    |The UUID5 of the parent message
 |link:http://php.net/array[array^]
-    a|linkedTo
-    a|An array with MessageLinkedTo instances
+    |linkedTo
+    |An array with MessageLinkedTo instances
 |        xref:Messenger.adoc#messenger_models_messagefrom[`MessageFrom`]
-    a|from
-    a|The sender of the message as MessageFrom instance.
+    |from
+    |The sender of the message as MessageFrom instance.
 |        xref:Messenger.adoc#messenger_models_messageto[`MessageTo`]
-    a|to
-    a|The user and role IDs and emails receiving the message
+    |to
+    |The user and role IDs and emails receiving the message
 |link:http://php.net/bool[bool^]
-    a|whispered
-    a|Whether the message is whispered (not visible for the contact/order linked to the message) or not
+    |whispered
+    |Whether the message is whispered (not visible for the contact/order linked to the message) or not
 |link:http://php.net/array[array^]
-    a|tags
-    a|An array with tag IDs assigned to the message
+    |tags
+    |An array with tag IDs assigned to the message
 |link:http://php.net/string[string^]
-    a|title
-    a|The title of the message
+    |title
+    |The title of the message
 |link:http://php.net/string[string^]
-    a|preview
-    a|The first two lines of the message without any markup
+    |preview
+    |The first two lines of the message without any markup
 |link:http://php.net/string[string^]
-    a|message
-    a|The content of the message
+    |message
+    |The content of the message
 |link:http://php.net/int[int^]
-    a|attachedFilesCount
-    a|The amount of attached files (readonly)
+    |attachedFilesCount
+    |The amount of attached files (readonly)
 |        xref:Messenger.adoc#messenger_models_messagereferrer[`MessageReferrer`]
-    a|referrer
-    a|The message referrer
+    |referrer
+    |The message referrer
 |        xref:Messenger.adoc#messenger_models_messagemetadata[`MessageMetaData`]
-    a|metaData
-    a|The meta data of the message
+    |metaData
+    |The meta data of the message
 |link:http://php.net/string[string^]
-    a|doneAt
-    a|The date the messages was set to done
+    |doneAt
+    |The date the messages was set to done
 |link:http://php.net/string[string^]
-    a|createdAt
-    a|The creation date of the message
+    |createdAt
+    |The creation date of the message
 |link:http://php.net/string[string^]
-    a|updatedAt
-    a|The date of the last update of the message
+    |updatedAt
+    |The date of the last update of the message
 |link:http://php.net/string[string^]
-    a|deletedAt
-    a|The date the message was deleted
+    |deletedAt
+    |The date the message was deleted
 |link:http://php.net/int[int^]
-    a|deletedBy
-    a|The ID of the user who deleted the message
+    |deletedBy
+    |The ID of the user who deleted the message
 |link:http://php.net/array[array^]
-    a|attachments
-    a|The message attachments
+    |attachments
+    |The message attachments
 |===
 
 
@@ -677,21 +667,20 @@ The MessageFrom model of the messenger.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|type
-    a|The type of the from instance (one of {@link MessageTypesService::FROM_TYPE_USER},
+    |type
+    |The type of the from instance (one of {@link MessageTypesService::FROM_TYPE_USER},
 {@link MessageTypesService::FROM_TYPE_CONTACT} and {@link MessageTypesService::FROM_TYPE_EMAIL})
 |
-    a|value
-    a|The value of the instance. For type {@link MessageTypesService::FROM_TYPE_EMAIL} it is a string (the email)
+    |value
+    |The value of the instance. For type {@link MessageTypesService::FROM_TYPE_EMAIL} it is a string (the email)
 and the id of the user or the contact otherwise.
 |link:http://php.net/string[string^]
-    a|name
-    a|An optional name for the instance, e.g. the real name for type {@link MessageTypesService::FROM_TYPE_EMAIL}
+    |name
+    |An optional name for the instance, e.g. the real name for type {@link MessageTypesService::FROM_TYPE_EMAIL}
 |===
 
 
@@ -729,22 +718,21 @@ The MessageLinkedTo model of the messenger.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|type
-    a|The type of the link (one of {@link MessageTypesService::LINKED_TO_TYPE_MESSAGE},
+    |type
+    |The type of the link (one of {@link MessageTypesService::LINKED_TO_TYPE_MESSAGE},
 {@link MessageTypesService::LINKED_TO_TYPE_ORDER}, {@link MessageTypesService::LINKED_TO_TYPE_CONTACT}
 and {@link MessageTypesService::LINKED_TO_TYPE_PAYMENT})
 |
-    a|value
-    a|The value of the link. For type {@link MessageTypesService::LINKED_TO_TYPE_MESSAGE} it is a string (uuid5)
+    |value
+    |The value of the link. For type {@link MessageTypesService::LINKED_TO_TYPE_MESSAGE} it is a string (uuid5)
 and an integer otherwise.
 |
-    a|typeId
-    a|This can be the ID of a sub-type (e.g. the order subTypeId). (optional)
+    |typeId
+    |This can be the ID of a sub-type (e.g. the order subTypeId). (optional)
 |===
 
 
@@ -782,28 +770,27 @@ The MessageMetaData model of the messenger.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/array[array^]
-    a|readBy
-    a|The array of users
+    |readBy
+    |The array of users
 |link:http://php.net/array[array^]
-    a|links
-    a|Array with links
+    |links
+    |Array with links
 |        xref:Messenger.adoc#messenger_models_messagemetadatanotdone[`MessageMetaDataNotDone`]
-    a|notDoneByBackend
-    a|deactivates the toggle button in the messenger ui (backend) also has optional tooltips (reason for the deactivated toggle)
+    |notDoneByBackend
+    |deactivates the toggle button in the messenger ui (backend) also has optional tooltips (reason for the deactivated toggle)
 |        xref:Messenger.adoc#messenger_models_messagemetadatacontrols[`MessageMetaDataControls`]
-    a|controls
-    a|An object with control options for the ui.
+    |controls
+    |An object with control options for the ui.
 |        xref:Messenger.adoc#messenger_models_messagemetadatatimecapture[`MessageMetaDataTimeCapture`]
-    a|timeCapture
-    a|An object of the message time capture data
+    |timeCapture
+    |An object of the message time capture data
 |link:http://php.net/int[int^]
-    a|plentyId
-    a|the plenty id of the related contact
+    |plentyId
+    |the plenty id of the related contact
 |===
 
 
@@ -852,19 +839,18 @@ The message controls model. Currently supported controls:
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/bool[bool^]
-    a|replyable
-    a|Indicates whether or not is allowed to reply to this message stream (default true).
+    |replyable
+    |Indicates whether or not is allowed to reply to this message stream (default true).
 |link:http://php.net/bool[bool^]
-    a|attachable
-    a|Indicates whether or not is allowed to attach files in a message (default true).
+    |attachable
+    |Indicates whether or not is allowed to attach files in a message (default true).
 |link:http://php.net/bool[bool^]
-    a|linksDisabled
-    a|Indicates whether or not the message links should be disabled (default false).
+    |linksDisabled
+    |Indicates whether or not the message links should be disabled (default false).
 |===
 
 
@@ -902,16 +888,15 @@ The MessageMetaDataNotDone model of the messenger.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/bool[bool^]
-    a|deactivated
-    a|Deactivates the toggle button for the UI
+    |deactivated
+    |Deactivates the toggle button for the UI
 |link:http://php.net/array[array^]
-    a|tooltips
-    a|Tooltips for the UI to show why the toggle is deactivated (if not set, show default values)
+    |tooltips
+    |Tooltips for the UI to show why the toggle is deactivated (if not set, show default values)
 |===
 
 
@@ -949,16 +934,15 @@ The MessageMetaDataTimeCapture model of the messenger.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/bool[bool^]
-    a|chargeable
-    a|
+    |chargeable
+    |
 |link:http://php.net/int[int^]
-    a|minutes
-    a|
+    |minutes
+    |
 |===
 
 
@@ -996,19 +980,18 @@ The MessageMetaLink model of the messenger.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|image
-    a|An optional image URL for the link
+    |image
+    |An optional image URL for the link
 |link:http://php.net/string[string^]
-    a|caption
-    a|The caption to be shown for the link
+    |caption
+    |The caption to be shown for the link
 |link:http://php.net/string[string^]
-    a|url
-    a|The link URL
+    |url
+    |The link URL
 <ul>
     <li>for {@link MessageMetaLink::TYPE_MAILTO} the email</li>
     <li>for {@link MessageMetaLink::TYPE_URL} the complete URL with protocol</li>
@@ -1016,8 +999,8 @@ The MessageMetaLink model of the messenger.
     <li>not needed for {@link MessageMetaLink::TYPE_REPLY}</li>
 </ul>
 |link:http://php.net/string[string^]
-    a|type
-    a|One of the constants:
+    |type
+    |One of the constants:
 <ul>
     <li>{@link MessageMetaLink::TYPE_MAILTO}</li>
     <li>{@link MessageMetaLink::TYPE_URL}</li>
@@ -1025,8 +1008,8 @@ The MessageMetaLink model of the messenger.
     <li>{@link MessageMetaLink::TYPE_REPLY}</li>
 </ul>
 |link:http://php.net/string[string^]
-    a|content
-    a|The reply content, only needed for type {@link MessageMetaLink::TYPE_REPLY}
+    |content
+    |The reply content, only needed for type {@link MessageMetaLink::TYPE_REPLY}
 |===
 
 
@@ -1064,24 +1047,23 @@ The MessageReferrer model of the messenger.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|type
-    a|The type of the from instance (one of {@link MessageTypesService::REFERRER_TYPE_SYSTEM},
+    |type
+    |The type of the from instance (one of {@link MessageTypesService::REFERRER_TYPE_SYSTEM},
 {@link MessageTypesService::REFERRER_TYPE_BACKEND}, {@link MessageTypesService::REFERRER_TYPE_REST}
 and {@link MessageTypesService::REFERRER_TYPE_PLUGIN})
 |
-    a|value
-    a|The value of the instance. It is an integer (the user id) for type
+    |value
+    |The value of the instance. It is an integer (the user id) for type
 {@link MessageTypesService::REFERRER_TYPE_SYSTEM}, {@link MessageTypesService::REFERRER_TYPE_BACKEND}
 and {@link MessageTypesService::REFERRER_TYPE_REST} and a string (the plugin name) for type
 {@link MessageTypesService::REFERRER_TYPE_PLUGIN}.
 |link:http://php.net/string[string^]
-    a|name
-    a|An optional name for the instance. For type {@link MessageTypesService::REFERRER_TYPE_PLUGIN} it is
+    |name
+    |An optional name for the instance. For type {@link MessageTypesService::REFERRER_TYPE_PLUGIN} it is
 the plugin namespace, the user name otherwise.
 |===
 
@@ -1120,22 +1102,21 @@ The MessageTo model of the messenger.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/array[array^]
-    a|user
-    a|An array with user IDs of users receiving the message
+    |user
+    |An array with user IDs of users receiving the message
 |link:http://php.net/array[array^]
-    a|role
-    a|An array with user role IDs of user roles receiving the message
+    |role
+    |An array with user role IDs of user roles receiving the message
 |link:http://php.net/array[array^]
-    a|email
-    a|An array with emails receiving the message
+    |email
+    |An array with emails receiving the message
 |link:http://php.net/bool[bool^]
-    a|allUsers
-    a|Flag indicating that all system users receive the message
+    |allUsers
+    |Flag indicating that all system users receive the message
 |===
 
 
@@ -1207,16 +1188,15 @@ public static isValidLinkedTo($linkType, $linkValue):bool
 Checks whether the given link is valid or not.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$linkType`
-a|The link type
+|The link type
 
 |
 a|`$linkValue`
-a|The link value
+|The link value
 |===
 
 
@@ -1251,16 +1231,15 @@ public static isValidFrom($fromType, $fromValue):bool
 Checks whether the given from is valid or not.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fromType`
-a|The from type
+|The from type
 
 |
 a|`$fromValue`
-a|The from value
+|The from value
 |===
 
 
@@ -1295,20 +1274,19 @@ public static isValidReferrer($referrerType, $referrerValue, $referrerName = nul
 Checks whether the given referrer reference is valid or not.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$referrerType`
-a|The reference to be checked
+|The reference to be checked
 
 |
 a|`$referrerValue`
-a|The value of the reference
+|The value of the reference
 
 |link:http://php.net/string[string^]
 a|`$referrerName`
-a|The name of the reference
+|The name of the reference
 |===
 
 
@@ -1343,12 +1321,11 @@ public static isValidTo($toKey):bool
 Checks whether the given key has a valid value for to.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$toKey`
-a|The to key
+|The to key
 |===
 
 
@@ -1387,12 +1364,11 @@ public find($uuid):Plenty\Modules\Messenger\Models\Message
 Gets the message with the given uuid.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$uuid`
-a|The UUID of the message
+|The UUID of the message
 |===
 
 
@@ -1412,12 +1388,11 @@ public findOrFail($uuid):Plenty\Modules\Messenger\Models\Message
 Gets the message with the given UUID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$uuid`
-a|The UUID of the message
+|The UUID of the message
 |===
 
 
@@ -1437,12 +1412,11 @@ public findMany($uuid):array
 Gets a stream of messages. The given UUID can be the UUID of the first message in the stream or one of the replied messages.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$uuid`
-a|The UUID of the message
+|The UUID of the message
 |===
 
 
@@ -1462,16 +1436,15 @@ public navigate($page = 1, $itemsPerPage = 50):array
 Lists the messages for the given navigation page.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|The page of results to search for
+|The page of results to search for
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The number of items to list per page
+|The number of items to list per page
 |===
 
 
@@ -1521,12 +1494,11 @@ public process($data):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -1636,12 +1608,11 @@ public addDependenciesToSource($sources):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$sources`
-a|
+|
 |===
 
 
@@ -1676,12 +1647,11 @@ public setName($name):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$name`
-a|
+|
 |===
 
 
@@ -1701,12 +1671,11 @@ public setIsSourceDisabled($isSourceDisabled):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/bool[bool^]
 a|`$isSourceDisabled`
-a|
+|
 |===
 
 
@@ -1726,12 +1695,11 @@ public addFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_type_typeinterface[`TypeInterface`]
 a|`$filter`
-a|
+|
 |===
 
 
@@ -1751,12 +1719,11 @@ public addPostFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_type_typeinterface[`TypeInterface`]
 a|`$filter`
-a|
+|
 |===
 
 
@@ -1776,12 +1743,11 @@ public addQuery($query):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_type_typeinterface[`TypeInterface`]
 a|`$query`
-a|
+|
 |===
 
 
@@ -1801,12 +1767,11 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_source_sourceinterface[`SourceInterface`]
 a|`$source`
-a|
+|
 |===
 
 
@@ -1826,12 +1791,11 @@ public setSorting($sorting):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_sorting_sortinginterface[`SortingInterface`]
 a|`$sorting`
-a|
+|
 |===
 
 
@@ -1851,12 +1815,11 @@ public addAggregation($aggregation):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 a|`$aggregation`
-a|
+|
 |===
 
 
@@ -1876,12 +1839,11 @@ public addSuggestion($suggestion):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_suggestion_suggestioninterface[`SuggestionInterface`]
 a|`$suggestion`
-a|
+|
 |===
 
 
@@ -1901,16 +1863,15 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$rowsPerPage`
-a|
+|
 |===
 
 
@@ -1930,12 +1891,11 @@ public setPagination($pagination):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$pagination`
-a|
+|
 |===
 
 
@@ -1955,12 +1915,11 @@ public setCollapse($collapse):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_collapse_collapseinterface[`CollapseInterface`]
 a|`$collapse`
-a|
+|
 |===
 
 
@@ -1980,12 +1939,11 @@ public setScoreModifier($scoreModifier):Plenty\Modules\Cloud\ElasticSearch\Lib\S
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_scoremodifier_scoremodifierinterface[`ScoreModifierInterface`]
 a|`$scoreModifier`
-a|
+|
 |===
 
 
@@ -2005,12 +1963,11 @@ public setMaxResultWindow($maxResults = 10000):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$maxResults`
-a|
+|
 |===
 
 
@@ -2030,12 +1987,11 @@ public setIndex($index):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$index`
-a|
+|
 |===
 
 

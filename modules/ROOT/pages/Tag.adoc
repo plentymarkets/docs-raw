@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[tag_tag]]
@@ -39,20 +44,19 @@ public update($data, $tagId, $availabilityType):Plenty\Modules\Tag\Models\TagAva
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The availability data. The properties that are required to update an tag can be found in the TagAvailability model.
+|The availability data. The properties that are required to update an tag can be found in the TagAvailability model.
 
 |link:http://php.net/int[int^]
 a|`$tagId`
-a|The ID of the tag
+|The ID of the tag
 
 |link:http://php.net/string[string^]
 a|`$availabilityType`
-a|The type of the availability. The following types are available.
+|The type of the availability. The following types are available.
 <ul>
 <li>blog</li>
 <li>category</li>
@@ -79,12 +83,11 @@ public create($data):Plenty\Modules\Tag\Models\TagAvailability
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The availability data. The properties that are required to update an tag can be found in the TagAvailability model.
+|The availability data. The properties that are required to update an tag can be found in the TagAvailability model.
 |===
 
 
@@ -153,20 +156,19 @@ public update($data, $tagId, $lang):Plenty\Modules\Tag\Models\TagName
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The name data. The properties that are required to update an name can be found in the TagName model.
+|The name data. The properties that are required to update an name can be found in the TagName model.
 
 |link:http://php.net/int[int^]
 a|`$tagId`
-a|The ID of the tag
+|The ID of the tag
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language of the name
+|The language of the name
 |===
 
 
@@ -186,12 +188,11 @@ public create($data):Plenty\Modules\Tag\Models\TagName
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The name data. The properties that are required to update an name can be found in the TagName model.
+|The name data. The properties that are required to update an name can be found in the TagName model.
 |===
 
 
@@ -211,16 +212,15 @@ public findByName($name, $lang):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The name of the tag
+|The name of the tag
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language of the name
+|The language of the name
 |===
 
 
@@ -289,20 +289,19 @@ public update($data, $tagId, $availabilityType, $relationshipValue):Plenty\Modul
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The relationship data. The properties that are required to update a relationship can be found in the TagRelationship model.
+|The relationship data. The properties that are required to update a relationship can be found in the TagRelationship model.
 
 |link:http://php.net/int[int^]
 a|`$tagId`
-a|The ID of the tag
+|The ID of the tag
 
 |link:http://php.net/string[string^]
 a|`$availabilityType`
-a|The type of the availability. The following types are available:
+|The type of the availability. The following types are available:
 <ul>
 <li>category</li>
 <li>variation</li>
@@ -311,7 +310,7 @@ a|The type of the availability. The following types are available:
 
 |link:http://php.net/int[int^]
 a|`$relationshipValue`
-a|The value of the relationship. This value is the ID of the data set the tag is linked to, e.g. item ID 1234.
+|The value of the relationship. This value is the ID of the data set the tag is linked to, e.g. item ID 1234.
 |===
 
 
@@ -331,12 +330,11 @@ public create($data):Plenty\Modules\Tag\Models\TagRelationship
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The relationship data. The properties that are required to update a relationship can be found in the TagRelationship model.
+|The relationship data. The properties that are required to update a relationship can be found in the TagRelationship model.
 |===
 
 
@@ -356,16 +354,15 @@ public deleteRelation($relationshipValue, $tagId):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$relationshipValue`
-a|The value of the relationship. This value is the ID of the data set the tag is linked to, e.g. item ID 1234.
+|The value of the relationship. This value is the ID of the data set the tag is linked to, e.g. item ID 1234.
 
 |link:http://php.net/int[int^]
 a|`$tagId`
-a|The ID of the tag
+|The ID of the tag
 |===
 
 
@@ -385,20 +382,19 @@ public deleteOneRelation($relationshipValue, $relationshipType, $tagId):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$relationshipValue`
-a|The value of the relationship. This value is the ID of the data set the tag is linked to, e.g. item ID 1234.
+|The value of the relationship. This value is the ID of the data set the tag is linked to, e.g. item ID 1234.
 
 |link:http://php.net/string[string^]
 a|`$relationshipType`
-a|The type of the relationship, i.e. <b>category</b>, <b>item</b> or <b>ticket</b>
+|The type of the relationship, i.e. <b>category</b>, <b>item</b> or <b>ticket</b>
 
 |link:http://php.net/int[int^]
 a|`$tagId`
-a|The ID of the tag
+|The ID of the tag
 |===
 
 
@@ -418,20 +414,19 @@ public deleteOneRelationByUUID($relationshipUUID, $relationshipType, $tagId):int
 Delete a tag relationship by the uuid5 value.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$relationshipUUID`
-a|The uuid5 value of the relationship.
+|The uuid5 value of the relationship.
 
 |link:http://php.net/string[string^]
 a|`$relationshipType`
-a|The type of the relationship, i.e. <b>board</b>
+|The type of the relationship, i.e. <b>board</b>
 
 |link:http://php.net/int[int^]
 a|`$tagId`
-a|The ID of the tag
+|The ID of the tag
 |===
 
 
@@ -451,12 +446,11 @@ public findByValueId($valueId):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$valueId`
-a|The value of the relationship. This value is the ID of the data set the tag is linked to, e.g. item ID 1234.
+|The value of the relationship. This value is the ID of the data set the tag is linked to, e.g. item ID 1234.
 |===
 
 
@@ -476,12 +470,11 @@ public findByTagId($tagId):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$tagId`
-a|The ID of the tag
+|The ID of the tag
 |===
 
 
@@ -501,20 +494,19 @@ public findRelationship($tagId, $relationshipValue, $relationshipType):Plenty\Mo
 Gets a specific tag relationship or returns null.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$tagId`
-a|The ID of the tag
+|The ID of the tag
 
 |link:http://php.net/int[int^]
 a|`$relationshipValue`
-a|The value of the relationship
+|The value of the relationship
 
 |link:http://php.net/string[string^]
 a|`$relationshipType`
-a|The type of the relationship
+|The type of the relationship
 |===
 
 
@@ -534,16 +526,15 @@ public delete($relationshipValue, $relationshipType):Plenty\Repositories\Models\
 Deletes tag links by reference value and relationship type.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$relationshipValue`
-a|The value of the relationship
+|The value of the relationship
 
 |link:http://php.net/string[string^]
 a|`$relationshipType`
-a|The type of the relationship
+|The type of the relationship
 |===
 
 
@@ -563,16 +554,15 @@ public deleteByUUID($relationshipValue, $relationshipType):Plenty\Repositories\M
 Deletes tag links by uuid5 reference value and relationship type.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$relationshipValue`
-a|The value of the relationship
+|The value of the relationship
 
 |link:http://php.net/string[string^]
 a|`$relationshipType`
-a|The type of the relationship
+|The type of the relationship
 |===
 
 
@@ -592,12 +582,11 @@ public deleteBulk($data):Illuminate\Support\Collection
 Deletes a list of tag relationships. The tag ID, tag type and relation value must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The array containing the data.
+|The array containing the data.
 |===
 
 
@@ -617,12 +606,11 @@ public listRelationships($with = []):Illuminate\Support\Collection
 Returns all tag relationships.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$with`
-a|An array with child instances to be loaded
+|An array with child instances to be loaded
 |===
 
 
@@ -672,12 +660,11 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -761,12 +748,11 @@ public create($name):Plenty\Modules\Tag\Models\Tag
 Creates a new tag.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The name of the tag
+|The name of the tag
 |===
 
 
@@ -786,16 +772,15 @@ public update($data, $tagId):Plenty\Modules\Tag\Models\Tag
 Updates a tag.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The tag data. The properties that are required to update a tag can be found in the Tag model.
+|The tag data. The properties that are required to update a tag can be found in the Tag model.
 
 |link:http://php.net/int[int^]
 a|`$tagId`
-a|The ID of the tag
+|The ID of the tag
 |===
 
 
@@ -815,12 +800,11 @@ public delete($tagId):void
 Deletes a tag by the given tag ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$tagId`
-a|The ID of the tag
+|The ID of the tag
 |===
 
 
@@ -840,12 +824,11 @@ public getTagByName($name):Plenty\Modules\Tag\Models\Tag
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The name of the tag
+|The name of the tag
 |===
 
 
@@ -865,12 +848,11 @@ public getTagsByIds($ids):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$ids`
-a|The IDs of the tags
+|The IDs of the tags
 |===
 
 
@@ -890,16 +872,15 @@ public getTagById($id, $with = []):Plenty\Modules\Tag\Models\Tag
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the tag
+|The ID of the tag
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|An array with child instances to be loaded
+|An array with child instances to be loaded
 |===
 
 
@@ -919,12 +900,11 @@ public getTagsByAvailability($availabilityType):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$availabilityType`
-a|The type of the availability. The following types are available.
+|The type of the availability. The following types are available.
 <ul>
 <li>blog</li>
 <li>category</li>
@@ -952,20 +932,19 @@ public getTagsByRelationship($relationshipType, $value, $isUUID = false):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$relationshipType`
-a|The relationship type
+|The relationship type
 
 |
 a|`$value`
-a|The relationship value (string if UUID, otherwise int)
+|The relationship value (string if UUID, otherwise int)
 
 |link:http://php.net/bool[bool^]
 a|`$isUUID`
-a|Indicates whether the value is a UUID5 or not.
+|Indicates whether the value is a UUID5 or not.
 |===
 
 
@@ -985,12 +964,11 @@ public listTags($with = []):Illuminate\Support\Collection
 Returns all tags.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$with`
-a|An array with child instances to be loaded
+|An array with child instances to be loaded
 |===
 
 
@@ -1010,12 +988,11 @@ public createTag($data):Plenty\Modules\Tag\Models\Tag
 Creates a new tag.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The data as associative array
+|The data as associative array
 |===
 
 
@@ -1035,12 +1012,11 @@ public createBulk($data):array
 Creates up to 50 new tags.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The data as associative array
+|The data as associative array
 |===
 
 
@@ -1060,12 +1036,11 @@ public updateBulk($data):array
 Updates up to 50 tags.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The data as associative array
+|The data as associative array
 |===
 
 
@@ -1115,12 +1090,11 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -1187,37 +1161,36 @@ The Tag model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The tag ID
+    |id
+    |The tag ID
 |link:http://php.net/string[string^]
-    a|tagName
-    a|The name of the tag
+    |tagName
+    |The name of the tag
 |link:http://php.net/string[string^]
-    a|color
-    a|The color for the tag
+    |color
+    |The color for the tag
 |link:http://php.net/array[array^]
-    a|availabilities
-    a|The availabilities of the tag.
+    |availabilities
+    |The availabilities of the tag.
 |link:http://php.net/array[array^]
-    a|names
-    a|The names of the tag.
+    |names
+    |The names of the tag.
 |link:http://php.net/array[array^]
-    a|relationships
-    a|The relationships of the tag.
+    |relationships
+    |The relationships of the tag.
 |link:http://php.net/array[array^]
-    a|clients
-    a|The clients of the tag.
+    |clients
+    |The clients of the tag.
 |link:http://php.net/string[string^]
-    a|updatedAt
-    a|The updated at timestamp of the tag.
+    |updatedAt
+    |The updated at timestamp of the tag.
 |link:http://php.net/string[string^]
-    a|createdAt
-    a|The created at timestamp of the tag.
+    |createdAt
+    |The created at timestamp of the tag.
 |===
 
 
@@ -1255,16 +1228,15 @@ The tag availability model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|tagId
-    a|The Tag ID of the tag
+    |tagId
+    |The Tag ID of the tag
 |link:http://php.net/string[string^]
-    a|tagType
-    a|The type of the tag. The following types are available.
+    |tagType
+    |The type of the tag. The following types are available.
 <ul>
 <li>blog</li>
 <li>category</li>
@@ -1311,19 +1283,18 @@ The tag client model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The id of the relation
+    |id
+    |The id of the relation
 |link:http://php.net/int[int^]
-    a|tagId
-    a|The Tag ID of the tag
+    |tagId
+    |The Tag ID of the tag
 |link:http://php.net/int[int^]
-    a|plentyId
-    a|The PlentyId of the client
+    |plentyId
+    |The PlentyId of the client
 |===
 
 
@@ -1361,22 +1332,21 @@ The tag name model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The name ID of the tag
+    |id
+    |The name ID of the tag
 |link:http://php.net/int[int^]
-    a|tagId
-    a|The tag ID
+    |tagId
+    |The tag ID
 |link:http://php.net/string[string^]
-    a|tagLang
-    a|The lang of the tag name.
+    |tagLang
+    |The lang of the tag name.
 |link:http://php.net/string[string^]
-    a|tagName
-    a|The name of the tag.
+    |tagName
+    |The name of the tag.
 |===
 
 
@@ -1414,22 +1384,21 @@ The tag relationship model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|tagId
-    a|The ID of the tag
+    |tagId
+    |The ID of the tag
 |link:http://php.net/string[string^]
-    a|tagType
-    a|The type of tag.
+    |tagType
+    |The type of tag.
 |link:http://php.net/int[int^]
-    a|relationshipValue
-    a|The ID of the data record for which a tag relationship is created
+    |relationshipValue
+    |The ID of the data record for which a tag relationship is created
 |link:http://php.net/string[string^]
-    a|relationshipUUID5
-    a|The ID of the data record for which a tag relationship is created. For models with uuid5 as primary key
+    |relationshipUUID5
+    |The ID of the data record for which a tag relationship is created. For models with uuid5 as primary key
 |===
 
 

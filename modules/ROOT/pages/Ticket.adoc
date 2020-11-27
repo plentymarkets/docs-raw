@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[ticket_ticket]]
@@ -39,12 +44,11 @@ public get($ticketMessageId):Plenty\Modules\Ticket\Models\TicketMessage
 Gets the ticket message by the given ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$ticketMessageId`
-a|The ID of the ticket message
+|The ID of the ticket message
 |===
 
 
@@ -64,12 +68,11 @@ public list($ticketId):void
 Lists all ticket messages of a ticket.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$ticketId`
-a|The ID of the ticket
+|The ID of the ticket
 |===
 
 
@@ -89,12 +92,11 @@ public listInternal($ticketId):void
 Lists all internal ticket messages of a ticket.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$ticketId`
-a|The ticket ID.
+|The ticket ID.
 |===
 
 
@@ -114,12 +116,11 @@ public listPublic($ticketId):void
 Lists all public ticket messages of a ticket
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$ticketId`
-a|The ID of the ticket
+|The ID of the ticket
 |===
 
 
@@ -158,12 +159,11 @@ public createTicket($data):Plenty\Modules\Ticket\Models\Ticket
 Creates a new ticket.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The ticket data as associative array
+|The ticket data as associative array
 |===
 
 
@@ -183,20 +183,19 @@ public searchTickets($filter, $page = 1, $itemsPerPage = 50):array
 List tickets by filter options.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filter`
-a|The filter
+|The filter
 
 |link:http://php.net/int[int^]
 a|`$page`
-a|The page to get. The default page that will be returned is page 1.
+|The page to get. The default page that will be returned is page 1.
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The number of tickets to be displayed per page. The default number of tickets per page is 50.
+|The number of tickets to be displayed per page. The default number of tickets per page is 50.
 |===
 
 
@@ -216,12 +215,11 @@ public deleteTicket($ticketId):void
 Deletes a ticket by the ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$ticketId`
-a|The ID of the ticket
+|The ID of the ticket
 |===
 
 
@@ -241,16 +239,15 @@ public createMessage($data, $ticketId):Plenty\Modules\Ticket\Models\TicketMessag
 Creates a message for a ticket.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The message data as associative array
+|The message data as associative array
 
 |link:http://php.net/int[int^]
 a|`$ticketId`
-a|The ID of the ticket
+|The ID of the ticket
 |===
 
 
@@ -270,16 +267,15 @@ public updateTicket($data, $ticketId):Plenty\Modules\Ticket\Models\Ticket
 Updates an existing ticket with given data.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The updating data as associative array
+|The updating data as associative array
 
 |link:http://php.net/int[int^]
 a|`$ticketId`
-a|The ID of the ticket
+|The ID of the ticket
 |===
 
 
@@ -299,16 +295,15 @@ public findById($ticketId, $with = []):Plenty\Modules\Ticket\Models\Ticket
 Gets a ticket by the ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$ticketId`
-a|The ID of the ticket
+|The ID of the ticket
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations to be loaded with the ticket. Possible values are 'order' and 'contact'.
+|The relations to be loaded with the ticket. Possible values are 'order' and 'contact'.
 |===
 
 
@@ -377,16 +372,15 @@ public update($data, $ticketRoleNameId):Plenty\Modules\Ticket\Models\TicketRoleN
 Updates an existing ticket role name.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The ticket role name data as associative array
+|The ticket role name data as associative array
 
 |link:http://php.net/int[int^]
 a|`$ticketRoleNameId`
-a|The ID of the ticket role name
+|The ID of the ticket role name
 |===
 
 
@@ -406,12 +400,11 @@ public create($data):Plenty\Modules\Ticket\Models\TicketRoleName
 Creates a ticket role name.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The ticket role name data as associative array
+|The ticket role name data as associative array
 |===
 
 
@@ -431,16 +424,15 @@ public findByName($name, $lang):array
 Lists the ticket roles by the name.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The name of the ticket role
+|The name of the ticket role
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language of the ticket role
+|The language of the ticket role
 |===
 
 
@@ -460,12 +452,11 @@ public findByLang($lang):array
 Lists the ticket roles by the language.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language of the ticket role
+|The language of the ticket role
 |===
 
 
@@ -504,16 +495,15 @@ public update($data, $ticketRoleId):Plenty\Modules\Ticket\Models\TicketRole
 Update an existing ticket role.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The ticket role data as associative array
+|The ticket role data as associative array
 
 |link:http://php.net/int[int^]
 a|`$ticketRoleId`
-a|The ID of the ticket role
+|The ID of the ticket role
 |===
 
 
@@ -533,12 +523,11 @@ public create($data):Plenty\Modules\Ticket\Models\TicketRole
 Creates a ticket role.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The ticket role data as associative array
+|The ticket role data as associative array
 |===
 
 
@@ -577,16 +566,15 @@ public update($data, $ticketStatusNameId):Plenty\Modules\Ticket\Models\TicketSta
 Updates the ticket status name by the given ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The ticket status name data as associative array
+|The ticket status name data as associative array
 
 |link:http://php.net/int[int^]
 a|`$ticketStatusNameId`
-a|The ID of the ticket status name
+|The ID of the ticket status name
 |===
 
 
@@ -606,12 +594,11 @@ public create($data):Plenty\Modules\Ticket\Models\TicketStatusName
 Creates a ticket status name.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The ticket status name data as associative array
+|The ticket status name data as associative array
 |===
 
 
@@ -631,16 +618,15 @@ public findByName($name, $lang):array
 Gets the ticket status name.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The name of the ticket status
+|The name of the ticket status
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language of the ticket status name
+|The language of the ticket status name
 |===
 
 
@@ -660,12 +646,11 @@ public statusNameList($lang):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language of the ticket status name
+|The language of the ticket status name
 |===
 
 
@@ -685,12 +670,11 @@ public statusNameListWithTypeId($lang):array
 Lists the ticket status names with type ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language of the ticket status name
+|The language of the ticket status name
 |===
 
 
@@ -729,16 +713,15 @@ public update($data, $ticketStatusId):Plenty\Modules\Ticket\Models\TicketStatus
 Updates an existing ticket status.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The ticket status data as associative array
+|The ticket status data as associative array
 
 |link:http://php.net/int[int^]
 a|`$ticketStatusId`
-a|The ID of the ticket status
+|The ID of the ticket status
 |===
 
 
@@ -758,12 +741,11 @@ public create($data):Plenty\Modules\Ticket\Models\TicketStatus
 Creates a ticket status.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The ticket status data as associative array
+|The ticket status data as associative array
 |===
 
 
@@ -783,12 +765,11 @@ public findByTypeId($typeId):array
 Lists the ticket statuses by the type ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$typeId`
-a|The ID of the type
+|The ID of the type
 |===
 
 
@@ -827,16 +808,15 @@ public update($data, $ticketTypeNameId):Plenty\Modules\Ticket\Models\TicketTypeN
 Updates an existing ticket type name.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The ticket type name data as associative array
+|The ticket type name data as associative array
 
 |link:http://php.net/int[int^]
 a|`$ticketTypeNameId`
-a|The ID of the ticket type name
+|The ID of the ticket type name
 |===
 
 
@@ -856,12 +836,11 @@ public create($data):Plenty\Modules\Ticket\Models\TicketTypeName
 Creates a ticket type name.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The ticket type name data as associative array
+|The ticket type name data as associative array
 |===
 
 
@@ -881,16 +860,15 @@ public findByName($name, $lang):array
 Lists the ticket types by the name.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|The name of the ticket type
+|The name of the ticket type
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language of the ticket type
+|The language of the ticket type
 |===
 
 
@@ -910,12 +888,11 @@ public typeNameList($lang):array
 Lists the ticket types by the language.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language of the ticket type
+|The language of the ticket type
 |===
 
 
@@ -954,16 +931,15 @@ public update($data, $ticketTypeId):Plenty\Modules\Ticket\Models\TicketType
 Updates the ticket type by the given ID.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The ticket type data as associative array
+|The ticket type data as associative array
 
 |link:http://php.net/int[int^]
 a|`$ticketTypeId`
-a|The ID of the ticket type
+|The ID of the ticket type
 |===
 
 
@@ -983,12 +959,11 @@ public create($data):Plenty\Modules\Ticket\Models\TicketType
 Creates a ticket type.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The ticket type data as associative array
+|The ticket type data as associative array
 |===
 
 
@@ -1010,91 +985,90 @@ The ticket model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the ticket
+    |id
+    |The ID of the ticket
 |link:http://php.net/int[int^]
-    a|typeId
-    a|The type ID of the ticket
+    |typeId
+    |The type ID of the ticket
 |link:http://php.net/int[int^]
-    a|priorityId
-    a|The priority ID of the ticket
+    |priorityId
+    |The priority ID of the ticket
 |link:http://php.net/int[int^]
-    a|parentTicketId
-    a|The ID of the parent ticket
+    |parentTicketId
+    |The ID of the parent ticket
 |link:http://php.net/int[int^]
-    a|statusId
-    a|The status ID of the ticket
+    |statusId
+    |The status ID of the ticket
 |link:http://php.net/array[array^]
-    a|confidential
-    a|The confidential value. Displays 1 if the ticket is confidential. Displays 0 if the ticket is not confidential.
+    |confidential
+    |The confidential value. Displays 1 if the ticket is confidential. Displays 0 if the ticket is not confidential.
 |link:http://php.net/int[int^]
-    a|contactId
-    a|The ID of the contact that is linked with the ticket
+    |contactId
+    |The ID of the contact that is linked with the ticket
 |link:http://php.net/int[int^]
-    a|orderId
-    a|The ID of the order linked with the ticket
+    |orderId
+    |The ID of the order linked with the ticket
 |link:http://php.net/string[string^]
-    a|createdAt
-    a|The time the ticket was created as unix timestamp or carbon object
+    |createdAt
+    |The time the ticket was created as unix timestamp or carbon object
 |link:http://php.net/string[string^]
-    a|updatedAt
-    a|The time the ticket was last updated as unix timestamp or carbon object
+    |updatedAt
+    |The time the ticket was last updated as unix timestamp or carbon object
 |link:http://php.net/string[string^]
-    a|contactLastUpdateAt
-    a|The time the contact was last updated
+    |contactLastUpdateAt
+    |The time the contact was last updated
 |link:http://php.net/string[string^]
-    a|deadlineAt
-    a|The date of the ticket deadline
+    |deadlineAt
+    |The date of the ticket deadline
 |link:http://php.net/string[string^]
-    a|finishedAt
-    a|The date the ticket is solved and displays 100 percent in the progress bar
+    |finishedAt
+    |The date the ticket is solved and displays 100 percent in the progress bar
 |link:http://php.net/string[string^]
-    a|title
-    a|The title of the ticket
+    |title
+    |The title of the ticket
 |link:http://php.net/int[int^]
-    a|progress
-    a|The progress of the ticket in percent
+    |progress
+    |The progress of the ticket in percent
 |link:http://php.net/int[int^]
-    a|plentyId
-    a|The ID of the client (store)
+    |plentyId
+    |The ID of the client (store)
 |link:http://php.net/array[array^]
-    a|source
-    a|The source of the ticket. Possible values are 'frontend', 'backend', 'ebay' and 'email'.
+    |source
+    |The source of the ticket. Possible values are 'frontend', 'backend', 'ebay' and 'email'.
 |link:http://php.net/int[int^]
-    a|documentsCount
-    a|The number of documents that are attached to the ticket
+    |documentsCount
+    |The number of documents that are attached to the ticket
 |link:http://php.net/int[int^]
-    a|hasDocuments
-    a|Displays 1 if the ticket has one or more documents. Displays 0 if the ticket has no document.
+    |hasDocuments
+    |Displays 1 if the ticket has one or more documents. Displays 0 if the ticket has no document.
 |link:http://php.net/int[int^]
-    a|childrenCount
-    a|The number of child tickets
+    |childrenCount
+    |The number of child tickets
 |link:http://php.net/string[string^]
-    a|resubmissionAt
-    a|The date the ticket should be resubmitted
+    |resubmissionAt
+    |The date the ticket should be resubmitted
 |link:http://php.net/string[string^]
-    a|parseData
-    a|The ParseData from the ticket
+    |parseData
+    |The ParseData from the ticket
 |        xref:Account.adoc#account_models_contact[`Contact`]
-    a|contact
-    a|The contact instance linked with the ticket
+    |contact
+    |The contact instance linked with the ticket
 |        xref:Order.adoc#order_models_order[`Order`]
-    a|order
-    a|The order instance linked with the ticket
+    |order
+    |The order instance linked with the ticket
 |link:http://php.net/array[array^]
-    a|owners
-    a|The owners of the ticket. It is a combination of the user ID and the role ID.
+    |owners
+    |The owners of the ticket. It is a combination of the user ID and the role ID.
 |link:http://php.net/array[array^]
-    a|messages
-    a|The messages of the ticket
+    |messages
+    |The messages of the ticket
 |link:http://php.net/array[array^]
-    a|documents
-    a|The docuemts of the ticket
+    |documents
+    |The docuemts of the ticket
 |===
 
 
@@ -1132,28 +1106,27 @@ The ticket document model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the ticket document
+    |id
+    |The ID of the ticket document
 |link:http://php.net/int[int^]
-    a|ticketId
-    a|TheID of the ticket
+    |ticketId
+    |TheID of the ticket
 |link:http://php.net/int[int^]
-    a|userId
-    a|The ID of the user
+    |userId
+    |The ID of the user
 |link:http://php.net/string[string^]
-    a|type
-    a|The type the document
+    |type
+    |The type the document
 |link:http://php.net/string[string^]
-    a|name
-    a|The name (path) of the document storage location
+    |name
+    |The name (path) of the document storage location
 |link:http://php.net/int[int^]
-    a|internal
-    a|/TODO what is this for?
+    |internal
+    |/TODO what is this for?
 |===
 
 
@@ -1191,35 +1164,34 @@ The ticket message model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the message
+    |id
+    |The ID of the message
 |link:http://php.net/int[int^]
-    a|ticketId
-    a|The ticket ID the message belongs to
+    |ticketId
+    |The ticket ID the message belongs to
 |link:http://php.net/int[int^]
-    a|userId
-    a|The user of the message
+    |userId
+    |The user of the message
 |link:http://php.net/string[string^]
-    a|createdAt
-    a|The time the ticket message was created as unix timestamp or carbon object
+    |createdAt
+    |The time the ticket message was created as unix timestamp or carbon object
 |link:http://php.net/string[string^]
-    a|text
-    a|The content of the message
+    |text
+    |The content of the message
 |link:http://php.net/array[array^]
-    a|type
-    a|The type of the message. Two types are available:
+    |type
+    |The type of the message. Two types are available:
 <ul>
 <li>message (visible for the customer)</li>
 <li>comment (not visible for the customer)</li>
 </ul>
 |link:http://php.net/array[array^]
-    a|source
-    a|The origin of the message. The following sources are available by default and cannot be deleted.
+    |source
+    |The origin of the message. The following sources are available by default and cannot be deleted.
 <ul>
 <li>backend</li>
 <li>frontend</li>
@@ -1227,11 +1199,11 @@ The ticket message model.
 <li>email</li>
 </ul>
 |link:http://php.net/int[int^]
-    a|topicId
-    a|The ID of the topic the message is assigned to
+    |topicId
+    |The ID of the topic the message is assigned to
 |        xref:Ticket.adoc#ticket_models_ticket[`Ticket`]
-    a|ticket
-    a|The corresponding ticket instance.
+    |ticket
+    |The corresponding ticket instance.
 |===
 
 
@@ -1269,16 +1241,15 @@ The ticket message topic model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The id of the message
+    |id
+    |The id of the message
 |link:http://php.net/int[int^]
-    a|position
-    a|The position of the topic
+    |position
+    |The position of the topic
 |===
 
 
@@ -1316,22 +1287,21 @@ The ticket message topic name model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the message
+    |id
+    |The ID of the message
 |link:http://php.net/int[int^]
-    a|topicId
-    a|The ID of the topic
+    |topicId
+    |The ID of the topic
 |link:http://php.net/string[string^]
-    a|lang
-    a|The language of the topic
+    |lang
+    |The language of the topic
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the topic
+    |name
+    |The name of the topic
 |===
 
 
@@ -1369,19 +1339,18 @@ The ticket owner model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|ticketId
-    a|The ID of the ticket
+    |ticketId
+    |The ID of the ticket
 |link:http://php.net/int[int^]
-    a|userId
-    a|The user ID of the owner
+    |userId
+    |The user ID of the owner
 |link:http://php.net/int[int^]
-    a|roleId
-    a|The role ID of the owner
+    |roleId
+    |The role ID of the owner
 |===
 
 
@@ -1419,19 +1388,18 @@ The ticket role model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the role
+    |id
+    |The ID of the role
 |link:http://php.net/int[int^]
-    a|position
-    a|The position of the role
+    |position
+    |The position of the role
 |link:http://php.net/array[array^]
-    a|names
-    a|
+    |names
+    |
 |===
 
 
@@ -1469,22 +1437,21 @@ The ticket role name model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the role name
+    |id
+    |The ID of the role name
 |link:http://php.net/int[int^]
-    a|roleId
-    a|The ID of the role
+    |roleId
+    |The ID of the role
 |link:http://php.net/int[int^]
-    a|lang
-    a|The language of the role
+    |lang
+    |The language of the role
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the role
+    |name
+    |The name of the role
 |===
 
 
@@ -1522,25 +1489,24 @@ The ticket status model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the status
+    |id
+    |The ID of the status
 |link:http://php.net/int[int^]
-    a|typeId
-    a|The type ID of the status
+    |typeId
+    |The type ID of the status
 |link:http://php.net/int[int^]
-    a|position
-    a|The position of the status
+    |position
+    |The position of the status
 |link:http://php.net/int[int^]
-    a|statusGroupId
-    a|The status group ID of the status
+    |statusGroupId
+    |The status group ID of the status
 |link:http://php.net/array[array^]
-    a|names
-    a|
+    |names
+    |
 |===
 
 
@@ -1578,19 +1544,18 @@ The ticket status group model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the status group
+    |id
+    |The ID of the status group
 |link:http://php.net/int[int^]
-    a|position
-    a|The position of the status group
+    |position
+    |The position of the status group
 |link:http://php.net/string[string^]
-    a|color
-    a|The color of the status group
+    |color
+    |The color of the status group
 |===
 
 
@@ -1628,19 +1593,18 @@ The ticket status group name model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the ticket
+    |id
+    |The ID of the ticket
 |link:http://php.net/int[int^]
-    a|lang
-    a|The language of the status group
+    |lang
+    |The language of the status group
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the status group
+    |name
+    |The name of the status group
 |===
 
 
@@ -1678,22 +1642,21 @@ The ticket status name model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the status name
+    |id
+    |The ID of the status name
 |link:http://php.net/int[int^]
-    a|statusId
-    a|The status ID of the status name
+    |statusId
+    |The status ID of the status name
 |link:http://php.net/string[string^]
-    a|lang
-    a|The language of the status name
+    |lang
+    |The language of the status name
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the status
+    |name
+    |The name of the status
 |===
 
 
@@ -1731,19 +1694,18 @@ The ticket type model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the role
+    |id
+    |The ID of the role
 |link:http://php.net/int[int^]
-    a|position
-    a|The position of the role
+    |position
+    |The position of the role
 |link:http://php.net/array[array^]
-    a|names
-    a|
+    |names
+    |
 |===
 
 
@@ -1781,22 +1743,21 @@ The ticket type name model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the role name
+    |id
+    |The ID of the role name
 |link:http://php.net/int[int^]
-    a|typeId
-    a|The type id of the role name
+    |typeId
+    |The type id of the role name
 |link:http://php.net/string[string^]
-    a|lang
-    a|The language of the role name
+    |lang
+    |The language of the role name
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the role
+    |name
+    |The name of the role
 |===
 
 

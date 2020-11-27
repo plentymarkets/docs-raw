@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[notifications_notifications]]
@@ -39,12 +44,11 @@ public addNotification($notificationBuiltWithNotificationBuilder):array
 Add a Notification in the system
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$notificationBuiltWithNotificationBuilder`
-a|An array built with NotificationBuilder::build() method
+|An array built with NotificationBuilder::build() method
 |===
 
 
@@ -64,20 +68,19 @@ public fetchNotifications($queryBuiltWithNotificationsQueryBuilder, $page, $item
 Fetch a list of short/incomplete notifications, containing only the subject. To be used for listing purposes.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$queryBuiltWithNotificationsQueryBuilder`
-a|An array built with NotificationsQueryBuilder::build() method
+|An array built with NotificationsQueryBuilder::build() method
 
 |link:http://php.net/int[int^]
 a|`$page`
-a|The page number, starting from 1
+|The page number, starting from 1
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The number of notifications per page
+|The number of notifications per page
 |===
 
 
@@ -97,12 +100,11 @@ public fetchNotificationsDetails($notificationsFetchDetailsQuery):array
 Fetch all the details of a Notification based on its id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$notificationsFetchDetailsQuery`
-a|An array built with NotificationsFetchDetailsQueryBuilder::build() method
+|An array built with NotificationsFetchDetailsQueryBuilder::build() method
 |===
 
 
@@ -122,12 +124,11 @@ public acknowledgeNotifications($queryBuiltWithNotificationsAcknowledgeQueryBuil
 Mark a Notification as acknowledged.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$queryBuiltWithNotificationsAcknowledgeQueryBuilder`
-a|An array built with NotificationsAcknowledgeQueryBuilder::build() method
+|An array built with NotificationsAcknowledgeQueryBuilder::build() method
 |===
 
 
@@ -147,12 +148,11 @@ public getNotificationsCount($queryBuiltWithNotificationsQueryBuilder):int
 Retrieve the current unread Notifications count
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$queryBuiltWithNotificationsQueryBuilder`
-a|An array built with NotificationsQueryBuilder::build() method
+|An array built with NotificationsQueryBuilder::build() method
 |===
 
 

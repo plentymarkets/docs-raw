@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[template_config]]
@@ -39,12 +44,11 @@ public findByDesignName($designName):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$designName`
-a|
+|
 |===
 
 
@@ -64,16 +68,15 @@ public findByDesignAndWebStore($designName, $webStoreId):Plenty\Modules\Template
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$designName`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$webStoreId`
-a|
+|
 |===
 
 
@@ -93,12 +96,11 @@ public findByDesign($design):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Template.adoc#template_models_design[`Design`]
 a|`$design`
-a|
+|
 |===
 
 
@@ -118,20 +120,19 @@ public update($data, $designName, $webstoreId):Plenty\Modules\Template\Design\Co
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$designName`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$webstoreId`
-a|
+|
 |===
 
 
@@ -151,16 +152,15 @@ public copyDesignConfig($designName, $newDesignName):Plenty\Modules\Template\Des
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$designName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$newDesignName`
-a|
+|
 |===
 
 
@@ -214,16 +214,15 @@ public findByDesignName($designName, $withConfig = true):Plenty\Modules\Template
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$designName`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$withConfig`
-a|
+|
 |===
 
 
@@ -260,28 +259,27 @@ Design model of the deprecated CMS
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|designName
-    a|
+    |designName
+    |
 |link:http://php.net/string[string^]
-    a|imageDir
-    a|directory of images
+    |imageDir
+    |directory of images
 |link:http://php.net/bool[bool^]
-    a|export
-    a|directory of images
+    |export
+    |directory of images
 |link:http://php.net/string[string^]
-    a|updatedAt
-    a|created at date timestamp
+    |updatedAt
+    |created at date timestamp
 |link:http://php.net/string[string^]
-    a|createdAt
-    a|updated at date timestamp
+    |createdAt
+    |updated at date timestamp
 |link:http://php.net/array[array^]
-    a|config
-    a|list of configurations of each webstore
+    |config
+    |list of configurations of each webstore
 |===
 
 
@@ -319,112 +317,111 @@ Design configuration model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|webstoreId
-    a|
+    |webstoreId
+    |
 |link:http://php.net/int[int^]
-    a|error404ContentPageId
-    a|
+    |error404ContentPageId
+    |
 |link:http://php.net/int[int^]
-    a|bankContentPageId
-    a|
+    |bankContentPageId
+    |
 |link:http://php.net/int[int^]
-    a|cancellationRightsContentPageId
-    a|
+    |cancellationRightsContentPageId
+    |
 |link:http://php.net/int[int^]
-    a|termsConditionsContentPageId
-    a|
+    |termsConditionsContentPageId
+    |
 |link:http://php.net/int[int^]
-    a|contactContentPageId
-    a|
+    |contactContentPageId
+    |
 |link:http://php.net/int[int^]
-    a|legalDisclosureContentPageId
-    a|
+    |legalDisclosureContentPageId
+    |
 |link:http://php.net/int[int^]
-    a|helpContentPageId
-    a|
+    |helpContentPageId
+    |
 |link:http://php.net/int[int^]
-    a|itemNotFoundContentPageId
-    a|
+    |itemNotFoundContentPageId
+    |
 |link:http://php.net/int[int^]
-    a|paymentMethodsContentPageId
-    a|
+    |paymentMethodsContentPageId
+    |
 |link:http://php.net/int[int^]
-    a|privacyPolicyContentPageId
-    a|
+    |privacyPolicyContentPageId
+    |
 |link:http://php.net/int[int^]
-    a|shippingContentPageId
-    a|
+    |shippingContentPageId
+    |
 |link:http://php.net/int[int^]
-    a|frontPageContentPageId
-    a|
+    |frontPageContentPageId
+    |
 |link:http://php.net/int[int^]
-    a|customerRegistrationPageId
-    a|
+    |customerRegistrationPageId
+    |
 |link:http://php.net/int[int^]
-    a|orderConfirmationPageId
-    a|
+    |orderConfirmationPageId
+    |
 |link:http://php.net/int[int^]
-    a|lostPasswordPageId
-    a|
+    |lostPasswordPageId
+    |
 |link:http://php.net/int[int^]
-    a|loginPageId
-    a|
+    |loginPageId
+    |
 |link:http://php.net/int[int^]
-    a|logoutPageId
-    a|
+    |logoutPageId
+    |
 |link:http://php.net/int[int^]
-    a|typeOfCheckout
-    a|
+    |typeOfCheckout
+    |
 |link:http://php.net/int[int^]
-    a|checkoutStep1PageId
-    a|
+    |checkoutStep1PageId
+    |
 |link:http://php.net/int[int^]
-    a|checkoutStep2PageId
-    a|
+    |checkoutStep2PageId
+    |
 |link:http://php.net/int[int^]
-    a|checkoutStep3PageId
-    a|
+    |checkoutStep3PageId
+    |
 |link:http://php.net/int[int^]
-    a|checkoutStep4PageId
-    a|
+    |checkoutStep4PageId
+    |
 |link:http://php.net/int[int^]
-    a|checkoutStep5PageId
-    a|
+    |checkoutStep5PageId
+    |
 |link:http://php.net/int[int^]
-    a|checkoutStep6PageId
-    a|
+    |checkoutStep6PageId
+    |
 |link:http://php.net/int[int^]
-    a|checkoutStep7PageId
-    a|
+    |checkoutStep7PageId
+    |
 |link:http://php.net/int[int^]
-    a|checkoutStep8PageId
-    a|
+    |checkoutStep8PageId
+    |
 |link:http://php.net/int[int^]
-    a|checkoutStep9PageId
-    a|
+    |checkoutStep9PageId
+    |
 |link:http://php.net/int[int^]
-    a|checkoutStep10PageId
-    a|
+    |checkoutStep10PageId
+    |
 |link:http://php.net/string[string^]
-    a|pageDesignWebshop
-    a|
+    |pageDesignWebshop
+    |
 |link:http://php.net/string[string^]
-    a|pageDesignCheckout
-    a|
+    |pageDesignCheckout
+    |
 |link:http://php.net/string[string^]
-    a|pageDesignMyAccount
-    a|
+    |pageDesignMyAccount
+    |
 |link:http://php.net/string[string^]
-    a|pageDesignBlog
-    a|
+    |pageDesignBlog
+    |
 |link:http://php.net/string[string^]
-    a|pageDesignForum
-    a|
+    |pageDesignForum
+    |
 |===
 
 

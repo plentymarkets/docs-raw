@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[plentymarketplace_plentymarketplace]]
@@ -39,12 +44,11 @@ public isPaid($pluginName):bool
 Takes the Name of a plugin and returns true if the plugin has been paid for.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|The plugin name. Must be exactly as provided in the plugin.json.
+|The plugin name. Must be exactly as provided in the plugin.json.
 |===
 
 
@@ -84,12 +88,11 @@ Takes the Name of a subscription plugin and returns true if the subscription has
 in the current payment period on the current system.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|The plugin name. Must be exactly as provided in the plugin.json.
+|The plugin name. Must be exactly as provided in the plugin.json.
 |===
 
 
@@ -109,12 +112,11 @@ public getSubscriptionInfo($pluginName):Plenty\Modules\PlentyMarketplace\Models\
 Takes the Name of a subscription plugin and returns information about the subscription.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|The plugin name. Must be exactly as provided in the plugin.json.
+|The plugin name. Must be exactly as provided in the plugin.json.
 |===
 
 
@@ -136,16 +138,15 @@ Eloquent model representing a SubscriptionChildOrderInformation.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|paymentStatus
-    a|
+    |paymentStatus
+    |
 |link:http://php.net/array[array^]
-    a|paymentInformation
-    a|
+    |paymentInformation
+    |
 |===
 
 
@@ -183,28 +184,27 @@ Eloquent model representing a SubscriptionChildPaymentInformation.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/float[float^]
-    a|amount
-    a|The amount of the payment
+    |amount
+    |The amount of the payment
 |link:http://php.net/int[int^]
-    a|status
-    a|The <a href="https://developers.plentymarkets.com/rest-doc/introduction#payment-statuses"  target="_blank">status</a> of the payment
+    |status
+    |The <a href="https://developers.plentymarkets.com/rest-doc/introduction#payment-statuses"  target="_blank">status</a> of the payment
 |link:http://php.net/int[int^]
-    a|unaccountable
-    a|An unassigned payment. Unassigned payments have the value 1.
+    |unaccountable
+    |An unassigned payment. Unassigned payments have the value 1.
 |link:http://php.net/string[string^]
-    a|currency
-    a|The currency of the payment in ISO 4217 code.
+    |currency
+    |The currency of the payment in ISO 4217 code.
 |link:http://php.net/string[string^]
-    a|receivedAt
-    a|The time the payment was received
+    |receivedAt
+    |The time the payment was received
 |link:http://php.net/string[string^]
-    a|importedAt
-    a|The time the payment was imported
+    |importedAt
+    |The time the payment was imported
 |===
 
 
@@ -242,31 +242,30 @@ Eloquent model representing a SubscriptionOrderInformation.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/bool[bool^]
-    a|isPaid
-    a|
+    |isPaid
+    |
 |link:http://php.net/string[string^]
-    a|intervalType
-    a|
+    |intervalType
+    |
 |link:http://php.net/string[string^]
-    a|intervalValue
-    a|
+    |intervalValue
+    |
 |link:http://php.net/string[string^]
-    a|startDate
-    a|
+    |startDate
+    |
 |link:http://php.net/string[string^]
-    a|subscriptionLastRun
-    a|
+    |subscriptionLastRun
+    |
 |link:http://php.net/string[string^]
-    a|subscriptionNextRun
-    a|
+    |subscriptionNextRun
+    |
 |link:http://php.net/array[array^]
-    a|childOrders
-    a|
+    |childOrders
+    |
 |===
 
 

@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[eventprocedures_eventprocedures]]
@@ -89,16 +94,15 @@ public registerProcedure($moduleName, $eventType, $procedureNames, $procedureCla
 Register a procedure class
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$moduleName`
-a|The name of the module. The name of the module can be choosen freely.
+|The name of the module. The name of the module can be choosen freely.
 
 |link:http://php.net/string[string^]
 a|`$eventType`
-a|The name of the event type. The event types are determined and can be one of the following:
+|The name of the event type. The event types are determined and can be one of the following:
 <ul>
 <li> {@see \ProcedureEntry::EVENT_TYPE_ORDER}, </li>
         					<li> {@see \ProcedureEntry::EVENT_TYPE_REORDER} or </li>
@@ -107,17 +111,17 @@ a|The name of the event type. The event types are determined and can be one of t
 
 |link:http://php.net/array[array^]
 a|`$procedureNames`
-a|The name for the procedure that will be shown in the event procedure UI. The name is unique and will be used for German and English.
+|The name for the procedure that will be shown in the event procedure UI. The name is unique and will be used for German and English.
 
 |link:http://php.net/string[string^]
 a|`$procedureClass`
-a|The fully qualified name of the procedure class to be called by event procedures.
+|The fully qualified name of the procedure class to be called by event procedures.
                    		Each procedure class must either contain the execute method defined by plentymarkets or can contain an individual method. The individual method has to be provided along with procedure class.
 The method is separated from the class by an "@" sign. The part following the "@" will be interpreted as method name. The part in front of the "@" is the name of the procedure class.
 
 |link:http://php.net/string[string^]
 a|`$procedureGroup`
-a|The name of the procedure group. The procedure groups are determined and can be one of the following:
+|The name of the procedure group. The procedure groups are determined and can be one of the following:
 <ul>
 <li> {@see \ProcedureEntry::PROCEDURE_GROUP_ORDER}, </li>
                    		<li> {@see \ProcedureEntry::PROCEDURE_GROUP_ITEM}, </li>
@@ -148,16 +152,15 @@ public registerFilter($moduleName, $eventType, $filterNames, $filterClass):bool
 Register a filter class
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$moduleName`
-a|The name of the module. The name of the module can be choosen freely.
+|The name of the module. The name of the module can be choosen freely.
 
 |link:http://php.net/string[string^]
 a|`$eventType`
-a|The name of the event type. The event types are determined and can be one of the following:
+|The name of the event type. The event types are determined and can be one of the following:
 <ul>
 <li>order</li>
 <li>ticket</li>
@@ -165,11 +168,11 @@ a|The name of the event type. The event types are determined and can be one of t
 
 |link:http://php.net/array[array^]
 a|`$filterNames`
-a|The name for the filter that will be shown in the event procedure UI. The name is unique and will be used for German and English.
+|The name for the filter that will be shown in the event procedure UI. The name is unique and will be used for German and English.
 
 |link:http://php.net/string[string^]
 a|`$filterClass`
-a|The fully qualified name of the filter class to be called by event procedures.
+|The fully qualified name of the filter class to be called by event procedures.
                     	Each procedure class must either contain the accept method defined by plentymarkets or can contain an individual method. The individual method has to be provided along with procedure class.
 The method is separated from the class by an "@" sign. The part following the "@" will be interpreted as method name. The part in front of the "@" is the name of the procedure class.
                         The method must return a boolean.
@@ -192,27 +195,26 @@ public registerTrigger($moduleName, $eventType, $triggerIdentifier, $triggerName
 Register a trigger
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$moduleName`
-a|The name of the module. The name of the module can be choosen freely.
+|The name of the module. The name of the module can be choosen freely.
 
 |link:http://php.net/string[string^]
 a|`$eventType`
-a|The name of the event type. The event types are determined and can be one of the following:
+|The name of the event type. The event types are determined and can be one of the following:
                        <ul>
 <li> order </li>
                        </ul>
 
 |link:http://php.net/string[string^]
 a|`$triggerIdentifier`
-a|The identifier for the trigger that will be used to identify the trigger on fire. The identifier of the trigger can be choosen freely.
+|The identifier for the trigger that will be used to identify the trigger on fire. The identifier of the trigger can be choosen freely.
 
 |link:http://php.net/array[array^]
 a|`$triggerNames`
-a|The name for the trigger that will be shown in the event procedure UI. The name is unique and will be used for German and English.
+|The name for the trigger that will be shown in the event procedure UI. The name is unique and will be used for German and English.
 |===
 
 
@@ -232,20 +234,19 @@ public fireTrigger($orderId, $moduleName, $triggerIdentifier):void
 Fire a trigger
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$orderId`
-a|The id of the order for which the trigger is fired.
+|The id of the order for which the trigger is fired.
 
 |link:http://php.net/string[string^]
 a|`$moduleName`
-a|The name of the module. The name of the module given on register the trigger.
+|The name of the module. The name of the module given on register the trigger.
 
 |link:http://php.net/string[string^]
 a|`$triggerIdentifier`
-a|The identifier for the trigger given on register the trigger.
+|The identifier for the trigger given on register the trigger.
 |===
 
 
@@ -303,12 +304,11 @@ public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entrie
 Sets the module name
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$moduleName`
-a|
+|
 |===
 
 
@@ -343,12 +343,11 @@ public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\
 Sets the event type
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$eventType`
-a|
+|
 |===
 
 
@@ -383,12 +382,11 @@ public setFilterNames($filterNames):Plenty\Modules\EventProcedures\Services\Entr
 Sets the filter names
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filterNames`
-a|
+|
 |===
 
 
@@ -423,12 +421,11 @@ public setFilterClass($filterClass):Plenty\Modules\EventProcedures\Services\Entr
 Sets the filter class
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$filterClass`
-a|
+|
 |===
 
 
@@ -482,12 +479,11 @@ public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entrie
 Sets the module name
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$moduleName`
-a|
+|
 |===
 
 
@@ -522,12 +518,11 @@ public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\
 Sets the event type
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$eventType`
-a|
+|
 |===
 
 
@@ -562,12 +557,11 @@ public setProcedureNames($procedureNames):Plenty\Modules\EventProcedures\Service
 Sets the procedure names
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$procedureNames`
-a|
+|
 |===
 
 
@@ -602,12 +596,11 @@ public setProcedureGroup($procedureGroup):Plenty\Modules\EventProcedures\Service
 Sets the procedure group
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$procedureGroup`
-a|
+|
 |===
 
 
@@ -642,12 +635,11 @@ public setProcedureClass($procedureClass):Plenty\Modules\EventProcedures\Service
 Sets the procedure class
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$procedureClass`
-a|
+|
 |===
 
 
@@ -701,12 +693,11 @@ public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entrie
 Sets the module name
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$moduleName`
-a|
+|
 |===
 
 
@@ -741,12 +732,11 @@ public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\
 Sets the event type
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$eventType`
-a|
+|
 |===
 
 
@@ -781,12 +771,11 @@ public setTriggerIdentifier($triggerIdentifier):Plenty\Modules\EventProcedures\S
 Sets the trigger identifier
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$triggerIdentifier`
-a|
+|
 |===
 
 
@@ -821,12 +810,11 @@ public setTriggerNames($triggerNames):Plenty\Modules\EventProcedures\Services\En
 Sets the trigger names
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$triggerNames`
-a|
+|
 |===
 
 

@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[webshop_consent]]
@@ -39,20 +44,19 @@ public registerConsentGroup($key, $label, $options = []):void
 Register a new group of consents.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|Unique identifier of the group
+|Unique identifier of the group
 
 |link:http://php.net/string[string^]
 a|`$label`
-a|Displayed label of the group
+|Displayed label of the group
 
 |link:http://php.net/array[array^]
 a|`$options`
-a|Additional options of the group. Available options are:
+|Additional options of the group. Available options are:
 <ul>
   <li><b>necessary:boolean</b> True if the group is necessary and could not be declined</li>
   <li><b>description:string</b> Description of the group.</li>
@@ -77,20 +81,19 @@ public registerConsent($key, $label, $options = []):void
 Register a new consent.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|Unique identifier of the consent.
+|Unique identifier of the consent.
 
 |link:http://php.net/string[string^]
 a|`$label`
-a|Displayed label of the consent.
+|Displayed label of the consent.
 
 |link:http://php.net/array[array^]
 a|`$options`
-a|Additional options of the consent. Available options are:
+|Additional options of the consent. Available options are:
 <ul>
     <li><b>necessary:boolean</b> True of the consent is necessary and could not be declined</li>
     <li><b>description:string</b> Description of the consent</li>
@@ -151,17 +154,16 @@ public setResponse($key, $isConsented = false):void
 Set the response for a consent or a group of consents.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|The key of the consent group and the consent, e.g. "group.consent"
+|The key of the consent group and the consent, e.g. "group.consent"
 Use "*" as consent key to check if all entries of a group has a response, e.g. "group.*"
 
 |link:http://php.net/bool[bool^]
 a|`$isConsented`
-a|True if the user has accepted the consent or the group of consents
+|True if the user has accepted the consent or the group of consents
 |===
 
 
@@ -181,12 +183,11 @@ public isConsented($key):bool
 Check if the user has consented.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|The key of the consent group and the consent, e.g. "group.consent"
+|The key of the consent group and the consent, e.g. "group.consent"
 Use "*" as consent key to check if all entries of a group has a response, e.g. "group.*"
 |===
 
@@ -245,12 +246,11 @@ public setCurrency($currency):void
 Set the currency.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$currency`
-a|
+|
 |===
 
 
@@ -349,12 +349,11 @@ public getContactClassData($contactClassId):array
 Get the contact class data for the provided contact class ID
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$contactClassId`
-a|
+|
 |===
 
 
@@ -423,20 +422,19 @@ public hasGiftCardPdf($orderId, $orderItemId, $campaignCodeOrderId):bool
 Checks if a gift card document has already been created for this order item
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$orderId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$orderItemId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$campaignCodeOrderId`
-a|
+|
 |===
 
 
@@ -456,12 +454,11 @@ public getGiftCardInformation($orderItemId):array
 Get Information about the gift card
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$orderItemId`
-a|
+|
 |===
 
 
@@ -481,12 +478,11 @@ public isReturnable($orderItemId):bool
 Return true if its not a gift card or the codes are not redeemed
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$orderItemId`
-a|
+|
 |===
 
 
@@ -506,12 +502,11 @@ public getReturnQuantity($orderItemId):int
 Returnable quantity for giftCard
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$orderItemId`
-a|
+|
 |===
 
 
@@ -580,12 +575,11 @@ public getLanguageCode($countryCode = null):string
 Get a ISO language code by given country code.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$countryCode`
-a|
+|
 |===
 
 
@@ -624,16 +618,15 @@ public setSessionValue($key, $value):void
 Set a value to a given key in the session
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|The key from session
+|The key from session
 
 |
 a|`$value`
-a|The value will set to given key
+|The value will set to given key
 |===
 
 
@@ -653,12 +646,11 @@ public getSessionValue($key):void
 Get a value from the session by a given key
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|The key to read from the session
+|The key to read from the session
 |===
 
 
@@ -727,16 +719,15 @@ public buildItemUrl($itemId, $lang = null):Plenty\Modules\Webshop\Helpers\UrlQue
 Build item url. Generate and write url to item data if not defined yet.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$itemId`
-a|Id of the item to generate url for.
+|Id of the item to generate url for.
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|Language to generate the url in. Defaults to current language from session.
+|Language to generate the url in. Defaults to current language from session.
 |===
 
 
@@ -756,20 +747,19 @@ public buildCategoryUrl($categoryId, $lang = null, $webstoreId = null):Plenty\Mo
 Build category url by recursively prepending url names of parent categories.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$categoryId`
-a|Id of the category to get url for.
+|Id of the category to get url for.
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|Language to generate the url in. Defaults to current language from session.
+|Language to generate the url in. Defaults to current language from session.
 
 |link:http://php.net/int[int^]
 a|`$webstoreId`
-a|Webstore to get url names for. Defaults to current webstore id.
+|Webstore to get url names for. Defaults to current webstore id.
 |===
 
 
@@ -789,12 +779,11 @@ public fillItemUrl($itemData):void
 Store item data of loaded items to be reused when generating item or variation urls.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$itemData`
-a|Item data object returned from search request.
+|Item data object returned from search request.
 |===
 
 
@@ -814,20 +803,19 @@ public buildVariationUrl($itemId, $variationId, $lang = null):Plenty\Modules\Web
 Build variation url. Variation urls equal to item urls with the variation id appended.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$itemId`
-a|Id of the item to generate url for.
+|Id of the item to generate url for.
 
 |link:http://php.net/int[int^]
 a|`$variationId`
-a|Id of the variation to generate url for.
+|Id of the variation to generate url for.
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|Language to generate the url in. Defaults to current language from session.
+|Language to generate the url in. Defaults to current language from session.
 |===
 
 
@@ -847,20 +835,19 @@ public getSuffix($itemId, $variationId, $withVariationId = true):string
 Get the suffix to be appended to item or variation urls.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$itemId`
-a|item id to be used in the suffix.
+|item id to be used in the suffix.
 
 |link:http://php.net/int[int^]
 a|`$variationId`
-a|variation id to be used in the suffix. Will be ignored when using Callisto urls.
+|variation id to be used in the suffix. Will be ignored when using Callisto urls.
 
 |link:http://php.net/bool[bool^]
 a|`$withVariationId`
-a|Set if the variation id should be included in the suffix. Not considered when using Callisto urls.
+|Set if the variation id should be included in the suffix. Not considered when using Callisto urls.
 |===
 
 
@@ -1048,16 +1035,15 @@ public formatDecimal($value, $decimal_places = -1):string
 Format the given value to decimal
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/float[float^]
 a|`$value`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$decimal_places`
-a|
+|
 |===
 
 
@@ -1077,16 +1063,15 @@ public formatMonetary($value, $currencyISO):string
 Format the given value to currency
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$value`
-a|
+|
 
 |
 a|`$currencyISO`
-a|
+|
 |===
 
 
@@ -1155,20 +1140,19 @@ public getMultiSelectValue($key, $possibleValues = [], $default = []):array
 Get values of a multiselect configuration.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|The key of the configuration to read.
+|The key of the configuration to read.
 
 |link:http://php.net/array[array^]
 a|`$possibleValues`
-a|List of possible configuration values. Will be returned if the configuration value is "all"
+|List of possible configuration values. Will be returned if the configuration value is "all"
 
 |link:http://php.net/array[array^]
 a|`$default`
-a|A default value to return if the configuration is not set yet.
+|A default value to return if the configuration is not set yet.
 |===
 
 
@@ -1188,20 +1172,19 @@ public getTextValue($key, $default = &quot;&quot;, $transformDefault = &quot;&qu
 Get the value of a text configuration.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|The key of the configuration to read.
+|The key of the configuration to read.
 
 |link:http://php.net/string[string^]
 a|`$default`
-a|A default value to return if the configuration is not set yet.
+|A default value to return if the configuration is not set yet.
 
 |link:http://php.net/string[string^]
 a|`$transformDefault`
-a|A value to be interpreted as a default value.
+|A value to be interpreted as a default value.
 Use this if you have defined a value in your config.json that should be handled as default value.
 |===
 
@@ -1222,16 +1205,15 @@ public getIntegerValue($key, $default):int
 Get the value of an integer configuration.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|The key of the configuration to read.
+|The key of the configuration to read.
 
 |link:http://php.net/int[int^]
 a|`$default`
-a|A default value to return if the configuration is not set yet.
+|A default value to return if the configuration is not set yet.
 |===
 
 
@@ -1251,16 +1233,15 @@ public getBooleanValue($key, $default = false):bool
 Get the value of a boolean configuration.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|The key of the configuration to read.
+|The key of the configuration to read.
 
 |link:http://php.net/bool[bool^]
 a|`$default`
-a|A default value to return if the configuration is not set yet.
+|A default value to return if the configuration is not set yet.
 |===
 
 
@@ -1280,16 +1261,15 @@ public getConfigValue($key, $default = null):void
 Get a configuration value without any cast.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|The key of the configuration to read.
+|The key of the configuration to read.
 
 |
 a|`$default`
-a|A default value to return if the configuration is not set yet.
+|A default value to return if the configuration is not set yet.
 |===
 
 
@@ -1328,12 +1308,11 @@ public static getHTML4Unit($unit = &quot;SMM&quot;):string
 Return common code for a unit (&#039;m&#039;,&#039;cm&#039; &#039;mm&#039;).
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$unit`
-a|The internal unit key.
+|The internal unit key.
 |===
 
 
@@ -1372,16 +1351,15 @@ public static create($path = null, $lang = null):Plenty\Modules\Webshop\Helpers\
 Create a new instance.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$path`
-a|The path of the url.
+|The path of the url.
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language of the generated url. Will be included automatically if it is different to the default language.
+|The language of the generated url. Will be included automatically if it is different to the default language.
 |===
 
 
@@ -1416,12 +1394,11 @@ public append($suffix):Plenty\Modules\Webshop\Helpers
 Append a string to the path the url without checking for slashes.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$suffix`
-a|String to append to the path.
+|String to append to the path.
 |===
 
 
@@ -1441,12 +1418,11 @@ public join($path):Plenty\Modules\Webshop\Helpers
 Append a new path to the existing one. Ensure having a slash as glue between existing path and the new segment.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$path`
-a|The new path to append.
+|The new path to append.
 |===
 
 
@@ -1466,12 +1442,11 @@ public toAbsoluteUrl($includeLanguage = false):string
 Return the absolute url by prepending the HTTPS domain of the current client.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/bool[bool^]
 a|`$includeLanguage`
-a|If true it will include the language at the beginning of the path.
+|If true it will include the language at the beginning of the path.
 |===
 
 
@@ -1491,12 +1466,11 @@ public toRelativeUrl($includeLanguage = false):string
 Return the path as a relative url.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/bool[bool^]
 a|`$includeLanguage`
-a|If true it will include the language at the beginning of the path.
+|If true it will include the language at the beginning of the path.
 |===
 
 
@@ -1516,12 +1490,11 @@ public getPath($includeLanguage = false):string
 Return the path. This equals the relative url without a leading slash.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/bool[bool^]
 a|`$includeLanguage`
-a|If true it will include the language at the beginning of the path.
+|If true it will include the language at the beginning of the path.
 |===
 
 
@@ -1541,12 +1514,11 @@ public equals($path):bool
 Compare current path to a string independent of a trailing slash.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$path`
-a|String to compare the current path to.
+|String to compare the current path to.
 |===
 
 
@@ -1586,12 +1558,11 @@ public handle($vatNumberEvent):void
 Validate the given vat number
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Webshop.adoc#webshop_events_validatevatnumber[`ValidateVatNumber`]
 a|`$vatNumberEvent`
-a|Event emitted while creating new addresses.
+|Event emitted while creating new addresses.
 |===
 
 
@@ -1649,12 +1620,11 @@ public mergeIntoFacetsList($result):array
 Merge facet data into list of facets.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$result`
-a|Facet data
+|Facet data
 |===
 
 
@@ -1674,12 +1644,11 @@ public extractFilterParams($filtersList):void
 Extract search filters from filter paramters to be applied to the search request.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$filtersList`
-a|List of value ids for this facet. Possible values can be set by mergeIntoFacetsList()
+|List of value ids for this facet. Possible values can be set by mergeIntoFacetsList()
 |===
 
 
@@ -1736,12 +1705,11 @@ public inherit($inheritedProperties = []):Plenty\Modules\Webshop\ItemSearch\Fact
 Create a new factory instance based on properties of an existing factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$inheritedProperties`
-a|List of properties to inherit or null to inherit all properties.
+|List of properties to inherit or null to inherit all properties.
 |===
 
 
@@ -1761,21 +1729,20 @@ public withMutator($mutator, $excludeDependencies = false, $position = 1000):Ple
 Add a mutator to transform search results.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_mutator_mutatorinterface[`MutatorInterface`]
 a|`$mutator`
-a|The mutator itself
+|The mutator itself
 
 |link:http://php.net/bool[bool^]
 a|`$excludeDependencies`
-a|Set to true to remove required data from the results after applying the mutator.
+|Set to true to remove required data from the results after applying the mutator.
 Fields will only be removed if they are not requested by the result fields of the search request.
 
 |link:http://php.net/int[int^]
 a|`$position`
-a|Position of the mutator. Mutators are executed in the order of their positions.
+|Position of the mutator. Mutators are executed in the order of their positions.
 |===
 
 
@@ -1795,16 +1762,15 @@ public createFilter($filterClass, $params = []):void
 Add a filter. Will create a new instance of the filter class if not already created.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$filterClass`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$params`
-a|
+|
 |===
 
 
@@ -1824,12 +1790,11 @@ public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories
 Add a filter. Will override existing filter instances.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_type_typeinterface[`TypeInterface`]
 a|`$filter`
-a|
+|
 |===
 
 
@@ -1849,12 +1814,11 @@ public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories
 Set fields to be contained in search result.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$fields`
-a|Reference to a json file to load fields from or a list of field names.
+|Reference to a json file to load fields from or a list of field names.
 |===
 
 
@@ -1889,12 +1853,11 @@ public hasResultField($field):bool
 Check if result field is already included in the source of the search.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$field`
-a|The field to search for in result fields
+|The field to search for in result fields
 |===
 
 
@@ -1929,16 +1892,15 @@ public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webs
 Add an extension.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$extensionClass`
-a|Extension class to add.
+|Extension class to add.
 
 |link:http://php.net/array[array^]
 a|`$extensionParams`
-a|Additional parameters to pass to extensions constructor
+|Additional parameters to pass to extensions constructor
 |===
 
 
@@ -1988,12 +1950,11 @@ public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories
 Add an aggregation
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 a|`$aggregation`
-a|
+|
 |===
 
 
@@ -2013,12 +1974,11 @@ public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories
 Add a suggestion
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_suggestion_suggestioninterface[`SuggestionInterface`]
 a|`$suggestion`
-a|
+|
 |===
 
 
@@ -2038,16 +1998,15 @@ public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories
 Set pagination parameters.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|
+|
 |===
 
 
@@ -2067,16 +2026,15 @@ public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\Vari
 Add sorting parameters
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$field`
-a|The field to order by
+|The field to order by
 
 |link:http://php.net/string[string^]
 a|`$order`
-a|Direction to order results. Possible values: 'asc' or 'desc'
+|Direction to order results. Possible values: 'asc' or 'desc'
 |===
 
 
@@ -2096,12 +2054,11 @@ public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories
 Add multiple sorting parameters
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$sortingList`
-a|List of sorting parameters. Each entry should have a 'field' and an 'order' property.
+|List of sorting parameters. Each entry should have a 'field' and an 'order' property.
 |===
 
 
@@ -2121,12 +2078,11 @@ public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories
 Set the order of the search results by ids.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$idList`
-a|List of variation ids. Search results will be sorted in the same order.
+|List of variation ids. Search results will be sorted in the same order.
 |===
 
 
@@ -2146,16 +2102,15 @@ public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factori
 Group results by field
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$field`
-a|The field to group properties by.
+|The field to group properties by.
 
 |link:http://php.net/array[array^]
 a|`$sortings`
-a|List of sort criteria. Might contain string
+|List of sort criteria. Might contain string
 |===
 
 
@@ -2194,12 +2149,11 @@ public static create($facets):Plenty\Modules\Webshop\ItemSearch\Factories
 Create a factory instance depending on a given set of facet values.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$facets`
-a|List of active facet values. If string is given, it will be exploded by ',' to a list of values.
+|List of active facet values. If string is given, it will be exploded by ',' to a list of values.
 |===
 
 
@@ -2234,12 +2188,11 @@ public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories
 Get the default configuration of a search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options
+|Available options
 <ul>
  <li><b>quantities</b> Quantities of the variations in the basket. This will be considered while calculating graduated prices</li>
  <li><b>setPriceOnly</b> Set to true to only consider prices for item sets</li>
@@ -2263,12 +2216,11 @@ public setAdminPreview($isAdminPreview):Plenty\Modules\Webshop\ItemSearch\Factor
 Set preview mode for the search request.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/bool[bool^]
 a|`$isAdminPreview`
-a|Set to true to enable preview.
+|Set to true to enable preview.
 |===
 
 
@@ -2318,12 +2270,11 @@ public hasItemId($itemId):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variation by a single item id
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$itemId`
-a|Item id to filter by.
+|Item id to filter by.
 |===
 
 
@@ -2343,12 +2294,11 @@ public hasItemIds($itemIds):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations by multiple item ids
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$itemIds`
-a|List of item ids to filter by.
+|List of item ids to filter by.
 |===
 
 
@@ -2368,12 +2318,11 @@ public hasVariationId($variationId):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variation by a single variation id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$variationId`
-a|The variation id to filter by.
+|The variation id to filter by.
 |===
 
 
@@ -2393,12 +2342,11 @@ public hasVariationIds($variationIds):Plenty\Modules\Webshop\ItemSearch\Factorie
 Filter variations by multiple variation ids.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$variationIds`
-a|List of variation ids to filter by.
+|List of variation ids to filter by.
 |===
 
 
@@ -2418,12 +2366,11 @@ public hasAtLeastOneAvailability($availabilityIds):Plenty\Modules\Webshop\ItemSe
 Filter variations by multiple availability ids.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$availabilityIds`
-a|List of availability ids to filter by.
+|List of availability ids to filter by.
 |===
 
 
@@ -2443,12 +2390,11 @@ public hasSupplier($supplierId):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations by multiple availability ids.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$supplierId`
-a|The supplier id to filter by.
+|The supplier id to filter by.
 |===
 
 
@@ -2468,12 +2414,11 @@ public hasManufacturer($manufacturerId):Plenty\Modules\Webshop\ItemSearch\Factor
 Filter manufacturers by id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$manufacturerId`
-a|To filter by manufacturer
+|To filter by manufacturer
 |===
 
 
@@ -2493,12 +2438,11 @@ public hasEachProperty($propertyIds):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations by multiple property ids.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$propertyIds`
-a|The property ids to filter by.
+|The property ids to filter by.
 |===
 
 
@@ -2548,12 +2492,11 @@ public isHiddenInCategoryList($isHidden = true):Plenty\Modules\Webshop\ItemSearc
 Filter by visibility in category list.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/bool[bool^]
 a|`$isHidden`
-a|Visibility in category list to filter by.
+|Visibility in category list to filter by.
 |===
 
 
@@ -2588,12 +2531,11 @@ public isVisibleForClient($clientId = null):Plenty\Modules\Webshop\ItemSearch\Fa
 Filter variations by visibility for client
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$clientId`
-a|The client id to filter by. If null, default client id from config will be used.
+|The client id to filter by. If null, default client id from config will be used.
 |===
 
 
@@ -2613,16 +2555,15 @@ public hasNameInLanguage($type = &quot;hasAnyNameInLanguage&quot;, $lang = null)
 Filter variations having texts in a given language.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$type`
-a|The text field to filter by ('hasAny', 'hasName1', 'hasName2', 'hasName3')
+|The text field to filter by ('hasAny', 'hasName1', 'hasName2', 'hasName3')
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language to filter by. If null, language defined in session will be used.
+|The language to filter by. If null, language defined in session will be used.
 |===
 
 
@@ -2642,12 +2583,11 @@ public isInCategory($categoryId):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations contained in a category.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$categoryId`
-a|A category id to filter variations by.
+|A category id to filter variations by.
 |===
 
 
@@ -2667,12 +2607,11 @@ public hasAtLeastOnePrice($priceIds):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations having at least on price.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$priceIds`
-a|List of price ids to filter variations by
+|List of price ids to filter variations by
 |===
 
 
@@ -2707,16 +2646,15 @@ public hasPriceInRange($priceMin, $priceMax):Plenty\Modules\Webshop\ItemSearch\F
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/float[float^]
 a|`$priceMin`
-a|
+|
 
 |link:http://php.net/float[float^]
 a|`$priceMax`
-a|
+|
 |===
 
 
@@ -2736,12 +2674,11 @@ public hasTag($tagId):Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$tagId`
-a|
+|
 |===
 
 
@@ -2761,12 +2698,11 @@ public hasAnyTag($tagIds):Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$tagIds`
-a|
+|
 |===
 
 
@@ -2801,16 +2737,15 @@ public isCrossSellingItem($itemId, $relation):Plenty\Modules\Webshop\ItemSearch\
 Filter variations having a cross selling relation to a given item.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$itemId`
-a|Item id to filter cross selling items for
+|Item id to filter cross selling items for
 
 |link:http://php.net/string[string^]
 a|`$relation`
-a|The relation of cross selling items.
+|The relation of cross selling items.
 |===
 
 
@@ -2830,20 +2765,19 @@ public hasFacets($facetValues, $clientId = null, $lang = null):Plenty\Modules\We
 Filter variations by facets.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$facetValues`
-a|List of facet values. If string is given, it will be exploded by ';'
+|List of facet values. If string is given, it will be exploded by ';'
 
 |link:http://php.net/int[int^]
 a|`$clientId`
-a|Client id to filter facets by. If null, default client id from config will be used.
+|Client id to filter facets by. If null, default client id from config will be used.
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|Language to filter facets by. If null, active language from session will be used.
+|Language to filter facets by. If null, active language from session will be used.
 |===
 
 
@@ -2863,24 +2797,23 @@ public hasSearchString($query, $lang = null, $a = &quot;&quot;, $b = &quot;&quot
 Filter variations by given search string.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$query`
-a|The search string to filter variations by
+|The search string to filter variations by
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language to apply search on. If null, default language from session will be used
+|The language to apply search on. If null, default language from session will be used
 
 |link:http://php.net/string[string^]
 a|`$a`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$b`
-a|
+|
 |===
 
 
@@ -2900,16 +2833,15 @@ public hasNameString($query, $lang = null):Plenty\Modules\Webshop\ItemSearch\Fac
 Filter variations by searching names
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$query`
-a|The search string
+|The search string
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|Language to apply search on. If null, default language from session will be used.
+|Language to apply search on. If null, default language from session will be used.
 |===
 
 
@@ -2929,12 +2861,11 @@ public withLanguage($lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
 Only request given language.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-a|Language to get texts for. If null, default language from session will be used.
+|Language to get texts for. If null, default language from session will be used.
 |===
 
 
@@ -2954,12 +2885,11 @@ public withImages($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories
 Include images in result
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$clientId`
-a|The client id to get images for. If null, default client id from config will be used.
+|The client id to get images for. If null, default client id from config will be used.
 |===
 
 
@@ -2979,20 +2909,19 @@ public withVariationAttributeMap($itemId, $initialVariationId, $afterKey = []):P
 Includes VariationAttributeMap for variation select
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$itemId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$initialVariationId`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$afterKey`
-a|
+|
 |===
 
 
@@ -3012,12 +2941,11 @@ public withPropertyGroups($displaySettings = []):Plenty\Modules\Webshop\ItemSear
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$displaySettings`
-a|
+|
 |===
 
 
@@ -3082,16 +3010,15 @@ public withPrices($quantities = [], $setPriceOnly = false):Plenty\Modules\Websho
 Append prices to result.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$quantities`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$setPriceOnly`
-a|
+|
 |===
 
 
@@ -3261,16 +3188,15 @@ public withSuggestions($query = &quot;&quot;, $lang = null):Plenty\Modules\Websh
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$query`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|
+|
 |===
 
 
@@ -3290,12 +3216,11 @@ public withDidYouMeanSuggestions($query):Plenty\Modules\Webshop\ItemSearch\Facto
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$query`
-a|
+|
 |===
 
 
@@ -3330,12 +3255,11 @@ public inherit($inheritedProperties = []):Plenty\Modules\Webshop\ItemSearch\Fact
 Create a new factory instance based on properties of an existing factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$inheritedProperties`
-a|List of properties to inherit or null to inherit all properties.
+|List of properties to inherit or null to inherit all properties.
 |===
 
 
@@ -3355,21 +3279,20 @@ public withMutator($mutator, $excludeDependencies = false, $position = 1000):Ple
 Add a mutator to transform search results.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_mutator_mutatorinterface[`MutatorInterface`]
 a|`$mutator`
-a|The mutator itself
+|The mutator itself
 
 |link:http://php.net/bool[bool^]
 a|`$excludeDependencies`
-a|Set to true to remove required data from the results after applying the mutator.
+|Set to true to remove required data from the results after applying the mutator.
 Fields will only be removed if they are not requested by the result fields of the search request.
 
 |link:http://php.net/int[int^]
 a|`$position`
-a|Position of the mutator. Mutators are executed in the order of their positions.
+|Position of the mutator. Mutators are executed in the order of their positions.
 |===
 
 
@@ -3389,16 +3312,15 @@ public createFilter($filterClass, $params = []):void
 Add a filter. Will create a new instance of the filter class if not already created.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$filterClass`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$params`
-a|
+|
 |===
 
 
@@ -3418,12 +3340,11 @@ public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories
 Add a filter. Will override existing filter instances.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_type_typeinterface[`TypeInterface`]
 a|`$filter`
-a|
+|
 |===
 
 
@@ -3443,12 +3364,11 @@ public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories
 Set fields to be contained in search result.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$fields`
-a|Reference to a json file to load fields from or a list of field names.
+|Reference to a json file to load fields from or a list of field names.
 |===
 
 
@@ -3483,12 +3403,11 @@ public hasResultField($field):bool
 Check if result field is already included in the source of the search.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$field`
-a|The field to search for in result fields
+|The field to search for in result fields
 |===
 
 
@@ -3523,16 +3442,15 @@ public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webs
 Add an extension.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$extensionClass`
-a|Extension class to add.
+|Extension class to add.
 
 |link:http://php.net/array[array^]
 a|`$extensionParams`
-a|Additional parameters to pass to extensions constructor
+|Additional parameters to pass to extensions constructor
 |===
 
 
@@ -3582,12 +3500,11 @@ public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories
 Add an aggregation
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 a|`$aggregation`
-a|
+|
 |===
 
 
@@ -3607,12 +3524,11 @@ public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories
 Add a suggestion
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_suggestion_suggestioninterface[`SuggestionInterface`]
 a|`$suggestion`
-a|
+|
 |===
 
 
@@ -3632,16 +3548,15 @@ public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories
 Set pagination parameters.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|
+|
 |===
 
 
@@ -3661,16 +3576,15 @@ public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\Vari
 Add sorting parameters
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$field`
-a|The field to order by
+|The field to order by
 
 |link:http://php.net/string[string^]
 a|`$order`
-a|Direction to order results. Possible values: 'asc' or 'desc'
+|Direction to order results. Possible values: 'asc' or 'desc'
 |===
 
 
@@ -3690,12 +3604,11 @@ public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories
 Add multiple sorting parameters
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$sortingList`
-a|List of sorting parameters. Each entry should have a 'field' and an 'order' property.
+|List of sorting parameters. Each entry should have a 'field' and an 'order' property.
 |===
 
 
@@ -3715,12 +3628,11 @@ public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories
 Set the order of the search results by ids.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$idList`
-a|List of variation ids. Search results will be sorted in the same order.
+|List of variation ids. Search results will be sorted in the same order.
 |===
 
 
@@ -3740,16 +3652,15 @@ public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factori
 Group results by field
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$field`
-a|The field to group properties by.
+|The field to group properties by.
 
 |link:http://php.net/array[array^]
 a|`$sortings`
-a|List of sort criteria. Might contain string
+|List of sort criteria. Might contain string
 |===
 
 
@@ -3788,12 +3699,11 @@ public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories
 Get the default configuration of a search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options
+|Available options
 <ul>
  <li><b>quantities</b> Quantities of the variations in the basket. This will be considered while calculating graduated prices</li>
  <li><b>setPriceOnly</b> Set to true to only consider prices for item sets</li>
@@ -3817,12 +3727,11 @@ public setAdminPreview($isAdminPreview):Plenty\Modules\Webshop\ItemSearch\Factor
 Set preview mode for the search request.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/bool[bool^]
 a|`$isAdminPreview`
-a|Set to true to enable preview.
+|Set to true to enable preview.
 |===
 
 
@@ -3872,12 +3781,11 @@ public hasItemId($itemId):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variation by a single item id
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$itemId`
-a|Item id to filter by.
+|Item id to filter by.
 |===
 
 
@@ -3897,12 +3805,11 @@ public hasItemIds($itemIds):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations by multiple item ids
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$itemIds`
-a|List of item ids to filter by.
+|List of item ids to filter by.
 |===
 
 
@@ -3922,12 +3829,11 @@ public hasVariationId($variationId):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variation by a single variation id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$variationId`
-a|The variation id to filter by.
+|The variation id to filter by.
 |===
 
 
@@ -3947,12 +3853,11 @@ public hasVariationIds($variationIds):Plenty\Modules\Webshop\ItemSearch\Factorie
 Filter variations by multiple variation ids.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$variationIds`
-a|List of variation ids to filter by.
+|List of variation ids to filter by.
 |===
 
 
@@ -3972,12 +3877,11 @@ public hasAtLeastOneAvailability($availabilityIds):Plenty\Modules\Webshop\ItemSe
 Filter variations by multiple availability ids.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$availabilityIds`
-a|List of availability ids to filter by.
+|List of availability ids to filter by.
 |===
 
 
@@ -3997,12 +3901,11 @@ public hasSupplier($supplierId):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations by multiple availability ids.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$supplierId`
-a|The supplier id to filter by.
+|The supplier id to filter by.
 |===
 
 
@@ -4022,12 +3925,11 @@ public hasManufacturer($manufacturerId):Plenty\Modules\Webshop\ItemSearch\Factor
 Filter manufacturers by id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$manufacturerId`
-a|To filter by manufacturer
+|To filter by manufacturer
 |===
 
 
@@ -4047,12 +3949,11 @@ public hasEachProperty($propertyIds):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations by multiple property ids.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$propertyIds`
-a|The property ids to filter by.
+|The property ids to filter by.
 |===
 
 
@@ -4102,12 +4003,11 @@ public isHiddenInCategoryList($isHidden = true):Plenty\Modules\Webshop\ItemSearc
 Filter by visibility in category list.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/bool[bool^]
 a|`$isHidden`
-a|Visibility in category list to filter by.
+|Visibility in category list to filter by.
 |===
 
 
@@ -4142,12 +4042,11 @@ public isVisibleForClient($clientId = null):Plenty\Modules\Webshop\ItemSearch\Fa
 Filter variations by visibility for client
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$clientId`
-a|The client id to filter by. If null, default client id from config will be used.
+|The client id to filter by. If null, default client id from config will be used.
 |===
 
 
@@ -4167,16 +4066,15 @@ public hasNameInLanguage($type = &quot;hasAnyNameInLanguage&quot;, $lang = null)
 Filter variations having texts in a given language.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$type`
-a|The text field to filter by ('hasAny', 'hasName1', 'hasName2', 'hasName3')
+|The text field to filter by ('hasAny', 'hasName1', 'hasName2', 'hasName3')
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language to filter by. If null, language defined in session will be used.
+|The language to filter by. If null, language defined in session will be used.
 |===
 
 
@@ -4196,12 +4094,11 @@ public isInCategory($categoryId):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations contained in a category.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$categoryId`
-a|A category id to filter variations by.
+|A category id to filter variations by.
 |===
 
 
@@ -4221,12 +4118,11 @@ public hasAtLeastOnePrice($priceIds):Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations having at least on price.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$priceIds`
-a|List of price ids to filter variations by
+|List of price ids to filter variations by
 |===
 
 
@@ -4261,16 +4157,15 @@ public hasPriceInRange($priceMin, $priceMax):Plenty\Modules\Webshop\ItemSearch\F
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/float[float^]
 a|`$priceMin`
-a|
+|
 
 |link:http://php.net/float[float^]
 a|`$priceMax`
-a|
+|
 |===
 
 
@@ -4290,12 +4185,11 @@ public hasTag($tagId):Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$tagId`
-a|
+|
 |===
 
 
@@ -4315,12 +4209,11 @@ public hasAnyTag($tagIds):Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$tagIds`
-a|
+|
 |===
 
 
@@ -4355,16 +4248,15 @@ public isCrossSellingItem($itemId, $relation):Plenty\Modules\Webshop\ItemSearch\
 Filter variations having a cross selling relation to a given item.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$itemId`
-a|Item id to filter cross selling items for
+|Item id to filter cross selling items for
 
 |link:http://php.net/string[string^]
 a|`$relation`
-a|The relation of cross selling items.
+|The relation of cross selling items.
 |===
 
 
@@ -4384,20 +4276,19 @@ public hasFacets($facetValues, $clientId = null, $lang = null):Plenty\Modules\We
 Filter variations by facets.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$facetValues`
-a|List of facet values. If string is given, it will be exploded by ';'
+|List of facet values. If string is given, it will be exploded by ';'
 
 |link:http://php.net/int[int^]
 a|`$clientId`
-a|Client id to filter facets by. If null, default client id from config will be used.
+|Client id to filter facets by. If null, default client id from config will be used.
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|Language to filter facets by. If null, active language from session will be used.
+|Language to filter facets by. If null, active language from session will be used.
 |===
 
 
@@ -4417,24 +4308,23 @@ public hasSearchString($query, $lang = null, $a = &quot;&quot;, $b = &quot;&quot
 Filter variations by given search string.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$query`
-a|The search string to filter variations by
+|The search string to filter variations by
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|The language to apply search on. If null, default language from session will be used
+|The language to apply search on. If null, default language from session will be used
 
 |link:http://php.net/string[string^]
 a|`$a`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$b`
-a|
+|
 |===
 
 
@@ -4454,16 +4344,15 @@ public hasNameString($query, $lang = null):Plenty\Modules\Webshop\ItemSearch\Fac
 Filter variations by searching names
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$query`
-a|The search string
+|The search string
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|Language to apply search on. If null, default language from session will be used.
+|Language to apply search on. If null, default language from session will be used.
 |===
 
 
@@ -4483,12 +4372,11 @@ public withLanguage($lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
 Only request given language.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-a|Language to get texts for. If null, default language from session will be used.
+|Language to get texts for. If null, default language from session will be used.
 |===
 
 
@@ -4508,12 +4396,11 @@ public withImages($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories
 Include images in result
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$clientId`
-a|The client id to get images for. If null, default client id from config will be used.
+|The client id to get images for. If null, default client id from config will be used.
 |===
 
 
@@ -4533,20 +4420,19 @@ public withVariationAttributeMap($itemId, $initialVariationId, $afterKey = []):P
 Includes VariationAttributeMap for variation select
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$itemId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$initialVariationId`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$afterKey`
-a|
+|
 |===
 
 
@@ -4566,12 +4452,11 @@ public withPropertyGroups($displaySettings = []):Plenty\Modules\Webshop\ItemSear
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$displaySettings`
-a|
+|
 |===
 
 
@@ -4636,16 +4521,15 @@ public withPrices($quantities = [], $setPriceOnly = false):Plenty\Modules\Websho
 Append prices to result.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$quantities`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$setPriceOnly`
-a|
+|
 |===
 
 
@@ -4815,16 +4699,15 @@ public withSuggestions($query = &quot;&quot;, $lang = null):Plenty\Modules\Websh
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$query`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$lang`
-a|
+|
 |===
 
 
@@ -4844,12 +4727,11 @@ public withDidYouMeanSuggestions($query):Plenty\Modules\Webshop\ItemSearch\Facto
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$query`
-a|
+|
 |===
 
 
@@ -4884,12 +4766,11 @@ public inherit($inheritedProperties = []):Plenty\Modules\Webshop\ItemSearch\Fact
 Create a new factory instance based on properties of an existing factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$inheritedProperties`
-a|List of properties to inherit or null to inherit all properties.
+|List of properties to inherit or null to inherit all properties.
 |===
 
 
@@ -4909,21 +4790,20 @@ public withMutator($mutator, $excludeDependencies = false, $position = 1000):Ple
 Add a mutator to transform search results.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_mutator_mutatorinterface[`MutatorInterface`]
 a|`$mutator`
-a|The mutator itself
+|The mutator itself
 
 |link:http://php.net/bool[bool^]
 a|`$excludeDependencies`
-a|Set to true to remove required data from the results after applying the mutator.
+|Set to true to remove required data from the results after applying the mutator.
 Fields will only be removed if they are not requested by the result fields of the search request.
 
 |link:http://php.net/int[int^]
 a|`$position`
-a|Position of the mutator. Mutators are executed in the order of their positions.
+|Position of the mutator. Mutators are executed in the order of their positions.
 |===
 
 
@@ -4943,16 +4823,15 @@ public createFilter($filterClass, $params = []):void
 Add a filter. Will create a new instance of the filter class if not already created.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$filterClass`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$params`
-a|
+|
 |===
 
 
@@ -4972,12 +4851,11 @@ public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories
 Add a filter. Will override existing filter instances.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_type_typeinterface[`TypeInterface`]
 a|`$filter`
-a|
+|
 |===
 
 
@@ -4997,12 +4875,11 @@ public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories
 Set fields to be contained in search result.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$fields`
-a|Reference to a json file to load fields from or a list of field names.
+|Reference to a json file to load fields from or a list of field names.
 |===
 
 
@@ -5037,12 +4914,11 @@ public hasResultField($field):bool
 Check if result field is already included in the source of the search.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$field`
-a|The field to search for in result fields
+|The field to search for in result fields
 |===
 
 
@@ -5077,16 +4953,15 @@ public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webs
 Add an extension.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$extensionClass`
-a|Extension class to add.
+|Extension class to add.
 
 |link:http://php.net/array[array^]
 a|`$extensionParams`
-a|Additional parameters to pass to extensions constructor
+|Additional parameters to pass to extensions constructor
 |===
 
 
@@ -5136,12 +5011,11 @@ public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories
 Add an aggregation
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 a|`$aggregation`
-a|
+|
 |===
 
 
@@ -5161,12 +5035,11 @@ public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories
 Add a suggestion
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Cloud.adoc#cloud_suggestion_suggestioninterface[`SuggestionInterface`]
 a|`$suggestion`
-a|
+|
 |===
 
 
@@ -5186,16 +5059,15 @@ public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories
 Set pagination parameters.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|
+|
 |===
 
 
@@ -5215,16 +5087,15 @@ public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\Vari
 Add sorting parameters
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$field`
-a|The field to order by
+|The field to order by
 
 |link:http://php.net/string[string^]
 a|`$order`
-a|Direction to order results. Possible values: 'asc' or 'desc'
+|Direction to order results. Possible values: 'asc' or 'desc'
 |===
 
 
@@ -5244,12 +5115,11 @@ public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories
 Add multiple sorting parameters
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$sortingList`
-a|List of sorting parameters. Each entry should have a 'field' and an 'order' property.
+|List of sorting parameters. Each entry should have a 'field' and an 'order' property.
 |===
 
 
@@ -5269,12 +5139,11 @@ public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories
 Set the order of the search results by ids.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$idList`
-a|List of variation ids. Search results will be sorted in the same order.
+|List of variation ids. Search results will be sorted in the same order.
 |===
 
 
@@ -5294,16 +5163,15 @@ public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factori
 Group results by field
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$field`
-a|The field to group properties by.
+|The field to group properties by.
 
 |link:http://php.net/array[array^]
 a|`$sortings`
-a|List of sort criteria. Might contain string
+|List of sort criteria. Might contain string
 |===
 
 
@@ -5358,12 +5226,11 @@ public addFacetExtension($facetExtension):void
 Add an extension to provide a custom facet.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Webshop.adoc#webshop_contracts_facetextension[`FacetExtension`]
 a|`$facetExtension`
-a|The extension describing the facet behavior
+|The extension describing the facet behavior
 |===
 
 
@@ -5402,12 +5269,11 @@ public static get($template):string
 Get the path to result fields file from a plugin
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$template`
-a|The key of the template to get the path for.
+|The key of the template to get the path for.
 |===
 
 
@@ -5427,12 +5293,11 @@ public static load($template):array
 Load result fields from a template file. Result field templates can be registered from a plugin.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$template`
-a|The key of the template to load file contents for.
+|The key of the template to load file contents for.
 |===
 
 
@@ -5452,20 +5317,19 @@ public setTemplate($event, $template, $overwriteExistingData = true):void
 Set the path of a template to read result fields from.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$event`
-a|The event to set the template for.
+|The event to set the template for.
 
 |link:http://php.net/string[string^]
 a|`$template`
-a|Path to the template to read result fields from.
+|Path to the template to read result fields from.
 
 |link:http://php.net/bool[bool^]
 a|`$overwriteExistingData`
-a|Option to overwrite existing data
+|Option to overwrite existing data
 |===
 
 
@@ -5485,16 +5349,15 @@ public setTemplates($templateMap, $overwriteExistingData = true):void
 Set multiple templates to read result fields from.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$templateMap`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$overwriteExistingData`
-a|
+|
 |===
 
 
@@ -5514,17 +5377,16 @@ public requireFields($event, $field = null):void
 Add required fields to variation search requests.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$event`
-a|A single template event to set required fields for
+|A single template event to set required fields for
 or a map between template events and list of required fields
 
 |
 a|`$field`
-a|If first parameter describes a single template event
+|If first parameter describes a single template event
 this parameter may contain a single result field or a list of field to require.
 |===
 
@@ -5564,12 +5426,11 @@ public getSorting($sortingConfig = null, $isCategory = true):array
 Get sorting values from plugin configuration
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sortingConfig`
-a|The configuration value from the plugin. Contains a sorting field and a sorting order joined by an '_', e.g. 'item.id_asc'<br>
+|The configuration value from the plugin. Contains a sorting field and a sorting order joined by an '_', e.g. 'item.id_asc'<br>
 Possible sorting fields:
 <ul>
  <li>item.id</li>
@@ -5592,7 +5453,7 @@ Possible sorting fields:
 
 |link:http://php.net/bool[bool^]
 a|`$isCategory`
-a|Get default sorting configuration for category or for search
+|Get default sorting configuration for category or for search
 |===
 
 
@@ -5612,12 +5473,11 @@ public getCategorySorting($sortingConfig = null):array
 Get sorting values for categories from config
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sortingConfig`
-a|The configuration value
+|The configuration value
 |===
 
 
@@ -5637,12 +5497,11 @@ public getSearchSorting($sortingConfig = null):array
 Get sorting values for searches from config
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sortingConfig`
-a|The configuration value
+|The configuration value
 |===
 
 
@@ -5677,12 +5536,11 @@ public splitPathAndOrder($sorting):array
 Explode configuration entries containing the field to sort by and the sorting order joined by an &#039;_&#039;.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sorting`
-a|Sorting configuration value, e.g. text.name_asc
+|Sorting configuration value, e.g. text.name_asc
 |===
 
 
@@ -5702,12 +5560,11 @@ public mapToInnerSorting($sorting):string
 Map (outer) sorting from item list to (inner) sorting to be applied on grouped variations of one item.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$sorting`
-a|The sorting of the item list to get the inner sorting value for.
+|The sorting of the item list to get the inner sorting value for.
 |===
 
 
@@ -5727,12 +5584,11 @@ public static isLanguageSupported($lang):bool
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-a|
+|
 |===
 
 
@@ -5752,12 +5608,11 @@ public static isLanguageActivated($lang):bool
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-a|
+|
 |===
 
 
@@ -5777,16 +5632,15 @@ public static getM10lByLanguage($lang, $fallback = &quot;en&quot;):string
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$fallback`
-a|
+|
 |===
 
 
@@ -5806,16 +5660,15 @@ public static getLanguageByM10l($lang, $fallback = &quot;english&quot;):string
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$lang`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$fallback`
-a|
+|
 |===
 
 
@@ -5855,12 +5708,11 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options:
+|Available options:
 <ul>
  <li><b>variationIds</b> Ids of basket items to get data for</li>
  <li><b>quantities</b> Quantity of each item to be considered when searching prices</li>
@@ -5904,12 +5756,11 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options:
+|Available options:
 <ul>
  <li><b>categoryId</b> Category id to get variations for</li>
  <li><b>facets</b> Active facets to filter variations by</li>
@@ -5957,12 +5808,11 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options:
+|Available options:
 <ul>
  <li><b>itemId</b> Id of the item to get cross selling items for</li>
  <li><b>relation</b> The relation to consider when getting cross selling items. Default: 'Similar'</li>
@@ -6006,12 +5856,11 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options:
+|Available options:
 <ul>
  <li><b>facets</b> Values of active facets.</li>
  <li><b>categoryId</b> Category Id to filter variations by.</li>
@@ -6056,12 +5905,11 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options:
+|Available options:
 <ul>
  <li><b>itemId</b> Id of an item to be queried</li>
  <li><b>itemIds</b> List of item ids to be queried</li>
@@ -6106,12 +5954,11 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options:
+|Available options:
 <ul>
  <li><b>manufacturerId</b> Id of the manufacturer to query items for.</li>
  <li><b>sorting</b> Sorting of items</li>
@@ -6156,12 +6003,11 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options:
+|Available options:
 <ul>
  <li><b>query</b> The search string</li>
  <li><b>facets</b> Facet values of active facets</li>
@@ -6211,12 +6057,11 @@ public static getSearchFactory($options):void
 Get the search factory from the preset.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|
+|
 |===
 
 
@@ -6255,12 +6100,11 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options:
+|Available options:
 <ul>
  <li><b>sorting</b> Sorting of items</li>
  <li><b>query</b> Search query to get suggestions for</li>
@@ -6303,12 +6147,11 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options:
+|Available options:
 <ul>
  <li><b>itemId</b> Item id to get</li>
  <li><b>variationId</b> Variation id to get. If not defined, plugin configuration will be considered if main or child variation should be displayed.</li>
@@ -6352,12 +6195,11 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options:
+|Available options:
 <ul>
  <li><b>tagIds</b> List of tag ids to query items by</li>
  <li><b>priceMin</b> Minimum price to filter items by</li>
@@ -6401,12 +6243,11 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options
+|Available options
 <ul>
  <li><b>itemId</b> Id of the to get variations and attributes for</li>
  <li><b>variationId</b> Id of a variation that is selected by default. Attribute values for this variation will be included on first page surely.</li>
@@ -6450,12 +6291,11 @@ public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Facto
 Get preset search factory.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$options`
-a|Available options:
+|Available options:
 <ul>
  <li><b>variationIds</b> List of variations to receive</li>
  <li><b>sorting</b> Configuration value to get sorting for</li>
@@ -6504,12 +6344,11 @@ public getResults($searches):array
 Execute multiple item searches at once. Results will be mapped to the same keys as used in the given associative array of search factories.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$searches`
-a|Associative array of search factories to execute. Result of each search request will be mapped to the key defined in this array.
+|Associative array of search factories to execute. Result of each search request will be mapped to the key defined in this array.
 |===
 
 
@@ -6529,12 +6368,11 @@ public getResult($searchFactory):array
 Get result of a single search request.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$searchFactory`
-a|The factory to get results for.
+|The factory to get results for.
 |===
 
 
@@ -6592,16 +6430,15 @@ public createReturnOrder($returnOrderData, $orderId = null):Plenty\Modules\Order
 Create a return order for some items of an existing order.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$returnOrderData`
-a|Data to create the return order with.
+|Data to create the return order with.
 
 |link:http://php.net/int[int^]
 a|`$orderId`
-a|Id of the original order
+|Id of the original order
 |===
 
 
@@ -6644,12 +6481,11 @@ public findByWebstoreId($webstoreId):Plenty\Modules\Webshop\Seo\Models\Robots
 Get the content of the robots.txt for a single webstore.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$webstoreId`
-a|Id of the webstore to get the robots.txt for.
+|Id of the webstore to get the robots.txt for.
 |===
 
 
@@ -6669,16 +6505,15 @@ public updateByWebstoreId($webstoreId, $data):Plenty\Modules\Webshop\Seo\Models\
 Update the content of the robots.txt of a single webstore.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$webstoreId`
-a|Id of the webstore to update the robots.txt for.
+|Id of the webstore to update the robots.txt for.
 
 |link:http://php.net/string[string^]
 a|`$data`
-a|Content of the robots.txt
+|Content of the robots.txt
 |===
 
 
@@ -6717,12 +6552,11 @@ public findByWebstoreId($webstoreId):Plenty\Modules\Webshop\Seo\Models\SitemapCo
 Get the sitemap configuration of a single webstore.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$webstoreId`
-a|Id of the webstore to get sitemap configuration for.
+|Id of the webstore to get sitemap configuration for.
 |===
 
 
@@ -6742,16 +6576,15 @@ public updateByWebstoreId($webstoreId, $data = []):Plenty\Modules\Webshop\Seo\Mo
 Update the sitemap configuration of a single webstore.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$webstoreId`
-a|Id of the webstore to get sitemap configuration for.
+|Id of the webstore to get sitemap configuration for.
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|Sitemap configuration data
+|Sitemap configuration data
 |===
 
 
@@ -6773,13 +6606,12 @@ Model for the configured content of the robots.txt
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|value
-    a|Content of the robots.txt file
+    |value
+    |Content of the robots.txt file
 |===
 
 
@@ -6817,22 +6649,21 @@ The sitemap configuration model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|contentCategory
-    a|
+    |contentCategory
+    |
 |link:http://php.net/int[int^]
-    a|itemCategory
-    a|
+    |itemCategory
+    |
 |link:http://php.net/int[int^]
-    a|item
-    a|
+    |item
+    |
 |link:http://php.net/int[int^]
-    a|blog
-    a|
+    |blog
+    |
 |===
 
 
@@ -6910,16 +6741,15 @@ Register an internal configuration. Available configuration keys are:
 &lt;/ul&gt;
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|Configuration key to set value for
+|Configuration key to set value for
 
 |
 a|`$value`
-a|Configuration value to set
+|Configuration value to set
 |===
 
 
@@ -6959,16 +6789,15 @@ public overrideTemplate($original, $override):void
 Override a twig template. The new template will be used when the overridden template is going to be rendered.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$original`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$override`
-a|
+|
 |===
 
 
@@ -6988,16 +6817,15 @@ public addTemplateAlias($original, $alias):void
 Add an alias for a template. Rendering the template will also check for overrides of the alias template.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$original`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$alias`
-a|
+|
 |===
 
 

@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[accounting_accounting]]
@@ -39,12 +44,11 @@ public get($id):Plenty\Modules\Accounting\Models\AccountingLocation
 Get an accounting location. The ID of the location must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|
+|
 |===
 
 
@@ -80,12 +84,11 @@ public listByPlentyId($plentyId):void
 List accounting locations for a client. The plenty ID of the client must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|
+|
 |===
 
 
@@ -105,12 +108,11 @@ public create($data):Plenty\Modules\Accounting\Models\AccountingLocation
 Create an accounting location.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -130,16 +132,15 @@ public update($id, $data):Plenty\Modules\Accounting\Models\AccountingLocation
 Update an accounting location. The ID of the location must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -159,12 +160,11 @@ public delete($id):bool
 Delete an accounting location. The ID of the location must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|
+|
 |===
 
 
@@ -184,12 +184,11 @@ public getSettings($id):Plenty\Modules\Accounting\Models\AccountingLocationSetti
 Get accounting location settings. The ID of the location must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The accounting location Id
+|The accounting location Id
 |===
 
 
@@ -209,16 +208,15 @@ public updateSettings($id, $data):Plenty\Modules\Accounting\Models\AccountingLoc
 Update accounting location settings. The ID of the location must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The accounting location Id
+|The accounting location Id
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|The request data
+|The request data
 |===
 
 
@@ -257,16 +255,15 @@ public detectLocationId($plentyId, $countryId = null):int
 Get a location ID for a country of delivery. The plenty ID must be specified and the ID of the country of delivery can be specified. If the ID of a country is not specified, the ID of the standard location of the specified client will be returned.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|The plenty ID of the client (store). The default client will be used if the plenty ID is not specified.
+|The plenty ID of the client (store). The default client will be used if the plenty ID is not specified.
 
 |link:http://php.net/int[int^]
 a|`$countryId`
-a|The ID of the country of delivery. The standard location of the specified client will be returned, if no ID of a country of delivery is specified.
+|The ID of the country of delivery. The standard location of the specified client will be returned, if no ID of a country of delivery is specified.
 |===
 
 
@@ -286,16 +283,15 @@ public detectLocationIdByClientId($clientId = null, $countryId = null):int
 Get the location ID for a country of delivery. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, the ID of the standard location of the default client will be returned.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$clientId`
-a|The ID of the client. The default client (ID 0) will be used if the ID of client is not specified.
+|The ID of the client. The default client (ID 0) will be used if the ID of client is not specified.
 
 |link:http://php.net/int[int^]
 a|`$countryId`
-a|The ID of the country of delivery. The standard location of the specified client will be returned, if no ID of a country of delivery is specified.
+|The ID of the country of delivery. The standard location of the specified client will be returned, if no ID of a country of delivery is specified.
 |===
 
 
@@ -315,16 +311,15 @@ public getAccountingLocations($plentyId, $countryId = null):array
 List accounting locations. The plenty ID must be specified and the ID of a country of delivery can be specified. If the ID of the country is specified, only one accounting location will be returned. If the ID of the country is not specified, all accounting locations of the client will be returned.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|The plenty ID of the client (store).
+|The plenty ID of the client (store).
 
 |link:http://php.net/int[int^]
 a|`$countryId`
-a|The ID of the country of delivery.
+|The ID of the country of delivery.
 |===
 
 
@@ -344,16 +339,15 @@ public getAccountingLocationsByClient($clientId = null, $countryId = null):array
 List accounting locations. The ID of the client and the ID of the country of delivery can be specified. If neither the client ID nor the ID of a country are specified, all accounting locations of the default client will be returned.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$clientId`
-a|The ID of the client. The default client (ID 0) will be used if the ID of client is not specified.
+|The ID of the client. The default client (ID 0) will be used if the ID of client is not specified.
 
 |link:http://php.net/int[int^]
 a|`$countryId`
-a|The ID of the country of delivery.
+|The ID of the country of delivery.
 |===
 
 
@@ -392,12 +386,11 @@ public findByLocationId($locationId):Plenty\Modules\Accounting\Models\DebtorAcco
 Get debtor account configuration of an accounting location. The ID of the accounting location must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the accounting location.
+|The ID of the accounting location.
 |===
 
 
@@ -417,16 +410,15 @@ public listByLocationIdAndMode($locationId, $mode):void
 Lists debtor accounts by mode for an accounting location . The mode and the accounting location must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the accounting location.
+|The ID of the accounting location.
 
 |link:http://php.net/string[string^]
 a|`$mode`
-a|Specifies the mode of the debtor accounts. There are 4 different modes available. These modes are:
+|Specifies the mode of the debtor accounts. There are 4 different modes available. These modes are:
 <ul>
     <li>character</li>
     <li>country</li>
@@ -472,12 +464,11 @@ public initByClientId($clientId):void
 Initialise the country of the standard location of a client. The ID of the client must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$clientId`
-a|The ID of the client [optional, default=0]
+|The ID of the client [optional, default=0]
 |===
 
 
@@ -497,12 +488,11 @@ public initByPlentyId($plentyId):void
 Initialise the country of the standard location of a client. The plenty ID of the client can be specified. If no plenty ID is specified, the standard client will be used.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|The plenty ID of the client [optional]
+|The plenty ID of the client [optional]
 |===
 
 
@@ -522,12 +512,11 @@ public initByLocationId($locationId):void
 Initialise the country of a location. The ID of the location must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the location
+|The ID of the location
 |===
 
 
@@ -547,12 +536,11 @@ public initByOrderId($orderId):void
 Initialise the country for an order. The ID of the order must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$orderId`
-a|The ID of the order
+|The ID of the order
 |===
 
 
@@ -617,12 +605,11 @@ public getCountryIdByClientId($clientId):int
 Get the ID of the country of a client&#039;s standard location. The ID of the client must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$clientId`
-a|The ID of the client. The ID of the default client will be used if no ID is specified [optional, default=0].
+|The ID of the client. The ID of the default client will be used if no ID is specified [optional, default=0].
 |===
 
 
@@ -642,12 +629,11 @@ public getCountryIdByPlentyId($plentyId):int
 Get the ID of the country of a client&#039;s standard location. The plenty ID of the client must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|The plenty ID of a client
+|The plenty ID of a client
 |===
 
 
@@ -667,16 +653,15 @@ public getCountryIdByClientIdAndCountryId($clientId, $countryId):int
 Get the country of a client&#039;s standard location. The ID of the client and the ID of the country must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$clientId`
-a|The ID of the client.
+|The ID of the client.
 
 |link:http://php.net/int[int^]
 a|`$countryId`
-a|The ID of the country.
+|The ID of the country.
 |===
 
 
@@ -696,12 +681,11 @@ public getCountryIdByLocationId($locationId):int
 Get the country of a location. The ID of the location must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the location.
+|The ID of the location.
 |===
 
 
@@ -740,12 +724,11 @@ public findByLocationId($locationId):Plenty\Modules\Accounting\Models\PostingKey
 Get the posting key configuration of an accounting location. The ID of the accounting location must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the accounting location
+|The ID of the accounting location
 |===
 
 
@@ -784,16 +767,15 @@ public listRevenueAccounts($page = 1, $itemsPerPage = 50):Plenty\Repositories\Mo
 List revenue account configurations for all accounting locations. Each accounting location has one revenue account configuration.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|The page to get. The default page that will be returned is page 1.
+|The page to get. The default page that will be returned is page 1.
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The number of revenue accounts to be displayed per page. The default number of revenue accounts is 50.
+|The number of revenue accounts to be displayed per page. The default number of revenue accounts is 50.
 |===
 
 
@@ -813,12 +795,11 @@ public findByLocationId($locationId):Plenty\Modules\Accounting\Models\RevenueAcc
 Get the revenue account configuration of an accounting location. The ID of the accounting location must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the accounting location
+|The ID of the accounting location
 |===
 
 
@@ -838,16 +819,15 @@ public findByLocationIdAndCountryId($locationId, $countryId):Plenty\Modules\Acco
 Get the revenue account configuration of a country. The country account configuration is associated with an accounting location. The ID of the accounting location that the country is associated with as well as the ID of the country must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the accounting location
+|The ID of the accounting location
 
 |link:http://php.net/int[int^]
 a|`$countryId`
-a|The ID of the country
+|The ID of the country
 |===
 
 
@@ -886,34 +866,33 @@ The accounting location model. An accounting location always has a country and b
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the accounting location
+    |id
+    |The ID of the accounting location
 |link:http://php.net/int[int^]
-    a|countryId
-    a|The ID of the country of the accounting location
+    |countryId
+    |The ID of the country of the accounting location
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the accounting location
+    |name
+    |The name of the accounting location
 |link:http://php.net/int[int^]
-    a|clientId
-    a|The ID of the client that the accounting location belongs to
+    |clientId
+    |The ID of the client that the accounting location belongs to
 |link:http://php.net/int[int^]
-    a|plentyId
-    a|The plenty ID of the client that the accounting location belongs to
+    |plentyId
+    |The plenty ID of the client that the accounting location belongs to
 |link:http://php.net/array[array^]
-    a|vats
-    a|A collection of VAT configurations that are related to the accounting location
+    |vats
+    |A collection of VAT configurations that are related to the accounting location
 |        xref:Order.adoc#order_models_country[`Country`]
-    a|country
-    a|The country that the accounting location belongs to
+    |country
+    |The country that the accounting location belongs to
 |        xref:System.adoc#system_models_webstore[`Webstore`]
-    a|client
-    a|The client (store) this accounting location belongs to
+    |client
+    |The client (store) this accounting location belongs to
 |===
 
 
@@ -951,31 +930,30 @@ The accounting location settings model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|locationId
-    a|The ID of the accounting location
+    |locationId
+    |The ID of the accounting location
 |link:http://php.net/bool[bool^]
-    a|isInvoiceEUNet
-    a|Is the invoice net for EU?
+    |isInvoiceEUNet
+    |Is the invoice net for EU?
 |link:http://php.net/bool[bool^]
-    a|isInvoiceExportNet
-    a|Is the invoice net for export?
+    |isInvoiceExportNet
+    |Is the invoice net for export?
 |link:http://php.net/bool[bool^]
-    a|showShippingVat
-    a|Show the vat for shipping costs on the invoice?
+    |showShippingVat
+    |Show the vat for shipping costs on the invoice?
 |link:http://php.net/bool[bool^]
-    a|isSmallBusiness
-    a|Is it a small business?
+    |isSmallBusiness
+    |Is it a small business?
 |link:http://php.net/int[int^]
-    a|numberOfDecimalPlaces
-    a|The number of decimal places for prices
+    |numberOfDecimalPlaces
+    |The number of decimal places for prices
 |link:http://php.net/bool[bool^]
-    a|roundTotalsOnly
-    a|Do only round totals?
+    |roundTotalsOnly
+    |Do only round totals?
 |===
 
 
@@ -1013,16 +991,15 @@ The DebtorAccountValue Model which contains the actual configured debtor account
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|accountId
-    a|The ID of the debtor account configuration that the debtor account belongs to
+    |accountId
+    |The ID of the debtor account configuration that the debtor account belongs to
 |link:http://php.net/string[string^]
-    a|mode
-    a|The mode describes the criteria based on which pending amounts are assigned to a debtor account. The following modes are available:
+    |mode
+    |The mode describes the criteria based on which pending amounts are assigned to a debtor account. The following modes are available:
 <ul>
 <li>character        = The debtor accounts are selected based on the first character of customer information. The information and the order of the information that will be used are defined with the sequence. There are 3 different sequences available.</li>
 <li>payment          = The debtor accounts are selected based on the payment method.</li>
@@ -1030,8 +1007,8 @@ The DebtorAccountValue Model which contains the actual configured debtor account
 <li>country_payment  = The debtor accounts are selected based on two criteria. The first criteria is the country and if the country is same as the country of the accounting location then the payment method is used to select the deptor account.</li>
 </ul>
 |link:http://php.net/string[string^]
-    a|key
-    a|The key depends on the debtor account mode.
+    |key
+    |The key depends on the debtor account mode.
 <ul>
 <li>For the character mode the keys are letters. The letters indicate the first letter of the customer information that was used to assign the pending amounts.</li>
 <li>For the payment mode the key is the ID of payment method.</li>
@@ -1039,11 +1016,11 @@ The DebtorAccountValue Model which contains the actual configured debtor account
 <li>For the country_payment mode the key is either the ID of the country or the ID of payment method. If the country is the same as the country of the accounting location then the payment methods are used to select the deptor account.</li>
 </ul>
 |link:http://php.net/string[string^]
-    a|value
-    a|The actual debtor account.
+    |value
+    |The actual debtor account.
 |        xref:Accounting.adoc#accounting_models_debtoraccountconfiguration[`DebtorAccountConfiguration`]
-    a|account
-    a|The debtor account configuration this account is associated with.
+    |account
+    |The debtor account configuration this account is associated with.
 |===
 
 
@@ -1081,19 +1058,18 @@ The debtor account configuration model. The configuration is a set of debtor acc
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the debtor account configuration
+    |id
+    |The ID of the debtor account configuration
 |link:http://php.net/int[int^]
-    a|locationId
-    a|The ID of the accounting location that the debtor account is associated with.
+    |locationId
+    |The ID of the accounting location that the debtor account is associated with.
 |link:http://php.net/string[string^]
-    a|mode
-    a|The mode describes the criteria based on which pending amounts are assigned to a debtor account. The following modes are available:
+    |mode
+    |The mode describes the criteria based on which pending amounts are assigned to a debtor account. The following modes are available:
 <ul>
 <li>character        = The debtor accounts are selected based on the first character of customer information. The information and the order of the information that will be used are defined with the sequence. There are 3 different sequences available.</li>
 <li>payment          = The debtor accounts are selected based on the payment method.</li>
@@ -1101,22 +1077,22 @@ The debtor account configuration model. The configuration is a set of debtor acc
 <li>country_payment  = The debtor accounts are selected based on two criteria. The first criteria is the country and if the country is same as the country of the accounting location then the payment method is used to select the deptor account.</li>
 </ul>
 |link:http://php.net/string[string^]
-    a|sequence
-    a|The sequence defines the order in which customer information will be used for the debtor account assignment if the character made has been chosen. The following sequences are available:
+    |sequence
+    |The sequence defines the order in which customer information will be used for the debtor account assignment if the character made has been chosen. The following sequences are available:
 <ul>
 <li>FNV = stands for the sequence: company, lastname, firstname</li>
 <li>NVF = stands for the sequence: lastname, firstname, company</li>
 <li>NFV = stands for the sequence: lastname, company, firstname</li>
 </ul>
 |link:http://php.net/string[string^]
-    a|standard
-    a|The standard debtor account that will be used if no matching debtor account can be found.
+    |standard
+    |The standard debtor account that will be used if no matching debtor account can be found.
 |link:http://php.net/bool[bool^]
-    a|save
-    a|Flag that indicates if the debtor account shall be saved within the contact data.
+    |save
+    |Flag that indicates if the debtor account shall be saved within the contact data.
 |
-    a|accounts
-    a|The actual debtor accounts
+    |accounts
+    |The actual debtor accounts
 |===
 
 
@@ -1154,16 +1130,15 @@ The Posting Key Model. A posting key is always associated with an accounting loc
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The Id posting key in relation to the vatrate.
+    |id
+    |The Id posting key in relation to the vatrate.
 |link:http://php.net/string[string^]
-    a|value
-    a|The actual posting key for the vat rate.
+    |value
+    |The actual posting key for the vat rate.
 |===
 
 
@@ -1201,19 +1176,18 @@ The posting key configuration model. A posting key configuration is a set of 4 p
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|locationId
-    a|The ID of the accounting location that the configuration belongs to
+    |locationId
+    |The ID of the accounting location that the configuration belongs to
 |
-    a|postingKeys
-    a|The posting keys for this configuration
+    |postingKeys
+    |The posting keys for this configuration
 |        xref:Accounting.adoc#accounting_models_accountinglocation[`AccountingLocation`]
-    a|location
-    a|The name of the accounting location that the configuration belongs to
+    |location
+    |The name of the accounting location that the configuration belongs to
 |===
 
 
@@ -1251,16 +1225,15 @@ The revenue account model provides information on a single revenue account. The 
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the account. The account IDs are always 0,1,2 or 3. This way the IDs indicate the VAT rate that the account is used for. The revenues that were made with items that have the VAT rate with the ID 0 are assigned to the account with the ID 0.
+    |id
+    |The ID of the account. The account IDs are always 0,1,2 or 3. This way the IDs indicate the VAT rate that the account is used for. The revenues that were made with items that have the VAT rate with the ID 0 are assigned to the account with the ID 0.
 |link:http://php.net/int[int^]
-    a|account
-    a|The actual account number that was entered in the entry field.
+    |account
+    |The actual account number that was entered in the entry field.
 |===
 
 
@@ -1298,25 +1271,24 @@ The revenue account country configuration model. The revenue account country con
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|countryId
-    a|The ID of the country that the account configuration belongs to
+    |countryId
+    |The ID of the country that the account configuration belongs to
 |link:http://php.net/int[int^]
-    a|revenueAccountLocationId
-    a|The ID configuration of the revenue account that these accounts are for.
+    |revenueAccountLocationId
+    |The ID configuration of the revenue account that these accounts are for.
 |
-    a|revenueAccounts
-    a|A list of the actual revenue accounts. The accounts are associated with VAT rate. The association can be identified by
+    |revenueAccounts
+    |A list of the actual revenue accounts. The accounts are associated with VAT rate. The association can be identified by
 |        xref:Order.adoc#order_models_country[`Country`]
-    a|country
-    a|The country these accounts are associated with.
+    |country
+    |The country these accounts are associated with.
 |        xref:Accounting.adoc#accounting_models_revenueaccountlocationconfiguration[`RevenueAccountLocationConfiguration`]
-    a|locationConfiguration
-    a|The revenue account configuration these accounts are associated with
+    |locationConfiguration
+    |The revenue account configuration these accounts are associated with
 |===
 
 
@@ -1354,25 +1326,24 @@ The revenue account location configuration model. A revenue account location con
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the revenue account configuration
+    |id
+    |The ID of the revenue account configuration
 |link:http://php.net/int[int^]
-    a|locationId
-    a|The ID of the accounting location that the configuration belongs to
+    |locationId
+    |The ID of the accounting location that the configuration belongs to
 |link:http://php.net/string[string^]
-    a|accountEu
-    a|The account used for revenues that are exempt from VAT and that were sold within the European Union
+    |accountEu
+    |The account used for revenues that are exempt from VAT and that were sold within the European Union
 |link:http://php.net/string[string^]
-    a|accountExport
-    a|The account used for revenues that are exempt from VAT and that were sold to outside the European Union
+    |accountExport
+    |The account used for revenues that are exempt from VAT and that were sold to outside the European Union
 |
-    a|revenueAccountCountryConfigurations
-    a|The set of revenue accounts of one country
+    |revenueAccountCountryConfigurations
+    |The set of revenue accounts of one country
 |===
 
 
@@ -1432,28 +1403,27 @@ public init($billingCountryId, $taxIdNumber, $locationId, $shippingCountryId, $s
 Initialise the VAT system data
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$billingCountryId`
-a|The ID of the country of the invoice address
+|The ID of the country of the invoice address
 
 |link:http://php.net/string[string^]
 a|`$taxIdNumber`
-a|The tax identification number
+|The tax identification number
 
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the location
+|The ID of the location
 
 |link:http://php.net/int[int^]
 a|`$shippingCountryId`
-a|The ID of the country of the shipping address. [optional, default=0]
+|The ID of the country of the shipping address. [optional, default=0]
 
 |link:http://php.net/string[string^]
 a|`$startedAt`
-a|The date when the VAT configuration went into effect. If no date is set, the current date will be used.
+|The date when the VAT configuration went into effect. If no date is set, the current date will be used.
 [optional, default=null]
 |===
 
@@ -1489,16 +1459,15 @@ public getVatField($vatRate, $restrictedToDigitalItems = false):int
 Get the VAT field for a VAT rate
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/float[float^]
 a|`$vatRate`
-a|The VAT rate to be used to find the VAT field
+|The VAT rate to be used to find the VAT field
 
 |link:http://php.net/bool[bool^]
 a|`$restrictedToDigitalItems`
-a|Flag that indicates if the VAT is restricted to digital items or not.
+|Flag that indicates if the VAT is restricted to digital items or not.
 <br />True = the VAT is restricted to digital items
 <br />False = the VAT is used for all items
 |===
@@ -1520,16 +1489,15 @@ public getVatRate($vatField, $restrictedToDigitalItems = false):float
 Get the VAT rate of a VAT field
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$vatField`
-a|The VAT field (0-3).
+|The VAT field (0-3).
 
 |link:http://php.net/bool[bool^]
 a|`$restrictedToDigitalItems`
-a|Flag that indicates if the VAT is restricted to digital items or not.
+|Flag that indicates if the VAT is restricted to digital items or not.
 <br />True = the VAT is restricted to digital items
 <br />False = the VAT is used for all items
 |===
@@ -1551,12 +1519,11 @@ public getUsingVat($restrictedToDigitalItems = false):Plenty\Modules\Accounting\
 Get the VAT configuration to be used for VAT calculation
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/bool[bool^]
 a|`$restrictedToDigitalItems`
-a|Flag that indicates if the VAT is restricted to digital items or not.
+|Flag that indicates if the VAT is restricted to digital items or not.
 <br />True = the VAT is restricted to digital items
 <br />False = the VAT is used for all items
 |===
@@ -1578,12 +1545,11 @@ public getUsingVatRates($restrictedToDigitalItems = false):array
 Get the VAT rates to be used for VAT calculation
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/bool[bool^]
 a|`$restrictedToDigitalItems`
-a|Flag that indicates if the VAT is restricted to digital items or not.
+|Flag that indicates if the VAT is restricted to digital items or not.
 <br />True = the VAT is restricted to digital items
 <br />False = the VAT is used for all items
 |===
@@ -1605,16 +1571,15 @@ public getStandardVatByLocationId($locationId, $startedAt = null):Plenty\Modules
 Get a standard VAT configuration of an accounting location
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the accounting location
+|The ID of the accounting location
 
 |link:http://php.net/string[string^]
 a|`$startedAt`
-a|The date when the VAT configuration went into effect. The date is in W3C format.
+|The date when the VAT configuration went into effect. The date is in W3C format.
 |===
 
 
@@ -1653,12 +1618,11 @@ public findById($id):Plenty\Modules\Accounting\Vat\Models\Vat
 Get a VAT configuration
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The ID of the VAT configuration
+|The ID of the VAT configuration
 |===
 
 
@@ -1678,16 +1642,15 @@ public getStandardVat($plentyId = null, $startedAt = null):Plenty\Modules\Accoun
 Get the standard VAT configuration for a plenty ID
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|The ID of the client (store)
+|The ID of the client (store)
 
 |link:http://php.net/string[string^]
 a|`$startedAt`
-a|The date when the VAT configuration went into effect. The date is given in W3C format.
+|The date when the VAT configuration went into effect. The date is given in W3C format.
 |===
 
 
@@ -1707,16 +1670,15 @@ public getStandardVatByLocation($locationId, $startedAt = null):Plenty\Modules\A
 Get the standard VAT configuration for a location ID
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the location.
+|The ID of the location.
 
 |link:http://php.net/string[string^]
 a|`$startedAt`
-a|The date when the VAT configuration went into effect. The date is given in W3C format.
+|The date when the VAT configuration went into effect. The date is given in W3C format.
 |===
 
 
@@ -1736,20 +1698,19 @@ public getVat($locationId, $countryId, $startedAt = null):Plenty\Modules\Account
 Gets the VAT configuration
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the location.
+|The ID of the location.
 
 |link:http://php.net/int[int^]
 a|`$countryId`
-a|The ID of the country.
+|The ID of the country.
 
 |link:http://php.net/string[string^]
 a|`$startedAt`
-a|The date when the VAT configuration went into effect. The date is given in W3C format.
+|The date when the VAT configuration went into effect. The date is given in W3C format.
 |===
 
 
@@ -1769,24 +1730,23 @@ public findVat($page = 1, $itemsPerPage = \Plenty\Modules\Accounting\Vat\Models\
 List VAT configurations
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|The page to be returned. If no page is specified, the first page will be returned.
+|The page to be returned. If no page is specified, the first page will be returned.
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The number of items per page. If not given, the model's default number will be used.
+|The number of items per page. If not given, the model's default number will be used.
 
 |link:http://php.net/array[array^]
 a|`$relations`
-a|The relations to load with the VAT object. The relations available are "location" and "country".
+|The relations to load with the VAT object. The relations available are "location" and "country".
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The columns to load in the response
+|The columns to load in the response
 |===
 
 
@@ -1806,20 +1766,19 @@ public findVatByLocationId($locationId, $relations = [], $columns = []):array
 List VAT configurations for an accounting location
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the accounting location
+|The ID of the accounting location
 
 |link:http://php.net/array[array^]
 a|`$relations`
-a|The relations to load with the VAT object. The relations available are "location" and "country".
+|The relations to load with the VAT object. The relations available are "location" and "country".
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The columns to load in the response
+|The columns to load in the response
 |===
 
 
@@ -1839,24 +1798,23 @@ public findVatByLocationIdAndCountry($locationId, $countryId, $relations = [], $
 List VAT configuration for a country of delivery
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the accounting location
+|The ID of the accounting location
 
 |link:http://php.net/int[int^]
 a|`$countryId`
-a|The ID of the country of delivery
+|The ID of the country of delivery
 
 |link:http://php.net/array[array^]
 a|`$relations`
-a|The relations to load with the VAT object. The relations available are "location" and "country".
+|The relations to load with the VAT object. The relations available are "location" and "country".
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The columns to load in the response.
+|The columns to load in the response.
 |===
 
 
@@ -1876,12 +1834,11 @@ public getVatById($id):Plenty\Modules\Accounting\Vat\Models\Vat
 Get a VAT configuration by id
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|
+|
 |===
 
 
@@ -1901,12 +1858,11 @@ public createVat($data):Plenty\Modules\Accounting\Vat\Models\Vat
 Create a VAT configuration
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -1926,16 +1882,15 @@ public updateVat($id, $data):Plenty\Modules\Accounting\Vat\Models\Vat
 Update a VAT configuration
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -1985,12 +1940,11 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -2074,16 +2028,15 @@ public getVatField($vat, $vatRate):int
 Get the VAT field for a VAT rate.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 a|`$vat`
-a|The VAT configuration of a country
+|The VAT configuration of a country
 
 |link:http://php.net/float[float^]
 a|`$vatRate`
-a|The VAT rate
+|The VAT rate
 |===
 
 
@@ -2103,16 +2056,15 @@ public getVatRate($vat, $vatField):float
 Get the VAT rate for a VAT field.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 a|`$vat`
-a|The VAT configuration of a country
+|The VAT configuration of a country
 
 |link:http://php.net/int[int^]
 a|`$vatField`
-a|The VAT field
+|The VAT field
 |===
 
 
@@ -2132,16 +2084,15 @@ public getVatName($vat, $vatField):string
 Get the name of a VAT field.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 a|`$vat`
-a|The VAT configuration of a country
+|The VAT configuration of a country
 
 |link:http://php.net/int[int^]
 a|`$vatField`
-a|The VAT field
+|The VAT field
 |===
 
 
@@ -2180,52 +2131,51 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the VAT configuration. A VAT configuration includes 4 VAT rates
+    |id
+    |The ID of the VAT configuration. A VAT configuration includes 4 VAT rates
 |link:http://php.net/int[int^]
-    a|countryId
-    a|The ID of the country that the VAT configuration belongs to
+    |countryId
+    |The ID of the country that the VAT configuration belongs to
 |link:http://php.net/string[string^]
-    a|taxIdNumber
-    a|The tax id number of VAT configuration.
+    |taxIdNumber
+    |The tax id number of VAT configuration.
 |
-    a|startedAt
-    a|The date when the VAT configuration went into effect
+    |startedAt
+    |The date when the VAT configuration went into effect
 |
-    a|invalidFrom
-    a|The date when the VAT configuration should not be used any more
+    |invalidFrom
+    |The date when the VAT configuration should not be used any more
 |link:http://php.net/int[int^]
-    a|locationId
-    a|The ID of the location
+    |locationId
+    |The ID of the location
 |link:http://php.net/string[string^]
-    a|marginScheme
-    a|Specifies the tax rate that is used, when the margin scheme is applied. Available values: 'none', 'vat1', 'vat2', 'vat3', 'vat4'.
+    |marginScheme
+    |Specifies the tax rate that is used, when the margin scheme is applied. Available values: 'none', 'vat1', 'vat2', 'vat3', 'vat4'.
 |link:http://php.net/bool[bool^]
-    a|isRestrictedToDigitalItems
-    a|Flag that indicates if the VAT configuration is used only applied to digital goods or not. True= The VAT set is only applied to digital goods. False = The VAT set is applied to all types of goods.
+    |isRestrictedToDigitalItems
+    |Flag that indicates if the VAT configuration is used only applied to digital goods or not. True= The VAT set is only applied to digital goods. False = The VAT set is applied to all types of goods.
 |link:http://php.net/bool[bool^]
-    a|isStandard
-    a|Flag that indicates if the VAT configuration is the standard VAT configuration for the location
+    |isStandard
+    |Flag that indicates if the VAT configuration is the standard VAT configuration for the location
 |
-    a|createdAt
-    a|The date at which the VAT configuration was created.
+    |createdAt
+    |The date at which the VAT configuration was created.
 |
-    a|updatedAt
-    a|The date that the VAT configuration was last updated.
+    |updatedAt
+    |The date that the VAT configuration was last updated.
 |        xref:Accounting.adoc#accounting_models_accountinglocation[`AccountingLocation`]
-    a|location
-    a|The accounting location that the VAT configuration belongs to. Each accounting location is assigned to a country and only one accounting location is allowed per country.
+    |location
+    |The accounting location that the VAT configuration belongs to. Each accounting location is assigned to a country and only one accounting location is allowed per country.
 |        xref:Order.adoc#order_models_country[`Country`]
-    a|country
-    a|The country that the VAT configuration belongs to
+    |country
+    |The country that the VAT configuration belongs to
 |link:http://php.net/array[array^]
-    a|vatRates
-    a|The VAT rates of a VAT configuration
+    |vatRates
+    |The VAT rates of a VAT configuration
 |===
 
 
@@ -2263,19 +2213,18 @@ The VAT rate model is always associated with a VAT configuration and contains th
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the VAT rate
+    |id
+    |The ID of the VAT rate
 |link:http://php.net/float[float^]
-    a|vatRate
-    a|The percentage of the VAT rate, e.g. 19.00 for 19 %
+    |vatRate
+    |The percentage of the VAT rate, e.g. 19.00 for 19 %
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of a VAT rate
+    |name
+    |The name of a VAT rate
 |===
 
 

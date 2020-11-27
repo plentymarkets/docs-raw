@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[fulfillment_picklist]]
@@ -8,7 +13,7 @@
 [[fulfillment_contracts_pickingorderitemrepositorycontract]]
 ==== PickingOrderItemRepositoryContract
 
-The PickingOrderItemRepositoryContract
+The PickingOrderItemRepositoryContract describes methods for fetching one or multiple picking order items.
 
 
 
@@ -54,12 +59,11 @@ public getPickingOrderItemById($pickingOrderItemId):Plenty\Modules\Fulfillment\P
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pickingOrderItemId`
-a|
+|
 |===
 
 
@@ -96,7 +100,7 @@ public getPickingOrderItemId():int
 
 
 
-
+Returns picking order item ID
 
 [source%nowrap, php]
 ----
@@ -111,7 +115,7 @@ public getProcessUserId():int
 
 
 
-
+Returns process user ID
 
 [source%nowrap, php]
 ----
@@ -126,19 +130,18 @@ public addPluginConfig($identifier, $pluginConfig):Plenty\Modules\Fulfillment\Pi
 ====== *Return type:*        xref:Fulfillment.adoc#fulfillment_picklist_events[`Events`]
 
 
-
+Add a plugin configuration
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$identifier`
-a|
+|
 
 |
 a|`$pluginConfig`
-a|
+|
 |===
 
 
@@ -155,14 +158,14 @@ public getPluginConfigs():array
 
 
 
-
+Return all plugin configurations
 
 [[fulfillment_picklist_models]]
 ===  Models
 [[fulfillment_models_pickingorderitem]]
 ==== PickingOrderItem
 
-PickingOrderItem
+Represent a picking order item
 
 
 
@@ -175,46 +178,45 @@ PickingOrderItem
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|
+    |id
+    |
 |link:http://php.net/int[int^]
-    a|pickingOrderId
-    a|
+    |pickingOrderId
+    |
 |link:http://php.net/int[int^]
-    a|orderItemId
-    a|
+    |orderItemId
+    |
 |link:http://php.net/string[string^]
-    a|processState
-    a|
+    |processState
+    |
 |
-    a|processDate
-    a|
+    |processDate
+    |
 |link:http://php.net/int[int^]
-    a|processUserId
-    a|
+    |processUserId
+    |
 |link:http://php.net/string[string^]
-    a|comment
-    a|
+    |comment
+    |
 |link:http://php.net/float[float^]
-    a|quantity
-    a|
+    |quantity
+    |
 |link:http://php.net/int[int^]
-    a|itemId
-    a|
+    |itemId
+    |
 |link:http://php.net/int[int^]
-    a|holdingArea
-    a|
+    |holdingArea
+    |
 |link:http://php.net/int[int^]
-    a|warehouseId
-    a|
+    |warehouseId
+    |
 |link:http://php.net/string[string^]
-    a|orderIdList
-    a|
+    |orderIdList
+    |
 |===
 
 
@@ -274,12 +276,11 @@ public registerReturns($orderId):bool
 Register the return of an order.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$orderId`
-a|The ID of the order
+|The ID of the order
 |===
 
 
@@ -299,16 +300,15 @@ public registerReturn($orderId, $returnProvider):bool
 Register the return of an order
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$orderId`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$returnProvider`
-a|
+|
 |===
 
 
@@ -347,12 +347,11 @@ public cancelShipment($orderId):bool
 Cancel the shipment of an order.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$orderId`
-a|The ID of the order
+|The ID of the order
 |===
 
 
@@ -372,12 +371,11 @@ public registerShipment($orderId):bool
 Register the shipment of an order.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$orderId`
-a|The ID of the order
+|The ID of the order
 |===
 
 
@@ -413,5 +411,5 @@ public getDhlRetoureOnlineData():void
 
 
 
-
+Get all DHL Retoure Online configurations
 

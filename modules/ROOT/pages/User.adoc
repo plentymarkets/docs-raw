@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[user_user]]
@@ -69,12 +74,11 @@ public getUserById($userId):Plenty\Modules\User\Models\User
 Get user by given user id
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$userId`
-a|
+|
 |===
 
 
@@ -94,12 +98,11 @@ public getUserByStatus($status):Illuminate\Database\Eloquent\Collection
 Get all users by given status
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$status`
-a|
+|
 |===
 
 
@@ -119,16 +122,15 @@ public getAllPinUsers($clientName = null, $clientSecret = null):Illuminate\Datab
 Get all users with a pin
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$clientName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$clientSecret`
-a|
+|
 |===
 
 
@@ -148,12 +150,11 @@ public findByName($name):Illuminate\Database\Eloquent\Collection
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|
+|
 |===
 
 
@@ -173,16 +174,15 @@ public setBackendPluginSet($userId, $setId):bool
 Sets the selected PluginSet for a given user&#039;s backend
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$userId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$setId`
-a|
+|
 |===
 
 
@@ -202,12 +202,11 @@ public getBackendPluginSet($userId):Plenty\Modules\Plugin\PluginSet\Models\Plugi
 Gets the selected PluginSet for a given user&#039;s backend
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$userId`
-a|
+|
 |===
 
 
@@ -229,211 +228,210 @@ User
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|
+    |id
+    |
 |link:http://php.net/string[string^]
-    a|user
-    a|
+    |user
+    |
 |link:http://php.net/string[string^]
-    a|realName
-    a|
+    |realName
+    |
 |link:http://php.net/string[string^]
-    a|lang
-    a|
+    |lang
+    |
 |link:http://php.net/string[string^]
-    a|ipLimit
-    a|
+    |ipLimit
+    |
 |link:http://php.net/bool[bool^]
-    a|ustatus
-    a|
+    |ustatus
+    |
 |link:http://php.net/int[int^]
-    a|memberId
-    a|
+    |memberId
+    |
 |link:http://php.net/string[string^]
-    a|timestamp
-    a|
+    |timestamp
+    |
 |link:http://php.net/string[string^]
-    a|email
-    a|
+    |email
+    |
 |link:http://php.net/string[string^]
-    a|timezone
-    a|
+    |timezone
+    |
 |link:http://php.net/string[string^]
-    a|googleEmail
-    a|
+    |googleEmail
+    |
 |link:http://php.net/string[string^]
-    a|skype
-    a|
+    |skype
+    |
 |link:http://php.net/string[string^]
-    a|ical
-    a|
+    |ical
+    |
 |link:http://php.net/bool[bool^]
-    a|psConfig
-    a|
+    |psConfig
+    |
 |link:http://php.net/bool[bool^]
-    a|psItem
-    a|
+    |psItem
+    |
 |link:http://php.net/bool[bool^]
-    a|psEbay
-    a|
+    |psEbay
+    |
 |link:http://php.net/bool[bool^]
-    a|psStock
-    a|
+    |psStock
+    |
 |link:http://php.net/bool[bool^]
-    a|psCustomer
-    a|
+    |psCustomer
+    |
 |link:http://php.net/bool[bool^]
-    a|psOrder
-    a|
+    |psOrder
+    |
 |link:http://php.net/bool[bool^]
-    a|psStats
-    a|
+    |psStats
+    |
 |link:http://php.net/bool[bool^]
-    a|psData
-    a|
+    |psData
+    |
 |link:http://php.net/bool[bool^]
-    a|pcConfig
-    a|
+    |pcConfig
+    |
 |link:http://php.net/bool[bool^]
-    a|pcContent
-    a|
+    |pcContent
+    |
 |link:http://php.net/bool[bool^]
-    a|pcNewsletter
-    a|
+    |pcNewsletter
+    |
 |link:http://php.net/bool[bool^]
-    a|pcLayout
-    a|
+    |pcLayout
+    |
 |link:http://php.net/bool[bool^]
-    a|pcDialog
-    a|
+    |pcDialog
+    |
 |link:http://php.net/bool[bool^]
-    a|pcStats
-    a|
+    |pcStats
+    |
 |link:http://php.net/bool[bool^]
-    a|pcData
-    a|
+    |pcData
+    |
 |link:http://php.net/bool[bool^]
-    a|pcBlog
-    a|
+    |pcBlog
+    |
 |link:http://php.net/string[string^]
-    a|signature
-    a|
+    |signature
+    |
 |link:http://php.net/string[string^]
-    a|color
-    a|
+    |color
+    |
 |link:http://php.net/bool[bool^]
-    a|eks
-    a|
+    |eks
+    |
 |link:http://php.net/bool[bool^]
-    a|payments
-    a|
+    |payments
+    |
 |link:http://php.net/int[int^]
-    a|acceptAgb
-    a|
+    |acceptAgb
+    |
 |link:http://php.net/bool[bool^]
-    a|api
-    a|
+    |api
+    |
 |link:http://php.net/string[string^]
-    a|image
-    a|
+    |image
+    |
 |link:http://php.net/bool[bool^]
-    a|delOrder
-    a|
+    |delOrder
+    |
 |link:http://php.net/bool[bool^]
-    a|delArticle
-    a|
+    |delArticle
+    |
 |link:http://php.net/bool[bool^]
-    a|delRecord
-    a|
+    |delRecord
+    |
 |link:http://php.net/bool[bool^]
-    a|plentystat
-    a|
+    |plentystat
+    |
 |link:http://php.net/bool[bool^]
-    a|plentyconnect
-    a|
+    |plentyconnect
+    |
 |link:http://php.net/bool[bool^]
-    a|webspaceAccess
-    a|
+    |webspaceAccess
+    |
 |link:http://php.net/string[string^]
-    a|accessControlList
-    a|
+    |accessControlList
+    |
 |link:http://php.net/bool[bool^]
-    a|plentymarketsShippingOrderId
-    a|
+    |plentymarketsShippingOrderId
+    |
 |link:http://php.net/bool[bool^]
-    a|plentymarketsShippingItem
-    a|
+    |plentymarketsShippingItem
+    |
 |link:http://php.net/bool[bool^]
-    a|plentymarketsShippingAuto
-    a|
+    |plentymarketsShippingAuto
+    |
 |link:http://php.net/bool[bool^]
-    a|plentymarketsShippingLabel
-    a|
+    |plentymarketsShippingLabel
+    |
 |link:http://php.net/bool[bool^]
-    a|plentymarketsShippingConfig
-    a|
+    |plentymarketsShippingConfig
+    |
 |link:http://php.net/int[int^]
-    a|warehouseId
-    a|
+    |warehouseId
+    |
 |link:http://php.net/bool[bool^]
-    a|calendar
-    a|
+    |calendar
+    |
 |link:http://php.net/string[string^]
-    a|orderStatus
-    a|
+    |orderStatus
+    |
 |link:http://php.net/int[int^]
-    a|warehouseRepairId
-    a|
+    |warehouseRepairId
+    |
 |link:http://php.net/bool[bool^]
-    a|project
-    a|
+    |project
+    |
 |link:http://php.net/bool[bool^]
-    a|ticket
-    a|
+    |ticket
+    |
 |link:http://php.net/bool[bool^]
-    a|order
-    a|
+    |order
+    |
 |link:http://php.net/bool[bool^]
-    a|blog
-    a|
+    |blog
+    |
 |link:http://php.net/bool[bool^]
-    a|lead
-    a|
+    |lead
+    |
 |link:http://php.net/bool[bool^]
-    a|customer
-    a|
+    |customer
+    |
 |link:http://php.net/float[float^]
-    a|totalVacationDays
-    a|
+    |totalVacationDays
+    |
 |link:http://php.net/int[int^]
-    a|roleId
-    a|
+    |roleId
+    |
 |link:http://php.net/string[string^]
-    a|salutation
-    a|
+    |salutation
+    |
 |link:http://php.net/string[string^]
-    a|dataLang
-    a|
+    |dataLang
+    |
 |link:http://php.net/bool[bool^]
-    a|disabled
-    a|
+    |disabled
+    |
 |link:http://php.net/bool[bool^]
-    a|scheduler
-    a|
+    |scheduler
+    |
 |link:http://php.net/bool[bool^]
-    a|item
-    a|
+    |item
+    |
 |link:http://php.net/bool[bool^]
-    a|incomingItems
-    a|
+    |incomingItems
+    |
 |link:http://php.net/int[int^]
-    a|backendPluginSetId
-    a|The ID of the user's selected backend set
+    |backendPluginSetId
+    |The ID of the user's selected backend set
 |===
 
 

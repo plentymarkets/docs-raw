@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[plugin_plugin]]
@@ -39,24 +44,23 @@ public saveConfiguration($pluginId, $configMap, $setId = null, $resetCache = tru
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginId`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$configMap`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$setId`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$resetCache`
-a|
+|
 |===
 
 
@@ -76,16 +80,15 @@ public copyToPluginSetEntry($configurationOrId, $pluginSetEntryOrId):int
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$configurationOrId`
-a|
+|
 
 |
 a|`$pluginSetEntryOrId`
-a|
+|
 |===
 
 
@@ -105,16 +108,15 @@ public getConfigurationFile($pluginId, $setId):string
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$setId`
-a|
+|
 |===
 
 
@@ -134,20 +136,19 @@ public export($setId, $pluginId = null, $active = null):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$pluginId`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$active`
-a|
+|
 |===
 
 
@@ -167,20 +168,19 @@ public import($setId, $data, $pluginId = null):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$pluginId`
-a|
+|
 |===
 
 
@@ -219,12 +219,11 @@ public all($pluginSetId):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|
+|
 |===
 
 
@@ -244,20 +243,19 @@ public updateAll($dataList, $pluginSetId, $pluginId = null):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$dataList`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$pluginId`
-a|
+|
 |===
 
 
@@ -277,20 +275,19 @@ public getActiveLinkedLayoutContainers($activeContainerKeysList, $activeDataProv
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$activeContainerKeysList`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$activeDataProviderKeysList`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|
+|
 |===
 
 
@@ -310,20 +307,19 @@ public getActiveLinkedLayoutContainersByPluginSetId($activeContainerKeysList, $a
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$activeContainerKeysList`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$activeDataProviderKeysList`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|
+|
 |===
 
 
@@ -343,16 +339,15 @@ public addNew($dataList, $pluginSetId):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$dataList`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|
+|
 |===
 
 
@@ -372,28 +367,27 @@ public addOne($pluginSetId, $containerKey, $dataProviderKey, $containerPluginId 
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$containerKey`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$dataProviderKey`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$containerPluginId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$dataProviderPluginId`
-a|
+|
 |===
 
 
@@ -413,28 +407,27 @@ public removeOne($pluginSetId, $containerKey, $dataProviderKey, $containerPlugin
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$containerKey`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$dataProviderKey`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$containerPluginId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$dataProviderPluginId`
-a|
+|
 |===
 
 
@@ -454,12 +447,11 @@ public exportByPluginSetId($pluginSetOrId):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$pluginSetOrId`
-a|
+|
 |===
 
 
@@ -479,16 +471,15 @@ public importByPluginSetId($pluginSetOrId, $containers):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$pluginSetOrId`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$containers`
-a|
+|
 |===
 
 
@@ -527,12 +518,11 @@ public getPluginByName($name):Plenty\Modules\Plugin\Models\Plugin
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$name`
-a|
+|
 |===
 
 
@@ -552,16 +542,15 @@ public searchPlugins($params = [], $itemsPerPage = \Plenty\Modules\Plugin\Models
 Search plugins using filters. Example: searchPlugins([&#039;name&#039; =&gt; &#039;PluginIWantToFind&#039;])
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$params`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|
+|
 |===
 
 
@@ -581,12 +570,11 @@ public getPluginSets($pluginId):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginId`
-a|
+|
 |===
 
 
@@ -606,16 +594,15 @@ public isActiveInPluginSet($pluginId, $pluginSetIdOrPluginSet):bool
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginId`
-a|
+|
 
 |
 a|`$pluginSetIdOrPluginSet`
-a|
+|
 |===
 
 
@@ -635,16 +622,15 @@ public isActiveInPluginSetByName($pluginName, $pluginSetId):bool
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|
+|
 |===
 
 
@@ -664,16 +650,15 @@ public isActiveInWebstore($pluginId, $webstoreId):bool
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$webstoreId`
-a|
+|
 |===
 
 
@@ -693,16 +678,15 @@ public isActiveInWebstoreByPluginName($pluginName, $webstoreId):bool
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$webstoreId`
-a|
+|
 |===
 
 
@@ -722,16 +706,15 @@ public decoratePlugin($plugin, $pluginSetId = null):Plenty\Modules\Plugin\Models
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Plugin.adoc#plugin_models_plugin[`Plugin`]
 a|`$plugin`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|
+|
 |===
 
 
@@ -751,16 +734,15 @@ public installMarketplacePluginByItemId($marketplacePluginItemId, $pluginSetId =
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$marketplacePluginItemId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|
+|
 |===
 
 
@@ -815,12 +797,11 @@ public sourceHasChanged($pluginName):bool
 Check if php files of a plugin have been changed
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|
+|
 |===
 
 
@@ -840,12 +821,11 @@ public resourcesHasChanged($pluginName):bool
 Check if resource files of a plugin have been changed
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|
+|
 |===
 
 
@@ -947,25 +927,24 @@ Model representing an installed Plugin
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the installed plugin instance
+    |id
+    |The ID of the installed plugin instance
 |link:http://php.net/int[int^]
-    a|variationId
-    a|The variationId of the installed version
+    |variationId
+    |The variationId of the installed version
 |link:http://php.net/int[int^]
-    a|itemId
-    a|The id of the installed plugin
+    |itemId
+    |The id of the installed plugin
 |link:http://php.net/bool[bool^]
-    a|removed
-    a|Whether this version of the plugin has been removed by the customer
+    |removed
+    |Whether this version of the plugin has been removed by the customer
 |link:http://php.net/string[string^]
-    a|lastUpdateChecksum
-    a|checksum of last installed plugin code
+    |lastUpdateChecksum
+    |checksum of last installed plugin code
 |===
 
 
@@ -1003,201 +982,200 @@ Eloquent model representing a Plugin.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the plugin
+    |id
+    |The ID of the plugin
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the plugin
+    |name
+    |The name of the plugin
 |link:http://php.net/int[int^]
-    a|position
-    a|The position of the plugin. The position is used to determine the plugin
+    |position
+    |The position of the plugin. The position is used to determine the plugin
 order.
 |link:http://php.net/bool[bool^]
-    a|activeStage
-    a|Shows whether the plugin is active in Stage. Inactive plugins will not
+    |activeStage
+    |Shows whether the plugin is active in Stage. Inactive plugins will not
 be provisioned in Stage.
 |link:http://php.net/bool[bool^]
-    a|activeProductive
-    a|Shows whether the plugin is active in Productive. Inactive plugins will
+    |activeProductive
+    |Shows whether the plugin is active in Productive. Inactive plugins will
 not be provisioned in Productive.
 |link:http://php.net/string[string^]
-    a|created_at
-    a|The date that the plugin was created.
+    |created_at
+    |The date that the plugin was created.
 |link:http://php.net/string[string^]
-    a|updated_at
-    a|The date that the plugin was updated last.
+    |updated_at
+    |The date that the plugin was updated last.
 |link:http://php.net/bool[bool^]
-    a|inStage
-    a|Shows whether the plugin is provisioned in Stage.
+    |inStage
+    |Shows whether the plugin is provisioned in Stage.
 |link:http://php.net/bool[bool^]
-    a|inProductive
-    a|Shows whether the plugin is provisioned in Productive.
+    |inProductive
+    |Shows whether the plugin is provisioned in Productive.
 |link:http://php.net/bool[bool^]
-    a|isConnectedWithGit
-    a|
+    |isConnectedWithGit
+    |
 |link:http://php.net/array[array^]
-    a|updateInformation
-    a|
+    |updateInformation
+    |
 |link:http://php.net/string[string^]
-    a|type
-    a|The type of the plugin. The following plugin types are available:
+    |type
+    |The type of the plugin. The following plugin types are available:
 <ul>
     <li>Template</li>
     <li>Export</li>
 </ul>
 |link:http://php.net/bool[bool^]
-    a|installed
-    a|Whether or not the plugin is installed. This will be false for plugins
+    |installed
+    |Whether or not the plugin is installed. This will be false for plugins
 that have been purchased from the marketplace but have not yet been installed in any set.
 |link:http://php.net/string[string^]
-    a|version
-    a|The version of the plugin
+    |version
+    |The version of the plugin
 |link:http://php.net/string[string^]
-    a|versionStage
-    a|The version of the plugin in stage
+    |versionStage
+    |The version of the plugin in stage
 |link:http://php.net/string[string^]
-    a|versionProductive
-    a|The version of the plugin in productive
+    |versionProductive
+    |The version of the plugin in productive
 |link:http://php.net/array[array^]
-    a|marketplaceVariations
-    a|A list of available marketplace versions
+    |marketplaceVariations
+    |A list of available marketplace versions
 |link:http://php.net/string[string^]
-    a|description
-    a|The description text of the plugin
+    |description
+    |The description text of the plugin
 |link:http://php.net/string[string^]
-    a|namespace
-    a|The namespace of the plugin
+    |namespace
+    |The namespace of the plugin
 |link:http://php.net/array[array^]
-    a|dependencies
-    a|A list of plugins with dependencies to the plugin
+    |dependencies
+    |A list of plugins with dependencies to the plugin
 |link:http://php.net/string[string^]
-    a|author
-    a|The name of the plugin author
+    |author
+    |The name of the plugin author
 |link:http://php.net/float[float^]
-    a|price
-    a|The price of the plugin
+    |price
+    |The price of the plugin
 |link:http://php.net/array[array^]
-    a|keywords
-    a|A list of plugin keywords
+    |keywords
+    |A list of plugin keywords
 |link:http://php.net/array[array^]
-    a|require
-    a|A list of plugins that are required by the plugin
+    |require
+    |A list of plugins that are required by the plugin
 |link:http://php.net/array[array^]
-    a|notInstalledRequirements
-    a|A list of required plugins that are not installed
+    |notInstalledRequirements
+    |A list of required plugins that are not installed
 |link:http://php.net/array[array^]
-    a|notActiveStageRequirements
-    a|A list of required plugins that are not active in stage
+    |notActiveStageRequirements
+    |A list of required plugins that are not active in stage
 |link:http://php.net/array[array^]
-    a|notActiveProductiveRequirements
-    a|A list of required plugins that are not active in productive
+    |notActiveProductiveRequirements
+    |A list of required plugins that are not active in productive
 |link:http://php.net/string[string^]
-    a|serviceProvider
-    a|The class name of the service provider
+    |serviceProvider
+    |The class name of the service provider
 |link:http://php.net/array[array^]
-    a|runOnBuild
-    a|The list of classes to execute once on plugin build
+    |runOnBuild
+    |The list of classes to execute once on plugin build
 |link:http://php.net/array[array^]
-    a|checkOnBuild
-    a|The list of classes to execute on every plugin build
+    |checkOnBuild
+    |The list of classes to execute on every plugin build
 |link:http://php.net/string[string^]
-    a|pluginPath
-    a|The plugin path
+    |pluginPath
+    |The plugin path
 |link:http://php.net/string[string^]
-    a|authorIcon
-    a|The author icon
+    |authorIcon
+    |The author icon
 |link:http://php.net/string[string^]
-    a|pluginIcon
-    a|The plugin icon
+    |pluginIcon
+    |The plugin icon
 |link:http://php.net/string[string^]
-    a|license
-    a|The plugin license
+    |license
+    |The plugin license
 |link:http://php.net/array[array^]
-    a|shortDescription
-    a|
+    |shortDescription
+    |
 |link:http://php.net/bool[bool^]
-    a|isClosedSource
-    a|is closed source
+    |isClosedSource
+    |is closed source
 |link:http://php.net/string[string^]
-    a|inboxPath
-    a|path in the inbox (closed source, open source)
+    |inboxPath
+    |path in the inbox (closed source, open source)
 |link:http://php.net/array[array^]
-    a|marketplaceName
-    a|The plugin name displayed in marketplace
+    |marketplaceName
+    |The plugin name displayed in marketplace
 |link:http://php.net/string[string^]
-    a|source
-    a|Whether this plugin was installed from marketplace, git or local
+    |source
+    |Whether this plugin was installed from marketplace, git or local
 |link:http://php.net/array[array^]
-    a|javaScriptFiles
-    a|A list of included javascript files
+    |javaScriptFiles
+    |A list of included javascript files
 |link:http://php.net/array[array^]
-    a|containers
-    a|A list of provided containers with name and description
+    |containers
+    |A list of provided containers with name and description
 |link:http://php.net/array[array^]
-    a|dataProviders
-    a|A list of data providers with name and description
+    |dataProviders
+    |A list of data providers with name and description
 |link:http://php.net/array[array^]
-    a|categories
-    a|
+    |categories
+    |
 |link:http://php.net/string[string^]
-    a|webhookUrl
-    a|webhookUrl
+    |webhookUrl
+    |webhookUrl
 |link:http://php.net/bool[bool^]
-    a|isExternalTool
-    a|is external tool
+    |isExternalTool
+    |is external tool
 |link:http://php.net/array[array^]
-    a|directDownloadLinks
-    a|A list of urls for the external tool
+    |directDownloadLinks
+    |A list of urls for the external tool
 |link:http://php.net/string[string^]
-    a|forwardLink
-    a|A forward link to the external tool developers page
+    |forwardLink
+    |A forward link to the external tool developers page
 |link:http://php.net/string[string^]
-    a|branch
-    a|The branch to checkout for this particular Plugin
+    |branch
+    |The branch to checkout for this particular Plugin
 |link:http://php.net/string[string^]
-    a|commit
-    a|The commit to checkout for this particular Plugin
+    |commit
+    |The commit to checkout for this particular Plugin
 |link:http://php.net/array[array^]
-    a|subscriptionInformation
-    a|A list if subscription informations
+    |subscriptionInformation
+    |A list if subscription informations
 |link:http://php.net/bool[bool^]
-    a|offerTrial
-    a|Determines if the plugin offers a trial period for plentyMarketplace
+    |offerTrial
+    |Determines if the plugin offers a trial period for plentyMarketplace
 |link:http://php.net/bool[bool^]
-    a|offerFreemium
-    a|Determines if the plugin offers freemium functionality
+    |offerFreemium
+    |Determines if the plugin offers freemium functionality
 |link:http://php.net/array[array^]
-    a|configurations
-    a|A list of plugin configuration items
+    |configurations
+    |A list of plugin configuration items
 |link:http://php.net/array[array^]
-    a|webstores
-    a|A list of clients (stores) activated for the plugin
+    |webstores
+    |A list of clients (stores) activated for the plugin
 |link:http://php.net/array[array^]
-    a|linkedDataProviders
-    a|A list of dataProviders linked with a container of this plugin
+    |linkedDataProviders
+    |A list of dataProviders linked with a container of this plugin
 |link:http://php.net/array[array^]
-    a|linkedContainers
-    a|A list of containers linked with a data provider of this plugin
+    |linkedContainers
+    |A list of containers linked with a data provider of this plugin
 |        xref:Plugin.adoc#plugin_models_git[`Git`]
-    a|repository
-    a|
+    |repository
+    |
 |        xref:Plugin.adoc#plugin_models_installedplugins[`InstalledPlugins`]
-    a|installedPlugins
-    a|
+    |installedPlugins
+    |
 |link:http://php.net/array[array^]
-    a|pluginSetIds
-    a|Array of PluginSet Ids where this plugin is contained.
+    |pluginSetIds
+    |Array of PluginSet Ids where this plugin is contained.
 |link:http://php.net/array[array^]
-    a|pluginSetEntries
-    a|A list of PluginSetEntries this plugin is linked to
+    |pluginSetEntries
+    |A list of PluginSetEntries this plugin is linked to
 |link:http://php.net/array[array^]
-    a|pluginSetEntriesWithTrashed
-    a|A list of PluginSetEntries this plugin is linked to, including
+    |pluginSetEntriesWithTrashed
+    |A list of PluginSetEntries this plugin is linked to, including
 trashed
           entries
 |===
@@ -1256,12 +1234,11 @@ public static getInstance($webstoreId):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$webstoreId`
-a|
+|
 |===
 
 
@@ -1281,24 +1258,23 @@ public sendMail($url, $template = &quot;&quot;, $email = &quot;&quot;, $callFunc
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$url`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$template`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$email`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$callFunction`
-a|
+|
 |===
 
 
@@ -1333,12 +1309,11 @@ public setStatus($status):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/bool[bool^]
 a|`$status`
-a|
+|
 |===
 
 
@@ -1373,12 +1348,11 @@ public setInitialized($initialized):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/bool[bool^]
 a|`$initialized`
-a|
+|
 |===
 
 
@@ -1413,16 +1387,15 @@ public addEmailPlaceholder($placeholder, $value):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$placeholder`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$value`
-a|
+|
 |===
 
 
@@ -1442,12 +1415,11 @@ public setEmailPlaceholder($emailPlaceholder):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$emailPlaceholder`
-a|
+|
 |===
 
 
@@ -1467,16 +1439,15 @@ public getEmailPlaceholderKey($key, $default = &quot;&quot;):string
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$default`
-a|
+|
 |===
 
 
@@ -1515,12 +1486,11 @@ public loadPatterns($url):bool
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$url`
-a|
+|
 |===
 
 
@@ -1555,12 +1525,11 @@ public setItemPattern($pattern):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$pattern`
-a|
+|
 |===
 
 
@@ -1580,12 +1549,11 @@ public setBlogPattern($pattern):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$pattern`
-a|
+|
 |===
 
 
@@ -1605,12 +1573,11 @@ public setContentCategoryPattern($pattern):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$pattern`
-a|
+|
 |===
 
 
@@ -1630,12 +1597,11 @@ public setItemCategoryPattern($pattern):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$pattern`
-a|
+|
 |===
 
 
@@ -1875,20 +1841,19 @@ public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\
 Add a basic where clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 |===
 
 
@@ -1908,24 +1873,23 @@ public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Pl
 Add a &quot;where in&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$not`
-a|
+|
 |===
 
 
@@ -1945,16 +1909,15 @@ public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts
 Add an &quot;or where in&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 |===
 
 
@@ -1974,20 +1937,19 @@ public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugi
 Add an &quot;or where&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 |===
 
 
@@ -2007,20 +1969,19 @@ public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Mo
 Add a &quot;where null&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$not`
-a|
+|
 |===
 
 
@@ -2040,12 +2001,11 @@ public orWhereNull($fieldName):void
 Add an &quot;or where null&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 |===
 
 
@@ -2065,24 +2025,23 @@ public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&
 Add a &quot;having&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$value`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 |===
 
 
@@ -2102,20 +2061,19 @@ public orHaving($fieldName, $operator = null, $value = null):void
 Add a &quot;or having&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$value`
-a|
+|
 |===
 
 
@@ -2135,24 +2093,23 @@ public whereHas($modelName, $callback = null, $operator = &quot;&gt;=&quot;, $co
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$modelName`
-a|
+|
 
 |
 a|`$callback`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$count`
-a|
+|
 |===
 
 
@@ -2172,20 +2129,19 @@ public join($firstModelName, $callback, $as = &quot;&quot;):void
 Add a join clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$firstModelName`
-a|
+|
 
 |
 a|`$callback`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$as`
-a|
+|
 |===
 
 
@@ -2205,16 +2161,15 @@ public leftJoin($firstModelName, $callback):void
 Add a left join to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$firstModelName`
-a|
+|
 
 |
 a|`$callback`
-a|
+|
 |===
 
 
@@ -2253,12 +2208,11 @@ public save($model):Plenty\Modules\Plugin\DataBase\Contracts\Model
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Plugin.adoc#plugin_contracts_model[`Model`]
 a|`$model`
-a|
+|
 |===
 
 
@@ -2278,16 +2232,15 @@ public find($modelClassName, $primaryKeyFieldValue):Plenty\Modules\Plugin\DataBa
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$modelClassName`
-a|
+|
 
 |
 a|`$primaryKeyFieldValue`
-a|
+|
 |===
 
 
@@ -2307,12 +2260,11 @@ public query($modelClassName):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$modelClassName`
-a|
+|
 |===
 
 
@@ -2332,12 +2284,11 @@ public delete($model):bool
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Plugin.adoc#plugin_contracts_model[`Model`]
 a|`$model`
-a|
+|
 |===
 
 
@@ -2376,32 +2327,31 @@ public on($firstModelName, $first, $operator = null, $secondModelName = null, $s
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$firstModelName`
-a|
+|
 
 |
 a|`$first`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$secondModelName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$second`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 |===
 
 
@@ -2421,28 +2371,27 @@ public where($modelName, $column, $operator = null, $value = null, $boolean = &q
 Add a basic where clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$modelName`
-a|
+|
 
 |
 a|`$column`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 |===
 
 
@@ -2462,24 +2411,23 @@ public orWhere($modelName, $column, $operator = null, $value = null):Plenty\Modu
 Add an &quot;or where&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$modelName`
-a|
+|
 
 |
 a|`$column`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 |===
 
 
@@ -2499,24 +2447,23 @@ public whereNull($modelName, $column, $boolean = &quot;and&quot;, $not = false):
 Add a &quot;where null&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$modelName`
-a|
+|
 
 |
 a|`$column`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$not`
-a|
+|
 |===
 
 
@@ -2536,16 +2483,15 @@ public orWhereNull($modelName, $column):Plenty\Modules\Plugin\DataBase\Contracts
 Add an &quot;or where null&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$modelName`
-a|
+|
 
 |
 a|`$column`
-a|
+|
 |===
 
 
@@ -2584,12 +2530,11 @@ public createTable($modelClassName):bool
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$modelClassName`
-a|
+|
 |===
 
 
@@ -2609,12 +2554,11 @@ public updateTable($modelClassName):bool
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$modelClassName`
-a|
+|
 |===
 
 
@@ -2634,12 +2578,11 @@ public deleteTable($modelClassName):bool
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$modelClassName`
-a|
+|
 |===
 
 
@@ -2660,43 +2603,42 @@ Database model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |
-    a|primaryKeyFieldName
-    a|
+    |primaryKeyFieldName
+    |
 |
-    a|primaryKeyFieldType
-    a|
+    |primaryKeyFieldType
+    |
 |
-    a|autoIncrementPrimaryKey
-    a|
+    |autoIncrementPrimaryKey
+    |
 |
-    a|textFields
-    a|
+    |textFields
+    |
 |
-    a|attributes
-    a|
+    |attributes
+    |
 |
-    a|original
-    a|
+    |original
+    |
 |
-    a|changes
-    a|
+    |changes
+    |
 |
-    a|casts
-    a|
+    |casts
+    |
 |
-    a|dates
-    a|
+    |dates
+    |
 |
-    a|dateFormat
-    a|
+    |dateFormat
+    |
 |
-    a|mutatorCache
-    a|
+    |mutatorCache
+    |
 |===
 
 
@@ -2748,12 +2690,11 @@ public getAttribute($key):void
 Get an attribute from the model.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|
+|
 |===
 
 
@@ -2773,12 +2714,11 @@ public getAttributeValue($key):void
 Get a plain attribute
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|
+|
 |===
 
 
@@ -2798,12 +2738,11 @@ public getAttributeFromArray($key):void
 Get an attribute from the $attributes array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|
+|
 |===
 
 
@@ -2823,12 +2762,11 @@ public hasGetMutator($key):bool
 Determine if a get mutator exists for an attribute.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|
+|
 |===
 
 
@@ -2848,16 +2786,15 @@ public mutateAttribute($key, $value):void
 Get the value of an attribute using its mutator.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 |===
 
 
@@ -2877,16 +2814,15 @@ public mutateAttributeForArray($key, $value):void
 Get the value of an attribute using its mutator for array conversion.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 |===
 
 
@@ -2906,16 +2842,15 @@ public setAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts
 Set a given attribute on the model.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 |===
 
 
@@ -2935,12 +2870,11 @@ public hasSetMutator($key):bool
 Determine if a set mutator exists for an attribute.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|
+|
 |===
 
 
@@ -2960,16 +2894,15 @@ public fillJsonAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts
 Set a given JSON attribute on the model.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 |===
 
 
@@ -2989,16 +2922,15 @@ public fromJson($value, $asObject = false):void
 Decode the given JSON back into an array or object.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$value`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$asObject`
-a|
+|
 |===
 
 
@@ -3018,12 +2950,11 @@ public fromDateTime($value):string
 Convert a DateTime to a storable string.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$value`
-a|
+|
 |===
 
 
@@ -3058,12 +2989,11 @@ public setDateFormat($format):Plenty\Modules\Plugin\DataBase\Contracts
 Set the date format used by the model.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$format`
-a|
+|
 |===
 
 
@@ -3083,16 +3013,15 @@ public hasCast($key, $types = null):bool
 Determine whether an attribute should be cast to a native type.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|
+|
 
 |
 a|`$types`
-a|
+|
 |===
 
 
@@ -3142,16 +3071,15 @@ public setRawAttributes($attributes, $sync = false):Plenty\Modules\Plugin\DataBa
 Set the array of model attributes. No checking is done.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$attributes`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$sync`
-a|
+|
 |===
 
 
@@ -3171,16 +3099,15 @@ public getOriginal($key = null, $default = null):void
 Get the model&#039;s original attribute values.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$key`
-a|
+|
 
 |
 a|`$default`
-a|
+|
 |===
 
 
@@ -3200,12 +3127,11 @@ public only($attributes):array
 Get a subset of the model&#039;s attributes.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$attributes`
-a|
+|
 |===
 
 
@@ -3240,12 +3166,11 @@ public syncOriginalAttribute($attribute):Plenty\Modules\Plugin\DataBase\Contract
 Sync a single original attribute with its current value.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$attribute`
-a|
+|
 |===
 
 
@@ -3280,12 +3205,11 @@ public isDirty($attributes = null):bool
 Determine if the model or given attribute(s) have been modified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$attributes`
-a|
+|
 |===
 
 
@@ -3305,12 +3229,11 @@ public isClean($attributes = null):bool
 Determine if the model or given attribute(s) have remained the same.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$attributes`
-a|
+|
 |===
 
 
@@ -3330,12 +3253,11 @@ public wasChanged($attributes = null):bool
 Determine if the model or given attribute(s) have been modified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$attributes`
-a|
+|
 |===
 
 
@@ -3400,12 +3322,11 @@ public static cacheMutatedAttributes($class):void
 Extract and cache all the mutated attributes of a class.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$class`
-a|
+|
 |===
 
 
@@ -3459,12 +3380,11 @@ public select($columns = []):Plenty\Modules\Plugin\DataBase\Contracts
 Add a basic select clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$columns`
-a|
+|
 |===
 
 
@@ -3484,20 +3404,19 @@ public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\
 Add a basic where clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 |===
 
 
@@ -3517,24 +3436,23 @@ public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Pl
 Add a &quot;where in&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$not`
-a|
+|
 |===
 
 
@@ -3554,16 +3472,15 @@ public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts
 Add an &quot;or where in&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 |===
 
 
@@ -3583,20 +3500,19 @@ public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugi
 Add an &quot;or where&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 |===
 
 
@@ -3616,20 +3532,19 @@ public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Mo
 Add a &quot;where null&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$not`
-a|
+|
 |===
 
 
@@ -3649,12 +3564,11 @@ public orWhereNull($fieldName):Plenty\Modules\Plugin\DataBase\Contracts
 Add an &quot;or where null&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 |===
 
 
@@ -3674,24 +3588,23 @@ public whereBetween($column, $values, $boolean = &quot;and&quot;, $not = false):
 Add a where between statement to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$column`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$not`
-a|
+|
 |===
 
 
@@ -3711,20 +3624,19 @@ public whereNotBetween($column, $values, $boolean = &quot;and&quot;):Plenty\Modu
 Add a where not between statement to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$column`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$values`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 |===
 
 
@@ -3744,24 +3656,23 @@ public whereDate($column, $operator, $value = null, $boolean = &quot;and&quot;):
 Add a &quot;where date&quot; statement to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$column`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 |===
 
 
@@ -3781,24 +3692,23 @@ public whereMonth($column, $operator, $value = null, $boolean = &quot;and&quot;)
 Add a &quot;where month&quot; statement to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$column`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 |===
 
 
@@ -3818,24 +3728,23 @@ public whereDay($column, $operator, $value = null, $boolean = &quot;and&quot;):P
 Add a &quot;where day&quot; statement to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$column`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 |===
 
 
@@ -3855,24 +3764,23 @@ public whereYear($column, $operator, $value = null, $boolean = &quot;and&quot;):
 Add a &quot;where year&quot; statement to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$column`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |
 a|`$value`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 |===
 
 
@@ -3892,24 +3800,23 @@ public whereTime($column, $operator, $value = null, $boolean = &quot;and&quot;):
 Add a &quot;where time&quot; statement to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$column`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$value`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 |===
 
 
@@ -3929,24 +3836,23 @@ public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&
 Add a &quot;having&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$value`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$boolean`
-a|
+|
 |===
 
 
@@ -3966,20 +3872,19 @@ public orHaving($fieldName, $operator = null, $value = null):Plenty\Modules\Plug
 Add a &quot;or having&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$operator`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$value`
-a|
+|
 |===
 
 
@@ -3999,16 +3904,15 @@ public orderBy($fieldName, $direction = &quot;asc&quot;):Plenty\Modules\Plugin\D
 Add an &quot;order by&quot; clause to the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$fieldName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$direction`
-a|
+|
 |===
 
 
@@ -4028,16 +3932,15 @@ public forPage($page, $perPage = 15):Plenty\Modules\Plugin\DataBase\Contracts
 Set the limit and offset for a given page.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$perPage`
-a|
+|
 |===
 
 
@@ -4057,12 +3960,11 @@ public count($columns = &quot;*&quot;):int
 Retrieve the &quot;count&quot; result of the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$columns`
-a|
+|
 |===
 
 
@@ -4082,12 +3984,11 @@ public limit($value):Plenty\Modules\Plugin\DataBase\Contracts
 Set the &quot;limit&quot; value of the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$value`
-a|
+|
 |===
 
 
@@ -4107,12 +4008,11 @@ public offset($value):Plenty\Modules\Plugin\DataBase\Contracts
 Set the &quot;offset&quot; value of the query.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$value`
-a|
+|
 |===
 
 
@@ -4132,12 +4032,11 @@ public getCountForPagination($columns = []):int
 Get the count of the total records for the paginator.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$columns`
-a|
+|
 |===
 
 
@@ -4224,32 +4123,31 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 Create a table
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$tableName`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$attributeDefinitions`
-a|http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_AttributeValue.html
+|http://docs.aws.amazon.com/amazondynamodb/latest/APIReference/API_AttributeValue.html
 
 |link:http://php.net/array[array^]
 a|`$keySchema`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$readCapacityUnits`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$writeCapacityUnits`
-a|
+|
 |===
 
 
@@ -4276,24 +4174,23 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 Update a table
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$tableName`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$readCapacityUnits`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$writeCapacityUnits`
-a|
+|
 |===
 
 
@@ -4320,20 +4217,19 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 Add item to table
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$tableName`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$item`
-a|
+|
 |===
 
 
@@ -4360,24 +4256,23 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 Retrieving items
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$tableName`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$consistentRead`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$key`
-a|
+|
 |===
 
 
@@ -4404,20 +4299,19 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 Delete an item
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$tableName`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$key`
-a|
+|
 |===
 
 
@@ -4444,16 +4338,15 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 Deleting a table
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$tableName`
-a|
+|
 |===
 
 
@@ -4480,32 +4373,31 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 A scan operation scans the entire table. You can specify filters to apply to the results to refine the values returned to you, after the complete scan. Amazon DynamoDB puts a 1MB limit on the scan (the limit applies before the results are filtered).
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$tableName`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$returnFields`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$expressionAttributeValues`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$filterExpression`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$limit`
-a|is taken into account when value greater than 0
+|is taken into account when value greater than 0
 |===
 
 
@@ -4548,16 +4440,15 @@ public call($libCall, $params = []):array
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$libCall`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$params`
-a|
+|
 |===
 
 
@@ -4600,12 +4491,11 @@ public get($idOrInstance):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry
 Get a PluginSetEntry.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$idOrInstance`
-a|The Id of the PluginSetEntry to retrieve or the PluginSetEntry object itself.
+|The Id of the PluginSetEntry to retrieve or the PluginSetEntry object itself.
 |===
 
 
@@ -4625,12 +4515,11 @@ public create($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry
 Create a set entry.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|Must contain a 'pluginId' field and a 'pluginSetId' field to specify which plugin should be associated with which plugin set in the
+|Must contain a 'pluginId' field and a 'pluginSetId' field to specify which plugin should be associated with which plugin set in the
 newly created set entry: ['pluginId' => 5, 'pluginSetId' => 3]
 |===
 
@@ -4651,20 +4540,19 @@ public copyToPluginSet($pluginSetEntryOrId, $pluginSetOrId, $copyConfigurations)
 Copy a PluginSetEntry to a PluginSet
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$pluginSetEntryOrId`
-a|The id of the PluginSetEntry that should be copied, or the PluginSetEntry object itself
+|The id of the PluginSetEntry that should be copied, or the PluginSetEntry object itself
 
 |
 a|`$pluginSetOrId`
-a|The id of the PluginSet the entry should be copied to, or the PluginSet object itself
+|The id of the PluginSet the entry should be copied to, or the PluginSet object itself
 
 |link:http://php.net/bool[bool^]
 a|`$copyConfigurations`
-a|true if the configurations related to the set entry should also be copied, false if not
+|true if the configurations related to the set entry should also be copied, false if not
 |===
 
 
@@ -4684,16 +4572,15 @@ public update($id, $data):bool
 Update a PluginSetEntry. Associate a set entry with a new set, a new plugin, or both.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The id of the set entry to update
+|The id of the set entry to update
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|Must contain EITHER a 'pluginId' field OR a 'pluginSetId' field OR both.
+|Must contain EITHER a 'pluginId' field OR a 'pluginSetId' field OR both.
 |===
 
 
@@ -4713,12 +4600,11 @@ public delete($what):int
 Delete a PluginSetEntry
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$what`
-a|The PluginSetEntry object to delete or a PluginSetEntry-Id
+|The PluginSetEntry object to delete or a PluginSetEntry-Id
 |===
 
 
@@ -4772,12 +4658,11 @@ public create($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
 Create a plugin set. The data array has to contain a &#039;name&#039; field. Throws a &#039;TooManyPluginSetsException&#039; if the maximum number of sets is exceeded.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The data for the newly created plugin set. Only the 'name' field is required: ['name' => 'MyNewPluginSet'].
+|The data for the newly created plugin set. Only the 'name' field is required: ['name' => 'MyNewPluginSet'].
 |===
 
 
@@ -4797,12 +4682,11 @@ public copy($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
 Copy a plugin set. All set entries from the source set will be copied into the new set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|Has to contain the Id of the plugin set to copy from and the name for the new set: ['copyPluginSetId' => 12, 'name' =>
+|Has to contain the Id of the plugin set to copy from and the name for the new set: ['copyPluginSetId' => 12, 'name' =>
 'NewSetWithCopiedEntries'].
 |===
 
@@ -4823,16 +4707,15 @@ public update($id, $data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
 Update a set. Only the &#039;name&#039; field can be updated.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|Id of the plugin set to update
+|Id of the plugin set to update
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|Update data must only contain a 'name' field: ['name' => 'NewNameForMySet']
+|Update data must only contain a 'name' field: ['name' => 'NewNameForMySet']
 |===
 
 
@@ -4852,12 +4735,11 @@ public delete($what):int
 Delete a set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$what`
-a|The PluginSet object to delete or a PluginSet-Id
+|The PluginSet object to delete or a PluginSet-Id
 |===
 
 
@@ -4877,12 +4759,11 @@ public get($pluginSetOrId):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
 Get a plugin set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$pluginSetOrId`
-a|The Id of the plugin set to retrieve from the database. If a PluginSet object is passed instead of an integer, the
+|The Id of the plugin set to retrieve from the database. If a PluginSet object is passed instead of an integer, the
 object is returned without change.
 |===
 
@@ -4918,12 +4799,11 @@ public listSetEntries($id):void
 List all set entries of a plugin set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The Id of the plugin set to list the entries from.
+|The Id of the plugin set to list the entries from.
 |===
 
 
@@ -4943,12 +4823,11 @@ public listWebstores($id):void
 List all webstores a plugin set is related to.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The Id of the set in question
+|The Id of the set in question
 |===
 
 
@@ -4968,12 +4847,11 @@ public listLayoutContainers($id):void
 List all LayoutContainers for a plugin set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The Id of the plugin set in question
+|The Id of the plugin set in question
 |===
 
 
@@ -4993,24 +4871,23 @@ public getOrCreatePluginSetEntry($id, $pluginId, $withTrashed = false, $resetCac
 Get the PluginSetEntry object containing a specific plugin for a set. If a PluginSetEntry does not exist, it will be created.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The Id of the plugin set in question
+|The Id of the plugin set in question
 
 |link:http://php.net/int[int^]
 a|`$pluginId`
-a|The Id of the plugin in question
+|The Id of the plugin in question
 
 |link:http://php.net/bool[bool^]
 a|`$withTrashed`
-a|If true, deleted PluginSetEntries will be included. Default is false.
+|If true, deleted PluginSetEntries will be included. Default is false.
 
 |link:http://php.net/bool[bool^]
 a|`$resetCache`
-a|
+|
 |===
 
 
@@ -5030,20 +4907,19 @@ public changePluginActiveStatusForSet($pluginSetId, $pluginId, $active):Plenty\M
 Activates / deactivates a plugin for a set by trashing or restoring the respective set entry.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|The id of the plugin set in question
+|The id of the plugin set in question
 
 |link:http://php.net/int[int^]
 a|`$pluginId`
-a|The id of the plugin in question
+|The id of the plugin in question
 
 |link:http://php.net/bool[bool^]
 a|`$active`
-a|true if the plugin should be activated for the set, false if it should be deactivated.
+|true if the plugin should be activated for the set, false if it should be deactivated.
 |===
 
 
@@ -5063,16 +4939,15 @@ public removePluginFromSet($setId, $pluginId):Plenty\Modules\Plugin\Models\Plugi
 Remove a plugin from a set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|The Id of the plugin set in question
+|The Id of the plugin set in question
 
 |link:http://php.net/int[int^]
 a|`$pluginId`
-a|The Id of the plugin that should be removed from the set.
+|The Id of the plugin that should be removed from the set.
 |===
 
 
@@ -5092,12 +4967,11 @@ public createPreviewHash($setId):string
 Create a preview hash for a plugin set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|The plugin set in question
+|The plugin set in question
 |===
 
 
@@ -5117,12 +4991,11 @@ public getPreviewPluginSetId($previewHash):void
 Extract a plugin set id from a preview hash.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$previewHash`
-a|The preview has to extract the plugin set id from
+|The preview has to extract the plugin set id from
 |===
 
 
@@ -5142,20 +5015,19 @@ public installGitPlugin($setId, $pluginId, $requestData):bool
 Install a git-plugin into a set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|The Id of the plugin set to install the plugin into
+|The Id of the plugin set to install the plugin into
 
 |link:http://php.net/int[int^]
 a|`$pluginId`
-a|The Id of the (git-) plugin that should be installed into the set
+|The Id of the (git-) plugin that should be installed into the set
 
 |link:http://php.net/array[array^]
 a|`$requestData`
-a|Must contain a 'branch' field that specifies the branch that should be installed: ['branch' => 'stable']
+|Must contain a 'branch' field that specifies the branch that should be installed: ['branch' => 'stable']
 |===
 
 
@@ -5175,20 +5047,19 @@ public setPosition($setId, $pluginId, $requestData):void
 Change the position of a plugin in a set
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|The id of the plugin set in question
+|The id of the plugin set in question
 
 |link:http://php.net/int[int^]
 a|`$pluginId`
-a|The id of the plugin of which the position should be changed
+|The id of the plugin of which the position should be changed
 
 |link:http://php.net/array[array^]
 a|`$requestData`
-a|Must contain a 'position' field with an integer specifying the new position: ['position' => 99]
+|Must contain a 'position' field with an integer specifying the new position: ['position' => 99]
 |===
 
 
@@ -5208,12 +5079,11 @@ public getSyncState($pluginSetId):bool
 Get the sync state, to determine if Plugins have been (de-)activated since last build.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|The id of the PluginSet
+|The id of the PluginSet
 |===
 
 
@@ -5233,12 +5103,11 @@ public getPluginSetHash($pluginSetOrId):string
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |
 a|`$pluginSetOrId`
-a|
+|
 |===
 
 
@@ -5258,12 +5127,11 @@ public getPluginSetIdFromHash($pluginSetHash):int
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginSetHash`
-a|
+|
 |===
 
 
@@ -5300,37 +5168,36 @@ Eloquent model representing a PluginSet.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|
+    |id
+    |
 |link:http://php.net/string[string^]
-    a|hash
-    a|
+    |hash
+    |
 |link:http://php.net/int[int^]
-    a|parentPluginSetId
-    a|
+    |parentPluginSetId
+    |
 |        xref:Plugin.adoc#plugin_models_pluginset[`PluginSet`]
-    a|parentPluginSet
-    a|
+    |parentPluginSet
+    |
 |link:http://php.net/string[string^]
-    a|name
-    a|
+    |name
+    |
 |
-    a|pluginSetEntries
-    a|
+    |pluginSetEntries
+    |
 |
-    a|pluginSetEntriesWithTrashed
-    a|
+    |pluginSetEntriesWithTrashed
+    |
 |
-    a|layoutContainers
-    a|
+    |layoutContainers
+    |
 |
-    a|webstores
-    a|
+    |webstores
+    |
 |===
 
 
@@ -5368,31 +5235,30 @@ Eloquent model representing a PluginSetEntry.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|
+    |id
+    |
 |link:http://php.net/int[int^]
-    a|pluginId
-    a|
+    |pluginId
+    |
 |link:http://php.net/int[int^]
-    a|pluginSetId
-    a|
+    |pluginSetId
+    |
 |        xref:Plugin.adoc#plugin_models_plugin[`Plugin`]
-    a|plugin
-    a|
+    |plugin
+    |
 |link:http://php.net/string[string^]
-    a|branchName
-    a|
+    |branchName
+    |
 |link:http://php.net/string[string^]
-    a|commit
-    a|
+    |commit
+    |
 |link:http://php.net/int[int^]
-    a|position
-    a|
+    |position
+    |
 |===
 
 
@@ -5452,28 +5318,27 @@ public uploadObject($pluginName, $key, $body, $publicVisible = false, $metaData 
 Create an object with content in $body
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$key`
-a|e.g. myDir/x/y/z/HelloWorld.txt
+|e.g. myDir/x/y/z/HelloWorld.txt
 
 |link:http://php.net/string[string^]
 a|`$body`
-a|file content
+|file content
 
 |link:http://php.net/bool[bool^]
 a|`$publicVisible`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$metaData`
-a|
+|
 |===
 
 
@@ -5493,20 +5358,19 @@ public getObject($pluginName, $key, $publicVisible = false):Plenty\Modules\Cloud
 Get an object
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$key`
-a|e.g. myDir/x/y/z/HelloWorld.txt
+|e.g. myDir/x/y/z/HelloWorld.txt
 
 |link:http://php.net/bool[bool^]
 a|`$publicVisible`
-a|
+|
 |===
 
 
@@ -5526,24 +5390,23 @@ public getObjectUrl($pluginName, $key, $publicVisible = false, $minutesToExpire 
 Returns the URL to an object identified by its bucket and key. The URL will be signed and set to expire at the provided time.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$key`
-a|e.g. myDir/x/y/z/HelloWorld.txt
+|e.g. myDir/x/y/z/HelloWorld.txt
 
 |link:http://php.net/bool[bool^]
 a|`$publicVisible`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$minutesToExpire`
-a|Minutes between 1 and 15
+|Minutes between 1 and 15
 |===
 
 
@@ -5563,20 +5426,19 @@ public getObjectAsTemporaryFileResource($pluginName, $key, $publicVisible = fals
 Get local file resource of an object. Use this if it is really necessary! Using getObject is the normal and effective way.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$key`
-a|e.g. myDir/x/y/z/HelloWorld.txt
+|e.g. myDir/x/y/z/HelloWorld.txt
 
 |link:http://php.net/bool[bool^]
 a|`$publicVisible`
-a|
+|
 |===
 
 
@@ -5596,20 +5458,19 @@ public doesObjectExist($pluginName, $key, $publicVisible = false):bool
 Checks if object exists
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$key`
-a|e.g. myDir/x/y/z/HelloWorld.txt
+|e.g. myDir/x/y/z/HelloWorld.txt
 
 |link:http://php.net/bool[bool^]
 a|`$publicVisible`
-a|
+|
 |===
 
 
@@ -5629,20 +5490,19 @@ public deleteObject($pluginName, $key, $publicVisible = false):bool
 Executes the DeleteObject operation.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$key`
-a|myDir/HelloWorld.txt
+|myDir/HelloWorld.txt
 
 |link:http://php.net/bool[bool^]
 a|`$publicVisible`
-a|
+|
 |===
 
 
@@ -5662,36 +5522,35 @@ public listObjects($pluginName, $prefix = &quot;&quot;, $limit, $startKey = &quo
 Returns some or all (up to 1000) objects
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|name of your plugin
+|name of your plugin
 
 |link:http://php.net/string[string^]
 a|`$prefix`
-a|Limits the response to keys that begin with the specified prefix.
+|Limits the response to keys that begin with the specified prefix.
 
 |link:http://php.net/int[int^]
 a|`$limit`
-a|The total number of items to return.
+|The total number of items to return.
 
 |link:http://php.net/string[string^]
 a|`$startKey`
-a|is where you want to start listing from. $startKey can be any key in the bucket.
+|is where you want to start listing from. $startKey can be any key in the bucket.
 
 |link:http://php.net/string[string^]
 a|`$continuationToken`
-a|indicates that the list is being continued on this bucket with a token.
+|indicates that the list is being continued on this bucket with a token.
 
 |link:http://php.net/bool[bool^]
 a|`$publicVisible`
-a|
+|
 
 |link:http://php.net/bool[bool^]
 a|`$resultKeyWithoutPrefix`
-a|
+|
 |===
 
 
@@ -5711,16 +5570,15 @@ public getPluginZip($pluginSetId, $pluginName):void
 Get all objects of a plugin as zip file
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$pluginSetId`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$pluginName`
-a|
+|
 |===
 
 
@@ -5745,43 +5603,42 @@ Model holding plugin data concerning Git version control.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|git id
+    |id
+    |git id
 |link:http://php.net/int[int^]
-    a|pluginId
-    a|plugin id
+    |pluginId
+    |plugin id
 |link:http://php.net/string[string^]
-    a|username
-    a|username for remote account
+    |username
+    |username for remote account
 |link:http://php.net/string[string^]
-    a|password
-    a|password for remote account
+    |password
+    |password for remote account
 |link:http://php.net/string[string^]
-    a|remoteUrl
-    a|url for remote repository
+    |remoteUrl
+    |url for remote repository
 |link:http://php.net/string[string^]
-    a|branch
-    a|actual selected branch
+    |branch
+    |actual selected branch
 |link:http://php.net/bool[bool^]
-    a|autoFetch
-    a|automatically fetch from remote repository
+    |autoFetch
+    |automatically fetch from remote repository
 |link:http://php.net/string[string^]
-    a|webhookToken
-    a|token needed for development
+    |webhookToken
+    |token needed for development
 |link:http://php.net/string[string^]
-    a|createdAt
-    a|created timestamp
+    |createdAt
+    |created timestamp
 |link:http://php.net/string[string^]
-    a|updatedAt
-    a|last update timestamp
+    |updatedAt
+    |last update timestamp
 |        xref:Plugin.adoc#plugin_models_plugin[`Plugin`]
-    a|plugin
-    a|
+    |plugin
+    |
 |===
 
 

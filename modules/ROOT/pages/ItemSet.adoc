@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[itemset_itemset]]
@@ -39,16 +44,15 @@ public show($id, $with):Plenty\Modules\ItemSet\Models\ItemSetComponent
 Gets an item set component. The ID of the item set component must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The unique ID of the item set component
+|The unique ID of the item set component
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|
+|
 |===
 
 
@@ -68,16 +72,15 @@ public get($setId, $id):Plenty\Modules\ItemSet\Models\ItemSetComponent
 Gets an item set component. The item ID of the item set and the component ID must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|The unique item ID of the item set
+|The unique item ID of the item set
 
 |link:http://php.net/int[int^]
 a|`$id`
-a|The unique ID of the item set component
+|The unique ID of the item set component
 |===
 
 
@@ -97,16 +100,15 @@ public create($setConfigId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponen
 Creates an item set component.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setConfigId`
-a|The unique ID of the item set configuration
+|The unique ID of the item set configuration
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -126,16 +128,15 @@ public createComponents($setId, $data):Plenty\Modules\ItemSet\Models\ItemSetComp
 Creates a link between an item and a set item and adds the item as a set component.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|The unique item ID of the item set
+|The unique item ID of the item set
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -155,16 +156,15 @@ public updateComponents($setId, $data):Plenty\Modules\ItemSet\Models\ItemSetComp
 Updates the item set components of a set item.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|The unique item ID of the item set
+|The unique item ID of the item set
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -184,20 +184,19 @@ public update($setId, $id, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent
 Updates an item set component. The item ID of the set and the ID of the set component must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|The unique item ID of the item set
+|The unique item ID of the item set
 
 |link:http://php.net/int[int^]
 a|`$id`
-a|The unique ID of the item set component
+|The unique ID of the item set component
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -217,16 +216,15 @@ public deleteComponents($setId, $data):Plenty\Repositories\Models\DeleteResponse
 Removes all item set components from an item set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|The unique item ID of the item set
+|The unique item ID of the item set
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -246,16 +244,15 @@ public delete($setId, $id):Plenty\Repositories\Models\DeleteResponse
 Deletes the link between an item set component and an item set. The item ID of the set and the ID of the set component must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|The unique item ID of the item set
+|The unique item ID of the item set
 
 |link:http://php.net/int[int^]
 a|`$id`
-a|The unique ID of the item set component
+|The unique ID of the item set component
 |===
 
 
@@ -290,16 +287,15 @@ public findBySetId($setId, $with):array
 Lists the item set components of a set. The item ID of the item set must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|The unique item ID of the item set
+|The unique item ID of the item set
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|
+|
 |===
 
 
@@ -319,12 +315,11 @@ public findByItemId($itemId):array
 Lists the item set components of a set. The item ID of the item set component must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$itemId`
-a|The unique item ID of the item set component
+|The unique item ID of the item set component
 |===
 
 
@@ -344,16 +339,15 @@ public deleteOne($setConfigId, $itemId):Plenty\Repositories\Models\DeleteRespons
 Delete an item set component. The item ID of the item set component and the set config ID must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setConfigId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$itemId`
-a|
+|
 |===
 
 
@@ -392,12 +386,11 @@ public show($id):Plenty\Modules\ItemSet\Models\ItemSetConfig
 Gets an item set. The ID of the item set configuration must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The unique ID of the item set configuration
+|The unique ID of the item set configuration
 |===
 
 
@@ -417,12 +410,11 @@ public create($data):Plenty\Modules\ItemSet\Models\ItemSetConfig
 Creates an item set configuration.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -442,16 +434,15 @@ public update($id, $data):Plenty\Modules\ItemSet\Models\ItemSetConfig
 Updates an item set configuration. The ID of the item set configuration must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -471,12 +462,11 @@ public delete($id):Plenty\Repositories\Models\DeleteResponse
 Deletes an item set configuration. The ID of the item set configuration must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The unique ID of the item set configuration
+|The unique ID of the item set configuration
 |===
 
 
@@ -496,16 +486,15 @@ public get($setId, $setConfigId):Plenty\Modules\ItemSet\Models\ItemSetConfig
 Gets the item set configuration of an item set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|The unique item ID of the item set
+|The unique item ID of the item set
 
 |link:http://php.net/int[int^]
 a|`$setConfigId`
-a|The unique ID of the item set configuration
+|The unique ID of the item set configuration
 |===
 
 
@@ -525,12 +514,11 @@ public findBySetId($setId):Plenty\Modules\ItemSet\Models\ItemSetConfig
 Gets the item set configuration of an item set. The item ID of the set item must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$setId`
-a|The unique item ID of the item set
+|The unique item ID of the item set
 |===
 
 
@@ -569,12 +557,11 @@ public show($id):Plenty\Modules\ItemSet\Models\ItemSet
 Gets an item set. The item ID of the set must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The unique item ID of the set
+|The unique item ID of the set
 |===
 
 
@@ -594,12 +581,11 @@ public create($data):Plenty\Modules\ItemSet\Models\ItemSet
 Creates an item set.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -619,12 +605,11 @@ public createSets($data):Plenty\Modules\ItemSet\Models\ItemSet
 Creates item sets.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -644,12 +629,11 @@ public updateSets($data):array
 Updates item sets.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -669,16 +653,15 @@ public update($id, $data):Plenty\Modules\ItemSet\Models\ItemSet
 Updates an item set. The item ID of the set must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|The unique item ID of the set.
+|The unique item ID of the set.
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -698,12 +681,11 @@ public deleteSets($data):Plenty\Repositories\Models\DeleteResponse
 Deletes item sets.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -723,12 +705,11 @@ public delete($id):Plenty\Repositories\Models\DeleteResponse
 Deletes an item set configuration. The ID must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$id`
-a|
+|
 |===
 
 
@@ -765,19 +746,18 @@ The ItemSet model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The item ID of the item set. The ID must be unique.
+    |id
+    |The item ID of the item set. The ID must be unique.
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the item set. The default language of the system is used.
+    |name
+    |The name of the item set. The default language of the system is used.
 |link:http://php.net/array[array^]
-    a|categories
-    a|The array with categories of the item set. The category ID key  "categoryId" must be specified. Example for JSON Object:  "categories":[{"categoryId":"34"},{"categoryId":"35"}]}]
+    |categories
+    |The array with categories of the item set. The category ID key  "categoryId" must be specified. Example for JSON Object:  "categories":[{"categoryId":"34"},{"categoryId":"35"}]}]
 |===
 
 
@@ -815,28 +795,27 @@ The ItemSetComponent model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The item set component ID. The ID must be unique.
+    |id
+    |The item set component ID. The ID must be unique.
 |link:http://php.net/int[int^]
-    a|setId
-    a|The item ID of the item set. The ID must be unique.
+    |setId
+    |The item ID of the item set. The ID must be unique.
 |link:http://php.net/int[int^]
-    a|itemId
-    a|The item ID of the set component
+    |itemId
+    |The item ID of the set component
 |link:http://php.net/float[float^]
-    a|minimalOrderQuantity
-    a|Minimum order quantity.
+    |minimalOrderQuantity
+    |Minimum order quantity.
 |link:http://php.net/float[float^]
-    a|maximumOrderQuantity
-    a|Maximum order quantity.
+    |maximumOrderQuantity
+    |Maximum order quantity.
 |link:http://php.net/bool[bool^]
-    a|orderQuantityPossible
-    a|Order quantities possible.
+    |orderQuantityPossible
+    |Order quantities possible.
 |===
 
 
@@ -874,16 +853,15 @@ The ItemSetConfig model.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|setId
-    a|set id The item ID of the item set. The ID must be unique.
+    |setId
+    |set id The item ID of the item set. The ID must be unique.
 |link:http://php.net/float[float^]
-    a|rebate
-    a|The discount in percent to be subtracted from the sum of the prices of the selected set components.
+    |rebate
+    |The discount in percent to be subtracted from the sum of the prices of the selected set components.
 |===
 
 

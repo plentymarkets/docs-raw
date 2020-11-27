@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[contentcache_contentcachelink]]
@@ -21,25 +26,24 @@ Eloquent model representing a Content Cache Link.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|
+    |id
+    |
 |link:http://php.net/int[int^]
-    a|plentyId
-    a|
+    |plentyId
+    |
 |link:http://php.net/string[string^]
-    a|linkType
-    a|
+    |linkType
+    |
 |link:http://php.net/string[string^]
-    a|cacheKey
-    a|
+    |cacheKey
+    |
 |link:http://php.net/int[int^]
-    a|linkId
-    a|
+    |linkId
+    |
 |===
 
 
@@ -81,16 +85,15 @@ Eloquent model representing the Content Cache Settings.
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|plentyId
-    a|
+    |plentyId
+    |
 |link:http://php.net/bool[bool^]
-    a|contentCacheActive
-    a|
+    |contentCacheActive
+    |
 |===
 
 
@@ -147,16 +150,15 @@ public invalidateVariationIds($variationIds, $plentyId = null):void
 Invalidate all cache entries related to given variation ids.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$variationIds`
-a|Ids of the variation to invalidate cache entries for
+|Ids of the variation to invalidate cache entries for
 
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|
+|
 |===
 
 
@@ -176,16 +178,15 @@ public invalidateItemIds($itemIds, $plentyId = null):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$itemIds`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|
+|
 |===
 
 
@@ -205,12 +206,11 @@ public invalidateAll($plentyId = null):void
 Invalidate all cache entries related to given plenty id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|
+|
 |===
 
 
@@ -230,12 +230,11 @@ public invalidateUri($uri):void
 Invalidate cache entries by URI
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$uri`
-a|
+|
 |===
 
 
@@ -304,12 +303,11 @@ public linkVariationsToResponse($variationIds):void
 Link variations to current response.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$variationIds`
-a|Ids of variations referenced by the current response.
+|Ids of variations referenced by the current response.
 |===
 
 
@@ -345,15 +343,14 @@ public getSettings($plentyId):Plenty\Modules\ContentCache\ContentCacheSettings\C
 ====== *Return type:*        xref:Contentcache.adoc#contentcache_contentcachesettings_contentcachesettings[`ContentCacheSettings`]
 
 
-
+Get the content cache settings for the specified client.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|
+|The plenty id of the client.
 |===
 
 
@@ -370,15 +367,14 @@ public getSettingsMultiple($plentyIds):void
 
 
 
-
+Get the content cache settings for multiple clients.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$plentyIds`
-a|
+|The plenty ids of the clients.
 |===
 
 
@@ -395,19 +391,94 @@ public saveSettings($plentyId, $contentCacheActive):Plenty\Modules\ContentCache\
 ====== *Return type:*        xref:Contentcache.adoc#contentcache_contentcachesettings_contentcachesettings[`ContentCacheSettings`]
 
 
-
+Save the content cache settings for the specified client.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|
+|The plenty id of the client.
 
 |link:http://php.net/bool[bool^]
 a|`$contentCacheActive`
-a|
+|Flag that indicates the content cache active state.
+|===
+
+
+[source%nowrap, php]
+----
+
+public getInvalidationDate($plentyId):string
+
+----
+
+    
+
+
+
+
+
+Get the date until when the content cache invalidation is deactivated.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|The plenty id of the client.
+|===
+
+
+[source%nowrap, php]
+----
+
+public saveInvalidationDate($plentyId, $invalidationDate):void
+
+----
+
+    
+
+
+
+
+
+Save the date until when the content cache invalidation is deactivated.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|The plenty id of the client.
+
+|link:http://php.net/string[string^]
+a|`$invalidationDate`
+|The date until when the invalidation is deactivated.
+|===
+
+
+[source%nowrap, php]
+----
+
+public isInvalidationActive($plentyId):bool
+
+----
+
+    
+
+
+
+
+
+Check if the content cache invalidation is currently active.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+|The plenty id of the client.
 |===
 
 

@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[basket_basket]]
@@ -39,12 +44,11 @@ public findOneById($basketRowId):Plenty\Modules\Basket\Models\BasketItem
 Gets an existing item by ID in the shopping cart of the current customer session.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$basketRowId`
-a|The ID of the basket row
+|The ID of the basket row
 |===
 
 
@@ -64,12 +68,11 @@ public findExistingOneByData($data):Plenty\Modules\Basket\Models\BasketItem
 Gets an existing item by item data in the shopping cart of the current customer session.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The item's data
+|The item's data
 |===
 
 
@@ -104,12 +107,11 @@ public addBasketItem($data):Plenty\Modules\Basket\Models\BasketItem
 Creates an item with the specified item data in the shopping cart.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The item's data
+|The item's data
 |===
 
 
@@ -129,16 +131,15 @@ public updateBasketItem($basketItemId, $data):void
 Updates an existing item in the shopping cart. The ID of the item and the data to be updated must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$basketItemId`
-a|The ID of the item in the shopping cart
+|The ID of the item in the shopping cart
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|The item's data
+|The item's data
 |===
 
 
@@ -158,16 +159,15 @@ public removeBasketItem($basketItemId, $dispatchAfterBasketChangedEvent = true):
 Deletes an item from the shopping cart. The ID of the item must be specified.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$basketItemId`
-a|The ID of the item in the shopping cart
+|The ID of the item in the shopping cart
 
 |link:http://php.net/bool[bool^]
 a|`$dispatchAfterBasketChangedEvent`
-a|The information if the AfterBasketChanged event should be dispatched
+|The information if the AfterBasketChanged event should be dispatched
 |===
 
 
@@ -221,12 +221,11 @@ public save($data):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|
+|
 |===
 
 
@@ -246,12 +245,11 @@ public setCouponCode($couponCode):Plenty\Modules\Basket\Models\Basket
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$couponCode`
-a|
+|
 |===
 
 
@@ -306,20 +304,19 @@ public __construct($code, $message = &quot;&quot;, $previous = null):void
 BasketCheckException constructor.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$code`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$message`
-a|
+|
 
 |
 a|`$previous`
-a|
+|
 |===
 
 
@@ -359,36 +356,35 @@ public __construct($code = 404, $message = &quot;&quot;, $previous = null, $item
 BasketItemCheckException constructor.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$code`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$message`
-a|
+|
 
 |
 a|`$previous`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$itemId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$variationId`
-a|
+|
 
 |link:http://php.net/float[float^]
 a|`$stockNet`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$additionalData`
-a|
+|
 |===
 
 
@@ -488,36 +484,35 @@ public __construct($code, $message = &quot;&quot;, $previous = null, $itemId, $v
 BasketItemQuantityCheckException constructor.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$code`
-a|
+|
 
 |link:http://php.net/string[string^]
 a|`$message`
-a|
+|
 
 |
 a|`$previous`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$itemId`
-a|
+|
 
 |link:http://php.net/int[int^]
 a|`$variationId`
-a|
+|
 
 |link:http://php.net/float[float^]
 a|`$requestedQuantity`
-a|
+|
 
 |link:http://php.net/float[float^]
 a|`$specifiedQuantity`
-a|
+|
 |===
 
 
@@ -569,101 +564,100 @@ The basket model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the shopping cart. The ID increases by 1 when a new customer enters the online store and adds an item to the shopping cart.
+    |id
+    |The ID of the shopping cart. The ID increases by 1 when a new customer enters the online store and adds an item to the shopping cart.
 |link:http://php.net/string[string^]
-    a|sessionId
-    a|The ID of the current customer session
+    |sessionId
+    |The ID of the current customer session
 |link:http://php.net/int[int^]
-    a|orderId
-    a|The ID of the order
+    |orderId
+    |The ID of the order
 |link:http://php.net/int[int^]
-    a|customerId
-    a|The ID of the customer
+    |customerId
+    |The ID of the customer
 |link:http://php.net/int[int^]
-    a|customerInvoiceAddressId
-    a|The ID of the customer's invoice address
+    |customerInvoiceAddressId
+    |The ID of the customer's invoice address
 |link:http://php.net/int[int^]
-    a|customerShippingAddressId
-    a|The ID of the customer's shipping address
+    |customerShippingAddressId
+    |The ID of the customer's shipping address
 |link:http://php.net/string[string^]
-    a|currency
-    a|The currency
+    |currency
+    |The currency
 |link:http://php.net/float[float^]
-    a|referrerId
-    a|The ID of the order referrer
+    |referrerId
+    |The ID of the order referrer
 |link:http://php.net/int[int^]
-    a|shippingCountryId
-    a|The ID of the shipping country
+    |shippingCountryId
+    |The ID of the shipping country
 |link:http://php.net/int[int^]
-    a|methodOfPaymentId
-    a|The ID of the payment method
+    |methodOfPaymentId
+    |The ID of the payment method
 |link:http://php.net/int[int^]
-    a|shippingProviderId
-    a|The ID of the shipping provider
+    |shippingProviderId
+    |The ID of the shipping provider
 |link:http://php.net/int[int^]
-    a|shippingProfileId
-    a|The ID of the shipping profile
+    |shippingProfileId
+    |The ID of the shipping profile
 |link:http://php.net/float[float^]
-    a|itemSum
-    a|The gross value of items in the shopping cart
+    |itemSum
+    |The gross value of items in the shopping cart
 |link:http://php.net/float[float^]
-    a|itemSumNet
-    a|The net value of items in the shopping cart
+    |itemSumNet
+    |The net value of items in the shopping cart
 |link:http://php.net/float[float^]
-    a|basketAmount
-    a|The total gross value of the shopping cart
+    |basketAmount
+    |The total gross value of the shopping cart
 |link:http://php.net/float[float^]
-    a|basketAmountNet
-    a|The total net value of the shopping cart
+    |basketAmountNet
+    |The total net value of the shopping cart
 |link:http://php.net/float[float^]
-    a|shippingAmount
-    a|The gross shipping costs
+    |shippingAmount
+    |The gross shipping costs
 |link:http://php.net/float[float^]
-    a|shippingAmountNet
-    a|The net shipping costs
+    |shippingAmountNet
+    |The net shipping costs
 |link:http://php.net/float[float^]
-    a|paymentAmount
-    a|The amount of the payment
+    |paymentAmount
+    |The amount of the payment
 |link:http://php.net/string[string^]
-    a|couponCode
-    a|The entered coupon code
+    |couponCode
+    |The entered coupon code
 |link:http://php.net/float[float^]
-    a|couponDiscount
-    a|The received discount due to the coupon code
+    |couponDiscount
+    |The received discount due to the coupon code
 |link:http://php.net/bool[bool^]
-    a|shippingDeleteByCoupon
-    a|Shows whether the shipping costs are subtracted due to a coupon code. Shopping carts that are free of shipping costs have the value true.
+    |shippingDeleteByCoupon
+    |Shows whether the shipping costs are subtracted due to a coupon code. Shopping carts that are free of shipping costs have the value true.
 |link:http://php.net/float[float^]
-    a|basketRebate
-    a|The discount to the shopping cart value. The discount can either be set as a discount scale for items, as a customer class discount or as a discount based on the payment method.
+    |basketRebate
+    |The discount to the shopping cart value. The discount can either be set as a discount scale for items, as a customer class discount or as a discount based on the payment method.
 |link:http://php.net/int[int^]
-    a|basketRebateType
-    a|The discount type. The following types are available:
+    |basketRebateType
+    |The discount type. The following types are available:
 <ul>
     <li>Discount scale based on net value of items = 4</li>
     <li>    Discount based on method of payment = 5</li>
 </ul>
 |link:http://php.net/int[int^]
-    a|maxFsk
-    a|The age rating
+    |maxFsk
+    |The age rating
 |link:http://php.net/int[int^]
-    a|orderTimestamp
-    a|The timestamp of the order
+    |orderTimestamp
+    |The timestamp of the order
 |link:http://php.net/string[string^]
-    a|createdAt
-    a|The date that the shopping cart was created.
+    |createdAt
+    |The date that the shopping cart was created.
 |link:http://php.net/string[string^]
-    a|updatedAt
-    a|The date that the shopping cart was updated last.
+    |updatedAt
+    |The date that the shopping cart was updated last.
 |
-    a|basketItems
-    a|
+    |basketItems
+    |
 |===
 
 
@@ -701,115 +695,114 @@ The basket item model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The ID of the item in the shopping cart
+    |id
+    |The ID of the item in the shopping cart
 |link:http://php.net/int[int^]
-    a|basketId
-    a|The ID of the shopping cart. The ID increases by 1 when a new customer enters the online store and adds an item to the shopping cart.
+    |basketId
+    |The ID of the shopping cart. The ID increases by 1 when a new customer enters the online store and adds an item to the shopping cart.
 |link:http://php.net/string[string^]
-    a|sessionId
-    a|The ID of the current customer session
+    |sessionId
+    |The ID of the current customer session
 |link:http://php.net/int[int^]
-    a|orderRowId
-    a|
+    |orderRowId
+    |
 |link:http://php.net/float[float^]
-    a|quantity
-    a|The current quantity of the item
+    |quantity
+    |The current quantity of the item
 |link:http://php.net/float[float^]
-    a|quantityOriginally
-    a|The initial quantity of the item
+    |quantityOriginally
+    |The initial quantity of the item
 |link:http://php.net/int[int^]
-    a|itemId
-    a|The ID of the item
+    |itemId
+    |The ID of the item
 |link:http://php.net/int[int^]
-    a|priceId
-    a|The ID of the item price
+    |priceId
+    |The ID of the item price
 |link:http://php.net/int[int^]
-    a|attributeValueSetId
-    a|The ID of the attribute value set
+    |attributeValueSetId
+    |The ID of the attribute value set
 |link:http://php.net/int[int^]
-    a|rebate
-    a|The discount on the item
+    |rebate
+    |The discount on the item
 |link:http://php.net/float[float^]
-    a|vat
-    a|The VAT
+    |vat
+    |The VAT
 |link:http://php.net/float[float^]
-    a|price
-    a|The item price
+    |price
+    |The item price
 |link:http://php.net/float[float^]
-    a|givenPrice
-    a|
+    |givenPrice
+    |
 |link:http://php.net/bool[bool^]
-    a|useGivenPrice
-    a|
+    |useGivenPrice
+    |
 |link:http://php.net/int[int^]
-    a|inputWidth
-    a|The width of the item
+    |inputWidth
+    |The width of the item
 |link:http://php.net/int[int^]
-    a|inputLength
-    a|The length of the item
+    |inputLength
+    |The length of the item
 |link:http://php.net/int[int^]
-    a|inputHeight
-    a|The height of the item
+    |inputHeight
+    |The height of the item
 |link:http://php.net/int[int^]
-    a|itemType
-    a|The item type
+    |itemType
+    |The item type
 |link:http://php.net/string[string^]
-    a|externalItemId
-    a|The external variation ID
+    |externalItemId
+    |The external variation ID
 |link:http://php.net/bool[bool^]
-    a|noEditByCustomer
-    a|Shows whether the item was edited by the customer
+    |noEditByCustomer
+    |Shows whether the item was edited by the customer
 |link:http://php.net/int[int^]
-    a|costCenterId
-    a|
+    |costCenterId
+    |
 |link:http://php.net/int[int^]
-    a|giftPackageForRowId
-    a|
+    |giftPackageForRowId
+    |
 |link:http://php.net/int[int^]
-    a|position
-    a|The item position
+    |position
+    |The item position
 |link:http://php.net/string[string^]
-    a|size
-    a|The item size
+    |size
+    |The item size
 |link:http://php.net/int[int^]
-    a|shippingProfileId
-    a|The ID of the shipping profile
+    |shippingProfileId
+    |The ID of the shipping profile
 |link:http://php.net/float[float^]
-    a|referrerId
-    a|The ID of the order referrer
+    |referrerId
+    |The ID of the order referrer
 |link:http://php.net/string[string^]
-    a|deliveryDate
-    a|The delivery date
+    |deliveryDate
+    |The delivery date
 |link:http://php.net/int[int^]
-    a|categoryId
-    a|The ID of the item category
+    |categoryId
+    |The ID of the item category
 |link:http://php.net/int[int^]
-    a|reservationDatetime
-    a|
+    |reservationDatetime
+    |
 |link:http://php.net/int[int^]
-    a|variationId
-    a|The ID of the item variation
+    |variationId
+    |The ID of the item variation
 |link:http://php.net/int[int^]
-    a|bundleVariationId
-    a|The ID of the item bundle type
+    |bundleVariationId
+    |The ID of the item bundle type
 |link:http://php.net/string[string^]
-    a|createdAt
-    a|The date that the shopping cart was created
+    |createdAt
+    |The date that the shopping cart was created
 |link:http://php.net/string[string^]
-    a|updatedAt
-    a|The date that the shopping cart was updated last
+    |updatedAt
+    |The date that the shopping cart was updated last
 |link:http://php.net/float[float^]
-    a|attributeTotalMarkup
-    a|attribute total markup
+    |attributeTotalMarkup
+    |attribute total markup
 |link:http://php.net/array[array^]
-    a|basketItemOrderParams
-    a|Array of BasketItemParams
+    |basketItemOrderParams
+    |Array of BasketItemParams
 |===
 
 
@@ -847,25 +840,24 @@ The basket item params model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|type
-    a|
+    |type
+    |
 |link:http://php.net/string[string^]
-    a|name
-    a|
+    |name
+    |
 |link:http://php.net/string[string^]
-    a|value
-    a|
+    |value
+    |
 |link:http://php.net/int[int^]
-    a|basketItemId
-    a|
+    |basketItemId
+    |
 |link:http://php.net/int[int^]
-    a|propertyId
-    a|
+    |propertyId
+    |
 |===
 
 
@@ -955,16 +947,15 @@ public setHasValidCoupon($hasValidCoupon, $couponValidationError = null):void
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/bool[bool^]
 a|`$hasValidCoupon`
-a|Flag that indicates if a valid coupon has been used.
+|Flag that indicates if a valid coupon has been used.
 
 |        xref:Miscellaneous.adoc#miscellaneous_exceptions_validationexception[`ValidationException`]
 a|`$couponValidationError`
-a|Validation errors indicating the reasons for an invalid coupon.
+|Validation errors indicating the reasons for an invalid coupon.
 |===
 
 
@@ -1014,12 +1005,11 @@ public setLocationId($locationId):Plenty\Modules\Basket\Events\Basket
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$locationId`
-a|The ID of the location
+|The ID of the location
 |===
 
 
@@ -1054,12 +1044,11 @@ public setInvoiceAddress($invoiceAddress):Plenty\Modules\Basket\Events\Basket
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |        xref:Account.adoc#account_models_address[`Address`]
 a|`$invoiceAddress`
-a|The invoice address
+|The invoice address
 |===
 
 
@@ -1094,12 +1083,11 @@ public setMaxFsk($maxFsk):Plenty\Modules\Basket\Events\Basket
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$maxFsk`
-a|The highest value for age restriction of an item in the shopping cart
+|The highest value for age restriction of an item in the shopping cart
 |===
 
 
@@ -1134,12 +1122,11 @@ public setShippingCosts($shippingCosts):Plenty\Modules\Basket\Events\Basket
 
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/float[float^]
 a|`$shippingCosts`
-a|The shipping costs of the shopping cart
+|The shipping costs of the shopping cart
 |===
 
 

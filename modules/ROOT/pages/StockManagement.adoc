@@ -1,3 +1,8 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
 
 
 [[stockmanagement_stock]]
@@ -39,24 +44,23 @@ public listStockByWarehouseId($warehouseId, $columns = [], $page = 1, $itemsPerP
 List stock of a warehouse
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$warehouseId`
-a|The ID of the warehouse
+|The ID of the warehouse
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The properties to be loaded
+|The properties to be loaded
 
 |link:http://php.net/int[int^]
 a|`$page`
-a|The requested page
+|The requested page
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The number of items per page
+|The number of items per page
 |===
 
 
@@ -76,20 +80,19 @@ public listStock($columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositori
 List stock
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The properties to be loaded
+|The properties to be loaded
 
 |link:http://php.net/int[int^]
 a|`$page`
-a|The requested page
+|The requested page
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The number of items per page
+|The number of items per page
 |===
 
 
@@ -109,24 +112,23 @@ public listStockByWarehouseType($type, $columns = [], $page = 1, $itemsPerPage =
 List stock by warehouse type
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$type`
-a|The type of the warehouse. Currently only 'sales' is supported.
+|The type of the warehouse. Currently only 'sales' is supported.
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The properties to be loaded
+|The properties to be loaded
 
 |link:http://php.net/int[int^]
 a|`$page`
-a|The requested page
+|The requested page
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The number of items per page
+|The number of items per page
 |===
 
 
@@ -146,16 +148,15 @@ public correctStock($warehouseId, $data):void
 Corrects stock. The ID of the warehouse has to be provided.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$warehouseId`
-a|The ID of the warehouse.
+|The ID of the warehouse.
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|The request data.
+|The request data.
 |===
 
 
@@ -175,16 +176,15 @@ public bookIncomingItems($warehouseId, $data):void
 Book incoming stock
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$warehouseId`
-a|The ID of the warehouse
+|The ID of the warehouse
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|The request data
+|The request data
 |===
 
 
@@ -204,16 +204,15 @@ public bookOutgoingItems($warehouseId, $data):void
 Book outgoing stock
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$warehouseId`
-a|The ID of the warehouse
+|The ID of the warehouse
 
 |link:http://php.net/array[array^]
 a|`$data`
-a|The request data
+|The request data
 |===
 
 
@@ -233,12 +232,11 @@ public redistributeStock($data):void
 Redistribute stock
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The request data
+|The request data
 |===
 
 
@@ -258,24 +256,23 @@ public listStockMovements($warehouseId, $columns = [], $page = 1, $itemsPerPage 
 List stock movements
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$warehouseId`
-a|The ID of the warehouse
+|The ID of the warehouse
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The properties to be loaded
+|The properties to be loaded
 
 |link:http://php.net/int[int^]
 a|`$page`
-a|The requested page
+|The requested page
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The number of items per page
+|The number of items per page
 |===
 
 
@@ -295,20 +292,19 @@ public unpackVariation($warehouseId, $variationStockIntake, $variationStockCorre
 Unpack variation
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$warehouseId`
-a|The ID of the warehouse
+|The ID of the warehouse
 
 |link:http://php.net/array[array^]
 a|`$variationStockIntake`
-a|
+|
 
 |link:http://php.net/array[array^]
 a|`$variationStockCorrection`
-a|
+|
 |===
 
 
@@ -358,12 +354,11 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -447,28 +442,27 @@ public listStockStorageLocationsByWarehouseId($warehouseId, $columns = [], $page
 List stock of all storage locations of a warehouse
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$warehouseId`
-a|The ID of the warehouse
+|The ID of the warehouse
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The properties to be loaded
+|The properties to be loaded
 
 |link:http://php.net/int[int^]
 a|`$page`
-a|The requested page
+|The requested page
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The number of items per page
+|The number of items per page
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations to load in the StockStorageLocationInstance, possible is: storageLocation
+|The relations to load in the StockStorageLocationInstance, possible is: storageLocation
 |===
 
 
@@ -488,36 +482,35 @@ public listStockStorageLocationsByVariationId($variationId, $columns = [], $page
 List stock of a variation per storage location
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$variationId`
-a|The ID of the variation.
+|The ID of the variation.
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The properties to be loaded
+|The properties to be loaded
 
 |link:http://php.net/int[int^]
 a|`$page`
-a|The requested page
+|The requested page
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|The number of items per page
+|The number of items per page
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations to load in the StockStorageLocationInstance, possible is: storageLocation
+|The relations to load in the StockStorageLocationInstance, possible is: storageLocation
 
 |link:http://php.net/string[string^]
 a|`$sortBy`
-a|[optional]
+|[optional]
 
 |link:http://php.net/string[string^]
 a|`$sortOrder`
-a|[optional, default=asc]
+|[optional, default=asc]
 |===
 
 
@@ -567,12 +560,11 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -639,49 +631,48 @@ The stock model. There are 4 different stock terms used in plentymarkets. The ph
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|itemId
-    a|The ID of the item
+    |itemId
+    |The ID of the item
 |link:http://php.net/int[int^]
-    a|variationId
-    a|The ID of the variation
+    |variationId
+    |The ID of the variation
 |link:http://php.net/int[int^]
-    a|warehouseId
-    a|The ID of the warehouse
+    |warehouseId
+    |The ID of the warehouse
 |link:http://php.net/float[float^]
-    a|stockPhysical
-    a|The physical stock
+    |stockPhysical
+    |The physical stock
 |link:http://php.net/float[float^]
-    a|reservedStock
-    a|The reserved stock
+    |reservedStock
+    |The reserved stock
 |link:http://php.net/float[float^]
-    a|reservedEbay
-    a|The stock reserved for ebay
+    |reservedEbay
+    |The stock reserved for ebay
 |link:http://php.net/float[float^]
-    a|reorderDelta
-    a|The reorder delta
+    |reorderDelta
+    |The reorder delta
 |link:http://php.net/float[float^]
-    a|stockNet
-    a|The net stock
+    |stockNet
+    |The net stock
 |link:http://php.net/int[int^]
-    a|reordered
-    a|The reordered quantity of a variation
+    |reordered
+    |The reordered quantity of a variation
 |link:http://php.net/int[int^]
-    a|warehousePriority
-    a|The priority of the warehouse
+    |warehousePriority
+    |The priority of the warehouse
 |link:http://php.net/float[float^]
-    a|reservedBundle
-    a|Reserved bundle
+    |reservedBundle
+    |Reserved bundle
 |link:http://php.net/float[float^]
-    a|averagePurchasePrice
-    a|The average purchase price
+    |averagePurchasePrice
+    |The average purchase price
 |
-    a|updatedAt
-    a|The time the stock was last updated
+    |updatedAt
+    |The time the stock was last updated
 |===
 
 
@@ -719,16 +710,15 @@ The stock batch best before date model contains all information about the batch 
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
-    a|batch
-    a|
+    |batch
+    |
 |link:http://php.net/string[string^]
-    a|bestBeforeDate
-    a|
+    |bestBeforeDate
+    |
 |===
 
 
@@ -766,43 +756,42 @@ The stock storage location model contains all information about the stock that i
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|itemId
-    a|The ID of the item
+    |itemId
+    |The ID of the item
 |link:http://php.net/int[int^]
-    a|variationId
-    a|The ID of the variation
+    |variationId
+    |The ID of the variation
 |link:http://php.net/int[int^]
-    a|storageLocationId
-    a|The ID of the storage location.
+    |storageLocationId
+    |The ID of the storage location.
 |link:http://php.net/int[int^]
-    a|warehouseId
-    a|The ID of the warehouse that the storage location is in
+    |warehouseId
+    |The ID of the warehouse that the storage location is in
 |link:http://php.net/float[float^]
-    a|quantity
-    a|The quantity stored at the storage location
+    |quantity
+    |The quantity stored at the storage location
 |link:http://php.net/string[string^]
-    a|bestBeforeDate
-    a|The best before date
+    |bestBeforeDate
+    |The best before date
 |link:http://php.net/string[string^]
-    a|batch
-    a|The batch
+    |batch
+    |The batch
 |
-    a|updatedAt
-    a|The day and time the stock was last updated
+    |updatedAt
+    |The day and time the stock was last updated
 |        xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[`StorageLocation`]
-    a|storageLocation
-    a|Deprecated! Use warehouseLocation instead
+    |storageLocation
+    |Deprecated! Use warehouseLocation instead
 |        xref:Warehouse.adoc#warehouse_models_warehouselocation[`WarehouseLocation`]
-    a|warehouseLocation
-    a|The warehouse location of the item
+    |warehouseLocation
+    |The warehouse location of the item
 |        xref:Item.adoc#item_models_variation[`Variation`]
-    a|variation
-    a|The variation of the item
+    |variation
+    |The variation of the item
 |===
 
 
@@ -862,16 +851,15 @@ public findById($warehouseId, $with = []):Plenty\Modules\StockManagement\Warehou
 Get a warehouse
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$warehouseId`
-a|The id of the warehouse.
+|The id of the warehouse.
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations to load in the warehouse instance. repairWarehouse is the only relation currently available.
+|The relations to load in the warehouse instance. repairWarehouse is the only relation currently available.
 |===
 
 
@@ -891,16 +879,15 @@ public all($with = [], $columns = []):array
 List warehouses
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations to load in the warehouse instance. repairWarehouse is the only relation currently available.
+|The relations to load in the warehouse instance. repairWarehouse is the only relation currently available.
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The columns to load in the response
+|The columns to load in the response
 |===
 
 
@@ -920,12 +907,11 @@ public create($data):Plenty\Modules\StockManagement\Warehouse\Models\Warehouse
 Create a warehouse
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The request data.
+|The request data.
 |===
 
 
@@ -947,22 +933,21 @@ The warehouse model in plentymarkets represents actual warehouses. Every warehou
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The id of the warehouse
+    |id
+    |The id of the warehouse
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the warehouse
+    |name
+    |The name of the warehouse
 |link:http://php.net/string[string^]
-    a|note
-    a|A note for this warehouse
+    |note
+    |A note for this warehouse
 |link:http://php.net/int[int^]
-    a|typeId
-    a|The id of the warehouse type. The following types are available:
+    |typeId
+    |The id of the warehouse type. The following types are available:
 <ul>
     <li>0 = Sales warehouse</li>
     <li>1 = Repair warehouse</li>
@@ -972,49 +957,49 @@ The warehouse model in plentymarkets represents actual warehouses. Every warehou
     <li>7 = Other</li>
 </ul>
 |link:http://php.net/array[array^]
-    a|allocationReferrerIds
-    a|Allocation Referrer Ids by automatic warehouse detection
+    |allocationReferrerIds
+    |Allocation Referrer Ids by automatic warehouse detection
 |link:http://php.net/int[int^]
-    a|onStockAvailability
-    a|Displayed availability of a variation if stock is available
+    |onStockAvailability
+    |Displayed availability of a variation if stock is available
 |link:http://php.net/int[int^]
-    a|outOfStockAvailability
-    a|Displayed availability of a variation if no stock is available
+    |outOfStockAvailability
+    |Displayed availability of a variation if no stock is available
 |link:http://php.net/bool[bool^]
-    a|splitByShippingProfile
-    a|Flag that indicates if for this warehouse orders are split by shipping profiles or not. <ul><li>True = Orders are split by shipping profiles</li> <li>False = Orders will not be split by shipping profiles</li></ul>
+    |splitByShippingProfile
+    |Flag that indicates if for this warehouse orders are split by shipping profiles or not. <ul><li>True = Orders are split by shipping profiles</li> <li>False = Orders will not be split by shipping profiles</li></ul>
 |link:http://php.net/string[string^]
-    a|storageLocationType
-    a|The storage location type. The following types are available: <ul><li>none</li> <li>small</li><li>medium</li> <li>large</li> <li>europallet</li></ul>
+    |storageLocationType
+    |The storage location type. The following types are available: <ul><li>none</li> <li>small</li><li>medium</li> <li>large</li> <li>europallet</li></ul>
 |link:http://php.net/int[int^]
-    a|storageLocationZone
-    a|The zone that the storage location is in
+    |storageLocationZone
+    |The zone that the storage location is in
 |link:http://php.net/int[int^]
-    a|repairWarehouseId
-    a|The id of the associated repair warehouse
+    |repairWarehouseId
+    |The id of the associated repair warehouse
 |link:http://php.net/bool[bool^]
-    a|isInventoryModeActive
-    a|Flag that indicates if the inventory mode for this warehouse is active or not. <ul><li>True = active</li> <li>False = inactive</li></ul>
+    |isInventoryModeActive
+    |Flag that indicates if the inventory mode for this warehouse is active or not. <ul><li>True = active</li> <li>False = inactive</li></ul>
 |link:http://php.net/string[string^]
-    a|logisticsType
-    a|The id of the logistics type of the warehouse. The logistics type states which service provider fulfills the storage and shipping. The following logistics types are available:
+    |logisticsType
+    |The id of the logistics type of the warehouse. The logistics type states which service provider fulfills the storage and shipping. The following logistics types are available:
 <ul>
 <li>own</li>
 <li>amazon</li>
 <li>dhlFulfillment</li>
 </ul>
 |        xref:Account.adoc#account_models_address[`Address`]
-    a|address
-    a|The address that the warehouse is located at
+    |address
+    |The address that the warehouse is located at
 |        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
-    a|repairWarehouse
-    a|All information about the repair warehouse if a repair warehouse is linked to the sales warehouse
+    |repairWarehouse
+    |All information about the repair warehouse if a repair warehouse is linked to the sales warehouse
 |link:http://php.net/string[string^]
-    a|updatedAt
-    a|The updated at timestamp of the warehouse
+    |updatedAt
+    |The updated at timestamp of the warehouse
 |link:http://php.net/string[string^]
-    a|createdAt
-    a|The created at timestamp of the warehouse
+    |createdAt
+    |The created at timestamp of the warehouse
 |===
 
 
@@ -1081,20 +1066,19 @@ public getRackById($rackId, $columns = [], $with = []):Plenty\Modules\StockManag
 Find a rack by id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$rackId`
-a|The id of the rack.
+|The id of the rack.
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The attributes to be loaded.
+|The attributes to be loaded.
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations to be loaded. Possible values are 'warehouse', 'shelves' and 'storageLocations'.
+|The relations to be loaded. Possible values are 'warehouse', 'shelves' and 'storageLocations'.
 |===
 
 
@@ -1114,24 +1098,23 @@ public findRacks($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plent
 Find racks. The results can be filtered by warehouse id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|The requested page.
+|The requested page.
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|Number of items per page.
+|Number of items per page.
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The attributes to be loaded.
+|The attributes to be loaded.
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations to be loaded. Possible values are 'warehouse', 'shelves' and 'storageLocations'.
+|The relations to be loaded. Possible values are 'warehouse', 'shelves' and 'storageLocations'.
 |===
 
 
@@ -1151,16 +1134,15 @@ public createRack($data, $warehouseId):Plenty\Modules\StockManagement\Warehouse\
 Create a new rack.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The data to create a new rack.
+|The data to create a new rack.
 
 |link:http://php.net/int[int^]
 a|`$warehouseId`
-a|The id of the warehouse the rack shall belong to.
+|The id of the warehouse the rack shall belong to.
 |===
 
 
@@ -1210,12 +1192,11 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -1306,20 +1287,19 @@ public getShelfById($shelfId, $columns = [], $with = []):Plenty\Modules\StockMan
 Find a shelf by id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$shelfId`
-a|The id of the shelf.
+|The id of the shelf.
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The attributes to be loaded.
+|The attributes to be loaded.
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations to be loaded. Possible values are 'warehouse', 'rack' and 'storageLocations'.
+|The relations to be loaded. Possible values are 'warehouse', 'rack' and 'storageLocations'.
 |===
 
 
@@ -1339,24 +1319,23 @@ public findShelves($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Ple
 Find shelves. The results can be filtered by warehouse id and rack id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|The requested page.
+|The requested page.
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|Number of items per page.
+|Number of items per page.
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The attributes to be loaded.
+|The attributes to be loaded.
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations to be loaded. Possible values are 'warehouse', 'rack' and 'storageLocations'.
+|The relations to be loaded. Possible values are 'warehouse', 'rack' and 'storageLocations'.
 |===
 
 
@@ -1376,20 +1355,19 @@ public createShelf($data, $warehouseId, $rackId):Plenty\Modules\StockManagement\
 Create a new shelf.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The data to create a new shelf.
+|The data to create a new shelf.
 
 |link:http://php.net/int[int^]
 a|`$warehouseId`
-a|The id of the warehouse the shelf shall belong to.
+|The id of the warehouse the shelf shall belong to.
 
 |link:http://php.net/int[int^]
 a|`$rackId`
-a|The id of the rack the shelf shall belong to.
+|The id of the rack the shelf shall belong to.
 |===
 
 
@@ -1439,12 +1417,11 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -1535,20 +1512,19 @@ public getStorageLocationById($storageLocationId, $columns = [], $with = []):Ple
 Find a storage location by id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$storageLocationId`
-a|The id of the storage location.
+|The id of the storage location.
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The attributes to be loaded.
+|The attributes to be loaded.
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations to be loaded. Possible values are 'warehouse', 'rack' and 'shelf'.
+|The relations to be loaded. Possible values are 'warehouse', 'rack' and 'shelf'.
 |===
 
 
@@ -1568,24 +1544,23 @@ public findStorageLocations($page = 1, $itemsPerPage = 50, $columns = [], $with 
 Find storage locations. The results can be filtered by warehouse id, rack id and shelf id.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$page`
-a|The requested page.
+|The requested page.
 
 |link:http://php.net/int[int^]
 a|`$itemsPerPage`
-a|Number of items per page.
+|Number of items per page.
 
 |link:http://php.net/array[array^]
 a|`$columns`
-a|The attributes to be loaded.
+|The attributes to be loaded.
 
 |link:http://php.net/array[array^]
 a|`$with`
-a|The relations to be loaded. Possible values are 'warehouse', 'rack' and 'shelf'.
+|The relations to be loaded. Possible values are 'warehouse', 'rack' and 'shelf'.
 |===
 
 
@@ -1605,24 +1580,23 @@ public createStorageLocation($data, $warehouseId, $rackId, $shelfId):Plenty\Modu
 Create a new storage location.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$data`
-a|The data to create a new storage location.
+|The data to create a new storage location.
 
 |link:http://php.net/int[int^]
 a|`$warehouseId`
-a|The id of the warehouse the storage location shall belong to.
+|The id of the warehouse the storage location shall belong to.
 
 |link:http://php.net/int[int^]
 a|`$rackId`
-a|The id of the rack the storage location shall belong to.
+|The id of the rack the storage location shall belong to.
 
 |link:http://php.net/int[int^]
 a|`$shelfId`
-a|The id of the shelf the storage location shall belong to.
+|The id of the shelf the storage location shall belong to.
 |===
 
 
@@ -1672,12 +1646,11 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$filters`
-a|
+|
 |===
 
 
@@ -1744,34 +1717,33 @@ The storage rack model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The id of the rack.
+    |id
+    |The id of the rack.
 |link:http://php.net/int[int^]
-    a|name
-    a|The name of the rack.
+    |name
+    |The name of the rack.
 |link:http://php.net/int[int^]
-    a|position
-    a|The position of the rack.
+    |position
+    |The position of the rack.
 |link:http://php.net/int[int^]
-    a|warehouseId
-    a|The id of the warehouse the rack belongs to.
+    |warehouseId
+    |The id of the warehouse the rack belongs to.
 |link:http://php.net/int[int^]
-    a|zone
-    a|The zone of the rack. Numbers between 1 and 20 are valid.
+    |zone
+    |The zone of the rack. Numbers between 1 and 20 are valid.
 |        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
-    a|warehouse
-    a|The warehouse this rack belongs to.
+    |warehouse
+    |The warehouse this rack belongs to.
 |
-    a|shelves
-    a|The shelves that belong to this rack.
+    |shelves
+    |The shelves that belong to this rack.
 |
-    a|storageLocations
-    a|The storage locations that belong to this rack.
+    |storageLocations
+    |The storage locations that belong to this rack.
 |===
 
 
@@ -1809,28 +1781,27 @@ The storage shelf model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The id of the shelf.
+    |id
+    |The id of the shelf.
 |link:http://php.net/int[int^]
-    a|rackId
-    a|The id of the rack the shelf belongs to.
+    |rackId
+    |The id of the rack the shelf belongs to.
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the shelf.
+    |name
+    |The name of the shelf.
 |link:http://php.net/int[int^]
-    a|level
-    a|The level of the shelf. Numbers between 1 and 25 are valid.
+    |level
+    |The level of the shelf. Numbers between 1 and 25 are valid.
 |        xref:Stockmanagement.adoc#stockmanagement_models_rack[`Rack`]
-    a|rack
-    a|The rack this shelf belongs to.
+    |rack
+    |The rack this shelf belongs to.
 |
-    a|storageLocations
-    a|The storage locations of this shelf.
+    |storageLocations
+    |The storage locations of this shelf.
 |===
 
 
@@ -1868,40 +1839,39 @@ The storage location model
 
 
 .Properties
-[cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 
 |link:http://php.net/int[int^]
-    a|id
-    a|The id of the storage location.
+    |id
+    |The id of the storage location.
 |link:http://php.net/int[int^]
-    a|warehouseId
-    a|The id of the warehouse the storage location belongs to.
+    |warehouseId
+    |The id of the warehouse the storage location belongs to.
 |link:http://php.net/int[int^]
-    a|rackId
-    a|The id of the rack the storage location belongs to.
+    |rackId
+    |The id of the rack the storage location belongs to.
 |link:http://php.net/int[int^]
-    a|shelfId
-    a|The id of the shelf the storage location belongs to.
+    |shelfId
+    |The id of the shelf the storage location belongs to.
 |link:http://php.net/string[string^]
-    a|name
-    a|The name of the storage location.
+    |name
+    |The name of the storage location.
 |link:http://php.net/int[int^]
-    a|type
-    a|The type of the storage location. Valid strings are: 'small', 'medium', 'large', 'europallet'.
+    |type
+    |The type of the storage location. Valid strings are: 'small', 'medium', 'large', 'europallet'.
 |link:http://php.net/int[int^]
-    a|position
-    a|The position of the storage location.
+    |position
+    |The position of the storage location.
 |        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
-    a|warehouse
-    a|The warehouse this storage location belongs to.
+    |warehouse
+    |The warehouse this storage location belongs to.
 |        xref:Stockmanagement.adoc#stockmanagement_models_rack[`Rack`]
-    a|rack
-    a|The rack this storage location belongs to.
+    |rack
+    |The rack this storage location belongs to.
 |        xref:Stockmanagement.adoc#stockmanagement_models_shelf[`Shelf`]
-    a|shelf
-    a|The shelf this storage location belongs to.
+    |shelf
+    |The shelf this storage location belongs to.
 |===
 
 
