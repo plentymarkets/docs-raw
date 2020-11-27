@@ -38,7 +38,7 @@ public list($boardId):Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 Lists all columns assigned to a specific board.
@@ -62,7 +62,7 @@ public create($boardId, $data):Plenty\Modules\Board\Models\BoardColumn
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_boardcolumn[BoardColumn]
+====== *Return type:*        xref:Board.adoc#board_models_boardcolumn[`BoardColumn`]
 
 
 Creates a new column and assigns it to a specific board.
@@ -90,7 +90,7 @@ public update($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardColum
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_boardcolumn[BoardColumn]
+====== *Return type:*        xref:Board.adoc#board_models_boardcolumn[`BoardColumn`]
 
 
 Updates a specific column.
@@ -122,7 +122,7 @@ public copy($boardId, $columnId):Plenty\Modules\Board\Models\BoardColumn
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_boardcolumn[BoardColumn]
+====== *Return type:*        xref:Board.adoc#board_models_boardcolumn[`BoardColumn`]
 
 
 Copies a column and all its tasks.
@@ -229,7 +229,7 @@ public list($columns = []):Illuminate\Database\Eloquent\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
 
 
 Lists all boards.
@@ -253,7 +253,7 @@ public get($boardId, $tasksPerPage = 20):Plenty\Modules\Board\Models\Board
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_board[Board]
+====== *Return type:*        xref:Board.adoc#board_models_board[`Board`]
 
 
 Returns a single board.
@@ -281,7 +281,7 @@ public create($data):Plenty\Modules\Board\Models\Board
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_board[Board]
+====== *Return type:*        xref:Board.adoc#board_models_board[`Board`]
 
 
 Creates a new board.
@@ -305,7 +305,7 @@ public update($boardId, $data):Plenty\Modules\Board\Models\Board
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_board[Board]
+====== *Return type:*        xref:Board.adoc#board_models_board[`Board`]
 
 
 Updates a board.
@@ -333,7 +333,7 @@ public copy($boardId):Plenty\Modules\Board\Models\Board
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_board[Board]
+====== *Return type:*        xref:Board.adoc#board_models_board[`Board`]
 
 
 Copies a board and all its columns.
@@ -424,7 +424,7 @@ public create($taskId, $referenceValue):Plenty\Modules\Board\Models\BoardTaskRef
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_boardtaskreference[BoardTaskReference]
+====== *Return type:*        xref:Board.adoc#board_models_boardtaskreference[`BoardTaskReference`]
 
 
 Creates a new reference to a given task. A reference may either point to a contact or to a ticket.
@@ -523,7 +523,7 @@ public list($columnId, $startAt, $tasksPerPage = 20, $columns = []):Illuminate\D
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[Collection]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
 
 
 Lists tasks for a specific column. Will return at most 20 tasks starting at defined task.
@@ -559,7 +559,7 @@ public create($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardTask
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[`BoardTask`]
 
 
 Creates a new task and assigns it to a specified column.
@@ -591,7 +591,7 @@ public copy($boardId, $columnId, $taskId):Plenty\Modules\Board\Models\BoardTask
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[`BoardTask`]
 
 
 Copies the task with all references.
@@ -623,7 +623,7 @@ public get($taskId):Plenty\Modules\Board\Models\BoardTask
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[`BoardTask`]
 
 
 Returns a task for a given ID.
@@ -647,7 +647,7 @@ public update($boardId, $columnId, $taskId, $data):Plenty\Modules\Board\Models\B
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[`BoardTask`]
 
 
 Updates a specified task.
@@ -691,7 +691,7 @@ Adds a task reference to a task object.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:Board.adoc#board_models_boardtaskreference[BoardTaskReference]
+|        xref:Board.adoc#board_models_boardtaskreference[`BoardTaskReference`]
 a|`$boardTaskReference`
 |The board task reference
 |===
@@ -715,7 +715,7 @@ Removes a task reference from a task object.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:Board.adoc#board_models_boardtaskreference[BoardTaskReference]
+|        xref:Board.adoc#board_models_boardtaskreference[`BoardTaskReference`]
 a|`$boardTaskReference`
 |The board task reference
 |===
@@ -963,7 +963,7 @@ public getBoardTask():Plenty\Modules\Board\Models\BoardTask
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[`BoardTask`]
 
 
 
@@ -997,7 +997,7 @@ public getBoardTask():Plenty\Modules\Board\Models\BoardTask
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[`BoardTask`]
 
 
 
@@ -1031,7 +1031,7 @@ public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_boardtaskreference[BoardTaskReference]
+====== *Return type:*        xref:Board.adoc#board_models_boardtaskreference[`BoardTaskReference`]
 
 
 
@@ -1065,7 +1065,7 @@ public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_boardtaskreference[BoardTaskReference]
+====== *Return type:*        xref:Board.adoc#board_models_boardtaskreference[`BoardTaskReference`]
 
 
 
@@ -1099,7 +1099,7 @@ public getBoard():Plenty\Modules\Board\Models\Board
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_board[Board]
+====== *Return type:*        xref:Board.adoc#board_models_board[`Board`]
 
 
 
@@ -1148,7 +1148,7 @@ public getBoard():Plenty\Modules\Board\Models\Board
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_board[Board]
+====== *Return type:*        xref:Board.adoc#board_models_board[`Board`]
 
 
 
@@ -1182,7 +1182,7 @@ public getBoardTask():Plenty\Modules\Board\Models\BoardTask
     
 
 
-====== *Return type:*        xref:Board.adoc#board_models_boardtask[BoardTask]
+====== *Return type:*        xref:Board.adoc#board_models_boardtask[`BoardTask`]
 
 
 
@@ -1214,7 +1214,7 @@ The board model.
 |link:http://php.net/string[string^]
     |boardName
     |The name of the board
-|        xref:Miscellaneous.adoc#miscellaneous_support_collection[Collection]
+|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
     |boardColumns
     |The columns of the board
 |link:http://php.net/int[int^]

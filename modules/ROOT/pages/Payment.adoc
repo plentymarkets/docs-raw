@@ -38,7 +38,7 @@ public createContactRelation($payment, $contact):Plenty\Modules\Payment\Models\P
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentcontactrelation[PaymentContactRelation]
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentcontactrelation[`PaymentContactRelation`]
 
 
 Creates a payment contact relation.
@@ -46,11 +46,11 @@ Creates a payment contact relation.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:Payment.adoc#payment_models_payment[Payment]
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
 a|`$payment`
 |The ID of the payment
 
-|        xref:Account.adoc#account_models_contact[Contact]
+|        xref:Account.adoc#account_models_contact[`Contact`]
 a|`$contact`
 |The ID of the contact
 |===
@@ -74,7 +74,7 @@ Deletes a payment contact relation.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:Payment.adoc#payment_models_payment[Payment]
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
 a|`$payment`
 |The ID of the payment
 |===
@@ -84,7 +84,7 @@ a|`$payment`
 [[payment_contracts_paymentmatcherrepositorycontract]]
 ==== PaymentMatcherRepositoryContract
 
-The PaymentMatcherRepositoryContract
+The PaymentMatcherRepositoryContract automatically matching payments to an order.
 
 
 
@@ -112,7 +112,7 @@ public checkMapFindAssignPayment($mopId, $data):string
 
 
 
-
+Checks and assigns payment data.
 
 .*Parameters*
 |===
@@ -140,12 +140,12 @@ public findAssignPayment($payment):void
 
 
 
-
+Finds and assigns payment data
 
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:Payment.adoc#payment_models_payment[Payment]
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
 a|`$payment`
 |
 |===
@@ -164,7 +164,7 @@ public getMatchingRatesForPayment($paymentId):array
 
 
 
-
+Gets the matching of payment data with orders.
 
 .*Parameters*
 |===
@@ -204,7 +204,7 @@ public createOrderRelation($payment, $order):Plenty\Modules\Payment\Models\Payme
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[PaymentOrderRelation]
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[`PaymentOrderRelation`]
 
 
 Creates a payment order relation.
@@ -212,11 +212,11 @@ Creates a payment order relation.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:Payment.adoc#payment_models_payment[Payment]
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
 a|`$payment`
 |The ID of the payment
 
-|        xref:Order.adoc#order_models_order[Order]
+|        xref:Order.adoc#order_models_order[`Order`]
 a|`$order`
 |The ID of the order
 |===
@@ -232,7 +232,7 @@ public findOrderRelation($payment):Plenty\Modules\Payment\Models\PaymentOrderRel
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[PaymentOrderRelation]
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[`PaymentOrderRelation`]
 
 
 Gets the payment order relation.
@@ -240,7 +240,7 @@ Gets the payment order relation.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:Payment.adoc#payment_models_payment[Payment]
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
 a|`$payment`
 |
 |===
@@ -264,7 +264,7 @@ Deletes a payment order relation.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:Payment.adoc#payment_models_payment[Payment]
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
 a|`$payment`
 |The ID of the payment
 |===
@@ -280,7 +280,7 @@ public createOrderRelationWithValidation($paymentId, $orderId):Plenty\Modules\Pa
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[PaymentOrderRelation]
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[`PaymentOrderRelation`]
 
 
 Assign a payment to an order ID if order ID is valid and order ID doesn&#039;t have a payment assigned.
@@ -498,7 +498,7 @@ public createProperty($data):Plenty\Modules\Payment\Models\PaymentProperty
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentproperty[PaymentProperty]
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentproperty[`PaymentProperty`]
 
 
 Creates a payment property.
@@ -522,7 +522,7 @@ public changeProperty($data):Plenty\Modules\Payment\Models\PaymentProperty
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentproperty[PaymentProperty]
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentproperty[`PaymentProperty`]
 
 
 Updates a payment property.
@@ -530,7 +530,7 @@ Updates a payment property.
 .*Parameters*
 |===
 |Type |Name |Description
-|        xref:Payment.adoc#payment_models_paymentproperty[PaymentProperty]
+|        xref:Payment.adoc#payment_models_paymentproperty[`PaymentProperty`]
 a|`$data`
 |
 |===
@@ -613,7 +613,7 @@ public createTypeName($data):Plenty\Modules\Payment\Models\PaymentPropertyTypeNa
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytypename[PaymentPropertyTypeName]
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytypename[`PaymentPropertyTypeName`]
 
 
 Creates a payment property type name.
@@ -764,7 +764,7 @@ public createType($data):Plenty\Modules\Payment\Models\PaymentPropertyType
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytype[PaymentPropertyType]
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytype[`PaymentPropertyType`]
 
 
 Creates a payment property type.
@@ -788,7 +788,7 @@ public changeProperty($data):Plenty\Modules\Payment\Models\PaymentPropertyType
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytype[PaymentPropertyType]
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytype[`PaymentPropertyType`]
 
 
 Updates a payment property type.
@@ -859,10 +859,10 @@ public search($page = 1, $itemsPerPage = \Plenty\Modules\Payment\Models\Payment:
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
-
+Searches for a list of payments.
 
 .*Parameters*
 |===
@@ -891,7 +891,7 @@ public getPaymentById($paymentId):Plenty\Modules\Payment\Models\Payment
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_payment[Payment]
+====== *Return type:*        xref:Payment.adoc#payment_models_payment[`Payment`]
 
 
 Gets a payment. The ID of the payment must be specified.
@@ -1143,7 +1143,7 @@ public createPayment($data):Plenty\Modules\Payment\Models\Payment
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_payment[Payment]
+====== *Return type:*        xref:Payment.adoc#payment_models_payment[`Payment`]
 
 
 Creates a payment.
@@ -1167,7 +1167,7 @@ public updatePayment($data):Plenty\Modules\Payment\Models\Payment
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_payment[Payment]
+====== *Return type:*        xref:Payment.adoc#payment_models_payment[`Payment`]
 
 
 Updates a payment.
@@ -1386,12 +1386,29 @@ public clearFilters():void
 
 Clears the filter array.
 
+[[payment_payment_exceptions]]
+===  Exceptions
+[[payment_exceptions_paymentmatcherexception]]
+==== PaymentMatcherException
+
+Class PaymentMatcherException
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\Exceptions`
+
+
+
+
+
 [[payment_payment_models]]
 ===  Models
 [[payment_models_payment]]
 ==== Payment
 
-The payment model
+The payment model representing a received payment by a payment service provider.
 
 
 
@@ -1467,16 +1484,16 @@ The payment model
 |link:http://php.net/int[int^]
     |mopId
     |The ID of the payment method
-|        xref:Payment.adoc#payment_models_payment[Payment]
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
     |parent
     |The parent payment
 |
     |children
     |
-|        xref:Payment.adoc#payment_models_paymentmethod[PaymentMethod]
+|        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
     |method
     |The payment method
-|        xref:Payment.adoc#payment_models_paymentorderrelation[PaymentOrderRelation]
+|        xref:Payment.adoc#payment_models_paymentorderrelation[`PaymentOrderRelation`]
     |order
     |
 |link:http://php.net/array[array^]
@@ -1687,10 +1704,10 @@ The payment property model
 |link:http://php.net/string[string^]
     |value
     |The value of the property type
-|        xref:Payment.adoc#payment_models_payment[Payment]
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
     |payment
     |
-|        xref:Payment.adoc#payment_models_paymentpropertytype[PaymentPropertyType]
+|        xref:Payment.adoc#payment_models_paymentpropertytype[`PaymentPropertyType`]
     |type
     |
 |===
@@ -1742,7 +1759,7 @@ The payment property type model
 |link:http://php.net/int[int^]
     |position
     |The position number of the property type
-|        xref:Payment.adoc#payment_models_paymentpropertytypename[PaymentPropertyTypeName]
+|        xref:Payment.adoc#payment_models_paymentpropertytypename[`PaymentPropertyTypeName`]
     |name
     |The name of the property type
 |===
@@ -1850,7 +1867,7 @@ public setOrderId($orderId):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the ID of the order in the checkout. The ID must be specified.
@@ -1889,7 +1906,7 @@ public setMop($mop):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the ID of the payment method. The ID must be specified.
@@ -1928,7 +1945,7 @@ public setType($type):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the content type.
@@ -1967,7 +1984,7 @@ public setValue($value):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the value of the content type.
@@ -2025,7 +2042,7 @@ public setMop($mop):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the ID of the payment method. The ID must be specified.
@@ -2064,7 +2081,7 @@ public setType($type):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the content type.
@@ -2103,7 +2120,7 @@ public setValue($value):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the value of the content type.
@@ -2142,7 +2159,7 @@ public setParams($params):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[Checkout]
+====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the parameters. The parameters must be specified.
@@ -2240,7 +2257,7 @@ public createHistory($data):Plenty\Modules\Payment\History\Models\PaymentHistory
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymenthistory[PaymentHistory]
+====== *Return type:*        xref:Payment.adoc#payment_models_paymenthistory[`PaymentHistory`]
 
 
 Creates the payment history.
@@ -2354,7 +2371,7 @@ public register($paymentKey, $paymentMethodServiceClass, $rebuildEventClassesLis
 
 
 
-
+Registers a payment method
 
 .*Parameters*
 |===
@@ -2386,7 +2403,7 @@ public isRegistered($paymentKey):bool
 
 
 
-
+Checks registered payment method
 
 .*Parameters*
 |===
@@ -2468,7 +2485,7 @@ public allPluginPaymentMethods():array
 
 
 
-
+Get all plugin payment methods.
 
 [source%nowrap, php]
 ----
@@ -2483,7 +2500,7 @@ public allOldPaymentMethods():array
 
 
 
-
+Get all old payment methods.
 
 [source%nowrap, php]
 ----
@@ -2495,7 +2512,7 @@ public findByPaymentMethodId($paymentMethodId):Plenty\Modules\Payment\Method\Mod
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[PaymentMethod]
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
 
 
 Gets a payment method. The ID of the payment method must be specified.
@@ -2543,7 +2560,7 @@ public createPaymentMethod($paymentMethodData):Plenty\Modules\Payment\Method\Mod
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[PaymentMethod]
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
 
 
 Creates a payment method.
@@ -2567,7 +2584,7 @@ public updateName($paymentMethodData):Plenty\Modules\Payment\Method\Models\Payme
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[PaymentMethod]
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
 
 
 Updates the payment method name.

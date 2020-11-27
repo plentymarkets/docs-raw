@@ -62,7 +62,7 @@ public getContentLink($contentLinkId):Plenty\Modules\ShopBuilder\Models\ContentL
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[ContentLink]
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
 
 
 Get a single connection between a content and a layout container
@@ -86,7 +86,7 @@ public createContentLink($data):Plenty\Modules\ShopBuilder\Models\ContentLink
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[ContentLink]
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
 
 
 Link a content to a layout container
@@ -110,7 +110,7 @@ public updateContentLink($contentLinkId, $data):Plenty\Modules\ShopBuilder\Model
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[ContentLink]
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
 
 
 Update a link between a content and a layout container
@@ -270,7 +270,7 @@ public searchContents($itemsPerPage = 20, $page = 1, $params = []):Plenty\Reposi
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[PaginatedResult]
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Search for contents
@@ -302,7 +302,7 @@ public getContent($contentId, $pluginSetId, $frontendLanguage = null, $versionId
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[Content]
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
 
 
 Get a single content.
@@ -406,7 +406,7 @@ public createContent($pluginSetId, $data, $frontendLanguage = null):Plenty\Modul
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[Content]
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
 
 
 Create new content. New content will not be linked to any layout container.
@@ -438,7 +438,7 @@ public updateContent($pluginSetId, $contentId, $data, $frontendLanguage = null):
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[Content]
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
 
 
 Update content.
@@ -502,7 +502,7 @@ public duplicateContent($contentId, $targetPluginSetId, $language, $containerNam
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[Content]
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
 
 
 Duplicate a content and its link
@@ -1111,7 +1111,7 @@ Content created by the shop builder. May be linked to layout containers.
 |link:http://php.net/array[array^]
     |dropzones
     |Dropzones of the content
-|        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[ContentLink]
+|        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
     |link
     |
 |===
@@ -1181,13 +1181,16 @@ Links a content from the shop builder to a layout container of the frontend plug
 |link:http://php.net/bool[bool^]
     |inherit
     |Indicates if this content should be inherited to child contents.
+|link:http://php.net/bool[bool^]
+    |invalid
+    |Indicate if the content is invalid and should be regenerated on next request.
 |
     |createdAt
     |The date when the content was created
 |
     |updatedAt
     |The date when the content was last updated
-|        xref:Shopbuilder.adoc#shopbuilder_models_content[Content]
+|        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
     |content
     |
 |===
