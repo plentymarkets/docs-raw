@@ -19149,6 +19149,346 @@ Returns this model as an array.
 [[order_search]]
 == Search
 
+[[order_search_aggregations]]
+===  Aggregations
+[[order_aggregations_statusaggregation]]
+==== StatusAggregation
+
+aggregation for order status
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Search\Aggregations`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public getName():string
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
+public getField():string
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
+public getAggregation():array
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
+public setInclude($string):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$string`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
+public process($data):array
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addAggregation($aggregation):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+a|`$aggregation`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregation\AggregationInterface
+
+----
+
+    
+
+
+====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|        xref:Cloud.adoc#cloud_source_sourceinterface[`SourceInterface`]
+a|`$source`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregation\AggregationInterface
+
+----
+
+    
+
+
+====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$rowsPerPage`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSources():void
+
+----
+
+    
+
+
+
+
+
+
+
+
+[[order_aggregations_statusaggregationprocessor]]
+==== StatusAggregationProcessor
+
+aggregation processor for order status
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Search\Aggregations`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public process($data):array
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getName():void
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
+public getDependencies():array
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
+public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
+
+----
+
+    
+
+
+====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|        xref:Cloud.adoc#cloud_mutator_mutatorinterface[`MutatorInterface`]
+a|`$mutator`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
+
+----
+
+    
+
+
+====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|        xref:Cloud.adoc#cloud_condition_conditioninterface[`ConditionInterface`]
+a|`$conditions`
+|
+|===
+
+
 [[order_search_contracts]]
 ===  Contracts
 [[order_contracts_orderelasticsearchscrollrepositorycontract]]
