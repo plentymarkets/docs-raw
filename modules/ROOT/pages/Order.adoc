@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[order_code]]
-== Code
+= Code
 
 [[order_code_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_couponcampaigncoderepositorycontract]]
-==== CouponCampaignCodeRepositoryContract
+=== CouponCampaignCodeRepositoryContract
 
 This interface allows you to get and create coupon codes.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Campaign\Code\Contracts`
 
@@ -21,7 +23,7 @@ This interface allows you to get and create coupon codes.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -33,7 +35,7 @@ public getByCode($code, $with = []):Plenty\Modules\Order\Coupon\Campaign\Code\Mo
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_couponcampaigncode[`CouponCampaignCode`]
+===== *Return type:*        xref:Order.adoc#order_models_couponcampaigncode[`CouponCampaignCode`]
 
 
 Gets a coupon code. The code string must be specified.
@@ -91,7 +93,7 @@ public create($data):Plenty\Modules\Order\Coupon\Campaign\Code\Models\CouponCamp
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_couponcampaigncode[`CouponCampaignCode`]
+===== *Return type:*        xref:Order.adoc#order_models_couponcampaigncode[`CouponCampaignCode`]
 
 
 Creates a coupon code.
@@ -137,13 +139,13 @@ a|
 
 
 [[order_contracts_couponcoderepositorycontract]]
-==== CouponCodeRepositoryContract
+=== CouponCodeRepositoryContract
 
 The CouponCodeRepositoryContract is the interface for the coupon code repository. This interface allows you to redeem coupons.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Code\Contracts`
 
@@ -152,7 +154,7 @@ The CouponCodeRepositoryContract is the interface for the coupon code repository
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -184,15 +186,15 @@ a|The coupon code to be redeemed
 
 
 [[order_code_models]]
-===  Models
+== Models
 [[order_models_couponcampaigncode]]
-==== CouponCampaignCode
+=== CouponCampaignCode
 
 The CouponCampaignCode model contains information about coupon codes. Each code belongs to one campaign only.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Campaign\Code\Models`
 
@@ -248,7 +250,7 @@ The CouponCampaignCode model contains information about coupon codes. Each code 
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -266,18 +268,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_order]]
-== Order
+= Order
 
 [[order_order_models]]
-===  Models
+== Models
 [[order_models_giftcardcode]]
-==== GiftCardCode
+=== GiftCardCode
 
 Model that holds gift card codes.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Campaign\Code\Order\Models`
 
@@ -314,7 +316,7 @@ Model that holds gift card codes.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -333,13 +335,13 @@ Returns this model as an array.
 
 
 [[order_models_couponcodeorder]]
-==== CouponCodeOrder
+=== CouponCodeOrder
 
 The CouponCodeOrder model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Code\Order\Models`
 
@@ -380,7 +382,7 @@ The following display types are available:<ul>
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -399,13 +401,13 @@ Returns this model as an array.
 
 
 [[order_models_order]]
-==== Order
+=== Order
 
-The order model.
+The model of the order.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -601,7 +603,7 @@ The order model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -620,13 +622,13 @@ Returns this model as an array.
 
 
 [[order_models_orderamount]]
-==== OrderAmount
+=== OrderAmount
 
 The order amount model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -701,7 +703,7 @@ The amount that still needs to paid is not an own parameter because the amount c
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -720,13 +722,13 @@ Returns this model as an array.
 
 
 [[order_models_orderamountvat]]
-==== OrderAmountVat
+=== OrderAmountVat
 
 The order amount vat model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -775,7 +777,7 @@ The order amount vat model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -794,13 +796,13 @@ Returns this model as an array.
 
 
 [[order_models_orderitem]]
-==== OrderItem
+=== OrderItem
 
 The order item model. Items, shipping costs, coupons, surcharges etc. are all displayed as order items.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -954,7 +956,7 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -973,13 +975,13 @@ Returns this model as an array.
 
 
 [[order_models_orderitemamount]]
-==== OrderItemAmount
+=== OrderItemAmount
 
 The order item amount model. Order item amount refers to amounts of money.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -1043,7 +1045,7 @@ The order item amount model. Order item amount refers to amounts of money.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1062,13 +1064,13 @@ Returns this model as an array.
 
 
 [[order_models_orderitemorderproperty]]
-==== OrderItemOrderProperty
+=== OrderItemOrderProperty
 
 This model contains the order properties that are assigned to order items.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -1102,7 +1104,7 @@ This model contains the order properties that are assigned to order items.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1121,13 +1123,13 @@ Returns this model as an array.
 
 
 [[order_models_orderitemtransactionsums]]
-==== OrderItemTransactionSums
+=== OrderItemTransactionSums
 
 The order item transaction sums model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -1176,7 +1178,7 @@ The order item transaction sums model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1195,13 +1197,13 @@ Returns this model as an array.
 
 
 [[order_models_orderitemtype]]
-==== OrderItemType
+=== OrderItemType
 
 The order item type model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -1242,7 +1244,7 @@ The order item type model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1261,13 +1263,13 @@ Returns this model as an array.
 
 
 [[order_models_orderitemtypename]]
-==== OrderItemTypeName
+=== OrderItemTypeName
 
 The order item type name model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -1298,7 +1300,7 @@ The order item type name model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1317,14 +1319,14 @@ Returns this model as an array.
 
 
 [[order_models_orderitemwarehouselocation]]
-==== OrderItemWarehouseLocation
+=== OrderItemWarehouseLocation
 
 &lt;b&gt;DEPRECATED&lt;/b&gt; The order item warehouse location model. Order item warehouse locations
  *                                             refer to the location of an order item, in a specific warehouse.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -1360,7 +1362,7 @@ with.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1379,13 +1381,13 @@ Returns this model as an array.
 
 
 [[order_models_orderpaymentterms]]
-==== OrderPaymentTerms
+=== OrderPaymentTerms
 
 The order payment terms model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -1428,7 +1430,7 @@ The order payment terms model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1447,13 +1449,13 @@ Returns this model as an array.
 
 
 [[order_models_orderreference]]
-==== OrderReference
+=== OrderReference
 
 The order reference model. Each OrderReference has an origin order (the most top order) and a referenced order (&#039;parent&#039; or &#039;reorder&#039;).
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -1493,7 +1495,7 @@ The order reference model. Each OrderReference has an origin order (the most top
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1512,13 +1514,13 @@ Returns this model as an array.
 
 
 [[order_models_ordertransactionsums]]
-==== OrderTransactionSums
+=== OrderTransactionSums
 
 The order transaction sums model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -1570,7 +1572,7 @@ The order transaction sums model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1589,13 +1591,13 @@ Returns this model as an array.
 
 
 [[order_models_ordertype]]
-==== OrderType
+=== OrderType
 
 The order type model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -1623,7 +1625,7 @@ The order type model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1642,13 +1644,13 @@ Returns this model as an array.
 
 
 [[order_models_ordertypename]]
-==== OrderTypeName
+=== OrderTypeName
 
 The order type name model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -1679,7 +1681,7 @@ The order type name model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1698,13 +1700,13 @@ Returns this model as an array.
 
 
 [[order_models_pricecalculationresultitem]]
-==== PriceCalculationResultItem
+=== PriceCalculationResultItem
 
 price calculation result item
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models`
 
@@ -1741,7 +1743,7 @@ price calculation result item
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1759,15 +1761,15 @@ public toArray()
 Returns this model as an array.
 
 [[order_order_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_orderamountrepositorycontract]]
-==== OrderAmountRepositoryContract
+=== OrderAmountRepositoryContract
 
 This interface allows you to get and list order amounts and their vats.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Contracts`
 
@@ -1776,7 +1778,7 @@ This interface allows you to get and list order amounts and their vats.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1788,7 +1790,7 @@ public getByOrderId($orderId, $currency = null):Plenty\Modules\Order\Models\Orde
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderamount[`OrderAmount`]
+===== *Return type:*        xref:Order.adoc#order_models_orderamount[`OrderAmount`]
 
 
 Get an order amount for an order in a currency. The ID of the order must be specified. The currency is optional. If no currency is specified, the order amount entry will be returned in the default system currency.
@@ -1817,7 +1819,7 @@ public getById($id):Plenty\Modules\Order\Models\OrderAmount
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderamount[`OrderAmount`]
+===== *Return type:*        xref:Order.adoc#order_models_orderamount[`OrderAmount`]
 
 
 Get an order amount. The ID of the order amount must be specified.
@@ -1859,13 +1861,13 @@ a|The ID of the order
 
 
 [[order_contracts_orderitemrepositorycontract]]
-==== OrderItemRepositoryContract
+=== OrderItemRepositoryContract
 
 The OrderItemRepositoryContract is the interface for the order item repository. This interface allows you to find, create and update order items. An order item can be e.g. items, surcharges and coupons. Each order item is given a unique id, which links it to a specific order.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Contracts`
 
@@ -1874,7 +1876,7 @@ The OrderItemRepositoryContract is the interface for the order item repository. 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1886,7 +1888,7 @@ public getOrderItem($orderItemId):Plenty\Modules\Order\Models\OrderItem
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitem[`OrderItem`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitem[`OrderItem`]
 
 
 Get an order item
@@ -1940,7 +1942,7 @@ public search($orderId, $page = 1, $itemsPerPage = 50, $with = [], $sortBy = &qu
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Search order items
@@ -2077,13 +2079,13 @@ Applies criteria classes to the current repository.
 
 
 [[order_contracts_orderrepositorycontract]]
-==== OrderRepositoryContract
+=== OrderRepositoryContract
 
 The OrderRepositoryContract is the interface for the order repository. This interface allows you to find, create and update orders. There are many different order types and the data returned depends on the order type.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Contracts`
 
@@ -2092,7 +2094,7 @@ The OrderRepositoryContract is the interface for the order repository. This inte
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2104,7 +2106,7 @@ public findOrderById($orderId, $with = []):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get an order
@@ -2133,7 +2135,7 @@ public findOrderByExternalOrderId($externalOrderId, $with = []):Plenty\Modules\O
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get an order by external order ID
@@ -2162,7 +2164,7 @@ public createOrder($data, $coupon = null):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Create an order
@@ -2191,7 +2193,7 @@ public updateOrder($data, $orderId):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Update an order
@@ -2245,7 +2247,7 @@ public undeleteOrder($orderId, $status):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Restore an order
@@ -2299,7 +2301,7 @@ public findSchedulerById($schedulerId):Plenty\Modules\Order\Scheduler\Models\Ord
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderscheduler[`OrderScheduler`]
+===== *Return type:*        xref:Order.adoc#order_models_orderscheduler[`OrderScheduler`]
 
 
 Get a scheduler order
@@ -2324,7 +2326,7 @@ public allOrdersByContact($contactId, $page = 1, $itemsPerPage = 50, $with = [])
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List orders of a contact
@@ -2361,7 +2363,7 @@ public allOrdersBySupplier($contactId, $page = 1, $itemsPerPage = 50, $with = []
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List orders that include one or more variations from a supplier
@@ -2398,7 +2400,7 @@ public allOrdersByContactSender($contactId, $page = 1, $itemsPerPage = 50, $with
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List orders sent by a contact
@@ -2435,7 +2437,7 @@ public getLatestOrderByContactId($contactId, $with = []):Plenty\Modules\Order\Mo
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get latest order of a contact
@@ -2465,10 +2467,10 @@ public searchOrders($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositori
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
-List orders
+Lists orders
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2552,7 +2554,7 @@ public findOrderByAccessKey($orderId, $accessKey):Plenty\Modules\Order\Models\Or
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Find the order for the given order ID and access key.
@@ -2606,7 +2608,7 @@ public completeOrder($orderId, $data = []):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Complete an incomplete order.
@@ -2635,7 +2637,7 @@ public createMultiOrderByContact($contactId):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Creates a multi order for a specific contact
@@ -2660,7 +2662,7 @@ public setOrderStatus45($orderId):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Deprecated : Set order status to 4 or 5
@@ -2746,16 +2748,16 @@ public clearFilters():void
 Clears the filter array.
 
 [[order_order_events]]
-===  Events
+== Events
 [[order_events_ordercreated]]
-==== OrderCreated
+=== OrderCreated
 
 An event class fired after a new order is created. The order type is not relevant.
  * 	At the same time also type depended events will be fired, like ReturnsCreated or CreditNoteCreated.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events`
 
@@ -2764,7 +2766,7 @@ An event class fired after a new order is created. The order type is not relevan
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2801,20 +2803,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_events_orderevent]]
-==== OrderEvent
+=== OrderEvent
 
 A base event class for all order events. Each order event expects an order instance.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events`
 
@@ -2823,7 +2825,7 @@ A base event class for all order events. Each order event expects an order insta
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2860,20 +2862,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_events_orderfullypaid]]
-==== OrderFullyPaid
+=== OrderFullyPaid
 
 An Event class fired after a payment assignment when the order is fully paid.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events`
 
@@ -2882,7 +2884,7 @@ An Event class fired after a payment assignment when the order is fully paid.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2919,20 +2921,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_events_orderoverpaid]]
-==== OrderOverpaid
+=== OrderOverpaid
 
 An event class will be fired after a payment is assigned and if the order is overpaid.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events`
 
@@ -2941,7 +2943,7 @@ An event class will be fired after a payment is assigned and if the order is ove
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2978,20 +2980,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_events_orderpaidevent]]
-==== OrderPaidEvent
+=== OrderPaidEvent
 
 A base Event class for all order paid events.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events`
 
@@ -3000,7 +3002,7 @@ A base Event class for all order paid events.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3037,20 +3039,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_events_orderpartlypaid]]
-==== OrderPartlyPaid
+=== OrderPartlyPaid
 
 An Event class fired after a payment is assigned and if the order is only partly paid.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events`
 
@@ -3059,7 +3061,7 @@ An Event class fired after a payment is assigned and if the order is only partly
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3096,14 +3098,14 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_events_orderpaymentassigned]]
-==== OrderPaymentAssigned
+=== OrderPaymentAssigned
 
 An Event class fired after a payment was assigned to an order.
  * After this event one of the following events will be fired, depending the payment status of the order:
@@ -3111,7 +3113,7 @@ An Event class fired after a payment was assigned to an order.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events`
 
@@ -3120,7 +3122,7 @@ An Event class fired after a payment was assigned to an order.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3161,7 +3163,7 @@ public getPayment():Plenty\Modules\Payment\Models\Payment
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_payment[`Payment`]
+===== *Return type:*        xref:Payment.adoc#payment_models_payment[`Payment`]
 
 
 Get the payment.
@@ -3176,20 +3178,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_events_orderprepaid]]
-==== OrderPrepaid
+=== OrderPrepaid
 
 An Event class fired after a payment is assigned and if the order is paid in advance.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events`
 
@@ -3198,7 +3200,7 @@ An Event class fired after a payment is assigned and if the order is paid in adv
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3235,21 +3237,21 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_events_subscriptionchildordercreated]]
-==== SubscriptionChildOrderCreated
+=== SubscriptionChildOrderCreated
 
 An event class fired after a new order for a subscription is created. The order type is not relevant.
  * 	At the same time also type depended events will be fired, like ReturnsCreated or CreditNoteCreated.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events`
 
@@ -3258,7 +3260,7 @@ An event class fired after a new order for a subscription is created. The order 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3295,21 +3297,21 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 [[order_order_exceptions]]
-===  Exceptions
+== Exceptions
 [[order_exceptions_orderduplicateexception]]
-==== OrderDuplicateException
+=== OrderDuplicateException
 
 Exception when duplicate order is created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Exceptions`
 
@@ -3318,7 +3320,7 @@ Exception when duplicate order is created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3426,15 +3428,15 @@ public getTraceAsString():void
 
 
 [[order_order_services]]
-===  Services
+== Services
 [[order_services_ordercreatedtypeservice]]
-==== OrderCreatedTypeService
+=== OrderCreatedTypeService
 
 This class is used as an event listener as well as a service for registering events. The class allows to register event classes to extend the OrderCreated event for custom order types.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Services`
 
@@ -3443,7 +3445,7 @@ This class is used as an event listener as well as a service for registering eve
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3529,18 +3531,18 @@ a|The name of the event class.
 
 
 [[order_campaign]]
-== Campaign
+= Campaign
 
 [[order_campaign_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_couponcampaignrepositorycontract]]
-==== CouponCampaignRepositoryContract
+=== CouponCampaignRepositoryContract
 
 This is the contract for the coupon campaign repository. It allows you to get coupon campaigns.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Campaign\Contracts`
 
@@ -3549,7 +3551,7 @@ This is the contract for the coupon campaign repository. It allows you to get co
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3561,7 +3563,7 @@ public findById($id):Plenty\Modules\Order\Coupon\Campaign\Models\CouponCampaign
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_couponcampaign[`CouponCampaign`]
+===== *Return type:*        xref:Order.adoc#order_models_couponcampaign[`CouponCampaign`]
 
 
 Get a coupon campaign
@@ -3586,7 +3588,7 @@ public findByEmailPlaceholder($placeholder):Plenty\Modules\Order\Coupon\Campaign
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_couponcampaign[`CouponCampaign`]
+===== *Return type:*        xref:Order.adoc#order_models_couponcampaign[`CouponCampaign`]
 
 
 Get the CouponCampaign model from the database by emailPlaceholder.
@@ -3611,7 +3613,7 @@ public findByCouponCode($couponCode):Plenty\Modules\Order\Coupon\Campaign\Models
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_couponcampaign[`CouponCampaign`]
+===== *Return type:*        xref:Order.adoc#order_models_couponcampaign[`CouponCampaign`]
 
 
 Get the coupon campaign of a coupon code
@@ -3661,7 +3663,7 @@ public create($data):Plenty\Modules\Order\Coupon\Campaign\Models\CouponCampaign
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_couponcampaign[`CouponCampaign`]
+===== *Return type:*        xref:Order.adoc#order_models_couponcampaign[`CouponCampaign`]
 
 
 Create a coupon campaign
@@ -3744,7 +3746,7 @@ public update($data):Plenty\Modules\Order\Coupon\Campaign\Models\CouponCampaign
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_couponcampaign[`CouponCampaign`]
+===== *Return type:*        xref:Order.adoc#order_models_couponcampaign[`CouponCampaign`]
 
 
 update a coupon campaign
@@ -3760,15 +3762,15 @@ a|
 
 
 [[order_campaign_models]]
-===  Models
+== Models
 [[order_models_couponcampaign]]
-==== CouponCampaign
+=== CouponCampaign
 
 The CouponCampaign model contains all information of a campaign.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Campaign\Models`
 
@@ -3887,7 +3889,7 @@ The redeem type interacts with the concept. Pay attention to the combination the
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3905,18 +3907,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_reference]]
-== Reference
+= Reference
 
 [[order_reference_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_couponcampaignreferencerepositorycontract]]
-==== CouponCampaignReferenceRepositoryContract
+=== CouponCampaignReferenceRepositoryContract
 
 This is the contract for the coupon campaign reference repository. It allows you to get and create coupon campaigns references.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Campaign\Reference\Contracts`
 
@@ -3925,7 +3927,7 @@ This is the contract for the coupon campaign reference repository. It allows you
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3937,7 +3939,7 @@ public findByCouponCampaignId($couponCampaignId):Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 Get a coupon campaign
@@ -3962,7 +3964,7 @@ public create($data):Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 Create a Coupon Campaign reference
@@ -3978,15 +3980,15 @@ a|
 
 
 [[order_reference_models]]
-===  Models
+== Models
 [[order_models_couponcampaignreference]]
-==== CouponCampaignReference
+=== CouponCampaignReference
 
 The CouponCampaignReference model contains all information of a campaign reference.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Campaign\Reference\Models`
 
@@ -4018,7 +4020,7 @@ The CouponCampaignReference model contains all information of a campaign referen
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4036,18 +4038,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_contact]]
-== Contact
+= Contact
 
 [[order_contact_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_couponcodecontactrepositorycontract]]
-==== CouponCodeContactRepositoryContract
+=== CouponCodeContactRepositoryContract
 
 This is the contract for the coupon codes by contacts repository. It allows you to list coupon codes redeemed by a contact as well as to create, update and delete redeemed coupon codes.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Code\Contact\Contracts`
 
@@ -4056,7 +4058,7 @@ This is the contract for the coupon codes by contacts repository. It allows you 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4068,7 +4070,7 @@ public create($data):Plenty\Modules\Order\Coupon\Code\Contact\Models\CouponCodeC
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_couponcodecontact[`CouponCodeContact`]
+===== *Return type:*        xref:Order.adoc#order_models_couponcodecontact[`CouponCodeContact`]
 
 
 Create redeemed coupons for a contact.
@@ -4093,7 +4095,7 @@ public update($contactId, $campaignId, $coupon, $data):Plenty\Modules\Order\Coup
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_couponcodecontact[`CouponCodeContact`]
+===== *Return type:*        xref:Order.adoc#order_models_couponcodecontact[`CouponCodeContact`]
 
 
 Update a redeemed coupon of a contact.
@@ -4130,7 +4132,7 @@ public find($contactId, $campaignId, $coupon):Plenty\Modules\Order\Coupon\Code\C
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_couponcodecontact[`CouponCodeContact`]
+===== *Return type:*        xref:Order.adoc#order_models_couponcodecontact[`CouponCodeContact`]
 
 
 Get a redeemed coupon for a contact
@@ -4163,7 +4165,7 @@ public findByContact($contactId, $page = 1, $itemsPerPage = 50):Plenty\Repositor
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List redeemed coupons for a contact
@@ -4196,7 +4198,7 @@ public findByCampaign($campaignId, $page = 1, $itemsPerPage = 50):Plenty\Reposit
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List redeemed coupons of a campaign.
@@ -4229,7 +4231,7 @@ public findByCoupon($coupon, $page = 1, $itemsPerPage = 50):Plenty\Repositories\
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List redeemed coupons of a coupon code
@@ -4253,15 +4255,15 @@ a|The number of coupons to be displayed per page. The default number of coupons 
 
 
 [[order_contact_models]]
-===  Models
+== Models
 [[order_models_couponcodecontact]]
-==== CouponCodeContact
+=== CouponCodeContact
 
 The CouponCodeContact model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Code\Contact\Models`
 
@@ -4298,7 +4300,7 @@ The CouponCodeContact model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4316,18 +4318,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_validation]]
-== Validation
+= Validation
 
 [[order_validation_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_couponcodevalidatorcontract]]
-==== CouponCodeValidatorContract
+=== CouponCodeValidatorContract
 
 CouponCodeValidatorContract is the interface for the coupon code validation repository. This interface provides the functionality to validate coupon data.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Code\Validation\Contracts`
 
@@ -4336,7 +4338,7 @@ CouponCodeValidatorContract is the interface for the coupon code validation repo
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4348,7 +4350,7 @@ public validate($validationData):Plenty\Modules\Order\Coupon\Code\Validation\Mod
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_couponcodevalidation[`CouponCodeValidation`]
+===== *Return type:*        xref:Order.adoc#order_models_couponcodevalidation[`CouponCodeValidation`]
 
 
 Validate a coupon code
@@ -4364,15 +4366,15 @@ a|The data to validate a coupon
 
 
 [[order_validation_models]]
-===  Models
+== Models
 [[order_models_couponcodevalidation]]
-==== CouponCodeValidation
+=== CouponCodeValidation
 
 The CouponCodeValidation data model contains all data necessary for validating a coupon.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Code\Validation\Models`
 
@@ -4442,7 +4444,7 @@ The CouponCodeValidation data model contains all data necessary for validating a
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4461,13 +4463,13 @@ Returns this model as an array.
 
 
 [[order_models_couponcodevalidationitem]]
-==== CouponCodeValidationItem
+=== CouponCodeValidationItem
 
 The CouponCodeValidationItem model contains all item data needed for validating whether the coupon can be redeemed for these items or not.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Coupon\Code\Validation\Models`
 
@@ -4501,7 +4503,7 @@ The CouponCodeValidationItem model contains all item data needed for validating 
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4519,18 +4521,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_currency]]
-== Currency
+= Currency
 
 [[order_currency_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_currencyconversionsettingsrepositorycontract]]
-==== CurrencyConversionSettingsRepositoryContract
+=== CurrencyConversionSettingsRepositoryContract
 
 Provides methods for currency conversion data.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Currency\Contracts`
 
@@ -4539,7 +4541,7 @@ Provides methods for currency conversion data.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4558,13 +4560,13 @@ Gets the currency conversion setting.
 
 
 [[order_contracts_currencyrepositorycontract]]
-==== CurrencyRepositoryContract
+=== CurrencyRepositoryContract
 
 Provides methods for currency data.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Currency\Contracts`
 
@@ -4573,7 +4575,7 @@ Provides methods for currency data.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4585,7 +4587,7 @@ public getCurrency($currencyIso, $columns = [], $with = []):Plenty\Modules\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_currency[`Currency`]
+===== *Return type:*        xref:Order.adoc#order_models_currency[`Currency`]
 
 
 Get a currency
@@ -4676,7 +4678,7 @@ public getCountryCurrency($countryId, $columns = [], $with = []):Plenty\Modules\
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_currency[`Currency`]
+===== *Return type:*        xref:Order.adoc#order_models_currency[`Currency`]
 
 
 Get a currency for a country
@@ -4709,7 +4711,7 @@ public getExchangeRate($currencyIso):Plenty\Modules\Order\Currency\Models\Curren
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_currencyexchangerate[`CurrencyExchangeRate`]
+===== *Return type:*        xref:Order.adoc#order_models_currencyexchangerate[`CurrencyExchangeRate`]
 
 
 Get the exchange rate for a currency
@@ -4775,15 +4777,15 @@ a|The currency ISO 4217 code, e.g. "EUR".
 
 
 [[order_currency_models]]
-===  Models
+== Models
 [[order_models_currency]]
-==== Currency
+=== Currency
 
 The currency model. The model includes information like the ISO 4217 code and the related currency symbols as well as the countries that a currency is used in.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Currency\Models`
 
@@ -4823,7 +4825,7 @@ The currency model. The model includes information like the ISO 4217 code and th
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4842,13 +4844,13 @@ Returns this model as an array.
 
 
 [[order_models_currencycountryrelation]]
-==== CurrencyCountryRelation
+=== CurrencyCountryRelation
 
 The CurrencyCountryRelation model indicates which currency is related to which country.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Currency\Models`
 
@@ -4879,7 +4881,7 @@ The CurrencyCountryRelation model indicates which currency is related to which c
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4898,13 +4900,13 @@ Returns this model as an array.
 
 
 [[order_models_currencyexchangerate]]
-==== CurrencyExchangeRate
+=== CurrencyExchangeRate
 
 The currency exchange rate model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Currency\Models`
 
@@ -4923,7 +4925,7 @@ The currency exchange rate model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4942,13 +4944,13 @@ Returns this model as an array.
 
 
 [[order_models_currencyname]]
-==== CurrencyName
+=== CurrencyName
 
 The currency name model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Currency\Models`
 
@@ -4979,7 +4981,7 @@ The currency name model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4997,18 +4999,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_idea]]
-== Idea
+= Idea
 
 [[order_idea_models]]
-===  Models
+== Models
 [[order_models_export]]
-==== Export
+=== Export
 
 The export model for IDEA exports.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Export\Pos\Idea\Models`
 
@@ -5054,7 +5056,7 @@ The export model for IDEA exports.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5072,18 +5074,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_method]]
-== Method
+= Method
 
 [[order_method_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_paymentmethodrepositorycontract]]
-==== PaymentMethodRepositoryContract
+=== PaymentMethodRepositoryContract
 
 Repository Contract for PaymentMethod
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Payment\Method\Contracts`
 
@@ -5092,7 +5094,7 @@ Repository Contract for PaymentMethod
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5128,15 +5130,15 @@ a|
 
 
 [[order_method_models]]
-===  Models
+== Models
 [[order_models_paymentmethod]]
-==== PaymentMethod
+=== PaymentMethod
 
 The payment method model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Payment\Method\Models`
 
@@ -5212,7 +5214,7 @@ The payment method model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5231,13 +5233,13 @@ Returns this model as an array.
 
 
 [[order_models_paymentmethodinformation]]
-==== PaymentMethodInformation
+=== PaymentMethodInformation
 
 The payment method information model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Payment\Method\Models`
 
@@ -5277,7 +5279,7 @@ The payment method information model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5295,18 +5297,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_pdf]]
-== Pdf
+= Pdf
 
 [[order_pdf_events]]
-===  Events
+== Events
 [[order_events_orderpdfgenerationevent]]
-==== OrderPdfGenerationEvent
+=== OrderPdfGenerationEvent
 
 The OrderPdfGenerationEvent triggered before a pdf is generated for an order.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Pdf\Events`
 
@@ -5315,7 +5317,7 @@ The OrderPdfGenerationEvent triggered before a pdf is generated for an order.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5327,7 +5329,7 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the
@@ -5357,7 +5359,7 @@ public addOrderPdfGeneration($orderPdfGeneration):Plenty\Modules\Order\Pdf\Event
     
 
 
-====== *Return type:*        xref:Order.adoc#order_pdf_events[`Events`]
+===== *Return type:*        xref:Order.adoc#order_pdf_events[`Events`]
 
 
 
@@ -5373,15 +5375,15 @@ a|
 
 
 [[order_pdf_models]]
-===  Models
+== Models
 [[order_models_orderpdfgeneration]]
-==== OrderPdfGeneration
+=== OrderPdfGeneration
 
 The OrderPdfGeneration Model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Pdf\Models`
 
@@ -5418,7 +5420,7 @@ The OrderPdfGeneration Model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5436,18 +5438,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_referrer]]
-== Referrer
+= Referrer
 
 [[order_referrer_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_orderreferrerrepositorycontract]]
-==== OrderReferrerRepositoryContract
+=== OrderReferrerRepositoryContract
 
 Provides methods for processing order referrers. An order referrer indicates where a purchase was made originally. 
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Referrer\Contracts`
 
@@ -5456,7 +5458,7 @@ Provides methods for processing order referrers. An order referrer indicates whe
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5493,7 +5495,7 @@ public create($data, $parentReferrerId = null):Plenty\Modules\Order\Referrer\Mod
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderreferrer[`OrderReferrer`]
+===== *Return type:*        xref:Order.adoc#order_models_orderreferrer[`OrderReferrer`]
 
 
 Create an order referrer
@@ -5522,7 +5524,7 @@ public update($data, $referrerId):Plenty\Modules\Order\Referrer\Models\OrderRefe
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderreferrer[`OrderReferrer`]
+===== *Return type:*        xref:Order.adoc#order_models_orderreferrer[`OrderReferrer`]
 
 
 Update an order referrer
@@ -5551,7 +5553,7 @@ public getReferrerById($referrerId, $columns = []):Plenty\Modules\Order\Referrer
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderreferrer[`OrderReferrer`]
+===== *Return type:*        xref:Order.adoc#order_models_orderreferrer[`OrderReferrer`]
 
 
 Get an order referrer
@@ -5626,15 +5628,15 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [[order_referrer_models]]
-===  Models
+== Models
 [[order_models_orderreferrer]]
-==== OrderReferrer
+=== OrderReferrer
 
 The order referrer model. An order referrer shows where a purchase was originally made.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Referrer\Models`
 
@@ -5675,7 +5677,7 @@ The order referrer model. An order referrer shows where a purchase was originall
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5693,18 +5695,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_scheduler]]
-== Scheduler
+= Scheduler
 
 [[order_scheduler_models]]
-===  Models
+== Models
 [[order_models_orderscheduler]]
-==== OrderScheduler
+=== OrderScheduler
 
 The legacy order model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Scheduler\Models`
 
@@ -5750,7 +5752,7 @@ The legacy order model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5768,18 +5770,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_serialnumber]]
-== SerialNumber
+= SerialNumber
 
 [[order_serialnumber_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_orderserialnumberrepositorycontract]]
-==== OrderSerialNumberRepositoryContract
+=== OrderSerialNumberRepositoryContract
 
 List serial numbers for orders
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\SerialNumber\Contracts`
 
@@ -5788,7 +5790,7 @@ List serial numbers for orders
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5841,15 +5843,15 @@ a|The ID of the order item
 
 
 [[order_serialnumber_models]]
-===  Models
+== Models
 [[order_models_orderserialnumber]]
-==== OrderSerialNumber
+=== OrderSerialNumber
 
 The order serial number model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\SerialNumber\Models`
 
@@ -5880,7 +5882,7 @@ The order serial number model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5898,18 +5900,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_shipping]]
-== Shipping
+= Shipping
 
 [[order_shipping_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_eucountrycodesservicecontract]]
-==== EUCountryCodesServiceContract
+=== EUCountryCodesServiceContract
 
 The EUCountryCodesServiceContract model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Contracts`
 
@@ -5918,12 +5920,12 @@ The EUCountryCodesServiceContract model
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public isEUCountry($countryId):bool
+public isEUCountry($countryId, $date = null):bool
 
 ----
 
@@ -5942,13 +5944,17 @@ public isEUCountry($countryId):bool
 |link:http://php.net/int[int^]
 a|`$countryId`
 a|
+
+|link:http://php.net/string[string^]
+a|`$date`
+a|[optional, default=null, date in format "0000-00-00"/"Y-m-d"]
 |===
 
 
 [source%nowrap, php]
 ----
 
-public hasCommunityTax($countryId):bool
+public hasCommunityTax($countryId, $date = null):bool
 
 ----
 
@@ -5967,13 +5973,17 @@ public hasCommunityTax($countryId):bool
 |link:http://php.net/int[int^]
 a|`$countryId`
 a|
+
+|link:http://php.net/string[string^]
+a|`$date`
+a|[optional, default=null, date in format "0000-00-00"/"Y-m-d"]
 |===
 
 
 [source%nowrap, php]
 ----
 
-public getTaxTerritory($countryId):int
+public getTaxTerritory($countryId, $date = null):int
 
 ----
 
@@ -5992,13 +6002,17 @@ public getTaxTerritory($countryId):int
 |link:http://php.net/int[int^]
 a|`$countryId`
 a|
+
+|link:http://php.net/string[string^]
+a|`$date`
+a|[optional, default=null, date in format "0000-00-00"/"Y-m-d"]
 |===
 
 
 [source%nowrap, php]
 ----
 
-public hasCommunityToll($countryId):bool
+public hasCommunityToll($countryId, $date = null):bool
 
 ----
 
@@ -6017,13 +6031,17 @@ public hasCommunityToll($countryId):bool
 |link:http://php.net/int[int^]
 a|`$countryId`
 a|
+
+|link:http://php.net/string[string^]
+a|`$date`
+a|[optional, default=null, date in format "0000-00-00"/"Y-m-d"]
 |===
 
 
 [source%nowrap, php]
 ----
 
-public getTollTerritory($countryId):int
+public getTollTerritory($countryId, $date = null):int
 
 ----
 
@@ -6042,13 +6060,17 @@ public getTollTerritory($countryId):int
 |link:http://php.net/int[int^]
 a|`$countryId`
 a|
+
+|link:http://php.net/string[string^]
+a|`$date`
+a|[optional, default=null, date in format "0000-00-00"/"Y-m-d"]
 |===
 
 
 [source%nowrap, php]
 ----
 
-public isExportDelivery($countryId, $merchandCountryId = null):bool
+public isExportDelivery($countryId, $merchandCountryId = null, $date = null):bool
 
 ----
 
@@ -6071,18 +6093,22 @@ a|
 |link:http://php.net/int[int^]
 a|`$merchandCountryId`
 a|
+
+|link:http://php.net/string[string^]
+a|`$date`
+a|[optional, default=null, date in format "0000-00-00"/"Y-m-d"]
 |===
 
 
 
 [[order_contracts_parcelservicepresetrepositorycontract]]
-==== ParcelServicePresetRepositoryContract
+=== ParcelServicePresetRepositoryContract
 
 The ParcelServicePresetRepositoryContract is the interface for the shipping profile repository. This interface allows to get a shipping profile by the ID or list all shipping profiles.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Contracts`
 
@@ -6091,7 +6117,7 @@ The ParcelServicePresetRepositoryContract is the interface for the shipping prof
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -6140,7 +6166,7 @@ public getPresetById($presetId, $columns = []):Plenty\Modules\Order\Shipping\Par
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_parcelservicepreset[`ParcelServicePreset`]
+===== *Return type:*        xref:Order.adoc#order_models_parcelservicepreset[`ParcelServicePreset`]
 
 
 Gets a shipping profile. The ID of the shipping profile must be specified.
@@ -6256,7 +6282,7 @@ public create($data):Plenty\Modules\Order\Shipping\ParcelService\Models\ParcelSe
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_parcelservicepreset[`ParcelServicePreset`]
+===== *Return type:*        xref:Order.adoc#order_models_parcelservicepreset[`ParcelServicePreset`]
 
 
 Creates an parcel service preset
@@ -6281,7 +6307,7 @@ public update($data, $id):Plenty\Modules\Order\Shipping\ParcelService\Models\Par
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_parcelservicepreset[`ParcelServicePreset`]
+===== *Return type:*        xref:Order.adoc#order_models_parcelservicepreset[`ParcelServicePreset`]
 
 
 Update an parcel service preset
@@ -6310,7 +6336,7 @@ public delete($id):Plenty\Modules\Order\Shipping\ParcelService\Models\ParcelServ
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_parcelservicepreset[`ParcelServicePreset`]
+===== *Return type:*        xref:Order.adoc#order_models_parcelservicepreset[`ParcelServicePreset`]
 
 
 Delete a parcel service preset
@@ -6426,16 +6452,16 @@ public clearFilters():void
 Clears the filter array.
 
 [[order_shipping_events]]
-===  Events
+== Events
 [[order_events_aftershippingcostcalculated]]
-==== AfterShippingCostCalculated
+=== AfterShippingCostCalculated
 
 An event class fired after the shipping calculation is done. Listeners can add fees to the shipping costs.
  * The shipping provider type name is mandatory. The ID of the order is optional.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Events`
 
@@ -6444,7 +6470,7 @@ An event class fired after the shipping calculation is done. Listeners can add f
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -6534,7 +6560,7 @@ public addAdditionalFee($additionalFee):Plenty\Modules\Order\Shipping\Events\Aft
     
 
 
-====== *Return type:*        xref:Order.adoc#order_events_aftershippingcostcalculated[`AfterShippingCostCalculated`]
+===== *Return type:*        xref:Order.adoc#order_events_aftershippingcostcalculated[`AfterShippingCostCalculated`]
 
 
 Set the additional fee.
@@ -6590,15 +6616,15 @@ a|The ID of the shipping profile
 
 
 [[order_shipping_models]]
-===  Models
+== Models
 [[order_models_defaultshipping]]
-==== DefaultShipping
+=== DefaultShipping
 
 The Default Shipping model is used to define the standard referrer, the standard shipping region and the payment methods. 
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Models`
 
@@ -6635,7 +6661,7 @@ The Default Shipping model is used to define the standard referrer, the standard
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -6653,18 +6679,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_countries]]
-== Countries
+= Countries
 
 [[order_countries_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_countryrepositorycontract]]
-==== CountryRepositoryContract
+=== CountryRepositoryContract
 
 Repository for Country
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Countries\Contracts`
 
@@ -6673,7 +6699,7 @@ Repository for Country
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -6714,7 +6740,7 @@ public getCountryById($countryId):Plenty\Modules\Order\Shipping\Countries\Models
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_country[`Country`]
+===== *Return type:*        xref:Order.adoc#order_models_country[`Country`]
 
 
 Gets a country
@@ -6739,7 +6765,7 @@ public getCountriesList($active, $with):Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 Get countries
@@ -6768,7 +6794,7 @@ public getActiveCountriesList():Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 Get active countries
@@ -6837,7 +6863,7 @@ public getCountryStateByIso($countryId, $isoCode):Plenty\Modules\Order\Shipping\
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_countrystate[`CountryState`]
+===== *Return type:*        xref:Order.adoc#order_models_countrystate[`CountryState`]
 
 
 Gets a country state
@@ -6866,7 +6892,7 @@ public activateCountry($countryId):Plenty\Modules\Order\Shipping\Countries\Model
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_country[`Country`]
+===== *Return type:*        xref:Order.adoc#order_models_country[`Country`]
 
 
 Activates a country
@@ -6891,7 +6917,7 @@ public deactivateCountry($countryId):Plenty\Modules\Order\Shipping\Countries\Mod
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_country[`Country`]
+===== *Return type:*        xref:Order.adoc#order_models_country[`Country`]
 
 
 Deactivates a country
@@ -6907,15 +6933,15 @@ a|
 
 
 [[order_countries_models]]
-===  Models
+== Models
 [[order_models_country]]
-==== Country
+=== Country
 
 The country model representing a country with allocated states and a list of names in different languages.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Countries\Models`
 
@@ -6964,7 +6990,7 @@ The country model representing a country with allocated states and a list of nam
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -6983,13 +7009,13 @@ Returns this model as an array.
 
 
 [[order_models_countryname]]
-==== CountryName
+=== CountryName
 
 The CountryName model containing a name of a country in a specified language.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Countries\Models`
 
@@ -7014,7 +7040,7 @@ The CountryName model containing a name of a country in a specified language.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -7033,13 +7059,13 @@ Returns this model as an array.
 
 
 [[order_models_countrystate]]
-==== CountryState
+=== CountryState
 
 The CountryState model representing a state which belongs to a country specified by the countryId.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Countries\Models`
 
@@ -7070,7 +7096,7 @@ The CountryState model representing a state which belongs to a country specified
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -7088,18 +7114,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_exportdocuments]]
-== ExportDocuments
+= ExportDocuments
 
 [[order_exportdocuments_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_exportdocumentscontract]]
-==== ExportDocumentsContract
+=== ExportDocumentsContract
 
-The ExportDocumentsContract
+Repository for Export Documents
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ExportDocuments\Contracts`
 
@@ -7108,7 +7134,7 @@ The ExportDocumentsContract
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -7120,7 +7146,7 @@ public listExportDocumentsByOrderId($orderId):Plenty\Modules\Order\Shipping\Expo
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_exportdocument[`ExportDocument`]
+===== *Return type:*        xref:Order.adoc#order_models_exportdocument[`ExportDocument`]
 
 
 List export documents by order ID
@@ -7136,15 +7162,15 @@ a|
 
 
 [[order_exportdocuments_models]]
-===  Models
+== Models
 [[order_models_exportdocument]]
-==== ExportDocument
+=== ExportDocument
 
 The Export Document model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ExportDocuments\Models`
 
@@ -7172,7 +7198,7 @@ The Export Document model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -7190,18 +7216,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_information]]
-== Information
+= Information
 
 [[order_information_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_shippinginformationrepositorycontract]]
-==== ShippingInformationRepositoryContract
+=== ShippingInformationRepositoryContract
 
 The ShippingInformationRepositoryContract is the interface for the shipping information repository. This interface allows to get shipping information by order ID, create new shipping information or update shipping information.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Information\Contracts`
 
@@ -7210,7 +7236,7 @@ The ShippingInformationRepositoryContract is the interface for the shipping info
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -7222,7 +7248,7 @@ public getShippingInformationByOrderId($orderId):Plenty\Modules\Order\Shipping\I
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_shippinginformation[`ShippingInformation`]
+===== *Return type:*        xref:Order.adoc#order_models_shippinginformation[`ShippingInformation`]
 
 
 Get Shipping Information by an order ID
@@ -7297,7 +7323,7 @@ public saveShippingInformation($data):Plenty\Modules\Order\Shipping\Information\
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_shippinginformation[`ShippingInformation`]
+===== *Return type:*        xref:Order.adoc#order_models_shippinginformation[`ShippingInformation`]
 
 
 Create Shipping Information
@@ -7322,7 +7348,7 @@ public updateAdditionalData($data, $orderId):Plenty\Modules\Order\Shipping\Infor
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_shippinginformation[`ShippingInformation`]
+===== *Return type:*        xref:Order.adoc#order_models_shippinginformation[`ShippingInformation`]
 
 
 Update Additional Data of Shipping Information by Order ID
@@ -7351,7 +7377,7 @@ public updateShippingStatus($data, $orderId):Plenty\Modules\Order\Shipping\Infor
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_shippinginformation[`ShippingInformation`]
+===== *Return type:*        xref:Order.adoc#order_models_shippinginformation[`ShippingInformation`]
 
 
 Update Shipping Status of Shipping Information by Order ID
@@ -7371,15 +7397,15 @@ a|The ID of the order.
 
 
 [[order_information_models]]
-===  Models
+== Models
 [[order_models_shippinginformation]]
-==== ShippingInformation
+=== ShippingInformation
 
-ShippingInformationModel
+The ShippingInformationModel represents additional shipping information for an order.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Information\Models`
 
@@ -7419,7 +7445,7 @@ ShippingInformationModel
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -7437,18 +7463,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_package]]
-== Package
+= Package
 
 [[order_package_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_ordershippingpackageitemsrepositorycontract]]
-==== OrderShippingPackageItemsRepositoryContract
+=== OrderShippingPackageItemsRepositoryContract
 
 Create and get items in packages from order
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Package\Contracts`
 
@@ -7457,7 +7483,7 @@ Create and get items in packages from order
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -7469,7 +7495,7 @@ public getItemsForPackage($packageId, $page = 1, $perPage = 1000, $sortBy = &quo
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_ordershippingpackageitems[`OrderShippingPackageItems`]
+===== *Return type:*        xref:Order.adoc#order_models_ordershippingpackageitems[`OrderShippingPackageItems`]
 
 
 Get items for a package
@@ -7510,7 +7536,7 @@ public getItemsInPackagesPalletsPaginated($orderId, $page = 1, $perPage = 1000, 
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_ordershippingpackageitems[`OrderShippingPackageItems`]
+===== *Return type:*        xref:Order.adoc#order_models_ordershippingpackageitems[`OrderShippingPackageItems`]
 
 
 Get all the packed items in the packages in the pallets in the order
@@ -7551,7 +7577,7 @@ public getItemsFromPackagesForOrder($orderId):Plenty\Modules\Order\Shipping\Pack
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_ordershippingpackageitems[`OrderShippingPackageItems`]
+===== *Return type:*        xref:Order.adoc#order_models_ordershippingpackageitems[`OrderShippingPackageItems`]
 
 
 Get items for an order
@@ -7764,7 +7790,7 @@ This method will not be supported in the future. Please refrain from using it as
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[`DeleteResponse`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[`DeleteResponse`]
 
 
 Delete a variation of an item from package in order
@@ -7789,13 +7815,13 @@ a|The ID of the variation
 
 
 [[order_contracts_ordershippingpackagerepositorycontract]]
-==== OrderShippingPackageRepositoryContract
+=== OrderShippingPackageRepositoryContract
 
 Create, get, update and delete order shipping packages.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Package\Contracts`
 
@@ -7804,7 +7830,7 @@ Create, get, update and delete order shipping packages.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -7816,7 +7842,7 @@ public getOrderShippingPackage($orderShippingPackageId, $columns = [], $orderId 
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_ordershippingpackage[`OrderShippingPackage`]
+===== *Return type:*        xref:Order.adoc#order_models_ordershippingpackage[`OrderShippingPackage`]
 
 
 Get an order shipping package
@@ -7882,7 +7908,7 @@ public createOrderShippingPackage($orderId, $data):Plenty\Modules\Order\Shipping
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_ordershippingpackage[`OrderShippingPackage`]
+===== *Return type:*        xref:Order.adoc#order_models_ordershippingpackage[`OrderShippingPackage`]
 
 
 Create an order shipping package
@@ -7911,7 +7937,7 @@ public updateOrderShippingPackage($orderShippingPackageId, $data):Plenty\Modules
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_ordershippingpackage[`OrderShippingPackage`]
+===== *Return type:*        xref:Order.adoc#order_models_ordershippingpackage[`OrderShippingPackage`]
 
 
 Update an order shipping package
@@ -8018,15 +8044,15 @@ a|
 
 
 [[order_package_models]]
-===  Models
+== Models
 [[order_models_ordershippingpackage]]
-==== OrderShippingPackage
+=== OrderShippingPackage
 
 The order shipping package model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Package\Models`
 
@@ -8131,7 +8157,7 @@ The order shipping package model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8150,13 +8176,13 @@ Returns this model as an array.
 
 
 [[order_models_ordershippingpackageitems]]
-==== OrderShippingPackageItems
+=== OrderShippingPackageItems
 
 The relation between package, item and variation model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Package\Models`
 
@@ -8187,7 +8213,7 @@ The relation between package, item and variation model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8205,18 +8231,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_packagetype]]
-== PackageType
+= PackageType
 
 [[order_packagetype_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_shippingpackagetyperepositorycontract]]
-==== ShippingPackageTypeRepositoryContract
+=== ShippingPackageTypeRepositoryContract
 
 The ShippingPackageTypeRepositoryContract is the interface for the shipping package type repository. This interface allows to list all shipping package types or to get a shipping package type by the ID.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\PackageType\Contracts`
 
@@ -8225,7 +8251,7 @@ The ShippingPackageTypeRepositoryContract is the interface for the shipping pack
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8237,7 +8263,7 @@ public findShippingPackageTypeById($shippingPackageTypeId):Plenty\Modules\Order\
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_shippingpackagetype[`ShippingPackageType`]
+===== *Return type:*        xref:Order.adoc#order_models_shippingpackagetype[`ShippingPackageType`]
 
 
 Gets a shipping package type. The ID of the shipping package type must be specified.
@@ -8268,15 +8294,15 @@ public listShippingPackageTypes():array
 Lists shipping packages types.
 
 [[order_packagetype_models]]
-===  Models
+== Models
 [[order_models_shippingpackagetype]]
-==== ShippingPackageType
+=== ShippingPackageType
 
 The shipping package type model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\PackageType\Models`
 
@@ -8319,7 +8345,7 @@ The shipping package type model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8337,18 +8363,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_pallet]]
-== Pallet
+= Pallet
 
 [[order_pallet_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_ordershippingpalletrepositorycontract]]
-==== OrderShippingPalletRepositoryContract
+=== OrderShippingPalletRepositoryContract
 
 Create, get, update and delete order shipping pallet.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Pallet\Contracts`
 
@@ -8357,7 +8383,7 @@ Create, get, update and delete order shipping pallet.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8369,7 +8395,7 @@ public getOrderShippingPallet($orderShippingPalletId):Plenty\Modules\Order\Shipp
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_ordershippingpallet[`OrderShippingPallet`]
+===== *Return type:*        xref:Order.adoc#order_models_ordershippingpallet[`OrderShippingPallet`]
 
 
 Get an order shipping pallet
@@ -8452,7 +8478,7 @@ public createOrderShippingPallet($data):Plenty\Modules\Order\Shipping\Pallet\Mod
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_ordershippingpallet[`OrderShippingPallet`]
+===== *Return type:*        xref:Order.adoc#order_models_ordershippingpallet[`OrderShippingPallet`]
 
 
 Create an order shipping pallet
@@ -8477,7 +8503,7 @@ public updateOrderShippingPallet($orderShippingPalletId, $data):Plenty\Modules\O
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_ordershippingpallet[`OrderShippingPallet`]
+===== *Return type:*        xref:Order.adoc#order_models_ordershippingpallet[`OrderShippingPallet`]
 
 
 Update an order shipping pallet
@@ -8506,7 +8532,7 @@ public deleteOrderShippingPallet($orderShippingPalletId):Plenty\Modules\Order\Sh
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_ordershippingpallet[`OrderShippingPallet`]
+===== *Return type:*        xref:Order.adoc#order_models_ordershippingpallet[`OrderShippingPallet`]
 
 
 Delete an order shipping pallet
@@ -8622,15 +8648,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[order_pallet_models]]
-===  Models
+== Models
 [[order_models_ordershippingpallet]]
-==== OrderShippingPallet
+=== OrderShippingPallet
 
 The order shipping pallet model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Pallet\Models`
 
@@ -8676,7 +8702,7 @@ The order shipping pallet model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8694,18 +8720,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_parcelservice]]
-== ParcelService
+= ParcelService
 
 [[order_parcelservice_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_parcelserviceconstraintrepositorycontract]]
-==== ParcelServiceConstraintRepositoryContract
+=== ParcelServiceConstraintRepositoryContract
 
 The ParcelServiceConstraintRepositoryContract is the interface for the parcel service constraint type repository.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelService\Contracts`
 
@@ -8714,7 +8740,7 @@ The ParcelServiceConstraintRepositoryContract is the interface for the parcel se
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8729,13 +8755,13 @@ public create($data):void
 
 
 
-
+Create a new parcel service constraint entry
 
 .*Parameters*
 [cols="10%,30%,60%"]
 |===
 |Type |Name |Description
-|
+|link:http://php.net/array[array^]
 a|`$data`
 a|
 |===
@@ -8754,13 +8780,13 @@ public getById($id):void
 
 
 
-
+Fetch parcel service constraint by ID
 
 .*Parameters*
 [cols="10%,30%,60%"]
 |===
 |Type |Name |Description
-|
+|link:http://php.net/int[int^]
 a|`$id`
 a|
 |===
@@ -8779,28 +8805,28 @@ public delete($id):void
 
 
 
-
+Delete a parcel service constant by ID
 
 .*Parameters*
 [cols="10%,30%,60%"]
 |===
 |Type |Name |Description
-|
+|link:http://php.net/int[int^]
 a|`$id`
 a|
 |===
 
 
 [[order_parcelservice_models]]
-===  Models
+== Models
 [[order_models_parcelservice]]
-==== ParcelService
+=== ParcelService
 
 The Parcel Service Model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelService\Models`
 
@@ -8843,7 +8869,7 @@ The Parcel Service Model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8862,13 +8888,13 @@ Returns this model as an array.
 
 
 [[order_models_parcelserviceconstraint]]
-==== ParcelServiceConstraint
+=== ParcelServiceConstraint
 
 The Parcel Service Constraint Model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelService\Models`
 
@@ -8902,7 +8928,7 @@ The Parcel Service Constraint Model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8921,13 +8947,13 @@ Returns this model as an array.
 
 
 [[order_models_parcelservicename]]
-==== ParcelServiceName
+=== ParcelServiceName
 
 The Parcel Service Name Model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelService\Models`
 
@@ -8952,7 +8978,7 @@ The Parcel Service Name Model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8971,13 +8997,13 @@ Returns this model as an array.
 
 
 [[order_models_parcelservicepreset]]
-==== ParcelServicePreset
+=== ParcelServicePreset
 
 The Parcel Service Preset Model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelService\Models`
 
@@ -9092,7 +9118,7 @@ The Parcel Service Preset Model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9111,13 +9137,13 @@ Returns this model as an array.
 
 
 [[order_models_parcelservicepresetname]]
-==== ParcelServicePresetName
+=== ParcelServicePresetName
 
 The Parcel Service Preset Name Model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelService\Models`
 
@@ -9142,7 +9168,7 @@ The Parcel Service Preset Name Model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9160,18 +9186,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_parcelserviceregion]]
-== ParcelServiceRegion
+= ParcelServiceRegion
 
 [[order_parcelserviceregion_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_parcelserviceregionnamerepositorycontract]]
-==== ParcelServiceRegionNameRepositoryContract
+=== ParcelServiceRegionNameRepositoryContract
 
 Get parcel service region name
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelServiceRegion\Contracts`
 
@@ -9180,7 +9206,7 @@ Get parcel service region name
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9192,7 +9218,7 @@ public create($data):Plenty\Modules\Order\Shipping\ParcelServiceRegion\Models\Pa
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_parcelserviceregionname[`ParcelServiceRegionName`]
+===== *Return type:*        xref:Order.adoc#order_models_parcelserviceregionname[`ParcelServiceRegionName`]
 
 
 Creates a Region
@@ -9224,13 +9250,13 @@ Return all the regions
 
 
 [[order_contracts_parcelserviceregionrepositorycontract]]
-==== ParcelServiceRegionRepositoryContract
+=== ParcelServiceRegionRepositoryContract
 
 Get parcel service region
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelServiceRegion\Contracts`
 
@@ -9239,7 +9265,7 @@ Get parcel service region
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9251,7 +9277,7 @@ public create($data):Plenty\Modules\Order\Shipping\ParcelServiceRegion\Models\Pa
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_parcelserviceregion[`ParcelServiceRegion`]
+===== *Return type:*        xref:Order.adoc#order_models_parcelserviceregion[`ParcelServiceRegion`]
 
 
 Creates a ParcelServiceRegion
@@ -9301,7 +9327,7 @@ public getParcelServiceRegion($parcelServiceRegionId, $columns = []):Plenty\Modu
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_parcelserviceregion[`ParcelServiceRegion`]
+===== *Return type:*        xref:Order.adoc#order_models_parcelserviceregion[`ParcelServiceRegion`]
 
 
 Get a parcel service region
@@ -9350,15 +9376,15 @@ a|
 
 
 [[order_parcelserviceregion_models]]
-===  Models
+== Models
 [[order_models_parcelserviceregion]]
-==== ParcelServiceRegion
+=== ParcelServiceRegion
 
 The parcel service region model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelServiceRegion\Models`
 
@@ -9389,7 +9415,7 @@ The parcel service region model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9408,13 +9434,13 @@ Returns this model as an array.
 
 
 [[order_models_parcelserviceregionname]]
-==== ParcelServiceRegionName
+=== ParcelServiceRegionName
 
 The parcel service region name model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ParcelServiceRegion\Models`
 
@@ -9436,7 +9462,7 @@ The parcel service region name model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9454,18 +9480,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_returns]]
-== Returns
+= Returns
 
 [[order_returns_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_returnsrepositorycontract]]
-==== ReturnsRepositoryContract
+=== ReturnsRepositoryContract
 
 The ReturnsRepositoryContract is the interface for the order returns repository. This interface allows to register, assign to order and list order returns.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Contracts`
 
@@ -9474,7 +9500,7 @@ The ReturnsRepositoryContract is the interface for the order returns repository.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9486,10 +9512,10 @@ public registerReturns($pluginName, $orderIds):Plenty\Modules\Order\Shipping\Ret
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_registerreturnsresult[`RegisterReturnsResult`]
+===== *Return type:*        xref:Order.adoc#order_models_registerreturnsresult[`RegisterReturnsResult`]
 
 
-
+Register a new return
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9515,10 +9541,10 @@ public getReturnsLabelById($labelId, $with):Plenty\Repositories\Models\Paginated
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
-
+Get return label by ID
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9544,10 +9570,10 @@ public assignLabel2Return($orderId, $returnsId):Plenty\Modules\Order\Shipping\Re
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderreturns[`OrderReturns`]
+===== *Return type:*        xref:Order.adoc#order_models_orderreturns[`OrderReturns`]
 
 
-
+Assign return label to order
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9573,10 +9599,10 @@ public getOrderReturns($orderId, $with = [], $page = 1, $itemsPerPage = 50):Plen
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
-
+Get a paginated list of all order returns
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9602,13 +9628,13 @@ a|
 
 
 [[order_contracts_returnsserviceproviderrepositorycontract]]
-==== ReturnsServiceProviderRepositoryContract
+=== ReturnsServiceProviderRepositoryContract
 
 The ReturnsServiceProviderRepositoryContract is the interface for the returns service provider repository. This interface allows to list returns service providers.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Contracts`
 
@@ -9617,7 +9643,7 @@ The ReturnsServiceProviderRepositoryContract is the interface for the returns se
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9629,10 +9655,10 @@ public getReturnsServiceProviderList($columns = [], $page = 1, $itemsPerPage = 5
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
-
+Get a paginated list of returns services providers
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9670,10 +9696,10 @@ public findById($returnsServiceProviderId):Plenty\Modules\Order\Shipping\Returns
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_returnsserviceprovider[`ReturnsServiceProvider`]
+===== *Return type:*        xref:Order.adoc#order_models_returnsserviceprovider[`ReturnsServiceProvider`]
 
 
-
+Find a returns service provider by ID
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9698,7 +9724,7 @@ public findByName($returnsServiceProviderName):array
 
 
 
-
+Find a returns service provider by name
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9720,10 +9746,10 @@ public saveReturnsServiceProvider($pluginName, $returnProviderAlias = null):Plen
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_returnsserviceprovider[`ReturnsServiceProvider`]
+===== *Return type:*        xref:Order.adoc#order_models_returnsserviceprovider[`ReturnsServiceProvider`]
 
 
-
+Save a returns service provider
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9749,10 +9775,10 @@ public getReturnsServiceProvider($orderId):Plenty\Modules\Order\Shipping\Returns
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_returnsserviceprovider[`ReturnsServiceProvider`]
+===== *Return type:*        xref:Order.adoc#order_models_returnsserviceprovider[`ReturnsServiceProvider`]
 
 
-
+Get the returns service provider for an order
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9780,15 +9806,15 @@ public pluginList():void
 
 
 [[order_returns_models]]
-===  Models
+== Models
 [[order_models_failedregisterorderreturns]]
-==== FailedRegisterOrderReturns
+=== FailedRegisterOrderReturns
 
 The FailedRegisterOrderReturns model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Models`
 
@@ -9797,7 +9823,7 @@ The FailedRegisterOrderReturns model.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9812,7 +9838,7 @@ public addErrorMessage($errorMessage):void
 
 
 
-
+Add a new error message
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9837,7 +9863,7 @@ public setOrderId($orderId):void
 
 
 
-
+Set the order ID variable
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9862,7 +9888,7 @@ public addException($exception):void
 
 
 
-
+Add a new exception object
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9959,7 +9985,7 @@ public setAttribute($key, $value):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set a given attribute on the model.
@@ -10211,7 +10237,7 @@ public fill($attributes):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Fill the model with an array of attributes.
@@ -10276,7 +10302,7 @@ public fillable($fillable):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set the fillable attributes for the model.
@@ -10351,13 +10377,13 @@ a|
 
 
 [[order_models_orderreturns]]
-==== OrderReturns
+=== OrderReturns
 
 The model for OrderReturns
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Models`
 
@@ -10400,7 +10426,7 @@ The model for OrderReturns
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -10419,13 +10445,13 @@ Returns this model as an array.
 
 
 [[order_models_registerorderreturnsresponse]]
-==== RegisterOrderReturnsResponse
+=== RegisterOrderReturnsResponse
 
 The RegisterOrderReturnsResponse model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Models`
 
@@ -10434,7 +10460,7 @@ The RegisterOrderReturnsResponse model.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -10449,7 +10475,7 @@ public addSuccessfullyRegisteredReturns($successfullyRegisteredReturn):void
 
 
 
-
+Add successfully registered order returns
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10474,7 +10500,7 @@ public addFailedRegisterOrderReturns($failedRegisterOrderReturn):void
 
 
 
-
+Add failed registered order returns
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10571,7 +10597,7 @@ public setAttribute($key, $value):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set a given attribute on the model.
@@ -10823,7 +10849,7 @@ public fill($attributes):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Fill the model with an array of attributes.
@@ -10888,7 +10914,7 @@ public fillable($fillable):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set the fillable attributes for the model.
@@ -10963,13 +10989,13 @@ a|
 
 
 [[order_models_registerreturnsresult]]
-==== RegisterReturnsResult
+=== RegisterReturnsResult
 
 The model for RegisterReturnsResult
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Models`
 
@@ -10991,7 +11017,7 @@ The model for RegisterReturnsResult
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -11010,13 +11036,13 @@ Returns this model as an array.
 
 
 [[order_models_returnsserviceprovider]]
-==== ReturnsServiceProvider
+=== ReturnsServiceProvider
 
-ReturnsServiceProvider
+The ReturnsServiceProvider model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Models`
 
@@ -11047,7 +11073,7 @@ ReturnsServiceProvider
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -11066,13 +11092,13 @@ Returns this model as an array.
 
 
 [[order_models_successfullyregisteredorderreturns]]
-==== SuccessfullyRegisteredOrderReturns
+=== SuccessfullyRegisteredOrderReturns
 
 The model for SuccessfullyRegisteredOrderReturns
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Models`
 
@@ -11081,7 +11107,7 @@ The model for SuccessfullyRegisteredOrderReturns
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -11096,7 +11122,7 @@ public setOrderId($orderId):void
 
 
 
-
+Set orderId variable
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -11121,7 +11147,7 @@ public setFileName($fileName):void
 
 
 
-
+Set fileName variable
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -11146,7 +11172,7 @@ public setExternalNumber($externalNumber):void
 
 
 
-
+Set externalNumber variable
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -11171,7 +11197,7 @@ public setExternalData($externalData):void
 
 
 
-
+Set externalData variable
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -11196,7 +11222,7 @@ public setAvailableUntil($availiableUntil):void
 
 
 
-
+Set availableUntil variable
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -11221,7 +11247,7 @@ public setLabelBase64($labelBase64):void
 
 
 
-
+Set labelBase64 variable
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -11246,7 +11272,7 @@ public setReturnsOrderId($returnsOrderId):void
 
 
 
-
+Set returnsOrderId variable
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -11343,7 +11369,7 @@ public setAttribute($key, $value):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set a given attribute on the model.
@@ -11595,7 +11621,7 @@ public fill($attributes):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Fill the model with an array of attributes.
@@ -11660,7 +11686,7 @@ public fillable($fillable):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set the fillable attributes for the model.
@@ -11734,15 +11760,15 @@ a|
 
 
 [[order_returns_services]]
-===  Services
+== Services
 [[order_services_registerreturnsservice]]
-==== RegisterReturnsService
+=== RegisterReturnsService
 
 The RegisterReturnsService class offers the possibility to register returns, get returns label and persist returns label.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Services`
 
@@ -11751,7 +11777,7 @@ The RegisterReturnsService class offers the possibility to register returns, get
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -11763,10 +11789,10 @@ public registerReturns($pluginName, $orderIds):Plenty\Modules\Order\Shipping\Ret
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_registerreturnsresult[`RegisterReturnsResult`]
+===== *Return type:*        xref:Order.adoc#order_models_registerreturnsresult[`RegisterReturnsResult`]
 
 
-
+Register returns for each order ID
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -11792,10 +11818,10 @@ public persistLabel($labelBase64, $returns):Plenty\Modules\Document\Models\Docum
     
 
 
-====== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
+===== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
 
 
-
+Save the return label in base64
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -11824,7 +11850,7 @@ public getLabel($orderReturns):string
 
 
 
-
+Get the return label
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -11838,13 +11864,13 @@ a|
 
 
 [[order_services_returnsserviceproviderservice]]
-==== ReturnsServiceProviderService
+=== ReturnsServiceProviderService
 
 The ReturnsServiceProviderService class offers the possibility to register a returns service provider class and method that can be called by plentymarkets returns controllers.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Services`
 
@@ -11853,7 +11879,7 @@ The ReturnsServiceProviderService class offers the possibility to register a ret
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -11902,7 +11928,7 @@ public getReturnsServiceProviderEntryById($providerId):Plenty\Modules\Order\Ship
     
 
 
-====== *Return type:*        xref:Order.adoc#order_entries_returnsserviceproviderentry[`ReturnsServiceProviderEntry`]
+===== *Return type:*        xref:Order.adoc#order_entries_returnsserviceproviderentry[`ReturnsServiceProviderEntry`]
 
 
 Get returns service provider by id
@@ -11947,18 +11973,18 @@ a|
 
 
 [[order_services]]
-== Services
+= Services
 
 [[order_services_entries]]
-===  Entries
+== Entries
 [[order_entries_returnsserviceproviderentry]]
-==== ReturnsServiceProviderEntry
+=== ReturnsServiceProviderEntry
 
 The returns provider entry contains all information needed to use module returns in plentymarkets returns .
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\Returns\Services\Entries`
 
@@ -11967,7 +11993,7 @@ The returns provider entry contains all information needed to use module returns
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -11982,7 +12008,7 @@ public getReturnsServiceProviderLabel():string
 
 
 
-Get the
+Get the returns service provider label
 
 [source%nowrap, php]
 ----
@@ -11994,10 +12020,10 @@ public setReturnsServiceProviderLabel($returnsServiceProviderLabel):Plenty\Modul
     
 
 
-====== *Return type:*        xref:Order.adoc#order_entries_returnsserviceproviderentry[`ReturnsServiceProviderEntry`]
+===== *Return type:*        xref:Order.adoc#order_entries_returnsserviceproviderentry[`ReturnsServiceProviderEntry`]
 
 
-Set the
+Set the returns service provider label
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -12022,7 +12048,7 @@ public getReturnsServiceProviderCode():string
 
 
 
-Get the
+Get the return service provider code
 
 [source%nowrap, php]
 ----
@@ -12034,10 +12060,10 @@ public setReturnsServiceProviderCode($returnsServiceProviderCode):Plenty\Modules
     
 
 
-====== *Return type:*        xref:Order.adoc#order_entries_returnsserviceproviderentry[`ReturnsServiceProviderEntry`]
+===== *Return type:*        xref:Order.adoc#order_entries_returnsserviceproviderentry[`ReturnsServiceProviderEntry`]
 
 
-Set the
+Set the returns service provider code
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -12062,7 +12088,7 @@ public getReturnsServiceProviderClass($methodName):string
 
 
 
-
+Get the returns service provider class
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -12087,7 +12113,7 @@ public methodExists($methodName):bool
 
 
 
-
+Check if method exists in returnsServiceProviderClass
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -12112,7 +12138,7 @@ public getProviderId():int
 
 
 
-Get the
+Get the provider ID
 
 [source%nowrap, php]
 ----
@@ -12127,17 +12153,17 @@ public getUseParentOrderId():bool
 
 
 
-
+Get setting for using parent order ID
 
 
 [[order_entries_shippingserviceproviderentry]]
-==== ShippingServiceProviderEntry
+=== ShippingServiceProviderEntry
 
 The shipping provider entry contains all information needed to use module shipping in plentymarkets shipping .
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ServiceProvider\Services\Entries`
 
@@ -12146,7 +12172,7 @@ The shipping provider entry contains all information needed to use module shippi
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -12161,7 +12187,7 @@ public getShippingServiceProviderClasses():array
 
 
 
-Get the
+Get the shipping service provider classes
 
 [source%nowrap, php]
 ----
@@ -12176,7 +12202,7 @@ public getShippingServiceProviderNames():void
 
 
 
-Get the
+Get the shipping service provider names
 
 [source%nowrap, php]
 ----
@@ -12188,10 +12214,10 @@ public setShippingServiceProviderNames($shippingServiceProviderNames):Plenty\Mod
     
 
 
-====== *Return type:*        xref:Order.adoc#order_entries_shippingserviceproviderentry[`ShippingServiceProviderEntry`]
+===== *Return type:*        xref:Order.adoc#order_entries_shippingserviceproviderentry[`ShippingServiceProviderEntry`]
 
 
-Set the
+Set the shipping service provider names
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -12216,7 +12242,7 @@ public getShippingServiceProviderCode():string
 
 
 
-Get the
+Get the shipping service provider code
 
 [source%nowrap, php]
 ----
@@ -12228,10 +12254,10 @@ public setShippingServiceProviderCode($shippingServiceProviderCode):Plenty\Modul
     
 
 
-====== *Return type:*        xref:Order.adoc#order_entries_shippingserviceproviderentry[`ShippingServiceProviderEntry`]
+===== *Return type:*        xref:Order.adoc#order_entries_shippingserviceproviderentry[`ShippingServiceProviderEntry`]
 
 
-Set the
+Set the shipping service provider entry
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -12256,7 +12282,7 @@ public getShippingServiceProviderClass($methodName):string
 
 
 
-
+Get the shipping service provider class
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -12281,7 +12307,7 @@ public methodExists($methodName):bool
 
 
 
-
+Check if method exists in shipping service provider classes
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -12294,18 +12320,18 @@ a|
 
 
 [[order_serviceprovider]]
-== ServiceProvider
+= ServiceProvider
 
 [[order_serviceprovider_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_shippingserviceproviderpluginrepositorycontract]]
-==== ShippingServiceProviderPluginRepositoryContract
+=== ShippingServiceProviderPluginRepositoryContract
 
 The ShippingServiceProviderPluginRepositoryContract is the interface for the shipping service provider plugin repository. This interface allows to list shipping service provider plugins.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ServiceProvider\Contracts`
 
@@ -12314,7 +12340,7 @@ The ShippingServiceProviderPluginRepositoryContract is the interface for the shi
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -12329,7 +12355,7 @@ public plugins():void
 
 
 
-
+Return list of shipping service provider plugins
 
 [source%nowrap, php]
 ----
@@ -12344,7 +12370,7 @@ public filteredPluginList($filter):void
 
 
 
-
+Return list of shipping service provider plugins using a filter
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -12358,13 +12384,13 @@ a|Filter that restricts the search result
 
 
 [[order_contracts_shippingserviceproviderrepositorycontract]]
-==== ShippingServiceProviderRepositoryContract
+=== ShippingServiceProviderRepositoryContract
 
 The ShippingServiceProviderRepositoryContract is the interface for the shipping service provider repository. This interface allows to list shipping service providers.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ServiceProvider\Contracts`
 
@@ -12373,7 +12399,7 @@ The ShippingServiceProviderRepositoryContract is the interface for the shipping 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -12426,7 +12452,7 @@ public find($shippingServiceProviderId):Plenty\Modules\Order\Shipping\ServicePro
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_shippingserviceprovider[`ShippingServiceProvider`]
+===== *Return type:*        xref:Order.adoc#order_models_shippingserviceprovider[`ShippingServiceProvider`]
 
 
 Gets a shipping service provider. The ID of the shipping service provider must be specified.
@@ -12451,7 +12477,7 @@ public findByName($shippingServiceProviderName):Plenty\Modules\Order\Shipping\Se
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_shippingserviceprovider[`ShippingServiceProvider`]
+===== *Return type:*        xref:Order.adoc#order_models_shippingserviceprovider[`ShippingServiceProvider`]
 
 
 Gets a shipping service provider. The name of the shipping service provider must be specified.
@@ -12476,7 +12502,7 @@ public saveShippingServiceProvider($pluginName, $shippingServiceProviderName, $i
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_shippingserviceprovider[`ShippingServiceProvider`]
+===== *Return type:*        xref:Order.adoc#order_models_shippingserviceprovider[`ShippingServiceProvider`]
 
 
 Creates a shipping service provider or updates it if already existing
@@ -12530,15 +12556,15 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [[order_serviceprovider_models]]
-===  Models
+== Models
 [[order_models_failedregistershipment]]
-==== FailedRegisterShipment
+=== FailedRegisterShipment
 
-FailedRegisterShipment model.
+The FailedRegisterShipment model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ServiceProvider\Models`
 
@@ -12547,7 +12573,7 @@ FailedRegisterShipment model.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -12709,7 +12735,7 @@ public setAttribute($key, $value):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set a given attribute on the model.
@@ -12961,7 +12987,7 @@ public fill($attributes):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Fill the model with an array of attributes.
@@ -13026,7 +13052,7 @@ public fillable($fillable):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set the fillable attributes for the model.
@@ -13101,13 +13127,13 @@ a|
 
 
 [[order_models_registershipmentresponse]]
-==== RegisterShipmentResponse
+=== RegisterShipmentResponse
 
-RegisterShipmentResponse model.
+The RegisterShipmentResponse model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ServiceProvider\Models`
 
@@ -13116,7 +13142,7 @@ RegisterShipmentResponse model.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13253,7 +13279,7 @@ public setAttribute($key, $value):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set a given attribute on the model.
@@ -13505,7 +13531,7 @@ public fill($attributes):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Fill the model with an array of attributes.
@@ -13570,7 +13596,7 @@ public fillable($fillable):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set the fillable attributes for the model.
@@ -13645,13 +13671,13 @@ a|
 
 
 [[order_models_shippingserviceprovider]]
-==== ShippingServiceProvider
+=== ShippingServiceProvider
 
 The service provider model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ServiceProvider\Models`
 
@@ -13685,7 +13711,7 @@ The service provider model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13704,13 +13730,13 @@ Returns this model as an array.
 
 
 [[order_models_successfullyregisteredshipment]]
-==== SuccessfullyRegisteredShipment
+=== SuccessfullyRegisteredShipment
 
-SuccessfullyRegisteredShipment model.
+The SuccessfullyRegisteredShipment model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ServiceProvider\Models`
 
@@ -13719,7 +13745,7 @@ SuccessfullyRegisteredShipment model.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13906,7 +13932,7 @@ public setAttribute($key, $value):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set a given attribute on the model.
@@ -14158,7 +14184,7 @@ public fill($attributes):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Fill the model with an array of attributes.
@@ -14223,7 +14249,7 @@ public fillable($fillable):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set the fillable attributes for the model.
@@ -14297,15 +14323,15 @@ a|
 
 
 [[order_serviceprovider_services]]
-===  Services
+== Services
 [[order_services_shippingserviceproviderservice]]
-==== ShippingServiceProviderService
+=== ShippingServiceProviderService
 
 The ShippingServiceProviderService class offers the possibility to register a shipping provider class and method that can be called by plentymarkets shipping controllers.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Shipping\ServiceProvider\Services`
 
@@ -14314,7 +14340,7 @@ The ShippingServiceProviderService class offers the possibility to register a sh
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -14329,7 +14355,7 @@ public registerShippingProvider($shippingServiceProviderCode, $shippingServicePr
 
 
 
-
+Registers a new shipping provider
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -14362,7 +14388,7 @@ public hasShippingServiceProviderMethod($shippingServiceProviderCode, $methodNam
 
 
 
-
+Check if shipping service provider has specified method
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -14379,18 +14405,18 @@ a|
 
 
 [[order_address]]
-== Address
+= Address
 
 [[order_address_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_orderaddressrepositorycontract]]
-==== OrderAddressRepositoryContract
+=== OrderAddressRepositoryContract
 
 The OrderAddressRepositoryContract is the interface for the order address repository. This interface allows you to get, create, update and delete addresses of an order.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Address\Contracts`
 
@@ -14399,7 +14425,7 @@ The OrderAddressRepositoryContract is the interface for the order address reposi
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -14411,7 +14437,7 @@ public findAddressByType($orderId, $typeId):Plenty\Modules\Account\Address\Model
     
 
 
-====== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
+===== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
 
 
 Get an address of an order
@@ -14440,7 +14466,7 @@ public findSchedulerAddressByType($schedulerId, $typeId):Plenty\Modules\Account\
     
 
 
-====== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
+===== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
 
 
 Get an address of a scheduler order
@@ -14469,7 +14495,7 @@ public createOrderAddress($data, $orderId, $typeId = \Plenty\Modules\Account\Add
     
 
 
-====== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
+===== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
 
 
 Create an address for an order
@@ -14512,7 +14538,7 @@ public updateOrderAddress($data, $addressId, $orderId, $typeId):Plenty\Modules\A
     
 
 
-====== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
+===== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
 
 
 Update an address of an order
@@ -14559,7 +14585,7 @@ public getAddress($addressId, $with = []):Plenty\Modules\Account\Address\Models\
     
 
 
-====== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
+===== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
 
 
 Get an address
@@ -14588,7 +14614,7 @@ public findAddresses($orderId):Illuminate\Database\Eloquent\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
 
 
 List addresses of an an order
@@ -14613,7 +14639,7 @@ public getAddressOfOrder($addressId, $orderId, $typeId):Plenty\Modules\Account\A
     
 
 
-====== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
+===== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
 
 
 Get an address of an order
@@ -14656,7 +14682,7 @@ public getAddressOfScheduler($addressId, $schedulerId, $typeId):Plenty\Modules\A
     
 
 
-====== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
+===== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
 
 
 Get an address of a scheduler
@@ -14819,18 +14845,18 @@ a|The ID of the address type. The types available are:
 
 
 [[order_booking]]
-== Booking
+= Booking
 
 [[order_booking_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_orderbookingrepositorycontract]]
-==== OrderBookingRepositoryContract
+=== OrderBookingRepositoryContract
 
 Book orders, order items and order item transactions.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Booking\Contracts`
 
@@ -14839,7 +14865,7 @@ Book orders, order items and order item transactions.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -14851,7 +14877,7 @@ public bookOrder($orderId, $deliveryNoteNumber = null):Plenty\Modules\Order\Book
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderbooking[`OrderBooking`]
+===== *Return type:*        xref:Order.adoc#order_models_orderbooking[`OrderBooking`]
 
 
 Book an order
@@ -14880,7 +14906,7 @@ public bookOrderItem($orderItemId, $deliveryNoteNumber = null):Plenty\Modules\Or
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderbooking[`OrderBooking`]
+===== *Return type:*        xref:Order.adoc#order_models_orderbooking[`OrderBooking`]
 
 
 Book an order item
@@ -14909,7 +14935,7 @@ public bookOrderItemTransactions($transactionIds, $warehouseId = null, $delivery
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderbooking[`OrderBooking`]
+===== *Return type:*        xref:Order.adoc#order_models_orderbooking[`OrderBooking`]
 
 
 Book order item transactions
@@ -14933,15 +14959,15 @@ a|
 
 
 [[order_booking_models]]
-===  Models
+== Models
 [[order_models_orderbooking]]
-==== OrderBooking
+=== OrderBooking
 
 The order booking model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Booking\Models`
 
@@ -14963,7 +14989,7 @@ The order booking model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -14981,18 +15007,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_contactwish]]
-== ContactWish
+= ContactWish
 
 [[order_contactwish_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_contactwishrepositorycontract]]
-==== ContactWishRepositoryContract
+=== ContactWishRepositoryContract
 
 This interface allows you to get and create contact wishes.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\ContactWish\Contracts`
 
@@ -15001,7 +15027,7 @@ This interface allows you to get and create contact wishes.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -15013,7 +15039,7 @@ public getContactWish($orderId):Plenty\Modules\Order\ContactWish\Models\ContactW
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_contactwish[`ContactWish`]
+===== *Return type:*        xref:Order.adoc#order_models_contactwish[`ContactWish`]
 
 
 Get the contact wish
@@ -15038,7 +15064,7 @@ public createContactWish($orderId, $text):Plenty\Modules\Order\ContactWish\Model
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_contactwish[`ContactWish`]
+===== *Return type:*        xref:Order.adoc#order_models_contactwish[`ContactWish`]
 
 
 Create a contact wish
@@ -15058,15 +15084,15 @@ a|The text for the contact wish
 
 
 [[order_contactwish_models]]
-===  Models
+== Models
 [[order_models_contactwish]]
-==== ContactWish
+=== ContactWish
 
 The contact wish model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\ContactWish\Models`
 
@@ -15085,7 +15111,7 @@ The contact wish model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -15103,18 +15129,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_date]]
-== Date
+= Date
 
 [[order_date_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_orderdaterepositorycontract]]
-==== OrderDateRepositoryContract
+=== OrderDateRepositoryContract
 
 The OrderDateRepositoryContract contains the functionality to find available OrderDateTypes with their names in a specific language. Furthermore it is possible to create new OrderDateTypes, to update or delete existing date types and to create date type names for a language.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Date\Contracts`
 
@@ -15123,7 +15149,7 @@ The OrderDateRepositoryContract contains the functionality to find available Ord
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -15160,7 +15186,7 @@ public findNameByTypeIdAndLang($typeId, $lang):Plenty\Modules\Order\Date\Models\
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderdatetypename[`OrderDateTypeName`]
+===== *Return type:*        xref:Order.adoc#order_models_orderdatetypename[`OrderDateTypeName`]
 
 
 Get a name of a date type
@@ -15214,7 +15240,7 @@ public findTypeById($typeId):Plenty\Modules\Order\Date\Models\OrderDateType
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderdatetype[`OrderDateType`]
+===== *Return type:*        xref:Order.adoc#order_models_orderdatetype[`OrderDateType`]
 
 
 Get a date type
@@ -15239,7 +15265,7 @@ public create($data = []):Plenty\Modules\Order\Date\Models\OrderDate
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderdate[`OrderDate`]
+===== *Return type:*        xref:Order.adoc#order_models_orderdate[`OrderDate`]
 
 
 Create an order date
@@ -15264,7 +15290,7 @@ public update($data, $orderDateId):Plenty\Modules\Order\Date\Models\OrderDate
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderdate[`OrderDate`]
+===== *Return type:*        xref:Order.adoc#order_models_orderdate[`OrderDate`]
 
 
 Update a date
@@ -15293,7 +15319,7 @@ public save($data = []):Plenty\Modules\Order\Date\Models\OrderDate
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderdate[`OrderDate`]
+===== *Return type:*        xref:Order.adoc#order_models_orderdate[`OrderDate`]
 
 
 Create or update an order date
@@ -15372,7 +15398,7 @@ public findByOrderIdAndTypeId($orderId, $typeId):Plenty\Modules\Order\Date\Model
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderdate[`OrderDate`]
+===== *Return type:*        xref:Order.adoc#order_models_orderdate[`OrderDate`]
 
 
 Get an order date from an order by the type of the order date
@@ -15418,13 +15444,13 @@ a|The ID of the order
 
 
 [[order_contracts_orderitemdaterepositorycontract]]
-==== OrderItemDateRepositoryContract
+=== OrderItemDateRepositoryContract
 
 The OrderItemDateRepositoryContract contains the functionality to get, create, update and delete OrderItemDate instances.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Date\Contracts`
 
@@ -15433,7 +15459,7 @@ The OrderItemDateRepositoryContract contains the functionality to get, create, u
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -15445,7 +15471,7 @@ public find($id):Plenty\Modules\Order\Date\Models\OrderItemDate
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
 
 
 Get an order item date
@@ -15470,7 +15496,7 @@ public create($data = []):Plenty\Modules\Order\Date\Models\OrderItemDate
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
 
 
 Create an order item date
@@ -15495,7 +15521,7 @@ public update($data, $id):Plenty\Modules\Order\Date\Models\OrderItemDate
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
 
 
 Update an order date
@@ -15524,7 +15550,7 @@ public save($data = []):Plenty\Modules\Order\Date\Models\OrderItemDate
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
 
 
 Create or update an order item date
@@ -15574,7 +15600,7 @@ public findByOrderItemIdAndTypeId($orderItemId, $typeId):Plenty\Modules\Order\Da
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
 
 
 Get an order item date by an order item and an order date type.
@@ -15603,7 +15629,7 @@ public createByOrderItemIdAndTypeId($data, $orderItemId, $typeId):Plenty\Modules
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
 
 
 Create an order item date by an order item and an order date type.
@@ -15636,7 +15662,7 @@ public updateByOrderItemIdAndTypeId($data, $orderItemId, $typeId):Plenty\Modules
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemdate[`OrderItemDate`]
 
 
 Update an order item date by an order item and an order date type.
@@ -15714,15 +15740,15 @@ a|The ID of the order
 
 
 [[order_date_models]]
-===  Models
+== Models
 [[order_models_orderdate]]
-==== OrderDate
+=== OrderDate
 
 The OrderDate model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Date\Models`
 
@@ -15778,7 +15804,7 @@ The OrderDate model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -15797,13 +15823,13 @@ Returns this model as an array.
 
 
 [[order_models_orderdatetype]]
-==== OrderDateType
+=== OrderDateType
 
 The OrderDateType model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Date\Models`
 
@@ -15851,7 +15877,7 @@ The OrderDateType model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -15870,13 +15896,13 @@ Returns this model as an array.
 
 
 [[order_models_orderdatetypename]]
-==== OrderDateTypeName
+=== OrderDateTypeName
 
 The OrderDateTypeName model. Order date types can have several names. One name per language. Each name has a unique ID.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Date\Models`
 
@@ -15921,7 +15947,7 @@ The OrderDateTypeName model. Order date types can have several names. One name p
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -15940,13 +15966,13 @@ Returns this model as an array.
 
 
 [[order_models_orderitemdate]]
-==== OrderItemDate
+=== OrderItemDate
 
 The OrderItemDate model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Date\Models`
 
@@ -16005,7 +16031,7 @@ The OrderItemDate model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -16023,18 +16049,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_deliveryorder]]
-== DeliveryOrder
+= DeliveryOrder
 
 [[order_deliveryorder_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_deliveryorderrepositorycontract]]
-==== DeliveryOrderRepositoryContract
+=== DeliveryOrderRepositoryContract
 
 The DeliveryOrderRepositoryContract is the interface for the delivery order repository. This interface allows you to create, update or delete delivery orders. A delivery order will be created according to a parent order and can either be created manually or automatically.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\DeliveryOrder\Contracts`
 
@@ -16043,7 +16069,7 @@ The DeliveryOrderRepositoryContract is the interface for the delivery order repo
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -16055,7 +16081,7 @@ public create($data):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Create a delivery order
@@ -16080,7 +16106,7 @@ public update($orderId, $data):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Update a delivery order
@@ -16159,7 +16185,7 @@ public createFromParent($orderId, $data):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Create a delivery order from a parent order
@@ -16188,7 +16214,7 @@ public createAllAutomaticallyFromParent($orderId):Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 Create delivery orders automatically for all order items
@@ -16213,7 +16239,7 @@ public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Update currency
@@ -16233,18 +16259,18 @@ a|
 
 
 [[order_documents]]
-== Documents
+= Documents
 
 [[order_documents_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_documentaccountingsummaryrepositorycontract]]
-==== DocumentAccountingSummaryRepositoryContract
+=== DocumentAccountingSummaryRepositoryContract
 
 Get document accounting summaries.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Documents\Contracts`
 
@@ -16253,7 +16279,7 @@ Get document accounting summaries.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -16265,7 +16291,7 @@ public list($page = 1, $itemsPerPage = 10):Plenty\Repositories\Models\PaginatedR
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Lists document accounting summaries. A document accounting summary is saved along with each reversal document (for invoice and credit note). It contains accounting information about the order for this point in time. The summary is saved because an order can be updated after a reversal_document is generated. The information about the order before the update is needed for accounting.
@@ -16356,13 +16382,13 @@ Clears the filter array.
 
 
 [[order_contracts_orderdocumentstoragecontract]]
-==== OrderDocumentStorageContract
+=== OrderDocumentStorageContract
 
 Provides methods to store, get and delete order document files. The files are stored on an AWS S3 storage by default. The implementation for this contract can be replaced by your own implementation.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Documents\Contracts`
 
@@ -16371,7 +16397,7 @@ Provides methods to store, get and delete order document files. The files are st
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -16437,7 +16463,7 @@ public get($path):Plenty\Modules\Cloud\Storage\Models\StorageObject
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_models_storageobject[`StorageObject`]
+===== *Return type:*        xref:Cloud.adoc#cloud_models_storageobject[`StorageObject`]
 
 
 Get a file from the storage
@@ -16478,18 +16504,18 @@ a|The file path
 
 
 [[order_events]]
-== Events
+= Events
 
 [[order_events_canceled]]
-===  Canceled
+== Canceled
 [[order_canceled_afterordercanceled]]
-==== AfterOrderCanceled
+=== AfterOrderCanceled
 
 An event class fired after an order is canceled.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events\Canceled`
 
@@ -16498,7 +16524,7 @@ An event class fired after an order is canceled.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -16535,20 +16561,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_canceled_beforeordercanceled]]
-==== BeforeOrderCanceled
+=== BeforeOrderCanceled
 
 An event class fired before an order will be canceled.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events\Canceled`
 
@@ -16557,7 +16583,7 @@ An event class fired before an order will be canceled.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -16594,21 +16620,21 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 [[order_events_changed]]
-===  Changed
+== Changed
 [[order_changed_orderstatuschanged]]
-==== OrderStatusChanged
+=== OrderStatusChanged
 
 An event class fired after the status of an order has changed.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events\Changed`
 
@@ -16617,7 +16643,7 @@ An event class fired after the status of an order has changed.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -16673,21 +16699,21 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 [[order_events_created]]
-===  Created
+== Created
 [[order_created_creditnotecreated]]
-==== CreditNoteCreated
+=== CreditNoteCreated
 
 An event class fired after a new credit note is created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events\Created`
 
@@ -16696,7 +16722,7 @@ An event class fired after a new credit note is created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -16733,20 +16759,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_created_deliveryordercreated]]
-==== DeliveryOrderCreated
+=== DeliveryOrderCreated
 
 An event class fired after a new delivery order is created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events\Created`
 
@@ -16755,7 +16781,7 @@ An event class fired after a new delivery order is created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -16792,20 +16818,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_created_multicreditnotecreated]]
-==== MultiCreditNoteCreated
+=== MultiCreditNoteCreated
 
 An event class fired after a new multi credit note is created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events\Created`
 
@@ -16814,7 +16840,7 @@ An event class fired after a new multi credit note is created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -16851,20 +16877,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_created_multiordercreated]]
-==== MultiOrderCreated
+=== MultiOrderCreated
 
 An event class fired after a new multi order is created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events\Created`
 
@@ -16873,7 +16899,7 @@ An event class fired after a new multi order is created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -16910,20 +16936,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_created_repaircreated]]
-==== RepairCreated
+=== RepairCreated
 
 An event class fired after a new repair is created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events\Created`
 
@@ -16932,7 +16958,7 @@ An event class fired after a new repair is created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -16969,20 +16995,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_created_returncreated]]
-==== ReturnCreated
+=== ReturnCreated
 
 An event class fired after a new returns is created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events\Created`
 
@@ -16991,7 +17017,7 @@ An event class fired after a new returns is created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -17028,20 +17054,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_created_salesordercreated]]
-==== SalesOrderCreated
+=== SalesOrderCreated
 
 An event class fired after a new sales order is created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events\Created`
 
@@ -17050,7 +17076,7 @@ An event class fired after a new sales order is created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -17087,20 +17113,20 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 
 [[order_created_warrantycreated]]
-==== WarrantyCreated
+=== WarrantyCreated
 
 An event class fired after a new warranty is created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Events\Created`
 
@@ -17109,7 +17135,7 @@ An event class fired after a new warranty is created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -17146,24 +17172,24 @@ public getOrder():Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Get the order instance.
 
 [[order_injection]]
-== Injection
+= Injection
 
 [[order_injection_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_orderinjectiononcreatecontract]]
-==== OrderInjectionOnCreateContract
+=== OrderInjectionOnCreateContract
 
 Contract for injections on create.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Injection\Contracts`
 
@@ -17172,7 +17198,7 @@ Contract for injections on create.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -17201,13 +17227,13 @@ a|
 
 
 [[order_contracts_orderinjectiononupdatecontract]]
-==== OrderInjectionOnUpdateContract
+=== OrderInjectionOnUpdateContract
 
 Contract for injections on update.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Injection\Contracts`
 
@@ -17216,7 +17242,7 @@ Contract for injections on update.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -17249,13 +17275,13 @@ a|
 
 
 [[order_contracts_orderinjectionservicecontract]]
-==== OrderInjectionServiceContract
+=== OrderInjectionServiceContract
 
 Service to register injections for order creation.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Injection\Contracts`
 
@@ -17264,7 +17290,7 @@ Service to register injections for order creation.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -17478,18 +17504,18 @@ a|
 
 
 [[order_models]]
-== Models
+= Models
 
 [[order_models_legacy]]
-===  Legacy
+== Legacy
 [[order_legacy_order]]
-==== Order
+=== Order
 
 The legacy order model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Models\Legacy`
 
@@ -17547,7 +17573,7 @@ The legacy order model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -17564,19 +17590,341 @@ public toArray()
 
 Returns this model as an array.
 
+[[order_payment]]
+= Payment
+
+[[order_payment_events]]
+== Events
+[[order_events_manualorderexecutepayment]]
+=== ManualOrderExecutePayment
+
+The event is triggered after the order is placed within the manual order creation.
+
+
+
+==== Namespace
+
+`Plenty\Modules\Order\Payment\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public setType($type):Plenty\Modules\Order\Payment\Events\ManualOrderExecutePayment
+
+----
+
+    
+
+
+===== *Return type:*        xref:Order.adoc#order_events_manualorderexecutepayment[`ManualOrderExecutePayment`]
+
+
+
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getType():string
+
+----
+
+    
+
+
+
+
+
+Gets the content type.
+
+[source%nowrap, php]
+----
+
+public setValue($value):Plenty\Modules\Order\Payment\Events\ManualOrderExecutePayment
+
+----
+
+    
+
+
+===== *Return type:*        xref:Order.adoc#order_events_manualorderexecutepayment[`ManualOrderExecutePayment`]
+
+
+Set the value of the content type.
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$value`
+a|The value of the content type
+|===
+
+
+[source%nowrap, php]
+----
+
+public getValue():string
+
+----
+
+    
+
+
+
+
+
+Gets the value of the content type.
+
+[source%nowrap, php]
+----
+
+public setOrderId($orderId):Plenty\Modules\Order\Payment\Events\ManualOrderExecutePayment
+
+----
+
+    
+
+
+===== *Return type:*        xref:Order.adoc#order_events_manualorderexecutepayment[`ManualOrderExecutePayment`]
+
+
+Set the order id.
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$orderId`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getOrderId():int
+
+----
+
+    
+
+
+
+
+
+Gets the order id.
+
+[source%nowrap, php]
+----
+
+public getAdditionalData():array
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
+public setAdditionalData($additionalData):Plenty\Modules\Order\Payment\Events\ManualOrderExecutePayment
+
+----
+
+    
+
+
+===== *Return type:*        xref:Order.adoc#order_events_manualorderexecutepayment[`ManualOrderExecutePayment`]
+
+
+
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$additionalData`
+a|
+|===
+
+
+
+[[order_events_manualorderpreparepayment]]
+=== ManualOrderPreparePayment
+
+The event is triggered before the order is placed within the manual order creation.
+
+
+
+==== Namespace
+
+`Plenty\Modules\Order\Payment\Events`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public setType($type):Plenty\Modules\Order\Payment\Events\ManualOrderPreparePayment
+
+----
+
+    
+
+
+===== *Return type:*        xref:Order.adoc#order_events_manualorderpreparepayment[`ManualOrderPreparePayment`]
+
+
+
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getType():string
+
+----
+
+    
+
+
+
+
+
+Gets the content type.
+
+[source%nowrap, php]
+----
+
+public setValue($value):Plenty\Modules\Order\Payment\Events\ManualOrderPreparePayment
+
+----
+
+    
+
+
+===== *Return type:*        xref:Order.adoc#order_events_manualorderpreparepayment[`ManualOrderPreparePayment`]
+
+
+Set the value of the content type.
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$value`
+a|The value of the content type
+|===
+
+
+[source%nowrap, php]
+----
+
+public getValue():string
+
+----
+
+    
+
+
+
+
+
+Gets the value of the content type.
+
+[source%nowrap, php]
+----
+
+public setOrderData($orderData):Plenty\Modules\Order\Payment\Events\ManualOrderPreparePayment
+
+----
+
+    
+
+
+===== *Return type:*        xref:Order.adoc#order_events_manualorderpreparepayment[`ManualOrderPreparePayment`]
+
+
+Set the order data.
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$orderData`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getOrderData():array
+
+----
+
+    
+
+
+
+
+
+Gets the order data.
+
 [[order_property]]
-== Property
+= Property
 
 [[order_property_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_orderitempropertyrepositorycontract]]
-==== OrderItemPropertyRepositoryContract
+=== OrderItemPropertyRepositoryContract
 
 The OrderItemPropertyRepositoryContract contains the functionality to find, create, update and delete OrderItemProperty instances.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Property\Contracts`
 
@@ -17585,7 +17933,7 @@ The OrderItemPropertyRepositoryContract contains the functionality to find, crea
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -17597,7 +17945,7 @@ public find($id):Plenty\Modules\Order\Property\Models\OrderItemProperty
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
 
 
 Find an order item property by its ID.
@@ -17622,7 +17970,7 @@ public create($data = []):Plenty\Modules\Order\Property\Models\OrderItemProperty
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
 
 
 Create an order item property
@@ -17647,7 +17995,7 @@ public update($data, $id):Plenty\Modules\Order\Property\Models\OrderItemProperty
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
 
 
 Update an order item property
@@ -17676,7 +18024,7 @@ public save($data = []):Plenty\Modules\Order\Property\Models\OrderItemProperty
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
 
 
 Create or update an order item property
@@ -17726,7 +18074,7 @@ public findByOrderItemIdAndTypeId($orderItemId, $typeId):Plenty\Modules\Order\Pr
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
 
 
 Get an order item property by an order item ID and an order property type ID.
@@ -17755,7 +18103,7 @@ public createByOrderItemIdAndTypeId($data, $orderItemId, $typeId):Plenty\Modules
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
 
 
 Create an order item property by an order item ID and an order property type ID.
@@ -17788,7 +18136,7 @@ public updateByOrderItemIdAndTypeId($data, $orderItemId, $typeId):Plenty\Modules
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemproperty[`OrderItemProperty`]
 
 
 Update an order item property by an order item ID and an order property type ID.
@@ -17867,13 +18215,13 @@ a|The ID of the order
 
 
 [[order_contracts_orderpropertyrepositorycontract]]
-==== OrderPropertyRepositoryContract
+=== OrderPropertyRepositoryContract
 
 The OrderPropertyRepositoryContract contains the functionality to get, list, create, update and delete  OrderPropertyTypes and OrderProperties as well as OrderProperties. Order properties contain information that are additional to an order. Each property has a type and each type can have several names, but only one name per language. An order can only have one property of each property type.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Property\Contracts`
 
@@ -17882,7 +18230,7 @@ The OrderPropertyRepositoryContract contains the functionality to get, list, cre
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -17894,7 +18242,7 @@ public create($data = []):Plenty\Modules\Order\Property\Models\OrderProperty
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderproperty[`OrderProperty`]
+===== *Return type:*        xref:Order.adoc#order_models_orderproperty[`OrderProperty`]
 
 
 Create an order property
@@ -17919,7 +18267,7 @@ public update($data, $orderPropertyId = null):Plenty\Modules\Order\Property\Mode
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderproperty[`OrderProperty`]
+===== *Return type:*        xref:Order.adoc#order_models_orderproperty[`OrderProperty`]
 
 
 Update an order property
@@ -18002,7 +18350,7 @@ public getType($typeId, $languages = []):Plenty\Modules\Order\Property\Models\Or
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderpropertytype[`OrderPropertyType`]
+===== *Return type:*        xref:Order.adoc#order_models_orderpropertytype[`OrderPropertyType`]
 
 
 Get a property type
@@ -18056,7 +18404,7 @@ public createType($data = []):Plenty\Modules\Order\Property\Models\OrderProperty
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderpropertytype[`OrderPropertyType`]
+===== *Return type:*        xref:Order.adoc#order_models_orderpropertytype[`OrderPropertyType`]
 
 
 Create an order property type
@@ -18081,7 +18429,7 @@ public updateType($data, $id):Plenty\Modules\Order\Property\Models\OrderProperty
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderpropertytype[`OrderPropertyType`]
+===== *Return type:*        xref:Order.adoc#order_models_orderpropertytype[`OrderPropertyType`]
 
 
 Update an order property type
@@ -18126,15 +18474,15 @@ a|The ID of the order property type
 
 
 [[order_property_models]]
-===  Models
+== Models
 [[order_models_orderitemproperty]]
-==== OrderItemProperty
+=== OrderItemProperty
 
 The order item property model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Property\Models`
 
@@ -18208,7 +18556,7 @@ The order item property model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -18227,13 +18575,13 @@ Returns this model as an array.
 
 
 [[order_models_orderproperty]]
-==== OrderProperty
+=== OrderProperty
 
 The order properties model. Each order property has a type.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Property\Models`
 
@@ -18304,7 +18652,7 @@ The order properties model. Each order property has a type.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -18323,13 +18671,13 @@ Returns this model as an array.
 
 
 [[order_models_orderpropertytype]]
-==== OrderPropertyType
+=== OrderPropertyType
 
 The OrderPropertyType model. Each order property must have a property type. An order can have one property of each property type. The default property types provided by plentymarkets are listed here.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Property\Models`
 
@@ -18367,7 +18715,7 @@ The OrderPropertyType model. Each order property must have a property type. An o
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -18386,13 +18734,13 @@ Returns this model as an array.
 
 
 [[order_models_orderpropertytypename]]
-==== OrderPropertyTypeName
+=== OrderPropertyTypeName
 
 The order property type name model. Each order property type can have one name per language.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Property\Models`
 
@@ -18423,7 +18771,7 @@ The order property type name model. Each order property type can have one name p
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -18441,18 +18789,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_redistribution]]
-== Redistribution
+= Redistribution
 
 [[order_redistribution_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_redistributionrepositorycontract]]
-==== RedistributionRepositoryContract
+=== RedistributionRepositoryContract
 
 Create and update redistributions.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Redistribution\Contracts`
 
@@ -18461,7 +18809,7 @@ Create and update redistributions.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -18473,7 +18821,7 @@ public create($data):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Create a redistribution
@@ -18498,7 +18846,7 @@ public update($orderId, $data):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Update a redistribution
@@ -18577,7 +18925,7 @@ public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Update currency
@@ -18597,18 +18945,18 @@ a|
 
 
 [[order_relationreference]]
-== RelationReference
+= RelationReference
 
 [[order_relationreference_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_orderrelationreferencerepositorycontract]]
-==== OrderRelationReferenceRepositoryContract
+=== OrderRelationReferenceRepositoryContract
 
 Get, create, update and delete order relation references.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\RelationReference\Contracts`
 
@@ -18617,7 +18965,7 @@ Get, create, update and delete order relation references.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -18629,7 +18977,7 @@ public find($id):Plenty\Modules\Order\RelationReference\Models\OrderRelationRefe
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderrelationreference[`OrderRelationReference`]
+===== *Return type:*        xref:Order.adoc#order_models_orderrelationreference[`OrderRelationReference`]
 
 
 Get a relation reference by ID
@@ -18654,7 +19002,7 @@ public findByComposite($orderId, $referenceType, $relation):Plenty\Modules\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderrelationreference[`OrderRelationReference`]
+===== *Return type:*        xref:Order.adoc#order_models_orderrelationreference[`OrderRelationReference`]
 
 
 Get a relation reference by composite key
@@ -18721,7 +19069,7 @@ public findByAnyValues($values, $page = 1, $itemsPerPage = 50):Plenty\Repositori
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List relation references by any values
@@ -18761,7 +19109,7 @@ public create($data):Plenty\Modules\Order\RelationReference\Models\OrderRelation
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderrelationreference[`OrderRelationReference`]
+===== *Return type:*        xref:Order.adoc#order_models_orderrelationreference[`OrderRelationReference`]
 
 
 Create a relation reference
@@ -18786,7 +19134,7 @@ public update($id, $data):Plenty\Modules\Order\RelationReference\Models\OrderRel
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderrelationreference[`OrderRelationReference`]
+===== *Return type:*        xref:Order.adoc#order_models_orderrelationreference[`OrderRelationReference`]
 
 
 Update a relation reference by ID
@@ -18815,7 +19163,7 @@ public updateByComposite($orderId, $referenceType, $relation, $data):Plenty\Modu
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderrelationreference[`OrderRelationReference`]
+===== *Return type:*        xref:Order.adoc#order_models_orderrelationreference[`OrderRelationReference`]
 
 
 Update a relation reference by composite key
@@ -18919,15 +19267,15 @@ a|The relation. Valid relations are:
 
 
 [[order_relationreference_models]]
-===  Models
+== Models
 [[order_models_orderrelationreference]]
-==== OrderRelationReference
+=== OrderRelationReference
 
 The order relation reference model specifies how references and orders are related to one another.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\RelationReference\Models`
 
@@ -18984,7 +19332,7 @@ The order relation reference model specifies how references and orders are relat
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -19002,18 +19350,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_reorder]]
-== Reorder
+= Reorder
 
 [[order_reorder_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_reorderrepositorycontract]]
-==== ReorderRepositoryContract
+=== ReorderRepositoryContract
 
 Create and update reorders.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Reorder\Contracts`
 
@@ -19022,7 +19370,7 @@ Create and update reorders.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -19034,7 +19382,7 @@ public create($data):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Create a reorder
@@ -19059,7 +19407,7 @@ public update($orderId, $data):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Update a reorder
@@ -19138,7 +19486,7 @@ public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Update currency
@@ -19167,7 +19515,7 @@ public getDeliveryDate($orderId):Carbon\Carbon
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
 
 
 Get the date when the reorder will probably be delivered.
@@ -19192,7 +19540,7 @@ public updateDeliveryDates($orderId):Plenty\Modules\Order\Models\Order
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Calculate and save the delivery dates
@@ -19208,18 +19556,18 @@ a|
 
 
 [[order_returnreason]]
-== ReturnReason
+= ReturnReason
 
 [[order_returnreason_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_returnreasonrepositorycontract]]
-==== ReturnReasonRepositoryContract
+=== ReturnReasonRepositoryContract
 
 Use this interface to retrieve order return reasons.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\ReturnReason\Contracts`
 
@@ -19228,7 +19576,7 @@ Use this interface to retrieve order return reasons.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -19255,7 +19603,7 @@ public get($id):Plenty\Modules\Order\ReturnReason\Models\ReturnReason
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_returnreason[`ReturnReason`]
+===== *Return type:*        xref:Order.adoc#order_models_returnreason[`ReturnReason`]
 
 
 Get a return reason.
@@ -19271,15 +19619,15 @@ a|The ID of the return reason.
 
 
 [[order_returnreason_models]]
-===  Models
+== Models
 [[order_models_returnreason]]
-==== ReturnReason
+=== ReturnReason
 
 The return reason model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\ReturnReason\Models`
 
@@ -19301,7 +19649,7 @@ The return reason model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -19319,14 +19667,362 @@ public toArray()
 Returns this model as an array.
 
 [[order_search]]
-== Search
+= Search
+
+[[order_search_aggregations]]
+== Aggregations
+[[order_aggregations_statusaggregation]]
+=== StatusAggregation
+
+aggregation for order status
+
+
+
+==== Namespace
+
+`Plenty\Modules\Order\Search\Aggregations`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public getName():string
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
+public getField():string
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
+public getAggregation():array
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
+public setInclude($string):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$string`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
+public process($data):array
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addAggregation($aggregation):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+a|`$aggregation`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregation\AggregationInterface
+
+----
+
+    
+
+
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+
+
+
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|        xref:Cloud.adoc#cloud_source_sourceinterface[`SourceInterface`]
+a|`$source`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregation\AggregationInterface
+
+----
+
+    
+
+
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+
+
+
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+a|
+
+|link:http://php.net/int[int^]
+a|`$rowsPerPage`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSources():void
+
+----
+
+    
+
+
+
+
+
+
+
+
+[[order_aggregations_statusaggregationprocessor]]
+=== StatusAggregationProcessor
+
+aggregation processor for order status
+
+
+
+==== Namespace
+
+`Plenty\Modules\Order\Search\Aggregations`
+
+
+
+
+
+
+==== Methods
+
+[source%nowrap, php]
+----
+
+public process($data):array
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getName():void
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
+public getDependencies():array
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
+public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
+
+----
+
+    
+
+
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+
+
+
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|        xref:Cloud.adoc#cloud_mutator_mutatorinterface[`MutatorInterface`]
+a|`$mutator`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
+
+----
+
+    
+
+
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+
+
+
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|        xref:Cloud.adoc#cloud_condition_conditioninterface[`ConditionInterface`]
+a|`$conditions`
+a|
+|===
+
 
 [[order_search_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_orderelasticsearchscrollrepositorycontract]]
-==== OrderElasticSearchScrollRepositoryContract
+=== OrderElasticSearchScrollRepositoryContract
 
-...
+This interface is deprecated and will be removed in the next version.
 
 [WARNING]
 .Deprecated! 
@@ -19337,7 +20033,7 @@ This class will not be supported in the future. Please refrain from using it as 
 ====
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Search\Contracts`
 
@@ -19346,7 +20042,7 @@ This class will not be supported in the future. Please refrain from using it as 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -19398,7 +20094,7 @@ public setIndex($index):Plenty\Modules\Cloud\ElasticSearch\Contracts\ElasticSear
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_contracts_elasticsearchsearchrepositorycontract[`ElasticSearchSearchRepositoryContract`]
+===== *Return type:*        xref:Cloud.adoc#cloud_contracts_elasticsearchsearchrepositorycontract[`ElasticSearchSearchRepositoryContract`]
 
 
 
@@ -19423,7 +20119,7 @@ public addSearch($search):Plenty\Modules\Cloud\ElasticSearch\Contracts\ElasticSe
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_contracts_elasticsearchsearchrepositorycontract[`ElasticSearchSearchRepositoryContract`]
+===== *Return type:*        xref:Cloud.adoc#cloud_contracts_elasticsearchsearchrepositorycontract[`ElasticSearchSearchRepositoryContract`]
 
 
 
@@ -19454,18 +20150,18 @@ public execute():array
 
 
 [[order_status]]
-== Status
+= Status
 
 [[order_status_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_orderstatusrepositorycontract]]
-==== OrderStatusRepositoryContract
+=== OrderStatusRepositoryContract
 
 The OrderStatusRepositoryContract is the interface for the order status repository. This interface allows you to get a single order status or to list order statuses as well as to create, update or delete.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Status\Contracts`
 
@@ -19474,7 +20170,7 @@ The OrderStatusRepositoryContract is the interface for the order status reposito
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -19486,7 +20182,7 @@ public get($statusId):Plenty\Modules\Order\Status\Models\OrderStatus
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderstatus[`OrderStatus`]
+===== *Return type:*        xref:Order.adoc#order_models_orderstatus[`OrderStatus`]
 
 
 Get an order status.
@@ -19511,7 +20207,7 @@ public search($page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\Paginate
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Search order status.
@@ -19540,7 +20236,7 @@ public all():Illuminate\Database\Eloquent\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
 
 
 List order statuses.
@@ -19555,7 +20251,7 @@ public create($data):Plenty\Modules\Order\Status\Models\OrderStatus
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderstatus[`OrderStatus`]
+===== *Return type:*        xref:Order.adoc#order_models_orderstatus[`OrderStatus`]
 
 
 Create an order status.
@@ -19580,7 +20276,7 @@ public update($statusId, $data):Plenty\Modules\Order\Status\Models\OrderStatus
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderstatus[`OrderStatus`]
+===== *Return type:*        xref:Order.adoc#order_models_orderstatus[`OrderStatus`]
 
 
 Update an order status.
@@ -19695,15 +20391,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[order_status_models]]
-===  Models
+== Models
 [[order_models_orderstatus]]
-==== OrderStatus
+=== OrderStatus
 
 The order status model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Status\Models`
 
@@ -19746,7 +20442,7 @@ The order status model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -19764,18 +20460,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_statushistory]]
-== StatusHistory
+= StatusHistory
 
 [[order_statushistory_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_statushistoryrepositorycontract]]
-==== StatusHistoryRepositoryContract
+=== StatusHistoryRepositoryContract
 
 This interface allows you to get the status history of an order and to list the status histories of all orders.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\StatusHistory\Contracts`
 
@@ -19784,7 +20480,7 @@ This interface allows you to get the status history of an order and to list the 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -19796,7 +20492,7 @@ public getStatusHistoryByOrderId($orderId, $columns = []):Illuminate\Database\El
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
 
 
 Get the status history of an order
@@ -19825,7 +20521,7 @@ public getStatusHistory($columns = [], $page = 1, $itemsPerPage = 50):Plenty\Rep
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List status histories
@@ -19949,15 +20645,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[order_statushistory_models]]
-===  Models
+== Models
 [[order_models_statushistoryentry]]
-==== StatusHistoryEntry
+=== StatusHistoryEntry
 
 The status history entry model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\StatusHistory\Models`
 
@@ -19991,7 +20687,7 @@ The status history entry model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -20009,18 +20705,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_subscription]]
-== Subscription
+= Subscription
 
 [[order_subscription_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_subscriptionorderrepositorycontract]]
-==== SubscriptionOrderRepositoryContract
+=== SubscriptionOrderRepositoryContract
 
 The SubscriptionOrderRepositoryContract allows you to find subscriptions, that due either today or on any given date, so that corresponding orders are created for them.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Subscription\Contracts`
 
@@ -20029,7 +20725,7 @@ The SubscriptionOrderRepositoryContract allows you to find subscriptions, that d
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -20081,7 +20777,7 @@ public manualRun($orderId, $skipNextRun = false):Plenty\Modules\Order\Models\Ord
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+===== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
 Create an order for today for a given subscription.
@@ -20101,18 +20797,18 @@ a|If true, the next run of this subscription will be skipped.
 
 
 [[order_taricvatassignment]]
-== TaricVatAssignment
+= TaricVatAssignment
 
 [[order_taricvatassignment_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_taricvatassignmentrepositorycontract]]
-==== TaricVatAssignmentRepositoryContract
+=== TaricVatAssignmentRepositoryContract
 
 The TaricVatAssignmentRepositoryContract contains the functionality to get, list, create, update, and delete the taricVatAssignment. Taric identifiers contain information that are necessary to determine the exact vat rate. Taric codes are linked in a variation. A taric vat assignment can only have one entry of each taric code / country ID combination.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\TaricVatAssignment\Contracts`
 
@@ -20121,7 +20817,7 @@ The TaricVatAssignmentRepositoryContract contains the functionality to get, list
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -20133,7 +20829,7 @@ public create($data = []):Plenty\Modules\Order\TaricVatAssignment\Models\TaricVa
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_taricvatassignment[`TaricVatAssignment`]
+===== *Return type:*        xref:Order.adoc#order_models_taricvatassignment[`TaricVatAssignment`]
 
 
 Create a taric vat assignment.
@@ -20158,7 +20854,7 @@ public update($data):Plenty\Modules\Order\TaricVatAssignment\Models\TaricVatAssi
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_taricvatassignment[`TaricVatAssignment`]
+===== *Return type:*        xref:Order.adoc#order_models_taricvatassignment[`TaricVatAssignment`]
 
 
 Update a taric vat assignment
@@ -20208,7 +20904,7 @@ public search($page = 1, $itemsPerPage = \Plenty\Modules\Order\TaricVatAssignmen
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Search taric vat assignments.
@@ -20241,7 +20937,7 @@ public findByTaricCodeAndCountryId($taricCode, $countryNumber):Plenty\Modules\Or
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_taricvatassignment[`TaricVatAssignment`]
+===== *Return type:*        xref:Order.adoc#order_models_taricvatassignment[`TaricVatAssignment`]
 
 
 List taric vat assignment of a taric code
@@ -20361,15 +21057,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[order_taricvatassignment_models]]
-===  Models
+== Models
 [[order_models_taricvatassignment]]
-==== TaricVatAssignment
+=== TaricVatAssignment
 
 The taric vat assignment model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\TaricVatAssignment\Models`
 
@@ -20406,7 +21102,7 @@ The taric vat assignment model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -20425,13 +21121,13 @@ Returns this model as an array.
 
 
 [[order_models_taricvatassignmentused]]
-==== TaricVatAssignmentUsed
+=== TaricVatAssignmentUsed
 
 The taric code use model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\TaricVatAssignment\Models`
 
@@ -20453,7 +21149,7 @@ The taric code use model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -20471,18 +21167,18 @@ public toArray()
 Returns this model as an array.
 
 [[order_transaction]]
-== Transaction
+= Transaction
 
 [[order_transaction_contracts]]
-===  Contracts
+== Contracts
 [[order_contracts_orderitemtransactionrepositorycontract]]
-==== OrderItemTransactionRepositoryContract
+=== OrderItemTransactionRepositoryContract
 
 List and create order item transactions.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Transaction\Contracts`
 
@@ -20491,7 +21187,7 @@ List and create order item transactions.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -20503,7 +21199,7 @@ public list($orderItemId, $columns = [], $with = []):Illuminate\Database\Eloquen
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
 
 
 List transactions
@@ -20536,7 +21232,7 @@ public create($data):Plenty\Modules\Order\Transaction\Models\OrderItemTransactio
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemtransaction[`OrderItemTransaction`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemtransaction[`OrderItemTransaction`]
 
 
 Create a transaction
@@ -20561,7 +21257,7 @@ public update($transactionId, $data):Plenty\Modules\Order\Transaction\Models\Ord
     
 
 
-====== *Return type:*        xref:Order.adoc#order_models_orderitemtransaction[`OrderItemTransaction`]
+===== *Return type:*        xref:Order.adoc#order_models_orderitemtransaction[`OrderItemTransaction`]
 
 
 Update a transaction
@@ -20615,7 +21311,7 @@ public search($page = 1, $itemsPerPage = 50, $columns = [], $with = [], $sortBy 
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Search transactions
@@ -20660,7 +21356,7 @@ public createForOrder($orderId, $data):Illuminate\Database\Eloquent\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
 
 
 Create transactions for order
@@ -20780,15 +21476,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[order_transaction_models]]
-===  Models
+== Models
 [[order_models_orderitemtransaction]]
-==== OrderItemTransaction
+=== OrderItemTransaction
 
 The order item transaction model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Order\Transaction\Models`
 
@@ -20849,7 +21545,7 @@ The order item transaction model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

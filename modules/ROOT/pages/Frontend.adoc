@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[frontend_frontend]]
-== Frontend
+= Frontend
 
 [[frontend_frontend_contracts]]
-===  Contracts
+== Contracts
 [[frontend_contracts_checkout]]
-==== Checkout
+=== Checkout
 
 The CheckoutContract is the interface for the checkout repository. This interface allows to set the shipping country ID, the payment method ID, the shipping profile ID and the currency in the checkout.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Contracts`
 
@@ -21,7 +23,7 @@ The CheckoutContract is the interface for the checkout repository. This interfac
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -283,20 +285,20 @@ public validateCheckout():Plenty\Modules\Frontend\Events\ValidateCheckoutEvent
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_events_validatecheckoutevent[`ValidateCheckoutEvent`]
+===== *Return type:*        xref:Frontend.adoc#frontend_events_validatecheckoutevent[`ValidateCheckoutEvent`]
 
 
 
 
 
 [[frontend_contracts_currencyexchangerepositorycontract]]
-==== CurrencyExchangeRepositoryContract
+=== CurrencyExchangeRepositoryContract
 
 The CurrencyExchangeRatioRepositoryContract is the interface for the currency exchange repository. This interface allows you to get the default system currency, to get exchange ratios for every currency and to convert an amount from the default currency into a given currency or from a given currency into the default currency.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Contracts`
 
@@ -305,7 +307,7 @@ The CurrencyExchangeRatioRepositoryContract is the interface for the currency ex
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -414,15 +416,15 @@ a|
 
 
 [[frontend_frontend_events]]
-===  Events
+== Events
 [[frontend_events_frontendcurrencychanged]]
-==== FrontendCurrencyChanged
+=== FrontendCurrencyChanged
 
 The event is triggered when the currency is changed in the online store.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -431,7 +433,7 @@ The event is triggered when the currency is changed in the online store.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -465,13 +467,13 @@ Gets the exchange rate used for converting the currency.
 
 
 [[frontend_events_frontendcustomeraddresschanged]]
-==== FrontendCustomerAddressChanged
+=== FrontendCustomerAddressChanged
 
 The event is triggered when a customer address is changed in the online store.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -481,13 +483,13 @@ The event is triggered when a customer address is changed in the online store.
 
 
 [[frontend_events_frontendlanguagechanged]]
-==== FrontendLanguageChanged
+=== FrontendLanguageChanged
 
 The event is triggered when the language is changed in the online store.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -496,7 +498,7 @@ The event is triggered when the language is changed in the online store.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -515,13 +517,13 @@ Gets the language of the online store.
 
 
 [[frontend_events_frontendpaymentmethodchanged]]
-==== FrontendPaymentMethodChanged
+=== FrontendPaymentMethodChanged
 
 The event is triggered when the payment method is changed in the online store.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -530,7 +532,7 @@ The event is triggered when the payment method is changed in the online store.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -574,13 +576,13 @@ a|
 
 
 [[frontend_events_frontendreferrerchanged]]
-==== FrontendReferrerChanged
+=== FrontendReferrerChanged
 
 The event is triggered when the referrer id  is changed in the online store.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -589,7 +591,7 @@ The event is triggered when the referrer id  is changed in the online store.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -616,7 +618,7 @@ public setReferrerId($referrerId):Plenty\Modules\Frontend\Events\FrontendReferre
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_events_frontendreferrerchanged[`FrontendReferrerChanged`]
+===== *Return type:*        xref:Frontend.adoc#frontend_events_frontendreferrerchanged[`FrontendReferrerChanged`]
 
 
 
@@ -633,13 +635,13 @@ a|
 
 
 [[frontend_events_frontendshippingcountrychanged]]
-==== FrontendShippingCountryChanged
+=== FrontendShippingCountryChanged
 
 The event is triggered when the shipping country is changed in the online store.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -648,7 +650,7 @@ The event is triggered when the shipping country is changed in the online store.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -675,7 +677,7 @@ public setShippingCountryId($shippingCountryId):Plenty\Modules\Frontend\Events\F
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_events_frontendshippingcountrychanged[`FrontendShippingCountryChanged`]
+===== *Return type:*        xref:Frontend.adoc#frontend_events_frontendshippingcountrychanged[`FrontendShippingCountryChanged`]
 
 
 Updates the ID of the shipping country. The ID must be specified.
@@ -692,13 +694,13 @@ a|The ID of the shipping country
 
 
 [[frontend_events_frontendshippingprofilechanged]]
-==== FrontendShippingProfileChanged
+=== FrontendShippingProfileChanged
 
 The event is triggered when the shipping profile is changed in the online store.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -707,7 +709,7 @@ The event is triggered when the shipping profile is changed in the online store.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -751,13 +753,13 @@ a|
 
 
 [[frontend_events_frontendupdatedeliveryaddress]]
-==== FrontendUpdateDeliveryAddress
+=== FrontendUpdateDeliveryAddress
 
 The event is triggered when the delivery address is changed in the online store.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -766,7 +768,7 @@ The event is triggered when the delivery address is changed in the online store.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -785,13 +787,13 @@ Gets the ID of the address saved for the account.
 
 
 [[frontend_events_frontendupdateinvoiceaddress]]
-==== FrontendUpdateInvoiceAddress
+=== FrontendUpdateInvoiceAddress
 
 The event is triggered when the invoice address is changed in the online store.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -800,7 +802,7 @@ The event is triggered when the invoice address is changed in the online store.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -819,13 +821,13 @@ Gets the ID of the address saved for the account.
 
 
 [[frontend_events_frontendupdatepaymentsettings]]
-==== FrontendUpdatePaymentSettings
+=== FrontendUpdatePaymentSettings
 
 The event is triggered when the payment method is changed in the online store.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -834,7 +836,7 @@ The event is triggered when the payment method is changed in the online store.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -853,13 +855,13 @@ Gets the ID of the payment method.
 
 
 [[frontend_events_frontendupdateshippingsettings]]
-==== FrontendUpdateShippingSettings
+=== FrontendUpdateShippingSettings
 
 The event is triggered when the shipping method is updated in the online store.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -868,7 +870,7 @@ The event is triggered when the shipping method is updated in the online store.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -917,13 +919,13 @@ Gets the preset ID of the shipping service provider.
 
 
 [[frontend_events_validatecheckoutevent]]
-==== ValidateCheckoutEvent
+=== ValidateCheckoutEvent
 
 validation event
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Events`
 
@@ -932,7 +934,7 @@ validation event
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -959,7 +961,7 @@ public addErrorKey($errorKey):Plenty\Modules\Frontend\Events
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_frontend_events[`Events`]
+===== *Return type:*        xref:Frontend.adoc#frontend_frontend_events[`Events`]
 
 
 
@@ -975,15 +977,15 @@ a|
 
 
 [[frontend_frontend_factories]]
-===  Factories
+== Factories
 [[frontend_factories_frontendfactory]]
-==== FrontendFactory
+=== FrontendFactory
 
 Frontend-Factory
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Factories`
 
@@ -992,7 +994,7 @@ Frontend-Factory
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1004,7 +1006,7 @@ public getLocale():Plenty\Modules\Frontend\Services\LocaleService
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_services_localeservice[`LocaleService`]
+===== *Return type:*        xref:Frontend.adoc#frontend_services_localeservice[`LocaleService`]
 
 
 
@@ -1019,7 +1021,7 @@ public getAgent():Plenty\Modules\Frontend\Services\AgentService
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_services_agentservice[`AgentService`]
+===== *Return type:*        xref:Frontend.adoc#frontend_services_agentservice[`AgentService`]
 
 
 
@@ -1034,7 +1036,7 @@ public getSystem():Plenty\Modules\Frontend\Services\SystemService
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_services_systemservice[`SystemService`]
+===== *Return type:*        xref:Frontend.adoc#frontend_services_systemservice[`SystemService`]
 
 
 
@@ -1049,7 +1051,7 @@ public getAccount():Plenty\Modules\Frontend\Services\AccountService
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_services_accountservice[`AccountService`]
+===== *Return type:*        xref:Frontend.adoc#frontend_services_accountservice[`AccountService`]
 
 
 
@@ -1064,21 +1066,21 @@ public getFile():Plenty\Modules\Frontend\Services\FileService
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_services_fileservice[`FileService`]
+===== *Return type:*        xref:Frontend.adoc#frontend_services_fileservice[`FileService`]
 
 
 
 
 [[frontend_frontend_models]]
-===  Models
+== Models
 [[frontend_models_totalvat]]
-==== TotalVat
+=== TotalVat
 
 frontend total vat model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Models`
 
@@ -1103,7 +1105,7 @@ frontend total vat model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1121,15 +1123,15 @@ public toArray()
 Returns this model as an array.
 
 [[frontend_frontend_services]]
-===  Services
+== Services
 [[frontend_services_accountservice]]
-==== AccountService
+=== AccountService
 
 Frontend-service for customer information
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -1138,7 +1140,7 @@ Frontend-service for customer information
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1172,13 +1174,13 @@ public getAccountContactId():int
 
 
 [[frontend_services_agentservice]]
-==== AgentService
+=== AgentService
 
 Frontend-Service for agent information
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -1187,7 +1189,7 @@ Frontend-Service for agent information
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1341,13 +1343,13 @@ public getIsTablet():bool
 
 
 [[frontend_services_fileservice]]
-==== FileService
+=== FileService
 
 Frontend-service for file information
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -1356,7 +1358,7 @@ Frontend-service for file information
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1468,7 +1470,7 @@ public setAttribute($key, $value):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set a given attribute on the model.
@@ -1720,7 +1722,7 @@ public fill($attributes):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Fill the model with an array of attributes.
@@ -1785,7 +1787,7 @@ public fillable($fillable):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_repositories_models[`Models`]
 
 
 Set the fillable attributes for the model.
@@ -1860,13 +1862,13 @@ a|
 
 
 [[frontend_services_localeservice]]
-==== LocaleService
+=== LocaleService
 
 frontend service for changing current language
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -1875,7 +1877,7 @@ frontend service for changing current language
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1908,13 +1910,13 @@ a|
 
 
 [[frontend_services_orderpropertyfileservice]]
-==== OrderPropertyFileService
+=== OrderPropertyFileService
 
 Frontend-service for customer information
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -1923,7 +1925,7 @@ Frontend-service for customer information
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1985,7 +1987,7 @@ public getFile($key):Plenty\Modules\Cloud\Storage\Models\StorageObject
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_models_storageobject[`StorageObject`]
+===== *Return type:*        xref:Cloud.adoc#cloud_models_storageobject[`StorageObject`]
 
 
 
@@ -2052,13 +2054,13 @@ a|
 
 
 [[frontend_services_systemservice]]
-==== SystemService
+=== SystemService
 
 Frontend-service for system information
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -2067,7 +2069,7 @@ Frontend-service for system information
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2101,13 +2103,13 @@ public getWebstoreId():int
 
 
 [[frontend_services_vatservice]]
-==== VatService
+=== VatService
 
 Frontend-service for vat information
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Services`
 
@@ -2116,7 +2118,7 @@ Frontend-service for vat information
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2158,7 +2160,7 @@ public getVat($taxIdNumber = &quot;&quot;):Plenty\Modules\Accounting\Vat\Models\
     
 
 
-====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[`Vat`]
+===== *Return type:*        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 
 
 
@@ -2199,18 +2201,18 @@ a|
 
 
 [[frontend_legalinformation]]
-== LegalInformation
+= LegalInformation
 
 [[frontend_legalinformation_contracts]]
-===  Contracts
+== Contracts
 [[frontend_contracts_legalinformationrepositorycontract]]
-==== LegalInformationRepositoryContract
+=== LegalInformationRepositoryContract
 
 Repository contract for LegalInformation model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\LegalInformation\Contracts`
 
@@ -2219,7 +2221,7 @@ Repository contract for LegalInformation model.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2231,7 +2233,7 @@ public find($plentyId, $lang, $type):Plenty\Modules\Frontend\LegalInformation\Mo
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_models_legalinformation[`LegalInformation`]
+===== *Return type:*        xref:Frontend.adoc#frontend_models_legalinformation[`LegalInformation`]
 
 
 Get legal information of an online store
@@ -2271,7 +2273,7 @@ public save($data, $plentyId, $lang, $type):Plenty\Modules\Frontend\LegalInforma
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_models_legalinformation[`LegalInformation`]
+===== *Return type:*        xref:Frontend.adoc#frontend_models_legalinformation[`LegalInformation`]
 
 
 Save legal information for an online store
@@ -2306,15 +2308,15 @@ a|The type of the legal information text. The types available are:
 
 
 [[frontend_legalinformation_models]]
-===  Models
+== Models
 [[frontend_models_legalinformation]]
-==== LegalInformation
+=== LegalInformation
 
 The legal information model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\LegalInformation\Models`
 
@@ -2352,7 +2354,7 @@ The legal information model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2370,18 +2372,18 @@ public toArray()
 Returns this model as an array.
 
 [[frontend_paymentmethod]]
-== PaymentMethod
+= PaymentMethod
 
 [[frontend_paymentmethod_contracts]]
-===  Contracts
+== Contracts
 [[frontend_contracts_frontendpaymentmethodrepositorycontract]]
-==== FrontendPaymentMethodRepositoryContract
+=== FrontendPaymentMethodRepositoryContract
 
 The FrontendPaymentMethodRepositoryContract is the interface for the front end payment method repository. Get the payment method information to be displayed in the online store.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\PaymentMethod\Contracts`
 
@@ -2390,7 +2392,7 @@ The FrontendPaymentMethodRepositoryContract is the interface for the front end p
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2911,18 +2913,18 @@ public getAllowedPaymentMethodListForContact():void
 
 
 [[frontend_session]]
-== Session
+= Session
 
 [[frontend_session_events]]
-===  Events
+== Events
 [[frontend_events_aftersessioncreate]]
-==== AfterSessionCreate
+=== AfterSessionCreate
 
 The event is triggered after a session is created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Session\Events`
 
@@ -2931,18 +2933,18 @@ The event is triggered after a session is created.
 
 
 [[frontend_storage]]
-== Storage
+= Storage
 
 [[frontend_storage_contracts]]
-===  Contracts
+== Contracts
 [[frontend_contracts_frontendsessionstoragefactorycontract]]
-==== FrontendSessionStorageFactoryContract
+=== FrontendSessionStorageFactoryContract
 
 The FrontendSessionStorageFactoryContract is the interface for the front end session storage repository. This interface allows to get information about the locale, the customer, the order, the plugin and the forum from the session.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Contracts`
 
@@ -2951,7 +2953,7 @@ The FrontendSessionStorageFactoryContract is the interface for the front end ses
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2963,7 +2965,7 @@ public getLocaleSettings():Plenty\Modules\Frontend\Session\Storage\Models\Locale
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_models_localesettings[`LocaleSettings`]
+===== *Return type:*        xref:Frontend.adoc#frontend_models_localesettings[`LocaleSettings`]
 
 
 Get the locale settings from the session storage.
@@ -2978,7 +2980,7 @@ public getCustomer():Plenty\Modules\Frontend\Session\Storage\Models\Customer
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_models_customer[`Customer`]
+===== *Return type:*        xref:Frontend.adoc#frontend_models_customer[`Customer`]
 
 
 Get the customer data from the session storage.
@@ -2993,7 +2995,7 @@ public getOrder():Plenty\Modules\Frontend\Session\Storage\Models\Order
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_models_order[`Order`]
+===== *Return type:*        xref:Frontend.adoc#frontend_models_order[`Order`]
 
 
 Get the order data from the session storage.
@@ -3008,7 +3010,7 @@ public getPlugin():Plenty\Modules\Frontend\Session\Storage\Models\Plugin
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_models_plugin[`Plugin`]
+===== *Return type:*        xref:Frontend.adoc#frontend_models_plugin[`Plugin`]
 
 
 Get the plugin data from the session storage.
@@ -3023,21 +3025,21 @@ public getForum():Plenty\Modules\Frontend\Session\Storage\Models\Forum
     
 
 
-====== *Return type:*        xref:Frontend.adoc#frontend_models_forum[`Forum`]
+===== *Return type:*        xref:Frontend.adoc#frontend_models_forum[`Forum`]
 
 
 Get the forum data from the session storage.
 
 [[frontend_storage_models]]
-===  Models
+== Models
 [[frontend_models_customer]]
-==== Customer
+=== Customer
 
 The session storage model for customer data.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
 
@@ -3077,7 +3079,7 @@ The session storage model for customer data.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3096,13 +3098,13 @@ Returns this model as an array.
 
 
 [[frontend_models_forum]]
-==== Forum
+=== Forum
 
 The session storage model for forum data.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
 
@@ -3133,7 +3135,7 @@ The session storage model for forum data.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3152,13 +3154,13 @@ Returns this model as an array.
 
 
 [[frontend_models_localesettings]]
-==== LocaleSettings
+=== LocaleSettings
 
 The session storage model for locale settings.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
 
@@ -3183,7 +3185,7 @@ The session storage model for locale settings.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3202,13 +3204,13 @@ Returns this model as an array.
 
 
 [[frontend_models_order]]
-==== Order
+=== Order
 
 The session storage model for order data.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
 
@@ -3296,7 +3298,7 @@ The session storage model for order data.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3315,13 +3317,13 @@ Returns this model as an array.
 
 
 [[frontend_models_plugin]]
-==== Plugin
+=== Plugin
 
 The session storage model for plugins.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Frontend\Session\Storage\Models`
 
@@ -3330,7 +3332,7 @@ The session storage model for plugins.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

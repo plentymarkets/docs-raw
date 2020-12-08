@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[shopbuilder_shopbuilder]]
-== ShopBuilder
+= ShopBuilder
 
 [[shopbuilder_shopbuilder_contracts]]
-===  Contracts
+== Contracts
 [[shopbuilder_contracts_contentlinkrepositorycontract]]
-==== ContentLinkRepositoryContract
+=== ContentLinkRepositoryContract
 
 Get, create, delete and update links between shop builder contents and layout containers.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -21,7 +23,7 @@ Get, create, delete and update links between shop builder contents and layout co
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -58,7 +60,7 @@ public getContentLink($contentLinkId):Plenty\Modules\ShopBuilder\Models\ContentL
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
+===== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
 
 
 Get a single connection between a content and a layout container
@@ -83,7 +85,7 @@ public createContentLink($data):Plenty\Modules\ShopBuilder\Models\ContentLink
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
+===== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
 
 
 Link a content to a layout container
@@ -108,7 +110,7 @@ public updateContentLink($contentLinkId, $data):Plenty\Modules\ShopBuilder\Model
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
+===== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
 
 
 Update a link between a content and a layout container
@@ -195,13 +197,13 @@ a|
 
 
 [[shopbuilder_contracts_contentpreset]]
-==== ContentPreset
+=== ContentPreset
 
 Contract for content presets
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -210,7 +212,7 @@ Contract for content presets
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -229,13 +231,13 @@ Get the widget configurations of the presets to be assigned to the created conte
 
 
 [[shopbuilder_contracts_contentrepositorycontract]]
-==== ContentRepositoryContract
+=== ContentRepositoryContract
 
 Get, create, delete und update shop builder contents.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -244,7 +246,7 @@ Get, create, delete und update shop builder contents.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -271,7 +273,7 @@ public searchContents($itemsPerPage = 20, $page = 1, $params = []):Plenty\Reposi
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Search for contents
@@ -304,7 +306,7 @@ public getContent($contentId, $pluginSetId, $frontendLanguage = null, $versionId
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
+===== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
 
 
 Get a single content.
@@ -411,7 +413,7 @@ public createContent($pluginSetId, $data, $frontendLanguage = null):Plenty\Modul
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
+===== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
 
 
 Create new content. New content will not be linked to any layout container.
@@ -444,7 +446,7 @@ public updateContent($pluginSetId, $contentId, $data, $frontendLanguage = null):
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
+===== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
 
 
 Update content.
@@ -510,7 +512,7 @@ public duplicateContent($contentId, $targetPluginSetId, $language, $containerNam
     
 
 
-====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
+===== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
 
 
 Duplicate a content and its link
@@ -572,13 +574,13 @@ a|Id of the plugin set to rebuild contents for.
 
 
 [[shopbuilder_contracts_contentwidgetrepositorycontract]]
-==== ContentWidgetRepositoryContract
+=== ContentWidgetRepositoryContract
 
 Register shop builder widgets.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -587,7 +589,7 @@ Register shop builder widgets.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -645,13 +647,13 @@ a|The class of the new class to get information of the widget from.
 
 
 [[shopbuilder_contracts_dynamicwidget]]
-==== DynamicWidget
+=== DynamicWidget
 
 Contract for widgets with dynamic settings
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -660,7 +662,7 @@ Contract for widgets with dynamic settings
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -758,13 +760,13 @@ a|
 
 
 [[shopbuilder_contracts_globalsettingshandler]]
-==== GlobalSettingsHandler
+=== GlobalSettingsHandler
 
 Contract for classes handling global settings for the ShopBuilder.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -773,7 +775,7 @@ Contract for classes handling global settings for the ShopBuilder.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -817,13 +819,13 @@ a|
 
 
 [[shopbuilder_contracts_widget]]
-==== Widget
+=== Widget
 
 Contract for content widgets
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Contracts`
 
@@ -832,7 +834,7 @@ Contract for content widgets
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -893,15 +895,15 @@ a|
 
 
 [[shopbuilder_shopbuilder_helper]]
-===  Helper
+== Helper
 [[shopbuilder_helper_mappablesettingshandler]]
-==== MappableSettingsHandler
+=== MappableSettingsHandler
 
 Helper to map global configurations to plugin configs.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Helper`
 
@@ -911,13 +913,13 @@ Helper to map global configurations to plugin configs.
 
 
 [[shopbuilder_helper_shopbuilderrequest]]
-==== ShopBuilderRequest
+=== ShopBuilderRequest
 
 Get information about the current request made from the shop builder preview.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Helper`
 
@@ -926,7 +928,7 @@ Get information about the current request made from the shop builder preview.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1090,15 +1092,15 @@ a|Id of the currently displayed category.
 
 
 [[shopbuilder_shopbuilder_models]]
-===  Models
+== Models
 [[shopbuilder_models_content]]
-==== Content
+=== Content
 
 Content created by the shop builder. May be linked to layout containers.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Models`
 
@@ -1138,7 +1140,7 @@ Content created by the shop builder. May be linked to layout containers.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1157,13 +1159,13 @@ Returns this model as an array.
 
 
 [[shopbuilder_models_contentlink]]
-==== ContentLink
+=== ContentLink
 
 Links a content from the shop builder to a layout container of the frontend plugin.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Models`
 
@@ -1203,6 +1205,9 @@ Links a content from the shop builder to a layout container of the frontend plug
 |link:http://php.net/bool[bool^]
     a|inherit
     a|Indicates if this content should be inherited to child contents.
+|link:http://php.net/bool[bool^]
+    a|invalid
+    a|Indicate if the content is invalid and should be regenerated on next request.
 |
     a|createdAt
     a|The date when the content was created
@@ -1215,7 +1220,7 @@ Links a content from the shop builder to a layout container of the frontend plug
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1234,13 +1239,13 @@ Returns this model as an array.
 
 
 [[shopbuilder_models_contentpage]]
-==== ContentPage
+=== ContentPage
 
 A content page provided by a frontend plugin.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Models`
 
@@ -1265,7 +1270,7 @@ A content page provided by a frontend plugin.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1284,13 +1289,13 @@ Returns this model as an array.
 
 
 [[shopbuilder_models_contentpagedropzone]]
-==== ContentPageDropzone
+=== ContentPageDropzone
 
 Layout container of a content page where to display link contents generated by the shop builder.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Models`
 
@@ -1312,7 +1317,7 @@ Layout container of a content page where to display link contents generated by t
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1331,13 +1336,13 @@ Returns this model as an array.
 
 
 [[shopbuilder_models_contentwidget]]
-==== ContentWidget
+=== ContentWidget
 
 Content widget provided by a frontend plugin
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Models`
 
@@ -1383,7 +1388,7 @@ Content widget provided by a frontend plugin
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1402,13 +1407,13 @@ Returns this model as an array.
 
 
 [[shopbuilder_models_contentwidgetpreview]]
-==== ContentWidgetPreview
+=== ContentWidgetPreview
 
 The rendered preview of a content widget
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Models`
 
@@ -1430,7 +1435,7 @@ The rendered preview of a content widget
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1448,15 +1453,15 @@ public toArray()
 Returns this model as an array.
 
 [[shopbuilder_shopbuilder_providers]]
-===  Providers
+== Providers
 [[shopbuilder_providers_datafieldprovider]]
-==== DataFieldProvider
+=== DataFieldProvider
 
 Base class for data field providers.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ShopBuilder\Providers`
 
@@ -1465,7 +1470,7 @@ Base class for data field providers.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

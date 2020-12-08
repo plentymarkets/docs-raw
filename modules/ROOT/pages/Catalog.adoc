@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[catalog_catalog]]
-== Catalog
+= Catalog
 
 [[catalog_catalog_contracts]]
-===  Contracts
+== Contracts
 [[catalog_contracts_catalogcontentrepositorycontract]]
-==== CatalogContentRepositoryContract
+=== CatalogContentRepositoryContract
 
 The CatalogContentRepositoryContract is the interface for the catalogue content repository. This interface allows to read and update a catalogue&#039;s content. The content contains the specific catalogue data that is used in the exports.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -21,7 +23,7 @@ The CatalogContentRepositoryContract is the interface for the catalogue content 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -79,13 +81,13 @@ a|The content that should be inserted into the catalogue
 
 
 [[catalog_contracts_catalogexportfilterservicecontract]]
-==== CatalogExportFilterServiceContract
+=== CatalogExportFilterServiceContract
 
 To be written
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -94,7 +96,7 @@ To be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -127,13 +129,13 @@ a|
 
 
 [[catalog_contracts_catalogexportrepositorycontract]]
-==== CatalogExportRepositoryContract
+=== CatalogExportRepositoryContract
 
 The CatalogExportRepositoryContract is the interface for the catalogue export repository. It allows to receive an instance of CatalogExportServiceContract to export a specific catalogue.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -142,7 +144,7 @@ The CatalogExportRepositoryContract is the interface for the catalogue export re
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -154,7 +156,7 @@ public exportById($id):Plenty\Modules\Catalog\Contracts\CatalogExportServiceCont
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogexportservicecontract[`CatalogExportServiceContract`]
+===== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogexportservicecontract[`CatalogExportServiceContract`]
 
 
 Returns an instance of CatalogExportServiceContract to export a specific catalogue.
@@ -237,13 +239,13 @@ a|
 
 
 [[catalog_contracts_catalogexportservicecontract]]
-==== CatalogExportServiceContract
+=== CatalogExportServiceContract
 
 The CatalogExportServiceContract is the interface for the catalogue export service. It allows you to configure and start the export of a catalogue.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -252,7 +254,7 @@ The CatalogExportServiceContract is the interface for the catalogue export servi
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -435,7 +437,7 @@ public getResult():Plenty\Modules\Catalog\Models\CatalogExportResult
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_models_catalogexportresult[`CatalogExportResult`]
+===== *Return type:*        xref:Catalog.adoc#catalog_models_catalogexportresult[`CatalogExportResult`]
 
 
 Returns an instance of CatalogExportResult, which can be iterated to receive the different pages of the exported data.
@@ -457,13 +459,13 @@ public getPreview():void
 
 
 [[catalog_contracts_catalogrepositorycontract]]
-==== CatalogRepositoryContract
+=== CatalogRepositoryContract
 
 The CatalogRepositoryContract is the interface for the catalogue repository. It allows you to create, read, update and delete catalogues.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -472,7 +474,7 @@ The CatalogRepositoryContract is the interface for the catalogue repository. It 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -484,7 +486,7 @@ public create($data):Plenty\Modules\Catalog\Models\Catalog
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
+===== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
 
 
 Create a catalog
@@ -509,7 +511,7 @@ public update($id, $data):Plenty\Modules\Catalog\Models\Catalog
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
+===== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
 
 
 Update a catalog
@@ -538,7 +540,7 @@ public get($id):Plenty\Modules\Catalog\Models\Catalog
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
+===== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
 
 
 Get the latest version of a catalog
@@ -563,7 +565,7 @@ public getByVersion($id, $version = &quot;&quot;):Plenty\Modules\Catalog\Models\
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
+===== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
 
 
 Get a specific version of a catalog
@@ -592,7 +594,7 @@ public restoreVersion($id, $version = &quot;&quot;):Plenty\Modules\Catalog\Model
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
+===== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
 
 
 Restore a past version of a catalog to become latest
@@ -621,7 +623,7 @@ public listVersions($id):Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 Lists catalog versions
@@ -661,7 +663,7 @@ public restoreArchived($id):Plenty\Modules\Catalog\Models\Catalog
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
+===== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
 
 
 Restores an archived catalog
@@ -736,7 +738,7 @@ public copyCatalog($id, $modifiedAttributes):Plenty\Modules\Catalog\Models\Catal
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
+===== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
 
 
 Copy a single catalog
@@ -794,7 +796,7 @@ public all($page = 1, $perPage = 25):Plenty\Repositories\Models\PaginatedResult
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Get list of all catalogs
@@ -838,6 +840,31 @@ a|
 
 |link:http://php.net/bool[bool^]
 a|`$active`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getCatalogPreview($id):array
+
+----
+
+    
+
+
+
+
+
+Gets the preview for an export with a specific catalog
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$id`
 a|
 |===
 
@@ -933,6 +960,56 @@ a|
 [source%nowrap, php]
 ----
 
+public exportCatalog($id):array
+
+----
+
+    
+
+
+
+
+
+Exports the catalog. The catalog ID is required.
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$id`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public importCatalog($content):Plenty\Modules\Catalog\Models\Catalog
+
+----
+
+    
+
+
+===== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
+
+
+Imports the catalog. The catalog ID is required.
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$content`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
 public setFilters($filters = []):void
 
 ----
@@ -1002,13 +1079,13 @@ Clears the filter array.
 
 
 [[catalog_contracts_catalogresultconvertercontract]]
-==== CatalogResultConverterContract
+=== CatalogResultConverterContract
 
 To be written
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1017,7 +1094,7 @@ To be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1087,17 +1164,17 @@ public clear():void
 
 
 
-Removes all the data that was previously added to this instance
+
 
 
 [[catalog_contracts_catalogruntimeconfigcontract]]
-==== CatalogRuntimeConfigContract
+=== CatalogRuntimeConfigContract
 
 To be written
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1106,7 +1183,7 @@ To be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1170,13 +1247,13 @@ a|
 
 
 [[catalog_contracts_catalogruntimeconfigprovidercontract]]
-==== CatalogRuntimeConfigProviderContract
+=== CatalogRuntimeConfigProviderContract
 
 To be written
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1185,7 +1262,7 @@ To be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1235,13 +1312,13 @@ Returns a class name through which the export result can be converted into the n
 
 
 [[catalog_contracts_catalogtemplateprovidercontract]]
-==== CatalogTemplateProviderContract
+=== CatalogTemplateProviderContract
 
 The CatalogTemplateProviderContract is the interface that has to be implemented by the catalogue template providers. Each registered template should have a catalogue template provider (multiple templates can use the same one) to avoid booting them if they are not necessary. A catalogue template provider fills a template with data at the moment the template gets booted. Whenever it is possible, use the abstract class Plenty\Modules\Catalog\Templates\BaseTemplateProvider.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1250,7 +1327,7 @@ The CatalogTemplateProviderContract is the interface that has to be implemented 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1359,13 +1436,13 @@ Returns an array of meta information which can be used to forward information to
 
 
 [[catalog_contracts_dataprovidercontract]]
-==== DataProviderContract
+=== DataProviderContract
 
 The DataProviderContract is the interface for data providers. Data providers provide the available fields that can be mapped in a template to create a catalogue. Whenever it is possible, use one of the concrete implementations Plenty\Modules\Catalog\DataProviders\BaseDataProvider, Plenty\Modules\Catalog\DataProviders\KeyDataProvider or Plenty\Modules\Catalog\DataProviders\NestedKeyDataProvider.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1374,7 +1451,7 @@ The DataProviderContract is the interface for data providers. Data providers pro
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1453,13 +1530,13 @@ a|
 
 
 [[catalog_contracts_fieldgrouprepositorycontract]]
-==== FieldGroupRepositoryContract
+=== FieldGroupRepositoryContract
 
 The FieldGroupRepositoryContract is the contract for the field group repository. It allows to retrieve fields of a field group. Field groups represent the different groups of available sources that can be seen in the data picker component in the catalogue UI. Each field represents a mappable source.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1468,7 +1545,7 @@ The FieldGroupRepositoryContract is the contract for the field group repository.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1480,7 +1557,7 @@ public getFields($id, $page, $itemsPerPage, $parentId = null):Plenty\Repositorie
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Get list of fields
@@ -1600,13 +1677,13 @@ a|
 
 
 [[catalog_contracts_nesteddataprovidercontract]]
-==== NestedDataProviderContract
+=== NestedDataProviderContract
 
 The NestedDataProviderContract is the interface for nested data providers. Nested data providers are used to provide nested options that can be selected for export. E.g. a list of categories of a specific marketplace. Whenever it is possible, use the concrete implementation Plenty\Modules\Catalog\DataProviders\NestedKeyDataProvider.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1615,7 +1692,7 @@ The NestedDataProviderContract is the interface for nested data providers. Neste
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1752,13 +1829,13 @@ a|
 
 
 [[catalog_contracts_templatecontainercontract]]
-==== TemplateContainerContract
+=== TemplateContainerContract
 
 The TemplateContainerContract is the interface of the template container. The template container is a singleton, which allows to register and retrieve templates.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1767,7 +1844,7 @@ The TemplateContainerContract is the interface of the template container. The te
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1779,7 +1856,7 @@ public register($name, $type, $providerClass = &quot;&quot;, $exportType = &quot
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+===== *Return type:*        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
 
 
 Registers a new template that can be used to create a catalogue.
@@ -1831,7 +1908,7 @@ public getTemplate($identifier):Plenty\Modules\Catalog\Contracts\TemplateContrac
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+===== *Return type:*        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
 
 
 Returns a specific template by its identifier.
@@ -1856,7 +1933,7 @@ public getTemplateWithoutBootingIt($identifier):Plenty\Modules\Catalog\Contracts
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+===== *Return type:*        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
 
 
 Returns a specific template by its identifier without booting it.
@@ -1873,13 +1950,13 @@ a|
 
 
 [[catalog_contracts_templatecontract]]
-==== TemplateContract
+=== TemplateContract
 
 The TemplateContract is the interface for templates. Templates are used to define a specific schema that can be used to create and configure a catalogue.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -1888,7 +1965,7 @@ The TemplateContract is the interface for templates. Templates are used to defin
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2364,7 +2441,7 @@ public getRuntimeConfig():Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigC
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogruntimeconfigcontract[`CatalogRuntimeConfigContract`]
+===== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogruntimeconfigcontract[`CatalogRuntimeConfigContract`]
 
 
 
@@ -2379,7 +2456,7 @@ public getResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConver
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+===== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
 
@@ -2481,13 +2558,13 @@ public jsonSerialize():void
 
 
 [[catalog_contracts_templaterepositorycontract]]
-==== TemplateRepositoryContract
+=== TemplateRepositoryContract
 
 The TemplateRepositoryContract is the interface for the template repository. It allows to retrieve templates and their mappings.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Contracts`
 
@@ -2496,7 +2573,7 @@ The TemplateRepositoryContract is the interface for the template repository. It 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2713,15 +2790,15 @@ a|
 
 
 [[catalog_catalog_dataproviders]]
-===  DataProviders
+== DataProviders
 [[catalog_dataproviders_basedataprovider]]
-==== BaseDataProvider
+=== BaseDataProvider
 
 The BaseDataProvider is used to define a section of simple mappings in the catalogue. A simple mapping refers to the assignment of a value in the plentymarkets system or a manually predefined value to a specific key. E.g. mapping the value of a specific text property to the key &#039;description&#039;.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\DataProviders`
 
@@ -2730,7 +2807,7 @@ The BaseDataProvider is used to define a section of simple mappings in the catal
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2799,13 +2876,13 @@ a|
 
 
 [[catalog_dataproviders_keydataprovider]]
-==== KeyDataProvider
+=== KeyDataProvider
 
 The KeyDataProvider is used to define a section of a complex mapping in the catalogue. A complex mapping refers to the assignment of a value from a predefined list of possible values to a key if a specific requirement is met. E.g. put the value &#039;awesomeBrand&#039; into the key &#039;brand&#039;, if manufacturer &#039;awesomeManufacturer&#039; is linked to a variation.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\DataProviders`
 
@@ -2814,7 +2891,7 @@ The KeyDataProvider is used to define a section of a complex mapping in the cata
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2898,13 +2975,13 @@ a|
 
 
 [[catalog_dataproviders_nestedkeydataprovider]]
-==== NestedKeyDataProvider
+=== NestedKeyDataProvider
 
 The NestedKeyDataProvider is used to define a section of a complex mapping in the catalogue. It is specifically used if the list of available values contains nested values. E.g. a list of categories with sub-categories.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\DataProviders`
 
@@ -2913,7 +2990,7 @@ The NestedKeyDataProvider is used to define a section of a complex mapping in th
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3094,15 +3171,15 @@ a|
 
 
 [[catalog_catalog_helpers]]
-===  Helpers
+== Helpers
 [[catalog_helpers_contenttypehelper]]
-==== ContentTypeHelper
+=== ContentTypeHelper
 
 Provides a list of valid content types that can be returned in a CatalogResultConverter
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Helpers`
 
@@ -3111,7 +3188,7 @@ Provides a list of valid content types that can be returned in a CatalogResultCo
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3139,15 +3216,15 @@ a|
 
 
 [[catalog_catalog_models]]
-===  Models
+== Models
 [[catalog_models_catalog]]
-==== Catalog
+=== Catalog
 
 The catalog model - stores on S3
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Models`
 
@@ -3190,7 +3267,7 @@ The catalog model - stores on S3
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3209,13 +3286,13 @@ Returns this model as an array.
 
 
 [[catalog_models_catalogexportresult]]
-==== CatalogExportResult
+=== CatalogExportResult
 
 The CatalogExportResult represents the exported data in a specific catalogue export. It implements the Iterator interface and can therefore be used in a foreach loop to retrieve the different pages of the export data.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Models`
 
@@ -3224,7 +3301,7 @@ The CatalogExportResult represents the exported data in a specific catalogue exp
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3242,15 +3319,15 @@ public toArray()
 Returns this model as an array.
 
 [[catalog_catalog_templates]]
-===  Templates
+== Templates
 [[catalog_templates_basetemplateprovider]]
-==== BaseTemplateProvider
+=== BaseTemplateProvider
 
 The BaseTemplateProvider is the abstract class that should be used to implement a template provider.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Templates`
 
@@ -3259,7 +3336,7 @@ The BaseTemplateProvider is the abstract class that should be used to implement 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3368,13 +3445,13 @@ Returns an array of meta information which can be used to forward information to
 
 
 [[catalog_templates_template]]
-==== Template
+=== Template
 
 Templates are used to define a schema for the creation of catalogues.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Catalog\Templates`
 
@@ -3383,7 +3460,7 @@ Templates are used to define a schema for the creation of catalogues.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3914,7 +3991,7 @@ public getRuntimeConfig():Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigC
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogruntimeconfigcontract[`CatalogRuntimeConfigContract`]
+===== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogruntimeconfigcontract[`CatalogRuntimeConfigContract`]
 
 
 
@@ -3929,7 +4006,7 @@ public getResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConver
     
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+===== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
 

@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[authentication_authentication]]
-== Authentication
+= Authentication
 
 [[authentication_authentication_contracts]]
-===  Contracts
+== Contracts
 [[authentication_contracts_contactauthenticationrepositorycontract]]
-==== ContactAuthenticationRepositoryContract
+=== ContactAuthenticationRepositoryContract
 
 The ContactAuthenticationRepositoryContract is the interface for the authentication repository. This interface allows to authenticate users in the client (store) by email and password or by contact ID and password. The interface also provides a method for logging out users from the client (store).
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Authentication\Contracts`
 
@@ -21,7 +23,7 @@ The ContactAuthenticationRepositoryContract is the interface for the authenticat
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -151,15 +153,15 @@ public logout():void
 
 
 [[authentication_authentication_events]]
-===  Events
+== Events
 [[authentication_events_afteraccountauthentication]]
-==== AfterAccountAuthentication
+=== AfterAccountAuthentication
 
 The event is triggered after a user is authenticated in the client (store).
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Authentication\Events`
 
@@ -168,7 +170,7 @@ The event is triggered after a user is authenticated in the client (store).
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -195,20 +197,20 @@ public getAccountContact():Plenty\Modules\Account\Contact\Models\Contact
     
 
 
-====== *Return type:*        xref:Account.adoc#account_models_contact[`Contact`]
+===== *Return type:*        xref:Account.adoc#account_models_contact[`Contact`]
 
 
 
 
 
 [[authentication_events_afteraccountcontactlogout]]
-==== AfterAccountContactLogout
+=== AfterAccountContactLogout
 
 The event is triggered after a user is logged out from the client (store).
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Authentication\Events`
 
@@ -217,15 +219,15 @@ The event is triggered after a user is logged out from the client (store).
 
 
 [[authentication_authentication_models]]
-===  Models
+== Models
 [[authentication_models_user]]
-==== User
+=== User
 
 The user authentication model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Authentication\Models`
 
@@ -304,7 +306,7 @@ The user authentication model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

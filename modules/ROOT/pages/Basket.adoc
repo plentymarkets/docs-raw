@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[basket_basket]]
-== Basket
+= Basket
 
 [[basket_basket_contracts]]
-===  Contracts
+== Contracts
 [[basket_contracts_basketitemrepositorycontract]]
-==== BasketItemRepositoryContract
+=== BasketItemRepositoryContract
 
 The BasketItemRepositoryContract is the interface for the basket item repository. This interface allows to list, add, update and delete items from the shopping cart of the current customer session.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Contracts`
 
@@ -21,7 +23,7 @@ The BasketItemRepositoryContract is the interface for the basket item repository
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -33,7 +35,7 @@ public findOneById($basketRowId):Plenty\Modules\Basket\Models\BasketItem
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
+===== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
 Gets an existing item by ID in the shopping cart of the current customer session.
@@ -58,7 +60,7 @@ public findExistingOneByData($data):Plenty\Modules\Basket\Models\BasketItem
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
+===== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
 Gets an existing item by item data in the shopping cart of the current customer session.
@@ -98,7 +100,7 @@ public addBasketItem($data):Plenty\Modules\Basket\Models\BasketItem
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
+===== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
 Creates an item with the specified item data in the shopping cart.
@@ -173,13 +175,13 @@ a|The information if the AfterBasketChanged event should be dispatched
 
 
 [[basket_contracts_basketrepositorycontract]]
-==== BasketRepositoryContract
+=== BasketRepositoryContract
 
 The BasketRepositoryContract is the interface for the basket repository. This interface allows to get the shopping cart of the current customer session.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Contracts`
 
@@ -188,7 +190,7 @@ The BasketRepositoryContract is the interface for the basket repository. This in
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -200,7 +202,7 @@ public load():Plenty\Modules\Basket\Models\Basket
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
+===== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
 
 
 Gets the shopping cart from current customer session.
@@ -240,7 +242,7 @@ public setCouponCode($couponCode):Plenty\Modules\Basket\Models\Basket
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
+===== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
 
 
 
@@ -265,21 +267,21 @@ public removeCouponCode():Plenty\Modules\Basket\Models\Basket
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
+===== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
 
 
 
 
 [[basket_basket_exceptions]]
-===  Exceptions
+== Exceptions
 [[basket_exceptions_basketcheckexception]]
-==== BasketCheckException
+=== BasketCheckException
 
 Class BasketCheckException
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Exceptions`
 
@@ -288,7 +290,7 @@ Class BasketCheckException
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -325,14 +327,14 @@ a|
 
 
 [[basket_exceptions_basketitemcheckexception]]
-==== BasketItemCheckException
+=== BasketItemCheckException
 
 Created by ptopczewski, 12.05.16 09:03
 Class BasketItemCheckException
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Exceptions`
 
@@ -341,7 +343,7 @@ Class BasketItemCheckException
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -454,14 +456,14 @@ public getAdditionalData():array
 
 
 [[basket_exceptions_basketitemquantitycheckexception]]
-==== BasketItemQuantityCheckException
+=== BasketItemQuantityCheckException
 
 Created by ptopczewski, 17.05.16 09:37
 Class BasketItemQuantityCheckException
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Exceptions`
 
@@ -470,7 +472,7 @@ Class BasketItemQuantityCheckException
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -552,15 +554,15 @@ public getSpecifiedQuantity():float
 
 
 [[basket_basket_models]]
-===  Models
+== Models
 [[basket_models_basket]]
-==== Basket
+=== Basket
 
 The basket model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Models`
 
@@ -667,7 +669,7 @@ The basket model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -686,13 +688,13 @@ Returns this model as an array.
 
 
 [[basket_models_basketitem]]
-==== BasketItem
+=== BasketItem
 
 The basket item model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Models`
 
@@ -813,7 +815,7 @@ The basket item model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -832,13 +834,13 @@ Returns this model as an array.
 
 
 [[basket_models_basketitemparams]]
-==== BasketItemParams
+=== BasketItemParams
 
 The basket item params model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Models`
 
@@ -869,7 +871,7 @@ The basket item params model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -887,18 +889,18 @@ public toArray()
 Returns this model as an array.
 
 [[basket_events]]
-== Events
+= Events
 
 [[basket_events_basket]]
-===  Basket
+== Basket
 [[basket_basket_afterbasketchanged]]
-==== AfterBasketChanged
+=== AfterBasketChanged
 
 The event is triggered after the shopping cart is changed.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Events\Basket`
 
@@ -907,7 +909,7 @@ The event is triggered after the shopping cart is changed.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -978,7 +980,7 @@ public getBasket():Plenty\Modules\Basket\Models\Basket
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
+===== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
 
 
 
@@ -1008,7 +1010,7 @@ public setLocationId($locationId):Plenty\Modules\Basket\Events\Basket
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_events_basket[`Basket`]
+===== *Return type:*        xref:Basket.adoc#basket_events_basket[`Basket`]
 
 
 
@@ -1033,7 +1035,7 @@ public getInvoiceAddress():Plenty\Modules\Account\Address\Models\Address
     
 
 
-====== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
+===== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
 
 
 
@@ -1048,7 +1050,7 @@ public setInvoiceAddress($invoiceAddress):Plenty\Modules\Basket\Events\Basket
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_events_basket[`Basket`]
+===== *Return type:*        xref:Basket.adoc#basket_events_basket[`Basket`]
 
 
 
@@ -1088,7 +1090,7 @@ public setMaxFsk($maxFsk):Plenty\Modules\Basket\Events\Basket
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_events_basket[`Basket`]
+===== *Return type:*        xref:Basket.adoc#basket_events_basket[`Basket`]
 
 
 
@@ -1128,7 +1130,7 @@ public setShippingCosts($shippingCosts):Plenty\Modules\Basket\Events\Basket
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_events_basket[`Basket`]
+===== *Return type:*        xref:Basket.adoc#basket_events_basket[`Basket`]
 
 
 
@@ -1145,13 +1147,13 @@ a|The shipping costs of the shopping cart
 
 
 [[basket_basket_afterbasketcreate]]
-==== AfterBasketCreate
+=== AfterBasketCreate
 
 The event is triggered after the shopping cart is created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Events\Basket`
 
@@ -1160,7 +1162,7 @@ The event is triggered after the shopping cart is created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1172,21 +1174,21 @@ public getBasket():Plenty\Modules\Basket\Models\Basket
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
+===== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
 
 
 
 
 [[basket_events_basketitem]]
-===  BasketItem
+== BasketItem
 [[basket_basketitem_afterbasketitemadd]]
-==== AfterBasketItemAdd
+=== AfterBasketItemAdd
 
 The event is triggered after an item is added to the shopping cart.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Events\BasketItem`
 
@@ -1195,7 +1197,7 @@ The event is triggered after an item is added to the shopping cart.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1207,20 +1209,20 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
+===== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
 
 
 
 [[basket_basketitem_afterbasketitemremove]]
-==== AfterBasketItemRemove
+=== AfterBasketItemRemove
 
 The event is triggered after an item is deleted from the shopping cart.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Events\BasketItem`
 
@@ -1230,13 +1232,13 @@ The event is triggered after an item is deleted from the shopping cart.
 
 
 [[basket_basketitem_afterbasketitemupdate]]
-==== AfterBasketItemUpdate
+=== AfterBasketItemUpdate
 
 The event is triggered after an item in the shopping cart is updated.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Events\BasketItem`
 
@@ -1245,7 +1247,7 @@ The event is triggered after an item in the shopping cart is updated.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1257,20 +1259,20 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
+===== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
 
 
 
 [[basket_basketitem_basketitemevent]]
-==== BasketItemEvent
+=== BasketItemEvent
 
 BasketItemEvent
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Events\BasketItem`
 
@@ -1279,7 +1281,7 @@ BasketItemEvent
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1291,20 +1293,20 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
+===== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
 
 
 
 [[basket_basketitem_beforebasketitemadd]]
-==== BeforeBasketItemAdd
+=== BeforeBasketItemAdd
 
 The event is triggered before an item is created in the shopping cart.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Events\BasketItem`
 
@@ -1313,7 +1315,7 @@ The event is triggered before an item is created in the shopping cart.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1325,20 +1327,20 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
+===== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
 
 
 
 [[basket_basketitem_beforebasketitemremove]]
-==== BeforeBasketItemRemove
+=== BeforeBasketItemRemove
 
 The event is triggered before an item is deleted from the shopping cart.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Events\BasketItem`
 
@@ -1348,13 +1350,13 @@ The event is triggered before an item is deleted from the shopping cart.
 
 
 [[basket_basketitem_beforebasketitemupdate]]
-==== BeforeBasketItemUpdate
+=== BeforeBasketItemUpdate
 
 The event is triggered before an item in the shopping cart is updated.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Basket\Events\BasketItem`
 
@@ -1363,7 +1365,7 @@ The event is triggered before an item in the shopping cart is updated.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1375,7 +1377,7 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
     
 
 
-====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
+===== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
 

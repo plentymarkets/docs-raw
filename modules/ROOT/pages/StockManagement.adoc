@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[stockmanagement_stock]]
-== Stock
+= Stock
 
 [[stockmanagement_stock_contracts]]
-===  Contracts
+== Contracts
 [[stockmanagement_contracts_stockrepositorycontract]]
-==== StockRepositoryContract
+=== StockRepositoryContract
 
 The StockRepositoryContract is the interface for the stock repository. This interface allows you to find, create and update stock. Stock is assigned to one variation and is stored in warehouses.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\StockManagement\Stock\Contracts`
 
@@ -21,7 +23,7 @@ The StockRepositoryContract is the interface for the stock repository. This inte
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -33,7 +35,7 @@ public listStockByWarehouseId($warehouseId, $columns = [], $page = 1, $itemsPerP
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List stock of a warehouse
@@ -70,7 +72,7 @@ public listStock($columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositori
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List stock
@@ -103,7 +105,7 @@ public listStockByWarehouseType($type, $columns = [], $page = 1, $itemsPerPage =
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List stock by warehouse type
@@ -252,7 +254,7 @@ public listStockMovements($warehouseId, $columns = [], $page = 1, $itemsPerPage 
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List stock movements
@@ -289,7 +291,7 @@ public unpackVariation($warehouseId, $variationStockIntake, $variationStockCorre
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
+===== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
 
 
 Unpack variation
@@ -414,13 +416,13 @@ Clears the filter array.
 
 
 [[stockmanagement_contracts_stockstoragelocationrepositorycontract]]
-==== StockStorageLocationRepositoryContract
+=== StockStorageLocationRepositoryContract
 
 The StockStorageLocationRepositoryContract is the interface for the stock storage location repository. This interface allows you to list the stock of all storage locations of a warehouse or to list all storage locations of a variation and the stock stored at these locations.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\StockManagement\Stock\Contracts`
 
@@ -429,7 +431,7 @@ The StockStorageLocationRepositoryContract is the interface for the stock storag
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -441,7 +443,7 @@ public listStockStorageLocationsByWarehouseId($warehouseId, $columns = [], $page
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List stock of all storage locations of a warehouse
@@ -482,7 +484,7 @@ public listStockStorageLocationsByVariationId($variationId, $columns = [], $page
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List stock of a variation per storage location
@@ -622,15 +624,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[stockmanagement_stock_models]]
-===  Models
+== Models
 [[stockmanagement_models_stock]]
-==== Stock
+=== Stock
 
 The stock model. There are 4 different stock terms used in plentymarkets. The physical stock, the net stock, the reserved stock and the stock reserved for listings.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\StockManagement\Stock\Models`
 
@@ -685,7 +687,7 @@ The stock model. There are 4 different stock terms used in plentymarkets. The ph
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -704,13 +706,13 @@ Returns this model as an array.
 
 
 [[stockmanagement_models_stockbatchbestbeforedate]]
-==== StockBatchBestBeforeDate
+=== StockBatchBestBeforeDate
 
 The stock batch best before date model contains all information about the batch and best before date.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\StockManagement\Stock\Models`
 
@@ -732,7 +734,7 @@ The stock batch best before date model contains all information about the batch 
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -751,13 +753,13 @@ Returns this model as an array.
 
 
 [[stockmanagement_models_stockstoragelocation]]
-==== StockStorageLocation
+=== StockStorageLocation
 
 The stock storage location model contains all information about the stock that is stored at one storage location.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\StockManagement\Stock\Models`
 
@@ -806,7 +808,7 @@ The stock storage location model contains all information about the stock that i
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -824,18 +826,18 @@ public toArray()
 Returns this model as an array.
 
 [[stockmanagement_warehouse]]
-== Warehouse
+= Warehouse
 
 [[stockmanagement_warehouse_contracts]]
-===  Contracts
+== Contracts
 [[stockmanagement_contracts_warehouserepositorycontract]]
-==== WarehouseRepositoryContract
+=== WarehouseRepositoryContract
 
 The WarehouseRepositoryContract is the interface for the warehouse repository. This interface allows you to either get one warehouse by specifying the id or to list all warehouses.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Contracts`
 
@@ -844,7 +846,7 @@ The WarehouseRepositoryContract is the interface for the warehouse repository. T
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -856,7 +858,7 @@ public findById($warehouseId, $with = []):Plenty\Modules\StockManagement\Warehou
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
+===== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
 
 
 Get a warehouse
@@ -914,7 +916,7 @@ public create($data):Plenty\Modules\StockManagement\Warehouse\Models\Warehouse
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
+===== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
 
 
 Create a warehouse
@@ -930,15 +932,15 @@ a|The request data.
 
 
 [[stockmanagement_warehouse_models]]
-===  Models
+== Models
 [[stockmanagement_models_warehouse]]
-==== Warehouse
+=== Warehouse
 
 The warehouse model in plentymarkets represents actual warehouses. Every warehouse is identified by an Id. Furthermore a warehouse is described by a name and is always associated with an address. This address may not only contain a physical address information like a street, a house number, a postal code and a town, but also an email address, a telephone number or a fax number.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Models`
 
@@ -1018,7 +1020,7 @@ The warehouse model in plentymarkets represents actual warehouses. Every warehou
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1036,12 +1038,12 @@ public toArray()
 Returns this model as an array.
 
 [[stockmanagement_management]]
-== Management
+= Management
 
 [[stockmanagement_management_contracts]]
-===  Contracts
+== Contracts
 [[stockmanagement_contracts_rackmanagementrepositorycontract]]
-==== RackManagementRepositoryContract
+=== RackManagementRepositoryContract
 
 The RackManagementRepositoryContract is the interface for the rack management repository. This interface provides the functionality to manage the warehouse configuration for racks. Racks can be retrieved, created or updated here.
 
@@ -1054,7 +1056,7 @@ Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationDimensionReposito
 ====
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Management\Contracts`
 
@@ -1063,7 +1065,7 @@ Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationDimensionReposito
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1075,7 +1077,7 @@ public getRackById($rackId, $columns = [], $with = []):Plenty\Modules\StockManag
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_rack[`Rack`]
+===== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_rack[`Rack`]
 
 
 Find a rack by id.
@@ -1108,7 +1110,7 @@ public findRacks($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plent
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Find racks. The results can be filtered by warehouse id.
@@ -1145,7 +1147,7 @@ public createRack($data, $warehouseId):Plenty\Modules\StockManagement\Warehouse\
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_rack[`Rack`]
+===== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_rack[`Rack`]
 
 
 Create a new rack.
@@ -1266,7 +1268,7 @@ Clears the filter array.
 
 
 [[stockmanagement_contracts_shelfmanagementrepositorycontract]]
-==== ShelfManagementRepositoryContract
+=== ShelfManagementRepositoryContract
 
 The ShelfManagementRepositoryContract is the interface for the shelf management repository. This interface provides the functionality to manage the warehouse configuration for shelves. Shelves can be retrieved, created or updated here.
 
@@ -1279,7 +1281,7 @@ Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationDimensionReposito
 ====
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Management\Contracts`
 
@@ -1288,7 +1290,7 @@ Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationDimensionReposito
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1300,7 +1302,7 @@ public getShelfById($shelfId, $columns = [], $with = []):Plenty\Modules\StockMan
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_shelf[`Shelf`]
+===== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_shelf[`Shelf`]
 
 
 Find a shelf by id.
@@ -1333,7 +1335,7 @@ public findShelves($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Ple
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Find shelves. The results can be filtered by warehouse id and rack id.
@@ -1370,7 +1372,7 @@ public createShelf($data, $warehouseId, $rackId):Plenty\Modules\StockManagement\
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_shelf[`Shelf`]
+===== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_shelf[`Shelf`]
 
 
 Create a new shelf.
@@ -1495,7 +1497,7 @@ Clears the filter array.
 
 
 [[stockmanagement_contracts_storagelocationmanagementrepositorycontract]]
-==== StorageLocationManagementRepositoryContract
+=== StorageLocationManagementRepositoryContract
 
 The StorageLocationManagementRepositoryContract is the interface for the storage location management repository. This interface provides the functionality to manage the warehouse configuration for storage locations. Storage locations can be retrieved, created or updated here.
 
@@ -1508,7 +1510,7 @@ Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationRepositoryContrac
 ====
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Management\Contracts`
 
@@ -1517,7 +1519,7 @@ Please use Plenty\Modules\Warehouse\Contracts\WarehouseLocationRepositoryContrac
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1529,7 +1531,7 @@ public getStorageLocationById($storageLocationId, $columns = [], $with = []):Ple
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[`StorageLocation`]
+===== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[`StorageLocation`]
 
 
 Find a storage location by id.
@@ -1562,7 +1564,7 @@ public findStorageLocations($page = 1, $itemsPerPage = 50, $columns = [], $with 
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Find storage locations. The results can be filtered by warehouse id, rack id and shelf id.
@@ -1599,7 +1601,7 @@ public createStorageLocation($data, $warehouseId, $rackId, $shelfId):Plenty\Modu
     
 
 
-====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[`StorageLocation`]
+===== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_storagelocation[`StorageLocation`]
 
 
 Create a new storage location.
@@ -1727,15 +1729,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[stockmanagement_management_models]]
-===  Models
+== Models
 [[stockmanagement_models_rack]]
-==== Rack
+=== Rack
 
 The storage rack model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Management\Models`
 
@@ -1775,7 +1777,7 @@ The storage rack model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1794,13 +1796,13 @@ Returns this model as an array.
 
 
 [[stockmanagement_models_shelf]]
-==== Shelf
+=== Shelf
 
 The storage shelf model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Management\Models`
 
@@ -1834,7 +1836,7 @@ The storage shelf model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1853,13 +1855,13 @@ Returns this model as an array.
 
 
 [[stockmanagement_models_storagelocation]]
-==== StorageLocation
+=== StorageLocation
 
 The storage location model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\StockManagement\Warehouse\Management\Models`
 
@@ -1905,7 +1907,7 @@ The storage location model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

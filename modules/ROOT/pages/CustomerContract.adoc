@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[customercontract_customercontract]]
-== CustomerContract
+= CustomerContract
 
 [[customercontract_customercontract_contracts]]
-===  Contracts
+== Contracts
 [[customercontract_contracts_contractsigningrepositorycontract]]
-==== ContractSigningRepositoryContract
+=== ContractSigningRepositoryContract
 
 This interface provides methods to digital sign contracts
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\CustomerContract\Contracts`
 
@@ -21,7 +23,7 @@ This interface provides methods to digital sign contracts
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -33,7 +35,7 @@ public signContract($contractId, $signerName):Plenty\Modules\CustomerContract\Mo
     
 
 
-====== *Return type:*        xref:Customercontract.adoc#customercontract_models_signing[`Signing`]
+===== *Return type:*        xref:Customercontract.adoc#customercontract_models_signing[`Signing`]
 
 
 Sign a contract
@@ -62,7 +64,7 @@ public getSigning($contractId):Plenty\Modules\CustomerContract\Models\Signing
     
 
 
-====== *Return type:*        xref:Customercontract.adoc#customercontract_models_signing[`Signing`]
+===== *Return type:*        xref:Customercontract.adoc#customercontract_models_signing[`Signing`]
 
 
 Returns signing of a contract
@@ -104,13 +106,13 @@ a|The contract Id
 
 
 [[customercontract_contracts_customercontractrepositorycontract]]
-==== CustomerContractRepositoryContract
+=== CustomerContractRepositoryContract
 
 This interface provides methods to list contracts
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\CustomerContract\Contracts`
 
@@ -119,7 +121,7 @@ This interface provides methods to list contracts
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -131,7 +133,7 @@ public list():Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 List all contracts
@@ -146,7 +148,7 @@ public get($contractId):Plenty\Modules\CustomerContract\Models\CustomerContract
     
 
 
-====== *Return type:*        xref:Customercontract.adoc#customercontract_models_customercontract[`CustomerContract`]
+===== *Return type:*        xref:Customercontract.adoc#customercontract_models_customercontract[`CustomerContract`]
 
 
 Returns a single contract
@@ -171,7 +173,7 @@ public create($data):Plenty\Modules\CustomerContract\Models\CustomerContract
     
 
 
-====== *Return type:*        xref:Customercontract.adoc#customercontract_models_customercontract[`CustomerContract`]
+===== *Return type:*        xref:Customercontract.adoc#customercontract_models_customercontract[`CustomerContract`]
 
 
 Add a contract
@@ -212,15 +214,15 @@ a|The contract Id
 
 
 [[customercontract_customercontract_models]]
-===  Models
+== Models
 [[customercontract_models_customercontract]]
-==== CustomerContract
+=== CustomerContract
 
 The customer contract model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\CustomerContract\Models`
 
@@ -248,7 +250,7 @@ The customer contract model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -267,13 +269,13 @@ Returns this model as an array.
 
 
 [[customercontract_models_signing]]
-==== Signing
+=== Signing
 
 The customer contract model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\CustomerContract\Models`
 
@@ -301,7 +303,7 @@ The customer contract model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

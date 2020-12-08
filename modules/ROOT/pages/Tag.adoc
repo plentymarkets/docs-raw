@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[tag_tag]]
-== Tag
+= Tag
 
 [[tag_tag_contracts]]
-===  Contracts
+== Contracts
 [[tag_contracts_tagavailabilityrepositorycontract]]
-==== TagAvailabilityRepositoryContract
+=== TagAvailabilityRepositoryContract
 
 The TagAvailabilityRepositoryContract is the interface for the tag availability repository. This interface allows to update and create tag availabilities.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Tag\Contracts`
 
@@ -21,7 +23,7 @@ The TagAvailabilityRepositoryContract is the interface for the tag availability 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -33,7 +35,7 @@ public update($data, $tagId, $availabilityType):Plenty\Modules\Tag\Models\TagAva
     
 
 
-====== *Return type:*        xref:Tag.adoc#tag_models_tagavailability[`TagAvailability`]
+===== *Return type:*        xref:Tag.adoc#tag_models_tagavailability[`TagAvailability`]
 
 
 
@@ -73,7 +75,7 @@ public create($data):Plenty\Modules\Tag\Models\TagAvailability
     
 
 
-====== *Return type:*        xref:Tag.adoc#tag_models_tagavailability[`TagAvailability`]
+===== *Return type:*        xref:Tag.adoc#tag_models_tagavailability[`TagAvailability`]
 
 
 
@@ -120,13 +122,13 @@ Applies criteria classes to the current repository.
 
 
 [[tag_contracts_tagnamerepositorycontract]]
-==== TagNameRepositoryContract
+=== TagNameRepositoryContract
 
 The TagNameRepositoryContract is the interface for the tag name repository. This interface allows to update, create and list tag names.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Tag\Contracts`
 
@@ -135,7 +137,7 @@ The TagNameRepositoryContract is the interface for the tag name repository. This
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -147,7 +149,7 @@ public update($data, $tagId, $lang):Plenty\Modules\Tag\Models\TagName
     
 
 
-====== *Return type:*        xref:Tag.adoc#tag_models_tagname[`TagName`]
+===== *Return type:*        xref:Tag.adoc#tag_models_tagname[`TagName`]
 
 
 
@@ -180,7 +182,7 @@ public create($data):Plenty\Modules\Tag\Models\TagName
     
 
 
-====== *Return type:*        xref:Tag.adoc#tag_models_tagname[`TagName`]
+===== *Return type:*        xref:Tag.adoc#tag_models_tagname[`TagName`]
 
 
 
@@ -256,13 +258,13 @@ Applies criteria classes to the current repository.
 
 
 [[tag_contracts_tagrelationshiprepositorycontract]]
-==== TagRelationshipRepositoryContract
+=== TagRelationshipRepositoryContract
 
 The TagRelationshipRepositoryContract is the interface for the tag relationship repository. This interface allows to update, create, delete and list tag relationships.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Tag\Contracts`
 
@@ -271,7 +273,7 @@ The TagRelationshipRepositoryContract is the interface for the tag relationship 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -283,7 +285,7 @@ public update($data, $tagId, $availabilityType, $relationshipValue):Plenty\Modul
     
 
 
-====== *Return type:*        xref:Tag.adoc#tag_models_tagrelationship[`TagRelationship`]
+===== *Return type:*        xref:Tag.adoc#tag_models_tagrelationship[`TagRelationship`]
 
 
 
@@ -325,7 +327,7 @@ public create($data):Plenty\Modules\Tag\Models\TagRelationship
     
 
 
-====== *Return type:*        xref:Tag.adoc#tag_models_tagrelationship[`TagRelationship`]
+===== *Return type:*        xref:Tag.adoc#tag_models_tagrelationship[`TagRelationship`]
 
 
 
@@ -495,7 +497,7 @@ public findRelationship($tagId, $relationshipValue, $relationshipType):Plenty\Mo
     
 
 
-====== *Return type:*        xref:Tag.adoc#tag_models_tagrelationship[`TagRelationship`]
+===== *Return type:*        xref:Tag.adoc#tag_models_tagrelationship[`TagRelationship`]
 
 
 Gets a specific tag relationship or returns null.
@@ -528,7 +530,7 @@ public delete($relationshipValue, $relationshipType):Plenty\Repositories\Models\
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[`DeleteResponse`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[`DeleteResponse`]
 
 
 Deletes tag links by reference value and relationship type.
@@ -557,7 +559,7 @@ public deleteByUUID($relationshipValue, $relationshipType):Plenty\Repositories\M
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[`DeleteResponse`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[`DeleteResponse`]
 
 
 Deletes tag links by uuid5 reference value and relationship type.
@@ -586,7 +588,7 @@ public deleteBulk($data):Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 Deletes a list of tag relationships. The tag ID, tag type and relation value must be specified.
@@ -611,7 +613,7 @@ public listRelationships($with = []):Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 Returns all tag relationships.
@@ -728,13 +730,13 @@ Clears the filter array.
 
 
 [[tag_contracts_tagrepositorycontract]]
-==== TagRepositoryContract
+=== TagRepositoryContract
 
 The TagRepositoryContract is the interface for the tag repository. This interface allows to create, update and delete tags.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Tag\Contracts`
 
@@ -743,7 +745,7 @@ The TagRepositoryContract is the interface for the tag repository. This interfac
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -755,7 +757,7 @@ public create($name):Plenty\Modules\Tag\Models\Tag
     
 
 
-====== *Return type:*        xref:Tag.adoc#tag_models_tag[`Tag`]
+===== *Return type:*        xref:Tag.adoc#tag_models_tag[`Tag`]
 
 
 Creates a new tag.
@@ -780,7 +782,7 @@ public update($data, $tagId):Plenty\Modules\Tag\Models\Tag
     
 
 
-====== *Return type:*        xref:Tag.adoc#tag_models_tag[`Tag`]
+===== *Return type:*        xref:Tag.adoc#tag_models_tag[`Tag`]
 
 
 Updates a tag.
@@ -834,7 +836,7 @@ public getTagByName($name):Plenty\Modules\Tag\Models\Tag
     
 
 
-====== *Return type:*        xref:Tag.adoc#tag_models_tag[`Tag`]
+===== *Return type:*        xref:Tag.adoc#tag_models_tag[`Tag`]
 
 
 
@@ -884,7 +886,7 @@ public getTagById($id, $with = []):Plenty\Modules\Tag\Models\Tag
     
 
 
-====== *Return type:*        xref:Tag.adoc#tag_models_tag[`Tag`]
+===== *Return type:*        xref:Tag.adoc#tag_models_tag[`Tag`]
 
 
 
@@ -979,7 +981,7 @@ public listTags($with = []):Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 Returns all tags.
@@ -1004,7 +1006,7 @@ public createTag($data):Plenty\Modules\Tag\Models\Tag
     
 
 
-====== *Return type:*        xref:Tag.adoc#tag_models_tag[`Tag`]
+===== *Return type:*        xref:Tag.adoc#tag_models_tag[`Tag`]
 
 
 Creates a new tag.
@@ -1170,15 +1172,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[tag_tag_models]]
-===  Models
+== Models
 [[tag_models_tag]]
-==== Tag
+=== Tag
 
 The Tag model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Tag\Models`
 
@@ -1221,7 +1223,7 @@ The Tag model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1240,13 +1242,13 @@ Returns this model as an array.
 
 
 [[tag_models_tagavailability]]
-==== TagAvailability
+=== TagAvailability
 
 The tag availability model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Tag\Models`
 
@@ -1277,7 +1279,7 @@ The tag availability model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1296,13 +1298,13 @@ Returns this model as an array.
 
 
 [[tag_models_tagclient]]
-==== TagClient
+=== TagClient
 
 The tag client model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Tag\Models`
 
@@ -1327,7 +1329,7 @@ The tag client model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1346,13 +1348,13 @@ Returns this model as an array.
 
 
 [[tag_models_tagname]]
-==== TagName
+=== TagName
 
 The tag name model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Tag\Models`
 
@@ -1380,7 +1382,7 @@ The tag name model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1399,13 +1401,13 @@ Returns this model as an array.
 
 
 [[tag_models_tagrelationship]]
-==== TagRelationship
+=== TagRelationship
 
 The tag relationship model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Tag\Models`
 
@@ -1433,7 +1435,7 @@ The tag relationship model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

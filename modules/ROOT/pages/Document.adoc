@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[document_document]]
-== Document
+= Document
 
 [[document_document_contracts]]
-===  Contracts
+== Contracts
 [[document_contracts_documentrepositorycontract]]
-==== DocumentRepositoryContract
+=== DocumentRepositoryContract
 
 Download and list order documents as well as download, list, upload and delete category documents.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Document\Contracts`
 
@@ -21,7 +23,7 @@ Download and list order documents as well as download, list, upload and delete c
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -58,7 +60,7 @@ public findById($id, $columns = []):Plenty\Modules\Document\Models\Document
     
 
 
-====== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
+===== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
 
 
 Get a document
@@ -87,7 +89,7 @@ public find($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Rep
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List documents
@@ -335,7 +337,7 @@ public findCurrentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\
     
 
 
-====== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
+===== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
 
 
 Finds the current order document
@@ -364,7 +366,7 @@ public findRecentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\D
     
 
 
-====== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
+===== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
 
 
 Finds order document.
@@ -443,7 +445,7 @@ public uploadOrderReturnsDocuments($returnsId, $document):Plenty\Modules\Documen
     
 
 
-====== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
+===== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
 
 
 Uploads a specific document.
@@ -472,7 +474,7 @@ public getOrderReturnsDocumentById($returnsId, $withLabel = false):Plenty\Module
     
 
 
-====== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
+===== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
 
 
 Finds a document.
@@ -625,15 +627,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[document_document_models]]
-===  Models
+== Models
 [[document_models_document]]
-==== Document
+=== Document
 
 The document model contains information about actual documents.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Document\Models`
 
@@ -742,7 +744,7 @@ The document model contains information about actual documents.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -761,13 +763,13 @@ Returns this model as an array.
 
 
 [[document_models_documentreference]]
-==== DocumentReference
+=== DocumentReference
 
 The document reference model. A document reference allows you to assign a document to other models.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Document\Models`
 
@@ -807,7 +809,7 @@ The document reference model. A document reference allows you to assign a docume
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

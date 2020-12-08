@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[payment_payment]]
-== Payment
+= Payment
 
 [[payment_payment_contracts]]
-===  Contracts
+== Contracts
 [[payment_contracts_paymentcontactrelationrepositorycontract]]
-==== PaymentContactRelationRepositoryContract
+=== PaymentContactRelationRepositoryContract
 
 The PaymentContactRelationRepositoryContract is the interface for the payment contact relation repository. Create and delete relations between payments and contact.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Contracts`
 
@@ -21,7 +23,7 @@ The PaymentContactRelationRepositoryContract is the interface for the payment co
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -33,7 +35,7 @@ public createContactRelation($payment, $contact):Plenty\Modules\Payment\Models\P
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentcontactrelation[`PaymentContactRelation`]
+===== *Return type:*        xref:Payment.adoc#payment_models_paymentcontactrelation[`PaymentContactRelation`]
 
 
 Creates a payment contact relation.
@@ -79,13 +81,13 @@ a|The ID of the payment
 
 
 [[payment_contracts_paymentmatcherrepositorycontract]]
-==== PaymentMatcherRepositoryContract
+=== PaymentMatcherRepositoryContract
 
 The PaymentMatcherRepositoryContract automatically matching payments to an order.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Contracts`
 
@@ -94,7 +96,7 @@ The PaymentMatcherRepositoryContract automatically matching payments to an order
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -177,13 +179,13 @@ a|
 
 
 [[payment_contracts_paymentorderrelationrepositorycontract]]
-==== PaymentOrderRelationRepositoryContract
+=== PaymentOrderRelationRepositoryContract
 
 The PaymentOrderRelationRepositoryContract is the interface for the payment order relation repository. Create and delete relations between payments and orders.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Contracts`
 
@@ -192,7 +194,7 @@ The PaymentOrderRelationRepositoryContract is the interface for the payment orde
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -204,7 +206,7 @@ public createOrderRelation($payment, $order):Plenty\Modules\Payment\Models\Payme
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[`PaymentOrderRelation`]
+===== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[`PaymentOrderRelation`]
 
 
 Creates a payment order relation.
@@ -233,7 +235,7 @@ public findOrderRelation($payment):Plenty\Modules\Payment\Models\PaymentOrderRel
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[`PaymentOrderRelation`]
+===== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[`PaymentOrderRelation`]
 
 
 Gets the payment order relation.
@@ -283,7 +285,7 @@ public createOrderRelationWithValidation($paymentId, $orderId):Plenty\Modules\Pa
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[`PaymentOrderRelation`]
+===== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[`PaymentOrderRelation`]
 
 
 Assign a payment to an order ID if order ID is valid and order ID doesn&#039;t have a payment assigned.
@@ -329,13 +331,13 @@ a|
 
 
 [[payment_contracts_paymentpropertyrepositorycontract]]
-==== PaymentPropertyRepositoryContract
+=== PaymentPropertyRepositoryContract
 
 The PaymentPropertyRepositoryContract is the interface for the payment property repository. List, get, create and update payment properties.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Contracts`
 
@@ -344,7 +346,7 @@ The PaymentPropertyRepositoryContract is the interface for the payment property 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -507,7 +509,7 @@ public createProperty($data):Plenty\Modules\Payment\Models\PaymentProperty
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentproperty[`PaymentProperty`]
+===== *Return type:*        xref:Payment.adoc#payment_models_paymentproperty[`PaymentProperty`]
 
 
 Creates a payment property.
@@ -532,7 +534,7 @@ public changeProperty($data):Plenty\Modules\Payment\Models\PaymentProperty
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentproperty[`PaymentProperty`]
+===== *Return type:*        xref:Payment.adoc#payment_models_paymentproperty[`PaymentProperty`]
 
 
 Updates a payment property.
@@ -549,13 +551,13 @@ a|
 
 
 [[payment_contracts_paymentpropertytypenamerepositorycontract]]
-==== PaymentPropertyTypeNameRepositoryContract
+=== PaymentPropertyTypeNameRepositoryContract
 
 The PaymentPropertyTypeNameRepositoryContract is the interface for the repository of payment property type names. List, get, create and update payment property names.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Contracts`
 
@@ -564,7 +566,7 @@ The PaymentPropertyTypeNameRepositoryContract is the interface for the repositor
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -626,7 +628,7 @@ public createTypeName($data):Plenty\Modules\Payment\Models\PaymentPropertyTypeNa
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytypename[`PaymentPropertyTypeName`]
+===== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytypename[`PaymentPropertyTypeName`]
 
 
 Creates a payment property type name.
@@ -668,13 +670,13 @@ a|
 
 
 [[payment_contracts_paymentpropertytyperepositorycontract]]
-==== PaymentPropertyTypeRepositoryContract
+=== PaymentPropertyTypeRepositoryContract
 
 The PaymentPropertyTypeRepositoryContract is the interface for the payment property type repository. List, get, create and update payment properties.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Contracts`
 
@@ -683,7 +685,7 @@ The PaymentPropertyTypeRepositoryContract is the interface for the payment prope
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -781,7 +783,7 @@ public createType($data):Plenty\Modules\Payment\Models\PaymentPropertyType
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytype[`PaymentPropertyType`]
+===== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytype[`PaymentPropertyType`]
 
 
 Creates a payment property type.
@@ -806,7 +808,7 @@ public changeProperty($data):Plenty\Modules\Payment\Models\PaymentPropertyType
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytype[`PaymentPropertyType`]
+===== *Return type:*        xref:Payment.adoc#payment_models_paymentpropertytype[`PaymentPropertyType`]
 
 
 Updates a payment property type.
@@ -823,13 +825,13 @@ a|
 
 
 [[payment_contracts_paymentrepositorycontract]]
-==== PaymentRepositoryContract
+=== PaymentRepositoryContract
 
 The PaymentRepositoryContract is the interface for the payment repository. List, get, create and update payments. Payments can come into plentymarkets automatically or can be booked manually. Existing payments can be filtered by payment method, by ID, by payment status, by transaction type, by order or by date. Existing payments can also be updated.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Contracts`
 
@@ -838,7 +840,7 @@ The PaymentRepositoryContract is the interface for the payment repository. List,
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -879,7 +881,7 @@ public search($page = 1, $itemsPerPage = \Plenty\Modules\Payment\Models\Payment:
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Searches for a list of payments.
@@ -912,7 +914,7 @@ public getPaymentById($paymentId):Plenty\Modules\Payment\Models\Payment
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_payment[`Payment`]
+===== *Return type:*        xref:Payment.adoc#payment_models_payment[`Payment`]
 
 
 Gets a payment. The ID of the payment must be specified.
@@ -1172,7 +1174,7 @@ public createPayment($data):Plenty\Modules\Payment\Models\Payment
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_payment[`Payment`]
+===== *Return type:*        xref:Payment.adoc#payment_models_payment[`Payment`]
 
 
 Creates a payment.
@@ -1197,7 +1199,7 @@ public updatePayment($data):Plenty\Modules\Payment\Models\Payment
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_payment[`Payment`]
+===== *Return type:*        xref:Payment.adoc#payment_models_payment[`Payment`]
 
 
 Updates a payment.
@@ -1421,16 +1423,33 @@ public clearFilters():void
 
 Clears the filter array.
 
+[[payment_payment_exceptions]]
+== Exceptions
+[[payment_exceptions_paymentmatcherexception]]
+=== PaymentMatcherException
+
+Class PaymentMatcherException
+
+
+
+==== Namespace
+
+`Plenty\Modules\Payment\Exceptions`
+
+
+
+
+
 [[payment_payment_models]]
-===  Models
+== Models
 [[payment_models_payment]]
-==== Payment
+=== Payment
 
 The payment model representing a received payment by a payment service provider.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Models`
 
@@ -1533,7 +1552,7 @@ The payment model representing a received payment by a payment service provider.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1552,13 +1571,13 @@ Returns this model as an array.
 
 
 [[payment_models_paymentcontactrelation]]
-==== PaymentContactRelation
+=== PaymentContactRelation
 
 The payment contact relation model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Models`
 
@@ -1586,7 +1605,7 @@ The payment contact relation model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1605,13 +1624,13 @@ Returns this model as an array.
 
 
 [[payment_models_paymentorderrelation]]
-==== PaymentOrderRelation
+=== PaymentOrderRelation
 
 The payment order relation model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Models`
 
@@ -1639,7 +1658,7 @@ The payment order relation model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1658,13 +1677,13 @@ Returns this model as an array.
 
 
 [[payment_models_paymentproperty]]
-==== PaymentProperty
+=== PaymentProperty
 
 The payment property model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Models`
 
@@ -1735,7 +1754,7 @@ The payment property model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1754,13 +1773,13 @@ Returns this model as an array.
 
 
 [[payment_models_paymentpropertytype]]
-==== PaymentPropertyType
+=== PaymentPropertyType
 
 The payment property type model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Models`
 
@@ -1788,7 +1807,7 @@ The payment property type model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1807,13 +1826,13 @@ Returns this model as an array.
 
 
 [[payment_models_paymentpropertytypename]]
-==== PaymentPropertyTypeName
+=== PaymentPropertyTypeName
 
 The payment property type name model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Models`
 
@@ -1841,7 +1860,7 @@ The payment property type name model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1859,18 +1878,18 @@ public toArray()
 Returns this model as an array.
 
 [[payment_events]]
-== Events
+= Events
 
 [[payment_events_checkout]]
-===  Checkout
+== Checkout
 [[payment_checkout_executepayment]]
-==== ExecutePayment
+=== ExecutePayment
 
 The event is triggered when a payment is executed.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Events\Checkout`
 
@@ -1879,7 +1898,7 @@ The event is triggered when a payment is executed.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1891,7 +1910,7 @@ public setOrderId($orderId):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
+===== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the ID of the order in the checkout. The ID must be specified.
@@ -1931,7 +1950,7 @@ public setMop($mop):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
+===== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the ID of the payment method. The ID must be specified.
@@ -1971,7 +1990,7 @@ public setType($type):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
+===== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the content type.
@@ -2011,7 +2030,7 @@ public setValue($value):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
+===== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the value of the content type.
@@ -2043,13 +2062,13 @@ Gets the value of the content type.
 
 
 [[payment_checkout_getpaymentmethodcontent]]
-==== GetPaymentMethodContent
+=== GetPaymentMethodContent
 
 The event is triggered after the payment method is selected in the checkout.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Events\Checkout`
 
@@ -2058,7 +2077,7 @@ The event is triggered after the payment method is selected in the checkout.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2070,7 +2089,7 @@ public setMop($mop):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
+===== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the ID of the payment method. The ID must be specified.
@@ -2110,7 +2129,7 @@ public setType($type):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
+===== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the content type.
@@ -2150,7 +2169,7 @@ public setValue($value):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
+===== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the value of the content type.
@@ -2190,7 +2209,7 @@ public setParams($params):Plenty\Modules\Payment\Events\Checkout
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
+===== *Return type:*        xref:Payment.adoc#payment_events_checkout[`Checkout`]
 
 
 Updates the parameters. The parameters must be specified.
@@ -2221,18 +2240,18 @@ public getParams():void
 Gets the parameters.
 
 [[payment_history]]
-== History
+= History
 
 [[payment_history_contracts]]
-===  Contracts
+== Contracts
 [[payment_contracts_paymenthistoryrepositorycontract]]
-==== PaymentHistoryRepositoryContract
+=== PaymentHistoryRepositoryContract
 
 The PaymentHistoryRepositoryContract is the interface for the payment history repository. Get and create the payment history.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\History\Contracts`
 
@@ -2241,7 +2260,7 @@ The PaymentHistoryRepositoryContract is the interface for the payment history re
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2290,7 +2309,7 @@ public createHistory($data):Plenty\Modules\Payment\History\Models\PaymentHistory
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymenthistory[`PaymentHistory`]
+===== *Return type:*        xref:Payment.adoc#payment_models_paymenthistory[`PaymentHistory`]
 
 
 Creates the payment history.
@@ -2306,15 +2325,15 @@ a|
 
 
 [[payment_history_models]]
-===  Models
+== Models
 [[payment_models_paymenthistory]]
-==== PaymentHistory
+=== PaymentHistory
 
 The payment history model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\History\Models`
 
@@ -2353,7 +2372,7 @@ The payment history model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2371,18 +2390,18 @@ public toArray()
 Returns this model as an array.
 
 [[payment_method]]
-== Method
+= Method
 
 [[payment_method_contracts]]
-===  Contracts
+== Contracts
 [[payment_contracts_paymentmethodcontainer]]
-==== PaymentMethodContainer
+=== PaymentMethodContainer
 
 The payment method container
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Method\Contracts`
 
@@ -2391,7 +2410,7 @@ The payment method container
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2453,13 +2472,13 @@ a|
 
 
 [[payment_contracts_paymentmethodrepositorycontract]]
-==== PaymentMethodRepositoryContract
+=== PaymentMethodRepositoryContract
 
 The PaymentMethodRepositoryContract is the interface for the payment method repository. List, get, create and update payment methods.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Method\Contracts`
 
@@ -2468,7 +2487,7 @@ The PaymentMethodRepositoryContract is the interface for the payment method repo
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2550,7 +2569,7 @@ public findByPaymentMethodId($paymentMethodId):Plenty\Modules\Payment\Method\Mod
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
+===== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
 
 
 Gets a payment method. The ID of the payment method must be specified.
@@ -2600,7 +2619,7 @@ public createPaymentMethod($paymentMethodData):Plenty\Modules\Payment\Method\Mod
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
+===== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
 
 
 Creates a payment method.
@@ -2625,7 +2644,7 @@ public updateName($paymentMethodData):Plenty\Modules\Payment\Method\Models\Payme
     
 
 
-====== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
+===== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
 
 
 Updates the payment method name.
@@ -2811,13 +2830,13 @@ a|
 
 
 [[payment_contracts_paymentmethodservice]]
-==== PaymentMethodService
+=== PaymentMethodService
 
 Deprecated: The payment method service
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Method\Contracts`
 
@@ -2826,7 +2845,7 @@ Deprecated: The payment method service
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2899,15 +2918,15 @@ public canHandleSubscriptions():bool
 Can this payment method handle subscriptions?
 
 [[payment_method_models]]
-===  Models
+== Models
 [[payment_models_paymentmethod]]
-==== PaymentMethod
+=== PaymentMethod
 
 The payment method model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Method\Models`
 
@@ -2935,7 +2954,7 @@ The payment method model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2953,15 +2972,15 @@ public toArray()
 Returns this model as an array.
 
 [[payment_method_services]]
-===  Services
+== Services
 [[payment_services_paymentmethodbaseservice]]
-==== PaymentMethodBaseService
+=== PaymentMethodBaseService
 
 The payment method service
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\Method\Services`
 
@@ -2970,7 +2989,7 @@ The payment method service
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3218,18 +3237,18 @@ public getBackendIcon():string
 Return the icon for the backend, shown in the payments ui
 
 [[payment_methodname]]
-== MethodName
+= MethodName
 
 [[payment_methodname_models]]
-===  Models
+== Models
 [[payment_models_paymentmethodname]]
-==== PaymentMethodName
+=== PaymentMethodName
 
 The payment method name model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Payment\MethodName\Models`
 
@@ -3254,7 +3273,7 @@ The payment method name model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

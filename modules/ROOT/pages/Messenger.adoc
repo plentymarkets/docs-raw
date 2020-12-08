@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[messenger_messenger]]
-== Messenger
+= Messenger
 
 [[messenger_messenger_contracts]]
-===  Contracts
+== Contracts
 [[messenger_contracts_messengerrepositorycontract]]
-==== MessengerRepositoryContract
+=== MessengerRepositoryContract
 
 The MessengerRepositoryContract is the interface for the messenger repository. This interface defines methods to add and show/list messages.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Contracts`
 
@@ -21,7 +23,7 @@ The MessengerRepositoryContract is the interface for the messenger repository. T
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -33,7 +35,7 @@ public add($data):Plenty\Modules\Messenger\Models\Message
     
 
 
-====== *Return type:*        xref:Messenger.adoc#messenger_models_message[`Message`]
+===== *Return type:*        xref:Messenger.adoc#messenger_models_message[`Message`]
 
 
 Creates a new message.
@@ -233,7 +235,7 @@ public updateControls($data, $uuid):Plenty\Modules\Messenger\Models\Message
     
 
 
-====== *Return type:*        xref:Messenger.adoc#messenger_models_message[`Message`]
+===== *Return type:*        xref:Messenger.adoc#messenger_models_message[`Message`]
 
 
 Updates the message ui control options in the message meta data and returns the message.
@@ -316,7 +318,7 @@ public getAttachment($uuid, $filename):Plenty\Modules\Messenger\Models\Attachmen
     
 
 
-====== *Return type:*        xref:Messenger.adoc#messenger_models_attachment[`Attachment`]
+===== *Return type:*        xref:Messenger.adoc#messenger_models_attachment[`Attachment`]
 
 
 Gets a message attachment.
@@ -345,7 +347,7 @@ public updateMetaData($uuid, $metaData):Plenty\Modules\Messenger\Models\Message
     
 
 
-====== *Return type:*        xref:Messenger.adoc#messenger_models_message[`Message`]
+===== *Return type:*        xref:Messenger.adoc#messenger_models_message[`Message`]
 
 
 Updates the meta data of the message.
@@ -450,15 +452,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[messenger_messenger_events]]
-===  Events
+== Events
 [[messenger_events_messagecreated]]
-==== MessageCreated
+=== MessageCreated
 
 The event is triggered after a new message was created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Events`
 
@@ -467,7 +469,7 @@ The event is triggered after a new message was created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -494,21 +496,21 @@ public getMessage():Plenty\Modules\Messenger\Models\Message
     
 
 
-====== *Return type:*        xref:Messenger.adoc#messenger_models_message[`Message`]
+===== *Return type:*        xref:Messenger.adoc#messenger_models_message[`Message`]
 
 
 Get the message.
 
 [[messenger_messenger_models]]
-===  Models
+== Models
 [[messenger_models_attachment]]
-==== Attachment
+=== Attachment
 
 The Attachment model of the messenger.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -542,7 +544,7 @@ The Attachment model of the messenger.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -561,13 +563,13 @@ Returns this model as an array.
 
 
 [[messenger_models_message]]
-==== Message
+=== Message
 
 The Message model of the messenger.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -643,7 +645,7 @@ The Message model of the messenger.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -662,13 +664,13 @@ Returns this model as an array.
 
 
 [[messenger_models_messagefrom]]
-==== MessageFrom
+=== MessageFrom
 
 The MessageFrom model of the messenger.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -695,7 +697,7 @@ and the id of the user or the contact otherwise.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -714,13 +716,13 @@ Returns this model as an array.
 
 
 [[messenger_models_messagelinkedto]]
-==== MessageLinkedTo
+=== MessageLinkedTo
 
 The MessageLinkedTo model of the messenger.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -748,7 +750,7 @@ and an integer otherwise.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -767,13 +769,13 @@ Returns this model as an array.
 
 
 [[messenger_models_messagemetadata]]
-==== MessageMetaData
+=== MessageMetaData
 
 The MessageMetaData model of the messenger.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -807,7 +809,7 @@ The MessageMetaData model of the messenger.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -826,7 +828,7 @@ Returns this model as an array.
 
 
 [[messenger_models_messagemetadatacontrols]]
-==== MessageMetaDataControls
+=== MessageMetaDataControls
 
 The message controls model. Currently supported controls:
  * &lt;ul&gt;
@@ -843,7 +845,7 @@ The message controls model. Currently supported controls:
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -868,7 +870,7 @@ The message controls model. Currently supported controls:
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -887,13 +889,13 @@ Returns this model as an array.
 
 
 [[messenger_models_messagemetadatanotdone]]
-==== MessageMetaDataNotDone
+=== MessageMetaDataNotDone
 
 The MessageMetaDataNotDone model of the messenger.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -915,7 +917,7 @@ The MessageMetaDataNotDone model of the messenger.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -934,13 +936,13 @@ Returns this model as an array.
 
 
 [[messenger_models_messagemetadatatimecapture]]
-==== MessageMetaDataTimeCapture
+=== MessageMetaDataTimeCapture
 
 The MessageMetaDataTimeCapture model of the messenger.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -962,7 +964,7 @@ The MessageMetaDataTimeCapture model of the messenger.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -981,13 +983,13 @@ Returns this model as an array.
 
 
 [[messenger_models_messagemetalink]]
-==== MessageMetaLink
+=== MessageMetaLink
 
 The MessageMetaLink model of the messenger.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -1030,7 +1032,7 @@ The MessageMetaLink model of the messenger.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1049,13 +1051,13 @@ Returns this model as an array.
 
 
 [[messenger_models_messagereferrer]]
-==== MessageReferrer
+=== MessageReferrer
 
 The MessageReferrer model of the messenger.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -1086,7 +1088,7 @@ the plugin namespace, the user name otherwise.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1105,13 +1107,13 @@ Returns this model as an array.
 
 
 [[messenger_models_messageto]]
-==== MessageTo
+=== MessageTo
 
 The MessageTo model of the messenger.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Models`
 
@@ -1139,7 +1141,7 @@ The MessageTo model of the messenger.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1157,15 +1159,15 @@ public toArray()
 Returns this model as an array.
 
 [[messenger_messenger_services]]
-===  Services
+== Services
 [[messenger_services_messagetypesservice]]
-==== MessageTypesService
+=== MessageTypesService
 
 Types and type validation for several types in the messenger.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Services`
 
@@ -1174,7 +1176,7 @@ Types and type validation for several types in the messenger.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1354,13 +1356,13 @@ a|The to key
 
 
 [[messenger_services_messagessearchservice]]
-==== MessagesSearchService
+=== MessagesSearchService
 
 Search service for the messenger.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Messenger\Services`
 
@@ -1369,7 +1371,7 @@ Search service for the messenger.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1381,7 +1383,7 @@ public find($uuid):Plenty\Modules\Messenger\Models\Message
     
 
 
-====== *Return type:*        xref:Messenger.adoc#messenger_models_message[`Message`]
+===== *Return type:*        xref:Messenger.adoc#messenger_models_message[`Message`]
 
 
 Gets the message with the given uuid.
@@ -1406,7 +1408,7 @@ public findOrFail($uuid):Plenty\Modules\Messenger\Models\Message
     
 
 
-====== *Return type:*        xref:Messenger.adoc#messenger_models_message[`Message`]
+===== *Return type:*        xref:Messenger.adoc#messenger_models_message[`Message`]
 
 
 Gets the message with the given UUID.
@@ -1720,7 +1722,7 @@ public addFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
 
 
 
@@ -1745,7 +1747,7 @@ public addPostFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
 
 
 
@@ -1770,7 +1772,7 @@ public addQuery($query):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
 
 
 
@@ -1795,7 +1797,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
 
 
 
@@ -1820,7 +1822,7 @@ public setSorting($sorting):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
 
 
 
@@ -1845,7 +1847,7 @@ public addAggregation($aggregation):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
 
 
 
@@ -1870,7 +1872,7 @@ public addSuggestion($suggestion):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
 
 
 
@@ -1895,7 +1897,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
 
 
 
@@ -1974,7 +1976,7 @@ public setScoreModifier($scoreModifier):Plenty\Modules\Cloud\ElasticSearch\Lib\S
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_search[`Search`]
 
 
 

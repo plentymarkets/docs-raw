@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[authorization_authorization]]
-== Authorization
+= Authorization
 
 [[authorization_authorization_contracts]]
-===  Contracts
+== Contracts
 [[authorization_contracts_authorizeduserrepositorycontract]]
-==== AuthorizedUserRepositoryContract
+=== AuthorizedUserRepositoryContract
 
 service to get current authorized user
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Authorization\Contracts`
 
@@ -21,7 +23,7 @@ service to get current authorized user
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -33,21 +35,21 @@ public getCurrentAuthorizedUser():Plenty\Modules\Authorization\Models\Authorized
     
 
 
-====== *Return type:*        xref:Authorization.adoc#authorization_models_authorizeduser[`AuthorizedUser`]
+===== *Return type:*        xref:Authorization.adoc#authorization_models_authorizeduser[`AuthorizedUser`]
 
 
 
 
 [[authorization_authorization_exception]]
-===  Exception
+== Exception
 [[authorization_exception_authorizationexception]]
-==== AuthorizationException
+=== AuthorizationException
 
 Class AuthorizationException
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Authorization\Exception`
 
@@ -56,7 +58,7 @@ Class AuthorizationException
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -101,7 +103,7 @@ public missingPermissions():Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 
@@ -147,15 +149,15 @@ public jsonSerialize():void
 
 
 [[authorization_authorization_models]]
-===  Models
+== Models
 [[authorization_models_authorizeduser]]
-==== AuthorizedUser
+=== AuthorizedUser
 
 The current authorized user
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Authorization\Models`
 
@@ -186,7 +188,7 @@ The current authorized user
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -205,13 +207,13 @@ Returns this model as an array.
 
 
 [[authorization_models_permission]]
-==== Permission
+=== Permission
 
 The authentication Permission (REST) model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Authorization\Models`
 
@@ -236,7 +238,7 @@ The authentication Permission (REST) model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -255,13 +257,13 @@ Returns this model as an array.
 
 
 [[authorization_models_role]]
-==== Role
+=== Role
 
 The Role authentication model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Authorization\Models`
 
@@ -298,7 +300,7 @@ The Role authentication model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -316,15 +318,15 @@ public toArray()
 Returns this model as an array.
 
 [[authorization_authorization_services]]
-===  Services
+== Services
 [[authorization_services_authhelper]]
-==== AuthHelper
+=== AuthHelper
 
 Service to process unguarded php code
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Authorization\Services`
 
@@ -333,7 +335,7 @@ Service to process unguarded php code
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

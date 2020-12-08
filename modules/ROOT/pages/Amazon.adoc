@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[amazon_amazon]]
-== Amazon
+= Amazon
 
 [[amazon_amazon_contracts]]
-===  Contracts
+== Contracts
 [[amazon_contracts_amazonclient]]
-==== AmazonClient
+=== AmazonClient
 
 The amazon client
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Amazon\Contracts`
 
@@ -21,7 +23,7 @@ The amazon client
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -33,7 +35,7 @@ public sendRequest($request, $serviceVersion):Plenty\Modules\Amazon\Contracts\Am
     
 
 
-====== *Return type:*        xref:Amazon.adoc#amazon_contracts_amazonclientresponse[`AmazonClientResponse`]
+===== *Return type:*        xref:Amazon.adoc#amazon_contracts_amazonclientresponse[`AmazonClientResponse`]
 
 
 
@@ -54,13 +56,13 @@ a|
 
 
 [[amazon_contracts_amazonclientfactory]]
-==== AmazonClientFactory
+=== AmazonClientFactory
 
 
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Amazon\Contracts`
 
@@ -69,7 +71,7 @@ a|
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -81,7 +83,7 @@ public getClient($accountId, $endpointPath):Plenty\Modules\Amazon\Contracts\Amaz
     
 
 
-====== *Return type:*        xref:Amazon.adoc#amazon_contracts_amazonclient[`AmazonClient`]
+===== *Return type:*        xref:Amazon.adoc#amazon_contracts_amazonclient[`AmazonClient`]
 
 
 
@@ -102,13 +104,13 @@ a|
 
 
 [[amazon_contracts_amazonclientrequest]]
-==== AmazonClientRequest
+=== AmazonClientRequest
 
 
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Amazon\Contracts`
 
@@ -117,7 +119,7 @@ a|
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -181,13 +183,13 @@ public getAction():string
 
 
 [[amazon_contracts_amazonclientrequestpayload]]
-==== AmazonClientRequestPayload
+=== AmazonClientRequestPayload
 
 
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Amazon\Contracts`
 
@@ -196,7 +198,7 @@ public getAction():string
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -215,13 +217,13 @@ public getPayload():void
 
 
 [[amazon_contracts_amazonclientresponse]]
-==== AmazonClientResponse
+=== AmazonClientResponse
 
 
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Amazon\Contracts`
 
@@ -230,7 +232,7 @@ public getPayload():void
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -264,13 +266,13 @@ public getResponseMetaData():array
 
 
 [[amazon_contracts_amazonfulfillmentcenterrepositorycontract]]
-==== AmazonFulfillmentCenterRepositoryContract
+=== AmazonFulfillmentCenterRepositoryContract
 
 AmazonFulfillmentCenterRepository
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Amazon\Contracts`
 
@@ -279,7 +281,7 @@ AmazonFulfillmentCenterRepository
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -306,7 +308,7 @@ public getDeliveryAddressByFulfillmentCenterId($amazonFulfillmentCenterId):Plent
     
 
 
-====== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
+===== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
 
 
 Get the delivery address by fulfillment center ID.
@@ -331,7 +333,7 @@ public getDeliveryAddressByGLN($GLN):Plenty\Modules\Account\Address\Models\Addre
     
 
 
-====== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
+===== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
 
 
 Get the delivery address by GLN.
@@ -356,7 +358,7 @@ public getInvoiceAddressByGLN($GLN):Plenty\Modules\Account\Address\Models\Addres
     
 
 
-====== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
+===== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
 
 
 Get the invoice address by GLN.
@@ -387,16 +389,16 @@ public getContactId():int
 
 
 [[amazon_amazon_exceptions]]
-===  Exceptions
+== Exceptions
 [[amazon_exceptions_amazonclientexception]]
-==== AmazonClientException
+=== AmazonClientException
 
 Created by ptopczewski, 01.02.18 11:41
 Class AmazonClientException
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Amazon\Exceptions`
 
@@ -406,14 +408,14 @@ Class AmazonClientException
 
 
 [[amazon_exceptions_amazonclientrequestexception]]
-==== AmazonClientRequestException
+=== AmazonClientRequestException
 
 Created by ptopczewski, 07.02.18 10:34
 Class AmazonClientRequestException
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Amazon\Exceptions`
 
@@ -422,7 +424,7 @@ Class AmazonClientRequestException
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

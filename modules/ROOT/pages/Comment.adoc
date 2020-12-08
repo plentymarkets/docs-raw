@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[comment_comment]]
-== Comment
+= Comment
 
 [[comment_comment_contracts]]
-===  Contracts
+== Contracts
 [[comment_contracts_commentrepositorycontract]]
-==== CommentRepositoryContract
+=== CommentRepositoryContract
 
 Get, create, update and delete comments.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Comment\Contracts`
 
@@ -21,7 +23,7 @@ Get, create, update and delete comments.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -33,7 +35,7 @@ public getComment($commentId):Plenty\Modules\Comment\Models\Comment
     
 
 
-====== *Return type:*        xref:Comment.adoc#comment_models_comment[`Comment`]
+===== *Return type:*        xref:Comment.adoc#comment_models_comment[`Comment`]
 
 
 Get a comment
@@ -58,7 +60,7 @@ public listComments():Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
 List comments
@@ -73,7 +75,7 @@ public createComment($data, $suppressEvent = false):Plenty\Modules\Comment\Model
     
 
 
-====== *Return type:*        xref:Comment.adoc#comment_models_comment[`Comment`]
+===== *Return type:*        xref:Comment.adoc#comment_models_comment[`Comment`]
 
 
 Create a comment
@@ -127,7 +129,7 @@ public updateComment($data, $commentId):Plenty\Modules\Comment\Models\Comment
     
 
 
-====== *Return type:*        xref:Comment.adoc#comment_models_comment[`Comment`]
+===== *Return type:*        xref:Comment.adoc#comment_models_comment[`Comment`]
 
 
 Update a comment
@@ -247,15 +249,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[comment_comment_models]]
-===  Models
+== Models
 [[comment_models_comment]]
-==== Comment
+=== Comment
 
 The comment model can be one of the following types: category, contact, order, item_variation, order_item, specified by the referenceType.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Comment\Models`
 
@@ -299,7 +301,7 @@ The comment model can be one of the following types: category, contact, order, i
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

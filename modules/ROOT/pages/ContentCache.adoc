@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[contentcache_contentcachelink]]
-== ContentCacheLink
+= ContentCacheLink
 
 [[contentcache_contentcachelink_models]]
-===  Models
+== Models
 [[contentcache_models_contentcachelink]]
-==== ContentCacheLink
+=== ContentCacheLink
 
 Eloquent model representing a Content Cache Link.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ContentCache\ContentCacheLink\Models`
 
@@ -43,7 +45,7 @@ Eloquent model representing a Content Cache Link.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -61,18 +63,18 @@ public toArray()
 Returns this model as an array.
 
 [[contentcache_contentcache]]
-== ContentCache
+= ContentCache
 
 [[contentcache_contentcache_contentcachesettings]]
-===  ContentCacheSettings
+== ContentCacheSettings
 [[contentcache_contentcachesettings_contentcachesettings]]
-==== ContentCacheSettings
+=== ContentCacheSettings
 
 Eloquent model representing the Content Cache Settings.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ContentCache\ContentCacheSettings`
 
@@ -94,7 +96,7 @@ Eloquent model representing the Content Cache Settings.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -112,15 +114,15 @@ public toArray()
 Returns this model as an array.
 
 [[contentcache_contentcache_contracts]]
-===  Contracts
+== Contracts
 [[contentcache_contracts_contentcacheinvalidationrepositorycontract]]
-==== ContentCacheInvalidationRepositoryContract
+=== ContentCacheInvalidationRepositoryContract
 
 Interface for content cache invalidation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ContentCache\Contracts`
 
@@ -129,7 +131,7 @@ Interface for content cache invalidation
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -256,13 +258,13 @@ public storeInvalidationStacks():void
 
 
 [[contentcache_contracts_contentcacherepositorycontract]]
-==== ContentCacheRepositoryContract
+=== ContentCacheRepositoryContract
 
 Save and retrieve values to or from the content cache
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ContentCache\Contracts`
 
@@ -271,7 +273,7 @@ Save and retrieve values to or from the content cache
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -315,13 +317,13 @@ a|Ids of variations referenced by the current response.
 
 
 [[contentcache_contracts_contentcachesettingsrepositorycontract]]
-==== ContentCacheSettingsRepositoryContract
+=== ContentCacheSettingsRepositoryContract
 
 Interface for content cache settings
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\ContentCache\Contracts`
 
@@ -330,7 +332,7 @@ Interface for content cache settings
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -342,10 +344,10 @@ public getSettings($plentyId):Plenty\Modules\ContentCache\ContentCacheSettings\C
     
 
 
-====== *Return type:*        xref:Contentcache.adoc#contentcache_contentcachesettings_contentcachesettings[`ContentCacheSettings`]
+===== *Return type:*        xref:Contentcache.adoc#contentcache_contentcachesettings_contentcachesettings[`ContentCacheSettings`]
 
 
-
+Get the content cache settings for the specified client.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -353,7 +355,7 @@ public getSettings($plentyId):Plenty\Modules\ContentCache\ContentCacheSettings\C
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|
+a|The plenty id of the client.
 |===
 
 
@@ -370,7 +372,7 @@ public getSettingsMultiple($plentyIds):void
 
 
 
-
+Get the content cache settings for multiple clients.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -378,7 +380,7 @@ public getSettingsMultiple($plentyIds):void
 |Type |Name |Description
 |link:http://php.net/array[array^]
 a|`$plentyIds`
-a|
+a|The plenty ids of the clients.
 |===
 
 
@@ -392,10 +394,10 @@ public saveSettings($plentyId, $contentCacheActive):Plenty\Modules\ContentCache\
     
 
 
-====== *Return type:*        xref:Contentcache.adoc#contentcache_contentcachesettings_contentcachesettings[`ContentCacheSettings`]
+===== *Return type:*        xref:Contentcache.adoc#contentcache_contentcachesettings_contentcachesettings[`ContentCacheSettings`]
 
 
-
+Save the content cache settings for the specified client.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -403,11 +405,90 @@ public saveSettings($plentyId, $contentCacheActive):Plenty\Modules\ContentCache\
 |Type |Name |Description
 |link:http://php.net/int[int^]
 a|`$plentyId`
-a|
+a|The plenty id of the client.
 
 |link:http://php.net/bool[bool^]
 a|`$contentCacheActive`
-a|
+a|Flag that indicates the content cache active state.
+|===
+
+
+[source%nowrap, php]
+----
+
+public getInvalidationDate($plentyId):string
+
+----
+
+    
+
+
+
+
+
+Get the date until when the content cache invalidation is deactivated.
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+a|The plenty id of the client.
+|===
+
+
+[source%nowrap, php]
+----
+
+public saveInvalidationDate($plentyId, $invalidationDate):void
+
+----
+
+    
+
+
+
+
+
+Save the date until when the content cache invalidation is deactivated.
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+a|The plenty id of the client.
+
+|link:http://php.net/string[string^]
+a|`$invalidationDate`
+a|The date until when the invalidation is deactivated.
+|===
+
+
+[source%nowrap, php]
+----
+
+public isInvalidationActive($plentyId):bool
+
+----
+
+    
+
+
+
+
+
+Check if the content cache invalidation is currently active.
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$plentyId`
+a|The plenty id of the client.
 |===
 
 

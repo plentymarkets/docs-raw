@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[pim_models]]
-== Models
+= Models
 
 [[pim_models_variation]]
-===  Variation
+== Variation
 [[pim_variation_propertyvalue]]
-==== PropertyValue
+=== PropertyValue
+
+The Property values of the variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\DocumentService\Models\Variation`
 
@@ -40,7 +42,7 @@
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -58,18 +60,18 @@ public toArray()
 Returns this model as an array.
 
 [[pim_searchservice]]
-== SearchService
+= SearchService
 
 [[pim_searchservice_aggregations]]
-===  Aggregations
+== Aggregations
 [[pim_aggregations_attributevalueaggregation]]
-==== AttributeValueAggregation
+=== AttributeValueAggregation
 
 Aggregate data by attributeValue ids
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -78,7 +80,7 @@ Aggregate data by attributeValue ids
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -93,12 +95,12 @@ public getName():string
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
 
-public getField():void
+public getField():string
 
 ----
 
@@ -108,7 +110,7 @@ public getField():void
 
 
 
-
+Get the field of the aggregation
 
 [source%nowrap, php]
 ----
@@ -225,7 +227,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -250,7 +252,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -286,13 +288,13 @@ public getSources():void
 
 
 [[pim_aggregations_categoryalltermsaggregation]]
-==== CategoryAllTermsAggregation
+=== CategoryAllTermsAggregation
 
 Aggregate data by all category ids
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -301,12 +303,12 @@ Aggregate data by all category ids
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public getName():void
+public getName():string
 
 ----
 
@@ -316,12 +318,12 @@ public getName():void
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
 
-public getField():void
+public getField():string
 
 ----
 
@@ -331,7 +333,7 @@ public getField():void
 
 
 
-
+Get the field of the aggregation
 
 [source%nowrap, php]
 ----
@@ -448,7 +450,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -473,7 +475,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -509,13 +511,13 @@ public getSources():void
 
 
 [[pim_aggregations_categorypathtermsaggregation]]
-==== CategoryPathTermsAggregation
+=== CategoryPathTermsAggregation
 
 Aggregate data by all category paths
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -524,12 +526,12 @@ Aggregate data by all category paths
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public getName():void
+public getName():string
 
 ----
 
@@ -539,12 +541,12 @@ public getName():void
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
 
-public getField():void
+public getField():string
 
 ----
 
@@ -554,7 +556,7 @@ public getField():void
 
 
 
-
+Get the field of the aggregation
 
 [source%nowrap, php]
 ----
@@ -671,7 +673,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -696,7 +698,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -732,13 +734,13 @@ public getSources():void
 
 
 [[pim_aggregations_itemcardinalityaggregation]]
-==== ItemCardinalityAggregation
+=== ItemCardinalityAggregation
 
 Get the count of found items
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -747,12 +749,12 @@ Get the count of found items
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public getName():void
+public getName():string
 
 ----
 
@@ -762,12 +764,12 @@ public getName():void
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
 
-public getField():void
+public getField():string
 
 ----
 
@@ -777,7 +779,7 @@ public getField():void
 
 
 
-
+Get the field of the aggregation
 
 [source%nowrap, php]
 ----
@@ -869,7 +871,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -894,7 +896,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -930,13 +932,13 @@ public getSources():void
 
 
 [[pim_aggregations_itemidtermsaggregation]]
-==== ItemIdTermsAggregation
+=== ItemIdTermsAggregation
 
 Aggregate data by item ids
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -945,12 +947,12 @@ Aggregate data by item ids
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public getName():void
+public getName():string
 
 ----
 
@@ -960,12 +962,12 @@ public getName():void
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
 
-public getField():void
+public getField():string
 
 ----
 
@@ -975,7 +977,7 @@ public getField():void
 
 
 
-
+Get the field of the aggregation
 
 [source%nowrap, php]
 ----
@@ -1092,7 +1094,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -1117,7 +1119,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -1153,13 +1155,13 @@ public getSources():void
 
 
 [[pim_aggregations_salablefilteraggregation]]
-==== SalableFilterAggregation
+=== SalableFilterAggregation
 
 Filter Aggregated Data if variation is salable
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -1168,12 +1170,12 @@ Filter Aggregated Data if variation is salable
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public getName():void
+public getName():string
 
 ----
 
@@ -1183,7 +1185,7 @@ public getName():void
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
@@ -1325,7 +1327,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -1350,7 +1352,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -1386,13 +1388,13 @@ public getSources():void
 
 
 [[pim_aggregations_unitcombinationaggregation]]
-==== UnitCombinationAggregation
+=== UnitCombinationAggregation
 
 Aggregate data by unit combination ids
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations`
 
@@ -1401,7 +1403,7 @@ Aggregate data by unit combination ids
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1416,12 +1418,12 @@ public getName():string
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
 
-public getField():void
+public getField():string
 
 ----
 
@@ -1431,7 +1433,7 @@ public getField():void
 
 
 
-
+Get the field of the aggregation
 
 [source%nowrap, php]
 ----
@@ -1548,7 +1550,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -1573,7 +1575,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -1608,15 +1610,15 @@ public getSources():void
 
 
 [[pim_searchservice_filter]]
-===  Filter
+== Filter
 [[pim_filter_amazonfilter]]
-==== AmazonFilter
+=== AmazonFilter
 
 Includes filters for amazon
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -1625,7 +1627,7 @@ Includes filters for amazon
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1637,10 +1639,10 @@ public hasAnyFlatFile($flatFiles):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the specified flatFiles.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -1662,10 +1664,10 @@ public hasAnyProductType($productTypes):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the specified productTypes.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -1687,10 +1689,10 @@ public hasAnyProductTypeId($productTypeIds):Plenty\Modules\Pim\SearchService\Fil
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the specified typeIds.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -1769,13 +1771,13 @@ a|
 
 
 [[pim_filter_attributefilter]]
-==== AttributeFilter
+=== AttributeFilter
 
 Includes filters for attributes
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -1784,7 +1786,7 @@ Includes filters for attributes
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1796,10 +1798,10 @@ public hasAttribute($attributeId):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the specified attributeId.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -1821,10 +1823,10 @@ public hasAnyAttribute($attributeIds):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the specified attributeId.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -1846,10 +1848,10 @@ public hasAllAttributes($attributeIds):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to has all of the specified attributeId.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -1871,10 +1873,10 @@ public hasAttributeValue($attributeValueId):Plenty\Modules\Pim\SearchService\Fil
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the specified attributeValueId.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -1896,10 +1898,10 @@ public hasAnyAttributeValue($attributeValueIds):Plenty\Modules\Pim\SearchService
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the specified attributeValueId.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -1921,10 +1923,10 @@ public hasAllAttributeValues($attributeValueIds):Plenty\Modules\Pim\SearchServic
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have all of the specified attributeValueId.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -1949,7 +1951,7 @@ public hasNoAttributeValue():void
 
 
 
-
+Restricts the result to have no attribute value.
 
 [source%nowrap, php]
 ----
@@ -2018,13 +2020,13 @@ a|
 
 
 [[pim_filter_barcodefilter]]
-==== BarcodeFilter
+=== BarcodeFilter
 
 Includes filters for barcodes
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -2033,7 +2035,7 @@ Includes filters for barcodes
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2045,10 +2047,10 @@ public hasCode($code, $precision):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have a specified code.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2077,7 +2079,7 @@ public hasType($type):void
 
 
 
-ToDo!
+Restricts the result to have a specified type. Not implemented.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2099,10 +2101,10 @@ public hasId($id):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have a specified id.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2181,13 +2183,13 @@ a|
 
 
 [[pim_filter_categoryfilter]]
-==== CategoryFilter
+=== CategoryFilter
 
 Includes filters for categories
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -2196,7 +2198,7 @@ Includes filters for categories
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2208,10 +2210,10 @@ public isInAtLeastOneCategory($categoryIds, $depth = self::DEPTH_ANY):Plenty\Mod
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the categoryIds.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2240,7 +2242,7 @@ public static getPathByDepth($depth):string
 
 
 
-
+Get the path by depth.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2262,10 +2264,10 @@ public isInEachCategory($categoryIds, $depth = self::DEPTH_ANY):Plenty\Modules\P
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have all of the categoryIds.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2291,10 +2293,10 @@ public isInCategory($categoryId, $depth = self::DEPTH_ANY):Plenty\Modules\Pim\Se
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the categoryId.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2320,10 +2322,10 @@ public isInACategory():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have a category.
 
 [source%nowrap, php]
 ----
@@ -2392,13 +2394,13 @@ a|
 
 
 [[pim_filter_characteristicfilter]]
-==== CharacteristicFilter
+=== CharacteristicFilter
 
 Includes filters for characteristics
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -2407,7 +2409,7 @@ Includes filters for characteristics
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2419,10 +2421,10 @@ public hasAtLeastOneProperty($ids):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the characteristicIds.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2444,10 +2446,10 @@ public hasEachProperty($ids):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have all of the characteristicIds.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2526,13 +2528,13 @@ a|
 
 
 [[pim_filter_clientfilter]]
-==== ClientFilter
+=== ClientFilter
 
 Includes filters for clients
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -2541,7 +2543,7 @@ Includes filters for clients
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2553,10 +2555,10 @@ public isVisibleForClient($clientId):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the clientId.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2578,10 +2580,10 @@ public isVisibleForAtLeastOneClient($clientIds):Plenty\Modules\Pim\SearchService
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the clientIds.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2603,10 +2605,10 @@ public isVisibleForAllClients($clientIds):Plenty\Modules\Pim\SearchService\Filte
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have all of the clientIds.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2628,10 +2630,10 @@ public hasAutomaticClientVisibility($values):Plenty\Modules\Pim\SearchService\Fi
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
--1, 0, 1, 2
+Restricts the result to have any of the automaticClientVisibilities. (-1, 0, 1, 2)
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2710,13 +2712,13 @@ a|
 
 
 [[pim_filter_crosssellingfilter]]
-==== CrossSellingFilter
+=== CrossSellingFilter
 
 Includes filters for cross selling
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -2725,12 +2727,12 @@ Includes filters for cross selling
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public getPath():void
+public getPath():string
 
 ----
 
@@ -2740,7 +2742,7 @@ public getPath():void
 
 
 
-
+get the nested path of the filter
 
 [source%nowrap, php]
 ----
@@ -2755,7 +2757,7 @@ public hasItemId($itemId):void
 
 
 
-
+Restricts the result to have the itemId linked
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2777,10 +2779,10 @@ public hasRelation($relation):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the relation
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2802,10 +2804,10 @@ public hasAnyRelation($relations):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any relation
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2884,13 +2886,13 @@ a|
 
 
 [[pim_filter_facetfilter]]
-==== FacetFilter
+=== FacetFilter
 
 Includes filters for facets
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -2899,7 +2901,7 @@ Includes filters for facets
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2911,10 +2913,10 @@ public hasAtLeastOneFacet($facetIds):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the facetIds.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2936,10 +2938,10 @@ public hasEachFacet($facetIds):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have all facetIds.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2961,10 +2963,10 @@ public hasFacet($facetIds):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the facetIds.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -2979,24 +2981,24 @@ a|
 [source%nowrap, php]
 ----
 
-public hasFacetValue($facetValueIds):Plenty\Modules\Pim\SearchService\Filter
+public hasFacetValue($facetValueId):Plenty\Modules\Pim\SearchService\Filter
 
 ----
 
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the facetValueId.
 
 .*Parameters*
 [cols="10%,30%,60%"]
 |===
 |Type |Name |Description
 |link:http://php.net/int[int^]
-a|`$facetValueIds`
+a|`$facetValueId`
 a|
 |===
 
@@ -3011,10 +3013,10 @@ public hasAFacet():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the facetValueIds.
 
 [source%nowrap, php]
 ----
@@ -3026,10 +3028,10 @@ public hasAtLeastOneFacetValue($valueIds):Plenty\Modules\Pim\SearchService\Filte
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the facetValueIds.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -3051,10 +3053,10 @@ public hasEachFacetValue($valueIds):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have all the facetValueIds.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -3133,13 +3135,13 @@ a|
 
 
 [[pim_filter_feedbackrangefilter]]
-==== FeedbackRangeFilter
+=== FeedbackRangeFilter
 
 Includes filters for feedback
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -3148,7 +3150,7 @@ Includes filters for feedback
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3160,10 +3162,10 @@ public hasFeedbackGreaterThan($value):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have feedback greater than or equal the value.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -3257,13 +3259,13 @@ a|
 
 
 [[pim_filter_itemcreatedatfilter]]
-==== ItemCreatedAtFilter
+=== ItemCreatedAtFilter
 
 Used to filter by item created at timestamp
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -3272,7 +3274,7 @@ Used to filter by item created at timestamp
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3287,7 +3289,7 @@ public getTimestamp():string
 
 
 
-
+Get the timestamp of the filter
 
 [source%nowrap, php]
 ----
@@ -3371,13 +3373,13 @@ a|
 
 
 [[pim_filter_itemfilter]]
-==== ItemFilter
+=== ItemFilter
 
 Includes filters for the item
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -3386,7 +3388,7 @@ Includes filters for the item
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3398,10 +3400,10 @@ public hasId($id):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the item id.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -3423,10 +3425,10 @@ public hasIds($ids):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have all the item ids.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -3448,10 +3450,10 @@ public hasAnImage():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have an image.
 
 [source%nowrap, php]
 ----
@@ -3463,10 +3465,10 @@ public hasFlag1($flagId):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the specified flag 1.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -3488,10 +3490,10 @@ public hasFlag2($flagId):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the specified flag 2.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -3513,10 +3515,10 @@ public hasManufacturer($manufacturerId):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the manufacturer id.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -3538,10 +3540,10 @@ public hasManufacturers($manufacturerIds):Plenty\Modules\Pim\SearchService\Filte
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the manufacturer ids.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -3563,10 +3565,10 @@ public hasAManufacturer():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have an manufacturer.
 
 [source%nowrap, php]
 ----
@@ -3578,10 +3580,10 @@ public isItemType($itemType):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the specified item type.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -3660,13 +3662,13 @@ a|
 
 
 [[pim_filter_itemlastupdatedatfilter]]
-==== ItemLastUpdatedAtFilter
+=== ItemLastUpdatedAtFilter
 
 Used to filter by item last update timestamp
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -3675,7 +3677,7 @@ Used to filter by item last update timestamp
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3690,7 +3692,7 @@ public getTimestamp():string
 
 
 
-
+Get the timestamp of the filter
 
 [source%nowrap, php]
 ----
@@ -3774,13 +3776,13 @@ a|
 
 
 [[pim_filter_itemrangefilter]]
-==== ItemRangeFilter
+=== ItemRangeFilter
 
 used to filter the range between item ids
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -3789,7 +3791,7 @@ used to filter the range between item ids
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3873,13 +3875,13 @@ a|
 
 
 [[pim_filter_marketfilter]]
-==== MarketFilter
+=== MarketFilter
 
 Includes filters for markets
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -3888,7 +3890,7 @@ Includes filters for markets
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3900,10 +3902,10 @@ public isVisibleForMarket($marketId):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the market id.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -3925,10 +3927,10 @@ public isVisibleForAtLeastOneMarket($marketIds):Plenty\Modules\Pim\SearchService
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the market ids.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -3950,10 +3952,10 @@ public isVisibleForAllMarkets($marketIds):Plenty\Modules\Pim\SearchService\Filte
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have all the market ids.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -4032,13 +4034,13 @@ a|
 
 
 [[pim_filter_pricefilter]]
-==== PriceFilter
+=== PriceFilter
 
 Includes filters for prices
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -4047,12 +4049,12 @@ Includes filters for prices
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public getPath():void
+public getPath():string
 
 ----
 
@@ -4062,7 +4064,7 @@ public getPath():void
 
 
 
-
+Get the path of the filter
 
 [source%nowrap, php]
 ----
@@ -4077,7 +4079,7 @@ public between($min = null, $max = null):void
 
 
 
-
+Restricts the result to have a price between the specified min and max value.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -4103,10 +4105,10 @@ public betweenByPriceId($priceIds = [], $min = null, $max = null):Plenty\Modules
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to a price between the specified min and max value. The price must be related to one of the specified price ids.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -4193,13 +4195,13 @@ a|
 
 
 [[pim_filter_propertyfilter]]
-==== PropertyFilter
+=== PropertyFilter
 
 Includes filters for Properties
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -4208,7 +4210,7 @@ Includes filters for Properties
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4220,10 +4222,10 @@ public hasPropertySelection($id):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the property selection id.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -4245,10 +4247,10 @@ public hasAtLeastOnePropertySelection($ids):Plenty\Modules\Pim\SearchService\Fil
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the property selection ids.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -4270,10 +4272,10 @@ public hasEachPropertySelection($ids):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have all of the property selection ids.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -4352,13 +4354,13 @@ a|
 
 
 [[pim_filter_salespricefilter]]
-==== SalesPriceFilter
+=== SalesPriceFilter
 
 Includes filters for salesPrices
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -4367,7 +4369,7 @@ Includes filters for salesPrices
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4379,10 +4381,10 @@ public hasAtLeastOnePrice($priceIds):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the price ids.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -4461,13 +4463,13 @@ a|
 
 
 [[pim_filter_skufilter]]
-==== SkuFilter
+=== SkuFilter
 
 Includes filters for skus
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -4476,12 +4478,12 @@ Includes filters for skus
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public getPath():void
+public getPath():string
 
 ----
 
@@ -4491,7 +4493,7 @@ public getPath():void
 
 
 
-
+Get the path of the filter.
 
 [source%nowrap, php]
 ----
@@ -4503,10 +4505,10 @@ public hasMarketId($marketId):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have a sku with the market referrer id.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -4528,10 +4530,10 @@ public hasAccountId($accountId):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have a sku with the account id.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -4553,10 +4555,10 @@ public hasStatus($status):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have a sku with the status.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -4564,6 +4566,31 @@ public hasStatus($status):Plenty\Modules\Pim\SearchService\Filter
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$status`
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public hasSku($sku):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+    
+
+
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+Restricts the result to have a specified sku.
+
+.*Parameters*
+[cols="10%,30%,60%"]
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$sku`
 a|
 |===
 
@@ -4635,13 +4662,13 @@ a|
 
 
 [[pim_filter_tagfilter]]
-==== TagFilter
+=== TagFilter
 
 Includes filters for tags
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -4650,7 +4677,7 @@ Includes filters for tags
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4662,10 +4689,10 @@ public hasTag($tagId):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the tag id.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -4687,10 +4714,10 @@ public hasAnyTag($tagIds):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the tag ids.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -4712,10 +4739,10 @@ public hasAllTags($tagIds):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have all of the tag ids.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -4794,13 +4821,13 @@ a|
 
 
 [[pim_filter_textfilter]]
-==== TextFilter
+=== TextFilter
 
 Includes filters for texts
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -4809,7 +4836,7 @@ Includes filters for texts
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4821,10 +4848,10 @@ public hasAnyName():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any name.
 
 [source%nowrap, php]
 ----
@@ -4836,10 +4863,10 @@ public hasNameInLanguage($lang = &quot;de&quot;, $filter = self::FILTER_ANY_NAME
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have specific or any name in language: Possible filter are hasAnyNameInLanguage, hasName1InLanguage, hasName2InLanguage, hasName3InLanguage.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5030,13 +5057,13 @@ a|
 
 
 [[pim_filter_variationavailabilityupdatedatfilter]]
-==== VariationAvailabilityUpdatedAtFilter
+=== VariationAvailabilityUpdatedAtFilter
 
 Used to filter by variation availability last update timestamp
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -5045,7 +5072,7 @@ Used to filter by variation availability last update timestamp
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5060,7 +5087,7 @@ public getTimestamp():string
 
 
 
-
+Get the timestamp of the filter
 
 [source%nowrap, php]
 ----
@@ -5144,13 +5171,13 @@ a|
 
 
 [[pim_filter_variationbasefilter]]
-==== VariationBaseFilter
+=== VariationBaseFilter
 
 Includes filters for the base variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -5159,7 +5186,7 @@ Includes filters for the base variation
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5171,10 +5198,10 @@ public hasNumber($number, $precision):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the number. Possible precisions are: exact, fuzzy and autocomplete
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5203,13 +5230,13 @@ public hasAnyNumber($numbers):void
 
 
 
-
+Restricts the result to have any of the numbers.
 
 .*Parameters*
 [cols="10%,30%,60%"]
 |===
 |Type |Name |Description
-|
+|link:http://php.net/array[array^]
 a|`$numbers`
 a|
 |===
@@ -5225,10 +5252,10 @@ public isActive():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have active variations only.
 
 [source%nowrap, php]
 ----
@@ -5240,10 +5267,10 @@ public isInactive():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have inactive variations only.
 
 [source%nowrap, php]
 ----
@@ -5255,10 +5282,10 @@ public hasId($id):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the variation id.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5280,10 +5307,10 @@ public hasIds($ids):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the variation ids.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5305,10 +5332,10 @@ public hasItemId($itemId):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the item id.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5330,10 +5357,10 @@ public hasAnyPriceCalculationId():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the any price calculation id
 
 [source%nowrap, php]
 ----
@@ -5345,10 +5372,10 @@ public hasPriceCalculationIds($ids):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the any of the price calculation ids
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5370,10 +5397,10 @@ public hasItemIds($itemIds):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the any of the item ids
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5395,10 +5422,10 @@ public isMain():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have no child&#039;s
 
 [source%nowrap, php]
 ----
@@ -5410,10 +5437,10 @@ public isChild():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have child&#039;s only
 
 [source%nowrap, php]
 ----
@@ -5425,10 +5452,10 @@ public isSalable($bool = true):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result whether is salable or not.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5450,10 +5477,10 @@ public isHiddenInCategoryList($bool = true):Plenty\Modules\Pim\SearchService\Fil
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result whether is hidden in category list or not.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5475,10 +5502,10 @@ public hasADescriptionInLanguage($language):Plenty\Modules\Pim\SearchService\Fil
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+This filter is not implemented. Deprecated.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5500,10 +5527,10 @@ public hasAnImageOrItemHasAnImage():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have an image.
 
 [source%nowrap, php]
 ----
@@ -5515,10 +5542,10 @@ public hasAnImage():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have an item image.
 
 [source%nowrap, php]
 ----
@@ -5530,10 +5557,10 @@ public hasManufacturer($manufacturerId):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the manufacturer.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5555,10 +5582,10 @@ public hasSupplier($supplierId):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the supplier.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5580,10 +5607,10 @@ public hasAtLeastOneAvailability($availabilities):Plenty\Modules\Pim\SearchServi
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have any of the availabilities.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5605,10 +5632,10 @@ public hasActiveChildren($bool = true):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have active child variations or not.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5630,10 +5657,10 @@ public hasChildren($bool = true):Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have child variations or not.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5655,10 +5682,10 @@ public hasCustomsTariffNumber($customsTariffNumber):Plenty\Modules\Pim\SearchSer
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have the customs tariff number.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5680,10 +5707,10 @@ public customsTariffNumberNotExists():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have no customs tariff number.
 
 [source%nowrap, php]
 ----
@@ -5695,10 +5722,10 @@ public customsTariffNumberExists():Plenty\Modules\Pim\SearchService\Filter
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
+Restricts the result to have a customs tariff number.
 
 [source%nowrap, php]
 ----
@@ -5767,13 +5794,13 @@ a|
 
 
 [[pim_filter_variationbundlefilter]]
-==== VariationBundleFilter
+=== VariationBundleFilter
 
 Includes filters for bundles
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -5782,22 +5809,22 @@ Includes filters for bundles
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public hasBundleType($bundleType):void
+public hasBundleType($bundleType):Plenty\Modules\Pim\SearchService\Filter
 
 ----
 
     
 
 
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
-
+Restricts the result to have the bundle type.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -5812,17 +5839,17 @@ a|
 [source%nowrap, php]
 ----
 
-public hasNoBundleType():void
+public hasNoBundleType():Plenty\Modules\Pim\SearchService\Filter
 
 ----
 
     
 
 
+===== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
 
 
-
-
+Restricts the result to have the no bundle type.
 
 [source%nowrap, php]
 ----
@@ -5891,13 +5918,13 @@ a|
 
 
 [[pim_filter_variationcreatedatfilter]]
-==== VariationCreatedAtFilter
+=== VariationCreatedAtFilter
 
 Used to filter by variation created at timestamp
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -5906,7 +5933,7 @@ Used to filter by variation created at timestamp
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5921,7 +5948,7 @@ public getTimestamp():string
 
 
 
-
+Get the timestamp of the filter
 
 [source%nowrap, php]
 ----
@@ -6005,13 +6032,13 @@ a|
 
 
 [[pim_filter_variationlastupdatedatfilter]]
-==== VariationLastUpdatedAtFilter
+=== VariationLastUpdatedAtFilter
 
 Used to filter by variation last update timestamp
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -6020,7 +6047,7 @@ Used to filter by variation last update timestamp
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -6035,7 +6062,7 @@ public getTimestamp():string
 
 
 
-
+Get the timestamp of the filter
 
 [source%nowrap, php]
 ----
@@ -6119,13 +6146,13 @@ a|
 
 
 [[pim_filter_variationsalespriceupdatedatfilter]]
-==== VariationSalesPriceUpdatedAtFilter
+=== VariationSalesPriceUpdatedAtFilter
 
 Used to filter by variation saleyPrice last update timestamp
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -6134,7 +6161,7 @@ Used to filter by variation saleyPrice last update timestamp
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -6149,7 +6176,7 @@ public getTimestamp():string
 
 
 
-
+Get the timestamp of the filter
 
 [source%nowrap, php]
 ----
@@ -6233,13 +6260,13 @@ a|
 
 
 [[pim_filter_variationstockupdatedatfilter]]
-==== VariationStockUpdatedAtFilter
+=== VariationStockUpdatedAtFilter
 
 Used to filter by variation stock last update timestamp
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Filter`
 
@@ -6248,7 +6275,7 @@ Used to filter by variation stock last update timestamp
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -6263,7 +6290,7 @@ public getTimestamp():string
 
 
 
-
+Get the timestamp of the filter
 
 [source%nowrap, php]
 ----
@@ -6346,15 +6373,15 @@ a|
 
 
 [[pim_searchservice_query]]
-===  Query
+== Query
 [[pim_query_managedsearchquery]]
-==== ManagedSearchQuery
+=== ManagedSearchQuery
 
 Used to search for variations by a specified term. 
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Query`
 
@@ -6363,7 +6390,7 @@ Used to search for variations by a specified term.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -6378,13 +6405,13 @@ public setLang($lang):void
 
 
 
-
+Sets the language to search in.
 
 .*Parameters*
 [cols="10%,30%,60%"]
 |===
 |Type |Name |Description
-|
+|link:http://php.net/string[string^]
 a|`$lang`
 a|
 |===
@@ -6393,7 +6420,7 @@ a|
 [source%nowrap, php]
 ----
 
-public toArray():void
+public toArray():array
 
 ----
 
@@ -6403,7 +6430,7 @@ public toArray():void
 
 
 
-
+Returns the search query as array.
 
 [source%nowrap, php]
 ----
@@ -6418,13 +6445,13 @@ public setOperator($operator):void
 
 
 
-
+Set the operator for the terms in the search query. Possible values: or, and
 
 .*Parameters*
 [cols="10%,30%,60%"]
 |===
 |Type |Name |Description
-|
+|link:http://php.net/string[string^]
 a|`$operator`
 a|
 |===
@@ -6443,13 +6470,13 @@ public setFuzzy($fuzzy):void
 
 
 
-
+Set whether this is a fuzzy search or not.
 
 .*Parameters*
 [cols="10%,30%,60%"]
 |===
 |Type |Name |Description
-|
+|link:http://php.net/string[string^]
 a|`$fuzzy`
 a|
 |===
@@ -6468,7 +6495,7 @@ public addFilterField($field, $boost):void
 
 
 
-
+Add a filter field to search in.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -6497,7 +6524,7 @@ public addMultilingualField($field, $language, $boost):void
 
 
 
-
+Add a multilingual field to search in.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -6530,7 +6557,7 @@ public addOtherAnalyzedField($field, $boost):void
 
 
 
-
+Add a other analyzed field to search in.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -6706,13 +6733,13 @@ a|
 
 
 [[pim_query_searchquery]]
-==== SearchQuery
+=== SearchQuery
 
 Used to search for variations by a specified term. 
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Query`
 
@@ -6721,7 +6748,7 @@ Used to search for variations by a specified term.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -6736,13 +6763,13 @@ public setOperator($operator):void
 
 
 
-
+Set the operator for the terms in the search query. Possible values: or, and
 
 .*Parameters*
 [cols="10%,30%,60%"]
 |===
 |Type |Name |Description
-|
+|link:http://php.net/string[string^]
 a|`$operator`
 a|
 |===
@@ -6761,13 +6788,13 @@ public setFuzzy($fuzzy):void
 
 
 
-
+Set whether this is a fuzzy search or not.
 
 .*Parameters*
 [cols="10%,30%,60%"]
 |===
 |Type |Name |Description
-|
+|link:http://php.net/string[string^]
 a|`$fuzzy`
 a|
 |===
@@ -6786,7 +6813,7 @@ public addFilterField($field, $boost):void
 
 
 
-
+Add a filter field to search in.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -6815,7 +6842,7 @@ public addMultilingualField($field, $language, $boost):void
 
 
 
-
+Add a multilingual field to search in.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -6848,7 +6875,7 @@ public addOtherAnalyzedField($field, $boost):void
 
 
 
-
+Add a other analyzed field to search in.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -7038,18 +7065,18 @@ a|
 
 
 [[pim_aggregations]]
-== Aggregations
+= Aggregations
 
 [[pim_aggregations_facet]]
-===  Facet
+== Facet
 [[pim_facet_nestedfacetvaluesaggregation]]
-==== NestedFacetValuesAggregation
+=== NestedFacetValuesAggregation
 
-To be written
+Provides a list of all facet value ids of a specific facet
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Facet`
 
@@ -7058,12 +7085,12 @@ To be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public getName():void
+public getName():string
 
 ----
 
@@ -7073,12 +7100,12 @@ public getName():void
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
 
-public getAggregation():void
+public getAggregation():array
 
 ----
 
@@ -7088,7 +7115,7 @@ public getAggregation():void
 
 
 
-
+Get the aggregation as array
 
 [source%nowrap, php]
 ----
@@ -7103,7 +7130,7 @@ public toArray():array
 
 
 
-
+Returns the aggregation as array
 
 [source%nowrap, php]
 ----
@@ -7165,7 +7192,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -7190,7 +7217,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -7225,15 +7252,15 @@ public getSources():void
 
 
 [[pim_aggregations_feedback]]
-===  Feedback
+== Feedback
 [[pim_feedback_feedbackrangeaggregation]]
-==== FeedbackRangeAggregation
+=== FeedbackRangeAggregation
 
-To be written
+Provides the count feedbacks in specific ranges (1 to 6, 2 to 6, 3 to 6, 4 to 6 and 5 to 6)
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Feedback`
 
@@ -7242,7 +7269,7 @@ To be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -7257,7 +7284,7 @@ public getName():string
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
@@ -7272,12 +7299,12 @@ public getField():string
 
 
 
-
+Get the field of the aggregation
 
 [source%nowrap, php]
 ----
 
-public getRanges():void
+public getRanges():array
 
 ----
 
@@ -7287,7 +7314,7 @@ public getRanges():void
 
 
 
-
+Get the ranges of the aggregation
 
 [source%nowrap, php]
 ----
@@ -7379,7 +7406,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -7404,7 +7431,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -7439,15 +7466,15 @@ public getSources():void
 
 
 [[pim_aggregations_price]]
-===  Price
+== Price
 [[pim_price_itemminpriceaggregation]]
-==== ItemMinPriceAggregation
+=== ItemMinPriceAggregation
 
 Get min price by price id for found variations
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Price`
 
@@ -7456,12 +7483,12 @@ Get min price by price id for found variations
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public getName():void
+public getName():string
 
 ----
 
@@ -7471,12 +7498,12 @@ public getName():void
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
 
-public getAggregation():void
+public getAggregation():array
 
 ----
 
@@ -7486,7 +7513,7 @@ public getAggregation():void
 
 
 
-
+Get the aggregation as array
 
 [source%nowrap, php]
 ----
@@ -7563,7 +7590,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -7588,7 +7615,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -7624,13 +7651,13 @@ public getSources():void
 
 
 [[pim_price_pricerangeaggregation]]
-==== PriceRangeAggregation
+=== PriceRangeAggregation
 
 Get price range for found variations
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Price`
 
@@ -7639,12 +7666,12 @@ Get price range for found variations
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public getName():void
+public getName():string
 
 ----
 
@@ -7654,7 +7681,7 @@ public getName():void
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
@@ -7669,7 +7696,7 @@ public setPriceIds($ids):void
 
 
 
-
+Set the price ids which should be aggregated
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -7694,7 +7721,7 @@ public process($data):array
 
 
 
-
+Process the provided data
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -7709,7 +7736,7 @@ a|
 [source%nowrap, php]
 ----
 
-public getAggregation():void
+public getAggregation():array
 
 ----
 
@@ -7719,7 +7746,7 @@ public getAggregation():void
 
 
 
-
+Get the aggregation as array
 
 [source%nowrap, php]
 ----
@@ -7771,7 +7798,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -7796,7 +7823,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -7831,15 +7858,15 @@ public getSources():void
 
 
 [[pim_aggregations_processors]]
-===  Processors
+== Processors
 [[pim_processors_attributevalueaggregationprocessor]]
-==== AttributeValueAggregationProcessor
+=== AttributeValueAggregationProcessor
 
 Processor for AttributeValueAggregation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -7848,7 +7875,7 @@ Processor for AttributeValueAggregation
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -7863,7 +7890,7 @@ public process($data):array
 
 
 
-
+Processes the data provided by the aggregation
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -7888,7 +7915,7 @@ public getName():string
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
@@ -7915,7 +7942,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -7940,7 +7967,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -7957,13 +7984,13 @@ a|
 
 
 [[pim_processors_categoryalltermsaggregationprocessor]]
-==== CategoryAllTermsAggregationProcessor
+=== CategoryAllTermsAggregationProcessor
 
 Processor for CategoryAllTermsAggregation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -7972,7 +7999,7 @@ Processor for CategoryAllTermsAggregation
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -7987,7 +8014,7 @@ public process($data):array
 
 
 
-
+Processes the data provided by the aggregation
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -8012,7 +8039,7 @@ public getName():string
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
@@ -8039,7 +8066,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8064,7 +8091,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8081,13 +8108,13 @@ a|
 
 
 [[pim_processors_categorypathtermsaggregationprocessor]]
-==== CategoryPathTermsAggregationProcessor
+=== CategoryPathTermsAggregationProcessor
 
 Processor for CategoryAllTermsAggregation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -8096,7 +8123,7 @@ Processor for CategoryAllTermsAggregation
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8111,7 +8138,7 @@ public process($data):array
 
 
 
-
+Processes the data provided by the aggregation
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -8136,7 +8163,7 @@ public getName():string
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
@@ -8148,10 +8175,10 @@ public setFullPath($fullPath):Plenty\Modules\Pim\SearchService\Aggregations\Proc
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_processors_categorypathtermsaggregationprocessor[`CategoryPathTermsAggregationProcessor`]
+===== *Return type:*        xref:Pim.adoc#pim_processors_categorypathtermsaggregationprocessor[`CategoryPathTermsAggregationProcessor`]
 
 
-
+Set if the full path should be used, or only the last element
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -8188,7 +8215,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8213,7 +8240,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8230,13 +8257,13 @@ a|
 
 
 [[pim_processors_facetaggregationprocessor]]
-==== FacetAggregationProcessor
+=== FacetAggregationProcessor
 
-To be written
+Processor for MultiAggregation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -8245,7 +8272,7 @@ To be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8260,7 +8287,7 @@ public process($data):array
 
 
 
-
+Processes the data provided by the aggregation
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -8285,7 +8312,7 @@ public getName():string
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
@@ -8312,7 +8339,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8337,7 +8364,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8354,13 +8381,13 @@ a|
 
 
 [[pim_processors_feedbackrangeaggregationprocessor]]
-==== FeedbackRangeAggregationProcessor
+=== FeedbackRangeAggregationProcessor
 
 Processor for FeedbackRangeAggregation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -8369,7 +8396,7 @@ Processor for FeedbackRangeAggregation
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8384,7 +8411,7 @@ public process($data):array
 
 
 
-
+Processes the data provided by the aggregation
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -8409,7 +8436,7 @@ public getName():string
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
@@ -8436,7 +8463,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8461,7 +8488,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8478,13 +8505,13 @@ a|
 
 
 [[pim_processors_itemcardinalityaggregationprocessor]]
-==== ItemCardinalityAggregationProcessor
+=== ItemCardinalityAggregationProcessor
 
 Processor for ItemCardinalityAggregation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -8493,7 +8520,7 @@ Processor for ItemCardinalityAggregation
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8508,7 +8535,7 @@ public process($data):array
 
 
 
-
+Processes the data provided by the aggregation
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -8533,7 +8560,7 @@ public getDependencies():array
 
 
 
-
+Get dependencies of the aggregation
 
 [source%nowrap, php]
 ----
@@ -8545,7 +8572,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8570,7 +8597,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8587,13 +8614,13 @@ a|
 
 
 [[pim_processors_itemidtermsaggregationprocessor]]
-==== ItemIdTermsAggregationProcessor
+=== ItemIdTermsAggregationProcessor
 
 Processor for ItemIdTermsAggregation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -8602,7 +8629,7 @@ Processor for ItemIdTermsAggregation
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8617,7 +8644,7 @@ public process($data):array
 
 
 
-
+Processes the data provided by the aggregation
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -8642,7 +8669,7 @@ public getName():string
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
@@ -8669,7 +8696,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8694,7 +8721,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8711,13 +8738,13 @@ a|
 
 
 [[pim_processors_itemminpriceaggregationprocessor]]
-==== ItemMinPriceAggregationProcessor
+=== ItemMinPriceAggregationProcessor
 
 Processor for ItemMinPriceAggregation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -8726,7 +8753,7 @@ Processor for ItemMinPriceAggregation
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8741,7 +8768,7 @@ public process($data):array
 
 
 
-
+Processes the data provided by the aggregation
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -8766,7 +8793,7 @@ public getName():string
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
@@ -8793,7 +8820,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8818,7 +8845,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8835,13 +8862,13 @@ a|
 
 
 [[pim_processors_salablefilteraggregationprocessor]]
-==== SalableFilterAggregationProcessor
+=== SalableFilterAggregationProcessor
 
 Processor for SalableFilterAggregation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -8850,7 +8877,7 @@ Processor for SalableFilterAggregation
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -8865,7 +8892,7 @@ public process($data):array
 
 
 
-
+Processes the data provided by the aggregation
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -8890,7 +8917,7 @@ public getName():string
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
@@ -8905,7 +8932,7 @@ public addSubProcessor($processor):void
 
 
 
-
+Add a sub processor to this processor
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -8942,7 +8969,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8967,7 +8994,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -8984,13 +9011,13 @@ a|
 
 
 [[pim_processors_searchsuggestionstermsaggregationprocessor]]
-==== SearchSuggestionsTermsAggregationProcessor
+=== SearchSuggestionsTermsAggregationProcessor
 
 Processor for SearchSuggestionsTermsAggregation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -8999,7 +9026,7 @@ Processor for SearchSuggestionsTermsAggregation
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9014,7 +9041,7 @@ public process($data):array
 
 
 
-
+Processes the data provided by the aggregation
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9039,7 +9066,7 @@ public getName():string
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
@@ -9066,7 +9093,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -9091,7 +9118,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -9108,13 +9135,13 @@ a|
 
 
 [[pim_processors_unitcombinationaggregationprocessor]]
-==== UnitCombinationAggregationProcessor
+=== UnitCombinationAggregationProcessor
 
 Processor for UnitCombinationAggregation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\Processors`
 
@@ -9123,7 +9150,7 @@ Processor for UnitCombinationAggregation
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9138,7 +9165,7 @@ public process($data):array
 
 
 
-
+Processes the data provided by the aggregation
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9163,7 +9190,7 @@ public getName():string
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
@@ -9190,7 +9217,7 @@ public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -9215,7 +9242,7 @@ public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processo
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
+===== *Return type:*        xref:Cloud.adoc#cloud_lib_processor[`Processor`]
 
 
 
@@ -9231,15 +9258,15 @@ a|
 
 
 [[pim_aggregations_searchsuggestions]]
-===  SearchSuggestions
+== SearchSuggestions
 [[pim_searchsuggestions_searchsuggestionstermsaggregation]]
-==== SearchSuggestionsTermsAggregation
+=== SearchSuggestionsTermsAggregation
 
 Get suggestions for found variations, use setInclude to filter them.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\SearchService\Aggregations\SearchSuggestions`
 
@@ -9248,12 +9275,12 @@ Get suggestions for found variations, use setInclude to filter them.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public getName():void
+public getName():string
 
 ----
 
@@ -9263,12 +9290,12 @@ public getName():void
 
 
 
-
+Get the name of the aggregation
 
 [source%nowrap, php]
 ----
 
-public getField():void
+public getField():string
 
 ----
 
@@ -9278,7 +9305,7 @@ public getField():void
 
 
 
-
+Get the field of the aggregation
 
 [source%nowrap, php]
 ----
@@ -9395,7 +9422,7 @@ public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregat
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -9420,7 +9447,7 @@ public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Searc
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_aggregation_aggregationinterface[`AggregationInterface`]
 
 
 
@@ -9563,18 +9590,18 @@ a|
 
 
 [[pim_variationdatainterface]]
-== VariationDataInterface
+= VariationDataInterface
 
 [[pim_variationdatainterface_contracts]]
-===  Contracts
+== Contracts
 [[pim_contracts_attributeinterface]]
-==== AttributeInterface
+=== AttributeInterface
 
-To be written
+The interface of all variation attributes
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Contracts`
 
@@ -9583,7 +9610,7 @@ To be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9598,7 +9625,7 @@ public getName():string
 
 
 
-
+Get the name of the attribute
 
 [source%nowrap, php]
 ----
@@ -9613,7 +9640,7 @@ public static getVariationAttribute():string
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -9625,10 +9652,10 @@ public addLazyLoadParts($lazyLoadParts):Plenty\Modules\Pim\VariationDataInterfac
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_variationdatainterface_contracts[`Contracts`]
+===== *Return type:*        xref:Pim.adoc#pim_variationdatainterface_contracts[`Contracts`]
 
 
-
+Get all parts which should be lazy loaded.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9653,17 +9680,17 @@ public getLazyLoadParts():array
 
 
 
-
+Get all parts which should be lazy loaded.
 
 
 [[pim_contracts_variationdatainterfacecontract]]
-==== VariationDataInterfaceContract
+=== VariationDataInterfaceContract
 
 Use this interface to load performant article data
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Contracts`
 
@@ -9672,7 +9699,7 @@ Use this interface to load performant article data
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9684,10 +9711,10 @@ public getResult($context):Plenty\Modules\Pim\VariationDataInterface\Contracts\V
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_contracts_variationdatainterfaceresultinterface[`VariationDataInterfaceResultInterface`]
+===== *Return type:*        xref:Pim.adoc#pim_contracts_variationdatainterfaceresultinterface[`VariationDataInterfaceResultInterface`]
 
 
-
+Get the result, using the context.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9712,7 +9739,7 @@ public getMultipleResults($contextList):array
 
 
 
-
+Get the multiple results, using multiple contexts
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9726,13 +9753,13 @@ a|
 
 
 [[pim_contracts_variationdatainterfaceresultinterface]]
-==== VariationDataInterfaceResultInterface
+=== VariationDataInterfaceResultInterface
 
-Result
+The Result of the variation data interface
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Contracts`
 
@@ -9741,7 +9768,7 @@ Result
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9753,10 +9780,10 @@ public getContext():Plenty\Modules\Pim\VariationDataInterface\Model\VariationDat
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+===== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
 
 
-
+Get the context which is uses for this result .
 
 [source%nowrap, php]
 ----
@@ -9771,7 +9798,7 @@ public total():int
 
 
 
-
+Get the total found variations.
 
 [source%nowrap, php]
 ----
@@ -9804,15 +9831,15 @@ public getAdditionalData():array
 Get additional data provided by the elasticsearch result
 
 [[pim_variationdatainterface_model]]
-===  Model
+== Model
 [[pim_model_variation]]
-==== Variation
+=== Variation
 
-The Variation
+The variation model, contains all possible informations of a variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model`
 
@@ -9894,7 +9921,7 @@ The Variation
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9913,13 +9940,13 @@ Returns this model as an array.
 
 
 [[pim_model_variationdatainterfacecontext]]
-==== VariationDataInterfaceContext
+=== VariationDataInterfaceContext
 
 The Conext to define what you get frome the VDI
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model`
 
@@ -9928,7 +9955,7 @@ The Conext to define what you get frome the VDI
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -9940,10 +9967,10 @@ public addFilter($filter):Plenty\Modules\Pim\VariationDataInterface\Model\Variat
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+===== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
 
 
-
+Add filter to restrict the result.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9965,10 +9992,10 @@ public addAggregation($aggregation):Plenty\Modules\Pim\VariationDataInterface\Mo
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+===== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
 
 
-
+Add aggregation to aggregate the result.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -9990,10 +10017,10 @@ public addSuggestion($suggestion):Plenty\Modules\Pim\VariationDataInterface\Mode
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+===== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
 
 
-
+Add suggestion to get suggestions in the result.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10015,10 +10042,10 @@ public addQuery($filter):Plenty\Modules\Pim\VariationDataInterface\Model\Variati
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+===== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
 
 
-
+Add query to restrict the result. Queries affecting the score.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10040,10 +10067,10 @@ public getFilter():Illuminate\Support\Collection
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
-
+Get filters which are added to the context.
 
 [source%nowrap, php]
 ----
@@ -10058,7 +10085,7 @@ public getIds():void
 
 
 
-
+Get ids which are added to the context.
 
 [source%nowrap, php]
 ----
@@ -10073,7 +10100,7 @@ public setIds($ids):void
 
 
 
-
+Set ids. All other restrictions are ignored.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10098,7 +10125,7 @@ public getAggregations():void
 
 
 
-
+Get aggregations which are added to the result.
 
 [source%nowrap, php]
 ----
@@ -10113,7 +10140,7 @@ public getSuggestions():void
 
 
 
-
+Get suggestions which are added to the result.
 
 [source%nowrap, php]
 ----
@@ -10128,7 +10155,7 @@ public getQuery():void
 
 
 
-
+Get queries which are added to the result.
 
 [source%nowrap, php]
 ----
@@ -10143,7 +10170,7 @@ public getParts():void
 
 
 
-
+Get parts which are added to the result.
 
 [source%nowrap, php]
 ----
@@ -10158,7 +10185,7 @@ public addPart($part):void
 
 
 
-
+Add part to the result. A part specifies what is returned in the result.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10180,10 +10207,10 @@ public setParts($parts):Plenty\Modules\Pim\VariationDataInterface\Model\Variatio
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+===== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
 
 
-
+Set parts. A part specifies what is returned in the result.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10208,7 +10235,7 @@ public getPlentyIds():void
 
 
 
-
+Get plenty ids. No further functionality added yet
 
 [source%nowrap, php]
 ----
@@ -10223,7 +10250,7 @@ public setPlentyIds($plentyIds):void
 
 
 
-
+Set plenty ids. No further functionality added yet
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10248,7 +10275,7 @@ public getLanguages():void
 
 
 
-
+Get languages. No further functionality added yet
 
 [source%nowrap, php]
 ----
@@ -10263,7 +10290,7 @@ public setLanguages($languages):void
 
 
 
-
+Set languages. No further functionality added yet
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10288,7 +10315,7 @@ public getPage():int
 
 
 
-
+Get the wanted page value.
 
 [source%nowrap, php]
 ----
@@ -10300,10 +10327,10 @@ public setPage($page = 1, $perPage = 50):Plenty\Modules\Pim\VariationDataInterfa
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+===== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
 
 
-
+Set the page and Items per page.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10332,7 +10359,7 @@ public getPerPage():int
 
 
 
-
+Get the wanted per page value.
 
 [source%nowrap, php]
 ----
@@ -10347,7 +10374,7 @@ public isGetAllFound():bool
 
 
 
-
+returns whether get all found or not
 
 [source%nowrap, php]
 ----
@@ -10359,10 +10386,10 @@ public setGetAllFound($getAll):Plenty\Modules\Pim\VariationDataInterface\Model
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_variationdatainterface_model[`Model`]
+===== *Return type:*        xref:Pim.adoc#pim_variationdatainterface_model[`Model`]
 
 
-
+set whether the result should return all found entities or not
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10387,7 +10414,7 @@ public getBatchSize():int
 
 
 
-
+Get the wanted batch size.
 
 [source%nowrap, php]
 ----
@@ -10399,10 +10426,10 @@ public setBatchSize($batchSize):Plenty\Modules\Pim\VariationDataInterface\Model\
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+===== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
 
 
-
+Set the batch size of result batch.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10427,7 +10454,7 @@ public getContextId():string
 
 
 
-
+Get the current context id.
 
 [source%nowrap, php]
 ----
@@ -10439,10 +10466,10 @@ public getGroupBy():Plenty\Modules\Pim\VariationDataInterface\Model\Context\Grou
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_context_groupby[`GroupBy`]
+===== *Return type:*        xref:Pim.adoc#pim_context_groupby[`GroupBy`]
 
 
-
+Get the wanted group by or null if non is set.
 
 [source%nowrap, php]
 ----
@@ -10454,10 +10481,10 @@ public setGroupBy($groupBy):Plenty\Modules\Pim\VariationDataInterface\Model\Vari
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+===== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
 
 
-
+Set a group by for the result.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10482,7 +10509,7 @@ public getDecoratedReturnType():string
 
 
 
-
+Get the decorated return type.
 
 [source%nowrap, php]
 ----
@@ -10494,10 +10521,10 @@ public getSorting():Plenty\Modules\Cloud\ElasticSearch\Lib\Sorting\SortingInterf
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_sorting_sortinginterface[`SortingInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_sorting_sortinginterface[`SortingInterface`]
 
 
-
+Get the sorting the result should be sorted by.
 
 [source%nowrap, php]
 ----
@@ -10509,10 +10536,10 @@ public setSorting($sorting):Plenty\Modules\Pim\VariationDataInterface\Model\Vari
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+===== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
 
 
-
+SeSett the sorting the result should be sorted by.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10534,10 +10561,10 @@ public getScoreModifier():Plenty\Modules\Cloud\ElasticSearch\Lib\Query\Type\Scor
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_scoremodifier_scoremodifierinterface[`ScoreModifierInterface`]
+===== *Return type:*        xref:Cloud.adoc#cloud_scoremodifier_scoremodifierinterface[`ScoreModifierInterface`]
 
 
-
+Get a score modifier. Score modifier are manipulation the score of the result hits.
 
 [source%nowrap, php]
 ----
@@ -10549,10 +10576,10 @@ public setScoreModifier($scoreModifier):Plenty\Modules\Pim\VariationDataInterfac
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+===== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
 
 
-
+Set a score modifier. Score modifier are manipulation the score of the result hits.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10574,10 +10601,10 @@ public getAdditionalSource():Plenty\Modules\Cloud\ElasticSearch\Lib\Source\Indep
     
 
 
-====== *Return type:*        xref:Cloud.adoc#cloud_source_independentsource[`IndependentSource`]
+===== *Return type:*        xref:Cloud.adoc#cloud_source_independentsource[`IndependentSource`]
 
 
-
+Get the additional source which should be added to the result.
 
 [source%nowrap, php]
 ----
@@ -10589,10 +10616,10 @@ public setAdditionalSource($additionalSource):Plenty\Modules\Pim\VariationDataIn
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+===== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
 
 
-
+Set the additional source which should be added to the result.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10617,7 +10644,7 @@ public hasAdditionalSource():bool
 
 
 
-
+Returns whether the context has an additional source or not
 
 [source%nowrap, php]
 ----
@@ -10632,7 +10659,7 @@ public getUseInMemoryCache():bool
 
 
 
-
+Returns whether the in memory cache should be used or not
 
 [source%nowrap, php]
 ----
@@ -10644,10 +10671,10 @@ public setUseInMemoryCache($useInMemoryCache):Plenty\Modules\Pim\VariationDataIn
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+===== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
 
 
-
+Set whether the in memory cache should be used or not. It is recommended to use this cache (Default)
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10672,7 +10699,7 @@ public isHasAdditionalSource():bool
 
 
 
-
+Returns whether the context has an additional source or not
 
 [source%nowrap, php]
 ----
@@ -10687,7 +10714,7 @@ public setHasAdditionalSource($hasAdditionalSource):void
 
 
 
-
+Set whether the context has an additional source or not. This is normally determined automatically
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10712,7 +10739,7 @@ public getSearchAfterKey():string
 
 
 
-
+Get the search after key.
 
 [source%nowrap, php]
 ----
@@ -10724,10 +10751,10 @@ public setSearchAfterKey($searchAfterKey):Plenty\Modules\Pim\VariationDataInterf
     
 
 
-====== *Return type:*        xref:Pim.adoc#pim_variationdatainterface_model[`Model`]
+===== *Return type:*        xref:Pim.adoc#pim_variationdatainterface_model[`Model`]
 
 
-
+Set the search after key. Set null for the first page.
 
 .*Parameters*
 [cols="10%,30%,60%"]
@@ -10752,21 +10779,21 @@ public isSearchAfter():bool
 
 
 
-
+Returns whether this is an search after search.
 
 [[pim_model]]
-== Model
+= Model
 
 [[pim_model_attributes]]
-===  Attributes
+== Attributes
 [[pim_attributes_variationadditionalskuattribute]]
-==== VariationAdditionalSkuAttribute
+=== VariationAdditionalSkuAttribute
 
-to be written
+The additional sku part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -10775,12 +10802,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -10790,7 +10817,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -10849,13 +10876,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationattributevalueattribute]]
-==== VariationAttributeValueAttribute
+=== VariationAttributeValueAttribute
 
-to be written
+The attribute part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -10864,12 +10891,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -10879,7 +10906,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -10938,13 +10965,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationbarcodeattribute]]
-==== VariationBarcodeAttribute
+=== VariationBarcodeAttribute
 
-to be written
+The barcode part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -10953,12 +10980,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -10968,7 +10995,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -11027,13 +11054,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationbaseattribute]]
-==== VariationBaseAttribute
+=== VariationBaseAttribute
 
-to be written
+The base part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11042,12 +11069,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -11057,7 +11084,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -11116,13 +11143,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationbundlecomponentattribute]]
-==== VariationBundleComponentAttribute
+=== VariationBundleComponentAttribute
 
-to be written
+The bundle component part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11131,12 +11158,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -11146,7 +11173,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -11205,13 +11232,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationcategoryattribute]]
-==== VariationCategoryAttribute
+=== VariationCategoryAttribute
 
-to be written
+The category part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11220,12 +11247,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -11235,7 +11262,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -11294,13 +11321,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationclientattribute]]
-==== VariationClientAttribute
+=== VariationClientAttribute
 
-to be written
+The client part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11309,12 +11336,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -11324,7 +11351,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -11383,13 +11410,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationcommentattribute]]
-==== VariationCommentAttribute
+=== VariationCommentAttribute
 
-to be written
+The comment part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11398,12 +11425,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -11413,7 +11440,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -11472,13 +11499,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationdefaultcategoryattribute]]
-==== VariationDefaultCategoryAttribute
+=== VariationDefaultCategoryAttribute
 
-to be written
+The default category part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11487,12 +11514,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -11502,7 +11529,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -11561,13 +11588,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationimageattribute]]
-==== VariationImageAttribute
+=== VariationImageAttribute
 
-to be written
+The image part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11576,12 +11603,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -11591,7 +11618,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -11650,13 +11677,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationmarketattribute]]
-==== VariationMarketAttribute
+=== VariationMarketAttribute
 
-to be written
+The market part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11665,12 +11692,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -11680,7 +11707,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -11739,13 +11766,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationmarketidentnumberattribute]]
-==== VariationMarketIdentNumberAttribute
+=== VariationMarketIdentNumberAttribute
 
-to be written
+The market ident number part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11754,12 +11781,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -11769,7 +11796,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -11828,13 +11855,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationpropertyattribute]]
-==== VariationPropertyAttribute
+=== VariationPropertyAttribute
 
-to be written
+The property part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11843,12 +11870,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -11858,7 +11885,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -11917,13 +11944,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationsalespriceattribute]]
-==== VariationSalesPriceAttribute
+=== VariationSalesPriceAttribute
 
-to be written
+The sales price part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -11932,12 +11959,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -11947,7 +11974,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -12006,13 +12033,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationskuattribute]]
-==== VariationSkuAttribute
+=== VariationSkuAttribute
 
-to be written
+The sku part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12021,12 +12048,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -12036,7 +12063,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -12095,13 +12122,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationsupplierattribute]]
-==== VariationSupplierAttribute
+=== VariationSupplierAttribute
 
-to be written
+The supplier part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12110,12 +12137,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -12125,7 +12152,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -12184,13 +12211,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationtagattribute]]
-==== VariationTagAttribute
+=== VariationTagAttribute
 
-to be written
+The tag part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12199,12 +12226,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -12214,7 +12241,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -12273,13 +12300,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationtimestampattribute]]
-==== VariationTimestampAttribute
+=== VariationTimestampAttribute
 
-to be written
+The timestamp part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12288,12 +12315,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -12303,7 +12330,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -12362,13 +12389,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationunitattribute]]
-==== VariationUnitAttribute
+=== VariationUnitAttribute
 
-to be written
+The unit part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12377,12 +12404,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -12392,7 +12419,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -12451,13 +12478,13 @@ public getLazyLoadParts():void
 
 
 [[pim_attributes_variationwarehouseattribute]]
-==== VariationWarehouseAttribute
+=== VariationWarehouseAttribute
 
-to be written
+The warehouse part of the variation
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
 
@@ -12466,12 +12493,12 @@ to be written
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
 
-public static getVariationAttribute():void
+public static getVariationAttribute():string
 
 ----
 
@@ -12481,7 +12508,7 @@ public static getVariationAttribute():void
 
 
 
-
+Get the related key on the variation model.
 
 [source%nowrap, php]
 ----
@@ -12539,15 +12566,15 @@ public getLazyLoadParts():void
 
 
 [[pim_model_context]]
-===  Context
+== Context
 [[pim_context_groupby]]
-==== GroupBy
+=== GroupBy
 
-Group by the result, expects 2 params: field - the field which the result is grouped by, sorting - the inner sorting, must be instance of SortingInterface)
+Group by the result, expects 2 params: field - the field which the result is grouped by, sorting - the inner sorting, must be instance of SortingInterface.)
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\Context`
 
@@ -12556,7 +12583,7 @@ Group by the result, expects 2 params: field - the field which the result is gro
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -12571,18 +12598,18 @@ public getField():string
 
 
 
-
+Get the field the result should be grouped by.
 
 [[pim_model_decoratedattributes]]
-===  DecoratedAttributes
+== DecoratedAttributes
 [[pim_decoratedattributes_additionalsku]]
-==== AdditionalSku
+=== AdditionalSku
+
+contains informations about an additonal sku, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -12610,7 +12637,7 @@ public getField():string
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -12629,13 +12656,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_attributevalue]]
-==== AttributeValue
+=== AttributeValue
+
+contains informations about an attribute value, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -12663,7 +12690,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -12682,13 +12709,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_barcode]]
-==== Barcode
+=== Barcode
+
+contains informations about a barcode, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -12713,7 +12740,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -12732,13 +12759,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_base]]
-==== Base
+=== Base
+
+contains the basic informations of a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -12955,7 +12982,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -12974,13 +13001,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_bundlecomponent]]
-==== BundleComponent
+=== BundleComponent
+
+contains informations about a barcode, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13002,7 +13029,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13021,13 +13048,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_category]]
-==== Category
+=== Category
+
+contains informations about a category, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13055,7 +13082,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13074,13 +13101,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_client]]
-==== Client
+=== Client
+
+contains informations about a client, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13099,7 +13126,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13118,13 +13145,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_comment]]
-==== Comment
+=== Comment
+
+contains informations about a comment, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13152,7 +13179,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13171,13 +13198,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_defaultcategory]]
-==== DefaultCategory
+=== DefaultCategory
+
+contains informations about a default category, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13205,7 +13232,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13224,13 +13251,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_image]]
-==== Image
+=== Image
+
+contains informations about an image, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13252,7 +13279,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13271,13 +13298,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_market]]
-==== Market
+=== Market
+
+contains informations about an market, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13296,7 +13323,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13315,13 +13342,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_marketidentnumber]]
-==== MarketIdentNumber
+=== MarketIdentNumber
+
+contains informations about an market ident number, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13352,7 +13379,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13371,13 +13398,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_property]]
-==== Property
+=== Property
+
+contains informations about a property, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13402,7 +13429,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13421,13 +13448,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_salesprice]]
-==== SalesPrice
+=== SalesPrice
+
+contains informations about a client, belongs to a salesPrice
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13452,7 +13479,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13471,13 +13498,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_sku]]
-==== Sku
+=== Sku
+
+contains informations about a sku, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13529,7 +13556,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13548,13 +13575,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_supplier]]
-==== Supplier
+=== Supplier
+
+contains informations about a supplier, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13609,7 +13636,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13628,13 +13655,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_tag]]
-==== Tag
+=== Tag
+
+contains informations about a tag, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13656,7 +13683,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13675,13 +13702,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_timestamp]]
-==== Timestamp
+=== Timestamp
+
+contains informations the timestamps of a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13757,7 +13784,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13776,13 +13803,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_unit]]
-==== Unit
+=== Unit
+
+contains informations about the unit of the variaiton
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13810,7 +13837,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13829,13 +13856,13 @@ Returns this model as an array.
 
 
 [[pim_decoratedattributes_warehouse]]
-==== Warehouse
+=== Warehouse
+
+contains informations about a warehouse, belongs to a variation
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
 
@@ -13884,7 +13911,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13902,18 +13929,18 @@ public toArray()
 Returns this model as an array.
 
 [[pim_decorators]]
-== Decorators
+= Decorators
 
 [[pim_decorators_attributevalue]]
-===  AttributeValue
+== AttributeValue
 [[pim_attributevalue_with]]
-==== With
+=== With
+
+contains lazy loaded attribute data
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\AttributeValue`
 
@@ -13935,7 +13962,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13953,15 +13980,15 @@ public toArray()
 Returns this model as an array.
 
 [[pim_decorators_barcode]]
-===  Barcode
+== Barcode
 [[pim_barcode_with]]
-==== With
+=== With
+
+contains lazy loaded barcode data
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Barcode`
 
@@ -13980,7 +14007,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -13998,15 +14025,15 @@ public toArray()
 Returns this model as an array.
 
 [[pim_decorators_base]]
-===  Base
+== Base
 [[pim_base_with]]
-==== With
+=== With
+
+contains lazy loaded base data
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Base`
 
@@ -14058,7 +14085,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -14076,15 +14103,15 @@ public toArray()
 Returns this model as an array.
 
 [[pim_decorators_category]]
-===  Category
+== Category
 [[pim_category_with]]
-==== With
+=== With
+
+contains lazy loaded category data
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Category`
 
@@ -14106,7 +14133,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -14124,15 +14151,15 @@ public toArray()
 Returns this model as an array.
 
 [[pim_decorators_defaultcategory]]
-===  DefaultCategory
+== DefaultCategory
 [[pim_defaultcategory_with]]
-==== With
+=== With
+
+contains lazy loaded default category data
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\DefaultCategory`
 
@@ -14151,7 +14178,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -14169,15 +14196,15 @@ public toArray()
 Returns this model as an array.
 
 [[pim_decorators_images]]
-===  Images
+== Images
 [[pim_images_with]]
-==== With
+=== With
+
+contains lazy loaded image data
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Images`
 
@@ -14196,7 +14223,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -14214,15 +14241,15 @@ public toArray()
 Returns this model as an array.
 
 [[pim_decorators_property]]
-===  Property
+== Property
 [[pim_property_with]]
-==== With
+=== With
+
+contains lazy loaded property data
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Property`
 
@@ -14241,7 +14268,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -14259,15 +14286,15 @@ public toArray()
 Returns this model as an array.
 
 [[pim_decorators_salesprice]]
-===  SalesPrice
+== SalesPrice
 [[pim_salesprice_with]]
-==== With
+=== With
+
+contains lazy loaded sales price data
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\SalesPrice`
 
@@ -14286,7 +14313,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -14304,15 +14331,15 @@ public toArray()
 Returns this model as an array.
 
 [[pim_decorators_supplier]]
-===  Supplier
+== Supplier
 [[pim_supplier_with]]
-==== With
+=== With
+
+contains lazy loaded supplier data
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Supplier`
 
@@ -14331,7 +14358,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -14349,15 +14376,15 @@ public toArray()
 Returns this model as an array.
 
 [[pim_decorators_tag]]
-===  Tag
+== Tag
 [[pim_tag_with]]
-==== With
+=== With
+
+contains lazy loaded tag data
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Tag`
 
@@ -14376,7 +14403,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -14394,15 +14421,15 @@ public toArray()
 Returns this model as an array.
 
 [[pim_decorators_unit]]
-===  Unit
+== Unit
 [[pim_unit_with]]
-==== With
+=== With
+
+contains lazy loaded unit data
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Unit`
 
@@ -14421,7 +14448,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -14439,15 +14466,15 @@ public toArray()
 Returns this model as an array.
 
 [[pim_decorators_warehouse]]
-===  Warehouse
+== Warehouse
 [[pim_warehouse_with]]
-==== With
+=== With
+
+contains lazy loaded warehouse data
 
 
 
-
-
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes\Decorators\Warehouse`
 
@@ -14466,7 +14493,7 @@ Returns this model as an array.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

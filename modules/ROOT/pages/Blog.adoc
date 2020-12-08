@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[blog_blog]]
-== Blog
+= Blog
 
 [[blog_blog_contracts]]
-===  Contracts
+== Contracts
 [[blog_contracts_blogpostrepositorycontract]]
-==== BlogPostRepositoryContract
+=== BlogPostRepositoryContract
 
 This interface provides methods to create, read, list, update and delete blog posts
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Blog\Contracts`
 
@@ -21,7 +23,7 @@ This interface provides methods to create, read, list, update and delete blog po
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -33,7 +35,7 @@ public createPost($data):Plenty\Modules\Blog\Models\BlogPost
     
 
 
-====== *Return type:*        xref:Blog.adoc#blog_models_blogpost[`BlogPost`]
+===== *Return type:*        xref:Blog.adoc#blog_models_blogpost[`BlogPost`]
 
 
 Creates a new blog post.
@@ -58,7 +60,7 @@ public getPost($blogPostId):Plenty\Modules\Blog\Models\BlogPost
     
 
 
-====== *Return type:*        xref:Blog.adoc#blog_models_blogpost[`BlogPost`]
+===== *Return type:*        xref:Blog.adoc#blog_models_blogpost[`BlogPost`]
 
 
 Get a single blog post by its ID
@@ -116,7 +118,7 @@ public updatePost($data, $blogPostId):Plenty\Modules\Blog\Models\BlogPost
     
 
 
-====== *Return type:*        xref:Blog.adoc#blog_models_blogpost[`BlogPost`]
+===== *Return type:*        xref:Blog.adoc#blog_models_blogpost[`BlogPost`]
 
 
 Update data for a post
@@ -311,15 +313,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[blog_blog_models]]
-===  Models
+== Models
 [[blog_models_blogpost]]
-==== BlogPost
+=== BlogPost
 
 The blog post model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Blog\Models`
 
@@ -344,7 +346,7 @@ The blog post model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -362,15 +364,15 @@ public toArray()
 Returns this model as an array.
 
 [[blog_blog_services]]
-===  Services
+== Services
 [[blog_services_blogpluginservice]]
-==== BlogPluginService
+=== BlogPluginService
 
 Blog plugin service
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Blog\Services`
 
@@ -379,7 +381,7 @@ Blog plugin service
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

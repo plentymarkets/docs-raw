@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[bi_keyfigure]]
-== KeyFigure
+= KeyFigure
 
 [[bi_keyfigure_contracts]]
-===  Contracts
+== Contracts
 [[bi_contracts_keyfigureresultrepositorycontract]]
-==== KeyFigureResultRepositoryContract
+=== KeyFigureResultRepositoryContract
 
 This interface allows you to search for key figures results.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\KeyFigure\Contracts`
 
@@ -21,7 +23,7 @@ This interface allows you to search for key figures results.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -33,7 +35,7 @@ public searchKeyFigureResults($searchRequests):Plenty\Modules\BI\KeyFigure\Model
     
 
 
-====== *Return type:*        xref:Bi.adoc#bi_models_keyfigureresultsearchresponse[`KeyFigureResultSearchResponse`]
+===== *Return type:*        xref:Bi.adoc#bi_models_keyfigureresultsearchresponse[`KeyFigureResultSearchResponse`]
 
 
 Search for key figure calculation results
@@ -49,15 +51,15 @@ a|Several key figure search requests
 
 
 [[bi_keyfigure_models]]
-===  Models
+== Models
 [[bi_models_keyfigureconfig]]
-==== KeyFigureConfig
+=== KeyFigureConfig
 
 The key figure config model represents the configuration of a key figure.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\KeyFigure\Models`
 
@@ -74,6 +76,9 @@ The key figure config model represents the configuration of a key figure.
     a|id
     a|Id of this configuration
 |link:http://php.net/string[string^]
+    a|hash
+    a|Hash value to check for updates and avoid duplicate key figures with the same filters
+|link:http://php.net/string[string^]
     a|plentyIdHash
     a|The plentymarkets system id hash
 |link:http://php.net/string[string^]
@@ -88,12 +93,21 @@ The key figure config model represents the configuration of a key figure.
 |        xref:Bi.adoc#bi_models_keyfigurefilter[`KeyFigureFilter`]
     a|filter
     a|Filter for calculating this key figure
-|        xref:Bi.adoc#bi_models_keyfiguretarget[`KeyFigureTarget`]
-    a|target
+|link:http://php.net/array[array^]
+    a|targets
     a|Contains the target figures
 |        xref:Bi.adoc#bi_models_keyfiguremeta[`KeyFigureMeta`]
     a|meta
     a|Additional data
+|link:http://php.net/bool[bool^]
+    a|direct
+    a|This key figure triggers a direct calculation without saving the result
+|link:http://php.net/bool[bool^]
+    a|freeOfCharge
+    a|Is this key figure free of charge
+|link:http://php.net/bool[bool^]
+    a|isGlobal
+    a|
 |link:http://php.net/string[string^]
     a|updatedAt
     a|Time of last change
@@ -112,7 +126,7 @@ The key figure config model represents the configuration of a key figure.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -131,13 +145,13 @@ Returns this model as an array.
 
 
 [[bi_models_keyfigurefilter]]
-==== KeyFigureFilter
+=== KeyFigureFilter
 
 The key figure filter holds configured filters for a key figure calculation.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\KeyFigure\Models`
 
@@ -162,7 +176,7 @@ The key figure filter holds configured filters for a key figure calculation.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -181,13 +195,13 @@ Returns this model as an array.
 
 
 [[bi_models_keyfiguremeta]]
-==== KeyFigureMeta
+=== KeyFigureMeta
 
 The key figure meta holds additional data.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\KeyFigure\Models`
 
@@ -215,7 +229,7 @@ The key figure meta holds additional data.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -234,13 +248,13 @@ Returns this model as an array.
 
 
 [[bi_models_keyfigureresult]]
-==== KeyFigureResult
+=== KeyFigureResult
 
 Represents a key figure result
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\KeyFigure\Models`
 
@@ -283,7 +297,7 @@ Represents a key figure result
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -302,13 +316,13 @@ Returns this model as an array.
 
 
 [[bi_models_keyfigureresultresponse]]
-==== KeyFigureResultResponse
+=== KeyFigureResultResponse
 
 The model represent a key figure result in condensed form to the presentation.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\KeyFigure\Models`
 
@@ -345,7 +359,7 @@ The model represent a key figure result in condensed form to the presentation.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -364,13 +378,13 @@ Returns this model as an array.
 
 
 [[bi_models_keyfigureresultsearchresponse]]
-==== KeyFigureResultSearchResponse
+=== KeyFigureResultSearchResponse
 
 The model represent search result of key figure result search.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\KeyFigure\Models`
 
@@ -389,7 +403,7 @@ The model represent search result of key figure result search.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -408,13 +422,13 @@ Returns this model as an array.
 
 
 [[bi_models_keyfigureresultsearchresult]]
-==== KeyFigureResultSearchResult
+=== KeyFigureResultSearchResult
 
 The key figure result search result model combine key figure information with key figure search result.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\KeyFigure\Models`
 
@@ -445,7 +459,7 @@ The key figure result search result model combine key figure information with ke
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -464,13 +478,13 @@ Returns this model as an array.
 
 
 [[bi_models_keyfiguresearchrequest]]
-==== KeyFigureSearchRequest
+=== KeyFigureSearchRequest
 
 The model holds filter information for a search query for key figures.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\KeyFigure\Models`
 
@@ -528,7 +542,7 @@ The model holds filter information for a search query for key figures.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -547,13 +561,13 @@ Returns this model as an array.
 
 
 [[bi_models_keyfiguresearchrequests]]
-==== KeyFigureSearchRequests
+=== KeyFigureSearchRequests
 
 The model represent several key figure search requests.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\KeyFigure\Models`
 
@@ -572,7 +586,7 @@ The model represent several key figure search requests.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -591,13 +605,13 @@ Returns this model as an array.
 
 
 [[bi_models_keyfiguretarget]]
-==== KeyFigureTarget
+=== KeyFigureTarget
 
 The key figure target day model contains the target figures for each weekday, week, month, quarter and year, which were stored for a key figure configuration
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\KeyFigure\Models`
 
@@ -691,7 +705,7 @@ The key figure target day model contains the target figures for each weekday, we
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -710,13 +724,13 @@ Returns this model as an array.
 
 
 [[bi_models_keyfiguretemplate]]
-==== KeyFigureTemplate
+=== KeyFigureTemplate
 
 The key figure template model contains preview data of a key figure template
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\KeyFigure\Models`
 
@@ -741,7 +755,7 @@ The key figure template model contains preview data of a key figure template
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -759,18 +773,18 @@ public toArray()
 Returns this model as an array.
 
 [[bi_rawdata]]
-== RawData
+= RawData
 
 [[bi_rawdata_contracts]]
-===  Contracts
+== Contracts
 [[bi_contracts_rawdatarepositorycontract]]
-==== RawDataRepositoryContract
+=== RawDataRepositoryContract
 
 This interface allows you to get a list of generated raw data files
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\RawData\Contracts`
 
@@ -779,7 +793,7 @@ This interface allows you to get a list of generated raw data files
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -791,7 +805,7 @@ public searchRawData($dataName, $createdAtTimestamp, $processStatus, $itemsPerPa
     
 
 
-====== *Return type:*        xref:Bi.adoc#bi_models_rawdatasearchresult[`RawDataSearchResult`]
+===== *Return type:*        xref:Bi.adoc#bi_models_rawdatasearchresult[`RawDataSearchResult`]
 
 
 Get list of raw data. Valid filter combinations: (dataName), (dataName &amp; processStatus), (createdAtTimestamp)
@@ -905,7 +919,7 @@ public getRawDataConfigs():Plenty\Modules\BI\RawData\Models\RawDataConfigs
     
 
 
-====== *Return type:*        xref:Bi.adoc#bi_models_rawdataconfigs[`RawDataConfigs`]
+===== *Return type:*        xref:Bi.adoc#bi_models_rawdataconfigs[`RawDataConfigs`]
 
 
 Returns list of all saved configurations
@@ -920,7 +934,7 @@ public updateRawDataConfigs($data):Plenty\Modules\BI\RawData\Models\RawDataConfi
     
 
 
-====== *Return type:*        xref:Bi.adoc#bi_models_rawdataconfigs[`RawDataConfigs`]
+===== *Return type:*        xref:Bi.adoc#bi_models_rawdataconfigs[`RawDataConfigs`]
 
 
 Resets all saved raw data configurations with given data
@@ -936,15 +950,15 @@ a|The configs data
 
 
 [[bi_rawdata_models]]
-===  Models
+== Models
 [[bi_models_rawdataconfig]]
-==== RawDataConfig
+=== RawDataConfig
 
 The BI raw data config model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\RawData\Models`
 
@@ -958,15 +972,21 @@ The BI raw data config model
 |Type |Name |Description
 
 |link:http://php.net/string[string^]
+    a|id
+    a|The raw data config id
+|link:http://php.net/string[string^]
+    a|plentyIdHash
+    a|The plentymarkets system id hash
+|link:http://php.net/string[string^]
     a|dataName
     a|The raw data name
-|link:http://php.net/int[int^]
+|link:http://php.net/bool[bool^]
     a|active
     a|If active, raw data is generated daily
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -985,13 +1005,13 @@ Returns this model as an array.
 
 
 [[bi_models_rawdataconfigs]]
-==== RawDataConfigs
+=== RawDataConfigs
 
 List of all saved raw data configurations
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\RawData\Models`
 
@@ -1013,7 +1033,7 @@ List of all saved raw data configurations
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1032,13 +1052,13 @@ Returns this model as an array.
 
 
 [[bi_models_rawdatacreator]]
-==== RawDataCreator
+=== RawDataCreator
 
 The BI raw data creator model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\RawData\Models`
 
@@ -1066,12 +1086,6 @@ The BI raw data creator model
 |link:http://php.net/string[string^]
     a|earliestPossibleDataDate
     a|Earliest possible date from which data should be requested.
-|link:http://php.net/int[int^]
-    a|deleteRawDataAfterDaysMinimum
-    a|Minimum number of days after the generated raw data is deleted
-|link:http://php.net/int[int^]
-    a|deleteRawDataAfterDaysMaximum
-    a|Maximum number of days after the generated raw data is deleted
 |link:http://php.net/string[string^]
     a|filterType
     a|Defines how this raw data is filtered.
@@ -1084,13 +1098,16 @@ The BI raw data creator model
 |link:http://php.net/string[string^]
     a|interval
     a|Interval in which this creator runs through
-|link:http://php.net/bool[bool^]
-    a|shouldProcess
-    a|Internal value, indicates whether this data should be transferred to the data warehouse database
+|link:http://php.net/string[string^]
+    a|storableFromPlan
+    a|From which plan is this format created and provided.
+|link:http://php.net/string[string^]
+    a|processableFromPlan
+    a|From which plan will this data be transferred to plentyBI data warehouse database.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1109,13 +1126,13 @@ Returns this model as an array.
 
 
 [[bi_models_rawdatafile]]
-==== RawDataFile
+=== RawDataFile
 
 The BI raw model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\RawData\Models`
 
@@ -1143,6 +1160,9 @@ The BI raw model
 |link:http://php.net/int[int^]
     a|shouldProcess
     a|Specifies whether this file should be transferred to the data warehouse
+|link:http://php.net/int[int^]
+    a|cloudId
+    a|ID of source cloud
 |link:http://php.net/string[string^]
     a|path
     a|Storage path to raw data file
@@ -1155,7 +1175,7 @@ The BI raw model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1174,13 +1194,13 @@ Returns this model as an array.
 
 
 [[bi_models_rawdatasearchresult]]
-==== RawDataSearchResult
+=== RawDataSearchResult
 
 The BI raw data search result model
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\BI\RawData\Models`
 
@@ -1202,7 +1222,7 @@ The BI raw data search result model
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----

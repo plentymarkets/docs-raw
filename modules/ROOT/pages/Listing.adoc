@@ -1,18 +1,20 @@
-
-
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
 [[listing_listing]]
-== Listing
+= Listing
 
 [[listing_listing_contracts]]
-===  Contracts
+== Contracts
 [[listing_contracts_listingrepositorycontract]]
-==== ListingRepositoryContract
+=== ListingRepositoryContract
 
 The contract for the listing repository.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Contracts`
 
@@ -21,7 +23,7 @@ The contract for the listing repository.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -33,7 +35,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Models\Listing
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listing[`Listing`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listing[`Listing`]
 
 
 Get a listing by a given ID.
@@ -62,7 +64,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List listing
@@ -99,7 +101,7 @@ public create($data):Plenty\Modules\Listing\Models\Listing
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listing[`Listing`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listing[`Listing`]
 
 
 Create new listing
@@ -124,7 +126,7 @@ public update($id, $data):Plenty\Modules\Listing\Models\Listing
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listing[`Listing`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listing[`Listing`]
 
 
 Update listing
@@ -269,15 +271,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[listing_listing_models]]
-===  Models
+== Models
 [[listing_models_listing]]
-==== Listing
+=== Listing
 
 The listing model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Models`
 
@@ -331,7 +333,7 @@ The listing model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -350,13 +352,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingproperty]]
-==== ListingProperty
+=== ListingProperty
 
 The listing properties model. Each listing property has a type.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Models`
 
@@ -398,7 +400,7 @@ The listing properties model. Each listing property has a type.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -416,18 +418,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_date]]
-== Date
+= Date
 
 [[listing_date_models]]
-===  Models
+== Models
 [[listing_models_listingdatetype]]
-==== ListingDateType
+=== ListingDateType
 
 The listing date type model. Each listing date type can have multiple names.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Date\Models`
 
@@ -460,7 +462,7 @@ The listing date type model. Each listing date type can have multiple names.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -479,13 +481,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingdatetypename]]
-==== ListingDateTypeName
+=== ListingDateTypeName
 
 The listing date type name model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Date\Models`
 
@@ -513,7 +515,7 @@ The listing date type name model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -531,18 +533,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_layouttemplate]]
-== LayoutTemplate
+= LayoutTemplate
 
 [[listing_layouttemplate_contracts]]
-===  Contracts
+== Contracts
 [[listing_contracts_layouttemplaterepositorycontract]]
-==== LayoutTemplateRepositoryContract
+=== LayoutTemplateRepositoryContract
 
 The LayoutTemplateRepositoryContract is the interface for the layout template repository. This interface allows you to get a single layout template or lists of layout templates as well as to create, update or delete a layout tempalte.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\LayoutTemplate\Contracts`
 
@@ -551,7 +553,7 @@ The LayoutTemplateRepositoryContract is the interface for the layout template re
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -563,7 +565,7 @@ public get($id, $with = []):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutT
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_layouttemplate[`LayoutTemplate`]
+===== *Return type:*        xref:Listing.adoc#listing_models_layouttemplate[`LayoutTemplate`]
 
 
 Get a layout template.
@@ -592,7 +594,7 @@ public create($data):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutTemplate
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_layouttemplate[`LayoutTemplate`]
+===== *Return type:*        xref:Listing.adoc#listing_models_layouttemplate[`LayoutTemplate`]
 
 
 Create a layout template.
@@ -733,15 +735,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[listing_layouttemplate_models]]
-===  Models
+== Models
 [[listing_models_layouttemplate]]
-==== LayoutTemplate
+=== LayoutTemplate
 
 The layout template model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\LayoutTemplate\Models`
 
@@ -778,7 +780,7 @@ The layout template model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -796,18 +798,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_market]]
-== Market
+= Market
 
 [[listing_market_contracts]]
-===  Contracts
+== Contracts
 [[listing_contracts_listingmarketrepositorycontract]]
-==== ListingMarketRepositoryContract
+=== ListingMarketRepositoryContract
 
 The ListingMarketRepositoryContract is the interface for the listing market repository. This interface allows you to get a single listing market or lists of listing markets as well as to create a listing market.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Contracts`
 
@@ -821,7 +823,7 @@ It is possible to extend this repository with own search criteria.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -833,7 +835,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Market\Models\ListingMarket
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
 
 
 Get a listing market
@@ -862,7 +864,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List listing markets
@@ -899,7 +901,7 @@ public find($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Rep
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Find listing markets
@@ -961,7 +963,7 @@ public update($id, $data):Plenty\Modules\Listing\Market\Models\ListingMarket
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
 
 
 Update listing market
@@ -1160,15 +1162,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[listing_market_events]]
-===  Events
+== Events
 [[listing_events_listingmarketbatchcreated]]
-==== ListingMarketBatchCreated
+=== ListingMarketBatchCreated
 
 An event class fired after multiple new listing markets are created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1177,7 +1179,7 @@ An event class fired after multiple new listing markets are created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1221,13 +1223,13 @@ Get the list of ListingMarket instances.
 
 
 [[listing_events_listingmarketbatchdeleted]]
-==== ListingMarketBatchDeleted
+=== ListingMarketBatchDeleted
 
 An event class fired after multiple listing markets are deleted.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1236,7 +1238,7 @@ An event class fired after multiple listing markets are deleted.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1280,13 +1282,13 @@ Get the list of ListingMarket instances.
 
 
 [[listing_events_listingmarketbatchevent]]
-==== ListingMarketBatchEvent
+=== ListingMarketBatchEvent
 
 A base event class for all listing market events. Each listing market batch event expects an array of ListingMarket instances.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1295,7 +1297,7 @@ A base event class for all listing market events. Each listing market batch even
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1339,13 +1341,13 @@ Get the list of ListingMarket instances.
 
 
 [[listing_events_listingmarketbatchupdated]]
-==== ListingMarketBatchUpdated
+=== ListingMarketBatchUpdated
 
 An event class fired after multiple listing markets are updated.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1354,7 +1356,7 @@ An event class fired after multiple listing markets are updated.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1398,13 +1400,13 @@ Get the list of ListingMarket instances.
 
 
 [[listing_events_listingmarketcreated]]
-==== ListingMarketCreated
+=== ListingMarketCreated
 
 An event class fired after a new listing market is created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1413,7 +1415,7 @@ An event class fired after a new listing market is created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1450,20 +1452,20 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
 
 
 Get the ListingMarket instance.
 
 
 [[listing_events_listingmarketdeleted]]
-==== ListingMarketDeleted
+=== ListingMarketDeleted
 
 An event class fired after a new listing market is deleted.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1472,7 +1474,7 @@ An event class fired after a new listing market is deleted.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1509,20 +1511,20 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
 
 
 Get the ListingMarket instance.
 
 
 [[listing_events_listingmarketevent]]
-==== ListingMarketEvent
+=== ListingMarketEvent
 
 A base event class for all listing market events. Each listing market event expects an ListingMarket instance.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1531,7 +1533,7 @@ A base event class for all listing market events. Each listing market event expe
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1568,20 +1570,20 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
 
 
 Get the ListingMarket instance.
 
 
 [[listing_events_listingmarketitemspecificscreated]]
-==== ListingMarketItemSpecificsCreated
+=== ListingMarketItemSpecificsCreated
 
 An event class fired after a new listing market item specifics are created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1590,7 +1592,7 @@ An event class fired after a new listing market item specifics are created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1627,20 +1629,20 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
 
 
 Get the ListingMarket instance.
 
 
 [[listing_events_listingmarketitemspecificsdeleted]]
-==== ListingMarketItemSpecificsDeleted
+=== ListingMarketItemSpecificsDeleted
 
 An event class fired after a new listing market item specifics are deleted.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1649,7 +1651,7 @@ An event class fired after a new listing market item specifics are deleted.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1686,20 +1688,20 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
 
 
 Get the ListingMarket instance.
 
 
 [[listing_events_listingmarketupdated]]
-==== ListingMarketUpdated
+=== ListingMarketUpdated
 
 An event class fired after a new listing market is updated.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Events`
 
@@ -1708,7 +1710,7 @@ An event class fired after a new listing market is updated.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1745,21 +1747,21 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
 
 
 Get the ListingMarket instance.
 
 [[listing_market_models]]
-===  Models
+== Models
 [[listing_models_listingmarket]]
-==== ListingMarket
+=== ListingMarket
 
 The listing market model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Models`
 
@@ -1904,7 +1906,7 @@ The listing market model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1923,13 +1925,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingmarketdate]]
-==== ListingMarketDate
+=== ListingMarketDate
 
 The listing market dates model. Each listing market date has a type.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Models`
 
@@ -1973,7 +1975,7 @@ The listing market dates model. Each listing market date has a type.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -1992,13 +1994,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingmarketitemspecific]]
-==== ListingMarketItemSpecific
+=== ListingMarketItemSpecific
 
 The listing market item specific model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Models`
 
@@ -2026,7 +2028,7 @@ The listing market item specific model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2045,13 +2047,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingmarketprice]]
-==== ListingMarketPrice
+=== ListingMarketPrice
 
 The listing market price model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Models`
 
@@ -2088,7 +2090,7 @@ The listing market price model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2107,13 +2109,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingmarketproperty]]
-==== ListingMarketProperty
+=== ListingMarketProperty
 
 The listing market properties model. Each listing market property has a type.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Models`
 
@@ -2213,7 +2215,7 @@ The listing market properties model. Each listing market property has a type.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2231,18 +2233,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_directory]]
-== Directory
+= Directory
 
 [[listing_directory_contracts]]
-===  Contracts
+== Contracts
 [[listing_contracts_listingmarketdirectoryrepositorycontract]]
-==== ListingMarketDirectoryRepositoryContract
+=== ListingMarketDirectoryRepositoryContract
 
 The contract for the listing market directory repository.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Directory\Contracts`
 
@@ -2251,7 +2253,7 @@ The contract for the listing market directory repository.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2263,7 +2265,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Market\Directory\Models\Listi
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketdirectory[`ListingMarketDirectory`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarketdirectory[`ListingMarketDirectory`]
 
 
 Get a listing market directory
@@ -2346,7 +2348,7 @@ public update($id, $data):Plenty\Modules\Listing\Market\Directory\Models\Listing
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketdirectory[`ListingMarketDirectory`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarketdirectory[`ListingMarketDirectory`]
 
 
 Update listing market directory
@@ -2491,15 +2493,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[listing_directory_models]]
-===  Models
+== Models
 [[listing_models_listingmarketdirectory]]
-==== ListingMarketDirectory
+=== ListingMarketDirectory
 
 The listing market directory model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Directory\Models`
 
@@ -2527,7 +2529,7 @@ The listing market directory model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2545,18 +2547,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_history]]
-== History
+= History
 
 [[listing_history_contracts]]
-===  Contracts
+== Contracts
 [[listing_contracts_listingmarkethistoryrepositorycontract]]
-==== ListingMarketHistoryRepositoryContract
+=== ListingMarketHistoryRepositoryContract
 
 The ListingMarketHistoryRepositoryContract is the interface for the listing market history repository. This interface allows you to get a single listing market history or to list several listing market histories.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\History\Contracts`
 
@@ -2565,7 +2567,7 @@ The ListingMarketHistoryRepositoryContract is the interface for the listing mark
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2577,7 +2579,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Market\History\Models\Listing
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkethistory[`ListingMarketHistory`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarkethistory[`ListingMarketHistory`]
 
 
 Get a listing market.
@@ -2606,7 +2608,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = [], $sort = 
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List listing market histories
@@ -2839,15 +2841,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[listing_history_models]]
-===  Models
+== Models
 [[listing_models_listingmarkethistory]]
-==== ListingMarketHistory
+=== ListingMarketHistory
 
 The listing market history model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\History\Models`
 
@@ -2929,7 +2931,7 @@ The listing market history model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -2948,13 +2950,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingmarkethistorydate]]
-==== ListingMarketHistoryDate
+=== ListingMarketHistoryDate
 
 The listing market history dates model. Each listing market history date has a type.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\History\Models`
 
@@ -2999,7 +3001,7 @@ The listing market history dates model. Each listing market history date has a t
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3018,13 +3020,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingmarkethistoryproperty]]
-==== ListingMarketHistoryProperty
+=== ListingMarketHistoryProperty
 
 The listing market properties model. Each listing market property has a type.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\History\Models`
 
@@ -3073,7 +3075,7 @@ The listing market properties model. Each listing market property has a type.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3092,13 +3094,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingmarkethistorytext]]
-==== ListingMarketHistoryText
+=== ListingMarketHistoryText
 
 The listing market history text model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\History\Models`
 
@@ -3126,7 +3128,7 @@ The listing market history text model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3145,13 +3147,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingmarkethistoryvariation]]
-==== ListingMarketHistoryVariation
+=== ListingMarketHistoryVariation
 
 The listing market history model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\History\Models`
 
@@ -3206,7 +3208,7 @@ The listing market history model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3224,18 +3226,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_info]]
-== Info
+= Info
 
 [[listing_info_contracts]]
-===  Contracts
+== Contracts
 [[listing_contracts_listingmarketinforepositorycontract]]
-==== ListingMarketInfoRepositoryContract
+=== ListingMarketInfoRepositoryContract
 
 The ListingMarketInfoRepositoryContract is the interface for the listing market info repository. This interface allows you to get information about one or many listing markets.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Info\Contracts`
 
@@ -3244,7 +3246,7 @@ The ListingMarketInfoRepositoryContract is the interface for the listing market 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3256,7 +3258,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List listing market infos by filter options
@@ -3384,15 +3386,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[listing_info_models]]
-===  Models
+== Models
 [[listing_models_listingmarketinfo]]
-==== ListingMarketInfo
+=== ListingMarketInfo
 
 The listing market info model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Info\Models`
 
@@ -3429,7 +3431,7 @@ The listing market info model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3447,18 +3449,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_itemspecific]]
-== ItemSpecific
+= ItemSpecific
 
 [[listing_itemspecific_contracts]]
-===  Contracts
+== Contracts
 [[listing_contracts_listingmarketitemspecificrepositorycontract]]
-==== ListingMarketItemSpecificRepositoryContract
+=== ListingMarketItemSpecificRepositoryContract
 
 The contract of the listing market item specific repository
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\ItemSpecific\Contracts`
 
@@ -3472,7 +3474,7 @@ It is possible to extend this repository with own search criteria.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3484,7 +3486,7 @@ public get($id):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketI
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketitemspecific[`ListingMarketItemSpecific`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarketitemspecific[`ListingMarketItemSpecific`]
 
 
 Gets a ListingMarketItemSpecific.
@@ -3509,7 +3511,7 @@ public search($data, $page = 1, $itemsPerPage = 50):Plenty\Modules\Listing\Marke
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketitemspecific[`ListingMarketItemSpecific`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarketitemspecific[`ListingMarketItemSpecific`]
 
 
 Gets all ListingMarketItemSpecifics.
@@ -3542,7 +3544,7 @@ public find($filters = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Mo
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Gets all ListingMarketItemSpecifics.
@@ -3575,7 +3577,7 @@ public update($id, $data):Plenty\Modules\Listing\Market\ItemSpecific\Models\List
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketitemspecific[`ListingMarketItemSpecific`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarketitemspecific[`ListingMarketItemSpecific`]
 
 
 Updates a ListingMarketItemSpecific.
@@ -3745,15 +3747,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[listing_itemspecific_models]]
-===  Models
+== Models
 [[listing_models_listingmarketitemspecific]]
-==== ListingMarketItemSpecific
+=== ListingMarketItemSpecific
 
 The item specific model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\ItemSpecific\Models`
 
@@ -3781,7 +3783,7 @@ The item specific model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3799,18 +3801,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_text]]
-== Text
+= Text
 
 [[listing_text_contracts]]
-===  Contracts
+== Contracts
 [[listing_contracts_listingmarkettextrepositorycontract]]
-==== ListingMarketTextRepositoryContract
+=== ListingMarketTextRepositoryContract
 
 The contract for the listing market text repository.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Text\Contracts`
 
@@ -3819,7 +3821,7 @@ The contract for the listing market text repository.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -3831,7 +3833,7 @@ public get($id):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[`ListingMarketText`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[`ListingMarketText`]
 
 
 Get a listing market text
@@ -3856,7 +3858,7 @@ public create($listingMarketId, $data):Plenty\Modules\Listing\Market\Text\Models
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[`ListingMarketText`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[`ListingMarketText`]
 
 
 Create new listing market text
@@ -3885,7 +3887,7 @@ public update($listingMarketId, $lang, $data):Plenty\Modules\Listing\Market\Text
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[`ListingMarketText`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[`ListingMarketText`]
 
 
 Update listing market text
@@ -3918,7 +3920,7 @@ public updateOrCreate($listingMarketId, $lang, $data):Plenty\Modules\Listing\Mar
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[`ListingMarketText`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[`ListingMarketText`]
 
 
 Update or create listing market text
@@ -3976,7 +3978,7 @@ public search($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List listing market text
@@ -4100,15 +4102,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[listing_text_models]]
-===  Models
+== Models
 [[listing_models_listingmarkettext]]
-==== ListingMarketText
+=== ListingMarketText
 
 The listing market text model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Market\Text\Models`
 
@@ -4142,7 +4144,7 @@ The listing market text model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4160,18 +4162,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_optiontemplate]]
-== OptionTemplate
+= OptionTemplate
 
 [[listing_optiontemplate_contracts]]
-===  Contracts
+== Contracts
 [[listing_contracts_optiontemplaterepositorycontract]]
-==== OptionTemplateRepositoryContract
+=== OptionTemplateRepositoryContract
 
 The contract for the listing option template repository.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\OptionTemplate\Contracts`
 
@@ -4180,7 +4182,7 @@ The contract for the listing option template repository.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4207,7 +4209,7 @@ public get($id):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_optiontemplate[`OptionTemplate`]
+===== *Return type:*        xref:Listing.adoc#listing_models_optiontemplate[`OptionTemplate`]
 
 
 Get option template
@@ -4232,7 +4234,7 @@ public create($data):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_optiontemplate[`OptionTemplate`]
+===== *Return type:*        xref:Listing.adoc#listing_models_optiontemplate[`OptionTemplate`]
 
 
 Create option template
@@ -4302,15 +4304,15 @@ a|The ID of the option template.
 
 
 [[listing_optiontemplate_models]]
-===  Models
+== Models
 [[listing_models_optiontemplate]]
-==== OptionTemplate
+=== OptionTemplate
 
 The option template model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\OptionTemplate\Models`
 
@@ -4341,7 +4343,7 @@ The option template model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4359,18 +4361,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_price]]
-== Price
+= Price
 
 [[listing_price_models]]
-===  Models
+== Models
 [[listing_models_listingpricetype]]
-==== ListingPriceType
+=== ListingPriceType
 
 The listing price type model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Price\Models`
 
@@ -4402,7 +4404,7 @@ The listing price type model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4421,13 +4423,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingpricetypename]]
-==== ListingPriceTypeName
+=== ListingPriceTypeName
 
 The listing price type name model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Price\Models`
 
@@ -4455,7 +4457,7 @@ The listing price type name model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4473,18 +4475,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_property]]
-== Property
+= Property
 
 [[listing_property_models]]
-===  Models
+== Models
 [[listing_models_listingpropertytype]]
-==== ListingPropertyType
+=== ListingPropertyType
 
 The listing properties model. Each listing property has a type.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Property\Models`
 
@@ -4569,7 +4571,7 @@ The listing properties model. Each listing property has a type.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4588,13 +4590,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingpropertytypename]]
-==== ListingPropertyTypeName
+=== ListingPropertyTypeName
 
 The listing property type name model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Property\Models`
 
@@ -4622,7 +4624,7 @@ The listing property type name model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4640,18 +4642,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_shippingprofile]]
-== ShippingProfile
+= ShippingProfile
 
 [[listing_shippingprofile_contracts]]
-===  Contracts
+== Contracts
 [[listing_contracts_shippingprofilerepositorycontract]]
-==== ShippingProfileRepositoryContract
+=== ShippingProfileRepositoryContract
 
 The ShippingProfileRepositoryContract is the interface for the listing shipping profile repository. This interface allows you to get a shipping profile.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Contracts`
 
@@ -4660,7 +4662,7 @@ The ShippingProfileRepositoryContract is the interface for the listing shipping 
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4672,7 +4674,7 @@ public get($id, $with = []):Plenty\Modules\Listing\ShippingProfile\Models\Shippi
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
+===== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
 
 
 Get a shipping profile
@@ -4701,7 +4703,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 Search shipping profiles
@@ -4829,15 +4831,15 @@ public clearFilters():void
 Clears the filter array.
 
 [[listing_shippingprofile_events]]
-===  Events
+== Events
 [[listing_events_shippingprofilecreated]]
-==== ShippingProfileCreated
+=== ShippingProfileCreated
 
 An event class fired after a new listing shipping profile is created.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Events`
 
@@ -4846,7 +4848,7 @@ An event class fired after a new listing shipping profile is created.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4883,20 +4885,20 @@ public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\Shippi
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
+===== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
 
 
 Get the ShippingProfile instance.
 
 
 [[listing_events_shippingprofiledeleted]]
-==== ShippingProfileDeleted
+=== ShippingProfileDeleted
 
 An event class fired after a listing shipping profile is deleted.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Events`
 
@@ -4905,7 +4907,7 @@ An event class fired after a listing shipping profile is deleted.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -4942,20 +4944,20 @@ public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\Shippi
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
+===== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
 
 
 Get the ShippingProfile instance.
 
 
 [[listing_events_shippingprofileevent]]
-==== ShippingProfileEvent
+=== ShippingProfileEvent
 
 A base event class for all listing shipping profile events. Each shipping profile event expects an ShippingProfile instance.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Events`
 
@@ -4964,7 +4966,7 @@ A base event class for all listing shipping profile events. Each shipping profil
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5001,20 +5003,20 @@ public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\Shippi
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
+===== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
 
 
 Get the ShippingProfile instance.
 
 
 [[listing_events_shippingprofileupdated]]
-==== ShippingProfileUpdated
+=== ShippingProfileUpdated
 
 An event class fired after a listing shipping profile is updated.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Events`
 
@@ -5023,7 +5025,7 @@ An event class fired after a listing shipping profile is updated.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5060,21 +5062,21 @@ public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\Shippi
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
+===== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
 
 
 Get the ShippingProfile instance.
 
 [[listing_shippingprofile_models]]
-===  Models
+== Models
 [[listing_models_shippingprofile]]
-==== ShippingProfile
+=== ShippingProfile
 
 The listing shipping profile model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\ShippingProfile\Models`
 
@@ -5111,7 +5113,7 @@ The listing shipping profile model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5129,18 +5131,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_status]]
-== Status
+= Status
 
 [[listing_status_models]]
-===  Models
+== Models
 [[listing_models_listingstatus]]
-==== ListingStatus
+=== ListingStatus
 
 The listing status model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Status\Models`
 
@@ -5168,7 +5170,7 @@ The listing status model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5187,13 +5189,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingstatusname]]
-==== ListingStatusName
+=== ListingStatusName
 
 The listing status name model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Status\Models`
 
@@ -5221,7 +5223,7 @@ The listing status name model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5239,18 +5241,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_stockdependencetype]]
-== StockDependenceType
+= StockDependenceType
 
 [[listing_stockdependencetype_contracts]]
-===  Contracts
+== Contracts
 [[listing_contracts_stockdependencetyperepositorycontract]]
-==== StockDependenceTypeRepositoryContract
+=== StockDependenceTypeRepositoryContract
 
 The contract for the listing stock dependence type repository.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\StockDependenceType\Contracts`
 
@@ -5259,7 +5261,7 @@ The contract for the listing stock dependence type repository.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5271,7 +5273,7 @@ public get($id, $with = []):Plenty\Modules\Listing\StockDependenceType\Models\St
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_stockdependencetype[`StockDependenceType`]
+===== *Return type:*        xref:Listing.adoc#listing_models_stockdependencetype[`StockDependenceType`]
 
 
 Get a listing stock dependence type
@@ -5300,7 +5302,7 @@ public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List listing stock dependence types
@@ -5324,15 +5326,15 @@ a|The relations to load in the ListingMarket instance. The relations available a
 
 
 [[listing_stockdependencetype_models]]
-===  Models
+== Models
 [[listing_models_stockdependencetype]]
-==== StockDependenceType
+=== StockDependenceType
 
 The listing stock dependence type model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\StockDependenceType\Models`
 
@@ -5360,7 +5362,7 @@ The listing stock dependence type model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5379,13 +5381,13 @@ Returns this model as an array.
 
 
 [[listing_models_stockdependencetypename]]
-==== StockDependenceTypeName
+=== StockDependenceTypeName
 
 The listing stock dependence type name model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\StockDependenceType\Models`
 
@@ -5413,7 +5415,7 @@ The listing stock dependence type name model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5431,18 +5433,18 @@ public toArray()
 Returns this model as an array.
 
 [[listing_type]]
-== Type
+= Type
 
 [[listing_type_contracts]]
-===  Contracts
+== Contracts
 [[listing_contracts_listingtyperepositorycontract]]
-==== ListingTypeRepositoryContract
+=== ListingTypeRepositoryContract
 
 The contract for the listing type repository.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Type\Contracts`
 
@@ -5451,7 +5453,7 @@ The contract for the listing type repository.
 
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5463,7 +5465,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Type\Models\ListingType
     
 
 
-====== *Return type:*        xref:Listing.adoc#listing_models_listingtype[`ListingType`]
+===== *Return type:*        xref:Listing.adoc#listing_models_listingtype[`ListingType`]
 
 
 Get a listing type
@@ -5492,7 +5494,7 @@ public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models
     
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+===== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
 List listing types
@@ -5516,15 +5518,15 @@ a|The relations to load in the ListingMarket instance. The relations available a
 
 
 [[listing_type_models]]
-===  Models
+== Models
 [[listing_models_listingtype]]
-==== ListingType
+=== ListingType
 
 The listing type model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Type\Models`
 
@@ -5552,7 +5554,7 @@ The listing type model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
@@ -5571,13 +5573,13 @@ Returns this model as an array.
 
 
 [[listing_models_listingtypename]]
-==== ListingTypeName
+=== ListingTypeName
 
 The listing type name model.
 
 
 
-===== Namespace
+==== Namespace
 
 `Plenty\Modules\Listing\Type\Models`
 
@@ -5605,7 +5607,7 @@ The listing type name model.
 |===
 
 
-===== Methods
+==== Methods
 
 [source%nowrap, php]
 ----
