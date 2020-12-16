@@ -2549,7 +2549,7 @@ a|`$paymentMethod`
 [source%nowrap, php]
 ----
 
-public getIsSwitchableTo($paymentMethod):bool
+public getIsSwitchableTo($paymentMethod, $orderId = null):bool
 
 ----
 
@@ -2567,13 +2567,17 @@ Gets the detail link of the payment method. The detail link can be entered in th
 |        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
 a|`$paymentMethod`
 |
+
+|link:http://php.net/int[int^]
+a|`$orderId`
+|
 |===
 
 
 [source%nowrap, php]
 ----
 
-public getIsSwitchableFrom($paymentMethod):bool
+public getIsSwitchableFrom($paymentMethod, $orderId = null):bool
 
 ----
 
@@ -2590,6 +2594,10 @@ Gets the detail link of the payment method. The detail link can be entered in th
 |Type |Name |Description
 |        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
 a|`$paymentMethod`
+|
+
+|link:http://php.net/int[int^]
+a|`$orderId`
 |
 |===
 
