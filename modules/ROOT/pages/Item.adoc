@@ -32548,7 +32548,7 @@ The contract of the variation stock repository
 [source%nowrap, php]
 ----
 
-public listStockByWarehouse($variationId, $columns = []):array
+public listStockByWarehouse($variationId, $columns = [], $page = 1, $itemsPerPage = 200):array
 
 ----
 
@@ -32570,6 +32570,14 @@ a|`$variationId`
 |link:http://php.net/array[array^]
 a|`$columns`
 |The properties to be loaded
+
+|link:http://php.net/int[int^]
+a|`$page`
+|The requested page
+
+|link:http://php.net/int[int^]
+a|`$itemsPerPage`
+|The number of items per page
 |===
 
 
