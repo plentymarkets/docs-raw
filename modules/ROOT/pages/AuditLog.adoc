@@ -1,0 +1,600 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
+
+
+[[auditlog_auditlog]]
+== AuditLog
+
+[[auditlog_auditlog_contracts]]
+===  Contracts
+[[auditlog_contracts_auditlogarchiverepositorycontract]]
+==== AuditLogArchiveRepositoryContract
+
+manage the audit log archive data
+
+
+
+===== Namespace
+
+`Plenty\Modules\AuditLog\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public search($page = 1, $perPage = 12, $filters = []):array
+
+----
+
+    
+
+
+
+
+
+Search for available archive files.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$page`
+|
+
+|link:http://php.net/int[int^]
+a|`$perPage`
+|
+
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public count($filters = []):int
+
+----
+
+    
+
+
+
+
+
+Get the number of found archives, restricted by filters.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$filters`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public restore($key):void
+
+----
+
+    
+
+
+
+
+
+Restore an audit log archive and make it downloadable for approximately 2 days
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getSignedUrl($key):string
+
+----
+
+    
+
+
+
+
+
+Get a signed url of an archive to download it.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+
+[[auditlog_contracts_auditlogentitiesrepositorycontract]]
+==== AuditLogEntitiesRepositoryContract
+
+Get possible auditLog entities
+
+
+
+===== Namespace
+
+`Plenty\Modules\AuditLog\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public getGroups():array
+
+----
+
+    
+
+
+
+
+
+Get list of entity groups
+
+[source%nowrap, php]
+----
+
+public getEntities():array
+
+----
+
+    
+
+
+
+
+
+Get list of entities
+
+
+[[auditlog_contracts_auditlogexportrepositorycontract]]
+==== AuditLogExportRepositoryContract
+
+get audit log files
+
+
+
+===== Namespace
+
+`Plenty\Modules\AuditLog\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public all():array
+
+----
+
+    
+
+
+
+
+
+Get all available files
+
+[source%nowrap, php]
+----
+
+public getSignedUrl($key):string
+
+----
+
+    
+
+
+
+
+
+Get a signed url of an archive to download it.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+
+[[auditlog_contracts_auditlogsystemconfigrepositorycontract]]
+==== AuditLogSystemConfigRepositoryContract
+
+Configure the audit log configuration
+
+
+
+===== Namespace
+
+`Plenty\Modules\AuditLog\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public save($systemConfig):Plenty\Modules\AuditLog\Models\SystemConfig
+
+----
+
+    
+
+
+====== *Return type:*        xref:Auditlog.adoc#auditlog_models_systemconfig[`SystemConfig`]
+
+
+Save a audit log system config
+
+.*Parameters*
+|===
+|Type |Name |Description
+|        xref:Auditlog.adoc#auditlog_models_systemconfig[`SystemConfig`]
+a|`$systemConfig`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public get():Plenty\Modules\AuditLog\Models\SystemConfig
+
+----
+
+    
+
+
+====== *Return type:*        xref:Auditlog.adoc#auditlog_models_systemconfig[`SystemConfig`]
+
+
+Get the current audit log system config
+
+[[auditlog_auditlog_models]]
+===  Models
+[[auditlog_models_archive]]
+==== Archive
+
+Contains informations about one archive file
+
+
+
+===== Namespace
+
+`Plenty\Modules\AuditLog\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |file
+    |The file name of the archive
+|link:http://php.net/int[int^]
+    |month
+    |The month of the archive
+|link:http://php.net/int[int^]
+    |year
+    |The year of the archive
+|link:http://php.net/int[int^]
+    |size
+    |The size of the archive
+|link:http://php.net/string[string^]
+    |status
+    |The status of the file. Possible values are: accessible, restore_in_progress, archived
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    |estimatedDeletionDate
+    |The date this file will be estimated deleted from the archive
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    |accessibleUntil
+    |The date this file is not available anymore
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+    
+
+
+
+
+
+Returns this model as an array.
+
+
+[[auditlog_models_entity]]
+==== Entity
+
+Contains the information about one audit log entity
+
+
+
+===== Namespace
+
+`Plenty\Modules\AuditLog\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |key
+    |The audit log entity
+|link:http://php.net/bool[bool^]
+    |requiredForCertificate
+    |Is the entity required for the IDW PS 880 certificate
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+    
+
+
+
+
+
+Returns this model as an array.
+
+
+[[auditlog_models_entitygroup]]
+==== EntityGroup
+
+Contains the entities depending to a group
+
+
+
+===== Namespace
+
+`Plenty\Modules\AuditLog\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |name
+    |The group name
+|link:http://php.net/array[array^]
+    |entities
+    |The entities depending to this group
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+    
+
+
+
+
+
+Returns this model as an array.
+
+
+[[auditlog_models_file]]
+==== File
+
+Contains informations about one file
+
+
+
+===== Namespace
+
+`Plenty\Modules\AuditLog\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |file
+    |The file name of the file
+|link:http://php.net/int[int^]
+    |month
+    |The month of the file
+|link:http://php.net/int[int^]
+    |year
+    |The year of the file
+|link:http://php.net/int[int^]
+    |day
+    |The day of the file
+|link:http://php.net/int[int^]
+    |size
+    |The size of the file
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    |estimatedDeletionDate
+    |The date this file will be estimated deleted
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+    
+
+
+
+
+
+Returns this model as an array.
+
+
+[[auditlog_models_systemconfig]]
+==== SystemConfig
+
+Contains entries, which should be saved
+
+
+
+===== Namespace
+
+`Plenty\Modules\AuditLog\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/array[array^]
+    |entries
+    |List of SystemConfigEntries
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+    
+
+
+
+
+
+Returns this model as an array.
+
+
+[[auditlog_models_systemconfigentry]]
+==== SystemConfigEntry
+
+Contains the configuration for one audit log entity
+
+
+
+===== Namespace
+
+`Plenty\Modules\AuditLog\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |entity
+    |The audit log entity
+|link:http://php.net/bool[bool^]
+    |active
+    |Should the entity be logged
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+    
+
+
+
+
+
+Returns this model as an array.
+
