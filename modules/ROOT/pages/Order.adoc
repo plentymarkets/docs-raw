@@ -19690,6 +19690,173 @@ public execute():array
 
 
 
+[[order_settings]]
+== Settings
+
+[[order_settings_contracts]]
+===  Contracts
+[[order_contracts_ordersettingsrepositorycontract]]
+==== OrderSettingsRepositoryContract
+
+Get settings for orders.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Settings\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public getStoreSettings($storeId):Plenty\Modules\Order\Settings\Models\StoreOrderSettings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Order.adoc#order_models_storeordersettings[`StoreOrderSettings`]
+
+
+Get order settings for store
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$storeId`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public get():Plenty\Modules\Order\Settings\Models\OrderSettings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Order.adoc#order_models_ordersettings[`OrderSettings`]
+
+
+Get basic order settings
+
+[[order_settings_models]]
+===  Models
+[[order_models_ordersettings]]
+==== OrderSettings
+
+The model of the order settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Settings\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |warehouseAssignment
+    |
+|link:http://php.net/float[float^]
+    |cancelStatusFrom
+    |
+|link:http://php.net/float[float^]
+    |cancelStatusTo
+    |
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+    
+
+
+
+
+
+Returns this model as an array.
+
+
+[[order_models_storeordersettings]]
+==== StoreOrderSettings
+
+The model of the store order settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Settings\Models`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|link:http://php.net/string[string^]
+    |defaultLanguage
+    |
+|link:http://php.net/int[int^]
+    |defaultParcelServiceId
+    |
+|link:http://php.net/int[int^]
+    |defaultParcelServicePresetId
+    |
+|link:http://php.net/int[int^]
+    |defaultMethodOfPaymentId
+    |
+|link:http://php.net/int[int^]
+    |defaultCustomerClassId
+    |
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public toArray()
+
+----
+
+    
+
+
+
+
+
+Returns this model as an array.
+
 [[order_status]]
 == Status
 
