@@ -192,6 +192,77 @@ Use "*" as consent key to check if all entries of a group has a response, e.g. "
 |===
 
 
+[[webshop_contactform]]
+== ContactForm
+
+[[webshop_contactform_contracts]]
+===  Contracts
+[[webshop_contracts_contactformfilerepositorycontract]]
+==== ContactFormFileRepositoryContract
+
+Repository to upload files from the online store contact form and retrieve them
+
+
+
+===== Namespace
+
+`Plenty\Modules\Webshop\ContactForm\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public uploadFiles($fileData):array
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$fileData`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getFile($fileName):Plenty\Modules\Cloud\Storage\Models\StorageObject
+
+----
+
+    
+
+
+====== *Return type:*        xref:Cloud.adoc#cloud_models_storageobject[`StorageObject`]
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$fileName`
+|
+|===
+
+
 [[webshop_webshop]]
 == Webshop
 
