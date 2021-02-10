@@ -1,0 +1,82 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
+
+
+[[mail_templates]]
+== Templates
+
+[[mail_templates_contracts]]
+===  Contracts
+[[mail_contracts_mailtemplatewidgetrepositorycontract]]
+==== MailTemplateWidgetRepositoryContract
+
+Register mail builder widgets.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Mail\Templates\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public registerWidget($widgetClass):void
+
+----
+
+    
+
+
+
+
+
+Register a widget to be available in the mail builder.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$widgetClass`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public overrideWidget($widgetIdentifier, $overrideWidget):void
+
+----
+
+    
+
+
+
+
+
+Override a widget class to extend data or settings of the widget.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$widgetIdentifier`
+|The identifier of the original widget to override
+
+|link:http://php.net/string[string^]
+a|`$overrideWidget`
+|The class of the new class to get information of the widget from.
+|===
+
+
