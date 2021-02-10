@@ -663,19 +663,13 @@ public getData():array
 
 
 
-Get base data of the widget. Each widget should define at least an
-identifier and a label to be displayed in the builder. In total the following information can be provided:
-&lt;ul&gt;
- &lt;li&gt;identifier: A unique identifier of the widget. This is used to identify widgets when loading widgets of a content in the builder.&lt;/li&gt;
- &lt;li&gt;label: The label of the widget to be displayed in the list of available widgets in the builder.&lt;/li&gt;
- &lt;li&gt;previewImageURL: The url of the preview image to be displayed in the list of available widgets in the builder.&lt;/li&gt;
- &lt;li&gt;type: The type of the widget. This is used to restrict possible locations of the widgets using the allowedNestingTypes.&lt;/li&gt;
- &lt;li&gt;categories: A list of category keys defined in the list of categories to be displayed in the list of available widgets. If no correspondig category exists, the widget will be located in a generic category.&lt;/li&gt;
- &lt;li&gt;position: The position of the widget in the list of available widgets&lt;/li&gt;
- &lt;li&gt;maxPerPage: Restrict the amount of times the widget can be placed on a single content.&lt;/li&gt;
- &lt;li&gt;allowedNestingTypes: A list of widget types that are allowed to be placed in child dropzones of the widget.&lt;/li&gt;
- &lt;li&gt;deprecated: set to true to hide the widget in the list of available widgets. Existing deprecated widgets can still be edited but not added anymore.&lt;/li&gt;
-&lt;/ul&gt;
+Get basic information about the widget. Possible fields are
+- identifier
+- label
+- previewImageURL
+- type
+- categories
+- position
 
 [source%nowrap, php]
 ----
@@ -690,7 +684,7 @@ public getSettings():array
 
 
 
-Get the settings of the widgets. Settings are displayed in a terra-form when the widget is selected in the builder.
+Return the structure of the settings for the widget
 
 [source%nowrap, php]
 ----
@@ -705,7 +699,7 @@ public getPreview($widgetSettings = [], $children = []):string
 
 
 
-Render the template of the widget twice to get the final markup to be displayed in the preview of the builder.
+Get the html representation of the widget
 
 .*Parameters*
 |===
@@ -733,7 +727,7 @@ public render($widgetSettings = [], $children = []):string
 
 
 
-Render the template of the widget.
+Render the widget
 
 .*Parameters*
 |===
@@ -838,7 +832,7 @@ public getPreview($widgetSettings = [], $children = []):string
 
 
 
-Render the template of the widget twice to get the final markup to be displayed in the preview of the builder.
+Get the html representation of the widget
 
 .*Parameters*
 |===
@@ -866,7 +860,7 @@ public render($widgetSettings = [], $children = []):string
 
 
 
-Render the template of the widget.
+Render the widget
 
 .*Parameters*
 |===
@@ -1453,6 +1447,21 @@ Base class for data field providers.
 [source%nowrap, php]
 ----
 
+public register():void
+
+----
+
+    
+
+
+
+
+
+
+
+[source%nowrap, php]
+----
+
 public addField($identifier, $label, $expression):void
 
 ----
@@ -1541,34 +1550,4 @@ a|`$keywords`
 |A list of keywords. Each keyword may contain a translation key. A single keyword could be a comma separated list of words.
 |===
 
-
-[source%nowrap, php]
-----
-
-public register():void
-
-----
-
-    
-
-
-
-
-
-
-
-[source%nowrap, php]
-----
-
-public getEntries():array
-
-----
-
-    
-
-
-
-
-
-Get all entries for this provider.
 
