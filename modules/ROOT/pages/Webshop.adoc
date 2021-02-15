@@ -54,7 +54,7 @@ a|`$key`
 a|`$label`
 |Displayed label of the group
 
-|link:http://php.net/array[array^]
+|
 a|`$options`
 |Additional options of the group. Available options are:
 <ul>
@@ -62,6 +62,7 @@ a|`$options`
   <li><b>description:string</b> Description of the group.</li>
   <li><b>position:number</b> The position of the group</li>
 </ul>
+Alternatively provide a function which returns all options. This will be resolved if registered consent groups are requested.
 |===
 
 
@@ -91,7 +92,7 @@ a|`$key`
 a|`$label`
 |Displayed label of the consent.
 
-|link:http://php.net/array[array^]
+|
 a|`$options`
 |Additional options of the consent. Available options are:
 <ul>
@@ -105,6 +106,7 @@ a|`$options`
     <li><b>isOptOut:boolean</b> Select the consent by default. The user needs to decline the consent explicitly.</li>
     <li><b>cookieNames:array</b> Names of cookies which will be set. These cookies will not be blocked after the user confirmed the consent.</li>
 </ul>
+Alternatively provide a function which returns all options. This will be resolved if registered consents are requested.
 |===
 
 
