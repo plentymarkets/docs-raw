@@ -94,7 +94,7 @@ Lists all items in the shopping cart of the current customer session.
 [source%nowrap, php]
 ----
 
-public addBasketItem($data):Plenty\Modules\Basket\Models\BasketItem
+public addBasketItem($data, $fireEvents = true):Plenty\Modules\Basket\Models\BasketItem
 
 ----
 
@@ -112,13 +112,17 @@ Creates an item with the specified item data in the shopping cart.
 |link:http://php.net/array[array^]
 a|`$data`
 |The item's data
+
+|link:http://php.net/bool[bool^]
+a|`$fireEvents`
+|Set to false to skip change events and calculation of basket totals.
 |===
 
 
 [source%nowrap, php]
 ----
 
-public updateBasketItem($basketItemId, $data):void
+public updateBasketItem($basketItemId, $data, $fireEvents = true):void
 
 ----
 
@@ -140,6 +144,10 @@ a|`$basketItemId`
 |link:http://php.net/array[array^]
 a|`$data`
 |The item's data
+
+|link:http://php.net/bool[bool^]
+a|`$fireEvents`
+|Set to false to skip change events and calculation of basket totals.
 |===
 
 
