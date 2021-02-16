@@ -35,7 +35,7 @@ public getDocumentPath($id):void
 
 ----
 
-    
+
 
 
 
@@ -44,11 +44,12 @@ public getDocumentPath($id):void
 Get the path to a document
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the document
+|link:http://php.net/int[int^]
+a|The ID of the document
 |===
 
 
@@ -59,7 +60,7 @@ public findById($id, $columns = []):Plenty\Modules\Document\Models\Document
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
@@ -68,15 +69,16 @@ public findById($id, $columns = []):Plenty\Modules\Document\Models\Document
 Get a document
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the document
+|link:http://php.net/int[int^]
+a|The ID of the document
 
-|link:http://php.net/array[array^]
 a|`$columns`
-|The columns to be loaded
+|link:http://php.net/array[array^]
+a|The columns to be loaded
 |===
 
 
@@ -87,7 +89,7 @@ public find($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Rep
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -96,23 +98,24 @@ public find($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Rep
 List documents
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|The page to get. The default page that will be returned is page 1.
-
 |link:http://php.net/int[int^]
+a|The page to get. The default page that will be returned is page 1.
+
 a|`$itemsPerPage`
-|The number of orders to be displayed per page. The default number of orders per page is 50.
+|link:http://php.net/int[int^]
+a|The number of orders to be displayed per page. The default number of orders per page is 50.
 
-|link:http://php.net/array[array^]
 a|`$columns`
-|The columns to be loaded
-
 |link:http://php.net/array[array^]
+a|The columns to be loaded
+
 a|`$with`
-|The relations to be loaded. Possible value is "references".
+|link:http://php.net/array[array^]
+a|The relations to be loaded. Possible value is "references".
 |===
 
 
@@ -123,7 +126,7 @@ public uploadOrderDocuments($orderId, $type, $data):array
 
 ----
 
-    
+
 
 
 
@@ -132,19 +135,20 @@ public uploadOrderDocuments($orderId, $type, $data):array
 Upload order documents
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$orderId`
-|The ID of the order
+|link:http://php.net/int[int^]
+a|The ID of the order
 
-|link:http://php.net/string[string^]
 a|`$type`
-|The document type. Supported types are 'invoiceExternal', 'deliveryNote', 'poDeliveryNote', 'orderConfirmation', 'offer', 'dunningLetter', 'returnNote', 'successConfirmation', 'correction', 'creditNoteExternal', 'reorder', 'uploaded'.
+|link:http://php.net/string[string^]
+a|The document type. Supported types are 'invoiceExternal', 'deliveryNote', 'poDeliveryNote', 'orderConfirmation', 'offer', 'dunningLetter', 'returnNote', 'successConfirmation', 'correction', 'creditNoteExternal', 'reorder', 'uploaded'.
 
-|link:http://php.net/array[array^]
 a|`$data`
-|The request data
+|link:http://php.net/array[array^]
+a|The request data
 |===
 
 
@@ -155,7 +159,7 @@ public deleteOrderDocument($orderId, $documentId):bool
 
 ----
 
-    
+
 
 
 
@@ -164,15 +168,16 @@ public deleteOrderDocument($orderId, $documentId):bool
 Delete order document
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$orderId`
-|The ID of the order
-
 |link:http://php.net/int[int^]
+a|The ID of the order
+
 a|`$documentId`
-|The ID of the document
+|link:http://php.net/int[int^]
+a|The ID of the document
 |===
 
 
@@ -183,7 +188,7 @@ public archiveOrderDocument($orderId, $documentId):void
 
 ----
 
-    
+
 
 
 
@@ -192,15 +197,16 @@ public archiveOrderDocument($orderId, $documentId):void
 Archive order document
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$orderId`
-|The ID of the order
-
 |link:http://php.net/int[int^]
+a|The ID of the order
+
 a|`$documentId`
-|The ID of the document
+|link:http://php.net/int[int^]
+a|The ID of the document
 |===
 
 
@@ -211,7 +217,7 @@ public uploadCategoryDocuments($categoryId, $data):array
 
 ----
 
-    
+
 
 
 
@@ -220,15 +226,16 @@ public uploadCategoryDocuments($categoryId, $data):array
 Upload category documents
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$categoryId`
-|The ID of the category
+|link:http://php.net/int[int^]
+a|The ID of the category
 
-|link:http://php.net/array[array^]
 a|`$data`
-|The request data
+|link:http://php.net/array[array^]
+a|The request data
 |===
 
 
@@ -239,7 +246,7 @@ public deleteCategoryDocument($categoryId, $documentId):bool
 
 ----
 
-    
+
 
 
 
@@ -248,15 +255,16 @@ public deleteCategoryDocument($categoryId, $documentId):bool
 Delete a category document.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$categoryId`
-|The ID of the category
-
 |link:http://php.net/int[int^]
+a|The ID of the category
+
 a|`$documentId`
-|The ID of the document
+|link:http://php.net/int[int^]
+a|The ID of the document
 |===
 
 
@@ -267,7 +275,7 @@ public uploadOrderShippingPackageDocuments($packageId, $type, $document):array
 
 ----
 
-    
+
 
 
 
@@ -276,19 +284,20 @@ public uploadOrderShippingPackageDocuments($packageId, $type, $document):array
 Uploads documents
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$packageId`
-|
+|link:http://php.net/int[int^]
+a|
 
-|link:http://php.net/string[string^]
 a|`$type`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$document`
-|base64 encoded document
+|link:http://php.net/string[string^]
+a|base64 encoded document
 |===
 
 
@@ -299,7 +308,7 @@ public findOrderShippingPackageDocuments($packageId, $type):array
 
 ----
 
-    
+
 
 
 
@@ -308,15 +317,16 @@ public findOrderShippingPackageDocuments($packageId, $type):array
 Find documents
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$packageId`
-|
+|link:http://php.net/int[int^]
+a|
 
-|link:http://php.net/string[string^]
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -327,7 +337,7 @@ public findCurrentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
@@ -336,15 +346,16 @@ public findCurrentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\
 Finds the current order document
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$orderId`
-|
+|link:http://php.net/int[int^]
+a|
 
-|link:http://php.net/string[string^]
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -355,7 +366,7 @@ public findRecentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\D
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
@@ -364,15 +375,16 @@ public findRecentOrderDocument($orderId, $type):Plenty\Modules\Document\Models\D
 Finds order document.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$orderId`
-|
+|link:http://php.net/int[int^]
+a|
 
-|link:http://php.net/string[string^]
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -383,7 +395,7 @@ public deleteOrderShippingPackageDocuments($packageId):bool
 
 ----
 
-    
+
 
 
 
@@ -392,11 +404,12 @@ public deleteOrderShippingPackageDocuments($packageId):bool
 Delets a document.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$packageId`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -407,7 +420,7 @@ public getDocumentStorageObject($key):void
 
 ----
 
-    
+
 
 
 
@@ -416,11 +429,12 @@ public getDocumentStorageObject($key):void
 Gets a document storage object.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$key`
 |
+a|
 |===
 
 
@@ -431,7 +445,7 @@ public uploadOrderReturnsDocuments($returnsId, $document):Plenty\Modules\Documen
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
@@ -440,15 +454,16 @@ public uploadOrderReturnsDocuments($returnsId, $document):Plenty\Modules\Documen
 Uploads a specific document.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$returnsId`
-|
+|link:http://php.net/int[int^]
+a|
 
-|link:http://php.net/string[string^]
 a|`$document`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -459,7 +474,7 @@ public getOrderReturnsDocumentById($returnsId, $withLabel = false):Plenty\Module
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Document.adoc#document_models_document[`Document`]
@@ -468,15 +483,16 @@ public getOrderReturnsDocumentById($returnsId, $withLabel = false):Plenty\Module
 Finds a document.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$returnsId`
-|
+|link:http://php.net/int[int^]
+a|
 
-|link:http://php.net/bool[bool^]
 a|`$withLabel`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -487,7 +503,7 @@ public generateOrderDocument($orderId, $type, $data):bool
 
 ----
 
-    
+
 
 
 
@@ -496,19 +512,20 @@ public generateOrderDocument($orderId, $type, $data):bool
 Generate order document
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$orderId`
-|The ID of the order
-
 |link:http://php.net/int[int^]
-a|`$type`
-|The document type
+a|The ID of the order
 
-|link:http://php.net/array[array^]
+a|`$type`
+|link:http://php.net/int[int^]
+a|The document type
+
 a|`$data`
-|The request data
+|link:http://php.net/array[array^]
+a|The request data
 |===
 
 
@@ -519,7 +536,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -534,7 +551,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -549,7 +566,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -558,11 +575,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -573,7 +591,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -588,7 +606,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -603,7 +621,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -629,15 +647,16 @@ The document model contains information about actual documents.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the document
-|link:http://php.net/string[string^]
-    |type
-    |The type of the document. The following types are available:
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the document
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the document. The following types are available:
                            <ul>
     <li>admin</li>
     <li>blog</li>
@@ -677,54 +696,54 @@ The document model contains information about actual documents.
     <li>returns_label</li>
                                <li>reversal_dunning_letter</l>
 </ul>
-|link:http://php.net/int[int^]
-    |number
-    |The document number
-|link:http://php.net/string[string^]
-    |numberWithPrefix
-    |The document number with prefix
-|link:http://php.net/string[string^]
-    |path
-    |The path to the document
-|link:http://php.net/int[int^]
-    |userId
-    |The ID of the user
-|link:http://php.net/string[string^]
-    |source
-    |The source where the document was generated. Possible sources are 'klarna', 'soap', 'admin', 'hitmeister', 'paypal' and 'rest'.
-|link:http://php.net/string[string^]
-    |displayDate
-    |The date displayed on the document
-|link:http://php.net/string[string^]
-    |content
-    |The base64 encodedcontent of the document.
-|
-    |createdAt
-    |The time the document was created
-|
-    |updatedAt
-    |The time the document was last updated
-|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
-    |references
-    |Collection of document references. The references available are:
+|number
+    |link:http://php.net/int[int^]
+    a|The document number
+|numberWithPrefix
+    |link:http://php.net/string[string^]
+    a|The document number with prefix
+|path
+    |link:http://php.net/string[string^]
+    a|The path to the document
+|userId
+    |link:http://php.net/int[int^]
+    a|The ID of the user
+|source
+    |link:http://php.net/string[string^]
+    a|The source where the document was generated. Possible sources are 'klarna', 'soap', 'admin', 'hitmeister', 'paypal' and 'rest'.
+|displayDate
+    |link:http://php.net/string[string^]
+    a|The date displayed on the document
+|content
+    |link:http://php.net/string[string^]
+    a|The base64 encodedcontent of the document.
+|createdAt
+    |
+    a|The time the document was created
+|updatedAt
+    |
+    a|The time the document was last updated
+|references
+    |        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+    a|Collection of document references. The references available are:
 <ul>
     <li>contacts</li>
     <li>orders</li>
     <li>webstores = refers to clients</li>
     <li>categories</li>
 </ul>
-|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
-    |contacts
-    |Collection of contacts that are associated with the document
-|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
-    |orders
-    |Collection of orders that are associated with the document
-|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
-    |webstores
-    |Collection of webstores that are associated with the document
-|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
-    |categories
-    |Collection of categories that are associated with the document
+|contacts
+    |        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+    a|Collection of contacts that are associated with the document
+|orders
+    |        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+    a|Collection of orders that are associated with the document
+|webstores
+    |        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+    a|Collection of webstores that are associated with the document
+|categories
+    |        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+    a|Collection of categories that are associated with the document
 |===
 
 
@@ -737,7 +756,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -762,15 +781,16 @@ The document reference model. A document reference allows you to assign a docume
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |documentId
-    |The ID of the document
-|link:http://php.net/string[string^]
-    |type
-    |The reference type. The following reference types are available:
+|documentId
+    |link:http://php.net/int[int^]
+    a|The ID of the document
+|type
+    |link:http://php.net/string[string^]
+    a|The reference type. The following reference types are available:
                             <ul>
     <li>blog</li>
                                <li>cash_register</li>
@@ -786,9 +806,9 @@ The document reference model. A document reference allows you to assign a docume
                                <li>warehouse</li>
                                <li>order_shipping_package</li>
 </ul>
-|link:http://php.net/string[string^]
-    |value
-    |The reference value (e.g. the ID of another model)
+|value
+    |link:http://php.net/string[string^]
+    a|The reference value (e.g. the ID of another model)
 |===
 
 
@@ -801,7 +821,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 

@@ -35,7 +35,7 @@ public isPaid($pluginName):bool
 
 ----
 
-    
+
 
 
 
@@ -44,11 +44,12 @@ public isPaid($pluginName):bool
 Takes the Name of a plugin and returns true if the plugin has been paid for.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$pluginName`
-|The plugin name. Must be exactly as provided in the plugin.json.
+|link:http://php.net/string[string^]
+a|The plugin name. Must be exactly as provided in the plugin.json.
 |===
 
 
@@ -78,7 +79,7 @@ public isPaid($pluginName):bool
 
 ----
 
-    
+
 
 
 
@@ -88,11 +89,12 @@ Takes the Name of a subscription plugin and returns true if the subscription has
 in the current payment period on the current system.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$pluginName`
-|The plugin name. Must be exactly as provided in the plugin.json.
+|link:http://php.net/string[string^]
+a|The plugin name. Must be exactly as provided in the plugin.json.
 |===
 
 
@@ -103,7 +105,7 @@ public getSubscriptionInfo($pluginName):Plenty\Modules\PlentyMarketplace\Models\
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Plentymarketplace.adoc#plentymarketplace_models_subscriptionorderinformation[`SubscriptionOrderInformation`]
@@ -112,11 +114,12 @@ public getSubscriptionInfo($pluginName):Plenty\Modules\PlentyMarketplace\Models\
 Takes the Name of a subscription plugin and returns information about the subscription.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$pluginName`
-|The plugin name. Must be exactly as provided in the plugin.json.
+|link:http://php.net/string[string^]
+a|The plugin name. Must be exactly as provided in the plugin.json.
 |===
 
 
@@ -138,15 +141,16 @@ Eloquent model representing a SubscriptionChildOrderInformation.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |paymentStatus
-    |
-|link:http://php.net/array[array^]
-    |paymentInformation
-    |
+|paymentStatus
+    |link:http://php.net/string[string^]
+    a|
+|paymentInformation
+    |link:http://php.net/array[array^]
+    a|
 |===
 
 
@@ -159,7 +163,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -184,27 +188,28 @@ Eloquent model representing a SubscriptionChildPaymentInformation.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/float[float^]
-    |amount
-    |The amount of the payment
-|link:http://php.net/int[int^]
-    |status
-    |The <a href="https://developers.plentymarkets.com/rest-doc/introduction#payment-statuses"  target="_blank">status</a> of the payment
-|link:http://php.net/int[int^]
-    |unaccountable
-    |An unassigned payment. Unassigned payments have the value 1.
-|link:http://php.net/string[string^]
-    |currency
-    |The currency of the payment in ISO 4217 code.
-|link:http://php.net/string[string^]
-    |receivedAt
-    |The time the payment was received
-|link:http://php.net/string[string^]
-    |importedAt
-    |The time the payment was imported
+|amount
+    |link:http://php.net/float[float^]
+    a|The amount of the payment
+|status
+    |link:http://php.net/int[int^]
+    a|The <a href="https://developers.plentymarkets.com/rest-doc/introduction#payment-statuses"  target="_blank">status</a> of the payment
+|unaccountable
+    |link:http://php.net/int[int^]
+    a|An unassigned payment. Unassigned payments have the value 1.
+|currency
+    |link:http://php.net/string[string^]
+    a|The currency of the payment in ISO 4217 code.
+|receivedAt
+    |link:http://php.net/string[string^]
+    a|The time the payment was received
+|importedAt
+    |link:http://php.net/string[string^]
+    a|The time the payment was imported
 |===
 
 
@@ -217,7 +222,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -242,30 +247,31 @@ Eloquent model representing a SubscriptionOrderInformation.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/bool[bool^]
-    |isPaid
-    |
-|link:http://php.net/string[string^]
-    |intervalType
-    |
-|link:http://php.net/string[string^]
-    |intervalValue
-    |
-|link:http://php.net/string[string^]
-    |startDate
-    |
-|link:http://php.net/string[string^]
-    |subscriptionLastRun
-    |
-|link:http://php.net/string[string^]
-    |subscriptionNextRun
-    |
-|link:http://php.net/array[array^]
-    |childOrders
-    |
+|isPaid
+    |link:http://php.net/bool[bool^]
+    a|
+|intervalType
+    |link:http://php.net/string[string^]
+    a|
+|intervalValue
+    |link:http://php.net/string[string^]
+    a|
+|startDate
+    |link:http://php.net/string[string^]
+    a|
+|subscriptionLastRun
+    |link:http://php.net/string[string^]
+    a|
+|subscriptionNextRun
+    |link:http://php.net/string[string^]
+    a|
+|childOrders
+    |link:http://php.net/array[array^]
+    a|
 |===
 
 
@@ -278,7 +284,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 

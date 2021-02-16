@@ -35,7 +35,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Models\Listing
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listing[`Listing`]
@@ -44,15 +44,16 @@ public get($id, $with = []):Plenty\Modules\Listing\Models\Listing
 Get a listing by a given ID.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing.
+|link:http://php.net/int[int^]
+a|The ID of the listing.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the listing instance, one of "markets", "type", "stockDependenceType", "properties".
+|link:http://php.net/array[array^]
+a|The relations to load in the listing instance, one of "markets", "type", "stockDependenceType", "properties".
 |===
 
 
@@ -63,7 +64,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -72,23 +73,24 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
 List listing
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|The default page that will be returned is page 1.
-
 |link:http://php.net/int[int^]
+a|The default page that will be returned is page 1.
+
 a|`$itemsPerPage`
-|The number of entries to be displayed per page. The default number of entries per page is 50.
+|link:http://php.net/int[int^]
+a|The number of entries to be displayed per page. The default number of entries per page is 50.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the ListingMarket instance. The relations available are 'type', 'stockDependenceType' and 'markets'.
-
 |link:http://php.net/array[array^]
+a|The relations to load in the ListingMarket instance. The relations available are 'type', 'stockDependenceType' and 'markets'.
+
 a|`$filters`
-|The filters that could be applied: 'id', 'itemId', 'typeId', 'stockDependenceTypeId', 'unitCombinationId'
+|link:http://php.net/array[array^]
+a|The filters that could be applied: 'id', 'itemId', 'typeId', 'stockDependenceTypeId', 'unitCombinationId'
 |===
 
 
@@ -99,7 +101,7 @@ public create($data):Plenty\Modules\Listing\Models\Listing
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listing[`Listing`]
@@ -108,11 +110,12 @@ public create($data):Plenty\Modules\Listing\Models\Listing
 Create new listing
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|The listing data as associative array.
+|link:http://php.net/array[array^]
+a|The listing data as associative array.
 |===
 
 
@@ -123,7 +126,7 @@ public update($id, $data):Plenty\Modules\Listing\Models\Listing
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listing[`Listing`]
@@ -132,15 +135,16 @@ public update($id, $data):Plenty\Modules\Listing\Models\Listing
 Update listing
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing.
+|link:http://php.net/int[int^]
+a|The ID of the listing.
 
-|link:http://php.net/array[array^]
 a|`$data`
-|The listing data as associative array.
+|link:http://php.net/array[array^]
+a|The listing data as associative array.
 |===
 
 
@@ -151,7 +155,7 @@ public delete($id):bool
 
 ----
 
-    
+
 
 
 
@@ -160,11 +164,12 @@ public delete($id):bool
 Delete listing
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing.
+|link:http://php.net/int[int^]
+a|The ID of the listing.
 |===
 
 
@@ -175,7 +180,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -190,7 +195,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -205,7 +210,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -214,11 +219,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -229,7 +235,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -244,7 +250,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -259,7 +265,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -285,47 +291,48 @@ The listing model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing.
-|link:http://php.net/int[int^]
-    |itemId
-    |The ID of the item.
-|link:http://php.net/int[int^]
-    |typeId
-    |The ID of the listing type. Possible types are:
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing.
+|itemId
+    |link:http://php.net/int[int^]
+    a|The ID of the item.
+|typeId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing type. Possible types are:
 <ul>
     <li>1 = Auction</li>
     <li>2 = Fixed</li>
     <li>3 = Shop item</li>
 </ul>
-|link:http://php.net/int[int^]
-    |stockDependenceTypeId
-    |The ID of the listing stock dependence. Possible stock dependence types are:
+|stockDependenceTypeId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing stock dependence. Possible stock dependence types are:
 <ul>
     <li>1 = Unlimited with sync</li>
     <li>2 = Limited with reservation</li>
     <li>3 = Limited without reservation</li>
     <li>4 = Unlimited without sync</li>
 </ul>
-|link:http://php.net/int[int^]
-    |unitCombinationId
-    |The ID of the unit combination.
-|
-    |properties
-    |The listing properties of the listing.
-|        xref:Listing.adoc#listing_models_listingtype[`ListingType`]
-    |type
-    |The type of the listing.
-|        xref:Listing.adoc#listing_models_stockdependencetype[`StockDependenceType`]
-    |stockDependenceType
-    |The stock dependence type of the listing.
-|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
-    |markets
-    |The listing markets of the listing
+|unitCombinationId
+    |link:http://php.net/int[int^]
+    a|The ID of the unit combination.
+|properties
+    |
+    a|The listing properties of the listing.
+|type
+    |        xref:Listing.adoc#listing_models_listingtype[`ListingType`]
+    a|The type of the listing.
+|stockDependenceType
+    |        xref:Listing.adoc#listing_models_stockdependencetype[`StockDependenceType`]
+    a|The stock dependence type of the listing.
+|markets
+    |        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+    a|The listing markets of the listing
 |===
 
 
@@ -338,7 +345,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -363,35 +370,36 @@ The listing properties model. Each listing property has a type.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing property.
-|link:http://php.net/int[int^]
-    |listingId
-    |The ID of the listing that the property belongs to.
-|link:http://php.net/int[int^]
-    |typeId
-    |The ID of the listing property type. The following types are available:
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing property.
+|listingId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing that the property belongs to.
+|typeId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing property type. The following types are available:
 <ul>
 <li>10 = Use item price</li>
 <li>11 = Number per lot</li>
 <li>12 = Transmit item number type</li>
 </ul>
-|
-    |value
-    |The value of the listing property. The value depends on the type.
-|
-    |createdAt
-    |The date that the property was created.
-|
-    |updatedAt
-    |The date that the property was last updated.
-|        xref:Listing.adoc#listing_models_listing[`Listing`]
-    |listing
-    |The listing that the property belongs to.
+|value
+    |
+    a|The value of the listing property. The value depends on the type.
+|createdAt
+    |
+    a|The date that the property was created.
+|updatedAt
+    |
+    a|The date that the property was last updated.
+|listing
+    |        xref:Listing.adoc#listing_models_listing[`Listing`]
+    a|The listing that the property belongs to.
 |===
 
 
@@ -404,7 +412,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -433,12 +441,13 @@ The listing date type model. Each listing date type can have multiple names.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing date type. The following date types are available:
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing date type. The following date types are available:
 <ul>
 <li>1 = Last price update</li>
 <li>2 = Last listing attempt</li>
@@ -447,12 +456,12 @@ The listing date type model. Each listing date type can have multiple names.
 <li>5 = Last market update</li>
 <li>6 = Last sale</li>
 </ul>
-|link:http://php.net/bool[bool^]
-    |isErasable
-    |Flag that indicates if this type can be deleted or not.
-|link:http://php.net/array[array^]
-    |names
-    |The listing date type names.
+|isErasable
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if this type can be deleted or not.
+|names
+    |link:http://php.net/array[array^]
+    a|The listing date type names.
 |===
 
 
@@ -465,7 +474,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -490,21 +499,22 @@ The listing date type name model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing date type name.
-|link:http://php.net/int[int^]
-    |typeId
-    |The listing date type ID that the current name belongs to.
-|link:http://php.net/int[int^]
-    |name
-    |The name of the listing date type.
-|link:http://php.net/int[int^]
-    |lang
-    |The language of the listing date type name.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing date type name.
+|typeId
+    |link:http://php.net/int[int^]
+    a|The listing date type ID that the current name belongs to.
+|name
+    |link:http://php.net/int[int^]
+    a|The name of the listing date type.
+|lang
+    |link:http://php.net/int[int^]
+    a|The language of the listing date type name.
 |===
 
 
@@ -517,7 +527,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -555,7 +565,7 @@ public get($id, $with = []):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutT
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_layouttemplate[`LayoutTemplate`]
@@ -564,15 +574,16 @@ public get($id, $with = []):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutT
 Get a layout template.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the layout template.
+|link:http://php.net/int[int^]
+a|The ID of the layout template.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the LayoutTemplate instance, one of "additional".
+|link:http://php.net/array[array^]
+a|The relations to load in the LayoutTemplate instance, one of "additional".
 |===
 
 
@@ -583,7 +594,7 @@ public create($data):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutTemplate
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_layouttemplate[`LayoutTemplate`]
@@ -592,11 +603,12 @@ public create($data):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutTemplate
 Create a layout template.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|The layout template data.
+|link:http://php.net/array[array^]
+a|The layout template data.
 |===
 
 
@@ -607,7 +619,7 @@ public delete($id):bool
 
 ----
 
-    
+
 
 
 
@@ -616,11 +628,12 @@ public delete($id):bool
 Delete layout template
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the layout template.
+|link:http://php.net/int[int^]
+a|The ID of the layout template.
 |===
 
 
@@ -631,7 +644,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -646,7 +659,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -661,7 +674,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -670,11 +683,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -685,7 +699,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -700,7 +714,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -715,7 +729,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -741,30 +755,31 @@ The layout template model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the layout template.
-|link:http://php.net/string[string^]
-    |name
-    |The name of the layout template.
-|link:http://php.net/string[string^]
-    |css
-    |The css of the layout template.
-|link:http://php.net/string[string^]
-    |htmlStructure
-    |The html structure of the layout template.
-|link:http://php.net/string[string^]
-    |mainFrame
-    |The main frame of the layout template.
-|link:http://php.net/array[array^]
-    |additionalContent
-    |The additional content of the layout template.
-|link:http://php.net/string[string^]
-    |appendixType
-    |The appendix type of the layout template.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the layout template.
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the layout template.
+|css
+    |link:http://php.net/string[string^]
+    a|The css of the layout template.
+|htmlStructure
+    |link:http://php.net/string[string^]
+    a|The html structure of the layout template.
+|mainFrame
+    |link:http://php.net/string[string^]
+    a|The main frame of the layout template.
+|additionalContent
+    |link:http://php.net/array[array^]
+    a|The additional content of the layout template.
+|appendixType
+    |link:http://php.net/string[string^]
+    a|The appendix type of the layout template.
 |===
 
 
@@ -777,7 +792,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -820,7 +835,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
@@ -829,15 +844,16 @@ public get($id, $with = []):Plenty\Modules\Listing\Market\Models\ListingMarket
 Get a listing market
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing market.
+|link:http://php.net/int[int^]
+a|The ID of the listing market.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts", "infos".
+|link:http://php.net/array[array^]
+a|The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts", "infos".
 |===
 
 
@@ -848,7 +864,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -857,23 +873,24 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
 List listing markets
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|The page to get. The default page that will be returned is page 1.
-
 |link:http://php.net/int[int^]
+a|The page to get. The default page that will be returned is page 1.
+
 a|`$itemsPerPage`
-|The number of entries to be displayed per page. The default number of entries per page is 50.
+|link:http://php.net/int[int^]
+a|The number of entries to be displayed per page. The default number of entries per page is 50.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts", "infos".
-
 |link:http://php.net/array[array^]
+a|The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts", "infos".
+
 a|`$filters`
-|The filters that should be applied. The filters that could be applied: 'id', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'directoryId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition', 'shippingProfileId', .
+|link:http://php.net/array[array^]
+a|The filters that should be applied. The filters that could be applied: 'id', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'directoryId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition', 'shippingProfileId', .
 |===
 
 
@@ -884,7 +901,7 @@ public find($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Rep
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -893,23 +910,24 @@ public find($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Rep
 Find listing markets
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|The page to get. The default page that will be returned is page 1.
-
 |link:http://php.net/int[int^]
+a|The page to get. The default page that will be returned is page 1.
+
 a|`$itemsPerPage`
-|The number of entries to be displayed per page. The default number of entries per page is 50.
+|link:http://php.net/int[int^]
+a|The number of entries to be displayed per page. The default number of entries per page is 50.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts", "infos".
-
 |link:http://php.net/array[array^]
+a|The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts", "infos".
+
 a|`$filters`
-|The filters that should be applied. The filters that could be applied: 'id', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'directoryId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition', 'shippingProfileId', .
+|link:http://php.net/array[array^]
+a|The filters that should be applied. The filters that could be applied: 'id', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'directoryId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition', 'shippingProfileId', .
 |===
 
 
@@ -920,7 +938,7 @@ public create($data):array
 
 ----
 
-    
+
 
 
 
@@ -929,11 +947,12 @@ public create($data):array
 Create a listing
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|The listing market data.
+|link:http://php.net/array[array^]
+a|The listing market data.
 |===
 
 
@@ -944,7 +963,7 @@ public update($id, $data):Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
@@ -953,15 +972,16 @@ public update($id, $data):Plenty\Modules\Listing\Market\Models\ListingMarket
 Update listing market
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing market.
+|link:http://php.net/int[int^]
+a|The ID of the listing market.
 
-|link:http://php.net/array[array^]
 a|`$data`
-|The listing market data as associative array.
+|link:http://php.net/array[array^]
+a|The listing market data as associative array.
 |===
 
 
@@ -972,7 +992,7 @@ public start($ids, $params = []):array
 
 ----
 
-    
+
 
 
 
@@ -981,15 +1001,16 @@ public start($ids, $params = []):array
 Start listing markets on the designated markets.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$ids`
-|The IDs of the listing markets that need to be started.
-
 |link:http://php.net/array[array^]
+a|The IDs of the listing markets that need to be started.
+
 a|`$params`
-|The parameters that should be considered during start. Available values are 'startTime', 'startDistribution'
+|link:http://php.net/array[array^]
+a|The parameters that should be considered during start. Available values are 'startTime', 'startDistribution'
 |===
 
 
@@ -1000,7 +1021,7 @@ public verify($ids):array
 
 ----
 
-    
+
 
 
 
@@ -1009,11 +1030,12 @@ public verify($ids):array
 Verifies listing markets.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$ids`
-|The IDs of the listing markets that need to be verified.
+|link:http://php.net/array[array^]
+a|The IDs of the listing markets that need to be verified.
 |===
 
 
@@ -1024,7 +1046,7 @@ public delete($id):void
 
 ----
 
-    
+
 
 
 
@@ -1033,11 +1055,12 @@ public delete($id):void
 Delete a listing market
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing market.
+|link:http://php.net/int[int^]
+a|The ID of the listing market.
 |===
 
 
@@ -1048,7 +1071,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -1063,7 +1086,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -1078,7 +1101,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -1087,11 +1110,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1102,7 +1126,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -1117,7 +1141,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -1132,7 +1156,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -1167,7 +1191,7 @@ public __construct($listingMarkets):void
 
 ----
 
-    
+
 
 
 
@@ -1176,11 +1200,12 @@ public __construct($listingMarkets):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$listingMarkets`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1191,7 +1216,7 @@ public getListingMarkets():array
 
 ----
 
-    
+
 
 
 
@@ -1225,7 +1250,7 @@ public __construct($listingMarkets):void
 
 ----
 
-    
+
 
 
 
@@ -1234,11 +1259,12 @@ public __construct($listingMarkets):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$listingMarkets`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1249,7 +1275,7 @@ public getListingMarkets():array
 
 ----
 
-    
+
 
 
 
@@ -1283,7 +1309,7 @@ public __construct($listingMarkets):void
 
 ----
 
-    
+
 
 
 
@@ -1292,11 +1318,12 @@ public __construct($listingMarkets):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$listingMarkets`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1307,7 +1334,7 @@ public getListingMarkets():array
 
 ----
 
-    
+
 
 
 
@@ -1341,7 +1368,7 @@ public __construct($listingMarkets):void
 
 ----
 
-    
+
 
 
 
@@ -1350,11 +1377,12 @@ public __construct($listingMarkets):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$listingMarkets`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1365,7 +1393,7 @@ public getListingMarkets():array
 
 ----
 
-    
+
 
 
 
@@ -1399,7 +1427,7 @@ public __construct($listingMarket):void
 
 ----
 
-    
+
 
 
 
@@ -1408,11 +1436,12 @@ public __construct($listingMarket):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+|Name |Type |Description
 a|`$listingMarket`
-|
+|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+a|
 |===
 
 
@@ -1423,7 +1452,7 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
@@ -1457,7 +1486,7 @@ public __construct($listingMarket):void
 
 ----
 
-    
+
 
 
 
@@ -1466,11 +1495,12 @@ public __construct($listingMarket):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+|Name |Type |Description
 a|`$listingMarket`
-|
+|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+a|
 |===
 
 
@@ -1481,7 +1511,7 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
@@ -1515,7 +1545,7 @@ public __construct($listingMarket):void
 
 ----
 
-    
+
 
 
 
@@ -1524,11 +1554,12 @@ public __construct($listingMarket):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+|Name |Type |Description
 a|`$listingMarket`
-|
+|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+a|
 |===
 
 
@@ -1539,7 +1570,7 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
@@ -1573,7 +1604,7 @@ public __construct($listingMarket):void
 
 ----
 
-    
+
 
 
 
@@ -1582,11 +1613,12 @@ public __construct($listingMarket):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+|Name |Type |Description
 a|`$listingMarket`
-|
+|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+a|
 |===
 
 
@@ -1597,7 +1629,7 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
@@ -1631,7 +1663,7 @@ public __construct($listingMarket):void
 
 ----
 
-    
+
 
 
 
@@ -1640,11 +1672,12 @@ public __construct($listingMarket):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+|Name |Type |Description
 a|`$listingMarket`
-|
+|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+a|
 |===
 
 
@@ -1655,7 +1688,7 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
@@ -1689,7 +1722,7 @@ public __construct($listingMarket):void
 
 ----
 
-    
+
 
 
 
@@ -1698,11 +1731,12 @@ public __construct($listingMarket):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+|Name |Type |Description
 a|`$listingMarket`
-|
+|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+a|
 |===
 
 
@@ -1713,7 +1747,7 @@ public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
@@ -1739,54 +1773,55 @@ The listing market model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing market.
-|link:http://php.net/int[int^]
-    |listingId
-    |The listing ID of the current listing market.
-|link:http://php.net/int[int^]
-    |variationId
-    |The variation ID for this listing market.
-|link:http://php.net/int[int^]
-    |referrerId
-    |The ID of the referrer.
-|link:http://php.net/int[int^]
-    |credentialsId
-    |The credentials ID that this listing market belongs to.
-|link:http://php.net/int[int^]
-    |directoryId
-    |The directory ID of the listing market.
-|link:http://php.net/bool[bool^]
-    |enabled
-    |Indicates if the listing market is enabled.
-|link:http://php.net/string[string^]
-    |duration
-    |The duration of the listing market.
-|link:http://php.net/string[string^]
-    |verified
-    |Indicates if the listing market has been verified. Possible values are: 'succeeded', 'failed', 'unknown'.
-|link:http://php.net/int[int^]
-    |quantity
-    |The quantity set for this listing market.
-|link:http://php.net/bool[bool^]
-    |allVariations
-    |Indicates if all variations should be included.
-|
-    |createdAt
-    |The date that the listing was created.
-|
-    |updatedAt
-    |The date that the listing was last updated.
-|        xref:Listing.adoc#listing_models_listing[`Listing`]
-    |listing
-    |The listing that the listing market belongs to.
-|
-    |properties
-    |The listing market properties of the listing market. The following properties are available:
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market.
+|listingId
+    |link:http://php.net/int[int^]
+    a|The listing ID of the current listing market.
+|variationId
+    |link:http://php.net/int[int^]
+    a|The variation ID for this listing market.
+|referrerId
+    |link:http://php.net/int[int^]
+    a|The ID of the referrer.
+|credentialsId
+    |link:http://php.net/int[int^]
+    a|The credentials ID that this listing market belongs to.
+|directoryId
+    |link:http://php.net/int[int^]
+    a|The directory ID of the listing market.
+|enabled
+    |link:http://php.net/bool[bool^]
+    a|Indicates if the listing market is enabled.
+|duration
+    |link:http://php.net/string[string^]
+    a|The duration of the listing market.
+|verified
+    |link:http://php.net/string[string^]
+    a|Indicates if the listing market has been verified. Possible values are: 'succeeded', 'failed', 'unknown'.
+|quantity
+    |link:http://php.net/int[int^]
+    a|The quantity set for this listing market.
+|allVariations
+    |link:http://php.net/bool[bool^]
+    a|Indicates if all variations should be included.
+|createdAt
+    |
+    a|The date that the listing was created.
+|updatedAt
+    |
+    a|The date that the listing was last updated.
+|listing
+    |        xref:Listing.adoc#listing_models_listing[`Listing`]
+    a|The listing that the listing market belongs to.
+|properties
+    |
+    a|The listing market properties of the listing market. The following properties are available:
 <ul>
 <li>1 = Shipping profile ID</li>
 <li>2 = Order status</li>
@@ -1850,27 +1885,27 @@ The listing market model.
 <li>311 = Ricardo template ID</li>
 <li>312 = Ricardo is relist sold out</li>
 </ul>
-|
-    |itemSpecifics
-    |The listing market item specifics of the listing market.
-|
-    |prices
-    |The listing market prices of the listing market.
-|
-    |dates
-    |The listing market dates of the listing market.
-|
-    |texts
-    |The listing market texts of the listing market.
-|
-    |infos
-    |The listing market infos of the listing market.
-|
-    |lister
-    |The listing market lister of the listing market.
-|
-    |histories
-    |The listing market histories of the listing market.
+|itemSpecifics
+    |
+    a|The listing market item specifics of the listing market.
+|prices
+    |
+    a|The listing market prices of the listing market.
+|dates
+    |
+    a|The listing market dates of the listing market.
+|texts
+    |
+    a|The listing market texts of the listing market.
+|infos
+    |
+    a|The listing market infos of the listing market.
+|lister
+    |
+    a|The listing market lister of the listing market.
+|histories
+    |
+    a|The listing market histories of the listing market.
 |===
 
 
@@ -1883,7 +1918,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1908,18 +1943,19 @@ The listing market dates model. Each listing market date has a type.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing market date.
-|link:http://php.net/int[int^]
-    |listingMarketId
-    |The ID of the listing market that the date belongs to.
-|link:http://php.net/int[int^]
-    |typeId
-    |The ID of the listing market date type. The following types are available:
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market date.
+|listingMarketId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market that the date belongs to.
+|typeId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market date type. The following types are available:
 <ul>
 <li>1 = Last price update</li>
 <li>2 = Last listing attempt</li>
@@ -1927,18 +1963,18 @@ The listing market dates model. Each listing market date has a type.
 <li>4 = End time</li>
 <li>5 = Last market update</li>
 </ul>
-|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
-    |date
-    |The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
-|
-    |createdAt
-    |The date that the date was created.
-|
-    |updatedAt
-    |The date that the date was last updated.
-|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
-    |listingMarket
-    |The listing market that the date belongs to.
+|date
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
+|createdAt
+    |
+    a|The date that the date was created.
+|updatedAt
+    |
+    a|The date that the date was last updated.
+|listingMarket
+    |        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+    a|The listing market that the date belongs to.
 |===
 
 
@@ -1951,7 +1987,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1976,21 +2012,22 @@ The listing market item specific model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing market item specific.
-|link:http://php.net/int[int^]
-    |listingMarketId
-    |The ID of the listing market.
-|link:http://php.net/string[string^]
-    |name
-    |The name of the listing market item specific.
-|
-    |value
-    |The value of the listing market item specific.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market item specific.
+|listingMarketId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market.
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the listing market item specific.
+|value
+    |
+    a|The value of the listing market item specific.
 |===
 
 
@@ -2003,7 +2040,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -2028,30 +2065,31 @@ The listing market price model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing price.
-|link:http://php.net/int[int^]
-    |listingMarketId
-    |The ID of the listing market.
-|link:http://php.net/int[int^]
-    |typeId
-    |The ID of the listing price type.
-|link:http://php.net/float[float^]
-    |value
-    |The value of the listing market price.
-|link:http://php.net/string[string^]
-    |currency
-    |The currency of the listing market price.
-|
-    |listingMarket
-    |The listing market.
-|
-    |type
-    |The listing price type.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing price.
+|listingMarketId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market.
+|typeId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing price type.
+|value
+    |link:http://php.net/float[float^]
+    a|The value of the listing market price.
+|currency
+    |link:http://php.net/string[string^]
+    a|The currency of the listing market price.
+|listingMarket
+    |
+    a|The listing market.
+|type
+    |
+    a|The listing price type.
 |===
 
 
@@ -2064,7 +2102,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -2089,18 +2127,19 @@ The listing market properties model. Each listing market property has a type.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing market property.
-|link:http://php.net/int[int^]
-    |listingMarketId
-    |The ID of the listing market that the property belongs to.
-|link:http://php.net/int[int^]
-    |typeId
-    |The ID of the listing market property type. The following types are available:
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market property.
+|listingMarketId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market that the property belongs to.
+|typeId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market property type. The following types are available:
 <ul>
 <li>1 = Shipping profile ID</li>
 <li>2 = Order status</li>
@@ -2164,18 +2203,18 @@ The listing market properties model. Each listing market property has a type.
 <li>311 = Ricardo template ID</li>
 <li>312 = Ricardo is relist sold out</li>
 </ul>
-|link:http://php.net/string[string^]
-    |value
-    |The value of the listing market property. The value depends on the type.
-|
-    |createdAt
-    |The date that the property was created.
-|
-    |updatedAt
-    |The date that the property was updated last.
-|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
-    |listingMarket
-    |The listing market that the property belongs to.
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the listing market property. The value depends on the type.
+|createdAt
+    |
+    a|The date that the property was created.
+|updatedAt
+    |
+    a|The date that the property was updated last.
+|listingMarket
+    |        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+    a|The listing market that the property belongs to.
 |===
 
 
@@ -2188,7 +2227,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -2226,7 +2265,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Market\Directory\Models\Listi
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketdirectory[`ListingMarketDirectory`]
@@ -2235,15 +2274,16 @@ public get($id, $with = []):Plenty\Modules\Listing\Market\Directory\Models\Listi
 Get a listing market directory
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing market directory.
+|link:http://php.net/int[int^]
+a|The ID of the listing market directory.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the ListingMarketDirectory instance, one of "children".
+|link:http://php.net/array[array^]
+a|The relations to load in the ListingMarketDirectory instance, one of "children".
 |===
 
 
@@ -2254,7 +2294,7 @@ public all($with = [], $filters = []):array
 
 ----
 
-    
+
 
 
 
@@ -2263,15 +2303,16 @@ public all($with = [], $filters = []):array
 List all directories
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$with`
-|The relations to load in the ListingMarketDirectory instances, one of "children".
-
 |link:http://php.net/array[array^]
+a|The relations to load in the ListingMarketDirectory instances, one of "children".
+
 a|`$filters`
-|Listing market directory filters. Available filters: parentId (if no parentId is given than top level is returned).
+|link:http://php.net/array[array^]
+a|Listing market directory filters. Available filters: parentId (if no parentId is given than top level is returned).
 |===
 
 
@@ -2282,7 +2323,7 @@ public create($data):array
 
 ----
 
-    
+
 
 
 
@@ -2291,11 +2332,12 @@ public create($data):array
 Create a listing market directory.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|The listing market directory data as associative array.
+|link:http://php.net/array[array^]
+a|The listing market directory data as associative array.
 |===
 
 
@@ -2306,7 +2348,7 @@ public update($id, $data):Plenty\Modules\Listing\Market\Directory\Models\Listing
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketdirectory[`ListingMarketDirectory`]
@@ -2315,15 +2357,16 @@ public update($id, $data):Plenty\Modules\Listing\Market\Directory\Models\Listing
 Update listing market directory
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing market directory.
+|link:http://php.net/int[int^]
+a|The ID of the listing market directory.
 
-|link:http://php.net/array[array^]
 a|`$data`
-|The listing market directory data as associative array.
+|link:http://php.net/array[array^]
+a|The listing market directory data as associative array.
 |===
 
 
@@ -2334,7 +2377,7 @@ public delete($id):void
 
 ----
 
-    
+
 
 
 
@@ -2343,11 +2386,12 @@ public delete($id):void
 Delete a listing market directory
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing market directory.
+|link:http://php.net/int[int^]
+a|The ID of the listing market directory.
 |===
 
 
@@ -2358,7 +2402,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -2373,7 +2417,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -2388,7 +2432,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -2397,11 +2441,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -2412,7 +2457,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -2427,7 +2472,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -2442,7 +2487,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -2468,21 +2513,22 @@ The listing market directory model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing market directory.
-|link:http://php.net/string[string^]
-    |name
-    |The name of the listing market directory.
-|link:http://php.net/int[int^]
-    |parentId
-    |The parent ID of the listing market directory.
-|link:http://php.net/int[int^]
-    |level
-    |The level of the directory.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market directory.
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the listing market directory.
+|parentId
+    |link:http://php.net/int[int^]
+    a|The parent ID of the listing market directory.
+|level
+    |link:http://php.net/int[int^]
+    a|The level of the directory.
 |===
 
 
@@ -2495,7 +2541,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -2533,7 +2579,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Market\History\Models\Listing
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkethistory[`ListingMarketHistory`]
@@ -2542,15 +2588,16 @@ public get($id, $with = []):Plenty\Modules\Listing\Market\History\Models\Listing
 Get a listing market.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing market.
+|link:http://php.net/int[int^]
+a|The ID of the listing market.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts".
+|link:http://php.net/array[array^]
+a|The relations to load in the ListingMarket instance, one of "listing", "prices", "dates", "properties", "texts".
 |===
 
 
@@ -2561,7 +2608,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = [], $sort = 
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -2570,27 +2617,28 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = [], $sort = 
 List listing market histories
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|The page to get. The default page that will be returned is page 1.
-
 |link:http://php.net/int[int^]
+a|The page to get. The default page that will be returned is page 1.
+
 a|`$itemsPerPage`
-|The number of entries to be displayed per page. The default number of entries per page is 50.
+|link:http://php.net/int[int^]
+a|The number of entries to be displayed per page. The default number of entries per page is 50.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the ListingMarketHistory instance, one of "listingMarket", "dates", "properties", "texts".
-
 |link:http://php.net/array[array^]
-a|`$filters`
-|The filters that should be applied. The filters that are available: 'listingMarketId', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition', 'updatedAtFrom', 'updatedAtTo , 'textData', 'firstPlatformCategoryId', 'secondPlatformCategoryId', 'firstShopCategoryId', 'secondShopCategoryId', 'thirdShopCategoryId', 'shippingProfileId', 'lastSale', 'isEbayPlus', 'isClickAndCollect'.
+a|The relations to load in the ListingMarketHistory instance, one of "listingMarket", "dates", "properties", "texts".
 
-|link:http://php.net/string[string^]
+a|`$filters`
+|link:http://php.net/array[array^]
+a|The filters that should be applied. The filters that are available: 'listingMarketId', 'variationId', 'allVariations', 'referrerId', 'credentialsId', 'verified', 'duration', 'listingId', 'itemId', 'listingTypeId', 'stockDependenceTypeId', 'status', 'stockCondition', 'updatedAtFrom', 'updatedAtTo , 'textData', 'firstPlatformCategoryId', 'secondPlatformCategoryId', 'firstShopCategoryId', 'secondShopCategoryId', 'thirdShopCategoryId', 'shippingProfileId', 'lastSale', 'isEbayPlus', 'isClickAndCollect'.
+
 a|`$sort`
-|The sorting key that can be applied. These sortings are available: 'endTimeAsc', 'endTimeDesc', 'startTimeAsc', 'startTimeDesc', 'externalListingIdAsc', 'externalListingIdDesc'
+|link:http://php.net/string[string^]
+a|The sorting key that can be applied. These sortings are available: 'endTimeAsc', 'endTimeDesc', 'startTimeAsc', 'startTimeDesc', 'externalListingIdAsc', 'externalListingIdDesc'
 |===
 
 
@@ -2601,7 +2649,7 @@ public end($ids, $params = []):array
 
 ----
 
-    
+
 
 
 
@@ -2610,15 +2658,16 @@ public end($ids, $params = []):array
 End the listing market histories on the designated markets.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$ids`
-|The IDs of the listing market histories that need to be started.
-
 |link:http://php.net/array[array^]
+a|The IDs of the listing market histories that need to be started.
+
 a|`$params`
-|The parameters that should be considers during end. Available values are 'deleteOnSuccess'
+|link:http://php.net/array[array^]
+a|The parameters that should be considers during end. Available values are 'deleteOnSuccess'
 |===
 
 
@@ -2629,7 +2678,7 @@ public relist($ids):void
 
 ----
 
-    
+
 
 
 
@@ -2638,11 +2687,12 @@ public relist($ids):void
 Relist the listing market histories on the designated markets.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$ids`
-|The IDs of the listing market histories that need to be started.
+|link:http://php.net/array[array^]
+a|The IDs of the listing market histories that need to be started.
 |===
 
 
@@ -2653,7 +2703,7 @@ public update($ids, $options = []):array
 
 ----
 
-    
+
 
 
 
@@ -2662,15 +2712,16 @@ public update($ids, $options = []):array
 Update the listing market histories on the designated markets.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$ids`
-|The IDs of the listing market histories that need to be updated.
-
 |link:http://php.net/array[array^]
+a|The IDs of the listing market histories that need to be updated.
+
 a|`$options`
-|The update options that should be considers during update. Available values are:
+|link:http://php.net/array[array^]
+a|The update options that should be considers during update. Available values are:
 <ul>
 <li>title - Updates the title
 <li>subtitle - Updates the subtitle</li></li>
@@ -2699,7 +2750,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -2714,7 +2765,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -2729,7 +2780,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -2738,11 +2789,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -2753,7 +2805,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -2768,7 +2820,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -2783,7 +2835,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -2809,75 +2861,76 @@ The listing market history model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The listing market history ID.
-|link:http://php.net/int[int^]
-    |listingMarketId
-    |The listing market ID of the current listing market history.
-|link:http://php.net/int[int^]
-    |referrerId
-    |The referrer ID.
-|link:http://php.net/string[string^]
-    |externalId
-    |The external ID of the listing market history.
-|link:http://php.net/int[int^]
-    |statusId
-    |The status ID of the current listing market history. The following properties are available:
+|id
+    |link:http://php.net/int[int^]
+    a|The listing market history ID.
+|listingMarketId
+    |link:http://php.net/int[int^]
+    a|The listing market ID of the current listing market history.
+|referrerId
+    |link:http://php.net/int[int^]
+    a|The referrer ID.
+|externalId
+    |link:http://php.net/string[string^]
+    a|The external ID of the listing market history.
+|statusId
+    |link:http://php.net/int[int^]
+    a|The status ID of the current listing market history. The following properties are available:
 <ul>
 <li>1 = Active</li>
 <li>2 = Ended</li>
 <li>3 = Relisted</li>
 <li>4 = Hidden</li>
 </ul>
-|link:http://php.net/int[int^]
-    |quantity
-    |The quantity available for sale on the marketplace.
-|link:http://php.net/int[int^]
-    |quantitySold
-    |The quantity sold currently on the marketplace.
-|link:http://php.net/int[int^]
-    |quantitySoldDelta
-    |The difference between the sold quantity and orders imported for this listing market history.
-|link:http://php.net/int[int^]
-    |quantityRemain
-    |The quantity remaining on the marketplace.
-|link:http://php.net/float[float^]
-    |price
-    |The price offered for this listing market. @see ListingMarketHistoryVariation if the listing market history contains variations.
-|link:http://php.net/string[string^]
-    |currency
-    |The currency for the price of this listing market.
-|link:http://php.net/string[string^]
-    |sku
-    |The stock keeping unit of this listing market history.
-|
-    |createdAt
-    |The date that the entry was created.
-|
-    |updatedAt
-    |The date that the entry was updated last.
-|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
-    |listingMarket
-    |The listing market that the listing market history belongs to.
-|
-    |variations
-    |The listing market history variations that belong to this listing market history.
-|
-    |properties
-    |The listing market history properties of the listing market.
-|
-    |dates
-    |The listing market history dates of the listing market history.
-|
-    |texts
-    |The listing market history texts of the listing market history.
-|
-    |status
-    |The listing market history status of the listing market history.
+|quantity
+    |link:http://php.net/int[int^]
+    a|The quantity available for sale on the marketplace.
+|quantitySold
+    |link:http://php.net/int[int^]
+    a|The quantity sold currently on the marketplace.
+|quantitySoldDelta
+    |link:http://php.net/int[int^]
+    a|The difference between the sold quantity and orders imported for this listing market history.
+|quantityRemain
+    |link:http://php.net/int[int^]
+    a|The quantity remaining on the marketplace.
+|price
+    |link:http://php.net/float[float^]
+    a|The price offered for this listing market. @see ListingMarketHistoryVariation if the listing market history contains variations.
+|currency
+    |link:http://php.net/string[string^]
+    a|The currency for the price of this listing market.
+|sku
+    |link:http://php.net/string[string^]
+    a|The stock keeping unit of this listing market history.
+|createdAt
+    |
+    a|The date that the entry was created.
+|updatedAt
+    |
+    a|The date that the entry was updated last.
+|listingMarket
+    |        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+    a|The listing market that the listing market history belongs to.
+|variations
+    |
+    a|The listing market history variations that belong to this listing market history.
+|properties
+    |
+    a|The listing market history properties of the listing market.
+|dates
+    |
+    a|The listing market history dates of the listing market history.
+|texts
+    |
+    a|The listing market history texts of the listing market history.
+|status
+    |
+    a|The listing market history status of the listing market history.
 |===
 
 
@@ -2890,7 +2943,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -2915,18 +2968,19 @@ The listing market history dates model. Each listing market history date has a t
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing market history date.
-|link:http://php.net/int[int^]
-    |historyId
-    |The ID of the listing market history that the date belongs to.
-|link:http://php.net/int[int^]
-    |typeId
-    |The ID of the listing date type. The following types are available:
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market history date.
+|historyId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market history that the date belongs to.
+|typeId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing date type. The following types are available:
 <ul>
 <li>Last price update = 1</li>
 <li>Last listing attempt = 2</li>
@@ -2935,18 +2989,18 @@ The listing market history dates model. Each listing market history date has a t
 <li>Last market update = 5</li>
 <li>Last sale = 6</li>
 </ul>
-|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
-    |date
-    |The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
-|
-    |createdAt
-    |The date that the date was created.
-|
-    |updatedAt
-    |The date that the date was last updated.
-|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
-    |listingMarket
-    |The listing market that the date belongs to.
+|date
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
+|createdAt
+    |
+    a|The date that the date was created.
+|updatedAt
+    |
+    a|The date that the date was last updated.
+|listingMarket
+    |        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+    a|The listing market that the date belongs to.
 |===
 
 
@@ -2959,7 +3013,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -2984,18 +3038,19 @@ The listing market properties model. Each listing market property has a type.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing market history property
-|link:http://php.net/int[int^]
-    |historyId
-    |The ID of the listing market history that the property belongs to
-|link:http://php.net/int[int^]
-    |typeId
-    |The ID of the listing market history property type. The following types are available:
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market history property
+|historyId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market history that the property belongs to
+|typeId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market history property type. The following types are available:
 <ul>
 <li>Relisted external ID = 13</li>
 <li>SCO Offer = 14</li>
@@ -3008,18 +3063,18 @@ The listing market properties model. Each listing market property has a type.
 <li>Is eBayPlus = 117</li>
 <li>Is click & collect = 118</li>
 </ul>
-|link:http://php.net/string[string^]
-    |value
-    |The value of the listing market history property. The value depends on the type.
-|
-    |createdAt
-    |The date that the property was created.
-|
-    |updatedAt
-    |The date that the property was updated last.
-|        xref:Listing.adoc#listing_models_listingmarkethistory[`ListingMarketHistory`]
-    |history
-    |The listing market history that the property belongs to.
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the listing market history property. The value depends on the type.
+|createdAt
+    |
+    a|The date that the property was created.
+|updatedAt
+    |
+    a|The date that the property was updated last.
+|history
+    |        xref:Listing.adoc#listing_models_listingmarkethistory[`ListingMarketHistory`]
+    a|The listing market history that the property belongs to.
 |===
 
 
@@ -3032,7 +3087,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -3057,21 +3112,22 @@ The listing market history text model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing market history text.
-|link:http://php.net/int[int^]
-    |historyId
-    |The ID of the listing market history the text belongs to.
-|link:http://php.net/string[string^]
-    |lang
-    |The language of the listing market text. Available values: 'de', 'en', 'fr', 'it', 'es', 'tr', 'nl', 'pl', 'nn', 'da', 'se', 'cz', 'ru', 'sk', 'cn', 'vn', 'pt', 'bg', 'ro'.
-|link:http://php.net/string[string^]
-    |title
-    |The title of the listing market text.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market history text.
+|historyId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market history the text belongs to.
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the listing market text. Available values: 'de', 'en', 'fr', 'it', 'es', 'tr', 'nl', 'pl', 'nn', 'da', 'se', 'cz', 'ru', 'sk', 'cn', 'vn', 'pt', 'bg', 'ro'.
+|title
+    |link:http://php.net/string[string^]
+    a|The title of the listing market text.
 |===
 
 
@@ -3084,7 +3140,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -3109,48 +3165,49 @@ The listing market history model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The listing market history variation ID.
-|link:http://php.net/int[int^]
-    |historyId
-    |The listing market history ID of the current listing market history variation.
-|link:http://php.net/int[int^]
-    |variationId
-    |The variation ID.
-|link:http://php.net/string[string^]
-    |attributeName
-    |The attribute name. This is an serialized array of the attribute-value data.
-|link:http://php.net/string[string^]
-    |sku
-    |The stock keeping unit of this listing market history variation.
-|link:http://php.net/int[int^]
-    |quantity
-    |The quantity available for sale on the marketplace.
-|link:http://php.net/int[int^]
-    |quantitySold
-    |The quantity sold currently on the marketplace.
-|link:http://php.net/int[int^]
-    |quantitySoldDelta
-    |The difference between the sold quantity and orders imported for this listing market history variation.
-|link:http://php.net/int[int^]
-    |quantityRemain
-    |The quantity remaining on the marketplace.
-|link:http://php.net/float[float^]
-    |price
-    |The price offered for this listing market history variation.
-|
-    |createdAt
-    |The date that the entry was created.
-|
-    |updatedAt
-    |The date that the entry was updated last.
-|        xref:Listing.adoc#listing_models_listingmarkethistory[`ListingMarketHistory`]
-    |history
-    |The listing market history variations that belong to this listing market history.
+|id
+    |link:http://php.net/int[int^]
+    a|The listing market history variation ID.
+|historyId
+    |link:http://php.net/int[int^]
+    a|The listing market history ID of the current listing market history variation.
+|variationId
+    |link:http://php.net/int[int^]
+    a|The variation ID.
+|attributeName
+    |link:http://php.net/string[string^]
+    a|The attribute name. This is an serialized array of the attribute-value data.
+|sku
+    |link:http://php.net/string[string^]
+    a|The stock keeping unit of this listing market history variation.
+|quantity
+    |link:http://php.net/int[int^]
+    a|The quantity available for sale on the marketplace.
+|quantitySold
+    |link:http://php.net/int[int^]
+    a|The quantity sold currently on the marketplace.
+|quantitySoldDelta
+    |link:http://php.net/int[int^]
+    a|The difference between the sold quantity and orders imported for this listing market history variation.
+|quantityRemain
+    |link:http://php.net/int[int^]
+    a|The quantity remaining on the marketplace.
+|price
+    |link:http://php.net/float[float^]
+    a|The price offered for this listing market history variation.
+|createdAt
+    |
+    a|The date that the entry was created.
+|updatedAt
+    |
+    a|The date that the entry was updated last.
+|history
+    |        xref:Listing.adoc#listing_models_listingmarkethistory[`ListingMarketHistory`]
+    a|The listing market history variations that belong to this listing market history.
 |===
 
 
@@ -3163,7 +3220,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -3201,7 +3258,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -3210,23 +3267,24 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
 List listing market infos by filter options
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|The page to get. The default page that will be returned is page 1.
-
 |link:http://php.net/int[int^]
+a|The page to get. The default page that will be returned is page 1.
+
 a|`$itemsPerPage`
-|The number of entries to be displayed per page. The default number of entries per page is 50.
+|link:http://php.net/int[int^]
+a|The number of entries to be displayed per page. The default number of entries per page is 50.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the ListingMarketInfo instance.
-
 |link:http://php.net/array[array^]
+a|The relations to load in the ListingMarketInfo instance.
+
 a|`$filters`
-|The filters that should be applied. The filters that could be applied: 'id', 'listingMarketId', 'type', 'createdAtFrom', 'createdAtTo', 'code'.
+|link:http://php.net/array[array^]
+a|The filters that should be applied. The filters that could be applied: 'id', 'listingMarketId', 'type', 'createdAtFrom', 'createdAtTo', 'code'.
 |===
 
 
@@ -3237,7 +3295,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -3252,7 +3310,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -3267,7 +3325,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -3276,11 +3334,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -3291,7 +3350,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -3306,7 +3365,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -3321,7 +3380,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -3347,30 +3406,31 @@ The listing market info model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The listing market info ID.
-|link:http://php.net/int[int^]
-    |listingMarketId
-    |The listing market ID that the current information belongs to.
-|link:http://php.net/string[string^]
-    |type
-    |The information type. Possible values: 'warning', 'error', 'info'.
-|link:http://php.net/int[int^]
-    |code
-    |The information code.
-|link:http://php.net/string[string^]
-    |message
-    |The information message.
-|
-    |createdAt
-    |The date that the listing market info was created.
-|        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
-    |listingMarket
-    |The listing market that the listing market info belongs to.
+|id
+    |link:http://php.net/int[int^]
+    a|The listing market info ID.
+|listingMarketId
+    |link:http://php.net/int[int^]
+    a|The listing market ID that the current information belongs to.
+|type
+    |link:http://php.net/string[string^]
+    a|The information type. Possible values: 'warning', 'error', 'info'.
+|code
+    |link:http://php.net/int[int^]
+    a|The information code.
+|message
+    |link:http://php.net/string[string^]
+    a|The information message.
+|createdAt
+    |
+    a|The date that the listing market info was created.
+|listingMarket
+    |        xref:Listing.adoc#listing_models_listingmarket[`ListingMarket`]
+    a|The listing market that the listing market info belongs to.
 |===
 
 
@@ -3383,7 +3443,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -3426,7 +3486,7 @@ public get($id):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketI
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketitemspecific[`ListingMarketItemSpecific`]
@@ -3435,11 +3495,12 @@ public get($id):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketI
 Gets a ListingMarketItemSpecific.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -3450,7 +3511,7 @@ public search($data, $page = 1, $itemsPerPage = 50):Plenty\Modules\Listing\Marke
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketitemspecific[`ListingMarketItemSpecific`]
@@ -3459,19 +3520,20 @@ public search($data, $page = 1, $itemsPerPage = 50):Plenty\Modules\Listing\Marke
 Gets all ListingMarketItemSpecifics.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 
-|link:http://php.net/int[int^]
 a|`$page`
-|
-
 |link:http://php.net/int[int^]
+a|
+
 a|`$itemsPerPage`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -3482,7 +3544,7 @@ public find($filters = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Mo
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -3491,19 +3553,20 @@ public find($filters = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Mo
 Gets all ListingMarketItemSpecifics.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 
-|link:http://php.net/int[int^]
 a|`$page`
-|
-
 |link:http://php.net/int[int^]
+a|
+
 a|`$itemsPerPage`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -3514,7 +3577,7 @@ public update($id, $data):Plenty\Modules\Listing\Market\ItemSpecific\Models\List
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarketitemspecific[`ListingMarketItemSpecific`]
@@ -3523,15 +3586,16 @@ public update($id, $data):Plenty\Modules\Listing\Market\ItemSpecific\Models\List
 Updates a ListingMarketItemSpecific.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/int[int^]
+a|
 
-|link:http://php.net/array[array^]
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -3542,7 +3606,7 @@ public delete($id):bool
 
 ----
 
-    
+
 
 
 
@@ -3551,11 +3615,12 @@ public delete($id):bool
 Deletes a ListingMarketItemSpecific.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -3566,7 +3631,7 @@ public deleteByListingMarketId($listingMarketId):bool
 
 ----
 
-    
+
 
 
 
@@ -3575,11 +3640,12 @@ public deleteByListingMarketId($listingMarketId):bool
 Deletes all ListingMarketItemSpecific entries by listing market id.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$listingMarketId`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -3590,7 +3656,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -3605,7 +3671,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -3620,7 +3686,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -3629,11 +3695,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -3644,7 +3711,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -3659,7 +3726,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -3674,7 +3741,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -3700,21 +3767,22 @@ The item specific model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the item specific.
-|link:http://php.net/int[int^]
-    |listingMarketId
-    |The LMID which belongs to the item specific ID.
-|link:http://php.net/string[string^]
-    |name
-    |The name of the item specific.
-|link:http://php.net/string[string^]
-    |value
-    |The value of the item specific.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the item specific.
+|listingMarketId
+    |link:http://php.net/int[int^]
+    a|The LMID which belongs to the item specific ID.
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the item specific.
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the item specific.
 |===
 
 
@@ -3727,7 +3795,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -3765,7 +3833,7 @@ public get($id):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[`ListingMarketText`]
@@ -3774,11 +3842,12 @@ public get($id):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText
 Get a listing market text
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing market text.
+|link:http://php.net/int[int^]
+a|The ID of the listing market text.
 |===
 
 
@@ -3789,7 +3858,7 @@ public create($listingMarketId, $data):Plenty\Modules\Listing\Market\Text\Models
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[`ListingMarketText`]
@@ -3798,15 +3867,16 @@ public create($listingMarketId, $data):Plenty\Modules\Listing\Market\Text\Models
 Create new listing market text
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$listingMarketId`
-|The listing market ID the new market listing text belongs to.
+|link:http://php.net/int[int^]
+a|The listing market ID the new market listing text belongs to.
 
-|link:http://php.net/array[array^]
 a|`$data`
-|The listing market text data as associative array.
+|link:http://php.net/array[array^]
+a|The listing market text data as associative array.
 |===
 
 
@@ -3817,7 +3887,7 @@ public update($listingMarketId, $lang, $data):Plenty\Modules\Listing\Market\Text
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[`ListingMarketText`]
@@ -3826,19 +3896,20 @@ public update($listingMarketId, $lang, $data):Plenty\Modules\Listing\Market\Text
 Update listing market text
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$listingMarketId`
-|The listing market ID the new listing market text belongs to.
+|link:http://php.net/int[int^]
+a|The listing market ID the new listing market text belongs to.
 
-|link:http://php.net/string[string^]
 a|`$lang`
-|The language that should be updated.
+|link:http://php.net/string[string^]
+a|The language that should be updated.
 
-|link:http://php.net/array[array^]
 a|`$data`
-|The listing market text data as associative array.
+|link:http://php.net/array[array^]
+a|The listing market text data as associative array.
 |===
 
 
@@ -3849,7 +3920,7 @@ public updateOrCreate($listingMarketId, $lang, $data):Plenty\Modules\Listing\Mar
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingmarkettext[`ListingMarketText`]
@@ -3858,19 +3929,20 @@ public updateOrCreate($listingMarketId, $lang, $data):Plenty\Modules\Listing\Mar
 Update or create listing market text
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$listingMarketId`
-|The listing market ID the new listing market text belongs to.
+|link:http://php.net/int[int^]
+a|The listing market ID the new listing market text belongs to.
 
-|link:http://php.net/string[string^]
 a|`$lang`
-|The language that should be updated.
+|link:http://php.net/string[string^]
+a|The language that should be updated.
 
-|link:http://php.net/array[array^]
 a|`$data`
-|The listing market text data as associative array.
+|link:http://php.net/array[array^]
+a|The listing market text data as associative array.
 |===
 
 
@@ -3881,7 +3953,7 @@ public delete($id):bool
 
 ----
 
-    
+
 
 
 
@@ -3890,11 +3962,12 @@ public delete($id):bool
 Delete listing market text
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing market text.
+|link:http://php.net/int[int^]
+a|The ID of the listing market text.
 |===
 
 
@@ -3905,7 +3978,7 @@ public search($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -3914,19 +3987,20 @@ public search($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\
 List listing market text
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|The default page that will be returned is page 1.
-
 |link:http://php.net/int[int^]
-a|`$itemsPerPage`
-|The number of entries to be displayed per page. The default number of entries per page is 50.
+a|The default page that will be returned is page 1.
 
-|link:http://php.net/array[array^]
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|The number of entries to be displayed per page. The default number of entries per page is 50.
+
 a|`$filters`
-|The filters that should be applied: 'id', 'language', 'contains'
+|link:http://php.net/array[array^]
+a|The filters that should be applied: 'id', 'language', 'contains'
 |===
 
 
@@ -3937,7 +4011,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -3952,7 +4026,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -3967,7 +4041,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -3976,11 +4050,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -3991,7 +4066,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -4006,7 +4081,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -4021,7 +4096,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -4047,27 +4122,28 @@ The listing market text model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing market text.
-|link:http://php.net/int[int^]
-    |listingMarketId
-    |The ID of the listing market the text belongs to.
-|link:http://php.net/string[string^]
-    |lang
-    |The language of the listing market text. Available values: 'de', 'en', 'fr', 'it', 'es', 'tr', 'nl', 'pl', 'nn', 'da', 'se', 'cz', 'ru', 'sk', 'cn', 'vn', 'pt', 'bg', 'ro'.
-|link:http://php.net/string[string^]
-    |title
-    |The title of the listing market text.
-|link:http://php.net/string[string^]
-    |subtitle
-    |The subtitle of the listing market text.
-|link:http://php.net/string[string^]
-    |description
-    |The description of the listing market text.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market text.
+|listingMarketId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing market the text belongs to.
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the listing market text. Available values: 'de', 'en', 'fr', 'it', 'es', 'tr', 'nl', 'pl', 'nn', 'da', 'se', 'cz', 'ru', 'sk', 'cn', 'vn', 'pt', 'bg', 'ro'.
+|title
+    |link:http://php.net/string[string^]
+    a|The title of the listing market text.
+|subtitle
+    |link:http://php.net/string[string^]
+    a|The subtitle of the listing market text.
+|description
+    |link:http://php.net/string[string^]
+    a|The description of the listing market text.
 |===
 
 
@@ -4080,7 +4156,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -4118,7 +4194,7 @@ public preview():array
 
 ----
 
-    
+
 
 
 
@@ -4133,7 +4209,7 @@ public get($id):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_optiontemplate[`OptionTemplate`]
@@ -4142,11 +4218,12 @@ public get($id):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate
 Get option template
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the option template.
+|link:http://php.net/int[int^]
+a|The ID of the option template.
 |===
 
 
@@ -4157,7 +4234,7 @@ public create($data):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_optiontemplate[`OptionTemplate`]
@@ -4166,11 +4243,12 @@ public create($data):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate
 Create option template
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|The option template data as associative array.
+|link:http://php.net/array[array^]
+a|The option template data as associative array.
 |===
 
 
@@ -4181,7 +4259,7 @@ public update($id, $data):void
 
 ----
 
-    
+
 
 
 
@@ -4190,15 +4268,16 @@ public update($id, $data):void
 Update option template
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the option template.
+|link:http://php.net/int[int^]
+a|The ID of the option template.
 
-|link:http://php.net/array[array^]
 a|`$data`
-|The option template data as associative array.
+|link:http://php.net/array[array^]
+a|The option template data as associative array.
 |===
 
 
@@ -4209,7 +4288,7 @@ public delete($id):void
 
 ----
 
-    
+
 
 
 
@@ -4218,11 +4297,12 @@ public delete($id):void
 Delete option template
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the option template.
+|link:http://php.net/int[int^]
+a|The ID of the option template.
 |===
 
 
@@ -4244,24 +4324,25 @@ The option template model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the option template.
-|link:http://php.net/string[string^]
-    |name
-    |The name of the option template.
-|link:http://php.net/array[array^]
-    |listing
-    |The listing options of the option template.
-|link:http://php.net/array[array^]
-    |listingMarket
-    |The listing market options of the option template.
-|link:http://php.net/array[array^]
-    |marketOptions
-    |The market options of the option template.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the option template.
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the option template.
+|listing
+    |link:http://php.net/array[array^]
+    a|The listing options of the option template.
+|listingMarket
+    |link:http://php.net/array[array^]
+    a|The listing market options of the option template.
+|marketOptions
+    |link:http://php.net/array[array^]
+    a|The market options of the option template.
 |===
 
 
@@ -4274,7 +4355,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -4303,12 +4384,13 @@ The listing price type model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing price type. The following date types are available:
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing price type. The following date types are available:
 <ul>
 <li>1 = Start price</li>
 <li>2 = Fixed price</li>
@@ -4316,12 +4398,12 @@ The listing price type model.
 <li>4 = SCO minimum price</li>
 <li>5 = Market fee</li>
 </ul>
-|link:http://php.net/bool[bool^]
-    |isErasable
-    |Flag that states if this type can be deleted or not.
-|
-    |names
-    |The listing price type names.
+|isErasable
+    |link:http://php.net/bool[bool^]
+    a|Flag that states if this type can be deleted or not.
+|names
+    |
+    a|The listing price type names.
 |===
 
 
@@ -4334,7 +4416,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -4359,21 +4441,22 @@ The listing price type name model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing price type name.
-|link:http://php.net/int[int^]
-    |typeId
-    |The ID of the listing price type.
-|link:http://php.net/int[int^]
-    |name
-    |The name of the listing price type.
-|link:http://php.net/int[int^]
-    |lang
-    |The language of the listing price type name.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing price type name.
+|typeId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing price type.
+|name
+    |link:http://php.net/int[int^]
+    a|The name of the listing price type.
+|lang
+    |link:http://php.net/int[int^]
+    a|The language of the listing price type name.
 |===
 
 
@@ -4386,7 +4469,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -4415,12 +4498,13 @@ The listing properties model. Each listing property has a type.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing property. The following types are available:
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing property. The following types are available:
 <ul>
 <li>1 = Shipping profile ID</li>
 <li>2 = Order status</li>
@@ -4485,9 +4569,9 @@ The listing properties model. Each listing property has a type.
 <li>311 = Ricardo template ID</li>
 <li>312 = Ricardo is relist sold out</li>
 </ul>
-|link:http://php.net/bool[bool^]
-    |isErasable
-    |Flag that indicates if this type can be deleted or not.
+|isErasable
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if this type can be deleted or not.
 |===
 
 
@@ -4500,7 +4584,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -4525,21 +4609,22 @@ The listing property type name model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing property type name.
-|link:http://php.net/int[int^]
-    |typeId
-    |The ID of the listing property type.
-|link:http://php.net/int[int^]
-    |name
-    |The name of the listing property type.
-|link:http://php.net/int[int^]
-    |lang
-    |The language of the listing property type name.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing property type name.
+|typeId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing property type.
+|name
+    |link:http://php.net/int[int^]
+    a|The name of the listing property type.
+|lang
+    |link:http://php.net/int[int^]
+    a|The language of the listing property type name.
 |===
 
 
@@ -4552,7 +4637,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -4590,7 +4675,7 @@ public get($id, $with = []):Plenty\Modules\Listing\ShippingProfile\Models\Shippi
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
@@ -4599,15 +4684,16 @@ public get($id, $with = []):Plenty\Modules\Listing\ShippingProfile\Models\Shippi
 Get a shipping profile
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the shipping profile.
+|link:http://php.net/int[int^]
+a|The ID of the shipping profile.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the ShippingProfile instance.
+|link:http://php.net/array[array^]
+a|The relations to load in the ShippingProfile instance.
 |===
 
 
@@ -4618,7 +4704,7 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -4627,23 +4713,24 @@ public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\R
 Search shipping profiles
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|The page to get. The default page that will be returned is page 1.
-
 |link:http://php.net/int[int^]
+a|The page to get. The default page that will be returned is page 1.
+
 a|`$itemsPerPage`
-|The number of entries to be displayed per page. The default number of entries per page is 50.
+|link:http://php.net/int[int^]
+a|The number of entries to be displayed per page. The default number of entries per page is 50.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the ShippingProfile instance.
-
 |link:http://php.net/array[array^]
+a|The relations to load in the ShippingProfile instance.
+
 a|`$filters`
-|The filters that should be applied. The filters that could be applied: 'id', 'referrerId', 'credentialsId'.
+|link:http://php.net/array[array^]
+a|The filters that should be applied. The filters that could be applied: 'id', 'referrerId', 'credentialsId'.
 |===
 
 
@@ -4654,7 +4741,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -4669,7 +4756,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -4684,7 +4771,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -4693,11 +4780,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -4708,7 +4796,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -4723,7 +4811,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -4738,7 +4826,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -4773,7 +4861,7 @@ public __construct($shippingProfile):void
 
 ----
 
-    
+
 
 
 
@@ -4782,11 +4870,12 @@ public __construct($shippingProfile):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
+|Name |Type |Description
 a|`$shippingProfile`
-|
+|        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
+a|
 |===
 
 
@@ -4797,7 +4886,7 @@ public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\Shippi
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
@@ -4831,7 +4920,7 @@ public __construct($shippingProfile):void
 
 ----
 
-    
+
 
 
 
@@ -4840,11 +4929,12 @@ public __construct($shippingProfile):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
+|Name |Type |Description
 a|`$shippingProfile`
-|
+|        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
+a|
 |===
 
 
@@ -4855,7 +4945,7 @@ public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\Shippi
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
@@ -4889,7 +4979,7 @@ public __construct($shippingProfile):void
 
 ----
 
-    
+
 
 
 
@@ -4898,11 +4988,12 @@ public __construct($shippingProfile):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
+|Name |Type |Description
 a|`$shippingProfile`
-|
+|        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
+a|
 |===
 
 
@@ -4913,7 +5004,7 @@ public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\Shippi
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
@@ -4947,7 +5038,7 @@ public __construct($shippingProfile):void
 
 ----
 
-    
+
 
 
 
@@ -4956,11 +5047,12 @@ public __construct($shippingProfile):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
+|Name |Type |Description
 a|`$shippingProfile`
-|
+|        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
+a|
 |===
 
 
@@ -4971,7 +5063,7 @@ public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\Shippi
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_shippingprofile[`ShippingProfile`]
@@ -4997,30 +5089,31 @@ The listing shipping profile model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The listing shipping profile ID.
-|link:http://php.net/string[string^]
-    |name
-    |The listing shipping profile name.
-|link:http://php.net/int[int^]
-    |credentialsId
-    |The credentials ID that this listing shipping profile belongs to.
-|link:http://php.net/int[int^]
-    |referrerId
-    |The referrer ID.
-|link:http://php.net/string[string^]
-    |createdBy
-    |Who created the shipping profile. Possible values: 'migration','customer','external'.
-|link:http://php.net/bool[bool^]
-    |isDefault
-    |Tells if the current listing shipping profile is set as default.
-|link:http://php.net/array[array^]
-    |extendedData
-    |Extended data that defines the current shipping profile.
+|id
+    |link:http://php.net/int[int^]
+    a|The listing shipping profile ID.
+|name
+    |link:http://php.net/string[string^]
+    a|The listing shipping profile name.
+|credentialsId
+    |link:http://php.net/int[int^]
+    a|The credentials ID that this listing shipping profile belongs to.
+|referrerId
+    |link:http://php.net/int[int^]
+    a|The referrer ID.
+|createdBy
+    |link:http://php.net/string[string^]
+    a|Who created the shipping profile. Possible values: 'migration','customer','external'.
+|isDefault
+    |link:http://php.net/bool[bool^]
+    a|Tells if the current listing shipping profile is set as default.
+|extendedData
+    |link:http://php.net/array[array^]
+    a|Extended data that defines the current shipping profile.
 |===
 
 
@@ -5033,7 +5126,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -5062,21 +5155,22 @@ The listing status model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing status.
-|link:http://php.net/int[int^]
-    |isErasable
-    |Flag that indicates if the status can be deleted.
-|link:http://php.net/int[int^]
-    |position
-    |The position for sorting.
-|
-    |names
-    |The listing status names.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing status.
+|isErasable
+    |link:http://php.net/int[int^]
+    a|Flag that indicates if the status can be deleted.
+|position
+    |link:http://php.net/int[int^]
+    a|The position for sorting.
+|names
+    |
+    a|The listing status names.
 |===
 
 
@@ -5089,7 +5183,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -5114,21 +5208,22 @@ The listing status name model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing status name.
-|link:http://php.net/int[int^]
-    |statusId
-    |The ID of the listing status.
-|link:http://php.net/string[string^]
-    |name
-    |The name of the listing status.
-|link:http://php.net/string[string^]
-    |lang
-    |The language of the listing status name.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing status name.
+|statusId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing status.
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the listing status.
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the listing status name.
 |===
 
 
@@ -5141,7 +5236,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -5179,7 +5274,7 @@ public get($id, $with = []):Plenty\Modules\Listing\StockDependenceType\Models\St
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_stockdependencetype[`StockDependenceType`]
@@ -5188,15 +5283,16 @@ public get($id, $with = []):Plenty\Modules\Listing\StockDependenceType\Models\St
 Get a listing stock dependence type
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing stock dependence type.
+|link:http://php.net/int[int^]
+a|The ID of the listing stock dependence type.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the StockDependenceType instance, available values are: "names".
+|link:http://php.net/array[array^]
+a|The relations to load in the StockDependenceType instance, available values are: "names".
 |===
 
 
@@ -5207,7 +5303,7 @@ public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -5216,19 +5312,20 @@ public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models
 List listing stock dependence types
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|The default page that will be returned is page 1.
-
 |link:http://php.net/int[int^]
-a|`$itemsPerPage`
-|The number of entries to be displayed per page. The default number of entries per page is 50.
+a|The default page that will be returned is page 1.
 
-|link:http://php.net/array[array^]
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|The number of entries to be displayed per page. The default number of entries per page is 50.
+
 a|`$with`
-|The relations to load in the ListingMarket instance. The relations available are 'names'.
+|link:http://php.net/array[array^]
+a|The relations to load in the ListingMarket instance. The relations available are 'names'.
 |===
 
 
@@ -5250,21 +5347,22 @@ The listing stock dependence type model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing stock dependence type.
-|link:http://php.net/int[int^]
-    |isErasable
-    |Flag that indicates if the type can be deleted.
-|link:http://php.net/int[int^]
-    |position
-    |The position for sorting.
-|
-    |names
-    |The listing stock dependence type names.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing stock dependence type.
+|isErasable
+    |link:http://php.net/int[int^]
+    a|Flag that indicates if the type can be deleted.
+|position
+    |link:http://php.net/int[int^]
+    a|The position for sorting.
+|names
+    |
+    a|The listing stock dependence type names.
 |===
 
 
@@ -5277,7 +5375,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -5302,21 +5400,22 @@ The listing stock dependence type name model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing stock dependence type name.
-|link:http://php.net/int[int^]
-    |typeId
-    |The ID of the listing stock type.
-|link:http://php.net/string[string^]
-    |name
-    |The name of the listing stock dependence type.
-|link:http://php.net/string[string^]
-    |lang
-    |The language of the listing stock dependence type name.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing stock dependence type name.
+|typeId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing stock type.
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the listing stock dependence type.
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the listing stock dependence type name.
 |===
 
 
@@ -5329,7 +5428,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -5367,7 +5466,7 @@ public get($id, $with = []):Plenty\Modules\Listing\Type\Models\ListingType
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Listing.adoc#listing_models_listingtype[`ListingType`]
@@ -5376,15 +5475,16 @@ public get($id, $with = []):Plenty\Modules\Listing\Type\Models\ListingType
 Get a listing type
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|The ID of the listing type.
+|link:http://php.net/int[int^]
+a|The ID of the listing type.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to load in the type instance, available values are: "names".
+|link:http://php.net/array[array^]
+a|The relations to load in the type instance, available values are: "names".
 |===
 
 
@@ -5395,7 +5495,7 @@ public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -5404,19 +5504,20 @@ public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models
 List listing types
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|The default page that will be returned is page 1.
-
 |link:http://php.net/int[int^]
-a|`$itemsPerPage`
-|The number of entries to be displayed per page. The default number of entries per page is 50.
+a|The default page that will be returned is page 1.
 
-|link:http://php.net/array[array^]
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|The number of entries to be displayed per page. The default number of entries per page is 50.
+
 a|`$with`
-|The relations to load in the ListingMarket instance. The relations available are 'names'.
+|link:http://php.net/array[array^]
+a|The relations to load in the ListingMarket instance. The relations available are 'names'.
 |===
 
 
@@ -5438,21 +5539,22 @@ The listing type model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing type.
-|link:http://php.net/int[int^]
-    |isErasable
-    |Flag that indicates if the type can be deleted.
-|link:http://php.net/int[int^]
-    |position
-    |The position for sorting.
-|
-    |names
-    |The listing type names.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing type.
+|isErasable
+    |link:http://php.net/int[int^]
+    a|Flag that indicates if the type can be deleted.
+|position
+    |link:http://php.net/int[int^]
+    a|The position for sorting.
+|names
+    |
+    a|The listing type names.
 |===
 
 
@@ -5465,7 +5567,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -5490,21 +5592,22 @@ The listing type name model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the listing type name.
-|link:http://php.net/int[int^]
-    |typeId
-    |The ID of the listing type.
-|link:http://php.net/string[string^]
-    |name
-    |The name of the listing type.
-|link:http://php.net/string[string^]
-    |lang
-    |The language of the listing type name.
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the listing type name.
+|typeId
+    |link:http://php.net/int[int^]
+    a|The ID of the listing type.
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the listing type.
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the listing type name.
 |===
 
 
@@ -5517,7 +5620,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 

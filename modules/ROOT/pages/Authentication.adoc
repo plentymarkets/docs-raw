@@ -35,7 +35,7 @@ public authenticateWithContactEmail($contactEmail, $password):void
 
 ----
 
-    
+
 
 
 
@@ -44,15 +44,16 @@ public authenticateWithContactEmail($contactEmail, $password):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$contactEmail`
-|The email address of the contact of the user
-
 |link:http://php.net/string[string^]
+a|The email address of the contact of the user
+
 a|`$password`
-|The password of the user
+|link:http://php.net/string[string^]
+a|The password of the user
 |===
 
 
@@ -63,7 +64,7 @@ public authenticateWithContactId($contactId, $password):void
 
 ----
 
-    
+
 
 
 
@@ -72,15 +73,16 @@ public authenticateWithContactId($contactId, $password):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$contactId`
-|The ID of the contact of the user
+|link:http://php.net/int[int^]
+a|The ID of the contact of the user
 
-|link:http://php.net/string[string^]
 a|`$password`
-|The password of the user
+|link:http://php.net/string[string^]
+a|The password of the user
 |===
 
 
@@ -91,7 +93,7 @@ public authenticateWithPlentyId($plentyId, $password):void
 
 ----
 
-    
+
 
 
 
@@ -100,15 +102,16 @@ public authenticateWithPlentyId($plentyId, $password):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$plentyId`
-|The PlentyId of the plenty system of the user
+|link:http://php.net/int[int^]
+a|The PlentyId of the plenty system of the user
 
-|link:http://php.net/string[string^]
 a|`$password`
-|The password of the user
+|link:http://php.net/string[string^]
+a|The password of the user
 |===
 
 
@@ -119,7 +122,7 @@ public authenticateWithToken($token):void
 
 ----
 
-    
+
 
 
 
@@ -128,11 +131,12 @@ public authenticateWithToken($token):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$token`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -143,7 +147,7 @@ public logout():void
 
 ----
 
-    
+
 
 
 
@@ -178,7 +182,7 @@ public isSuccessful():bool
 
 ----
 
-    
+
 
 
 
@@ -193,7 +197,7 @@ public getAccountContact():Plenty\Modules\Account\Contact\Models\Contact
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Account.adoc#account_models_contact[`Contact`]
@@ -235,72 +239,73 @@ The user authentication model
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the user
-|link:http://php.net/int[int^]
-    |userId
-    |The ID of the user
-|
-    |pwd
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the user
+|userId
+    |link:http://php.net/int[int^]
+    a|The ID of the user
+|pwd
     |
-|
-    |pwd_md5
+    a|
+|pwd_md5
     |
-|link:http://php.net/string[string^]
-    |email
+    a|
+|email
+    |link:http://php.net/string[string^]
+    a|
+|emailHash
+    |link:http://php.net/string[string^]
+    a|
+|timezone
+    |link:http://php.net/string[string^]
+    a|
+|ticket
+    |link:http://php.net/int[int^]
+    a|
+|password
+    |link:http://php.net/string[string^]
+    a|The password of the user
+|user
     |
-|link:http://php.net/string[string^]
-    |emailHash
-    |
-|link:http://php.net/string[string^]
-    |timezone
-    |
-|link:http://php.net/int[int^]
-    |ticket
-    |
-|link:http://php.net/string[string^]
-    |password
-    |The password of the user
-|
-    |user
-    |The login name of the user
-|link:http://php.net/string[string^]
-    |username
-    |The login name of the user
-|link:http://php.net/int[int^]
-    |userClass
-    |
-|link:http://php.net/array[array^]
-    |userRights
-    |
-|link:http://php.net/array[array^]
-    |uiConfig
-    |
-|link:http://php.net/array[array^]
-    |permissions
-    |
-|link:http://php.net/array[array^]
-    |pluginPermissions
-    |
-|link:http://php.net/array[array^]
-    |roles
-    |
-|link:http://php.net/array[array^]
-    |accessControl
-    |
-|link:http://php.net/int[int^]
-    |daysLeftToChangePassword
-    |
-|link:http://php.net/bool[bool^]
-    |isSupportUser
-    |
-|link:http://php.net/string[string^]
-    |oauthAccessTokensId
-    |
+    a|The login name of the user
+|username
+    |link:http://php.net/string[string^]
+    a|The login name of the user
+|userClass
+    |link:http://php.net/int[int^]
+    a|
+|userRights
+    |link:http://php.net/array[array^]
+    a|
+|uiConfig
+    |link:http://php.net/array[array^]
+    a|
+|permissions
+    |link:http://php.net/array[array^]
+    a|
+|pluginPermissions
+    |link:http://php.net/array[array^]
+    a|
+|roles
+    |link:http://php.net/array[array^]
+    a|
+|accessControl
+    |link:http://php.net/array[array^]
+    a|
+|daysLeftToChangePassword
+    |link:http://php.net/int[int^]
+    a|
+|isSupportUser
+    |link:http://php.net/bool[bool^]
+    a|
+|oauthAccessTokensId
+    |link:http://php.net/string[string^]
+    a|
 |===
 
 
@@ -313,7 +318,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 

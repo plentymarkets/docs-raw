@@ -35,7 +35,7 @@ public getContentLinks($pluginSetId):array
 
 ----
 
-    
+
 
 
 
@@ -44,11 +44,12 @@ public getContentLinks($pluginSetId):array
 Get all linked contents for a plugin set
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$pluginSetId`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -59,7 +60,7 @@ public getContentLink($contentLinkId):Plenty\Modules\ShopBuilder\Models\ContentL
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
@@ -68,11 +69,12 @@ public getContentLink($contentLinkId):Plenty\Modules\ShopBuilder\Models\ContentL
 Get a single connection between a content and a layout container
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$contentLinkId`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -83,7 +85,7 @@ public createContentLink($data):Plenty\Modules\ShopBuilder\Models\ContentLink
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
@@ -92,11 +94,12 @@ public createContentLink($data):Plenty\Modules\ShopBuilder\Models\ContentLink
 Link a content to a layout container
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -107,7 +110,7 @@ public updateContentLink($contentLinkId, $data):Plenty\Modules\ShopBuilder\Model
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
@@ -116,15 +119,16 @@ public updateContentLink($contentLinkId, $data):Plenty\Modules\ShopBuilder\Model
 Update a link between a content and a layout container
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$contentLinkId`
-|
+|link:http://php.net/int[int^]
+a|
 
-|link:http://php.net/array[array^]
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -135,7 +139,7 @@ public deleteContentLink($contentLinkId):void
 
 ----
 
-    
+
 
 
 
@@ -144,11 +148,12 @@ public deleteContentLink($contentLinkId):void
 Unlink a content from a layout container. The content itself will remain
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$contentLinkId`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -159,7 +164,7 @@ public getContentLinksForContainer($containerName, $pluginSetId = null, $lang = 
 
 ----
 
-    
+
 
 
 
@@ -168,27 +173,28 @@ public getContentLinksForContainer($containerName, $pluginSetId = null, $lang = 
 Get all content links for a specific layout container.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$containerName`
-|The name of the layout container to get content links for.
+|link:http://php.net/string[string^]
+a|The name of the layout container to get content links for.
 
-|link:http://php.net/int[int^]
 a|`$pluginSetId`
-|An id of a plugin set to get content links for. Active plugin set will be used by default.
+|link:http://php.net/int[int^]
+a|An id of a plugin set to get content links for. Active plugin set will be used by default.
 
-|link:http://php.net/string[string^]
 a|`$lang`
-|The language to get content links for. Current language will be get from session if not defined.
-
 |link:http://php.net/string[string^]
-a|`$contentType`
-|Type of the content to get
+a|The language to get content links for. Current language will be get from session if not defined.
 
-|link:http://php.net/bool[bool^]
+a|`$contentType`
+|link:http://php.net/string[string^]
+a|Type of the content to get
+
 a|`$filterResults`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -218,7 +224,7 @@ public getWidgets():void
 
 ----
 
-    
+
 
 
 
@@ -252,7 +258,7 @@ public getContents():array
 
 ----
 
-    
+
 
 
 
@@ -267,7 +273,7 @@ public searchContents($itemsPerPage = 20, $page = 1, $params = []):Plenty\Reposi
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -276,19 +282,20 @@ public searchContents($itemsPerPage = 20, $page = 1, $params = []):Plenty\Reposi
 Search for contents
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$itemsPerPage`
-|Maximum number of items to be returned on each page
-
 |link:http://php.net/int[int^]
-a|`$page`
-|Current page
+a|Maximum number of items to be returned on each page
 
-|link:http://php.net/array[array^]
+a|`$page`
+|link:http://php.net/int[int^]
+a|Current page
+
 a|`$params`
-|Search parameters
+|link:http://php.net/array[array^]
+a|Search parameters
 |===
 
 
@@ -299,7 +306,7 @@ public getContent($contentId, $pluginSetId, $frontendLanguage = null, $versionId
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
@@ -308,23 +315,24 @@ public getContent($contentId, $pluginSetId, $frontendLanguage = null, $versionId
 Get a single content.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$contentId`
-|Id of the content to get information for
-
 |link:http://php.net/int[int^]
+a|Id of the content to get information for
+
 a|`$pluginSetId`
-|Plugin set id to be used for rendering widgets.
+|link:http://php.net/int[int^]
+a|Plugin set id to be used for rendering widgets.
 
-|link:http://php.net/string[string^]
 a|`$frontendLanguage`
-|The language to be used for rendering the widgets.
-
 |link:http://php.net/string[string^]
+a|The language to be used for rendering the widgets.
+
 a|`$versionId`
-|The version of the content
+|link:http://php.net/string[string^]
+a|The version of the content
 |===
 
 
@@ -335,7 +343,7 @@ public listContentVersions($contentId, $itemsPerPage = 20, $versionIdMarker = &q
 
 ----
 
-    
+
 
 
 
@@ -344,19 +352,20 @@ public listContentVersions($contentId, $itemsPerPage = 20, $versionIdMarker = &q
 Get a list of Versions of the specified content.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$contentId`
-|
-
 |link:http://php.net/int[int^]
-a|`$itemsPerPage`
-|
+a|
 
-|link:http://php.net/string[string^]
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|
+
 a|`$versionIdMarker`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -367,7 +376,7 @@ public restoreContentVersion($contentId, $versionId, $pluginSetId, $frontendLang
 
 ----
 
-    
+
 
 
 
@@ -376,23 +385,24 @@ public restoreContentVersion($contentId, $versionId, $pluginSetId, $frontendLang
 Restore a specific content version
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$contentId`
-|
-
-|link:http://php.net/string[string^]
-a|`$versionId`
-|
-
 |link:http://php.net/int[int^]
-a|`$pluginSetId`
-|
+a|
 
-|
+a|`$versionId`
+|link:http://php.net/string[string^]
+a|
+
+a|`$pluginSetId`
+|link:http://php.net/int[int^]
+a|
+
 a|`$frontendLanguage`
 |
+a|
 |===
 
 
@@ -403,7 +413,7 @@ public createContent($pluginSetId, $data, $frontendLanguage = null):Plenty\Modul
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
@@ -412,19 +422,20 @@ public createContent($pluginSetId, $data, $frontendLanguage = null):Plenty\Modul
 Create new content. New content will not be linked to any layout container.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$pluginSetId`
-|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
+|link:http://php.net/int[int^]
+a|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
 
-|
 a|`$data`
-|The raw content data.
+|
+a|The raw content data.
 
-|link:http://php.net/string[string^]
 a|`$frontendLanguage`
-|The language to be used for rendering the widgets.
+|link:http://php.net/string[string^]
+a|The language to be used for rendering the widgets.
 |===
 
 
@@ -435,7 +446,7 @@ public updateContent($pluginSetId, $contentId, $data, $frontendLanguage = null):
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
@@ -444,23 +455,24 @@ public updateContent($pluginSetId, $contentId, $data, $frontendLanguage = null):
 Update content.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$pluginSetId`
-|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
-
 |link:http://php.net/int[int^]
+a|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
+
 a|`$contentId`
-|The id of the content to be updated.
+|link:http://php.net/int[int^]
+a|The id of the content to be updated.
 
-|
 a|`$data`
-|The raw data of the content.
+|
+a|The raw data of the content.
 
-|link:http://php.net/string[string^]
 a|`$frontendLanguage`
-|The language to be used for rendering the widgets.
+|link:http://php.net/string[string^]
+a|The language to be used for rendering the widgets.
 |===
 
 
@@ -471,7 +483,7 @@ public deleteContent($pluginSetId, $contentId):void
 
 ----
 
-    
+
 
 
 
@@ -480,15 +492,16 @@ public deleteContent($pluginSetId, $contentId):void
 Delete content. Any connections to layout containers will be removed too.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$pluginSetId`
-|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
-
 |link:http://php.net/int[int^]
+a|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
+
 a|`$contentId`
-|The id of the content to be deleted.
+|link:http://php.net/int[int^]
+a|The id of the content to be deleted.
 |===
 
 
@@ -499,7 +512,7 @@ public duplicateContent($contentId, $targetPluginSetId, $language, $containerNam
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
@@ -508,27 +521,28 @@ public duplicateContent($contentId, $targetPluginSetId, $language, $containerNam
 Duplicate a content and its link
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$contentId`
-|
-
 |link:http://php.net/int[int^]
+a|
+
 a|`$targetPluginSetId`
-|
+|link:http://php.net/int[int^]
+a|
 
-|link:http://php.net/string[string^]
 a|`$language`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$containerName`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$contentName`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -539,7 +553,7 @@ public rebuildContents($containerName = null, $pluginSetId = null):int
 
 ----
 
-    
+
 
 
 
@@ -548,15 +562,16 @@ public rebuildContents($containerName = null, $pluginSetId = null):int
 Rebuild all contents linked to the current plugin set.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$containerName`
-|Name of the layout container to rebuild contents for.
+|link:http://php.net/string[string^]
+a|Name of the layout container to rebuild contents for.
 
-|link:http://php.net/int[int^]
 a|`$pluginSetId`
-|Id of the plugin set to rebuild contents for.
+|link:http://php.net/int[int^]
+a|Id of the plugin set to rebuild contents for.
 |===
 
 
@@ -586,7 +601,7 @@ public registerWidget($widgetClass):void
 
 ----
 
-    
+
 
 
 
@@ -595,11 +610,12 @@ public registerWidget($widgetClass):void
 Register a widget to be available in the shop builder.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$widgetClass`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -610,7 +626,7 @@ public overrideWidget($widgetIdentifier, $overrideWidget):void
 
 ----
 
-    
+
 
 
 
@@ -619,15 +635,16 @@ public overrideWidget($widgetIdentifier, $overrideWidget):void
 Override a widget class to extend data or settings of the widget.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$widgetIdentifier`
-|The identifier of the original widget to override
-
 |link:http://php.net/string[string^]
+a|The identifier of the original widget to override
+
 a|`$overrideWidget`
-|The class of the new class to get information of the widget from.
+|link:http://php.net/string[string^]
+a|The class of the new class to get information of the widget from.
 |===
 
 
@@ -657,7 +674,7 @@ public getData():array
 
 ----
 
-    
+
 
 
 
@@ -684,7 +701,7 @@ public getSettings():array
 
 ----
 
-    
+
 
 
 
@@ -699,7 +716,7 @@ public getPreview($widgetSettings = [], $children = []):string
 
 ----
 
-    
+
 
 
 
@@ -708,15 +725,16 @@ public getPreview($widgetSettings = [], $children = []):string
 Render the template of the widget twice to get the final markup to be displayed in the preview of the builder.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$widgetSettings`
-|
-
 |link:http://php.net/array[array^]
+a|
+
 a|`$children`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -727,7 +745,7 @@ public render($widgetSettings = [], $children = []):string
 
 ----
 
-    
+
 
 
 
@@ -736,15 +754,16 @@ public render($widgetSettings = [], $children = []):string
 Render the template of the widget.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$widgetSettings`
-|
-
 |link:http://php.net/array[array^]
+a|
+
 a|`$children`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -774,7 +793,7 @@ public readSettings():void
 
 ----
 
-    
+
 
 
 
@@ -789,7 +808,7 @@ public writeSettings($values):void
 
 ----
 
-    
+
 
 
 
@@ -798,11 +817,12 @@ public writeSettings($values):void
 Store values of global settings.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$values`
 |
+a|
 |===
 
 
@@ -832,7 +852,7 @@ public getPreview($widgetSettings = [], $children = []):string
 
 ----
 
-    
+
 
 
 
@@ -841,15 +861,16 @@ public getPreview($widgetSettings = [], $children = []):string
 Render the template of the widget twice to get the final markup to be displayed in the preview of the builder.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$widgetSettings`
-|
-
 |link:http://php.net/array[array^]
+a|
+
 a|`$children`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -860,7 +881,7 @@ public render($widgetSettings = [], $children = []):string
 
 ----
 
-    
+
 
 
 
@@ -869,15 +890,16 @@ public render($widgetSettings = [], $children = []):string
 Render the template of the widget.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$widgetSettings`
-|
-
 |link:http://php.net/array[array^]
+a|
+
 a|`$children`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -908,7 +930,7 @@ public static inherit($parentWidgetClass):Plenty\Modules\ContentBuilder\Factorie
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_contentbuilder_factories[`Factories`]
@@ -917,11 +939,12 @@ public static inherit($parentWidgetClass):Plenty\Modules\ContentBuilder\Factorie
 Create a new factory instance and initialize values from given widget class.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$parentWidgetClass`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -932,7 +955,7 @@ public static create($data = []):Plenty\Modules\ContentBuilder\Factories
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_contentbuilder_factories[`Factories`]
@@ -941,11 +964,12 @@ public static create($data = []):Plenty\Modules\ContentBuilder\Factories
 Create a new factory instance with initial values.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -956,7 +980,7 @@ public createSetting($key, $settingsFactory = &quot;&quot;, $args = []):void
 
 ----
 
-    
+
 
 
 
@@ -965,19 +989,20 @@ public createSetting($key, $settingsFactory = &quot;&quot;, $args = []):void
 Create a generic widget settings entry.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The key of the new settings entry. If key already exists, previous entry will be overridden.
-
 |link:http://php.net/string[string^]
-a|`$settingsFactory`
-|Class name of the settings factory to add an instance of
+a|The key of the new settings entry. If key already exists, previous entry will be overridden.
 
-|link:http://php.net/array[array^]
+a|`$settingsFactory`
+|link:http://php.net/string[string^]
+a|Class name of the settings factory to add an instance of
+
 a|`$args`
-|Arguments to be passed to the factory constructor method
+|link:http://php.net/array[array^]
+a|Arguments to be passed to the factory constructor method
 |===
 
 
@@ -988,7 +1013,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -1003,7 +1028,7 @@ public withPointer($key):Plenty\Modules\ContentBuilder\Factories
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_contentbuilder_factories[`Factories`]
@@ -1012,11 +1037,12 @@ public withPointer($key):Plenty\Modules\ContentBuilder\Factories
 Set a settings key to insert new settings after.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1027,7 +1053,7 @@ public addSetting($key, $setting):void
 
 ----
 
-    
+
 
 
 
@@ -1036,15 +1062,16 @@ public addSetting($key, $setting):void
 Insert a new settings factory at the current pointer.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|
+|link:http://php.net/string[string^]
+a|
 
-|
 a|`$setting`
 |
+a|
 |===
 
 
@@ -1091,7 +1118,7 @@ public isShopBuilder():bool
 
 ----
 
-    
+
 
 
 
@@ -1106,7 +1133,7 @@ public getPreviewContentType():string
 
 ----
 
-    
+
 
 
 
@@ -1121,7 +1148,7 @@ public getPreviewUri():void
 
 ----
 
-    
+
 
 
 
@@ -1137,7 +1164,7 @@ public getMainContentType():string
 
 ----
 
-    
+
 
 
 
@@ -1152,7 +1179,7 @@ public setMainContentType($mainContentType):void
 
 ----
 
-    
+
 
 
 
@@ -1162,11 +1189,12 @@ Set the type of the currently displayed item content
 This will be used to determine the corresponding header/footer contents which are linked to a specific type.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$mainContentType`
-|Possible values:
+|link:http://php.net/string[string^]
+a|Possible values:
 <ul>
  <li>content</li>
  <li>checkout</li>
@@ -1186,7 +1214,7 @@ public getMainContainerName():string
 
 ----
 
-    
+
 
 
 
@@ -1201,7 +1229,7 @@ public setMainContainerName($mainContainerName):void
 
 ----
 
-    
+
 
 
 
@@ -1210,11 +1238,12 @@ public setMainContainerName($mainContainerName):void
 Set the container name where the main content will be loaded into.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$mainContainerName`
-|Name of the layout container.
+|link:http://php.net/string[string^]
+a|Name of the layout container.
 |===
 
 
@@ -1225,7 +1254,7 @@ public setMainCategory($mainCategory):void
 
 ----
 
-    
+
 
 
 
@@ -1234,11 +1263,12 @@ public setMainCategory($mainCategory):void
 Set the id of the currently displayed category.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$mainCategory`
-|Id of the currently displayed category.
+|
+a|Id of the currently displayed category.
 |===
 
 
@@ -1260,33 +1290,34 @@ Content created by the shop builder. May be linked to layout containers.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the content
-|link:http://php.net/string[string^]
-    |dataProviderName
-    |The name of the data provider
-|
-    |createdAt
-    |The date when the content was created
-|
-    |updatedAt
-    |The date when the content was last updated
-|link:http://php.net/string[string^]
-    |type
-    |The type of the content
-|
-    |widgets
-    |The configured widgets of the content. This attribute is deprecated. Use $dropzones instead.
-|link:http://php.net/array[array^]
-    |dropzones
-    |Dropzones of the content
-|        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
-    |link
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the content
+|dataProviderName
+    |link:http://php.net/string[string^]
+    a|The name of the data provider
+|createdAt
     |
+    a|The date when the content was created
+|updatedAt
+    |
+    a|The date when the content was last updated
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the content
+|widgets
+    |
+    a|The configured widgets of the content. This attribute is deprecated. Use $dropzones instead.
+|dropzones
+    |link:http://php.net/array[array^]
+    a|Dropzones of the content
+|link
+    |        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
+    a|
 |===
 
 
@@ -1299,7 +1330,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1324,48 +1355,49 @@ Links a content from the shop builder to a layout container of the frontend plug
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The ID of the content link
-|link:http://php.net/int[int^]
-    |contentId
-    |The ID of the content
-|link:http://php.net/string[string^]
-    |containerName
-    |The name of the container
-|link:http://php.net/int[int^]
-    |pluginSetId
-    |The Id of the plugin set
-|link:http://php.net/string[string^]
-    |language
-    |The language where the content is linked to.
-|link:http://php.net/bool[bool^]
-    |active
-    |Indicates if the link is active and the content should be visible for the frontend.
-|link:http://php.net/string[string^]
-    |relatedContentType
-    |The content type the content is linked to
-|link:http://php.net/string[string^]
-    |relatedContainerName
-    |The container name the content is linked to
-|link:http://php.net/bool[bool^]
-    |inherit
-    |Indicates if this content should be inherited to child contents.
-|link:http://php.net/bool[bool^]
-    |invalid
-    |Indicate if the content is invalid and should be regenerated on next request.
-|
-    |createdAt
-    |The date when the content was created
-|
-    |updatedAt
-    |The date when the content was last updated
-|        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
-    |content
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the content link
+|contentId
+    |link:http://php.net/int[int^]
+    a|The ID of the content
+|containerName
+    |link:http://php.net/string[string^]
+    a|The name of the container
+|pluginSetId
+    |link:http://php.net/int[int^]
+    a|The Id of the plugin set
+|language
+    |link:http://php.net/string[string^]
+    a|The language where the content is linked to.
+|active
+    |link:http://php.net/bool[bool^]
+    a|Indicates if the link is active and the content should be visible for the frontend.
+|relatedContentType
+    |link:http://php.net/string[string^]
+    a|The content type the content is linked to
+|relatedContainerName
+    |link:http://php.net/string[string^]
+    a|The container name the content is linked to
+|inherit
+    |link:http://php.net/bool[bool^]
+    a|Indicates if this content should be inherited to child contents.
+|invalid
+    |link:http://php.net/bool[bool^]
+    a|Indicate if the content is invalid and should be regenerated on next request.
+|createdAt
     |
+    a|The date when the content was created
+|updatedAt
+    |
+    a|The date when the content was last updated
+|content
+    |        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
+    a|
 |===
 
 
@@ -1378,7 +1410,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1403,18 +1435,19 @@ A content page provided by a frontend plugin.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |identifier
-    |The identifier of the content page
-|link:http://php.net/string[string^]
-    |caption
-    |Translation key to read the caption from
-|link:http://php.net/array[array^]
-    |dropzones
-    |Available dropzones of this page to put contents into.
+|identifier
+    |link:http://php.net/string[string^]
+    a|The identifier of the content page
+|caption
+    |link:http://php.net/string[string^]
+    a|Translation key to read the caption from
+|dropzones
+    |link:http://php.net/array[array^]
+    a|Available dropzones of this page to put contents into.
 |===
 
 
@@ -1427,7 +1460,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1452,15 +1485,16 @@ Layout container of a content page where to display link contents generated by t
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |container
-    |The container where dropped contents should be linked to.
-|link:http://php.net/string[string^]
-    |type
-    |The type of contents which can be linked to this dropzone.
+|container
+    |link:http://php.net/string[string^]
+    a|The container where dropped contents should be linked to.
+|type
+    |link:http://php.net/string[string^]
+    a|The type of contents which can be linked to this dropzone.
 |===
 
 
@@ -1473,7 +1507,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1498,39 +1532,40 @@ Content widget provided by a frontend plugin
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |identifier
-    |The identifier of the content widget
-|link:http://php.net/string[string^]
-    |widgetClass
-    |The class of the content widget
-|link:http://php.net/string[string^]
-    |label
-    |The label of the content widget
-|link:http://php.net/string[string^]
-    |tooltip
-    |The tooltip of the content widget
-|link:http://php.net/string[string^]
-    |previewImageURL
-    |The preview image the content widget
-|link:http://php.net/string[string^]
-    |type
-    |The type of the widget
-|link:http://php.net/int[int^]
-    |maxPerPage
-    |Maximum occurrences per content of the widget
-|link:http://php.net/array[array^]
-    |categories
-    |List of categories
-|link:http://php.net/array[array^]
-    |allowedNestingTypes
-    |Allowed types to be nested inside this widget
-|
-    |settings
-    |The settings of the content widget
+|identifier
+    |link:http://php.net/string[string^]
+    a|The identifier of the content widget
+|widgetClass
+    |link:http://php.net/string[string^]
+    a|The class of the content widget
+|label
+    |link:http://php.net/string[string^]
+    a|The label of the content widget
+|tooltip
+    |link:http://php.net/string[string^]
+    a|The tooltip of the content widget
+|previewImageURL
+    |link:http://php.net/string[string^]
+    a|The preview image the content widget
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the widget
+|maxPerPage
+    |link:http://php.net/int[int^]
+    a|Maximum occurrences per content of the widget
+|categories
+    |link:http://php.net/array[array^]
+    a|List of categories
+|allowedNestingTypes
+    |link:http://php.net/array[array^]
+    a|Allowed types to be nested inside this widget
+|settings
+    |
+    a|The settings of the content widget
 |===
 
 
@@ -1543,7 +1578,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1568,15 +1603,16 @@ The rendered preview of a content widget
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |identifier
-    |
-|link:http://php.net/string[string^]
-    |content
-    |
+|identifier
+    |link:http://php.net/string[string^]
+    a|
+|content
+    |link:http://php.net/string[string^]
+    a|
 |===
 
 
@@ -1589,7 +1625,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1624,7 +1660,7 @@ public addField($identifier, $label, $expression):void
 
 ----
 
-    
+
 
 
 
@@ -1633,19 +1669,20 @@ public addField($identifier, $label, $expression):void
 Register a new data field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$identifier`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$label`
-|The label of the field
-
 |link:http://php.net/string[string^]
+a|The label of the field
+
 a|`$expression`
-|The twig expression to be inserted by this field
+|link:http://php.net/string[string^]
+a|The twig expression to be inserted by this field
 |===
 
 
@@ -1656,7 +1693,7 @@ public addChildProvider($label, $childProviderClass, $params = []):void
 
 ----
 
-    
+
 
 
 
@@ -1665,19 +1702,20 @@ public addChildProvider($label, $childProviderClass, $params = []):void
 Register a nested provider containing a list of child data fields.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$label`
-|The label of the group
-
 |link:http://php.net/string[string^]
-a|`$childProviderClass`
-|The class name of the nested data fields provider.
+a|The label of the group
 
-|link:http://php.net/array[array^]
+a|`$childProviderClass`
+|link:http://php.net/string[string^]
+a|The class name of the nested data fields provider.
+
 a|`$params`
-|Additional parameters to be passed to provider constructor method.
+|link:http://php.net/array[array^]
+a|Additional parameters to be passed to provider constructor method.
 |===
 
 
@@ -1688,7 +1726,7 @@ public addSearchKeywords($identifier, $keywords = []):void
 
 ----
 
-    
+
 
 
 
@@ -1697,15 +1735,16 @@ public addSearchKeywords($identifier, $keywords = []):void
 Assign keywords to a field to be respected during search.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$identifier`
-|The identifier of the field to assign keywords to.
+|link:http://php.net/string[string^]
+a|The identifier of the field to assign keywords to.
 
-|link:http://php.net/array[array^]
 a|`$keywords`
-|A list of keywords. Each keyword may contain a translation key. A single keyword could be a comma separated list of words.
+|link:http://php.net/array[array^]
+a|A list of keywords. Each keyword may contain a translation key. A single keyword could be a comma separated list of words.
 |===
 
 
@@ -1716,7 +1755,7 @@ public register():void
 
 ----
 
-    
+
 
 
 
@@ -1731,7 +1770,7 @@ public getEntries():array
 
 ----
 
-    
+
 
 
 
@@ -1760,12 +1799,13 @@ Common factory to generate properties of a widget setting definition.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|
-    |data
+|data
     |
+    a|
 |===
 
 
@@ -1778,7 +1818,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -1787,11 +1827,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -1802,7 +1843,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -1811,11 +1852,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1826,7 +1868,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -1835,15 +1877,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -1854,7 +1897,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -1863,11 +1906,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -1878,7 +1922,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -1887,11 +1931,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -1902,7 +1947,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -1911,11 +1956,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -1926,7 +1972,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -1935,11 +1981,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -1950,7 +1997,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -1959,15 +2006,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -1978,7 +2026,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -2012,7 +2060,7 @@ public withDisplayResetButton($displayResetButton):Plenty\Modules\ContentBuilder
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2021,11 +2069,12 @@ public withDisplayResetButton($displayResetButton):Plenty\Modules\ContentBuilder
 Display or hide a button to reset the current selection.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$displayResetButton`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -2036,7 +2085,7 @@ public withDisplaySearch($displaySearch):Plenty\Modules\ContentBuilder\Factories
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2045,11 +2094,12 @@ public withDisplaySearch($displaySearch):Plenty\Modules\ContentBuilder\Factories
 Display or hide an input to search for categories with.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$displaySearch`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -2060,7 +2110,7 @@ public withShowFullSelectionPath($showFullSelectionPath):Plenty\Modules\ContentB
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2069,11 +2119,12 @@ public withShowFullSelectionPath($showFullSelectionPath):Plenty\Modules\ContentB
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$showFullSelectionPath`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -2084,7 +2135,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -2093,11 +2144,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -2108,7 +2160,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2117,11 +2169,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -2132,7 +2185,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2141,15 +2194,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -2160,7 +2214,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2169,11 +2223,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -2184,7 +2239,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2193,11 +2248,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -2208,7 +2264,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2217,11 +2273,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -2232,7 +2289,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2241,11 +2298,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -2256,7 +2314,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2265,15 +2323,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -2284,7 +2343,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -2318,7 +2377,7 @@ public withCollapsed($collapsed):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2327,11 +2386,12 @@ public withCollapsed($collapsed):Plenty\Modules\ContentBuilder\Factories\Setting
 Collapse or expand the group by default. The group can be toggled by the user.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$collapsed`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -2342,7 +2402,7 @@ public withCheckboxValues($checkboxValues):Plenty\Modules\ContentBuilder\Factori
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2351,11 +2411,12 @@ public withCheckboxValues($checkboxValues):Plenty\Modules\ContentBuilder\Factori
 Set available checkboxes of the group.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$checkboxValues`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -2366,7 +2427,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2375,11 +2436,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value of the group. This should be an array of values.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$defaultValue`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -2390,7 +2452,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -2399,11 +2461,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -2414,7 +2477,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2423,11 +2486,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -2438,7 +2502,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2447,15 +2511,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -2466,7 +2531,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2475,11 +2540,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -2490,7 +2556,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2499,11 +2565,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -2514,7 +2581,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2523,11 +2590,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -2538,7 +2606,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2547,15 +2615,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -2566,7 +2635,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -2600,7 +2669,7 @@ public withIcon($icon):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2609,11 +2678,12 @@ public withIcon($icon):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the icon of the checkbox.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$icon`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -2624,7 +2694,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -2633,11 +2703,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -2648,7 +2719,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2657,11 +2728,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -2672,7 +2744,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2681,15 +2753,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -2700,7 +2773,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2709,11 +2782,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -2724,7 +2798,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2733,11 +2807,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -2748,7 +2823,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2757,11 +2832,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -2772,7 +2848,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2781,11 +2857,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -2796,7 +2873,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2805,15 +2882,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -2824,7 +2902,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -2858,7 +2936,7 @@ public static create($data = []):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2867,11 +2945,12 @@ public static create($data = []):Plenty\Modules\ContentBuilder\Factories\Setting
 Create a new factory instance with initial value.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -2882,7 +2961,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -2897,7 +2976,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2906,11 +2985,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -2921,7 +3001,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2930,15 +3010,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -2949,7 +3030,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2958,11 +3039,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -2973,7 +3055,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -2982,11 +3064,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -2997,7 +3080,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3006,11 +3089,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -3021,7 +3105,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3030,11 +3114,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -3045,7 +3130,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3054,15 +3139,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -3092,7 +3178,7 @@ public withCalendarTop($isCalendarTop):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3101,11 +3187,12 @@ public withCalendarTop($isCalendarTop):Plenty\Modules\ContentBuilder\Factories\S
 Display the popup containing the calendar above or below the input field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$isCalendarTop`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -3116,7 +3203,7 @@ public withDisplayDateFormat($format):Plenty\Modules\ContentBuilder\Factories\Se
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3125,11 +3212,12 @@ public withDisplayDateFormat($format):Plenty\Modules\ContentBuilder\Factories\Se
 Set the date format to apply to the input field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$format`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -3140,7 +3228,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -3149,11 +3237,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -3164,7 +3253,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3173,11 +3262,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -3188,7 +3278,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3197,15 +3287,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -3216,7 +3307,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3225,11 +3316,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -3240,7 +3332,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3249,11 +3341,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -3264,7 +3357,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3273,11 +3366,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -3288,7 +3382,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3297,11 +3391,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -3312,7 +3407,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3321,15 +3416,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -3340,7 +3436,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -3374,7 +3470,7 @@ public withPriceInput($isPriceInput):Plenty\Modules\ContentBuilder\Factories\Set
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3383,11 +3479,12 @@ public withPriceInput($isPriceInput):Plenty\Modules\ContentBuilder\Factories\Set
 Define if input expects a monetary value.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$isPriceInput`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -3398,7 +3495,7 @@ public withDecimalCount($decimalCount):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3407,11 +3504,12 @@ public withDecimalCount($decimalCount):Plenty\Modules\ContentBuilder\Factories\S
 Set the number of decimal places for the input.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$decimalCount`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -3422,7 +3520,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -3431,11 +3529,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -3446,7 +3545,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3455,11 +3554,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -3470,7 +3570,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3479,15 +3579,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -3498,7 +3599,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3507,11 +3608,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -3522,7 +3624,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3531,11 +3633,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -3546,7 +3649,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3555,11 +3658,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -3570,7 +3674,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3579,11 +3683,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -3594,7 +3699,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3603,15 +3708,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -3622,7 +3728,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -3656,7 +3762,7 @@ public withShowPreview($showPreview):Plenty\Modules\ContentBuilder\Factories\Set
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3665,11 +3771,12 @@ public withShowPreview($showPreview):Plenty\Modules\ContentBuilder\Factories\Set
 Display the preview of the selected file.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$showPreview`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -3680,7 +3787,7 @@ public withAllowedExtensions($allowedExtensions):Plenty\Modules\ContentBuilder\F
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3689,11 +3796,12 @@ public withAllowedExtensions($allowedExtensions):Plenty\Modules\ContentBuilder\F
 Restrict allowed file extensions.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$allowedExtensions`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -3704,7 +3812,7 @@ public withFoldersAllowed($foldersAllowed):Plenty\Modules\ContentBuilder\Factori
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3713,11 +3821,12 @@ public withFoldersAllowed($foldersAllowed):Plenty\Modules\ContentBuilder\Factori
 Set to true if the user should be allowed to create new folders.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$foldersAllowed`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -3728,7 +3837,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -3737,11 +3846,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -3752,7 +3862,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3761,11 +3871,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -3776,7 +3887,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3785,15 +3896,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -3804,7 +3916,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3813,11 +3925,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -3828,7 +3941,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3837,11 +3950,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -3852,7 +3966,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3861,11 +3975,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -3876,7 +3991,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3885,11 +4000,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -3900,7 +4016,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3909,15 +4025,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -3928,7 +4045,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -3962,7 +4079,7 @@ public withRadioValues($radioValues):Plenty\Modules\ContentBuilder\Factories\Set
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -3971,11 +4088,12 @@ public withRadioValues($radioValues):Plenty\Modules\ContentBuilder\Factories\Set
 Set the available radio buttons in this group.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$radioValues`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -3986,7 +4104,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -3995,11 +4113,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -4010,7 +4129,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4019,11 +4138,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -4034,7 +4154,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4043,15 +4163,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -4062,7 +4183,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4071,11 +4192,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -4086,7 +4208,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4095,11 +4217,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -4110,7 +4233,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4119,11 +4242,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -4134,7 +4258,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4143,11 +4267,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -4158,7 +4283,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4167,15 +4292,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -4186,7 +4312,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -4220,7 +4346,7 @@ public withOpenOnTop($openOnTop):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4229,11 +4355,12 @@ public withOpenOnTop($openOnTop):Plenty\Modules\ContentBuilder\Factories\Setting
 Set to true to open selection values above the input field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$openOnTop`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -4244,7 +4371,7 @@ public withListBoxValues($listBoxValues):Plenty\Modules\ContentBuilder\Factories
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4253,11 +4380,12 @@ public withListBoxValues($listBoxValues):Plenty\Modules\ContentBuilder\Factories
 Set available selection values.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$listBoxValues`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -4268,7 +4396,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -4277,11 +4405,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -4292,7 +4421,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4301,11 +4430,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -4316,7 +4446,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4325,15 +4455,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -4344,7 +4475,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4353,11 +4484,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -4368,7 +4500,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4377,11 +4509,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -4392,7 +4525,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4401,11 +4534,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -4416,7 +4550,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4425,11 +4559,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -4440,7 +4575,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4449,15 +4584,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -4468,7 +4604,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -4502,7 +4638,7 @@ public withMin($min):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4511,11 +4647,12 @@ public withMin($min):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the minimum value of the slider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -4526,7 +4663,7 @@ public withMax($max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4535,11 +4672,12 @@ public withMax($max):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the maximum value of the slider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$max`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -4550,7 +4688,7 @@ public withInterval($interval):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4559,11 +4697,12 @@ public withInterval($interval):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the interval between the values of the slider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$interval`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -4574,7 +4713,7 @@ public withPrecision($precision):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4583,11 +4722,12 @@ public withPrecision($precision):Plenty\Modules\ContentBuilder\Factories\Setting
 Set the number of decimal places of the value.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$precision`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -4598,7 +4738,7 @@ public withShowMinMax($showMinMax):Plenty\Modules\ContentBuilder\Factories\Setti
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4607,11 +4747,12 @@ public withShowMinMax($showMinMax):Plenty\Modules\ContentBuilder\Factories\Setti
 Set to true to display the minimum and maximum values at each end of the slider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$showMinMax`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -4622,7 +4763,7 @@ public withShowTicks($showTicks):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4631,11 +4772,12 @@ public withShowTicks($showTicks):Plenty\Modules\ContentBuilder\Factories\Setting
 Set to true to display ticks on each value.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$showTicks`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -4646,7 +4788,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -4655,11 +4797,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -4670,7 +4813,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4679,11 +4822,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -4694,7 +4838,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4703,15 +4847,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -4722,7 +4867,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4731,11 +4876,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -4746,7 +4892,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4755,11 +4901,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -4770,7 +4917,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4779,11 +4926,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -4794,7 +4942,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4803,11 +4951,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -4818,7 +4967,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4827,15 +4976,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -4846,7 +4996,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -4880,7 +5030,7 @@ public withListBoxValues($listBoxValues):Plenty\Modules\ContentBuilder\Factories
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4889,11 +5039,12 @@ public withListBoxValues($listBoxValues):Plenty\Modules\ContentBuilder\Factories
 Set available values.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$listBoxValues`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -4904,7 +5055,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -4913,11 +5064,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -4928,7 +5080,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4937,11 +5089,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -4952,7 +5105,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4961,15 +5114,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -4980,7 +5134,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -4989,11 +5143,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -5004,7 +5159,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5013,11 +5168,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -5028,7 +5184,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5037,11 +5193,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -5052,7 +5209,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5061,11 +5218,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -5076,7 +5234,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5085,15 +5243,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -5104,7 +5263,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -5138,7 +5297,7 @@ public withPassword($isPassword):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5147,11 +5306,12 @@ public withPassword($isPassword):Plenty\Modules\ContentBuilder\Factories\Setting
 Set to true if the input field should be handled as a password input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$isPassword`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -5162,7 +5322,7 @@ public withReadonly($isReadonly):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5171,11 +5331,12 @@ public withReadonly($isReadonly):Plenty\Modules\ContentBuilder\Factories\Setting
 Set to true if input field should be readonly.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$isReadonly`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -5186,7 +5347,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -5195,11 +5356,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -5210,7 +5372,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5219,11 +5381,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -5234,7 +5397,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5243,15 +5406,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -5262,7 +5426,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5271,11 +5435,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -5286,7 +5451,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5295,11 +5460,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -5310,7 +5476,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5319,11 +5485,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -5334,7 +5501,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5343,11 +5510,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -5358,7 +5526,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5367,15 +5535,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -5386,7 +5555,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -5420,7 +5589,7 @@ public withFixedHeight($isFixedHeight):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5429,11 +5598,12 @@ public withFixedHeight($isFixedHeight):Plenty\Modules\ContentBuilder\Factories\S
 Set to true if the height should be fixed.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$isFixedHeight`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -5444,7 +5614,7 @@ public withMaxRows($maxRows):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5453,11 +5623,12 @@ public withMaxRows($maxRows):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the maximum number of rows for the textarea.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$maxRows`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -5468,7 +5639,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -5477,11 +5648,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -5492,7 +5664,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5501,11 +5673,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -5516,7 +5689,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5525,15 +5698,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -5544,7 +5718,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5553,11 +5727,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -5568,7 +5743,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5577,11 +5752,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -5592,7 +5768,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5601,11 +5777,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -5616,7 +5793,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5625,11 +5802,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -5640,7 +5818,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5649,15 +5827,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -5668,7 +5847,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -5702,7 +5881,7 @@ public withInternalLinks($internalLinks):Plenty\Modules\ShopBuilder\Factories\Se
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_settings_urlsettingfactory[`UrlSettingFactory`]
@@ -5711,11 +5890,12 @@ public withInternalLinks($internalLinks):Plenty\Modules\ShopBuilder\Factories\Se
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$internalLinks`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -5726,7 +5906,7 @@ public static create($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -5735,11 +5915,12 @@ public static create($data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -5750,7 +5931,7 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5759,11 +5940,12 @@ public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the type of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -5774,7 +5956,7 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5783,15 +5965,16 @@ public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
 Set an option for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|The option key
+|link:http://php.net/string[string^]
+a|The option key
 
-|
 a|`$value`
-|The option value
+|
+a|The option value
 |===
 
 
@@ -5802,7 +5985,7 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5811,11 +5994,12 @@ public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\S
 Set the default value for the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$defaultValue`
-|The default value
+|
+a|The default value
 |===
 
 
@@ -5826,7 +6010,7 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5835,11 +6019,12 @@ public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Setting
 Set a condition if the setting should be visible or not.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$condition`
-|Condition if the related form element should be visible or not.
+|link:http://php.net/string[string^]
+a|Condition if the related form element should be visible or not.
 |===
 
 
@@ -5850,7 +6035,7 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5859,11 +6044,12 @@ public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
 Set the name of the setting.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The label of the setting
+|link:http://php.net/string[string^]
+a|The label of the setting
 |===
 
 
@@ -5874,7 +6060,7 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5883,11 +6069,12 @@ public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
 Set a tooltip text for this input
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$tooltip`
-|An additional description of the setting
+|link:http://php.net/string[string^]
+a|An additional description of the setting
 |===
 
 
@@ -5898,7 +6085,7 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5907,15 +6094,16 @@ public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
 Determines whether the declaration is used to render a list of the specified form field.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$min`
-|Minimum number of entries.
-
 |link:http://php.net/int[int^]
+a|Minimum number of entries.
+
 a|`$max`
-|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|link:http://php.net/int[int^]
+a|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
 |===
 
 
@@ -5926,7 +6114,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -5960,7 +6148,7 @@ public static make():Plenty\Modules\ContentBuilder\Factories\Settings
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5975,7 +6163,7 @@ public addEntry($value, $caption):Plenty\Modules\ContentBuilder\Factories\Settin
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
@@ -5984,15 +6172,16 @@ public addEntry($value, $caption):Plenty\Modules\ContentBuilder\Factories\Settin
 Add an entry to the list of values
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$value`
 |
+a|
 
-|link:http://php.net/string[string^]
 a|`$caption`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -6003,7 +6192,7 @@ public toArray():void
 
 ----
 
-    
+
 
 
 

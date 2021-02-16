@@ -35,7 +35,7 @@ public get($id):array
 
 ----
 
-    
+
 
 
 
@@ -44,11 +44,12 @@ public get($id):array
 Returns the content of the catalogue.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|The id of the catalogue
+|link:http://php.net/string[string^]
+a|The id of the catalogue
 |===
 
 
@@ -59,7 +60,7 @@ public update($id, $data):array
 
 ----
 
-    
+
 
 
 
@@ -68,15 +69,16 @@ public update($id, $data):array
 Updates the content of the catalogue.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|The id of the catalogue
+|link:http://php.net/string[string^]
+a|The id of the catalogue
 
-|link:http://php.net/array[array^]
 a|`$data`
-|The content that should be inserted into the catalogue
+|link:http://php.net/array[array^]
+a|The content that should be inserted into the catalogue
 |===
 
 
@@ -106,7 +108,7 @@ public applyFilters($documentSearch, $config):void
 
 ----
 
-    
+
 
 
 
@@ -115,15 +117,16 @@ public applyFilters($documentSearch, $config):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Cloud.adoc#cloud_document_documentsearch[`DocumentSearch`]
+|Name |Type |Description
 a|`$documentSearch`
-|
+|        xref:Cloud.adoc#cloud_document_documentsearch[`DocumentSearch`]
+a|
 
-|link:http://php.net/array[array^]
 a|`$config`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -153,7 +156,7 @@ public exportById($id):Plenty\Modules\Catalog\Contracts\CatalogExportServiceCont
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogexportservicecontract[`CatalogExportServiceContract`]
@@ -162,11 +165,12 @@ public exportById($id):Plenty\Modules\Catalog\Contracts\CatalogExportServiceCont
 Returns an instance of CatalogExportServiceContract to export a specific catalogue.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|The id of the catalogue
+|link:http://php.net/string[string^]
+a|The id of the catalogue
 |===
 
 
@@ -177,7 +181,7 @@ public initiateQueue($id):void
 
 ----
 
-    
+
 
 
 
@@ -186,11 +190,12 @@ public initiateQueue($id):void
 Initiates the queue which exports a specific catalogue.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -201,7 +206,7 @@ public download($id, $hash = &quot;&quot;, $extension = &quot;csv&quot;, $public
 
 ----
 
-    
+
 
 
 
@@ -210,27 +215,28 @@ public download($id, $hash = &quot;&quot;, $extension = &quot;csv&quot;, $public
 Provides the response with file attachment to download in browser
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$hash`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$extension`
-|
-
-|link:http://php.net/bool[bool^]
-a|`$public`
-|
-
 |link:http://php.net/string[string^]
+a|
+
+a|`$public`
+|link:http://php.net/bool[bool^]
+a|
+
 a|`$token`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -267,7 +273,7 @@ public setAdditionalFields($additionalFields):void
 Use fields with the attribute &#039;hidden&#039; and &#039;default&#039; in Plenty\Modules\Catalog\Contracts\DataProviderContract::getData instead
 
 ====
-    
+
 
 
 
@@ -276,11 +282,12 @@ Use fields with the attribute &#039;hidden&#039; and &#039;default&#039; in Plen
 Specifies fields that should be exported in addition to the mappings configured in the catalogue.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$additionalFields`
-|The fields that should be exported additionally. Each field will be specified by an entry in the array, while the key of that entry determines the key that the field will have in the exported item.
+|link:http://php.net/array[array^]
+a|The fields that should be exported additionally. Each field will be specified by an entry in the array, while the key of that entry determines the key that the field will have in the exported item.
 |===
 
 
@@ -298,7 +305,7 @@ public addMutator($mutator):void
 Use Plenty\Modules\Catalog\Contracts\TemplateContract::getPreMutators or Plenty\Modules\Catalog\Contracts\TemplateContract::getPostMutators instead.
 
 ====
-    
+
 
 
 
@@ -307,11 +314,12 @@ Use Plenty\Modules\Catalog\Contracts\TemplateContract::getPreMutators or Plenty\
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/callable[callable^]
+|Name |Type |Description
 a|`$mutator`
-|
+|link:http://php.net/callable[callable^]
+a|
 |===
 
 
@@ -322,7 +330,7 @@ public setSettings($settings):void
 
 ----
 
-    
+
 
 
 
@@ -331,11 +339,12 @@ public setSettings($settings):void
 Defines the settings that are used in the mappings and for filtering.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$settings`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -353,7 +362,7 @@ public setNumberOfDocumentsPerShard($numberOfDocumentsPerShard):void
 Use Plenty\Modules\Catalog\Contracts\CatalogExportServiceContract::setItemsPerPage instead.
 
 ====
-    
+
 
 
 
@@ -362,11 +371,12 @@ Use Plenty\Modules\Catalog\Contracts\CatalogExportServiceContract::setItemsPerPa
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$numberOfDocumentsPerShard`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -377,7 +387,7 @@ public setItemsPerPage($itemsPerPage):void
 
 ----
 
-    
+
 
 
 
@@ -386,11 +396,12 @@ public setItemsPerPage($itemsPerPage):void
 Defines the amount of items that will be returned in each iteration of the export. In specific formats such as variation, it can have more results e.g. if items per page is set to 500, but variations 500 and 501 belong to the same item. In this case, variation 501 will also be returned.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$itemsPerPage`
-|The amount of items per page
+|link:http://php.net/int[int^]
+a|The amount of items per page
 |===
 
 
@@ -401,7 +412,7 @@ public setUpdatedSince($timestamp):void
 
 ----
 
-    
+
 
 
 
@@ -410,11 +421,12 @@ public setUpdatedSince($timestamp):void
 Limits the results of items to only those that were updated after the given timestamp.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+|Name |Type |Description
 a|`$timestamp`
-|
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
 |===
 
 
@@ -425,7 +437,7 @@ public getResult():Plenty\Modules\Catalog\Models\CatalogExportResult
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_models_catalogexportresult[`CatalogExportResult`]
@@ -440,7 +452,7 @@ public getPreview():void
 
 ----
 
-    
+
 
 
 
@@ -474,7 +486,7 @@ public create($data):Plenty\Modules\Catalog\Models\Catalog
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
@@ -483,11 +495,12 @@ public create($data):Plenty\Modules\Catalog\Models\Catalog
 Create a catalog
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -498,7 +511,7 @@ public update($id, $data):Plenty\Modules\Catalog\Models\Catalog
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
@@ -507,15 +520,16 @@ public update($id, $data):Plenty\Modules\Catalog\Models\Catalog
 Update a catalog
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 
-|link:http://php.net/array[array^]
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -526,7 +540,7 @@ public get($id):Plenty\Modules\Catalog\Models\Catalog
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
@@ -535,11 +549,12 @@ public get($id):Plenty\Modules\Catalog\Models\Catalog
 Get the latest version of a catalog
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -550,7 +565,7 @@ public getByVersion($id, $version = &quot;&quot;):Plenty\Modules\Catalog\Models\
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
@@ -559,15 +574,16 @@ public getByVersion($id, $version = &quot;&quot;):Plenty\Modules\Catalog\Models\
 Get a specific version of a catalog
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$version`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -578,7 +594,7 @@ public restoreVersion($id, $version = &quot;&quot;):Plenty\Modules\Catalog\Model
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
@@ -587,15 +603,16 @@ public restoreVersion($id, $version = &quot;&quot;):Plenty\Modules\Catalog\Model
 Restore a past version of a catalog to become latest
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$version`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -606,7 +623,7 @@ public listVersions($id):Illuminate\Support\Collection
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
@@ -615,11 +632,12 @@ public listVersions($id):Illuminate\Support\Collection
 Lists catalog versions
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|Catalog ID
+|link:http://php.net/string[string^]
+a|Catalog ID
 |===
 
 
@@ -630,7 +648,7 @@ public getArchive():array
 
 ----
 
-    
+
 
 
 
@@ -645,7 +663,7 @@ public restoreArchived($id):Plenty\Modules\Catalog\Models\Catalog
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
@@ -654,11 +672,12 @@ public restoreArchived($id):Plenty\Modules\Catalog\Models\Catalog
 Restores an archived catalog
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -669,7 +688,7 @@ public delete($id):bool
 
 ----
 
-    
+
 
 
 
@@ -678,11 +697,12 @@ public delete($id):bool
 Delete a catalog
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|Catalog ID
+|link:http://php.net/string[string^]
+a|Catalog ID
 |===
 
 
@@ -693,7 +713,7 @@ public copy($data):array
 
 ----
 
-    
+
 
 
 
@@ -702,11 +722,12 @@ public copy($data):array
 Copy a catalog or multiple catalogs
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -717,7 +738,7 @@ public copyCatalog($id, $modifiedAttributes):Plenty\Modules\Catalog\Models\Catal
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
@@ -726,15 +747,16 @@ public copyCatalog($id, $modifiedAttributes):Plenty\Modules\Catalog\Models\Catal
 Copy a single catalog
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|Catalog ID
+|link:http://php.net/string[string^]
+a|Catalog ID
 
-|link:http://php.net/array[array^]
 a|`$modifiedAttributes`
-|Attributes to add or modify
+|link:http://php.net/array[array^]
+a|Attributes to add or modify
 |===
 
 
@@ -745,7 +767,7 @@ public copyCatalogFormat($catalogId, $data):array
 
 ----
 
-    
+
 
 
 
@@ -754,15 +776,16 @@ public copyCatalogFormat($catalogId, $data):array
 Copy a catalog format
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$catalogId`
-|Catalog ID
+|link:http://php.net/string[string^]
+a|Catalog ID
 
-|link:http://php.net/array[array^]
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -773,7 +796,7 @@ public all($page = 1, $perPage = 25):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -782,15 +805,16 @@ public all($page = 1, $perPage = 25):Plenty\Repositories\Models\PaginatedResult
 Get list of all catalogs
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|
-
 |link:http://php.net/int[int^]
+a|
+
 a|`$perPage`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -801,7 +825,7 @@ public activate($id, $active):array
 
 ----
 
-    
+
 
 
 
@@ -810,15 +834,16 @@ public activate($id, $active):array
 Activate a catalog
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 
-|link:http://php.net/bool[bool^]
 a|`$active`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -829,7 +854,7 @@ public getCatalogPreview($id):array
 
 ----
 
-    
+
 
 
 
@@ -838,11 +863,12 @@ public getCatalogPreview($id):array
 Gets the preview for an export with a specific catalog
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -853,7 +879,7 @@ public migrate():bool
 
 ----
 
-    
+
 
 
 
@@ -868,7 +894,7 @@ public generateToken():string
 
 ----
 
-    
+
 
 
 
@@ -883,7 +909,7 @@ public buildDownloadPublicURL($id, $data):string
 
 ----
 
-    
+
 
 
 
@@ -892,15 +918,16 @@ public buildDownloadPublicURL($id, $data):string
 Builds the catalog&#039;s public download url
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 
-|link:http://php.net/array[array^]
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -911,7 +938,7 @@ public buildDownloadPrivateURL($id, $data):string
 
 ----
 
-    
+
 
 
 
@@ -920,15 +947,16 @@ public buildDownloadPrivateURL($id, $data):string
 Builds the catalog&#039;s private download url
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 
-|link:http://php.net/array[array^]
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -939,7 +967,7 @@ public exportCatalog($id):array
 
 ----
 
-    
+
 
 
 
@@ -948,11 +976,12 @@ public exportCatalog($id):array
 Exports the catalog. The catalog ID is required.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -963,7 +992,7 @@ public importCatalog($content):Plenty\Modules\Catalog\Models\Catalog
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
@@ -972,11 +1001,12 @@ public importCatalog($content):Plenty\Modules\Catalog\Models\Catalog
 Imports the catalog. The catalog ID is required.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$content`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -987,7 +1017,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -996,11 +1026,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1011,7 +1042,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -1026,7 +1057,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -1041,7 +1072,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -1075,7 +1106,7 @@ public addData($data):void
 
 ----
 
-    
+
 
 
 
@@ -1084,11 +1115,12 @@ public addData($data):void
 Through this a single entry of a catalog result should be added
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$data`
 |
+a|
 |===
 
 
@@ -1099,7 +1131,7 @@ public getConvertedResult():string
 
 ----
 
-    
+
 
 
 
@@ -1114,7 +1146,7 @@ public getType():string
 
 ----
 
-    
+
 
 
 
@@ -1129,7 +1161,7 @@ public clear():void
 
 ----
 
-    
+
 
 
 
@@ -1163,7 +1195,7 @@ public applyRuntimeConfig($template, $catalog):void
 
 ----
 
-    
+
 
 
 
@@ -1173,15 +1205,16 @@ Will be run before every export and is meant to provide filters on the template
 which can&#039;t be defined before the runtime of the export
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+|Name |Type |Description
 a|`$template`
-|
+|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+a|
 
-|        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
 a|`$catalog`
-|
+|        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
+a|
 |===
 
 
@@ -1192,7 +1225,7 @@ public applyPreviewRuntimeConfig($template, $catalog):void
 
 ----
 
-    
+
 
 
 
@@ -1202,15 +1235,16 @@ Will be run before every preview and is meant to provide filters on the template
 which can&#039;t be defined before the runtime of the preview
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+|Name |Type |Description
 a|`$template`
-|
+|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+a|
 
-|        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
 a|`$catalog`
-|
+|        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
+a|
 |===
 
 
@@ -1240,7 +1274,7 @@ public isPreviewable():bool
 
 ----
 
-    
+
 
 
 
@@ -1255,7 +1289,7 @@ public getRuntimeConfigClass():string
 
 ----
 
-    
+
 
 
 
@@ -1271,7 +1305,7 @@ public getResultConverterClass():string
 
 ----
 
-    
+
 
 
 
@@ -1305,7 +1339,7 @@ public getMappings():array
 
 ----
 
-    
+
 
 
 
@@ -1320,7 +1354,7 @@ public getFilter():array
 
 ----
 
-    
+
 
 
 
@@ -1335,7 +1369,7 @@ public getPreMutators():array
 
 ----
 
-    
+
 
 
 
@@ -1350,7 +1384,7 @@ public getPostMutators():array
 
 ----
 
-    
+
 
 
 
@@ -1365,7 +1399,7 @@ public getSkuCallback():callable
 
 ----
 
-    
+
 
 
 
@@ -1380,7 +1414,7 @@ public getSettings():array
 
 ----
 
-    
+
 
 
 
@@ -1395,7 +1429,7 @@ public getMetaInfo():array
 
 ----
 
-    
+
 
 
 
@@ -1429,7 +1463,7 @@ public getData($query = &quot;&quot;):array
 
 ----
 
-    
+
 
 
 
@@ -1438,11 +1472,12 @@ public getData($query = &quot;&quot;):array
 Returns the data that should be provided.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$query`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1453,7 +1488,7 @@ public setTemplate($template):void
 
 ----
 
-    
+
 
 
 
@@ -1462,11 +1497,12 @@ public setTemplate($template):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+|Name |Type |Description
 a|`$template`
-|
+|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+a|
 |===
 
 
@@ -1477,7 +1513,7 @@ public setMapping($mapping):void
 
 ----
 
-    
+
 
 
 
@@ -1486,11 +1522,12 @@ public setMapping($mapping):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$mapping`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1520,7 +1557,7 @@ public getFields($id, $page, $itemsPerPage, $parentId = null):Plenty\Repositorie
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -1529,23 +1566,24 @@ public getFields($id, $page, $itemsPerPage, $parentId = null):Plenty\Repositorie
 Get list of fields
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
-
-|link:http://php.net/int[int^]
-a|`$page`
-|
-
-|link:http://php.net/int[int^]
-a|`$itemsPerPage`
-|
-
 |link:http://php.net/string[string^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|
+
 a|`$parentId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1556,7 +1594,7 @@ public getSearchFields($id, $hidden = []):array
 
 ----
 
-    
+
 
 
 
@@ -1565,15 +1603,16 @@ public getSearchFields($id, $hidden = []):array
 Get list of fields for search
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 
-|link:http://php.net/array[array^]
 a|`$hidden`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1584,7 +1623,7 @@ public getFieldById($id, $fieldId):array
 
 ----
 
-    
+
 
 
 
@@ -1593,15 +1632,16 @@ public getFieldById($id, $fieldId):array
 Get field by id
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$fieldId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1612,7 +1652,7 @@ public getFieldsByCatalogId($id, $catalogId):array
 
 ----
 
-    
+
 
 
 
@@ -1621,15 +1661,16 @@ public getFieldsByCatalogId($id, $catalogId):array
 Get Fields by id of the catalog
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$catalogId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1640,7 +1681,7 @@ public fieldValuesTree($id, $page, $itemsPerPage):array
 
 ----
 
-    
+
 
 
 
@@ -1649,19 +1690,20 @@ public fieldValuesTree($id, $page, $itemsPerPage):array
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 
-|link:http://php.net/int[int^]
 a|`$page`
-|
-
 |link:http://php.net/int[int^]
+a|
+
 a|`$itemsPerPage`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -1691,7 +1733,7 @@ public getNestedData($parentId, $query = &quot;&quot;, $meta = []):array
 
 ----
 
-    
+
 
 
 
@@ -1700,19 +1742,20 @@ public getNestedData($parentId, $query = &quot;&quot;, $meta = []):array
 Returns the data of a specific level, which is determined via the id of a parent value.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$parentId`
-|
-
 |link:http://php.net/string[string^]
-a|`$query`
-|
+a|
 
-|link:http://php.net/array[array^]
+a|`$query`
+|link:http://php.net/string[string^]
+a|
+
 a|`$meta`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1723,7 +1766,7 @@ public getDataByValue($id):array
 
 ----
 
-    
+
 
 
 
@@ -1732,11 +1775,12 @@ public getDataByValue($id):array
 Returns a specific value of the nested data determined by its id.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1747,7 +1791,7 @@ public getData($query = &quot;&quot;):array
 
 ----
 
-    
+
 
 
 
@@ -1756,11 +1800,12 @@ public getData($query = &quot;&quot;):array
 Returns the data that should be provided.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$query`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1771,7 +1816,7 @@ public setTemplate($template):void
 
 ----
 
-    
+
 
 
 
@@ -1780,11 +1825,12 @@ public setTemplate($template):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+|Name |Type |Description
 a|`$template`
-|
+|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+a|
 |===
 
 
@@ -1795,7 +1841,7 @@ public setMapping($mapping):void
 
 ----
 
-    
+
 
 
 
@@ -1804,11 +1850,12 @@ public setMapping($mapping):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$mapping`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1838,7 +1885,7 @@ public register($name, $type, $providerClass = &quot;&quot;, $exportType = &quot
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
@@ -1847,23 +1894,24 @@ public register($name, $type, $providerClass = &quot;&quot;, $exportType = &quot
 Registers a new template that can be used to create a catalogue.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$name`
-|The specific name of the template
-
 |link:http://php.net/string[string^]
+a|The specific name of the template
+
 a|`$type`
-|The type of the template. Multiple templates can be grouped in one type
-
 |link:http://php.net/string[string^]
+a|The type of the template. Multiple templates can be grouped in one type
+
 a|`$providerClass`
-|Class name of the provider that boots the template
-
 |link:http://php.net/string[string^]
+a|Class name of the provider that boots the template
+
 a|`$exportType`
-|Determines which data is available for mappings in the export. The default is variation data. (Currently only variation data can be exported via catalogues.)
+|link:http://php.net/string[string^]
+a|Determines which data is available for mappings in the export. The default is variation data. (Currently only variation data can be exported via catalogues.)
 |===
 
 
@@ -1874,7 +1922,7 @@ public getTemplates():array
 
 ----
 
-    
+
 
 
 
@@ -1889,7 +1937,7 @@ public getTemplate($identifier):Plenty\Modules\Catalog\Contracts\TemplateContrac
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
@@ -1898,11 +1946,12 @@ public getTemplate($identifier):Plenty\Modules\Catalog\Contracts\TemplateContrac
 Returns a specific template by its identifier.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$identifier`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1913,7 +1962,7 @@ public getTemplateWithoutBootingIt($identifier):Plenty\Modules\Catalog\Contracts
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
@@ -1922,11 +1971,12 @@ public getTemplateWithoutBootingIt($identifier):Plenty\Modules\Catalog\Contracts
 Returns a specific template by its identifier without booting it.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$identifier`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1956,7 +2006,7 @@ public getName():string
 
 ----
 
-    
+
 
 
 
@@ -1971,7 +2021,7 @@ public getType():string
 
 ----
 
-    
+
 
 
 
@@ -1986,7 +2036,7 @@ public getExportType():string
 
 ----
 
-    
+
 
 
 
@@ -2001,7 +2051,7 @@ public getMappings():array
 
 ----
 
-    
+
 
 
 
@@ -2016,7 +2066,7 @@ public addMapping($mapping):void
 
 ----
 
-    
+
 
 
 
@@ -2025,11 +2075,12 @@ public addMapping($mapping):void
 Adds a mapping to the template. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$mapping`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -2047,7 +2098,7 @@ public addMutator($callback):void
 Use Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator or Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator instead.
 
 ====
-    
+
 
 
 
@@ -2056,11 +2107,12 @@ Use Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator or Plenty\M
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/callable[callable^]
+|Name |Type |Description
 a|`$callback`
-|
+|link:http://php.net/callable[callable^]
+a|
 |===
 
 
@@ -2071,7 +2123,7 @@ public addPreMutator($callback):void
 
 ----
 
-    
+
 
 
 
@@ -2080,11 +2132,12 @@ public addPreMutator($callback):void
 Adds a pre mutator to the template. Pre mutators are applied to the export data before the mapping occurs. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/callable[callable^]
+|Name |Type |Description
 a|`$callback`
-|
+|link:http://php.net/callable[callable^]
+a|
 |===
 
 
@@ -2095,7 +2148,7 @@ public addPostMutator($callback):void
 
 ----
 
-    
+
 
 
 
@@ -2104,11 +2157,12 @@ public addPostMutator($callback):void
 Adds a post mutator to the template. Post mutators are applied to the export data once the mapping occurred. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/callable[callable^]
+|Name |Type |Description
 a|`$callback`
-|
+|link:http://php.net/callable[callable^]
+a|
 |===
 
 
@@ -2119,7 +2173,7 @@ public getFilter():array
 
 ----
 
-    
+
 
 
 
@@ -2134,7 +2188,7 @@ public addFilter($filter):void
 
 ----
 
-    
+
 
 
 
@@ -2143,11 +2197,12 @@ public addFilter($filter):void
 Adds a filter to the template. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filter`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -2158,7 +2213,7 @@ public getIdentifier():string
 
 ----
 
-    
+
 
 
 
@@ -2180,7 +2235,7 @@ public getMutators():array
 Use Plenty\Modules\Catalog\Contracts\TemplateContract::getPreMutators or Plenty\Modules\Catalog\Contracts\TemplateContract::getPostMutators instead.
 
 ====
-    
+
 
 
 
@@ -2195,7 +2250,7 @@ public getPreMutators():array
 
 ----
 
-    
+
 
 
 
@@ -2210,7 +2265,7 @@ public getPostMutators():array
 
 ----
 
-    
+
 
 
 
@@ -2225,7 +2280,7 @@ public setSkuCallback($callback):void
 
 ----
 
-    
+
 
 
 
@@ -2234,11 +2289,12 @@ public setSkuCallback($callback):void
 Defines the callback function that will be called after the mapping is done for a field with the key &quot;sku&quot;.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/callable[callable^]
+|Name |Type |Description
 a|`$callback`
-|
+|link:http://php.net/callable[callable^]
+a|
 |===
 
 
@@ -2249,7 +2305,7 @@ public getSkuCallback():callable
 
 ----
 
-    
+
 
 
 
@@ -2264,7 +2320,7 @@ public addSetting($setting):void
 
 ----
 
-    
+
 
 
 
@@ -2273,11 +2329,12 @@ public addSetting($setting):void
 Adds a setting to the templates. Settings create components in the UI of catalogues which use this template. The components will provide data for the export in accordance with the user input in the catalogue. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$setting`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -2288,7 +2345,7 @@ public getSettings():array
 
 ----
 
-    
+
 
 
 
@@ -2303,7 +2360,7 @@ public setMetaInfo($meta):void
 
 ----
 
-    
+
 
 
 
@@ -2312,11 +2369,12 @@ public setMetaInfo($meta):void
 Sets the meta info for a template. Meta info is used to provide data which has to be known when working with the template. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$meta`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -2327,7 +2385,7 @@ public getMetaInfo():array
 
 ----
 
-    
+
 
 
 
@@ -2342,7 +2400,7 @@ public isPreviewable():bool
 
 ----
 
-    
+
 
 
 
@@ -2357,7 +2415,7 @@ public allowPreview($isPreviewable):void
 
 ----
 
-    
+
 
 
 
@@ -2366,11 +2424,12 @@ public allowPreview($isPreviewable):void
 Used to activate / deactivate the possibility to export previews through this template
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$isPreviewable`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -2381,7 +2440,7 @@ public hasRuntimeConfig():bool
 
 ----
 
-    
+
 
 
 
@@ -2396,7 +2455,7 @@ public hasResultConverter():bool
 
 ----
 
-    
+
 
 
 
@@ -2411,7 +2470,7 @@ public getRuntimeConfig():Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigC
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogruntimeconfigcontract[`CatalogRuntimeConfigContract`]
@@ -2426,7 +2485,7 @@ public getResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConver
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
@@ -2441,7 +2500,7 @@ public boot($provider):void
 
 ----
 
-    
+
 
 
 
@@ -2450,11 +2509,12 @@ public boot($provider):void
 Fills the template via the given catalogue template provider. This method is called by the template container and should not be called manually.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Catalog.adoc#catalog_contracts_catalogtemplateprovidercontract[`CatalogTemplateProviderContract`]
+|Name |Type |Description
 a|`$provider`
-|
+|        xref:Catalog.adoc#catalog_contracts_catalogtemplateprovidercontract[`CatalogTemplateProviderContract`]
+a|
 |===
 
 
@@ -2465,7 +2525,7 @@ public isBooted():bool
 
 ----
 
-    
+
 
 
 
@@ -2480,7 +2540,7 @@ public translatedToArray($language):array
 
 ----
 
-    
+
 
 
 
@@ -2489,11 +2549,12 @@ public translatedToArray($language):array
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$language`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -2504,7 +2565,7 @@ public toArray():array
 
 ----
 
-    
+
 
 
 
@@ -2519,7 +2580,7 @@ public jsonSerialize():void
 
 ----
 
-    
+
 
 
 
@@ -2553,7 +2614,7 @@ public getTemplates():array
 
 ----
 
-    
+
 
 
 
@@ -2568,7 +2629,7 @@ public getTemplate($id, $data):array
 
 ----
 
-    
+
 
 
 
@@ -2577,15 +2638,16 @@ public getTemplate($id, $data):array
 Get template
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$data`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -2596,7 +2658,7 @@ public getMappings($id):array
 
 ----
 
-    
+
 
 
 
@@ -2605,11 +2667,12 @@ public getMappings($id):array
 Get list of mappings
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -2620,7 +2683,7 @@ public getMapping($id, $mappingId):array
 
 ----
 
-    
+
 
 
 
@@ -2629,15 +2692,16 @@ public getMapping($id, $mappingId):array
 Get mapping
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$mappingId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -2648,7 +2712,7 @@ public getMappingData($id, $mappingId, $parentId = null):array
 
 ----
 
-    
+
 
 
 
@@ -2657,19 +2721,20 @@ public getMappingData($id, $mappingId, $parentId = null):array
 Get mapping data
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$mappingId`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$parentId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -2680,7 +2745,7 @@ public getMappingDataById($id, $mappingId, $dataId):array
 
 ----
 
-    
+
 
 
 
@@ -2689,19 +2754,20 @@ public getMappingDataById($id, $mappingId, $dataId):array
 Get mapping data by id
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$mappingId`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$dataId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -2712,7 +2778,7 @@ public test($id):void
 
 ----
 
-    
+
 
 
 
@@ -2721,11 +2787,12 @@ public test($id):void
 Test export of a catalog
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -2736,7 +2803,7 @@ public getAllMappings($id):array
 
 ----
 
-    
+
 
 
 
@@ -2745,11 +2812,12 @@ public getAllMappings($id):array
 Get all mappings
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -2780,7 +2848,7 @@ public getRows():array
 
 ----
 
-    
+
 
 
 
@@ -2795,7 +2863,7 @@ public setTemplate($template):void
 
 ----
 
-    
+
 
 
 
@@ -2804,11 +2872,12 @@ public setTemplate($template):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+|Name |Type |Description
 a|`$template`
-|
+|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+a|
 |===
 
 
@@ -2819,7 +2888,7 @@ public setMapping($mapping):void
 
 ----
 
-    
+
 
 
 
@@ -2828,11 +2897,12 @@ public setMapping($mapping):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$mapping`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -2862,7 +2932,7 @@ public getKey():string
 
 ----
 
-    
+
 
 
 
@@ -2877,7 +2947,7 @@ public getRows():array
 
 ----
 
-    
+
 
 
 
@@ -2892,7 +2962,7 @@ public setTemplate($template):void
 
 ----
 
-    
+
 
 
 
@@ -2901,11 +2971,12 @@ public setTemplate($template):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+|Name |Type |Description
 a|`$template`
-|
+|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+a|
 |===
 
 
@@ -2916,7 +2987,7 @@ public setMapping($mapping):void
 
 ----
 
-    
+
 
 
 
@@ -2925,11 +2996,12 @@ public setMapping($mapping):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$mapping`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -2959,7 +3031,7 @@ public getKey():string
 
 ----
 
-    
+
 
 
 
@@ -2974,7 +3046,7 @@ public getNestedRows($parentId):array
 
 ----
 
-    
+
 
 
 
@@ -2983,11 +3055,12 @@ public getNestedRows($parentId):array
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|
+|Name |Type |Description
 a|`$parentId`
 |
+a|
 |===
 
 
@@ -2998,7 +3071,7 @@ public getMetaData():void
 
 ----
 
-    
+
 
 
 
@@ -3013,7 +3086,7 @@ public getNestedData($parentId, $query = &quot;&quot;, $meta = []):array
 
 ----
 
-    
+
 
 
 
@@ -3022,19 +3095,20 @@ public getNestedData($parentId, $query = &quot;&quot;, $meta = []):array
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$parentId`
-|
-
 |link:http://php.net/string[string^]
-a|`$query`
-|
+a|
 
-|link:http://php.net/array[array^]
+a|`$query`
+|link:http://php.net/string[string^]
+a|
+
 a|`$meta`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -3045,7 +3119,7 @@ public getRows():array
 
 ----
 
-    
+
 
 
 
@@ -3060,7 +3134,7 @@ public setTemplate($template):void
 
 ----
 
-    
+
 
 
 
@@ -3069,11 +3143,12 @@ public setTemplate($template):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+|Name |Type |Description
 a|`$template`
-|
+|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+a|
 |===
 
 
@@ -3084,7 +3159,7 @@ public setMapping($mapping):void
 
 ----
 
-    
+
 
 
 
@@ -3093,11 +3168,12 @@ public setMapping($mapping):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$mapping`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -3108,7 +3184,7 @@ public getDataByValue($id):array
 
 ----
 
-    
+
 
 
 
@@ -3117,11 +3193,12 @@ public getDataByValue($id):array
 Returns a specific value of the nested data determined by its id.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -3152,7 +3229,7 @@ public static isValidType($type):bool
 
 ----
 
-    
+
 
 
 
@@ -3161,11 +3238,12 @@ public static isValidType($type):bool
 Checks wether a given type is valid as return type in a CatalogResultConverter
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -3187,36 +3265,37 @@ The catalog model - stores on S3
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/array[array^]
-    |data
-    |Contains the mappings and template settings
-|link:http://php.net/array[array^]
-    |settings
-    |Contains the settings
-|link:http://php.net/string[string^]
-    |name
-    |The name of the catalogue
-|link:http://php.net/string[string^]
-    |template
-    |The id of the template that was used to create the catalogue
-|link:http://php.net/string[string^]
-    |id
-    |The id of the catalogue
-|link:http://php.net/bool[bool^]
-    |active
-    |Determines whether a catalogue can be exported
-|link:http://php.net/bool[bool^]
-    |showMandatoryFields
-    |Determines if only the mandatory fields should be displayed in the catalogue UI
-|link:http://php.net/string[string^]
-    |updatedAt
-    |The updated at date in W3C
-|link:http://php.net/string[string^]
-    |createdAt
-    |The created at date in W3C
+|data
+    |link:http://php.net/array[array^]
+    a|Contains the mappings and template settings
+|settings
+    |link:http://php.net/array[array^]
+    a|Contains the settings
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the catalogue
+|template
+    |link:http://php.net/string[string^]
+    a|The id of the template that was used to create the catalogue
+|id
+    |link:http://php.net/string[string^]
+    a|The id of the catalogue
+|active
+    |link:http://php.net/bool[bool^]
+    a|Determines whether a catalogue can be exported
+|showMandatoryFields
+    |link:http://php.net/bool[bool^]
+    a|Determines if only the mandatory fields should be displayed in the catalogue UI
+|updatedAt
+    |link:http://php.net/string[string^]
+    a|The updated at date in W3C
+|createdAt
+    |link:http://php.net/string[string^]
+    a|The created at date in W3C
 |===
 
 
@@ -3229,7 +3308,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -3263,7 +3342,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -3298,7 +3377,7 @@ public getMappings():array
 
 ----
 
-    
+
 
 
 
@@ -3313,7 +3392,7 @@ public getFilter():array
 
 ----
 
-    
+
 
 
 
@@ -3328,7 +3407,7 @@ public getPreMutators():array
 
 ----
 
-    
+
 
 
 
@@ -3343,7 +3422,7 @@ public getPostMutators():array
 
 ----
 
-    
+
 
 
 
@@ -3358,7 +3437,7 @@ public getSkuCallback():callable
 
 ----
 
-    
+
 
 
 
@@ -3373,7 +3452,7 @@ public getSettings():array
 
 ----
 
-    
+
 
 
 
@@ -3388,7 +3467,7 @@ public getMetaInfo():array
 
 ----
 
-    
+
 
 
 
@@ -3422,7 +3501,7 @@ public getMappings():array
 
 ----
 
-    
+
 
 
 
@@ -3437,7 +3516,7 @@ public addMapping($section):void
 
 ----
 
-    
+
 
 
 
@@ -3446,11 +3525,12 @@ public addMapping($section):void
 Adds a mapping to the template. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$section`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -3468,7 +3548,7 @@ public addMutator($callback):void
 Use Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator or Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator instead.
 
 ====
-    
+
 
 
 
@@ -3477,11 +3557,12 @@ Use Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator or Plenty\M
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/callable[callable^]
+|Name |Type |Description
 a|`$callback`
-|
+|link:http://php.net/callable[callable^]
+a|
 |===
 
 
@@ -3499,7 +3580,7 @@ public getMutators():array
 Use Plenty\Modules\Catalog\Contracts\TemplateContract::getPreMutators or Plenty\Modules\Catalog\Contracts\TemplateContract::getPostMutators instead.
 
 ====
-    
+
 
 
 
@@ -3514,7 +3595,7 @@ public addPreMutator($callback):void
 
 ----
 
-    
+
 
 
 
@@ -3523,11 +3604,12 @@ public addPreMutator($callback):void
 Adds a pre mutator to the template. Pre mutators are applied to the export data before the mapping occurs. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/callable[callable^]
+|Name |Type |Description
 a|`$callback`
-|
+|link:http://php.net/callable[callable^]
+a|
 |===
 
 
@@ -3538,7 +3620,7 @@ public addPostMutator($callback):void
 
 ----
 
-    
+
 
 
 
@@ -3547,11 +3629,12 @@ public addPostMutator($callback):void
 Adds a post mutator to the template. Post mutators are applied to the export data once the mapping occurred. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/callable[callable^]
+|Name |Type |Description
 a|`$callback`
-|
+|link:http://php.net/callable[callable^]
+a|
 |===
 
 
@@ -3562,7 +3645,7 @@ public getFilter():array
 
 ----
 
-    
+
 
 
 
@@ -3577,7 +3660,7 @@ public addFilter($filter):void
 
 ----
 
-    
+
 
 
 
@@ -3586,11 +3669,12 @@ public addFilter($filter):void
 Adds a filter to the template. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filter`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -3601,7 +3685,7 @@ public getPreMutators():array
 
 ----
 
-    
+
 
 
 
@@ -3616,7 +3700,7 @@ public getPostMutators():array
 
 ----
 
-    
+
 
 
 
@@ -3631,7 +3715,7 @@ public setSkuCallback($callback):void
 
 ----
 
-    
+
 
 
 
@@ -3640,11 +3724,12 @@ public setSkuCallback($callback):void
 Defines the callback function that will be called after the mapping is done for a field with the key &quot;sku&quot;.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/callable[callable^]
+|Name |Type |Description
 a|`$callback`
-|
+|link:http://php.net/callable[callable^]
+a|
 |===
 
 
@@ -3655,7 +3740,7 @@ public getSkuCallback():callable
 
 ----
 
-    
+
 
 
 
@@ -3670,7 +3755,7 @@ public addSetting($setting):void
 
 ----
 
-    
+
 
 
 
@@ -3679,11 +3764,12 @@ public addSetting($setting):void
 Adds a setting to the templates. Settings create components in the UI of catalogues which use this template. The components will provide data for the export in accordance with the user input in the catalogue. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$setting`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -3694,7 +3780,7 @@ public getSettings():array
 
 ----
 
-    
+
 
 
 
@@ -3709,7 +3795,7 @@ public setMetaInfo($meta):void
 
 ----
 
-    
+
 
 
 
@@ -3718,11 +3804,12 @@ public setMetaInfo($meta):void
 Sets the meta info for a template. Meta info is used to provide data which has to be known when working with the template. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$meta`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -3733,7 +3820,7 @@ public getMetaInfo():void
 
 ----
 
-    
+
 
 
 
@@ -3748,7 +3835,7 @@ public getName():string
 
 ----
 
-    
+
 
 
 
@@ -3763,7 +3850,7 @@ public getExportType():string
 
 ----
 
-    
+
 
 
 
@@ -3778,7 +3865,7 @@ public getType():string
 
 ----
 
-    
+
 
 
 
@@ -3793,7 +3880,7 @@ public translatedToArray($language):array
 
 ----
 
-    
+
 
 
 
@@ -3802,11 +3889,12 @@ public translatedToArray($language):array
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$language`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -3817,7 +3905,7 @@ public toArray():void
 
 ----
 
-    
+
 
 
 
@@ -3832,7 +3920,7 @@ public jsonSerialize():void
 
 ----
 
-    
+
 
 
 
@@ -3847,7 +3935,7 @@ public getIdentifier():string
 
 ----
 
-    
+
 
 
 
@@ -3862,7 +3950,7 @@ public getFormatSettings():array
 
 ----
 
-    
+
 
 
 
@@ -3877,7 +3965,7 @@ public getExportSettings():array
 
 ----
 
-    
+
 
 
 
@@ -3892,7 +3980,7 @@ public isPreviewable():bool
 
 ----
 
-    
+
 
 
 
@@ -3907,7 +3995,7 @@ public allowPreview($isPreviewable):void
 
 ----
 
-    
+
 
 
 
@@ -3916,11 +4004,12 @@ public allowPreview($isPreviewable):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$isPreviewable`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -3931,7 +4020,7 @@ public getRuntimeConfig():Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigC
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogruntimeconfigcontract[`CatalogRuntimeConfigContract`]
@@ -3946,7 +4035,7 @@ public getResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConver
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
@@ -3961,7 +4050,7 @@ public hasRuntimeConfig():bool
 
 ----
 
-    
+
 
 
 
@@ -3976,7 +4065,7 @@ public hasResultConverter():bool
 
 ----
 
-    
+
 
 
 
@@ -3991,7 +4080,7 @@ public boot($provider):void
 
 ----
 
-    
+
 
 
 
@@ -4000,11 +4089,12 @@ public boot($provider):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Catalog.adoc#catalog_contracts_catalogtemplateprovidercontract[`CatalogTemplateProviderContract`]
+|Name |Type |Description
 a|`$provider`
-|
+|        xref:Catalog.adoc#catalog_contracts_catalogtemplateprovidercontract[`CatalogTemplateProviderContract`]
+a|
 |===
 
 
@@ -4015,7 +4105,7 @@ public isBooted():bool
 
 ----
 
-    
+
 
 
 

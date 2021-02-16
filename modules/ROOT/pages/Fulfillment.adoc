@@ -35,7 +35,7 @@ public getAll():Illuminate\Database\Eloquent\Collection
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
@@ -50,7 +50,7 @@ public getPickingOrderItemById($pickingOrderItemId):Plenty\Modules\Fulfillment\P
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Fulfillment.adoc#fulfillment_models_pickingorderitem[`PickingOrderItem`]
@@ -59,11 +59,12 @@ public getPickingOrderItemById($pickingOrderItemId):Plenty\Modules\Fulfillment\P
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$pickingOrderItemId`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -94,7 +95,7 @@ public getPickingOrderItemId():int
 
 ----
 
-    
+
 
 
 
@@ -109,7 +110,7 @@ public getProcessUserId():int
 
 ----
 
-    
+
 
 
 
@@ -124,7 +125,7 @@ public addPluginConfig($identifier, $pluginConfig):Plenty\Modules\Fulfillment\Pi
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Fulfillment.adoc#fulfillment_picklist_events[`Events`]
@@ -133,15 +134,16 @@ public addPluginConfig($identifier, $pluginConfig):Plenty\Modules\Fulfillment\Pi
 Add a plugin configuration
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$identifier`
-|
+|link:http://php.net/string[string^]
+a|
 
-|
 a|`$pluginConfig`
 |
+a|
 |===
 
 
@@ -152,7 +154,7 @@ public getPluginConfigs():array
 
 ----
 
-    
+
 
 
 
@@ -178,45 +180,46 @@ Represent a picking order item
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
+|id
+    |link:http://php.net/int[int^]
+    a|
+|pickingOrderId
+    |link:http://php.net/int[int^]
+    a|
+|orderItemId
+    |link:http://php.net/int[int^]
+    a|
+|processState
+    |link:http://php.net/string[string^]
+    a|
+|processDate
     |
-|link:http://php.net/int[int^]
-    |pickingOrderId
-    |
-|link:http://php.net/int[int^]
-    |orderItemId
-    |
-|link:http://php.net/string[string^]
-    |processState
-    |
-|
-    |processDate
-    |
-|link:http://php.net/int[int^]
-    |processUserId
-    |
-|link:http://php.net/string[string^]
-    |comment
-    |
-|link:http://php.net/float[float^]
-    |quantity
-    |
-|link:http://php.net/int[int^]
-    |itemId
-    |
-|link:http://php.net/int[int^]
-    |holdingArea
-    |
-|link:http://php.net/int[int^]
-    |warehouseId
-    |
-|link:http://php.net/string[string^]
-    |orderIdList
-    |
+    a|
+|processUserId
+    |link:http://php.net/int[int^]
+    a|
+|comment
+    |link:http://php.net/string[string^]
+    a|
+|quantity
+    |link:http://php.net/float[float^]
+    a|
+|itemId
+    |link:http://php.net/int[int^]
+    a|
+|holdingArea
+    |link:http://php.net/int[int^]
+    a|
+|warehouseId
+    |link:http://php.net/int[int^]
+    a|
+|orderIdList
+    |link:http://php.net/string[string^]
+    a|
 |===
 
 
@@ -229,7 +232,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -267,7 +270,7 @@ public registerReturns($orderId):bool
 
 ----
 
-    
+
 
 
 
@@ -276,11 +279,12 @@ public registerReturns($orderId):bool
 Register the return of an order.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$orderId`
-|The ID of the order
+|link:http://php.net/int[int^]
+a|The ID of the order
 |===
 
 
@@ -291,7 +295,7 @@ public registerReturn($orderId, $returnProvider):bool
 
 ----
 
-    
+
 
 
 
@@ -300,15 +304,16 @@ public registerReturn($orderId, $returnProvider):bool
 Register the return of an order
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$orderId`
-|
+|link:http://php.net/int[int^]
+a|
 
-|link:http://php.net/string[string^]
 a|`$returnProvider`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -338,7 +343,7 @@ public resetShipment($orderId):bool
 
 ----
 
-    
+
 
 
 
@@ -347,11 +352,12 @@ public resetShipment($orderId):bool
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$orderId`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -362,7 +368,7 @@ public cancelShipment($orderId):bool
 
 ----
 
-    
+
 
 
 
@@ -371,11 +377,12 @@ public cancelShipment($orderId):bool
 Cancel the shipment of an order.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$orderId`
-|The ID of the order
+|link:http://php.net/int[int^]
+a|The ID of the order
 |===
 
 
@@ -386,7 +393,7 @@ public registerShipment($orderId):bool
 
 ----
 
-    
+
 
 
 
@@ -395,11 +402,12 @@ public registerShipment($orderId):bool
 Register the shipment of an order.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$orderId`
-|The ID of the order
+|link:http://php.net/int[int^]
+a|The ID of the order
 |===
 
 
@@ -429,7 +437,7 @@ public getDhlRetoureOnlineData():void
 
 ----
 
-    
+
 
 
 
