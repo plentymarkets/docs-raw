@@ -1656,6 +1656,21 @@ Base class for data field providers.
 [source%nowrap, php]
 ----
 
+public register():void
+
+----
+
+
+
+
+
+
+
+Register data fields and child providers.
+
+[source%nowrap, php]
+----
+
 public addField($identifier, $label, $expression):void
 
 ----
@@ -1674,7 +1689,7 @@ Register a new data field.
 |Name |Type |Description
 a|`$identifier`
 |link:http://php.net/string[string^]
-a|
+a|Unique identifier of the data field
 
 a|`$label`
 |link:http://php.net/string[string^]
@@ -1747,36 +1762,6 @@ a|`$keywords`
 a|A list of keywords. Each keyword may contain a translation key. A single keyword could be a comma separated list of words.
 |===
 
-
-[source%nowrap, php]
-----
-
-public register():void
-
-----
-
-
-
-
-
-
-
-
-
-[source%nowrap, php]
-----
-
-public getEntries():array
-
-----
-
-
-
-
-
-
-
-Get all entries for this provider.
 
 [[shopbuilder_factories]]
 == Factories
