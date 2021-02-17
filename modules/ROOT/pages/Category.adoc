@@ -35,7 +35,7 @@ public findCategoryBranchMarketplace($branchId, $webstoreId, $marketplaceId, $ma
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Category.adoc#category_models_categorybranchmarketplace[`CategoryBranchMarketplace`]
@@ -44,23 +44,24 @@ public findCategoryBranchMarketplace($branchId, $webstoreId, $marketplaceId, $ma
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$branchId`
-|
-
 |link:http://php.net/int[int^]
+a|
+
 a|`$webstoreId`
-|
-
 |link:http://php.net/int[int^]
-a|`$marketplaceId`
-|
+a|
 
-|link:http://php.net/float[float^]
+a|`$marketplaceId`
+|link:http://php.net/int[int^]
+a|
+
 a|`$marketplaceSubId`
-|
+|link:http://php.net/float[float^]
+a|
 |===
 
 
@@ -90,7 +91,7 @@ public find($id):Plenty\Modules\Category\Models\CategoryBranch
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Category.adoc#category_models_categorybranch[`CategoryBranch`]
@@ -99,11 +100,12 @@ public find($id):Plenty\Modules\Category\Models\CategoryBranch
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -114,7 +116,7 @@ public get($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\Con
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_contracts_paginationresponsecontract[`PaginationResponseContract`]
@@ -123,19 +125,20 @@ public get($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\Con
 Get category trees
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|
-
 |link:http://php.net/int[int^]
-a|`$itemsPerPage`
-|
+a|
 
-|link:http://php.net/array[array^]
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|
+
 a|`$filters`
-|Filters restrict the list of results. Results can be filtered by the following parameters: 'type' - the category type. Available values: item, container, content, blog
+|link:http://php.net/array[array^]
+a|Filters restrict the list of results. Results can be filtered by the following parameters: 'type' - the category type. Available values: item, container, content, blog
 |===
 
 
@@ -146,7 +149,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -161,7 +164,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -176,7 +179,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -185,11 +188,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -200,7 +204,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -215,7 +219,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -230,7 +234,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -264,7 +268,7 @@ public create($data):Plenty\Modules\Category\Models\CategoryProperty
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Category.adoc#category_models_categoryproperty[`CategoryProperty`]
@@ -273,11 +277,12 @@ public create($data):Plenty\Modules\Category\Models\CategoryProperty
 Link a category to an Elmar category
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -288,7 +293,7 @@ public update($categoryId, $marketId, $plentyId, $data):Plenty\Modules\Category\
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Category.adoc#category_models_categoryproperty[`CategoryProperty`]
@@ -297,23 +302,24 @@ public update($categoryId, $marketId, $plentyId, $data):Plenty\Modules\Category\
 Update a link between a category and an Elmar category
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$categoryId`
-|
-
-|link:http://php.net/float[float^]
-a|`$marketId`
-|
-
 |link:http://php.net/int[int^]
-a|`$plentyId`
-|
+a|
 
-|link:http://php.net/array[array^]
+a|`$marketId`
+|link:http://php.net/float[float^]
+a|
+
+a|`$plentyId`
+|link:http://php.net/int[int^]
+a|
+
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -324,7 +330,7 @@ public delete($categoryId, $marketId, $plentyId):Plenty\Repositories\Models\Dele
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[`DeleteResponse`]
@@ -333,19 +339,20 @@ public delete($categoryId, $marketId, $plentyId):Plenty\Repositories\Models\Dele
 Delete the link between a category and an Elmar category
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$categoryId`
-|
-
-|link:http://php.net/float[float^]
-a|`$marketId`
-|
-
 |link:http://php.net/int[int^]
+a|
+
+a|`$marketId`
+|link:http://php.net/float[float^]
+a|
+
 a|`$plentyId`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -356,7 +363,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -371,7 +378,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -386,7 +393,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -395,11 +402,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -410,7 +418,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -425,7 +433,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -440,7 +448,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -474,7 +482,7 @@ public get($categoryId, $lang = &quot;de&quot;, $webstoreId = null):Plenty\Modul
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Category.adoc#category_models_category[`Category`]
@@ -483,19 +491,20 @@ public get($categoryId, $lang = &quot;de&quot;, $webstoreId = null):Plenty\Modul
 Returns one category by id.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$categoryId`
-|The id of the category.
-
-|link:http://php.net/string[string^]
-a|`$lang`
-|Optional language of details.
-
 |link:http://php.net/int[int^]
+a|The id of the category.
+
+a|`$lang`
+|link:http://php.net/string[string^]
+a|Optional language of details.
+
 a|`$webstoreId`
-|Optional webstore id of details.
+|link:http://php.net/int[int^]
+a|Optional webstore id of details.
 |===
 
 
@@ -506,7 +515,7 @@ public getLinklistTree($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientI
 
 ----
 
-    
+
 
 
 
@@ -515,27 +524,28 @@ public getLinklistTree($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientI
 Returns all linklist categories as tree.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|'all','item','container','content' or 'blog'
-
 |link:http://php.net/string[string^]
+a|'all','item','container','content' or 'blog'
+
 a|`$lang`
-|Optional language of details.
+|link:http://php.net/string[string^]
+a|Optional language of details.
 
-|link:http://php.net/int[int^]
 a|`$clientId`
-|The unique ID of the client (store)
-
 |link:http://php.net/int[int^]
+a|The unique ID of the client (store)
+
 a|`$maxLevel`
-|The deepest category level to load
-
 |link:http://php.net/int[int^]
+a|The deepest category level to load
+
 a|`$customerClassId`
-|The customer class id
+|link:http://php.net/int[int^]
+a|The customer class id
 |===
 
 
@@ -546,7 +556,7 @@ public getArrayTree($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId =
 
 ----
 
-    
+
 
 
 
@@ -555,31 +565,32 @@ public getArrayTree($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId =
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|'all','item','container','content' or 'blog'
-
 |link:http://php.net/string[string^]
+a|'all','item','container','content' or 'blog'
+
 a|`$lang`
-|Optional language of details.
+|link:http://php.net/string[string^]
+a|Optional language of details.
 
-|link:http://php.net/int[int^]
 a|`$clientId`
-|The unique ID of the client (store)
-
 |link:http://php.net/int[int^]
+a|The unique ID of the client (store)
+
 a|`$maxLevel`
-|The deepest category level to load
-
 |link:http://php.net/int[int^]
-a|`$customerClassId`
-|The customer class id
+a|The deepest category level to load
 
-|link:http://php.net/callable[callable^]
+a|`$customerClassId`
+|link:http://php.net/int[int^]
+a|The customer class id
+
 a|`$filter`
-|
+|link:http://php.net/callable[callable^]
+a|
 |===
 
 
@@ -590,7 +601,7 @@ public findCategoryByUrl($level1, $level2 = null, $level3 = null, $level4 = null
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Category.adoc#category_models_category[`Category`]
@@ -599,39 +610,40 @@ public findCategoryByUrl($level1, $level2 = null, $level3 = null, $level4 = null
 Get the category by url.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$level1`
-|First level of the url.
-
 |link:http://php.net/string[string^]
+a|First level of the url.
+
 a|`$level2`
-|Second level of the url.
-
 |link:http://php.net/string[string^]
+a|Second level of the url.
+
 a|`$level3`
-|Third level of the url.
-
 |link:http://php.net/string[string^]
+a|Third level of the url.
+
 a|`$level4`
-|Fourth level of the url.
-
 |link:http://php.net/string[string^]
+a|Fourth level of the url.
+
 a|`$level5`
-|Fifth level of the url.
-
 |link:http://php.net/string[string^]
+a|Fifth level of the url.
+
 a|`$level6`
-|Sixth level of the url.
-
-|link:http://php.net/int[int^]
-a|`$webstoreId`
-|Id of current webstore.
-
 |link:http://php.net/string[string^]
+a|Sixth level of the url.
+
+a|`$webstoreId`
+|link:http://php.net/int[int^]
+a|Id of current webstore.
+
 a|`$lang`
-|Language
+|link:http://php.net/string[string^]
+a|Language
 |===
 
 
@@ -642,7 +654,7 @@ public buildCache($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId, $c
 
 ----
 
-    
+
 
 
 
@@ -651,23 +663,24 @@ public buildCache($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId, $c
 Rebuild the category tree cache
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|'all','item','container','content' or 'blog'
-
 |link:http://php.net/string[string^]
+a|'all','item','container','content' or 'blog'
+
 a|`$lang`
-|Optional language of details.
+|link:http://php.net/string[string^]
+a|Optional language of details.
 
-|link:http://php.net/int[int^]
 a|`$clientId`
-|The unique ID of the client (store)
-
 |link:http://php.net/int[int^]
+a|The unique ID of the client (store)
+
 a|`$customerClassId`
-|The customer class id
+|link:http://php.net/int[int^]
+a|The customer class id
 |===
 
 
@@ -678,7 +691,7 @@ public getLinklistList($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientI
 
 ----
 
-    
+
 
 
 
@@ -687,23 +700,24 @@ public getLinklistList($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientI
 Returns all linklist categories as list.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$type`
-|'all','item','container','content' or 'blog'
-
 |link:http://php.net/string[string^]
+a|'all','item','container','content' or 'blog'
+
 a|`$lang`
-|Optional language of details.
+|link:http://php.net/string[string^]
+a|Optional language of details.
 
-|link:http://php.net/int[int^]
 a|`$clientId`
-|The unique ID of the client (store)
-
 |link:http://php.net/int[int^]
+a|The unique ID of the client (store)
+
 a|`$maxLevel`
-|The deepest category level to load
+|link:http://php.net/int[int^]
+a|The deepest category level to load
 |===
 
 
@@ -714,7 +728,7 @@ public hasChildren($categoryId, $onlySiteMapped = false, $onlyLinkListed = false
 
 ----
 
-    
+
 
 
 
@@ -723,19 +737,20 @@ public hasChildren($categoryId, $onlySiteMapped = false, $onlyLinkListed = false
 Returns true if category has children.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$categoryId`
-|The id of the category.
+|link:http://php.net/int[int^]
+a|The id of the category.
 
-|link:http://php.net/bool[bool^]
 a|`$onlySiteMapped`
-|Determines if the result has only sitemaps or all visible categories.
-
 |link:http://php.net/bool[bool^]
+a|Determines if the result has only sitemaps or all visible categories.
+
 a|`$onlyLinkListed`
-|Determines if the result has only linklists or all visible categories.
+|link:http://php.net/bool[bool^]
+a|Determines if the result has only linklists or all visible categories.
 |===
 
 
@@ -746,7 +761,7 @@ public getChildren($categoryId, $lang = &quot;de&quot;):array
 
 ----
 
-    
+
 
 
 
@@ -755,15 +770,16 @@ public getChildren($categoryId, $lang = &quot;de&quot;):array
 Returns children of the category.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$categoryId`
-|The id of the category.
+|link:http://php.net/int[int^]
+a|The id of the category.
 
-|link:http://php.net/string[string^]
 a|`$lang`
-|Optional language of details.
+|link:http://php.net/string[string^]
+a|Optional language of details.
 |===
 
 
@@ -774,7 +790,7 @@ public getUrl($categoryId, $lang = &quot;de&quot;, $onlySitemaps = false, $webst
 
 ----
 
-    
+
 
 
 
@@ -783,23 +799,24 @@ public getUrl($categoryId, $lang = &quot;de&quot;, $onlySitemaps = false, $webst
 Retrieves the url for a category.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$categoryId`
-|The id of the category.
+|link:http://php.net/int[int^]
+a|The id of the category.
 
-|link:http://php.net/string[string^]
 a|`$lang`
-|Optional language of details.
+|link:http://php.net/string[string^]
+a|Optional language of details.
 
-|link:http://php.net/bool[bool^]
 a|`$onlySitemaps`
-|Whether or not to only include categories with 'sitemaps' = 'Y'. Default false.
-
 |link:http://php.net/bool[bool^]
+a|Whether or not to only include categories with 'sitemaps' = 'Y'. Default false.
+
 a|`$webstoreId`
-|webstoreId of details
+|link:http://php.net/bool[bool^]
+a|webstoreId of details
 |===
 
 
@@ -810,7 +827,7 @@ public search($categoryId = null, $page, $itemsPerPage = 50, $with = [], $filter
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
@@ -819,27 +836,28 @@ public search($categoryId = null, $page, $itemsPerPage = 50, $with = [], $filter
 Search for categories
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$categoryId`
-|The id of the category.
-
 |link:http://php.net/int[int^]
+a|The id of the category.
+
 a|`$page`
-|The requested page.
-
 |link:http://php.net/int[int^]
+a|The requested page.
+
 a|`$itemsPerPage`
-|Number of items per page.
+|link:http://php.net/int[int^]
+a|Number of items per page.
 
-|link:http://php.net/array[array^]
 a|`$with`
-|The relations to be loaded.
-
 |link:http://php.net/array[array^]
+a|The relations to be loaded.
+
 a|`$filters`
-|Filters restrict the list of results. Results can be filtered by the following parameters: 'type','lang','parentId', 'plentyId', 'linklist'
+|link:http://php.net/array[array^]
+a|Filters restrict the list of results. Results can be filtered by the following parameters: 'type','lang','parentId', 'plentyId', 'linklist'
 |===
 
 
@@ -850,7 +868,7 @@ public createCategories($data):array
 
 ----
 
-    
+
 
 
 
@@ -859,11 +877,12 @@ public createCategories($data):array
 Creates new categories, including CategoryDetails. At least one CategoryDetails object for the default language is required. The data fields &#039;plentyId&#039;,&#039;lang&#039; and &#039;name&#039; are required. Client objects can also be specified to activate visibility for a client.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|The data fields for the new Categories, including the details data fields
+|link:http://php.net/array[array^]
+a|The data fields for the new Categories, including the details data fields
 |===
 
 
@@ -874,7 +893,7 @@ public updateCategories($data):array
 
 ----
 
-    
+
 
 
 
@@ -883,11 +902,12 @@ public updateCategories($data):array
 Update categories, including optional CategoryDetails. The data fields &#039;plentyId&#039;,&#039;lang&#039; are required for the CategoryDetails object. Client objects can also be specified to change visibility for a client.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|The data fields for the Categories, including the details and client data fields
+|link:http://php.net/array[array^]
+a|The data fields for the Categories, including the details and client data fields
 |===
 
 
@@ -898,7 +918,7 @@ public createCategory($data):Plenty\Modules\Category\Models\Category
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Category.adoc#category_models_category[`Category`]
@@ -907,11 +927,12 @@ public createCategory($data):Plenty\Modules\Category\Models\Category
 Creates a new category
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -922,7 +943,7 @@ public delete($categoryId):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[`DeleteResponse`]
@@ -931,11 +952,12 @@ public delete($categoryId):Plenty\Repositories\Models\DeleteResponse
 Deletes a category. The ID of the category must be specified.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$categoryId`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -946,7 +968,7 @@ public deleteCategoryDetails($categoryId, $data):Plenty\Repositories\Models\Dele
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[`DeleteResponse`]
@@ -955,15 +977,16 @@ public deleteCategoryDetails($categoryId, $data):Plenty\Repositories\Models\Dele
 Delete the category details for the languages specified.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$categoryId`
-|
+|link:http://php.net/int[int^]
+a|
 
-|link:http://php.net/array[array^]
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -974,7 +997,7 @@ public deleteCategoryClients($categoryId, $data):Plenty\Repositories\Models\Dele
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[`DeleteResponse`]
@@ -983,15 +1006,16 @@ public deleteCategoryClients($categoryId, $data):Plenty\Repositories\Models\Dele
 Deactivate availability for clients
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$categoryId`
-|
+|link:http://php.net/int[int^]
+a|
 
-|link:http://php.net/array[array^]
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1002,7 +1026,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -1017,7 +1041,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -1032,7 +1056,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -1041,11 +1065,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1056,7 +1081,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -1071,7 +1096,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -1086,7 +1111,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -1120,7 +1145,7 @@ public find($params):Plenty\Modules\Category\Models\CategoryTemplate
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Category.adoc#category_models_categorytemplate[`CategoryTemplate`]
@@ -1129,11 +1154,12 @@ public find($params):Plenty\Modules\Category\Models\CategoryTemplate
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$params`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1144,7 +1170,7 @@ public put($data):Plenty\Modules\Category\Models\CategoryTemplate
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Category.adoc#category_models_categorytemplate[`CategoryTemplate`]
@@ -1153,11 +1179,12 @@ public put($data):Plenty\Modules\Category\Models\CategoryTemplate
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1168,7 +1195,7 @@ public delete($data):Plenty\Modules\Category\Models\CategoryTemplate
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Category.adoc#category_models_categorytemplate[`CategoryTemplate`]
@@ -1177,11 +1204,12 @@ public delete($data):Plenty\Modules\Category\Models\CategoryTemplate
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1203,44 +1231,45 @@ Category
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |The unique ID of the category
-|link:http://php.net/int[int^]
-    |parentCategoryId
-    |The ID of the category's parent category. Value is <strong>null</strong> if category level is 1.
-|link:http://php.net/int[int^]
-    |level
-    |The category level of this category. This information is used for the sitemap.
-|link:http://php.net/string[string^]
-    |type
-    |The category type of the category
-|link:http://php.net/string[string^]
-    |linklist
-    |Flag that indicates if the category will be displayed in the online store's navigation.
-|link:http://php.net/string[string^]
-    |right
-    |Flag that indicates who can see this category. <ul><li>all = Category is
+|id
+    |link:http://php.net/int[int^]
+    a|The unique ID of the category
+|parentCategoryId
+    |link:http://php.net/int[int^]
+    a|The ID of the category's parent category. Value is <strong>null</strong> if category level is 1.
+|level
+    |link:http://php.net/int[int^]
+    a|The category level of this category. This information is used for the sitemap.
+|type
+    |link:http://php.net/string[string^]
+    a|The category type of the category
+|linklist
+    |link:http://php.net/string[string^]
+    a|Flag that indicates if the category will be displayed in the online store's navigation.
+|right
+    |link:http://php.net/string[string^]
+    a|Flag that indicates who can see this category. <ul><li>all = Category is
 visible to all visitors of the online store.</li><li>customer = Category and all of its subcategories are visible to
 visitors of the online store that have logged in only. Visitors that are not logged in are redirected to the login page.</li></ul>
-|link:http://php.net/string[string^]
-    |sitemap
-    |Flag that indicates if the category will be included in the sitemap.
-|link:http://php.net/string[string^]
-    |updatedAt
-    |The updated at timestamp of the category.
-|link:http://php.net/array[array^]
-    |clients
-    |Collection of the clients (stores) that belong to this category
-|link:http://php.net/array[array^]
-    |details
-    |Collection of the category details that belong to this category
-|link:http://php.net/array[array^]
-    |elmarCategories
-    |The linked elmar
+|sitemap
+    |link:http://php.net/string[string^]
+    a|Flag that indicates if the category will be included in the sitemap.
+|updatedAt
+    |link:http://php.net/string[string^]
+    a|The updated at timestamp of the category.
+|clients
+    |link:http://php.net/array[array^]
+    a|Collection of the clients (stores) that belong to this category
+|details
+    |link:http://php.net/array[array^]
+    a|Collection of the category details that belong to this category
+|elmarCategories
+    |link:http://php.net/array[array^]
+    a|The linked elmar
 |===
 
 
@@ -1253,7 +1282,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1278,30 +1307,31 @@ Category Branch
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |categoryId
-    |The ID of the category
-|link:http://php.net/int[int^]
-    |category1Id
-    |The ID of the category tree's 1st level. If 1st value is identical to category ID, category is of this level.
-|link:http://php.net/int[int^]
-    |category2Id
-    |The ID of the category tree's 2nd level. If 2nd level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.
-|link:http://php.net/int[int^]
-    |category3Id
-    |The ID of the category tree's 3rd level. If 3rd level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.
-|link:http://php.net/int[int^]
-    |category4Id
-    |The ID of the category tree's 4th level. If 4th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.
-|link:http://php.net/int[int^]
-    |category5Id
-    |The ID of the category tree's 5th level. If 5th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.
-|link:http://php.net/int[int^]
-    |category6Id
-    |The ID of the category tree's 6th level. If 6th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.
+|categoryId
+    |link:http://php.net/int[int^]
+    a|The ID of the category
+|category1Id
+    |link:http://php.net/int[int^]
+    a|The ID of the category tree's 1st level. If 1st value is identical to category ID, category is of this level.
+|category2Id
+    |link:http://php.net/int[int^]
+    a|The ID of the category tree's 2nd level. If 2nd level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.
+|category3Id
+    |link:http://php.net/int[int^]
+    a|The ID of the category tree's 3rd level. If 3rd level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.
+|category4Id
+    |link:http://php.net/int[int^]
+    a|The ID of the category tree's 4th level. If 4th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.
+|category5Id
+    |link:http://php.net/int[int^]
+    a|The ID of the category tree's 5th level. If 5th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.
+|category6Id
+    |link:http://php.net/int[int^]
+    a|The ID of the category tree's 6th level. If 6th level value is identical to category ID, category is of this level. If 2nd level value is <strong>null</strong>, category is of a higher level.
 |===
 
 
@@ -1314,7 +1344,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1339,36 +1369,37 @@ The CategoryBranchMarketplace model
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |plenty_category_branch_marketplace_branch_id
-    |
-|link:http://php.net/int[int^]
-    |plenty_category_branch_marketplace_webstore_id
-    |
-|link:http://php.net/float[float^]
-    |plenty_category_branch_marketplace_marketplace_id
-    |
-|link:http://php.net/float[float^]
-    |plenty_category_branch_marketplace_marketplace_sub_id
-    |
-|link:http://php.net/string[string^]
-    |plenty_category_branch_marketplace_delimiter
-    |
-|link:http://php.net/string[string^]
-    |plenty_category_branch_marketplace_value1
-    |
-|link:http://php.net/string[string^]
-    |plenty_category_branch_marketplace_value2
-    |
-|link:http://php.net/string[string^]
-    |plenty_category_branch_marketplace_last_update
-    |
-|        xref:Category.adoc#category_models_categorybranch[`CategoryBranch`]
-    |branch
-    |
+|plenty_category_branch_marketplace_branch_id
+    |link:http://php.net/int[int^]
+    a|
+|plenty_category_branch_marketplace_webstore_id
+    |link:http://php.net/int[int^]
+    a|
+|plenty_category_branch_marketplace_marketplace_id
+    |link:http://php.net/float[float^]
+    a|
+|plenty_category_branch_marketplace_marketplace_sub_id
+    |link:http://php.net/float[float^]
+    a|
+|plenty_category_branch_marketplace_delimiter
+    |link:http://php.net/string[string^]
+    a|
+|plenty_category_branch_marketplace_value1
+    |link:http://php.net/string[string^]
+    a|
+|plenty_category_branch_marketplace_value2
+    |link:http://php.net/string[string^]
+    a|
+|plenty_category_branch_marketplace_last_update
+    |link:http://php.net/string[string^]
+    a|
+|branch
+    |        xref:Category.adoc#category_models_categorybranch[`CategoryBranch`]
+    a|
 |===
 
 
@@ -1381,7 +1412,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1406,12 +1437,13 @@ The Category Client
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |plentyId
-    |The unique plenty ID of the client (store) in which the category is visible. Several IDs can be separated by commas. If a subcategory is linked to a client, its parent categories will be linked to this client as well.
+|plentyId
+    |link:http://php.net/int[int^]
+    a|The unique plenty ID of the client (store) in which the category is visible. Several IDs can be separated by commas. If a subcategory is linked to a client, its parent categories will be linked to this client as well.
 |===
 
 
@@ -1424,7 +1456,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1449,88 +1481,89 @@ CategoryDetails
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |categoryId
-    |The unique ID of the category these category details belong to
-|link:http://php.net/int[int^]
-    |plentyId
-    |The unique plenty ID of the client (store) in which the category is visible. If a subcategory is linked to a client, its parent categories will be linked to this client as well.
-|link:http://php.net/string[string^]
-    |lang
-    |The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language</a> of the category
-|link:http://php.net/string[string^]
-    |name
-    |The name of the category. The same category name can be used more than once in different categories or on different category levels. However, category names must be unique within the same category or level.
-|link:http://php.net/string[string^]
-    |description
-    |The category text. The description is inserted into the online store using template variables.
-|link:http://php.net/string[string^]
-    |description2
-    |The category text 2. The description 2 is inserted into the online store using template variables.
-|link:http://php.net/string[string^]
-    |shortDescription
-    |The short description of the category. The short description can be inserted into the store's design using template variables.
-|link:http://php.net/string[string^]
-    |metaKeywords
-    |HTML meta keywords to tag the category for search engines. More than one keyword can be separated by commas.
-|link:http://php.net/string[string^]
-    |metaDescription
-    |The meta description of the category. This description is analysed by search engines and displayed in search results. This text should be treated as an advertising text to maximise click-through from search engine result pages. Current recommended limit is 156 characters.
-|link:http://php.net/string[string^]
-    |nameUrl
-    |The category name to be used for the category's URL. The same URL name can be used more than once in different categories or on different category levels. However, URL names must be unique within the same category or level. The URL name should not be changed once the category is indexed by search engines. If no URL name is specified, the name will automatically be used as the URL name when the category is created.<br />Important: Name should contain ASCII code only and no special characters. The following character strings may not be used as prefixes to URL names: a-, b-, c-, f-, fa-, p-, t-. These prefixes will be removed automatically. For instance, a-class will be changed to class automatically. However, the URL name aclass can be used for a category named A-class.
-|link:http://php.net/string[string^]
-    |metaTitle
-    |This will be displayed as the title of a tab in the web browser and as a search result in search engines. If this is left blank, the category name will be used as the title. Current recommended limit is 50 characters. Longer titles will be cut off.
-|link:http://php.net/string[string^]
-    |image
-    |The ID to the image1 of the category.
-|link:http://php.net/string[string^]
-    |image2
-    |The ID to the image2 of the category.
-|link:http://php.net/string[string^]
-    |imagePath
-    |The path to the image1 of the category.
-|link:http://php.net/string[string^]
-    |image2Path
-    |The path to the image2 of the category.
-|link:http://php.net/string[string^]
-    |previewUrl
-    |The category's URL.
-|link:http://php.net/int[int^]
-    |position
-    |The position of the category within a category level.
-|link:http://php.net/string[string^]
-    |itemListView
-    |The template the category is linked to for the category overview. The template determines what the category overview will look like for this category. This option is available for categories of the type <strong>Item</strong> only. Possible values: ItemViewCategoriesList, ItemViewCategoriesList2 to ItemViewCategoriesList10.
-|link:http://php.net/string[string^]
-    |singleItemView
-    |The template the category is linked to for the single item view. The template determines the appearance of the single item design for this category. This option is available for categories of the type <strong>Item</strong> only. Possible values: ItemViewSingleItem, ItemViewSingleItem2 to ItemViewSingleItem5.
-|link:http://php.net/string[string^]
-    |pageView
-    |
-|link:http://php.net/bool[bool^]
-    |fulltext
-    |Flag that indicates if the complete category text, i.e. the complete description, will be searched.<ul><li>Y = Complete text will be searched.</li><li>N = Text will not be searched completely.</li></ul>
-|link:http://php.net/string[string^]
-    |metaRobots
-    |Values from the meta element Robots are analyzed by Web crawlers. These values tell the crawler what it should do with the page and with the links on the page.<ul><li>all = Include this category in the search engine index and follow the links on the page.</li><li>index = Include in the search engine index.</li><li>nofollow = Do not follow the links on the page.</li><li>noindex = Do not include in the search engine index.</li><li>nofollow, noindex = Do not follow the links and do not include the category in the search engine index.</li></ul>
-|link:http://php.net/string[string^]
-    |canonicalLink
-    |The URL of any category that contains the same content. This
+|categoryId
+    |link:http://php.net/int[int^]
+    a|The unique ID of the category these category details belong to
+|plentyId
+    |link:http://php.net/int[int^]
+    a|The unique plenty ID of the client (store) in which the category is visible. If a subcategory is linked to a client, its parent categories will be linked to this client as well.
+|lang
+    |link:http://php.net/string[string^]
+    a|The <a href="https://developers.plentymarkets.com/rest-doc/introduction#languages" target="_blank">language</a> of the category
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the category. The same category name can be used more than once in different categories or on different category levels. However, category names must be unique within the same category or level.
+|description
+    |link:http://php.net/string[string^]
+    a|The category text. The description is inserted into the online store using template variables.
+|description2
+    |link:http://php.net/string[string^]
+    a|The category text 2. The description 2 is inserted into the online store using template variables.
+|shortDescription
+    |link:http://php.net/string[string^]
+    a|The short description of the category. The short description can be inserted into the store's design using template variables.
+|metaKeywords
+    |link:http://php.net/string[string^]
+    a|HTML meta keywords to tag the category for search engines. More than one keyword can be separated by commas.
+|metaDescription
+    |link:http://php.net/string[string^]
+    a|The meta description of the category. This description is analysed by search engines and displayed in search results. This text should be treated as an advertising text to maximise click-through from search engine result pages. Current recommended limit is 156 characters.
+|nameUrl
+    |link:http://php.net/string[string^]
+    a|The category name to be used for the category's URL. The same URL name can be used more than once in different categories or on different category levels. However, URL names must be unique within the same category or level. The URL name should not be changed once the category is indexed by search engines. If no URL name is specified, the name will automatically be used as the URL name when the category is created.<br />Important: Name should contain ASCII code only and no special characters. The following character strings may not be used as prefixes to URL names: a-, b-, c-, f-, fa-, p-, t-. These prefixes will be removed automatically. For instance, a-class will be changed to class automatically. However, the URL name aclass can be used for a category named A-class.
+|metaTitle
+    |link:http://php.net/string[string^]
+    a|This will be displayed as the title of a tab in the web browser and as a search result in search engines. If this is left blank, the category name will be used as the title. Current recommended limit is 50 characters. Longer titles will be cut off.
+|image
+    |link:http://php.net/string[string^]
+    a|The ID to the image1 of the category.
+|image2
+    |link:http://php.net/string[string^]
+    a|The ID to the image2 of the category.
+|imagePath
+    |link:http://php.net/string[string^]
+    a|The path to the image1 of the category.
+|image2Path
+    |link:http://php.net/string[string^]
+    a|The path to the image2 of the category.
+|previewUrl
+    |link:http://php.net/string[string^]
+    a|The category's URL.
+|position
+    |link:http://php.net/int[int^]
+    a|The position of the category within a category level.
+|itemListView
+    |link:http://php.net/string[string^]
+    a|The template the category is linked to for the category overview. The template determines what the category overview will look like for this category. This option is available for categories of the type <strong>Item</strong> only. Possible values: ItemViewCategoriesList, ItemViewCategoriesList2 to ItemViewCategoriesList10.
+|singleItemView
+    |link:http://php.net/string[string^]
+    a|The template the category is linked to for the single item view. The template determines the appearance of the single item design for this category. This option is available for categories of the type <strong>Item</strong> only. Possible values: ItemViewSingleItem, ItemViewSingleItem2 to ItemViewSingleItem5.
+|pageView
+    |link:http://php.net/string[string^]
+    a|
+|fulltext
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if the complete category text, i.e. the complete description, will be searched.<ul><li>Y = Complete text will be searched.</li><li>N = Text will not be searched completely.</li></ul>
+|metaRobots
+    |link:http://php.net/string[string^]
+    a|Values from the meta element Robots are analyzed by Web crawlers. These values tell the crawler what it should do with the page and with the links on the page.<ul><li>all = Include this category in the search engine index and follow the links on the page.</li><li>index = Include in the search engine index.</li><li>nofollow = Do not follow the links on the page.</li><li>noindex = Do not include in the search engine index.</li><li>nofollow, noindex = Do not follow the links and do not include the category in the search engine index.</li></ul>
+|canonicalLink
+    |link:http://php.net/string[string^]
+    a|The URL of any category that contains the same content. This
 will avoid duplicate content.
-|link:http://php.net/string[string^]
-    |updatedAt
-    |The time the category details were last updated
-|link:http://php.net/string[string^]
-    |updatedBy
-    |The user who last updated the category details
-|        xref:Category.adoc#category_models_category[`Category`]
-    |category
-    |The category these category details are associated with.
+|updatedAt
+    |link:http://php.net/string[string^]
+    a|The time the category details were last updated
+|updatedBy
+    |link:http://php.net/string[string^]
+    a|The user who last updated the category details
+|category
+    |        xref:Category.adoc#category_models_category[`Category`]
+    a|The category these category details are associated with.
 |===
 
 
@@ -1543,7 +1576,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1568,30 +1601,31 @@ CategoryItemCount
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |categoryId
-    |The unique ID of the category
-|link:http://php.net/int[int^]
-    |webstoreId
-    |The ID of the client (store)
-|link:http://php.net/int[int^]
-    |count
-    |The count of items
-|link:http://php.net/string[string^]
-    |createdAt
-    |The date that the category item count was created.
-|link:http://php.net/string[string^]
-    |updatedAt
-    |The date that the category item count was updated last.
-|link:http://php.net/int[int^]
-    |variationCount
-    |The count of variations
-|link:http://php.net/int[int^]
-    |customerClassId
-    |The ID of the customer class
+|categoryId
+    |link:http://php.net/int[int^]
+    a|The unique ID of the category
+|webstoreId
+    |link:http://php.net/int[int^]
+    a|The ID of the client (store)
+|count
+    |link:http://php.net/int[int^]
+    a|The count of items
+|createdAt
+    |link:http://php.net/string[string^]
+    a|The date that the category item count was created.
+|updatedAt
+    |link:http://php.net/string[string^]
+    a|The date that the category item count was updated last.
+|variationCount
+    |link:http://php.net/int[int^]
+    a|The count of variations
+|customerClassId
+    |link:http://php.net/int[int^]
+    a|The ID of the customer class
 |===
 
 
@@ -1604,7 +1638,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1629,21 +1663,22 @@ The Category Property
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |categoryId
-    |The unique ID of the category
-|link:http://php.net/float[float^]
-    |marketId
-    |The unique ID of the referrer
-|link:http://php.net/int[int^]
-    |plentyId
-    |The unique plenty ID of the client (store)
-|link:http://php.net/string[string^]
-    |value
-    |The category of the referrer
+|categoryId
+    |link:http://php.net/int[int^]
+    a|The unique ID of the category
+|marketId
+    |link:http://php.net/float[float^]
+    a|The unique ID of the referrer
+|plentyId
+    |link:http://php.net/int[int^]
+    a|The unique plenty ID of the client (store)
+|value
+    |link:http://php.net/string[string^]
+    a|The category of the referrer
 |===
 
 
@@ -1656,7 +1691,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1681,21 +1716,22 @@ Category Template
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |categoryId
-    |The unique ID of the category
-|link:http://php.net/int[int^]
-    |plentyId
-    |The unique plenty ID of the client (store)
-|link:http://php.net/string[string^]
-    |lang
-    |The language of the template
-|link:http://php.net/string[string^]
-    |content
-    |The content of the template
+|categoryId
+    |link:http://php.net/int[int^]
+    a|The unique ID of the category
+|plentyId
+    |link:http://php.net/int[int^]
+    a|The unique plenty ID of the client (store)
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the template
+|content
+    |link:http://php.net/string[string^]
+    a|The content of the template
 |===
 
 
@@ -1708,7 +1744,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 

@@ -35,7 +35,7 @@ public createPost($data):Plenty\Modules\Blog\Models\BlogPost
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Blog.adoc#blog_models_blogpost[`BlogPost`]
@@ -44,11 +44,12 @@ public createPost($data):Plenty\Modules\Blog\Models\BlogPost
 Creates a new blog post.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|Blog post data
+|link:http://php.net/array[array^]
+a|Blog post data
 |===
 
 
@@ -59,7 +60,7 @@ public getPost($blogPostId):Plenty\Modules\Blog\Models\BlogPost
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Blog.adoc#blog_models_blogpost[`BlogPost`]
@@ -68,11 +69,12 @@ public getPost($blogPostId):Plenty\Modules\Blog\Models\BlogPost
 Get a single blog post by its ID
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$blogPostId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -83,7 +85,7 @@ public listPosts($page = 1, $itemsPerPage = 50, $filters = []):array
 
 ----
 
-    
+
 
 
 
@@ -92,19 +94,20 @@ public listPosts($page = 1, $itemsPerPage = 50, $filters = []):array
 Lists all blog posts for current plenty ID.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|
-
 |link:http://php.net/int[int^]
-a|`$itemsPerPage`
-|
+a|
 
-|link:http://php.net/array[array^]
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|
+
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -115,7 +118,7 @@ public updatePost($data, $blogPostId):Plenty\Modules\Blog\Models\BlogPost
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Blog.adoc#blog_models_blogpost[`BlogPost`]
@@ -124,15 +127,16 @@ public updatePost($data, $blogPostId):Plenty\Modules\Blog\Models\BlogPost
 Update data for a post
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 
-|link:http://php.net/string[string^]
 a|`$blogPostId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -143,7 +147,7 @@ public deletePost($blogPostId):void
 
 ----
 
-    
+
 
 
 
@@ -152,11 +156,12 @@ public deletePost($blogPostId):void
 Delete a single blog post by its ID
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$blogPostId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -167,7 +172,7 @@ public migratePosts($data = []):void
 
 ----
 
-    
+
 
 
 
@@ -176,11 +181,12 @@ public migratePosts($data = []):void
 Migrate old posts to new
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -191,7 +197,7 @@ public getOldPostById($id):void
 
 ----
 
-    
+
 
 
 
@@ -200,11 +206,12 @@ public getOldPostById($id):void
 Get old blog post by its ID
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$id`
-|
+|link:http://php.net/int[int^]
+a|
 |===
 
 
@@ -215,7 +222,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -230,7 +237,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -245,7 +252,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -254,11 +261,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -269,7 +277,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -284,7 +292,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -299,7 +307,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -325,18 +333,19 @@ The blog post model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |id
-    |
-|link:http://php.net/string[string^]
-    |plentyIdHash
-    |
-|link:http://php.net/string[string^]
-    |data
-    |
+|id
+    |link:http://php.net/string[string^]
+    a|
+|plentyIdHash
+    |link:http://php.net/string[string^]
+    a|
+|data
+    |link:http://php.net/string[string^]
+    a|
 |===
 
 
@@ -349,7 +358,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -384,7 +393,7 @@ public getPluginSetIdFromConfig():void
 
 ----
 
-    
+
 
 
 
@@ -399,7 +408,7 @@ public findCategoryByUrl($level1, $level2 = null, $level3 = null, $level4 = null
 
 ----
 
-    
+
 
 
 
@@ -408,39 +417,40 @@ public findCategoryByUrl($level1, $level2 = null, $level3 = null, $level4 = null
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$level1`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$level2`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$level3`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$level4`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$level5`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$level6`
-|
-
-|link:http://php.net/int[int^]
-a|`$webstoreId`
-|
-
 |link:http://php.net/string[string^]
+a|
+
+a|`$webstoreId`
+|link:http://php.net/int[int^]
+a|
+
 a|`$lang`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 

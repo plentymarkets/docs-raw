@@ -35,7 +35,7 @@ public search($page = 1, $perPage = 12, $filters = []):array
 
 ----
 
-    
+
 
 
 
@@ -44,19 +44,20 @@ public search($page = 1, $perPage = 12, $filters = []):array
 Search for available archive files.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|
-
 |link:http://php.net/int[int^]
-a|`$perPage`
-|
+a|
 
-|link:http://php.net/array[array^]
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|
+
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -67,7 +68,7 @@ public count($filters = []):int
 
 ----
 
-    
+
 
 
 
@@ -76,11 +77,12 @@ public count($filters = []):int
 Get the number of found archives, restricted by filters.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -91,7 +93,7 @@ public restore($key):void
 
 ----
 
-    
+
 
 
 
@@ -100,11 +102,12 @@ public restore($key):void
 Restore an audit log archive and make it downloadable for approximately 2 days. There may be costs.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -115,7 +118,7 @@ public getSignedUrl($key):string
 
 ----
 
-    
+
 
 
 
@@ -124,11 +127,12 @@ public getSignedUrl($key):string
 Get a signed url of an archive to download it.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -158,7 +162,7 @@ public getGroups():array
 
 ----
 
-    
+
 
 
 
@@ -173,7 +177,7 @@ public getEntities():array
 
 ----
 
-    
+
 
 
 
@@ -207,7 +211,7 @@ public all():array
 
 ----
 
-    
+
 
 
 
@@ -222,7 +226,7 @@ public getSignedUrl($key):string
 
 ----
 
-    
+
 
 
 
@@ -231,11 +235,12 @@ public getSignedUrl($key):string
 Get a signed url of an archive to download it.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$key`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -265,7 +270,7 @@ public save($systemConfig):Plenty\Modules\AuditLog\Models\SystemConfig
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Auditlog.adoc#auditlog_models_systemconfig[`SystemConfig`]
@@ -274,11 +279,12 @@ public save($systemConfig):Plenty\Modules\AuditLog\Models\SystemConfig
 Save a audit log system config
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|        xref:Auditlog.adoc#auditlog_models_systemconfig[`SystemConfig`]
+|Name |Type |Description
 a|`$systemConfig`
-|
+|        xref:Auditlog.adoc#auditlog_models_systemconfig[`SystemConfig`]
+a|
 |===
 
 
@@ -289,7 +295,7 @@ public get():Plenty\Modules\AuditLog\Models\SystemConfig
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Auditlog.adoc#auditlog_models_systemconfig[`SystemConfig`]
@@ -315,30 +321,31 @@ Contains informations about one archive file
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |file
-    |The file name of the archive
-|link:http://php.net/int[int^]
-    |month
-    |The month of the archive
-|link:http://php.net/int[int^]
-    |year
-    |The year of the archive
-|link:http://php.net/int[int^]
-    |size
-    |The size of the archive
-|link:http://php.net/string[string^]
-    |status
-    |The status of the file. Possible values are: accessible, restore_in_progress, archived
-|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
-    |estimatedDeletionDate
-    |The date this file will be estimated deleted from the archive
-|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
-    |accessibleUntil
-    |The date this file is not available anymore
+|file
+    |link:http://php.net/string[string^]
+    a|The file name of the archive
+|month
+    |link:http://php.net/int[int^]
+    a|The month of the archive
+|year
+    |link:http://php.net/int[int^]
+    a|The year of the archive
+|size
+    |link:http://php.net/int[int^]
+    a|The size of the archive
+|status
+    |link:http://php.net/string[string^]
+    a|The status of the file. Possible values are: accessible, restore_in_progress, archived
+|estimatedDeletionDate
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The date this file will be estimated deleted from the archive
+|accessibleUntil
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The date this file is not available anymore
 |===
 
 
@@ -351,7 +358,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -376,21 +383,22 @@ Contains the information about one audit log entity
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |key
-    |The audit log entity
-|link:http://php.net/bool[bool^]
-    |requiredForCertificate
-    |Is the entity required for the IDW PS 880 certificate
-|link:http://php.net/bool[bool^]
-    |alwaysActive
-    |Is the entity always active and can not be deactivated
-|link:http://php.net/bool[bool^]
-    |free
-    |Is the entity free of charge
+|key
+    |link:http://php.net/string[string^]
+    a|The audit log entity
+|requiredForCertificate
+    |link:http://php.net/bool[bool^]
+    a|Is the entity required for the IDW PS 880 certificate
+|alwaysActive
+    |link:http://php.net/bool[bool^]
+    a|Is the entity always active and can not be deactivated
+|free
+    |link:http://php.net/bool[bool^]
+    a|Is the entity free of charge
 |===
 
 
@@ -403,7 +411,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -428,15 +436,16 @@ Contains the entities depending to a group
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |name
-    |The group name
-|link:http://php.net/array[array^]
-    |entities
-    |The entities depending to this group
+|name
+    |link:http://php.net/string[string^]
+    a|The group name
+|entities
+    |link:http://php.net/array[array^]
+    a|The entities depending to this group
 |===
 
 
@@ -449,7 +458,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -474,27 +483,28 @@ Contains informations about one file
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |file
-    |The file name of the file
-|link:http://php.net/int[int^]
-    |month
-    |The month of the file
-|link:http://php.net/int[int^]
-    |year
-    |The year of the file
-|link:http://php.net/int[int^]
-    |day
-    |The day of the file
-|link:http://php.net/int[int^]
-    |size
-    |The size of the file
-|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
-    |estimatedDeletionDate
-    |The date this file will be estimated deleted
+|file
+    |link:http://php.net/string[string^]
+    a|The file name of the file
+|month
+    |link:http://php.net/int[int^]
+    a|The month of the file
+|year
+    |link:http://php.net/int[int^]
+    a|The year of the file
+|day
+    |link:http://php.net/int[int^]
+    a|The day of the file
+|size
+    |link:http://php.net/int[int^]
+    a|The size of the file
+|estimatedDeletionDate
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The date this file will be estimated deleted
 |===
 
 
@@ -507,7 +517,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -532,15 +542,16 @@ Contains entries, which should be saved
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/array[array^]
-    |entries
-    |List of SystemConfigEntries
-|link:http://php.net/bool[bool^]
-    |archiveActive
-    |Is the Archive activated
+|entries
+    |link:http://php.net/array[array^]
+    a|List of SystemConfigEntries
+|archiveActive
+    |link:http://php.net/bool[bool^]
+    a|Is the Archive activated
 |===
 
 
@@ -553,7 +564,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -578,15 +589,16 @@ Contains the configuration for one audit log entity
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |entity
-    |The audit log entity
-|link:http://php.net/bool[bool^]
-    |active
-    |Should the entity be logged
+|entity
+    |link:http://php.net/string[string^]
+    a|The audit log entity
+|active
+    |link:http://php.net/bool[bool^]
+    a|Should the entity be logged
 |===
 
 
@@ -599,7 +611,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 

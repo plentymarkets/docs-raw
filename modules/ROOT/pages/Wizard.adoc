@@ -51,7 +51,7 @@ public register($wizardKey, $wizard):void
 
 ----
 
-    
+
 
 
 
@@ -60,15 +60,16 @@ public register($wizardKey, $wizard):void
 Register a wizard
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$wizardKey`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$wizard`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -79,7 +80,7 @@ public registerFolders($folderClass):void
 
 ----
 
-    
+
 
 
 
@@ -88,11 +89,12 @@ public registerFolders($folderClass):void
 Register a wizard folder
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$folderClass`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -103,7 +105,7 @@ public get($wizardKey, $skipTranslation = false):Plenty\Modules\Wizard\Models\Wi
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Wizard.adoc#wizard_models_wizard[`Wizard`]
@@ -112,15 +114,16 @@ public get($wizardKey, $skipTranslation = false):Plenty\Modules\Wizard\Models\Wi
 Get a single wizard by its key
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$wizardKey`
-|
+|link:http://php.net/string[string^]
+a|
 
-|link:http://php.net/bool[bool^]
 a|`$skipTranslation`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -131,7 +134,7 @@ public all():array
 
 ----
 
-    
+
 
 
 
@@ -146,7 +149,7 @@ public folders($hierarchy = false):array
 
 ----
 
-    
+
 
 
 
@@ -155,11 +158,12 @@ public folders($hierarchy = false):array
 List all wizard folders
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/bool[bool^]
+|Name |Type |Description
 a|`$hierarchy`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -189,7 +193,7 @@ public modify($parameters):void
 
 ----
 
-    
+
 
 
 
@@ -198,11 +202,12 @@ public modify($parameters):void
 Modify a wizard data for a step
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$parameters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -232,7 +237,7 @@ public create($wizardKey, $steps = []):void
 
 ----
 
-    
+
 
 
 
@@ -241,15 +246,16 @@ public create($wizardKey, $steps = []):void
 Creates a new WizardData.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$wizardKey`
-|
+|link:http://php.net/string[string^]
+a|
 
-|link:http://php.net/array[array^]
 a|`$steps`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -260,7 +266,7 @@ public createDataOption($wizardKey, $data = [], $optionId = &quot;default&quot;)
 
 ----
 
-    
+
 
 
 
@@ -269,19 +275,20 @@ public createDataOption($wizardKey, $data = [], $optionId = &quot;default&quot;)
 Creates a new WizardData option
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$wizardKey`
-|
-
-|link:http://php.net/array[array^]
-a|`$data`
-|
-
 |link:http://php.net/string[string^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+
 a|`$optionId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -292,7 +299,7 @@ public get($wizardKey):void
 
 ----
 
-    
+
 
 
 
@@ -301,11 +308,12 @@ public get($wizardKey):void
 Get a single WizardData by its ID
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$wizardKey`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -316,7 +324,7 @@ public getByOptionId($wizardKey, $optionId = &quot;default&quot;):void
 
 ----
 
-    
+
 
 
 
@@ -325,15 +333,16 @@ public getByOptionId($wizardKey, $optionId = &quot;default&quot;):void
 Get a single WizardData for an option ID
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$wizardKey`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$optionId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -344,7 +353,7 @@ public findByWizardKey($wizardKey):void
 
 ----
 
-    
+
 
 
 
@@ -353,11 +362,12 @@ public findByWizardKey($wizardKey):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$wizardKey`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -368,7 +378,7 @@ public list($page = 1, $itemsPerPage = 50, $filters = []):array
 
 ----
 
-    
+
 
 
 
@@ -377,19 +387,20 @@ public list($page = 1, $itemsPerPage = 50, $filters = []):array
 List all WizardData for current plenty ID.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/int[int^]
+|Name |Type |Description
 a|`$page`
-|
-
 |link:http://php.net/int[int^]
-a|`$itemsPerPage`
-|
+a|
 
-|link:http://php.net/array[array^]
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|
+
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -400,7 +411,7 @@ public update($wizardKey, $properties):void
 
 ----
 
-    
+
 
 
 
@@ -409,15 +420,16 @@ public update($wizardKey, $properties):void
 Update data for a WizardData
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$wizardKey`
-|
+|link:http://php.net/string[string^]
+a|
 
-|link:http://php.net/array[array^]
 a|`$properties`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -428,7 +440,7 @@ public updateDataOption($wizardKey, $optionId, $data, $stepKey, $skipValidation 
 
 ----
 
-    
+
 
 
 
@@ -437,27 +449,28 @@ public updateDataOption($wizardKey, $optionId, $data, $stepKey, $skipValidation 
 Update data for a WizardData option
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$wizardKey`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$optionId`
-|
-
-|link:http://php.net/array[array^]
-a|`$data`
-|
-
 |link:http://php.net/string[string^]
-a|`$stepKey`
-|
+a|
 
-|link:http://php.net/bool[bool^]
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+
+a|`$stepKey`
+|link:http://php.net/string[string^]
+a|
+
 a|`$skipValidation`
-|
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -468,7 +481,7 @@ public delete($wizardKey):void
 
 ----
 
-    
+
 
 
 
@@ -477,11 +490,12 @@ public delete($wizardKey):void
 Delete a single WizardData by its ID
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$wizardKey`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -492,7 +506,7 @@ public deleteDataOption($wizardKey, $optionId):void
 
 ----
 
-    
+
 
 
 
@@ -501,15 +515,16 @@ public deleteDataOption($wizardKey, $optionId):void
 Delete a single WizardData by its ID
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$wizardKey`
-|
-
 |link:http://php.net/string[string^]
+a|
+
 a|`$optionId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -520,7 +535,7 @@ public finalize($wizardKey, $optionId = &quot;default&quot;, $data = []):void
 
 ----
 
-    
+
 
 
 
@@ -529,19 +544,20 @@ public finalize($wizardKey, $optionId = &quot;default&quot;, $data = []):void
 Finalize wizard
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$wizardKey`
-|
-
 |link:http://php.net/string[string^]
-a|`$optionId`
-|
+a|
 
-|link:http://php.net/array[array^]
+a|`$optionId`
+|link:http://php.net/string[string^]
+a|
+
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -552,7 +568,7 @@ public clearCriteria():void
 
 ----
 
-    
+
 
 
 
@@ -567,7 +583,7 @@ public applyCriteriaFromFilters():void
 
 ----
 
-    
+
 
 
 
@@ -582,7 +598,7 @@ public setFilters($filters = []):void
 
 ----
 
-    
+
 
 
 
@@ -591,11 +607,12 @@ public setFilters($filters = []):void
 Sets the filter array.
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$filters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -606,7 +623,7 @@ public getFilters():void
 
 ----
 
-    
+
 
 
 
@@ -621,7 +638,7 @@ public getConditions():void
 
 ----
 
-    
+
 
 
 
@@ -636,7 +653,7 @@ public clearFilters():void
 
 ----
 
-    
+
 
 
 
@@ -702,7 +719,7 @@ public handle($parameters):bool
 
 ----
 
-    
+
 
 
 
@@ -711,11 +728,12 @@ public handle($parameters):bool
 Handle wizard data for a finalized wizard
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$parameters`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -737,42 +755,43 @@ The wizard model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |title
-    |The title
-|link:http://php.net/string[string^]
-    |key
-    |The wizard's key
-|link:http://php.net/string[string^]
-    |settingsHandlerClass
-    |Settings handler
-|link:http://php.net/string[string^]
-    |shortDescription
-    |The short description
-|link:http://php.net/string[string^]
-    |translationKey
-    |The translation key
-|link:http://php.net/string[string^]
-    |deleteConfirmationText
-    |Delete confirmation Text in deletion overlay
-|link:http://php.net/array[array^]
-    |topics
-    |The topics
-|link:http://php.net/array[array^]
-    |steps
-    |Wizard's structure
-|link:http://php.net/int[int^]
-    |priority
-    |Wizard's listing priority in the overview
-|link:http://php.net/string[string^]
-    |relevance
-    |Wizard's level of relevance
-|link:http://php.net/array[array^]
-    |keywords
-    |Keywords describing the wizard
+|title
+    |link:http://php.net/string[string^]
+    a|The title
+|key
+    |link:http://php.net/string[string^]
+    a|The wizard's key
+|settingsHandlerClass
+    |link:http://php.net/string[string^]
+    a|Settings handler
+|shortDescription
+    |link:http://php.net/string[string^]
+    a|The short description
+|translationKey
+    |link:http://php.net/string[string^]
+    a|The translation key
+|deleteConfirmationText
+    |link:http://php.net/string[string^]
+    a|Delete confirmation Text in deletion overlay
+|topics
+    |link:http://php.net/array[array^]
+    a|The topics
+|steps
+    |link:http://php.net/array[array^]
+    a|Wizard's structure
+|priority
+    |link:http://php.net/int[int^]
+    a|Wizard's listing priority in the overview
+|relevance
+    |link:http://php.net/string[string^]
+    a|Wizard's level of relevance
+|keywords
+    |link:http://php.net/array[array^]
+    a|Keywords describing the wizard
 |===
 
 
@@ -785,7 +804,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -810,24 +829,25 @@ The wizard data model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |uuid
-    |
-|link:http://php.net/string[string^]
-    |plentyIdHash
-    |
-|link:http://php.net/string[string^]
-    |wizardKey
-    |
-|link:http://php.net/array[array^]
-    |data
-    |
-|link:http://php.net/array[array^]
-    |steps
-    |
+|uuid
+    |link:http://php.net/string[string^]
+    a|
+|plentyIdHash
+    |link:http://php.net/string[string^]
+    a|
+|wizardKey
+    |link:http://php.net/string[string^]
+    a|
+|data
+    |link:http://php.net/array[array^]
+    a|
+|steps
+    |link:http://php.net/array[array^]
+    a|
 |===
 
 
@@ -840,7 +860,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -865,21 +885,22 @@ The wizard folder.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |name
-    |The name
-|link:http://php.net/int[int^]
-    |priority
-    |The priority
-|link:http://php.net/string[string^]
-    |shortDescription
-    |The short description
-|link:http://php.net/string[string^]
-    |parent
-    |The parent
+|name
+    |link:http://php.net/string[string^]
+    a|The name
+|priority
+    |link:http://php.net/int[int^]
+    a|The priority
+|shortDescription
+    |link:http://php.net/string[string^]
+    a|The short description
+|parent
+    |link:http://php.net/string[string^]
+    a|The parent
 |===
 
 
@@ -892,7 +913,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -917,24 +938,25 @@ The wizard form option.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |name
-    |The name
-|link:http://php.net/string[string^]
-    |placeholder
-    |The placeholder
-|link:http://php.net/string[string^]
-    |caption
-    |The caption. Only for checkboxValues.
-|link:http://php.net/string[string^]
-    |label
-    |The label
-|link:http://php.net/string[string^]
-    |tooltip
-    |The tooltip
+|name
+    |link:http://php.net/string[string^]
+    a|The name
+|placeholder
+    |link:http://php.net/string[string^]
+    a|The placeholder
+|caption
+    |link:http://php.net/string[string^]
+    a|The caption. Only for checkboxValues.
+|label
+    |link:http://php.net/string[string^]
+    a|The label
+|tooltip
+    |link:http://php.net/string[string^]
+    a|The tooltip
 |===
 
 
@@ -947,7 +969,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -972,18 +994,19 @@ The wizard step section model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |title
-    |The title
-|link:http://php.net/string[string^]
-    |description
-    |The description
-|link:http://php.net/array[array^]
-    |form
-    |The form
+|title
+    |link:http://php.net/string[string^]
+    a|The title
+|description
+    |link:http://php.net/string[string^]
+    a|The description
+|form
+    |link:http://php.net/array[array^]
+    a|The form
 |===
 
 
@@ -996,7 +1019,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1021,24 +1044,25 @@ The wizard step model.
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |title
-    |The title
-|link:http://php.net/string[string^]
-    |description
-    |The short description
-|link:http://php.net/string[string^]
-    |modifierClass
-    |The modifier class
-|link:http://php.net/string[string^]
-    |validationClass
-    |The validation class
-|link:http://php.net/array[array^]
-    |sections
-    |The sections
+|title
+    |link:http://php.net/string[string^]
+    a|The title
+|description
+    |link:http://php.net/string[string^]
+    a|The short description
+|modifierClass
+    |link:http://php.net/string[string^]
+    a|The modifier class
+|validationClass
+    |link:http://php.net/string[string^]
+    a|The validation class
+|sections
+    |link:http://php.net/array[array^]
+    a|The sections
 |===
 
 
@@ -1051,7 +1075,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -1086,7 +1110,7 @@ public folders():array
 
 ----
 
-    
+
 
 
 
@@ -1120,7 +1144,7 @@ public structure():array
 
 ----
 
-    
+
 
 
 
@@ -1149,15 +1173,16 @@ Base data source for wizards
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|
-    |wizardKey
+|wizardKey
     |
-|
-    |dataStructure
+    a|
+|dataStructure
     |
+    a|
 |===
 
 
@@ -1170,7 +1195,7 @@ public setWizardKey($wizardKey):void
 
 ----
 
-    
+
 
 
 
@@ -1179,11 +1204,12 @@ public setWizardKey($wizardKey):void
 Sets the wizard key for this data source
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$wizardKey`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1194,7 +1220,7 @@ public getIdentifiers():array
 
 ----
 
-    
+
 
 
 
@@ -1209,7 +1235,7 @@ public create($steps = []):array
 
 ----
 
-    
+
 
 
 
@@ -1218,11 +1244,12 @@ public create($steps = []):array
 Create data
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$steps`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1233,7 +1260,7 @@ public get():array
 
 ----
 
-    
+
 
 
 
@@ -1248,7 +1275,7 @@ public update($properties = []):void
 
 ----
 
-    
+
 
 
 
@@ -1257,11 +1284,12 @@ public update($properties = []):void
 Update data
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$properties`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -1272,7 +1300,7 @@ public delete():void
 
 ----
 
-    
+
 
 
 
@@ -1287,7 +1315,7 @@ public createDataOption($data = [], $optionId = &quot;default&quot;):array
 
 ----
 
-    
+
 
 
 
@@ -1296,15 +1324,16 @@ public createDataOption($data = [], $optionId = &quot;default&quot;):array
 Create data option
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/array[array^]
+|Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 
-|link:http://php.net/string[string^]
 a|`$optionId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1315,7 +1344,7 @@ public getByOptionId($optionId = &quot;default&quot;):array
 
 ----
 
-    
+
 
 
 
@@ -1324,11 +1353,12 @@ public getByOptionId($optionId = &quot;default&quot;):array
 Get data option by its option ID
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$optionId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1339,7 +1369,7 @@ public updateDataOption($optionId = &quot;default&quot;, $data = [], $stepKey = 
 
 ----
 
-    
+
 
 
 
@@ -1348,19 +1378,20 @@ public updateDataOption($optionId = &quot;default&quot;, $data = [], $stepKey = 
 Update data option
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$optionId`
-|
-
-|link:http://php.net/array[array^]
-a|`$data`
-|
-
 |link:http://php.net/string[string^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+
 a|`$stepKey`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1371,7 +1402,7 @@ public deleteDataOption($optionId):void
 
 ----
 
-    
+
 
 
 
@@ -1380,11 +1411,12 @@ public deleteDataOption($optionId):void
 Delete data option
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$optionId`
-|
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -1395,7 +1427,7 @@ public finalize($optionId, $data = []):void
 
 ----
 
-    
+
 
 
 
@@ -1404,15 +1436,16 @@ public finalize($optionId, $data = []):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$optionId`
-|
+|link:http://php.net/string[string^]
+a|
 
-|link:http://php.net/array[array^]
 a|`$data`
-|
+|link:http://php.net/array[array^]
+a|
 |===
 
 
