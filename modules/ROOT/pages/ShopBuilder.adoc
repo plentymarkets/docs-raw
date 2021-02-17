@@ -663,13 +663,19 @@ public getData():array
 
 
 
-Get basic information about the widget. Possible fields are
-- identifier
-- label
-- previewImageURL
-- type
-- categories
-- position
+Get base data of the widget. Each widget should define at least an
+identifier and a label to be displayed in the builder. In total the following information can be provided:
+&lt;ul&gt;
+ &lt;li&gt;identifier: A unique identifier of the widget. This is used to identify widgets when loading widgets of a content in the builder.&lt;/li&gt;
+ &lt;li&gt;label: The label of the widget to be displayed in the list of available widgets in the builder.&lt;/li&gt;
+ &lt;li&gt;previewImageURL: The url of the preview image to be displayed in the list of available widgets in the builder.&lt;/li&gt;
+ &lt;li&gt;type: The type of the widget. This is used to restrict possible locations of the widgets using the allowedNestingTypes.&lt;/li&gt;
+ &lt;li&gt;categories: A list of category keys defined in the list of categories to be displayed in the list of available widgets. If no correspondig category exists, the widget will be located in a generic category.&lt;/li&gt;
+ &lt;li&gt;position: The position of the widget in the list of available widgets&lt;/li&gt;
+ &lt;li&gt;maxPerPage: Restrict the amount of times the widget can be placed on a single content.&lt;/li&gt;
+ &lt;li&gt;allowedNestingTypes: A list of widget types that are allowed to be placed in child dropzones of the widget.&lt;/li&gt;
+ &lt;li&gt;deprecated: set to true to hide the widget in the list of available widgets. Existing deprecated widgets can still be edited but not added anymore.&lt;/li&gt;
+&lt;/ul&gt;
 
 [source%nowrap, php]
 ----
@@ -684,7 +690,7 @@ public getSettings():array
 
 
 
-Return the structure of the settings for the widget
+Get the settings of the widgets. Settings are displayed in a terra-form when the widget is selected in the builder.
 
 [source%nowrap, php]
 ----
@@ -699,7 +705,7 @@ public getPreview($widgetSettings = [], $children = []):string
 
 
 
-Get the html representation of the widget
+Render the template of the widget twice to get the final markup to be displayed in the preview of the builder.
 
 .*Parameters*
 |===
@@ -727,7 +733,7 @@ public render($widgetSettings = [], $children = []):string
 
 
 
-Render the widget
+Render the template of the widget.
 
 .*Parameters*
 |===
@@ -832,7 +838,7 @@ public getPreview($widgetSettings = [], $children = []):string
 
 
 
-Get the html representation of the widget
+Render the template of the widget twice to get the final markup to be displayed in the preview of the builder.
 
 .*Parameters*
 |===
@@ -860,7 +866,7 @@ public render($widgetSettings = [], $children = []):string
 
 
 
-Render the widget
+Render the template of the widget.
 
 .*Parameters*
 |===
@@ -871,6 +877,173 @@ a|`$widgetSettings`
 
 |link:http://php.net/array[array^]
 a|`$children`
+|
+|===
+
+
+[[shopbuilder_shopbuilder_factories]]
+===  Factories
+[[shopbuilder_factories_widgetsettingsfactory]]
+==== WidgetSettingsFactory
+
+Factory to generate widget settings
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public static inherit($parentWidgetClass):Plenty\Modules\ContentBuilder\Factories
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_contentbuilder_factories[`Factories`]
+
+
+Create a new factory instance and initialize values from given widget class.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$parentWidgetClass`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):Plenty\Modules\ContentBuilder\Factories
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_contentbuilder_factories[`Factories`]
+
+
+Create a new factory instance with initial values.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createSetting($key, $settingsFactory = &quot;&quot;, $args = []):void
+
+----
+
+    
+
+
+
+
+
+Create a generic widget settings entry.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The key of the new settings entry. If key already exists, previous entry will be overridden.
+
+|link:http://php.net/string[string^]
+a|`$settingsFactory`
+|Class name of the settings factory to add an instance of
+
+|link:http://php.net/array[array^]
+a|`$args`
+|Arguments to be passed to the factory constructor method
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Generate settings data from all registered factories
+
+[source%nowrap, php]
+----
+
+public withPointer($key):Plenty\Modules\ContentBuilder\Factories
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_contentbuilder_factories[`Factories`]
+
+
+Set a settings key to insert new settings after.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public addSetting($key, $setting):void
+
+----
+
+    
+
+
+
+
+
+Insert a new settings factory at the current pointer.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|
+
+|
+a|`$setting`
 |
 |===
 
@@ -1457,7 +1630,7 @@ public register():void
 
 
 
-
+Register data fields and child providers.
 
 [source%nowrap, php]
 ----
@@ -1479,7 +1652,7 @@ Register a new data field.
 |Type |Name |Description
 |link:http://php.net/string[string^]
 a|`$identifier`
-|
+|Unique identifier of the data field
 
 |link:http://php.net/string[string^]
 a|`$label`
@@ -1550,4 +1723,4276 @@ a|`$keywords`
 |A list of keywords. Each keyword may contain a translation key. A single keyword could be a comma separated list of words.
 |===
 
+
+[[shopbuilder_factories]]
+== Factories
+
+[[shopbuilder_factories_settings]]
+===  Settings
+[[shopbuilder_settings_basesettingfactory]]
+==== BaseSettingFactory
+
+Common factory to generate properties of a widget setting definition.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+.Properties
+|===
+|Type |Name |Description
+
+|
+    |data
+    |
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_categorysettingfactory]]
+==== CategorySettingFactory
+
+Factory to define a category picker in the widget settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public withDisplayResetButton($displayResetButton):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Display or hide a button to reset the current selection.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$displayResetButton`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDisplaySearch($displaySearch):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Display or hide an input to search for categories with.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$displaySearch`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withShowFullSelectionPath($showFullSelectionPath):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$showFullSelectionPath`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_checkboxgroupsettingfactory]]
+==== CheckboxGroupSettingFactory
+
+Factory to define a checkbox group in the widget settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public withCollapsed($collapsed):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Collapse or expand the group by default. The group can be toggled by the user.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$collapsed`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCheckboxValues($checkboxValues):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set available checkboxes of the group.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$checkboxValues`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value of the group. This should be an array of values.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$defaultValue`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_checkboxsettingfactory]]
+==== CheckboxSettingFactory
+
+Factory to define a checkbox in the widget settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public withIcon($icon):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the icon of the checkbox.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$icon`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_containersettingfactory]]
+==== ContainerSettingFactory
+
+Factory to define a container for nested settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public static create($data = []):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Create a new factory instance with initial value.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all children as a native array
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+
+[[shopbuilder_settings_datesettingfactory]]
+==== DateSettingFactory
+
+Factory to define a date picker in the widget settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public withCalendarTop($isCalendarTop):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Display the popup containing the calendar above or below the input field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$isCalendarTop`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDisplayDateFormat($format):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the date format to apply to the input field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$format`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_doublesettingfactory]]
+==== DoubleSettingFactory
+
+Factory to define a number input in the widget settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public withPriceInput($isPriceInput):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Define if input expects a monetary value.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$isPriceInput`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDecimalCount($decimalCount):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the number of decimal places for the input.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$decimalCount`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_filesettingfactory]]
+==== FileSettingFactory
+
+Factory to define a file input in the widget settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public withShowPreview($showPreview):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Display the preview of the selected file.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$showPreview`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withAllowedExtensions($allowedExtensions):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Restrict allowed file extensions.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$allowedExtensions`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withFoldersAllowed($foldersAllowed):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set to true if the user should be allowed to create new folders.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$foldersAllowed`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_radiogroupsettingfactory]]
+==== RadioGroupSettingFactory
+
+Factory to define a group of radio buttons in the widget settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public withRadioValues($radioValues):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the available radio buttons in this group.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$radioValues`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_selectsettingfactory]]
+==== SelectSettingFactory
+
+Factory to define a selection input in the widget settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public withOpenOnTop($openOnTop):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set to true to open selection values above the input field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$openOnTop`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withListBoxValues($listBoxValues):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set available selection values.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$listBoxValues`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_slidersettingfactory]]
+==== SliderSettingFactory
+
+Factory to define a slider in the widget settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public withMin($min):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the minimum value of the slider.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withMax($max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the maximum value of the slider.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$max`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withInterval($interval):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the interval between the values of the slider.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$interval`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withPrecision($precision):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the number of decimal places of the value.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$precision`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withShowMinMax($showMinMax):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set to true to display the minimum and maximum values at each end of the slider.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$showMinMax`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withShowTicks($showTicks):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set to true to display ticks on each value.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$showTicks`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_suggestionsettingfactory]]
+==== SuggestionSettingFactory
+
+Factory to define an input with suggestions in the widget settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public withListBoxValues($listBoxValues):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set available values.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$listBoxValues`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_textsettingfactory]]
+==== TextSettingFactory
+
+Factory to define a text input in the widget settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public withPassword($isPassword):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set to true if the input field should be handled as a password input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$isPassword`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withReadonly($isReadonly):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set to true if input field should be readonly.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$isReadonly`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_textareasettingfactory]]
+==== TextareaSettingFactory
+
+Factory to define a textarea in the widget settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public withFixedHeight($isFixedHeight):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set to true if the height should be fixed.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/bool[bool^]
+a|`$isFixedHeight`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withMaxRows($maxRows):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the maximum number of rows for the textarea.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$maxRows`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_urlsettingfactory]]
+==== UrlSettingFactory
+
+Factory to define an url picker in the widget settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public withInternalLinks($internalLinks):Plenty\Modules\ShopBuilder\Factories\Settings\UrlSettingFactory
+
+----
+
+    
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_settings_urlsettingfactory[`UrlSettingFactory`]
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/array[array^]
+a|`$internalLinks`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public static create($data = []):void
+
+----
+
+    
+
+
+
+
+
+
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$data`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the type of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$type`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set an option for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$key`
+|The option key
+
+|
+a|`$value`
+|The option value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the default value for the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$defaultValue`
+|The default value
+|===
+
+
+[source%nowrap, php]
+----
+
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a condition if the setting should be visible or not.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$condition`
+|Condition if the related form element should be visible or not.
+|===
+
+
+[source%nowrap, php]
+----
+
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set the name of the setting.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$name`
+|The label of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Set a tooltip text for this input
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/string[string^]
+a|`$tooltip`
+|An additional description of the setting
+|===
+
+
+[source%nowrap, php]
+----
+
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Determines whether the declaration is used to render a list of the specified form field.
+
+.*Parameters*
+|===
+|Type |Name |Description
+|link:http://php.net/int[int^]
+a|`$min`
+|Minimum number of entries.
+
+|link:http://php.net/int[int^]
+a|`$max`
+|Maximum number of entries. If not set or smaller than 0, unlimited entries might be added by the user.
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():array
+
+----
+
+    
+
+
+
+
+
+Get all data as array
+
+
+[[shopbuilder_settings_valuelistfactory]]
+==== ValueListFactory
+
+Create a list of values to be used by settings with multiple predefined values.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories\Settings`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public static make():Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Create a new factory instance.
+
+[source%nowrap, php]
+----
+
+public addEntry($value, $caption):Plenty\Modules\ContentBuilder\Factories\Settings
+
+----
+
+    
+
+
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+
+
+Add an entry to the list of values
+
+.*Parameters*
+|===
+|Type |Name |Description
+|
+a|`$value`
+|
+
+|link:http://php.net/string[string^]
+a|`$caption`
+|
+|===
+
+
+[source%nowrap, php]
+----
+
+public toArray():void
+
+----
+
+    
+
+
+
+
+
+Get all values.
 
