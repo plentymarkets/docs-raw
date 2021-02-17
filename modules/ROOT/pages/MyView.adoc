@@ -10,6 +10,90 @@
 
 [[myview_myview_contracts]]
 ===  Contracts
+[[myview_contracts_presetcontainercontract]]
+==== PresetContainerContract
+
+This container contains presets registered at boot time
+
+
+
+===== Namespace
+
+`Plenty\Modules\MyView\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public registerPresets($presets):void
+
+----
+
+
+
+
+
+
+
+Register an array of presets
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$presets`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public getAll():array
+
+----
+
+
+
+
+
+
+
+Returns an array of preset-container collections
+
+[source%nowrap, php]
+----
+
+public getPresetsForMyViewKey($myViewKey):array
+
+----
+
+
+
+
+
+
+
+Get all presets for a given my-view key
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$myViewKey`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+
 [[myview_contracts_viewsetnamerepositorycontract]]
 ==== ViewSetNameRepositoryContract
 
