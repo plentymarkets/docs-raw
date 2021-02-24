@@ -13,7 +13,7 @@
 [[shopbuilder_contracts_contentlinkrepositorycontract]]
 ==== ContentLinkRepositoryContract
 
-Get, create, delete and update links between shop builder contents and layout containers.
+Get, create, delete, and update links between shopBuilder contents and layout containers depending on plugin sets and languages.
 
 
 
@@ -41,7 +41,7 @@ public getContentLinks($pluginSetId):array
 
 
 
-Get all linked contents for a plugin set
+Get all content links for a plugin set.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -49,7 +49,7 @@ Get all linked contents for a plugin set
 |Name |Type |Description
 a|`$pluginSetId`
 |link:http://php.net/int[int^]
-a|
+a|The ID of the plugin set to get content links for.
 |===
 
 
@@ -66,7 +66,7 @@ public getContentLink($contentLinkId):Plenty\Modules\ShopBuilder\Models\ContentL
 ====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
 
 
-Get a single connection between a content and a layout container
+Get a single connection between a content and a layout container.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -74,7 +74,7 @@ Get a single connection between a content and a layout container
 |Name |Type |Description
 a|`$contentLinkId`
 |link:http://php.net/int[int^]
-a|
+a|The ID of the content link to get.
 |===
 
 
@@ -91,7 +91,7 @@ public createContentLink($data):Plenty\Modules\ShopBuilder\Models\ContentLink
 ====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
 
 
-Link a content to a layout container
+Create a link between a content and a layout container for a specified plugin set and a language.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -99,7 +99,7 @@ Link a content to a layout container
 |Name |Type |Description
 a|`$data`
 |
-a|
+a|Content link data to create instance with.
 |===
 
 
@@ -116,7 +116,7 @@ public updateContentLink($contentLinkId, $data):Plenty\Modules\ShopBuilder\Model
 ====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_contentlink[`ContentLink`]
 
 
-Update a link between a content and a layout container
+Update a link between a content and a layout container.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -124,11 +124,11 @@ Update a link between a content and a layout container
 |Name |Type |Description
 a|`$contentLinkId`
 |link:http://php.net/int[int^]
-a|
+a|ID of the content link.
 
 a|`$data`
 |link:http://php.net/array[array^]
-a|
+a|Data to assign to the content link.
 |===
 
 
@@ -145,7 +145,7 @@ public deleteContentLink($contentLinkId):void
 
 
 
-Unlink a content from a layout container. The content itself will remain
+Unlink a content from a layout container. The content itself will remain.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -153,7 +153,7 @@ Unlink a content from a layout container. The content itself will remain
 |Name |Type |Description
 a|`$contentLinkId`
 |link:http://php.net/int[int^]
-a|
+a|The ID of the content link to remove.
 |===
 
 
@@ -178,19 +178,19 @@ Get all content links for a specific layout container.
 |Name |Type |Description
 a|`$containerName`
 |link:http://php.net/string[string^]
-a|The name of the layout container to get content links for.
+a|The name of the layout container for which to get content links.
 
 a|`$pluginSetId`
 |link:http://php.net/int[int^]
-a|An id of a plugin set to get content links for. Active plugin set will be used by default.
+a|An ID of a plugin set for which to get content links. Active plugin set will be used by default.
 
 a|`$lang`
 |link:http://php.net/string[string^]
-a|The language to get content links for. Current language will be get from session if not defined.
+a|The language for which to get content links. Current language will be gotten from session if not defined.
 
 a|`$contentType`
 |link:http://php.net/string[string^]
-a|Type of the content to get
+a|Type of the content to get.
 
 a|`$filterResults`
 |link:http://php.net/bool[bool^]
@@ -202,7 +202,7 @@ a|
 [[shopbuilder_contracts_contentpreset]]
 ==== ContentPreset
 
-Contract for content presets
+Contract for content presets. Presets can provide a predefined set of widgets when creating new contents in the shopBuilder.
 
 
 
@@ -236,7 +236,7 @@ Get the widget configurations of the presets to be assigned to the created conte
 [[shopbuilder_contracts_contentrepositorycontract]]
 ==== ContentRepositoryContract
 
-Get, create, delete und update shop builder contents.
+Get, create, delete, und update shopBuilder contents.
 
 
 
@@ -264,7 +264,7 @@ public getContents():array
 
 
 
-Get all contents to be edited in the shop builder.
+Get all contents with all their widget data.
 
 [source%nowrap, php]
 ----
@@ -279,7 +279,7 @@ public searchContents($itemsPerPage = 20, $page = 1, $params = []):Plenty\Reposi
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
-Search for contents
+Search for contents. Search params are queried conjunctively while values for each params are queried disjunctively:
 
 .*Parameters*
 [cols="3,1,6"]
@@ -320,11 +320,11 @@ Get a single content.
 |Name |Type |Description
 a|`$contentId`
 |link:http://php.net/int[int^]
-a|Id of the content to get information for
+a|ID of the content to get information for.
 
 a|`$pluginSetId`
 |link:http://php.net/int[int^]
-a|Plugin set id to be used for rendering widgets.
+a|The plugin set ID to be used for rendering widgets.
 
 a|`$frontendLanguage`
 |link:http://php.net/string[string^]
@@ -332,7 +332,7 @@ a|The language to be used for rendering the widgets.
 
 a|`$versionId`
 |link:http://php.net/string[string^]
-a|The version of the content
+a|The version of the content.
 |===
 
 
@@ -349,7 +349,7 @@ public listContentVersions($contentId, $itemsPerPage = 20, $versionIdMarker = &q
 
 
 
-Get a list of Versions of the specified content.
+Get a list of versions of the specified content.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -357,15 +357,15 @@ Get a list of Versions of the specified content.
 |Name |Type |Description
 a|`$contentId`
 |link:http://php.net/int[int^]
-a|
+a|ID of the content to get versions for.
 
 a|`$itemsPerPage`
 |link:http://php.net/int[int^]
-a|
+a|Number of versions to be displayed at a page.
 
 a|`$versionIdMarker`
 |link:http://php.net/string[string^]
-a|
+a|ID of a version to get subsequent versions from.
 |===
 
 
@@ -382,7 +382,7 @@ public restoreContentVersion($contentId, $versionId, $pluginSetId, $frontendLang
 
 
 
-Restore a specific content version
+Restore a content to a specific version.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -390,11 +390,11 @@ Restore a specific content version
 |Name |Type |Description
 a|`$contentId`
 |link:http://php.net/int[int^]
-a|
+a|ID of the content to restore.
 
 a|`$versionId`
 |link:http://php.net/string[string^]
-a|
+a|ID of the version to restore the content to.
 
 a|`$pluginSetId`
 |link:http://php.net/int[int^]
@@ -427,7 +427,7 @@ Create new content. New content will not be linked to any layout container.
 |Name |Type |Description
 a|`$pluginSetId`
 |link:http://php.net/int[int^]
-a|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
+a|The plugin set to be used to render the content. The raw content data do not depend on a plugin set.
 
 a|`$data`
 |
@@ -452,7 +452,7 @@ public updateContent($pluginSetId, $contentId, $data, $frontendLanguage = null):
 ====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
 
 
-Update content.
+Update content. Metadata, such as the user defined name of the content, will be stored separately to the data of the widgets.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -460,11 +460,11 @@ Update content.
 |Name |Type |Description
 a|`$pluginSetId`
 |link:http://php.net/int[int^]
-a|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
+a|The plugin set to be used to render the content. The raw content data do not depend on a plugin set.
 
 a|`$contentId`
 |link:http://php.net/int[int^]
-a|The id of the content to be updated.
+a|The ID of the content to be updated.
 
 a|`$data`
 |
@@ -489,7 +489,7 @@ public deleteContent($pluginSetId, $contentId):void
 
 
 
-Delete content. Any connections to layout containers will be removed too.
+Delete content. Any connections to layout containers will be removed, too.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -497,11 +497,11 @@ Delete content. Any connections to layout containers will be removed too.
 |Name |Type |Description
 a|`$pluginSetId`
 |link:http://php.net/int[int^]
-a|The plugin set to be used to render the content. The raw content data are not depending on a plugin set.
+a|The plugin set to be used to render the content. The raw content data do not depend on a plugin set.
 
 a|`$contentId`
 |link:http://php.net/int[int^]
-a|The id of the content to be deleted.
+a|The ID of the content to be deleted.
 |===
 
 
@@ -518,7 +518,7 @@ public duplicateContent($contentId, $targetPluginSetId, $language, $containerNam
 ====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_models_content[`Content`]
 
 
-Duplicate a content and its link
+Duplicate a content and its link.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -526,30 +526,30 @@ Duplicate a content and its link
 |Name |Type |Description
 a|`$contentId`
 |link:http://php.net/int[int^]
-a|
+a|The ID of the content to be duplicated.
 
 a|`$targetPluginSetId`
 |link:http://php.net/int[int^]
-a|
+a|ID of the plugin set to link the duplicated content to.
 
 a|`$language`
 |link:http://php.net/string[string^]
-a|
+a|Language to link the duplicated content to.
 
 a|`$containerName`
 |link:http://php.net/string[string^]
-a|
+a|Name of the layout container to link the duplicated content to.
 
 a|`$contentName`
 |link:http://php.net/string[string^]
-a|
+a|Name of the duplicated content.
 |===
 
 
 [source%nowrap, php]
 ----
 
-public rebuildContents($containerName = null, $pluginSetId = null):int
+public rebuildContents($containerName = null, $pluginSetId):int
 
 ----
 
@@ -571,7 +571,7 @@ a|Name of the layout container to rebuild contents for.
 
 a|`$pluginSetId`
 |link:http://php.net/int[int^]
-a|Id of the plugin set to rebuild contents for.
+a|ID of the plugin set to rebuild contents for.
 |===
 
 
@@ -579,7 +579,7 @@ a|Id of the plugin set to rebuild contents for.
 [[shopbuilder_contracts_contentwidgetrepositorycontract]]
 ==== ContentWidgetRepositoryContract
 
-Register shop builder widgets.
+Register shopBuilder widgets.
 
 
 
@@ -607,7 +607,7 @@ public registerWidget($widgetClass):void
 
 
 
-Register a widget to be available in the shop builder.
+Register a widget to be available in the shopBuilder.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -615,7 +615,7 @@ Register a widget to be available in the shop builder.
 |Name |Type |Description
 a|`$widgetClass`
 |link:http://php.net/string[string^]
-a|
+a|Widget class to be registered to the shopBuilder. Should implement the Widget interface.
 |===
 
 
@@ -640,7 +640,7 @@ Override a widget class to extend data or settings of the widget.
 |Name |Type |Description
 a|`$widgetIdentifier`
 |link:http://php.net/string[string^]
-a|The identifier of the original widget to override
+a|The identifier of the original widget to override.
 
 a|`$overrideWidget`
 |link:http://php.net/string[string^]
@@ -771,7 +771,7 @@ a|
 [[shopbuilder_contracts_globalsettingshandler]]
 ==== GlobalSettingsHandler
 
-Contract for classes handling global settings for the ShopBuilder.
+Contract for classes handling global settings for the ShopBuilder. Handler classes can be registered in the shopBuilder.json of a plugin.
 
 
 
@@ -822,7 +822,7 @@ Store values of global settings.
 |Name |Type |Description
 a|`$values`
 |
-a|
+a|Setting values for the global settings defined by this handler.
 |===
 
 

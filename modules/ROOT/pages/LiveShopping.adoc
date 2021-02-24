@@ -13,7 +13,7 @@
 [[liveshopping_contracts_liveshoppingrepositorycontract]]
 ==== LiveShoppingRepositoryContract
 
-Interface for Live Shopping
+Return information about live shopping offers.
 
 
 
@@ -41,7 +41,7 @@ public getLiveShopping($liveShoppingId):void
 
 
 
-
+Get live shopping data for specific live shopping ID.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -49,7 +49,7 @@ public getLiveShopping($liveShoppingId):void
 |Name |Type |Description
 a|`$liveShoppingId`
 |link:http://php.net/int[int^]
-a|
+a|Live shopping ID for which to retrieve data.
 |===
 
 
@@ -66,7 +66,7 @@ public getActiveByItemId($itemId):void
 
 
 
-
+Get live shopping data for a specific item ID.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -74,7 +74,7 @@ public getActiveByItemId($itemId):void
 |Name |Type |Description
 a|`$itemId`
 |link:http://php.net/int[int^]
-a|
+a|Item ID for which to retrieve data.
 |===
 
 
@@ -91,7 +91,7 @@ public getActive($liveShoppingId):void
 
 
 
-
+Get live shopping data for a specific live shopping ID and active status.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -99,7 +99,7 @@ public getActive($liveShoppingId):void
 |Name |Type |Description
 a|`$liveShoppingId`
 |link:http://php.net/int[int^]
-a|
+a|Live shopping ID for which to retrieve data.
 |===
 
 
@@ -116,7 +116,7 @@ public getNextActive($liveShoppingId):void
 
 
 
-
+Get the next live shopping data for a specific live shopping ID.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -124,7 +124,7 @@ public getNextActive($liveShoppingId):void
 |Name |Type |Description
 a|`$liveShoppingId`
 |link:http://php.net/int[int^]
-a|
+a|Live shopping ID for which to retrieve data.
 |===
 
 
@@ -141,7 +141,7 @@ public getLastExpired($liveShoppingId):void
 
 
 
-
+Get the last expired live shopping data for a specific live shopping ID.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -149,7 +149,7 @@ public getLastExpired($liveShoppingId):void
 |Name |Type |Description
 a|`$liveShoppingId`
 |link:http://php.net/int[int^]
-a|
+a|Live shopping ID for which to retrieve data.
 |===
 
 
@@ -166,7 +166,7 @@ public getRecentlyStartedOrExpired($time, $interval):void
 
 
 
-
+Get recently started or expired live shopping data.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -174,11 +174,11 @@ public getRecentlyStartedOrExpired($time, $interval):void
 |Name |Type |Description
 a|`$time`
 |link:http://php.net/int[int^]
-a|
+a|Unix timestamp to define start time.
 
 a|`$interval`
 |link:http://php.net/int[int^]
-a|
+a|Period time in seconds used to be checked before and after start time.
 |===
 
 
@@ -195,7 +195,7 @@ public itemHasActiveLiveShopping($itemId):bool
 
 
 
-
+Get an active live shopping status for specific item ID.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -203,7 +203,7 @@ public itemHasActiveLiveShopping($itemId):bool
 |Name |Type |Description
 a|`$itemId`
 |link:http://php.net/int[int^]
-a|
+a|Item ID for which to retrieve active status.
 |===
 
 
@@ -220,7 +220,7 @@ public increaseRealQuantity($itemId, $increase):void
 
 
 
-
+Increase the real sold quantity for specific item ID.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -228,11 +228,11 @@ public increaseRealQuantity($itemId, $increase):void
 |Name |Type |Description
 a|`$itemId`
 |link:http://php.net/int[int^]
-a|
+a|Item ID for which to increase real sold quantity.
 
 a|`$increase`
 |link:http://php.net/float[float^]
-a|
+a|Quantity to be increased.
 |===
 
 
@@ -241,7 +241,7 @@ a|
 [[liveshopping_models_liveshopping]]
 ==== LiveShopping
 
-The LiveShopping Model
+The LiveShopping data model.
 
 
 
@@ -260,31 +260,31 @@ The LiveShopping Model
 
 |id
     |link:http://php.net/int[int^]
-    a|
+    a|Autoincremented ID
 |fromTime
     |link:http://php.net/int[int^]
-    a|
+    a|Unix timestamp for the start time
 |toTime
     |link:http://php.net/int[int^]
-    a|
+    a|Unix timestamp for the end time
 |itemId
     |link:http://php.net/int[int^]
-    a|
+    a|Specific item ID
 |quantitySold
     |link:http://php.net/int[int^]
-    a|
+    a|Declared quantity sold
 |quantitySoldReal
     |link:http://php.net/int[int^]
-    a|
+    a|Defacto quantity sold
 |quantityMax
     |link:http://php.net/int[int^]
-    a|
+    a|Declared maximal quantity for sale as live shopping
 |liveShoppingId
     |link:http://php.net/int[int^]
-    a|
+    a|ID for a specific live shopping slot (1-10)
 |link
     |link:http://php.net/int[int^]
-    a|
+    a|Link value
 |===
 
 
