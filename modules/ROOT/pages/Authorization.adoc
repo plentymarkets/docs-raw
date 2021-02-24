@@ -35,7 +35,7 @@ public getCurrentAuthorizedUser():Plenty\Modules\Authorization\Models\Authorized
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Authorization.adoc#authorization_models_authorizeduser[`AuthorizedUser`]
@@ -70,7 +70,7 @@ public __construct($message = &quot;&quot;, $code, $previous = null):void
 
 ----
 
-    
+
 
 
 
@@ -79,19 +79,20 @@ public __construct($message = &quot;&quot;, $code, $previous = null):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$message`
-|The exception message
+|link:http://php.net/string[string^]
+a|The exception message
 
-|link:http://php.net/int[int^]
 a|`$code`
-|The exception code
+|link:http://php.net/int[int^]
+a|The exception code
 
-|
 a|`$previous`
 |
+a|
 |===
 
 
@@ -102,7 +103,7 @@ public missingPermissions():Illuminate\Support\Collection
 
 ----
 
-    
+
 
 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
@@ -117,7 +118,7 @@ public addMissingPermission($permissionKey):void
 
 ----
 
-    
+
 
 
 
@@ -126,11 +127,12 @@ public addMissingPermission($permissionKey):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/string[string^]
+|Name |Type |Description
 a|`$permissionKey`
-|The permission key
+|link:http://php.net/string[string^]
+a|The permission key
 |===
 
 
@@ -141,7 +143,7 @@ public jsonSerialize():void
 
 ----
 
-    
+
 
 
 
@@ -167,24 +169,25 @@ The current authorized user
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/string[string^]
-    |realName
-    |The real name of the authorized user
-|link:http://php.net/string[string^]
-    |lang
-    |The back end language used by the authorized user
-|link:http://php.net/string[string^]
-    |isSupportUser
-    |Shows whether the authorized user is a support user
-|        xref:Authentication.adoc#authentication_models_user[`User`]
-    |user
-    |Further information about the user's class, roles and rights
-|link:http://php.net/string[string^]
-    |oauthAccessTokensId
-    |The access token for OAUTH authentication
+|realName
+    |link:http://php.net/string[string^]
+    a|The real name of the authorized user
+|lang
+    |link:http://php.net/string[string^]
+    a|The back end language used by the authorized user
+|isSupportUser
+    |link:http://php.net/string[string^]
+    a|Shows whether the authorized user is a support user
+|user
+    |        xref:Authentication.adoc#authentication_models_user[`User`]
+    a|Further information about the user's class, roles and rights
+|oauthAccessTokensId
+    |link:http://php.net/string[string^]
+    a|The access token for OAUTH authentication
 |===
 
 
@@ -197,7 +200,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -222,18 +225,19 @@ The authentication Permission (REST) model
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |permission id
-|link:http://php.net/string[string^]
-    |permissionKey
-    |permission key
-|link:http://php.net/array[array^]
-    |roles
-    |
+|id
+    |link:http://php.net/int[int^]
+    a|permission id
+|permissionKey
+    |link:http://php.net/string[string^]
+    a|permission key
+|roles
+    |link:http://php.net/array[array^]
+    a|
 |===
 
 
@@ -246,7 +250,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -271,30 +275,31 @@ The Role authentication model
 
 
 .Properties
+[cols="3,1,6"]
 |===
-|Type |Name |Description
+|Name |Type |Description
 
-|link:http://php.net/int[int^]
-    |id
-    |role id
-|link:http://php.net/string[string^]
-    |name
-    |role name
-|link:http://php.net/bool[bool^]
-    |holdParents
-    |hold parents if there is a new child
-|link:http://php.net/bool[bool^]
-    |hidden
-    |hidden status for internal roles
-|link:http://php.net/array[array^]
-    |users
-    |
-|link:http://php.net/array[array^]
-    |permissions
-    |
-|link:http://php.net/array[array^]
-    |accessControl
-    |
+|id
+    |link:http://php.net/int[int^]
+    a|role id
+|name
+    |link:http://php.net/string[string^]
+    a|role name
+|holdParents
+    |link:http://php.net/bool[bool^]
+    a|hold parents if there is a new child
+|hidden
+    |link:http://php.net/bool[bool^]
+    a|hidden status for internal roles
+|users
+    |link:http://php.net/array[array^]
+    a|
+|permissions
+    |link:http://php.net/array[array^]
+    a|
+|accessControl
+    |link:http://php.net/array[array^]
+    a|
 |===
 
 
@@ -307,7 +312,7 @@ public toArray()
 
 ----
 
-    
+
 
 
 
@@ -342,7 +347,7 @@ public processUnguarded($callable):void
 
 ----
 
-    
+
 
 
 
@@ -351,11 +356,12 @@ public processUnguarded($callable):void
 
 
 .*Parameters*
+[cols="3,1,6"]
 |===
-|Type |Name |Description
-|link:http://php.net/callable[callable^]
+|Name |Type |Description
 a|`$callable`
-|
+|link:http://php.net/callable[callable^]
+a|
 |===
 
 
