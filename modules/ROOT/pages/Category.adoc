@@ -29,6 +29,7 @@ Repository for CategoryBranchMarketplace
 ===== Methods
 
 [source%nowrap, php]
+[#findcategorybranchmarketplace]
 ----
 
 public findCategoryBranchMarketplace($branchId, $webstoreId, $marketplaceId, $marketplaceSubId = 0.0):Plenty\Modules\Category\Models\CategoryBranchMarketplace
@@ -85,6 +86,7 @@ Repository Contract for CategoryBranch
 ===== Methods
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($id):Plenty\Modules\Category\Models\CategoryBranch
@@ -110,6 +112,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\Contracts\PaginationResponseContract
@@ -143,6 +146,7 @@ a|Filters restrict the list of results. Results can be filtered by the following
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -158,6 +162,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -173,6 +178,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -198,6 +204,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -213,6 +220,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -228,6 +236,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -262,6 +271,7 @@ Repository Contract for CategoryProperty
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Category\Models\CategoryProperty
@@ -287,6 +297,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($categoryId, $marketId, $plentyId, $data):Plenty\Modules\Category\Models\CategoryProperty
@@ -324,6 +335,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($categoryId, $marketId, $plentyId):Plenty\Repositories\Models\DeleteResponse
@@ -357,6 +369,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -372,6 +385,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -387,6 +401,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -412,6 +427,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -427,6 +443,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -442,6 +459,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -476,6 +494,7 @@ Repository for categories
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($categoryId, $lang = &quot;de&quot;, $webstoreId = null):Plenty\Modules\Category\Models\Category
@@ -509,6 +528,7 @@ a|Optional webstore id of details.
 
 
 [source%nowrap, php]
+[#getlinklisttree]
 ----
 
 public getLinklistTree($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId = null, $maxLevel = 6, $customerClassId):array
@@ -550,6 +570,7 @@ a|The customer class id
 
 
 [source%nowrap, php]
+[#getarraytree]
 ----
 
 public getArrayTree($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId = null, $maxLevel = 6, $customerClassId, $filter = null):array
@@ -595,6 +616,7 @@ a|
 
 
 [source%nowrap, php]
+[#findcategorybyurl]
 ----
 
 public findCategoryByUrl($level1, $level2 = null, $level3 = null, $level4 = null, $level5 = null, $level6 = null, $webstoreId = null, $lang = null):Plenty\Modules\Category\Models\Category
@@ -648,6 +670,7 @@ a|Language
 
 
 [source%nowrap, php]
+[#buildcache]
 ----
 
 public buildCache($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId, $customerClassId):void
@@ -685,6 +708,7 @@ a|The customer class id
 
 
 [source%nowrap, php]
+[#getlinklistlist]
 ----
 
 public getLinklistList($type = &quot;all&quot;, $lang = &quot;de&quot;, $clientId = null, $maxLevel = 6):array
@@ -722,6 +746,7 @@ a|The deepest category level to load
 
 
 [source%nowrap, php]
+[#haschildren]
 ----
 
 public hasChildren($categoryId, $onlySiteMapped = false, $onlyLinkListed = false):bool
@@ -755,6 +780,7 @@ a|Determines if the result has only linklists or all visible categories.
 
 
 [source%nowrap, php]
+[#getchildren]
 ----
 
 public getChildren($categoryId, $lang = &quot;de&quot;):array
@@ -784,6 +810,7 @@ a|Optional language of details.
 
 
 [source%nowrap, php]
+[#geturl]
 ----
 
 public getUrl($categoryId, $lang = &quot;de&quot;, $onlySitemaps = false, $webstoreId = null):string
@@ -821,6 +848,7 @@ a|webstoreId of details
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($categoryId = null, $page, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
@@ -862,6 +890,7 @@ a|Filters restrict the list of results. Results can be filtered by the following
 
 
 [source%nowrap, php]
+[#createcategories]
 ----
 
 public createCategories($data):array
@@ -887,6 +916,7 @@ a|The data fields for the new Categories, including the details data fields
 
 
 [source%nowrap, php]
+[#updatecategories]
 ----
 
 public updateCategories($data):array
@@ -912,6 +942,7 @@ a|The data fields for the Categories, including the details and client data fiel
 
 
 [source%nowrap, php]
+[#createcategory]
 ----
 
 public createCategory($data):Plenty\Modules\Category\Models\Category
@@ -937,6 +968,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($categoryId):Plenty\Repositories\Models\DeleteResponse
@@ -962,6 +994,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletecategorydetails]
 ----
 
 public deleteCategoryDetails($categoryId, $data):Plenty\Repositories\Models\DeleteResponse
@@ -991,6 +1024,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletecategoryclients]
 ----
 
 public deleteCategoryClients($categoryId, $data):Plenty\Repositories\Models\DeleteResponse
@@ -1020,6 +1054,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -1035,6 +1070,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -1050,6 +1086,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -1075,6 +1112,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -1090,6 +1128,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -1105,6 +1144,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -1139,6 +1179,7 @@ Repository for category templates
 ===== Methods
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($params):Plenty\Modules\Category\Models\CategoryTemplate
@@ -1164,6 +1205,7 @@ a|
 
 
 [source%nowrap, php]
+[#put]
 ----
 
 public put($data):Plenty\Modules\Category\Models\CategoryTemplate
@@ -1189,6 +1231,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($data):Plenty\Modules\Category\Models\CategoryTemplate
@@ -1276,6 +1319,7 @@ visitors of the online store that have logged in only. Visitors that are not log
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1338,6 +1382,7 @@ Category Branch
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1406,6 +1451,7 @@ The CategoryBranchMarketplace model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1450,6 +1496,7 @@ The Category Client
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1570,6 +1617,7 @@ will avoid duplicate content.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1632,6 +1680,7 @@ CategoryItemCount
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1685,6 +1734,7 @@ The Category Property
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1738,6 +1788,7 @@ Category Template
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

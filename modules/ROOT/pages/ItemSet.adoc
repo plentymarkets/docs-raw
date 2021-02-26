@@ -29,6 +29,7 @@ The contract for the item set component repository
 ===== Methods
 
 [source%nowrap, php]
+[#show]
 ----
 
 public show($id, $with):Plenty\Modules\ItemSet\Models\ItemSetComponent
@@ -58,6 +59,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($setId, $id):Plenty\Modules\ItemSet\Models\ItemSetComponent
@@ -87,6 +89,7 @@ a|The unique ID of the item set component
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($setConfigId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent
@@ -116,6 +119,7 @@ a|
 
 
 [source%nowrap, php]
+[#createcomponents]
 ----
 
 public createComponents($setId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent
@@ -145,6 +149,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatecomponents]
 ----
 
 public updateComponents($setId, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent
@@ -174,6 +179,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($setId, $id, $data):Plenty\Modules\ItemSet\Models\ItemSetComponent
@@ -207,6 +213,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletecomponents]
 ----
 
 public deleteComponents($setId, $data):Plenty\Repositories\Models\DeleteResponse
@@ -236,6 +243,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($setId, $id):Plenty\Repositories\Models\DeleteResponse
@@ -265,6 +273,7 @@ a|The unique ID of the item set component
 
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all():array
@@ -280,6 +289,7 @@ public all():array
 Lists all item set components.
 
 [source%nowrap, php]
+[#findbysetid]
 ----
 
 public findBySetId($setId, $with):array
@@ -309,6 +319,7 @@ a|
 
 
 [source%nowrap, php]
+[#findbyitemid]
 ----
 
 public findByItemId($itemId):array
@@ -334,6 +345,7 @@ a|The unique item ID of the item set component
 
 
 [source%nowrap, php]
+[#deleteone]
 ----
 
 public deleteOne($setConfigId, $itemId):Plenty\Repositories\Models\DeleteResponse
@@ -382,6 +394,7 @@ The contract for the item set configuration repository
 ===== Methods
 
 [source%nowrap, php]
+[#show]
 ----
 
 public show($id):Plenty\Modules\ItemSet\Models\ItemSetConfig
@@ -407,6 +420,7 @@ a|The unique ID of the item set configuration
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\ItemSet\Models\ItemSetConfig
@@ -432,6 +446,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):Plenty\Modules\ItemSet\Models\ItemSetConfig
@@ -461,6 +476,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):Plenty\Repositories\Models\DeleteResponse
@@ -486,6 +502,7 @@ a|The unique ID of the item set configuration
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($setId, $setConfigId):Plenty\Modules\ItemSet\Models\ItemSetConfig
@@ -515,6 +532,7 @@ a|The unique ID of the item set configuration
 
 
 [source%nowrap, php]
+[#findbysetid]
 ----
 
 public findBySetId($setId):Plenty\Modules\ItemSet\Models\ItemSetConfig
@@ -559,6 +577,7 @@ The contract for the item set repository
 ===== Methods
 
 [source%nowrap, php]
+[#show]
 ----
 
 public show($id):Plenty\Modules\ItemSet\Models\ItemSet
@@ -584,6 +603,7 @@ a|The unique item ID of the set
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\ItemSet\Models\ItemSet
@@ -609,6 +629,7 @@ a|
 
 
 [source%nowrap, php]
+[#createsets]
 ----
 
 public createSets($data):Plenty\Modules\ItemSet\Models\ItemSet
@@ -634,6 +655,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatesets]
 ----
 
 public updateSets($data):array
@@ -659,6 +681,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):Plenty\Modules\ItemSet\Models\ItemSet
@@ -688,6 +711,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletesets]
 ----
 
 public deleteSets($data):Plenty\Repositories\Models\DeleteResponse
@@ -713,6 +737,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):Plenty\Repositories\Models\DeleteResponse
@@ -738,6 +763,7 @@ a|
 
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all():array
@@ -789,6 +815,7 @@ The ItemSet model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -848,6 +875,7 @@ The ItemSetComponent model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -895,6 +923,7 @@ The ItemSetConfig model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

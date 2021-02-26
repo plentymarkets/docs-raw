@@ -29,6 +29,7 @@ Get, create, delete, and update links between shopBuilder contents and layout co
 ===== Methods
 
 [source%nowrap, php]
+[#getcontentlinks]
 ----
 
 public getContentLinks($pluginSetId):array
@@ -54,6 +55,7 @@ a|The ID of the plugin set to get content links for.
 
 
 [source%nowrap, php]
+[#getcontentlink]
 ----
 
 public getContentLink($contentLinkId):Plenty\Modules\ShopBuilder\Models\ContentLink
@@ -79,6 +81,7 @@ a|The ID of the content link to get.
 
 
 [source%nowrap, php]
+[#createcontentlink]
 ----
 
 public createContentLink($data):Plenty\Modules\ShopBuilder\Models\ContentLink
@@ -104,6 +107,7 @@ a|Content link data to create instance with.
 
 
 [source%nowrap, php]
+[#updatecontentlink]
 ----
 
 public updateContentLink($contentLinkId, $data):Plenty\Modules\ShopBuilder\Models\ContentLink
@@ -133,6 +137,7 @@ a|Data to assign to the content link.
 
 
 [source%nowrap, php]
+[#deletecontentlink]
 ----
 
 public deleteContentLink($contentLinkId):void
@@ -158,6 +163,7 @@ a|The ID of the content link to remove.
 
 
 [source%nowrap, php]
+[#getcontentlinksforcontainer]
 ----
 
 public getContentLinksForContainer($containerName, $pluginSetId = null, $lang = null, $contentType = null, $filterResults = true):void
@@ -218,6 +224,7 @@ Contract for content presets. Presets can provide a predefined set of widgets wh
 ===== Methods
 
 [source%nowrap, php]
+[#getwidgets]
 ----
 
 public getWidgets():void
@@ -252,6 +259,7 @@ Get, create, delete, und update shopBuilder contents.
 ===== Methods
 
 [source%nowrap, php]
+[#getcontents]
 ----
 
 public getContents():array
@@ -267,6 +275,7 @@ public getContents():array
 Get all contents with all their widget data.
 
 [source%nowrap, php]
+[#searchcontents]
 ----
 
 public searchContents($itemsPerPage = 20, $page = 1, $params = []):Plenty\Repositories\Models\PaginatedResult
@@ -300,6 +309,7 @@ a|Search parameters
 
 
 [source%nowrap, php]
+[#getcontent]
 ----
 
 public getContent($contentId, $pluginSetId, $frontendLanguage = null, $versionId = &quot;&quot;):Plenty\Modules\ShopBuilder\Models\Content
@@ -337,6 +347,7 @@ a|The version of the content.
 
 
 [source%nowrap, php]
+[#listcontentversions]
 ----
 
 public listContentVersions($contentId, $itemsPerPage = 20, $versionIdMarker = &quot;&quot;):void
@@ -370,6 +381,7 @@ a|ID of a version to get subsequent versions from.
 
 
 [source%nowrap, php]
+[#restorecontentversion]
 ----
 
 public restoreContentVersion($contentId, $versionId, $pluginSetId, $frontendLanguage = null):void
@@ -407,6 +419,7 @@ a|
 
 
 [source%nowrap, php]
+[#createcontent]
 ----
 
 public createContent($pluginSetId, $data, $frontendLanguage = null):Plenty\Modules\ShopBuilder\Models\Content
@@ -440,6 +453,7 @@ a|The language to be used for rendering the widgets.
 
 
 [source%nowrap, php]
+[#updatecontent]
 ----
 
 public updateContent($pluginSetId, $contentId, $data, $frontendLanguage = null):Plenty\Modules\ShopBuilder\Models\Content
@@ -477,6 +491,7 @@ a|The language to be used for rendering the widgets.
 
 
 [source%nowrap, php]
+[#deletecontent]
 ----
 
 public deleteContent($pluginSetId, $contentId):void
@@ -506,6 +521,7 @@ a|The ID of the content to be deleted.
 
 
 [source%nowrap, php]
+[#duplicatecontent]
 ----
 
 public duplicateContent($contentId, $targetPluginSetId, $language, $containerName, $contentName):Plenty\Modules\ShopBuilder\Models\Content
@@ -547,6 +563,7 @@ a|Name of the duplicated content.
 
 
 [source%nowrap, php]
+[#rebuildcontents]
 ----
 
 public rebuildContents($containerName = null, $pluginSetId):int
@@ -595,6 +612,7 @@ Register shopBuilder widgets.
 ===== Methods
 
 [source%nowrap, php]
+[#registerwidget]
 ----
 
 public registerWidget($widgetClass):void
@@ -620,6 +638,7 @@ a|Widget class to be registered to the shopBuilder. Should implement the Widget 
 
 
 [source%nowrap, php]
+[#overridewidget]
 ----
 
 public overrideWidget($widgetIdentifier, $overrideWidget):void
@@ -668,6 +687,7 @@ Contract for widgets with dynamic settings
 ===== Methods
 
 [source%nowrap, php]
+[#getdata]
 ----
 
 public getData():array
@@ -695,6 +715,7 @@ identifier and a label to be displayed in the builder. In total the following in
 &lt;/ul&gt;
 
 [source%nowrap, php]
+[#getsettings]
 ----
 
 public getSettings():array
@@ -710,6 +731,7 @@ public getSettings():array
 Get the settings of the widgets. Settings are displayed in a terra-form when the widget is selected in the builder.
 
 [source%nowrap, php]
+[#getpreview]
 ----
 
 public getPreview($widgetSettings = [], $children = []):string
@@ -739,6 +761,7 @@ a|
 
 
 [source%nowrap, php]
+[#render]
 ----
 
 public render($widgetSettings = [], $children = []):string
@@ -787,6 +810,7 @@ Contract for classes handling global settings for the ShopBuilder. Handler class
 ===== Methods
 
 [source%nowrap, php]
+[#readsettings]
 ----
 
 public readSettings():void
@@ -802,6 +826,7 @@ public readSettings():void
 Read values of global settings.
 
 [source%nowrap, php]
+[#writesettings]
 ----
 
 public writeSettings($values):void
@@ -846,6 +871,7 @@ Contract for content widgets
 ===== Methods
 
 [source%nowrap, php]
+[#getpreview]
 ----
 
 public getPreview($widgetSettings = [], $children = []):string
@@ -875,6 +901,7 @@ a|
 
 
 [source%nowrap, php]
+[#render]
 ----
 
 public render($widgetSettings = [], $children = []):string
@@ -924,6 +951,7 @@ Factory to generate widget settings
 ===== Methods
 
 [source%nowrap, php]
+[#inherit]
 ----
 
 public static inherit($parentWidgetClass):Plenty\Modules\ContentBuilder\Factories
@@ -949,6 +977,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):Plenty\Modules\ContentBuilder\Factories
@@ -974,6 +1003,7 @@ a|
 
 
 [source%nowrap, php]
+[#createsetting]
 ----
 
 public createSetting($key, $settingsFactory = &quot;&quot;, $args = []):void
@@ -1007,6 +1037,7 @@ a|Arguments to be passed to the factory constructor method
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -1022,6 +1053,7 @@ public toArray():array
 Generate settings data from all registered factories
 
 [source%nowrap, php]
+[#withpointer]
 ----
 
 public withPointer($key):Plenty\Modules\ContentBuilder\Factories
@@ -1047,6 +1079,7 @@ a|
 
 
 [source%nowrap, php]
+[#addsetting]
 ----
 
 public addSetting($key, $setting):void
@@ -1112,6 +1145,7 @@ Get information about the current request made from the shop builder preview.
 ===== Methods
 
 [source%nowrap, php]
+[#isshopbuilder]
 ----
 
 public isShopBuilder():bool
@@ -1127,6 +1161,7 @@ public isShopBuilder():bool
 Determine if the current request is made from the shop builder preview or while rendering a widget via REST.
 
 [source%nowrap, php]
+[#getpreviewcontenttype]
 ----
 
 public getPreviewContentType():string
@@ -1142,6 +1177,7 @@ public getPreviewContentType():string
 Get the type of the previewed shop builder content.
 
 [source%nowrap, php]
+[#getpreviewuri]
 ----
 
 public getPreviewUri():void
@@ -1158,6 +1194,7 @@ Get uri of the current preview. This might be used when rendering widgets via RE
 to know the context where the widget will be placed into after rendering.
 
 [source%nowrap, php]
+[#getmaincontenttype]
 ----
 
 public getMainContentType():string
@@ -1173,6 +1210,7 @@ public getMainContentType():string
 Get the content type of the currently displayed main content.
 
 [source%nowrap, php]
+[#setmaincontenttype]
 ----
 
 public setMainContentType($mainContentType):void
@@ -1208,6 +1246,7 @@ a|Possible values:
 
 
 [source%nowrap, php]
+[#getmaincontainername]
 ----
 
 public getMainContainerName():string
@@ -1223,6 +1262,7 @@ public getMainContainerName():string
 Get the container name where the main content will be loaded into.
 
 [source%nowrap, php]
+[#setmaincontainername]
 ----
 
 public setMainContainerName($mainContainerName):void
@@ -1248,6 +1288,7 @@ a|Name of the layout container.
 
 
 [source%nowrap, php]
+[#setmaincategory]
 ----
 
 public setMainCategory($mainCategory):void
@@ -1324,6 +1365,7 @@ Content created by the shop builder. May be linked to layout containers.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1404,6 +1446,7 @@ Links a content from the shop builder to a layout container of the frontend plug
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1454,6 +1497,7 @@ A content page provided by a frontend plugin.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1501,6 +1545,7 @@ Layout container of a content page where to display link contents generated by t
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1572,6 +1617,7 @@ Content widget provided by a frontend plugin
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1619,6 +1665,7 @@ The rendered preview of a content widget
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1654,6 +1701,7 @@ Base class for data field providers.
 ===== Methods
 
 [source%nowrap, php]
+[#register]
 ----
 
 public register():void
@@ -1669,6 +1717,7 @@ public register():void
 Register data fields and child providers.
 
 [source%nowrap, php]
+[#addfield]
 ----
 
 public addField($identifier, $label, $expression):void
@@ -1702,6 +1751,7 @@ a|The twig expression to be inserted by this field
 
 
 [source%nowrap, php]
+[#addchildprovider]
 ----
 
 public addChildProvider($label, $childProviderClass, $params = []):void
@@ -1735,6 +1785,7 @@ a|Additional parameters to be passed to provider constructor method.
 
 
 [source%nowrap, php]
+[#addsearchkeywords]
 ----
 
 public addSearchKeywords($identifier, $keywords = []):void
@@ -1797,6 +1848,7 @@ Common factory to generate properties of a widget setting definition.
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -1822,6 +1874,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -1847,6 +1900,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -1876,6 +1930,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -1901,6 +1956,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -1926,6 +1982,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -1951,6 +2008,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -1976,6 +2034,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2005,6 +2064,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -2039,6 +2099,7 @@ Factory to define a category picker in the widget settings.
 ===== Methods
 
 [source%nowrap, php]
+[#withdisplayresetbutton]
 ----
 
 public withDisplayResetButton($displayResetButton):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2064,6 +2125,7 @@ a|
 
 
 [source%nowrap, php]
+[#withdisplaysearch]
 ----
 
 public withDisplaySearch($displaySearch):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2089,6 +2151,7 @@ a|
 
 
 [source%nowrap, php]
+[#withshowfullselectionpath]
 ----
 
 public withShowFullSelectionPath($showFullSelectionPath):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2114,6 +2177,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -2139,6 +2203,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2164,6 +2229,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2193,6 +2259,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2218,6 +2285,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2243,6 +2311,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2268,6 +2337,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2293,6 +2363,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2322,6 +2393,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -2356,6 +2428,7 @@ Factory to define a checkbox group in the widget settings.
 ===== Methods
 
 [source%nowrap, php]
+[#withcollapsed]
 ----
 
 public withCollapsed($collapsed):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2381,6 +2454,7 @@ a|
 
 
 [source%nowrap, php]
+[#withcheckboxvalues]
 ----
 
 public withCheckboxValues($checkboxValues):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2406,6 +2480,7 @@ a|
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2431,6 +2506,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -2456,6 +2532,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2481,6 +2558,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2510,6 +2588,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2535,6 +2614,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2560,6 +2640,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2585,6 +2666,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2614,6 +2696,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -2648,6 +2731,7 @@ Factory to define a checkbox in the widget settings.
 ===== Methods
 
 [source%nowrap, php]
+[#withicon]
 ----
 
 public withIcon($icon):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2673,6 +2757,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -2698,6 +2783,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2723,6 +2809,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2752,6 +2839,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2777,6 +2865,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2802,6 +2891,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2827,6 +2917,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2852,6 +2943,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2881,6 +2973,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -2915,6 +3008,7 @@ Factory to define a container for nested settings.
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2940,6 +3034,7 @@ a|
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -2955,6 +3050,7 @@ public toArray():array
 Get all children as a native array
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -2980,6 +3076,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3009,6 +3106,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3034,6 +3132,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3059,6 +3158,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3084,6 +3184,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3109,6 +3210,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3157,6 +3259,7 @@ Factory to define a date picker in the widget settings.
 ===== Methods
 
 [source%nowrap, php]
+[#withcalendartop]
 ----
 
 public withCalendarTop($isCalendarTop):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3182,6 +3285,7 @@ a|
 
 
 [source%nowrap, php]
+[#withdisplaydateformat]
 ----
 
 public withDisplayDateFormat($format):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3207,6 +3311,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -3232,6 +3337,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3257,6 +3363,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3286,6 +3393,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3311,6 +3419,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3336,6 +3445,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3361,6 +3471,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3386,6 +3497,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3415,6 +3527,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -3449,6 +3562,7 @@ Factory to define a number input in the widget settings.
 ===== Methods
 
 [source%nowrap, php]
+[#withpriceinput]
 ----
 
 public withPriceInput($isPriceInput):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3474,6 +3588,7 @@ a|
 
 
 [source%nowrap, php]
+[#withdecimalcount]
 ----
 
 public withDecimalCount($decimalCount):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3499,6 +3614,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -3524,6 +3640,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3549,6 +3666,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3578,6 +3696,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3603,6 +3722,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3628,6 +3748,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3653,6 +3774,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3678,6 +3800,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3707,6 +3830,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -3741,6 +3865,7 @@ Factory to define a file input in the widget settings.
 ===== Methods
 
 [source%nowrap, php]
+[#withshowpreview]
 ----
 
 public withShowPreview($showPreview):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3766,6 +3891,7 @@ a|
 
 
 [source%nowrap, php]
+[#withallowedextensions]
 ----
 
 public withAllowedExtensions($allowedExtensions):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3791,6 +3917,7 @@ a|
 
 
 [source%nowrap, php]
+[#withfoldersallowed]
 ----
 
 public withFoldersAllowed($foldersAllowed):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3816,6 +3943,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -3841,6 +3969,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3866,6 +3995,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3895,6 +4025,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3920,6 +4051,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3945,6 +4077,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3970,6 +4103,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -3995,6 +4129,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4024,6 +4159,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -4058,6 +4194,7 @@ Factory to define a group of radio buttons in the widget settings.
 ===== Methods
 
 [source%nowrap, php]
+[#withradiovalues]
 ----
 
 public withRadioValues($radioValues):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4083,6 +4220,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -4108,6 +4246,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4133,6 +4272,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4162,6 +4302,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4187,6 +4328,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4212,6 +4354,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4237,6 +4380,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4262,6 +4406,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4291,6 +4436,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -4325,6 +4471,7 @@ Factory to define a selection input in the widget settings.
 ===== Methods
 
 [source%nowrap, php]
+[#withopenontop]
 ----
 
 public withOpenOnTop($openOnTop):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4350,6 +4497,7 @@ a|
 
 
 [source%nowrap, php]
+[#withlistboxvalues]
 ----
 
 public withListBoxValues($listBoxValues):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4375,6 +4523,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -4400,6 +4549,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4425,6 +4575,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4454,6 +4605,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4479,6 +4631,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4504,6 +4657,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4529,6 +4683,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4554,6 +4709,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4583,6 +4739,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -4617,6 +4774,7 @@ Factory to define a slider in the widget settings.
 ===== Methods
 
 [source%nowrap, php]
+[#withmin]
 ----
 
 public withMin($min):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4642,6 +4800,7 @@ a|
 
 
 [source%nowrap, php]
+[#withmax]
 ----
 
 public withMax($max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4667,6 +4826,7 @@ a|
 
 
 [source%nowrap, php]
+[#withinterval]
 ----
 
 public withInterval($interval):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4692,6 +4852,7 @@ a|
 
 
 [source%nowrap, php]
+[#withprecision]
 ----
 
 public withPrecision($precision):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4717,6 +4878,7 @@ a|
 
 
 [source%nowrap, php]
+[#withshowminmax]
 ----
 
 public withShowMinMax($showMinMax):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4742,6 +4904,7 @@ a|
 
 
 [source%nowrap, php]
+[#withshowticks]
 ----
 
 public withShowTicks($showTicks):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4767,6 +4930,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -4792,6 +4956,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4817,6 +4982,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4846,6 +5012,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4871,6 +5038,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4896,6 +5064,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4921,6 +5090,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4946,6 +5116,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -4975,6 +5146,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -5009,6 +5181,7 @@ Factory to define an input with suggestions in the widget settings.
 ===== Methods
 
 [source%nowrap, php]
+[#withlistboxvalues]
 ----
 
 public withListBoxValues($listBoxValues):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5034,6 +5207,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -5059,6 +5233,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5084,6 +5259,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5113,6 +5289,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5138,6 +5315,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5163,6 +5341,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5188,6 +5367,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5213,6 +5393,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5242,6 +5423,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -5276,6 +5458,7 @@ Factory to define a text input in the widget settings.
 ===== Methods
 
 [source%nowrap, php]
+[#withpassword]
 ----
 
 public withPassword($isPassword):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5301,6 +5484,7 @@ a|
 
 
 [source%nowrap, php]
+[#withreadonly]
 ----
 
 public withReadonly($isReadonly):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5326,6 +5510,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -5351,6 +5536,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5376,6 +5562,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5405,6 +5592,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5430,6 +5618,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5455,6 +5644,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5480,6 +5670,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5505,6 +5696,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5534,6 +5726,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -5568,6 +5761,7 @@ Factory to define a textarea in the widget settings.
 ===== Methods
 
 [source%nowrap, php]
+[#withfixedheight]
 ----
 
 public withFixedHeight($isFixedHeight):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5593,6 +5787,7 @@ a|
 
 
 [source%nowrap, php]
+[#withmaxrows]
 ----
 
 public withMaxRows($maxRows):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5618,6 +5813,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -5643,6 +5839,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5668,6 +5865,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5697,6 +5895,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5722,6 +5921,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5747,6 +5947,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5772,6 +5973,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5797,6 +5999,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5826,6 +6029,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -5860,6 +6064,7 @@ Factory to define an url picker in the widget settings.
 ===== Methods
 
 [source%nowrap, php]
+[#withinternallinks]
 ----
 
 public withInternalLinks($internalLinks):Plenty\Modules\ShopBuilder\Factories\Settings\UrlSettingFactory
@@ -5885,6 +6090,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($data = []):void
@@ -5910,6 +6116,7 @@ a|
 
 
 [source%nowrap, php]
+[#withtype]
 ----
 
 public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5935,6 +6142,7 @@ a|
 
 
 [source%nowrap, php]
+[#withoption]
 ----
 
 public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5964,6 +6172,7 @@ a|The option value
 
 
 [source%nowrap, php]
+[#withdefaultvalue]
 ----
 
 public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -5989,6 +6198,7 @@ a|The default value
 
 
 [source%nowrap, php]
+[#withcondition]
 ----
 
 public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -6014,6 +6224,7 @@ a|Condition if the related form element should be visible or not.
 
 
 [source%nowrap, php]
+[#withname]
 ----
 
 public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -6039,6 +6250,7 @@ a|The label of the setting
 
 
 [source%nowrap, php]
+[#withtooltip]
 ----
 
 public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -6064,6 +6276,7 @@ a|An additional description of the setting
 
 
 [source%nowrap, php]
+[#withlist]
 ----
 
 public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -6093,6 +6306,7 @@ a|Maximum number of entries. If not set or smaller than 0, unlimited entries mig
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -6127,6 +6341,7 @@ Create a list of values to be used by settings with multiple predefined values.
 ===== Methods
 
 [source%nowrap, php]
+[#make]
 ----
 
 public static make():Plenty\Modules\ContentBuilder\Factories\Settings
@@ -6142,6 +6357,7 @@ public static make():Plenty\Modules\ContentBuilder\Factories\Settings
 Create a new factory instance.
 
 [source%nowrap, php]
+[#addentry]
 ----
 
 public addEntry($value, $caption):Plenty\Modules\ContentBuilder\Factories\Settings
@@ -6171,6 +6387,7 @@ a|
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():void

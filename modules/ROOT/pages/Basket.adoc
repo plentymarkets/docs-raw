@@ -29,6 +29,7 @@ The BasketItemRepositoryContract is the interface for the basket item repository
 ===== Methods
 
 [source%nowrap, php]
+[#findonebyid]
 ----
 
 public findOneById($basketRowId):Plenty\Modules\Basket\Models\BasketItem
@@ -54,6 +55,7 @@ a|The ID of the basket row
 
 
 [source%nowrap, php]
+[#findexistingonebydata]
 ----
 
 public findExistingOneByData($data):Plenty\Modules\Basket\Models\BasketItem
@@ -79,6 +81,7 @@ a|The item's data
 
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all():array
@@ -94,6 +97,7 @@ public all():array
 Lists all items in the shopping cart of the current customer session.
 
 [source%nowrap, php]
+[#addbasketitem]
 ----
 
 public addBasketItem($data, $fireEvents = true):Plenty\Modules\Basket\Models\BasketItem
@@ -123,6 +127,7 @@ a|Set to false to skip change events and calculation of basket totals.
 
 
 [source%nowrap, php]
+[#updatebasketitem]
 ----
 
 public updateBasketItem($basketItemId, $data, $fireEvents = true):void
@@ -156,6 +161,7 @@ a|Set to false to skip change events and calculation of basket totals.
 
 
 [source%nowrap, php]
+[#removebasketitem]
 ----
 
 public removeBasketItem($basketItemId, $dispatchAfterBasketChangedEvent = true):void
@@ -204,6 +210,7 @@ The BasketRepositoryContract is the interface for the basket repository. This in
 ===== Methods
 
 [source%nowrap, php]
+[#load]
 ----
 
 public load():Plenty\Modules\Basket\Models\Basket
@@ -219,6 +226,7 @@ public load():Plenty\Modules\Basket\Models\Basket
 Gets the shopping cart from current customer session.
 
 [source%nowrap, php]
+[#save]
 ----
 
 public save($data):void
@@ -244,6 +252,7 @@ a|
 
 
 [source%nowrap, php]
+[#setcouponcode]
 ----
 
 public setCouponCode($couponCode):Plenty\Modules\Basket\Models\Basket
@@ -269,6 +278,7 @@ a|
 
 
 [source%nowrap, php]
+[#removecouponcode]
 ----
 
 public removeCouponCode():Plenty\Modules\Basket\Models\Basket
@@ -284,6 +294,7 @@ public removeCouponCode():Plenty\Modules\Basket\Models\Basket
 
 
 [source%nowrap, php]
+[#deletebasket]
 ----
 
 public deleteBasket():Plenty\Modules\Basket\Models\Basket
@@ -319,6 +330,7 @@ Class BasketCheckException
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($code, $message = &quot;&quot;, $previous = null):void
@@ -372,6 +384,7 @@ Class BasketItemCheckException
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($code = 404, $message = &quot;&quot;, $previous = null, $itemId, $variationId, $stockNet = 0.0, $additionalData = []):void
@@ -421,6 +434,7 @@ a|
 
 
 [source%nowrap, php]
+[#getitemid]
 ----
 
 public getItemId():int
@@ -436,6 +450,7 @@ public getItemId():int
 
 
 [source%nowrap, php]
+[#getvariationid]
 ----
 
 public getVariationId():int
@@ -451,6 +466,7 @@ public getVariationId():int
 
 
 [source%nowrap, php]
+[#getstocknet]
 ----
 
 public getStockNet():float
@@ -466,6 +482,7 @@ public getStockNet():float
 
 
 [source%nowrap, php]
+[#getadditionaldata]
 ----
 
 public getAdditionalData():array
@@ -501,6 +518,7 @@ Class BasketItemQuantityCheckException
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($code, $message = &quot;&quot;, $previous = null, $itemId, $variationId, $requestedQuantity = 0.0, $specifiedQuantity = 0.0):void
@@ -550,6 +568,7 @@ a|
 
 
 [source%nowrap, php]
+[#getrequestedquantity]
 ----
 
 public getRequestedQuantity():float
@@ -565,6 +584,7 @@ public getRequestedQuantity():float
 
 
 [source%nowrap, php]
+[#getspecifiedquantity]
 ----
 
 public getSpecifiedQuantity():float
@@ -698,6 +718,7 @@ The basket model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -844,6 +865,7 @@ The basket item model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -900,6 +922,7 @@ The basket item params model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -938,6 +961,7 @@ The event is triggered after the shopping cart is changed.
 ===== Methods
 
 [source%nowrap, php]
+[#hasvalidcoupon]
 ----
 
 public hasValidCoupon():bool
@@ -953,6 +977,7 @@ public hasValidCoupon():bool
 
 
 [source%nowrap, php]
+[#getcouponvalidationerror]
 ----
 
 public getCouponValidationError():void
@@ -968,6 +993,7 @@ public getCouponValidationError():void
 
 
 [source%nowrap, php]
+[#sethasvalidcoupon]
 ----
 
 public setHasValidCoupon($hasValidCoupon, $couponValidationError = null):void
@@ -997,6 +1023,7 @@ a|Validation errors indicating the reasons for an invalid coupon.
 
 
 [source%nowrap, php]
+[#getbasket]
 ----
 
 public getBasket():Plenty\Modules\Basket\Models\Basket
@@ -1012,6 +1039,7 @@ public getBasket():Plenty\Modules\Basket\Models\Basket
 
 
 [source%nowrap, php]
+[#getlocationid]
 ----
 
 public getLocationId():int
@@ -1027,6 +1055,7 @@ public getLocationId():int
 
 
 [source%nowrap, php]
+[#setlocationid]
 ----
 
 public setLocationId($locationId):Plenty\Modules\Basket\Events\Basket
@@ -1052,6 +1081,7 @@ a|The ID of the location
 
 
 [source%nowrap, php]
+[#getinvoiceaddress]
 ----
 
 public getInvoiceAddress():Plenty\Modules\Account\Address\Models\Address
@@ -1067,6 +1097,7 @@ public getInvoiceAddress():Plenty\Modules\Account\Address\Models\Address
 
 
 [source%nowrap, php]
+[#setinvoiceaddress]
 ----
 
 public setInvoiceAddress($invoiceAddress):Plenty\Modules\Basket\Events\Basket
@@ -1092,6 +1123,7 @@ a|The invoice address
 
 
 [source%nowrap, php]
+[#getmaxfsk]
 ----
 
 public getMaxFsk():int
@@ -1107,6 +1139,7 @@ public getMaxFsk():int
 
 
 [source%nowrap, php]
+[#setmaxfsk]
 ----
 
 public setMaxFsk($maxFsk):Plenty\Modules\Basket\Events\Basket
@@ -1132,6 +1165,7 @@ a|The highest value for age restriction of an item in the shopping cart
 
 
 [source%nowrap, php]
+[#getshippingcosts]
 ----
 
 public getShippingCosts():float
@@ -1147,6 +1181,7 @@ public getShippingCosts():float
 
 
 [source%nowrap, php]
+[#setshippingcosts]
 ----
 
 public setShippingCosts($shippingCosts):Plenty\Modules\Basket\Events\Basket
@@ -1191,6 +1226,7 @@ The event is triggered after the shopping cart is created.
 ===== Methods
 
 [source%nowrap, php]
+[#getbasket]
 ----
 
 public getBasket():Plenty\Modules\Basket\Models\Basket
@@ -1226,6 +1262,7 @@ The event is triggered after an item is added to the shopping cart.
 ===== Methods
 
 [source%nowrap, php]
+[#getbasketitem]
 ----
 
 public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
@@ -1260,6 +1297,7 @@ The event is triggered after an item is deleted from the shopping cart.
 ===== Methods
 
 [source%nowrap, php]
+[#getbasketitem]
 ----
 
 public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
@@ -1294,6 +1332,7 @@ The event is triggered after an item in the shopping cart is updated.
 ===== Methods
 
 [source%nowrap, php]
+[#getbasketitem]
 ----
 
 public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
@@ -1328,6 +1367,7 @@ BasketItemEvent
 ===== Methods
 
 [source%nowrap, php]
+[#getbasketitem]
 ----
 
 public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
@@ -1362,6 +1402,7 @@ The event is triggered before an item is created in the shopping cart.
 ===== Methods
 
 [source%nowrap, php]
+[#getbasketitem]
 ----
 
 public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
@@ -1396,6 +1437,7 @@ The event is triggered before an item is deleted from the shopping cart.
 ===== Methods
 
 [source%nowrap, php]
+[#getbasketitem]
 ----
 
 public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
@@ -1430,6 +1472,7 @@ The event is triggered before an item in the shopping cart is updated.
 ===== Methods
 
 [source%nowrap, php]
+[#getbasketitem]
 ----
 
 public getBasketItem():Plenty\Modules\Basket\Models\BasketItem

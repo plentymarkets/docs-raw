@@ -29,6 +29,7 @@ The MessengerRepositoryContract is the interface for the messenger repository. T
 ===== Methods
 
 [source%nowrap, php]
+[#add]
 ----
 
 public add($data):Plenty\Modules\Messenger\Models\Message
@@ -54,6 +55,7 @@ a|The message data to be loaded
 
 
 [source%nowrap, php]
+[#show]
 ----
 
 public show($uuid):void
@@ -79,6 +81,7 @@ a|The UUID5 of the message
 
 
 [source%nowrap, php]
+[#list]
 ----
 
 public list($uuid = null, $successors = true, $amount = self::DEFAULT_MESSAGES_AMOUNT):array
@@ -113,6 +116,7 @@ a|The amount of messages to list (defaults to 50)
 
 
 [source%nowrap, php]
+[#getmessages]
 ----
 
 public getMessages($page = self::DEFAULT_PAGE_OF_MESSAGES, $itemsPerPage = self::DEFAULT_ITEMS_PER_PAGE_OF_MESSAGES):array
@@ -142,6 +146,7 @@ a|The amount of messages to list (defaults to 50)
 
 
 [source%nowrap, php]
+[#updatereadby]
 ----
 
 public updateReadBy($readBy, $uuid):void
@@ -171,6 +176,7 @@ a|The UUID of the message
 
 
 [source%nowrap, php]
+[#updatetags]
 ----
 
 public updateTags($tags, $uuid):void
@@ -200,6 +206,7 @@ a|The UUID of the message
 
 
 [source%nowrap, php]
+[#updatevisibility]
 ----
 
 public updateVisibility($data, $uuid):void
@@ -229,6 +236,7 @@ a|The UUID of the messages
 
 
 [source%nowrap, php]
+[#updatecontrols]
 ----
 
 public updateControls($data, $uuid):Plenty\Modules\Messenger\Models\Message
@@ -258,6 +266,7 @@ a|The uuid of the message.
 
 
 [source%nowrap, php]
+[#setdone]
 ----
 
 public setDone($doneAt = null, $uuid):void
@@ -287,6 +296,7 @@ a|The UUID of the message
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($uuid):int
@@ -312,6 +322,7 @@ a|The UUID of the message
 
 
 [source%nowrap, php]
+[#getattachment]
 ----
 
 public getAttachment($uuid, $filename):Plenty\Modules\Messenger\Models\Attachment
@@ -341,6 +352,7 @@ a|The file name of the attachment
 
 
 [source%nowrap, php]
+[#updatemetadata]
 ----
 
 public updateMetaData($uuid, $metaData):Plenty\Modules\Messenger\Models\Message
@@ -370,6 +382,7 @@ a|The meta data of the message
 
 
 [source%nowrap, php]
+[#gettotalentries]
 ----
 
 public getTotalEntries():int
@@ -385,6 +398,7 @@ public getTotalEntries():int
 Returns total message entries
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -410,6 +424,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -425,6 +440,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -440,6 +456,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -475,6 +492,7 @@ The event is triggered after a new message was created.
 ===== Methods
 
 [source%nowrap, php]
+[#isfirstmessage]
 ----
 
 public isFirstMessage():bool
@@ -490,6 +508,7 @@ public isFirstMessage():bool
 If TRUE, the message is the first one. Otherwise, it is a reply message.
 
 [source%nowrap, php]
+[#getmessage]
 ----
 
 public getMessage():Plenty\Modules\Messenger\Models\Message
@@ -550,6 +569,7 @@ The Attachment model of the messenger.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -651,6 +671,7 @@ The Message model of the messenger.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -703,6 +724,7 @@ and the id of the user or the contact otherwise.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -756,6 +778,7 @@ and an integer otherwise.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -815,6 +838,7 @@ The MessageMetaData model of the messenger.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -876,6 +900,7 @@ The message controls model. Currently supported controls:
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -923,6 +948,7 @@ The MessageMetaDataNotDone model of the messenger.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -970,6 +996,7 @@ The MessageMetaDataTimeCapture model of the messenger.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1038,6 +1065,7 @@ The MessageMetaLink model of the messenger.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1094,6 +1122,7 @@ the plugin namespace, the user name otherwise.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1147,6 +1176,7 @@ The MessageTo model of the messenger.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1182,6 +1212,7 @@ Types and type validation for several types in the messenger.
 ===== Methods
 
 [source%nowrap, php]
+[#getvalidlinkedtotypes]
 ----
 
 public static getValidLinkedToTypes():array
@@ -1197,6 +1228,7 @@ public static getValidLinkedToTypes():array
 Gets the valid types for &quot;linked to&quot; references.
 
 [source%nowrap, php]
+[#isvalidlinkedto]
 ----
 
 public static isValidLinkedTo($linkType, $linkValue):bool
@@ -1226,6 +1258,7 @@ a|The link value
 
 
 [source%nowrap, php]
+[#getvalidfromtypes]
 ----
 
 public static getValidFromTypes():array
@@ -1241,6 +1274,7 @@ public static getValidFromTypes():array
 Gets the valid types for &quot;from&quot; references.
 
 [source%nowrap, php]
+[#isvalidfrom]
 ----
 
 public static isValidFrom($fromType, $fromValue):bool
@@ -1270,6 +1304,7 @@ a|The from value
 
 
 [source%nowrap, php]
+[#getvalidreferrertypes]
 ----
 
 public static getValidReferrerTypes():array
@@ -1285,6 +1320,7 @@ public static getValidReferrerTypes():array
 Gets the valid types for &quot;referrer&quot; references.
 
 [source%nowrap, php]
+[#isvalidreferrer]
 ----
 
 public static isValidReferrer($referrerType, $referrerValue, $referrerName = null):bool
@@ -1318,6 +1354,7 @@ a|The name of the reference
 
 
 [source%nowrap, php]
+[#getvalidtotypes]
 ----
 
 public static getValidToTypes():array
@@ -1333,6 +1370,7 @@ public static getValidToTypes():array
 Gets the valid key types for the &#039;to&#039; array.
 
 [source%nowrap, php]
+[#isvalidto]
 ----
 
 public static isValidTo($toKey):bool
@@ -1377,6 +1415,7 @@ Search service for the messenger.
 ===== Methods
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($uuid):Plenty\Modules\Messenger\Models\Message
@@ -1402,6 +1441,7 @@ a|The UUID of the message
 
 
 [source%nowrap, php]
+[#findorfail]
 ----
 
 public findOrFail($uuid):Plenty\Modules\Messenger\Models\Message
@@ -1427,6 +1467,7 @@ a|The UUID of the message
 
 
 [source%nowrap, php]
+[#findmany]
 ----
 
 public findMany($uuid):array
@@ -1452,6 +1493,7 @@ a|The UUID of the message
 
 
 [source%nowrap, php]
+[#navigate]
 ----
 
 public navigate($page = 1, $itemsPerPage = 50):array
@@ -1481,6 +1523,7 @@ a|The number of items to list per page
 
 
 [source%nowrap, php]
+[#gettotalentries]
 ----
 
 public getTotalEntries():int
@@ -1496,6 +1539,7 @@ public getTotalEntries():int
 Returns total entries
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -1511,6 +1555,7 @@ public toArray():array
 
 
 [source%nowrap, php]
+[#process]
 ----
 
 public process($data):array
@@ -1536,6 +1581,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilter]
 ----
 
 public getFilter():array
@@ -1551,6 +1597,7 @@ public getFilter():array
 
 
 [source%nowrap, php]
+[#getpostfilter]
 ----
 
 public getPostFilter():array
@@ -1566,6 +1613,7 @@ public getPostFilter():array
 
 
 [source%nowrap, php]
+[#getquery]
 ----
 
 public getQuery():array
@@ -1581,6 +1629,7 @@ public getQuery():array
 
 
 [source%nowrap, php]
+[#getaggregations]
 ----
 
 public getAggregations():array
@@ -1596,6 +1645,7 @@ public getAggregations():array
 
 
 [source%nowrap, php]
+[#getsuggestions]
 ----
 
 public getSuggestions():array
@@ -1611,6 +1661,7 @@ public getSuggestions():array
 
 
 [source%nowrap, php]
+[#getsources]
 ----
 
 public getSources():void
@@ -1626,6 +1677,7 @@ public getSources():void
 
 
 [source%nowrap, php]
+[#adddependenciestosource]
 ----
 
 public addDependenciesToSource($sources):void
@@ -1651,6 +1703,7 @@ a|
 
 
 [source%nowrap, php]
+[#getname]
 ----
 
 public getName():void
@@ -1666,6 +1719,7 @@ public getName():void
 
 
 [source%nowrap, php]
+[#setname]
 ----
 
 public setName($name):void
@@ -1691,6 +1745,7 @@ a|
 
 
 [source%nowrap, php]
+[#setissourcedisabled]
 ----
 
 public setIsSourceDisabled($isSourceDisabled):void
@@ -1716,6 +1771,7 @@ a|
 
 
 [source%nowrap, php]
+[#addfilter]
 ----
 
 public addFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
@@ -1741,6 +1797,7 @@ a|
 
 
 [source%nowrap, php]
+[#addpostfilter]
 ----
 
 public addPostFilter($filter):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
@@ -1766,6 +1823,7 @@ a|
 
 
 [source%nowrap, php]
+[#addquery]
 ----
 
 public addQuery($query):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
@@ -1791,6 +1849,7 @@ a|
 
 
 [source%nowrap, php]
+[#addsource]
 ----
 
 public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
@@ -1816,6 +1875,7 @@ a|
 
 
 [source%nowrap, php]
+[#setsorting]
 ----
 
 public setSorting($sorting):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
@@ -1841,6 +1901,7 @@ a|
 
 
 [source%nowrap, php]
+[#addaggregation]
 ----
 
 public addAggregation($aggregation):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
@@ -1866,6 +1927,7 @@ a|
 
 
 [source%nowrap, php]
+[#addsuggestion]
 ----
 
 public addSuggestion($suggestion):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
@@ -1891,6 +1953,7 @@ a|
 
 
 [source%nowrap, php]
+[#setpage]
 ----
 
 public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
@@ -1920,6 +1983,7 @@ a|
 
 
 [source%nowrap, php]
+[#setpagination]
 ----
 
 public setPagination($pagination):void
@@ -1945,6 +2009,7 @@ a|
 
 
 [source%nowrap, php]
+[#setcollapse]
 ----
 
 public setCollapse($collapse):void
@@ -1970,6 +2035,7 @@ a|
 
 
 [source%nowrap, php]
+[#setscoremodifier]
 ----
 
 public setScoreModifier($scoreModifier):Plenty\Modules\Cloud\ElasticSearch\Lib\Search
@@ -1995,6 +2061,7 @@ a|
 
 
 [source%nowrap, php]
+[#setmaxresultwindow]
 ----
 
 public setMaxResultWindow($maxResults = 10000):void
@@ -2020,6 +2087,7 @@ a|
 
 
 [source%nowrap, php]
+[#setindex]
 ----
 
 public setIndex($index):void
@@ -2045,6 +2113,7 @@ a|
 
 
 [source%nowrap, php]
+[#issearchafter]
 ----
 
 public isSearchAfter():void
@@ -2060,6 +2129,7 @@ public isSearchAfter():void
 
 
 [source%nowrap, php]
+[#getfilterraw]
 ----
 
 public getFilterRaw():void
@@ -2075,6 +2145,7 @@ public getFilterRaw():void
 
 
 [source%nowrap, php]
+[#getqueriesraw]
 ----
 
 public getQueriesRaw():void
@@ -2090,6 +2161,7 @@ public getQueriesRaw():void
 
 
 [source%nowrap, php]
+[#getaggregationsraw]
 ----
 
 public getAggregationsRaw():array
@@ -2105,6 +2177,7 @@ public getAggregationsRaw():array
 
 
 [source%nowrap, php]
+[#getsorting]
 ----
 
 public getSorting():void
@@ -2120,6 +2193,7 @@ public getSorting():void
 
 
 [source%nowrap, php]
+[#getscoremodifier]
 ----
 
 public getScoreModifier():void

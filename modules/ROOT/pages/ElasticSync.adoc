@@ -29,6 +29,7 @@ This interface allows you to get, list, create, update and delete elastic sync m
 ===== Methods
 
 [source%nowrap, php]
+[#createsyncmappingfilter]
 ----
 
 public createSyncMappingFilter($mappingId, $data):void
@@ -58,6 +59,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#getsyncmappingfilter]
 ----
 
 public getSyncMappingFilter($filterId):void
@@ -83,6 +85,7 @@ a|
 
 
 [source%nowrap, php]
+[#listsyncmappingfilters]
 ----
 
 public listSyncMappingFilters($mappingId, $filters = [], $with = []):void
@@ -116,6 +119,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatesyncmappingfilter]
 ----
 
 public updateSyncMappingFilter($filterId, $data):void
@@ -145,6 +149,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletesyncmappingfilter]
 ----
 
 public deleteSyncMappingFilter($filterId):void
@@ -170,6 +175,7 @@ a|
 
 
 [source%nowrap, php]
+[#createsyncmappingfilters]
 ----
 
 public createSyncMappingFilters($mappingId, $data):void
@@ -199,6 +205,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#updatesyncmappingfilters]
 ----
 
 public updateSyncMappingFilters($mappingId, $data):void
@@ -228,6 +235,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -243,6 +251,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -258,6 +267,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -283,6 +293,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -298,6 +309,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -313,6 +325,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -347,6 +360,7 @@ This interface allows you to get, list, create, update and delete elastic sync m
 ===== Methods
 
 [source%nowrap, php]
+[#createsyncmapping]
 ----
 
 public createSyncMapping($syncId, $data):void
@@ -376,6 +390,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#getsyncmapping]
 ----
 
 public getSyncMapping($mappingId, $with = []):void
@@ -405,6 +420,7 @@ a|
 
 
 [source%nowrap, php]
+[#listsyncmappings]
 ----
 
 public listSyncMappings($syncId, $page = 1, $itemsPerPage = 50, $paginate = 1, $filters = [], $with = []):Plenty\Repositories\Models\PaginatedResult
@@ -450,6 +466,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatesyncmapping]
 ----
 
 public updateSyncMapping($mappingId, $data):void
@@ -479,6 +496,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletesyncmapping]
 ----
 
 public deleteSyncMapping($mappingId):void
@@ -504,6 +522,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletesyncmappings]
 ----
 
 public deleteSyncMappings($mappingIds):void
@@ -529,6 +548,7 @@ a|
 
 
 [source%nowrap, php]
+[#copysyncmapping]
 ----
 
 public copySyncMapping($mappingIds):array
@@ -554,6 +574,7 @@ a|
 
 
 [source%nowrap, php]
+[#mappingvalues]
 ----
 
 public mappingValues($sync_type):array
@@ -579,6 +600,7 @@ a|
 
 
 [source%nowrap, php]
+[#fieldvaluesmap]
 ----
 
 public fieldValuesMap():array
@@ -601,6 +623,7 @@ This method will not be supported in the future. Please refrain from using it as
 Get the field value map for all sync types.
 
 [source%nowrap, php]
+[#listvariationmatched]
 ----
 
 public listVariationMatched():array
@@ -616,6 +639,7 @@ public listVariationMatched():array
 Get a list with variation matches.
 
 [source%nowrap, php]
+[#modelkeytofieldvaluekey]
 ----
 
 public modelKeyToFieldValueKey($syncType):array
@@ -641,6 +665,7 @@ a|
 
 
 [source%nowrap, php]
+[#filterlabellist]
 ----
 
 public filterLabelList():array
@@ -656,6 +681,7 @@ public filterLabelList():array
 Get the label list for mapping filtration.
 
 [source%nowrap, php]
+[#mappingvaluestree]
 ----
 
 public mappingValuesTree($data):array
@@ -681,6 +707,7 @@ a|
 
 
 [source%nowrap, php]
+[#csvcolumns]
 ----
 
 public csvColumns($syncId):array
@@ -706,6 +733,7 @@ a|
 
 
 [source%nowrap, php]
+[#rowcsv]
 ----
 
 public rowCsv($syncId):array
@@ -731,6 +759,7 @@ a|
 
 
 [source%nowrap, php]
+[#getplentyfieldsvaluemap]
 ----
 
 public getPlentyFieldsValueMap($syncDataType):array
@@ -756,6 +785,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -771,6 +801,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -786,6 +817,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -811,6 +843,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -826,6 +859,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -841,6 +875,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -875,6 +910,7 @@ This interface allows you to get, list, create, update and delete elastic sync m
 ===== Methods
 
 [source%nowrap, php]
+[#createsyncmappingrow]
 ----
 
 public createSyncMappingRow($mappingId, $data):void
@@ -904,6 +940,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#getsyncmappingrow]
 ----
 
 public getSyncMappingRow($rowId):void
@@ -929,6 +966,7 @@ a|
 
 
 [source%nowrap, php]
+[#listsyncmappingrows]
 ----
 
 public listSyncMappingRows($mappingId, $filters = [], $with = [], $page = 1, $itemsPerPage = 25):void
@@ -970,6 +1008,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatesyncmappingrow]
 ----
 
 public updateSyncMappingRow($rowId, $data):void
@@ -999,6 +1038,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletesyncmappingrow]
 ----
 
 public deleteSyncMappingRow($rowId):void
@@ -1024,6 +1064,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatesyncmappingrows]
 ----
 
 public updateSyncMappingRows($mappingId, $data):void
@@ -1053,6 +1094,7 @@ a|
 
 
 [source%nowrap, php]
+[#createsyncmappingrows]
 ----
 
 public createSyncMappingRows($mappingId, $data):void
@@ -1082,6 +1124,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -1097,6 +1140,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -1112,6 +1156,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -1137,6 +1182,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -1152,6 +1198,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -1167,6 +1214,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -1201,6 +1249,7 @@ This interface allows you to get, list, create, update and delete elastic sync m
 ===== Methods
 
 [source%nowrap, php]
+[#createsyncmatching]
 ----
 
 public createSyncMatching($syncId, $data):void
@@ -1230,6 +1279,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#getsyncmatching]
 ----
 
 public getSyncMatching($matchingId):void
@@ -1255,6 +1305,7 @@ a|
 
 
 [source%nowrap, php]
+[#listsyncmatches]
 ----
 
 public listSyncMatches($syncId, $filters = [], $with = []):void
@@ -1288,6 +1339,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatesyncmatching]
 ----
 
 public updateSyncMatching($matchingId, $data):void
@@ -1317,6 +1369,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletesyncmatching]
 ----
 
 public deleteSyncMatching($matchingId):void
@@ -1342,6 +1395,7 @@ a|
 
 
 [source%nowrap, php]
+[#getentity]
 ----
 
 public getEntity($syncId):array
@@ -1367,6 +1421,7 @@ a|
 
 
 [source%nowrap, php]
+[#matchingfields]
 ----
 
 public matchingFields($syncType):array
@@ -1392,6 +1447,7 @@ a|
 
 
 [source%nowrap, php]
+[#createsyncmatches]
 ----
 
 public createSyncMatches($syncId, $data):void
@@ -1421,6 +1477,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#updatesyncmatches]
 ----
 
 public updateSyncMatches($syncId, $data):void
@@ -1450,6 +1507,7 @@ a|
 
 
 [source%nowrap, php]
+[#listdecimals]
 ----
 
 public listDecimals():array
@@ -1465,6 +1523,7 @@ public listDecimals():array
 Get list of decimals.
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -1480,6 +1539,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -1495,6 +1555,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -1520,6 +1581,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -1535,6 +1597,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -1550,6 +1613,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -1584,6 +1648,7 @@ This interface allows you to get, list, create, update and delete elastic sync o
 ===== Methods
 
 [source%nowrap, php]
+[#createsyncoption]
 ----
 
 public createSyncOption($syncId, $data):void
@@ -1613,6 +1678,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#getsyncoption]
 ----
 
 public getSyncOption($optionId):void
@@ -1638,6 +1704,7 @@ a|
 
 
 [source%nowrap, php]
+[#listsyncoptions]
 ----
 
 public listSyncOptions($syncId, $filters = [], $with = []):void
@@ -1671,6 +1738,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatesyncoption]
 ----
 
 public updateSyncOption($optionId, $data):void
@@ -1700,6 +1768,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletesyncoption]
 ----
 
 public deleteSyncOption($optionId):void
@@ -1725,6 +1794,7 @@ a|
 
 
 [source%nowrap, php]
+[#createsyncoptions]
 ----
 
 public createSyncOptions($syncId, $data):void
@@ -1754,6 +1824,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#updatesyncoptions]
 ----
 
 public updateSyncOptions($syncId, $data):void
@@ -1783,6 +1854,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -1798,6 +1870,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -1813,6 +1886,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -1838,6 +1912,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -1853,6 +1928,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -1868,6 +1944,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -1902,6 +1979,7 @@ This interface allows you to get, list, create, update and delete elastic sync s
 ===== Methods
 
 [source%nowrap, php]
+[#createsync]
 ----
 
 public createSync($data):void
@@ -1927,6 +2005,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#getsync]
 ----
 
 public getSync($syncId, $with = []):array
@@ -1956,6 +2035,7 @@ a|
 
 
 [source%nowrap, php]
+[#listsyncs]
 ----
 
 public listSyncs($page = 1, $itemsPerPage = 50, $paginate = 1, $filters = [], $with = []):Plenty\Repositories\Models\PaginatedResult
@@ -1997,6 +2077,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatesync]
 ----
 
 public updateSync($syncId, $data):void
@@ -2026,6 +2107,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletesync]
 ----
 
 public deleteSync($syncId):void
@@ -2051,6 +2133,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletesyncs]
 ----
 
 public deleteSyncs($syncIds):void
@@ -2076,6 +2159,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlisttypes]
 ----
 
 public getListTypes():array
@@ -2091,6 +2175,7 @@ public getListTypes():array
 Get list of sync types.
 
 [source%nowrap, php]
+[#getlistintervals]
 ----
 
 public getListIntervals():array
@@ -2106,6 +2191,7 @@ public getListIntervals():array
 Get list of sync intervals.
 
 [source%nowrap, php]
+[#getlistdecimals]
 ----
 
 public getListDecimals():array
@@ -2121,6 +2207,7 @@ public getListDecimals():array
 Get list of sync decimals.
 
 [source%nowrap, php]
+[#export]
 ----
 
 public export($syncIds):array
@@ -2146,6 +2233,7 @@ a|
 
 
 [source%nowrap, php]
+[#copy]
 ----
 
 public copy($syncIds):array
@@ -2171,6 +2259,7 @@ a|
 
 
 [source%nowrap, php]
+[#resetcache]
 ----
 
 public resetCache():array
@@ -2186,6 +2275,7 @@ public resetCache():array
 Reset the cache.
 
 [source%nowrap, php]
+[#sourcepreview]
 ----
 
 public sourcePreview($syncId):array
@@ -2211,6 +2301,7 @@ a|
 
 
 [source%nowrap, php]
+[#scheduletimes]
 ----
 
 public scheduleTimes():string
@@ -2226,6 +2317,7 @@ public scheduleTimes():string
 Get schedule times.
 
 [source%nowrap, php]
+[#getreportlogs]
 ----
 
 public getReportLogs($page = 1, $itemsPerPage = 50, $paginate = 1, $filters = [], $with = []):Plenty\Repositories\Models\PaginatedResult
@@ -2267,6 +2359,7 @@ a|
 
 
 [source%nowrap, php]
+[#savecsvtos3]
 ----
 
 public saveCsvToS3($data):void
@@ -2292,6 +2385,7 @@ a|
 
 
 [source%nowrap, php]
+[#importsyncdifferent]
 ----
 
 public importSyncDifferent($data):void
@@ -2317,6 +2411,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpreviewvalues]
 ----
 
 public getPreviewValues($syncId):array
@@ -2342,6 +2437,7 @@ a|
 
 
 [source%nowrap, php]
+[#run]
 ----
 
 public run($syncId, $data):void
@@ -2371,6 +2467,7 @@ a|
 
 
 [source%nowrap, php]
+[#newrun]
 ----
 
 public newRun($syncId, $data):array
@@ -2400,6 +2497,7 @@ a|
 
 
 [source%nowrap, php]
+[#report]
 ----
 
 public report($id):array
@@ -2425,6 +2523,7 @@ a|
 
 
 [source%nowrap, php]
+[#reportavailable]
 ----
 
 public reportAvailable($page = 1, $itemsPerPage = 50, $paginate = 1, $filters = [], $with = []):array
@@ -2466,6 +2565,7 @@ a|
 
 
 [source%nowrap, php]
+[#exportsync]
 ----
 
 public exportSync($syncId):array
@@ -2491,6 +2591,7 @@ a|
 
 
 [source%nowrap, php]
+[#syncstatus]
 ----
 
 public syncStatus():array
@@ -2506,6 +2607,7 @@ public syncStatus():array
 Get syncs status.
 
 [source%nowrap, php]
+[#updatecsvsync]
 ----
 
 public updateCsvSync($data):void
@@ -2531,6 +2633,7 @@ a|
 
 
 [source%nowrap, php]
+[#importsyncjson]
 ----
 
 public importSyncJson($data):void
@@ -2556,6 +2659,7 @@ a|
 
 
 [source%nowrap, php]
+[#importsyncjsondifferent]
 ----
 
 public importSyncJsonDifferent($data):void
@@ -2581,6 +2685,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -2596,6 +2701,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -2611,6 +2717,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -2636,6 +2743,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -2651,6 +2759,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -2666,6 +2775,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -2701,6 +2811,7 @@ describes properties of a Model
 ===== Methods
 
 [source%nowrap, php]
+[#getpropertyinformation]
 ----
 
 public getPropertyInformation($modelClassName):array
@@ -2746,6 +2857,7 @@ This interface provides methods to CRUD report options
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\ElasticSync\Models\Report\RunReportOption
@@ -2771,6 +2883,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id):Plenty\Modules\ElasticSync\Models\Report\RunReportOption
@@ -2796,6 +2909,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):Plenty\Modules\ElasticSync\Models\Report\RunReportOption
@@ -2825,6 +2939,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):void
@@ -2850,6 +2965,7 @@ a|
 
 
 [source%nowrap, php]
+[#set]
 ----
 
 public set($report, $name, $value = null, $type = &quot;string&quot;):void
@@ -2887,6 +3003,7 @@ a|
 
 
 [source%nowrap, php]
+[#getoptionbyname]
 ----
 
 public getOptionByName($report, $name):void
@@ -2916,6 +3033,7 @@ a|
 
 
 [source%nowrap, php]
+[#getvaluebyname]
 ----
 
 public getValueByName($report, $name):void
@@ -2945,6 +3063,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -2960,6 +3079,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -2975,6 +3095,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -3000,6 +3121,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -3015,6 +3137,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -3030,6 +3153,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -3064,6 +3188,7 @@ This interface provides methods to list reports
 ===== Methods
 
 [source%nowrap, php]
+[#getrunreport]
 ----
 
 public getRunReport($id):Plenty\Modules\ElasticSync\Models\Report\RunReport
@@ -3089,6 +3214,7 @@ a|
 
 
 [source%nowrap, php]
+[#getrunreportlog]
 ----
 
 public getRunReportLog($id):void
@@ -3114,6 +3240,7 @@ a|
 
 
 [source%nowrap, php]
+[#cancelrun]
 ----
 
 public cancelRun($id):void
@@ -3139,6 +3266,7 @@ a|
 
 
 [source%nowrap, php]
+[#listrunreports]
 ----
 
 public listRunReports($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\Models\PaginatedResult
@@ -3172,6 +3300,7 @@ a|
 
 
 [source%nowrap, php]
+[#listjobreports]
 ----
 
 public listJobReports($reportId, $page = 1, $itemsPerPage = 50, $filters = []):array
@@ -3209,6 +3338,7 @@ a|
 
 
 [source%nowrap, php]
+[#listjobs]
 ----
 
 public listJobs($reportId):array
@@ -3234,6 +3364,7 @@ a|
 
 
 [source%nowrap, php]
+[#listoutcomes]
 ----
 
 public listOutcomes($reportId, $job):array
@@ -3263,6 +3394,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -3278,6 +3410,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -3293,6 +3426,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -3318,6 +3452,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -3333,6 +3468,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -3348,6 +3484,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -3408,6 +3545,7 @@ The elastic sync mapping model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3467,6 +3605,7 @@ The elastic sync mapping filter model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3535,6 +3674,7 @@ The elastic sync mapping row model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3591,6 +3731,7 @@ The elastic sync matching model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3653,6 +3794,7 @@ The elastic sync option model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3730,6 +3872,7 @@ The elastic sync sync model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3765,6 +3908,7 @@ property information
 ===== Methods
 
 [source%nowrap, php]
+[#gettype]
 ----
 
 public getType():string
@@ -3780,6 +3924,7 @@ public getType():string
 
 
 [source%nowrap, php]
+[#getname]
 ----
 
 public getName():string
@@ -3795,6 +3940,7 @@ public getName():string
 
 
 [source%nowrap, php]
+[#getdescription]
 ----
 
 public getDescription():string
@@ -3867,6 +4013,7 @@ The run report model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3923,6 +4070,7 @@ The run report option model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3980,6 +4128,7 @@ The mapping model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4036,6 +4185,7 @@ The sync model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4101,6 +4251,7 @@ The synclog model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

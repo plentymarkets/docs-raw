@@ -29,6 +29,7 @@ Plugin Notifications Service
 ===== Methods
 
 [source%nowrap, php]
+[#addnotification]
 ----
 
 public addNotification($notificationBuiltWithNotificationBuilder):array
@@ -54,6 +55,7 @@ a|An array built with NotificationBuilder::build() method
 
 
 [source%nowrap, php]
+[#fetchnotifications]
 ----
 
 public fetchNotifications($queryBuiltWithNotificationsQueryBuilder, $page, $itemsPerPage):Plenty\Repositories\Models\UnspecifiedLengthPaginationResponse
@@ -87,6 +89,7 @@ a|The number of notifications per page
 
 
 [source%nowrap, php]
+[#fetchnotificationsdetails]
 ----
 
 public fetchNotificationsDetails($notificationsFetchDetailsQuery):array
@@ -112,6 +115,7 @@ a|An array built with NotificationsFetchDetailsQueryBuilder::build() method
 
 
 [source%nowrap, php]
+[#acknowledgenotifications]
 ----
 
 public acknowledgeNotifications($queryBuiltWithNotificationsAcknowledgeQueryBuilder):bool
@@ -137,6 +141,7 @@ a|An array built with NotificationsAcknowledgeQueryBuilder::build() method
 
 
 [source%nowrap, php]
+[#getnotificationscount]
 ----
 
 public getNotificationsCount($queryBuiltWithNotificationsQueryBuilder):int
@@ -182,6 +187,7 @@ The Notification Model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -216,6 +222,7 @@ The Notification Content model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -250,6 +257,7 @@ The Notification user interface settings
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

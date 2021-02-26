@@ -29,6 +29,7 @@ The repository to get, create, update and delete accounting locations.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id):Plenty\Modules\Accounting\Models\AccountingLocation
@@ -54,6 +55,7 @@ a|
 
 
 [source%nowrap, php]
+[#getall]
 ----
 
 public getAll():Plenty\Modules\Accounting\Models\AccountingLocation
@@ -70,6 +72,7 @@ List all accounting locations
 *
 
 [source%nowrap, php]
+[#listbyplentyid]
 ----
 
 public listByPlentyId($plentyId):void
@@ -95,6 +98,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Accounting\Models\AccountingLocation
@@ -120,6 +124,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):Plenty\Modules\Accounting\Models\AccountingLocation
@@ -149,6 +154,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):bool
@@ -174,6 +180,7 @@ a|
 
 
 [source%nowrap, php]
+[#getsettings]
 ----
 
 public getSettings($id):Plenty\Modules\Accounting\Models\AccountingLocationSettings
@@ -199,6 +206,7 @@ a|The accounting location Id
 
 
 [source%nowrap, php]
+[#updatesettings]
 ----
 
 public updateSettings($id, $data):Plenty\Modules\Accounting\Models\AccountingLocationSettings
@@ -247,6 +255,7 @@ Provides methods to detect a location ID.
 ===== Methods
 
 [source%nowrap, php]
+[#detectlocationid]
 ----
 
 public detectLocationId($plentyId, $countryId = null):int
@@ -276,6 +285,7 @@ a|The ID of the country of delivery. The standard location of the specified clie
 
 
 [source%nowrap, php]
+[#detectlocationidbyclientid]
 ----
 
 public detectLocationIdByClientId($clientId = null, $countryId = null):int
@@ -305,6 +315,7 @@ a|The ID of the country of delivery. The standard location of the specified clie
 
 
 [source%nowrap, php]
+[#getaccountinglocations]
 ----
 
 public getAccountingLocations($plentyId, $countryId = null):array
@@ -334,6 +345,7 @@ a|The ID of the country of delivery.
 
 
 [source%nowrap, php]
+[#getaccountinglocationsbyclient]
 ----
 
 public getAccountingLocationsByClient($clientId = null, $countryId = null):array
@@ -382,6 +394,7 @@ The DebtorAccountRepositoryContract is the interface for the DebtorAccountReposi
 ===== Methods
 
 [source%nowrap, php]
+[#findbylocationid]
 ----
 
 public findByLocationId($locationId):Plenty\Modules\Accounting\Models\DebtorAccountConfiguration
@@ -407,6 +420,7 @@ a|The ID of the accounting location.
 
 
 [source%nowrap, php]
+[#listbylocationidandmode]
 ----
 
 public listByLocationIdAndMode($locationId, $mode):void
@@ -462,6 +476,7 @@ This interface provides methods to initialise the country of a location or the c
 ===== Methods
 
 [source%nowrap, php]
+[#initbyclientid]
 ----
 
 public initByClientId($clientId):void
@@ -487,6 +502,7 @@ a|The ID of the client [optional, default=0]
 
 
 [source%nowrap, php]
+[#initbyplentyid]
 ----
 
 public initByPlentyId($plentyId):void
@@ -512,6 +528,7 @@ a|The plenty ID of the client [optional]
 
 
 [source%nowrap, php]
+[#initbylocationid]
 ----
 
 public initByLocationId($locationId):void
@@ -537,6 +554,7 @@ a|The ID of the location
 
 
 [source%nowrap, php]
+[#initbyorderid]
 ----
 
 public initByOrderId($orderId):void
@@ -562,6 +580,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#getcountryid]
 ----
 
 public getCountryId():int
@@ -577,6 +596,7 @@ public getCountryId():int
 Get the ID of the country of the current standard location. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
 
 [source%nowrap, php]
+[#getclientid]
 ----
 
 public getClientId():int
@@ -592,6 +612,7 @@ public getClientId():int
 Get the ID of the current client. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
 
 [source%nowrap, php]
+[#getplentyid]
 ----
 
 public getPlentyId():int
@@ -607,6 +628,7 @@ public getPlentyId():int
 Get the plenty ID of the current client. One of the initialise methods must be called first. The client that was initialised with the initialise method is your current client.
 
 [source%nowrap, php]
+[#getcountryidbyclientid]
 ----
 
 public getCountryIdByClientId($clientId):int
@@ -632,6 +654,7 @@ a|The ID of the client. The ID of the default client will be used if no ID is sp
 
 
 [source%nowrap, php]
+[#getcountryidbyplentyid]
 ----
 
 public getCountryIdByPlentyId($plentyId):int
@@ -657,6 +680,7 @@ a|The plenty ID of a client
 
 
 [source%nowrap, php]
+[#getcountryidbyclientidandcountryid]
 ----
 
 public getCountryIdByClientIdAndCountryId($clientId, $countryId):int
@@ -686,6 +710,7 @@ a|The ID of the country.
 
 
 [source%nowrap, php]
+[#getcountryidbylocationid]
 ----
 
 public getCountryIdByLocationId($locationId):int
@@ -730,6 +755,7 @@ The PostingKeyRepositoryContract is the interface for the PostingKeyRepository. 
 ===== Methods
 
 [source%nowrap, php]
+[#findbylocationid]
 ----
 
 public findByLocationId($locationId):Plenty\Modules\Accounting\Models\PostingKeyConfiguration
@@ -774,6 +800,7 @@ The RevenueAccountRepositoryContract is the interface for the RevenueAccountRepo
 ===== Methods
 
 [source%nowrap, php]
+[#listrevenueaccounts]
 ----
 
 public listRevenueAccounts($page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
@@ -803,6 +830,7 @@ a|The number of revenue accounts to be displayed per page. The default number of
 
 
 [source%nowrap, php]
+[#findbylocationid]
 ----
 
 public findByLocationId($locationId):Plenty\Modules\Accounting\Models\RevenueAccountLocationConfiguration
@@ -828,6 +856,7 @@ a|The ID of the accounting location
 
 
 [source%nowrap, php]
+[#findbylocationidandcountryid]
 ----
 
 public findByLocationIdAndCountryId($locationId, $countryId):Plenty\Modules\Accounting\Models\RevenueAccountCountryConfiguration
@@ -925,6 +954,7 @@ The accounting location model. An accounting location always has a country and b
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -987,6 +1017,7 @@ The accounting location settings model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1055,6 +1086,7 @@ The DebtorAccountValue Model which contains the actual configured debtor account
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1128,6 +1160,7 @@ The debtor account configuration model. The configuration is a set of debtor acc
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1175,6 +1208,7 @@ The Posting Key Model. A posting key is always associated with an accounting loc
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1225,6 +1259,7 @@ The posting key configuration model. A posting key configuration is a set of 4 p
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1272,6 +1307,7 @@ The revenue account model provides information on a single revenue account. The 
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1328,6 +1364,7 @@ The revenue account country configuration model. The revenue account country con
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1384,6 +1421,7 @@ The revenue account location configuration model. A revenue account location con
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1422,6 +1460,7 @@ This interface provides methods to initialise the detection of a VAT configurati
 ===== Methods
 
 [source%nowrap, php]
+[#init]
 ----
 
 public init($billingCountryId, $taxIdNumber, $locationId, $shippingCountryId, $startedAt = null):void
@@ -1464,6 +1503,7 @@ a|The date when the VAT configuration went into effect. If no date is set, the c
 
 
 [source%nowrap, php]
+[#isinitialized]
 ----
 
 public isInitialized():bool
@@ -1479,6 +1519,7 @@ public isInitialized():bool
 Get whether the VAT system is already initialised or not
 
 [source%nowrap, php]
+[#getvatfield]
 ----
 
 public getVatField($vatRate, $restrictedToDigitalItems = false):int
@@ -1510,6 +1551,7 @@ a|Flag that indicates if the VAT is restricted to digital items or not.
 
 
 [source%nowrap, php]
+[#getvatrate]
 ----
 
 public getVatRate($vatField, $restrictedToDigitalItems = false):float
@@ -1541,6 +1583,7 @@ a|Flag that indicates if the VAT is restricted to digital items or not.
 
 
 [source%nowrap, php]
+[#getusingvat]
 ----
 
 public getUsingVat($restrictedToDigitalItems = false):Plenty\Modules\Accounting\Vat\Models\Vat
@@ -1568,6 +1611,7 @@ a|Flag that indicates if the VAT is restricted to digital items or not.
 
 
 [source%nowrap, php]
+[#getusingvatrates]
 ----
 
 public getUsingVatRates($restrictedToDigitalItems = false):array
@@ -1595,6 +1639,7 @@ a|Flag that indicates if the VAT is restricted to digital items or not.
 
 
 [source%nowrap, php]
+[#getstandardvatbylocationid]
 ----
 
 public getStandardVatByLocationId($locationId, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat
@@ -1643,6 +1688,7 @@ The VatRepositoryContract is the interface for the VAT functionality. This inter
 ===== Methods
 
 [source%nowrap, php]
+[#findbyid]
 ----
 
 public findById($id):Plenty\Modules\Accounting\Vat\Models\Vat
@@ -1668,6 +1714,7 @@ a|The ID of the VAT configuration
 
 
 [source%nowrap, php]
+[#getstandardvat]
 ----
 
 public getStandardVat($plentyId = null, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat
@@ -1697,6 +1744,7 @@ a|The date when the VAT configuration went into effect. The date is given in W3C
 
 
 [source%nowrap, php]
+[#getstandardvatbylocation]
 ----
 
 public getStandardVatByLocation($locationId, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat
@@ -1726,6 +1774,7 @@ a|The date when the VAT configuration went into effect. The date is given in W3C
 
 
 [source%nowrap, php]
+[#getvat]
 ----
 
 public getVat($locationId, $countryId, $startedAt = null):Plenty\Modules\Accounting\Vat\Models\Vat
@@ -1759,6 +1808,7 @@ a|The date when the VAT configuration went into effect. The date is given in W3C
 
 
 [source%nowrap, php]
+[#findvat]
 ----
 
 public findVat($page = 1, $itemsPerPage = \Plenty\Modules\Accounting\Vat\Models\Vat::ITEMS_PER_PAGE, $relations = [], $columns = []):array
@@ -1796,6 +1846,7 @@ a|The columns to load in the response
 
 
 [source%nowrap, php]
+[#findvatbylocationid]
 ----
 
 public findVatByLocationId($locationId, $relations = [], $columns = []):array
@@ -1829,6 +1880,7 @@ a|The columns to load in the response
 
 
 [source%nowrap, php]
+[#findvatbylocationidandcountry]
 ----
 
 public findVatByLocationIdAndCountry($locationId, $countryId, $relations = [], $columns = []):array
@@ -1866,6 +1918,7 @@ a|The columns to load in the response.
 
 
 [source%nowrap, php]
+[#getvatbyid]
 ----
 
 public getVatById($id):Plenty\Modules\Accounting\Vat\Models\Vat
@@ -1891,6 +1944,7 @@ a|
 
 
 [source%nowrap, php]
+[#createvat]
 ----
 
 public createVat($data):Plenty\Modules\Accounting\Vat\Models\Vat
@@ -1916,6 +1970,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatevat]
 ----
 
 public updateVat($id, $data):Plenty\Modules\Accounting\Vat\Models\Vat
@@ -1945,6 +2000,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -1960,6 +2016,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -1975,6 +2032,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -2000,6 +2058,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -2015,6 +2074,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -2030,6 +2090,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -2064,6 +2125,7 @@ Provides methods for a quick search of VAT fields, VAT rates and VAT names of a 
 ===== Methods
 
 [source%nowrap, php]
+[#getvatfield]
 ----
 
 public getVatField($vat, $vatRate):int
@@ -2093,6 +2155,7 @@ a|The VAT rate
 
 
 [source%nowrap, php]
+[#getvatrate]
 ----
 
 public getVatRate($vat, $vatField):float
@@ -2122,6 +2185,7 @@ a|The VAT field
 
 
 [source%nowrap, php]
+[#getvatname]
 ----
 
 public getVatName($vat, $vatField):string
@@ -2237,6 +2301,7 @@ The VAT model contains the complete VAT configuration in plentymarkets. The VAT 
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -2287,6 +2352,7 @@ The VAT rate model is always associated with a VAT configuration and contains th
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

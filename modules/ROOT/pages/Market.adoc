@@ -29,6 +29,7 @@ The contract for the fitment repository.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id):Plenty\Modules\Market\Credentials\Models\Credentials
@@ -54,6 +55,7 @@ a|The ID of the credentials.
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Market\Credentials\Models\Credentials
@@ -79,6 +81,7 @@ a|The credentials data. The properties that are required to update credentials c
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):Plenty\Modules\Market\Credentials\Models\Credentials
@@ -108,6 +111,7 @@ a|The credentials data. The properties that are required to update credentials c
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):Plenty\Repositories\Models\DeleteResponse
@@ -133,6 +137,7 @@ a|The ID of the credentials.
 
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all($filters = []):array
@@ -158,6 +163,7 @@ a|Credentials can be filtered by ID, market, status, environment.
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($filters = [], $page, $itemsPerPage = \Plenty\Modules\Market\Credentials\Models\Credentials::MAX_ITEMS_PER_PAGE):Plenty\Repositories\Models\PaginatedResult
@@ -191,6 +197,7 @@ a|The requested amount of credentials per result page.
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -206,6 +213,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -221,6 +229,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -246,6 +255,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -261,6 +271,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -276,6 +287,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -339,6 +351,7 @@ The credentials model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -377,6 +390,7 @@ The contract for the eBay fulfillment policy repository.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id, $filters = []):Plenty\Modules\Market\Ebay\AccountPolicy\Models\FulfillmentPolicy
@@ -425,6 +439,7 @@ The contract for the eBay payment policy repository.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id, $filters = []):Plenty\Modules\Market\Ebay\AccountPolicy\Models\PaymentPolicy
@@ -473,6 +488,7 @@ The contract for the eBay return policy repository.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id, $filters = []):Plenty\Modules\Market\Ebay\AccountPolicy\Models\ReturnPolicy
@@ -522,6 +538,7 @@ An event class fired after a new fulfillment policy is created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($fulfillmentPolicy):void
@@ -547,6 +564,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfulfillmentpolicy]
 ----
 
 public getFulfillmentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\FulfillmentPolicy
@@ -581,6 +599,7 @@ An event class fired after a new fulfillment policy is deleted.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($fulfillmentPolicy):void
@@ -606,6 +625,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfulfillmentpolicy]
 ----
 
 public getFulfillmentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\FulfillmentPolicy
@@ -640,6 +660,7 @@ A base event class for all fulfillment policy events. Each fulfillment policy ev
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($fulfillmentPolicy):void
@@ -665,6 +686,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfulfillmentpolicy]
 ----
 
 public getFulfillmentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\FulfillmentPolicy
@@ -699,6 +721,7 @@ An event class fired after a new fulfillment policy is updated.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($fulfillmentPolicy):void
@@ -724,6 +747,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfulfillmentpolicy]
 ----
 
 public getFulfillmentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\FulfillmentPolicy
@@ -758,6 +782,7 @@ An event class fired after a new payment policy is created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($paymentPolicy):void
@@ -783,6 +808,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpaymentpolicy]
 ----
 
 public getPaymentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\PaymentPolicy
@@ -817,6 +843,7 @@ An event class fired after a new payment policy is deleted.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($paymentPolicy):void
@@ -842,6 +869,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpaymentpolicy]
 ----
 
 public getPaymentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\PaymentPolicy
@@ -876,6 +904,7 @@ A base event class for all payment policy events. Each payment policy events exp
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($paymentPolicy):void
@@ -901,6 +930,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpaymentpolicy]
 ----
 
 public getPaymentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\PaymentPolicy
@@ -935,6 +965,7 @@ An event class fired after a new payment policy is updated.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($paymentPolicy):void
@@ -960,6 +991,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpaymentpolicy]
 ----
 
 public getPaymentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\PaymentPolicy
@@ -994,6 +1026,7 @@ An event class fired after a new return policy is created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($returnPolicy):void
@@ -1019,6 +1052,7 @@ a|
 
 
 [source%nowrap, php]
+[#getreturnpolicy]
 ----
 
 public getReturnPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\ReturnPolicy
@@ -1053,6 +1087,7 @@ An event class fired after a new return policy is deleted.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($returnPolicy):void
@@ -1078,6 +1113,7 @@ a|
 
 
 [source%nowrap, php]
+[#getreturnpolicy]
 ----
 
 public getReturnPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\ReturnPolicy
@@ -1112,6 +1148,7 @@ A base event class for all return policy events. Each return policy events expec
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($returnPolicy):void
@@ -1137,6 +1174,7 @@ a|
 
 
 [source%nowrap, php]
+[#getreturnpolicy]
 ----
 
 public getReturnPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\ReturnPolicy
@@ -1171,6 +1209,7 @@ An event class fired after a new return policy is updated.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($returnPolicy):void
@@ -1196,6 +1235,7 @@ a|
 
 
 [source%nowrap, php]
+[#getreturnpolicy]
 ----
 
 public getReturnPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\ReturnPolicy
@@ -1244,6 +1284,7 @@ The eBay amount type model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1291,6 +1332,7 @@ The eBay category type model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1341,6 +1383,7 @@ The eBay deposit model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1418,6 +1461,7 @@ The eBay fulfillment policy model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1468,6 +1512,7 @@ The eBay payment method model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1539,6 +1584,7 @@ The eBay payment policy model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1586,6 +1632,7 @@ The eBay recipient account reference model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1633,6 +1680,7 @@ The eBay region model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1680,6 +1728,7 @@ The eBay region set model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1760,6 +1809,7 @@ The eBay return policy model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1822,6 +1872,7 @@ The eBay shipping option model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1896,6 +1947,7 @@ The eBay shipping service model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1943,6 +1995,7 @@ The eBay time duration model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1981,6 +2034,7 @@ InvalidEndPointException.
 ===== Methods
 
 [source%nowrap, php]
+[#getmessage]
 ----
 
 public getMessage():void
@@ -1996,6 +2050,7 @@ public getMessage():void
 
 
 [source%nowrap, php]
+[#getcode]
 ----
 
 public getCode():void
@@ -2011,6 +2066,7 @@ public getCode():void
 
 
 [source%nowrap, php]
+[#getfile]
 ----
 
 public getFile():void
@@ -2026,6 +2082,7 @@ public getFile():void
 
 
 [source%nowrap, php]
+[#getline]
 ----
 
 public getLine():void
@@ -2041,6 +2098,7 @@ public getLine():void
 
 
 [source%nowrap, php]
+[#gettrace]
 ----
 
 public getTrace():void
@@ -2056,6 +2114,7 @@ public getTrace():void
 
 
 [source%nowrap, php]
+[#getprevious]
 ----
 
 public getPrevious():void
@@ -2071,6 +2130,7 @@ public getPrevious():void
 
 
 [source%nowrap, php]
+[#gettraceasstring]
 ----
 
 public getTraceAsString():void
@@ -2105,6 +2165,7 @@ InvalidPropertyTypeException.
 ===== Methods
 
 [source%nowrap, php]
+[#getmessage]
 ----
 
 public getMessage():void
@@ -2120,6 +2181,7 @@ public getMessage():void
 
 
 [source%nowrap, php]
+[#getcode]
 ----
 
 public getCode():void
@@ -2135,6 +2197,7 @@ public getCode():void
 
 
 [source%nowrap, php]
+[#getfile]
 ----
 
 public getFile():void
@@ -2150,6 +2213,7 @@ public getFile():void
 
 
 [source%nowrap, php]
+[#getline]
 ----
 
 public getLine():void
@@ -2165,6 +2229,7 @@ public getLine():void
 
 
 [source%nowrap, php]
+[#gettrace]
 ----
 
 public getTrace():void
@@ -2180,6 +2245,7 @@ public getTrace():void
 
 
 [source%nowrap, php]
+[#getprevious]
 ----
 
 public getPrevious():void
@@ -2195,6 +2261,7 @@ public getPrevious():void
 
 
 [source%nowrap, php]
+[#gettraceasstring]
 ----
 
 public getTraceAsString():void
@@ -2229,6 +2296,7 @@ InvalidPropertyTypeException.
 ===== Methods
 
 [source%nowrap, php]
+[#getmessage]
 ----
 
 public getMessage():void
@@ -2244,6 +2312,7 @@ public getMessage():void
 
 
 [source%nowrap, php]
+[#getcode]
 ----
 
 public getCode():void
@@ -2259,6 +2328,7 @@ public getCode():void
 
 
 [source%nowrap, php]
+[#getfile]
 ----
 
 public getFile():void
@@ -2274,6 +2344,7 @@ public getFile():void
 
 
 [source%nowrap, php]
+[#getline]
 ----
 
 public getLine():void
@@ -2289,6 +2360,7 @@ public getLine():void
 
 
 [source%nowrap, php]
+[#gettrace]
 ----
 
 public getTrace():void
@@ -2304,6 +2376,7 @@ public getTrace():void
 
 
 [source%nowrap, php]
+[#getprevious]
 ----
 
 public getPrevious():void
@@ -2319,6 +2392,7 @@ public getPrevious():void
 
 
 [source%nowrap, php]
+[#gettraceasstring]
 ----
 
 public getTraceAsString():void
@@ -2354,6 +2428,7 @@ The service for making eBay REST calls.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($config):void
@@ -2379,6 +2454,7 @@ a|Configuration option values.
 
 
 [source%nowrap, php]
+[#getconfigdefinitions]
 ----
 
 public static getConfigDefinitions():array
@@ -2394,6 +2470,7 @@ public static getConfigDefinitions():array
 Returns definitions for each configuration option that is supported.
 
 [source%nowrap, php]
+[#getconfig]
 ----
 
 public getConfig($option = null, $default = null):void
@@ -2423,6 +2500,7 @@ a|
 
 
 [source%nowrap, php]
+[#calloperation]
 ----
 
 public callOperation($name, $request = null):Plenty\Modules\Market\Ebay\Api\Types\BaseType
@@ -2452,6 +2530,7 @@ a|Request object containing the request information.
 
 
 [source%nowrap, php]
+[#getebayheaders]
 ----
 
 public getEbayHeaders():array
@@ -2486,6 +2565,7 @@ The service for making eBay WSDL calls.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($config):void
@@ -2511,6 +2591,7 @@ a|Configuration option values.
 
 
 [source%nowrap, php]
+[#getconfigdefinitions]
 ----
 
 public static getConfigDefinitions():array
@@ -2526,6 +2607,7 @@ public static getConfigDefinitions():array
 Returns definitions for each configuration option that is supported.
 
 [source%nowrap, php]
+[#getconfig]
 ----
 
 public getConfig($option = null, $default = null):void
@@ -2555,6 +2637,7 @@ a|
 
 
 [source%nowrap, php]
+[#calloperation]
 ----
 
 public callOperation($name, $request, $responseClass):Plenty\Modules\Market\Ebay\Api\Types\BaseType
@@ -2588,6 +2671,7 @@ a|The name of the PHP class that will be created from the XML response.
 
 
 [source%nowrap, php]
+[#getebayheaders]
 ----
 
 public getEbayHeaders($operationName):array
@@ -2649,6 +2733,7 @@ The service for eBay Base64BinaryType.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($values = []):void
@@ -2674,6 +2759,7 @@ a|Optional properties and values to assign to the object.
 
 
 [source%nowrap, php]
+[#getparentvalues]
 ----
 
 public static getParentValues($properties, $values):array
@@ -2703,6 +2789,7 @@ a|
 
 
 [source%nowrap, php]
+[#__get]
 ----
 
 public __get($name):void
@@ -2728,6 +2815,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__set]
 ----
 
 public __set($name, $value):void
@@ -2757,6 +2845,7 @@ a|Value assigned to the property.
 
 
 [source%nowrap, php]
+[#__isset]
 ----
 
 public __isset($name):bool
@@ -2782,6 +2871,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__unset]
 ----
 
 public __unset($name):void
@@ -2807,6 +2897,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#torequestxml]
 ----
 
 public toRequestXml():string
@@ -2822,6 +2913,7 @@ public toRequestXml():string
 Converts the object to a XML request string.
 
 [source%nowrap, php]
+[#elementmeta]
 ----
 
 public elementMeta($elementName):void
@@ -2847,6 +2939,7 @@ a|The element name.
 
 
 [source%nowrap, php]
+[#attachment]
 ----
 
 public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;):void
@@ -2876,6 +2969,7 @@ a|The MIME type of the attachment that will be used in the request. Defaults to 
 
 
 [source%nowrap, php]
+[#hasattachment]
 ----
 
 public hasAttachment():bool
@@ -2891,6 +2985,7 @@ public hasAttachment():bool
 Helper method to check if an object has an attachment.
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -2906,6 +3001,7 @@ public toArray():array
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($expression):void
@@ -2931,6 +3027,7 @@ a|A valid JMESPath expression
 
 
 [source%nowrap, php]
+[#setvalues]
 ----
 
 public setValues($class, $values = []):void
@@ -2995,6 +3092,7 @@ The service for base type.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($values = []):void
@@ -3020,6 +3118,7 @@ a|Can pass an associative array that will set the objects properties.
 
 
 [source%nowrap, php]
+[#__get]
 ----
 
 public __get($name):void
@@ -3045,6 +3144,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__set]
 ----
 
 public __set($name, $value):void
@@ -3074,6 +3174,7 @@ a|Value assigned to the property.
 
 
 [source%nowrap, php]
+[#__isset]
 ----
 
 public __isset($name):bool
@@ -3099,6 +3200,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__unset]
 ----
 
 public __unset($name):void
@@ -3124,6 +3226,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#torequestxml]
 ----
 
 public toRequestXml():string
@@ -3139,6 +3242,7 @@ public toRequestXml():string
 Converts the object to a XML request string.
 
 [source%nowrap, php]
+[#elementmeta]
 ----
 
 public elementMeta($elementName):void
@@ -3164,6 +3268,7 @@ a|The element name.
 
 
 [source%nowrap, php]
+[#attachment]
 ----
 
 public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;):void
@@ -3193,6 +3298,7 @@ a|The MIME type of the attachment that will be used in the request. Defaults to 
 
 
 [source%nowrap, php]
+[#hasattachment]
 ----
 
 public hasAttachment():bool
@@ -3208,6 +3314,7 @@ public hasAttachment():bool
 Helper method to check if an object has an attachment.
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -3223,6 +3330,7 @@ public toArray():array
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($expression):void
@@ -3248,6 +3356,7 @@ a|A valid JMESPath expression
 
 
 [source%nowrap, php]
+[#setvalues]
 ----
 
 public setValues($class, $values = []):void
@@ -3277,6 +3386,7 @@ a|Associative array of property names and their values.
 
 
 [source%nowrap, php]
+[#getparentvalues]
 ----
 
 public static getParentValues($properties, $values):array
@@ -3341,6 +3451,7 @@ The service for boolean type.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($values = []):void
@@ -3366,6 +3477,7 @@ a|Optional properties and values to assign to the object.
 
 
 [source%nowrap, php]
+[#getparentvalues]
 ----
 
 public static getParentValues($properties, $values):array
@@ -3395,6 +3507,7 @@ a|
 
 
 [source%nowrap, php]
+[#__get]
 ----
 
 public __get($name):void
@@ -3420,6 +3533,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__set]
 ----
 
 public __set($name, $value):void
@@ -3449,6 +3563,7 @@ a|Value assigned to the property.
 
 
 [source%nowrap, php]
+[#__isset]
 ----
 
 public __isset($name):bool
@@ -3474,6 +3589,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__unset]
 ----
 
 public __unset($name):void
@@ -3499,6 +3615,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#torequestxml]
 ----
 
 public toRequestXml():string
@@ -3514,6 +3631,7 @@ public toRequestXml():string
 Converts the object to a XML request string.
 
 [source%nowrap, php]
+[#elementmeta]
 ----
 
 public elementMeta($elementName):void
@@ -3539,6 +3657,7 @@ a|The element name.
 
 
 [source%nowrap, php]
+[#attachment]
 ----
 
 public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;):void
@@ -3568,6 +3687,7 @@ a|The MIME type of the attachment that will be used in the request. Defaults to 
 
 
 [source%nowrap, php]
+[#hasattachment]
 ----
 
 public hasAttachment():bool
@@ -3583,6 +3703,7 @@ public hasAttachment():bool
 Helper method to check if an object has an attachment.
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -3598,6 +3719,7 @@ public toArray():array
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($expression):void
@@ -3623,6 +3745,7 @@ a|A valid JMESPath expression
 
 
 [source%nowrap, php]
+[#setvalues]
 ----
 
 public setValues($class, $values = []):void
@@ -3687,6 +3810,7 @@ The service for decimal type.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($values = []):void
@@ -3712,6 +3836,7 @@ a|Optional properties and values to assign to the object.
 
 
 [source%nowrap, php]
+[#getparentvalues]
 ----
 
 public static getParentValues($properties, $values):array
@@ -3741,6 +3866,7 @@ a|
 
 
 [source%nowrap, php]
+[#__get]
 ----
 
 public __get($name):void
@@ -3766,6 +3892,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__set]
 ----
 
 public __set($name, $value):void
@@ -3795,6 +3922,7 @@ a|Value assigned to the property.
 
 
 [source%nowrap, php]
+[#__isset]
 ----
 
 public __isset($name):bool
@@ -3820,6 +3948,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__unset]
 ----
 
 public __unset($name):void
@@ -3845,6 +3974,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#torequestxml]
 ----
 
 public toRequestXml():string
@@ -3860,6 +3990,7 @@ public toRequestXml():string
 Converts the object to a XML request string.
 
 [source%nowrap, php]
+[#elementmeta]
 ----
 
 public elementMeta($elementName):void
@@ -3885,6 +4016,7 @@ a|The element name.
 
 
 [source%nowrap, php]
+[#attachment]
 ----
 
 public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;):void
@@ -3914,6 +4046,7 @@ a|The MIME type of the attachment that will be used in the request. Defaults to 
 
 
 [source%nowrap, php]
+[#hasattachment]
 ----
 
 public hasAttachment():bool
@@ -3929,6 +4062,7 @@ public hasAttachment():bool
 Helper method to check if an object has an attachment.
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -3944,6 +4078,7 @@ public toArray():array
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($expression):void
@@ -3969,6 +4104,7 @@ a|A valid JMESPath expression
 
 
 [source%nowrap, php]
+[#setvalues]
 ----
 
 public setValues($class, $values = []):void
@@ -4033,6 +4169,7 @@ The service for double type.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($values = []):void
@@ -4058,6 +4195,7 @@ a|Optional properties and values to assign to the object.
 
 
 [source%nowrap, php]
+[#getparentvalues]
 ----
 
 public static getParentValues($properties, $values):array
@@ -4087,6 +4225,7 @@ a|
 
 
 [source%nowrap, php]
+[#__get]
 ----
 
 public __get($name):void
@@ -4112,6 +4251,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__set]
 ----
 
 public __set($name, $value):void
@@ -4141,6 +4281,7 @@ a|Value assigned to the property.
 
 
 [source%nowrap, php]
+[#__isset]
 ----
 
 public __isset($name):bool
@@ -4166,6 +4307,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__unset]
 ----
 
 public __unset($name):void
@@ -4191,6 +4333,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#torequestxml]
 ----
 
 public toRequestXml():string
@@ -4206,6 +4349,7 @@ public toRequestXml():string
 Converts the object to a XML request string.
 
 [source%nowrap, php]
+[#elementmeta]
 ----
 
 public elementMeta($elementName):void
@@ -4231,6 +4375,7 @@ a|The element name.
 
 
 [source%nowrap, php]
+[#attachment]
 ----
 
 public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;):void
@@ -4260,6 +4405,7 @@ a|The MIME type of the attachment that will be used in the request. Defaults to 
 
 
 [source%nowrap, php]
+[#hasattachment]
 ----
 
 public hasAttachment():bool
@@ -4275,6 +4421,7 @@ public hasAttachment():bool
 Helper method to check if an object has an attachment.
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -4290,6 +4437,7 @@ public toArray():array
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($expression):void
@@ -4315,6 +4463,7 @@ a|A valid JMESPath expression
 
 
 [source%nowrap, php]
+[#setvalues]
 ----
 
 public setValues($class, $values = []):void
@@ -4379,6 +4528,7 @@ The service for integer type.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($values = []):void
@@ -4404,6 +4554,7 @@ a|Optional properties and values to assign to the object.
 
 
 [source%nowrap, php]
+[#getparentvalues]
 ----
 
 public static getParentValues($properties, $values):array
@@ -4433,6 +4584,7 @@ a|
 
 
 [source%nowrap, php]
+[#__get]
 ----
 
 public __get($name):void
@@ -4458,6 +4610,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__set]
 ----
 
 public __set($name, $value):void
@@ -4487,6 +4640,7 @@ a|Value assigned to the property.
 
 
 [source%nowrap, php]
+[#__isset]
 ----
 
 public __isset($name):bool
@@ -4512,6 +4666,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__unset]
 ----
 
 public __unset($name):void
@@ -4537,6 +4692,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#torequestxml]
 ----
 
 public toRequestXml():string
@@ -4552,6 +4708,7 @@ public toRequestXml():string
 Converts the object to a XML request string.
 
 [source%nowrap, php]
+[#elementmeta]
 ----
 
 public elementMeta($elementName):void
@@ -4577,6 +4734,7 @@ a|The element name.
 
 
 [source%nowrap, php]
+[#attachment]
 ----
 
 public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;):void
@@ -4606,6 +4764,7 @@ a|The MIME type of the attachment that will be used in the request. Defaults to 
 
 
 [source%nowrap, php]
+[#hasattachment]
 ----
 
 public hasAttachment():bool
@@ -4621,6 +4780,7 @@ public hasAttachment():bool
 Helper method to check if an object has an attachment.
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -4636,6 +4796,7 @@ public toArray():array
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($expression):void
@@ -4661,6 +4822,7 @@ a|A valid JMESPath expression
 
 
 [source%nowrap, php]
+[#setvalues]
 ----
 
 public setValues($class, $values = []):void
@@ -4709,6 +4871,7 @@ The service for repeatable type.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($class, $property, $expectedType):void
@@ -4742,6 +4905,7 @@ a|The type that values assigned to the array should be.
 
 
 [source%nowrap, php]
+[#offsetexists]
 ----
 
 public offsetExists($offset):bool
@@ -4767,6 +4931,7 @@ a|The array index to check.
 
 
 [source%nowrap, php]
+[#offsetget]
 ----
 
 public offsetGet($offset):void
@@ -4792,6 +4957,7 @@ a|The array index.
 
 
 [source%nowrap, php]
+[#offsetset]
 ----
 
 public offsetSet($offset, $value):void
@@ -4821,6 +4987,7 @@ a|The value to add.
 
 
 [source%nowrap, php]
+[#offsetunset]
 ----
 
 public offsetUnset($offset):void
@@ -4846,6 +5013,7 @@ a|The array index.
 
 
 [source%nowrap, php]
+[#count]
 ----
 
 public count():int
@@ -4861,6 +5029,7 @@ public count():int
 
 
 [source%nowrap, php]
+[#current]
 ----
 
 public current():void
@@ -4876,6 +5045,7 @@ public current():void
 
 
 [source%nowrap, php]
+[#key]
 ----
 
 public key():int
@@ -4891,6 +5061,7 @@ public key():int
 
 
 [source%nowrap, php]
+[#next]
 ----
 
 public next():void
@@ -4906,6 +5077,7 @@ public next():void
 Move onto the next array index.
 
 [source%nowrap, php]
+[#rewind]
 ----
 
 public rewind():void
@@ -4921,6 +5093,7 @@ public rewind():void
 Reset the array index to the start of the array.
 
 [source%nowrap, php]
+[#valid]
 ----
 
 public valid():bool
@@ -4971,6 +5144,7 @@ The service for string type.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($values = []):void
@@ -4996,6 +5170,7 @@ a|Optional properties and values to assign to the object.
 
 
 [source%nowrap, php]
+[#getparentvalues]
 ----
 
 public static getParentValues($properties, $values):array
@@ -5025,6 +5200,7 @@ a|
 
 
 [source%nowrap, php]
+[#__get]
 ----
 
 public __get($name):void
@@ -5050,6 +5226,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__set]
 ----
 
 public __set($name, $value):void
@@ -5079,6 +5256,7 @@ a|Value assigned to the property.
 
 
 [source%nowrap, php]
+[#__isset]
 ----
 
 public __isset($name):bool
@@ -5104,6 +5282,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__unset]
 ----
 
 public __unset($name):void
@@ -5129,6 +5308,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#torequestxml]
 ----
 
 public toRequestXml():string
@@ -5144,6 +5324,7 @@ public toRequestXml():string
 Converts the object to a XML request string.
 
 [source%nowrap, php]
+[#elementmeta]
 ----
 
 public elementMeta($elementName):void
@@ -5169,6 +5350,7 @@ a|The element name.
 
 
 [source%nowrap, php]
+[#attachment]
 ----
 
 public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;):void
@@ -5198,6 +5380,7 @@ a|The MIME type of the attachment that will be used in the request. Defaults to 
 
 
 [source%nowrap, php]
+[#hasattachment]
 ----
 
 public hasAttachment():bool
@@ -5213,6 +5396,7 @@ public hasAttachment():bool
 Helper method to check if an object has an attachment.
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -5228,6 +5412,7 @@ public toArray():array
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($expression):void
@@ -5253,6 +5438,7 @@ a|A valid JMESPath expression
 
 
 [source%nowrap, php]
+[#setvalues]
 ----
 
 public setValues($class, $values = []):void
@@ -5317,6 +5503,7 @@ The service for token type.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($values = []):void
@@ -5342,6 +5529,7 @@ a|Optional properties and values to assign to the object.
 
 
 [source%nowrap, php]
+[#getparentvalues]
 ----
 
 public static getParentValues($properties, $values):array
@@ -5371,6 +5559,7 @@ a|
 
 
 [source%nowrap, php]
+[#__get]
 ----
 
 public __get($name):void
@@ -5396,6 +5585,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__set]
 ----
 
 public __set($name, $value):void
@@ -5425,6 +5615,7 @@ a|Value assigned to the property.
 
 
 [source%nowrap, php]
+[#__isset]
 ----
 
 public __isset($name):bool
@@ -5450,6 +5641,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__unset]
 ----
 
 public __unset($name):void
@@ -5475,6 +5667,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#torequestxml]
 ----
 
 public toRequestXml():string
@@ -5490,6 +5683,7 @@ public toRequestXml():string
 Converts the object to a XML request string.
 
 [source%nowrap, php]
+[#elementmeta]
 ----
 
 public elementMeta($elementName):void
@@ -5515,6 +5709,7 @@ a|The element name.
 
 
 [source%nowrap, php]
+[#attachment]
 ----
 
 public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;):void
@@ -5544,6 +5739,7 @@ a|The MIME type of the attachment that will be used in the request. Defaults to 
 
 
 [source%nowrap, php]
+[#hasattachment]
 ----
 
 public hasAttachment():bool
@@ -5559,6 +5755,7 @@ public hasAttachment():bool
 Helper method to check if an object has an attachment.
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -5574,6 +5771,7 @@ public toArray():array
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($expression):void
@@ -5599,6 +5797,7 @@ a|A valid JMESPath expression
 
 
 [source%nowrap, php]
+[#setvalues]
 ----
 
 public setValues($class, $values = []):void
@@ -5663,6 +5862,7 @@ The service for uri type.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($values = []):void
@@ -5688,6 +5888,7 @@ a|Optional properties and values to assign to the object.
 
 
 [source%nowrap, php]
+[#getparentvalues]
 ----
 
 public static getParentValues($properties, $values):array
@@ -5717,6 +5918,7 @@ a|
 
 
 [source%nowrap, php]
+[#__get]
 ----
 
 public __get($name):void
@@ -5742,6 +5944,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__set]
 ----
 
 public __set($name, $value):void
@@ -5771,6 +5974,7 @@ a|Value assigned to the property.
 
 
 [source%nowrap, php]
+[#__isset]
 ----
 
 public __isset($name):bool
@@ -5796,6 +6000,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#__unset]
 ----
 
 public __unset($name):void
@@ -5821,6 +6026,7 @@ a|The property name.
 
 
 [source%nowrap, php]
+[#torequestxml]
 ----
 
 public toRequestXml():string
@@ -5836,6 +6042,7 @@ public toRequestXml():string
 Converts the object to a XML request string.
 
 [source%nowrap, php]
+[#elementmeta]
 ----
 
 public elementMeta($elementName):void
@@ -5861,6 +6068,7 @@ a|The element name.
 
 
 [source%nowrap, php]
+[#attachment]
 ----
 
 public attachment($data = null, $mimeType = &quot;application/octet-stream&quot;):void
@@ -5890,6 +6098,7 @@ a|The MIME type of the attachment that will be used in the request. Defaults to 
 
 
 [source%nowrap, php]
+[#hasattachment]
 ----
 
 public hasAttachment():bool
@@ -5905,6 +6114,7 @@ public hasAttachment():bool
 Helper method to check if an object has an attachment.
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -5920,6 +6130,7 @@ public toArray():array
 Helper method that returns an associative array of the object&#039;s properties and values.
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($expression):void
@@ -5945,6 +6156,7 @@ a|A valid JMESPath expression
 
 
 [source%nowrap, php]
+[#setvalues]
 ----
 
 public setValues($class, $values = []):void
@@ -5997,6 +6209,7 @@ The contract for the eBay authentication service.
 ===== Methods
 
 [source%nowrap, php]
+[#refreshtokenbycredentialsid]
 ----
 
 public refreshTokenByCredentialsId($credentialsId):void
@@ -6045,6 +6258,7 @@ The contract for the Ebay category repository.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id, $filters = [], $with = []):Plenty\Modules\Market\Ebay\Category\Models\Category
@@ -6078,6 +6292,7 @@ a|The relations that should be loaded: 'path'
 
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all($filters = [], $with = []):array
@@ -6152,6 +6367,7 @@ The category model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -6190,6 +6406,7 @@ The contract for the Ebay category repository.
 ===== Methods
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all($filters = []):array
@@ -6275,6 +6492,7 @@ The eBay item specific model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -6313,6 +6531,7 @@ The contract for the Ebay marketplace repository.
 ===== Methods
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all($filters = []):array
@@ -6338,6 +6557,7 @@ a|You can pass multiple filters to search only custom marketplaces. Available fi
 
 
 [source%nowrap, php]
+[#allebay]
 ----
 
 public allEbay($filters = []):array
@@ -6383,6 +6603,7 @@ Helper class that allows getting information about an eBay marketplace more easi
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($filters):Plenty\Modules\Market\Ebay\Marketplace\Models\Marketplace
@@ -6408,6 +6629,7 @@ a|
 
 
 [source%nowrap, php]
+[#getmarketplaceid]
 ----
 
 public getMarketplaceId($filters):string
@@ -6433,6 +6655,7 @@ a|
 
 
 [source%nowrap, php]
+[#getmarketplaceids]
 ----
 
 public getMarketplaceIds():array
@@ -6448,6 +6671,7 @@ public getMarketplaceIds():array
 Get all available marketplace IDs.
 
 [source%nowrap, php]
+[#getreferrerid]
 ----
 
 public getReferrerId($filters):string
@@ -6473,6 +6697,7 @@ a|
 
 
 [source%nowrap, php]
+[#getreferrerids]
 ----
 
 public getReferrerIds():array
@@ -6488,6 +6713,7 @@ public getReferrerIds():array
 Get all available referrer IDs.
 
 [source%nowrap, php]
+[#getsiteid]
 ----
 
 public getSiteId($filters):string
@@ -6513,6 +6739,7 @@ a|
 
 
 [source%nowrap, php]
+[#getsiteids]
 ----
 
 public getSiteIds():array
@@ -6528,6 +6755,7 @@ public getSiteIds():array
 Get all available site IDs.
 
 [source%nowrap, php]
+[#getmarketid]
 ----
 
 public getMarketId($filters):string
@@ -6553,6 +6781,7 @@ a|
 
 
 [source%nowrap, php]
+[#getmarketids]
 ----
 
 public getMarketIds():array
@@ -6568,6 +6797,7 @@ public getMarketIds():array
 Get all available market IDs.
 
 [source%nowrap, php]
+[#getcurrency]
 ----
 
 public getCurrency($filters):string
@@ -6593,6 +6823,7 @@ a|
 
 
 [source%nowrap, php]
+[#getshortcut]
 ----
 
 public getShortcut($filters):string
@@ -6663,6 +6894,7 @@ The eBay marketplace model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -6701,6 +6933,7 @@ The contract for the fitment item property repository.
 ===== Methods
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($id):Plenty\Modules\Market\Ebay\PartsFitment\Models\FitmentItemProperty
@@ -6726,6 +6959,7 @@ a|The ID of the fitment item property that should be found.
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\FitmentItemProperty
@@ -6755,6 +6989,7 @@ a|The fitment item ID that the current property should belong to.
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\FitmentItem
@@ -6784,6 +7019,7 @@ a|The ID of the fitment item property that should be updated.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):bool
@@ -6828,6 +7064,7 @@ The contract for the fitment item repository.
 ===== Methods
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($id):Plenty\Modules\Market\Ebay\PartsFitment\Models\FitmentItem
@@ -6853,6 +7090,7 @@ a|The id of the fitment item that should be found.
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\FitmentItem
@@ -6882,6 +7120,7 @@ a|The ID of the fitment that the current fitment item belongs to.
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\FitmentItem
@@ -6911,6 +7150,7 @@ a|The ID of the fitment item that should be updated.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):bool
@@ -6955,6 +7195,7 @@ The contract for the fitment repository.
 ===== Methods
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($id, $with = []):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
@@ -6984,6 +7225,7 @@ a|The relations to load in the Fitment instance. The relations available are 'it
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
@@ -7009,6 +7251,7 @@ a|The fitment data as associative array.
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $id):Plenty\Modules\Market\Ebay\PartsFitment\Models\Fitment
@@ -7038,6 +7281,7 @@ a|The ID of the fitment that should be updated.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):Plenty\Repositories\Models\DeleteResponse
@@ -7063,6 +7307,7 @@ a|The ID of the fitment that should be deleted.
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):array
@@ -7100,6 +7345,7 @@ a|The filters that could be applied: 'id', 'categoryId', 'marketId', 'name', 'pr
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -7115,6 +7361,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -7130,6 +7377,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -7155,6 +7403,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -7170,6 +7419,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -7185,6 +7435,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -7242,6 +7493,7 @@ The fitment model. This can contain multiple FitmentItems models.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -7295,6 +7547,7 @@ The fitment item model. This belongs to one fitment model and can contain multip
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -7351,6 +7604,7 @@ The fitment item property model. This bleongs to an FitmentItem model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -7389,6 +7643,7 @@ The contract for the eBay shop categories.
 ===== Methods
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all($credentialsId, $viewType = &quot;list&quot;):array
@@ -7441,6 +7696,7 @@ The contract for the ebay transaction repository.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id):Plenty\Modules\Market\Ebay\Transaction\Models\Transaction
@@ -7466,6 +7722,7 @@ a|The ID of the ebay transaction.
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($page = 1, $itemsPerPage = 50, $filters = []):array
@@ -7499,6 +7756,7 @@ a|The filters that could be applied: 'orderId', 'externalOrderId'.
 
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -7524,6 +7782,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -7539,6 +7798,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -7554,6 +7814,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -7569,6 +7830,7 @@ public clearFilters():void
 Clears the filter array.
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -7584,6 +7846,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -7704,6 +7967,7 @@ The ebay transaction model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -7742,6 +8006,7 @@ The contract for the market account helper repository.
 ===== Methods
 
 [source%nowrap, php]
+[#listmarketaccounts]
 ----
 
 public listMarketAccounts($marketId):array
@@ -7786,6 +8051,7 @@ The contract for the market attribute helper repository.
 ===== Methods
 
 [source%nowrap, php]
+[#getattributename]
 ----
 
 public getAttributeName($id, $lang):string
@@ -7815,6 +8081,7 @@ a|
 
 
 [source%nowrap, php]
+[#getattributevaluename]
 ----
 
 public getAttributeValueName($attributeId, $valueId, $lang):string
@@ -7848,6 +8115,7 @@ a|
 
 
 [source%nowrap, php]
+[#getattributenames]
 ----
 
 public getAttributeNames($record, $lang = &quot;de&quot;, $delimiter = &quot;,&quot;):string
@@ -7881,6 +8149,7 @@ a|
 
 
 [source%nowrap, php]
+[#getattributevaluesetshortfrontendname]
 ----
 
 public getAttributeValueSetShortFrontendName($record, $lang = &quot;de&quot;, $delimiter = &quot;, &quot;, $attributeNameCombination = []):string
@@ -7918,6 +8187,7 @@ a|
 
 
 [source%nowrap, php]
+[#getattributenameandvaluecombination]
 ----
 
 public getAttributeNameAndValueCombination($attributeNames, $attributeValues, $delimiter = &quot;,&quot;):string
@@ -7951,6 +8221,7 @@ a|
 
 
 [source%nowrap, php]
+[#getvariationnameandattributenameandvaluecombination]
 ----
 
 public getVariationNameAndAttributeNameAndValueCombination($record, $lang):string
@@ -7999,6 +8270,7 @@ The contract for the market category helper repository.
 ===== Methods
 
 [source%nowrap, php]
+[#getcategorybranchname]
 ----
 
 public getCategoryBranchName($branchId, $lang, $plentyId, $separator = &quot;&gt;&quot;):string
@@ -8055,6 +8327,7 @@ The contract for the item helper repository.
 ===== Methods
 
 [source%nowrap, php]
+[#getexternalmanufacturername]
 ----
 
 public getExternalManufacturerName($manufacturerId):string
@@ -8080,6 +8353,7 @@ a|
 
 
 [source%nowrap, php]
+[#generatesku]
 ----
 
 public generateSku($variationId, $marketId, $accountId, $setLastExportedTimestamp):string
@@ -8117,6 +8391,7 @@ a|
 
 
 [source%nowrap, php]
+[#getavailability]
 ----
 
 public getAvailability($availabilityId, $lang, $returnAvailabilityName):string
@@ -8169,6 +8444,7 @@ The contract for the market property helper repository.
 ===== Methods
 
 [source%nowrap, php]
+[#getmarketproperty]
 ----
 
 public getMarketProperty($referrerId):array
@@ -8217,6 +8493,7 @@ Use this interface to store and retrieve market specific settings.
 ===== Methods
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($filters = [], $page, $itemsPerPage = \Plenty\Modules\Market\Settings\Models\Settings::MAX_ITEMS_PER_PAGE):Plenty\Repositories\Models\PaginatedResult
@@ -8250,6 +8527,7 @@ a|The requested amount of settings per result page.
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($marketplaceId, $type, $settings):Plenty\Modules\Market\Settings\Models\Settings
@@ -8283,6 +8561,7 @@ a|The settings that will be saved.
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($settingsData, $id):void
@@ -8312,6 +8591,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id):Plenty\Modules\Market\Settings\Models\Settings
@@ -8337,6 +8617,7 @@ a|The settings id.
 
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($marketplaceId, $type = null):array
@@ -8366,6 +8647,7 @@ a|The typo of settings that should be searched for. Possible values: shipping, a
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):bool
@@ -8391,6 +8673,7 @@ a|
 
 
 [source%nowrap, php]
+[#deleteall]
 ----
 
 public deleteAll($marketplaceId, $type):void
@@ -8420,6 +8703,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -8435,6 +8719,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -8470,6 +8755,7 @@ Factory that allows to store correlation between market settings and plentymarke
 ===== Methods
 
 [source%nowrap, php]
+[#type]
 ----
 
 public type($type):Plenty\Modules\Market\Settings\Factories\SettingsCorrelationFactory
@@ -8495,6 +8781,7 @@ a|The relation type. Possible values: shipping, attribute, category, property
 
 
 [source%nowrap, php]
+[#createrelation]
 ----
 
 public createRelation($settingsId, $correlationId):void
@@ -8524,6 +8811,7 @@ a|The id of the plentymarkets settings we want to create the relation to.
 
 
 [source%nowrap, php]
+[#createrelationwithparent]
 ----
 
 public createRelationWithParent($settingsId, $correlationId, $parentSettingsId):void
@@ -8557,6 +8845,7 @@ a|The id of the parent market settings we want to create the relation to.
 
 
 [source%nowrap, php]
+[#clear]
 ----
 
 public clear($marketplaceId):void
@@ -8582,6 +8871,7 @@ a|
 
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all($marketplaceId):array
@@ -8607,6 +8897,7 @@ a|
 
 
 [source%nowrap, php]
+[#getsettingsbycorrelation]
 ----
 
 public getSettingsByCorrelation($marketplaceId, $correlationId):void
@@ -8636,6 +8927,7 @@ a|
 
 
 [source%nowrap, php]
+[#getallsettingsbycorrelation]
 ----
 
 public getAllSettingsByCorrelation($marketplaceId, $correlationId):void
@@ -8665,6 +8957,7 @@ a|
 
 
 [source%nowrap, php]
+[#getsettingsbycorrelationandparent]
 ----
 
 public getSettingsByCorrelationAndParent($marketplaceId, $correlationId, $parentSettingsId):void
@@ -8698,6 +8991,7 @@ a|
 
 
 [source%nowrap, php]
+[#getsettingsbyparent]
 ----
 
 public getSettingsByParent($marketplaceId, $parentSettingsId):void
@@ -8727,6 +9021,7 @@ a|
 
 
 [source%nowrap, php]
+[#getallsettingsbycorrelationandparent]
 ----
 
 public getAllSettingsByCorrelationAndParent($marketplaceId, $correlationId, $parentSettingsId):void
@@ -8814,6 +9109,7 @@ The market settings model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -8852,6 +9148,7 @@ Event which signals a new ebay order item before its creation.
 ===== Methods
 
 [source%nowrap, php]
+[#getdata]
 ----
 
 public getData():void
@@ -8867,6 +9164,7 @@ public getData():void
 
 
 [source%nowrap, php]
+[#getwarehouseid]
 ----
 
 public getWarehouseId():void
@@ -8882,6 +9180,7 @@ public getWarehouseId():void
 
 
 [source%nowrap, php]
+[#setwarehouseid]
 ----
 
 public setWarehouseId($warehouseId):void
@@ -8926,6 +9225,7 @@ Generic ebay order item event.
 ===== Methods
 
 [source%nowrap, php]
+[#getdata]
 ----
 
 public getData():void
@@ -8941,6 +9241,7 @@ public getData():void
 
 
 [source%nowrap, php]
+[#getwarehouseid]
 ----
 
 public getWarehouseId():void
@@ -8956,6 +9257,7 @@ public getWarehouseId():void
 
 
 [source%nowrap, php]
+[#setwarehouseid]
 ----
 
 public setWarehouseId($warehouseId):void

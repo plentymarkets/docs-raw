@@ -29,6 +29,7 @@ The contract for the facet name repository
 ===== Methods
 
 [source%nowrap, php]
+[#findone]
 ----
 
 public findOne($facetId, $lang):Plenty\Modules\Facet\Facet\Models\FacetName
@@ -58,6 +59,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Facet\Facet\Models\FacetName
@@ -83,6 +85,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($facetId, $lang, $data):Plenty\Modules\Facet\Facet\Models\FacetName
@@ -116,6 +119,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($facetId, $lang):Plenty\Repositories\Models\DeleteResponse
@@ -164,6 +168,7 @@ The contract for the facet repository
 ===== Methods
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($with, $filters):Illuminate\Support\Collection
@@ -193,6 +198,7 @@ a|
 
 
 [source%nowrap, php]
+[#listbyplentyid]
 ----
 
 public listByPlentyId($plentyId, $lang = &quot;de&quot;):array
@@ -222,6 +228,7 @@ a|
 
 
 [source%nowrap, php]
+[#findone]
 ----
 
 public findOne($id):Plenty\Modules\Facet\Facet\Models\Facet
@@ -247,6 +254,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Facet\Facet\Models\Facet
@@ -272,6 +280,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):Plenty\Modules\Facet\Facet\Models\Facet
@@ -301,6 +310,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):Plenty\Repositories\Models\DeleteResponse
@@ -326,6 +336,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -341,6 +352,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -356,6 +368,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -381,6 +394,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -396,6 +410,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -411,6 +426,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -445,6 +461,7 @@ The contract for the facet value name repository
 ===== Methods
 
 [source%nowrap, php]
+[#findone]
 ----
 
 public findOne($valueId, $lang):Plenty\Modules\Facet\Facet\Models\FacetValueName
@@ -474,6 +491,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Facet\Facet\Models\FacetValueName
@@ -499,6 +517,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($valueId, $lang, $data):Plenty\Modules\Facet\Facet\Models\FacetValueName
@@ -532,6 +551,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($valueId, $lang):Plenty\Repositories\Models\DeleteResponse
@@ -580,6 +600,7 @@ The contract for the facet value reference repository
 ===== Methods
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($filters):Illuminate\Support\Collection
@@ -605,6 +626,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Facet\Facet\Models\FacetValueReference
@@ -630,6 +652,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):Plenty\Repositories\Models\DeleteResponse
@@ -655,6 +678,7 @@ a|
 
 
 [source%nowrap, php]
+[#findone]
 ----
 
 public findOne($id):Plenty\Modules\Facet\Facet\Models\FacetValueReference
@@ -680,6 +704,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -695,6 +720,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -710,6 +736,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -735,6 +762,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -750,6 +778,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -765,6 +794,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -799,6 +829,7 @@ The contract for the facet value repository
 ===== Methods
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($with, $filters):Illuminate\Support\Collection
@@ -828,6 +859,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Facet\Facet\Models\FacetValue
@@ -853,6 +885,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):Plenty\Modules\Facet\Facet\Models\FacetValue
@@ -882,6 +915,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):Plenty\Repositories\Models\DeleteResponse
@@ -907,6 +941,7 @@ a|
 
 
 [source%nowrap, php]
+[#findone]
 ----
 
 public findOne($id):Plenty\Modules\Facet\Facet\Models\FacetValue
@@ -932,6 +967,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -947,6 +983,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -962,6 +999,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -987,6 +1025,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -1002,6 +1041,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -1017,6 +1057,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -1098,6 +1139,7 @@ The facet model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1151,6 +1193,7 @@ The facet name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1219,6 +1262,7 @@ The facet value model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1272,6 +1316,7 @@ The facet value name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1340,6 +1385,7 @@ The facet value reference model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

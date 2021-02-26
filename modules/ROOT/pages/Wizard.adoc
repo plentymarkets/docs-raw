@@ -45,6 +45,7 @@ This interface provides methods to register, get and list all wizards.
 ===== Methods
 
 [source%nowrap, php]
+[#register]
 ----
 
 public register($wizardKey, $wizard):void
@@ -74,6 +75,7 @@ a|
 
 
 [source%nowrap, php]
+[#registerfolders]
 ----
 
 public registerFolders($folderClass):void
@@ -99,6 +101,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($wizardKey, $skipTranslation = false):Plenty\Modules\Wizard\Models\Wizard
@@ -128,6 +131,7 @@ a|
 
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all():array
@@ -143,6 +147,7 @@ public all():array
 List all wizards class names
 
 [source%nowrap, php]
+[#folders]
 ----
 
 public folders($hierarchy = false):array
@@ -187,6 +192,7 @@ This interface provides methods to modify wizard data.
 ===== Methods
 
 [source%nowrap, php]
+[#modify]
 ----
 
 public modify($parameters):void
@@ -231,6 +237,7 @@ This interface provides methods to create, get, list, update and delete wizard d
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($wizardKey, $steps = []):void
@@ -260,6 +267,7 @@ a|
 
 
 [source%nowrap, php]
+[#createdataoption]
 ----
 
 public createDataOption($wizardKey, $data = [], $optionId = &quot;default&quot;):void
@@ -293,6 +301,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($wizardKey):void
@@ -318,6 +327,7 @@ a|
 
 
 [source%nowrap, php]
+[#getbyoptionid]
 ----
 
 public getByOptionId($wizardKey, $optionId = &quot;default&quot;):void
@@ -347,6 +357,7 @@ a|
 
 
 [source%nowrap, php]
+[#findbywizardkey]
 ----
 
 public findByWizardKey($wizardKey):void
@@ -372,6 +383,7 @@ a|
 
 
 [source%nowrap, php]
+[#list]
 ----
 
 public list($page = 1, $itemsPerPage = 50, $filters = []):array
@@ -405,6 +417,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($wizardKey, $properties):void
@@ -434,6 +447,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatedataoption]
 ----
 
 public updateDataOption($wizardKey, $optionId, $data, $stepKey, $skipValidation = false):void
@@ -475,6 +489,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($wizardKey):void
@@ -500,6 +515,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletedataoption]
 ----
 
 public deleteDataOption($wizardKey, $optionId):void
@@ -529,6 +545,7 @@ a|
 
 
 [source%nowrap, php]
+[#finalize]
 ----
 
 public finalize($wizardKey, $optionId = &quot;default&quot;, $data = []):void
@@ -562,6 +579,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -577,6 +595,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -592,6 +611,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -617,6 +637,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -632,6 +653,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -647,6 +669,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -713,6 +736,7 @@ This interface provides methods to handle final wizard data.
 ===== Methods
 
 [source%nowrap, php]
+[#handle]
 ----
 
 public handle($parameters):bool
@@ -798,6 +822,7 @@ The wizard model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -854,6 +879,7 @@ The wizard data model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -907,6 +933,7 @@ The wizard folder.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -963,6 +990,7 @@ The wizard form option.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1013,6 +1041,7 @@ The wizard step section model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1069,6 +1098,7 @@ The wizard step model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1104,6 +1134,7 @@ Register a wizard folder.
 ===== Methods
 
 [source%nowrap, php]
+[#folders]
 ----
 
 public folders():array
@@ -1138,6 +1169,7 @@ Register a wizard.
 ===== Methods
 
 [source%nowrap, php]
+[#structure]
 ----
 
 public structure():array
@@ -1189,6 +1221,7 @@ Base data source for wizards
 ===== Methods
 
 [source%nowrap, php]
+[#setwizardkey]
 ----
 
 public setWizardKey($wizardKey):void
@@ -1214,6 +1247,7 @@ a|
 
 
 [source%nowrap, php]
+[#getidentifiers]
 ----
 
 public getIdentifiers():array
@@ -1229,6 +1263,7 @@ public getIdentifiers():array
 List of option identifiers
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($steps = []):array
@@ -1254,6 +1289,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get():array
@@ -1269,6 +1305,7 @@ public get():array
 Get data
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($properties = []):void
@@ -1294,6 +1331,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete():void
@@ -1309,6 +1347,7 @@ public delete():void
 Delete data
 
 [source%nowrap, php]
+[#createdataoption]
 ----
 
 public createDataOption($data = [], $optionId = &quot;default&quot;):array
@@ -1338,6 +1377,7 @@ a|
 
 
 [source%nowrap, php]
+[#getbyoptionid]
 ----
 
 public getByOptionId($optionId = &quot;default&quot;):array
@@ -1363,6 +1403,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatedataoption]
 ----
 
 public updateDataOption($optionId = &quot;default&quot;, $data = [], $stepKey = &quot;&quot;):array
@@ -1396,6 +1437,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletedataoption]
 ----
 
 public deleteDataOption($optionId):void
@@ -1421,6 +1463,7 @@ a|
 
 
 [source%nowrap, php]
+[#finalize]
 ----
 
 public finalize($optionId, $data = []):void

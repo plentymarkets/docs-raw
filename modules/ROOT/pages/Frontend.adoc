@@ -29,6 +29,7 @@ The CheckoutContract is the interface for the checkout repository. This interfac
 ===== Methods
 
 [source%nowrap, php]
+[#getshippingcountryid]
 ----
 
 public getShippingCountryId():int
@@ -44,6 +45,7 @@ public getShippingCountryId():int
 Gets the shipping country ID.
 
 [source%nowrap, php]
+[#setshippingcountryid]
 ----
 
 public setShippingCountryId($shippingCountryId):void
@@ -69,6 +71,7 @@ a|The ID of the shipping country
 
 
 [source%nowrap, php]
+[#getpaymentmethodid]
 ----
 
 public getPaymentMethodId():int
@@ -84,6 +87,7 @@ public getPaymentMethodId():int
 Gets the payment method id of the current shopping cart.
 
 [source%nowrap, php]
+[#setpaymentmethodid]
 ----
 
 public setPaymentMethodId($paymentMethodId):void
@@ -109,6 +113,7 @@ a|The ID of the payment method
 
 
 [source%nowrap, php]
+[#getshippingprofileid]
 ----
 
 public getShippingProfileId():int
@@ -124,6 +129,7 @@ public getShippingProfileId():int
 Gets the shipping profile id of the current shopping cart.
 
 [source%nowrap, php]
+[#setshippingprofileid]
 ----
 
 public setShippingProfileId($shippingProfileId):void
@@ -149,6 +155,7 @@ a|The ID of the shipping profile
 
 
 [source%nowrap, php]
+[#setcurrency]
 ----
 
 public setCurrency($currency):void
@@ -174,6 +181,7 @@ a|The currency
 
 
 [source%nowrap, php]
+[#setbasketreferrerid]
 ----
 
 public setBasketReferrerId($referrerId):void
@@ -199,6 +207,7 @@ a|The ID of the order referrer. The <a href="https://www.plentymarkets.co.uk/man
 
 
 [source%nowrap, php]
+[#getcustomerinvoiceaddressid]
 ----
 
 public getCustomerInvoiceAddressId():int
@@ -214,6 +223,7 @@ public getCustomerInvoiceAddressId():int
 Gets the invoice address id of the current shopping cart.
 
 [source%nowrap, php]
+[#setcustomerinvoiceaddressid]
 ----
 
 public setCustomerInvoiceAddressId($invoiceAddressId):void
@@ -239,6 +249,7 @@ a|
 
 
 [source%nowrap, php]
+[#getcustomershippingaddressid]
 ----
 
 public getCustomerShippingAddressId():int
@@ -254,6 +265,7 @@ public getCustomerShippingAddressId():int
 Gets the shipping address id of the current shopping cart.
 
 [source%nowrap, php]
+[#setcustomershippingaddressid]
 ----
 
 public setCustomerShippingAddressId($shippingAddressId):void
@@ -279,6 +291,7 @@ a|
 
 
 [source%nowrap, php]
+[#validatecheckout]
 ----
 
 public validateCheckout():Plenty\Modules\Frontend\Events\ValidateCheckoutEvent
@@ -313,6 +326,7 @@ The CurrencyExchangeRatioRepositoryContract is the interface for the currency ex
 ===== Methods
 
 [source%nowrap, php]
+[#getexchangeratiobycurrency]
 ----
 
 public getExchangeRatioByCurrency($currency):float
@@ -338,6 +352,7 @@ a|
 
 
 [source%nowrap, php]
+[#getdefaultcurrency]
 ----
 
 public getDefaultCurrency():string
@@ -353,6 +368,7 @@ public getDefaultCurrency():string
 Get the default currency.
 
 [source%nowrap, php]
+[#convertfromdefaultcurrency]
 ----
 
 public convertFromDefaultCurrency($currency, $amount, $exchangeRatio = 0.0):float
@@ -386,6 +402,7 @@ a|
 
 
 [source%nowrap, php]
+[#converttodefaultcurrency]
 ----
 
 public convertToDefaultCurrency($currency, $amount, $exchangeRatio = 0.0):float
@@ -439,6 +456,7 @@ The event is triggered when the currency is changed in the online store.
 ===== Methods
 
 [source%nowrap, php]
+[#getcurrency]
 ----
 
 public getCurrency():string
@@ -454,6 +472,7 @@ public getCurrency():string
 Gets the currency.
 
 [source%nowrap, php]
+[#getcurrencyexchangeratio]
 ----
 
 public getCurrencyExchangeRatio():float
@@ -504,6 +523,7 @@ The event is triggered when the language is changed in the online store.
 ===== Methods
 
 [source%nowrap, php]
+[#getlanguage]
 ----
 
 public getLanguage():string
@@ -538,6 +558,7 @@ The event is triggered when the payment method is changed in the online store.
 ===== Methods
 
 [source%nowrap, php]
+[#getpaymentmethodid]
 ----
 
 public getPaymentMethodId():void
@@ -553,6 +574,7 @@ public getPaymentMethodId():void
 Gets the ID of the payment method.
 
 [source%nowrap, php]
+[#setpaymentmethodid]
 ----
 
 public setPaymentMethodId($paymentMethodId):void
@@ -597,6 +619,7 @@ The event is triggered when the referrer id  is changed in the online store.
 ===== Methods
 
 [source%nowrap, php]
+[#getreferrerid]
 ----
 
 public getReferrerId():void
@@ -612,6 +635,7 @@ public getReferrerId():void
 
 
 [source%nowrap, php]
+[#setreferrerid]
 ----
 
 public setReferrerId($referrerId):Plenty\Modules\Frontend\Events\FrontendReferrerChanged
@@ -656,6 +680,7 @@ The event is triggered when the shipping country is changed in the online store.
 ===== Methods
 
 [source%nowrap, php]
+[#getshippingcountryid]
 ----
 
 public getShippingCountryId():int
@@ -671,6 +696,7 @@ public getShippingCountryId():int
 Gets the ID of the shipping country.
 
 [source%nowrap, php]
+[#setshippingcountryid]
 ----
 
 public setShippingCountryId($shippingCountryId):Plenty\Modules\Frontend\Events\FrontendShippingCountryChanged
@@ -715,6 +741,7 @@ The event is triggered when the shipping profile is changed in the online store.
 ===== Methods
 
 [source%nowrap, php]
+[#getshippingprofileid]
 ----
 
 public getShippingProfileId():void
@@ -730,6 +757,7 @@ public getShippingProfileId():void
 Gets the ID of the shipping profile.
 
 [source%nowrap, php]
+[#setshippingprofileid]
 ----
 
 public setShippingProfileId($shippingProfileId):void
@@ -774,6 +802,7 @@ The event is triggered when the delivery address is changed in the online store.
 ===== Methods
 
 [source%nowrap, php]
+[#getaccountaddressid]
 ----
 
 public getAccountAddressId():int
@@ -808,6 +837,7 @@ The event is triggered when the invoice address is changed in the online store.
 ===== Methods
 
 [source%nowrap, php]
+[#getaccountaddressid]
 ----
 
 public getAccountAddressId():int
@@ -842,6 +872,7 @@ The event is triggered when the payment method is changed in the online store.
 ===== Methods
 
 [source%nowrap, php]
+[#getpaymentmethodid]
 ----
 
 public getPaymentMethodId():int
@@ -876,6 +907,7 @@ The event is triggered when the shipping method is updated in the online store.
 ===== Methods
 
 [source%nowrap, php]
+[#getshippingcosts]
 ----
 
 public getShippingCosts():float
@@ -891,6 +923,7 @@ public getShippingCosts():float
 Gets the shipping costs.
 
 [source%nowrap, php]
+[#getparcelserviceid]
 ----
 
 public getParcelServiceId():int
@@ -906,6 +939,7 @@ public getParcelServiceId():int
 Gets the ID of the shipping service provider.
 
 [source%nowrap, php]
+[#getparcelservicepresetid]
 ----
 
 public getParcelServicePresetId():int
@@ -940,6 +974,7 @@ validation event
 ===== Methods
 
 [source%nowrap, php]
+[#geterrorkeyslist]
 ----
 
 public getErrorKeysList():array
@@ -955,6 +990,7 @@ public getErrorKeysList():array
 
 
 [source%nowrap, php]
+[#adderrorkey]
 ----
 
 public addErrorKey($errorKey):Plenty\Modules\Frontend\Events
@@ -1000,6 +1036,7 @@ Frontend-Factory
 ===== Methods
 
 [source%nowrap, php]
+[#getlocale]
 ----
 
 public getLocale():Plenty\Modules\Frontend\Services\LocaleService
@@ -1015,6 +1052,7 @@ public getLocale():Plenty\Modules\Frontend\Services\LocaleService
 
 
 [source%nowrap, php]
+[#getagent]
 ----
 
 public getAgent():Plenty\Modules\Frontend\Services\AgentService
@@ -1030,6 +1068,7 @@ public getAgent():Plenty\Modules\Frontend\Services\AgentService
 
 
 [source%nowrap, php]
+[#getsystem]
 ----
 
 public getSystem():Plenty\Modules\Frontend\Services\SystemService
@@ -1045,6 +1084,7 @@ public getSystem():Plenty\Modules\Frontend\Services\SystemService
 
 
 [source%nowrap, php]
+[#getaccount]
 ----
 
 public getAccount():Plenty\Modules\Frontend\Services\AccountService
@@ -1060,6 +1100,7 @@ public getAccount():Plenty\Modules\Frontend\Services\AccountService
 
 
 [source%nowrap, php]
+[#getfile]
 ----
 
 public getFile():Plenty\Modules\Frontend\Services\FileService
@@ -1111,6 +1152,7 @@ frontend total vat model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1146,6 +1188,7 @@ Frontend-service for customer information
 ===== Methods
 
 [source%nowrap, php]
+[#getisaccountloggedin]
 ----
 
 public getIsAccountLoggedIn():bool
@@ -1161,6 +1204,7 @@ public getIsAccountLoggedIn():bool
 
 
 [source%nowrap, php]
+[#getaccountcontactid]
 ----
 
 public getAccountContactId():int
@@ -1195,6 +1239,7 @@ Frontend-Service for agent information
 ===== Methods
 
 [source%nowrap, php]
+[#getlanguages]
 ----
 
 public getLanguages():array
@@ -1210,6 +1255,7 @@ public getLanguages():array
 
 
 [source%nowrap, php]
+[#getbrowser]
 ----
 
 public getBrowser():string
@@ -1225,6 +1271,7 @@ public getBrowser():string
 
 
 [source%nowrap, php]
+[#getplatform]
 ----
 
 public getPlatform():string
@@ -1240,6 +1287,7 @@ public getPlatform():string
 
 
 [source%nowrap, php]
+[#getdevice]
 ----
 
 public getDevice():string
@@ -1255,6 +1303,7 @@ public getDevice():string
 
 
 [source%nowrap, php]
+[#getisdesktop]
 ----
 
 public getIsDesktop():bool
@@ -1270,6 +1319,7 @@ public getIsDesktop():bool
 
 
 [source%nowrap, php]
+[#getrobotname]
 ----
 
 public getRobotName():string
@@ -1285,6 +1335,7 @@ public getRobotName():string
 
 
 [source%nowrap, php]
+[#getisrobot]
 ----
 
 public getIsRobot():bool
@@ -1300,6 +1351,7 @@ public getIsRobot():bool
 
 
 [source%nowrap, php]
+[#gethttpheaders]
 ----
 
 public getHttpHeaders():array
@@ -1315,6 +1367,7 @@ public getHttpHeaders():array
 
 
 [source%nowrap, php]
+[#getismobile]
 ----
 
 public getIsMobile():bool
@@ -1330,6 +1383,7 @@ public getIsMobile():bool
 
 
 [source%nowrap, php]
+[#getistablet]
 ----
 
 public getIsTablet():bool
@@ -1364,6 +1418,7 @@ Frontend-service for file information
 ===== Methods
 
 [source%nowrap, php]
+[#addjsfile]
 ----
 
 public addJsFile($jsFile):void
@@ -1389,6 +1444,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($key):void
@@ -1414,6 +1470,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasgetmutator]
 ----
 
 public hasGetMutator($key):bool
@@ -1439,6 +1496,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattributes]
 ----
 
 public setAttributes($attributes):void
@@ -1464,6 +1522,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattribute]
 ----
 
 public setAttribute($key, $value):Plenty\Repositories\Models
@@ -1493,6 +1552,7 @@ a|
 
 
 [source%nowrap, php]
+[#hassetmutator]
 ----
 
 public hasSetMutator($key):bool
@@ -1518,6 +1578,7 @@ a|
 
 
 [source%nowrap, php]
+[#changevalue]
 ----
 
 public changeValue($key, $callback):void
@@ -1547,6 +1608,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetexists]
 ----
 
 public offsetExists($offset):bool
@@ -1572,6 +1634,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetget]
 ----
 
 public offsetGet($offset):void
@@ -1597,6 +1660,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetset]
 ----
 
 public offsetSet($offset, $value):void
@@ -1626,6 +1690,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetunset]
 ----
 
 public offsetUnset($offset):void
@@ -1651,6 +1716,7 @@ a|
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray($translate = false):array
@@ -1676,6 +1742,7 @@ a|Flag indicating if values should be translated.
 
 
 [source%nowrap, php]
+[#tojson]
 ----
 
 public toJson($options):string
@@ -1701,6 +1768,7 @@ a|
 
 
 [source%nowrap, php]
+[#jsonserialize]
 ----
 
 public jsonSerialize():void
@@ -1716,6 +1784,7 @@ public jsonSerialize():void
 
 
 [source%nowrap, php]
+[#fill]
 ----
 
 public fill($attributes):Plenty\Repositories\Models
@@ -1741,6 +1810,7 @@ a|
 
 
 [source%nowrap, php]
+[#isfillable]
 ----
 
 public isFillable($key):bool
@@ -1766,6 +1836,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfillable]
 ----
 
 public getFillable():array
@@ -1781,6 +1852,7 @@ public getFillable():array
 Get the fillable attributes for the model.
 
 [source%nowrap, php]
+[#fillable]
 ----
 
 public fillable($fillable):Plenty\Repositories\Models
@@ -1806,6 +1878,7 @@ a|
 
 
 [source%nowrap, php]
+[#hascast]
 ----
 
 public hasCast($key, $types = null):bool
@@ -1835,6 +1908,7 @@ a|
 
 
 [source%nowrap, php]
+[#fromjson]
 ----
 
 public fromJson($value, $asObject = false):void
@@ -1883,6 +1957,7 @@ frontend service for changing current language
 ===== Methods
 
 [source%nowrap, php]
+[#setlanguage]
 ----
 
 public setLanguage($newLanguage, $fireEvents = true):void
@@ -1931,6 +2006,7 @@ Frontend-service for customer information
 ===== Methods
 
 [source%nowrap, php]
+[#uploadfile]
 ----
 
 public uploadFile($fileData):string
@@ -1956,6 +2032,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfileurl]
 ----
 
 public getFileURL($key):string
@@ -1981,6 +2058,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfile]
 ----
 
 public getFile($key):Plenty\Modules\Cloud\Storage\Models\StorageObject
@@ -2006,6 +2084,7 @@ a|
 
 
 [source%nowrap, php]
+[#copybasketfiletoorder]
 ----
 
 public copyBasketFileToOrder($filename):string
@@ -2031,6 +2110,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletefile]
 ----
 
 public deleteFile($filename):void
@@ -2075,6 +2155,7 @@ Frontend-service for system information
 ===== Methods
 
 [source%nowrap, php]
+[#getplentyid]
 ----
 
 public getPlentyId():int
@@ -2090,6 +2171,7 @@ public getPlentyId():int
 
 
 [source%nowrap, php]
+[#getwebstoreid]
 ----
 
 public getWebstoreId():int
@@ -2124,6 +2206,7 @@ Frontend-service for vat information
 ===== Methods
 
 [source%nowrap, php]
+[#getcountryvatid]
 ----
 
 public getCountryVatId():int
@@ -2139,6 +2222,7 @@ public getCountryVatId():int
 
 
 [source%nowrap, php]
+[#getcurrenttotalvats]
 ----
 
 public getCurrentTotalVats():array
@@ -2154,6 +2238,7 @@ public getCurrentTotalVats():array
 
 
 [source%nowrap, php]
+[#getvat]
 ----
 
 public getVat($taxIdNumber = &quot;&quot;):Plenty\Modules\Accounting\Vat\Models\Vat
@@ -2179,6 +2264,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlocationid]
 ----
 
 public getLocationId($countryId = null):int
@@ -2227,6 +2313,7 @@ Repository contract for LegalInformation model.
 ===== Methods
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($plentyId, $lang, $type):Plenty\Modules\Frontend\LegalInformation\Models\LegalInformation
@@ -2267,6 +2354,7 @@ a|The type of the legal information text. The types available are:
 
 
 [source%nowrap, php]
+[#save]
 ----
 
 public save($data, $plentyId, $lang, $type):Plenty\Modules\Frontend\LegalInformation\Models\LegalInformation
@@ -2360,6 +2448,7 @@ The legal information model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -2398,6 +2487,7 @@ The FrontendPaymentMethodRepositoryContract is the interface for the front end p
 ===== Methods
 
 [source%nowrap, php]
+[#getcurrentpaymentmethodslist]
 ----
 
 public getCurrentPaymentMethodsList():array
@@ -2413,6 +2503,7 @@ public getCurrentPaymentMethodsList():array
 Lists all payment methods of the current customer session.
 
 [source%nowrap, php]
+[#getcurrentpaymentmethodslistforswitch]
 ----
 
 public getCurrentPaymentMethodsListForSwitch($currentPaymentMethodId, $orderId = null, $lang = &quot;de&quot;):array
@@ -2446,6 +2537,7 @@ a|
 
 
 [source%nowrap, php]
+[#getcurrentpaymentmethodsforexpresscheckout]
 ----
 
 public getCurrentPaymentMethodsForExpressCheckout():array
@@ -2461,6 +2553,7 @@ public getCurrentPaymentMethodsForExpressCheckout():array
 Lists all payment methods if express checkout is available
 
 [source%nowrap, php]
+[#getpaymentmethodname]
 ----
 
 public getPaymentMethodName($paymentMethod, $lang):string
@@ -2490,6 +2583,7 @@ a|The language
 
 
 [source%nowrap, php]
+[#getpaymentmethodfee]
 ----
 
 public getPaymentMethodFee($paymentMethod):float
@@ -2515,6 +2609,7 @@ a|The payment method
 
 
 [source%nowrap, php]
+[#getpaymentmethodicon]
 ----
 
 public getPaymentMethodIcon($paymentMethod, $lang):string
@@ -2544,6 +2639,7 @@ a|The language
 
 
 [source%nowrap, php]
+[#getpaymentmethoddescription]
 ----
 
 public getPaymentMethodDescription($paymentMethod, $lang):string
@@ -2573,6 +2669,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpaymentmethodsourceurl]
 ----
 
 public getPaymentMethodSourceUrl($paymentMethod):string
@@ -2598,6 +2695,7 @@ a|
 
 
 [source%nowrap, php]
+[#getisswitchableto]
 ----
 
 public getIsSwitchableTo($paymentMethod, $orderId = null):bool
@@ -2627,6 +2725,7 @@ a|
 
 
 [source%nowrap, php]
+[#getisswitchablefrom]
 ----
 
 public getIsSwitchableFrom($paymentMethod, $orderId = null):bool
@@ -2656,6 +2755,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpaymentmethodisselectable]
 ----
 
 public getPaymentMethodIsSelectable($paymentMethod):bool
@@ -2681,6 +2781,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpaymentmethodnamebyid]
 ----
 
 public getPaymentMethodNameById($paymentMethodId, $lang):string
@@ -2710,6 +2811,7 @@ a|The language
 
 
 [source%nowrap, php]
+[#getpaymentmethodfeebyid]
 ----
 
 public getPaymentMethodFeeById($paymentMethodId):float
@@ -2735,6 +2837,7 @@ a|The ID of the payment method
 
 
 [source%nowrap, php]
+[#getpaymentmethodiconbyid]
 ----
 
 public getPaymentMethodIconById($paymentMethodId, $lang):string
@@ -2764,6 +2867,7 @@ a|The language
 
 
 [source%nowrap, php]
+[#getpaymentmethoddescriptionbyid]
 ----
 
 public getPaymentMethodDescriptionById($paymentMethodId, $lang):string
@@ -2793,6 +2897,7 @@ a|The language
 
 
 [source%nowrap, php]
+[#getpaymentmethodswitchtobyid]
 ----
 
 public getPaymentMethodSwitchToById($paymentMethodId, $orderId = null):bool
@@ -2822,6 +2927,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpaymentmethodswitchfrombyid]
 ----
 
 public getPaymentMethodSwitchFromById($paymentMethodId, $orderId = null):bool
@@ -2851,6 +2957,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpaymentmethodswitchabletobyid]
 ----
 
 public getPaymentMethodSwitchableToById($paymentMethodId, $orderId = null):bool
@@ -2880,6 +2987,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpaymentmethodswitchablefrombyid]
 ----
 
 public getPaymentMethodSwitchableFromById($paymentMethodId, $orderId = null):bool
@@ -2909,6 +3017,7 @@ a|
 
 
 [source%nowrap, php]
+[#getallowedpaymentmethodlistforcontact]
 ----
 
 public getAllowedPaymentMethodListForContact():void
@@ -2967,6 +3076,7 @@ The FrontendSessionStorageFactoryContract is the interface for the front end ses
 ===== Methods
 
 [source%nowrap, php]
+[#getlocalesettings]
 ----
 
 public getLocaleSettings():Plenty\Modules\Frontend\Session\Storage\Models\LocaleSettings
@@ -2982,6 +3092,7 @@ public getLocaleSettings():Plenty\Modules\Frontend\Session\Storage\Models\Locale
 Get the locale settings from the session storage.
 
 [source%nowrap, php]
+[#getcustomer]
 ----
 
 public getCustomer():Plenty\Modules\Frontend\Session\Storage\Models\Customer
@@ -2997,6 +3108,7 @@ public getCustomer():Plenty\Modules\Frontend\Session\Storage\Models\Customer
 Get the customer data from the session storage.
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Frontend\Session\Storage\Models\Order
@@ -3012,6 +3124,7 @@ public getOrder():Plenty\Modules\Frontend\Session\Storage\Models\Order
 Get the order data from the session storage.
 
 [source%nowrap, php]
+[#getplugin]
 ----
 
 public getPlugin():Plenty\Modules\Frontend\Session\Storage\Models\Plugin
@@ -3027,6 +3140,7 @@ public getPlugin():Plenty\Modules\Frontend\Session\Storage\Models\Plugin
 Get the plugin data from the session storage.
 
 [source%nowrap, php]
+[#getforum]
 ----
 
 public getForum():Plenty\Modules\Frontend\Session\Storage\Models\Forum
@@ -3093,6 +3207,7 @@ The session storage model for customer data.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3149,6 +3264,7 @@ The session storage model for forum data.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3199,6 +3315,7 @@ The session storage model for locale settings.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3312,6 +3429,7 @@ The session storage model for order data.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3346,6 +3464,7 @@ The session storage model for plugins.
 ===== Methods
 
 [source%nowrap, php]
+[#setvalue]
 ----
 
 public setValue($key, $value):void
@@ -3375,6 +3494,7 @@ a|
 
 
 [source%nowrap, php]
+[#getvalue]
 ----
 
 public getValue($key):void
@@ -3400,6 +3520,7 @@ a|
 
 
 [source%nowrap, php]
+[#unsetkey]
 ----
 
 public unsetKey($key):void
