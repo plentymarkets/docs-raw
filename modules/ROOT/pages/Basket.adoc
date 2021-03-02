@@ -231,7 +231,7 @@ public save($data):void
 
 
 
-
+Save the current shopping cart data.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -256,7 +256,7 @@ public setCouponCode($couponCode):Plenty\Modules\Basket\Models\Basket
 ====== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
 
 
-
+Add a coupon code to the shopping cart.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -281,7 +281,7 @@ public removeCouponCode():Plenty\Modules\Basket\Models\Basket
 ====== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
 
 
-
+Remove a coupon code from the shopping cart.
 
 [source%nowrap, php]
 ----
@@ -584,7 +584,7 @@ public getSpecifiedQuantity():float
 [[basket_models_basket]]
 ==== Basket
 
-The basket model
+The shopping cart model
 
 
 
@@ -716,7 +716,7 @@ Returns this model as an array.
 [[basket_models_basketitem]]
 ==== BasketItem
 
-The basket item model
+The shopping cart item model
 
 
 
@@ -950,22 +950,22 @@ public hasValidCoupon():bool
 
 
 
-
+Get information if the current shopping cart has a valid coupon.
 
 [source%nowrap, php]
 ----
 
-public getCouponValidationError():void
+public getCouponValidationError():Plenty\Exceptions\ValidationException
 
 ----
 
 
 
 
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_exceptions_validationexception[`ValidationException`]
 
 
-
-
+Get the validation errors from a failed attempt to add a coupon to the shopping cart.
 
 [source%nowrap, php]
 ----
@@ -980,7 +980,7 @@ public setHasValidCoupon($hasValidCoupon, $couponValidationError = null):void
 
 
 
-
+Set if the shopping cart has a valid coupon.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -1009,7 +1009,7 @@ public getBasket():Plenty\Modules\Basket\Models\Basket
 ====== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
 
 
-
+Get the current shopping cart.
 
 [source%nowrap, php]
 ----
@@ -1024,7 +1024,7 @@ public getLocationId():int
 
 
 
-
+Get the location ID from the current shopping cart.
 
 [source%nowrap, php]
 ----
@@ -1039,7 +1039,7 @@ public setLocationId($locationId):Plenty\Modules\Basket\Events\Basket
 ====== *Return type:*        xref:Basket.adoc#basket_events_basket[`Basket`]
 
 
-
+Set the location of the current shopping cart.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -1064,7 +1064,7 @@ public getInvoiceAddress():Plenty\Modules\Account\Address\Models\Address
 ====== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
 
 
-
+Get the invoice address of the current shopping cart.
 
 [source%nowrap, php]
 ----
@@ -1079,7 +1079,7 @@ public setInvoiceAddress($invoiceAddress):Plenty\Modules\Basket\Events\Basket
 ====== *Return type:*        xref:Basket.adoc#basket_events_basket[`Basket`]
 
 
-
+Set the invoice address to the currrent shopping cart.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -1104,7 +1104,7 @@ public getMaxFsk():int
 
 
 
-
+Get the highest value for age restriction of all items in the shopping cart.
 
 [source%nowrap, php]
 ----
@@ -1119,7 +1119,7 @@ public setMaxFsk($maxFsk):Plenty\Modules\Basket\Events\Basket
 ====== *Return type:*        xref:Basket.adoc#basket_events_basket[`Basket`]
 
 
-
+Set the highest value for age restriction of all items in the shopping cart.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -1127,7 +1127,7 @@ public setMaxFsk($maxFsk):Plenty\Modules\Basket\Events\Basket
 |Name |Type |Description
 a|`$maxFsk`
 |link:http://php.net/int[int^]
-a|The highest value for age restriction of an item in the shopping cart
+a|The highest value for age restriction of an item in the shopping cart.
 |===
 
 
@@ -1144,7 +1144,7 @@ public getShippingCosts():float
 
 
 
-
+Get the shipping costs of the shopping cart.
 
 [source%nowrap, php]
 ----
@@ -1159,7 +1159,7 @@ public setShippingCosts($shippingCosts):Plenty\Modules\Basket\Events\Basket
 ====== *Return type:*        xref:Basket.adoc#basket_events_basket[`Basket`]
 
 
-
+Set the shipping costs of the shopping cart.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -1203,7 +1203,7 @@ public getBasket():Plenty\Modules\Basket\Models\Basket
 ====== *Return type:*        xref:Basket.adoc#basket_models_basket[`Basket`]
 
 
-
+Get the current shopping cart.
 
 [[basket_events_basketitem]]
 ===  BasketItem
@@ -1238,7 +1238,7 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
 ====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
-
+The shopping cart item that has changed.
 
 
 [[basket_basketitem_afterbasketitemremove]]
@@ -1272,7 +1272,7 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
 ====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
-
+The shopping cart item that has changed.
 
 
 [[basket_basketitem_afterbasketitemupdate]]
@@ -1306,13 +1306,13 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
 ====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
-
+The shopping cart item that has changed.
 
 
 [[basket_basketitem_basketitemevent]]
 ==== BasketItemEvent
 
-BasketItemEvent
+An event fired if something changes concerning the shoppping cart items
 
 
 
@@ -1340,7 +1340,7 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
 ====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
-
+The shopping cart item that has changed.
 
 
 [[basket_basketitem_beforebasketitemadd]]
@@ -1374,7 +1374,7 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
 ====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
-
+The shopping cart item that has changed.
 
 
 [[basket_basketitem_beforebasketitemremove]]
@@ -1408,7 +1408,7 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
 ====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
-
+The shopping cart item that has changed.
 
 
 [[basket_basketitem_beforebasketitemupdate]]
@@ -1442,5 +1442,5 @@ public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
 ====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
 
 
-
+The shopping cart item that has changed.
 
