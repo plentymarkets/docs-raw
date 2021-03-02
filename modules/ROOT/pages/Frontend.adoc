@@ -291,7 +291,7 @@ public validateCheckout():Plenty\Modules\Frontend\Events\ValidateCheckoutEvent
 ====== *Return type:*        xref:Frontend.adoc#frontend_events_validatecheckoutevent[`ValidateCheckoutEvent`]
 
 
-
+Validate all data of the checkout
 
 
 [[frontend_contracts_currencyexchangerepositorycontract]]
@@ -325,7 +325,7 @@ public getExchangeRatioByCurrency($currency):float
 
 
 
-
+Get the exchange rate for the given currency
 
 .*Parameters*
 [cols="3,1,6"]
@@ -451,7 +451,7 @@ public getCurrency():string
 
 
 
-Gets the currency.
+Gets the changed currency.
 
 [source%nowrap, php]
 ----
@@ -609,7 +609,7 @@ public getReferrerId():void
 
 
 
-
+Get the ID of the changed referrer
 
 [source%nowrap, php]
 ----
@@ -624,7 +624,7 @@ public setReferrerId($referrerId):Plenty\Modules\Frontend\Events\FrontendReferre
 ====== *Return type:*        xref:Frontend.adoc#frontend_events_frontendreferrerchanged[`FrontendReferrerChanged`]
 
 
-
+Set the ID of the changed referrer
 
 .*Parameters*
 [cols="3,1,6"]
@@ -924,7 +924,7 @@ Gets the preset ID of the shipping service provider.
 [[frontend_events_validatecheckoutevent]]
 ==== ValidateCheckoutEvent
 
-validation event
+Event to validate the complete checkout
 
 
 
@@ -952,7 +952,7 @@ public getErrorKeysList():array
 
 
 
-
+Get a list of error keys.
 
 [source%nowrap, php]
 ----
@@ -967,7 +967,7 @@ public addErrorKey($errorKey):Plenty\Modules\Frontend\Events
 ====== *Return type:*        xref:Frontend.adoc#frontend_frontend_events[`Events`]
 
 
-
+Add an error key to the list.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -984,7 +984,7 @@ a|
 [[frontend_factories_frontendfactory]]
 ==== FrontendFactory
 
-Frontend-Factory
+Factory to get information regarding the frontend
 
 
 
@@ -1012,7 +1012,7 @@ public getLocale():Plenty\Modules\Frontend\Services\LocaleService
 ====== *Return type:*        xref:Frontend.adoc#frontend_services_localeservice[`LocaleService`]
 
 
-
+Get the locale service.
 
 [source%nowrap, php]
 ----
@@ -1027,7 +1027,7 @@ public getAgent():Plenty\Modules\Frontend\Services\AgentService
 ====== *Return type:*        xref:Frontend.adoc#frontend_services_agentservice[`AgentService`]
 
 
-
+Get the agent service.
 
 [source%nowrap, php]
 ----
@@ -1042,7 +1042,7 @@ public getSystem():Plenty\Modules\Frontend\Services\SystemService
 ====== *Return type:*        xref:Frontend.adoc#frontend_services_systemservice[`SystemService`]
 
 
-
+Get the system service.
 
 [source%nowrap, php]
 ----
@@ -1057,7 +1057,7 @@ public getAccount():Plenty\Modules\Frontend\Services\AccountService
 ====== *Return type:*        xref:Frontend.adoc#frontend_services_accountservice[`AccountService`]
 
 
-
+Get the account service.
 
 [source%nowrap, php]
 ----
@@ -1072,7 +1072,7 @@ public getFile():Plenty\Modules\Frontend\Services\FileService
 ====== *Return type:*        xref:Frontend.adoc#frontend_services_fileservice[`FileService`]
 
 
-
+Get the file service.
 
 [[frontend_frontend_models]]
 ===  Models
@@ -1158,7 +1158,7 @@ public getIsAccountLoggedIn():bool
 
 
 
-
+Get the information if an account is currently logged in.
 
 [source%nowrap, php]
 ----
@@ -1173,7 +1173,7 @@ public getAccountContactId():int
 
 
 
-
+Get the ID of the currently logged in account.
 
 
 [[frontend_services_agentservice]]
@@ -1207,7 +1207,7 @@ public getLanguages():array
 
 
 
-
+Get the current language.
 
 [source%nowrap, php]
 ----
@@ -1222,7 +1222,7 @@ public getBrowser():string
 
 
 
-
+Get the current browser.
 
 [source%nowrap, php]
 ----
@@ -1237,7 +1237,7 @@ public getPlatform():string
 
 
 
-
+Get the current platform.
 
 [source%nowrap, php]
 ----
@@ -1252,7 +1252,7 @@ public getDevice():string
 
 
 
-
+Get the current device.
 
 [source%nowrap, php]
 ----
@@ -1267,7 +1267,7 @@ public getIsDesktop():bool
 
 
 
-
+Get information if the device is a desktop.
 
 [source%nowrap, php]
 ----
@@ -1282,7 +1282,7 @@ public getRobotName():string
 
 
 
-
+Get the name of the robot.
 
 [source%nowrap, php]
 ----
@@ -1297,7 +1297,7 @@ public getIsRobot():bool
 
 
 
-
+Get information if the visitor is a robot.
 
 [source%nowrap, php]
 ----
@@ -1312,7 +1312,7 @@ public getHttpHeaders():array
 
 
 
-
+Get the http headers of the agent.
 
 [source%nowrap, php]
 ----
@@ -1327,7 +1327,7 @@ public getIsMobile():bool
 
 
 
-
+Get the information if the device is mobile.
 
 [source%nowrap, php]
 ----
@@ -1342,7 +1342,7 @@ public getIsTablet():bool
 
 
 
-
+Get the information if the device is a tablet.
 
 
 [[frontend_services_fileservice]]
@@ -1376,7 +1376,7 @@ public addJsFile($jsFile):void
 
 
 
-
+Add a js file to the list.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -1895,7 +1895,7 @@ public setLanguage($newLanguage, $fireEvents = true):void
 
 
 
-
+Set the current language of the shop.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -1915,7 +1915,7 @@ a|
 [[frontend_services_orderpropertyfileservice]]
 ==== OrderPropertyFileService
 
-Frontend-service for customer information
+Frontend-service for order property files
 
 
 
@@ -1943,7 +1943,7 @@ public uploadFile($fileData):string
 
 
 
-
+Upload an order property file.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -1968,7 +1968,7 @@ public getFileURL($key):string
 
 
 
-
+Get the URL for the specified key.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -1993,7 +1993,7 @@ public getFile($key):Plenty\Modules\Cloud\Storage\Models\StorageObject
 ====== *Return type:*        xref:Cloud.adoc#cloud_models_storageobject[`StorageObject`]
 
 
-
+Get the file for a specified key.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -2018,7 +2018,7 @@ public copyBasketFileToOrder($filename):string
 
 
 
-
+Copy the uploaded file to the order.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -2043,7 +2043,7 @@ public deleteFile($filename):void
 
 
 
-
+Delete the specified file.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -2087,7 +2087,7 @@ public getPlentyId():int
 
 
 
-
+Get the plenty ID of the current client.
 
 [source%nowrap, php]
 ----
@@ -2102,7 +2102,7 @@ public getWebstoreId():int
 
 
 
-
+get the webstore ID of the current client.
 
 
 [[frontend_services_vatservice]]
@@ -2136,7 +2136,7 @@ public getCountryVatId():int
 
 
 
-
+Get the VAT ID of the specified country.
 
 [source%nowrap, php]
 ----
@@ -2151,7 +2151,7 @@ public getCurrentTotalVats():array
 
 
 
-
+Get the current total VAT.
 
 [source%nowrap, php]
 ----
@@ -2166,7 +2166,7 @@ public getVat($taxIdNumber = &quot;&quot;):Plenty\Modules\Accounting\Vat\Models\
 ====== *Return type:*        xref:Accounting.adoc#accounting_models_vat[`Vat`]
 
 
-
+Get VAT for the specified tax ID number
 
 .*Parameters*
 [cols="3,1,6"]
@@ -2191,7 +2191,7 @@ public getLocationId($countryId = null):int
 
 
 
-Get the ID of the location
+Get the ID of the location.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -2805,7 +2805,7 @@ public getPaymentMethodSwitchToById($paymentMethodId, $orderId = null):bool
 
 
 
-
+Get all payment methods to which switching is allowed for the current payment method.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -2834,7 +2834,7 @@ public getPaymentMethodSwitchFromById($paymentMethodId, $orderId = null):bool
 
 
 
-
+Get all payment methods from which switching is allowed for the current payment method.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -2863,7 +2863,7 @@ public getPaymentMethodSwitchableToById($paymentMethodId, $orderId = null):bool
 
 
 
-
+Get information if switching to the payment method is allowed.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -2892,7 +2892,7 @@ public getPaymentMethodSwitchableFromById($paymentMethodId, $orderId = null):boo
 
 
 
-
+Get information if switching from the payment method is allowed.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -2921,7 +2921,7 @@ public getAllowedPaymentMethodListForContact():void
 
 
 
-
+Get all allowed payment methods for the current contact.
 
 [[frontend_session]]
 == Session
