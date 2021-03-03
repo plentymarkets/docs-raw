@@ -29,6 +29,7 @@ The PaymentContactRelationRepositoryContract is the interface for the payment co
 ===== Methods
 
 [source%nowrap, php]
+[#createcontactrelation]
 ----
 
 public createContactRelation($payment, $contact):Plenty\Modules\Payment\Models\PaymentContactRelation
@@ -58,6 +59,7 @@ a|The ID of the contact
 
 
 [source%nowrap, php]
+[#deletecontactrelation]
 ----
 
 public deleteContactRelation($payment):void
@@ -102,6 +104,7 @@ The PaymentMatcherRepositoryContract automatically matching payments to an order
 ===== Methods
 
 [source%nowrap, php]
+[#checkmapfindassignpayment]
 ----
 
 public checkMapFindAssignPayment($mopId, $data):string
@@ -131,6 +134,7 @@ a|
 
 
 [source%nowrap, php]
+[#findassignpayment]
 ----
 
 public findAssignPayment($payment):void
@@ -156,6 +160,7 @@ a|
 
 
 [source%nowrap, php]
+[#getmatchingratesforpayment]
 ----
 
 public getMatchingRatesForPayment($paymentId):array
@@ -200,6 +205,7 @@ The PaymentOrderRelationRepositoryContract is the interface for the payment orde
 ===== Methods
 
 [source%nowrap, php]
+[#createorderrelation]
 ----
 
 public createOrderRelation($payment, $order):Plenty\Modules\Payment\Models\PaymentOrderRelation
@@ -229,6 +235,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#findorderrelation]
 ----
 
 public findOrderRelation($payment):Plenty\Modules\Payment\Models\PaymentOrderRelation
@@ -254,6 +261,7 @@ a|
 
 
 [source%nowrap, php]
+[#deleteorderrelation]
 ----
 
 public deleteOrderRelation($payment):void
@@ -279,6 +287,7 @@ a|The ID of the payment
 
 
 [source%nowrap, php]
+[#createorderrelationwithvalidation]
 ----
 
 public createOrderRelationWithValidation($paymentId, $orderId):Plenty\Modules\Payment\Models\PaymentOrderRelation
@@ -308,6 +317,7 @@ a|
 
 
 [source%nowrap, php]
+[#autoassignpayments]
 ----
 
 public autoAssignPayments($paymentIds):array
@@ -352,6 +362,7 @@ The PaymentPropertyRepositoryContract is the interface for the payment property 
 ===== Methods
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all():array
@@ -367,6 +378,7 @@ public all():array
 Lists properties.
 
 [source%nowrap, php]
+[#findbypropertyid]
 ----
 
 public findByPropertyId($propertyId):array
@@ -392,6 +404,7 @@ a|The ID of the payment property
 
 
 [source%nowrap, php]
+[#allbypaymentid]
 ----
 
 public allByPaymentId($paymentId):array
@@ -417,6 +430,7 @@ a|The ID of the payment
 
 
 [source%nowrap, php]
+[#allbytypeid]
 ----
 
 public allByTypeId($typeId):array
@@ -474,6 +488,7 @@ a|The ID of the payment property type. The following property types are availabl
 
 
 [source%nowrap, php]
+[#findbycreateddateinterval]
 ----
 
 public findByCreatedDateInterval($startDate, $endDate):array
@@ -503,6 +518,7 @@ a|The end date of the date range for the date of creation of the property
 
 
 [source%nowrap, php]
+[#createproperty]
 ----
 
 public createProperty($data):Plenty\Modules\Payment\Models\PaymentProperty
@@ -528,6 +544,7 @@ a|
 
 
 [source%nowrap, php]
+[#changeproperty]
 ----
 
 public changeProperty($data):Plenty\Modules\Payment\Models\PaymentProperty
@@ -572,6 +589,7 @@ The PaymentPropertyTypeNameRepositoryContract is the interface for the repositor
 ===== Methods
 
 [source%nowrap, php]
+[#alltypenames]
 ----
 
 public allTypeNames($lang):array
@@ -597,6 +615,7 @@ a|The language of the payment property type name
 
 
 [source%nowrap, php]
+[#findbynameid]
 ----
 
 public findByNameId($nameId):array
@@ -622,6 +641,7 @@ a|The ID of the payment property type name
 
 
 [source%nowrap, php]
+[#createtypename]
 ----
 
 public createTypeName($data):Plenty\Modules\Payment\Models\PaymentPropertyTypeName
@@ -647,6 +667,7 @@ a|
 
 
 [source%nowrap, php]
+[#changeproperty]
 ----
 
 public changeProperty($data):array
@@ -691,6 +712,7 @@ The PaymentPropertyTypeRepositoryContract is the interface for the payment prope
 ===== Methods
 
 [source%nowrap, php]
+[#alltypes]
 ----
 
 public allTypes($lang):array
@@ -716,6 +738,7 @@ a|The language of the payment property type
 
 
 [source%nowrap, php]
+[#findtypesbyid]
 ----
 
 public findTypesById($id, $lang):array
@@ -777,6 +800,7 @@ a|The language of the payment property type
 
 
 [source%nowrap, php]
+[#createtype]
 ----
 
 public createType($data):Plenty\Modules\Payment\Models\PaymentPropertyType
@@ -802,6 +826,7 @@ a|
 
 
 [source%nowrap, php]
+[#changeproperty]
 ----
 
 public changeProperty($data):Plenty\Modules\Payment\Models\PaymentPropertyType
@@ -846,6 +871,7 @@ The PaymentRepositoryContract is the interface for the payment repository. List,
 ===== Methods
 
 [source%nowrap, php]
+[#getall]
 ----
 
 public getAll($itemsPerPage = 50, $page = 1):array
@@ -875,6 +901,7 @@ a|The page of results to search for
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($page = 1, $itemsPerPage = \Plenty\Modules\Payment\Models\Payment::MAX_ITEMS_PER_PAGE, $with = []):Plenty\Repositories\Models\PaginatedResult
@@ -908,6 +935,7 @@ a|The relations to be loaded.
 
 
 [source%nowrap, php]
+[#getpaymentbyid]
 ----
 
 public getPaymentById($paymentId):Plenty\Modules\Payment\Models\Payment
@@ -933,6 +961,7 @@ a|The ID of the payment
 
 
 [source%nowrap, php]
+[#getpaymentsbymethodid]
 ----
 
 public getPaymentsByMethodId($methodId, $itemsPerPage = 50, $page = 1):array
@@ -966,6 +995,7 @@ a|The page of results to search for
 
 
 [source%nowrap, php]
+[#getpaymentsbystatusid]
 ----
 
 public getPaymentsByStatusId($statusId, $itemsPerPage = 50, $page = 1):array
@@ -999,6 +1029,7 @@ a|The page of results to search for
 
 
 [source%nowrap, php]
+[#getpaymentsbytransactiontype]
 ----
 
 public getPaymentsByTransactionType($transactionType, $itemsPerPage = 50, $page = 1):array
@@ -1032,6 +1063,7 @@ a|The page of results to search for
 
 
 [source%nowrap, php]
+[#getpaymentsbyorderid]
 ----
 
 public getPaymentsByOrderId($orderId):array
@@ -1057,6 +1089,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#getpaymentsbyimportdateinterval]
 ----
 
 public getPaymentsByImportDateInterval($startDate, $endDate, $itemsPerPage = 50, $page = 1):array
@@ -1094,6 +1127,7 @@ a|The page of results to search for
 
 
 [source%nowrap, php]
+[#getpaymentsbyentrydateinterval]
 ----
 
 public getPaymentsByEntryDateInterval($startDate, $endDate, $itemsPerPage = 50, $page = 1):array
@@ -1131,6 +1165,7 @@ a|The page of results to search for
 
 
 [source%nowrap, php]
+[#getpaymentsbypropertytypeandvalue]
 ----
 
 public getPaymentsByPropertyTypeAndValue($propertyTypeId, $propertyValue, $itemsPerPage = 50, $page = 1):void
@@ -1168,6 +1203,7 @@ a|The page of results to search for
 
 
 [source%nowrap, php]
+[#createpayment]
 ----
 
 public createPayment($data):Plenty\Modules\Payment\Models\Payment
@@ -1193,6 +1229,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatepayment]
 ----
 
 public updatePayment($data):Plenty\Modules\Payment\Models\Payment
@@ -1218,6 +1255,7 @@ a|
 
 
 [source%nowrap, php]
+[#getstatusconstants]
 ----
 
 public getStatusConstants():array
@@ -1233,6 +1271,7 @@ public getStatusConstants():array
 
 
 [source%nowrap, php]
+[#getoriginconstants]
 ----
 
 public getOriginConstants():array
@@ -1248,6 +1287,7 @@ public getOriginConstants():array
 
 
 [source%nowrap, php]
+[#deletepayment]
 ----
 
 public deletePayment($paymentId):void
@@ -1273,6 +1313,7 @@ a|
 
 
 [source%nowrap, php]
+[#splitandassignpayment]
 ----
 
 public splitAndAssignPayment($paymentId, $orderIds):bool
@@ -1302,6 +1343,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletepayments]
 ----
 
 public deletePayments($paymentIds):array
@@ -1327,6 +1369,7 @@ a|An array containing payment ids. Eg: [ids => [1, 2, 3]]
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -1342,6 +1385,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -1357,6 +1401,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -1382,6 +1427,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -1397,6 +1443,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -1412,6 +1459,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -1558,6 +1606,7 @@ The payment model representing a received payment by a payment service provider.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1611,6 +1660,7 @@ The payment contact relation model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1664,6 +1714,7 @@ The payment order relation model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1760,6 +1811,7 @@ The payment property model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1813,6 +1865,7 @@ The payment property type model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1866,6 +1919,7 @@ The payment property type name model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1904,6 +1958,7 @@ The event is triggered when a payment is executed.
 ===== Methods
 
 [source%nowrap, php]
+[#setorderid]
 ----
 
 public setOrderId($orderId):Plenty\Modules\Payment\Events\Checkout
@@ -1929,6 +1984,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#getorderid]
 ----
 
 public getOrderId():int
@@ -1944,6 +2000,7 @@ public getOrderId():int
 Gets the ID of the order.
 
 [source%nowrap, php]
+[#setmop]
 ----
 
 public setMop($mop):Plenty\Modules\Payment\Events\Checkout
@@ -1969,6 +2026,7 @@ a|The ID of the payment method
 
 
 [source%nowrap, php]
+[#getmop]
 ----
 
 public getMop():int
@@ -1984,6 +2042,7 @@ public getMop():int
 Gets the ID of the payment method.
 
 [source%nowrap, php]
+[#settype]
 ----
 
 public setType($type):Plenty\Modules\Payment\Events\Checkout
@@ -2009,6 +2068,7 @@ a|The <a href="https://developers.plentymarkets.com/dev-doc/payment-plugins#paym
 
 
 [source%nowrap, php]
+[#gettype]
 ----
 
 public getType():string
@@ -2024,6 +2084,7 @@ public getType():string
 Gets the content type.
 
 [source%nowrap, php]
+[#setvalue]
 ----
 
 public setValue($value):Plenty\Modules\Payment\Events\Checkout
@@ -2049,6 +2110,7 @@ a|The value of the content type
 
 
 [source%nowrap, php]
+[#getvalue]
 ----
 
 public getValue():string
@@ -2083,6 +2145,7 @@ The event is triggered after the payment method is selected in the checkout.
 ===== Methods
 
 [source%nowrap, php]
+[#setmop]
 ----
 
 public setMop($mop):Plenty\Modules\Payment\Events\Checkout
@@ -2108,6 +2171,7 @@ a|The ID of the payment method
 
 
 [source%nowrap, php]
+[#getmop]
 ----
 
 public getMop():int
@@ -2123,6 +2187,7 @@ public getMop():int
 Gets the ID of the payment method.
 
 [source%nowrap, php]
+[#settype]
 ----
 
 public setType($type):Plenty\Modules\Payment\Events\Checkout
@@ -2148,6 +2213,7 @@ a|The <a href="https://developers.plentymarkets.com/dev-doc/payment-plugins#paym
 
 
 [source%nowrap, php]
+[#gettype]
 ----
 
 public getType():string
@@ -2163,6 +2229,7 @@ public getType():string
 Gets the content type.
 
 [source%nowrap, php]
+[#setvalue]
 ----
 
 public setValue($value):Plenty\Modules\Payment\Events\Checkout
@@ -2188,6 +2255,7 @@ a|The value of the content type
 
 
 [source%nowrap, php]
+[#getvalue]
 ----
 
 public getValue():string
@@ -2203,6 +2271,7 @@ public getValue():string
 Gets the value of the content type.
 
 [source%nowrap, php]
+[#setparams]
 ----
 
 public setParams($params):Plenty\Modules\Payment\Events\Checkout
@@ -2228,6 +2297,7 @@ a|The parameters
 
 
 [source%nowrap, php]
+[#getparams]
 ----
 
 public getParams():void
@@ -2266,6 +2336,7 @@ The PaymentHistoryRepositoryContract is the interface for the payment history re
 ===== Methods
 
 [source%nowrap, php]
+[#getbypaymentid]
 ----
 
 public getByPaymentId($paymentId, $typeId):array
@@ -2303,6 +2374,7 @@ a|The ID of the history type. The following types are available:
 
 
 [source%nowrap, php]
+[#createhistory]
 ----
 
 public createHistory($data):Plenty\Modules\Payment\History\Models\PaymentHistory
@@ -2378,6 +2450,7 @@ The payment history model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -2416,6 +2489,7 @@ The payment method container
 ===== Methods
 
 [source%nowrap, php]
+[#register]
 ----
 
 public register($paymentKey, $paymentMethodServiceClass, $rebuildEventClassesList):void
@@ -2449,6 +2523,7 @@ a|A list of events. It is checked again for the list of events whether the payme
 
 
 [source%nowrap, php]
+[#isregistered]
 ----
 
 public isRegistered($paymentKey):bool
@@ -2493,6 +2568,7 @@ The PaymentMethodRepositoryContract is the interface for the payment method repo
 ===== Methods
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all():array
@@ -2508,6 +2584,7 @@ public all():array
 Lists payment methods.
 
 [source%nowrap, php]
+[#allforplugin]
 ----
 
 public allForPlugin($pluginKey):array
@@ -2533,6 +2610,7 @@ a|The plugin key
 
 
 [source%nowrap, php]
+[#allpluginpaymentmethods]
 ----
 
 public allPluginPaymentMethods():array
@@ -2548,6 +2626,7 @@ public allPluginPaymentMethods():array
 Get all plugin payment methods.
 
 [source%nowrap, php]
+[#alloldpaymentmethods]
 ----
 
 public allOldPaymentMethods():array
@@ -2563,6 +2642,7 @@ public allOldPaymentMethods():array
 Get all old payment methods.
 
 [source%nowrap, php]
+[#findbypaymentmethodid]
 ----
 
 public findByPaymentMethodId($paymentMethodId):Plenty\Modules\Payment\Method\Models\PaymentMethod
@@ -2588,6 +2668,7 @@ a|The ID of the payment method
 
 
 [source%nowrap, php]
+[#getpreviewlist]
 ----
 
 public getPreviewList($language = null):array
@@ -2613,6 +2694,7 @@ a|The names will be returned in this language.
 
 
 [source%nowrap, php]
+[#createpaymentmethod]
 ----
 
 public createPaymentMethod($paymentMethodData):Plenty\Modules\Payment\Method\Models\PaymentMethod
@@ -2638,6 +2720,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatename]
 ----
 
 public updateName($paymentMethodData):Plenty\Modules\Payment\Method\Models\PaymentMethod
@@ -2663,6 +2746,7 @@ a|
 
 
 [source%nowrap, php]
+[#preparepaymentmethod]
 ----
 
 public preparePaymentMethod($mop):array
@@ -2688,6 +2772,7 @@ a|The ID of the payment method
 
 
 [source%nowrap, php]
+[#executepayment]
 ----
 
 public executePayment($mop, $orderId):array
@@ -2717,6 +2802,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#listbackendsearchable]
 ----
 
 public listBackendSearchable($lang):array
@@ -2742,6 +2828,7 @@ a|
 
 
 [source%nowrap, php]
+[#listbackendactive]
 ----
 
 public listBackendActive($lang):array
@@ -2767,6 +2854,7 @@ a|
 
 
 [source%nowrap, php]
+[#listbackendicon]
 ----
 
 public listBackendIcon():array
@@ -2782,6 +2870,7 @@ public listBackendIcon():array
 List all payment methods backend icon
 
 [source%nowrap, php]
+[#listcanhandlesubscriptions]
 ----
 
 public listCanHandleSubscriptions($lang):array
@@ -2807,6 +2896,7 @@ a|
 
 
 [source%nowrap, php]
+[#listallactive]
 ----
 
 public listAllActive($lang):array
@@ -2851,6 +2941,7 @@ Deprecated: The payment method service
 ===== Methods
 
 [source%nowrap, php]
+[#isbackendsearchable]
 ----
 
 public isBackendSearchable():bool
@@ -2866,6 +2957,7 @@ public isBackendSearchable():bool
 Is this payment method searchable in the backend?
 
 [source%nowrap, php]
+[#isbackendactive]
 ----
 
 public isBackendActive():bool
@@ -2881,6 +2973,7 @@ public isBackendActive():bool
 Is this payment method active in the backend?
 
 [source%nowrap, php]
+[#getbackendname]
 ----
 
 public getBackendName($lang):string
@@ -2906,6 +2999,7 @@ a|
 
 
 [source%nowrap, php]
+[#canhandlesubscriptions]
 ----
 
 public canHandleSubscriptions():bool
@@ -2960,6 +3054,7 @@ The payment method model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -2995,6 +3090,7 @@ The payment method service
 ===== Methods
 
 [source%nowrap, php]
+[#isactive]
 ----
 
 public isActive():bool
@@ -3010,6 +3106,7 @@ public isActive():bool
 Determine if the payment method is active for the frontend
 
 [source%nowrap, php]
+[#getname]
 ----
 
 public getName($lang = &quot;&quot;):string
@@ -3035,6 +3132,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfee]
 ----
 
 public getFee():float
@@ -3050,6 +3148,7 @@ public getFee():float
 Return an additional payment fee for the payment method
 
 [source%nowrap, php]
+[#geticon]
 ----
 
 public getIcon($lang = &quot;&quot;):string
@@ -3075,6 +3174,7 @@ a|
 
 
 [source%nowrap, php]
+[#getdescription]
 ----
 
 public getDescription($lang = &quot;&quot;):string
@@ -3100,6 +3200,7 @@ a|
 
 
 [source%nowrap, php]
+[#getsourceurl]
 ----
 
 public getSourceUrl($lang = &quot;&quot;):string
@@ -3125,6 +3226,7 @@ a|
 
 
 [source%nowrap, php]
+[#isswitchableto]
 ----
 
 public isSwitchableTo():bool
@@ -3140,6 +3242,7 @@ public isSwitchableTo():bool
 Check if it is allowed to switch to this payment method after the order is placed
 
 [source%nowrap, php]
+[#isswitchablefrom]
 ----
 
 public isSwitchableFrom():bool
@@ -3155,6 +3258,7 @@ public isSwitchableFrom():bool
 Check if it is allowed to switch from this payment method after the order is placed
 
 [source%nowrap, php]
+[#isbackendsearchable]
 ----
 
 public isBackendSearchable():bool
@@ -3170,6 +3274,7 @@ public isBackendSearchable():bool
 Is this payment method searchable in the backend?
 
 [source%nowrap, php]
+[#isbackendactive]
 ----
 
 public isBackendActive():bool
@@ -3185,6 +3290,7 @@ public isBackendActive():bool
 Is this payment method active in the backend to used for existing orders?
 
 [source%nowrap, php]
+[#getbackendname]
 ----
 
 public getBackendName($lang = &quot;&quot;):string
@@ -3210,6 +3316,7 @@ a|
 
 
 [source%nowrap, php]
+[#canhandlesubscriptions]
 ----
 
 public canHandleSubscriptions():bool
@@ -3225,6 +3332,7 @@ public canHandleSubscriptions():bool
 Can this payment method handle subscriptions?
 
 [source%nowrap, php]
+[#getbackendicon]
 ----
 
 public getBackendIcon():string
@@ -3279,6 +3387,7 @@ The payment method name model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

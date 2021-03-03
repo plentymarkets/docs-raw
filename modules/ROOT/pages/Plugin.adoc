@@ -29,6 +29,7 @@ Save config values for plugins
 ===== Methods
 
 [source%nowrap, php]
+[#saveconfiguration]
 ----
 
 public saveConfiguration($pluginId, $configMap, $setId = null, $resetCache = true):array
@@ -66,6 +67,7 @@ a|
 
 
 [source%nowrap, php]
+[#copytopluginsetentry]
 ----
 
 public copyToPluginSetEntry($configurationOrId, $pluginSetEntryOrId):int
@@ -95,6 +97,7 @@ a|
 
 
 [source%nowrap, php]
+[#getconfigurationfile]
 ----
 
 public getConfigurationFile($pluginId, $setId):string
@@ -124,6 +127,7 @@ a|
 
 
 [source%nowrap, php]
+[#export]
 ----
 
 public export($setId, $pluginId = null, $active = null):array
@@ -157,6 +161,7 @@ a|
 
 
 [source%nowrap, php]
+[#import]
 ----
 
 public import($setId, $data, $pluginId = null):void
@@ -209,6 +214,7 @@ Plugin layout container
 ===== Methods
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all($pluginSetId):void
@@ -234,6 +240,7 @@ a|
 
 
 [source%nowrap, php]
+[#updateall]
 ----
 
 public updateAll($dataList, $pluginSetId, $pluginId = null):void
@@ -267,6 +274,7 @@ a|
 
 
 [source%nowrap, php]
+[#getactivelinkedlayoutcontainers]
 ----
 
 public getActiveLinkedLayoutContainers($activeContainerKeysList, $activeDataProviderKeysList, $pluginSetId = null):void
@@ -300,6 +308,7 @@ a|
 
 
 [source%nowrap, php]
+[#getactivelinkedlayoutcontainersbypluginsetid]
 ----
 
 public getActiveLinkedLayoutContainersByPluginSetId($activeContainerKeysList, $activeDataProviderKeysList, $pluginSetId):void
@@ -333,6 +342,7 @@ a|
 
 
 [source%nowrap, php]
+[#addnew]
 ----
 
 public addNew($dataList, $pluginSetId):void
@@ -362,6 +372,7 @@ a|
 
 
 [source%nowrap, php]
+[#addone]
 ----
 
 public addOne($pluginSetId, $containerKey, $dataProviderKey, $containerPluginId = null, $dataProviderPluginId = null):void
@@ -403,6 +414,7 @@ a|
 
 
 [source%nowrap, php]
+[#removeone]
 ----
 
 public removeOne($pluginSetId, $containerKey, $dataProviderKey, $containerPluginId = null, $dataProviderPluginId = null):void
@@ -444,6 +456,7 @@ a|
 
 
 [source%nowrap, php]
+[#exportbypluginsetid]
 ----
 
 public exportByPluginSetId($pluginSetOrId):array
@@ -469,6 +482,7 @@ a|
 
 
 [source%nowrap, php]
+[#importbypluginsetid]
 ----
 
 public importByPluginSetId($pluginSetOrId, $containers):void
@@ -517,6 +531,7 @@ Search plugins according to parameters
 ===== Methods
 
 [source%nowrap, php]
+[#getpluginbyname]
 ----
 
 public getPluginByName($name):Plenty\Modules\Plugin\Models\Plugin
@@ -542,6 +557,7 @@ a|
 
 
 [source%nowrap, php]
+[#searchplugins]
 ----
 
 public searchPlugins($params = [], $itemsPerPage = \Plenty\Modules\Plugin\Models\Plugin::DEFAULT_ITEMS_PER_PAGE):Plenty\Repositories\Models\PaginatedResult
@@ -571,6 +587,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpluginsets]
 ----
 
 public getPluginSets($pluginId):array
@@ -596,6 +613,7 @@ a|
 
 
 [source%nowrap, php]
+[#isactiveinpluginset]
 ----
 
 public isActiveInPluginSet($pluginId, $pluginSetIdOrPluginSet):bool
@@ -625,6 +643,7 @@ a|
 
 
 [source%nowrap, php]
+[#isactiveinpluginsetbyname]
 ----
 
 public isActiveInPluginSetByName($pluginName, $pluginSetId):bool
@@ -654,6 +673,7 @@ a|
 
 
 [source%nowrap, php]
+[#isactiveinwebstore]
 ----
 
 public isActiveInWebstore($pluginId, $webstoreId):bool
@@ -683,6 +703,7 @@ a|
 
 
 [source%nowrap, php]
+[#isactiveinwebstorebypluginname]
 ----
 
 public isActiveInWebstoreByPluginName($pluginName, $webstoreId):bool
@@ -712,6 +733,7 @@ a|
 
 
 [source%nowrap, php]
+[#decorateplugin]
 ----
 
 public decoratePlugin($plugin, $pluginSetId = null):Plenty\Modules\Plugin\Models\Plugin
@@ -741,6 +763,7 @@ a|
 
 
 [source%nowrap, php]
+[#installmarketplacepluginbyitemid]
 ----
 
 public installMarketplacePluginByItemId($marketplacePluginItemId, $pluginSetId = null):void
@@ -790,6 +813,7 @@ Event after plugin build has finished
 ===== Methods
 
 [source%nowrap, php]
+[#getpluginset]
 ----
 
 public getPluginSet():Plenty\Modules\Plugin\PluginSet\Models\PluginSet
@@ -805,6 +829,7 @@ public getPluginSet():Plenty\Modules\Plugin\PluginSet\Models\PluginSet
 Get the plugin set which have been built
 
 [source%nowrap, php]
+[#sourcehaschanged]
 ----
 
 public sourceHasChanged($pluginName):bool
@@ -830,6 +855,7 @@ a|
 
 
 [source%nowrap, php]
+[#resourceshaschanged]
 ----
 
 public resourcesHasChanged($pluginName):bool
@@ -890,6 +916,7 @@ PluginSendMail
 ===== Methods
 
 [source%nowrap, php]
+[#gettemplate]
 ----
 
 public getTemplate():void
@@ -905,6 +932,7 @@ public getTemplate():void
 
 
 [source%nowrap, php]
+[#getcontactemail]
 ----
 
 public getContactEmail():void
@@ -920,6 +948,7 @@ public getContactEmail():void
 
 
 [source%nowrap, php]
+[#getcallfunction]
 ----
 
 public getCallFunction():void
@@ -977,6 +1006,7 @@ Model representing an installed Plugin
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1211,6 +1241,7 @@ trashed
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1246,6 +1277,7 @@ The PluginSendMailService send mails in plugins
 ===== Methods
 
 [source%nowrap, php]
+[#getinstance]
 ----
 
 public static getInstance($webstoreId):void
@@ -1271,6 +1303,7 @@ a|
 
 
 [source%nowrap, php]
+[#sendmail]
 ----
 
 public sendMail($url, $template = &quot;&quot;, $email = &quot;&quot;, $callFunction = &quot;&quot;):bool
@@ -1308,6 +1341,7 @@ a|
 
 
 [source%nowrap, php]
+[#getstatus]
 ----
 
 public getStatus():bool
@@ -1323,6 +1357,7 @@ public getStatus():bool
 
 
 [source%nowrap, php]
+[#setstatus]
 ----
 
 public setStatus($status):void
@@ -1348,6 +1383,7 @@ a|
 
 
 [source%nowrap, php]
+[#isinitialized]
 ----
 
 public isInitialized():bool
@@ -1363,6 +1399,7 @@ public isInitialized():bool
 
 
 [source%nowrap, php]
+[#setinitialized]
 ----
 
 public setInitialized($initialized):void
@@ -1388,6 +1425,7 @@ a|
 
 
 [source%nowrap, php]
+[#getemailplaceholder]
 ----
 
 public getEmailPlaceholder():array
@@ -1403,6 +1441,7 @@ public getEmailPlaceholder():array
 
 
 [source%nowrap, php]
+[#addemailplaceholder]
 ----
 
 public addEmailPlaceholder($placeholder, $value):void
@@ -1432,6 +1471,7 @@ a|
 
 
 [source%nowrap, php]
+[#setemailplaceholder]
 ----
 
 public setEmailPlaceholder($emailPlaceholder):void
@@ -1457,6 +1497,7 @@ a|
 
 
 [source%nowrap, php]
+[#getemailplaceholderkey]
 ----
 
 public getEmailPlaceholderKey($key, $default = &quot;&quot;):string
@@ -1505,6 +1546,7 @@ The PluginSeoSitemapService collect the sitemap patterns.
 ===== Methods
 
 [source%nowrap, php]
+[#loadpatterns]
 ----
 
 public loadPatterns($url):bool
@@ -1530,6 +1572,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpatterns]
 ----
 
 public getPatterns():array
@@ -1545,6 +1588,7 @@ public getPatterns():array
 
 
 [source%nowrap, php]
+[#setitempattern]
 ----
 
 public setItemPattern($pattern):void
@@ -1570,6 +1614,7 @@ a|
 
 
 [source%nowrap, php]
+[#setblogpattern]
 ----
 
 public setBlogPattern($pattern):void
@@ -1595,6 +1640,7 @@ a|
 
 
 [source%nowrap, php]
+[#setcontentcategorypattern]
 ----
 
 public setContentCategoryPattern($pattern):void
@@ -1620,6 +1666,7 @@ a|
 
 
 [source%nowrap, php]
+[#setitemcategorypattern]
 ----
 
 public setItemCategoryPattern($pattern):void
@@ -1645,6 +1692,7 @@ a|
 
 
 [source%nowrap, php]
+[#getitempattern]
 ----
 
 public getItemPattern():string
@@ -1660,6 +1708,7 @@ public getItemPattern():string
 
 
 [source%nowrap, php]
+[#getblogpattern]
 ----
 
 public getBlogPattern():string
@@ -1675,6 +1724,7 @@ public getBlogPattern():string
 
 
 [source%nowrap, php]
+[#getitemcategorypattern]
 ----
 
 public getItemCategoryPattern():string
@@ -1690,6 +1740,7 @@ public getItemCategoryPattern():string
 
 
 [source%nowrap, php]
+[#getcontentcategorypattern]
 ----
 
 public getContentCategoryPattern():string
@@ -1728,6 +1779,7 @@ public getContentCategoryPattern():string
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1762,6 +1814,7 @@ Returns this model as an array.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1796,6 +1849,7 @@ Returns this model as an array.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1830,6 +1884,7 @@ Returns this model as an array.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1865,6 +1920,7 @@ database query
 ===== Methods
 
 [source%nowrap, php]
+[#where]
 ----
 
 public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
@@ -1898,6 +1954,7 @@ a|
 
 
 [source%nowrap, php]
+[#wherein]
 ----
 
 public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
@@ -1935,6 +1992,7 @@ a|
 
 
 [source%nowrap, php]
+[#orwherein]
 ----
 
 public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts
@@ -1964,6 +2022,7 @@ a|
 
 
 [source%nowrap, php]
+[#orwhere]
 ----
 
 public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
@@ -1997,6 +2056,7 @@ a|
 
 
 [source%nowrap, php]
+[#wherenull]
 ----
 
 public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
@@ -2030,6 +2090,7 @@ a|
 
 
 [source%nowrap, php]
+[#orwherenull]
 ----
 
 public orWhereNull($fieldName):void
@@ -2055,6 +2116,7 @@ a|
 
 
 [source%nowrap, php]
+[#having]
 ----
 
 public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
@@ -2092,6 +2154,7 @@ a|
 
 
 [source%nowrap, php]
+[#orhaving]
 ----
 
 public orHaving($fieldName, $operator = null, $value = null):void
@@ -2125,6 +2188,7 @@ a|
 
 
 [source%nowrap, php]
+[#wherehas]
 ----
 
 public whereHas($modelName, $callback = null, $operator = &quot;&gt;=&quot;, $count = 1):void
@@ -2162,6 +2226,7 @@ a|
 
 
 [source%nowrap, php]
+[#join]
 ----
 
 public join($firstModelName, $callback, $as = &quot;&quot;):void
@@ -2195,6 +2260,7 @@ a|
 
 
 [source%nowrap, php]
+[#leftjoin]
 ----
 
 public leftJoin($firstModelName, $callback):void
@@ -2243,6 +2309,7 @@ Database contract
 ===== Methods
 
 [source%nowrap, php]
+[#save]
 ----
 
 public save($model):Plenty\Modules\Plugin\DataBase\Contracts\Model
@@ -2268,6 +2335,7 @@ a|
 
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($modelClassName, $primaryKeyFieldValue):Plenty\Modules\Plugin\DataBase\Contracts\Model
@@ -2297,6 +2365,7 @@ a|
 
 
 [source%nowrap, php]
+[#query]
 ----
 
 public query($modelClassName):Plenty\Modules\Plugin\DataBase\Contracts\Query
@@ -2322,6 +2391,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($model):bool
@@ -2366,6 +2436,7 @@ database join query
 ===== Methods
 
 [source%nowrap, php]
+[#on]
 ----
 
 public on($firstModelName, $first, $operator = null, $secondModelName = null, $second = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
@@ -2411,6 +2482,7 @@ a|
 
 
 [source%nowrap, php]
+[#where]
 ----
 
 public where($modelName, $column, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
@@ -2452,6 +2524,7 @@ a|
 
 
 [source%nowrap, php]
+[#orwhere]
 ----
 
 public orWhere($modelName, $column, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
@@ -2489,6 +2562,7 @@ a|
 
 
 [source%nowrap, php]
+[#wherenull]
 ----
 
 public whereNull($modelName, $column, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
@@ -2526,6 +2600,7 @@ a|
 
 
 [source%nowrap, php]
+[#orwherenull]
 ----
 
 public orWhereNull($modelName, $column):Plenty\Modules\Plugin\DataBase\Contracts
@@ -2574,6 +2649,7 @@ Migrate models
 ===== Methods
 
 [source%nowrap, php]
+[#createtable]
 ----
 
 public createTable($modelClassName):bool
@@ -2599,6 +2675,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatetable]
 ----
 
 public updateTable($modelClassName):bool
@@ -2624,6 +2701,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletetable]
 ----
 
 public deleteTable($modelClassName):bool
@@ -2708,6 +2786,7 @@ Database model
 ===== Methods
 
 [source%nowrap, php]
+[#gettablename]
 ----
 
 public getTableName():string
@@ -2723,6 +2802,7 @@ public getTableName():string
 
 
 [source%nowrap, php]
+[#attributestoarray]
 ----
 
 public attributesToArray():array
@@ -2738,6 +2818,7 @@ public attributesToArray():array
 Convert the model&#039;s attributes to an array.
 
 [source%nowrap, php]
+[#getattribute]
 ----
 
 public getAttribute($key):void
@@ -2763,6 +2844,7 @@ a|
 
 
 [source%nowrap, php]
+[#getattributevalue]
 ----
 
 public getAttributeValue($key):void
@@ -2788,6 +2870,7 @@ a|
 
 
 [source%nowrap, php]
+[#getattributefromarray]
 ----
 
 public getAttributeFromArray($key):void
@@ -2813,6 +2896,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasgetmutator]
 ----
 
 public hasGetMutator($key):bool
@@ -2838,6 +2922,7 @@ a|
 
 
 [source%nowrap, php]
+[#mutateattribute]
 ----
 
 public mutateAttribute($key, $value):void
@@ -2867,6 +2952,7 @@ a|
 
 
 [source%nowrap, php]
+[#mutateattributeforarray]
 ----
 
 public mutateAttributeForArray($key, $value):void
@@ -2896,6 +2982,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattribute]
 ----
 
 public setAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts
@@ -2925,6 +3012,7 @@ a|
 
 
 [source%nowrap, php]
+[#hassetmutator]
 ----
 
 public hasSetMutator($key):bool
@@ -2950,6 +3038,7 @@ a|
 
 
 [source%nowrap, php]
+[#filljsonattribute]
 ----
 
 public fillJsonAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts
@@ -2979,6 +3068,7 @@ a|
 
 
 [source%nowrap, php]
+[#fromjson]
 ----
 
 public fromJson($value, $asObject = false):void
@@ -3008,6 +3098,7 @@ a|
 
 
 [source%nowrap, php]
+[#fromdatetime]
 ----
 
 public fromDateTime($value):string
@@ -3033,6 +3124,7 @@ a|
 
 
 [source%nowrap, php]
+[#getdates]
 ----
 
 public getDates():array
@@ -3048,6 +3140,7 @@ public getDates():array
 Get the attributes that should be converted to dates.
 
 [source%nowrap, php]
+[#setdateformat]
 ----
 
 public setDateFormat($format):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3073,6 +3166,7 @@ a|
 
 
 [source%nowrap, php]
+[#hascast]
 ----
 
 public hasCast($key, $types = null):bool
@@ -3102,6 +3196,7 @@ a|
 
 
 [source%nowrap, php]
+[#getcasts]
 ----
 
 public getCasts():array
@@ -3117,6 +3212,7 @@ public getCasts():array
 Get the casts array.
 
 [source%nowrap, php]
+[#getattributes]
 ----
 
 public getAttributes():array
@@ -3132,6 +3228,7 @@ public getAttributes():array
 Get all of the current attributes on the model.
 
 [source%nowrap, php]
+[#setrawattributes]
 ----
 
 public setRawAttributes($attributes, $sync = false):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3161,6 +3258,7 @@ a|
 
 
 [source%nowrap, php]
+[#getoriginal]
 ----
 
 public getOriginal($key = null, $default = null):void
@@ -3190,6 +3288,7 @@ a|
 
 
 [source%nowrap, php]
+[#only]
 ----
 
 public only($attributes):array
@@ -3215,6 +3314,7 @@ a|
 
 
 [source%nowrap, php]
+[#syncoriginal]
 ----
 
 public syncOriginal():Plenty\Modules\Plugin\DataBase\Contracts
@@ -3230,6 +3330,7 @@ public syncOriginal():Plenty\Modules\Plugin\DataBase\Contracts
 Sync the original attributes with the current.
 
 [source%nowrap, php]
+[#syncoriginalattribute]
 ----
 
 public syncOriginalAttribute($attribute):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3255,6 +3356,7 @@ a|
 
 
 [source%nowrap, php]
+[#syncchanges]
 ----
 
 public syncChanges():Plenty\Modules\Plugin\DataBase\Contracts
@@ -3270,6 +3372,7 @@ public syncChanges():Plenty\Modules\Plugin\DataBase\Contracts
 Sync the changed attributes.
 
 [source%nowrap, php]
+[#isdirty]
 ----
 
 public isDirty($attributes = null):bool
@@ -3295,6 +3398,7 @@ a|
 
 
 [source%nowrap, php]
+[#isclean]
 ----
 
 public isClean($attributes = null):bool
@@ -3320,6 +3424,7 @@ a|
 
 
 [source%nowrap, php]
+[#waschanged]
 ----
 
 public wasChanged($attributes = null):bool
@@ -3345,6 +3450,7 @@ a|
 
 
 [source%nowrap, php]
+[#getdirty]
 ----
 
 public getDirty():array
@@ -3360,6 +3466,7 @@ public getDirty():array
 Get the attributes that have been changed since last sync.
 
 [source%nowrap, php]
+[#getchanges]
 ----
 
 public getChanges():array
@@ -3375,6 +3482,7 @@ public getChanges():array
 Get the attributes that were changed.
 
 [source%nowrap, php]
+[#getmutatedattributes]
 ----
 
 public getMutatedAttributes():array
@@ -3390,6 +3498,7 @@ public getMutatedAttributes():array
 Get the mutated attributes for a given instance.
 
 [source%nowrap, php]
+[#cachemutatedattributes]
 ----
 
 public static cacheMutatedAttributes($class):void
@@ -3415,6 +3524,7 @@ a|
 
 
 [source%nowrap, php]
+[#relationloaded]
 ----
 
 public relationLoaded():void
@@ -3449,6 +3559,7 @@ database query
 ===== Methods
 
 [source%nowrap, php]
+[#select]
 ----
 
 public select($columns = []):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3474,6 +3585,7 @@ a|
 
 
 [source%nowrap, php]
+[#where]
 ----
 
 public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3507,6 +3619,7 @@ a|
 
 
 [source%nowrap, php]
+[#wherein]
 ----
 
 public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3544,6 +3657,7 @@ a|
 
 
 [source%nowrap, php]
+[#orwherein]
 ----
 
 public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3573,6 +3687,7 @@ a|
 
 
 [source%nowrap, php]
+[#orwhere]
 ----
 
 public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3606,6 +3721,7 @@ a|
 
 
 [source%nowrap, php]
+[#wherenull]
 ----
 
 public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3639,6 +3755,7 @@ a|
 
 
 [source%nowrap, php]
+[#orwherenull]
 ----
 
 public orWhereNull($fieldName):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3664,6 +3781,7 @@ a|
 
 
 [source%nowrap, php]
+[#wherebetween]
 ----
 
 public whereBetween($column, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3701,6 +3819,7 @@ a|
 
 
 [source%nowrap, php]
+[#wherenotbetween]
 ----
 
 public whereNotBetween($column, $values, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3734,6 +3853,7 @@ a|
 
 
 [source%nowrap, php]
+[#wheredate]
 ----
 
 public whereDate($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3771,6 +3891,7 @@ a|
 
 
 [source%nowrap, php]
+[#wheremonth]
 ----
 
 public whereMonth($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3808,6 +3929,7 @@ a|
 
 
 [source%nowrap, php]
+[#whereday]
 ----
 
 public whereDay($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3845,6 +3967,7 @@ a|
 
 
 [source%nowrap, php]
+[#whereyear]
 ----
 
 public whereYear($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3882,6 +4005,7 @@ a|
 
 
 [source%nowrap, php]
+[#wheretime]
 ----
 
 public whereTime($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3919,6 +4043,7 @@ a|
 
 
 [source%nowrap, php]
+[#groupby]
 ----
 
 public groupBy($groups):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3944,6 +4069,7 @@ a|
 
 
 [source%nowrap, php]
+[#having]
 ----
 
 public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
@@ -3981,6 +4107,7 @@ a|
 
 
 [source%nowrap, php]
+[#orhaving]
 ----
 
 public orHaving($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
@@ -4014,6 +4141,7 @@ a|
 
 
 [source%nowrap, php]
+[#orderby]
 ----
 
 public orderBy($fieldName, $direction = &quot;asc&quot;):Plenty\Modules\Plugin\DataBase\Contracts
@@ -4043,6 +4171,7 @@ a|
 
 
 [source%nowrap, php]
+[#forpage]
 ----
 
 public forPage($page, $perPage = 15):Plenty\Modules\Plugin\DataBase\Contracts
@@ -4072,6 +4201,7 @@ a|
 
 
 [source%nowrap, php]
+[#count]
 ----
 
 public count($columns = &quot;*&quot;):int
@@ -4097,6 +4227,7 @@ a|
 
 
 [source%nowrap, php]
+[#limit]
 ----
 
 public limit($value):Plenty\Modules\Plugin\DataBase\Contracts
@@ -4122,6 +4253,7 @@ a|
 
 
 [source%nowrap, php]
+[#offset]
 ----
 
 public offset($value):Plenty\Modules\Plugin\DataBase\Contracts
@@ -4147,6 +4279,7 @@ a|
 
 
 [source%nowrap, php]
+[#getcountforpagination]
 ----
 
 public getCountForPagination($columns = []):int
@@ -4172,6 +4305,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get():array
@@ -4187,6 +4321,7 @@ public get():array
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete():bool
@@ -4232,6 +4367,7 @@ Please use Plenty\Modules\Plugin\DataBase\Contracts\DataBase instead
 ===== Methods
 
 [source%nowrap, php]
+[#createtable]
 ----
 
 public createTable($pluginName, $tableName, $attributeDefinitions, $keySchema, $readCapacityUnits = 3, $writeCapacityUnits = 2):bool
@@ -4284,6 +4420,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatetable]
 ----
 
 public updateTable($pluginName, $tableName, $readCapacityUnits = 3, $writeCapacityUnits = 2):bool
@@ -4328,6 +4465,7 @@ a|
 
 
 [source%nowrap, php]
+[#putitem]
 ----
 
 public putItem($pluginName, $tableName, $item):bool
@@ -4368,6 +4506,7 @@ a|
 
 
 [source%nowrap, php]
+[#getitem]
 ----
 
 public getItem($pluginName, $tableName, $consistentRead, $key):array
@@ -4412,6 +4551,7 @@ a|
 
 
 [source%nowrap, php]
+[#deleteitem]
 ----
 
 public deleteItem($pluginName, $tableName, $key):bool
@@ -4452,6 +4592,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletetable]
 ----
 
 public deleteTable($pluginName, $tableName):bool
@@ -4488,6 +4629,7 @@ a|
 
 
 [source%nowrap, php]
+[#scan]
 ----
 
 public scan($pluginName, $tableName, $returnFields = &quot;&quot;, $expressionAttributeValues = [], $filterExpression = &quot;&quot;, $limit):void
@@ -4563,6 +4705,7 @@ library call
 ===== Methods
 
 [source%nowrap, php]
+[#call]
 ----
 
 public call($libCall, $params = []):array
@@ -4615,6 +4758,7 @@ get, create, update or delete plugin set entries
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($idOrInstance):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry
@@ -4640,6 +4784,7 @@ a|The Id of the PluginSetEntry to retrieve or the PluginSetEntry object itself.
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry
@@ -4666,6 +4811,7 @@ newly created set entry: ['pluginId' => 5, 'pluginSetId' => 3]
 
 
 [source%nowrap, php]
+[#copytopluginset]
 ----
 
 public copyToPluginSet($pluginSetEntryOrId, $pluginSetOrId, $copyConfigurations):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry
@@ -4699,6 +4845,7 @@ a|true if the configurations related to the set entry should also be copied, fal
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):bool
@@ -4728,6 +4875,7 @@ a|Must contain EITHER a 'pluginId' field OR a 'pluginSetId' field OR both.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($what):int
@@ -4772,6 +4920,7 @@ list, create, update or delete plugin sets
 ===== Methods
 
 [source%nowrap, php]
+[#count]
 ----
 
 public count():int
@@ -4787,6 +4936,7 @@ public count():int
 Count current plugin sets.
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
@@ -4812,6 +4962,7 @@ a|The data for the newly created plugin set. Only the 'name' field is required: 
 
 
 [source%nowrap, php]
+[#copy]
 ----
 
 public copy($data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
@@ -4838,6 +4989,7 @@ a|Has to contain the Id of the plugin set to copy from and the name for the new 
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
@@ -4867,6 +5019,7 @@ a|Update data must only contain a 'name' field: ['name' => 'NewNameForMySet']
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($what):int
@@ -4892,6 +5045,7 @@ a|The PluginSet object to delete or a PluginSet-Id
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($pluginSetOrId):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
@@ -4918,6 +5072,7 @@ object is returned without change.
 
 
 [source%nowrap, php]
+[#list]
 ----
 
 public list():void
@@ -4933,6 +5088,7 @@ public list():void
 List all plugin sets.
 
 [source%nowrap, php]
+[#listsetentries]
 ----
 
 public listSetEntries($id):void
@@ -4958,6 +5114,7 @@ a|The Id of the plugin set to list the entries from.
 
 
 [source%nowrap, php]
+[#listwebstores]
 ----
 
 public listWebstores($id):void
@@ -4983,6 +5140,7 @@ a|The Id of the set in question
 
 
 [source%nowrap, php]
+[#listlayoutcontainers]
 ----
 
 public listLayoutContainers($id):void
@@ -5008,6 +5166,7 @@ a|The Id of the plugin set in question
 
 
 [source%nowrap, php]
+[#getorcreatepluginsetentry]
 ----
 
 public getOrCreatePluginSetEntry($id, $pluginId, $withTrashed = false, $resetCache = true):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry
@@ -5045,6 +5204,7 @@ a|
 
 
 [source%nowrap, php]
+[#changepluginactivestatusforset]
 ----
 
 public changePluginActiveStatusForSet($pluginSetId, $pluginId, $active):Plenty\Modules\Plugin\Models\Plugin
@@ -5078,6 +5238,7 @@ a|true if the plugin should be activated for the set, false if it should be deac
 
 
 [source%nowrap, php]
+[#removepluginfromset]
 ----
 
 public removePluginFromSet($setId, $pluginId):Plenty\Modules\Plugin\Models\Plugin
@@ -5107,6 +5268,7 @@ a|The Id of the plugin that should be removed from the set.
 
 
 [source%nowrap, php]
+[#createpreviewhash]
 ----
 
 public createPreviewHash($setId):string
@@ -5132,6 +5294,7 @@ a|The plugin set in question
 
 
 [source%nowrap, php]
+[#getpreviewpluginsetid]
 ----
 
 public getPreviewPluginSetId($previewHash):void
@@ -5157,6 +5320,7 @@ a|The preview has to extract the plugin set id from
 
 
 [source%nowrap, php]
+[#installgitplugin]
 ----
 
 public installGitPlugin($setId, $pluginId, $requestData):bool
@@ -5190,6 +5354,7 @@ a|Must contain a 'branch' field that specifies the branch that should be install
 
 
 [source%nowrap, php]
+[#setposition]
 ----
 
 public setPosition($setId, $pluginId, $requestData):void
@@ -5223,6 +5388,7 @@ a|Must contain a 'position' field with an integer specifying the new position: [
 
 
 [source%nowrap, php]
+[#getsyncstate]
 ----
 
 public getSyncState($pluginSetId):bool
@@ -5248,6 +5414,7 @@ a|The id of the PluginSet
 
 
 [source%nowrap, php]
+[#getpluginsethash]
 ----
 
 public getPluginSetHash($pluginSetOrId):string
@@ -5273,6 +5440,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpluginsetidfromhash]
 ----
 
 public getPluginSetIdFromHash($pluginSetHash):int
@@ -5298,6 +5466,7 @@ a|
 
 
 [source%nowrap, php]
+[#getcurrentpluginsetid]
 ----
 
 public getCurrentPluginSetId():int
@@ -5367,6 +5536,7 @@ Eloquent model representing a PluginSet.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5429,6 +5599,7 @@ Eloquent model representing a PluginSetEntry.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5467,6 +5638,7 @@ Storage Repository
 ===== Methods
 
 [source%nowrap, php]
+[#uploadobject]
 ----
 
 public uploadObject($pluginName, $key, $body, $publicVisible = false, $metaData = []):Plenty\Modules\Cloud\Storage\Models\StorageObject
@@ -5508,6 +5680,7 @@ a|
 
 
 [source%nowrap, php]
+[#getobject]
 ----
 
 public getObject($pluginName, $key, $publicVisible = false):Plenty\Modules\Cloud\Storage\Models\StorageObject
@@ -5541,6 +5714,7 @@ a|
 
 
 [source%nowrap, php]
+[#getobjecturl]
 ----
 
 public getObjectUrl($pluginName, $key, $publicVisible = false, $minutesToExpire = 5):string
@@ -5578,6 +5752,7 @@ a|Minutes between 1 and 15
 
 
 [source%nowrap, php]
+[#getobjectastemporaryfileresource]
 ----
 
 public getObjectAsTemporaryFileResource($pluginName, $key, $publicVisible = false):string
@@ -5611,6 +5786,7 @@ a|
 
 
 [source%nowrap, php]
+[#doesobjectexist]
 ----
 
 public doesObjectExist($pluginName, $key, $publicVisible = false):bool
@@ -5644,6 +5820,7 @@ a|
 
 
 [source%nowrap, php]
+[#deleteobject]
 ----
 
 public deleteObject($pluginName, $key, $publicVisible = false):bool
@@ -5677,6 +5854,7 @@ a|
 
 
 [source%nowrap, php]
+[#listobjects]
 ----
 
 public listObjects($pluginName, $prefix = &quot;&quot;, $limit, $startKey = &quot;&quot;, $continuationToken = &quot;&quot;, $publicVisible = false, $resultKeyWithoutPrefix = true):Plenty\Modules\Cloud\Storage\Models\StorageObjectList
@@ -5726,6 +5904,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpluginzip]
 ----
 
 public getPluginZip($pluginSetId, $pluginName):void
@@ -5818,6 +5997,7 @@ Model holding plugin data concerning Git version control.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

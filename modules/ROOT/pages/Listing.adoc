@@ -29,6 +29,7 @@ The contract for the listing repository.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id, $with = []):Plenty\Modules\Listing\Models\Listing
@@ -58,6 +59,7 @@ a|The relations to load in the listing instance, one of "markets", "type", "stoc
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
@@ -95,6 +97,7 @@ a|The filters that could be applied: 'id', 'itemId', 'typeId', 'stockDependenceT
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Listing\Models\Listing
@@ -120,6 +123,7 @@ a|The listing data as associative array.
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):Plenty\Modules\Listing\Models\Listing
@@ -149,6 +153,7 @@ a|The listing data as associative array.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):bool
@@ -174,6 +179,7 @@ a|The ID of the listing.
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -189,6 +195,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -204,6 +211,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -229,6 +237,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -244,6 +253,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -259,6 +269,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -339,6 +350,7 @@ The listing model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -406,6 +418,7 @@ The listing properties model. Each listing property has a type.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -468,6 +481,7 @@ The listing date type model. Each listing date type can have multiple names.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -521,6 +535,7 @@ The listing date type name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -559,6 +574,7 @@ The LayoutTemplateRepositoryContract is the interface for the layout template re
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id, $with = []):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutTemplate
@@ -588,6 +604,7 @@ a|The relations to load in the LayoutTemplate instance, one of "additional".
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Listing\LayoutTemplate\Models\LayoutTemplate
@@ -613,6 +630,7 @@ a|The layout template data.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):bool
@@ -638,6 +656,7 @@ a|The ID of the layout template.
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -653,6 +672,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -668,6 +688,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -693,6 +714,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -708,6 +730,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -723,6 +746,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -786,6 +810,7 @@ The layout template model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -829,6 +854,7 @@ It is possible to extend this repository with own search criteria.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id, $with = []):Plenty\Modules\Listing\Market\Models\ListingMarket
@@ -858,6 +884,7 @@ a|The relations to load in the ListingMarket instance, one of "listing", "prices
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
@@ -895,6 +922,7 @@ a|The filters that should be applied. The filters that could be applied: 'id', '
 
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
@@ -932,6 +960,7 @@ a|The filters that should be applied. The filters that could be applied: 'id', '
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):array
@@ -957,6 +986,7 @@ a|The listing market data.
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):Plenty\Modules\Listing\Market\Models\ListingMarket
@@ -986,6 +1016,7 @@ a|The listing market data as associative array.
 
 
 [source%nowrap, php]
+[#start]
 ----
 
 public start($ids, $params = []):array
@@ -1015,6 +1046,7 @@ a|The parameters that should be considered during start. Available values are 's
 
 
 [source%nowrap, php]
+[#verify]
 ----
 
 public verify($ids):array
@@ -1040,6 +1072,7 @@ a|The IDs of the listing markets that need to be verified.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):void
@@ -1065,6 +1098,7 @@ a|The ID of the listing market.
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -1080,6 +1114,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -1095,6 +1130,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -1120,6 +1156,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -1135,6 +1172,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -1150,6 +1188,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -1185,6 +1224,7 @@ An event class fired after multiple new listing markets are created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($listingMarkets):void
@@ -1210,6 +1250,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlistingmarkets]
 ----
 
 public getListingMarkets():array
@@ -1244,6 +1285,7 @@ An event class fired after multiple listing markets are deleted.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($listingMarkets):void
@@ -1269,6 +1311,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlistingmarkets]
 ----
 
 public getListingMarkets():array
@@ -1303,6 +1346,7 @@ A base event class for all listing market events. Each listing market batch even
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($listingMarkets):void
@@ -1328,6 +1372,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlistingmarkets]
 ----
 
 public getListingMarkets():array
@@ -1362,6 +1407,7 @@ An event class fired after multiple listing markets are updated.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($listingMarkets):void
@@ -1387,6 +1433,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlistingmarkets]
 ----
 
 public getListingMarkets():array
@@ -1421,6 +1468,7 @@ An event class fired after a new listing market is created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($listingMarket):void
@@ -1446,6 +1494,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlistingmarket]
 ----
 
 public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
@@ -1480,6 +1529,7 @@ An event class fired after a new listing market is deleted.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($listingMarket):void
@@ -1505,6 +1555,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlistingmarket]
 ----
 
 public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
@@ -1539,6 +1590,7 @@ A base event class for all listing market events. Each listing market event expe
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($listingMarket):void
@@ -1564,6 +1616,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlistingmarket]
 ----
 
 public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
@@ -1598,6 +1651,7 @@ An event class fired after a new listing market item specifics are created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($listingMarket):void
@@ -1623,6 +1677,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlistingmarket]
 ----
 
 public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
@@ -1657,6 +1712,7 @@ An event class fired after a new listing market item specifics are deleted.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($listingMarket):void
@@ -1682,6 +1738,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlistingmarket]
 ----
 
 public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
@@ -1716,6 +1773,7 @@ An event class fired after a new listing market is updated.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($listingMarket):void
@@ -1741,6 +1799,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlistingmarket]
 ----
 
 public getListingMarket():Plenty\Modules\Listing\Market\Models\ListingMarket
@@ -1912,6 +1971,7 @@ The listing market model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1981,6 +2041,7 @@ The listing market dates model. Each listing market date has a type.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -2034,6 +2095,7 @@ The listing market item specific model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -2096,6 +2158,7 @@ The listing market price model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -2221,6 +2284,7 @@ The listing market properties model. Each listing market property has a type.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -2259,6 +2323,7 @@ The contract for the listing market directory repository.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id, $with = []):Plenty\Modules\Listing\Market\Directory\Models\ListingMarketDirectory
@@ -2288,6 +2353,7 @@ a|The relations to load in the ListingMarketDirectory instance, one of "children
 
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all($with = [], $filters = []):array
@@ -2317,6 +2383,7 @@ a|Listing market directory filters. Available filters: parentId (if no parentId 
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):array
@@ -2342,6 +2409,7 @@ a|The listing market directory data as associative array.
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):Plenty\Modules\Listing\Market\Directory\Models\ListingMarketDirectory
@@ -2371,6 +2439,7 @@ a|The listing market directory data as associative array.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):void
@@ -2396,6 +2465,7 @@ a|The ID of the listing market directory.
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -2411,6 +2481,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -2426,6 +2497,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -2451,6 +2523,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -2466,6 +2539,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -2481,6 +2555,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -2535,6 +2610,7 @@ The listing market directory model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -2573,6 +2649,7 @@ The ListingMarketHistoryRepositoryContract is the interface for the listing mark
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id, $with = []):Plenty\Modules\Listing\Market\History\Models\ListingMarketHistory
@@ -2602,6 +2679,7 @@ a|The relations to load in the ListingMarket instance, one of "listing", "prices
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($page = 1, $itemsPerPage = 50, $with = [], $filters = [], $sort = &quot;&quot;):Plenty\Repositories\Models\PaginatedResult
@@ -2643,6 +2721,7 @@ a|The sorting key that can be applied. These sortings are available: 'endTimeAsc
 
 
 [source%nowrap, php]
+[#end]
 ----
 
 public end($ids, $params = []):array
@@ -2672,6 +2751,7 @@ a|The parameters that should be considers during end. Available values are 'dele
 
 
 [source%nowrap, php]
+[#relist]
 ----
 
 public relist($ids):void
@@ -2697,6 +2777,7 @@ a|The IDs of the listing market histories that need to be started.
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($ids, $options = []):array
@@ -2744,6 +2825,7 @@ a|The update options that should be considers during update. Available values ar
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -2759,6 +2841,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -2774,6 +2857,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -2799,6 +2883,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -2814,6 +2899,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -2829,6 +2915,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -2937,6 +3024,7 @@ The listing market history model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3007,6 +3095,7 @@ The listing market history dates model. Each listing market history date has a t
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3081,6 +3170,7 @@ The listing market properties model. Each listing market property has a type.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3134,6 +3224,7 @@ The listing market history text model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3214,6 +3305,7 @@ The listing market history model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3252,6 +3344,7 @@ The ListingMarketInfoRepositoryContract is the interface for the listing market 
 ===== Methods
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
@@ -3289,6 +3382,7 @@ a|The filters that should be applied. The filters that could be applied: 'id', '
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -3304,6 +3398,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -3319,6 +3414,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -3344,6 +3440,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -3359,6 +3456,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -3374,6 +3472,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -3437,6 +3536,7 @@ The listing market info model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3480,6 +3580,7 @@ It is possible to extend this repository with own search criteria.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketItemSpecific
@@ -3505,6 +3606,7 @@ a|
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($data, $page = 1, $itemsPerPage = 50):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketItemSpecific
@@ -3538,6 +3640,7 @@ a|
 
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($filters = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
@@ -3571,6 +3674,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):Plenty\Modules\Listing\Market\ItemSpecific\Models\ListingMarketItemSpecific
@@ -3600,6 +3704,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):bool
@@ -3625,6 +3730,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletebylistingmarketid]
 ----
 
 public deleteByListingMarketId($listingMarketId):bool
@@ -3650,6 +3756,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -3665,6 +3772,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -3680,6 +3788,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -3705,6 +3814,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -3720,6 +3830,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -3735,6 +3846,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -3789,6 +3901,7 @@ The item specific model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3827,6 +3940,7 @@ The contract for the listing market text repository.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText
@@ -3852,6 +3966,7 @@ a|The ID of the listing market text.
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($listingMarketId, $data):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText
@@ -3881,6 +3996,7 @@ a|The listing market text data as associative array.
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($listingMarketId, $lang, $data):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText
@@ -3914,6 +4030,7 @@ a|The listing market text data as associative array.
 
 
 [source%nowrap, php]
+[#updateorcreate]
 ----
 
 public updateOrCreate($listingMarketId, $lang, $data):Plenty\Modules\Listing\Market\Text\Models\ListingMarketText
@@ -3947,6 +4064,7 @@ a|The listing market text data as associative array.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):bool
@@ -3972,6 +4090,7 @@ a|The ID of the listing market text.
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($page = 1, $itemsPerPage = 50, $filters = []):Plenty\Repositories\Models\PaginatedResult
@@ -4005,6 +4124,7 @@ a|The filters that should be applied: 'id', 'language', 'contains'
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -4020,6 +4140,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -4035,6 +4156,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -4060,6 +4182,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -4075,6 +4198,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -4090,6 +4214,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -4150,6 +4275,7 @@ The listing market text model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4188,6 +4314,7 @@ The contract for the listing option template repository.
 ===== Methods
 
 [source%nowrap, php]
+[#preview]
 ----
 
 public preview():array
@@ -4203,6 +4330,7 @@ public preview():array
 Get a preview list of all listing option templates
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate
@@ -4228,6 +4356,7 @@ a|The ID of the option template.
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Listing\OptionTemplate\Models\OptionTemplate
@@ -4253,6 +4382,7 @@ a|The option template data as associative array.
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):void
@@ -4282,6 +4412,7 @@ a|The option template data as associative array.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):void
@@ -4349,6 +4480,7 @@ The option template model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4410,6 +4542,7 @@ The listing price type model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4463,6 +4596,7 @@ The listing price type name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4578,6 +4712,7 @@ The listing properties model. Each listing property has a type.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4631,6 +4766,7 @@ The listing property type name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4669,6 +4805,7 @@ The ShippingProfileRepositoryContract is the interface for the listing shipping 
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id, $with = []):Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile
@@ -4698,6 +4835,7 @@ a|The relations to load in the ShippingProfile instance.
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($page = 1, $itemsPerPage = 50, $with = [], $filters = []):Plenty\Repositories\Models\PaginatedResult
@@ -4735,6 +4873,7 @@ a|The filters that should be applied. The filters that could be applied: 'id', '
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -4750,6 +4889,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -4765,6 +4905,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -4790,6 +4931,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -4805,6 +4947,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -4820,6 +4963,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -4855,6 +4999,7 @@ An event class fired after a new listing shipping profile is created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($shippingProfile):void
@@ -4880,6 +5025,7 @@ a|
 
 
 [source%nowrap, php]
+[#getshippingprofile]
 ----
 
 public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile
@@ -4914,6 +5060,7 @@ An event class fired after a listing shipping profile is deleted.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($shippingProfile):void
@@ -4939,6 +5086,7 @@ a|
 
 
 [source%nowrap, php]
+[#getshippingprofile]
 ----
 
 public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile
@@ -4973,6 +5121,7 @@ A base event class for all listing shipping profile events. Each shipping profil
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($shippingProfile):void
@@ -4998,6 +5147,7 @@ a|
 
 
 [source%nowrap, php]
+[#getshippingprofile]
 ----
 
 public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile
@@ -5032,6 +5182,7 @@ An event class fired after a listing shipping profile is updated.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($shippingProfile):void
@@ -5057,6 +5208,7 @@ a|
 
 
 [source%nowrap, php]
+[#getshippingprofile]
 ----
 
 public getShippingProfile():Plenty\Modules\Listing\ShippingProfile\Models\ShippingProfile
@@ -5120,6 +5272,7 @@ The listing shipping profile model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5177,6 +5330,7 @@ The listing status model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5230,6 +5384,7 @@ The listing status name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5268,6 +5423,7 @@ The contract for the listing stock dependence type repository.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id, $with = []):Plenty\Modules\Listing\StockDependenceType\Models\StockDependenceType
@@ -5297,6 +5453,7 @@ a|The relations to load in the StockDependenceType instance, available values ar
 
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult
@@ -5369,6 +5526,7 @@ The listing stock dependence type model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5422,6 +5580,7 @@ The listing stock dependence type name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5460,6 +5619,7 @@ The contract for the listing type repository.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id, $with = []):Plenty\Modules\Listing\Type\Models\ListingType
@@ -5489,6 +5649,7 @@ a|The relations to load in the type instance, available values are: "names".
 
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult
@@ -5561,6 +5722,7 @@ The listing type model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5614,6 +5776,7 @@ The listing type name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

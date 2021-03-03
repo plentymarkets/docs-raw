@@ -29,6 +29,7 @@ Repository to register consents and check for users response.
 ===== Methods
 
 [source%nowrap, php]
+[#registerconsentgroup]
 ----
 
 public registerConsentGroup($key, $label, $options = []):void
@@ -68,6 +69,7 @@ Alternatively provide a function which returns all options. This will be resolve
 
 
 [source%nowrap, php]
+[#registerconsent]
 ----
 
 public registerConsent($key, $label, $options = []):void
@@ -113,6 +115,7 @@ Alternatively provide a function which returns all options. This will be resolve
 
 
 [source%nowrap, php]
+[#getconsentgroups]
 ----
 
 public getConsentGroups():Illuminate\Support\Collection
@@ -128,6 +131,7 @@ public getConsentGroups():Illuminate\Support\Collection
 Get all consent groups including all consents.
 
 [source%nowrap, php]
+[#hasresponse]
 ----
 
 public hasResponse():bool
@@ -143,6 +147,7 @@ public hasResponse():bool
 Check if the user has already responded the consents.
 
 [source%nowrap, php]
+[#setresponse]
 ----
 
 public setResponse($key, $isConsented = false):void
@@ -173,6 +178,7 @@ a|True if the user has accepted the consent or the group of consents
 
 
 [source%nowrap, php]
+[#isconsented]
 ----
 
 public isConsented($key):bool
@@ -222,6 +228,7 @@ Repository to upload files from the online store contact form and retrieve them
 ===== Methods
 
 [source%nowrap, php]
+[#uploadfiles]
 ----
 
 public uploadFiles($fileData):array
@@ -247,6 +254,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfile]
 ----
 
 public getFile($fileName):Plenty\Modules\Cloud\Storage\Models\StorageObject
@@ -295,6 +303,7 @@ Repository to get and set checkout data
 ===== Methods
 
 [source%nowrap, php]
+[#getcurrency]
 ----
 
 public getCurrency():string
@@ -310,6 +319,7 @@ public getCurrency():string
 Get the currently used currency.
 
 [source%nowrap, php]
+[#setcurrency]
 ----
 
 public setCurrency($currency):void
@@ -335,6 +345,7 @@ a|
 
 
 [source%nowrap, php]
+[#getshippingcountryid]
 ----
 
 public getShippingCountryId():int
@@ -369,6 +380,7 @@ Repository to get and set contact information for the webshop
 ===== Methods
 
 [source%nowrap, php]
+[#getcontactid]
 ----
 
 public getContactId():int
@@ -384,6 +396,7 @@ public getContactId():int
 Get the ID of the logged in contact or 0 for guests
 
 [source%nowrap, php]
+[#getcontact]
 ----
 
 public getContact():Plenty\Modules\Account\Contact\Models\Contact
@@ -399,6 +412,7 @@ public getContact():Plenty\Modules\Account\Contact\Models\Contact
 Get the logged in contact
 
 [source%nowrap, php]
+[#getcontactclassid]
 ----
 
 public getContactClassId():int
@@ -414,6 +428,7 @@ public getContactClassId():int
 Get the contact class ID of the logged in contact
 
 [source%nowrap, php]
+[#getcontactclassdata]
 ----
 
 public getContactClassData($contactClassId):array
@@ -439,6 +454,7 @@ a|
 
 
 [source%nowrap, php]
+[#getdefaultcontactclassid]
 ----
 
 public getDefaultContactClassId():int
@@ -454,6 +470,7 @@ public getDefaultContactClassId():int
 Get the default contact class ID of the webstore
 
 [source%nowrap, php]
+[#shownetprices]
 ----
 
 public showNetPrices():bool
@@ -488,6 +505,7 @@ Repository to get information about gift cards and corresponding order items
 ===== Methods
 
 [source%nowrap, php]
+[#hasgiftcardpdf]
 ----
 
 public hasGiftCardPdf($orderId, $orderItemId, $campaignCodeOrderId):bool
@@ -521,6 +539,7 @@ a|
 
 
 [source%nowrap, php]
+[#getgiftcardinformation]
 ----
 
 public getGiftCardInformation($orderItemId):array
@@ -546,6 +565,7 @@ a|
 
 
 [source%nowrap, php]
+[#isreturnable]
 ----
 
 public isReturnable($orderItemId):bool
@@ -571,6 +591,7 @@ a|
 
 
 [source%nowrap, php]
+[#getreturnquantity]
 ----
 
 public getReturnQuantity($orderItemId):int
@@ -615,6 +636,7 @@ Repository for webshop localization information
 ===== Methods
 
 [source%nowrap, php]
+[#getlanguage]
 ----
 
 public getLanguage():string
@@ -630,6 +652,7 @@ public getLanguage():string
 Get the currently used language of the webshop visitor
 
 [source%nowrap, php]
+[#getlocale]
 ----
 
 public getLocale():string
@@ -645,6 +668,7 @@ public getLocale():string
 Get the current locale
 
 [source%nowrap, php]
+[#getlanguagecode]
 ----
 
 public getLanguageCode($countryCode = null):string
@@ -689,6 +713,7 @@ Repository for webshop session information
 ===== Methods
 
 [source%nowrap, php]
+[#setsessionvalue]
 ----
 
 public setSessionValue($key, $value):void
@@ -718,6 +743,7 @@ a|The value will set to given key
 
 
 [source%nowrap, php]
+[#getsessionvalue]
 ----
 
 public getSessionValue($key):void
@@ -743,6 +769,7 @@ a|The key to read from the session
 
 
 [source%nowrap, php]
+[#getcustomer]
 ----
 
 public getCustomer():Plenty\Modules\Frontend\Session\Storage\Models\Customer
@@ -758,6 +785,7 @@ public getCustomer():Plenty\Modules\Frontend\Session\Storage\Models\Customer
 Get the customer session model
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Frontend\Session\Storage\Models\Order
@@ -792,6 +820,7 @@ Generate url for items, variations and categories considering all affecting conf
 ===== Methods
 
 [source%nowrap, php]
+[#builditemurl]
 ----
 
 public buildItemUrl($itemId, $lang = null):Plenty\Modules\Webshop\Helpers\UrlQuery
@@ -821,6 +850,7 @@ a|Language to generate the url in. Defaults to current language from session.
 
 
 [source%nowrap, php]
+[#buildcategoryurl]
 ----
 
 public buildCategoryUrl($categoryId, $lang = null, $webstoreId = null):Plenty\Modules\Webshop\Helpers\UrlQuery
@@ -854,6 +884,7 @@ a|Webstore to get url names for. Defaults to current webstore id.
 
 
 [source%nowrap, php]
+[#fillitemurl]
 ----
 
 public fillItemUrl($itemData):void
@@ -879,6 +910,7 @@ a|Item data object returned from search request.
 
 
 [source%nowrap, php]
+[#buildvariationurl]
 ----
 
 public buildVariationUrl($itemId, $variationId, $lang = null):Plenty\Modules\Webshop\Helpers\UrlQuery
@@ -912,6 +944,7 @@ a|Language to generate the url in. Defaults to current language from session.
 
 
 [source%nowrap, php]
+[#getsuffix]
 ----
 
 public getSuffix($itemId, $variationId, $withVariationId = true):string
@@ -964,6 +997,7 @@ Repository for webstore information
 ===== Methods
 
 [source%nowrap, php]
+[#getwebstoreconfiguration]
 ----
 
 public getWebstoreConfiguration():Plenty\Modules\System\Models\WebstoreConfiguration
@@ -979,6 +1013,7 @@ public getWebstoreConfiguration():Plenty\Modules\System\Models\WebstoreConfigura
 Get the webstore configuration
 
 [source%nowrap, php]
+[#getactivelanguagelist]
 ----
 
 public getActiveLanguageList():array
@@ -994,6 +1029,7 @@ public getActiveLanguageList():array
 Get the activate languages of the webstore
 
 [source%nowrap, php]
+[#getdefaultshippingcountryid]
 ----
 
 public getDefaultShippingCountryId():int
@@ -1029,6 +1065,7 @@ Event for receiving or manupulating the order item
 ===== Methods
 
 [source%nowrap, php]
+[#getorderitem]
 ----
 
 public getOrderItem():array
@@ -1044,6 +1081,7 @@ public getOrderItem():array
 Get order item data generated from the basket item.
 
 [source%nowrap, php]
+[#getbasketitem]
 ----
 
 public getBasketItem():array
@@ -1078,6 +1116,7 @@ Event to trigger validation of a vat number while creating new addresses. Failed
 ===== Methods
 
 [source%nowrap, php]
+[#getvatnumber]
 ----
 
 public getVatNumber():string
@@ -1113,6 +1152,7 @@ Helper class for number formatting
 ===== Methods
 
 [source%nowrap, php]
+[#formatdecimal]
 ----
 
 public formatDecimal($value, $decimal_places = -1):string
@@ -1142,6 +1182,7 @@ a|
 
 
 [source%nowrap, php]
+[#formatmonetary]
 ----
 
 public formatMonetary($value, $currencyISO):string
@@ -1190,6 +1231,7 @@ Helper to get plugin configuration values. Provides several methods to read conf
 ===== Methods
 
 [source%nowrap, php]
+[#load]
 ----
 
 public load():void
@@ -1205,6 +1247,7 @@ public load():void
 Initially load configuration values into member variables.
 
 [source%nowrap, php]
+[#getpluginname]
 ----
 
 public getPluginName():string
@@ -1220,6 +1263,7 @@ public getPluginName():string
 Return the name of the plugin to get the configuration values for.
 
 [source%nowrap, php]
+[#getmultiselectvalue]
 ----
 
 public getMultiSelectValue($key, $possibleValues = [], $default = []):array
@@ -1253,6 +1297,7 @@ a|A default value to return if the configuration is not set yet.
 
 
 [source%nowrap, php]
+[#gettextvalue]
 ----
 
 public getTextValue($key, $default = &quot;&quot;, $transformDefault = &quot;&quot;):string
@@ -1287,6 +1332,7 @@ Use this if you have defined a value in your config.json that should be handled 
 
 
 [source%nowrap, php]
+[#getintegervalue]
 ----
 
 public getIntegerValue($key, $default):int
@@ -1316,6 +1362,7 @@ a|A default value to return if the configuration is not set yet.
 
 
 [source%nowrap, php]
+[#getbooleanvalue]
 ----
 
 public getBooleanValue($key, $default = false):bool
@@ -1345,6 +1392,7 @@ a|A default value to return if the configuration is not set yet.
 
 
 [source%nowrap, php]
+[#getconfigvalue]
 ----
 
 public getConfigValue($key, $default = null):void
@@ -1393,6 +1441,7 @@ Convert plentymarkets unit keys into common unit codes.
 ===== Methods
 
 [source%nowrap, php]
+[#gethtml4unit]
 ----
 
 public static getHTML4Unit($unit = &quot;SMM&quot;):string
@@ -1437,6 +1486,7 @@ Helper to generate and manipulate urls to be used in the webshop.
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($path = null, $lang = null):Plenty\Modules\Webshop\Helpers\UrlQuery
@@ -1466,6 +1516,7 @@ a|The language of the generated url. Will be included automatically if it is dif
 
 
 [source%nowrap, php]
+[#shouldappendtrailingslash]
 ----
 
 public static shouldAppendTrailingSlash():bool
@@ -1481,6 +1532,7 @@ public static shouldAppendTrailingSlash():bool
 Check if a trailing slash should be appended to urls.
 
 [source%nowrap, php]
+[#append]
 ----
 
 public append($suffix):Plenty\Modules\Webshop\Helpers
@@ -1506,6 +1558,7 @@ a|String to append to the path.
 
 
 [source%nowrap, php]
+[#join]
 ----
 
 public join($path):Plenty\Modules\Webshop\Helpers
@@ -1531,6 +1584,7 @@ a|The new path to append.
 
 
 [source%nowrap, php]
+[#toabsoluteurl]
 ----
 
 public toAbsoluteUrl($includeLanguage = false):string
@@ -1556,6 +1610,7 @@ a|If true it will include the language at the beginning of the path.
 
 
 [source%nowrap, php]
+[#torelativeurl]
 ----
 
 public toRelativeUrl($includeLanguage = false):string
@@ -1581,6 +1636,7 @@ a|If true it will include the language at the beginning of the path.
 
 
 [source%nowrap, php]
+[#getpath]
 ----
 
 public getPath($includeLanguage = false):string
@@ -1606,6 +1662,7 @@ a|If true it will include the language at the beginning of the path.
 
 
 [source%nowrap, php]
+[#equals]
 ----
 
 public equals($path):bool
@@ -1651,6 +1708,7 @@ Hook to execute validation of vat numbers. Can be triggered by emitting Validate
 ===== Methods
 
 [source%nowrap, php]
+[#handle]
 ----
 
 public handle($vatNumberEvent):void
@@ -1699,6 +1757,7 @@ Interface to add custom facets.
 ===== Methods
 
 [source%nowrap, php]
+[#getaggregation]
 ----
 
 public getAggregation():Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregation\AggregationInterface
@@ -1714,6 +1773,7 @@ public getAggregation():Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregatio
 Get the aggregation to apply the facet to the search results.
 
 [source%nowrap, php]
+[#mergeintofacetslist]
 ----
 
 public mergeIntoFacetsList($result):array
@@ -1739,6 +1799,7 @@ a|Facet data
 
 
 [source%nowrap, php]
+[#extractfilterparams]
 ----
 
 public extractFilterParams($filtersList):void
@@ -1801,6 +1862,7 @@ Base factory to prepare and build search requests on variation data interface
 ===== Methods
 
 [source%nowrap, php]
+[#inherit]
 ----
 
 public inherit($inheritedProperties = []):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
@@ -1826,6 +1888,7 @@ a|List of properties to inherit or null to inherit all properties.
 
 
 [source%nowrap, php]
+[#withmutator]
 ----
 
 public withMutator($mutator, $excludeDependencies = false, $position = 1000):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -1860,6 +1923,7 @@ a|Position of the mutator. Mutators are executed in the order of their positions
 
 
 [source%nowrap, php]
+[#createfilter]
 ----
 
 public createFilter($filterClass, $params = []):void
@@ -1889,6 +1953,7 @@ a|
 
 
 [source%nowrap, php]
+[#withfilter]
 ----
 
 public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -1914,6 +1979,7 @@ a|
 
 
 [source%nowrap, php]
+[#withresultfields]
 ----
 
 public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -1939,6 +2005,7 @@ a|Reference to a json file to load fields from or a list of field names.
 
 
 [source%nowrap, php]
+[#getresultfields]
 ----
 
 public getResultFields():array
@@ -1954,6 +2021,7 @@ public getResultFields():array
 Get the requested result fields for this search request.
 
 [source%nowrap, php]
+[#hasresultfield]
 ----
 
 public hasResultField($field):bool
@@ -1979,6 +2047,7 @@ a|The field to search for in result fields
 
 
 [source%nowrap, php]
+[#getadditionalresultfields]
 ----
 
 public getAdditionalResultFields():array
@@ -1994,6 +2063,7 @@ public getAdditionalResultFields():array
 Get additional result fields required by webshop mutators.
 
 [source%nowrap, php]
+[#withextension]
 ----
 
 public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2023,6 +2093,7 @@ a|Additional parameters to pass to extensions constructor
 
 
 [source%nowrap, php]
+[#getextensions]
 ----
 
 public getExtensions():array
@@ -2038,6 +2109,7 @@ public getExtensions():array
 Get all registered extensions
 
 [source%nowrap, php]
+[#getmutators]
 ----
 
 public getMutators():array
@@ -2053,6 +2125,7 @@ public getMutators():array
 Get all registered mutators
 
 [source%nowrap, php]
+[#withaggregation]
 ----
 
 public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2078,6 +2151,7 @@ a|
 
 
 [source%nowrap, php]
+[#withsuggestion]
 ----
 
 public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2103,6 +2177,7 @@ a|
 
 
 [source%nowrap, php]
+[#setpage]
 ----
 
 public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2132,6 +2207,7 @@ a|
 
 
 [source%nowrap, php]
+[#sortby]
 ----
 
 public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory::SORTING_ORDER_DESC):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2161,6 +2237,7 @@ a|Direction to order results. Possible values: 'asc' or 'desc'
 
 
 [source%nowrap, php]
+[#sortbymultiple]
 ----
 
 public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2186,6 +2263,7 @@ a|List of sorting parameters. Each entry should have a 'field' and an 'order' pr
 
 
 [source%nowrap, php]
+[#setorder]
 ----
 
 public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2211,6 +2289,7 @@ a|List of variation ids. Search results will be sorted in the same order.
 
 
 [source%nowrap, php]
+[#groupby]
 ----
 
 public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2259,6 +2338,7 @@ Prepare and build search requests to query facets
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public static create($facets):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2284,6 +2364,7 @@ a|List of active facet values. If string is given, it will be exploded by ',' to
 
 
 [source%nowrap, php]
+[#withminimumcount]
 ----
 
 public withMinimumCount():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2299,6 +2380,7 @@ public withMinimumCount():Plenty\Modules\Webshop\ItemSearch\Factories
 Register extension to filter facets by minimum hit count.
 
 [source%nowrap, php]
+[#default]
 ----
 
 public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2328,6 +2410,7 @@ a|Available options
 
 
 [source%nowrap, php]
+[#setadminpreview]
 ----
 
 public setAdminPreview($isAdminPreview):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2353,6 +2436,7 @@ a|Set to true to enable preview.
 
 
 [source%nowrap, php]
+[#isactive]
 ----
 
 public isActive():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2368,6 +2452,7 @@ public isActive():Plenty\Modules\Webshop\ItemSearch\Factories
 Filter active variations
 
 [source%nowrap, php]
+[#isinactive]
 ----
 
 public isInactive():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2383,6 +2468,7 @@ public isInactive():Plenty\Modules\Webshop\ItemSearch\Factories
 Filter inactive variations
 
 [source%nowrap, php]
+[#hasitemid]
 ----
 
 public hasItemId($itemId):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2408,6 +2494,7 @@ a|Item id to filter by.
 
 
 [source%nowrap, php]
+[#hasitemids]
 ----
 
 public hasItemIds($itemIds):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2433,6 +2520,7 @@ a|List of item ids to filter by.
 
 
 [source%nowrap, php]
+[#hasvariationid]
 ----
 
 public hasVariationId($variationId):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2458,6 +2546,7 @@ a|The variation id to filter by.
 
 
 [source%nowrap, php]
+[#hasvariationids]
 ----
 
 public hasVariationIds($variationIds):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2483,6 +2572,7 @@ a|List of variation ids to filter by.
 
 
 [source%nowrap, php]
+[#hasatleastoneavailability]
 ----
 
 public hasAtLeastOneAvailability($availabilityIds):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2508,6 +2598,7 @@ a|List of availability ids to filter by.
 
 
 [source%nowrap, php]
+[#hassupplier]
 ----
 
 public hasSupplier($supplierId):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2533,6 +2624,7 @@ a|The supplier id to filter by.
 
 
 [source%nowrap, php]
+[#hasmanufacturer]
 ----
 
 public hasManufacturer($manufacturerId):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2558,6 +2650,7 @@ a|To filter by manufacturer
 
 
 [source%nowrap, php]
+[#haseachproperty]
 ----
 
 public hasEachProperty($propertyIds):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2583,6 +2676,7 @@ a|The property ids to filter by.
 
 
 [source%nowrap, php]
+[#ismain]
 ----
 
 public isMain():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2598,6 +2692,7 @@ public isMain():Plenty\Modules\Webshop\ItemSearch\Factories
 Filter only main variations
 
 [source%nowrap, php]
+[#ischild]
 ----
 
 public isChild():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2613,6 +2708,7 @@ public isChild():Plenty\Modules\Webshop\ItemSearch\Factories
 Filter only child variations
 
 [source%nowrap, php]
+[#ishiddenincategorylist]
 ----
 
 public isHiddenInCategoryList($isHidden = true):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2638,6 +2734,7 @@ a|Visibility in category list to filter by.
 
 
 [source%nowrap, php]
+[#issalable]
 ----
 
 public isSalable():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2653,6 +2750,7 @@ public isSalable():Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations by isSalable flag
 
 [source%nowrap, php]
+[#isvisibleforclient]
 ----
 
 public isVisibleForClient($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2678,6 +2776,7 @@ a|The client id to filter by. If null, default client id from config will be use
 
 
 [source%nowrap, php]
+[#hasnameinlanguage]
 ----
 
 public hasNameInLanguage($type = &quot;hasAnyNameInLanguage&quot;, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2707,6 +2806,7 @@ a|The language to filter by. If null, language defined in session will be used.
 
 
 [source%nowrap, php]
+[#isincategory]
 ----
 
 public isInCategory($categoryId):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2732,6 +2832,7 @@ a|A category id to filter variations by.
 
 
 [source%nowrap, php]
+[#hasatleastoneprice]
 ----
 
 public hasAtLeastOnePrice($priceIds):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2757,6 +2858,7 @@ a|List of price ids to filter variations by
 
 
 [source%nowrap, php]
+[#haspriceforcustomer]
 ----
 
 public hasPriceForCustomer():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2772,6 +2874,7 @@ public hasPriceForCustomer():Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations having at least one price accessible by current customer.
 
 [source%nowrap, php]
+[#haspriceinrange]
 ----
 
 public hasPriceInRange($priceMin, $priceMax):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2801,6 +2904,7 @@ a|
 
 
 [source%nowrap, php]
+[#hastag]
 ----
 
 public hasTag($tagId):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2826,6 +2930,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasanytag]
 ----
 
 public hasAnyTag($tagIds):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2851,6 +2956,7 @@ a|
 
 
 [source%nowrap, php]
+[#groupbytemplateconfig]
 ----
 
 public groupByTemplateConfig():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2866,6 +2972,7 @@ public groupByTemplateConfig():Plenty\Modules\Webshop\ItemSearch\Factories
 Group results depending on a config value.
 
 [source%nowrap, php]
+[#iscrosssellingitem]
 ----
 
 public isCrossSellingItem($itemId, $relation):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2895,6 +3002,7 @@ a|The relation of cross selling items.
 
 
 [source%nowrap, php]
+[#hasfacets]
 ----
 
 public hasFacets($facetValues, $clientId = null, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2928,6 +3036,7 @@ a|Language to filter facets by. If null, active language from session will be us
 
 
 [source%nowrap, php]
+[#hassearchstring]
 ----
 
 public hasSearchString($query, $lang = null, $a = &quot;&quot;, $b = &quot;&quot;):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2965,6 +3074,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasnamestring]
 ----
 
 public hasNameString($query, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -2994,6 +3104,7 @@ a|Language to apply search on. If null, default language from session will be us
 
 
 [source%nowrap, php]
+[#withlanguage]
 ----
 
 public withLanguage($lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3019,6 +3130,7 @@ a|Language to get texts for. If null, default language from session will be used
 
 
 [source%nowrap, php]
+[#withimages]
 ----
 
 public withImages($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3044,6 +3156,7 @@ a|The client id to get images for. If null, default client id from config will b
 
 
 [source%nowrap, php]
+[#withvariationattributemap]
 ----
 
 public withVariationAttributeMap($itemId, $initialVariationId, $afterKey = []):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3077,6 +3190,7 @@ a|
 
 
 [source%nowrap, php]
+[#withpropertygroups]
 ----
 
 public withPropertyGroups($displaySettings = []):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3102,6 +3216,7 @@ a|
 
 
 [source%nowrap, php]
+[#withorderpropertyselectionvalues]
 ----
 
 public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3117,6 +3232,7 @@ public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Fact
 
 
 [source%nowrap, php]
+[#withvariationproperties]
 ----
 
 public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3132,6 +3248,7 @@ public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withurls]
 ----
 
 public withUrls():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3147,6 +3264,7 @@ public withUrls():Plenty\Modules\Webshop\ItemSearch\Factories
 Append URLs to result.
 
 [source%nowrap, php]
+[#withprices]
 ----
 
 public withPrices($quantities = [], $setPriceOnly = false):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3176,6 +3294,7 @@ a|
 
 
 [source%nowrap, php]
+[#withcurrentcategory]
 ----
 
 public withCurrentCategory():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3191,6 +3310,7 @@ public withCurrentCategory():Plenty\Modules\Webshop\ItemSearch\Factories
 Set result as current category
 
 [source%nowrap, php]
+[#withdefaultimage]
 ----
 
 public withDefaultImage():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3206,6 +3326,7 @@ public withDefaultImage():Plenty\Modules\Webshop\ItemSearch\Factories
 Append default item image if images are requested by result fields and item does not have any image
 
 [source%nowrap, php]
+[#withbundlecomponents]
 ----
 
 public withBundleComponents():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3221,6 +3342,7 @@ public withBundleComponents():Plenty\Modules\Webshop\ItemSearch\Factories
 Add bundle component variations.
 
 [source%nowrap, php]
+[#withsetcomponents]
 ----
 
 public withSetComponents():void
@@ -3236,6 +3358,7 @@ public withSetComponents():void
 Add set component variations to item set entries.
 
 [source%nowrap, php]
+[#withlinktocontent]
 ----
 
 public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3251,6 +3374,7 @@ public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withgroupedattributevalues]
 ----
 
 public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3266,6 +3390,7 @@ public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withreducedresults]
 ----
 
 public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3281,6 +3406,7 @@ public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withavailability]
 ----
 
 public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3296,6 +3422,7 @@ public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withtags]
 ----
 
 public withTags():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3311,6 +3438,7 @@ public withTags():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withcategories]
 ----
 
 public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3326,6 +3454,7 @@ public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withsuggestions]
 ----
 
 public withSuggestions($query = &quot;&quot;, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3355,6 +3484,7 @@ a|
 
 
 [source%nowrap, php]
+[#withdidyoumeansuggestions]
 ----
 
 public withDidYouMeanSuggestions($query):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3380,6 +3510,7 @@ a|
 
 
 [source%nowrap, php]
+[#withsalablevariationcount]
 ----
 
 public withSalableVariationCount():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
@@ -3395,6 +3526,7 @@ public withSalableVariationCount():Plenty\Modules\Webshop\ItemSearch\Factories\V
 
 
 [source%nowrap, php]
+[#inherit]
 ----
 
 public inherit($inheritedProperties = []):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
@@ -3420,6 +3552,7 @@ a|List of properties to inherit or null to inherit all properties.
 
 
 [source%nowrap, php]
+[#withmutator]
 ----
 
 public withMutator($mutator, $excludeDependencies = false, $position = 1000):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3454,6 +3587,7 @@ a|Position of the mutator. Mutators are executed in the order of their positions
 
 
 [source%nowrap, php]
+[#createfilter]
 ----
 
 public createFilter($filterClass, $params = []):void
@@ -3483,6 +3617,7 @@ a|
 
 
 [source%nowrap, php]
+[#withfilter]
 ----
 
 public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3508,6 +3643,7 @@ a|
 
 
 [source%nowrap, php]
+[#withresultfields]
 ----
 
 public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3533,6 +3669,7 @@ a|Reference to a json file to load fields from or a list of field names.
 
 
 [source%nowrap, php]
+[#getresultfields]
 ----
 
 public getResultFields():array
@@ -3548,6 +3685,7 @@ public getResultFields():array
 Get the requested result fields for this search request.
 
 [source%nowrap, php]
+[#hasresultfield]
 ----
 
 public hasResultField($field):bool
@@ -3573,6 +3711,7 @@ a|The field to search for in result fields
 
 
 [source%nowrap, php]
+[#getadditionalresultfields]
 ----
 
 public getAdditionalResultFields():array
@@ -3588,6 +3727,7 @@ public getAdditionalResultFields():array
 Get additional result fields required by webshop mutators.
 
 [source%nowrap, php]
+[#withextension]
 ----
 
 public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3617,6 +3757,7 @@ a|Additional parameters to pass to extensions constructor
 
 
 [source%nowrap, php]
+[#getextensions]
 ----
 
 public getExtensions():array
@@ -3632,6 +3773,7 @@ public getExtensions():array
 Get all registered extensions
 
 [source%nowrap, php]
+[#getmutators]
 ----
 
 public getMutators():array
@@ -3647,6 +3789,7 @@ public getMutators():array
 Get all registered mutators
 
 [source%nowrap, php]
+[#withaggregation]
 ----
 
 public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3672,6 +3815,7 @@ a|
 
 
 [source%nowrap, php]
+[#withsuggestion]
 ----
 
 public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3697,6 +3841,7 @@ a|
 
 
 [source%nowrap, php]
+[#setpage]
 ----
 
 public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3726,6 +3871,7 @@ a|
 
 
 [source%nowrap, php]
+[#sortby]
 ----
 
 public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory::SORTING_ORDER_DESC):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3755,6 +3901,7 @@ a|Direction to order results. Possible values: 'asc' or 'desc'
 
 
 [source%nowrap, php]
+[#sortbymultiple]
 ----
 
 public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3780,6 +3927,7 @@ a|List of sorting parameters. Each entry should have a 'field' and an 'order' pr
 
 
 [source%nowrap, php]
+[#setorder]
 ----
 
 public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3805,6 +3953,7 @@ a|List of variation ids. Search results will be sorted in the same order.
 
 
 [source%nowrap, php]
+[#groupby]
 ----
 
 public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3853,6 +4002,7 @@ Prepare and build search requests to query variations
 ===== Methods
 
 [source%nowrap, php]
+[#default]
 ----
 
 public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3882,6 +4032,7 @@ a|Available options
 
 
 [source%nowrap, php]
+[#setadminpreview]
 ----
 
 public setAdminPreview($isAdminPreview):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3907,6 +4058,7 @@ a|Set to true to enable preview.
 
 
 [source%nowrap, php]
+[#isactive]
 ----
 
 public isActive():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3922,6 +4074,7 @@ public isActive():Plenty\Modules\Webshop\ItemSearch\Factories
 Filter active variations
 
 [source%nowrap, php]
+[#isinactive]
 ----
 
 public isInactive():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3937,6 +4090,7 @@ public isInactive():Plenty\Modules\Webshop\ItemSearch\Factories
 Filter inactive variations
 
 [source%nowrap, php]
+[#hasitemid]
 ----
 
 public hasItemId($itemId):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3962,6 +4116,7 @@ a|Item id to filter by.
 
 
 [source%nowrap, php]
+[#hasitemids]
 ----
 
 public hasItemIds($itemIds):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -3987,6 +4142,7 @@ a|List of item ids to filter by.
 
 
 [source%nowrap, php]
+[#hasvariationid]
 ----
 
 public hasVariationId($variationId):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4012,6 +4168,7 @@ a|The variation id to filter by.
 
 
 [source%nowrap, php]
+[#hasvariationids]
 ----
 
 public hasVariationIds($variationIds):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4037,6 +4194,7 @@ a|List of variation ids to filter by.
 
 
 [source%nowrap, php]
+[#hasatleastoneavailability]
 ----
 
 public hasAtLeastOneAvailability($availabilityIds):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4062,6 +4220,7 @@ a|List of availability ids to filter by.
 
 
 [source%nowrap, php]
+[#hassupplier]
 ----
 
 public hasSupplier($supplierId):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4087,6 +4246,7 @@ a|The supplier id to filter by.
 
 
 [source%nowrap, php]
+[#hasmanufacturer]
 ----
 
 public hasManufacturer($manufacturerId):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4112,6 +4272,7 @@ a|To filter by manufacturer
 
 
 [source%nowrap, php]
+[#haseachproperty]
 ----
 
 public hasEachProperty($propertyIds):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4137,6 +4298,7 @@ a|The property ids to filter by.
 
 
 [source%nowrap, php]
+[#ismain]
 ----
 
 public isMain():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4152,6 +4314,7 @@ public isMain():Plenty\Modules\Webshop\ItemSearch\Factories
 Filter only main variations
 
 [source%nowrap, php]
+[#ischild]
 ----
 
 public isChild():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4167,6 +4330,7 @@ public isChild():Plenty\Modules\Webshop\ItemSearch\Factories
 Filter only child variations
 
 [source%nowrap, php]
+[#ishiddenincategorylist]
 ----
 
 public isHiddenInCategoryList($isHidden = true):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4192,6 +4356,7 @@ a|Visibility in category list to filter by.
 
 
 [source%nowrap, php]
+[#issalable]
 ----
 
 public isSalable():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4207,6 +4372,7 @@ public isSalable():Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations by isSalable flag
 
 [source%nowrap, php]
+[#isvisibleforclient]
 ----
 
 public isVisibleForClient($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4232,6 +4398,7 @@ a|The client id to filter by. If null, default client id from config will be use
 
 
 [source%nowrap, php]
+[#hasnameinlanguage]
 ----
 
 public hasNameInLanguage($type = &quot;hasAnyNameInLanguage&quot;, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4261,6 +4428,7 @@ a|The language to filter by. If null, language defined in session will be used.
 
 
 [source%nowrap, php]
+[#isincategory]
 ----
 
 public isInCategory($categoryId):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4286,6 +4454,7 @@ a|A category id to filter variations by.
 
 
 [source%nowrap, php]
+[#hasatleastoneprice]
 ----
 
 public hasAtLeastOnePrice($priceIds):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4311,6 +4480,7 @@ a|List of price ids to filter variations by
 
 
 [source%nowrap, php]
+[#haspriceforcustomer]
 ----
 
 public hasPriceForCustomer():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4326,6 +4496,7 @@ public hasPriceForCustomer():Plenty\Modules\Webshop\ItemSearch\Factories
 Filter variations having at least one price accessible by current customer.
 
 [source%nowrap, php]
+[#haspriceinrange]
 ----
 
 public hasPriceInRange($priceMin, $priceMax):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4355,6 +4526,7 @@ a|
 
 
 [source%nowrap, php]
+[#hastag]
 ----
 
 public hasTag($tagId):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4380,6 +4552,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasanytag]
 ----
 
 public hasAnyTag($tagIds):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4405,6 +4578,7 @@ a|
 
 
 [source%nowrap, php]
+[#groupbytemplateconfig]
 ----
 
 public groupByTemplateConfig():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4420,6 +4594,7 @@ public groupByTemplateConfig():Plenty\Modules\Webshop\ItemSearch\Factories
 Group results depending on a config value.
 
 [source%nowrap, php]
+[#iscrosssellingitem]
 ----
 
 public isCrossSellingItem($itemId, $relation):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4449,6 +4624,7 @@ a|The relation of cross selling items.
 
 
 [source%nowrap, php]
+[#hasfacets]
 ----
 
 public hasFacets($facetValues, $clientId = null, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4482,6 +4658,7 @@ a|Language to filter facets by. If null, active language from session will be us
 
 
 [source%nowrap, php]
+[#hassearchstring]
 ----
 
 public hasSearchString($query, $lang = null, $a = &quot;&quot;, $b = &quot;&quot;):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4519,6 +4696,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasnamestring]
 ----
 
 public hasNameString($query, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4548,6 +4726,7 @@ a|Language to apply search on. If null, default language from session will be us
 
 
 [source%nowrap, php]
+[#withlanguage]
 ----
 
 public withLanguage($lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4573,6 +4752,7 @@ a|Language to get texts for. If null, default language from session will be used
 
 
 [source%nowrap, php]
+[#withimages]
 ----
 
 public withImages($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4598,6 +4778,7 @@ a|The client id to get images for. If null, default client id from config will b
 
 
 [source%nowrap, php]
+[#withvariationattributemap]
 ----
 
 public withVariationAttributeMap($itemId, $initialVariationId, $afterKey = []):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4631,6 +4812,7 @@ a|
 
 
 [source%nowrap, php]
+[#withpropertygroups]
 ----
 
 public withPropertyGroups($displaySettings = []):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4656,6 +4838,7 @@ a|
 
 
 [source%nowrap, php]
+[#withorderpropertyselectionvalues]
 ----
 
 public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4671,6 +4854,7 @@ public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Fact
 
 
 [source%nowrap, php]
+[#withvariationproperties]
 ----
 
 public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4686,6 +4870,7 @@ public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withurls]
 ----
 
 public withUrls():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4701,6 +4886,7 @@ public withUrls():Plenty\Modules\Webshop\ItemSearch\Factories
 Append URLs to result.
 
 [source%nowrap, php]
+[#withprices]
 ----
 
 public withPrices($quantities = [], $setPriceOnly = false):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4730,6 +4916,7 @@ a|
 
 
 [source%nowrap, php]
+[#withcurrentcategory]
 ----
 
 public withCurrentCategory():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4745,6 +4932,7 @@ public withCurrentCategory():Plenty\Modules\Webshop\ItemSearch\Factories
 Set result as current category
 
 [source%nowrap, php]
+[#withdefaultimage]
 ----
 
 public withDefaultImage():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4760,6 +4948,7 @@ public withDefaultImage():Plenty\Modules\Webshop\ItemSearch\Factories
 Append default item image if images are requested by result fields and item does not have any image
 
 [source%nowrap, php]
+[#withbundlecomponents]
 ----
 
 public withBundleComponents():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4775,6 +4964,7 @@ public withBundleComponents():Plenty\Modules\Webshop\ItemSearch\Factories
 Add bundle component variations.
 
 [source%nowrap, php]
+[#withsetcomponents]
 ----
 
 public withSetComponents():void
@@ -4790,6 +4980,7 @@ public withSetComponents():void
 Add set component variations to item set entries.
 
 [source%nowrap, php]
+[#withlinktocontent]
 ----
 
 public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4805,6 +4996,7 @@ public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withgroupedattributevalues]
 ----
 
 public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4820,6 +5012,7 @@ public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withreducedresults]
 ----
 
 public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4835,6 +5028,7 @@ public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withavailability]
 ----
 
 public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4850,6 +5044,7 @@ public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withtags]
 ----
 
 public withTags():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4865,6 +5060,7 @@ public withTags():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withcategories]
 ----
 
 public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4880,6 +5076,7 @@ public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 [source%nowrap, php]
+[#withsuggestions]
 ----
 
 public withSuggestions($query = &quot;&quot;, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4909,6 +5106,7 @@ a|
 
 
 [source%nowrap, php]
+[#withdidyoumeansuggestions]
 ----
 
 public withDidYouMeanSuggestions($query):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -4934,6 +5132,7 @@ a|
 
 
 [source%nowrap, php]
+[#withsalablevariationcount]
 ----
 
 public withSalableVariationCount():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
@@ -4949,6 +5148,7 @@ public withSalableVariationCount():Plenty\Modules\Webshop\ItemSearch\Factories\V
 
 
 [source%nowrap, php]
+[#inherit]
 ----
 
 public inherit($inheritedProperties = []):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
@@ -4974,6 +5174,7 @@ a|List of properties to inherit or null to inherit all properties.
 
 
 [source%nowrap, php]
+[#withmutator]
 ----
 
 public withMutator($mutator, $excludeDependencies = false, $position = 1000):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -5008,6 +5209,7 @@ a|Position of the mutator. Mutators are executed in the order of their positions
 
 
 [source%nowrap, php]
+[#createfilter]
 ----
 
 public createFilter($filterClass, $params = []):void
@@ -5037,6 +5239,7 @@ a|
 
 
 [source%nowrap, php]
+[#withfilter]
 ----
 
 public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -5062,6 +5265,7 @@ a|
 
 
 [source%nowrap, php]
+[#withresultfields]
 ----
 
 public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -5087,6 +5291,7 @@ a|Reference to a json file to load fields from or a list of field names.
 
 
 [source%nowrap, php]
+[#getresultfields]
 ----
 
 public getResultFields():array
@@ -5102,6 +5307,7 @@ public getResultFields():array
 Get the requested result fields for this search request.
 
 [source%nowrap, php]
+[#hasresultfield]
 ----
 
 public hasResultField($field):bool
@@ -5127,6 +5333,7 @@ a|The field to search for in result fields
 
 
 [source%nowrap, php]
+[#getadditionalresultfields]
 ----
 
 public getAdditionalResultFields():array
@@ -5142,6 +5349,7 @@ public getAdditionalResultFields():array
 Get additional result fields required by webshop mutators.
 
 [source%nowrap, php]
+[#withextension]
 ----
 
 public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -5171,6 +5379,7 @@ a|Additional parameters to pass to extensions constructor
 
 
 [source%nowrap, php]
+[#getextensions]
 ----
 
 public getExtensions():array
@@ -5186,6 +5395,7 @@ public getExtensions():array
 Get all registered extensions
 
 [source%nowrap, php]
+[#getmutators]
 ----
 
 public getMutators():array
@@ -5201,6 +5411,7 @@ public getMutators():array
 Get all registered mutators
 
 [source%nowrap, php]
+[#withaggregation]
 ----
 
 public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -5226,6 +5437,7 @@ a|
 
 
 [source%nowrap, php]
+[#withsuggestion]
 ----
 
 public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -5251,6 +5463,7 @@ a|
 
 
 [source%nowrap, php]
+[#setpage]
 ----
 
 public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -5280,6 +5493,7 @@ a|
 
 
 [source%nowrap, php]
+[#sortby]
 ----
 
 public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory::SORTING_ORDER_DESC):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -5309,6 +5523,7 @@ a|Direction to order results. Possible values: 'asc' or 'desc'
 
 
 [source%nowrap, php]
+[#sortbymultiple]
 ----
 
 public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -5334,6 +5549,7 @@ a|List of sorting parameters. Each entry should have a 'field' and an 'order' pr
 
 
 [source%nowrap, php]
+[#setorder]
 ----
 
 public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -5359,6 +5575,7 @@ a|List of variation ids. Search results will be sorted in the same order.
 
 
 [source%nowrap, php]
+[#groupby]
 ----
 
 public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factories
@@ -5408,6 +5625,7 @@ Container to collect facet extensions
 ===== Methods
 
 [source%nowrap, php]
+[#getfacetextensions]
 ----
 
 public getFacetExtensions():array
@@ -5423,6 +5641,7 @@ public getFacetExtensions():array
 Get all registered facet extensions.
 
 [source%nowrap, php]
+[#addfacetextension]
 ----
 
 public addFacetExtension($facetExtension):void
@@ -5467,6 +5686,7 @@ Collect templates to read required result fields for several views from.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public static get($template):string
@@ -5492,6 +5712,7 @@ a|The key of the template to get the path for.
 
 
 [source%nowrap, php]
+[#load]
 ----
 
 public static load($template):array
@@ -5517,6 +5738,7 @@ a|The key of the template to load file contents for.
 
 
 [source%nowrap, php]
+[#settemplate]
 ----
 
 public setTemplate($event, $template, $overwriteExistingData = true):void
@@ -5550,6 +5772,7 @@ a|Option to overwrite existing data
 
 
 [source%nowrap, php]
+[#settemplates]
 ----
 
 public setTemplates($templateMap, $overwriteExistingData = true):void
@@ -5579,6 +5802,7 @@ a|
 
 
 [source%nowrap, php]
+[#requirefields]
 ----
 
 public requireFields($event, $field = null):void
@@ -5629,6 +5853,7 @@ Helper class to convert sorting configuration values into internal sorting param
 ===== Methods
 
 [source%nowrap, php]
+[#getsorting]
 ----
 
 public getSorting($sortingConfig = null, $isCategory = true):array
@@ -5677,6 +5902,7 @@ a|Get default sorting configuration for category or for search
 
 
 [source%nowrap, php]
+[#getcategorysorting]
 ----
 
 public getCategorySorting($sortingConfig = null):array
@@ -5702,6 +5928,7 @@ a|The configuration value
 
 
 [source%nowrap, php]
+[#getsearchsorting]
 ----
 
 public getSearchSorting($sortingConfig = null):array
@@ -5727,6 +5954,7 @@ a|The configuration value
 
 
 [source%nowrap, php]
+[#getuseditemname]
 ----
 
 public getUsedItemName():string
@@ -5742,6 +5970,7 @@ public getUsedItemName():string
 Get the result field for the name to be displayed in the webshop.
 
 [source%nowrap, php]
+[#splitpathandorder]
 ----
 
 public splitPathAndOrder($sorting):array
@@ -5767,6 +5996,7 @@ a|Sorting configuration value, e.g. text.name_asc
 
 
 [source%nowrap, php]
+[#maptoinnersorting]
 ----
 
 public mapToInnerSorting($sorting):string
@@ -5792,6 +6022,7 @@ a|The sorting of the item list to get the inner sorting value for.
 
 
 [source%nowrap, php]
+[#islanguagesupported]
 ----
 
 public static isLanguageSupported($lang):bool
@@ -5817,6 +6048,7 @@ a|
 
 
 [source%nowrap, php]
+[#islanguageactivated]
 ----
 
 public static isLanguageActivated($lang):bool
@@ -5842,6 +6074,7 @@ a|
 
 
 [source%nowrap, php]
+[#getm10lbylanguage]
 ----
 
 public static getM10lByLanguage($lang, $fallback = &quot;en&quot;):string
@@ -5871,6 +6104,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlanguagebym10l]
 ----
 
 public static getLanguageByM10l($lang, $fallback = &quot;english&quot;):string
@@ -5920,6 +6154,7 @@ Query basket items.
 ===== Methods
 
 [source%nowrap, php]
+[#getsearchfactory]
 ----
 
 public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
@@ -5969,6 +6204,7 @@ Query items for a single category
 ===== Methods
 
 [source%nowrap, php]
+[#getsearchfactory]
 ----
 
 public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
@@ -6022,6 +6258,7 @@ Query cross selling items related to single item.
 ===== Methods
 
 [source%nowrap, php]
+[#getsearchfactory]
 ----
 
 public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
@@ -6071,6 +6308,7 @@ Query facets for the item search of the webstore.
 ===== Methods
 
 [source%nowrap, php]
+[#getsearchfactory]
 ----
 
 public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Factories\FacetSearchFactory
@@ -6121,6 +6359,7 @@ Query live shopping items.
 ===== Methods
 
 [source%nowrap, php]
+[#getsearchfactory]
 ----
 
 public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
@@ -6171,6 +6410,7 @@ Query items by manufacturer.
 ===== Methods
 
 [source%nowrap, php]
+[#getsearchfactory]
 ----
 
 public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
@@ -6221,6 +6461,7 @@ Query items from the item search of the webstore.
 ===== Methods
 
 [source%nowrap, php]
+[#getsearchfactory]
 ----
 
 public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
@@ -6276,6 +6517,7 @@ Define a preset of search request parameters to be reused for common search requ
 ===== Methods
 
 [source%nowrap, php]
+[#getsearchfactory]
 ----
 
 public static getSearchFactory($options):void
@@ -6320,6 +6562,7 @@ Query items to display search suggestions
 ===== Methods
 
 [source%nowrap, php]
+[#getsearchfactory]
 ----
 
 public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
@@ -6368,6 +6611,7 @@ Get item to be displayed on single item pages
 ===== Methods
 
 [source%nowrap, php]
+[#getsearchfactory]
 ----
 
 public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
@@ -6417,6 +6661,7 @@ Query items by tag id.
 ===== Methods
 
 [source%nowrap, php]
+[#getsearchfactory]
 ----
 
 public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
@@ -6466,6 +6711,7 @@ Append list of all variations for attribute selection in item views
 ===== Methods
 
 [source%nowrap, php]
+[#getsearchfactory]
 ----
 
 public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
@@ -6515,6 +6761,7 @@ Search for variation lists
 ===== Methods
 
 [source%nowrap, php]
+[#getsearchfactory]
 ----
 
 public static getSearchFactory($options):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
@@ -6569,6 +6816,7 @@ Execute item searches using the variation data interface
 ===== Methods
 
 [source%nowrap, php]
+[#getresults]
 ----
 
 public getResults($searches):array
@@ -6594,6 +6842,7 @@ a|Associative array of search factories to execute. Result of each search reques
 
 
 [source%nowrap, php]
+[#getresult]
 ----
 
 public getResult($searchFactory):array
@@ -6642,6 +6891,7 @@ Create orders from the webshop
 ===== Methods
 
 [source%nowrap, php]
+[#placeorder]
 ----
 
 public placeOrder():Plenty\Modules\Order\Models\Order
@@ -6657,6 +6907,7 @@ public placeOrder():Plenty\Modules\Order\Models\Order
 Generate order data from current basket and place the order.
 
 [source%nowrap, php]
+[#createreturnorder]
 ----
 
 public createReturnOrder($returnOrderData, $orderId = null):Plenty\Modules\Order\Models\Order
@@ -6709,6 +6960,7 @@ Repository to read or write content of the robots.txt
 ===== Methods
 
 [source%nowrap, php]
+[#findbywebstoreid]
 ----
 
 public findByWebstoreId($webstoreId):Plenty\Modules\Webshop\Seo\Models\Robots
@@ -6734,6 +6986,7 @@ a|Id of the webstore to get the robots.txt for.
 
 
 [source%nowrap, php]
+[#updatebywebstoreid]
 ----
 
 public updateByWebstoreId($webstoreId, $data):Plenty\Modules\Webshop\Seo\Models\Robots
@@ -6782,6 +7035,7 @@ Repository for sitemap configuration
 ===== Methods
 
 [source%nowrap, php]
+[#findbywebstoreid]
 ----
 
 public findByWebstoreId($webstoreId):Plenty\Modules\Webshop\Seo\Models\SitemapConfiguration
@@ -6807,6 +7061,7 @@ a|Id of the webstore to get sitemap configuration for.
 
 
 [source%nowrap, php]
+[#updatebywebstoreid]
 ----
 
 public updateByWebstoreId($webstoreId, $data = []):Plenty\Modules\Webshop\Seo\Models\SitemapConfiguration
@@ -6866,6 +7121,7 @@ Model for the configured content of the robots.txt
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -6919,6 +7175,7 @@ The sitemap configuration model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -6957,6 +7214,7 @@ Set configuration values from the plugin to be considered in internal functions.
 ===== Methods
 
 [source%nowrap, php]
+[#registerconfigvalue]
 ----
 
 public registerConfigValue($key, $value):Plenty\Modules\Webshop\Template\Contracts\TemplateConfigRepositoryContract
@@ -7024,6 +7282,7 @@ Service provider for template plugins
 ===== Methods
 
 [source%nowrap, php]
+[#overridetemplate]
 ----
 
 public overrideTemplate($original, $override):void
@@ -7053,6 +7312,7 @@ a|
 
 
 [source%nowrap, php]
+[#addtemplatealias]
 ----
 
 public addTemplateAlias($original, $alias):void
