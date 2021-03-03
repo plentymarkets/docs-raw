@@ -437,25 +437,24 @@ The model of the order.
 |typeId
     |link:http://php.net/int[int^]
     a|The ID of the order type
-                                                              It is possible to define individual order types. However,
-                                                              the following types are available by default:
-<ul>
-    <li>1 = Sales order</li>
-    <li>2 = Delivery</li>
-    <li>3 = Returns</li>
-    <li>4 = Credit note</li>
-    <li>5 = Warranty</li>
-    <li>6 = Repair</li>
-    <li>7 = Offer</li>
-    <li>8 = Advance order</li>
-    <li>9 = Multi-order</li>
-    <li>10 = Multi credit note</li>
-    <li>11 = Multi delivery</li>
-    <li>12 = Reorder</li>
-    <li>13 = Partial delivery</li>
-    <li>14 = Subscription</li>
-    <li>15 = Redistribution</li>
-</ul>
+                                                          It is possible to define individual order types. However,
+                                                          the following types are available by default:
+
+* 1 = Sales order
+* 2 = Delivery
+* 3 = Returns
+* 4 = Credit note
+* 5 = Warranty
+* 6 = Repair
+* 7 = Offer
+* 8 = Advance order
+* 9 = Multi-order
+* 10 = Multi credit note
+* 11 = Multi delivery
+* 12 = Reorder
+* 13 = Partial delivery
+* 14 = Subscription
+* 15 = Redistribution
 |methodOfPaymentId
     |link:http://php.net/int[int^]
     a|The ID of the order's payment method (read only)
@@ -498,11 +497,10 @@ The model of the order.
 |lockStatus
     |link:http://php.net/string[string^]
     a|The lock status of the order. The following statuses are available:
-<ul>
- <li>unlocked</li>
- <li>permanentlyLocked</li>
- <li>reversibleLocked</li>
-</ul>
+
+* unlocked
+* permanentlyLocked
+* reversibleLocked
 |hasTaxRelevantDocuments
     |link:http://php.net/bool[bool^]
     a|
@@ -566,12 +564,11 @@ The model of the order.
 |dates
     |
     a|The dates of the order. Can contain many different dates with their types like:
-<ul>
-<li>1 = Delete date</li>
-<li>2 = Entry date</li>
-<li>3 = Payment date</li>
-<li>4 = Delivery date</li>
-</ul>
+
+* 1 = Delete date
+* 2 = Entry date
+* 3 = Payment date
+* 4 = Delivery date
 |originOrder
     |        xref:Order.adoc#order_models_order[`Order`]
     a|The origin order of this order. If this order is the origin, this attribute is null. (deprecated)
@@ -841,22 +838,21 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 |typeId
     |link:http://php.net/int[int^]
     a|The ID of the order item type
-<ul>
-<li>VARIATION			=	1</li>
-<li>ITEM_BUNDLE			=	2</li>
-<li>BUNDLE_COMPONENT		=	3</li>
-<li>PROMOTIONAL_COUPON	=	4</li>
-<li>GIFT_CARD			=	5</li>
-<li>SHIPPING_COSTS		=	6</li>
-<li>PAYMENT_SURCHARGE	=	7</li>
-<li>GIFT_WRAP			=	8</li>
-<li>UNASSIGEND_VARIATION	=	9</li>
-<li>DEPOSIT				=	10</li>
-<li>ORDER				=	11</li>
-<li>DUNNING_CHARGE		=   12</li>
-<li>ITEM_SET		        =   13</li>
-<li>SET_COMPONENT		=   14</li>
-</ul>
+
+* VARIATION			=	1
+* ITEM_BUNDLE			=	2
+* BUNDLE_COMPONENT		=	3
+* PROMOTIONAL_COUPON	=	4
+* GIFT_CARD			=	5
+* SHIPPING_COSTS		=	6
+* PAYMENT_SURCHARGE	=	7
+* GIFT_WRAP			=	8
+* UNASSIGEND_VARIATION	=	9
+* DEPOSIT				=	10
+* ORDER				=	11
+* DUNNING_CHARGE		=   12
+* ITEM_SET		        =   13
+* SET_COMPONENT		=   14
 |referrerId
     |link:http://php.net/float[float^]
     a|The ID of order item referrer
@@ -929,20 +925,19 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 |dates
     |
     a|The dates of the order item. Can contain many different dates with their types. The following types are currently available:
-<ul>
-<li>Deleted on = 1</li>
-<li>Created on = 2</li>
-<li>Paid date = 3</li>
-<li>Last update = 4</li>
-<li>Completed on = 5</li>
-<li>Return date = 6</li>
-<li>Payment due date = 7</li>
-<li>Estimated shipping date = 8</li>
-<li>Start date = 9</li>
-<li>End date = 10</li>
-<li>Possible delivery date = 11</li>
-<li>Market transfer date = 12</li>
-</ul>
+
+* Deleted on = 1
+* Created on = 2
+* Paid date = 3
+* Last update = 4
+* Completed on = 5
+* Return date = 6
+* Payment due date = 7
+* Estimated shipping date = 8
+* Start date = 9
+* End date = 10
+* Possible delivery date = 11
+* Market transfer date = 12
 |references
     |
     a|The order item references.
@@ -1243,19 +1238,18 @@ The order item type model.
 |id
     |link:http://php.net/int[int^]
     a|The ID of the order item type. The following types are currently available: <br />
-<ul>
-<li>VARIATION			=	1</li>
-<li>ITEM_BUNDLE			=	2</li>
-<li>BUNDLE_COMPONENT		=	3</li>
-<li>PROMOTIONAL_COUPON	=	4</li>
-<li>GIFT_CARD			=	5</li>
-<li>SHIPPING_COSTS		=	6</li>
-<li>PAYMENT_SURCHARGE	=	7</li>
-<li>GIFT_WRAP			=	8</li>
-<li>UNASSIGEND_VARIATION	=	9</li>
-<li>DEPOSIT				=	10</li>
-<li>ORDER				=	11</li>
-</ul>
+
+* VARIATION			=	1
+* ITEM_BUNDLE			=	2
+* BUNDLE_COMPONENT		=	3
+* PROMOTIONAL_COUPON	=	4
+* GIFT_CARD			=	5
+* SHIPPING_COSTS		=	6
+* PAYMENT_SURCHARGE	=	7
+* GIFT_WRAP			=	8
+* UNASSIGEND_VARIATION	=	9
+* DEPOSIT				=	10
+* ORDER				=	11
 |isErasable
     |link:http://php.net/bool[bool^]
     a|Flag that indicates if this type can be deleted or not
@@ -15043,15 +15037,13 @@ a|`$typeId`
 |link:http://php.net/int[int^]
 a|[optional] The ID of the address type. The default ID is 1 for billing address. The types available are:
 
-<ul>
-<li>Billing address = 1</li>
-<li>Delivery address = 2</li>
-<li>Sender address = 3</li>
-<li>Return address = 4</li>
-<li>Client address = 5</li>
-<li>Contractor address = 6</li>
-<li>Warehouse address = 7</li>
-</ul>
+* Billing address = 1
+* Delivery address = 2
+* Sender address = 3
+* Return address = 4
+* Client address = 5
+* Contractor address = 6
+* Warehouse address = 7
 |===
 
 
@@ -15091,15 +15083,13 @@ a|`$typeId`
 |link:http://php.net/int[int^]
 a|The ID of the address type. The types available are:
 
-<ul>
-<li>Billing address = 1</li>
-<li>Delivery address = 2</li>
-<li>Sender address = 3</li>
-<li>Return address = 4</li>
-<li>Client address = 5</li>
-<li>Contractor address = 6</li>
-<li>Warehouse address = 7</li>
-</ul>
+* Billing address = 1
+* Delivery address = 2
+* Sender address = 3
+* Return address = 4
+* Client address = 5
+* Contractor address = 6
+* Warehouse address = 7
 |===
 
 
@@ -15191,15 +15181,13 @@ a|`$typeId`
 |link:http://php.net/int[int^]
 a|The ID of the address type. The types available are:
 
-<ul>
-<li>Billing address = 1</li>
-<li>Delivery address = 2</li>
-<li>Sender address = 3</li>
-<li>Return address = 4</li>
-<li>Client address = 5</li>
-<li>Contractor address = 6</li>
-<li>Warehouse address = 7</li>
-</ul>
+* Billing address = 1
+* Delivery address = 2
+* Sender address = 3
+* Return address = 4
+* Client address = 5
+* Contractor address = 6
+* Warehouse address = 7
 |===
 
 
@@ -15235,15 +15223,13 @@ a|`$typeId`
 |link:http://php.net/int[int^]
 a|The ID of the address type. The types available are:
 
-<ul>
-<li>Billing address = 1</li>
-<li>Delivery address = 2</li>
-<li>Sender address = 3</li>
-<li>Return address = 4</li>
-<li>Client address = 5</li>
-<li>Contractor address = 6</li>
-<li>Warehouse address = 7</li>
-</ul>
+* Billing address = 1
+* Delivery address = 2
+* Sender address = 3
+* Return address = 4
+* Client address = 5
+* Contractor address = 6
+* Warehouse address = 7
 |===
 
 
@@ -15279,15 +15265,13 @@ a|`$typeId`
 |link:http://php.net/int[int^]
 a|The ID of the address type. The types available are:
 
-<ul>
-<li>Billing address = 1</li>
-<li>Delivery address = 2</li>
-<li>Sender address = 3</li>
-<li>Return address = 4</li>
-<li>Client address = 5</li>
-<li>Contractor address = 6</li>
-<li>Warehouse address = 7</li>
-</ul>
+* Billing address = 1
+* Delivery address = 2
+* Sender address = 3
+* Return address = 4
+* Client address = 5
+* Contractor address = 6
+* Warehouse address = 7
 |===
 
 
@@ -15323,15 +15307,13 @@ a|`$typeId`
 |link:http://php.net/int[int^]
 a|The ID of the address type. The types available are:
 
-<ul>
-<li>Billing address = 1</li>
-<li>Delivery address = 2</li>
-<li>Sender address = 3</li>
-<li>Return address = 4</li>
-<li>Client address = 5</li>
-<li>Contractor address = 6</li>
-<li>Warehouse address = 7</li>
-</ul>
+* Billing address = 1
+* Delivery address = 2
+* Sender address = 3
+* Return address = 4
+* Client address = 5
+* Contractor address = 6
+* Warehouse address = 7
 |===
 
 
@@ -15367,15 +15349,13 @@ a|`$typeId`
 |link:http://php.net/int[int^]
 a|The ID of the address type. The types available are:
 
-<ul>
-<li>Billing address = 1</li>
-<li>Delivery address = 2</li>
-<li>Sender address = 3</li>
-<li>Return address = 4</li>
-<li>Client address = 5</li>
-<li>Contractor address = 6</li>
-<li>Warehouse address = 7</li>
-</ul>
+* Billing address = 1
+* Delivery address = 2
+* Sender address = 3
+* Return address = 4
+* Client address = 5
+* Contractor address = 6
+* Warehouse address = 7
 |===
 
 
@@ -16333,25 +16313,24 @@ The OrderDate model.
 |typeId
     |link:http://php.net/int[int^]
     a|The ID of the date type. The following types are available:
-<ul>
-<li>Deleted on = 1</li>
-<li>Created on = 2</li>
-<li>Paid date = 3</li>
-<li>Last update = 4</li>
-<li>Completed date = 5</li>
-<li>Return date = 6</li>
-<li>Payment due date = 7</li>
-<li>Estimated shipping date = 8</li>
-<li>Start date = 9</li>
-<li>End date = 10</li>
-<li>Estimated delivery date = 11</li>
-<li>Market transfer date = 12</li>
-<li>Subscription cancelled on = 13</li>
-<li>Subscription last run = 14</li>
-<li>Subscription next run = 15</li>
-<li>Purchase date = 16</li>
-<li>Finish date = 17</li>
-</ul>
+
+* Deleted on = 1
+* Created on = 2
+* Paid date = 3
+* Last update = 4
+* Completed date = 5
+* Return date = 6
+* Payment due date = 7
+* Estimated shipping date = 8
+* Start date = 9
+* End date = 10
+* Estimated delivery date = 11
+* Market transfer date = 12
+* Subscription cancelled on = 13
+* Subscription last run = 14
+* Subscription next run = 15
+* Purchase date = 16
+* Finish date = 17
 |date
     |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
     a|The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
@@ -16409,23 +16388,22 @@ The OrderDateType model.
 |id
     |link:http://php.net/int[int^]
     a|The ID of the order date type. The following date types are available:
-<ul>
-<li>Deleted on = 1</li>
-<li>Created on = 2</li>
-<li>Paid date = 3</li>
-<li>Last update = 4</li>
-<li>Completed on = 5</li>
-<li>Return date = 6</li>
-<li>Payment due date = 7</li>
-<li>Estimated shipping date = 8</li>
-<li>Start date = 9</li>
-<li>End date = 10</li>
-<li>Possible delivery date = 11</li>
-<li>Market transfer date = 12</li>
-<li>Subscription cancelled on = 13</li>
-<li>Subscription last run = 14</li>
-<li>Subscription next run = 15</li>
-</ul>
+
+* Deleted on = 1
+* Created on = 2
+* Paid date = 3
+* Last update = 4
+* Completed on = 5
+* Return date = 6
+* Payment due date = 7
+* Estimated shipping date = 8
+* Start date = 9
+* End date = 10
+* Possible delivery date = 11
+* Market transfer date = 12
+* Subscription cancelled on = 13
+* Subscription last run = 14
+* Subscription next run = 15
 |isErasable
     |link:http://php.net/bool[bool^]
     a|Flag that indicates if this type can be deleted or not.
@@ -16486,20 +16464,19 @@ The OrderDateTypeName model. Order date types can have several names. One name p
 |typeId
     |link:http://php.net/int[int^]
     a|The ID of the date type that this name belongs to. The following date types are available:
-<ul>
-<li>Deleted on = 1</li>
-<li>Created on = 2</li>
-<li>Paid date = 3</li>
-<li>Last update = 4</li>
-<li>Completed on = 5</li>
-<li>Return date = 6</li>
-<li>Payment due date = 7</li>
-<li>Estimated shipping date = 8</li>
-<li>Start date = 9</li>
-<li>End date = 10</li>
-<li>Possible delivery date = 11</li>
-<li>Market transfer date = 12</li>
-</ul>
+
+* Deleted on = 1
+* Created on = 2
+* Paid date = 3
+* Last update = 4
+* Completed on = 5
+* Return date = 6
+* Payment due date = 7
+* Estimated shipping date = 8
+* Start date = 9
+* End date = 10
+* Possible delivery date = 11
+* Market transfer date = 12
 |lang
     |link:http://php.net/string[string^]
     a|The ISO 639-1 language code for the name, e.g. "en" for English
@@ -16560,11 +16537,10 @@ The OrderItemDate model.
 |typeId
     |link:http://php.net/int[int^]
     a|The ID of the date type. The following types are available:
-<ul>
-<li>Start date = 9</li>
-<li>End date = 10</li>
-<li>Estimated delivery date = 11</li>
-</ul>
+
+* Start date = 9
+* End date = 10
+* Estimated delivery date = 11
 |date
     |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
     a|The date plus hours, minutes and seconds. The date format must comply with the W3C standard.
@@ -16577,20 +16553,19 @@ The OrderItemDate model.
 |type
     |        xref:Order.adoc#order_models_orderdatetype[`OrderDateType`]
     a|The type of the date.  The following date types are available:
-<ul>
-<li>Deleted on = 1</li>
-<li>Created on = 2</li>
-<li>Paid date = 3</li>
-<li>Last update = 4</li>
-<li>Completed on = 5</li>
-<li>Return date = 6</li>
-<li>Payment due date = 7</li>
-<li>Estimated shipping date = 8</li>
-<li>Start date = 9</li>
-<li>End date = 10</li>
-<li>Possible delivery date = 11</li>
-<li>Market transfer date = 12</li>
-</ul>
+
+* Deleted on = 1
+* Created on = 2
+* Paid date = 3
+* Last update = 4
+* Completed on = 5
+* Return date = 6
+* Payment due date = 7
+* Estimated shipping date = 8
+* Start date = 9
+* End date = 10
+* Possible delivery date = 11
+* Market transfer date = 12
 |orderItem
     |        xref:Order.adoc#order_models_orderitem[`OrderItem`]
     a|The order item the date belongs to.
@@ -19153,40 +19128,39 @@ The order item property model.
 |typeId
     |link:http://php.net/int[int^]
     a|The ID of the property type.
-<ul>
-<li>WAREHOUSE		              =	1</li>
-<li>SHIPPING_PROFILE	              =	2</li>
-<li>PAYMENT_METHOD	              =	3</li>
-<li>WEIGHT			              =	11</li>
-<li>WIDTH			              =	12</li>
-<li>LENGTH		                  =	13</li>
-<li>HEIGHT	      		          = 14</li>
-<li>EXTERNAL_TOKEN_ID              =	16</li>
-<li>EXTERNAL_ITEM_ID               =	17</li>
-<li>COUPON_CODE	      	          =	18</li>
-<li>COUPON_TYPE		              =	19</li>
-<li>ORIGINAL_WAREHOUSE	          =	20</li>
-<li>ORIGINAL_QUANTITY              =	21</li>
-<li>CATEGORY_ID                    = 22</li>
-<li>MARKET_FEE		              =	23</li>
-<li>STOCK_REVERSING	              =	24</li>
-<li>DISPUTE_STATUS      	          =	25</li>
-<li>NO_CHANGE_BY_CONTACT           = 26</li>
-<li>SIZE 			              =	29</li>
-<li>LOCATION_RESERVED	          =	30</li>
-<li>EXTERNAL_SHIPMENT_ITEM_ID      =	31</li>
-<li>PARTIAL_SHIPPING_COSTS         =	32</li>
-<li>MAIN_DOCUMENT_NUMBER           =	33</li>
-<li>SALES_TAX_ID_NUMBER            =	34</li>
-<li>RETURNS_REASON                 =	35</li>
-<li>RETURNS_ITEM_STATUS            =	36</li>
-<li>FULFILLMENT_CENTER_ID          = 37</li>
-<li>FULFILLMENT_CENTER_COUNTRY_ISO = 38</li>
-<li>REORDER_ITEM_ID                = 39</li>
-<li>LISTING_TYPE                   = 40</li>
-<li>SOLD_COUPON_CODE               = 46</li>
-<li>ORDER_ITEM_STATE               = 48</li>
-</ul>
+
+* WAREHOUSE		              =	1
+* SHIPPING_PROFILE	              =	2
+* PAYMENT_METHOD	              =	3
+* WEIGHT			              =	11
+* WIDTH			              =	12
+* LENGTH		                  =	13
+* HEIGHT	      		          = 14
+* EXTERNAL_TOKEN_ID              =	16
+* EXTERNAL_ITEM_ID               =	17
+* COUPON_CODE	      	          =	18
+* COUPON_TYPE		              =	19
+* ORIGINAL_WAREHOUSE	          =	20
+* ORIGINAL_QUANTITY              =	21
+* CATEGORY_ID                    = 22
+* MARKET_FEE		              =	23
+* STOCK_REVERSING	              =	24
+* DISPUTE_STATUS      	          =	25
+* NO_CHANGE_BY_CONTACT           = 26
+* SIZE 			              =	29
+* LOCATION_RESERVED	          =	30
+* EXTERNAL_SHIPMENT_ITEM_ID      =	31
+* PARTIAL_SHIPPING_COSTS         =	32
+* MAIN_DOCUMENT_NUMBER           =	33
+* SALES_TAX_ID_NUMBER            =	34
+* RETURNS_REASON                 =	35
+* RETURNS_ITEM_STATUS            =	36
+* FULFILLMENT_CENTER_ID          = 37
+* FULFILLMENT_CENTER_COUNTRY_ISO = 38
+* REORDER_ITEM_ID                = 39
+* LISTING_TYPE                   = 40
+* SOLD_COUPON_CODE               = 46
+* ORDER_ITEM_STATE               = 48
 |value
     |link:http://php.net/string[string^]
     a|The value of the property. The value depends on type.
@@ -19253,37 +19227,36 @@ The order properties model. Each order property has a type.
 |typeId
     |link:http://php.net/int[int^]
     a|The ID of the property type. The following types are available:
-<ul>
-  <li>WAREHOUSE		=	1</li>
-  <li>SHIPPING_PROFILE	=	2</li>
-  <li>PAYMENT_METHOD			=	3</li>
-  <li>PAYMENT_STATUS			=	4</li>
-  <li>EXTERNAL_SHIPPING_PROFILE			=	5</li>
-  <li>DOCUMENT_LANGUAGE			=	6</li>
-  <li>EXTERNAL_ORDER_ID			=	7</li>
-  <li>CUSTOMER_SIGN			=	8</li>
-  <li>DUNNING_LEVEL			=	9</li>
-  <li>SELLER_ACCOUNT			=	10</li>
-  <li>WEIGHT			=	11</li>
-  <li>WIDTH			=	12</li>
-  <li>LENGTH          =	13</li>
-  <li>HEIGHT		=	14</li>
-  <li>FLAG			=	15</li>
-  <li>EXTERNAL_TOKEN_ID			=	16</li>
-  <li>EXTERNAL_ITEM_ID			=	17</li>
-  <li>COUPON_CODE			=	18</li>
-  <li>COUPON_TYPE         =   19</li>
-  <li>SALES_TAX_ID_NUMBER =   34</li>
-  <li>MAIN_DOCUMENT_NUMBER = 33</li>
-  <li>PAYMENT_TRANSACTION_ID = 45</li>
-  <li>EXTERNAL_TAX_SERVICE = 47</li>
-  <li>MERCHANT_ID = 60</li>
-  <li>REPORT_ID = 61</li>
-  <li>PREFERRED_STORAGE_LOCATION_ID = 63</li>
-  <li>AMAZON_SHIPPING_LABEL = 64</li>
-  <li>EBAY_PLUS = 994</li>
-  <li>FULFILLMENT_SERVICE = 995</li>
-</ul>
+
+* WAREHOUSE		=	1
+* SHIPPING_PROFILE	=	2
+* PAYMENT_METHOD			=	3
+* PAYMENT_STATUS			=	4
+* EXTERNAL_SHIPPING_PROFILE			=	5
+* DOCUMENT_LANGUAGE			=	6
+* EXTERNAL_ORDER_ID			=	7
+* CUSTOMER_SIGN			=	8
+* DUNNING_LEVEL			=	9
+* SELLER_ACCOUNT			=	10
+* WEIGHT			=	11
+* WIDTH			=	12
+* LENGTH          =	13
+* HEIGHT		=	14
+* FLAG			=	15
+* EXTERNAL_TOKEN_ID			=	16
+* EXTERNAL_ITEM_ID			=	17
+* COUPON_CODE			=	18
+* COUPON_TYPE         =   19
+* SALES_TAX_ID_NUMBER =   34
+* MAIN_DOCUMENT_NUMBER = 33
+* PAYMENT_TRANSACTION_ID = 45
+* EXTERNAL_TAX_SERVICE = 47
+* MERCHANT_ID = 60
+* REPORT_ID = 61
+* PREFERRED_STORAGE_LOCATION_ID = 63
+* AMAZON_SHIPPING_LABEL = 64
+* EBAY_PLUS = 994
+* FULFILLMENT_SERVICE = 995
 |value
     |link:http://php.net/string[string^]
     a|The value of the property. The value depends on the type.
@@ -19353,13 +19326,12 @@ The OrderPropertyType model. Each order property must have a property type. An o
 |cast
     |link:http://php.net/string[string^]
     a|The data type of the values of this property type. Valid types are:
-<ul>
-	<li>string</li>
-	<li>int</li>
-	<li>numeric</li>
-	<li>bool</li>
-	<li>enum(val1,val2,val3,...)</li>
-</ul>
+
+* string
+* int
+* numeric
+* bool
+* enum(val1,val2,val3,...)
 |names
     |link:http://php.net/array[array^]
     a|The names of the order property types.
@@ -19678,19 +19650,17 @@ a|The ID of the order
 a|`$referenceType`
 |link:http://php.net/string[string^]
 a|The reference type. Valid types are:
-<ul>
-	<li>contact</li>
-	<li>warehouse</li>
-	<li>account</li>
-</ul>
+
+* contact
+* warehouse
+* account
 
 a|`$relation`
 |link:http://php.net/string[string^]
 a|The relation. Valid relations are:
-<ul>
-	<li>sender</li>
-	<li>receiver</li>
-</ul>
+
+* sender
+* receiver
 |===
 
 
@@ -19743,13 +19713,12 @@ List relation references by any values
 a|`$values`
 |link:http://php.net/array[array^]
 a|The array with the given filter values. E.g. ['referenceType' => 'contact']. Valid filters are:
-<ul>
-	<li>id</li>
-	<li>orderId</li>
-	<li>referenceType</li>
-	<li>referenceId</li>
-	<li>relation</li>
-</ul>
+
+* id
+* orderId
+* referenceType
+* referenceId
+* relation
 
 a|`$page`
 |link:http://php.net/int[int^]
@@ -19844,19 +19813,17 @@ a|The ID of the order
 a|`$referenceType`
 |link:http://php.net/string[string^]
 a|The reference type. Valid types are:
-<ul>
-	<li>contact</li>
-	<li>warehouse</li>
-	<li>account</li>
-</ul>
+
+* contact
+* warehouse
+* account
 
 a|`$relation`
 |link:http://php.net/string[string^]
 a|The relation. Valid relations are:
-<ul>
-	<li>sender</li>
-	<li>receiver</li>
-</ul>
+
+* sender
+* receiver
 
 a|`$data`
 |link:http://php.net/array[array^]
@@ -19917,19 +19884,17 @@ a|The ID of the order
 a|`$referenceType`
 |link:http://php.net/string[string^]
 a|The reference type. Valid types are:
-<ul>
-	<li>contact</li>
-	<li>warehouse</li>
-	<li>account</li>
-</ul>
+
+* contact
+* warehouse
+* account
 
 a|`$relation`
 |link:http://php.net/string[string^]
 a|The relation. Valid relations are:
-<ul>
-	<li>sender</li>
-	<li>receiver</li>
-</ul>
+
+* sender
+* receiver
 |===
 
 
@@ -19965,11 +19930,10 @@ The order relation reference model specifies how references and orders are relat
     |link:http://php.net/string[string^]
     a|The reference type.
                                          The reference types available are the following:
-<ul>
-<li>contact</li>
-<li>account</li>
-<li>warehouse</li>
-</ul>
+
+* contact
+* account
+* warehouse
 |referenceId
     |link:http://php.net/int[int^]
     a|The reference id.
@@ -19977,10 +19941,9 @@ The order relation reference model specifies how references and orders are relat
     |link:http://php.net/string[string^]
     a|The relation between a reference and an order.
                                          The relation types available are the following:
-<ul>
-<li>sender</li>
-<li>receiver</li>
-</ul>
+
+* sender
+* receiver
 |order
     |        xref:Order.adoc#order_models_order[`Order`]
     a|The order that the reference belongs to.
