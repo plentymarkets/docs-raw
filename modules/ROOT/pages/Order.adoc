@@ -9666,6 +9666,64 @@ a|
 |===
 
 
+[source%nowrap, php]
+----
+
+public createReturnsOrder($orderId, $data):void
+
+----
+
+
+
+
+
+
+
+Create a return
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateReturnsOrder($returnsOrderId, $data):void
+
+----
+
+
+
+
+
+
+
+Update existing return
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$returnsOrderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
 
 [[order_contracts_returnsserviceproviderrepositorycontract]]
 ==== ReturnsServiceProviderRepositoryContract
@@ -19705,6 +19763,303 @@ public toArray()
 
 
 Returns this model as an array.
+
+[[order_salesorder]]
+== SalesOrder
+
+[[order_salesorder_contracts]]
+===  Contracts
+[[order_contracts_salesorderrepositorycontract]]
+==== SalesOrderRepositoryContract
+
+The SalesOrderRepositoryContract is the interface for the sales order repository. This interface allows you to create and update sales orders.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\SalesOrder\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+----
+
+public create($data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a sales order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createWithCoupons($data, $coupons = []):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a sales order with coupon codes
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+
+a|`$coupons`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public update($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update a sales order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public delete($orderId):void
+
+----
+
+
+
+
+
+
+
+Delete a sales order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public deleteOrderItem($orderItemId):bool
+
+----
+
+
+
+
+
+
+
+Delete an order item from a sales order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderItemId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public createFromParent($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a sales order from a parent order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public previewCreate($data):array
+
+----
+
+
+
+
+
+
+
+Get a sales order create preview for the given order data.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|The order data for the preview.
+|===
+
+
+[source%nowrap, php]
+----
+
+public previewCreateWithCoupons($data, $coupons = []):array
+
+----
+
+
+
+
+
+
+
+Get a sales order create preview for the given order data with coupon codes
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+
+a|`$coupons`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public previewUpdate($orderId, $data):array
+
+----
+
+
+
+
+
+
+
+Get an sales order update preview for the given order data.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+----
+
+public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update currency
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
 
 [[order_search]]
 == Search
