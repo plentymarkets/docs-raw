@@ -29,6 +29,7 @@ This interface provides methods to create, read, list, update and delete blog po
 ===== Methods
 
 [source%nowrap, php]
+[#createpost]
 ----
 
 public createPost($data):Plenty\Modules\Blog\Models\BlogPost
@@ -54,6 +55,7 @@ a|Blog post data
 
 
 [source%nowrap, php]
+[#getpost]
 ----
 
 public getPost($blogPostId):Plenty\Modules\Blog\Models\BlogPost
@@ -79,6 +81,7 @@ a|
 
 
 [source%nowrap, php]
+[#listposts]
 ----
 
 public listPosts($page = 1, $itemsPerPage = 50, $filters = []):array
@@ -112,6 +115,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatepost]
 ----
 
 public updatePost($data, $blogPostId):Plenty\Modules\Blog\Models\BlogPost
@@ -141,6 +145,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletepost]
 ----
 
 public deletePost($blogPostId):void
@@ -166,6 +171,7 @@ a|
 
 
 [source%nowrap, php]
+[#migrateposts]
 ----
 
 public migratePosts($data = []):void
@@ -191,6 +197,7 @@ a|
 
 
 [source%nowrap, php]
+[#getoldpostbyid]
 ----
 
 public getOldPostById($id):void
@@ -216,6 +223,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -231,6 +239,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -246,6 +255,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -271,6 +281,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -286,6 +297,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -301,6 +313,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -352,6 +365,7 @@ The blog post model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -387,6 +401,7 @@ The blog plugin service
 ===== Methods
 
 [source%nowrap, php]
+[#getpluginsetidfromconfig]
 ----
 
 public getPluginSetIdFromConfig():void
@@ -402,6 +417,7 @@ public getPluginSetIdFromConfig():void
 Get the ID of the plugin set.
 
 [source%nowrap, php]
+[#findcategorybyurl]
 ----
 
 public findCategoryByUrl($level1, $level2 = null, $level3 = null, $level4 = null, $level5 = null, $level6 = null, $webstoreId = null, $lang = null):void

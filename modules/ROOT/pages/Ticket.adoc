@@ -29,6 +29,7 @@ The TicketMessageRepositoryContract is the interface for the ticket message repo
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($ticketMessageId):Plenty\Modules\Ticket\Models\TicketMessage
@@ -54,6 +55,7 @@ a|The ID of the ticket message
 
 
 [source%nowrap, php]
+[#list]
 ----
 
 public list($ticketId):void
@@ -79,6 +81,7 @@ a|The ID of the ticket
 
 
 [source%nowrap, php]
+[#listinternal]
 ----
 
 public listInternal($ticketId):void
@@ -104,6 +107,7 @@ a|The ticket ID.
 
 
 [source%nowrap, php]
+[#listpublic]
 ----
 
 public listPublic($ticketId):void
@@ -148,6 +152,7 @@ The TicketRepositoryContract is the interface for the ticket repository. This in
 ===== Methods
 
 [source%nowrap, php]
+[#createticket]
 ----
 
 public createTicket($data):Plenty\Modules\Ticket\Models\Ticket
@@ -173,6 +178,7 @@ a|The ticket data as associative array
 
 
 [source%nowrap, php]
+[#searchtickets]
 ----
 
 public searchTickets($filter, $page = 1, $itemsPerPage = 50):array
@@ -206,6 +212,7 @@ a|The number of tickets to be displayed per page. The default number of tickets 
 
 
 [source%nowrap, php]
+[#deleteticket]
 ----
 
 public deleteTicket($ticketId):void
@@ -231,6 +238,7 @@ a|The ID of the ticket
 
 
 [source%nowrap, php]
+[#createmessage]
 ----
 
 public createMessage($data, $ticketId):Plenty\Modules\Ticket\Models\TicketMessage
@@ -260,6 +268,7 @@ a|The ID of the ticket
 
 
 [source%nowrap, php]
+[#updateticket]
 ----
 
 public updateTicket($data, $ticketId):Plenty\Modules\Ticket\Models\Ticket
@@ -289,6 +298,7 @@ a|The ID of the ticket
 
 
 [source%nowrap, php]
+[#findbyid]
 ----
 
 public findById($ticketId, $with = []):Plenty\Modules\Ticket\Models\Ticket
@@ -318,6 +328,7 @@ a|The relations to be loaded with the ticket. Possible values are 'order' and 'c
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -333,6 +344,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -367,6 +379,7 @@ The TicketRoleNameRepositoryContract is the interface for the ticket role name r
 ===== Methods
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $ticketRoleNameId):Plenty\Modules\Ticket\Models\TicketRoleName
@@ -396,6 +409,7 @@ a|The ID of the ticket role name
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Ticket\Models\TicketRoleName
@@ -421,6 +435,7 @@ a|The ticket role name data as associative array
 
 
 [source%nowrap, php]
+[#findbyname]
 ----
 
 public findByName($name, $lang):array
@@ -450,6 +465,7 @@ a|The language of the ticket role
 
 
 [source%nowrap, php]
+[#findbylang]
 ----
 
 public findByLang($lang):array
@@ -494,6 +510,7 @@ The TicketRoleRepositoryContract is the interface for the ticket role repository
 ===== Methods
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $ticketRoleId):Plenty\Modules\Ticket\Models\TicketRole
@@ -523,6 +540,7 @@ a|The ID of the ticket role
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Ticket\Models\TicketRole
@@ -567,6 +585,7 @@ The TicketStatusNameRepositoryContract is the interface for the ticket status na
 ===== Methods
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $ticketStatusNameId):Plenty\Modules\Ticket\Models\TicketStatusName
@@ -596,6 +615,7 @@ a|The ID of the ticket status name
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Ticket\Models\TicketStatusName
@@ -621,6 +641,7 @@ a|The ticket status name data as associative array
 
 
 [source%nowrap, php]
+[#findbyname]
 ----
 
 public findByName($name, $lang):array
@@ -650,6 +671,7 @@ a|The language of the ticket status name
 
 
 [source%nowrap, php]
+[#statusnamelist]
 ----
 
 public statusNameList($lang):array
@@ -675,6 +697,7 @@ a|The language of the ticket status name
 
 
 [source%nowrap, php]
+[#statusnamelistwithtypeid]
 ----
 
 public statusNameListWithTypeId($lang):array
@@ -719,6 +742,7 @@ The TicketStatusRepositoryContract is the interface for the ticket status reposi
 ===== Methods
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $ticketStatusId):Plenty\Modules\Ticket\Models\TicketStatus
@@ -748,6 +772,7 @@ a|The ID of the ticket status
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Ticket\Models\TicketStatus
@@ -773,6 +798,7 @@ a|The ticket status data as associative array
 
 
 [source%nowrap, php]
+[#findbytypeid]
 ----
 
 public findByTypeId($typeId):array
@@ -817,6 +843,7 @@ The TicketTypeNameRepositoryContract is the interface for the ticket type name r
 ===== Methods
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $ticketTypeNameId):Plenty\Modules\Ticket\Models\TicketTypeName
@@ -846,6 +873,7 @@ a|The ID of the ticket type name
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Ticket\Models\TicketTypeName
@@ -871,6 +899,7 @@ a|The ticket type name data as associative array
 
 
 [source%nowrap, php]
+[#findbyname]
 ----
 
 public findByName($name, $lang):array
@@ -900,6 +929,7 @@ a|The language of the ticket type
 
 
 [source%nowrap, php]
+[#typenamelist]
 ----
 
 public typeNameList($lang):array
@@ -944,6 +974,7 @@ The TicketTypeRepositoryContract is the interface for the ticket type repository
 ===== Methods
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $ticketTypeId):Plenty\Modules\Ticket\Models\TicketType
@@ -973,6 +1004,7 @@ a|The ID of the ticket type
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Ticket\Models\TicketType
@@ -1106,6 +1138,7 @@ The ticket model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1165,6 +1198,7 @@ The ticket document model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1243,6 +1277,7 @@ The ticket message model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1290,6 +1325,7 @@ The ticket message topic model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1343,6 +1379,7 @@ The ticket message topic name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1393,6 +1430,7 @@ The ticket owner model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1443,6 +1481,7 @@ The ticket role model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1496,6 +1535,7 @@ The ticket role name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1552,6 +1592,7 @@ The ticket status model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1602,6 +1643,7 @@ The ticket status group model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1652,6 +1694,7 @@ The ticket status group name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1705,6 +1748,7 @@ The ticket status name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1755,6 +1799,7 @@ The ticket type model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1808,6 +1853,7 @@ The ticket type name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

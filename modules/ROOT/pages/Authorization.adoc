@@ -29,6 +29,7 @@ service to get current authorized user
 ===== Methods
 
 [source%nowrap, php]
+[#getcurrentauthorizeduser]
 ----
 
 public getCurrentAuthorizedUser():Plenty\Modules\Authorization\Models\AuthorizedUser
@@ -64,6 +65,7 @@ Class AuthorizationException
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($message = &quot;&quot;, $code, $previous = null):void
@@ -97,6 +99,7 @@ a|
 
 
 [source%nowrap, php]
+[#missingpermissions]
 ----
 
 public missingPermissions():Illuminate\Support\Collection
@@ -112,6 +115,7 @@ public missingPermissions():Illuminate\Support\Collection
 
 
 [source%nowrap, php]
+[#addmissingpermission]
 ----
 
 public addMissingPermission($permissionKey):void
@@ -137,6 +141,7 @@ a|The permission key
 
 
 [source%nowrap, php]
+[#jsonserialize]
 ----
 
 public jsonSerialize():void
@@ -194,6 +199,7 @@ The current authorized user
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -244,6 +250,7 @@ The authentication Permission (REST) model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -306,6 +313,7 @@ The Role authentication model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -341,6 +349,7 @@ Service to process unguarded php code
 ===== Methods
 
 [source%nowrap, php]
+[#processunguarded]
 ----
 
 public processUnguarded($callable):void

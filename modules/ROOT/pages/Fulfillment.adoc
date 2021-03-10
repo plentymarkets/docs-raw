@@ -29,6 +29,7 @@ The PickingOrderItemRepositoryContract describes methods for fetching one or mul
 ===== Methods
 
 [source%nowrap, php]
+[#getall]
 ----
 
 public getAll():Illuminate\Database\Eloquent\Collection
@@ -44,6 +45,7 @@ public getAll():Illuminate\Database\Eloquent\Collection
 
 
 [source%nowrap, php]
+[#getpickingorderitembyid]
 ----
 
 public getPickingOrderItemById($pickingOrderItemId):Plenty\Modules\Fulfillment\Picklist\Models\PickingOrderItem
@@ -89,6 +91,7 @@ This event will be triggered, when an item is picked
 ===== Methods
 
 [source%nowrap, php]
+[#getpickingorderitemid]
 ----
 
 public getPickingOrderItemId():int
@@ -104,6 +107,7 @@ public getPickingOrderItemId():int
 Returns picking order item ID
 
 [source%nowrap, php]
+[#getprocessuserid]
 ----
 
 public getProcessUserId():int
@@ -119,6 +123,7 @@ public getProcessUserId():int
 Returns process user ID
 
 [source%nowrap, php]
+[#addpluginconfig]
 ----
 
 public addPluginConfig($identifier, $pluginConfig):Plenty\Modules\Fulfillment\Picklist\Events
@@ -148,6 +153,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpluginconfigs]
 ----
 
 public getPluginConfigs():array
@@ -226,6 +232,7 @@ Represent a picking order item
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -264,6 +271,7 @@ The FulfillmentReturnService is the service for return shipments of an order.
 ===== Methods
 
 [source%nowrap, php]
+[#registerreturns]
 ----
 
 public registerReturns($orderId):bool
@@ -289,6 +297,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#registerreturn]
 ----
 
 public registerReturn($orderId, $returnProvider):bool
@@ -337,6 +346,7 @@ The FulfillmentShipmentService is the service for registering and cancelling shi
 ===== Methods
 
 [source%nowrap, php]
+[#resetshipment]
 ----
 
 public resetShipment($orderId):bool
@@ -362,6 +372,7 @@ a|
 
 
 [source%nowrap, php]
+[#cancelshipment]
 ----
 
 public cancelShipment($orderId):bool
@@ -387,6 +398,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#registershipment]
 ----
 
 public registerShipment($orderId):bool
@@ -431,6 +443,7 @@ The GetDhlRetoureOnlineDataService is the service that retrieves old DHL Retoure
 ===== Methods
 
 [source%nowrap, php]
+[#getdhlretoureonlinedata]
 ----
 
 public getDhlRetoureOnlineData():void

@@ -29,6 +29,7 @@ UserRepositoryContract
 ===== Methods
 
 [source%nowrap, php]
+[#getall]
 ----
 
 public getAll():Illuminate\Database\Eloquent\Collection
@@ -44,6 +45,7 @@ public getAll():Illuminate\Database\Eloquent\Collection
 Get all users
 
 [source%nowrap, php]
+[#getcurrentuser]
 ----
 
 public getCurrentUser():Plenty\Modules\User\Models\User
@@ -59,6 +61,7 @@ public getCurrentUser():Plenty\Modules\User\Models\User
 Get current user
 
 [source%nowrap, php]
+[#getuserbyid]
 ----
 
 public getUserById($userId):Plenty\Modules\User\Models\User
@@ -84,6 +87,7 @@ a|
 
 
 [source%nowrap, php]
+[#getuserbystatus]
 ----
 
 public getUserByStatus($status):Illuminate\Database\Eloquent\Collection
@@ -109,6 +113,7 @@ a|
 
 
 [source%nowrap, php]
+[#getallpinusers]
 ----
 
 public getAllPinUsers($clientName = null, $clientSecret = null):Illuminate\Database\Eloquent\Collection
@@ -138,6 +143,7 @@ a|
 
 
 [source%nowrap, php]
+[#findbyname]
 ----
 
 public findByName($name):Illuminate\Database\Eloquent\Collection
@@ -163,6 +169,7 @@ a|
 
 
 [source%nowrap, php]
+[#setbackendpluginset]
 ----
 
 public setBackendPluginSet($userId, $setId):bool
@@ -192,6 +199,7 @@ a|
 
 
 [source%nowrap, php]
+[#getbackendpluginset]
 ----
 
 public getBackendPluginSet($userId):Plenty\Modules\Plugin\PluginSet\Models\PluginSet
@@ -445,6 +453,7 @@ User
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

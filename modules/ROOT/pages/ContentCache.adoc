@@ -51,6 +51,7 @@ Eloquent model representing a Content Cache Link.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -102,6 +103,7 @@ Eloquent model representing the Content Cache Settings.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -137,6 +139,7 @@ Interface for content cache invalidation
 ===== Methods
 
 [source%nowrap, php]
+[#invalidatevariationids]
 ----
 
 public invalidateVariationIds($variationIds, $plentyId = null):void
@@ -166,6 +169,7 @@ a|
 
 
 [source%nowrap, php]
+[#invalidateitemids]
 ----
 
 public invalidateItemIds($itemIds, $plentyId = null):void
@@ -195,6 +199,7 @@ a|
 
 
 [source%nowrap, php]
+[#invalidateall]
 ----
 
 public invalidateAll($plentyId = null):void
@@ -220,6 +225,7 @@ a|
 
 
 [source%nowrap, php]
+[#invalidateuri]
 ----
 
 public invalidateUri($uri):void
@@ -245,6 +251,7 @@ a|
 
 
 [source%nowrap, php]
+[#storeinvalidationstacks]
 ----
 
 public storeInvalidationStacks():void
@@ -279,6 +286,7 @@ Save and retrieve values to or from the content cache
 ===== Methods
 
 [source%nowrap, php]
+[#enablecacheforresponse]
 ----
 
 public enableCacheForResponse():void
@@ -294,6 +302,7 @@ public enableCacheForResponse():void
 Enable content caching for current response so next request on this resource will be delivered from content cache.
 
 [source%nowrap, php]
+[#linkvariationstoresponse]
 ----
 
 public linkVariationsToResponse($variationIds):void
@@ -338,6 +347,7 @@ Interface for content cache settings
 ===== Methods
 
 [source%nowrap, php]
+[#getsettings]
 ----
 
 public getSettings($plentyId):Plenty\Modules\ContentCache\ContentCacheSettings\ContentCacheSettings
@@ -363,6 +373,7 @@ a|The plenty id of the client.
 
 
 [source%nowrap, php]
+[#getsettingsmultiple]
 ----
 
 public getSettingsMultiple($plentyIds):void
@@ -388,6 +399,7 @@ a|The plenty ids of the clients.
 
 
 [source%nowrap, php]
+[#savesettings]
 ----
 
 public saveSettings($plentyId, $contentCacheActive):Plenty\Modules\ContentCache\ContentCacheSettings\ContentCacheSettings
@@ -417,6 +429,7 @@ a|Flag that indicates the content cache active state.
 
 
 [source%nowrap, php]
+[#getinvalidationdate]
 ----
 
 public getInvalidationDate($plentyId):string
@@ -442,6 +455,7 @@ a|The plenty id of the client.
 
 
 [source%nowrap, php]
+[#saveinvalidationdate]
 ----
 
 public saveInvalidationDate($plentyId, $invalidationDate):void
@@ -471,6 +485,7 @@ a|The date until when the invalidation is deactivated.
 
 
 [source%nowrap, php]
+[#isinvalidationactive]
 ----
 
 public isInvalidationActive($plentyId):bool

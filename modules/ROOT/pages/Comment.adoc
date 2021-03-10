@@ -29,6 +29,7 @@ Get, create, update and delete comments.
 ===== Methods
 
 [source%nowrap, php]
+[#getcomment]
 ----
 
 public getComment($commentId):Plenty\Modules\Comment\Models\Comment
@@ -54,6 +55,7 @@ a|The ID of the comment
 
 
 [source%nowrap, php]
+[#listcomments]
 ----
 
 public listComments():Illuminate\Support\Collection
@@ -69,6 +71,7 @@ public listComments():Illuminate\Support\Collection
 List comments
 
 [source%nowrap, php]
+[#createcomment]
 ----
 
 public createComment($data, $suppressEvent = false):Plenty\Modules\Comment\Models\Comment
@@ -98,6 +101,7 @@ a|Whether to suppress the created event or not.
 
 
 [source%nowrap, php]
+[#deletecomment]
 ----
 
 public deleteComment($commentId):void
@@ -123,6 +127,7 @@ a|The ID of the comment
 
 
 [source%nowrap, php]
+[#updatecomment]
 ----
 
 public updateComment($data, $commentId):Plenty\Modules\Comment\Models\Comment
@@ -152,6 +157,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -167,6 +173,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -182,6 +189,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -207,6 +215,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -222,6 +231,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -237,6 +247,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -307,6 +318,7 @@ The comment model can be one of the following types: category, contact, order, i
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

@@ -29,6 +29,7 @@ This service provides a method to initiate the automatic email delivery.
 ===== Methods
 
 [source%nowrap, php]
+[#sendautomatic]
 ----
 
 public sendAutomatic($email):bool
@@ -74,6 +75,7 @@ A container with all needed data to initiate the automatic email delivery.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -108,6 +110,7 @@ The automatic email data for contact type emails.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -142,6 +145,7 @@ The abstract base class for all automatic email data. Provides constants for the
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -176,6 +180,7 @@ The automatic email data for newsletter type emails.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -210,6 +215,7 @@ The automatic email data for order type emails.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -244,6 +250,7 @@ Provides constants for the automatic email template names.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -282,6 +289,7 @@ GetApiCallLimits reads the values for the API call limits from the config and re
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get():array
@@ -317,6 +325,7 @@ Repository Contract for retrieving image and item URLs
 ===== Methods
 
 [source%nowrap, php]
+[#getimageurl]
 ----
 
 public getImageUrl($path, $plentyId = null, $size = &quot;&quot;, $fileType = &quot;&quot;, $isExternalImage = false):string
@@ -358,6 +367,7 @@ a|
 
 
 [source%nowrap, php]
+[#getitemurl]
 ----
 
 public getItemUrl($itemId, $plentyId, $urlContent = &quot;&quot;, $lang = &quot;de&quot;, $useHttpsDomain = true):string
@@ -419,6 +429,7 @@ Class EncryptionException
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($message, $code):void
@@ -468,6 +479,7 @@ key value data
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($key, $default = null):mixed
@@ -517,6 +529,7 @@ Helper class for arrays
 ===== Methods
 
 [source%nowrap, php]
+[#buildmapfromobjectlist]
 ----
 
 public buildMapFromObjectList($list, $keyField, $valueField):Plenty\Modules\Helper\Models\KeyValue
@@ -569,6 +582,7 @@ Service for encoding strings
 ===== Methods
 
 [source%nowrap, php]
+[#todatabase]
 ----
 
 public toDatabase($sString):string
@@ -594,6 +608,7 @@ a|
 
 
 [source%nowrap, php]
+[#toemail]
 ----
 
 public toEmail($sString):string
@@ -619,6 +634,7 @@ a|
 
 
 [source%nowrap, php]
+[#towebshop]
 ----
 
 public toWebshop($sString, $sTargetEncoding = self::WEBSHOP_ENCODING):string
@@ -648,6 +664,7 @@ a|[optional default=PlentyCoding::WEBSHOP_ENCODING]
 
 
 [source%nowrap, php]
+[#toadmin]
 ----
 
 public toAdmin($sString, $sTargetEncoding = self::ADMIN_ENCODING):string
@@ -677,6 +694,7 @@ a|[optional default=PlentyCoding::ADMIN_ENCODING]
 
 
 [source%nowrap, php]
+[#togwt]
 ----
 
 public toGwt($sString):string
@@ -702,6 +720,7 @@ a|
 
 
 [source%nowrap, php]
+[#toexport]
 ----
 
 public toExport($sString, $sTargetEncoding = self::EXPORT_ENCODING):string
@@ -731,6 +750,7 @@ a|[optional default=PlentyCoding::EXPORT_ENCODING]
 
 
 [source%nowrap, php]
+[#tolegacy]
 ----
 
 public toLegacy($sString):string
@@ -756,6 +776,7 @@ a|
 
 
 [source%nowrap, php]
+[#topdf]
 ----
 
 public toPDF($sString, $sTargetEncoding = self::PDF_ENCODING):string
@@ -785,6 +806,7 @@ a|The target encoding (since plentymarkets version 5.100). [optional, default=Pl
 
 
 [source%nowrap, php]
+[#toxml]
 ----
 
 public toXML($string, $targetEncoding = self::XML_ENCODING):string
@@ -814,6 +836,7 @@ a|The target encoding (since plentymarkets version 5.100). [optional, default=Pl
 
 
 [source%nowrap, php]
+[#detect_encoding]
 ----
 
 public detect_encoding($sString):string
@@ -839,6 +862,7 @@ a|
 
 
 [source%nowrap, php]
+[#convertarray]
 ----
 
 public convertArray($array, $sTargetEncoding = self::UTF8_ENCODING, $convertKey = false):array
@@ -872,6 +896,7 @@ a|[optional, default=false]
 
 
 [source%nowrap, php]
+[#cuttextfordb]
 ----
 
 public cutTextForDB($text, $lenghtIntoDB):string
@@ -901,6 +926,7 @@ a|
 
 
 [source%nowrap, php]
+[#isvalidutf8]
 ----
 
 public isValidUtf8($string):int
@@ -945,6 +971,7 @@ Webstore Helper Service
 ===== Methods
 
 [source%nowrap, php]
+[#getcurrentwebstoreconfiguration]
 ----
 
 public getCurrentWebstoreConfiguration():Plenty\Modules\System\Models\WebstoreConfiguration

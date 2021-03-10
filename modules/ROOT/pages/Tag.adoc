@@ -29,6 +29,7 @@ The TagAvailabilityRepositoryContract is the interface for the tag availability 
 ===== Methods
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $tagId, $availabilityType):Plenty\Modules\Tag\Models\TagAvailability
@@ -69,6 +70,7 @@ a|The type of the availability. The following types are available.
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Tag\Models\TagAvailability
@@ -94,6 +96,7 @@ a|The availability data. The properties that are required to update an tag can b
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -109,6 +112,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -143,6 +147,7 @@ The TagNameRepositoryContract is the interface for the tag name repository. This
 ===== Methods
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $tagId, $lang):Plenty\Modules\Tag\Models\TagName
@@ -176,6 +181,7 @@ a|The language of the name
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Tag\Models\TagName
@@ -201,6 +207,7 @@ a|The name data. The properties that are required to update an name can be found
 
 
 [source%nowrap, php]
+[#findbyname]
 ----
 
 public findByName($name, $lang):array
@@ -230,6 +237,7 @@ a|The language of the name
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -245,6 +253,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -279,6 +288,7 @@ The TagRelationshipRepositoryContract is the interface for the tag relationship 
 ===== Methods
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $tagId, $availabilityType, $relationshipValue):Plenty\Modules\Tag\Models\TagRelationship
@@ -321,6 +331,7 @@ a|The value of the relationship. This value is the ID of the data set the tag is
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Tag\Models\TagRelationship
@@ -346,6 +357,7 @@ a|The relationship data. The properties that are required to update a relationsh
 
 
 [source%nowrap, php]
+[#deleterelation]
 ----
 
 public deleteRelation($relationshipValue, $tagId):void
@@ -375,6 +387,7 @@ a|The ID of the tag
 
 
 [source%nowrap, php]
+[#deleteonerelation]
 ----
 
 public deleteOneRelation($relationshipValue, $relationshipType, $tagId):void
@@ -408,6 +421,7 @@ a|The ID of the tag
 
 
 [source%nowrap, php]
+[#deleteonerelationbyuuid]
 ----
 
 public deleteOneRelationByUUID($relationshipUUID, $relationshipType, $tagId):int
@@ -441,6 +455,7 @@ a|The ID of the tag
 
 
 [source%nowrap, php]
+[#findbyvalueid]
 ----
 
 public findByValueId($valueId):array
@@ -466,6 +481,7 @@ a|The value of the relationship. This value is the ID of the data set the tag is
 
 
 [source%nowrap, php]
+[#findbytagid]
 ----
 
 public findByTagId($tagId):array
@@ -491,6 +507,7 @@ a|The ID of the tag
 
 
 [source%nowrap, php]
+[#findrelationship]
 ----
 
 public findRelationship($tagId, $relationshipValue, $relationshipType):Plenty\Modules\Tag\Models\TagRelationship
@@ -524,6 +541,7 @@ a|The type of the relationship
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($relationshipValue, $relationshipType):Plenty\Repositories\Models\DeleteResponse
@@ -553,6 +571,7 @@ a|The type of the relationship
 
 
 [source%nowrap, php]
+[#deletebyuuid]
 ----
 
 public deleteByUUID($relationshipValue, $relationshipType):Plenty\Repositories\Models\DeleteResponse
@@ -582,6 +601,7 @@ a|The type of the relationship
 
 
 [source%nowrap, php]
+[#deletebulk]
 ----
 
 public deleteBulk($data):Illuminate\Support\Collection
@@ -607,6 +627,7 @@ a|The array containing the data.
 
 
 [source%nowrap, php]
+[#listrelationships]
 ----
 
 public listRelationships($with = []):Illuminate\Support\Collection
@@ -632,6 +653,7 @@ a|An array with child instances to be loaded
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -647,6 +669,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -662,6 +685,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -687,6 +711,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -702,6 +727,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -717,6 +743,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -751,6 +778,7 @@ The TagRepositoryContract is the interface for the tag repository. This interfac
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($name):Plenty\Modules\Tag\Models\Tag
@@ -776,6 +804,7 @@ a|The name of the tag
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $tagId):Plenty\Modules\Tag\Models\Tag
@@ -805,6 +834,7 @@ a|The ID of the tag
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($tagId):void
@@ -830,6 +860,7 @@ a|The ID of the tag
 
 
 [source%nowrap, php]
+[#gettagbyname]
 ----
 
 public getTagByName($name):Plenty\Modules\Tag\Models\Tag
@@ -855,6 +886,7 @@ a|The name of the tag
 
 
 [source%nowrap, php]
+[#gettagsbyids]
 ----
 
 public getTagsByIds($ids):array
@@ -880,6 +912,7 @@ a|The IDs of the tags
 
 
 [source%nowrap, php]
+[#gettagbyid]
 ----
 
 public getTagById($id, $with = []):Plenty\Modules\Tag\Models\Tag
@@ -909,6 +942,7 @@ a|An array with child instances to be loaded
 
 
 [source%nowrap, php]
+[#gettagsbyavailability]
 ----
 
 public getTagsByAvailability($availabilityType):array
@@ -942,6 +976,7 @@ a|The type of the availability. The following types are available.
 
 
 [source%nowrap, php]
+[#gettagsbyrelationship]
 ----
 
 public getTagsByRelationship($relationshipType, $value, $isUUID = false):array
@@ -975,6 +1010,7 @@ a|Indicates whether the value is a UUID5 or not.
 
 
 [source%nowrap, php]
+[#listtags]
 ----
 
 public listTags($with = []):Illuminate\Support\Collection
@@ -1000,6 +1036,7 @@ a|An array with child instances to be loaded
 
 
 [source%nowrap, php]
+[#createtag]
 ----
 
 public createTag($data):Plenty\Modules\Tag\Models\Tag
@@ -1025,6 +1062,7 @@ a|The data as associative array
 
 
 [source%nowrap, php]
+[#createbulk]
 ----
 
 public createBulk($data):array
@@ -1050,6 +1088,7 @@ a|The data as associative array
 
 
 [source%nowrap, php]
+[#updatebulk]
 ----
 
 public updateBulk($data):array
@@ -1075,6 +1114,7 @@ a|The data as associative array
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -1090,6 +1130,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -1105,6 +1146,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -1130,6 +1172,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -1145,6 +1188,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -1160,6 +1204,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -1229,6 +1274,7 @@ The Tag model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1285,6 +1331,7 @@ The tag availability model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1335,6 +1382,7 @@ The tag client model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1388,6 +1436,7 @@ The tag name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1441,6 +1490,7 @@ The tag relationship model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

@@ -29,6 +29,7 @@ plentymarkets event procedures triggered
 ===== Methods
 
 [source%nowrap, php]
+[#getticket]
 ----
 
 public getTicket():Plenty\Modules\Ticket\Models\Ticket
@@ -44,6 +45,7 @@ public getTicket():Plenty\Modules\Ticket\Models\Ticket
 Gets the ticket.
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -79,6 +81,7 @@ The EventProcedureService class offers the possibility to register a procedure c
 ===== Methods
 
 [source%nowrap, php]
+[#registerprocedure]
 ----
 
 public registerProcedure($moduleName, $eventType, $procedureNames, $procedureClass, $procedureGroup = \Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry::PROCEDURE_GROUP_ORDER):bool
@@ -138,6 +141,7 @@ a|The name of the procedure group. The procedure groups are determined and can b
 
 
 [source%nowrap, php]
+[#registerfilter]
 ----
 
 public registerFilter($moduleName, $eventType, $filterNames, $filterClass):bool
@@ -182,6 +186,7 @@ The method is separated from the class by an "@" sign. The part following the "@
 
 
 [source%nowrap, php]
+[#registertrigger]
 ----
 
 public registerTrigger($moduleName, $eventType, $triggerIdentifier, $triggerNames):bool
@@ -222,6 +227,7 @@ a|The name for the trigger that will be shown in the event procedure UI. The nam
 
 
 [source%nowrap, php]
+[#firetrigger]
 ----
 
 public fireTrigger($orderId, $moduleName, $triggerIdentifier):void
@@ -278,6 +284,7 @@ The filter entry contains all information needed to use module filters in plenty
 ===== Methods
 
 [source%nowrap, php]
+[#getmodulename]
 ----
 
 public getModuleName():string
@@ -293,6 +300,7 @@ public getModuleName():string
 Gets the module name.
 
 [source%nowrap, php]
+[#setmodulename]
 ----
 
 public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry
@@ -318,6 +326,7 @@ a|
 
 
 [source%nowrap, php]
+[#geteventtype]
 ----
 
 public getEventType():string
@@ -333,6 +342,7 @@ public getEventType():string
 Gets the type of event for the current filter entry.
 
 [source%nowrap, php]
+[#seteventtype]
 ----
 
 public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry
@@ -358,6 +368,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilternames]
 ----
 
 public getFilterNames():array
@@ -373,6 +384,7 @@ public getFilterNames():array
 Gets the filter names
 
 [source%nowrap, php]
+[#setfilternames]
 ----
 
 public setFilterNames($filterNames):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry
@@ -398,6 +410,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilterclass]
 ----
 
 public getFilterClass():string
@@ -413,6 +426,7 @@ public getFilterClass():string
 Gets the filter class
 
 [source%nowrap, php]
+[#setfilterclass]
 ----
 
 public setFilterClass($filterClass):Plenty\Modules\EventProcedures\Services\Entries\FilterEntry
@@ -457,6 +471,7 @@ The procedure entry contains all information needed to use module procedures in 
 ===== Methods
 
 [source%nowrap, php]
+[#getmodulename]
 ----
 
 public getModuleName():string
@@ -472,6 +487,7 @@ public getModuleName():string
 Gets the module name
 
 [source%nowrap, php]
+[#setmodulename]
 ----
 
 public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry
@@ -497,6 +513,7 @@ a|
 
 
 [source%nowrap, php]
+[#geteventtype]
 ----
 
 public getEventType():string
@@ -512,6 +529,7 @@ public getEventType():string
 Gets the event type
 
 [source%nowrap, php]
+[#seteventtype]
 ----
 
 public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry
@@ -537,6 +555,7 @@ a|
 
 
 [source%nowrap, php]
+[#getprocedurenames]
 ----
 
 public getProcedureNames():array
@@ -552,6 +571,7 @@ public getProcedureNames():array
 Gets the procedure names
 
 [source%nowrap, php]
+[#setprocedurenames]
 ----
 
 public setProcedureNames($procedureNames):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry
@@ -577,6 +597,7 @@ a|
 
 
 [source%nowrap, php]
+[#getproceduregroup]
 ----
 
 public getProcedureGroup():string
@@ -592,6 +613,7 @@ public getProcedureGroup():string
 Gets the procedure group
 
 [source%nowrap, php]
+[#setproceduregroup]
 ----
 
 public setProcedureGroup($procedureGroup):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry
@@ -617,6 +639,7 @@ a|
 
 
 [source%nowrap, php]
+[#getprocedureclass]
 ----
 
 public getProcedureClass():string
@@ -632,6 +655,7 @@ public getProcedureClass():string
 Gets the procedure class
 
 [source%nowrap, php]
+[#setprocedureclass]
 ----
 
 public setProcedureClass($procedureClass):Plenty\Modules\EventProcedures\Services\Entries\ProcedureEntry
@@ -676,6 +700,7 @@ The trigger entry contains all information needed to use module triggers in plen
 ===== Methods
 
 [source%nowrap, php]
+[#getmodulename]
 ----
 
 public getModuleName():string
@@ -691,6 +716,7 @@ public getModuleName():string
 Gets the module name
 
 [source%nowrap, php]
+[#setmodulename]
 ----
 
 public setModuleName($moduleName):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry
@@ -716,6 +742,7 @@ a|
 
 
 [source%nowrap, php]
+[#geteventtype]
 ----
 
 public getEventType():string
@@ -731,6 +758,7 @@ public getEventType():string
 Gets the event type
 
 [source%nowrap, php]
+[#seteventtype]
 ----
 
 public setEventType($eventType):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry
@@ -756,6 +784,7 @@ a|
 
 
 [source%nowrap, php]
+[#gettriggeridentifier]
 ----
 
 public getTriggerIdentifier():string
@@ -771,6 +800,7 @@ public getTriggerIdentifier():string
 Gets the trigger identifier
 
 [source%nowrap, php]
+[#settriggeridentifier]
 ----
 
 public setTriggerIdentifier($triggerIdentifier):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry
@@ -796,6 +826,7 @@ a|
 
 
 [source%nowrap, php]
+[#gettriggernames]
 ----
 
 public getTriggerNames():array
@@ -811,6 +842,7 @@ public getTriggerNames():array
 Gets the trigger names
 
 [source%nowrap, php]
+[#settriggernames]
 ----
 
 public setTriggerNames($triggerNames):Plenty\Modules\EventProcedures\Services\Entries\TriggerEntry
@@ -836,6 +868,7 @@ a|
 
 
 [source%nowrap, php]
+[#gettrigger]
 ----
 
 public getTrigger():int

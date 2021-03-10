@@ -29,6 +29,7 @@ This interface allows you to get and create coupon codes.
 ===== Methods
 
 [source%nowrap, php]
+[#getbycode]
 ----
 
 public getByCode($code, $with = []):Plenty\Modules\Order\Coupon\Campaign\Code\Models\CouponCampaignCode
@@ -58,6 +59,7 @@ a|
 
 
 [source%nowrap, php]
+[#deletecode]
 ----
 
 public deleteCode($code, $withoutUsed = false):bool
@@ -87,6 +89,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Order\Coupon\Campaign\Code\Models\CouponCampaignCode
@@ -112,6 +115,7 @@ a|
 
 
 [source%nowrap, php]
+[#setdisabledbycode]
 ----
 
 public setDisabledByCode($code, $disabled):int
@@ -160,6 +164,7 @@ The CouponCodeRepositoryContract is the interface for the coupon code repository
 ===== Methods
 
 [source%nowrap, php]
+[#redeem]
 ----
 
 public redeem($orderId, $coupon):bool
@@ -256,6 +261,7 @@ The CouponCampaignCode model contains information about coupon codes. Each code 
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -322,6 +328,7 @@ Model that holds gift card codes.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -388,6 +395,7 @@ The following display types are available:<ul>
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -609,6 +617,7 @@ The model of the order.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -712,6 +721,7 @@ The amount that still needs to paid is not an own parameter because the amount c
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -786,6 +796,7 @@ The order amount vat model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -968,6 +979,7 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1057,6 +1069,7 @@ The order item amount model. Order item amount refers to amounts of money.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1116,6 +1129,7 @@ This model contains the order properties that are assigned to order items.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1190,6 +1204,7 @@ The order item transaction sums model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1256,6 +1271,7 @@ The order item type model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1312,6 +1328,7 @@ The order item type name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1374,6 +1391,7 @@ with.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1442,6 +1460,7 @@ The order payment terms model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1507,6 +1526,7 @@ The order reference model. Each OrderReference has an origin order (the most top
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1584,6 +1604,7 @@ The order transaction sums model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1637,6 +1658,7 @@ The order type model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1693,6 +1715,7 @@ The order type name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1755,6 +1778,7 @@ price calculation result item
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1790,6 +1814,7 @@ This interface allows you to get and list order amounts and their vats.
 ===== Methods
 
 [source%nowrap, php]
+[#getbyorderid]
 ----
 
 public getByOrderId($orderId, $currency = null):Plenty\Modules\Order\Models\OrderAmount
@@ -1819,6 +1844,7 @@ a|The currency of the order amount
 
 
 [source%nowrap, php]
+[#getbyid]
 ----
 
 public getById($id):Plenty\Modules\Order\Models\OrderAmount
@@ -1844,6 +1870,7 @@ a|The ID of the order amount
 
 
 [source%nowrap, php]
+[#listbyorderid]
 ----
 
 public listByOrderId($orderId):array
@@ -1888,6 +1915,7 @@ The OrderItemRepositoryContract is the interface for the order item repository. 
 ===== Methods
 
 [source%nowrap, php]
+[#getorderitem]
 ----
 
 public getOrderItem($orderItemId):Plenty\Modules\Order\Models\OrderItem
@@ -1913,6 +1941,7 @@ a|The ID of the order item
 
 
 [source%nowrap, php]
+[#deleteorderitem]
 ----
 
 public deleteOrderItem($orderId, $orderItemId):bool
@@ -1942,6 +1971,7 @@ a|The ID of the order item to be deleted.
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($orderId, $page = 1, $itemsPerPage = 50, $with = [], $sortBy = &quot;id&quot;, $sortOrder = &quot;asc&quot;):Plenty\Repositories\Models\PaginatedResult
@@ -1987,6 +2017,7 @@ a|
 
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -2012,6 +2043,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -2027,6 +2059,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -2042,6 +2075,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -2057,6 +2091,7 @@ public clearFilters():void
 Clears the filter array.
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -2072,6 +2107,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -2106,6 +2142,7 @@ The OrderRepositoryContract is the interface for the order repository. This inte
 ===== Methods
 
 [source%nowrap, php]
+[#findorderbyid]
 ----
 
 public findOrderById($orderId, $with = []):Plenty\Modules\Order\Models\Order
@@ -2135,6 +2172,7 @@ a|The relations to load in the order instance, one of "addresses", "events", "da
 
 
 [source%nowrap, php]
+[#findorderbyexternalorderid]
 ----
 
 public findOrderByExternalOrderId($externalOrderId, $with = []):Plenty\Modules\Order\Models\Order
@@ -2164,6 +2202,7 @@ a|
 
 
 [source%nowrap, php]
+[#createorder]
 ----
 
 public createOrder($data, $coupon = null):Plenty\Modules\Order\Models\Order
@@ -2193,6 +2232,7 @@ a|A coupon code or a list of coupon codes to be redeemed in the order.
 
 
 [source%nowrap, php]
+[#updateorder]
 ----
 
 public updateOrder($data, $orderId):Plenty\Modules\Order\Models\Order
@@ -2222,6 +2262,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#deleteorder]
 ----
 
 public deleteOrder($orderId):bool
@@ -2247,6 +2288,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#undeleteorder]
 ----
 
 public undeleteOrder($orderId, $status):Plenty\Modules\Order\Models\Order
@@ -2276,6 +2318,7 @@ a|The status of the order
 
 
 [source%nowrap, php]
+[#isdeleted]
 ----
 
 public isDeleted($orderId):bool
@@ -2301,6 +2344,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#findschedulerbyid]
 ----
 
 public findSchedulerById($schedulerId):Plenty\Modules\Order\Scheduler\Models\OrderScheduler
@@ -2326,6 +2370,7 @@ a|The ID of the scheduler order
 
 
 [source%nowrap, php]
+[#allordersbycontact]
 ----
 
 public allOrdersByContact($contactId, $page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult
@@ -2363,6 +2408,7 @@ a|The relations to load in the Order instance. Valid are "addresses", "events", 
 
 
 [source%nowrap, php]
+[#allordersbysupplier]
 ----
 
 public allOrdersBySupplier($contactId, $page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult
@@ -2400,6 +2446,7 @@ a|The relations to load in the Order instance. Valid are "addresses", "events", 
 
 
 [source%nowrap, php]
+[#allordersbycontactsender]
 ----
 
 public allOrdersByContactSender($contactId, $page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult
@@ -2437,6 +2484,7 @@ a|The relations to load in the Order instance. Valid are "addresses", "events", 
 
 
 [source%nowrap, php]
+[#getlatestorderbycontactid]
 ----
 
 public getLatestOrderByContactId($contactId, $with = []):Plenty\Modules\Order\Models\Order
@@ -2467,6 +2515,7 @@ If you want to load relations, you need to include at least one, but you can als
 
 
 [source%nowrap, php]
+[#searchorders]
 ----
 
 public searchOrders($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult
@@ -2500,6 +2549,7 @@ a|The relations to load in the Order instance. Valid are "addresses", "events", 
 
 
 [source%nowrap, php]
+[#getpackagenumbers]
 ----
 
 public getPackageNumbers($orderId):array
@@ -2525,6 +2575,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#cancelorder]
 ----
 
 public cancelOrder($orderId, $data):void
@@ -2554,6 +2605,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#findorderbyaccesskey]
 ----
 
 public findOrderByAccessKey($orderId, $accessKey):Plenty\Modules\Order\Models\Order
@@ -2583,6 +2635,7 @@ a|The access key, that belongs to the order.
 
 
 [source%nowrap, php]
+[#generateaccesskey]
 ----
 
 public generateAccessKey($orderId):string
@@ -2608,6 +2661,7 @@ a|
 
 
 [source%nowrap, php]
+[#completeorder]
 ----
 
 public completeOrder($orderId, $data = []):Plenty\Modules\Order\Models\Order
@@ -2637,6 +2691,7 @@ a|Additional data. Currently only the statusId can be specified.
 
 
 [source%nowrap, php]
+[#createmultiorderbycontact]
 ----
 
 public createMultiOrderByContact($contactId):Plenty\Modules\Order\Models\Order
@@ -2662,6 +2717,7 @@ a|
 
 
 [source%nowrap, php]
+[#setorderstatus45]
 ----
 
 public setOrderStatus45($orderId):Plenty\Modules\Order\Models\Order
@@ -2687,6 +2743,7 @@ a|
 
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -2712,6 +2769,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -2727,6 +2785,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -2742,6 +2801,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -2778,6 +2838,7 @@ An event class fired after a new order is created. The order type is not relevan
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -2803,6 +2864,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -2837,6 +2899,7 @@ A base event class for all order events. Each order event expects an order insta
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -2862,6 +2925,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -2896,6 +2960,7 @@ An Event class fired after a payment assignment when the order is fully paid.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -2921,6 +2986,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -2955,6 +3021,7 @@ An event class will be fired after a payment is assigned and if the order is ove
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -2980,6 +3047,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -3014,6 +3082,7 @@ A base Event class for all order paid events.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -3039,6 +3108,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -3073,6 +3143,7 @@ An Event class fired after a payment is assigned and if the order is only partly
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -3098,6 +3169,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -3134,6 +3206,7 @@ An Event class fired after a payment was assigned to an order.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order, $payment):void
@@ -3163,6 +3236,7 @@ a|
 
 
 [source%nowrap, php]
+[#getpayment]
 ----
 
 public getPayment():Plenty\Modules\Payment\Models\Payment
@@ -3178,6 +3252,7 @@ public getPayment():Plenty\Modules\Payment\Models\Payment
 Get the payment.
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -3212,6 +3287,7 @@ An Event class fired after a payment is assigned and if the order is paid in adv
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -3237,6 +3313,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -3272,6 +3349,7 @@ An event class fired after a new order for a subscription is created. The order 
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -3297,6 +3375,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -3332,6 +3411,7 @@ Exception when duplicate order is created.
 ===== Methods
 
 [source%nowrap, php]
+[#getmessage]
 ----
 
 public getMessage():void
@@ -3347,6 +3427,7 @@ public getMessage():void
 
 
 [source%nowrap, php]
+[#getcode]
 ----
 
 public getCode():void
@@ -3362,6 +3443,7 @@ public getCode():void
 
 
 [source%nowrap, php]
+[#getfile]
 ----
 
 public getFile():void
@@ -3377,6 +3459,7 @@ public getFile():void
 
 
 [source%nowrap, php]
+[#getline]
 ----
 
 public getLine():void
@@ -3392,6 +3475,7 @@ public getLine():void
 
 
 [source%nowrap, php]
+[#gettrace]
 ----
 
 public getTrace():void
@@ -3407,6 +3491,7 @@ public getTrace():void
 
 
 [source%nowrap, php]
+[#getprevious]
 ----
 
 public getPrevious():void
@@ -3422,6 +3507,7 @@ public getPrevious():void
 
 
 [source%nowrap, php]
+[#gettraceasstring]
 ----
 
 public getTraceAsString():void
@@ -3457,6 +3543,7 @@ This class is used as an event listener as well as a service for registering eve
 ===== Methods
 
 [source%nowrap, php]
+[#handle]
 ----
 
 public handle($created):void
@@ -3482,6 +3569,7 @@ a|The event instance.
 
 
 [source%nowrap, php]
+[#addeventfortype]
 ----
 
 public static addEventForType($typeId, $className):void
@@ -3511,6 +3599,7 @@ a|The name of the event class.
 
 
 [source%nowrap, php]
+[#removeeventfortype]
 ----
 
 public static removeEventForType($typeId, $className):void
@@ -3563,6 +3652,7 @@ This is the contract for the coupon campaign repository. It allows you to get co
 ===== Methods
 
 [source%nowrap, php]
+[#findbyid]
 ----
 
 public findById($id):Plenty\Modules\Order\Coupon\Campaign\Models\CouponCampaign
@@ -3588,6 +3678,7 @@ a|The ID of the coupon campaign
 
 
 [source%nowrap, php]
+[#findbyemailplaceholder]
 ----
 
 public findByEmailPlaceholder($placeholder):Plenty\Modules\Order\Coupon\Campaign\Models\CouponCampaign
@@ -3613,6 +3704,7 @@ a|The email placeholder to search the database by
 
 
 [source%nowrap, php]
+[#findbycouponcode]
 ----
 
 public findByCouponCode($couponCode):Plenty\Modules\Order\Coupon\Campaign\Models\CouponCampaign
@@ -3638,6 +3730,7 @@ a|The coupon code to search the database by
 
 
 [source%nowrap, php]
+[#getcoupondisplaytype]
 ----
 
 public getCouponDisplayType($couponCodeValidation):string
@@ -3663,6 +3756,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Order\Coupon\Campaign\Models\CouponCampaign
@@ -3688,6 +3782,7 @@ a|
 
 
 [source%nowrap, php]
+[#modifycampaignusage]
 ----
 
 public modifyCampaignUsage($couponCampaignId, $operator, $field):void
@@ -3721,6 +3816,7 @@ a|Usage type to modify ( 'used' or 'unused' )
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($couponCampaignId):bool
@@ -3746,6 +3842,7 @@ a|The ID of the coupon campaign
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data):Plenty\Modules\Order\Coupon\Campaign\Models\CouponCampaign
@@ -3901,6 +3998,7 @@ The redeem type interacts with the concept. Pay attention to the combination the
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -3939,6 +4037,7 @@ This is the contract for the coupon campaign reference repository. It allows you
 ===== Methods
 
 [source%nowrap, php]
+[#findbycouponcampaignid]
 ----
 
 public findByCouponCampaignId($couponCampaignId):Illuminate\Support\Collection
@@ -3964,6 +4063,7 @@ a|The ID of the coupon campaign
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Illuminate\Support\Collection
@@ -4032,6 +4132,7 @@ The CouponCampaignReference model contains all information of a campaign referen
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4070,6 +4171,7 @@ This is the contract for the coupon codes by contacts repository. It allows you 
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Order\Coupon\Code\Contact\Models\CouponCodeContact
@@ -4095,6 +4197,7 @@ a|The redeemed coupon data. The properties that are required to create an entry 
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($contactId, $campaignId, $coupon, $data):Plenty\Modules\Order\Coupon\Code\Contact\Models\CouponCodeContact
@@ -4132,6 +4235,7 @@ a|The redeemed coupon data. The properties that are required to update an entry 
 
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($contactId, $campaignId, $coupon):Plenty\Modules\Order\Coupon\Code\Contact\Models\CouponCodeContact
@@ -4165,6 +4269,7 @@ a|The coupon code
 
 
 [source%nowrap, php]
+[#findbycontact]
 ----
 
 public findByContact($contactId, $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
@@ -4198,6 +4303,7 @@ a|The number of coupons to be displayed per page. The default number of coupons 
 
 
 [source%nowrap, php]
+[#findbycampaign]
 ----
 
 public findByCampaign($campaignId, $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
@@ -4231,6 +4337,7 @@ a|The number of coupons to be displayed per page. The default number of coupons 
 
 
 [source%nowrap, php]
+[#findbycoupon]
 ----
 
 public findByCoupon($coupon, $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
@@ -4312,6 +4419,7 @@ The CouponCodeContact model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4350,6 +4458,7 @@ CouponCodeValidatorContract is the interface for the coupon code validation repo
 ===== Methods
 
 [source%nowrap, php]
+[#validate]
 ----
 
 public validate($validationData):Plenty\Modules\Order\Coupon\Code\Validation\Models\CouponCodeValidation
@@ -4459,6 +4568,7 @@ The CouponCodeValidation data model contains all data necessary for validating a
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4518,6 +4628,7 @@ The CouponCodeValidationItem model contains all item data needed for validating 
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4556,6 +4667,7 @@ Provides methods for currency conversion data.
 ===== Methods
 
 [source%nowrap, php]
+[#getcurrencyconversionlist]
 ----
 
 public getCurrencyConversionList():array
@@ -4590,6 +4702,7 @@ Provides methods for currency data.
 ===== Methods
 
 [source%nowrap, php]
+[#getcurrency]
 ----
 
 public getCurrency($currencyIso, $columns = [], $with = []):Plenty\Modules\Order\Currency\Models\Currency
@@ -4623,6 +4736,7 @@ a|The relations to be loaded in the currency instance. Valid relations are "name
 
 
 [source%nowrap, php]
+[#getcurrencylist]
 ----
 
 public getCurrencyList($columns = [], $with = []):void
@@ -4652,6 +4766,7 @@ a|The relations to be loaded in the currency instance. Valid relations are "name
 
 
 [source%nowrap, php]
+[#getcurrencycountries]
 ----
 
 public getCurrencyCountries($currencyIso, $columns = []):void
@@ -4681,6 +4796,7 @@ a|The attributes to be loaded in the country instances.
 
 
 [source%nowrap, php]
+[#getcountrycurrency]
 ----
 
 public getCountryCurrency($countryId, $columns = [], $with = []):Plenty\Modules\Order\Currency\Models\Currency
@@ -4714,6 +4830,7 @@ a|The relations to be loaded in the currency instance ("names" or "countries").
 
 
 [source%nowrap, php]
+[#getexchangerate]
 ----
 
 public getExchangeRate($currencyIso):Plenty\Modules\Order\Currency\Models\CurrencyExchangeRate
@@ -4739,6 +4856,7 @@ a|
 
 
 [source%nowrap, php]
+[#getexchangeratesfrom]
 ----
 
 public getExchangeRatesFrom($currencyIso):array
@@ -4764,6 +4882,7 @@ a|The currency ISO 4217 code, e.g. "EUR".
 
 
 [source%nowrap, php]
+[#getexchangeratesto]
 ----
 
 public getExchangeRatesTo($currencyIso):array
@@ -4840,6 +4959,7 @@ The currency model. The model includes information like the ISO 4217 code and th
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4896,6 +5016,7 @@ The CurrencyCountryRelation model indicates which currency is related to which c
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4940,6 +5061,7 @@ The currency exchange rate model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -4996,6 +5118,7 @@ The currency name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5071,6 +5194,7 @@ The export model for IDEA exports.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5109,6 +5233,7 @@ Repository Contract for PaymentMethod
 ===== Methods
 
 [source%nowrap, php]
+[#getpaymentmethods]
 ----
 
 public getPaymentMethods($countryId, $plentyId = null, $lang = &quot;de&quot;):array
@@ -5142,6 +5267,7 @@ a|
 
 
 [source%nowrap, php]
+[#activatepaymentmethod]
 ----
 
 public activatePaymentMethod($id):Plenty\Modules\Order\Payment\Method\Models\PaymentMethod
@@ -5254,6 +5380,7 @@ The payment method model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5319,6 +5446,7 @@ The payment method information model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5357,6 +5485,7 @@ The OrderPdfGenerationEvent triggered before a pdf is generated for an order.
 ===== Methods
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -5372,6 +5501,7 @@ public getOrder():Plenty\Modules\Order\Models\Order
 Get the
 
 [source%nowrap, php]
+[#getdoctype]
 ----
 
 public getDocType():string
@@ -5387,6 +5517,7 @@ public getDocType():string
 Get the
 
 [source%nowrap, php]
+[#addorderpdfgeneration]
 ----
 
 public addOrderPdfGeneration($orderPdfGeneration):Plenty\Modules\Order\Pdf\Events
@@ -5460,6 +5591,7 @@ The OrderPdfGeneration Model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5498,6 +5630,7 @@ Provides methods for processing order referrers. An order referrer indicates whe
 ===== Methods
 
 [source%nowrap, php]
+[#getlist]
 ----
 
 public getList($columns = []):void
@@ -5523,6 +5656,7 @@ a|The columns (attributes) to load in the instances.
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data, $parentReferrerId = null):Plenty\Modules\Order\Referrer\Models\OrderReferrer
@@ -5552,6 +5686,7 @@ a|If a parent referrer ID is specified, the new referrer will be created as a su
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $referrerId):Plenty\Modules\Order\Referrer\Models\OrderReferrer
@@ -5581,6 +5716,7 @@ a|The ID of the order referrer
 
 
 [source%nowrap, php]
+[#getreferrerbyid]
 ----
 
 public getReferrerById($referrerId, $columns = []):Plenty\Modules\Order\Referrer\Models\OrderReferrer
@@ -5610,6 +5746,7 @@ a|The columns (attributes) to load in the instances.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($referrerId):bool
@@ -5635,6 +5772,7 @@ a|The ID of the order referrer
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -5650,6 +5788,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -5717,6 +5856,7 @@ The order referrer model. An order referrer shows where a purchase was originall
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5792,6 +5932,7 @@ The legacy order model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5830,6 +5971,7 @@ List serial numbers for orders
 ===== Methods
 
 [source%nowrap, php]
+[#listserialnumbersbyorder]
 ----
 
 public listSerialNumbersByOrder($orderId):void
@@ -5855,6 +5997,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#listserialnumbersbyorderitem]
 ----
 
 public listSerialNumbersByOrderItem($orderItemId):void
@@ -5922,6 +6065,7 @@ The order serial number model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -5960,6 +6104,7 @@ The EUCountryCodesServiceContract model
 ===== Methods
 
 [source%nowrap, php]
+[#iseucountry]
 ----
 
 public isEUCountry($countryId, $date = null):bool
@@ -5989,6 +6134,7 @@ a|[optional, default=null, date in format "0000-00-00"/"Y-m-d"]
 
 
 [source%nowrap, php]
+[#hascommunitytax]
 ----
 
 public hasCommunityTax($countryId, $date = null):bool
@@ -6018,6 +6164,7 @@ a|[optional, default=null, date in format "0000-00-00"/"Y-m-d"]
 
 
 [source%nowrap, php]
+[#gettaxterritory]
 ----
 
 public getTaxTerritory($countryId, $date = null):int
@@ -6047,6 +6194,7 @@ a|[optional, default=null, date in format "0000-00-00"/"Y-m-d"]
 
 
 [source%nowrap, php]
+[#hascommunitytoll]
 ----
 
 public hasCommunityToll($countryId, $date = null):bool
@@ -6076,6 +6224,7 @@ a|[optional, default=null, date in format "0000-00-00"/"Y-m-d"]
 
 
 [source%nowrap, php]
+[#gettollterritory]
 ----
 
 public getTollTerritory($countryId, $date = null):int
@@ -6105,6 +6254,7 @@ a|[optional, default=null, date in format "0000-00-00"/"Y-m-d"]
 
 
 [source%nowrap, php]
+[#isexportdelivery]
 ----
 
 public isExportDelivery($countryId, $merchandCountryId = null, $date = null):bool
@@ -6157,6 +6307,7 @@ The ParcelServicePresetRepositoryContract is the interface for the shipping prof
 ===== Methods
 
 [source%nowrap, php]
+[#getpresetlist]
 ----
 
 public getPresetList($columns = [], $with = null, $parcelServiceName = null, $filters = []):void
@@ -6194,6 +6345,7 @@ a|Possible attributes are updatedAtBefore and updatedAtAfter (yyyy-mm-dd or yyyy
 
 
 [source%nowrap, php]
+[#getpresetbyid]
 ----
 
 public getPresetById($presetId, $columns = []):Plenty\Modules\Order\Shipping\ParcelService\Models\ParcelServicePreset
@@ -6223,6 +6375,7 @@ a|The columns (attributes) to retrieve
 
 
 [source%nowrap, php]
+[#getpresetnamesbyid]
 ----
 
 public getPresetNamesById($presetId):array
@@ -6248,6 +6401,7 @@ a|The ID of the shipping profile
 
 
 [source%nowrap, php]
+[#getlastweightedpresetcombinations]
 ----
 
 public getLastWeightedPresetCombinations($basket, $contactClass, $customParams = []):array
@@ -6281,6 +6435,7 @@ a|User-defined parameters
 
 
 [source%nowrap, php]
+[#getpreviewlist]
 ----
 
 public getPreviewList($language = null, $useBackendName = false):array
@@ -6310,6 +6465,7 @@ a|Use the backend name instead of the external name?
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Order\Shipping\ParcelService\Models\ParcelServicePreset
@@ -6335,6 +6491,7 @@ a|The data as an associative array
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $id):Plenty\Modules\Order\Shipping\ParcelService\Models\ParcelServicePreset
@@ -6364,6 +6521,7 @@ a|The ID of the shipping profile
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):Plenty\Modules\Order\Shipping\ParcelService\Models\ParcelServicePreset
@@ -6389,6 +6547,7 @@ a|The ID of parcel service preset
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -6404,6 +6563,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -6419,6 +6579,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -6444,6 +6605,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -6459,6 +6621,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -6474,6 +6637,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -6510,6 +6674,7 @@ An event class fired after the shipping calculation is done. Listeners can add f
 ===== Methods
 
 [source%nowrap, php]
+[#getshippingserviceprovider]
 ----
 
 public getShippingServiceProvider():int
@@ -6525,6 +6690,7 @@ public getShippingServiceProvider():int
 Get the shipping service provider
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($shippingServiceProvider, $orderId, $shippingProfileId):void
@@ -6558,6 +6724,7 @@ a|The ID of the shipping profile
 
 
 [source%nowrap, php]
+[#getorderid]
 ----
 
 public getOrderId():int
@@ -6573,6 +6740,7 @@ public getOrderId():int
 Get the ID of the order.
 
 [source%nowrap, php]
+[#getadditonalfee]
 ----
 
 public getAdditonalFee():float
@@ -6588,6 +6756,7 @@ public getAdditonalFee():float
 Get the additional fee.
 
 [source%nowrap, php]
+[#addadditionalfee]
 ----
 
 public addAdditionalFee($additionalFee):Plenty\Modules\Order\Shipping\Events\AfterShippingCostCalculated
@@ -6613,6 +6782,7 @@ a|The additional fee
 
 
 [source%nowrap, php]
+[#getshippingprofileid]
 ----
 
 public getShippingProfileId():int
@@ -6628,6 +6798,7 @@ public getShippingProfileId():int
 Get the ID of the shipping profile.
 
 [source%nowrap, php]
+[#setshippingprofileid]
 ----
 
 public setShippingProfileId($shippingProfileId):void
@@ -6701,6 +6872,7 @@ The Default Shipping model is used to define the standard referrer, the standard
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -6739,6 +6911,7 @@ Repository for Country
 ===== Methods
 
 [source%nowrap, php]
+[#findisocode]
 ----
 
 public findIsoCode($countryId, $isoCodeType):string
@@ -6768,6 +6941,7 @@ a|
 
 
 [source%nowrap, php]
+[#getcountrybyid]
 ----
 
 public getCountryById($countryId):Plenty\Modules\Order\Shipping\Countries\Models\Country
@@ -6793,6 +6967,7 @@ a|
 
 
 [source%nowrap, php]
+[#getcountrieslist]
 ----
 
 public getCountriesList($active, $with):Illuminate\Support\Collection
@@ -6822,6 +6997,7 @@ a|
 
 
 [source%nowrap, php]
+[#getactivecountrieslist]
 ----
 
 public getActiveCountriesList():Illuminate\Support\Collection
@@ -6837,6 +7013,7 @@ public getActiveCountriesList():Illuminate\Support\Collection
 Get active countries
 
 [source%nowrap, php]
+[#getactivecountrynamemap]
 ----
 
 public getActiveCountryNameMap($language):array
@@ -6862,6 +7039,7 @@ a|
 
 
 [source%nowrap, php]
+[#getcountrybyiso]
 ----
 
 public getCountryByIso($isoCode, $isoType):void
@@ -6891,6 +7069,7 @@ a|('isoCode2', 'isoCode3')
 
 
 [source%nowrap, php]
+[#getcountrystatebyiso]
 ----
 
 public getCountryStateByIso($countryId, $isoCode):Plenty\Modules\Order\Shipping\Countries\Models\CountryState
@@ -6920,6 +7099,7 @@ a|
 
 
 [source%nowrap, php]
+[#activatecountry]
 ----
 
 public activateCountry($countryId):Plenty\Modules\Order\Shipping\Countries\Models\Country
@@ -6945,6 +7125,7 @@ a|
 
 
 [source%nowrap, php]
+[#deactivatecountry]
 ----
 
 public deactivateCountry($countryId):Plenty\Modules\Order\Shipping\Countries\Models\Country
@@ -7033,6 +7214,7 @@ The country model representing a country with allocated states and a list of nam
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -7083,6 +7265,7 @@ The CountryName model containing a name of a country in a specified language.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -7139,6 +7322,7 @@ The CountryState model representing a state which belongs to a country specified
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -7177,6 +7361,7 @@ Repository for Export Documents
 ===== Methods
 
 [source%nowrap, php]
+[#listexportdocumentsbyorderid]
 ----
 
 public listExportDocumentsByOrderId($orderId):Plenty\Modules\Order\Shipping\ExportDocuments\Models\ExportDocument
@@ -7241,6 +7426,7 @@ The Export Document model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -7279,6 +7465,7 @@ The ShippingInformationRepositoryContract is the interface for the shipping info
 ===== Methods
 
 [source%nowrap, php]
+[#getshippinginformationbyorderid]
 ----
 
 public getShippingInformationByOrderId($orderId):Plenty\Modules\Order\Shipping\Information\Models\ShippingInformation
@@ -7304,6 +7491,7 @@ a|The ID of the Order
 
 
 [source%nowrap, php]
+[#getordersshippinginformation]
 ----
 
 public getOrdersShippingInformation($searchParams):array
@@ -7329,6 +7517,7 @@ a|
 
 
 [source%nowrap, php]
+[#resetshippinginformation]
 ----
 
 public resetShippingInformation($orderId):void
@@ -7354,6 +7543,7 @@ a|The ID of the Order
 
 
 [source%nowrap, php]
+[#saveshippinginformation]
 ----
 
 public saveShippingInformation($data):Plenty\Modules\Order\Shipping\Information\Models\ShippingInformation
@@ -7379,6 +7569,7 @@ a|The shipping information data as associative array.
 
 
 [source%nowrap, php]
+[#updateadditionaldata]
 ----
 
 public updateAdditionalData($data, $orderId):Plenty\Modules\Order\Shipping\Information\Models\ShippingInformation
@@ -7408,6 +7599,7 @@ a|The ID of the order.
 
 
 [source%nowrap, php]
+[#updateshippingstatus]
 ----
 
 public updateShippingStatus($data, $orderId):Plenty\Modules\Order\Shipping\Information\Models\ShippingInformation
@@ -7488,6 +7680,7 @@ The ShippingInformationModel represents additional shipping information for an o
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -7526,6 +7719,7 @@ Create and get items in packages from order
 ===== Methods
 
 [source%nowrap, php]
+[#getitemsforpackage]
 ----
 
 public getItemsForPackage($packageId, $page = 1, $perPage = 1000, $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;):Plenty\Modules\Order\Shipping\Package\Models\OrderShippingPackageItems
@@ -7567,6 +7761,7 @@ a|[optional, default=desc]
 
 
 [source%nowrap, php]
+[#getitemsinpackagespalletspaginated]
 ----
 
 public getItemsInPackagesPalletsPaginated($orderId, $page = 1, $perPage = 1000, $sortBy = &quot;id&quot;, $sortOrder = &quot;asc&quot;):Plenty\Modules\Order\Shipping\Package\Models\OrderShippingPackageItems
@@ -7608,6 +7803,7 @@ a|[optional, default=asc]
 
 
 [source%nowrap, php]
+[#getitemsfrompackagesfororder]
 ----
 
 public getItemsFromPackagesForOrder($orderId):Plenty\Modules\Order\Shipping\Package\Models\OrderShippingPackageItems
@@ -7633,6 +7829,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#getpackeditemsperpackagefororder]
 ----
 
 public getPackedItemsPerPackageForOrder($orderId):array
@@ -7658,6 +7855,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#getunpackeditemsfrompackagesfororder]
 ----
 
 public getUnpackedItemsFromPackagesForOrder($orderId):array
@@ -7683,6 +7881,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#createitemsforpackageorder]
 ----
 
 public createItemsForPackageOrder($data, $packageId, $isCallFromLegacyCode = false):array
@@ -7716,6 +7915,7 @@ a|Optional. Flag to see if the call of this method is from legacy code or new co
 
 
 [source%nowrap, php]
+[#updateitemsinordershippingpackage]
 ----
 
 public updateItemsInOrderShippingPackage($id, $data):int
@@ -7745,6 +7945,7 @@ a|Array with data including package id, item id, variation id and/or the quantit
 
 
 [source%nowrap, php]
+[#deleteitemsinordershippingpackage]
 ----
 
 public deleteItemsInOrderShippingPackage($id):int
@@ -7770,6 +7971,7 @@ a|The ID of the order package item variation
 
 
 [source%nowrap, php]
+[#updateitemsfrompackage]
 ----
 
 public updateItemsFromPackage($packageId, $itemId, $variationId, $data):int
@@ -7814,6 +8016,7 @@ a|Array with data including item id, variation id and the quantity of the item i
 
 
 [source%nowrap, php]
+[#deleteitemsfrompackage]
 ----
 
 public deleteItemsFromPackage($packageId, $itemId, $variationId):Plenty\Repositories\Models\DeleteResponse
@@ -7873,6 +8076,7 @@ Create, get, update and delete order shipping packages.
 ===== Methods
 
 [source%nowrap, php]
+[#getordershippingpackage]
 ----
 
 public getOrderShippingPackage($orderShippingPackageId, $columns = [], $orderId = null):Plenty\Modules\Order\Shipping\Package\Models\OrderShippingPackage
@@ -7906,6 +8110,7 @@ a|The ID of an order
 
 
 [source%nowrap, php]
+[#listordershippingpackages]
 ----
 
 public listOrderShippingPackages($orderId, $columns = [], $with = []):array
@@ -7939,6 +8144,7 @@ a|(optional) Possible value is 'labelBase64' to get the label with the response
 
 
 [source%nowrap, php]
+[#createordershippingpackage]
 ----
 
 public createOrderShippingPackage($orderId, $data):Plenty\Modules\Order\Shipping\Package\Models\OrderShippingPackage
@@ -7968,6 +8174,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#updateordershippingpackage]
 ----
 
 public updateOrderShippingPackage($orderShippingPackageId, $data):Plenty\Modules\Order\Shipping\Package\Models\OrderShippingPackage
@@ -7997,6 +8204,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#deleteordershippingpackage]
 ----
 
 public deleteOrderShippingPackage($orderShippingPackageId):void
@@ -8022,6 +8230,7 @@ a|The ID of the order shipping package
 
 
 [source%nowrap, php]
+[#deleteallpackagesinpallet]
 ----
 
 public deleteAllPackagesInPallet($orderId, $palletId):void
@@ -8051,6 +8260,7 @@ a|The ID of the pallet
 
 
 [source%nowrap, php]
+[#updateallpackagesinpallet]
 ----
 
 public updateAllPackagesInPallet($orderId, $palletId, $data):void
@@ -8200,6 +8410,7 @@ The order shipping package model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -8256,6 +8467,7 @@ The relation between package, item and variation model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -8294,6 +8506,7 @@ The ShippingPackageTypeRepositoryContract is the interface for the shipping pack
 ===== Methods
 
 [source%nowrap, php]
+[#findshippingpackagetypebyid]
 ----
 
 public findShippingPackageTypeById($shippingPackageTypeId):Plenty\Modules\Order\Shipping\PackageType\Models\ShippingPackageType
@@ -8319,6 +8532,7 @@ a|The ID of the shipping package type
 
 
 [source%nowrap, php]
+[#listshippingpackagetypes]
 ----
 
 public listShippingPackageTypes():array
@@ -8388,6 +8602,7 @@ The shipping package type model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -8426,6 +8641,7 @@ Create, get, update and delete order shipping pallet.
 ===== Methods
 
 [source%nowrap, php]
+[#getordershippingpallet]
 ----
 
 public getOrderShippingPallet($orderShippingPalletId):Plenty\Modules\Order\Shipping\Pallet\Models\OrderShippingPallet
@@ -8451,6 +8667,7 @@ a|The ID of the order shipping pallet
 
 
 [source%nowrap, php]
+[#listordershippingpallets]
 ----
 
 public listOrderShippingPallets($filters, $with):array
@@ -8480,6 +8697,7 @@ a|
 
 
 [source%nowrap, php]
+[#listpalletpackages]
 ----
 
 public listPalletPackages($orderShippingPalletId, $orderId):array
@@ -8509,6 +8727,7 @@ a|
 
 
 [source%nowrap, php]
+[#createordershippingpallet]
 ----
 
 public createOrderShippingPallet($data):Plenty\Modules\Order\Shipping\Pallet\Models\OrderShippingPallet
@@ -8534,6 +8753,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#updateordershippingpallet]
 ----
 
 public updateOrderShippingPallet($orderShippingPalletId, $data):Plenty\Modules\Order\Shipping\Pallet\Models\OrderShippingPallet
@@ -8563,6 +8783,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#deleteordershippingpallet]
 ----
 
 public deleteOrderShippingPallet($orderShippingPalletId):Plenty\Modules\Order\Shipping\Pallet\Models\OrderShippingPallet
@@ -8588,6 +8809,7 @@ a|The ID of the order shipping pallet
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -8603,6 +8825,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -8618,6 +8841,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -8643,6 +8867,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -8658,6 +8883,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -8673,6 +8899,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -8745,6 +8972,7 @@ The order shipping pallet model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -8783,6 +9011,7 @@ The ParcelServiceConstraintRepositoryContract is the interface for the parcel se
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):void
@@ -8808,6 +9037,7 @@ a|
 
 
 [source%nowrap, php]
+[#getbyid]
 ----
 
 public getById($id):void
@@ -8833,6 +9063,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):void
@@ -8912,6 +9143,7 @@ The Parcel Service Model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -8971,6 +9203,7 @@ The Parcel Service Constraint Model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -9021,6 +9254,7 @@ The Parcel Service Name Model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -9161,6 +9395,7 @@ The Parcel Service Preset Model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -9211,6 +9446,7 @@ The Parcel Service Preset Name Model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -9249,6 +9485,7 @@ Get parcel service region name
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Order\Shipping\ParcelServiceRegion\Models\ParcelServiceRegionName
@@ -9274,6 +9511,7 @@ a|
 
 
 [source%nowrap, php]
+[#getallregions]
 ----
 
 public getAllRegions():array
@@ -9308,6 +9546,7 @@ Get parcel service region
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Order\Shipping\ParcelServiceRegion\Models\ParcelServiceRegion
@@ -9333,6 +9572,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):void
@@ -9358,6 +9598,7 @@ a|
 
 
 [source%nowrap, php]
+[#getparcelserviceregion]
 ----
 
 public getParcelServiceRegion($parcelServiceRegionId, $columns = []):Plenty\Modules\Order\Shipping\ParcelServiceRegion\Models\ParcelServiceRegion
@@ -9387,6 +9628,7 @@ a|
 
 
 [source%nowrap, php]
+[#listparcelserviceregions]
 ----
 
 public listParcelServiceRegions($parcelServicePresetId, $columns = []):array
@@ -9458,6 +9700,7 @@ The parcel service region model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -9505,6 +9748,7 @@ The parcel service region name model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -9543,6 +9787,7 @@ The ReturnsRepositoryContract is the interface for the order returns repository.
 ===== Methods
 
 [source%nowrap, php]
+[#registerreturns]
 ----
 
 public registerReturns($pluginName, $orderIds):Plenty\Modules\Order\Shipping\Returns\Models\RegisterReturnsResult
@@ -9572,6 +9817,7 @@ a|
 
 
 [source%nowrap, php]
+[#getreturnslabelbyid]
 ----
 
 public getReturnsLabelById($labelId, $with):Plenty\Repositories\Models\PaginatedResult
@@ -9601,6 +9847,7 @@ a|
 
 
 [source%nowrap, php]
+[#assignlabel2return]
 ----
 
 public assignLabel2Return($orderId, $returnsId):Plenty\Modules\Order\Shipping\Returns\Models\OrderReturns
@@ -9630,6 +9877,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorderreturns]
 ----
 
 public getOrderReturns($orderId, $with = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
@@ -9667,6 +9915,7 @@ a|
 
 
 [source%nowrap, php]
+[#createreturnsorder]
 ----
 
 public createReturnsOrder($orderId, $data):void
@@ -9696,6 +9945,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatereturnsorder]
 ----
 
 public updateReturnsOrder($returnsOrderId, $data):void
@@ -9744,6 +9994,7 @@ The ReturnsServiceProviderRepositoryContract is the interface for the returns se
 ===== Methods
 
 [source%nowrap, php]
+[#getreturnsserviceproviderlist]
 ----
 
 public getReturnsServiceProviderList($columns = [], $page = 1, $itemsPerPage = 50, $filters = [], $with = []):Plenty\Repositories\Models\PaginatedResult
@@ -9785,6 +10036,7 @@ a|
 
 
 [source%nowrap, php]
+[#findbyid]
 ----
 
 public findById($returnsServiceProviderId):Plenty\Modules\Order\Shipping\Returns\Models\ReturnsServiceProvider
@@ -9810,6 +10062,7 @@ a|
 
 
 [source%nowrap, php]
+[#findbyname]
 ----
 
 public findByName($returnsServiceProviderName):array
@@ -9835,6 +10088,7 @@ a|
 
 
 [source%nowrap, php]
+[#savereturnsserviceprovider]
 ----
 
 public saveReturnsServiceProvider($pluginName, $returnProviderAlias = null):Plenty\Modules\Order\Shipping\Returns\Models\ReturnsServiceProvider
@@ -9864,6 +10118,7 @@ a|
 
 
 [source%nowrap, php]
+[#getreturnsserviceprovider]
 ----
 
 public getReturnsServiceProvider($orderId):Plenty\Modules\Order\Shipping\Returns\Models\ReturnsServiceProvider
@@ -9889,6 +10144,7 @@ a|
 
 
 [source%nowrap, php]
+[#pluginlist]
 ----
 
 public pluginList():void
@@ -9924,6 +10180,7 @@ The FailedRegisterOrderReturns model.
 ===== Methods
 
 [source%nowrap, php]
+[#adderrormessage]
 ----
 
 public addErrorMessage($errorMessage):void
@@ -9949,6 +10206,7 @@ a|
 
 
 [source%nowrap, php]
+[#setorderid]
 ----
 
 public setOrderId($orderId):void
@@ -9974,6 +10232,7 @@ a|
 
 
 [source%nowrap, php]
+[#addexception]
 ----
 
 public addException($exception):void
@@ -9999,6 +10258,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($key):void
@@ -10024,6 +10284,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasgetmutator]
 ----
 
 public hasGetMutator($key):bool
@@ -10049,6 +10310,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattributes]
 ----
 
 public setAttributes($attributes):void
@@ -10074,6 +10336,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattribute]
 ----
 
 public setAttribute($key, $value):Plenty\Repositories\Models
@@ -10103,6 +10366,7 @@ a|
 
 
 [source%nowrap, php]
+[#hassetmutator]
 ----
 
 public hasSetMutator($key):bool
@@ -10128,6 +10392,7 @@ a|
 
 
 [source%nowrap, php]
+[#changevalue]
 ----
 
 public changeValue($key, $callback):void
@@ -10157,6 +10422,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetexists]
 ----
 
 public offsetExists($offset):bool
@@ -10182,6 +10448,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetget]
 ----
 
 public offsetGet($offset):void
@@ -10207,6 +10474,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetset]
 ----
 
 public offsetSet($offset, $value):void
@@ -10236,6 +10504,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetunset]
 ----
 
 public offsetUnset($offset):void
@@ -10261,6 +10530,7 @@ a|
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray($translate = false):array
@@ -10286,6 +10556,7 @@ a|Flag indicating if values should be translated.
 
 
 [source%nowrap, php]
+[#tojson]
 ----
 
 public toJson($options):string
@@ -10311,6 +10582,7 @@ a|
 
 
 [source%nowrap, php]
+[#jsonserialize]
 ----
 
 public jsonSerialize():void
@@ -10326,6 +10598,7 @@ public jsonSerialize():void
 
 
 [source%nowrap, php]
+[#fill]
 ----
 
 public fill($attributes):Plenty\Repositories\Models
@@ -10351,6 +10624,7 @@ a|
 
 
 [source%nowrap, php]
+[#isfillable]
 ----
 
 public isFillable($key):bool
@@ -10376,6 +10650,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfillable]
 ----
 
 public getFillable():array
@@ -10391,6 +10666,7 @@ public getFillable():array
 Get the fillable attributes for the model.
 
 [source%nowrap, php]
+[#fillable]
 ----
 
 public fillable($fillable):Plenty\Repositories\Models
@@ -10416,6 +10692,7 @@ a|
 
 
 [source%nowrap, php]
+[#hascast]
 ----
 
 public hasCast($key, $types = null):bool
@@ -10445,6 +10722,7 @@ a|
 
 
 [source%nowrap, php]
+[#fromjson]
 ----
 
 public fromJson($value, $asObject = false):void
@@ -10527,6 +10805,7 @@ The model for OrderReturns
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -10561,6 +10840,7 @@ The RegisterOrderReturnsResponse model.
 ===== Methods
 
 [source%nowrap, php]
+[#addsuccessfullyregisteredreturns]
 ----
 
 public addSuccessfullyRegisteredReturns($successfullyRegisteredReturn):void
@@ -10586,6 +10866,7 @@ a|
 
 
 [source%nowrap, php]
+[#addfailedregisterorderreturns]
 ----
 
 public addFailedRegisterOrderReturns($failedRegisterOrderReturn):void
@@ -10611,6 +10892,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($key):void
@@ -10636,6 +10918,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasgetmutator]
 ----
 
 public hasGetMutator($key):bool
@@ -10661,6 +10944,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattributes]
 ----
 
 public setAttributes($attributes):void
@@ -10686,6 +10970,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattribute]
 ----
 
 public setAttribute($key, $value):Plenty\Repositories\Models
@@ -10715,6 +11000,7 @@ a|
 
 
 [source%nowrap, php]
+[#hassetmutator]
 ----
 
 public hasSetMutator($key):bool
@@ -10740,6 +11026,7 @@ a|
 
 
 [source%nowrap, php]
+[#changevalue]
 ----
 
 public changeValue($key, $callback):void
@@ -10769,6 +11056,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetexists]
 ----
 
 public offsetExists($offset):bool
@@ -10794,6 +11082,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetget]
 ----
 
 public offsetGet($offset):void
@@ -10819,6 +11108,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetset]
 ----
 
 public offsetSet($offset, $value):void
@@ -10848,6 +11138,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetunset]
 ----
 
 public offsetUnset($offset):void
@@ -10873,6 +11164,7 @@ a|
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray($translate = false):array
@@ -10898,6 +11190,7 @@ a|Flag indicating if values should be translated.
 
 
 [source%nowrap, php]
+[#tojson]
 ----
 
 public toJson($options):string
@@ -10923,6 +11216,7 @@ a|
 
 
 [source%nowrap, php]
+[#jsonserialize]
 ----
 
 public jsonSerialize():void
@@ -10938,6 +11232,7 @@ public jsonSerialize():void
 
 
 [source%nowrap, php]
+[#fill]
 ----
 
 public fill($attributes):Plenty\Repositories\Models
@@ -10963,6 +11258,7 @@ a|
 
 
 [source%nowrap, php]
+[#isfillable]
 ----
 
 public isFillable($key):bool
@@ -10988,6 +11284,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfillable]
 ----
 
 public getFillable():array
@@ -11003,6 +11300,7 @@ public getFillable():array
 Get the fillable attributes for the model.
 
 [source%nowrap, php]
+[#fillable]
 ----
 
 public fillable($fillable):Plenty\Repositories\Models
@@ -11028,6 +11326,7 @@ a|
 
 
 [source%nowrap, php]
+[#hascast]
 ----
 
 public hasCast($key, $types = null):bool
@@ -11057,6 +11356,7 @@ a|
 
 
 [source%nowrap, php]
+[#fromjson]
 ----
 
 public fromJson($value, $asObject = false):void
@@ -11118,6 +11418,7 @@ The model for RegisterReturnsResult
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -11174,6 +11475,7 @@ The ReturnsServiceProvider model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -11208,6 +11510,7 @@ The model for SuccessfullyRegisteredOrderReturns
 ===== Methods
 
 [source%nowrap, php]
+[#setorderid]
 ----
 
 public setOrderId($orderId):void
@@ -11233,6 +11536,7 @@ a|
 
 
 [source%nowrap, php]
+[#setfilename]
 ----
 
 public setFileName($fileName):void
@@ -11258,6 +11562,7 @@ a|
 
 
 [source%nowrap, php]
+[#setexternalnumber]
 ----
 
 public setExternalNumber($externalNumber):void
@@ -11283,6 +11588,7 @@ a|
 
 
 [source%nowrap, php]
+[#setexternaldata]
 ----
 
 public setExternalData($externalData):void
@@ -11308,6 +11614,7 @@ a|
 
 
 [source%nowrap, php]
+[#setavailableuntil]
 ----
 
 public setAvailableUntil($availiableUntil):void
@@ -11333,6 +11640,7 @@ a|
 
 
 [source%nowrap, php]
+[#setlabelbase64]
 ----
 
 public setLabelBase64($labelBase64):void
@@ -11358,6 +11666,7 @@ a|
 
 
 [source%nowrap, php]
+[#setreturnsorderid]
 ----
 
 public setReturnsOrderId($returnsOrderId):void
@@ -11383,6 +11692,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($key):void
@@ -11408,6 +11718,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasgetmutator]
 ----
 
 public hasGetMutator($key):bool
@@ -11433,6 +11744,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattributes]
 ----
 
 public setAttributes($attributes):void
@@ -11458,6 +11770,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattribute]
 ----
 
 public setAttribute($key, $value):Plenty\Repositories\Models
@@ -11487,6 +11800,7 @@ a|
 
 
 [source%nowrap, php]
+[#hassetmutator]
 ----
 
 public hasSetMutator($key):bool
@@ -11512,6 +11826,7 @@ a|
 
 
 [source%nowrap, php]
+[#changevalue]
 ----
 
 public changeValue($key, $callback):void
@@ -11541,6 +11856,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetexists]
 ----
 
 public offsetExists($offset):bool
@@ -11566,6 +11882,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetget]
 ----
 
 public offsetGet($offset):void
@@ -11591,6 +11908,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetset]
 ----
 
 public offsetSet($offset, $value):void
@@ -11620,6 +11938,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetunset]
 ----
 
 public offsetUnset($offset):void
@@ -11645,6 +11964,7 @@ a|
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray($translate = false):array
@@ -11670,6 +11990,7 @@ a|Flag indicating if values should be translated.
 
 
 [source%nowrap, php]
+[#tojson]
 ----
 
 public toJson($options):string
@@ -11695,6 +12016,7 @@ a|
 
 
 [source%nowrap, php]
+[#jsonserialize]
 ----
 
 public jsonSerialize():void
@@ -11710,6 +12032,7 @@ public jsonSerialize():void
 
 
 [source%nowrap, php]
+[#fill]
 ----
 
 public fill($attributes):Plenty\Repositories\Models
@@ -11735,6 +12058,7 @@ a|
 
 
 [source%nowrap, php]
+[#isfillable]
 ----
 
 public isFillable($key):bool
@@ -11760,6 +12084,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfillable]
 ----
 
 public getFillable():array
@@ -11775,6 +12100,7 @@ public getFillable():array
 Get the fillable attributes for the model.
 
 [source%nowrap, php]
+[#fillable]
 ----
 
 public fillable($fillable):Plenty\Repositories\Models
@@ -11800,6 +12126,7 @@ a|
 
 
 [source%nowrap, php]
+[#hascast]
 ----
 
 public hasCast($key, $types = null):bool
@@ -11829,6 +12156,7 @@ a|
 
 
 [source%nowrap, php]
+[#fromjson]
 ----
 
 public fromJson($value, $asObject = false):void
@@ -11878,6 +12206,7 @@ The RegisterReturnsService class offers the possibility to register returns, get
 ===== Methods
 
 [source%nowrap, php]
+[#registerreturns]
 ----
 
 public registerReturns($pluginName, $orderIds):Plenty\Modules\Order\Shipping\Returns\Models\RegisterReturnsResult
@@ -11907,6 +12236,7 @@ a|
 
 
 [source%nowrap, php]
+[#persistlabel]
 ----
 
 public persistLabel($labelBase64, $returns):Plenty\Modules\Document\Models\Document
@@ -11936,6 +12266,7 @@ a|
 
 
 [source%nowrap, php]
+[#getlabel]
 ----
 
 public getLabel($orderReturns):string
@@ -11980,6 +12311,7 @@ The ReturnsServiceProviderService class offers the possibility to register a ret
 ===== Methods
 
 [source%nowrap, php]
+[#registerreturnsprovider]
 ----
 
 public registerReturnsProvider($returnsServiceProviderCode, $returnsServiceProviderLabel, $returnsServiceProviderClass, $useParentOrderId = true):bool
@@ -12017,6 +12349,7 @@ a|
 
 
 [source%nowrap, php]
+[#getreturnsserviceproviderentrybyid]
 ----
 
 public getReturnsServiceProviderEntryById($providerId):Plenty\Modules\Order\Shipping\Returns\Services\Entries\ReturnsServiceProviderEntry
@@ -12042,6 +12375,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasreturnsserviceprovidermethod]
 ----
 
 public hasReturnsServiceProviderMethod($returnsServiceProviderCode, $methodName):bool
@@ -12094,6 +12428,7 @@ The returns provider entry contains all information needed to use module returns
 ===== Methods
 
 [source%nowrap, php]
+[#getreturnsserviceproviderlabel]
 ----
 
 public getReturnsServiceProviderLabel():string
@@ -12109,6 +12444,7 @@ public getReturnsServiceProviderLabel():string
 Get the returns service provider label
 
 [source%nowrap, php]
+[#setreturnsserviceproviderlabel]
 ----
 
 public setReturnsServiceProviderLabel($returnsServiceProviderLabel):Plenty\Modules\Order\Shipping\Returns\Services\Entries\ReturnsServiceProviderEntry
@@ -12134,6 +12470,7 @@ a|
 
 
 [source%nowrap, php]
+[#getreturnsserviceprovidercode]
 ----
 
 public getReturnsServiceProviderCode():string
@@ -12149,6 +12486,7 @@ public getReturnsServiceProviderCode():string
 Get the return service provider code
 
 [source%nowrap, php]
+[#setreturnsserviceprovidercode]
 ----
 
 public setReturnsServiceProviderCode($returnsServiceProviderCode):Plenty\Modules\Order\Shipping\Returns\Services\Entries\ReturnsServiceProviderEntry
@@ -12174,6 +12512,7 @@ a|
 
 
 [source%nowrap, php]
+[#getreturnsserviceproviderclass]
 ----
 
 public getReturnsServiceProviderClass($methodName):string
@@ -12199,6 +12538,7 @@ a|
 
 
 [source%nowrap, php]
+[#methodexists]
 ----
 
 public methodExists($methodName):bool
@@ -12224,6 +12564,7 @@ a|
 
 
 [source%nowrap, php]
+[#getproviderid]
 ----
 
 public getProviderId():int
@@ -12239,6 +12580,7 @@ public getProviderId():int
 Get the provider ID
 
 [source%nowrap, php]
+[#getuseparentorderid]
 ----
 
 public getUseParentOrderId():bool
@@ -12273,6 +12615,7 @@ The shipping provider entry contains all information needed to use module shippi
 ===== Methods
 
 [source%nowrap, php]
+[#getshippingserviceproviderclasses]
 ----
 
 public getShippingServiceProviderClasses():array
@@ -12288,6 +12631,7 @@ public getShippingServiceProviderClasses():array
 Get the shipping service provider classes
 
 [source%nowrap, php]
+[#getshippingserviceprovidernames]
 ----
 
 public getShippingServiceProviderNames():void
@@ -12303,6 +12647,7 @@ public getShippingServiceProviderNames():void
 Get the shipping service provider names
 
 [source%nowrap, php]
+[#setshippingserviceprovidernames]
 ----
 
 public setShippingServiceProviderNames($shippingServiceProviderNames):Plenty\Modules\Order\Shipping\ServiceProvider\Services\Entries\ShippingServiceProviderEntry
@@ -12328,6 +12673,7 @@ a|
 
 
 [source%nowrap, php]
+[#getshippingserviceprovidercode]
 ----
 
 public getShippingServiceProviderCode():string
@@ -12343,6 +12689,7 @@ public getShippingServiceProviderCode():string
 Get the shipping service provider code
 
 [source%nowrap, php]
+[#setshippingserviceprovidercode]
 ----
 
 public setShippingServiceProviderCode($shippingServiceProviderCode):Plenty\Modules\Order\Shipping\ServiceProvider\Services\Entries\ShippingServiceProviderEntry
@@ -12368,6 +12715,7 @@ a|
 
 
 [source%nowrap, php]
+[#getshippingserviceproviderclass]
 ----
 
 public getShippingServiceProviderClass($methodName):string
@@ -12393,6 +12741,7 @@ a|
 
 
 [source%nowrap, php]
+[#methodexists]
 ----
 
 public methodExists($methodName):bool
@@ -12441,6 +12790,7 @@ The ShippingServiceProviderPluginRepositoryContract is the interface for the shi
 ===== Methods
 
 [source%nowrap, php]
+[#plugins]
 ----
 
 public plugins():void
@@ -12456,6 +12806,7 @@ public plugins():void
 Return list of shipping service provider plugins
 
 [source%nowrap, php]
+[#filteredpluginlist]
 ----
 
 public filteredPluginList($filter):void
@@ -12500,6 +12851,7 @@ The ShippingServiceProviderRepositoryContract is the interface for the shipping 
 ===== Methods
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all($columns = [], $page = 1, $itemsPerPage = 50, $filters = [], $with = []):void
@@ -12541,6 +12893,7 @@ a|The releations to be loaded with the shipping service provider
 
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($shippingServiceProviderId):Plenty\Modules\Order\Shipping\ServiceProvider\Models\ShippingServiceProvider
@@ -12566,6 +12919,7 @@ a|The ID of the shipping service provider
 
 
 [source%nowrap, php]
+[#findbyname]
 ----
 
 public findByName($shippingServiceProviderName):Plenty\Modules\Order\Shipping\ServiceProvider\Models\ShippingServiceProvider
@@ -12591,6 +12945,7 @@ a|The name of the shipping service provider
 
 
 [source%nowrap, php]
+[#saveshippingserviceprovider]
 ----
 
 public saveShippingServiceProvider($pluginName, $shippingServiceProviderName, $icon = null):Plenty\Modules\Order\Shipping\ServiceProvider\Models\ShippingServiceProvider
@@ -12624,6 +12979,7 @@ a|The path of the icon
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -12639,6 +12995,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -12674,6 +13031,7 @@ The FailedRegisterShipment model.
 ===== Methods
 
 [source%nowrap, php]
+[#adderrormessage]
 ----
 
 public addErrorMessage($errorMessage):void
@@ -12699,6 +13057,7 @@ a|
 
 
 [source%nowrap, php]
+[#addexception]
 ----
 
 public addException($exception):void
@@ -12724,6 +13083,7 @@ a|
 
 
 [source%nowrap, php]
+[#setorderid]
 ----
 
 public setOrderId($orderId):void
@@ -12749,6 +13109,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($key):void
@@ -12774,6 +13135,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasgetmutator]
 ----
 
 public hasGetMutator($key):bool
@@ -12799,6 +13161,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattributes]
 ----
 
 public setAttributes($attributes):void
@@ -12824,6 +13187,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattribute]
 ----
 
 public setAttribute($key, $value):Plenty\Repositories\Models
@@ -12853,6 +13217,7 @@ a|
 
 
 [source%nowrap, php]
+[#hassetmutator]
 ----
 
 public hasSetMutator($key):bool
@@ -12878,6 +13243,7 @@ a|
 
 
 [source%nowrap, php]
+[#changevalue]
 ----
 
 public changeValue($key, $callback):void
@@ -12907,6 +13273,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetexists]
 ----
 
 public offsetExists($offset):bool
@@ -12932,6 +13299,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetget]
 ----
 
 public offsetGet($offset):void
@@ -12957,6 +13325,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetset]
 ----
 
 public offsetSet($offset, $value):void
@@ -12986,6 +13355,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetunset]
 ----
 
 public offsetUnset($offset):void
@@ -13011,6 +13381,7 @@ a|
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray($translate = false):array
@@ -13036,6 +13407,7 @@ a|Flag indicating if values should be translated.
 
 
 [source%nowrap, php]
+[#tojson]
 ----
 
 public toJson($options):string
@@ -13061,6 +13433,7 @@ a|
 
 
 [source%nowrap, php]
+[#jsonserialize]
 ----
 
 public jsonSerialize():void
@@ -13076,6 +13449,7 @@ public jsonSerialize():void
 
 
 [source%nowrap, php]
+[#fill]
 ----
 
 public fill($attributes):Plenty\Repositories\Models
@@ -13101,6 +13475,7 @@ a|
 
 
 [source%nowrap, php]
+[#isfillable]
 ----
 
 public isFillable($key):bool
@@ -13126,6 +13501,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfillable]
 ----
 
 public getFillable():array
@@ -13141,6 +13517,7 @@ public getFillable():array
 Get the fillable attributes for the model.
 
 [source%nowrap, php]
+[#fillable]
 ----
 
 public fillable($fillable):Plenty\Repositories\Models
@@ -13166,6 +13543,7 @@ a|
 
 
 [source%nowrap, php]
+[#hascast]
 ----
 
 public hasCast($key, $types = null):bool
@@ -13195,6 +13573,7 @@ a|
 
 
 [source%nowrap, php]
+[#fromjson]
 ----
 
 public fromJson($value, $asObject = false):void
@@ -13243,6 +13622,7 @@ The RegisterShipmentResponse model.
 ===== Methods
 
 [source%nowrap, php]
+[#addsuccessfullyregisteredshipment]
 ----
 
 public addSuccessfullyRegisteredShipment($successfullyRegisteredShipment):void
@@ -13268,6 +13648,7 @@ a|Object containing data for successfully registering a shipment
 
 
 [source%nowrap, php]
+[#addfailedregistershipment]
 ----
 
 public addFailedRegisterShipment($failedRegisterShipment):void
@@ -13293,6 +13674,7 @@ a|Object containing data when shipment registration was not successful, e.g. inc
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($key):void
@@ -13318,6 +13700,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasgetmutator]
 ----
 
 public hasGetMutator($key):bool
@@ -13343,6 +13726,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattributes]
 ----
 
 public setAttributes($attributes):void
@@ -13368,6 +13752,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattribute]
 ----
 
 public setAttribute($key, $value):Plenty\Repositories\Models
@@ -13397,6 +13782,7 @@ a|
 
 
 [source%nowrap, php]
+[#hassetmutator]
 ----
 
 public hasSetMutator($key):bool
@@ -13422,6 +13808,7 @@ a|
 
 
 [source%nowrap, php]
+[#changevalue]
 ----
 
 public changeValue($key, $callback):void
@@ -13451,6 +13838,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetexists]
 ----
 
 public offsetExists($offset):bool
@@ -13476,6 +13864,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetget]
 ----
 
 public offsetGet($offset):void
@@ -13501,6 +13890,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetset]
 ----
 
 public offsetSet($offset, $value):void
@@ -13530,6 +13920,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetunset]
 ----
 
 public offsetUnset($offset):void
@@ -13555,6 +13946,7 @@ a|
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray($translate = false):array
@@ -13580,6 +13972,7 @@ a|Flag indicating if values should be translated.
 
 
 [source%nowrap, php]
+[#tojson]
 ----
 
 public toJson($options):string
@@ -13605,6 +13998,7 @@ a|
 
 
 [source%nowrap, php]
+[#jsonserialize]
 ----
 
 public jsonSerialize():void
@@ -13620,6 +14014,7 @@ public jsonSerialize():void
 
 
 [source%nowrap, php]
+[#fill]
 ----
 
 public fill($attributes):Plenty\Repositories\Models
@@ -13645,6 +14040,7 @@ a|
 
 
 [source%nowrap, php]
+[#isfillable]
 ----
 
 public isFillable($key):bool
@@ -13670,6 +14066,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfillable]
 ----
 
 public getFillable():array
@@ -13685,6 +14082,7 @@ public getFillable():array
 Get the fillable attributes for the model.
 
 [source%nowrap, php]
+[#fillable]
 ----
 
 public fillable($fillable):Plenty\Repositories\Models
@@ -13710,6 +14108,7 @@ a|
 
 
 [source%nowrap, php]
+[#hascast]
 ----
 
 public hasCast($key, $types = null):bool
@@ -13739,6 +14138,7 @@ a|
 
 
 [source%nowrap, php]
+[#fromjson]
 ----
 
 public fromJson($value, $asObject = false):void
@@ -13812,6 +14212,7 @@ The service provider model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -13846,6 +14247,7 @@ The SuccessfullyRegisteredShipment model.
 ===== Methods
 
 [source%nowrap, php]
+[#setorderid]
 ----
 
 public setOrderId($orderId):void
@@ -13871,6 +14273,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#sethasnewpackagenumber]
 ----
 
 public setHasNewPackageNumber($hasNewPackageNumber):void
@@ -13896,6 +14299,7 @@ a|Flag that indicates whether the order has a new package number
 
 
 [source%nowrap, php]
+[#addmessage]
 ----
 
 public addMessage($message):void
@@ -13921,6 +14325,7 @@ a|The message
 
 
 [source%nowrap, php]
+[#addpackage]
 ----
 
 public addPackage($package):void
@@ -13946,6 +14351,7 @@ a|The order shipping package
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($key):void
@@ -13971,6 +14377,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasgetmutator]
 ----
 
 public hasGetMutator($key):bool
@@ -13996,6 +14403,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattributes]
 ----
 
 public setAttributes($attributes):void
@@ -14021,6 +14429,7 @@ a|
 
 
 [source%nowrap, php]
+[#setattribute]
 ----
 
 public setAttribute($key, $value):Plenty\Repositories\Models
@@ -14050,6 +14459,7 @@ a|
 
 
 [source%nowrap, php]
+[#hassetmutator]
 ----
 
 public hasSetMutator($key):bool
@@ -14075,6 +14485,7 @@ a|
 
 
 [source%nowrap, php]
+[#changevalue]
 ----
 
 public changeValue($key, $callback):void
@@ -14104,6 +14515,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetexists]
 ----
 
 public offsetExists($offset):bool
@@ -14129,6 +14541,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetget]
 ----
 
 public offsetGet($offset):void
@@ -14154,6 +14567,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetset]
 ----
 
 public offsetSet($offset, $value):void
@@ -14183,6 +14597,7 @@ a|
 
 
 [source%nowrap, php]
+[#offsetunset]
 ----
 
 public offsetUnset($offset):void
@@ -14208,6 +14623,7 @@ a|
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray($translate = false):array
@@ -14233,6 +14649,7 @@ a|Flag indicating if values should be translated.
 
 
 [source%nowrap, php]
+[#tojson]
 ----
 
 public toJson($options):string
@@ -14258,6 +14675,7 @@ a|
 
 
 [source%nowrap, php]
+[#jsonserialize]
 ----
 
 public jsonSerialize():void
@@ -14273,6 +14691,7 @@ public jsonSerialize():void
 
 
 [source%nowrap, php]
+[#fill]
 ----
 
 public fill($attributes):Plenty\Repositories\Models
@@ -14298,6 +14717,7 @@ a|
 
 
 [source%nowrap, php]
+[#isfillable]
 ----
 
 public isFillable($key):bool
@@ -14323,6 +14743,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfillable]
 ----
 
 public getFillable():array
@@ -14338,6 +14759,7 @@ public getFillable():array
 Get the fillable attributes for the model.
 
 [source%nowrap, php]
+[#fillable]
 ----
 
 public fillable($fillable):Plenty\Repositories\Models
@@ -14363,6 +14785,7 @@ a|
 
 
 [source%nowrap, php]
+[#hascast]
 ----
 
 public hasCast($key, $types = null):bool
@@ -14392,6 +14815,7 @@ a|
 
 
 [source%nowrap, php]
+[#fromjson]
 ----
 
 public fromJson($value, $asObject = false):void
@@ -14441,6 +14865,7 @@ The ShippingServiceProviderService class offers the possibility to register a sh
 ===== Methods
 
 [source%nowrap, php]
+[#registershippingprovider]
 ----
 
 public registerShippingProvider($shippingServiceProviderCode, $shippingServiceProviderNames, $shippingServiceProviderClasses):bool
@@ -14474,6 +14899,7 @@ a|
 
 
 [source%nowrap, php]
+[#hasshippingserviceprovidermethod]
 ----
 
 public hasShippingServiceProviderMethod($shippingServiceProviderCode, $methodName):bool
@@ -14526,6 +14952,7 @@ The OrderAddressRepositoryContract is the interface for the order address reposi
 ===== Methods
 
 [source%nowrap, php]
+[#findaddressbytype]
 ----
 
 public findAddressByType($orderId, $typeId):Plenty\Modules\Account\Address\Models\Address
@@ -14555,6 +14982,7 @@ a|The ID of the address type
 
 
 [source%nowrap, php]
+[#findscheduleraddressbytype]
 ----
 
 public findSchedulerAddressByType($schedulerId, $typeId):Plenty\Modules\Account\Address\Models\Address
@@ -14584,6 +15012,7 @@ a|The ID of the address type
 
 
 [source%nowrap, php]
+[#createorderaddress]
 ----
 
 public createOrderAddress($data, $orderId, $typeId = \Plenty\Modules\Account\Address\Models\AddressRelationType::BILLING_ADDRESS):Plenty\Modules\Account\Address\Models\Address
@@ -14627,6 +15056,7 @@ a|[optional] The ID of the address type. The default ID is 1 for billing address
 
 
 [source%nowrap, php]
+[#updateorderaddress]
 ----
 
 public updateOrderAddress($data, $addressId, $orderId, $typeId):Plenty\Modules\Account\Address\Models\Address
@@ -14674,6 +15104,7 @@ a|The ID of the address type. The types available are:
 
 
 [source%nowrap, php]
+[#getaddress]
 ----
 
 public getAddress($addressId, $with = []):Plenty\Modules\Account\Address\Models\Address
@@ -14703,6 +15134,7 @@ a|The relations to load in the address instance. The relations available are "op
 
 
 [source%nowrap, php]
+[#findaddresses]
 ----
 
 public findAddresses($orderId):Illuminate\Database\Eloquent\Collection
@@ -14728,6 +15160,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#getaddressoforder]
 ----
 
 public getAddressOfOrder($addressId, $orderId, $typeId):Plenty\Modules\Account\Address\Models\Address
@@ -14771,6 +15204,7 @@ a|The ID of the address type. The types available are:
 
 
 [source%nowrap, php]
+[#getaddressofscheduler]
 ----
 
 public getAddressOfScheduler($addressId, $schedulerId, $typeId):Plenty\Modules\Account\Address\Models\Address
@@ -14814,6 +15248,7 @@ a|The ID of the address type. The types available are:
 
 
 [source%nowrap, php]
+[#addorderaddress]
 ----
 
 public addOrderAddress($addressId, $orderId, $typeId):void
@@ -14857,6 +15292,7 @@ a|The ID of the address type. The types available are:
 
 
 [source%nowrap, php]
+[#addscheduleraddress]
 ----
 
 public addSchedulerAddress($addressId, $schedulerId, $typeId):void
@@ -14900,6 +15336,7 @@ a|The ID of the address type. The types available are:
 
 
 [source%nowrap, php]
+[#deleteorderaddress]
 ----
 
 public deleteOrderAddress($addressId, $orderId, $typeId):bool
@@ -14966,6 +15403,7 @@ Book orders, order items and order item transactions.
 ===== Methods
 
 [source%nowrap, php]
+[#bookorder]
 ----
 
 public bookOrder($orderId, $deliveryNoteNumber = null):Plenty\Modules\Order\Booking\Models\OrderBooking
@@ -14995,6 +15433,7 @@ a|
 
 
 [source%nowrap, php]
+[#bookorderitem]
 ----
 
 public bookOrderItem($orderItemId, $deliveryNoteNumber = null):Plenty\Modules\Order\Booking\Models\OrderBooking
@@ -15024,6 +15463,7 @@ a|
 
 
 [source%nowrap, php]
+[#bookorderitemtransactions]
 ----
 
 public bookOrderItemTransactions($transactionIds, $warehouseId = null, $deliveryNoteNumber = null):Plenty\Modules\Order\Booking\Models\OrderBooking
@@ -15090,6 +15530,7 @@ The order booking model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -15128,6 +15569,7 @@ This interface allows you to get and create contact wishes.
 ===== Methods
 
 [source%nowrap, php]
+[#getcontactwish]
 ----
 
 public getContactWish($orderId):Plenty\Modules\Order\ContactWish\Models\ContactWish
@@ -15153,6 +15595,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#createcontactwish]
 ----
 
 public createContactWish($orderId, $text):Plenty\Modules\Order\ContactWish\Models\ContactWish
@@ -15212,6 +15655,7 @@ The contact wish model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -15250,6 +15694,7 @@ The OrderDateRepositoryContract contains the functionality to find available Ord
 ===== Methods
 
 [source%nowrap, php]
+[#findnamesbytypeid]
 ----
 
 public findNamesByTypeId($typeId):void
@@ -15275,6 +15720,7 @@ a|The ID of the date type
 
 
 [source%nowrap, php]
+[#findnamebytypeidandlang]
 ----
 
 public findNameByTypeIdAndLang($typeId, $lang):Plenty\Modules\Order\Date\Models\OrderDateTypeName
@@ -15304,6 +15750,7 @@ a|The language ISO 639-1 code, e.g. "en" for English
 
 
 [source%nowrap, php]
+[#findtypes]
 ----
 
 public findTypes($languages = []):void
@@ -15329,6 +15776,7 @@ a|The languages to load
 
 
 [source%nowrap, php]
+[#findtypebyid]
 ----
 
 public findTypeById($typeId):Plenty\Modules\Order\Date\Models\OrderDateType
@@ -15354,6 +15802,7 @@ a|The ID of the date type
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data = []):Plenty\Modules\Order\Date\Models\OrderDate
@@ -15379,6 +15828,7 @@ a|The order date data. The properties that are required to create an order can b
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $orderDateId):Plenty\Modules\Order\Date\Models\OrderDate
@@ -15408,6 +15858,7 @@ a|The ID of the order date
 
 
 [source%nowrap, php]
+[#save]
 ----
 
 public save($data = []):Plenty\Modules\Order\Date\Models\OrderDate
@@ -15433,6 +15884,7 @@ a|The order date data. The properties that are required to create an order can b
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($orderDateId):bool
@@ -15458,6 +15910,7 @@ a|The ID of the order date
 
 
 [source%nowrap, php]
+[#deletebyorderidandtype]
 ----
 
 public deleteByOrderIdAndType($orderId, $typeId):void
@@ -15487,6 +15940,7 @@ a|The ID of the date type.
 
 
 [source%nowrap, php]
+[#findbyorderidandtypeid]
 ----
 
 public findByOrderIdAndTypeId($orderId, $typeId):Plenty\Modules\Order\Date\Models\OrderDate
@@ -15516,6 +15970,7 @@ a|The ID of the date type
 
 
 [source%nowrap, php]
+[#findbyorderid]
 ----
 
 public findByOrderId($orderId):void
@@ -15560,6 +16015,7 @@ The OrderItemDateRepositoryContract contains the functionality to get, create, u
 ===== Methods
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($id):Plenty\Modules\Order\Date\Models\OrderItemDate
@@ -15585,6 +16041,7 @@ a|The ID of the order item date.
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data = []):Plenty\Modules\Order\Date\Models\OrderItemDate
@@ -15610,6 +16067,7 @@ a|The order item date data. The properties that are required to create an order 
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $id):Plenty\Modules\Order\Date\Models\OrderItemDate
@@ -15639,6 +16097,7 @@ a|The ID of the order item date
 
 
 [source%nowrap, php]
+[#save]
 ----
 
 public save($data = []):Plenty\Modules\Order\Date\Models\OrderItemDate
@@ -15664,6 +16123,7 @@ a|The order item date data. The properties that are required to create or update
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):bool
@@ -15689,6 +16149,7 @@ a|The ID of the order item date
 
 
 [source%nowrap, php]
+[#findbyorderitemidandtypeid]
 ----
 
 public findByOrderItemIdAndTypeId($orderItemId, $typeId):Plenty\Modules\Order\Date\Models\OrderItemDate
@@ -15718,6 +16179,7 @@ a|The ID of the date type
 
 
 [source%nowrap, php]
+[#createbyorderitemidandtypeid]
 ----
 
 public createByOrderItemIdAndTypeId($data, $orderItemId, $typeId):Plenty\Modules\Order\Date\Models\OrderItemDate
@@ -15751,6 +16213,7 @@ a|The ID of the date type
 
 
 [source%nowrap, php]
+[#updatebyorderitemidandtypeid]
 ----
 
 public updateByOrderItemIdAndTypeId($data, $orderItemId, $typeId):Plenty\Modules\Order\Date\Models\OrderItemDate
@@ -15784,6 +16247,7 @@ a|The ID of the date type
 
 
 [source%nowrap, php]
+[#deletebyorderitemidandtypeid]
 ----
 
 public deleteByOrderItemIdAndTypeId($orderItemId, $typeId):bool
@@ -15813,6 +16277,7 @@ a|The ID of the date type
 
 
 [source%nowrap, php]
+[#findbyorderitemid]
 ----
 
 public findByOrderItemId($orderItemId):void
@@ -15905,6 +16370,7 @@ The OrderDate model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -15978,6 +16444,7 @@ The OrderDateType model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -16048,6 +16515,7 @@ The OrderDateTypeName model. Order date types can have several names. One name p
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -16132,6 +16600,7 @@ The OrderItemDate model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -16170,6 +16639,7 @@ The DeliveryOrderRepositoryContract is the interface for the delivery order repo
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Order\Models\Order
@@ -16195,6 +16665,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($orderId, $data):Plenty\Modules\Order\Models\Order
@@ -16224,6 +16695,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($orderId):void
@@ -16249,6 +16721,7 @@ a|
 
 
 [source%nowrap, php]
+[#deleteorderitem]
 ----
 
 public deleteOrderItem($orderItemId):bool
@@ -16274,6 +16747,7 @@ a|
 
 
 [source%nowrap, php]
+[#createfromparent]
 ----
 
 public createFromParent($orderId, $data):Plenty\Modules\Order\Models\Order
@@ -16303,6 +16777,7 @@ a|The order item Ids with quantities to be added to the delivery order.
 
 
 [source%nowrap, php]
+[#createallautomaticallyfromparent]
 ----
 
 public createAllAutomaticallyFromParent($orderId):Illuminate\Support\Collection
@@ -16328,6 +16803,7 @@ a|The ID of the parent order, for which the delivery should be created.
 
 
 [source%nowrap, php]
+[#updatecurrency]
 ----
 
 public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
@@ -16380,6 +16856,7 @@ Get document accounting summaries.
 ===== Methods
 
 [source%nowrap, php]
+[#list]
 ----
 
 public list($page = 1, $itemsPerPage = 10):Plenty\Repositories\Models\PaginatedResult
@@ -16409,6 +16886,7 @@ a|The number of summaries to be displayed per page. The default number of orders
 
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -16434,6 +16912,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -16449,6 +16928,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -16464,6 +16944,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -16498,6 +16979,7 @@ Provides methods to store, get and delete order document files. The files are st
 ===== Methods
 
 [source%nowrap, php]
+[#fileexists]
 ----
 
 public fileExists($path):bool
@@ -16523,6 +17005,7 @@ a|The file path
 
 
 [source%nowrap, php]
+[#put]
 ----
 
 public put($path, $file):void
@@ -16552,6 +17035,7 @@ a|The file to store. Can be either a file path on the file system or an object.
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($path):Plenty\Modules\Cloud\Storage\Models\StorageObject
@@ -16577,6 +17061,7 @@ a|The file path
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($path):bool
@@ -16625,6 +17110,7 @@ An event class fired after an order is canceled.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -16650,6 +17136,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -16684,6 +17171,7 @@ An event class fired before an order will be canceled.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -16709,6 +17197,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -16744,6 +17233,7 @@ An event class fired after the status of an order has changed.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order, $oldStatus):void
@@ -16773,6 +17263,7 @@ a|
 
 
 [source%nowrap, php]
+[#getoldstatus]
 ----
 
 public getOldStatus():float
@@ -16788,6 +17279,7 @@ public getOldStatus():float
 Get the old order status.
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -16823,6 +17315,7 @@ An event class fired after a new credit note is created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -16848,6 +17341,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -16882,6 +17376,7 @@ An event class fired after a new delivery order is created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -16907,6 +17402,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -16941,6 +17437,7 @@ An event class fired after a new multi credit note is created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -16966,6 +17463,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -17000,6 +17498,7 @@ An event class fired after a new multi order is created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -17025,6 +17524,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -17059,6 +17559,7 @@ An event class fired after a new repair is created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -17084,6 +17585,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -17118,6 +17620,7 @@ An event class fired after a new returns is created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -17143,6 +17646,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -17177,6 +17681,7 @@ An event class fired after a new sales order is created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -17202,6 +17707,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -17236,6 +17742,7 @@ An event class fired after a new warranty is created.
 ===== Methods
 
 [source%nowrap, php]
+[#__construct]
 ----
 
 public __construct($order):void
@@ -17261,6 +17768,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorder]
 ----
 
 public getOrder():Plenty\Modules\Order\Models\Order
@@ -17299,6 +17807,7 @@ Contract for injections on create.
 ===== Methods
 
 [source%nowrap, php]
+[#handle]
 ----
 
 public handle($data):array
@@ -17343,6 +17852,7 @@ Contract for injections on update.
 ===== Methods
 
 [source%nowrap, php]
+[#handle]
 ----
 
 public handle($order, $data):array
@@ -17391,6 +17901,7 @@ Service to register injections for order creation.
 ===== Methods
 
 [source%nowrap, php]
+[#registeroncreatebeforevalidation]
 ----
 
 public registerOnCreateBeforeValidation($orderTypeIds, $class):void
@@ -17420,6 +17931,7 @@ a|
 
 
 [source%nowrap, php]
+[#registeroncreatebeforesumscalculation]
 ----
 
 public registerOnCreateBeforeSumsCalculation($orderTypeIds, $class):void
@@ -17449,6 +17961,7 @@ a|
 
 
 [source%nowrap, php]
+[#registeroncreateaftersumscalculation]
 ----
 
 public registerOnCreateAfterSumsCalculation($orderTypeIds, $class):void
@@ -17478,6 +17991,7 @@ a|
 
 
 [source%nowrap, php]
+[#registeronupdatebeforevalidation]
 ----
 
 public registerOnUpdateBeforeValidation($orderTypeIds, $class):void
@@ -17507,6 +18021,7 @@ a|
 
 
 [source%nowrap, php]
+[#registeronupdatebeforesumscalculation]
 ----
 
 public registerOnUpdateBeforeSumsCalculation($orderTypeIds, $class):void
@@ -17536,6 +18051,7 @@ a|
 
 
 [source%nowrap, php]
+[#registeronupdateaftersumscalculation]
 ----
 
 public registerOnUpdateAfterSumsCalculation($orderTypeIds, $class):void
@@ -17565,6 +18081,7 @@ a|
 
 
 [source%nowrap, php]
+[#inject]
 ----
 
 public inject($saveType, $injectionPoint, $data, $order = null):array
@@ -17674,6 +18191,7 @@ The legacy order model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -17712,6 +18230,7 @@ The event is triggered after the order is placed within the manual order creatio
 ===== Methods
 
 [source%nowrap, php]
+[#settype]
 ----
 
 public setType($type):Plenty\Modules\Order\Payment\Events\ManualOrderExecutePayment
@@ -17737,6 +18256,7 @@ a|
 
 
 [source%nowrap, php]
+[#gettype]
 ----
 
 public getType():string
@@ -17752,6 +18272,7 @@ public getType():string
 Gets the content type.
 
 [source%nowrap, php]
+[#setvalue]
 ----
 
 public setValue($value):Plenty\Modules\Order\Payment\Events\ManualOrderExecutePayment
@@ -17777,6 +18298,7 @@ a|The value of the content type
 
 
 [source%nowrap, php]
+[#getvalue]
 ----
 
 public getValue():string
@@ -17792,6 +18314,7 @@ public getValue():string
 Gets the value of the content type.
 
 [source%nowrap, php]
+[#setorderid]
 ----
 
 public setOrderId($orderId):Plenty\Modules\Order\Payment\Events\ManualOrderExecutePayment
@@ -17817,6 +18340,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorderid]
 ----
 
 public getOrderId():int
@@ -17832,6 +18356,7 @@ public getOrderId():int
 Gets the order id.
 
 [source%nowrap, php]
+[#getadditionaldata]
 ----
 
 public getAdditionalData():array
@@ -17847,6 +18372,7 @@ public getAdditionalData():array
 
 
 [source%nowrap, php]
+[#setadditionaldata]
 ----
 
 public setAdditionalData($additionalData):Plenty\Modules\Order\Payment\Events\ManualOrderExecutePayment
@@ -17891,6 +18417,7 @@ The event is triggered before the order is placed within the manual order creati
 ===== Methods
 
 [source%nowrap, php]
+[#settype]
 ----
 
 public setType($type):Plenty\Modules\Order\Payment\Events\ManualOrderPreparePayment
@@ -17916,6 +18443,7 @@ a|
 
 
 [source%nowrap, php]
+[#gettype]
 ----
 
 public getType():string
@@ -17931,6 +18459,7 @@ public getType():string
 Gets the content type.
 
 [source%nowrap, php]
+[#setvalue]
 ----
 
 public setValue($value):Plenty\Modules\Order\Payment\Events\ManualOrderPreparePayment
@@ -17956,6 +18485,7 @@ a|The value of the content type
 
 
 [source%nowrap, php]
+[#getvalue]
 ----
 
 public getValue():string
@@ -17971,6 +18501,7 @@ public getValue():string
 Gets the value of the content type.
 
 [source%nowrap, php]
+[#setorderdata]
 ----
 
 public setOrderData($orderData):Plenty\Modules\Order\Payment\Events\ManualOrderPreparePayment
@@ -17996,6 +18527,7 @@ a|
 
 
 [source%nowrap, php]
+[#getorderdata]
 ----
 
 public getOrderData():array
@@ -18034,6 +18566,7 @@ The OrderItemPropertyRepositoryContract contains the functionality to find, crea
 ===== Methods
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($id):Plenty\Modules\Order\Property\Models\OrderItemProperty
@@ -18059,6 +18592,7 @@ a|The ID of the order item property.
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data = []):Plenty\Modules\Order\Property\Models\OrderItemProperty
@@ -18084,6 +18618,7 @@ a|The order item property data. The properties that are required to create an or
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $id):Plenty\Modules\Order\Property\Models\OrderItemProperty
@@ -18113,6 +18648,7 @@ a|The ID of the order item property
 
 
 [source%nowrap, php]
+[#save]
 ----
 
 public save($data = []):Plenty\Modules\Order\Property\Models\OrderItemProperty
@@ -18138,6 +18674,7 @@ a|The order item property data. The properties that are required to create an or
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):bool
@@ -18163,6 +18700,7 @@ a|The ID of the order item property
 
 
 [source%nowrap, php]
+[#findbyorderitemidandtypeid]
 ----
 
 public findByOrderItemIdAndTypeId($orderItemId, $typeId):Plenty\Modules\Order\Property\Models\OrderItemProperty
@@ -18192,6 +18730,7 @@ a|The ID of the property type
 
 
 [source%nowrap, php]
+[#createbyorderitemidandtypeid]
 ----
 
 public createByOrderItemIdAndTypeId($data, $orderItemId, $typeId):Plenty\Modules\Order\Property\Models\OrderItemProperty
@@ -18225,6 +18764,7 @@ a|The ID of the property type
 
 
 [source%nowrap, php]
+[#updatebyorderitemidandtypeid]
 ----
 
 public updateByOrderItemIdAndTypeId($data, $orderItemId, $typeId):Plenty\Modules\Order\Property\Models\OrderItemProperty
@@ -18258,6 +18798,7 @@ a|The ID of the property type
 
 
 [source%nowrap, php]
+[#deletebyorderitemidandtypeid]
 ----
 
 public deleteByOrderItemIdAndTypeId($orderItemId, $typeId):bool
@@ -18287,6 +18828,7 @@ a|The ID of the property type
 
 
 [source%nowrap, php]
+[#findbyorderitemid]
 ----
 
 public findByOrderItemId($orderItemId):void
@@ -18331,6 +18873,7 @@ The OrderPropertyRepositoryContract contains the functionality to get, list, cre
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data = []):Plenty\Modules\Order\Property\Models\OrderProperty
@@ -18356,6 +18899,7 @@ a|The order property data. The properties that are required to create an order c
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $orderPropertyId = null):Plenty\Modules\Order\Property\Models\OrderProperty
@@ -18385,6 +18929,7 @@ a|The ID of the order property.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($data = []):bool
@@ -18410,6 +18955,7 @@ a|Either the ID of the property or an array holding the composite key composed o
 
 
 [source%nowrap, php]
+[#findbyorderid]
 ----
 
 public findByOrderId($orderId, $typeId = null):void
@@ -18439,6 +18985,7 @@ a|The ID of the type.
 
 
 [source%nowrap, php]
+[#gettype]
 ----
 
 public getType($typeId, $languages = []):Plenty\Modules\Order\Property\Models\OrderPropertyType
@@ -18468,6 +19015,7 @@ a|The languages to load
 
 
 [source%nowrap, php]
+[#gettypes]
 ----
 
 public getTypes($languages = []):void
@@ -18493,6 +19041,7 @@ a|The languages to load
 
 
 [source%nowrap, php]
+[#createtype]
 ----
 
 public createType($data = []):Plenty\Modules\Order\Property\Models\OrderPropertyType
@@ -18518,6 +19067,7 @@ a|The order property type data. The properties that are required to create a typ
 
 
 [source%nowrap, php]
+[#updatetype]
 ----
 
 public updateType($data, $id):Plenty\Modules\Order\Property\Models\OrderPropertyType
@@ -18547,6 +19097,7 @@ a|The ID of the order property type.
 
 
 [source%nowrap, php]
+[#deletetype]
 ----
 
 public deleteType($id):bool
@@ -18657,6 +19208,7 @@ The order item property model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -18753,6 +19305,7 @@ The order properties model. Each order property has a type.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -18816,6 +19369,7 @@ The OrderPropertyType model. Each order property must have a property type. An o
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -18872,6 +19426,7 @@ The order property type name model. Each order property type can have one name p
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -18910,6 +19465,7 @@ Create and update redistributions.
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Order\Models\Order
@@ -18935,6 +19491,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($orderId, $data):Plenty\Modules\Order\Models\Order
@@ -18964,6 +19521,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($orderId):void
@@ -18989,6 +19547,7 @@ a|
 
 
 [source%nowrap, php]
+[#deleteorderitem]
 ----
 
 public deleteOrderItem($orderItemId):bool
@@ -19014,6 +19573,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatecurrency]
 ----
 
 public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
@@ -19066,6 +19626,7 @@ Get, create, update and delete order relation references.
 ===== Methods
 
 [source%nowrap, php]
+[#find]
 ----
 
 public find($id):Plenty\Modules\Order\RelationReference\Models\OrderRelationReference
@@ -19091,6 +19652,7 @@ a|The ID of the relation reference
 
 
 [source%nowrap, php]
+[#findbycomposite]
 ----
 
 public findByComposite($orderId, $referenceType, $relation):Plenty\Modules\Order\RelationReference\Models\OrderRelationReference
@@ -19133,6 +19695,7 @@ a|The relation. Valid relations are:
 
 
 [source%nowrap, php]
+[#findbyorderid]
 ----
 
 public findByOrderId($orderId):void
@@ -19158,6 +19721,7 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#findbyanyvalues]
 ----
 
 public findByAnyValues($values, $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
@@ -19198,6 +19762,7 @@ a|The items per page
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Order\RelationReference\Models\OrderRelationReference
@@ -19223,6 +19788,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($id, $data):Plenty\Modules\Order\RelationReference\Models\OrderRelationReference
@@ -19252,6 +19818,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#updatebycomposite]
 ----
 
 public updateByComposite($orderId, $referenceType, $relation, $data):Plenty\Modules\Order\RelationReference\Models\OrderRelationReference
@@ -19298,6 +19865,7 @@ a|The request data
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($id):bool
@@ -19323,6 +19891,7 @@ a|The ID of the relation reference
 
 
 [source%nowrap, php]
+[#deletebycomposite]
 ----
 
 public deleteByComposite($orderId, $referenceType, $relation):bool
@@ -19433,6 +20002,7 @@ The order relation reference model specifies how references and orders are relat
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -19471,6 +20041,7 @@ Create and update reorders.
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Order\Models\Order
@@ -19496,6 +20067,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($orderId, $data):Plenty\Modules\Order\Models\Order
@@ -19525,6 +20097,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($orderId):void
@@ -19550,6 +20123,7 @@ a|
 
 
 [source%nowrap, php]
+[#deleteorderitem]
 ----
 
 public deleteOrderItem($orderItemId):bool
@@ -19575,6 +20149,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatecurrency]
 ----
 
 public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
@@ -19604,6 +20179,7 @@ a|
 
 
 [source%nowrap, php]
+[#getdeliverydate]
 ----
 
 public getDeliveryDate($orderId):Carbon\Carbon
@@ -19629,6 +20205,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatedeliverydates]
 ----
 
 public updateDeliveryDates($orderId):Plenty\Modules\Order\Models\Order
@@ -19677,6 +20254,7 @@ Use this interface to retrieve order return reasons.
 ===== Methods
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all():array
@@ -19692,6 +20270,7 @@ public all():array
 Get all return reasons.
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($id):Plenty\Modules\Order\ReturnReason\Models\ReturnReason
@@ -19750,6 +20329,7 @@ The return reason model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -19788,6 +20368,7 @@ The SalesOrderRepositoryContract is the interface for the sales order repository
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Order\Models\Order
@@ -19813,6 +20394,7 @@ a|
 
 
 [source%nowrap, php]
+[#createwithcoupons]
 ----
 
 public createWithCoupons($data, $coupons = []):Plenty\Modules\Order\Models\Order
@@ -19842,6 +20424,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($orderId, $data):Plenty\Modules\Order\Models\Order
@@ -19871,6 +20454,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($orderId):void
@@ -19896,6 +20480,7 @@ a|
 
 
 [source%nowrap, php]
+[#deleteorderitem]
 ----
 
 public deleteOrderItem($orderItemId):bool
@@ -19921,6 +20506,7 @@ a|
 
 
 [source%nowrap, php]
+[#createfromparent]
 ----
 
 public createFromParent($orderId, $data):Plenty\Modules\Order\Models\Order
@@ -19950,6 +20536,7 @@ a|
 
 
 [source%nowrap, php]
+[#previewcreate]
 ----
 
 public previewCreate($data):array
@@ -19975,6 +20562,7 @@ a|The order data for the preview.
 
 
 [source%nowrap, php]
+[#previewcreatewithcoupons]
 ----
 
 public previewCreateWithCoupons($data, $coupons = []):array
@@ -20004,6 +20592,7 @@ a|
 
 
 [source%nowrap, php]
+[#previewupdate]
 ----
 
 public previewUpdate($orderId, $data):array
@@ -20033,6 +20622,7 @@ a|
 
 
 [source%nowrap, php]
+[#updatecurrency]
 ----
 
 public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
@@ -20085,6 +20675,7 @@ aggregation for order status
 ===== Methods
 
 [source%nowrap, php]
+[#getname]
 ----
 
 public getName():string
@@ -20100,6 +20691,7 @@ public getName():string
 
 
 [source%nowrap, php]
+[#getfield]
 ----
 
 public getField():string
@@ -20115,6 +20707,7 @@ public getField():string
 
 
 [source%nowrap, php]
+[#getaggregation]
 ----
 
 public getAggregation():array
@@ -20130,6 +20723,7 @@ public getAggregation():array
 
 
 [source%nowrap, php]
+[#setinclude]
 ----
 
 public setInclude($string):void
@@ -20155,6 +20749,7 @@ a|
 
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray():array
@@ -20170,6 +20765,7 @@ public toArray():array
 
 
 [source%nowrap, php]
+[#process]
 ----
 
 public process($data):array
@@ -20195,6 +20791,7 @@ a|
 
 
 [source%nowrap, php]
+[#addaggregation]
 ----
 
 public addAggregation($aggregation):void
@@ -20220,6 +20817,7 @@ a|
 
 
 [source%nowrap, php]
+[#addsource]
 ----
 
 public addSource($source):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregation\AggregationInterface
@@ -20245,6 +20843,7 @@ a|
 
 
 [source%nowrap, php]
+[#setpage]
 ----
 
 public setPage($page, $rowsPerPage):Plenty\Modules\Cloud\ElasticSearch\Lib\Search\Aggregation\AggregationInterface
@@ -20274,6 +20873,7 @@ a|
 
 
 [source%nowrap, php]
+[#getsources]
 ----
 
 public getSources():void
@@ -20308,6 +20908,7 @@ aggregation processor for order status
 ===== Methods
 
 [source%nowrap, php]
+[#process]
 ----
 
 public process($data):array
@@ -20333,6 +20934,7 @@ a|
 
 
 [source%nowrap, php]
+[#getname]
 ----
 
 public getName():void
@@ -20348,6 +20950,7 @@ public getName():void
 
 
 [source%nowrap, php]
+[#getdependencies]
 ----
 
 public getDependencies():array
@@ -20363,6 +20966,7 @@ public getDependencies():array
 
 
 [source%nowrap, php]
+[#addmutator]
 ----
 
 public addMutator($mutator):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
@@ -20388,6 +20992,7 @@ a|
 
 
 [source%nowrap, php]
+[#addcondition]
 ----
 
 public addCondition($conditions):Plenty\Modules\Cloud\ElasticSearch\Lib\Processor
@@ -20440,6 +21045,7 @@ This class will not be supported in the future. Please refrain from using it as 
 ===== Methods
 
 [source%nowrap, php]
+[#hasnext]
 ----
 
 public hasNext():bool
@@ -20455,6 +21061,7 @@ public hasNext():bool
 
 
 [source%nowrap, php]
+[#setnumberofdocumentspershard]
 ----
 
 public setNumberOfDocumentsPerShard($size):void
@@ -20480,6 +21087,7 @@ a|
 
 
 [source%nowrap, php]
+[#setindex]
 ----
 
 public setIndex($index):Plenty\Modules\Cloud\ElasticSearch\Contracts\ElasticSearchSearchRepositoryContract
@@ -20505,6 +21113,7 @@ a|
 
 
 [source%nowrap, php]
+[#addsearch]
 ----
 
 public addSearch($search):Plenty\Modules\Cloud\ElasticSearch\Contracts\ElasticSearchSearchRepositoryContract
@@ -20530,6 +21139,7 @@ a|
 
 
 [source%nowrap, php]
+[#execute]
 ----
 
 public execute():array
@@ -20568,6 +21178,7 @@ Get settings for orders.
 ===== Methods
 
 [source%nowrap, php]
+[#getstoresettings]
 ----
 
 public getStoreSettings($storeId):Plenty\Modules\Order\Settings\Models\StoreOrderSettings
@@ -20593,6 +21204,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get():Plenty\Modules\Order\Settings\Models\OrderSettings
@@ -20644,6 +21256,7 @@ The model of the order settings.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -20700,6 +21313,7 @@ The model of the store order settings.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -20738,6 +21352,7 @@ The OrderStatusRepositoryContract is the interface for the order status reposito
 ===== Methods
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($statusId):Plenty\Modules\Order\Status\Models\OrderStatus
@@ -20763,6 +21378,7 @@ a|The number of the order status.
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
@@ -20792,6 +21408,7 @@ a|The number of order statuses to be displayed per page. The default number per 
 
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all():Illuminate\Database\Eloquent\Collection
@@ -20807,6 +21424,7 @@ public all():Illuminate\Database\Eloquent\Collection
 List order statuses.
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Order\Status\Models\OrderStatus
@@ -20832,6 +21450,7 @@ a|The order status data to be created.
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($statusId, $data):Plenty\Modules\Order\Status\Models\OrderStatus
@@ -20861,6 +21480,7 @@ a|The order status data, which is updated.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($statusId):void
@@ -20886,6 +21506,7 @@ a|The number of the order status, to be deleted.
 
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -20911,6 +21532,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -20926,6 +21548,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -20941,6 +21564,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -21010,6 +21634,7 @@ The order status model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -21048,6 +21673,7 @@ This interface allows you to get the status history of an order and to list the 
 ===== Methods
 
 [source%nowrap, php]
+[#getstatushistorybyorderid]
 ----
 
 public getStatusHistoryByOrderId($orderId, $columns = []):Illuminate\Database\Eloquent\Collection
@@ -21077,6 +21703,7 @@ a|The columns to get
 
 
 [source%nowrap, php]
+[#getstatushistory]
 ----
 
 public getStatusHistory($columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
@@ -21110,6 +21737,7 @@ a|The number of entries from status histories listed per page
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -21125,6 +21753,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -21140,6 +21769,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -21165,6 +21795,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -21180,6 +21811,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -21195,6 +21827,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -21255,6 +21888,7 @@ The status history entry model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -21293,6 +21927,7 @@ The SubscriptionOrderRepositoryContract allows you to find subscriptions, that d
 ===== Methods
 
 [source%nowrap, php]
+[#runtoday]
 ----
 
 public runToday():bool
@@ -21308,6 +21943,7 @@ public runToday():bool
 Finds all subscriptions that are due today and creates corresponding orders for them.
 
 [source%nowrap, php]
+[#runanydate]
 ----
 
 public runAnyDate($runDate):bool
@@ -21333,6 +21969,7 @@ a|The date that the subscriptions are due on. Given in the following format: Y-m
 
 
 [source%nowrap, php]
+[#manualrun]
 ----
 
 public manualRun($orderId, $skipNextRun = false):Plenty\Modules\Order\Models\Order
@@ -21385,6 +22022,7 @@ The TaricVatAssignmentRepositoryContract contains the functionality to get, list
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data = []):Plenty\Modules\Order\TaricVatAssignment\Models\TaricVatAssignment
@@ -21410,6 +22048,7 @@ a|The taric vat assignment data.
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data):Plenty\Modules\Order\TaricVatAssignment\Models\TaricVatAssignment
@@ -21435,6 +22074,7 @@ a|The taric vat assignment data.
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($data = []):bool
@@ -21460,6 +22100,7 @@ a|Either the ID of the taric vat assignment or an array holding the composite ke
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($page = 1, $itemsPerPage = \Plenty\Modules\Order\TaricVatAssignment\Models\TaricVatAssignment::MAX_ITEMS_PER_PAGE, $with = []):Plenty\Repositories\Models\PaginatedResult
@@ -21493,6 +22134,7 @@ a|
 
 
 [source%nowrap, php]
+[#findbytariccodeandcountryid]
 ----
 
 public findByTaricCodeAndCountryId($taricCode, $countryNumber):Plenty\Modules\Order\TaricVatAssignment\Models\TaricVatAssignment
@@ -21522,6 +22164,7 @@ a|The ID of the country.
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -21537,6 +22180,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -21552,6 +22196,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -21577,6 +22222,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -21592,6 +22238,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -21607,6 +22254,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -21670,6 +22318,7 @@ The taric vat assignment model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -21717,6 +22366,7 @@ The taric code use model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -21755,6 +22405,7 @@ List and create order item transactions.
 ===== Methods
 
 [source%nowrap, php]
+[#list]
 ----
 
 public list($orderItemId, $columns = [], $with = []):Illuminate\Database\Eloquent\Collection
@@ -21788,6 +22439,7 @@ a|
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Order\Transaction\Models\OrderItemTransaction
@@ -21813,6 +22465,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($transactionId, $data):Plenty\Modules\Order\Transaction\Models\OrderItemTransaction
@@ -21842,6 +22495,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($transactionId):bool
@@ -21867,6 +22521,7 @@ a|
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($page = 1, $itemsPerPage = 50, $columns = [], $with = [], $sortBy = &quot;orderItemId&quot;, $sortOrder = &quot;asc&quot;):Plenty\Repositories\Models\PaginatedResult
@@ -21912,6 +22567,7 @@ a|
 
 
 [source%nowrap, php]
+[#createfororder]
 ----
 
 public createForOrder($orderId, $data):Illuminate\Database\Eloquent\Collection
@@ -21941,6 +22597,7 @@ a|
 
 
 [source%nowrap, php]
+[#clearcriteria]
 ----
 
 public clearCriteria():void
@@ -21956,6 +22613,7 @@ public clearCriteria():void
 Resets all Criteria filters by creating a new instance of the builder object.
 
 [source%nowrap, php]
+[#applycriteriafromfilters]
 ----
 
 public applyCriteriaFromFilters():void
@@ -21971,6 +22629,7 @@ public applyCriteriaFromFilters():void
 Applies criteria classes to the current repository.
 
 [source%nowrap, php]
+[#setfilters]
 ----
 
 public setFilters($filters = []):void
@@ -21996,6 +22655,7 @@ a|
 
 
 [source%nowrap, php]
+[#getfilters]
 ----
 
 public getFilters():void
@@ -22011,6 +22671,7 @@ public getFilters():void
 Returns the filter array.
 
 [source%nowrap, php]
+[#getconditions]
 ----
 
 public getConditions():void
@@ -22026,6 +22687,7 @@ public getConditions():void
 Returns a collection of parsed filters as Condition object
 
 [source%nowrap, php]
+[#clearfilters]
 ----
 
 public clearFilters():void
@@ -22113,6 +22775,7 @@ The order item transaction model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

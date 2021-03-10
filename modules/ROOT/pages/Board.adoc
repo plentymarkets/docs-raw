@@ -29,6 +29,7 @@ The BoardColumnRepositoryContract is the interface for the board column reposito
 ===== Methods
 
 [source%nowrap, php]
+[#list]
 ----
 
 public list($boardId):Illuminate\Support\Collection
@@ -54,6 +55,7 @@ a|The ID of the board to get columns for
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($boardId, $data):Plenty\Modules\Board\Models\BoardColumn
@@ -83,6 +85,7 @@ a|The data of the new column
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardColumn
@@ -116,6 +119,7 @@ a|The data to assign to the specified column
 
 
 [source%nowrap, php]
+[#copy]
 ----
 
 public copy($boardId, $columnId):Plenty\Modules\Board\Models\BoardColumn
@@ -145,6 +149,7 @@ a|The ID of the column to be copied
 
 
 [source%nowrap, php]
+[#updateposition]
 ----
 
 public updatePosition($boardId, $columnId, $newPosition):bool
@@ -178,6 +183,7 @@ a|The new position
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($boardId, $columnId):bool
@@ -226,6 +232,7 @@ The BoardRepositoryContract is the interface for the board repository. This inte
 ===== Methods
 
 [source%nowrap, php]
+[#list]
 ----
 
 public list($columns = []):Illuminate\Database\Eloquent\Collection
@@ -251,6 +258,7 @@ a|Fields to load for each board
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($boardId, $tasksPerPage = 20):Plenty\Modules\Board\Models\Board
@@ -280,6 +288,7 @@ a|The maximum number of tasks to load for each column
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\Board\Models\Board
@@ -305,6 +314,7 @@ a|The data of the new board
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($boardId, $data):Plenty\Modules\Board\Models\Board
@@ -334,6 +344,7 @@ a|New data to be assigned to the board if it exists
 
 
 [source%nowrap, php]
+[#copy]
 ----
 
 public copy($boardId):Plenty\Modules\Board\Models\Board
@@ -359,6 +370,7 @@ a|The ID of the board to be copied
 
 
 [source%nowrap, php]
+[#updatetaskscount]
 ----
 
 public updateTasksCount($boardId):bool
@@ -384,6 +396,7 @@ a|The ID of the board to update the tasks count
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($boardId):bool
@@ -428,6 +441,7 @@ The BoardTaskReferenceRepositoryContract is the interface for the board task ref
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($taskId, $referenceValue):Plenty\Modules\Board\Models\BoardTaskReference
@@ -457,6 +471,7 @@ a|Reference type followed by foreign ID of the referenced object. Syntax: TYPE-I
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($referenceId):bool
@@ -482,6 +497,7 @@ a|The ID of the reference
 
 
 [source%nowrap, php]
+[#checkreferencekey]
 ----
 
 public checkReferenceKey($referenceType, $referenceKey):bool
@@ -530,6 +546,7 @@ The BoardTaskRepositoryContract is the interface for the board task repository. 
 ===== Methods
 
 [source%nowrap, php]
+[#list]
 ----
 
 public list($columnId, $startAt, $tasksPerPage = 20, $columns = []):Illuminate\Database\Eloquent\Collection
@@ -567,6 +584,7 @@ a|Fields to load for each task
 
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($boardId, $columnId, $data):Plenty\Modules\Board\Models\BoardTask
@@ -600,6 +618,7 @@ a|The data of the new task
 
 
 [source%nowrap, php]
+[#copy]
 ----
 
 public copy($boardId, $columnId, $taskId):Plenty\Modules\Board\Models\BoardTask
@@ -633,6 +652,7 @@ a|The ID of the task to be copied
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get($taskId):Plenty\Modules\Board\Models\BoardTask
@@ -658,6 +678,7 @@ a|The ID of the task
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($boardId, $columnId, $taskId, $data):Plenty\Modules\Board\Models\BoardTask
@@ -695,6 +716,7 @@ a|Data to set at the task
 
 
 [source%nowrap, php]
+[#addreference]
 ----
 
 public addReference($boardTaskReference):bool
@@ -720,6 +742,7 @@ a|The board task reference
 
 
 [source%nowrap, php]
+[#removereference]
 ----
 
 public removeReference($boardTaskReference):bool
@@ -745,6 +768,7 @@ a|The board task reference
 
 
 [source%nowrap, php]
+[#updateposition]
 ----
 
 public updatePosition($taskId, $newColumnId, $newPosition):int
@@ -778,6 +802,7 @@ a|The new position
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($taskId):bool
@@ -803,6 +828,7 @@ a|The ID of the task to be deleted
 
 
 [source%nowrap, php]
+[#deletebycolumn]
 ----
 
 public deleteByColumn($boardId, $columnId):bool
@@ -832,6 +858,7 @@ a|The ID of the column the task belongs to
 
 
 [source%nowrap, php]
+[#allbycolumnid]
 ----
 
 public allByColumnId($columnId, $referenceValue = null, $columns = []):void
@@ -865,6 +892,7 @@ a|The attributes of the task to load
 
 
 [source%nowrap, php]
+[#allbyboardid]
 ----
 
 public allByBoardId($boardId, $referenceValue = null, $columns = []):void
@@ -918,6 +946,7 @@ This event will be triggered, after all tasks of a column were deleted.
 ===== Methods
 
 [source%nowrap, php]
+[#getboardid]
 ----
 
 public getBoardId():string
@@ -933,6 +962,7 @@ public getBoardId():string
 
 
 [source%nowrap, php]
+[#getcolumnid]
 ----
 
 public getColumnId():string
@@ -948,6 +978,7 @@ public getColumnId():string
 
 
 [source%nowrap, php]
+[#getdeletedtaskidlist]
 ----
 
 public getDeletedTaskIdList():array
@@ -982,6 +1013,7 @@ This event will be triggered, when a board task was created.
 ===== Methods
 
 [source%nowrap, php]
+[#getboardtask]
 ----
 
 public getBoardTask():Plenty\Modules\Board\Models\BoardTask
@@ -1016,6 +1048,7 @@ This event will be triggered, when a single board task was deleted. It won&#039;
 ===== Methods
 
 [source%nowrap, php]
+[#getboardtask]
 ----
 
 public getBoardTask():Plenty\Modules\Board\Models\BoardTask
@@ -1050,6 +1083,7 @@ This event will be triggered, after a task reference was created.
 ===== Methods
 
 [source%nowrap, php]
+[#getboardtaskreference]
 ----
 
 public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference
@@ -1084,6 +1118,7 @@ This event will be triggered, after a task reference was deleted.
 ===== Methods
 
 [source%nowrap, php]
+[#getboardtaskreference]
 ----
 
 public getBoardTaskReference():Plenty\Modules\Board\Models\BoardTaskReference
@@ -1118,6 +1153,7 @@ This event will be triggered, before a board column will be deleted.
 ===== Methods
 
 [source%nowrap, php]
+[#getboard]
 ----
 
 public getBoard():Plenty\Modules\Board\Models\Board
@@ -1133,6 +1169,7 @@ public getBoard():Plenty\Modules\Board\Models\Board
 
 
 [source%nowrap, php]
+[#getcolumnid]
 ----
 
 public getColumnId():string
@@ -1167,6 +1204,7 @@ This event will be triggered, before a board will be deleted.
 ===== Methods
 
 [source%nowrap, php]
+[#getboard]
 ----
 
 public getBoard():Plenty\Modules\Board\Models\Board
@@ -1201,6 +1239,7 @@ This event will be triggered, before a single board task was deleted. It won&#03
 ===== Methods
 
 [source%nowrap, php]
+[#getboardtask]
 ----
 
 public getBoardTask():Plenty\Modules\Board\Models\BoardTask
@@ -1258,6 +1297,7 @@ The board model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1314,6 +1354,7 @@ The board column model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1379,6 +1420,7 @@ The board task model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1429,6 +1471,7 @@ The task reference model.
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()

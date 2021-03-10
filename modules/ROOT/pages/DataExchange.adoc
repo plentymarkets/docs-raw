@@ -29,6 +29,7 @@ generator for csv content
 ===== Methods
 
 [source%nowrap, php]
+[#setdelimiter]
 ----
 
 public setDelimiter($delimiter):void
@@ -54,6 +55,7 @@ a|
 
 
 [source%nowrap, php]
+[#setenclosure]
 ----
 
 public setEnclosure($enclosure):void
@@ -79,6 +81,7 @@ a|
 
 
 [source%nowrap, php]
+[#addcsvcontent]
 ----
 
 public addCSVContent($data):void
@@ -104,6 +107,7 @@ a|
 
 
 [source%nowrap, php]
+[#addbulkcsvcontent]
 ----
 
 public addBulkCSVContent($data):void
@@ -129,6 +133,7 @@ a|
 
 
 [source%nowrap, php]
+[#addcontent]
 ----
 
 public addContent($content):void
@@ -154,6 +159,7 @@ a|
 
 
 [source%nowrap, php]
+[#generatecontent]
 ----
 
 public generateContent($resultData, $formatSettings = []):void
@@ -202,6 +208,7 @@ generator for csv content
 ===== Methods
 
 [source%nowrap, php]
+[#setdelimiter]
 ----
 
 public setDelimiter($delimiter):void
@@ -227,6 +234,7 @@ a|
 
 
 [source%nowrap, php]
+[#setenclosure]
 ----
 
 public setEnclosure($enclosure):void
@@ -252,6 +260,7 @@ a|
 
 
 [source%nowrap, php]
+[#addcsvcontent]
 ----
 
 public addCSVContent($data):void
@@ -277,6 +286,7 @@ a|
 
 
 [source%nowrap, php]
+[#addbulkcsvcontent]
 ----
 
 public addBulkCSVContent($data):void
@@ -302,6 +312,7 @@ a|
 
 
 [source%nowrap, php]
+[#addcontent]
 ----
 
 public addContent($content):void
@@ -327,6 +338,7 @@ a|
 
 
 [source%nowrap, php]
+[#generateplugincontent]
 ----
 
 public generatePluginContent($resultData, $formatSettings = [], $filter = []):void
@@ -379,6 +391,7 @@ a|
 ===== Methods
 
 [source%nowrap, php]
+[#create]
 ----
 
 public create($data):Plenty\Modules\DataExchange\Models\Export
@@ -404,6 +417,7 @@ a|
 
 
 [source%nowrap, php]
+[#update]
 ----
 
 public update($data, $exportId):Plenty\Modules\DataExchange\Models\Export
@@ -433,6 +447,7 @@ a|
 
 
 [source%nowrap, php]
+[#delete]
 ----
 
 public delete($exportId):bool
@@ -458,6 +473,7 @@ a|
 
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($params = [], $with = [], $columns = []):Plenty\Repositories\Models\PaginatedResult
@@ -491,6 +507,7 @@ a|
 
 
 [source%nowrap, php]
+[#findbyid]
 ----
 
 public findById($exportId, $with = []):Plenty\Modules\DataExchange\Models\Export
@@ -539,6 +556,7 @@ Filters
 ===== Methods
 
 [source%nowrap, php]
+[#generatefilters]
 ----
 
 public generateFilters($formatSettings = []):array
@@ -583,6 +601,7 @@ Generator
 ===== Methods
 
 [source%nowrap, php]
+[#addcontent]
 ----
 
 public addContent($content):void
@@ -608,6 +627,7 @@ a|
 
 
 [source%nowrap, php]
+[#generatecontent]
 ----
 
 public generateContent($resultData, $formatSettings = []):void
@@ -656,6 +676,7 @@ Output
 ===== Methods
 
 [source%nowrap, php]
+[#out]
 ----
 
 public out($resource, $outputParams = [], $export = null):void
@@ -708,6 +729,7 @@ PluginGenerator
 ===== Methods
 
 [source%nowrap, php]
+[#addcontent]
 ----
 
 public addContent($content):void
@@ -733,6 +755,7 @@ a|
 
 
 [source%nowrap, php]
+[#generateplugincontent]
 ----
 
 public generatePluginContent($resultData, $formatSettings = [], $filter = []):void
@@ -785,6 +808,7 @@ ResultFields
 ===== Methods
 
 [source%nowrap, php]
+[#generateresultfields]
 ----
 
 public generateResultFields($formatSettings = []):array
@@ -810,6 +834,7 @@ a|
 
 
 [source%nowrap, php]
+[#setgroupbylist]
 ----
 
 public setGroupByList($groupByList):void
@@ -835,6 +860,7 @@ a|
 
 
 [source%nowrap, php]
+[#setorderbylist]
 ----
 
 public setOrderByList($orderByList):void
@@ -898,6 +924,7 @@ generator for xml content
 ===== Methods
 
 [source%nowrap, php]
+[#init]
 ----
 
 public init($rootName):void
@@ -923,6 +950,7 @@ a|
 
 
 [source%nowrap, php]
+[#root]
 ----
 
 public root():\DOMElement
@@ -938,6 +966,7 @@ public root():\DOMElement
 
 
 [source%nowrap, php]
+[#build]
 ----
 
 public build():void
@@ -953,6 +982,7 @@ public build():void
 Build the XML.
 
 [source%nowrap, php]
+[#createelement]
 ----
 
 public createElement($name, $value = null):\DOMElement
@@ -982,6 +1012,7 @@ a|
 
 
 [source%nowrap, php]
+[#createcdatasection]
 ----
 
 public createCDATASection($data):\DOMCdataSection
@@ -1007,6 +1038,7 @@ a|
 
 
 [source%nowrap, php]
+[#createattribute]
 ----
 
 public createAttribute($name, $value = null):\DOMAttr
@@ -1036,6 +1068,7 @@ a|
 
 
 [source%nowrap, php]
+[#createtextnode]
 ----
 
 public createTextNode($content):\DOMText
@@ -1061,6 +1094,7 @@ a|
 
 
 [source%nowrap, php]
+[#addcontent]
 ----
 
 public addContent($content):void
@@ -1086,6 +1120,7 @@ a|
 
 
 [source%nowrap, php]
+[#generatecontent]
 ----
 
 public generateContent($resultData, $formatSettings = []):void
@@ -1153,6 +1188,7 @@ generator for xml content
 ===== Methods
 
 [source%nowrap, php]
+[#init]
 ----
 
 public init($rootName):void
@@ -1178,6 +1214,7 @@ a|
 
 
 [source%nowrap, php]
+[#root]
 ----
 
 public root():\DOMElement
@@ -1193,6 +1230,7 @@ public root():\DOMElement
 
 
 [source%nowrap, php]
+[#build]
 ----
 
 public build():void
@@ -1208,6 +1246,7 @@ public build():void
 Build the XML.
 
 [source%nowrap, php]
+[#createelement]
 ----
 
 public createElement($name, $value = null):\DOMElement
@@ -1237,6 +1276,7 @@ a|
 
 
 [source%nowrap, php]
+[#createcdatasection]
 ----
 
 public createCDATASection($data):\DOMCdataSection
@@ -1262,6 +1302,7 @@ a|
 
 
 [source%nowrap, php]
+[#createattribute]
 ----
 
 public createAttribute($name, $value = null):\DOMAttr
@@ -1291,6 +1332,7 @@ a|
 
 
 [source%nowrap, php]
+[#createtextnode]
 ----
 
 public createTextNode($content):\DOMText
@@ -1316,6 +1358,7 @@ a|
 
 
 [source%nowrap, php]
+[#addcontent]
 ----
 
 public addContent($content):void
@@ -1341,6 +1384,7 @@ a|
 
 
 [source%nowrap, php]
+[#generateplugincontent]
 ----
 
 public generatePluginContent($resultData, $formatSettings = [], $filter = []):void
@@ -1437,6 +1481,7 @@ Export model
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1496,6 +1541,7 @@ export filter
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1555,6 +1601,7 @@ format setting
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1614,6 +1661,7 @@ output params
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -1649,6 +1697,7 @@ Register export presets
 ===== Methods
 
 [source%nowrap, php]
+[#add]
 ----
 
 public add($exportKey, $resultFieldsClass, $generatorClass, $filterClass = &quot;&quot;, $isPlugin = false, $generatorExecute = false, $exportType = &quot;item&quot;, $restrictRows = true):void
@@ -1725,6 +1774,7 @@ Repository Contract for ResourceLoader
 ===== Methods
 
 [source%nowrap, php]
+[#getresource]
 ----
 
 public getResource($sourceOptions):void
@@ -1750,6 +1800,7 @@ a|
 
 
 [source%nowrap, php]
+[#getresourcebag]
 ----
 
 public getResourceBag($sourceOptions):Plenty\Modules\DataExchange\Resource\Models\ResourceBag
@@ -1775,6 +1826,7 @@ a|
 
 
 [source%nowrap, php]
+[#validatesourceoptions]
 ----
 
 public validateSourceOptions($sourceOptions):void
@@ -1800,6 +1852,7 @@ a|
 
 
 [source%nowrap, php]
+[#archivefile]
 ----
 
 public archiveFile($sourceOptions):void
@@ -1825,6 +1878,7 @@ a|
 
 
 [source%nowrap, php]
+[#getloadertype]
 ----
 
 public getLoaderType():string
@@ -1859,6 +1913,7 @@ Repository Contract for ResourceParser
 ===== Methods
 
 [source%nowrap, php]
+[#next]
 ----
 
 public next($resource, $parseOptions):array
@@ -1888,6 +1943,7 @@ a|
 
 
 [source%nowrap, php]
+[#getparsertype]
 ----
 
 public getParserType():string
@@ -1923,6 +1979,7 @@ public getParserType():string
 ===== Methods
 
 [source%nowrap, php]
+[#getresourceloaderbytype]
 ----
 
 public getResourceLoaderByType($type):Plenty\Modules\DataExchange\Resource\Contracts\ResourceLoaderContract
@@ -1948,6 +2005,7 @@ a|
 
 
 [source%nowrap, php]
+[#addloader]
 ----
 
 public addLoader($loader):void
@@ -1992,6 +2050,7 @@ a|
 ===== Methods
 
 [source%nowrap, php]
+[#getresourceparserbytype]
 ----
 
 public getResourceParserByType($type):Plenty\Modules\DataExchange\Resource\Contracts\ResourceParserContract
@@ -2017,6 +2076,7 @@ a|
 
 
 [source%nowrap, php]
+[#addparser]
 ----
 
 public addParser($parser):void
@@ -2062,6 +2122,7 @@ ResourceBag
 ===== Methods
 
 [source%nowrap, php]
+[#getresource]
 ----
 
 public getResource():void
@@ -2077,6 +2138,7 @@ public getResource():void
 
 
 [source%nowrap, php]
+[#getmd5]
 ----
 
 public getMd5():void

@@ -29,6 +29,7 @@ manage the audit log archive data
 ===== Methods
 
 [source%nowrap, php]
+[#search]
 ----
 
 public search($page = 1, $perPage = 12, $filters = []):array
@@ -62,6 +63,7 @@ a|
 
 
 [source%nowrap, php]
+[#count]
 ----
 
 public count($filters = []):int
@@ -87,6 +89,7 @@ a|
 
 
 [source%nowrap, php]
+[#restore]
 ----
 
 public restore($key):void
@@ -112,6 +115,7 @@ a|
 
 
 [source%nowrap, php]
+[#getsignedurl]
 ----
 
 public getSignedUrl($key):string
@@ -156,6 +160,7 @@ Get possible auditLog entities
 ===== Methods
 
 [source%nowrap, php]
+[#getgroups]
 ----
 
 public getGroups():array
@@ -171,6 +176,7 @@ public getGroups():array
 Get list of entity groups
 
 [source%nowrap, php]
+[#getentities]
 ----
 
 public getEntities():array
@@ -205,6 +211,7 @@ get audit log files
 ===== Methods
 
 [source%nowrap, php]
+[#all]
 ----
 
 public all():array
@@ -220,6 +227,7 @@ public all():array
 Get all available files
 
 [source%nowrap, php]
+[#getsignedurl]
 ----
 
 public getSignedUrl($key):string
@@ -264,6 +272,7 @@ Configure the audit log configuration
 ===== Methods
 
 [source%nowrap, php]
+[#save]
 ----
 
 public save($systemConfig):Plenty\Modules\AuditLog\Models\SystemConfig
@@ -289,6 +298,7 @@ a|
 
 
 [source%nowrap, php]
+[#get]
 ----
 
 public get():Plenty\Modules\AuditLog\Models\SystemConfig
@@ -352,6 +362,7 @@ Contains informations about one archive file
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -405,6 +416,7 @@ Contains the information about one audit log entity
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -452,6 +464,7 @@ Contains the entities depending to a group
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -511,6 +524,7 @@ Contains informations about one file
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -558,6 +572,7 @@ Contains entries, which should be saved
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
@@ -605,6 +620,7 @@ Contains the configuration for one audit log entity
 ===== Methods
 
 [source%nowrap, php]
+[#toarray]
 ----
 
 public toArray()
