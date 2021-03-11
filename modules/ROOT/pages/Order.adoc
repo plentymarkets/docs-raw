@@ -21328,6 +21328,81 @@ public toArray()
 
 Returns this model as an array.
 
+[[order_shippingprofiles]]
+== ShippingProfiles
+
+[[order_shippingprofiles_contracts]]
+===  Contracts
+[[order_contracts_ordershippingprofilesrepositorycontract]]
+==== OrderShippingProfilesRepositoryContract
+
+Order shipping profile repository contract to load the shipping profile combinations for an order or for the given order data as an array
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\ShippingProfiles\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getcombinations]
+----
+
+public getCombinations($orderId):array
+
+----
+
+
+
+
+
+
+
+Get the shipping profile combinations for an order.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getcombinationsfororderdata]
+----
+
+public getCombinationsForOrderData($data):array
+
+----
+
+
+
+
+
+
+
+Get the shipping profile combinations for the given order data.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|The (basket) data.
+|===
+
+
 [[order_status]]
 == Status
 
