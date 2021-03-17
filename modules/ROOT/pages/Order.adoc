@@ -501,6 +501,9 @@ The model of the order.
 * unlocked
 * permanentlyLocked
 * reversibleLocked
+|isLocked
+    |link:http://php.net/bool[bool^]
+    a|True, if the order has the lock status "unlocked". False otherwise.
 |hasTaxRelevantDocuments
     |link:http://php.net/bool[bool^]
     a|
@@ -590,15 +593,27 @@ The model of the order.
 |amount
     |        xref:Order.adoc#order_models_orderamount[`OrderAmount`]
     a|The order amount in foreign currency if exists. Otherwise the amount in system currency.
+|contactSenderId
+    |link:http://php.net/int[int^]
+    a|
 |contactSender
     |        xref:Account.adoc#account_models_contact[`Contact`]
     a|The associated contact for the contact-sender relation.
+|contactReceiverId
+    |link:http://php.net/int[int^]
+    a|
 |contactReceiver
     |        xref:Account.adoc#account_models_contact[`Contact`]
     a|The associated contact for the contact-receiver relation.
+|warehouseSenderId
+    |link:http://php.net/int[int^]
+    a|
 |warehouseSender
     |        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
     a|The associated warehouse for the warehouse-sender relation.
+|warehouseReceiverId
+    |link:http://php.net/int[int^]
+    a|
 |warehouseReceiver
     |        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
     a|The associated warehouse for the warehouse-receiver relation.
