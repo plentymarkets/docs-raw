@@ -2512,7 +2512,7 @@ a|
 [#listrelations]
 ----
 
-public listRelations($filters = [], $page = 1, $itemsPerPage = 50, $paginate):array
+public listRelations($filters = [], $page = 1, $itemsPerPage = 50, $paginate, $sorting = []):array
 
 ----
 
@@ -2542,6 +2542,10 @@ a|
 
 a|`$paginate`
 |link:http://php.net/int[int^]
+a|
+
+a|`$sorting`
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -3872,6 +3876,15 @@ The property group model. A property group allows to group several properties to
 |updatedAt
     |
     a|The date when the property group was last updated
+|options
+    |
+    a|The group options
+|names
+    |
+    a|The group names
+|properties
+    |
+    a|The properties the group belongs to
 |===
 
 
@@ -4346,6 +4359,12 @@ The property relation model allows to relate a property e.g. to a variation or o
 |selectionRelationId
     |link:http://php.net/int[int^]
     a|The ID of the selection relation
+|groupId
+    |link:http://php.net/int[int^]
+    a|The ID of the property group
+|markup
+    |link:http://php.net/float[float^]
+    a|The mark up of the property relation
 |createdAt
     |
     a|The date when the property was created
@@ -4357,6 +4376,9 @@ The property relation model allows to relate a property e.g. to a variation or o
     a|
 |propertyRelation
     |        xref:Property.adoc#property_models_property[`Property`]
+    a|
+|group
+    |        xref:Property.adoc#property_models_propertygroup[`PropertyGroup`]
     a|
 |===
 
