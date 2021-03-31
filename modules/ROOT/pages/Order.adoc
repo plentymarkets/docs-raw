@@ -501,6 +501,9 @@ The model of the order.
 * unlocked
 * permanentlyLocked
 * reversibleLocked
+|isLocked
+    |link:http://php.net/bool[bool^]
+    a|True, if the order has the lock status "unlocked". False otherwise.
 |hasTaxRelevantDocuments
     |link:http://php.net/bool[bool^]
     a|
@@ -590,15 +593,27 @@ The model of the order.
 |amount
     |        xref:Order.adoc#order_models_orderamount[`OrderAmount`]
     a|The order amount in foreign currency if exists. Otherwise the amount in system currency.
+|contactSenderId
+    |link:http://php.net/int[int^]
+    a|
 |contactSender
     |        xref:Account.adoc#account_models_contact[`Contact`]
     a|The associated contact for the contact-sender relation.
+|contactReceiverId
+    |link:http://php.net/int[int^]
+    a|
 |contactReceiver
     |        xref:Account.adoc#account_models_contact[`Contact`]
     a|The associated contact for the contact-receiver relation.
+|warehouseSenderId
+    |link:http://php.net/int[int^]
+    a|
 |warehouseSender
     |        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
     a|The associated warehouse for the warehouse-sender relation.
+|warehouseReceiverId
+    |link:http://php.net/int[int^]
+    a|
 |warehouseReceiver
     |        xref:Stockmanagement.adoc#stockmanagement_models_warehouse[`Warehouse`]
     a|The associated warehouse for the warehouse-receiver relation.
@@ -787,6 +802,9 @@ The order amount vat model.
 |orderAmount
     |        xref:Order.adoc#order_models_orderamount[`OrderAmount`]
     a|The OrderAmount model that the OrderAmountVat belongs to.
+|countryVat
+    |        xref:Accounting.adoc#accounting_models_vat[`Vat`]
+    a|The country vat instance.
 |===
 
 
@@ -853,6 +871,7 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 * DUNNING_CHARGE		=   12
 * ITEM_SET		        =   13
 * SET_COMPONENT		=   14
+* SET_COMPONENT		=   15
 |referrerId
     |link:http://php.net/float[float^]
     a|The ID of order item referrer
@@ -938,6 +957,12 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
 * End date = 10
 * Possible delivery date = 11
 * Market transfer date = 12
+|orderPropertyItems
+    |
+    a|A collection with order items referencing the current order item with type 'order_property'.
+|referencedOrderPropertyItem
+    |        xref:Order.adoc#order_models_orderitem[`OrderItem`]
+    a|The referenced order item with type 'order_property'.
 |references
     |
     a|The order item references.
@@ -4616,6 +4641,12 @@ The CouponCodeValidationItem model contains all item data needed for validating 
 |vatField
     |link:http://php.net/int[int^]
     a|The field of the VAT rate
+|itemHash
+    |link:http://php.net/string[string^]
+    a|The hash for items with new order properties
+|hashReference
+    |link:http://php.net/string[string^]
+    a|The reference to itemHash in new order property items
 |===
 
 
@@ -12760,6 +12791,138 @@ a|
 |===
 
 
+[[order_services_tax]]
+===  Tax
+[[order_tax_taxinformation]]
+==== TaxInformation
+
+This model holds all information about the data used to detect the order taxes.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Legacy\Services\Tax`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getlocationid]
+----
+
+public getLocationId():int
+
+----
+
+
+
+
+
+
+
+Get the location ID.
+
+[source%nowrap, php]
+[#getbillingcountryid]
+----
+
+public getBillingCountryId():int
+
+----
+
+
+
+
+
+
+
+Get the billing country ID.
+
+[source%nowrap, php]
+[#getdeliverycountryid]
+----
+
+public getDeliveryCountryId():int
+
+----
+
+
+
+
+
+
+
+Get the delivery country ID.
+
+[source%nowrap, php]
+[#getbillingtaxidnumber]
+----
+
+public getBillingTaxIdNumber():string
+
+----
+
+
+
+
+
+
+
+Get the tax id number of the billing address.
+
+[source%nowrap, php]
+[#getdeliverytaxidnumber]
+----
+
+public getDeliveryTaxIdNumber():string
+
+----
+
+
+
+
+
+
+
+Get the tax id number of the delivery address.
+
+[source%nowrap, php]
+[#getdate]
+----
+
+public getDate():string
+
+----
+
+
+
+
+
+
+
+Get the date.
+
+[source%nowrap, php]
+[#gethasentrycertificate]
+----
+
+public getHasEntryCertificate():bool
+
+----
+
+
+
+
+
+
+
+Get whether the delivery address ha sn entry cerificat or not.
+
 [[order_serviceprovider]]
 == ServiceProvider
 
@@ -19161,6 +19324,16 @@ The order item property model.
 * LISTING_TYPE                   = 40
 * SOLD_COUPON_CODE               = 46
 * ORDER_ITEM_STATE               = 48
+* SAP_ORDER_NUMBER               = 50
+* DISCOUNT                       = 52
+* REORDER_ITEM_PACKAGE_UNIT      = 53
+* REORDER_ITEM_MINIMUM_PURCHASE  = 54
+* REORDER_ITEM_DELIVERY_TIME_IN_DAYS = 55
+* REORDER_ITEM_DISCOUNTABLE      = 56
+* RETURNS_REMAINING_PERCENTAGE   = 57
+* ORDER_PROPERTY_ID              = 81
+* ORDER_PROPERTY_VALUE           = 82
+* ORDER_PROPERTY_GROUP_ID        = 83
 |value
     |link:http://php.net/string[string^]
     a|The value of the property. The value depends on type.
