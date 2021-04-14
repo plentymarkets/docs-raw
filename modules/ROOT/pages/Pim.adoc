@@ -4973,6 +4973,123 @@ a|
 
 
 
+[[pim_filter_supplierfilter]]
+==== SupplierFilter
+
+Includes filters for supplier
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\SearchService\Filter`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#matchsupplieritemnumber]
+----
+
+public matchSupplierItemNumber($term, $precision = \Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch::SEARCH_TYPE_EXACT):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$term`
+|link:http://php.net/string[string^]
+a|
+
+a|`$precision`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#addstatement]
+----
+
+public addStatement($statement):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statement`
+|        xref:Cloud.adoc#cloud_statement_statementinterface[`StatementInterface`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addquery]
+----
+
+public addQuery($statement):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statement`
+|
+a|
+|===
+
+
+
 [[pim_filter_tagfilter]]
 ==== TagFilter
 
@@ -5197,6 +5314,142 @@ a|`$lang`
 a|
 
 a|`$filter`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#matchanyname]
+----
+
+public matchAnyName($lang, $term, $precision = \Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch::SEARCH_TYPE_EXACT):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$lang`
+|link:http://php.net/string[string^]
+a|
+
+a|`$term`
+|link:http://php.net/string[string^]
+a|
+
+a|`$precision`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#matchname1]
+----
+
+public matchName1($lang, $term, $precision = \Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch::SEARCH_TYPE_EXACT):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$lang`
+|link:http://php.net/string[string^]
+a|
+
+a|`$term`
+|link:http://php.net/string[string^]
+a|
+
+a|`$precision`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#matchname2]
+----
+
+public matchName2($lang, $term, $precision = \Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch::SEARCH_TYPE_EXACT):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$lang`
+|link:http://php.net/string[string^]
+a|
+
+a|`$term`
+|link:http://php.net/string[string^]
+a|
+
+a|`$precision`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#matchname3]
+----
+
+public matchName3($lang, $term, $precision = \Plenty\Modules\Cloud\ElasticSearch\Lib\ElasticSearch::SEARCH_TYPE_EXACT):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$lang`
+|link:http://php.net/string[string^]
+a|
+
+a|`$term`
+|link:http://php.net/string[string^]
+a|
+
+a|`$precision`
 |link:http://php.net/string[string^]
 a|
 |===
@@ -11457,6 +11710,32 @@ Add filter to restrict the result.
 |Name |Type |Description
 a|`$filter`
 |        xref:Cloud.adoc#cloud_type_typeinterface[`TypeInterface`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setfilter]
+----
+
+public setFilter($filter):Plenty\Modules\Pim\VariationDataInterface\Model
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variationdatainterface_model[`Model`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filter`
+|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 a|
 |===
 
