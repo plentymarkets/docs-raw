@@ -8,6 +8,242 @@
 [[catalog_catalog]]
 == Catalog
 
+[[catalog_catalog_containers]]
+===  Containers
+[[catalog_containers_catalogmappingvaluecontainer]]
+==== CatalogMappingValueContainer
+
+The CatalogMappingValueContainer collects and returns multiple CatalogMappingValues.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Containers`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addmappingvalue]
+----
+
+public addMappingValue($value):void
+
+----
+
+
+
+
+
+
+
+Add a mapping value to the container
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$value`
+|        xref:Catalog.adoc#catalog_models_catalogmappingvalue[`CatalogMappingValue`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getmappingvalues]
+----
+
+public getMappingValues():array
+
+----
+
+
+
+
+
+
+
+Get all mapping values that are collected in the container.
+
+
+[[catalog_containers_catalogtemplatefieldcontainer]]
+==== CatalogTemplateFieldContainer
+
+The CatalogTemplateFieldContainer collects and returns multiple CatalogTemplateFields.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Containers`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addfield]
+----
+
+public addField($field):void
+
+----
+
+
+
+
+
+
+
+Add a field to the container.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$field`
+|        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcontract[`CatalogTemplateFieldContract`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfield]
+----
+
+public getField($key):Plenty\Modules\Catalog\Contracts\CatalogTemplateFieldContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcontract[`CatalogTemplateFieldContract`]
+
+
+Get a specified field out of the container.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfields]
+----
+
+public getFields():array
+
+----
+
+
+
+
+
+
+
+Get all fields that are collected in the container.
+
+
+[[catalog_containers_templategroupcontainer]]
+==== TemplateGroupContainer
+
+The TemplateGroupContainer collects all groups of a specific template.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Containers`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addgroup]
+----
+
+public addGroup($group):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$group`
+|        xref:Catalog.adoc#catalog_models_templategroup[`TemplateGroup`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getgroups]
+----
+
+public getGroups():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getgroup]
+----
+
+public getGroup($identifier):Plenty\Modules\Catalog\Models\TemplateGroup
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_models_templategroup[`TemplateGroup`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$identifier`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
 [[catalog_catalog_contracts]]
 ===  Contracts
 [[catalog_contracts_catalogcontentrepositorycontract]]
@@ -540,6 +776,312 @@ public getPreview():void
 
 
 
+
+
+
+[[catalog_contracts_cataloggroupedtemplateprovidercontract]]
+==== CatalogGroupedTemplateProviderContract
+
+The CatalogGroupedTemplateProviderContract is the interface that has to be implemented by the catalogue template providers. Each registered template should have a catalogue template provider (multiple templates can use the same one) to avoid booting them if they are not necessary. A catalogue template provider fills a template with data at the moment the template gets booted.Use the abstract class Plenty\Modules\Catalog\Templates\Providers\AbstractGroupedTemplateProvider.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#gettemplategroupcontainer]
+----
+
+public getTemplateGroupContainer():Plenty\Modules\Catalog\Containers\TemplateGroupContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_templategroupcontainer[`TemplateGroupContainer`]
+
+
+Returns a container in which all TemplateGroups of this template are collected.
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter():array
+
+----
+
+
+
+
+
+
+
+Returns the filters that will be applied in each export of templates that will be booted by this provider.
+
+[source%nowrap, php]
+[#getpremutator]
+----
+
+public getPreMutator():Plenty\Modules\Catalog\Contracts\CatalogMutatorContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogmutatorcontract[`CatalogMutatorContract`]
+
+
+Returns the Mutator instance that should be called to manipulate data before the mapping.
+
+[source%nowrap, php]
+[#getpostmutator]
+----
+
+public getPostMutator():Plenty\Modules\Catalog\Contracts\CatalogMutatorContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogmutatorcontract[`CatalogMutatorContract`]
+
+
+Returns the Mutator instance that should be called to manipulate data after the mapping.
+
+[source%nowrap, php]
+[#getskucallback]
+----
+
+public getSkuCallback():callable
+
+----
+
+
+
+
+
+
+
+Returns a callback function that is called if a field with the specific key &quot;sku&quot; got mapped. The function will receive the value that got mapped, the raw data array of this item and the type of the mapped source. It should return the new value (e.g. function ($value, array $item, $mappingType){ --your code-- return $value})).
+
+[source%nowrap, php]
+[#getsettings]
+----
+
+public getSettings():array
+
+----
+
+
+
+
+
+
+
+Returns an array of settings that will be displayed in the UI of each catalogue with a template that uses this provider. The selected values for all those settings can then be used in the export.
+
+[source%nowrap, php]
+[#getmetainfo]
+----
+
+public getMetaInfo():array
+
+----
+
+
+
+
+
+
+
+Returns an array of meta information which can be used to forward information to the export which could otherwise not be received.
+
+[source%nowrap, php]
+[#getcustomfilters]
+----
+
+public getCustomFilters():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getassignments]
+----
+
+public getAssignments():array
+
+----
+
+
+
+
+
+
+
+
+
+
+[[catalog_contracts_catalogmappingvalueprovidercontract]]
+==== CatalogMappingValueProviderContract
+
+The CatalogMappingValueProvider provides all mapping values for a specific field.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getvaluebyid]
+----
+
+public getValueById($id):Plenty\Modules\Catalog\Models\CatalogMappingValue
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_models_catalogmappingvalue[`CatalogMappingValue`]
+
+
+Get a CatalogMappingValue specified by its id
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getvaluesbyparentid]
+----
+
+public getValuesByParentId($parentId = null):Plenty\Modules\Catalog\Containers\CatalogMappingValueContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_catalogmappingvaluecontainer[`CatalogMappingValueContainer`]
+
+
+Get a CatalogMappingValueContainer that contains all CatalogMappingValues that match the given parentId. If no
+parentId is provided, all CatalogMappingValues that have no parent value are returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$parentId`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getvalues]
+----
+
+public getValues($params = []):Plenty\Modules\Catalog\Containers\CatalogMappingValueContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_catalogmappingvaluecontainer[`CatalogMappingValueContainer`]
+
+
+Get a CatalogMappingValueContainer dependent on provided params.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$params`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+
+[[catalog_contracts_catalogmutatorcontract]]
+==== CatalogMutatorContract
+
+The CatalogMutatorContract represents one mutator that will be used to manipulate a specific item in the export either before or after it has been mapped.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#mutate]
+----
+
+public mutate($item):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$item`
+|
+a|
+|===
 
 
 
@@ -1430,11 +1972,286 @@ public getResultConverterClass():string
 Returns a class name through which the export result can be converted into the necessary format (e.g. json or csv)
 
 
+[[catalog_contracts_catalogtemplatefieldcallablecontract]]
+==== CatalogTemplateFieldCallableContract
+
+The CatalogTemplateFieldCallableContract is the Interface that has to be implemented by each callable that is going to be linked to a field.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#call]
+----
+
+public call($item, $value, $originType):void
+
+----
+
+
+
+
+
+
+
+This method will be called if the linked field is mapped. The method will receive the loaded data for the item,
+the value that was mapped by the catalog and the origin of that value.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$item`
+|
+a|
+
+a|`$value`
+|
+a|
+
+a|`$originType`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+
+[[catalog_contracts_catalogtemplatefieldcontract]]
+==== CatalogTemplateFieldContract
+
+The CatalogTemplateFieldContract representes a single field in a template. Use a specific implementation of this interface to create a field.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getexportkey]
+----
+
+public getExportKey():string
+
+----
+
+
+
+
+
+
+
+Returns the key that will be present in the exported result
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+Returns a unique identifier for this field
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+Returns the label of the field that will be visible in the UI
+
+[source%nowrap, php]
+[#isrequired]
+----
+
+public isRequired():bool
+
+----
+
+
+
+
+
+
+
+Defines if the field is required.
+
+[source%nowrap, php]
+[#islocked]
+----
+
+public isLocked():bool
+
+----
+
+
+
+
+
+
+
+Defines if the field is locked. Locked fields will be visible in the UI but can not be overwritten.
+
+[source%nowrap, php]
+[#isarray]
+----
+
+public isArray():bool
+
+----
+
+
+
+
+
+
+
+Defines if (true) all found sources will be exported as an array or (false) the first filled source will be used
+to fill the field.
+
+[source%nowrap, php]
+[#getcallable]
+----
+
+public getCallable():Plenty\Modules\Catalog\Contracts\CatalogTemplateFieldCallableContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcallablecontract[`CatalogTemplateFieldCallableContract`]
+
+
+Returns a callable that should be run after mapping the field to manipulate it if necessary.
+
+[source%nowrap, php]
+[#getmeta]
+----
+
+public getMeta():array
+
+----
+
+
+
+
+
+
+
+Returns an array of meta information that will not be used by the catalog itself. This array can be used to pass
+data through the export that the specific implementation needs.
+
+[source%nowrap, php]
+[#getdefaultsources]
+----
+
+public getDefaultSources():array
+
+----
+
+
+
+
+
+
+
+Returns an array of default sources. Default sources will be used if no other sources are manually added through the
+UI.
+
+[source%nowrap, php]
+[#getmappingvalueprovider]
+----
+
+public getMappingValueProvider():Plenty\Modules\Catalog\Contracts\CatalogMappingValueProviderContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogmappingvalueprovidercontract[`CatalogMappingValueProviderContract`]
+
+
+
+
+[source%nowrap, php]
+[#getnestedfields]
+----
+
+public getNestedFields():Plenty\Modules\Catalog\Containers\CatalogTemplateFieldContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_catalogtemplatefieldcontainer[`CatalogTemplateFieldContainer`]
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():int
+
+----
+
+
+
+
+
+
+
+
+
+
 [[catalog_contracts_catalogtemplateprovidercontract]]
 ==== CatalogTemplateProviderContract
 
 The CatalogTemplateProviderContract is the interface that has to be implemented by the catalogue template providers. Each registered template should have a catalogue template provider (multiple templates can use the same one) to avoid booting them if they are not necessary. A catalogue template provider fills a template with data at the moment the template gets booted. Whenever it is possible, use the abstract class Plenty\Modules\Catalog\Templates\BaseTemplateProvider.
 
+[WARNING]
+.Deprecated! 
+====
+
+Use \Plenty\Modules\Catalog\Contracts\CatalogGroupedTemplateProviderContract instead.
+
+====
 
 
 ===== Namespace
@@ -1456,6 +2273,13 @@ public getMappings():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1472,6 +2296,13 @@ public getFilter():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1488,6 +2319,13 @@ public getPreMutators():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1504,6 +2342,13 @@ public getPostMutators():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1520,6 +2365,13 @@ public getSkuCallback():callable
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1536,6 +2388,13 @@ public getSettings():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1552,6 +2411,13 @@ public getMetaInfo():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1566,6 +2432,13 @@ Returns an array of meta information which can be used to forward information to
 
 The DataProviderContract is the interface for data providers. Data providers provide the available fields that can be mapped in a template to create a catalogue. Whenever it is possible, use one of the concrete implementations Plenty\Modules\Catalog\DataProviders\BaseDataProvider, Plenty\Modules\Catalog\DataProviders\KeyDataProvider or Plenty\Modules\Catalog\DataProviders\NestedKeyDataProvider.
 
+[WARNING]
+.Deprecated! 
+====
+
+Use \Plenty\Modules\Catalog\Contracts\CatalogTemplateFieldContract instead.
+
+====
 
 
 ===== Namespace
@@ -1587,6 +2460,13 @@ public getData($query = &quot;&quot;):array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1613,6 +2493,13 @@ public setTemplate($template):void
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1639,6 +2526,13 @@ public setMapping($mapping):void
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1844,6 +2738,13 @@ a|
 
 The NestedDataProviderContract is the interface for nested data providers. Nested data providers are used to provide nested options that can be selected for export. E.g. a list of categories of a specific marketplace. Whenever it is possible, use the concrete implementation Plenty\Modules\Catalog\DataProviders\NestedKeyDataProvider.
 
+[WARNING]
+.Deprecated! 
+====
+
+Use \Plenty\Modules\Catalog\Contracts\CatalogTemplateFieldContract instead.
+
+====
 
 
 ===== Namespace
@@ -1865,6 +2766,13 @@ public getNestedData($parentId, $query = &quot;&quot;, $meta = []):array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1899,6 +2807,13 @@ public getDataByValue($id):array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1925,6 +2840,13 @@ public getData($query = &quot;&quot;):array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1951,6 +2873,13 @@ public setTemplate($template):void
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -1977,6 +2906,13 @@ public setMapping($mapping):void
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -2195,6 +3131,13 @@ public getMappings():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+All templates that are provided by \Plenty\Modules\Catalog\Contracts\CatalogGroupedTemplateProviderContract should use Plenty\Modules\Catalog\Contracts\TemplateContract::getGroupContainer instead.
+
+====
 
 
 
@@ -2211,6 +3154,13 @@ public addMapping($mapping):void
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+All templates that are provided by \Plenty\Modules\Catalog\Contracts\CatalogGroupedTemplateProviderContract should use Plenty\Modules\Catalog\Contracts\TemplateContract::addGroupContainer instead.
+
+====
 
 
 
@@ -2230,6 +3180,49 @@ a|
 
 
 [source%nowrap, php]
+[#getgroupcontainer]
+----
+
+public getGroupContainer():Plenty\Modules\Catalog\Containers\TemplateGroupContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_templategroupcontainer[`TemplateGroupContainer`]
+
+
+Returns a container that contains all groups of fields that are present in this template. Each group will represent a portlet in the catalog UI. The order of the portlets is identical to the order the groups were added to the container.
+
+[source%nowrap, php]
+[#addgroupcontainer]
+----
+
+public addGroupContainer($groupContainer):void
+
+----
+
+
+
+
+
+
+
+Adds a group of fields to the template. Those groups will be displayed in the UI. The position in the UI depends
+on the order of adding the groups to the template.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$groupContainer`
+|        xref:Catalog.adoc#catalog_containers_templategroupcontainer[`TemplateGroupContainer`]
+a|
+|===
+
+
+[source%nowrap, php]
 [#addmutator]
 ----
 
@@ -2241,7 +3234,7 @@ public addMutator($callback):void
 .Deprecated! 
 ====
 
-Use Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator or Plenty\Modules\Catalog\Contracts\TemplateContract::addPreMutator instead.
+Use Plenty\Modules\Catalog\Contracts\TemplateContract::setPostMutator instead.
 
 ====
 
@@ -2270,6 +3263,13 @@ public addPreMutator($callback):void
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Premutators will be removed entirely in the near future. Please do not use them in any new implementation.
+
+====
 
 
 
@@ -2296,6 +3296,13 @@ public addPostMutator($callback):void
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Use Plenty\Modules\Catalog\Contracts\TemplateContract::setPreMutator or Plenty\Modules\Catalog\Contracts\TemplateContract::setPostMutator instead.
+
+====
 
 
 
@@ -2310,6 +3317,65 @@ Adds a post mutator to the template. Post mutators are applied to the export dat
 |Name |Type |Description
 a|`$callback`
 |link:http://php.net/callable[callable^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setpremutator]
+----
+
+public setPreMutator($preMutator):void
+
+----
+
+[WARNING]
+.Deprecated! 
+====
+
+Premutators will be removed entirely in the near future. Please do not use them in any new implementation
+
+====
+
+
+
+
+
+
+Defines the pre mutator of the template. The pre mutator is applied to the export data before the mapping occurs. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$preMutator`
+|        xref:Catalog.adoc#catalog_contracts_catalogmutatorcontract[`CatalogMutatorContract`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setpostmutator]
+----
+
+public setPostMutator($postMutator):void
+
+----
+
+
+
+
+
+
+
+Defines the post mutator of the template. The post mutator is applied to the export data once the mapping occurred. If possible, don&#039;t use this directly and let it be handled by the catalogue template provider.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$postMutator`
+|        xref:Catalog.adoc#catalog_contracts_catalogmutatorcontract[`CatalogMutatorContract`]
 a|
 |===
 
@@ -2403,6 +3469,13 @@ public getPreMutators():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Use Plenty\Modules\Catalog\Contracts\TemplateContract::getPreMutator instead.
+
+====
 
 
 
@@ -2419,6 +3492,13 @@ public getPostMutators():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Use Plenty\Modules\Catalog\Contracts\TemplateContract::getPostMutator instead.
+
+====
 
 
 
@@ -2426,6 +3506,45 @@ public getPostMutators():array
 
 
 Returns the post mutators of the template.
+
+[source%nowrap, php]
+[#getpremutator]
+----
+
+public getPreMutator():Plenty\Modules\Catalog\Contracts\CatalogMutatorContract
+
+----
+
+[WARNING]
+.Deprecated! 
+====
+
+Premutators will be removed entirely in the near future. Please do not use them in any new implementation.
+
+====
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogmutatorcontract[`CatalogMutatorContract`]
+
+
+Returns the pre mutator of the template.
+
+[source%nowrap, php]
+[#getpostmutator]
+----
+
+public getPostMutator():Plenty\Modules\Catalog\Contracts\CatalogMutatorContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogmutatorcontract[`CatalogMutatorContract`]
+
+
+Returns the post mutator of the template.
 
 [source%nowrap, php]
 [#setskucallback]
@@ -3091,6 +4210,13 @@ a|
 
 The BaseDataProvider is used to define a section of simple mappings in the catalogue. A simple mapping refers to the assignment of a value in the plentymarkets system or a manually predefined value to a specific key. E.g. mapping the value of a specific text property to the key &#039;description&#039;.
 
+[WARNING]
+.Deprecated! 
+====
+
+Use Plenty\Modules\Catalog\Models\SimpleTemplateField instead.
+
+====
 
 
 ===== Namespace
@@ -3178,6 +4304,13 @@ a|
 
 The KeyDataProvider is used to define a section of a complex mapping in the catalogue. A complex mapping refers to the assignment of a value from a predefined list of possible values to a key if a specific requirement is met. E.g. put the value &#039;awesomeBrand&#039; into the key &#039;brand&#039;, if manufacturer &#039;awesomeManufacturer&#039; is linked to a variation.
 
+[WARNING]
+.Deprecated! 
+====
+
+Use Plenty\Modules\Catalog\Models\ComplexTemplateField instead.
+
+====
 
 
 ===== Namespace
@@ -3281,6 +4414,13 @@ a|
 
 The NestedKeyDataProvider is used to define a section of a complex mapping in the catalogue. It is specifically used if the list of available values contains nested values. E.g. a list of categories with sub-categories.
 
+[WARNING]
+.Deprecated! 
+====
+
+Use Plenty\Modules\Catalog\Models\ComplexTemplateField instead.
+
+====
 
 
 ===== Namespace
@@ -3462,6 +4602,13 @@ public getDataByValue($id):array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Whole interface is deprecated
+
+====
 
 
 
@@ -3631,6 +4778,146 @@ public toArray()
 
 Returns this model as an array.
 
+
+[[catalog_models_catalogmappingvalue]]
+==== CatalogMappingValue
+
+A CatalogMappingValue represents a single available option in the catalog UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Models`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[catalog_models_complextemplatefield]]
+==== ComplexTemplateField
+
+To be written.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Models`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[catalog_models_simpletemplatefield]]
+==== SimpleTemplateField
+
+To be written.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Models`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[catalog_models_templategroup]]
+==== TemplateGroup
+
+A TemplateGroup represents a portlet in the catalog UI. Each container field will be displayed in the same portlet. The order of the fields depends on the order they were added into the group.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Models`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
 [[catalog_catalog_templates]]
 ===  Templates
 [[catalog_templates_basetemplateprovider]]
@@ -3638,6 +4925,13 @@ Returns this model as an array.
 
 The BaseTemplateProvider is the abstract class that should be used to implement a template provider.
 
+[WARNING]
+.Deprecated! 
+====
+
+Use Plenty\Modules\Catalog\Templates\Providers\AbstractGroupedTemplateProvider instead.
+
+====
 
 
 ===== Namespace
@@ -4162,6 +5456,132 @@ public getMetaInfo():void
 
 
 
+
+
+[source%nowrap, php]
+[#getgroupcontainer]
+----
+
+public getGroupContainer():Plenty\Modules\Catalog\Containers\TemplateGroupContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_templategroupcontainer[`TemplateGroupContainer`]
+
+
+
+
+[source%nowrap, php]
+[#addgroupcontainer]
+----
+
+public addGroupContainer($groupContainer):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$groupContainer`
+|        xref:Catalog.adoc#catalog_containers_templategroupcontainer[`TemplateGroupContainer`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getpremutator]
+----
+
+public getPreMutator():Plenty\Modules\Catalog\Contracts\CatalogMutatorContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogmutatorcontract[`CatalogMutatorContract`]
+
+
+
+
+[source%nowrap, php]
+[#getpostmutator]
+----
+
+public getPostMutator():Plenty\Modules\Catalog\Contracts\CatalogMutatorContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogmutatorcontract[`CatalogMutatorContract`]
+
+
+
+
+[source%nowrap, php]
+[#setpremutator]
+----
+
+public setPreMutator($preMutator):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$preMutator`
+|        xref:Catalog.adoc#catalog_contracts_catalogmutatorcontract[`CatalogMutatorContract`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setpostmutator]
+----
+
+public setPostMutator($postMutator):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$postMutator`
+|        xref:Catalog.adoc#catalog_contracts_catalogmutatorcontract[`CatalogMutatorContract`]
+a|
+|===
 
 
 [source%nowrap, php]
@@ -4940,4 +6360,171 @@ public toArray()
 
 
 Returns this model as an array.
+
+[[catalog_templates]]
+== Templates
+
+[[catalog_templates_providers]]
+===  Providers
+[[catalog_providers_abstractgroupedtemplateprovider]]
+==== AbstractGroupedTemplateProvider
+
+The AbstractGroupedTemplateProvider is the abstract class that should be used to implement a template provider.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Templates\Providers`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#gettemplategroupcontainer]
+----
+
+public getTemplateGroupContainer():Plenty\Modules\Catalog\Containers\TemplateGroupContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_templategroupcontainer[`TemplateGroupContainer`]
+
+
+Returns a container in which all TemplateGroups of this template are collected.
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter():array
+
+----
+
+
+
+
+
+
+
+Returns the filters that will be applied in each export of templates that will be booted by this provider.
+
+[source%nowrap, php]
+[#getpremutator]
+----
+
+public getPreMutator():Plenty\Modules\Catalog\Contracts\CatalogMutatorContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogmutatorcontract[`CatalogMutatorContract`]
+
+
+Returns the Mutator instance that should be called to manipulate data before the mapping.
+
+[source%nowrap, php]
+[#getpostmutator]
+----
+
+public getPostMutator():Plenty\Modules\Catalog\Contracts\CatalogMutatorContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogmutatorcontract[`CatalogMutatorContract`]
+
+
+Returns the Mutator instance that should be called to manipulate data after the mapping.
+
+[source%nowrap, php]
+[#getskucallback]
+----
+
+public getSkuCallback():callable
+
+----
+
+
+
+
+
+
+
+Returns a callback function that is called if a field with the specific key &quot;sku&quot; got mapped. The function will receive the value that got mapped, the raw data array of this item and the type of the mapped source. It should return the new value (e.g. function ($value, array $item, $mappingType){ --your code-- return $value})).
+
+[source%nowrap, php]
+[#getsettings]
+----
+
+public getSettings():array
+
+----
+
+
+
+
+
+
+
+Returns an array of settings that will be displayed in the UI of each catalogue with a template that uses this provider. The selected values for all those settings can then be used in the export.
+
+[source%nowrap, php]
+[#getmetainfo]
+----
+
+public getMetaInfo():array
+
+----
+
+
+
+
+
+
+
+Returns an array of meta information which can be used to forward information to the export which could otherwise not be received.
+
+[source%nowrap, php]
+[#getcustomfilters]
+----
+
+public getCustomFilters():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getassignments]
+----
+
+public getAssignments():array
+
+----
+
+
+
+
+
+
+
+
 
