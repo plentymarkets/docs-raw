@@ -1161,6 +1161,22 @@ public getVatNumber():string
 
 Get the vat number to validate.
 
+[source%nowrap, php]
+[#getcountryid]
+----
+
+public getCountryId():int
+
+----
+
+
+
+
+
+
+
+Get the country id to validate.
+
 [[webshop_webshop_helpers]]
 ===  Helpers
 [[webshop_helpers_baseprice]]
@@ -7091,6 +7107,36 @@ a|Data to create the return order with.
 a|`$orderId`
 |link:http://php.net/int[int^]
 a|Id of the original order
+|===
+
+
+[source%nowrap, php]
+[#switchpaymentmethodfororder]
+----
+
+public switchPaymentMethodForOrder($orderId, $paymentMethodId):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Switch the payment method of an existing order.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|The id of the order.
+
+a|`$paymentMethodId`
+|link:http://php.net/int[int^]
+a|The id of the payment method which should be switched to.
 |===
 
 
