@@ -778,6 +778,62 @@ public getPreview():void
 
 
 
+[source%nowrap, php]
+[#allowexportkeys]
+----
+
+public allowExportKeys($keys):void
+
+----
+
+
+
+
+
+
+
+Defines a list of keys that will be considered in the export. That means that only keys that exist in the catalog
+and are defined in this list will be contained in the export result. This will overwrite the forbidden keys that
+were defined by the forbidExportKeys method.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$keys`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#forbidexportkeys]
+----
+
+public forbidExportKeys($keys):void
+
+----
+
+
+
+
+
+
+
+Defines a list of keys that will not be considered in the export. That means that only keys that exist in the
+catalog and are not defined in this list will be contained in the export result. This will overwrite the allowed
+keys that were defined by the allowExportKeys method.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$keys`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
 
 [[catalog_contracts_cataloggroupedtemplateprovidercontract]]
 ==== CatalogGroupedTemplateProviderContract
@@ -4814,10 +4870,247 @@ public toArray()
 Returns this model as an array.
 
 
+[[catalog_models_combinedtemplatefield]]
+==== CombinedTemplateField
+
+A combined template field is a mix out of simple and complex template fields. You can define a field with predefined valid values, which will be exported if all nested fields were filled successfully in the export. An example is a barcode type. The customer can choose a barcode type, that is exported if the field barcode was successfully mapped with a specific source.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Models`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isrequired]
+----
+
+public isRequired():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#islocked]
+----
+
+public isLocked():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isarray]
+----
+
+public isArray():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getmeta]
+----
+
+public getMeta():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getcallable]
+----
+
+public getCallable():Plenty\Modules\Catalog\Contracts\CatalogTemplateFieldCallableContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcallablecontract[`CatalogTemplateFieldCallableContract`]
+
+
+
+
+[source%nowrap, php]
+[#getmappingvalueprovider]
+----
+
+public getMappingValueProvider():Plenty\Modules\Catalog\Contracts\CatalogMappingValueProviderContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogmappingvalueprovidercontract[`CatalogMappingValueProviderContract`]
+
+
+
+
+[source%nowrap, php]
+[#getdefaultsources]
+----
+
+public getDefaultSources():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getexportkey]
+----
+
+public getExportKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getnestedfields]
+----
+
+public getNestedFields():Plenty\Modules\Catalog\Containers\CatalogTemplateFieldContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_catalogtemplatefieldcontainer[`CatalogTemplateFieldContainer`]
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setcallable]
+----
+
+public setCallable($callable):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$callable`
+|        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcallablecontract[`CatalogTemplateFieldCallableContract`]
+a|
+|===
+
+
+
 [[catalog_models_complextemplatefield]]
 ==== ComplexTemplateField
 
-To be written.
+A complex template field is used for Mappings with predefined valid values. The user has to choose a valid value and then provide a condition, which determines in which cases this value will be sent.
 
 
 
@@ -4852,7 +5145,7 @@ Returns this model as an array.
 [[catalog_models_simpletemplatefield]]
 ==== SimpleTemplateField
 
-To be written.
+A simple template field is used to fill a specific key through a data source which is defined by the user.
 
 
 
