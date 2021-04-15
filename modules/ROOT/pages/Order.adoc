@@ -1165,6 +1165,72 @@ public toArray()
 Returns this model as an array.
 
 
+[[order_models_orderitemreference]]
+==== OrderItemReference
+
+The order item reference model. Each OrderItemReference has a referenced OrderItem and a referenced type (&#039;parent&#039;,&#039;bundle&#039;,&#039;campaign&#039;,&#039;reorder&#039;,&#039;set&#039;,&#039;order_property&#039;).
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the reference
+|orderItemId
+    |link:http://php.net/int[int^]
+    a|The ID of the order item that the reference belongs to
+|referenceOrderItemId
+    |link:http://php.net/int[int^]
+    a|The ID of the order item that is referred to
+|referenceType
+    |link:http://php.net/string[string^]
+    a|The type of the reference
+|createdAt
+    |
+    a|The date that the reference was created
+|updatedAt
+    |
+    a|The date that the reference was updated last
+|orderItem
+    |        xref:Order.adoc#order_models_orderitem[`OrderItem`]
+    a|The order item the reference belongs to
+|referencedOrderItem
+    |        xref:Order.adoc#order_models_orderitem[`OrderItem`]
+    a|The referenced order item
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
 [[order_models_orderitemtransactionsums]]
 ==== OrderItemTransactionSums
 
