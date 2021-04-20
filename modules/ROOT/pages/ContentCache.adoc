@@ -289,7 +289,7 @@ Save and retrieve values to or from the content cache
 [#enablecacheforresponse]
 ----
 
-public enableCacheForResponse():void
+public enableCacheForResponse($options = []):void
 
 ----
 
@@ -300,6 +300,17 @@ public enableCacheForResponse():void
 
 
 Enable content caching for current response so next request on this resource will be delivered from content cache.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$options`
+|link:http://php.net/array[array^]
+a|Additional options to be considered when handling cache entries. Possible options are:
+- enableQueryParams: boolean Set to true to enable caching pages having query params.
+|===
+
 
 [source%nowrap, php]
 [#linkvariationstoresponse]
