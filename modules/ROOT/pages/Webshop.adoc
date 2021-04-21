@@ -7466,6 +7466,59 @@ Returns this model as an array.
 
 [[webshop_template_contracts]]
 ===  Contracts
+[[webshop_contracts_assetrepositorycontract]]
+==== AssetRepositoryContract
+
+Register required assets for the frontend.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Webshop\Template\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addasset]
+----
+
+public addAsset($path, $as = &quot;&quot;, $rel = &quot;preload&quot;):void
+
+----
+
+
+
+
+
+
+
+Add a path to an asset that should be pushed to the client using HTTP2 server push
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$path`
+|link:http://php.net/string[string^]
+a|The path to the asset to be pushed.
+
+a|`$as`
+|link:http://php.net/string[string^]
+a|The type to be used for the "as"-attribute. If not set, is is determined based on the file extension.
+
+a|`$rel`
+|link:http://php.net/string[string^]
+a|The rel attribute to be used.
+|===
+
+
+
 [[webshop_contracts_templateconfigrepositorycontract]]
 ==== TemplateConfigRepositoryContract
 
