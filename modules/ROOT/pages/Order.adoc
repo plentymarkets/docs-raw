@@ -19282,6 +19282,110 @@ a|
 [[order_payment]]
 == Payment
 
+[[order_payment_contracts]]
+===  Contracts
+[[order_contracts_orderpaymentrepositorycontract]]
+==== OrderPaymentRepositoryContract
+
+The OrderPaymentRepositoryContract is the interface for the order payment repository. This interface allows you to update the paid amount of orders.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Payment\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addpaidamount]
+----
+
+public addPaidAmount($orderId, $paidAmount, $currency = null, $date = null, $options = []):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Add a given paid amount to the already existing paid amount of an order.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$paidAmount`
+|link:http://php.net/float[float^]
+a|
+
+a|`$currency`
+|link:http://php.net/string[string^]
+a|
+
+a|`$date`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+
+a|`$options`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#overwritepaidamount]
+----
+
+public overwritePaidAmount($orderId, $paidAmount, $currency = null, $date = null, $options = []):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Overwrite already existing paid amount of an order with a given paid amount.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$paidAmount`
+|link:http://php.net/float[float^]
+a|
+
+a|`$currency`
+|link:http://php.net/string[string^]
+a|
+
+a|`$date`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+
+a|`$options`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
 [[order_payment_events]]
 ===  Events
 [[order_events_manualorderexecutepayment]]
