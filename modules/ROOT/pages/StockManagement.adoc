@@ -10,6 +10,51 @@
 
 [[stockmanagement_stock_contracts]]
 ===  Contracts
+[[stockmanagement_contracts_itemvariationwarehousedynamicrepositorycontract]]
+==== ItemVariationWarehouseDynamicRepositoryContract
+
+The ItemVariationWarehouseDynamicRepositoryContract is the interface for the stock repository. This interface allows you to find, create and update stock. Stock is assigned to one variation and is stored in warehouses.
+
+
+
+===== Namespace
+
+`Plenty\Modules\StockManagement\Stock\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#findavgorderbyvariationid]
+----
+
+public findAvgOrderByVariationId($variationId):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$variationId`
+|
+a|
+|===
+
+
+
 [[stockmanagement_contracts_stockrepositorycontract]]
 ==== StockRepositoryContract
 
@@ -651,6 +696,90 @@ Clears the filter array.
 
 [[stockmanagement_stock_models]]
 ===  Models
+[[stockmanagement_models_itemvariationwarehousedynamic]]
+==== ItemVariationWarehouseDynamic
+
+The stock model. There are 4 different stock terms used in plentymarkets. The physical stock, the net stock, the reserved stock and the stock reserved for listings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\StockManagement\Stock\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|itemId
+    |link:http://php.net/int[int^]
+    a|The ID of the item
+|variationId
+    |link:http://php.net/int[int^]
+    a|The ID of the variation
+|warehouseId
+    |link:http://php.net/int[int^]
+    a|The ID of the warehouse
+|stockPhysical
+    |link:http://php.net/float[float^]
+    a|The physical stock
+|reservedStock
+    |link:http://php.net/float[float^]
+    a|The reserved stock
+|reservedEbay
+    |link:http://php.net/float[float^]
+    a|The stock reserved for ebay
+|reorderDelta
+    |link:http://php.net/float[float^]
+    a|The reorder delta
+|stockNet
+    |link:http://php.net/float[float^]
+    a|The net stock
+|reordered
+    |link:http://php.net/int[int^]
+    a|The reordered quantity of a variation
+|warehousePriority
+    |link:http://php.net/int[int^]
+    a|The priority of the warehouse
+|reservedBundle
+    |link:http://php.net/float[float^]
+    a|Reserved bundle
+|averagePurchasePrice
+    |link:http://php.net/float[float^]
+    a|The average purchase price
+|averageSale
+    |link:http://php.net/float[float^]
+    a|The averageSale price
+|updatedAt
+    |
+    a|The time the stock was last updated
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
 [[stockmanagement_models_stock]]
 ==== Stock
 
@@ -707,6 +836,9 @@ The stock model. There are 4 different stock terms used in plentymarkets. The ph
 |averagePurchasePrice
     |link:http://php.net/float[float^]
     a|The average purchase price
+|averageOrderQuantity
+    |link:http://php.net/float[float^]
+    a|The average sale
 |updatedAt
     |
     a|The time the stock was last updated
