@@ -519,6 +519,9 @@ The model of the order.
 |hasDeliveryOrders
     |link:http://php.net/bool[bool^]
     a|Has the order delivery orders?
+|legacyOrderType
+    |link:http://php.net/string[string^]
+    a|The legacy order type as string
 |addresses
     |
     a|The address objects that are associated with the order.
@@ -1564,7 +1567,7 @@ Returns this model as an array.
 [[order_models_orderreference]]
 ==== OrderReference
 
-The order reference model. Each OrderReference has an origin order (the most top order) and a referenced order (&#039;parent&#039; or &#039;reorder&#039;).
+The order reference model. Each OrderReference has an origin order (the most top order) and a referenced order.
 
 
 
@@ -1595,7 +1598,7 @@ The order reference model. Each OrderReference has an origin order (the most top
     a|The id of the referenced order.
 |referenceType
     |link:http://php.net/string[string^]
-    a|The reference type ("parent" or "reorder") of the referenced order.
+    a|The reference type ("parent", "reorder", "grouped", "split") of the referenced order.
 |order
     |        xref:Order.adoc#order_models_order[`Order`]
     a|
@@ -2003,7 +2006,7 @@ The OrderItemRepositoryContract is the interface for the order item repository. 
 [#getorderitem]
 ----
 
-public getOrderItem($orderItemId):Plenty\Modules\Order\Models\OrderItem
+public getOrderItem($orderItemId, $with = [], $lazyLoaded = false):Plenty\Modules\Order\Models\OrderItem
 
 ----
 
@@ -2022,6 +2025,14 @@ Get an order item
 a|`$orderItemId`
 |link:http://php.net/int[int^]
 a|The ID of the order item
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|The relations to load
+
+a|`$lazyLoaded`
+|link:http://php.net/bool[bool^]
+a|Load order item instance without default relations
 |===
 
 
@@ -2230,7 +2241,7 @@ The OrderRepositoryContract is the interface for the order repository. This inte
 [#findorderbyid]
 ----
 
-public findOrderById($orderId, $with = []):Plenty\Modules\Order\Models\Order
+public findOrderById($orderId, $with = [], $lazyLoaded = false):Plenty\Modules\Order\Models\Order
 
 ----
 
@@ -2253,6 +2264,10 @@ a|The ID of the order
 a|`$with`
 |link:http://php.net/array[array^]
 a|The relations to load in the order instance, one of "addresses", "events", "dates", "relation", "reference", "location", "payments", "documents" and "comments".
+
+a|`$lazyLoaded`
+|link:http://php.net/bool[bool^]
+a|Load order instance without default relations
 |===
 
 
@@ -2260,7 +2275,7 @@ a|The relations to load in the order instance, one of "addresses", "events", "da
 [#findorderbyexternalorderid]
 ----
 
-public findOrderByExternalOrderId($externalOrderId, $with = []):Plenty\Modules\Order\Models\Order
+public findOrderByExternalOrderId($externalOrderId, $with = [], $lazyLoaded = false):Plenty\Modules\Order\Models\Order
 
 ----
 
@@ -2283,6 +2298,10 @@ a|
 a|`$with`
 |link:http://php.net/array[array^]
 a|
+
+a|`$lazyLoaded`
+|link:http://php.net/bool[bool^]
+a|Load order instance without default relations
 |===
 
 
@@ -2380,6 +2399,13 @@ public undeleteOrder($orderId, $status):Plenty\Modules\Order\Models\Order
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2021-03)#
+====
+
+Method won&#039;t be supported in the future
+
+====
 
 
 
@@ -2436,6 +2462,13 @@ public findSchedulerById($schedulerId):Plenty\Modules\Order\Scheduler\Models\Ord
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2021-03)#
+====
+
+Method won&#039;t be supported in the future
+
+====
 
 
 
@@ -2603,7 +2636,7 @@ If you want to load relations, you need to include at least one, but you can als
 [#searchorders]
 ----
 
-public searchOrders($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult
+public searchOrders($page = 1, $itemsPerPage = 50, $with = [], $lazyLoaded = false):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
@@ -2630,6 +2663,10 @@ a|The number of orders to be displayed per page. The default number of orders pe
 a|`$with`
 |link:http://php.net/array[array^]
 a|The relations to load in the Order instance. Valid are "addresses", "events", "dates", "relation", "reference", "location", "payments", "documents" and "comments".
+
+a|`$lazyLoaded`
+|link:http://php.net/bool[bool^]
+a|Load order instance without default relations
 |===
 
 
@@ -2809,13 +2846,20 @@ public setOrderStatus45($orderId):Plenty\Modules\Order\Models\Order
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2021-03)#
+====
+
+Method won&#039;t be supported in the future
+
+====
 
 
 
 ====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
 
 
-Deprecated : Set order status to 4 or 5
+Set order status to 4 or 5
 
 .*Parameters*
 [cols="3,1,6"]
@@ -15594,6 +15638,227 @@ a|The ID of the address type. The types available are:
 |===
 
 
+[[order_advanceorder]]
+== AdvanceOrder
+
+[[order_advanceorder_contracts]]
+===  Contracts
+[[order_contracts_advanceorderrepositorycontract]]
+==== AdvanceOrderRepositoryContract
+
+The AdvanceOrderRepositoryContract is the interface for the advance order repository. This interface allows you to create and update advance orders.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\AdvanceOrder\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create an advance order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#createwithcoupons]
+----
+
+public createWithCoupons($data, $coupons = []):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create an advance order with coupon codes
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+
+a|`$coupons`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update an advance order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($orderId):void
+
+----
+
+
+
+
+
+
+
+Delete an advance order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deleteorderitem]
+----
+
+public deleteOrderItem($orderItemId):bool
+
+----
+
+
+
+
+
+
+
+Delete an order item from an advance order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderItemId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#createfromparent]
+----
+
+public createFromParent($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create an advance order from a parent order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#updatecurrency]
+----
+
+public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update currency
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
 [[order_booking]]
 == Booking
 
@@ -15885,6 +16150,197 @@ public toArray()
 
 Returns this model as an array.
 
+[[order_creditnote]]
+== CreditNote
+
+[[order_creditnote_contracts]]
+===  Contracts
+[[order_contracts_creditnoterepositorycontract]]
+==== CreditNoteRepositoryContract
+
+The CreditNoteRepositoryContract is the interface for the credit note repository. This interface allows you to create and update credit notes.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\CreditNote\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a credit note
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update a credit note
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($orderId):void
+
+----
+
+
+
+
+
+
+
+Delete a credit note
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deleteorderitem]
+----
+
+public deleteOrderItem($orderItemId):bool
+
+----
+
+
+
+
+
+
+
+Delete an order item from a credit note
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderItemId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#createfromparent]
+----
+
+public createFromParent($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a credit note from a parent order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#updatecurrency]
+----
+
+public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update currency
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
 [[order_date]]
 == Date
 
@@ -16024,6 +16480,13 @@ public create($data = []):Plenty\Modules\Order\Date\Models\OrderDate
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder instead
+
+====
 
 
 
@@ -16050,6 +16513,13 @@ public update($data, $orderDateId):Plenty\Modules\Order\Date\Models\OrderDate
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder instead
+
+====
 
 
 
@@ -16080,6 +16550,13 @@ public save($data = []):Plenty\Modules\Order\Date\Models\OrderDate
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder instead
+
+====
 
 
 
@@ -16106,6 +16583,13 @@ public delete($orderDateId):bool
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder instead
+
+====
 
 
 
@@ -16132,6 +16616,13 @@ public deleteByOrderIdAndType($orderId, $typeId):void
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder instead
+
+====
 
 
 
@@ -16162,6 +16653,13 @@ public findByOrderIdAndTypeId($orderId, $typeId):Plenty\Modules\Order\Date\Model
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::findOrderById instead
+
+====
 
 
 
@@ -16192,6 +16690,13 @@ public findByOrderId($orderId):void
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::findOrderById instead
+
+====
 
 
 
@@ -16237,6 +16742,13 @@ public find($id):Plenty\Modules\Order\Date\Models\OrderItemDate
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::findOrderById order instead
+
+====
 
 
 
@@ -16263,6 +16775,13 @@ public create($data = []):Plenty\Modules\Order\Date\Models\OrderItemDate
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -16289,6 +16808,13 @@ public update($data, $id):Plenty\Modules\Order\Date\Models\OrderItemDate
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -16319,6 +16845,13 @@ public save($data = []):Plenty\Modules\Order\Date\Models\OrderItemDate
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -16345,6 +16878,13 @@ public delete($id):bool
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -16371,6 +16911,13 @@ public findByOrderItemIdAndTypeId($orderItemId, $typeId):Plenty\Modules\Order\Da
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::findOrderById order instead
+
+====
 
 
 
@@ -16401,6 +16948,13 @@ public createByOrderItemIdAndTypeId($data, $orderItemId, $typeId):Plenty\Modules
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -16435,6 +16989,13 @@ public updateByOrderItemIdAndTypeId($data, $orderItemId, $typeId):Plenty\Modules
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -16469,6 +17030,13 @@ public deleteByOrderItemIdAndTypeId($orderItemId, $typeId):bool
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -16499,6 +17067,13 @@ public findByOrderItemId($orderItemId):void
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::findOrderById order instead
+
+====
 
 
 
@@ -18416,8 +18991,359 @@ public toArray()
 
 Returns this model as an array.
 
+[[order_offer]]
+== Offer
+
+[[order_offer_contracts]]
+===  Contracts
+[[order_contracts_offerrepositorycontract]]
+==== OfferRepositoryContract
+
+The OfferRepositoryContract is the interface for the offer repository. This interface allows you to create and update offers.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Offer\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create an offer
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update an offer
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($orderId):void
+
+----
+
+
+
+
+
+
+
+Delete an offer
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deleteorderitem]
+----
+
+public deleteOrderItem($orderItemId):bool
+
+----
+
+
+
+
+
+
+
+Delete an order item from an offer
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderItemId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#createfromparent]
+----
+
+public createFromParent($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create an offer from a parent order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#previewcreate]
+----
+
+public previewCreate($data):array
+
+----
+
+
+
+
+
+
+
+Get an offer create preview for the given order data.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|The order data for the create preview.
+|===
+
+
+[source%nowrap, php]
+[#previewupdate]
+----
+
+public previewUpdate($orderId, $data):array
+
+----
+
+
+
+
+
+
+
+Get an offer update preview for the given order data.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#updatecurrency]
+----
+
+public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update currency
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
 [[order_payment]]
 == Payment
+
+[[order_payment_contracts]]
+===  Contracts
+[[order_contracts_orderpaymentrepositorycontract]]
+==== OrderPaymentRepositoryContract
+
+The OrderPaymentRepositoryContract is the interface for the order payment repository. This interface allows you to update the paid amount of orders.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Payment\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addpaidamount]
+----
+
+public addPaidAmount($orderId, $paidAmount, $currency = null, $date = null, $options = []):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Add a given paid amount to the already existing paid amount of an order.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$paidAmount`
+|link:http://php.net/float[float^]
+a|
+
+a|`$currency`
+|link:http://php.net/string[string^]
+a|
+
+a|`$date`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+
+a|`$options`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#overwritepaidamount]
+----
+
+public overwritePaidAmount($orderId, $paidAmount, $currency = null, $date = null, $options = []):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Overwrite already existing paid amount of an order with a given paid amount.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$paidAmount`
+|link:http://php.net/float[float^]
+a|
+
+a|`$currency`
+|link:http://php.net/string[string^]
+a|
+
+a|`$date`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+
+a|`$options`
+|link:http://php.net/array[array^]
+a|
+|===
+
 
 [[order_payment_events]]
 ===  Events
@@ -18783,6 +19709,13 @@ public find($id):Plenty\Modules\Order\Property\Models\OrderItemProperty
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::findOrderById order instead
+
+====
 
 
 
@@ -18809,6 +19742,13 @@ public create($data = []):Plenty\Modules\Order\Property\Models\OrderItemProperty
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -18835,6 +19775,13 @@ public update($data, $id):Plenty\Modules\Order\Property\Models\OrderItemProperty
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -18865,6 +19812,13 @@ public save($data = []):Plenty\Modules\Order\Property\Models\OrderItemProperty
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -18891,6 +19845,13 @@ public delete($id):bool
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -18917,6 +19878,13 @@ public findByOrderItemIdAndTypeId($orderItemId, $typeId):Plenty\Modules\Order\Pr
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::findOrderById order instead
+
+====
 
 
 
@@ -18947,6 +19915,13 @@ public createByOrderItemIdAndTypeId($data, $orderItemId, $typeId):Plenty\Modules
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -18981,6 +19956,13 @@ public updateByOrderItemIdAndTypeId($data, $orderItemId, $typeId):Plenty\Modules
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -19015,6 +19997,13 @@ public deleteByOrderItemIdAndTypeId($orderItemId, $typeId):bool
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder order instead
+
+====
 
 
 
@@ -19045,6 +20034,13 @@ public findByOrderItemId($orderItemId):void
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::findOrderById order instead
+
+====
 
 
 
@@ -19090,6 +20086,13 @@ public create($data = []):Plenty\Modules\Order\Property\Models\OrderProperty
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder instead
+
+====
 
 
 
@@ -19116,6 +20119,13 @@ public update($data, $orderPropertyId = null):Plenty\Modules\Order\Property\Mode
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder instead
+
+====
 
 
 
@@ -19146,6 +20156,13 @@ public delete($data = []):bool
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::updateOrder instead
+
+====
 
 
 
@@ -19172,6 +20189,13 @@ public findByOrderId($orderId, $typeId = null):void
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2019-09)#
+====
+
+Please use OrderRepositoryContract::findOrderById instead
+
+====
 
 
 
@@ -20438,6 +21462,448 @@ a|
 |===
 
 
+[[order_repair]]
+== Repair
+
+[[order_repair_contracts]]
+===  Contracts
+[[order_contracts_repairrepositorycontract]]
+==== RepairRepositoryContract
+
+The RepairRepositoryContract is the interface for the repair repository. This interface allows you to create and update repairs.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Repair\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a repair
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update a repair
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($orderId):void
+
+----
+
+
+
+
+
+
+
+Delete a repair
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deleteorderitem]
+----
+
+public deleteOrderItem($orderItemId):bool
+
+----
+
+
+
+
+
+
+
+Delete an order item from a repair
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderItemId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#createfromparent]
+----
+
+public createFromParent($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a repair from a parent order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#updatecurrency]
+----
+
+public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update currency
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#book]
+----
+
+public book($orderId, $data = []):bool
+
+----
+
+
+
+
+
+
+
+Book order.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#cancelbooking]
+----
+
+public cancelBooking($orderId, $data = []):bool
+
+----
+
+
+
+
+
+
+
+Cancellation the booking of an order. The ID of the order must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[[order_returnorder]]
+== ReturnOrder
+
+[[order_returnorder_contracts]]
+===  Contracts
+[[order_contracts_returnorderrepositorycontract]]
+==== ReturnOrderRepositoryContract
+
+The ReturnOrderRepositoryContract is the interface for the return order repository. This interface allows you to create and update return orders.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\ReturnOrder\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a return
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update a return
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($orderId):void
+
+----
+
+
+
+
+
+
+
+Delete a return
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deleteorderitem]
+----
+
+public deleteOrderItem($orderItemId):bool
+
+----
+
+
+
+
+
+
+
+Delete an order item from a return
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderItemId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#createfromparent]
+----
+
+public createFromParent($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a return from a parent order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#updatecurrency]
+----
+
+public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update currency
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
 [[order_returnreason]]
 == ReturnReason
 
@@ -20844,6 +22310,66 @@ public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
 
 
 Update currency
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#book]
+----
+
+public book($orderId, $data = []):bool
+
+----
+
+
+
+
+
+
+
+Book order.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#cancelbooking]
+----
+
+public cancelBooking($orderId, $data = []):bool
+
+----
+
+
+
+
+
+
+
+Cancellation the booking of an order. The ID of the order must be specified.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -22281,6 +23807,163 @@ a|If true, the next run of this subscription will be skipped.
 |===
 
 
+
+[[order_contracts_subscriptionrepositorycontract]]
+==== SubscriptionRepositoryContract
+
+The SubscriptionRepositoryContract is the interface for the subscription repository. This interface allows you to create and update subscriptions.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Subscription\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a subscription
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update a subscription
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($orderId):void
+
+----
+
+
+
+
+
+
+
+Delete a subscription
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deleteorderitem]
+----
+
+public deleteOrderItem($orderItemId):bool
+
+----
+
+
+
+
+
+
+
+Delete an order item from a subscription
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderItemId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#updatecurrency]
+----
+
+public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update currency
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
 [[order_taricvatassignment]]
 == TaricVatAssignment
 
@@ -23072,4 +24755,255 @@ public toArray()
 
 
 Returns this model as an array.
+
+[[order_warranty]]
+== Warranty
+
+[[order_warranty_contracts]]
+===  Contracts
+[[order_contracts_warrantyrepositorycontract]]
+==== WarrantyRepositoryContract
+
+The WarrantyRepositoryContract is the interface for the warranty repository. This interface allows you to create and update warranties.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Warranty\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a warranty
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update a warranty
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($orderId):void
+
+----
+
+
+
+
+
+
+
+Delete a warranty
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deleteorderitem]
+----
+
+public deleteOrderItem($orderItemId):bool
+
+----
+
+
+
+
+
+
+
+Delete an order item from a warranty
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderItemId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#createfromparent]
+----
+
+public createFromParent($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a warranty from a parent order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#updatecurrency]
+----
+
+public updateCurrency($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update currency
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#book]
+----
+
+public book($orderId, $data = []):bool
+
+----
+
+
+
+
+
+
+
+Book order.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#cancelbooking]
+----
+
+public cancelBooking($orderId, $data = []):bool
+
+----
+
+
+
+
+
+
+
+Cancellation the booking of an order. The ID of the order must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
 
