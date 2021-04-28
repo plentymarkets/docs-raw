@@ -5,6 +5,394 @@
 = Plentymarkets interface documentation
 
 
+[[pim_contracts]]
+== Contracts
+
+[[pim_contracts_category]]
+===  Category
+[[pim_category_categorydetailrepositorycontract]]
+==== CategoryDetailRepositoryContract
+
+To be written...
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Contracts\Category`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#search]
+----
+
+public search($with = [], $page = 1, $perPage = 50):array
+
+----
+
+
+
+
+
+
+
+Search category details
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getcount]
+----
+
+public getCount():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
+[[pim_category_categoryrepositorycontract]]
+==== CategoryRepositoryContract
+
+To be written...
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Contracts\Category`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#search]
+----
+
+public search($with = [], $page = 1, $perPage = 50, $sorting = []):array
+
+----
+
+
+
+
+
+
+
+Search categories
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$sorting`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getbyid]
+----
+
+public getById($id, $with = []):Plenty\Modules\Category\Models\Category
+
+----
+
+
+
+
+====== *Return type:*        xref:Category.adoc#category_models_category[`Category`]
+
+
+Get one category by ID
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getcount]
+----
+
+public getCount():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
 [[pim_models]]
 == Models
 
