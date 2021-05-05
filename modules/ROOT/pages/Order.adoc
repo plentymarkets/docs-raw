@@ -1598,7 +1598,7 @@ The order reference model. Each OrderReference has an origin order (the most top
     a|The id of the referenced order.
 |referenceType
     |link:http://php.net/string[string^]
-    a|The reference type ("parent", "reorder", "grouped", "split") of the referenced order.
+    a|The reference type ("parent", "reorder", "grouped", "split", "multi_order") of the referenced order.
 |order
     |        xref:Order.adoc#order_models_order[`Order`]
     a|
@@ -2245,6 +2245,13 @@ public findOrderById($orderId, $with = [], $lazyLoaded = false):Plenty\Modules\O
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2021-04)#
+====
+
+Please use OrderRepositoryContract::findById instead
+
+====
 
 
 
@@ -2272,6 +2279,40 @@ a|Load order instance without default relations
 
 
 [source%nowrap, php]
+[#findbyid]
+----
+
+public findById($orderId, $with = [], $lazyLoaded = false):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Get an order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|The ID of the order
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|The relations to load in the order instance
+
+a|`$lazyLoaded`
+|link:http://php.net/bool[bool^]
+a|Load order instance without default relations
+|===
+
+
+[source%nowrap, php]
 [#findorderbyexternalorderid]
 ----
 
@@ -2283,7 +2324,7 @@ public findOrderByExternalOrderId($externalOrderId, $with = [], $lazyLoaded = fa
 .Deprecated! [small]#(since 2021-04)#
 ====
 
-Please use OrderRepositoryContract::getByExternalOrderId order instead
+Please use OrderRepositoryContract::getByExternalOrderId instead
 
 ====
 
@@ -2354,6 +2395,13 @@ public createOrder($data, $coupon = null):Plenty\Modules\Order\Models\Order
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2021-04)#
+====
+
+Please use OrderRepositoryContract::create instead
+
+====
 
 
 
@@ -2377,6 +2425,36 @@ a|A coupon code or a list of coupon codes to be redeemed in the order.
 
 
 [source%nowrap, php]
+[#create]
+----
+
+public create($data, $coupons = []):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create an order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|The order data
+
+a|`$coupons`
+|link:http://php.net/array[array^]
+a|Coupon codes to be redeemed in the order
+|===
+
+
+[source%nowrap, php]
 [#updateorder]
 ----
 
@@ -2384,6 +2462,13 @@ public updateOrder($data, $orderId):Plenty\Modules\Order\Models\Order
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2021-04)#
+====
+
+Please use OrderRepositoryContract::update instead
+
+====
 
 
 
@@ -2407,10 +2492,73 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#update]
+----
+
+public update($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Update an order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|The ID of the order
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|The order data
+|===
+
+
+[source%nowrap, php]
 [#deleteorder]
 ----
 
 public deleteOrder($orderId):bool
+
+----
+
+[WARNING]
+.Deprecated! [small]#(since 2021-04)#
+====
+
+Please use OrderRepositoryContract::delete instead
+
+====
+
+
+
+
+
+
+Delete an order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|The ID of the order
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($orderId):void
 
 ----
 
@@ -2745,6 +2893,43 @@ public cancelOrder($orderId, $data):void
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2021-04)#
+====
+
+Please use OrderRepositoryContract::cancel instead
+
+====
+
+
+
+
+
+
+Cancel an order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|The ID of the order
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|The request data
+|===
+
+
+[source%nowrap, php]
+[#cancel]
+----
+
+public cancel($orderId, $data = []):void
+
+----
+
 
 
 
@@ -2828,6 +3013,43 @@ a|
 ----
 
 public completeOrder($orderId, $data = []):Plenty\Modules\Order\Models\Order
+
+----
+
+[WARNING]
+.Deprecated! [small]#(since 2021-04)#
+====
+
+Please use OrderRepositoryContract::complete instead
+
+====
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Complete an incomplete order.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|The ID of the order
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|Additional data. Currently only the statusId can be specified.
+|===
+
+
+[source%nowrap, php]
+[#complete]
+----
+
+public complete($orderId, $data = []):Plenty\Modules\Order\Models\Order
 
 ----
 
@@ -6195,6 +6417,32 @@ List serial numbers if an order item
 a|`$orderItemId`
 |link:http://php.net/int[int^]
 a|The ID of the order item
+|===
+
+
+[source%nowrap, php]
+[#addserialnumbertoorderitem]
+----
+
+public addSerialNumberToOrderItem($orderSerialNumber):Plenty\Modules\Order\SerialNumber\Models\OrderSerialNumber
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_orderserialnumber[`OrderSerialNumber`]
+
+
+Create item serial number and bind it to order item
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderSerialNumber`
+|link:http://php.net/array[array^]
+a|Order serial number data
 |===
 
 

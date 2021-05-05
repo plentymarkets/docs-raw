@@ -589,6 +589,48 @@ a|[optional, default=asc]
 
 
 [source%nowrap, php]
+[#liststockstoragelocationsbywarehouseidpim]
+----
+
+public listStockStorageLocationsByWarehouseIdPim($warehouseId, $columns = [], $page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+List  stock of all storage locations of a warehouse with pim entry
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$warehouseId`
+|link:http://php.net/int[int^]
+a|The ID of the warehouse
+
+a|`$columns`
+|link:http://php.net/array[array^]
+a|The properties to be loaded
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|The requested page
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|The number of items per page
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|The relations to load in the StockStorageLocationInstance, possible is: storageLocation
+|===
+
+
+[source%nowrap, php]
 [#clearcriteria]
 ----
 
