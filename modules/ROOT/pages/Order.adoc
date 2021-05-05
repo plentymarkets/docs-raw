@@ -2279,6 +2279,13 @@ public findOrderByExternalOrderId($externalOrderId, $with = [], $lazyLoaded = fa
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2021-04)#
+====
+
+Please use OrderRepositoryContract::getByExternalOrderId order instead
+
+====
 
 
 
@@ -2286,6 +2293,40 @@ public findOrderByExternalOrderId($externalOrderId, $with = [], $lazyLoaded = fa
 
 
 Get an order by external order ID
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$externalOrderId`
+|link:http://php.net/string[string^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+
+a|`$lazyLoaded`
+|link:http://php.net/bool[bool^]
+a|Load order instance without default relations
+|===
+
+
+[source%nowrap, php]
+[#getbyexternalorderid]
+----
+
+public getByExternalOrderId($externalOrderId, $with = [], $lazyLoaded = false):Illuminate\Support\Collection
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+
+
+List orders by external order ID
 
 .*Parameters*
 [cols="3,1,6"]

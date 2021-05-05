@@ -2550,6 +2550,22 @@ public withMinimumCount():Plenty\Modules\Webshop\ItemSearch\Factories
 Register extension to filter facets by minimum hit count.
 
 [source%nowrap, php]
+[#getfacetvalues]
+----
+
+public getFacetValues():array
+
+----
+
+
+
+
+
+
+
+Return selected facet values as array
+
+[source%nowrap, php]
 [#default]
 ----
 
@@ -3694,6 +3710,38 @@ public withSalableVariationCount():Plenty\Modules\Webshop\ItemSearch\Factories\V
 
 
 
+
+[source%nowrap, php]
+[#getminprice]
+----
+
+public getMinPrice():float
+
+----
+
+
+
+
+
+
+
+Return given min price
+
+[source%nowrap, php]
+[#getmaxprice]
+----
+
+public getMaxPrice():float
+
+----
+
+
+
+
+
+
+
+Return given max price
 
 [source%nowrap, php]
 [#inherit]
@@ -5316,6 +5364,38 @@ public withSalableVariationCount():Plenty\Modules\Webshop\ItemSearch\Factories\V
 
 
 
+
+[source%nowrap, php]
+[#getminprice]
+----
+
+public getMinPrice():float
+
+----
+
+
+
+
+
+
+
+Return given min price
+
+[source%nowrap, php]
+[#getmaxprice]
+----
+
+public getMaxPrice():float
+
+----
+
+
+
+
+
+
+
+Return given max price
 
 [source%nowrap, php]
 [#inherit]
@@ -7488,7 +7568,7 @@ Register required assets for the frontend.
 [#addasset]
 ----
 
-public addAsset($path, $as = &quot;&quot;, $rel = &quot;preload&quot;):void
+public addAsset($path, $as = &quot;&quot;, $rel = &quot;preload&quot;, $additionalParams = []):void
 
 ----
 
@@ -7515,6 +7595,10 @@ a|The type to be used for the "as"-attribute. If not set, is is determined based
 a|`$rel`
 |link:http://php.net/string[string^]
 a|The rel attribute to be used.
+
+a|`$additionalParams`
+|link:http://php.net/array[array^]
+a|array for additional information ['type', 'crossorigin => true', 'position']  default position is 1000.
 |===
 
 
