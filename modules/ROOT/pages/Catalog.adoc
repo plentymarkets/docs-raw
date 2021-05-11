@@ -601,7 +601,7 @@ a|
 [#getdevcachedresult]
 ----
 
-public getDevCachedResult($id, $maximumAgeInSeconds = 3600):Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection
+public getDevCachedResult($id, $maximumAgeInSeconds = 14400):Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection
 
 ----
 
@@ -619,11 +619,11 @@ Gets the latest prebuilt, cached result
 |Name |Type |Description
 a|`$id`
 |link:http://php.net/string[string^]
-a|
+a|Catalog ID
 
 a|`$maximumAgeInSeconds`
 |link:http://php.net/int[int^]
-a|
+a|Maximum age in seconds. Defaults to 4 hours.
 |===
 
 
@@ -7169,10 +7169,36 @@ LazyCollection wrapper with limited access. Only specific methods are allowed.
 ===== Methods
 
 [source%nowrap, php]
+[#each]
+----
+
+public each($callback):void
+
+----
+
+
+
+
+
+
+
+Iterates through results. Results can be the chunks if the collection is chunked.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$callback`
+|link:http://php.net/callable[callable^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#toarray]
 ----
 
-public toArray()
+public toArray():array
 
 ----
 
@@ -7182,7 +7208,37 @@ public toArray()
 
 
 
-Returns this model as an array.
+Converts the results into an array
+https://laravel.com/docs/8.x/collections#method-toarray
+https://laravel.com/docs/8.x/collections#lazy-collection-introduction
+
+[source%nowrap, php]
+[#chunk]
+----
+
+public chunk($size = self::MAX_CHUNK_SIZE):Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
+
+
+Chunks the results
+https://laravel.com/docs/8.x/collections#method-chunk
+https://laravel.com/docs/8.x/collections#lazy-collection-introduction
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$size`
+|link:http://php.net/int[int^]
+a|
+|===
+
 
 [[catalog_services_filehandlers]]
 ===  FileHandlers
