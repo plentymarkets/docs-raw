@@ -321,6 +321,95 @@ a|The content that should be inserted into the catalogue
 
 
 
+[[catalog_contracts_catalogdynamicconfigcontract]]
+==== CatalogDynamicConfigContract
+
+The CatalogDynamicConfigContract is the Interface that has to be implemented to run specific export logic that changes filters, settings and other information which is not known on the template definition level. This logic is applied in each catalog export triggered by catalog specific logic (e.g. preview, asynchronus exports etc) to make sure, that manual downloads of a user through the UI deliver identical results as a cron export to a marketplace. Can be applied manually in exports that get triggered from other modules or plugins.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#applydynamicconfig]
+----
+
+public applyDynamicConfig($template, $catalog, $catalogExportService):void
+
+----
+
+
+
+
+
+
+
+Will be run before every export and is meant to provide filters on the template
+which can&#039;t be defined before the runtime of the export.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$template`
+|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+a|
+
+a|`$catalog`
+|        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
+a|
+
+a|`$catalogExportService`
+|        xref:Catalog.adoc#catalog_contracts_catalogexportservicecontract[`CatalogExportServiceContract`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#applydynamicpreviewconfig]
+----
+
+public applyDynamicPreviewConfig($template, $catalog, $catalogExportService):void
+
+----
+
+
+
+
+
+
+
+Will be run before every preview and is meant to provide filters on the template
+which can&#039;t be defined before the runtime of the preview
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$template`
+|        xref:Catalog.adoc#catalog_contracts_templatecontract[`TemplateContract`]
+a|
+
+a|`$catalog`
+|        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
+a|
+
+a|`$catalogExportService`
+|        xref:Catalog.adoc#catalog_contracts_catalogexportservicecontract[`CatalogExportServiceContract`]
+a|
+|===
+
+
+
 [[catalog_contracts_catalogexportfilterservicecontract]]
 ==== CatalogExportFilterServiceContract
 
@@ -479,6 +568,62 @@ a|
 a|`$token`
 |link:http://php.net/string[string^]
 a|
+|===
+
+
+[source%nowrap, php]
+[#initiatedevqueue]
+----
+
+public initiateDevQueue($id):bool
+
+----
+
+
+
+
+
+
+
+Initiates the dev queue. Stores the file on S3 and can be fetched using getDevCachedResult()
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getdevcachedresult]
+----
+
+public getDevCachedResult($id, $maximumAgeInSeconds = 14400):Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
+
+
+Gets the latest prebuilt, cached result
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|Catalog ID
+
+a|`$maximumAgeInSeconds`
+|link:http://php.net/int[int^]
+a|Maximum age in seconds. Defaults to 4 hours.
 |===
 
 
@@ -986,6 +1131,70 @@ public getCustomFilters():array
 ----
 
 public getAssignments():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#hasextendedmappings]
+----
+
+public hasExtendedMappings():bool
+
+----
+
+
+
+
+
+
+
+Determines if this template supports extended mappings
+
+[source%nowrap, php]
+[#ispreviewable]
+----
+
+public isPreviewable():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdynamicconfig]
+----
+
+public getDynamicConfig():Plenty\Modules\Catalog\Contracts\CatalogDynamicConfigContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogdynamicconfigcontract[`CatalogDynamicConfigContract`]
+
+
+
+
+[source%nowrap, php]
+[#getresultconverterclass]
+----
+
+public getResultConverterClass():string
 
 ----
 
@@ -1789,7 +1998,7 @@ Clears the filter array.
 [[catalog_contracts_catalogresultconvertercontract]]
 ==== CatalogResultConverterContract
 
-To be written
+Converts export results
 
 
 
@@ -1803,6 +2012,226 @@ To be written
 
 
 ===== Methods
+
+[source%nowrap, php]
+[#getmime]
+----
+
+public getMIME():string
+
+----
+
+
+
+
+
+
+
+Get the mime type of the resource returned by this converter
+
+[source%nowrap, php]
+[#getchunksize]
+----
+
+public getChunkSize():int
+
+----
+
+
+
+
+
+
+
+Get the lazy collection&#039;s chunk size
+
+[source%nowrap, php]
+[#getsourcecollection]
+----
+
+public getSourceCollection():Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
+
+
+Get the source lazy collection
+
+[source%nowrap, php]
+[#setsettings]
+----
+
+public setSettings($settings = []):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+
+
+Set settings that you need to use in your converter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromarray]
+----
+
+public fromArray($data):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+
+
+Convert from an array
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcollection]
+----
+
+public fromCollection($collection):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+
+
+Convert from a Collection
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$collection`
+|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcataloglazycollection]
+----
+
+public fromCatalogLazyCollection($catalogLazyCollection):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+
+
+Convert from a CatalogLazyCollection
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$catalogLazyCollection`
+|        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcatalogexportresult]
+----
+
+public fromCatalogExportResult($exportResult):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+
+
+Convert from a CatalogExportResult
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$exportResult`
+|        xref:Catalog.adoc#catalog_models_catalogexportresult[`CatalogExportResult`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#tomarketplace]
+----
+
+public toMarketplace():void
+
+----
+
+
+
+
+
+
+
+Convert and prepare data for marketplace
+
+[source%nowrap, php]
+[#todownload]
+----
+
+public toDownload($resourceHandler):void
+
+----
+
+
+
+
+
+
+
+Convert and prepare resource for download
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$resourceHandler`
+|        xref:Catalog.adoc#catalog_filehandlers_resourcehandler[`ResourceHandler`]
+a|
+|===
+
 
 [source%nowrap, php]
 [#adddata]
@@ -1884,6 +2313,13 @@ public clear():void
 
 To be written
 
+[WARNING]
+.Deprecated! 
+====
+
+Please use Plenty\Modules\Catalog\Contracts\CatalogDynamicConfigContract instead.
+
+====
 
 
 ===== Namespace
@@ -1965,6 +2401,13 @@ a|
 
 To be written
 
+[WARNING]
+.Deprecated! 
+====
+
+This is now part of the AbstractGroupedTemplateProvider.
+
+====
 
 
 ===== Namespace
@@ -3916,6 +4359,22 @@ a|`$assignment`
 |link:http://php.net/array[array^]
 a|
 |===
+
+
+[source%nowrap, php]
+[#getdynamicconfig]
+----
+
+public getDynamicConfig():Plenty\Modules\Catalog\Contracts\CatalogDynamicConfigContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogdynamicconfigcontract[`CatalogDynamicConfigContract`]
+
+
 
 
 [source%nowrap, php]
@@ -6222,6 +6681,38 @@ public hasResultConverter():bool
 
 
 [source%nowrap, php]
+[#hasextendedmappings]
+----
+
+public hasExtendedMappings():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdynamicconfig]
+----
+
+public getDynamicConfig():Plenty\Modules\Catalog\Contracts\CatalogDynamicConfigContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogdynamicconfigcontract[`CatalogDynamicConfigContract`]
+
+
+
+
+[source%nowrap, php]
 [#isbooted]
 ----
 
@@ -6654,6 +7145,2044 @@ public toArray()
 
 Returns this model as an array.
 
+[[catalog_services]]
+== Services
+
+[[catalog_services_collections]]
+===  Collections
+[[catalog_collections_cataloglazycollection]]
+==== CatalogLazyCollection
+
+LazyCollection wrapper with limited access. Only specific methods are allowed.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Collections`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#each]
+----
+
+public each($callback):void
+
+----
+
+
+
+
+
+
+
+Iterates through results. Results can be the chunks if the collection is chunked.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$callback`
+|link:http://php.net/callable[callable^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+Converts the results into an array
+https://laravel.com/docs/8.x/collections#method-toarray
+https://laravel.com/docs/8.x/collections#lazy-collection-introduction
+
+[source%nowrap, php]
+[#chunk]
+----
+
+public chunk($size = self::MAX_CHUNK_SIZE):Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
+
+
+Chunks the results
+https://laravel.com/docs/8.x/collections#method-chunk
+https://laravel.com/docs/8.x/collections#lazy-collection-introduction
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$size`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[[catalog_services_filehandlers]]
+===  FileHandlers
+[[catalog_filehandlers_resourcehandler]]
+==== ResourceHandler
+
+Handles writing on resources.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\FileHandlers`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#write]
+----
+
+public write($string):void
+
+----
+
+
+
+
+
+
+
+Write to resource
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$string`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#writecsv]
+----
+
+public writeCSV($fields, $separator = &quot;,&quot;, $enclosure = null, $escape = null):void
+
+----
+
+
+
+
+
+
+
+Write CSV to resource
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$fields`
+|link:http://php.net/array[array^]
+a|
+
+a|`$separator`
+|link:http://php.net/string[string^]
+a|
+
+a|`$enclosure`
+|link:http://php.net/string[string^]
+a|
+
+a|`$escape`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#rewind]
+----
+
+public rewind():bool
+
+----
+
+
+
+
+
+
+
+Rewinds resource
+
+[[catalog_converter]]
+== Converter
+
+[[catalog_converter_resultconverters]]
+===  ResultConverters
+[[catalog_resultconverters_baseresultconverter]]
+==== BaseResultConverter
+
+Base Result converter
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Converter\ResultConverters`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#todownload]
+----
+
+public toDownload($resourceHandler):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$resourceHandler`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#tomarketplace]
+----
+
+public toMarketplace():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#from]
+----
+
+public from($data):Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
+
+
+When you don&#039;t know what you have but you know what you want
+You give it almost anything and you hope
+Hope dies last
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromarray]
+----
+
+public fromArray($data):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcollection]
+----
+
+public fromCollection($collection):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$collection`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcataloglazycollection]
+----
+
+public fromCatalogLazyCollection($catalogLazyCollection):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$catalogLazyCollection`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcatalogexportresult]
+----
+
+public fromCatalogExportResult($exportResult):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$exportResult`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromrawjsonlfile]
+----
+
+public fromRawJSONLFile($sourceFile):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$sourceFile`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getchunksize]
+----
+
+public getChunkSize():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getmime]
+----
+
+public getMIME():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getsourcecollection]
+----
+
+public getSourceCollection():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setsettings]
+----
+
+public setSettings($settings = []):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#adddata]
+----
+
+public addData($data):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getconvertedresult]
+----
+
+public getConvertedResult():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#clear]
+----
+
+public clear():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():void
+
+----
+
+
+
+
+
+
+
+
+
+[[catalog_resultconverters]]
+== ResultConverters
+
+[[catalog_resultconverters_defaults]]
+===  Defaults
+[[catalog_defaults_csvresultconverter]]
+==== CSVResultConverter
+
+Default CSV Result converter
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#todownload]
+----
+
+public toDownload($resourceHandler):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$resourceHandler`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#tomarketplace]
+----
+
+public toMarketplace():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#from]
+----
+
+public from($data):Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
+
+
+When you don&#039;t know what you have but you know what you want
+You give it almost anything and you hope
+Hope dies last
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromarray]
+----
+
+public fromArray($data):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcollection]
+----
+
+public fromCollection($collection):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$collection`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcataloglazycollection]
+----
+
+public fromCatalogLazyCollection($catalogLazyCollection):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$catalogLazyCollection`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcatalogexportresult]
+----
+
+public fromCatalogExportResult($exportResult):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$exportResult`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromrawjsonlfile]
+----
+
+public fromRawJSONLFile($sourceFile):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$sourceFile`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getchunksize]
+----
+
+public getChunkSize():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getmime]
+----
+
+public getMIME():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getsourcecollection]
+----
+
+public getSourceCollection():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setsettings]
+----
+
+public setSettings($settings = []):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#adddata]
+----
+
+public addData($data):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getconvertedresult]
+----
+
+public getConvertedResult():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#clear]
+----
+
+public clear():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():void
+
+----
+
+
+
+
+
+
+
+
+
+
+[[catalog_defaults_jsonresultconverter]]
+==== JSONResultConverter
+
+Default JSON Result converter
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#todownload]
+----
+
+public toDownload($resourceHandler):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$resourceHandler`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#tomarketplace]
+----
+
+public toMarketplace():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#from]
+----
+
+public from($data):Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
+
+
+When you don&#039;t know what you have but you know what you want
+You give it almost anything and you hope
+Hope dies last
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromarray]
+----
+
+public fromArray($data):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcollection]
+----
+
+public fromCollection($collection):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$collection`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcataloglazycollection]
+----
+
+public fromCatalogLazyCollection($catalogLazyCollection):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$catalogLazyCollection`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcatalogexportresult]
+----
+
+public fromCatalogExportResult($exportResult):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$exportResult`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromrawjsonlfile]
+----
+
+public fromRawJSONLFile($sourceFile):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$sourceFile`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getchunksize]
+----
+
+public getChunkSize():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getmime]
+----
+
+public getMIME():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getsourcecollection]
+----
+
+public getSourceCollection():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setsettings]
+----
+
+public setSettings($settings = []):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#adddata]
+----
+
+public addData($data):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getconvertedresult]
+----
+
+public getConvertedResult():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#clear]
+----
+
+public clear():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():void
+
+----
+
+
+
+
+
+
+
+
+
+
+[[catalog_defaults_txtresultconverter]]
+==== TXTResultConverter
+
+Default TXT Result converter
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#todownload]
+----
+
+public toDownload($resourceHandler):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$resourceHandler`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#tomarketplace]
+----
+
+public toMarketplace():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#from]
+----
+
+public from($data):Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
+
+
+When you don&#039;t know what you have but you know what you want
+You give it almost anything and you hope
+Hope dies last
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromarray]
+----
+
+public fromArray($data):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcollection]
+----
+
+public fromCollection($collection):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$collection`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcataloglazycollection]
+----
+
+public fromCatalogLazyCollection($catalogLazyCollection):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$catalogLazyCollection`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcatalogexportresult]
+----
+
+public fromCatalogExportResult($exportResult):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$exportResult`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromrawjsonlfile]
+----
+
+public fromRawJSONLFile($sourceFile):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$sourceFile`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getchunksize]
+----
+
+public getChunkSize():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getmime]
+----
+
+public getMIME():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getsourcecollection]
+----
+
+public getSourceCollection():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setsettings]
+----
+
+public setSettings($settings = []):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#adddata]
+----
+
+public addData($data):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getconvertedresult]
+----
+
+public getConvertedResult():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#clear]
+----
+
+public clear():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():void
+
+----
+
+
+
+
+
+
+
+
+
+
+[[catalog_defaults_xmlresultconverter]]
+==== XMLResultConverter
+
+Default XML Result converter
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Converter\ResultConverters\Defaults`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#todownload]
+----
+
+public toDownload($resourceHandler):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$resourceHandler`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#tomarketplace]
+----
+
+public toMarketplace():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#from]
+----
+
+public from($data):Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
+
+
+When you don&#039;t know what you have but you know what you want
+You give it almost anything and you hope
+Hope dies last
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromarray]
+----
+
+public fromArray($data):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcollection]
+----
+
+public fromCollection($collection):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$collection`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcataloglazycollection]
+----
+
+public fromCatalogLazyCollection($catalogLazyCollection):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$catalogLazyCollection`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromcatalogexportresult]
+----
+
+public fromCatalogExportResult($exportResult):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$exportResult`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#fromrawjsonlfile]
+----
+
+public fromRawJSONLFile($sourceFile):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$sourceFile`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getchunksize]
+----
+
+public getChunkSize():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getmime]
+----
+
+public getMIME():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getsourcecollection]
+----
+
+public getSourceCollection():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setsettings]
+----
+
+public setSettings($settings = []):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#adddata]
+----
+
+public addData($data):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getconvertedresult]
+----
+
+public getConvertedResult():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#clear]
+----
+
+public clear():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():void
+
+----
+
+
+
+
+
+
+
+
+
 [[catalog_templates]]
 == Templates
 
@@ -6676,6 +9205,38 @@ The AbstractGroupedTemplateProvider is the abstract class that should be used to
 
 
 ===== Methods
+
+[source%nowrap, php]
+[#ispreviewable]
+----
+
+public isPreviewable():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdynamicconfig]
+----
+
+public getDynamicConfig():Plenty\Modules\Catalog\Contracts\CatalogDynamicConfigContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogdynamicconfigcontract[`CatalogDynamicConfigContract`]
+
+
+
 
 [source%nowrap, php]
 [#getpremutator]
@@ -6762,6 +9323,38 @@ Returns an array of meta information which can be used to forward information to
 ----
 
 public getCustomFilters():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#hasextendedmappings]
+----
+
+public hasExtendedMappings():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getresultconverterclass]
+----
+
+public getResultConverterClass():string
 
 ----
 
