@@ -5313,10 +5313,10 @@ A CatalogMappingValue represents a single available option in the catalog UI.
 ===== Methods
 
 [source%nowrap, php]
-[#toarray]
+[#__construct]
 ----
 
-public toArray()
+public __construct($identifier, $label, $exportValue, $parentId = null, $hasChildren = false):void
 
 ----
 
@@ -5326,7 +5326,113 @@ public toArray()
 
 
 
-Returns this model as an array.
+CatalogMappingValue constructor.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$identifier`
+|link:http://php.net/string[string^]
+a|
+
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+
+a|`$exportValue`
+|
+a|
+
+a|`$parentId`
+|link:http://php.net/string[string^]
+a|
+
+a|`$hasChildren`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getidentifier]
+----
+
+public getIdentifier():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getexportvalue]
+----
+
+public getExportValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#haschildren]
+----
+
+public hasChildren():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getparentid]
+----
+
+public getParentId():string
+
+----
+
+
+
+
+
+
+
+
 
 
 [[catalog_models_combinedtemplatefield]]
@@ -5346,6 +5452,68 @@ A combined template field is a mix out of simple and complex template fields. Yo
 
 
 ===== Methods
+
+[source%nowrap, php]
+[#__construct]
+----
+
+public __construct($exportKey, $key, $label, $catalogMappingValueProvider, $catalogTemplateFieldContainer, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = []):void
+
+----
+
+
+
+
+
+
+
+CombinedTemplateField constructor.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$exportKey`
+|link:http://php.net/string[string^]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+
+a|`$catalogMappingValueProvider`
+|        xref:Catalog.adoc#catalog_contracts_catalogmappingvalueprovidercontract[`CatalogMappingValueProviderContract`]
+a|
+
+a|`$catalogTemplateFieldContainer`
+|        xref:Catalog.adoc#catalog_containers_catalogtemplatefieldcontainer[`CatalogTemplateFieldContainer`]
+a|
+
+a|`$isRequired`
+|link:http://php.net/bool[bool^]
+a|
+
+a|`$isLocked`
+|link:http://php.net/bool[bool^]
+a|
+
+a|`$isArray`
+|link:http://php.net/bool[bool^]
+a|
+
+a|`$meta`
+|link:http://php.net/array[array^]
+a|
+
+a|`$defaultSources`
+|link:http://php.net/array[array^]
+a|currently not defined behavior therefore it will not be consumed yet.
+|===
+
 
 [source%nowrap, php]
 [#getkey]
@@ -5585,10 +5753,10 @@ A complex template field is used for Mappings with predefined valid values. The 
 ===== Methods
 
 [source%nowrap, php]
-[#toarray]
+[#__construct]
 ----
 
-public toArray()
+public __construct($exportKey, $key, $label, $catalogMappingValueProvider, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = []):void
 
 ----
 
@@ -5598,7 +5766,267 @@ public toArray()
 
 
 
-Returns this model as an array.
+ComplexTemplateField constructor.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$exportKey`
+|link:http://php.net/string[string^]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+
+a|`$catalogMappingValueProvider`
+|        xref:Catalog.adoc#catalog_contracts_catalogmappingvalueprovidercontract[`CatalogMappingValueProviderContract`]
+a|
+
+a|`$isRequired`
+|link:http://php.net/bool[bool^]
+a|
+
+a|`$isLocked`
+|link:http://php.net/bool[bool^]
+a|
+
+a|`$isArray`
+|link:http://php.net/bool[bool^]
+a|
+
+a|`$meta`
+|link:http://php.net/array[array^]
+a|
+
+a|`$defaultSources`
+|link:http://php.net/array[array^]
+a|currently not defined behavior therefore it will not be consumed yet.
+|===
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isrequired]
+----
+
+public isRequired():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#islocked]
+----
+
+public isLocked():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isarray]
+----
+
+public isArray():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getmeta]
+----
+
+public getMeta():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getcallable]
+----
+
+public getCallable():Plenty\Modules\Catalog\Contracts\CatalogTemplateFieldCallableContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcallablecontract[`CatalogTemplateFieldCallableContract`]
+
+
+
+
+[source%nowrap, php]
+[#getmappingvalueprovider]
+----
+
+public getMappingValueProvider():Plenty\Modules\Catalog\Contracts\CatalogMappingValueProviderContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogmappingvalueprovidercontract[`CatalogMappingValueProviderContract`]
+
+
+
+
+[source%nowrap, php]
+[#getdefaultsources]
+----
+
+public getDefaultSources():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getexportkey]
+----
+
+public getExportKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getnestedfields]
+----
+
+public getNestedFields():Plenty\Modules\Catalog\Containers\CatalogTemplateFieldContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_catalogtemplatefieldcontainer[`CatalogTemplateFieldContainer`]
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setcallable]
+----
+
+public setCallable($callable):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$callable`
+|        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcallablecontract[`CatalogTemplateFieldCallableContract`]
+a|
+|===
+
 
 
 [[catalog_models_simpletemplatefield]]
@@ -5620,10 +6048,10 @@ A simple template field is used to fill a specific key through a data source whi
 ===== Methods
 
 [source%nowrap, php]
-[#toarray]
+[#__construct]
 ----
 
-public toArray()
+public __construct($exportKey, $key, $label, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = []):void
 
 ----
 
@@ -5633,7 +6061,263 @@ public toArray()
 
 
 
-Returns this model as an array.
+SimpleTemplateField constructor.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$exportKey`
+|link:http://php.net/string[string^]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+
+a|`$isRequired`
+|link:http://php.net/bool[bool^]
+a|
+
+a|`$isLocked`
+|link:http://php.net/bool[bool^]
+a|
+
+a|`$isArray`
+|link:http://php.net/bool[bool^]
+a|
+
+a|`$meta`
+|link:http://php.net/array[array^]
+a|
+
+a|`$defaultSources`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#islocked]
+----
+
+public isLocked():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isarray]
+----
+
+public isArray():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getmeta]
+----
+
+public getMeta():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getcallable]
+----
+
+public getCallable():Plenty\Modules\Catalog\Contracts\CatalogTemplateFieldCallableContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcallablecontract[`CatalogTemplateFieldCallableContract`]
+
+
+
+
+[source%nowrap, php]
+[#getdefaultsources]
+----
+
+public getDefaultSources():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getmappingvalueprovider]
+----
+
+public getMappingValueProvider():Plenty\Modules\Catalog\Contracts\CatalogMappingValueProviderContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogmappingvalueprovidercontract[`CatalogMappingValueProviderContract`]
+
+
+
+
+[source%nowrap, php]
+[#getexportkey]
+----
+
+public getExportKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getnestedfields]
+----
+
+public getNestedFields():Plenty\Modules\Catalog\Containers\CatalogTemplateFieldContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_catalogtemplatefieldcontainer[`CatalogTemplateFieldContainer`]
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isrequired]
+----
+
+public isRequired():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setcallable]
+----
+
+public setCallable($callable):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$callable`
+|        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcallablecontract[`CatalogTemplateFieldCallableContract`]
+a|
+|===
+
 
 
 [[catalog_models_templategroup]]
@@ -5655,10 +6339,10 @@ A TemplateGroup represents a portlet in the catalog UI. Each container field wil
 ===== Methods
 
 [source%nowrap, php]
-[#toarray]
+[#__construct]
 ----
 
-public toArray()
+public __construct($identifier, $label):void
 
 ----
 
@@ -5668,7 +6352,121 @@ public toArray()
 
 
 
-Returns this model as an array.
+TemplateGroup constructor.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$identifier`
+|link:http://php.net/string[string^]
+a|
+
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addgroupfield]
+----
+
+public addGroupField($field):void
+
+----
+
+
+
+
+
+
+
+Add a field to the group.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$field`
+|        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcontract[`CatalogTemplateFieldContract`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getidentifier]
+----
+
+public getIdentifier():string
+
+----
+
+
+
+
+
+
+
+Get the identifier of the group.
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+Get the label of the group. The label will be displayed in the UI.
+
+[source%nowrap, php]
+[#getfieldcontainer]
+----
+
+public getFieldContainer():Plenty\Modules\Catalog\Containers\CatalogTemplateFieldContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_catalogtemplatefieldcontainer[`CatalogTemplateFieldContainer`]
+
+
+Get the CatalogTemplateFieldContainer that contains all the fields of the group.
+
+[source%nowrap, php]
+[#getfield]
+----
+
+public getField($key):Plenty\Modules\Catalog\Contracts\CatalogTemplateFieldContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcontract[`CatalogTemplateFieldContract`]
+
+
+Get a field specified by its key.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
 
 [[catalog_catalog_templates]]
 ===  Templates
