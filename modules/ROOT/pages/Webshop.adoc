@@ -59,11 +59,9 @@ a|Displayed label of the group
 a|`$options`
 |
 a|Additional options of the group. Available options are:
-<ul>
-  <li><b>necessary:boolean</b> True if the group is necessary and could not be declined</li>
-  <li><b>description:string</b> Description of the group.</li>
-  <li><b>position:number</b> The position of the group</li>
-</ul>
+  * `necessary:boolean` True if the group is necessary and could not be declined
+  * `description:string` Description of the group
+  * `position:number` Position of the group
 Alternatively provide a function which returns all options. This will be resolved if registered consent groups are requested.
 |===
 
@@ -99,17 +97,15 @@ a|Displayed label of the consent.
 a|`$options`
 |
 a|Additional options of the consent. Available options are:
-<ul>
-    <li><b>necessary:boolean</b> True of the consent is necessary and could not be declined</li>
-    <li><b>description:string</b> Description of the consent</li>
-    <li><b>provider:string</b> The provider of the cookie</li>
-    <li><b>lifespan:string</b> Lifespan of the cookie</li>
-    <li><b>policyUrl:string</b> URL to external privacy policy</li>
-    <li><b>group:string</b> Identifier of an consent group</li>
-    <li><b>position:number</b> The position of the consent in the group</li>
-    <li><b>isOptOut:boolean</b> Select the consent by default. The user needs to decline the consent explicitly.</li>
-    <li><b>cookieNames:array</b> Names of cookies which will be set. These cookies will not be blocked after the user confirmed the consent.</li>
-</ul>
+    - `necessary:boolean` True of the consent is necessary and could not be declined
+    - `description:string` Description of the consent
+    - `provider:string` The provider of the cookie
+    - `lifespan:string` Lifespan of the cookie
+    - `policyUrl:string` URL to external privacy policy
+    - `group:string` Identifier of an consent group
+    - `position:number` The position of the consent in the group
+    - `isOptOut:boolean` Select the consent by default. The user needs to decline the consent explicitly.
+    - `cookieNames:array` Names of cookies which will be set. These cookies will not be blocked after the user confirmed the consent.
 Alternatively provide a function which returns all options. This will be resolved if registered consents are requested.
 |===
 
@@ -2579,7 +2575,18 @@ public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories
 ====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
 
 
-Get the default configuration of a search factory.
+Get the default configuration of a search factory. This applies the following filters
+ - @see VariationSearchFactory::isActive()
+ - @see VariationSearchFactory::isVisibleForClient()
+ - @see VariationSearchFactory::hasPriceForCustomer()
+ - @see VariationSearchFactory::hasNameInLanguage()
+ - @see VariationSearchFactory::withLanguage()
+ - @see VariationSearchFactory::withUrls()
+ - @see VariationSearchFactory::withImages()
+ - @see VariationSearchFactory::withDefaultImage()
+ - @see VariationSearchFactory::withPrices()
+ - @see VariationSearchFactory::withReducedResults()
+ - @see VariationSearchFactory::withSalableVariationCount()
 
 .*Parameters*
 [cols="3,1,6"]
@@ -2588,10 +2595,8 @@ Get the default configuration of a search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options
-<ul>
- <li><b>quantities</b> Quantities of the variations in the basket. This will be considered while calculating graduated prices</li>
- <li><b>setPriceOnly</b> Set to true to only consider prices for item sets</li>
-</ul>
+- `quantities` Quantities of the variations in the basket. This will be considered while calculating graduated prices
+- `setPriceOnly` Set to true to only consider prices for item sets
 |===
 
 
@@ -4233,7 +4238,18 @@ public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories
 ====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
 
 
-Get the default configuration of a search factory.
+Get the default configuration of a search factory. This applies the following filters
+ - @see VariationSearchFactory::isActive()
+ - @see VariationSearchFactory::isVisibleForClient()
+ - @see VariationSearchFactory::hasPriceForCustomer()
+ - @see VariationSearchFactory::hasNameInLanguage()
+ - @see VariationSearchFactory::withLanguage()
+ - @see VariationSearchFactory::withUrls()
+ - @see VariationSearchFactory::withImages()
+ - @see VariationSearchFactory::withDefaultImage()
+ - @see VariationSearchFactory::withPrices()
+ - @see VariationSearchFactory::withReducedResults()
+ - @see VariationSearchFactory::withSalableVariationCount()
 
 .*Parameters*
 [cols="3,1,6"]
@@ -4242,10 +4258,8 @@ Get the default configuration of a search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options
-<ul>
- <li><b>quantities</b> Quantities of the variations in the basket. This will be considered while calculating graduated prices</li>
- <li><b>setPriceOnly</b> Set to true to only consider prices for item sets</li>
-</ul>
+- `quantities` Quantities of the variations in the basket. This will be considered while calculating graduated prices
+- `setPriceOnly` Set to true to only consider prices for item sets
 |===
 
 
@@ -6126,24 +6140,22 @@ a|`$sortingConfig`
 |link:http://php.net/string[string^]
 a|The configuration value from the plugin. Contains a sorting field and a sorting order joined by an '_', e.g. 'item.id_asc'<br>
 Possible sorting fields:
-<ul>
- <li>item.id</li>
- <li>texts.name1</li>
- <li>texts.name2</li>
- <li>texts.name3</li>
- <li>variation.createdAt</li>
- <li>variation.updatedAt</li>
- <li>variation.id</li>
- <li>variation.number</li>
- <li>variation.availability.averageDays</li>
- <li>variation.position</li>
- <li>item.manufacturer.externalName</li>>
- <li>item.manufacturer.position</li>>
- <li>stock.net</li>
- <li>sorting.price.avg</li>
- <li>item.random</li>
- <li>item.feedbackDecimal</li>
-</ul>
+ - item.id
+ - texts.name1
+ - texts.name2
+ - texts.name3
+ - variation.createdAt
+ - variation.updatedAt
+ - variation.id
+ - variation.number
+ - variation.availability.averageDays
+ - variation.position
+ - item.manufacturer.externalName<
+ - item.manufacturer.position<
+ - stock.net
+ - sorting.price.avg
+ - item.random
+ - item.feedbackDecimal
 
 a|`$isCategory`
 |link:http://php.net/bool[bool^]
@@ -6497,11 +6509,9 @@ Get preset search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options:
-<ul>
- <li><b>variationIds</b> Ids of basket items to get data for</li>
- <li><b>quantities</b> Quantity of each item to be considered when searching prices</li>
- <li><b>language</b> Required items to have a name configured in this language</li>
-</ul>
+- *variationIds* Ids of basket items to get data for
+- *quantities* Quantity of each item to be considered when searching prices
+- *language* Required items to have a name configured in this language
 |===
 
 
@@ -6547,15 +6557,13 @@ Get preset search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options:
-<ul>
- <li><b>categoryId</b> Category id to get variations for</li>
- <li><b>facets</b> Active facets to filter variations by</li>
- <li><b>sorting</b> Configuration value from plugin config</li>
- <li><b>page</b> Current page</li>
- <li><b>itemsPerPage</b> Number of items per page</li>
- <li><b>priceMin</b> Minimum price of the variations</li>
- <li><b>priceMax</b> Maximum price of the variations</li>
-</ul>
+- *categoryId* Category id to get variations for
+- *facets* Active facets to filter variations by
+- *sorting* Configuration value from plugin config
+- *page* Current page
+- *itemsPerPage* Number of items per page
+- *priceMin* Minimum price of the variations
+- *priceMax* Maximum price of the variations
 |===
 
 
@@ -6601,11 +6609,9 @@ Get preset search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options:
-<ul>
- <li><b>itemId</b> Id of the item to get cross selling items for</li>
- <li><b>relation</b> The relation to consider when getting cross selling items. Default: 'Similar'</li>
- <li><b>sorting</b> Sorting of the returned items</li>
-</ul>
+- *itemId* Id of the item to get cross selling items for
+- *relation* The relation to consider when getting cross selling items. Default: 'Similar'
+- *sorting* Sorting of the returned items
 |===
 
 
@@ -6651,12 +6657,10 @@ Get preset search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options:
-<ul>
- <li><b>facets</b> Values of active facets.</li>
- <li><b>categoryId</b> Category Id to filter variations by.</li>
- <li><b>query</b> Search string to get variations by.</li>
- <li><b>autocomplete</b> Flag indicating if autocomplete search should be used (boolean). Will only be used if 'query' is defined.</li>
-</ul>
+- *facets* Values of active facets.
+- *categoryId* Category Id to filter variations by.
+- *query* Search string to get variations by.
+- *autocomplete* Flag indicating if autocomplete search should be used (boolean). Will only be used if 'query' is defined.
 |===
 
 
@@ -6702,12 +6706,10 @@ Get preset search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options:
-<ul>
- <li><b>itemId</b> Id of an item to be queried</li>
- <li><b>itemIds</b> List of item ids to be queried</li>
- <li><b>sorting</b> Sorting of returned item</li>
- <li><b>resultFields</b> List of result fields to be used when querying items. Will use ResultField template for list items if not defined.</li>
-</ul>
+- *itemId* Id of an item to be queried
+- *itemIds* List of item ids to be queried
+- *sorting* Sorting of returned item
+- *resultFields* List of result fields to be used when querying items. Will use ResultField template for list items if not defined.
 |===
 
 
@@ -6753,12 +6755,10 @@ Get preset search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options:
-<ul>
- <li><b>manufacturerId</b> Id of the manufacturer to query items for.</li>
- <li><b>sorting</b> Sorting of items</li>
- <li><b>itemsPerPage</b> Number of items per page</li>
- <li><b>page</b> Current page of results</li>
-</ul>
+- *manufacturerId* Id of the manufacturer to query items for
+- *sorting* Sorting of items
+- *itemsPerPage* Number of items per page
+- *page* Current page of results
 |===
 
 
@@ -6804,16 +6804,14 @@ Get preset search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options:
-<ul>
- <li><b>query</b> The search string</li>
- <li><b>facets</b> Facet values of active facets</li>
- <li><b>sorting</b> Configuration value from plugin config</li>
- <li><b>page</b> The current page</li>
- <li><b>itemsPerPage</b> Number of items per page</li>
- <li><b>priceMin</b> Minimum price of the variations</li>
- <li><b>priceMax</b> Maximum price of the variations</li>
- <li><b>autocomplete</b> Flag indicating if autocompletion should be used</li>
-</ul>
+- *query* The search string
+- *facets* Facet values of active facets
+- *sorting* Configuration value from plugin config
+- *page* The current page
+- *itemsPerPage* Number of items per page
+- *priceMin* Minimum price of the variations
+- *priceMax* Maximum price of the variations
+- *autocomplete* Flag indicating if autocompletion should be used
 |===
 
 
@@ -6905,10 +6903,8 @@ Get preset search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options:
-<ul>
- <li><b>sorting</b> Sorting of items</li>
- <li><b>query</b> Search query to get suggestions for</li>
-</ul>
+- *sorting* Sorting of items
+- *query* Search query to get suggestions for
 |===
 
 
@@ -6954,11 +6950,9 @@ Get preset search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options:
-<ul>
- <li><b>itemId</b> Item id to get</li>
- <li><b>variationId</b> Variation id to get. If not defined, plugin configuration will be considered if main or child variation should be displayed.</li>
- <li><b>setCategory</b> Flag indicating if item should be set as current item to be displayed in breadcrumbs</li>
-</ul>
+- *itemId* Item id to get
+- *variationId* Variation id to get. If not defined, plugin configuration will be considered if main or child variation should be displayed.
+- *setCategory* Flag indicating if item should be set as current item to be displayed in breadcrumbs
 |===
 
 
@@ -7004,11 +6998,9 @@ Get preset search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options:
-<ul>
- <li><b>tagIds</b> List of tag ids to query items by</li>
- <li><b>priceMin</b> Minimum price to filter items by</li>
- <li><b>priceMax</b> Maximum price to filter items by</li>
-</ul>
+- *tagIds* List of tag ids to query items by
+- *priceMin* Minimum price to filter items by
+- *priceMax* Maximum price to filter items by
 |===
 
 
@@ -7054,11 +7046,9 @@ Get preset search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options
-<ul>
- <li><b>itemId</b> Id of the to get variations and attributes for</li>
- <li><b>variationId</b> Id of a variation that is selected by default. Attribute values for this variation will be included on first page surely.</li>
- <li><b>afterKey</b> This might be provided from previous search requests to enable pagination of variation entries</li>
-</ul>
+- *itemId* Id of the to get variations and attributes for
+- *variationId* Id of a variation that is selected by default. Attribute values for this variation will be included on first page surely.
+- *afterKey* This might be provided from previous search requests to enable pagination of variation entries
 |===
 
 
@@ -7104,15 +7094,13 @@ Get preset search factory.
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options:
-<ul>
- <li><b>variationIds</b> List of variations to receive</li>
- <li><b>sorting</b> Configuration value to get sorting for</li>
- <li><b>sortingField</b> Field to sort items by. Will be appended to sorting list if sorting configuration is defined.</li>
- <li><b>sortingOrder</b> Order to sort items with ('asc', 'desc')</li>
- <li><b>page</b> The current page</li>
- <li><b>itemsPerPage</b> Number of items per page</li>
- <li><b>excludeFromCache</b> Set to true if results should not be linked to response</li>
-</ul>
+- *variationIds* List of variations to receive
+- *sorting* Configuration value to get sorting for
+- *sortingField* Field to sort items by. Will be appended to sorting list if sorting configuration is defined.
+- *sortingOrder* Order to sort items with ('asc', 'desc')
+- *page* The current page
+- *itemsPerPage* Number of items per page
+- *excludeFromCache* Set to true if results should not be linked to response
 |===
 
 
@@ -7635,25 +7623,7 @@ public registerConfigValue($key, $value):Plenty\Modules\Webshop\Template\Contrac
 ====== *Return type:*        xref:Webshop.adoc#webshop_contracts_templateconfigrepositorycontract[`TemplateConfigRepositoryContract`]
 
 
-Register an internal configuration. Available configuration keys are:
-&lt;ul&gt;
- &lt;li&gt;&lt;b&gt;currency.format&lt;/b&gt; Format to display the currency in monetary values.&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;sort.defaultSorting&lt;/b&gt; Default item sorting criteria&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;sort.defaultSortingSearch&lt;/b&gt; Default sorting criteria when searching for items&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;sorting.prioritySearch1&lt;/b&gt; First sorting criteria when searching for items&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;sorting.prioritySearch2&lt;/b&gt; Second sorting criteria when searching for items&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;sorting.prioritySearch3&lt;/b&gt; Third sorting criteria when searching for items&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;sorting.priorityCategory1&lt;/b&gt; First sorting criteria when searching for items of a category&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;sorting.priorityCategory2&lt;/b&gt; Second sorting criteria when searching for items of a category&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;sorting.priorityCategory3&lt;/b&gt; Third sorting criteria when searching for items of a category&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;sorting.dynamicInherit&lt;/b&gt; Set to true to adopts sorting criteria from item search options to grouping of variations&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;sorting.dynamicPrio1&lt;/b&gt; First sorting criteria when grouping variations in item search results&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;sorting.dynamicPrio2&lt;/b&gt; Second sorting criteria when grouping variations in item search results&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;item.name&lt;/b&gt; Set which item name should be used in the webshop.&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;item.displayName&lt;/b&gt; Define if the item name, the variation name or both names should be displayed in the webshop.&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;global.enableOldUrlPattern&lt;/b&gt; Item urls will be served with prefix &quot;a-{itemId}&quot; when enabled&lt;/li&gt;
- &lt;li&gt;&lt;b&gt;language.activeLanguages&lt;/b&gt; List of languages that are enabled for the webshop&lt;/li&gt;
-&lt;/ul&gt;
+Register an internal configuration.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -7661,7 +7631,25 @@ Register an internal configuration. Available configuration keys are:
 |Name |Type |Description
 a|`$key`
 |link:http://php.net/string[string^]
-a|Configuration key to set value for
+a|Configuration key to set value for. Available configuration keys are:
+
+* `currency.format` Format to display the currency in monetary values.
+* `sort.defaultSorting` Default item sorting criteria
+* `sort.defaultSortingSearch` Default sorting criteria when searching for items
+* `sorting.prioritySearch1` First sorting criteria when searching for items
+* `sorting.prioritySearch2` Second sorting criteria when searching for items
+* `sorting.prioritySearch3` Third sorting criteria when searching for items
+* `sorting.priorityCategory1` First sorting criteria when searching for items of a category
+* `sorting.priorityCategory2` Second sorting criteria when searching for items of a category
+* `sorting.priorityCategory3` Third sorting criteria when searching for items of a category
+* `sorting.dynamicInherit` Set to true to adopts sorting criteria from item search options to grouping of variations
+* `sorting.dynamicPrio1` First sorting criteria when grouping variations in item search results
+* `sorting.dynamicPrio2` Second sorting criteria when grouping variations in item search results
+* `item.name` Set which item name should be used in the webshop.
+* `item.displayName` Define if the item name, the variation name or both names should be displayed in the webshop.
+* `global.enableOldUrlPattern` Item urls will be served with prefix "a-{itemId}" when enabled
+* `language.activeLanguages` List of languages that are enabled for the webshop
+* `log.performance.ssr` Set to true to enable Vue.js server side rendering of frontend templates
 
 a|`$value`
 |
