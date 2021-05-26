@@ -1022,6 +1022,13 @@ public getFilter():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Filters should be consumed throgh getFilterContainer().
+
+====
 
 
 
@@ -1118,13 +1125,20 @@ public getCustomFilters():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Custom filters should be consumed throgh getCustomFilterContainer().
+
+====
 
 
 
 
 
 
-
+Returns the custom filters that will be configurable in the catalog UI. Each configured custom filter will be applied in each export of templates that will be booted by this provider.
 
 [source%nowrap, php]
 [#getassignments]
@@ -1141,6 +1155,38 @@ public getAssignments():array
 
 
 
+
+[source%nowrap, php]
+[#getfiltercontainer]
+----
+
+public getFilterContainer():Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontainer[`CatalogFilterBuilderContainer`]
+
+
+Returns the container that collects all filters of templates that are booted by this specific provider.
+
+[source%nowrap, php]
+[#getcustomfiltercontainer]
+----
+
+public getCustomFilterContainer():Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontainer[`CatalogFilterBuilderContainer`]
+
+
+Returns the container that collects all custom filters of templates that are booted by this specific provider.
 
 [source%nowrap, php]
 [#hasextendedmappings]
@@ -1195,6 +1241,22 @@ public getDynamicConfig():Plenty\Modules\Catalog\Contracts\CatalogDynamicConfigC
 ----
 
 public getResultConverterClass():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#allowscustomfilter]
+----
+
+public allowsCustomFilter():bool
 
 ----
 
@@ -3887,6 +3949,13 @@ public getFilter():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Filters should be consumed throgh getFilterContainer().
+
+====
 
 
 
@@ -3903,6 +3972,13 @@ public addFilter($filter):void
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Filters should now be added to the filter container. The container can be set through setFilterContainer().
+
+====
 
 
 
@@ -4214,6 +4290,48 @@ a|
 
 
 [source%nowrap, php]
+[#allowscustomfilter]
+----
+
+public allowsCustomFilter():bool
+
+----
+
+
+
+
+
+
+
+Determines if this template enable/disable custom filters
+
+[source%nowrap, php]
+[#setcustomfilters]
+----
+
+public setCustomFilters($allowsCustomFilter):bool
+
+----
+
+
+
+
+
+
+
+Disable or not the custom filters
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$allowsCustomFilter`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#hasruntimeconfig]
 ----
 
@@ -4285,6 +4403,13 @@ public getCustomFilter():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Custom filters should be consumed throgh getCustomFilterContainer().
+
+====
 
 
 
@@ -4301,6 +4426,13 @@ public addCustomFilter($customFilter):void
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Filters should now be added to the filter container. The container can be set through setFilterContainer().
+
+====
 
 
 
@@ -4315,6 +4447,90 @@ Adds a custom filter to the template. If possible, don&#039;t use this directly 
 |Name |Type |Description
 a|`$customFilter`
 |link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getcustomfiltercontainer]
+----
+
+public getCustomFilterContainer():Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontainer[`CatalogFilterBuilderContainer`]
+
+
+Returns the container that collects all custom filters of this specific template.
+
+[source%nowrap, php]
+[#getfiltercontainer]
+----
+
+public getFilterContainer():Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontainer[`CatalogFilterBuilderContainer`]
+
+
+Returns the container that collects all filters of this specific template.
+
+[source%nowrap, php]
+[#setcustomfiltercontainer]
+----
+
+public setCustomFilterContainer($customFilterContainer):void
+
+----
+
+
+
+
+
+
+
+Sets the container that collects all custom filters of this specific template.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$customFilterContainer`
+|        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontainer[`CatalogFilterBuilderContainer`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setfiltercontainer]
+----
+
+public setFilterContainer($filterContainer):void
+
+----
+
+
+
+
+
+
+
+Sets the container that collects all filters of this specific template.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterContainer`
+|        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontainer[`CatalogFilterBuilderContainer`]
 a|
 |===
 
@@ -5434,6 +5650,29 @@ public getParentId():string
 
 
 
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+[WARNING]
+.Deprecated! 
+====
+
+This is deprecated and will only return an empty array.
+
+====
+
+
+
+
+
+
+
+
 
 [[catalog_models_combinedtemplatefield]]
 ==== CombinedTemplateField
@@ -5511,7 +5750,7 @@ a|
 
 a|`$defaultSources`
 |link:http://php.net/array[array^]
-a|currently not defined behavior therefore it will not be consumed yet.
+a|
 |===
 
 
@@ -5731,6 +5970,29 @@ a|`$callable`
 |        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcallablecontract[`CatalogTemplateFieldCallableContract`]
 a|
 |===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+[WARNING]
+.Deprecated! 
+====
+
+This is deprecated and will only return an empty array.
+
+====
+
+
+
+
+
+
 
 
 
@@ -5806,7 +6068,7 @@ a|
 
 a|`$defaultSources`
 |link:http://php.net/array[array^]
-a|currently not defined behavior therefore it will not be consumed yet.
+a|
 |===
 
 
@@ -6026,6 +6288,29 @@ a|`$callable`
 |        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcallablecontract[`CatalogTemplateFieldCallableContract`]
 a|
 |===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+[WARNING]
+.Deprecated! 
+====
+
+This is deprecated and will only return an empty array.
+
+====
+
+
+
+
+
+
 
 
 
@@ -6317,6 +6602,29 @@ a|`$callable`
 |        xref:Catalog.adoc#catalog_contracts_catalogtemplatefieldcallablecontract[`CatalogTemplateFieldCallableContract`]
 a|
 |===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+[WARNING]
+.Deprecated! 
+====
+
+This is deprecated and will only return an empty array.
+
+====
+
+
+
+
+
+
 
 
 
@@ -7415,6 +7723,48 @@ a|
 
 
 [source%nowrap, php]
+[#allowscustomfilter]
+----
+
+public allowsCustomFilter():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setcustomfilters]
+----
+
+public setCustomFilters($allowsCustomFilter):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$allowsCustomFilter`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#getruntimeconfig]
 ----
 
@@ -7526,8 +7876,313 @@ public isBooted():bool
 
 
 
+[source%nowrap, php]
+[#getcustomfiltercontainer]
+----
+
+public getCustomFilterContainer():Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontainer[`CatalogFilterBuilderContainer`]
+
+
+
+
+[source%nowrap, php]
+[#getfiltercontainer]
+----
+
+public getFilterContainer():Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontainer[`CatalogFilterBuilderContainer`]
+
+
+
+
+[source%nowrap, php]
+[#setcustomfiltercontainer]
+----
+
+public setCustomFilterContainer($customFilterContainer):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$customFilterContainer`
+|        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontainer[`CatalogFilterBuilderContainer`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setfiltercontainer]
+----
+
+public setFilterContainer($filterContainer):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterContainer`
+|        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontainer[`CatalogFilterBuilderContainer`]
+a|
+|===
+
+
+[[catalog_containers]]
+== Containers
+
+[[catalog_containers_filters]]
+===  Filters
+[[catalog_filters_catalogfilterbuildercontainer]]
+==== CatalogFilterBuilderContainer
+
+The CatalogFilterBuilderContainer collects filter builders.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Containers\Filters`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addfilterbuilder]
+----
+
+public addFilterBuilder($filterBuilder):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterBuilder`
+|        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontract[`CatalogFilterBuilderContract`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilterbuilders]
+----
+
+public getFilterBuilders():array
+
+----
+
+
+
+
+
+
+
+
+
+
+[[catalog_filters_cataloguifiltercontainer]]
+==== CatalogUiFilterContainer
+
+The CatalogUiFilterContainer collects the ui representation of multiple filters.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Containers\Filters`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addfilter]
+----
+
+public addFilter($filter):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filter`
+|        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():array
+
+----
+
+
+
+
+
+
+
+
+
 [[catalog_contracts]]
 == Contracts
+
+[[catalog_contracts_filters]]
+===  Filters
+[[catalog_filters_catalogfilterbuildercontract]]
+==== CatalogFilterBuilderContract
+
+The CatalogFilterBuilderContract is the interface for catalog filter builder. They are used to collect data for filters and then retrieve the specific export or ui filter.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Contracts\Filters`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+Returns an identifier for the filter
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be filled by the specified values in a catalog. It should be used to provide
+the necessary manipulation so the filter that is returned by getFilter can be consumed by the export.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter():void
+
+----
+
+
+
+
+
+
+
+Returns the filter that will be given to the export
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+Returns the UI representation of the filter
 
 [[catalog_contracts_status]]
 ===  Status
@@ -7891,6 +8546,180 @@ Returns this model as an array.
 
 [[catalog_models]]
 == Models
+
+[[catalog_models_filters]]
+===  Filters
+[[catalog_filters_cataloguifilter]]
+==== CatalogUiFilter
+
+A catalog UI filter provides the information that is necessary for a filter to be displayed in the UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Models\Filters`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#required]
+----
+
+public required():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isvisible]
+----
+
+public isVisible():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdefaultvalue]
+----
+
+public getDefaultValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalues]
+----
+
+public getValues():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getnesteduifiltercontainer]
+----
+
+public getNestedUiFilterContainer():Plenty\Modules\Catalog\Containers\Filters\CatalogUiFilterContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifiltercontainer[`CatalogUiFilterContainer`]
+
+
+
+
+[source%nowrap, php]
+[#setnesteduifiltercontainer]
+----
+
+public setNestedUiFilterContainer($nestedUiFilterContainer):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$nestedUiFilterContainer`
+|        xref:Catalog.adoc#catalog_filters_cataloguifiltercontainer[`CatalogUiFilterContainer`]
+a|
+|===
+
 
 [[catalog_models_status]]
 ===  Status
@@ -10055,6 +10884,22 @@ public isPreviewable():bool
 
 
 [source%nowrap, php]
+[#allowscustomfilter]
+----
+
+public allowsCustomFilter():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#getdynamicconfig]
 ----
 
@@ -10158,6 +11003,52 @@ public getCustomFilters():array
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Custom filters should be consumed through getCustomFilterContainer().
+
+====
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getassignments]
+----
+
+public getAssignments():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter():array
+
+----
+
+[WARNING]
+.Deprecated! 
+====
+
+Filters should be consumed through getFilterContainer().
+
+====
 
 
 
@@ -10215,34 +11106,34 @@ public getTemplateGroupContainer():Plenty\Modules\Catalog\Containers\TemplateGro
 Returns a container in which all TemplateGroups of this template are collected.
 
 [source%nowrap, php]
-[#getfilter]
+[#getfiltercontainer]
 ----
 
-public getFilter():array
+public getFilterContainer():Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontainer[`CatalogFilterBuilderContainer`]
 
 
-
-Returns the filters that will be applied in each export of templates that will be booted by this provider.
+Returns the container that collects all filters of templates that are booted by this specific provider.
 
 [source%nowrap, php]
-[#getassignments]
+[#getcustomfiltercontainer]
 ----
 
-public getAssignments():array
+public getCustomFilterContainer():Plenty\Modules\Catalog\Containers\Filters\CatalogFilterBuilderContainer
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontainer[`CatalogFilterBuilderContainer`]
 
 
-
-
+Returns the container that collects all custom filters of templates that are booted by this specific provider.
 
