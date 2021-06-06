@@ -103,6 +103,9 @@ The key figure config model represents the configuration of a key figure.
 |meta
     |        xref:Bi.adoc#bi_models_keyfiguremeta[`KeyFigureMeta`]
     a|Additional data
+|spreadSheetExport
+    |        xref:Bi.adoc#bi_models_keyfigurespreadsheetexport[`KeyFigureSpreadSheetExport`]
+    a|Configuration data for the export of key figure results in a spread sheet document
 |direct
     |link:http://php.net/bool[bool^]
     a|This key figure triggers a direct calculation without saving the result
@@ -346,6 +349,9 @@ The model represent a key figure result in condensed form to the presentation.
 |===
 |Name |Type |Description
 
+|id
+    |link:http://php.net/string[string^]
+    a|The result ID
 |scaleBasis
     |link:http://php.net/string[string^]
     a|Time reference value of the key figure result. The structure of scaleBasis depends on the time interval of the key figure. At the interval day is the structure: YYYYMMDD. For the interval month: YYYYMMM. In the case of year: YYYYY.
@@ -529,6 +535,9 @@ The model holds filter information for a search query for key figures.
 |scaleBasis
     |link:http://php.net/string[string^]
     a|Filter restricts the list of results to items with a scale base time during the specified period. For the time interval day, a date or comma separated two dates (format: YYYYMMDD) can be specified. For the time interval week, several comma-separated days (YYYYMMDD) of different weeks can be specified. For the interval month, a comma separated list of months is expected e.g. 2020-01, 2020-02.
+|resultId
+    |link:http://php.net/bool[bool^]
+    a|Return ID of key figure result
 |resultUnit
     |link:http://php.net/bool[bool^]
     a|Return unit of the primary result.
@@ -556,6 +565,9 @@ The model holds filter information for a search query for key figures.
 |searchId
     |link:http://php.net/string[string^]
     a|Identification string to assign the result
+|calculatedAt
+    |link:http://php.net/string[string^]
+    a|Filter that restricts the search result to key figure results which have been calculated as of this date (format: YYYY-MM-DD HH:II:SS)
 |sortBy
     |link:http://php.net/array[array^]
     a|Sort the results options.
@@ -604,6 +616,66 @@ The model represent several key figure search requests.
 |searchRequests
     |link:http://php.net/array[array^]
     a|The list of key figure search requests
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[bi_models_keyfigurespreadsheetexport]]
+==== KeyFigureSpreadSheetExport
+
+The key figure spread sheet export keeps configuration data for the export of key figure results in a spread sheet document.
+
+
+
+===== Namespace
+
+`Plenty\Modules\BI\KeyFigure\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|spreadSheetURL
+    |link:http://php.net/string[string^]
+    a|URL of the spread sheet document
+|exportMethod
+    |link:http://php.net/string[string^]
+    a|Defines how the exported data is to be inserted in the document. Possible values: append, upsert.
+|timeInterval
+    |link:http://php.net/string[string^]
+    a|Time interval in which the result data are to be aggregated. Possible values: day, week, month, quarter, year
+|exportColumns
+    |link:http://php.net/array[array^]
+    a|List of column names to be exported
+|userId
+    |link:http://php.net/int[int^]
+    a|Id of the user who created this spreadsheet configuration
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the user
 |===
 
 

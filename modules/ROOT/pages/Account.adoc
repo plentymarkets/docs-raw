@@ -9693,6 +9693,150 @@ a|The ID of the address
 |===
 
 
+[source%nowrap, php]
+[#allunpaidordersummaries]
+----
+
+public allUnpaidOrderSummaries($page = 1, $itemsPerPage = 50, $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Returns a collection of all unpaid order summaries.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
 [[account_ordersummary_models]]
 ===  Models
 [[account_models_ordersummary]]
@@ -9739,6 +9883,54 @@ The order summary model.
 |updatedAt
     |link:http://php.net/string[string^]
     a|The time the order summary was last updated as unix timestamp
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[account_models_ordersummarysettings]]
+==== OrderSummarySettings
+
+The model of the order summary settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Account\OrderSummary\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|customerTypeIds
+    |link:http://php.net/array[array^]
+    a|
+|customerClassIds
+    |link:http://php.net/array[array^]
+    a|
 |===
 
 
