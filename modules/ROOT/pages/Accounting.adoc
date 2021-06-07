@@ -1934,6 +1934,44 @@ a|The columns to load in the response.
 
 
 [source%nowrap, php]
+[#findvatbylocationidanddate]
+----
+
+public findVatByLocationIdAndDate($locationId, $date, $relations = [], $columns = []):array
+
+----
+
+
+
+
+
+
+
+List VAT configuration for a date
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$locationId`
+|link:http://php.net/int[int^]
+a|The ID of the accounting location
+
+a|`$date`
+|link:http://php.net/string[string^]
+a|The started at date
+
+a|`$relations`
+|link:http://php.net/array[array^]
+a|The relations to load with the VAT object. The relations available are "location" and "country".
+
+a|`$columns`
+|link:http://php.net/array[array^]
+a|The columns to load in the response.
+|===
+
+
+[source%nowrap, php]
 [#getvatbyid]
 ----
 
