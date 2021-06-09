@@ -626,6 +626,9 @@ The model of the order.
 |paymentTerms
     |        xref:Order.adoc#order_models_orderpaymentterms[`OrderPaymentTerms`]
     a|The payment terms of this order.
+|tags
+    |
+    a|The order tags.
 |===
 
 
@@ -21141,6 +21144,36 @@ a|
 
 
 [source%nowrap, php]
+[#createfromparent]
+----
+
+public createFromParent($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a redistribution from a parent order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|The ID of the parent order, for which the reorder should be created.
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|The order item Ids with quantities to be added to the reorder.
+|===
+
+
+[source%nowrap, php]
 [#updatecurrency]
 ----
 
@@ -21704,6 +21737,36 @@ Delete an order item from a reorder
 a|`$orderItemId`
 |link:http://php.net/int[int^]
 a|
+|===
+
+
+[source%nowrap, php]
+[#createfromparent]
+----
+
+public createFromParent($orderId, $data):Plenty\Modules\Order\Models\Order
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_order[`Order`]
+
+
+Create a reorder from a parent order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|The ID of the parent order, for which the reorder should be created.
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|The order item Ids with quantities to be added to the reorder.
 |===
 
 
