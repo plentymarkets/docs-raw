@@ -1572,7 +1572,39 @@ Get the VAT rate of a VAT field
 |Name |Type |Description
 a|`$vatField`
 |link:http://php.net/int[int^]
-a|The VAT field (0-3).
+a|The VAT field (0-5).
+
+a|`$restrictedToDigitalItems`
+|link:http://php.net/bool[bool^]
+a|Flag that indicates if the VAT is restricted to digital items or not.
+<br />True = the VAT is restricted to digital items
+<br />False = the VAT is used for all items
+|===
+
+
+[source%nowrap, php]
+[#getrevenueaccount]
+----
+
+public getRevenueAccount($vatField, $restrictedToDigitalItems = false):string
+
+----
+
+
+
+
+
+
+
+Get the revenue account of a VAT field
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$vatField`
+|link:http://php.net/int[int^]
+a|The VAT field (0-5).
 
 a|`$restrictedToDigitalItems`
 |link:http://php.net/bool[bool^]
@@ -2268,6 +2300,36 @@ a|The VAT field
 |===
 
 
+[source%nowrap, php]
+[#getrevenueaccount]
+----
+
+public getRevenueAccount($vat, $vatField):string
+
+----
+
+
+
+
+
+
+
+Get the revenue account for the given vat field.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$vat`
+|        xref:Accounting.adoc#accounting_models_vat[`Vat`]
+a|The country VAT instance.
+
+a|`$vatField`
+|link:http://php.net/int[int^]
+a|The vat field.
+|===
+
+
 [[accounting_vat_exceptions]]
 ===  Exceptions
 [[accounting_exceptions_vatexception]]
@@ -2400,6 +2462,9 @@ The VAT rate model is always associated with a VAT configuration and contains th
 |name
     |link:http://php.net/string[string^]
     a|The name of a VAT rate
+|revenueAccount
+    |link:http://php.net/string[string^]
+    a|The revenue account for the VAT rate
 |===
 
 
