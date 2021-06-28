@@ -7345,6 +7345,297 @@ public clearFilters():void
 Clears the filter array.
 
 
+[[property_contracts_propertyrepositorycontract]]
+==== PropertyRepositoryContract
+
+This interface allows you to get, create, update and delete properties.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#search]
+----
+
+public search($with = [], $perPage = 50, $page = 1, $sorting = []):void
+
+----
+
+
+
+
+
+
+
+Gets a list of properties. Filter can be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$sorting`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#count]
+----
+
+public count():int
+
+----
+
+
+
+
+
+
+
+Count the properties.
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $with = []):Plenty\Modules\Property\V2\Models\Property
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_property[`Property`]
+
+
+Gets a property. The ID of the property must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Property\V2\Models\Property
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_property[`Property`]
+
+
+Updates a property. The ID of the property must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\Property
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_property[`Property`]
+
+
+Creates a property.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property. The ID of the property must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
 [[property_contracts_propertyselectionnamerepositorycontract]]
 ==== PropertySelectionNameRepositoryContract
 
@@ -7801,297 +8092,6 @@ public applyCriteriaFromFilters():void
 
 
 Applies criteria classes to the current repository.
-
-
-[[property_contracts_propertyrepositorycontract]]
-==== PropertyRepositoryContract
-
-This interface allows you to get, create, update and delete properties.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Property\V2\Contracts`
-
-
-
-
-
-
-===== Methods
-
-[source%nowrap, php]
-[#search]
-----
-
-public search($with = [], $perPage = 50, $page = 1, $sorting = []):void
-
-----
-
-
-
-
-
-
-
-Gets a list of properties. Filter can be specified.
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$with`
-|link:http://php.net/array[array^]
-a|
-
-a|`$perPage`
-|link:http://php.net/int[int^]
-a|
-
-a|`$page`
-|link:http://php.net/int[int^]
-a|
-
-a|`$sorting`
-|link:http://php.net/array[array^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#count]
-----
-
-public count():int
-
-----
-
-
-
-
-
-
-
-Count the properties.
-
-[source%nowrap, php]
-[#get]
-----
-
-public get($id, $with = []):Plenty\Modules\Property\V2\Models\Property
-
-----
-
-
-
-
-====== *Return type:*        xref:Property.adoc#property_models_property[`Property`]
-
-
-Gets a property. The ID of the property must be specified.
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$id`
-|link:http://php.net/int[int^]
-a|
-
-a|`$with`
-|link:http://php.net/array[array^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#update]
-----
-
-public update($id, $data):Plenty\Modules\Property\V2\Models\Property
-
-----
-
-
-
-
-====== *Return type:*        xref:Property.adoc#property_models_property[`Property`]
-
-
-Updates a property. The ID of the property must be specified.
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$id`
-|link:http://php.net/int[int^]
-a|
-
-a|`$data`
-|link:http://php.net/array[array^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#create]
-----
-
-public create($data):Plenty\Modules\Property\V2\Models\Property
-
-----
-
-
-
-
-====== *Return type:*        xref:Property.adoc#property_models_property[`Property`]
-
-
-Creates a property.
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$data`
-|link:http://php.net/array[array^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#delete]
-----
-
-public delete($id):bool
-
-----
-
-
-
-
-
-
-
-Deletes a property. The ID of the property must be specified.
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$id`
-|link:http://php.net/int[int^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#clearcriteria]
-----
-
-public clearCriteria():void
-
-----
-
-
-
-
-
-
-
-Resets all Criteria filters by creating a new instance of the builder object.
-
-[source%nowrap, php]
-[#applycriteriafromfilters]
-----
-
-public applyCriteriaFromFilters():void
-
-----
-
-
-
-
-
-
-
-Applies criteria classes to the current repository.
-
-[source%nowrap, php]
-[#setfilters]
-----
-
-public setFilters($filters = []):void
-
-----
-
-
-
-
-
-
-
-Sets the filter array.
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$filters`
-|link:http://php.net/array[array^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#getfilters]
-----
-
-public getFilters():void
-
-----
-
-
-
-
-
-
-
-Returns the filter array.
-
-[source%nowrap, php]
-[#getconditions]
-----
-
-public getConditions():void
-
-----
-
-
-
-
-
-
-
-Returns a collection of parsed filters as Condition object
-
-[source%nowrap, php]
-[#clearfilters]
-----
-
-public clearFilters():void
-
-----
-
-
-
-
-
-
-
-Clears the filter array.
 
 [[property_v2_models]]
 ===  Models
