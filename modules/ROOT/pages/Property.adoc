@@ -3696,6 +3696,15 @@ The property model. Properties allow to further describe items, categories etc. 
 |relation
     |        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
     a|
+|amazons
+    |        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
+    a|
+|selections
+    |        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
+    a|
+|groups
+    |        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
+    a|
 |===
 
 
@@ -4563,6 +4572,4359 @@ The property selection model.
 |relation
     |        xref:Property.adoc#property_models_propertyrelation[`PropertyRelation`]
     a|
+|property
+    |        xref:Property.adoc#property_models_property[`Property`]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+[[property_v2]]
+== V2
+
+[[property_v2_contracts]]
+===  Contracts
+[[property_contracts_propertyamazonrepositorycontract]]
+==== PropertyAmazonRepositoryContract
+
+This interface allows you to get, create, update and delete property amazons.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#search]
+----
+
+public search($with = [], $perPage = 50, $page = 1):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#findbypropertyid]
+----
+
+public findByPropertyId($propertyId):void
+
+----
+
+
+
+
+
+
+
+Gets a list of property amazon. The ID of the property must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$propertyId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $with = []):Plenty\Modules\Property\V2\Models\PropertyAmazon
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyamazon[`PropertyAmazon`]
+
+
+Gets a property amazon. The ID of the property amazon must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Property\V2\Models\PropertyAmazon
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyamazon[`PropertyAmazon`]
+
+
+Updates a property amazon. The ID of the property amazon must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\PropertyAmazon
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyamazon[`PropertyAmazon`]
+
+
+Creates a property amazon.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property amazon. The ID of the property amazon must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
+[[property_contracts_propertygroupnamerepositorycontract]]
+==== PropertyGroupNameRepositoryContract
+
+This interface allows you to get, create, update and delete property group names.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#findbygroupid]
+----
+
+public findByGroupId($groupId):void
+
+----
+
+
+
+
+
+
+
+Gets a list of property group names. The ID of the property group must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$groupId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id):Plenty\Modules\Property\V2\Models\PropertyGroupName
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertygroupname[`PropertyGroupName`]
+
+
+Gets a property group name. The ID of the property group name must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Property\V2\Models\PropertyGroupName
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertygroupname[`PropertyGroupName`]
+
+
+Updates a property group name. The ID of the property group name must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\PropertyGroupName
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertygroupname[`PropertyGroupName`]
+
+
+Creates a property group name.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property group name. The ID of the property group name must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
+[[property_contracts_propertygroupoptionrepositorycontract]]
+==== PropertyGroupOptionRepositoryContract
+
+This interface allows you to get, create, update and delete property group options.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#findbygroupid]
+----
+
+public findByGroupId($groupId):void
+
+----
+
+
+
+
+
+
+
+Gets a list of property group options. The ID of the property group must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$groupId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id):Plenty\Modules\Property\V2\Models\PropertyGroupOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertygroupoption[`PropertyGroupOption`]
+
+
+Gets a property group option. The ID of the property group option must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Property\V2\Models\PropertyGroupOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertygroupoption[`PropertyGroupOption`]
+
+
+Updates a property group option. The ID of the property group option must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\PropertyGroupOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertygroupoption[`PropertyGroupOption`]
+
+
+Creates a property group option.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property group option. The ID of the property group option must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
+[[property_contracts_propertygrouprelationrepositorycontract]]
+==== PropertyGroupRelationRepositoryContract
+
+This interface allows you to get, create and delete property group relations.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#search]
+----
+
+public search($with = [], $perPage = 50, $page = 1, $sorting = []):void
+
+----
+
+
+
+
+
+
+
+Gets a list of property group relations.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$sorting`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#count]
+----
+
+public count():int
+
+----
+
+
+
+
+
+
+
+Count the property group relations.
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $with = []):Plenty\Modules\Property\V2\Models\PropertyGroupRelation
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertygrouprelation[`PropertyGroupRelation`]
+
+
+Gets a property group relation. The ID of the property group relation must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\PropertyGroupRelation
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertygrouprelation[`PropertyGroupRelation`]
+
+
+Creates a property group relation.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property group relation. The ID of the property group relation must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#findone]
+----
+
+public findOne($propertyId, $groupId):Plenty\Modules\Property\V2\Models\PropertyGroupRelation
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertygrouprelation[`PropertyGroupRelation`]
+
+
+Gets a property group relation. The property ID and the group ID of the property group relation must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$propertyId`
+|link:http://php.net/int[int^]
+a|The property ID of the property group relation
+
+a|`$groupId`
+|link:http://php.net/int[int^]
+a|The group ID of the property group relation
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
+[[property_contracts_propertygrouprepositorycontract]]
+==== PropertyGroupRepositoryContract
+
+This interface allows you to get, create, update and delete property groups.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#search]
+----
+
+public search($with = [], $perPage = 50, $page = 1, $sorting = []):void
+
+----
+
+
+
+
+
+
+
+Gets a list of property groups. Filter can be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$sorting`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#count]
+----
+
+public count():int
+
+----
+
+
+
+
+
+
+
+Count the property groups.
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $with = []):Plenty\Modules\Property\V2\Models\PropertyGroup
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertygroup[`PropertyGroup`]
+
+
+Gets a property group. The ID of the property group must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Property\V2\Models\PropertyGroup
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertygroup[`PropertyGroup`]
+
+
+Updates a property group. The ID of the property group must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\PropertyGroup
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertygroup[`PropertyGroup`]
+
+
+Creates a property group.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property group. The ID of the property group must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
+[[property_contracts_propertynamerepositorycontract]]
+==== PropertyNameRepositoryContract
+
+This interface allows you to get, create, update and delete property names.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#findbypropertyid]
+----
+
+public findByPropertyId($propertyId):void
+
+----
+
+
+
+
+
+
+
+Gets a list of property names. The ID of the property must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$propertyId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id):Plenty\Modules\Property\V2\Models\PropertyName
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyname[`PropertyName`]
+
+
+Gets a property name. The ID of the property name must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Property\V2\Models\PropertyName
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyname[`PropertyName`]
+
+
+Updates a property name. The ID of the property name must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\PropertyName
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyname[`PropertyName`]
+
+
+Creates a property name.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property name. The ID of the property name must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
+[[property_contracts_propertyoptionrepositorycontract]]
+==== PropertyOptionRepositoryContract
+
+This interface allows you to get, create, update and delete property options.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#searchbypropertyid]
+----
+
+public searchByPropertyId($propertyId, $with = []):void
+
+----
+
+
+
+
+
+
+
+Gets a list of property options. The ID of the property must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$propertyId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id):Plenty\Modules\Property\V2\Models\PropertyOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyoption[`PropertyOption`]
+
+
+Gets a property option. The ID of the property option must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Property\V2\Models\PropertyOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyoption[`PropertyOption`]
+
+
+Updates a property option. The ID of the property option must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\PropertyOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyoption[`PropertyOption`]
+
+
+Creates a property option.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property option. The ID of the property option must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
+[[property_contracts_propertyrelationrepositorycontract]]
+==== PropertyRelationRepositoryContract
+
+This interface allows you to get, create, update and delete property relations.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#search]
+----
+
+public search($with = [], $perPage = 50, $page = 1, $sorting = []):void
+
+----
+
+
+
+
+
+
+
+Gets a list of property relation. Filter can be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$sorting`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#count]
+----
+
+public count():int
+
+----
+
+
+
+
+
+
+
+Count the property relations.
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $with = []):Plenty\Modules\Property\V2\Models\PropertyRelation
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyrelation[`PropertyRelation`]
+
+
+Gets a property relation. The ID of the property relation must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Property\V2\Models\PropertyRelation
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyrelation[`PropertyRelation`]
+
+
+Updates a property relation. The ID of the property relation must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\PropertyRelation
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyrelation[`PropertyRelation`]
+
+
+Creates a property relation.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property relation. The ID of the property relation must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
+[[property_contracts_propertyrelationselectionrepositorycontract]]
+==== PropertyRelationSelectionRepositoryContract
+
+This interface allows you to get, create, update and delete property relation selections.T hey are used for linked properties of the type `selection` and `multiSelection`.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#findbypropertyrelationid]
+----
+
+public findByPropertyRelationId($propertyRelationId, $with = []):void
+
+----
+
+
+
+
+
+
+
+Gets a list of property relation selections. The ID of the property relation must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$propertyRelationId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $with = []):Plenty\Modules\Property\V2\Models\PropertyRelationSelection
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyrelationselection[`PropertyRelationSelection`]
+
+
+Gets a property relation selection. The ID of the property relation selection must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Property\V2\Models\PropertyRelationSelection
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyrelationselection[`PropertyRelationSelection`]
+
+
+Updates a property relation selection. The ID of the property relation selection must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\PropertyRelationSelection
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyrelationselection[`PropertyRelationSelection`]
+
+
+Creates a property relation selection.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property relation selection. The ID of the property relation selection must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
+[[property_contracts_propertyrelationvaluerepositorycontract]]
+==== PropertyRelationValueRepositoryContract
+
+This interface allows you to get, create, update and delete property relation values. They are used for linked properties of the type `html` and `text`.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#findbypropertyrelationid]
+----
+
+public findByPropertyRelationId($propertyRelationId, $with = []):void
+
+----
+
+
+
+
+
+
+
+Gets a list of property relation values. The ID of the property relation must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$propertyRelationId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $with = []):Plenty\Modules\Property\V2\Models\PropertyRelationValue
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyrelationvalue[`PropertyRelationValue`]
+
+
+Gets a property relation value. The ID of the property relation value must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Property\V2\Models\PropertyRelationValue
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyrelationvalue[`PropertyRelationValue`]
+
+
+Updates a property relation value. The ID of the property relation value must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\PropertyRelationValue
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyrelationvalue[`PropertyRelationValue`]
+
+
+Creates a property relation value.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property relation value. The ID of the property relation value must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
+[[property_contracts_propertyrepositorycontract]]
+==== PropertyRepositoryContract
+
+This interface allows you to get, create, update and delete properties.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#search]
+----
+
+public search($with = [], $perPage = 50, $page = 1, $sorting = []):void
+
+----
+
+
+
+
+
+
+
+Gets a list of properties. Filter can be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$sorting`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#count]
+----
+
+public count():int
+
+----
+
+
+
+
+
+
+
+Count the properties.
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $with = []):Plenty\Modules\Property\V2\Models\Property
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_property[`Property`]
+
+
+Gets a property. The ID of the property must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Property\V2\Models\Property
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_property[`Property`]
+
+
+Updates a property. The ID of the property must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\Property
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_property[`Property`]
+
+
+Creates a property.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property. The ID of the property must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
+[[property_contracts_propertyselectionnamerepositorycontract]]
+==== PropertySelectionNameRepositoryContract
+
+This interface allows you to get, create, update and delete property selection names.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#findbyselectionid]
+----
+
+public findBySelectionId($selectionId):void
+
+----
+
+
+
+
+
+
+
+Gets a list of property selection names. The ID of the property selection must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$selectionId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id):Plenty\Modules\Property\V2\Models\PropertySelectionName
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyselectionname[`PropertySelectionName`]
+
+
+Gets a property selection name. The ID of the property selection name must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Property\V2\Models\PropertySelectionName
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyselectionname[`PropertySelectionName`]
+
+
+Updates a property selection name. The ID of the property selection name must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\PropertySelectionName
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyselectionname[`PropertySelectionName`]
+
+
+Create a property selection name.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property selection name. The ID of the property selection name must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+
+[[property_contracts_propertyselectionrepositorycontract]]
+==== PropertySelectionRepositoryContract
+
+This interface allows you to get, create, update and delete property selections.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#searchbypropertyid]
+----
+
+public searchByPropertyId($propertyId, $with = [], $perPage = 50, $page = 1, $sorting = []):void
+
+----
+
+
+
+
+
+
+
+Gets a list of property selections. The ID of the property must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$propertyId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$sorting`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#countbypropertyid]
+----
+
+public countByPropertyId($propertyId):int
+
+----
+
+
+
+
+
+
+
+Count the property selections. The ID of the property must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$propertyId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $with = []):Plenty\Modules\Property\V2\Models\PropertySelection
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyselection[`PropertySelection`]
+
+
+Gets a property selection. The ID of the property selection must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Property\V2\Models\PropertySelection
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyselection[`PropertySelection`]
+
+
+Updates a property selection. The ID of the property selection must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Property\V2\Models\PropertySelection
+
+----
+
+
+
+
+====== *Return type:*        xref:Property.adoc#property_models_propertyselection[`PropertySelection`]
+
+
+Creates a property selection.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a property selection. The ID of the property selection must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[[property_v2_models]]
+===  Models
+[[property_models_property]]
+==== Property
+
+The property model. Properties allow to further describe items, customers etc.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the property
+|cast
+    |link:http://php.net/string[string^]
+    a|The cast of the property (array values: 'empty','int','float','string','selection','text','html','date','file')
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the property (e.g. 'item' or 'contact')
+|position
+    |link:http://php.net/int[int^]
+    a|The position of the property
+|createdAt
+    |
+    a|The date when the property was created
+|updatedAt
+    |
+    a|The date when the property was last updated
+|amazon
+    |link:http://php.net/array[array^]
+    a|Property amazon
+|names
+    |
+    a|Property names
+|groups
+    |
+    a|Property Groups
+|options
+    |
+    a|Property Options
+|selections
+    |
+    a|Property selections
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[property_models_propertyamazon]]
+==== PropertyAmazon
+
+The property amazon model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the property amazon
+|propertyId
+    |link:http://php.net/int[int^]
+    a|The property ID of the property amazon
+|platform
+    |link:http://php.net/string[string^]
+    a|The platform of the property amazon
+|category
+    |link:http://php.net/string[string^]
+    a|The category of the property amazon
+|field
+    |link:http://php.net/string[string^]
+    a|The field of the property amazon
+|createdAt
+    |
+    a|The date when the property amazon was created
+|updatedAt
+    |
+    a|The date when the property amazon was last updated
+|property
+    |        xref:Property.adoc#property_models_property[`Property`]
+    a|The associated property
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[property_models_propertygroup]]
+==== PropertyGroup
+
+The property group model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the property group
+|position
+    |link:http://php.net/int[int^]
+    a|The position of the property group
+|createdAt
+    |
+    a|The date when the property group was created
+|updatedAt
+    |
+    a|The date when the property group was last updated
+|names
+    |
+    a|The property group names of the property group
+|options
+    |
+    a|The property group options of the property group
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[property_models_propertygroupname]]
+==== PropertyGroupName
+
+The property group name model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the property group name
+|groupId
+    |link:http://php.net/int[int^]
+    a|The property group ID of the property group
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the property group name as ISO 639-1 language code, e.g. en for English
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the property group
+|description
+    |link:http://php.net/string[string^]
+    a|The description of the property group
+|createdAt
+    |
+    a|The date when the property group name was created
+|updatedAt
+    |
+    a|The date when the property group name was last updated
+|group
+    |        xref:Property.adoc#property_models_propertygroup[`PropertyGroup`]
+    a|The associated property group
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[property_models_propertygroupoption]]
+==== PropertyGroupOption
+
+The property group option model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the property group option
+|groupId
+    |link:http://php.net/int[int^]
+    a|The property group ID of the property group
+|type
+    |link:http://php.net/string[string^]
+    a|The identifier of the property group option
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the property group option
+|createdAt
+    |
+    a|The date when the property group option was created
+|updatedAt
+    |
+    a|The date when the property group option was last updated
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[property_models_propertygrouprelation]]
+==== PropertyGroupRelation
+
+The property group relation model. The model shows which property is related to which property group.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the property group relation
+|propertyId
+    |link:http://php.net/int[int^]
+    a|The ID of the property
+|groupId
+    |link:http://php.net/int[int^]
+    a|The ID of the property group
+|group
+    |        xref:Property.adoc#property_models_propertygroup[`PropertyGroup`]
+    a|The associated property group
+|property
+    |        xref:Property.adoc#property_models_property[`Property`]
+    a|The associated property
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[property_models_propertyname]]
+==== PropertyName
+
+The property name model. A property can have several names. One name per language. Each name has a unique ID.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the property name
+|propertyId
+    |link:http://php.net/int[int^]
+    a|The property ID of the property name
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the property name as ISO 639-1 language code, e.g. en for English
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the property name
+|description
+    |link:http://php.net/string[string^]
+    a|The description of the property name
+|createdAt
+    |
+    a|The date when the property name was created
+|updatedAt
+    |
+    a|The date when the property name was last updated
+|property
+    |        xref:Property.adoc#property_models_property[`Property`]
+    a|The associated property
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[property_models_propertyoption]]
+==== PropertyOption
+
+The property option model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the property option
+|propertyId
+    |link:http://php.net/int[int^]
+    a|The property ID of the property option
+|type
+    |link:http://php.net/string[string^]
+    a|The identifier type of the option
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the option
+|createdAt
+    |
+    a|The date when the property option was created
+|updatedAt
+    |
+    a|The date when the property option was last updated
+|property
+    |        xref:Property.adoc#property_models_property[`Property`]
+    a|The associated property
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[property_models_propertyrelation]]
+==== PropertyRelation
+
+The property relation model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the property relation
+|propertyId
+    |link:http://php.net/int[int^]
+    a|The property ID of the property relation
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the property relation
+|targetId
+    |link:http://php.net/int[int^]
+    a|The ID of the target of the property relation
+|groupId
+    |link:http://php.net/int[int^]
+    a|The property group ID of the property relation
+|markup
+    |link:http://php.net/float[float^]
+    a|The mark up of the property relation
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the property relation for properties of the following type: int, float, date and file.
+|createdAt
+    |
+    a|The date when the property was created
+|updatedAt
+    |
+    a|The date when the property was last updated
+|property
+    |        xref:Property.adoc#property_models_property[`Property`]
+    a|The associated property
+|group
+    |        xref:Property.adoc#property_models_propertygroup[`PropertyGroup`]
+    a|The associated property group
+|values
+    |link:http://php.net/array[array^]
+    a|The property relation values of the property relation. Includes properties of the types short and long text.
+|selectionValues
+    |link:http://php.net/array[array^]
+    a|The property relation values of the property relation. Includes properties of the types selection and multi selection.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[property_models_propertyrelationselection]]
+==== PropertyRelationSelection
+
+The property relation selection value model. Includes the values in different languages for properties of the type short text and long text.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the property relation selection value
+|relationId
+    |link:http://php.net/int[int^]
+    a|The relation ID of the property relation selection value
+|selectionId
+    |link:http://php.net/int[int^]
+    a|The selection ID of the property relation selection value
+|createdAt
+    |
+    a|The date when the property relation value was created
+|updatedAt
+    |
+    a|The date when the property relation value was last updated
+|relation
+    |        xref:Property.adoc#property_models_propertyrelation[`PropertyRelation`]
+    a|The associated property relation
+|selection
+    |        xref:Property.adoc#property_models_propertyselection[`PropertySelection`]
+    a|The associated property selection
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[property_models_propertyrelationvalue]]
+==== PropertyRelationValue
+
+The property relation value model. Includes the values in different languages for properties of the type short text and long text.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the property relation value
+|relationId
+    |link:http://php.net/int[int^]
+    a|The ID of the property relation
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the property relation value
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the property relation
+|description
+    |link:http://php.net/string[string^]
+    a|The description of the property relation value
+|createdAt
+    |
+    a|The date when the property relation value was created
+|updatedAt
+    |
+    a|The date when the property relation value was last updated
+|relation
+    |        xref:Property.adoc#property_models_propertyrelation[`PropertyRelation`]
+    a|The associated property relation
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[property_models_propertyselection]]
+==== PropertySelection
+
+The property selection model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the property selection
+|propertyId
+    |link:http://php.net/int[int^]
+    a|The property ID of the property selection
+|position
+    |link:http://php.net/int[int^]
+    a|The position of the property selection
+|createdAt
+    |
+    a|he date when the property selection was created
+|updatedAt
+    |
+    a|The date when the property selection was last updated
+|property
+    |        xref:Property.adoc#property_models_property[`Property`]
+    a|The associated property
+|names
+    |
+    a|The names of the property selection
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[property_models_propertyselectionname]]
+==== PropertySelectionName
+
+The property selection name model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Property\V2\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the property selection name
+|selectionId
+    |link:http://php.net/int[int^]
+    a|The selection ID of the property selection name
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the property selection name
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the property selection name
+|description
+    |link:http://php.net/string[string^]
+    a|The description of the property selection name
+|createdAt
+    |
+    a|The date when the property selection name was created
+|updatedAt
+    |
+    a|The date when the property selection name was last updated
+|selection
+    |        xref:Property.adoc#property_models_propertyselection[`PropertySelection`]
+    a|The associated property selection
 |===
 
 
