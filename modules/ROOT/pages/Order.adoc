@@ -8577,6 +8577,52 @@ a|(optional) Possible value is 'labelBase64' to get the label with the response
 
 
 [source%nowrap, php]
+[#getordershippingpackagespaginated]
+----
+
+public getOrderShippingPackagesPaginated($orderId, $with = [], $page = 1, $perPage = 1000, $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;):array
+
+----
+
+
+
+
+
+
+
+Get all the packages for the given order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|The ID of the order
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|(Optional) Possible values are 'labelBase64', 'items' to get the label and/or the items with the response
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|[optional, default=1]
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|[optional, default=1000]
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|[optional, default=id]
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|[optional, default=desc]
+|===
+
+
+[source%nowrap, php]
 [#createordershippingpackage]
 ----
 
@@ -8840,6 +8886,9 @@ The order shipping package model
 |order
     |        xref:Order.adoc#order_models_order[`Order`]
     a|The order the package belongs to
+|items
+    |        xref:Order.adoc#order_models_ordershippingpackageitems[`OrderShippingPackageItems`]
+    a|The items inside the package.
 |===
 
 

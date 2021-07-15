@@ -250,8 +250,106 @@ Returns this model as an array.
 [[fulfillment_fulfillment]]
 == Fulfillment
 
+[[fulfillment_fulfillment_datamodels]]
+===  DataModels
+[[fulfillment_datamodels_dsgvocontactdata]]
+==== DSGVOContactData
+
+The DSGVO contact data model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\DataModels`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|phone
+    |link:http://php.net/string[string^]
+    a|The contact data phone
+|email
+    |link:http://php.net/string[string^]
+    a|The contact data email address
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
 [[fulfillment_fulfillment_services]]
 ===  Services
+[[fulfillment_services_dsgvocontactaddressdataservice]]
+==== DSGVOContactAddressDataService
+
+The DSGVOContactAddressDataService is the service for generating contact address data according to DSGVO settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\Services`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getdsgvoaddressdata]
+----
+
+public static getDSGVOAddressData($addressType, $order):array
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$addressType`
+|link:http://php.net/int[int^]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+
 [[fulfillment_services_fulfillmentreturnservice]]
 ==== FulfillmentReturnService
 

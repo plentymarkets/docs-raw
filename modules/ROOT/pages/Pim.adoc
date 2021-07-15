@@ -398,6 +398,54 @@ Clears the filter array.
 
 [[pim_models_variation]]
 ===  Variation
+[[pim_variation_propertyselectionvalue]]
+==== PropertySelectionValue
+
+The Property selection values of the variation
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\DocumentService\Models\Variation`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The id of the relation selection value
+|selectionId
+    |link:http://php.net/int[int^]
+    a|The selection id of the relation selection value
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
 [[pim_variation_propertyvalue]]
 ==== PropertyValue
 
@@ -15706,6 +15754,9 @@ contains informations about a property, belongs to a variation
 |with
     |        xref:Pim.adoc#pim_property_with[`With`]
     a|
+|id
+    |link:http://php.net/int[int^]
+    a|The unique ID of the property relation
 |propertyId
     |link:http://php.net/int[int^]
     a|The unique ID of the property
@@ -15715,9 +15766,18 @@ contains informations about a property, belongs to a variation
 |markup
     |link:http://php.net/float[float^]
     a|The markup of the property relation
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the property relation
+|rawValue
+    |link:http://php.net/string[string^]
+    a|The raw value of the property relation (read only)
 |values
     |link:http://php.net/array[array^]
-    a|the values of this relation
+    a|The values of this relation
+|selectionValues
+    |link:http://php.net/array[array^]
+    a|The selection values of this relation
 |===
 
 

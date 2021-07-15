@@ -299,6 +299,229 @@ public clearFilters():void
 Clears the filter array.
 
 
+[[warehouse_contracts_warehouselocationinventoryrepositorycontract]]
+==== WarehouseLocationInventoryRepositoryContract
+
+Get, create, update and delete warehouse locations
+
+
+
+===== Namespace
+
+`Plenty\Modules\Warehouse\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getwarehouselocationinventory]
+----
+
+public getWarehouseLocationInventory($warehouseLocationInventory):Plenty\Modules\Warehouse\Models\WarehouseLocationInventory
+
+----
+
+
+
+
+====== *Return type:*        xref:Warehouse.adoc#warehouse_models_warehouselocationinventory[`WarehouseLocationInventory`]
+
+
+Get a warehouse location inventory
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$warehouseLocationInventory`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getwarehouselocationinventorylist]
+----
+
+public getWarehouseLocationInventoryList($page = 1, $itemsPerPage = 50, $paginate = 1, $filters = [], $warehouseLocationId = null, $with = []):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Get a warehouse location inventory
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$paginate`
+|link:http://php.net/int[int^]
+a|
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+
+a|`$warehouseLocationId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#createwarehouselocationinventory]
+----
+
+public createWarehouseLocationInventory($data):Plenty\Modules\Warehouse\Models\WarehouseLocationInventory
+
+----
+
+
+
+
+====== *Return type:*        xref:Warehouse.adoc#warehouse_models_warehouselocationinventory[`WarehouseLocationInventory`]
+
+
+Create a warehouse location inventory
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|The request data
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
 [[warehouse_contracts_warehouselocationlevelrepositorycontract]]
 ==== WarehouseLocationLevelRepositoryContract
 
@@ -1390,6 +1613,69 @@ The warehouse location dimension model.
 |warehouseLocationLevel
     |link:http://php.net/array[array^]
     a|The linked warehouse location level
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[warehouse_models_warehouselocationinventory]]
+==== WarehouseLocationInventory
+
+The warehouse location inventory model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Warehouse\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the warehouse location
+|user_id
+    |link:http://php.net/int[int^]
+    a|The user ID of the warehouse location
+|status
+    |link:http://php.net/int[int^]
+    a|The status of the warehouse location inventory
+|warehouse_location
+    |link:http://php.net/int[int^]
+    a|The  warehouse location
+|createdAt
+    |
+    a|The date when the warehouse location inventory was created
+|updatedAt
+    |
+    a|The date when the warehouse location inventory was last updated
+|warehouseLocation
+    |        xref:Warehouse.adoc#warehouse_models_warehouselocation[`WarehouseLocation`]
+    a|The warehouse location.
 |===
 
 
