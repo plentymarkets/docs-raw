@@ -533,7 +533,7 @@ a|
 [#download]
 ----
 
-public download($id, $hash = &quot;&quot;, $extension = &quot;csv&quot;, $public = false, $token = &quot;&quot;):array
+public download($id, $hash = &quot;&quot;, $converterKey = &quot;csv&quot;, $public = false, $token = &quot;&quot;):array
 
 ----
 
@@ -557,7 +557,7 @@ a|`$hash`
 |link:http://php.net/string[string^]
 a|
 
-a|`$extension`
+a|`$converterKey`
 |link:http://php.net/string[string^]
 a|
 
@@ -1244,6 +1244,13 @@ public getResultConverterClass():string
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+This will not be consumed anymore. Use getResultConverterContainer() instead.
+
+====
 
 
 
@@ -1264,6 +1271,22 @@ public allowsCustomFilter():bool
 
 
 
+
+
+
+
+[source%nowrap, php]
+[#getresultconvertercontainer]
+----
+
+public getResultConverterContainer():Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_resultconvertercontainer[`ResultConverterContainer`]
 
 
 
@@ -2142,6 +2165,38 @@ Converts export results
 
 
 ===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+Returns the identifier for this result converter. Has to be unique in its templates scope.
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+Returns the readable representation for this converter
 
 [source%nowrap, php]
 [#getmime]
@@ -4491,6 +4546,13 @@ public hasResultConverter():bool
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Use getResultConverterContainer() instead
+
+====
 
 
 
@@ -4507,6 +4569,13 @@ public getRuntimeConfig():Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigC
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Use getDynamicConfig() instead
+
+====
 
 
 
@@ -4523,6 +4592,13 @@ public getResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConver
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Use getResultConverterContainer() instead
+
+====
 
 
 
@@ -4786,6 +4862,22 @@ public getDefaultCatalogSettings():array
 
 
 Returns the default settings a catalog that is created through this template will contain.
+
+[source%nowrap, php]
+[#getresultconvertercontainer]
+----
+
+public getResultConverterContainer():Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_resultconvertercontainer[`ResultConverterContainer`]
+
+
+Returns the container including all registered result converters of the template
 
 [source%nowrap, php]
 [#toarray]
@@ -7992,6 +8084,13 @@ public getResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConver
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Use getResultConverterContainer() instead
+
+====
 
 
 
@@ -8024,6 +8123,13 @@ public hasResultConverter():bool
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Use getResultConverterContainer() instead
+
+====
 
 
 
@@ -8072,6 +8178,22 @@ a|`$defaultCatalogSettings`
 |link:http://php.net/array[array^]
 a|
 |===
+
+
+[source%nowrap, php]
+[#getresultconvertercontainer]
+----
+
+public getResultConverterContainer():Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_resultconvertercontainer[`ResultConverterContainer`]
+
+
 
 
 [source%nowrap, php]
@@ -9502,6 +9624,253 @@ Rewinds resource
 [[catalog_converter]]
 == Converter
 
+[[catalog_converter_containers]]
+===  Containers
+[[catalog_containers_defaultresultconvertercontainer]]
+==== DefaultResultConverterContainer
+
+The DefaultResultConverterContainer collects all result converters for a specific template and is prefilled with all default result converters.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Converter\Containers`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addresultconverter]
+----
+
+public addResultConverter($resultConverter, $isDefault = false):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$resultConverter`
+|        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
+a|
+
+a|`$isDefault`
+|link:http://php.net/bool[bool^]
+a|Defines if the added converter will be the default converter for newly generated catalogs. If no default is provided the first registered provider will be used.
+|===
+
+
+[source%nowrap, php]
+[#getresultconverters]
+----
+
+public getResultConverters():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getresultconverterscount]
+----
+
+public getResultConvertersCount():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getresultconverter]
+----
+
+public getResultConverter($key):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getdefaultresultconverter]
+----
+
+public getDefaultResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+
+
+
+
+
+[[catalog_containers_resultconvertercontainer]]
+==== ResultConverterContainer
+
+The DefaultResultConverterContainer collects all result converters for a specific template.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Converter\Containers`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addresultconverter]
+----
+
+public addResultConverter($resultConverter, $isDefault = false):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$resultConverter`
+|        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
+a|
+
+a|`$isDefault`
+|link:http://php.net/bool[bool^]
+a|Defines if the added converter will be the default converter for newly generated catalogs. If no default is provided the first registered provider will be used.
+|===
+
+
+[source%nowrap, php]
+[#getresultconverters]
+----
+
+public getResultConverters():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getresultconverterscount]
+----
+
+public getResultConvertersCount():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getresultconverter]
+----
+
+public getResultConverter($key):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getdefaultresultconverter]
+----
+
+public getDefaultResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+
+
+
+
 [[catalog_converter_resultconverters]]
 ===  ResultConverters
 [[catalog_resultconverters_baseresultconverter]]
@@ -9536,14 +9905,14 @@ public toDownload($resourceHandler):void
 
 
 
-
+Convert and prepare resource for download
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$resourceHandler`
-|
+|        xref:Catalog.adoc#catalog_filehandlers_resourcehandler[`ResourceHandler`]
 a|
 |===
 
@@ -9562,58 +9931,30 @@ public toMarketplace():void
 
 
 
-
-
-[source%nowrap, php]
-[#from]
-----
-
-public from($data):Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter
-
-----
-
-
-
-
-====== *Return type:*        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
-
-
-When you don&#039;t know what you have but you know what you want
-You give it almost anything and you hope
-Hope dies last
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$data`
-|
-a|
-|===
-
+Convert and prepare data for marketplace
 
 [source%nowrap, php]
 [#fromarray]
 ----
 
-public fromArray($data):void
+public fromArray($data):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from an array
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -9622,24 +9963,24 @@ a|
 [#fromcollection]
 ----
 
-public fromCollection($collection):void
+public fromCollection($collection):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a Collection
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$collection`
-|
+|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 a|
 |===
 
@@ -9648,24 +9989,24 @@ a|
 [#fromcataloglazycollection]
 ----
 
-public fromCatalogLazyCollection($catalogLazyCollection):void
+public fromCatalogLazyCollection($catalogLazyCollection):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a CatalogLazyCollection
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$catalogLazyCollection`
-|
+|        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
 a|
 |===
 
@@ -9674,50 +10015,24 @@ a|
 [#fromcatalogexportresult]
 ----
 
-public fromCatalogExportResult($exportResult):void
+public fromCatalogExportResult($exportResult):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a CatalogExportResult
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$exportResult`
-|
-a|
-|===
-
-
-[source%nowrap, php]
-[#fromrawjsonlfile]
-----
-
-public fromRawJSONLFile($sourceFile):void
-
-----
-
-
-
-
-
-
-
-
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$sourceFile`
-|
+|        xref:Catalog.adoc#catalog_models_catalogexportresult[`CatalogExportResult`]
 a|
 |===
 
@@ -9726,7 +10041,7 @@ a|
 [#getchunksize]
 ----
 
-public getChunkSize():void
+public getChunkSize():int
 
 ----
 
@@ -9736,13 +10051,13 @@ public getChunkSize():void
 
 
 
-
+Get the lazy collection&#039;s chunk size
 
 [source%nowrap, php]
 [#getmime]
 ----
 
-public getMIME():void
+public getMIME():string
 
 ----
 
@@ -9752,13 +10067,13 @@ public getMIME():void
 
 
 
-
+Get the mime type of the resource returned by this converter
 
 [source%nowrap, php]
 [#getfileextension]
 ----
 
-public getFileExtension():void
+public getFileExtension():string
 
 ----
 
@@ -9768,46 +10083,46 @@ public getFileExtension():void
 
 
 
-
+Get the file extension of the resource returned by this converter
 
 [source%nowrap, php]
 [#getsourcecollection]
 ----
 
-public getSourceCollection():void
+public getSourceCollection():Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
 
 
-
-
+Get the source lazy collection
 
 [source%nowrap, php]
 [#setsettings]
 ----
 
-public setSettings($settings = []):void
+public setSettings($settings = []):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Set settings that you need to use in your converter
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$settings`
-|
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -9826,7 +10141,7 @@ public addData($data):void
 
 
 
-
+Through this a single entry of a catalog result should be added
 
 .*Parameters*
 [cols="3,1,6"]
@@ -9842,7 +10157,7 @@ a|
 [#getconvertedresult]
 ----
 
-public getConvertedResult():void
+public getConvertedResult():string
 
 ----
 
@@ -9852,7 +10167,7 @@ public getConvertedResult():void
 
 
 
-
+Converts the data that was inserted into the specific output format
 
 [source%nowrap, php]
 [#clear]
@@ -9868,13 +10183,13 @@ public clear():void
 
 
 
-
+Removes all the data that was previously added to this instance
 
 [source%nowrap, php]
 [#gettype]
 ----
 
-public getType():void
+public getType():string
 
 ----
 
@@ -9884,7 +10199,39 @@ public getType():void
 
 
 
+Returns the type of the converted result
 
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+Returns the identifier for this result converter. Has to be unique in its templates scope.
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+Returns the readable representation for this converter
 
 [[catalog_resultconverters]]
 == ResultConverters
@@ -9910,6 +10257,38 @@ Default CSV Result converter
 ===== Methods
 
 [source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#todownload]
 ----
 
@@ -9923,14 +10302,14 @@ public toDownload($resourceHandler):void
 
 
 
-
+Convert and prepare resource for download
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$resourceHandler`
-|
+|        xref:Catalog.adoc#catalog_filehandlers_resourcehandler[`ResourceHandler`]
 a|
 |===
 
@@ -9949,58 +10328,30 @@ public toMarketplace():void
 
 
 
-
-
-[source%nowrap, php]
-[#from]
-----
-
-public from($data):Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter
-
-----
-
-
-
-
-====== *Return type:*        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
-
-
-When you don&#039;t know what you have but you know what you want
-You give it almost anything and you hope
-Hope dies last
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$data`
-|
-a|
-|===
-
+Convert and prepare data for marketplace
 
 [source%nowrap, php]
 [#fromarray]
 ----
 
-public fromArray($data):void
+public fromArray($data):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from an array
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -10009,24 +10360,24 @@ a|
 [#fromcollection]
 ----
 
-public fromCollection($collection):void
+public fromCollection($collection):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a Collection
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$collection`
-|
+|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 a|
 |===
 
@@ -10035,24 +10386,24 @@ a|
 [#fromcataloglazycollection]
 ----
 
-public fromCatalogLazyCollection($catalogLazyCollection):void
+public fromCatalogLazyCollection($catalogLazyCollection):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a CatalogLazyCollection
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$catalogLazyCollection`
-|
+|        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
 a|
 |===
 
@@ -10061,50 +10412,24 @@ a|
 [#fromcatalogexportresult]
 ----
 
-public fromCatalogExportResult($exportResult):void
+public fromCatalogExportResult($exportResult):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a CatalogExportResult
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$exportResult`
-|
-a|
-|===
-
-
-[source%nowrap, php]
-[#fromrawjsonlfile]
-----
-
-public fromRawJSONLFile($sourceFile):void
-
-----
-
-
-
-
-
-
-
-
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$sourceFile`
-|
+|        xref:Catalog.adoc#catalog_models_catalogexportresult[`CatalogExportResult`]
 a|
 |===
 
@@ -10113,7 +10438,7 @@ a|
 [#getchunksize]
 ----
 
-public getChunkSize():void
+public getChunkSize():int
 
 ----
 
@@ -10123,13 +10448,13 @@ public getChunkSize():void
 
 
 
-
+Get the lazy collection&#039;s chunk size
 
 [source%nowrap, php]
 [#getmime]
 ----
 
-public getMIME():void
+public getMIME():string
 
 ----
 
@@ -10139,13 +10464,13 @@ public getMIME():void
 
 
 
-
+Get the mime type of the resource returned by this converter
 
 [source%nowrap, php]
 [#getfileextension]
 ----
 
-public getFileExtension():void
+public getFileExtension():string
 
 ----
 
@@ -10155,46 +10480,46 @@ public getFileExtension():void
 
 
 
-
+Get the file extension of the resource returned by this converter
 
 [source%nowrap, php]
 [#getsourcecollection]
 ----
 
-public getSourceCollection():void
+public getSourceCollection():Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
 
 
-
-
+Get the source lazy collection
 
 [source%nowrap, php]
 [#setsettings]
 ----
 
-public setSettings($settings = []):void
+public setSettings($settings = []):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Set settings that you need to use in your converter
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$settings`
-|
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -10213,7 +10538,7 @@ public addData($data):void
 
 
 
-
+Through this a single entry of a catalog result should be added
 
 .*Parameters*
 [cols="3,1,6"]
@@ -10229,7 +10554,7 @@ a|
 [#getconvertedresult]
 ----
 
-public getConvertedResult():void
+public getConvertedResult():string
 
 ----
 
@@ -10239,7 +10564,7 @@ public getConvertedResult():void
 
 
 
-
+Converts the data that was inserted into the specific output format
 
 [source%nowrap, php]
 [#clear]
@@ -10255,13 +10580,13 @@ public clear():void
 
 
 
-
+Removes all the data that was previously added to this instance
 
 [source%nowrap, php]
 [#gettype]
 ----
 
-public getType():void
+public getType():string
 
 ----
 
@@ -10271,7 +10596,7 @@ public getType():void
 
 
 
-
+Returns the type of the converted result
 
 
 [[catalog_defaults_jsonresultconverter]]
@@ -10293,6 +10618,38 @@ Default JSON Result converter
 ===== Methods
 
 [source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#todownload]
 ----
 
@@ -10306,14 +10663,14 @@ public toDownload($resourceHandler):void
 
 
 
-
+Convert and prepare resource for download
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$resourceHandler`
-|
+|        xref:Catalog.adoc#catalog_filehandlers_resourcehandler[`ResourceHandler`]
 a|
 |===
 
@@ -10332,58 +10689,30 @@ public toMarketplace():void
 
 
 
-
-
-[source%nowrap, php]
-[#from]
-----
-
-public from($data):Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter
-
-----
-
-
-
-
-====== *Return type:*        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
-
-
-When you don&#039;t know what you have but you know what you want
-You give it almost anything and you hope
-Hope dies last
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$data`
-|
-a|
-|===
-
+Convert and prepare data for marketplace
 
 [source%nowrap, php]
 [#fromarray]
 ----
 
-public fromArray($data):void
+public fromArray($data):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from an array
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -10392,24 +10721,24 @@ a|
 [#fromcollection]
 ----
 
-public fromCollection($collection):void
+public fromCollection($collection):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a Collection
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$collection`
-|
+|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 a|
 |===
 
@@ -10418,24 +10747,24 @@ a|
 [#fromcataloglazycollection]
 ----
 
-public fromCatalogLazyCollection($catalogLazyCollection):void
+public fromCatalogLazyCollection($catalogLazyCollection):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a CatalogLazyCollection
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$catalogLazyCollection`
-|
+|        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
 a|
 |===
 
@@ -10444,50 +10773,24 @@ a|
 [#fromcatalogexportresult]
 ----
 
-public fromCatalogExportResult($exportResult):void
+public fromCatalogExportResult($exportResult):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a CatalogExportResult
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$exportResult`
-|
-a|
-|===
-
-
-[source%nowrap, php]
-[#fromrawjsonlfile]
-----
-
-public fromRawJSONLFile($sourceFile):void
-
-----
-
-
-
-
-
-
-
-
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$sourceFile`
-|
+|        xref:Catalog.adoc#catalog_models_catalogexportresult[`CatalogExportResult`]
 a|
 |===
 
@@ -10496,7 +10799,7 @@ a|
 [#getchunksize]
 ----
 
-public getChunkSize():void
+public getChunkSize():int
 
 ----
 
@@ -10506,13 +10809,13 @@ public getChunkSize():void
 
 
 
-
+Get the lazy collection&#039;s chunk size
 
 [source%nowrap, php]
 [#getmime]
 ----
 
-public getMIME():void
+public getMIME():string
 
 ----
 
@@ -10522,13 +10825,13 @@ public getMIME():void
 
 
 
-
+Get the mime type of the resource returned by this converter
 
 [source%nowrap, php]
 [#getfileextension]
 ----
 
-public getFileExtension():void
+public getFileExtension():string
 
 ----
 
@@ -10538,46 +10841,46 @@ public getFileExtension():void
 
 
 
-
+Get the file extension of the resource returned by this converter
 
 [source%nowrap, php]
 [#getsourcecollection]
 ----
 
-public getSourceCollection():void
+public getSourceCollection():Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
 
 
-
-
+Get the source lazy collection
 
 [source%nowrap, php]
 [#setsettings]
 ----
 
-public setSettings($settings = []):void
+public setSettings($settings = []):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Set settings that you need to use in your converter
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$settings`
-|
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -10596,7 +10899,7 @@ public addData($data):void
 
 
 
-
+Through this a single entry of a catalog result should be added
 
 .*Parameters*
 [cols="3,1,6"]
@@ -10612,7 +10915,7 @@ a|
 [#getconvertedresult]
 ----
 
-public getConvertedResult():void
+public getConvertedResult():string
 
 ----
 
@@ -10622,7 +10925,7 @@ public getConvertedResult():void
 
 
 
-
+Converts the data that was inserted into the specific output format
 
 [source%nowrap, php]
 [#clear]
@@ -10638,13 +10941,13 @@ public clear():void
 
 
 
-
+Removes all the data that was previously added to this instance
 
 [source%nowrap, php]
 [#gettype]
 ----
 
-public getType():void
+public getType():string
 
 ----
 
@@ -10654,7 +10957,7 @@ public getType():void
 
 
 
-
+Returns the type of the converted result
 
 
 [[catalog_defaults_txtresultconverter]]
@@ -10676,6 +10979,64 @@ Default TXT Result converter
 ===== Methods
 
 [source%nowrap, php]
+[#from]
+----
+
+public from($data):Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#todownload]
 ----
 
@@ -10689,14 +11050,14 @@ public toDownload($resourceHandler):void
 
 
 
-
+Convert and prepare resource for download
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$resourceHandler`
-|
+|        xref:Catalog.adoc#catalog_filehandlers_resourcehandler[`ResourceHandler`]
 a|
 |===
 
@@ -10715,58 +11076,30 @@ public toMarketplace():void
 
 
 
-
-
-[source%nowrap, php]
-[#from]
-----
-
-public from($data):Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter
-
-----
-
-
-
-
-====== *Return type:*        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
-
-
-When you don&#039;t know what you have but you know what you want
-You give it almost anything and you hope
-Hope dies last
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$data`
-|
-a|
-|===
-
+Convert and prepare data for marketplace
 
 [source%nowrap, php]
 [#fromarray]
 ----
 
-public fromArray($data):void
+public fromArray($data):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from an array
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -10775,24 +11108,24 @@ a|
 [#fromcollection]
 ----
 
-public fromCollection($collection):void
+public fromCollection($collection):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a Collection
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$collection`
-|
+|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 a|
 |===
 
@@ -10801,24 +11134,24 @@ a|
 [#fromcataloglazycollection]
 ----
 
-public fromCatalogLazyCollection($catalogLazyCollection):void
+public fromCatalogLazyCollection($catalogLazyCollection):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a CatalogLazyCollection
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$catalogLazyCollection`
-|
+|        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
 a|
 |===
 
@@ -10827,50 +11160,24 @@ a|
 [#fromcatalogexportresult]
 ----
 
-public fromCatalogExportResult($exportResult):void
+public fromCatalogExportResult($exportResult):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a CatalogExportResult
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$exportResult`
-|
-a|
-|===
-
-
-[source%nowrap, php]
-[#fromrawjsonlfile]
-----
-
-public fromRawJSONLFile($sourceFile):void
-
-----
-
-
-
-
-
-
-
-
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$sourceFile`
-|
+|        xref:Catalog.adoc#catalog_models_catalogexportresult[`CatalogExportResult`]
 a|
 |===
 
@@ -10879,7 +11186,7 @@ a|
 [#getchunksize]
 ----
 
-public getChunkSize():void
+public getChunkSize():int
 
 ----
 
@@ -10889,13 +11196,13 @@ public getChunkSize():void
 
 
 
-
+Get the lazy collection&#039;s chunk size
 
 [source%nowrap, php]
 [#getmime]
 ----
 
-public getMIME():void
+public getMIME():string
 
 ----
 
@@ -10905,13 +11212,13 @@ public getMIME():void
 
 
 
-
+Get the mime type of the resource returned by this converter
 
 [source%nowrap, php]
 [#getfileextension]
 ----
 
-public getFileExtension():void
+public getFileExtension():string
 
 ----
 
@@ -10921,46 +11228,46 @@ public getFileExtension():void
 
 
 
-
+Get the file extension of the resource returned by this converter
 
 [source%nowrap, php]
 [#getsourcecollection]
 ----
 
-public getSourceCollection():void
+public getSourceCollection():Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
 
 
-
-
+Get the source lazy collection
 
 [source%nowrap, php]
 [#setsettings]
 ----
 
-public setSettings($settings = []):void
+public setSettings($settings = []):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Set settings that you need to use in your converter
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$settings`
-|
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -10979,7 +11286,7 @@ public addData($data):void
 
 
 
-
+Through this a single entry of a catalog result should be added
 
 .*Parameters*
 [cols="3,1,6"]
@@ -10995,7 +11302,7 @@ a|
 [#getconvertedresult]
 ----
 
-public getConvertedResult():void
+public getConvertedResult():string
 
 ----
 
@@ -11005,7 +11312,7 @@ public getConvertedResult():void
 
 
 
-
+Converts the data that was inserted into the specific output format
 
 [source%nowrap, php]
 [#clear]
@@ -11021,13 +11328,13 @@ public clear():void
 
 
 
-
+Removes all the data that was previously added to this instance
 
 [source%nowrap, php]
 [#gettype]
 ----
 
-public getType():void
+public getType():string
 
 ----
 
@@ -11037,7 +11344,7 @@ public getType():void
 
 
 
-
+Returns the type of the converted result
 
 
 [[catalog_defaults_xmlresultconverter]]
@@ -11059,6 +11366,38 @@ Default XML Result converter
 ===== Methods
 
 [source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#todownload]
 ----
 
@@ -11072,14 +11411,14 @@ public toDownload($resourceHandler):void
 
 
 
-
+Convert and prepare resource for download
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$resourceHandler`
-|
+|        xref:Catalog.adoc#catalog_filehandlers_resourcehandler[`ResourceHandler`]
 a|
 |===
 
@@ -11098,58 +11437,30 @@ public toMarketplace():void
 
 
 
-
-
-[source%nowrap, php]
-[#from]
-----
-
-public from($data):Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter
-
-----
-
-
-
-
-====== *Return type:*        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
-
-
-When you don&#039;t know what you have but you know what you want
-You give it almost anything and you hope
-Hope dies last
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$data`
-|
-a|
-|===
-
+Convert and prepare data for marketplace
 
 [source%nowrap, php]
 [#fromarray]
 ----
 
-public fromArray($data):void
+public fromArray($data):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from an array
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$data`
-|
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -11158,24 +11469,24 @@ a|
 [#fromcollection]
 ----
 
-public fromCollection($collection):void
+public fromCollection($collection):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a Collection
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$collection`
-|
+|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 a|
 |===
 
@@ -11184,24 +11495,24 @@ a|
 [#fromcataloglazycollection]
 ----
 
-public fromCatalogLazyCollection($catalogLazyCollection):void
+public fromCatalogLazyCollection($catalogLazyCollection):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a CatalogLazyCollection
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$catalogLazyCollection`
-|
+|        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
 a|
 |===
 
@@ -11210,50 +11521,24 @@ a|
 [#fromcatalogexportresult]
 ----
 
-public fromCatalogExportResult($exportResult):void
+public fromCatalogExportResult($exportResult):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Convert from a CatalogExportResult
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$exportResult`
-|
-a|
-|===
-
-
-[source%nowrap, php]
-[#fromrawjsonlfile]
-----
-
-public fromRawJSONLFile($sourceFile):void
-
-----
-
-
-
-
-
-
-
-
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$sourceFile`
-|
+|        xref:Catalog.adoc#catalog_models_catalogexportresult[`CatalogExportResult`]
 a|
 |===
 
@@ -11262,7 +11547,7 @@ a|
 [#getchunksize]
 ----
 
-public getChunkSize():void
+public getChunkSize():int
 
 ----
 
@@ -11272,13 +11557,13 @@ public getChunkSize():void
 
 
 
-
+Get the lazy collection&#039;s chunk size
 
 [source%nowrap, php]
 [#getmime]
 ----
 
-public getMIME():void
+public getMIME():string
 
 ----
 
@@ -11288,13 +11573,13 @@ public getMIME():void
 
 
 
-
+Get the mime type of the resource returned by this converter
 
 [source%nowrap, php]
 [#getfileextension]
 ----
 
-public getFileExtension():void
+public getFileExtension():string
 
 ----
 
@@ -11304,46 +11589,46 @@ public getFileExtension():void
 
 
 
-
+Get the file extension of the resource returned by this converter
 
 [source%nowrap, php]
 [#getsourcecollection]
 ----
 
-public getSourceCollection():void
+public getSourceCollection():Plenty\Modules\Catalog\Services\Collections\CatalogLazyCollection
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_collections_cataloglazycollection[`CatalogLazyCollection`]
 
 
-
-
+Get the source lazy collection
 
 [source%nowrap, php]
 [#setsettings]
 ----
 
-public setSettings($settings = []):void
+public setSettings($settings = []):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
 
 
-
-
+Set settings that you need to use in your converter
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$settings`
-|
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -11362,7 +11647,7 @@ public addData($data):void
 
 
 
-
+Through this a single entry of a catalog result should be added
 
 .*Parameters*
 [cols="3,1,6"]
@@ -11378,7 +11663,7 @@ a|
 [#getconvertedresult]
 ----
 
-public getConvertedResult():void
+public getConvertedResult():string
 
 ----
 
@@ -11388,7 +11673,7 @@ public getConvertedResult():void
 
 
 
-
+Converts the data that was inserted into the specific output format
 
 [source%nowrap, php]
 [#clear]
@@ -11404,13 +11689,13 @@ public clear():void
 
 
 
-
+Removes all the data that was previously added to this instance
 
 [source%nowrap, php]
 [#gettype]
 ----
 
-public getType():void
+public getType():string
 
 ----
 
@@ -11420,7 +11705,7 @@ public getType():void
 
 
 
-
+Returns the type of the converted result
 
 [[catalog_templates]]
 == Templates
@@ -11659,6 +11944,13 @@ public getResultConverterClass():string
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+This will not be consumed anymore. Use getResultConverterContainer() instead.
+
+====
 
 
 
@@ -11666,6 +11958,22 @@ public getResultConverterClass():string
 
 
 
+
+[source%nowrap, php]
+[#getresultconvertercontainer]
+----
+
+public getResultConverterContainer():Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_resultconvertercontainer[`ResultConverterContainer`]
+
+
+Returns a container which contains all result converters for a given template.
 
 [source%nowrap, php]
 [#getdefaultcatalogsettings]
