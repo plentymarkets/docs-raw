@@ -299,6 +299,54 @@ public toArray()
 
 Returns this model as an array.
 
+
+[[fulfillment_datamodels_vatnumberdata]]
+==== VATNumberData
+
+The VAT number data model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\DataModels`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|type
+    |link:http://php.net/string[string^]
+    a|The VAT number type
+|value
+    |link:http://php.net/string[string^]
+    a|The VAT number value
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
 [[fulfillment_fulfillment_services]]
 ===  Services
 [[fulfillment_services_dsgvocontactaddressdataservice]]
@@ -555,4 +603,49 @@ public getDhlRetoureOnlineData():void
 
 
 Get all DHL Retoure Online configurations
+
+
+[[fulfillment_services_vatnumberservice]]
+==== VATNumberService
+
+The VATNumberService is the service for providing the correct VAT ID.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\Services`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getvatnumber]
+----
+
+public getVATNumber($orderId):Plenty\Modules\Fulfillment\DataModels\VATNumberData
+
+----
+
+
+
+
+====== *Return type:*        xref:Fulfillment.adoc#fulfillment_datamodels_vatnumberdata[`VATNumberData`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+|===
+
 
