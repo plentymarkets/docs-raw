@@ -533,7 +533,7 @@ a|
 [#download]
 ----
 
-public download($id, $hash = &quot;&quot;, $extension = &quot;csv&quot;, $public = false, $token = &quot;&quot;):array
+public download($id, $hash = &quot;&quot;, $converterKey = &quot;csv&quot;, $public = false, $token = &quot;&quot;):array
 
 ----
 
@@ -557,7 +557,7 @@ a|`$hash`
 |link:http://php.net/string[string^]
 a|
 
-a|`$extension`
+a|`$converterKey`
 |link:http://php.net/string[string^]
 a|
 
@@ -1244,6 +1244,13 @@ public getResultConverterClass():string
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+This will not be consumed anymore. Use getResultConverterContainer() instead.
+
+====
 
 
 
@@ -1264,6 +1271,22 @@ public allowsCustomFilter():bool
 
 
 
+
+
+
+
+[source%nowrap, php]
+[#getresultconvertercontainer]
+----
+
+public getResultConverterContainer():Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_resultconvertercontainer[`ResultConverterContainer`]
 
 
 
@@ -2142,6 +2165,38 @@ Converts export results
 
 
 ===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+Returns the identifier for this result converter. Has to be unique in its templates scope.
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+Returns the readable representation for this converter
 
 [source%nowrap, php]
 [#getmime]
@@ -4491,6 +4546,13 @@ public hasResultConverter():bool
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Use getResultConverterContainer() instead
+
+====
 
 
 
@@ -4507,6 +4569,13 @@ public getRuntimeConfig():Plenty\Modules\Catalog\Contracts\CatalogRuntimeConfigC
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Use getDynamicConfig() instead
+
+====
 
 
 
@@ -4523,6 +4592,13 @@ public getResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConver
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Use getResultConverterContainer() instead
+
+====
 
 
 
@@ -4786,6 +4862,22 @@ public getDefaultCatalogSettings():array
 
 
 Returns the default settings a catalog that is created through this template will contain.
+
+[source%nowrap, php]
+[#getresultconvertercontainer]
+----
+
+public getResultConverterContainer():Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_resultconvertercontainer[`ResultConverterContainer`]
+
+
+Returns the container including all registered result converters of the template
 
 [source%nowrap, php]
 [#toarray]
@@ -7992,6 +8084,13 @@ public getResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConver
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Use getResultConverterContainer() instead
+
+====
 
 
 
@@ -8024,6 +8123,13 @@ public hasResultConverter():bool
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+Use getResultConverterContainer() instead
+
+====
 
 
 
@@ -8072,6 +8178,22 @@ a|`$defaultCatalogSettings`
 |link:http://php.net/array[array^]
 a|
 |===
+
+
+[source%nowrap, php]
+[#getresultconvertercontainer]
+----
+
+public getResultConverterContainer():Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_resultconvertercontainer[`ResultConverterContainer`]
+
+
 
 
 [source%nowrap, php]
@@ -9502,6 +9624,253 @@ Rewinds resource
 [[catalog_converter]]
 == Converter
 
+[[catalog_converter_containers]]
+===  Containers
+[[catalog_containers_defaultresultconvertercontainer]]
+==== DefaultResultConverterContainer
+
+The DefaultResultConverterContainer collects all result converters for a specific template and is prefilled with all default result converters.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Converter\Containers`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addresultconverter]
+----
+
+public addResultConverter($resultConverter, $isDefault = false):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$resultConverter`
+|        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
+a|
+
+a|`$isDefault`
+|link:http://php.net/bool[bool^]
+a|Defines if the added converter will be the default converter for newly generated catalogs. If no default is provided the first registered provider will be used.
+|===
+
+
+[source%nowrap, php]
+[#getresultconverters]
+----
+
+public getResultConverters():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getresultconverterscount]
+----
+
+public getResultConvertersCount():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getresultconverter]
+----
+
+public getResultConverter($key):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getdefaultresultconverter]
+----
+
+public getDefaultResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+
+
+
+
+
+[[catalog_containers_resultconvertercontainer]]
+==== ResultConverterContainer
+
+The DefaultResultConverterContainer collects all result converters for a specific template.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Converter\Containers`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addresultconverter]
+----
+
+public addResultConverter($resultConverter, $isDefault = false):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$resultConverter`
+|        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
+a|
+
+a|`$isDefault`
+|link:http://php.net/bool[bool^]
+a|Defines if the added converter will be the default converter for newly generated catalogs. If no default is provided the first registered provider will be used.
+|===
+
+
+[source%nowrap, php]
+[#getresultconverters]
+----
+
+public getResultConverters():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getresultconverterscount]
+----
+
+public getResultConvertersCount():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getresultconverter]
+----
+
+public getResultConverter($key):Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getdefaultresultconverter]
+----
+
+public getDefaultResultConverter():Plenty\Modules\Catalog\Contracts\CatalogResultConverterContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogresultconvertercontract[`CatalogResultConverterContract`]
+
+
+
+
 [[catalog_converter_resultconverters]]
 ===  ResultConverters
 [[catalog_resultconverters_baseresultconverter]]
@@ -9832,6 +10201,38 @@ public getType():string
 
 Returns the type of the converted result
 
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+Returns the identifier for this result converter. Has to be unique in its templates scope.
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+Returns the readable representation for this converter
+
 [[catalog_resultconverters]]
 == ResultConverters
 
@@ -9854,6 +10255,38 @@ Default CSV Result converter
 
 
 ===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
 
 [source%nowrap, php]
 [#todownload]
@@ -10185,6 +10618,38 @@ Default JSON Result converter
 ===== Methods
 
 [source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#todownload]
 ----
 
@@ -10514,6 +10979,64 @@ Default TXT Result converter
 ===== Methods
 
 [source%nowrap, php]
+[#from]
+----
+
+public from($data):Plenty\Modules\Catalog\Services\Converter\ResultConverters\BaseResultConverter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_resultconverters_baseresultconverter[`BaseResultConverter`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#todownload]
 ----
 
@@ -10841,6 +11364,38 @@ Default XML Result converter
 
 
 ===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
 
 [source%nowrap, php]
 [#todownload]
@@ -11389,6 +11944,13 @@ public getResultConverterClass():string
 
 ----
 
+[WARNING]
+.Deprecated! 
+====
+
+This will not be consumed anymore. Use getResultConverterContainer() instead.
+
+====
 
 
 
@@ -11396,6 +11958,22 @@ public getResultConverterClass():string
 
 
 
+
+[source%nowrap, php]
+[#getresultconvertercontainer]
+----
+
+public getResultConverterContainer():Plenty\Modules\Catalog\Services\Converter\Containers\ResultConverterContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_containers_resultconvertercontainer[`ResultConverterContainer`]
+
+
+Returns a container which contains all result converters for a given template.
 
 [source%nowrap, php]
 [#getdefaultcatalogsettings]
