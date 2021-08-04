@@ -84,3 +84,72 @@ a|The class of the new class to get information of the widget from.
 |===
 
 
+[[mail_models]]
+== Models
+
+[[mail_models_templates]]
+===  Templates
+[[mail_templates_mailtemplateattachments]]
+==== MailTemplateAttachments
+
+The MailTemplateAttachments model. Stores the relation between
+ *     mail templates - static attachments - dynamic attachments
+
+
+
+===== Namespace
+
+`Plenty\Modules\Mail\Templates\Models\Templates`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|configId
+    |link:http://php.net/int[int^]
+    a|plenty_mail_template_base_config.id // mail template id; required
+|isStaticDoc
+    |link:http://php.net/bool[bool^]
+    a|The reference type. The following reference types are available; required
+<ul>
+     <li>0</li> // is dynamic
+   <li>1</li> // is static
+ </ul>
+|documentId
+    |link:http://php.net/int[int^]
+    a|plenty_documents.id // static attachment document id; optional FK plenty_documents
+|dynamicAttachmentId
+    |link:http://php.net/string[string^]
+    a|// dynamic attachment; optional; FK plenty_dynamic_attachments
+|createdAt
+    |
+    a|The time the attachment was created as unix timestamp
+|updatedAt
+    |
+    a|The time the attachment was last updated as unix timestamp
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
