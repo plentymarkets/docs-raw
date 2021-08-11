@@ -2199,6 +2199,22 @@ public getLabel():string
 Returns the readable representation for this converter
 
 [source%nowrap, php]
+[#getoptions]
+----
+
+public getOptions():Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
+
+
+Returns the options that can be set in the UI
+
+[source%nowrap, php]
 [#getmime]
 ----
 
@@ -8925,6 +8941,665 @@ public clearFilters():void
 
 Clears the filter array.
 
+[[catalog_contracts_ui]]
+===  UI
+[[catalog_ui_uioptioncontract]]
+==== UIOptionContract
+
+The UIOptionContract is the interface for an individual catalogue option. This interface allows you to define UI options. The options are settings in the settings menu that can be defined in the backend.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Contracts\UI`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isvisible]
+----
+
+public isVisible():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isrequired]
+----
+
+public isRequired():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdefaultvalue]
+----
+
+public getDefaultValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalues]
+----
+
+public getValues():Plenty\Modules\Catalog\Contracts\UI\UIValuesContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+
+
+
+
+[source%nowrap, php]
+[#setkey]
+----
+
+public setKey($key):Plenty\Modules\Catalog\Contracts\UI\UIOptionContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptioncontract[`UIOptionContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setlabel]
+----
+
+public setLabel($label):Plenty\Modules\Catalog\Contracts\UI\UIOptionContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptioncontract[`UIOptionContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#settype]
+----
+
+public setType($type):Plenty\Modules\Catalog\Contracts\UI\UIOptionContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptioncontract[`UIOptionContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$type`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setdefaultvalue]
+----
+
+public setDefaultValue($defaultValue):Plenty\Modules\Catalog\Contracts\UI\UIOptionContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptioncontract[`UIOptionContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$defaultValue`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvisible]
+----
+
+public setVisible($visible):Plenty\Modules\Catalog\Contracts\UI\UIOptionContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptioncontract[`UIOptionContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$visible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Catalog\Contracts\UI\UIOptionContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptioncontract[`UIOptionContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvalues]
+----
+
+public setValues($values):Plenty\Modules\Catalog\Contracts\UI\UIOptionContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptioncontract[`UIOptionContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$values`
+|        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+Get the instance as an array.
+
+
+[[catalog_ui_uioptionscontract]]
+==== UIOptionsContract
+
+The UIOptionsContract is the interface for the catalogue options. This interface allows you to handle UI options. The options are settings in the settings menu that can be defined in the backend.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Contracts\UI`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($option, $key = null):Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
+
+
+Add an option
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$option`
+|        xref:Catalog.adoc#catalog_ui_uioptioncontract[`UIOptionContract`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+Get the instance as an array.
+
+
+[[catalog_ui_uivaluecontract]]
+==== UIValueContract
+
+The UIValueContract is the interface for an individual catalogue option value. This interface allows you to define UI option values. The options are settings in the settings menu that can be defined in the backend.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Contracts\UI`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getcaption]
+----
+
+public getCaption():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalue]
+----
+
+public getValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getcolor]
+----
+
+public getColor():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#geticon]
+----
+
+public getIcon():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setcaption]
+----
+
+public setCaption($caption):Plenty\Modules\Catalog\Contracts\UI\UIValueContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluecontract[`UIValueContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$caption`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvalue]
+----
+
+public setValue($value):Plenty\Modules\Catalog\Contracts\UI\UIValueContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluecontract[`UIValueContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$value`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setcolor]
+----
+
+public setColor($color):Plenty\Modules\Catalog\Contracts\UI\UIValueContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluecontract[`UIValueContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$color`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#seticon]
+----
+
+public setIcon($icon):Plenty\Modules\Catalog\Contracts\UI\UIValueContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluecontract[`UIValueContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$icon`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+Get the instance as an array.
+
+
+[[catalog_ui_uivaluescontract]]
+==== UIValuesContract
+
+The UIValuesContract is the interface for the catalogue option values. This interface allows you to handle UI option values. The options are settings in the settings menu that can be defined in the backend.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Contracts\UI`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($value):Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
+
+
+Add a value
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$value`
+|        xref:Catalog.adoc#catalog_ui_uivaluecontract[`UIValueContract`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+Get the instance as an array.
+
 [[catalog_example]]
 == Example
 
@@ -10038,6 +10713,22 @@ a|
 
 
 [source%nowrap, php]
+[#getoptions]
+----
+
+public getOptions():Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
+
+
+Get the options
+
+[source%nowrap, php]
 [#getchunksize]
 ----
 
@@ -10284,6 +10975,22 @@ public getLabel():string
 
 
 
+
+
+
+
+[source%nowrap, php]
+[#getoptions]
+----
+
+public getOptions():Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
 
 
 
@@ -10796,6 +11503,22 @@ a|
 
 
 [source%nowrap, php]
+[#getoptions]
+----
+
+public getOptions():Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
+
+
+Get the options
+
+[source%nowrap, php]
 [#getchunksize]
 ----
 
@@ -11032,6 +11755,22 @@ public getKey():string
 
 
 
+
+
+
+
+[source%nowrap, php]
+[#getoptions]
+----
+
+public getOptions():Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
 
 
 
@@ -11398,6 +12137,22 @@ public getLabel():string
 
 
 [source%nowrap, php]
+[#getoptions]
+----
+
+public getOptions():Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
+
+
+
+
+[source%nowrap, php]
 [#todownload]
 ----
 
@@ -11706,6 +12461,3173 @@ public getType():string
 
 
 Returns the type of the converted result
+
+[[catalog_elements]]
+== Elements
+
+[[catalog_elements_base]]
+===  Base
+[[catalog_base_baseuioption]]
+==== BaseUIOption
+
+Base UI Option
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Options\Elements\Base`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdefaultvalue]
+----
+
+public getDefaultValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isvisible]
+----
+
+public isVisible():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isrequired]
+----
+
+public isRequired():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalues]
+----
+
+public getValues():Plenty\Modules\Catalog\Contracts\UI\UIValuesContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+
+
+
+
+[source%nowrap, php]
+[#setkey]
+----
+
+public setKey($key):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setlabel]
+----
+
+public setLabel($label):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#settype]
+----
+
+public setType($type):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$type`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setdefaultvalue]
+----
+
+public setDefaultValue($defaultValue):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$defaultValue`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvisible]
+----
+
+public setVisible($visible):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$visible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvalues]
+----
+
+public setValues($values):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$values`
+|        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+a|
+|===
+
+
+
+[[catalog_base_value]]
+==== Value
+
+Base UI Option value
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Elements\Base`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getcaption]
+----
+
+public getCaption():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalue]
+----
+
+public getValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getcolor]
+----
+
+public getColor():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#geticon]
+----
+
+public getIcon():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setcaption]
+----
+
+public setCaption($caption):Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Elements\Base\Value
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_value[`Value`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$caption`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvalue]
+----
+
+public setValue($value):Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Elements\Base\Value
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_value[`Value`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$value`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setcolor]
+----
+
+public setColor($color):Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Elements\Base\Value
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_value[`Value`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$color`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#seticon]
+----
+
+public setIcon($icon):Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Elements\Base\Value
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_value[`Value`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$icon`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[[catalog_elements_values]]
+===  Values
+[[catalog_values_values]]
+==== Values
+
+UI Option values container
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Options\Elements\Values`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($value):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$value`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():void
+
+----
+
+
+
+
+
+
+
+
+
+[[catalog_options]]
+== Options
+
+[[catalog_options_elements]]
+===  Elements
+[[catalog_elements_checkboxuioption]]
+==== CheckboxUIOption
+
+UI Option of type: checkbox
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Options\Elements`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdefaultvalue]
+----
+
+public getDefaultValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isvisible]
+----
+
+public isVisible():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isrequired]
+----
+
+public isRequired():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalues]
+----
+
+public getValues():Plenty\Modules\Catalog\Contracts\UI\UIValuesContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+
+
+
+
+[source%nowrap, php]
+[#setkey]
+----
+
+public setKey($key):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setlabel]
+----
+
+public setLabel($label):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#settype]
+----
+
+public setType($type):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$type`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setdefaultvalue]
+----
+
+public setDefaultValue($defaultValue):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$defaultValue`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvisible]
+----
+
+public setVisible($visible):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$visible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvalues]
+----
+
+public setValues($values):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$values`
+|        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+a|
+|===
+
+
+
+[[catalog_elements_dateuioption]]
+==== DateUIOption
+
+UI Option of type: date
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Options\Elements`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdefaultvalue]
+----
+
+public getDefaultValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isvisible]
+----
+
+public isVisible():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isrequired]
+----
+
+public isRequired():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalues]
+----
+
+public getValues():Plenty\Modules\Catalog\Contracts\UI\UIValuesContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+
+
+
+
+[source%nowrap, php]
+[#setkey]
+----
+
+public setKey($key):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setlabel]
+----
+
+public setLabel($label):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#settype]
+----
+
+public setType($type):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$type`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setdefaultvalue]
+----
+
+public setDefaultValue($defaultValue):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$defaultValue`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvisible]
+----
+
+public setVisible($visible):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$visible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvalues]
+----
+
+public setValues($values):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$values`
+|        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+a|
+|===
+
+
+
+[[catalog_elements_numberuioption]]
+==== NumberUIOption
+
+UI Option of type: number
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Options\Elements`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdefaultvalue]
+----
+
+public getDefaultValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isvisible]
+----
+
+public isVisible():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isrequired]
+----
+
+public isRequired():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalues]
+----
+
+public getValues():Plenty\Modules\Catalog\Contracts\UI\UIValuesContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+
+
+
+
+[source%nowrap, php]
+[#setkey]
+----
+
+public setKey($key):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setlabel]
+----
+
+public setLabel($label):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#settype]
+----
+
+public setType($type):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$type`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setdefaultvalue]
+----
+
+public setDefaultValue($defaultValue):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$defaultValue`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvisible]
+----
+
+public setVisible($visible):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$visible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvalues]
+----
+
+public setValues($values):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$values`
+|        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+a|
+|===
+
+
+
+[[catalog_elements_operatoruioption]]
+==== OperatorUIOption
+
+UI Option of type: operator
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Options\Elements`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdefaultvalue]
+----
+
+public getDefaultValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isvisible]
+----
+
+public isVisible():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isrequired]
+----
+
+public isRequired():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalues]
+----
+
+public getValues():Plenty\Modules\Catalog\Contracts\UI\UIValuesContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+
+
+
+
+[source%nowrap, php]
+[#setkey]
+----
+
+public setKey($key):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setlabel]
+----
+
+public setLabel($label):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#settype]
+----
+
+public setType($type):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$type`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setdefaultvalue]
+----
+
+public setDefaultValue($defaultValue):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$defaultValue`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvisible]
+----
+
+public setVisible($visible):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$visible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvalues]
+----
+
+public setValues($values):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$values`
+|        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+a|
+|===
+
+
+
+[[catalog_elements_selectuioption]]
+==== SelectUIOption
+
+UI Option of type: select
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Options\Elements`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdefaultvalue]
+----
+
+public getDefaultValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isvisible]
+----
+
+public isVisible():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isrequired]
+----
+
+public isRequired():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalues]
+----
+
+public getValues():Plenty\Modules\Catalog\Contracts\UI\UIValuesContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+
+
+
+
+[source%nowrap, php]
+[#setkey]
+----
+
+public setKey($key):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setlabel]
+----
+
+public setLabel($label):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#settype]
+----
+
+public setType($type):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$type`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setdefaultvalue]
+----
+
+public setDefaultValue($defaultValue):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$defaultValue`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvisible]
+----
+
+public setVisible($visible):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$visible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvalues]
+----
+
+public setValues($values):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$values`
+|        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+a|
+|===
+
+
+
+[[catalog_elements_textuioption]]
+==== TextUIOption
+
+UI Option of type: text
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Options\Elements`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdefaultvalue]
+----
+
+public getDefaultValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isvisible]
+----
+
+public isVisible():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isrequired]
+----
+
+public isRequired():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalues]
+----
+
+public getValues():Plenty\Modules\Catalog\Contracts\UI\UIValuesContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+
+
+
+
+[source%nowrap, php]
+[#setkey]
+----
+
+public setKey($key):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setlabel]
+----
+
+public setLabel($label):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#settype]
+----
+
+public setType($type):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$type`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setdefaultvalue]
+----
+
+public setDefaultValue($defaultValue):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$defaultValue`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvisible]
+----
+
+public setVisible($visible):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$visible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvalues]
+----
+
+public setValues($values):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$values`
+|        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+a|
+|===
+
+
+
+[[catalog_elements_toggleuioption]]
+==== ToggleUIOption
+
+UI Option of type: toggle
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Options\Elements`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdefaultvalue]
+----
+
+public getDefaultValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isvisible]
+----
+
+public isVisible():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isrequired]
+----
+
+public isRequired():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalues]
+----
+
+public getValues():Plenty\Modules\Catalog\Contracts\UI\UIValuesContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+
+
+
+
+[source%nowrap, php]
+[#setkey]
+----
+
+public setKey($key):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setlabel]
+----
+
+public setLabel($label):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#settype]
+----
+
+public setType($type):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$type`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setdefaultvalue]
+----
+
+public setDefaultValue($defaultValue):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$defaultValue`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvisible]
+----
+
+public setVisible($visible):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$visible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvalues]
+----
+
+public setValues($values):Plenty\Modules\Catalog\Services\UI\Options\Elements\Base\BaseUIOption
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_baseuioption[`BaseUIOption`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$values`
+|        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
+a|
+|===
+
+
+[[catalog_values]]
+== Values
+
+[[catalog_values_elements]]
+===  Elements
+[[catalog_elements_selectvalue]]
+==== SelectValue
+
+UI Option value of type: select
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Elements`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getcaption]
+----
+
+public getCaption():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalue]
+----
+
+public getValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getcolor]
+----
+
+public getColor():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#geticon]
+----
+
+public getIcon():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setcaption]
+----
+
+public setCaption($caption):Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Elements\Base\Value
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_value[`Value`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$caption`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setvalue]
+----
+
+public setValue($value):Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Elements\Base\Value
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_value[`Value`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$value`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setcolor]
+----
+
+public setColor($color):Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Elements\Base\Value
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_value[`Value`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$color`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#seticon]
+----
+
+public setIcon($icon):Plenty\Modules\Catalog\Services\UI\Options\Elements\Values\Elements\Base\Value
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_base_value[`Value`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$icon`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[[catalog_ui]]
+== UI
+
+[[catalog_ui_options]]
+===  Options
+[[catalog_options_uioptions]]
+==== UIOptions
+
+UI Options container
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Options`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#add]
+----
+
+public add():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():void
+
+----
+
+
+
+
+
+
+
+
 
 [[catalog_templates]]
 == Templates
