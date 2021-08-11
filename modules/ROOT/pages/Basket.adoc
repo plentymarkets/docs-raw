@@ -255,7 +255,7 @@ The BasketRepositoryContract is the interface for the basket repository. This in
 [#load]
 ----
 
-public load():Plenty\Modules\Basket\Models\Basket
+public load($forceCreate = false):Plenty\Modules\Basket\Models\Basket
 
 ----
 
@@ -266,6 +266,16 @@ public load():Plenty\Modules\Basket\Models\Basket
 
 
 Gets the shopping cart from current customer session.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$forceCreate`
+|link:http://php.net/bool[bool^]
+a|Flag to create a basket in database if not exist.
+|===
+
 
 [source%nowrap, php]
 [#save]
