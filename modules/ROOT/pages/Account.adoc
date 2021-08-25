@@ -5426,7 +5426,7 @@ public createRegion($data, $contactId = null, $accountId = null):Plenty\Modules\
 ====== *Return type:*        xref:Account.adoc#account_models_salesrepresentativeregion[`SalesRepresentativeRegion`]
 
 
-Create a region for the sales representative
+Create a region for the sales representative. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -5442,7 +5442,7 @@ a|The ID of the contact
 
 a|`$accountId`
 |link:http://php.net/int[int^]
-a|The ID of the account
+a|The ID of the company
 |===
 
 
@@ -5506,7 +5506,7 @@ Get a region by the ID
 |Name |Type |Description
 a|`$accountContactRelationId`
 |link:http://php.net/int[int^]
-a|The ID of the account contact relation
+a|The ID of the company contact relation
 |===
 
 
@@ -5524,7 +5524,7 @@ public deleteRegionById($accountContactRelationId):bool
 
 
 
-Delete a region by the ID
+Delete a region by the ID. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -5532,7 +5532,7 @@ Delete a region by the ID
 |Name |Type |Description
 a|`$accountContactRelationId`
 |link:http://php.net/int[int^]
-a|The ID of the account contact relation
+a|The ID of the company contact relation
 |===
 
 
@@ -5550,7 +5550,7 @@ public updateRegionById($accountContactRelationId, $data):Plenty\Modules\Account
 ====== *Return type:*        xref:Account.adoc#account_models_salesrepresentativeregion[`SalesRepresentativeRegion`]
 
 
-Update an existing region by the ID
+Update an existing region by the ID. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -5558,7 +5558,7 @@ Update an existing region by the ID
 |Name |Type |Description
 a|`$accountContactRelationId`
 |link:http://php.net/int[int^]
-a|The ID of the account contact relation
+a|The ID of the company contact relation
 
 a|`$data`
 |link:http://php.net/array[array^]
@@ -5580,7 +5580,7 @@ public getRegionByContactAndAccountId($contactId, $accountId):Plenty\Modules\Acc
 ====== *Return type:*        xref:Account.adoc#account_models_salesrepresentativeregion[`SalesRepresentativeRegion`]
 
 
-Get a region by contact ID and account ID
+Get a region by contact ID and company ID. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -5592,7 +5592,7 @@ a|The ID of the contact
 
 a|`$accountId`
 |link:http://php.net/int[int^]
-a|The ID of the account
+a|The ID of the company
 |===
 
 
@@ -7575,6 +7575,32 @@ The AccountContactRelationRepositoryContract is the interface for the account co
 ===== Methods
 
 [source%nowrap, php]
+[#createcompanycontactrelation]
+----
+
+public createCompanyContactRelation($companyContactRelation):Plenty\Modules\Account\Models\AccountContactRelation
+
+----
+
+
+
+
+====== *Return type:*        xref:Account.adoc#account_models_accountcontactrelation[`AccountContactRelation`]
+
+
+Creates a company contact relation. The ID of the account contact relation must be specified. An account is equivalent to a company.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$companyContactRelation`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#findaccountcontactrelationbyid]
 ----
 
@@ -7588,7 +7614,7 @@ public findAccountContactRelationById($accountContactRelation):Plenty\Modules\Ac
 ====== *Return type:*        xref:Account.adoc#account_models_accountcontactrelation[`AccountContactRelation`]
 
 
-Gets an account contact releation. The ID of the account contact relation must be specified.
+Gets a company contact relation. The ID of the account contact relation must be specified. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -7596,7 +7622,7 @@ Gets an account contact releation. The ID of the account contact relation must b
 |Name |Type |Description
 a|`$accountContactRelation`
 |link:http://php.net/int[int^]
-a|The ID of the account contact relation
+a|The ID of the company contact relation
 |===
 
 
@@ -7614,7 +7640,7 @@ public deleteAccountContactRelation($accountContactRelationId):bool
 
 
 
-Deletes an account contact relation. The ID of the account contact relation must be specified.
+Deletes a company contact relation. The ID of the account contact relation must be specified. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -7622,7 +7648,7 @@ Deletes an account contact relation. The ID of the account contact relation must
 |Name |Type |Description
 a|`$accountContactRelationId`
 |link:http://php.net/int[int^]
-a|The ID of the account contact relation
+a|The ID of the company contact relation
 |===
 
 
@@ -7659,7 +7685,7 @@ public createAccount($data):Plenty\Modules\Account\Models\Account
 ====== *Return type:*        xref:Account.adoc#account_models_account[`Account`]
 
 
-Creates a new account and returns it.
+Creates a new company and returns it. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -7667,7 +7693,7 @@ Creates a new account and returns it.
 |Name |Type |Description
 a|`$data`
 |link:http://php.net/array[array^]
-a|The account data as associative array
+a|The company data as associative array
 |===
 
 
@@ -7685,7 +7711,7 @@ public updateAccount($data, $accountId):Plenty\Modules\Account\Models\Account
 ====== *Return type:*        xref:Account.adoc#account_models_account[`Account`]
 
 
-Updates an existing account and returns it. The ID of the account must be specified.
+Updates an existing company and returns it. The ID of the company must be specified. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -7693,11 +7719,11 @@ Updates an existing account and returns it. The ID of the account must be specif
 |Name |Type |Description
 a|`$data`
 |link:http://php.net/array[array^]
-a|The account data as associative array
+a|The company data as associative array
 
 a|`$accountId`
 |link:http://php.net/int[int^]
-a|The ID of the account
+a|The ID of the company
 |===
 
 
@@ -7715,7 +7741,7 @@ public deleteAccount($accountId):bool
 
 
 
-Deletes an account. The ID of the account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+Deletes a company. The ID of the company must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -7723,7 +7749,7 @@ Deletes an account. The ID of the account must be specified. Returns `true` if d
 |Name |Type |Description
 a|`$accountId`
 |link:http://php.net/int[int^]
-a|The ID of the account
+a|The ID of the company
 |===
 
 
@@ -7741,7 +7767,7 @@ public findAccountById($accountId):Plenty\Modules\Account\Models\Account
 ====== *Return type:*        xref:Account.adoc#account_models_account[`Account`]
 
 
-Gets an account. The ID of the account must be specified.
+Gets a company. The ID of the company must be specified. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -7749,7 +7775,7 @@ Gets an account. The ID of the account must be specified.
 |Name |Type |Description
 a|`$accountId`
 |link:http://php.net/int[int^]
-a|The ID of the account
+a|The ID of the company
 |===
 
 
@@ -7767,7 +7793,7 @@ public allAccounts($columns = [], $perPage = 50):Illuminate\Database\Eloquent\Co
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
 
 
-Returns a collection of all accounts.
+Returns a collection of all companies. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -7787,7 +7813,7 @@ a|Optional: The number of objects per page (Default: 50).
 [#allaccountspaginated]
 ----
 
-public allAccountsPaginated($columns = [], $page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult
+public allAccountsPaginated($columns = [], $page = 1, $itemsPerPage = 50, $with = [], $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
@@ -7797,7 +7823,7 @@ public allAccountsPaginated($columns = [], $page = 1, $itemsPerPage = 50, $with 
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
 
 
-Returns a collection of all accounts.
+Returns a collection of all companies. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -7818,6 +7844,14 @@ a|Optional: The number of objects per page (Default: 50).
 a|`$with`
 |link:http://php.net/array[array^]
 a|Optional: The relationships that should be eager loaded.
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|Optional: The field to be sorted (Default: id).
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|Optional: The order for sorting (Default: desc).
 |===
 
 
@@ -7835,7 +7869,7 @@ public getContactsOfAccount($accountId):Illuminate\Database\Eloquent\Collection
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
 
 
-Returns a collection of contacts that belong to the account.
+Returns a collection of contacts that belong to the company. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -7843,7 +7877,49 @@ Returns a collection of contacts that belong to the account.
 |Name |Type |Description
 a|`$accountId`
 |link:http://php.net/int[int^]
-a|The ID of the account
+a|The ID of the company
+|===
+
+
+[source%nowrap, php]
+[#getcontactsofaccountpaginated]
+----
+
+public getContactsOfAccountPaginated($accountId, $page = 1, $itemsPerPage = 25, $sortBy = &quot;id&quot;, $sortOrder = &quot;asc&quot;):Illuminate\Database\Eloquent\Collection
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_eloquent_collection[`Collection`]
+
+
+Returns a collection of contacts that belong to the company. An account is equivalent to a company.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$accountId`
+|link:http://php.net/int[int^]
+a|The ID of the company
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|Optional: The number of the page (Default: 1)
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|Optional: The number of objects per page (Default: 25)
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|Optional: The contact field to be sorted (Default: id).
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|Optional: The order for sorting (Default: asc).
 |===
 
 
@@ -7861,7 +7937,7 @@ public saveAccount($data = []):void
 
 
 
-Creates a new or updates an existing account.
+Creates a new or updates an existing company. An account is equivalent to a company.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -7869,7 +7945,7 @@ Creates a new or updates an existing account.
 |Name |Type |Description
 a|`$data`
 |link:http://php.net/array[array^]
-a|The account data as associative array
+a|The company data as associative array
 |===
 
 
