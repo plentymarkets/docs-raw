@@ -1173,6 +1173,73 @@ public getBasketItem():array
 
 Get basket item data used to generate the order item from.
 
+[source%nowrap, php]
+[#getincompletestatus]
+----
+
+public getIncompleteStatus():bool
+
+----
+
+
+
+
+
+
+
+Get preview status for current event.
+
+
+[[webshop_events_beforebasketitemtoorderitem]]
+==== BeforeBasketItemToOrderItem
+
+Event for receiving the basket item before transformed to an order item.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Webshop\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getincompletestatus]
+----
+
+public getIncompleteStatus():bool
+
+----
+
+
+
+
+
+
+
+Get preview status for current event.
+
+[source%nowrap, php]
+[#getbasketitem]
+----
+
+public getBasketItem():Plenty\Modules\Basket\Models\BasketItem
+
+----
+
+
+
+
+====== *Return type:*        xref:Basket.adoc#basket_models_basketitem[`BasketItem`]
+
+
+The shopping cart item that has changed.
+
 
 [[webshop_events_validatevatnumber]]
 ==== ValidateVatNumber
@@ -7281,7 +7348,7 @@ a|Id of the original order
 [#switchpaymentmethodfororder]
 ----
 
-public switchPaymentMethodForOrder($orderId, $paymentMethodId):Plenty\Modules\Order\Models\Order
+public switchPaymentMethodForOrder($orderId, $paymentMethodId, $accessKey = &quot;&quot;):Plenty\Modules\Order\Models\Order
 
 ----
 
@@ -7304,6 +7371,10 @@ a|The id of the order.
 a|`$paymentMethodId`
 |link:http://php.net/int[int^]
 a|The id of the payment method which should be switched to.
+
+a|`$accessKey`
+|link:http://php.net/string[string^]
+a|The access key must be compatible with order id.
 |===
 
 
