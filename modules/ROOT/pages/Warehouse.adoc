@@ -957,7 +957,7 @@ Get, create, update and delete warehouse locations
 [#getwarehouselocation]
 ----
 
-public getWarehouseLocation($warehouseLocation):Plenty\Modules\Warehouse\Models\WarehouseLocation
+public getWarehouseLocation($warehouseLocation, $with = []):Plenty\Modules\Warehouse\Models\WarehouseLocation
 
 ----
 
@@ -975,6 +975,10 @@ Get a warehouse location
 |Name |Type |Description
 a|`$warehouseLocation`
 |link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -1535,6 +1539,9 @@ The warehouse location model.
 |warehouseLocationLevel
     |        xref:Warehouse.adoc#warehouse_models_warehouselocationlevel[`WarehouseLocationLevel`]
     a|The level from warehouse location.
+|lastFinishedInventory
+    |        xref:Warehouse.adoc#warehouse_models_warehouselocationinventory[`WarehouseLocationInventory`]
+    a|The last finished warehouse location inventory.
 |===
 
 
@@ -1658,15 +1665,21 @@ The warehouse location inventory model.
 |id
     |link:http://php.net/int[int^]
     a|The ID of the warehouse location
-|user_id
+|userId
     |link:http://php.net/int[int^]
     a|The user ID of the warehouse location
+|user_id
+    |link:http://php.net/int[int^]
+    a|deprecated - use userID instead
 |status
     |link:http://php.net/int[int^]
     a|The status of the warehouse location inventory
+|warehouseLocationId
+    |link:http://php.net/int[int^]
+    a|The  warehouse location ID
 |warehouse_location
     |link:http://php.net/int[int^]
-    a|The  warehouse location
+    a|deprecated - use WarehouseLocationId
 |createdAt
     |
     a|The date when the warehouse location inventory was created
