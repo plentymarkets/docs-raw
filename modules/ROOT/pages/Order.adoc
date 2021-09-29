@@ -7945,7 +7945,7 @@ public getShippingInformationByOrderId($orderId):Plenty\Modules\Order\Shipping\I
 ====== *Return type:*        xref:Order.adoc#order_models_shippinginformation[`ShippingInformation`]
 
 
-Get Shipping Information by an order ID
+Get Shipping Information by an order ID.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -7954,6 +7954,32 @@ Get Shipping Information by an order ID
 a|`$orderId`
 |link:http://php.net/int[int^]
 a|The ID of the Order
+|===
+
+
+[source%nowrap, php]
+[#getshippingexportlabelbyorderid]
+----
+
+public getShippingExportLabelByOrderId($orderId):void
+
+----
+
+
+
+
+
+
+
+Get export label for an order ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|The ID of the order
 |===
 
 
@@ -7972,6 +7998,32 @@ public getOrdersShippingInformation($searchParams):array
 
 
 Get all the orders with their shipping information
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$searchParams`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#listordersshippinginformation]
+----
+
+public listOrdersShippingInformation($searchParams):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Get all the orders with their shipping information in a paginated form
 
 .*Parameters*
 [cols="3,1,6"]
@@ -10402,7 +10454,7 @@ a|
 [#getorderreturns]
 ----
 
-public getOrderReturns($orderId, $with = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
+public getOrderReturns($orderId, $with = [], $page = 1, $itemsPerPage = 50, $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
@@ -10433,6 +10485,14 @@ a|
 a|`$itemsPerPage`
 |link:http://php.net/int[int^]
 a|
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|[optional, default=id]
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|[optional, default=desc]
 |===
 
 
@@ -10440,7 +10500,7 @@ a|
 [#getorderreturnsbyreturnsorderid]
 ----
 
-public getOrderReturnsByReturnsOrderId($returnsOrderId, $with = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
+public getOrderReturnsByReturnsOrderId($returnsOrderId, $with = [], $page = 1, $itemsPerPage = 50, $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
@@ -10470,6 +10530,14 @@ a|
 
 a|`$itemsPerPage`
 |link:http://php.net/int[int^]
+a|
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
 a|
 |===
 
@@ -23605,6 +23673,9 @@ The model of the order settings.
     a|
 |cancelStatusTo
     |link:http://php.net/float[float^]
+    a|
+|orderItemPrefixes
+    |link:http://php.net/array[array^]
     a|
 |===
 

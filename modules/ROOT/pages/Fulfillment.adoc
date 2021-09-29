@@ -250,6 +250,198 @@ Returns this model as an array.
 [[fulfillment_fulfillment]]
 == Fulfillment
 
+[[fulfillment_fulfillment_contracts]]
+===  Contracts
+[[fulfillment_contracts_shippingproviderconfigformcontract]]
+==== ShippingProviderConfigFormContract
+
+Add fields to the shipping provider config form.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#adddatefield]
+----
+
+public addDateField($dateField):void
+
+----
+
+
+
+
+
+
+
+Add a shipping provider date field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$dateField`
+|        xref:Fulfillment.adoc#fulfillment_configform_datefield[`DateField`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addtimefield]
+----
+
+public addTimeField($timeField):void
+
+----
+
+
+
+
+
+
+
+Add a shipping provider time field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$timeField`
+|        xref:Fulfillment.adoc#fulfillment_configform_timefield[`TimeField`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addinputfield]
+----
+
+public addInputField($inputField):void
+
+----
+
+
+
+
+
+
+
+Add a shipping provider input field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$inputField`
+|        xref:Fulfillment.adoc#fulfillment_configform_inputfield[`InputField`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addcheckboxfield]
+----
+
+public addCheckboxField($checkboxField):void
+
+----
+
+
+
+
+
+
+
+Add a shipping provider checkbox field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$checkboxField`
+|        xref:Fulfillment.adoc#fulfillment_configform_checkboxfield[`CheckboxField`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addselectboxfield]
+----
+
+public addSelectboxField($selectboxField):void
+
+----
+
+
+
+
+
+
+
+Add a shipping provider selectbox field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$selectboxField`
+|        xref:Fulfillment.adoc#fulfillment_configform_selectboxfield[`SelectboxField`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addhyperlinkfield]
+----
+
+public addHyperlinkField($hyperlinkField):void
+
+----
+
+
+
+
+
+
+
+Add a shipping provider hyperlink field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hyperlinkField`
+|        xref:Fulfillment.adoc#fulfillment_configform_hyperlinkfield[`HyperlinkField`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getconfigfields]
+----
+
+public getConfigFields():array
+
+----
+
+
+
+
+
+
+
+Get the list with the config fields
+
 [[fulfillment_fulfillment_datamodels]]
 ===  DataModels
 [[fulfillment_datamodels_dsgvocontactdata]]
@@ -605,6 +797,197 @@ public getDhlRetoureOnlineData():void
 Get all DHL Retoure Online configurations
 
 
+[[fulfillment_services_shippingproviderconfigformservice]]
+==== ShippingProviderConfigFormService
+
+The ShippingProviderConfigFormService is the service for creating the config form for a shipping provider.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\Services`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#adddatefield]
+----
+
+public addDateField($dateField):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$dateField`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#addtimefield]
+----
+
+public addTimeField($timeField):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$timeField`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#addinputfield]
+----
+
+public addInputField($inputField):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$inputField`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#addcheckboxfield]
+----
+
+public addCheckboxField($checkboxField):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$checkboxField`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#addselectboxfield]
+----
+
+public addSelectboxField($selectboxField):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$selectboxField`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#addhyperlinkfield]
+----
+
+public addHyperlinkField($hyperlinkField):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hyperlinkField`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getconfigfields]
+----
+
+public getConfigFields():void
+
+----
+
+
+
+
+
+
+
+
+
+
 [[fulfillment_services_vatnumberservice]]
 ==== VATNumberService
 
@@ -648,4 +1031,464 @@ a|`$orderId`
 a|
 |===
 
+
+[[fulfillment_datamodels]]
+== DataModels
+
+[[fulfillment_datamodels_configform]]
+===  ConfigForm
+[[fulfillment_configform_checkboxfield]]
+==== CheckboxField
+
+The checkbox field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|label
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|value
+    |link:http://php.net/bool[bool^]
+    a|The value of the field
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the field
+|isVisible
+    |link:http://php.net/bool[bool^]
+    a|The visibility of the form on the config form
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[fulfillment_configform_datefield]]
+==== DateField
+
+The date field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|label
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|value
+    |
+    a|The value of the field
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the field
+|isVisible
+    |link:http://php.net/bool[bool^]
+    a|The visibility of the form on the config form
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[fulfillment_configform_formfield]]
+==== FormField
+
+The form field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|label
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the field
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the field
+|isVisible
+    |link:http://php.net/bool[bool^]
+    a|The visibility of the form on the config form
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[fulfillment_configform_hyperlinkfield]]
+==== HyperlinkField
+
+The hyperlink field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|label
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the field
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the field
+|url
+    |link:http://php.net/string[string^]
+    a|The url of the field
+|isVisible
+    |link:http://php.net/bool[bool^]
+    a|The visibility of the form on the config form
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[fulfillment_configform_inputfield]]
+==== InputField
+
+The input field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|label
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the field
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the field
+|isVisible
+    |link:http://php.net/bool[bool^]
+    a|The visibility of the form on the config form
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[fulfillment_configform_selectboxfield]]
+==== SelectboxField
+
+The selectbox field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|label
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the field
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the field
+|selectBoxValues
+    |link:http://php.net/array[array^]
+    a|The selectbox values of the field
+|isVisible
+    |link:http://php.net/bool[bool^]
+    a|The visibility of the form on the config form
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[fulfillment_configform_selectboxvalue]]
+==== SelectboxValue
+
+The selectbox value model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|caption
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|value
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|translateCaption
+    |link:http://php.net/bool[bool^]
+    a|The option to translate caption, default value is true
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[fulfillment_configform_timefield]]
+==== TimeField
+
+The time field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|label
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the field
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the field
+|isVisible
+    |link:http://php.net/bool[bool^]
+    a|The visibility of the form on the config form
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
 
