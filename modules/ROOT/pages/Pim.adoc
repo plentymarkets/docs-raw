@@ -5,6 +5,6255 @@
 = Plentymarkets interface documentation
 
 
+[[pim_variation]]
+== Variation
+
+[[pim_variation_contracts]]
+===  Contracts
+[[pim_contracts_exporttypecontract]]
+==== ExportTypeContract
+
+The export type to load variation data through the catalogue. This should not be extended, instead just consume the constant when registering a template.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Contracts`
+
+
+
+
+
+[[pim_variation_filters]]
+===  Filters
+[[pim_filters_defaultvariationfilterbuildercontainer]]
+==== DefaultVariationFilterBuilderContainer
+
+Default variation filter builder container. Contains all available filter builders.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addfilterbuilder]
+----
+
+public addFilterBuilder($filterBuilder):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterBuilder`
+|        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontract[`CatalogFilterBuilderContract`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilterbuilders]
+----
+
+public getFilterBuilders():array
+
+----
+
+
+
+
+
+
+
+
+
+
+[[pim_filters_filterbuilder]]
+==== FilterBuilder
+
+Used to represent the base of all filters in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be filled by the specified values in a catalog. It should be used to provide
+the necessary manipulation so the filter that is returned by getFilter can be consumed by the export.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):void
+
+----
+
+
+
+
+
+
+
+Returns the filter that will be given to the export
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+Returns the UI representation of the filter
+
+
+[[pim_filters_filterbuilderfactory]]
+==== FilterBuilderFactory
+
+This factory provides methods to retrieve all available catalog filter builders.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#variationhasatleastoneavailability]
+----
+
+public variationHasAtLeastOneAvailability():Plenty\Modules\Pim\Catalog\Variation\Filters\Availability\VariationHasAtLeastOneAvailability
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_availability_variationhasatleastoneavailability[`VariationHasAtLeastOneAvailability`]
+
+
+
+
+[source%nowrap, php]
+[#variationhasatleastonebundletype]
+----
+
+public variationHasAtLeastOneBundleType():Plenty\Modules\Pim\Catalog\Variation\Filters\BundleType\VariationHasAtLeastOneBundleType
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_bundletype_variationhasatleastonebundletype[`VariationHasAtLeastOneBundleType`]
+
+
+
+
+[source%nowrap, php]
+[#variationisinatleastonecategory]
+----
+
+public variationIsInAtLeastOneCategory():Plenty\Modules\Pim\Catalog\Variation\Filters\Category\VariationIsInAtLeastOneCategory
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_category_variationisinatleastonecategory[`VariationIsInAtLeastOneCategory`]
+
+
+
+
+[source%nowrap, php]
+[#variationisincategories]
+----
+
+public variationIsInCategories():Plenty\Modules\Pim\Catalog\Variation\Filters\Category\VariationIsInCategories
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_category_variationisincategories[`VariationIsInCategories`]
+
+
+
+
+[source%nowrap, php]
+[#variationhasatleastoneclient]
+----
+
+public variationHasAtLeastOneClient():Plenty\Modules\Pim\Catalog\Variation\Filters\Client\VariationHasAtLeastOneClient
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_client_variationhasatleastoneclient[`VariationHasAtLeastOneClient`]
+
+
+
+
+[source%nowrap, php]
+[#variationhasclients]
+----
+
+public variationHasClients():Plenty\Modules\Pim\Catalog\Variation\Filters\Client\VariationHasClients
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_client_variationhasclients[`VariationHasClients`]
+
+
+
+
+[source%nowrap, php]
+[#variationhasimage]
+----
+
+public variationHasImage():Plenty\Modules\Pim\Catalog\Variation\Filters\Image\VariationHasImage
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_image_variationhasimage[`VariationHasImage`]
+
+
+
+
+[source%nowrap, php]
+[#itembelongstoatleastoneamazonflatfile]
+----
+
+public itemBelongsToAtLeastOneAmazonFlatFile():Plenty\Modules\Pim\Catalog\Variation\Filters\Item\ItemBelongsToAtLeastOneAmazonFlatFile
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_item_itembelongstoatleastoneamazonflatfile[`ItemBelongsToAtLeastOneAmazonFlatFile`]
+
+
+
+
+[source%nowrap, php]
+[#itemcreatedat]
+----
+
+public itemCreatedAt():Plenty\Modules\Pim\Catalog\Variation\Filters\Item\ItemCreatedAt
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_item_itemcreatedat[`ItemCreatedAt`]
+
+
+
+
+[source%nowrap, php]
+[#itemhasatleastoneflagone]
+----
+
+public itemHasAtLeastOneFlagOne():Plenty\Modules\Pim\Catalog\Variation\Filters\Item\ItemHasAtLeastOneFlagOne
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_item_itemhasatleastoneflagone[`ItemHasAtLeastOneFlagOne`]
+
+
+
+
+[source%nowrap, php]
+[#itemhasatleastoneflagtwo]
+----
+
+public itemHasAtLeastOneFlagTwo():Plenty\Modules\Pim\Catalog\Variation\Filters\Item\ItemHasAtLeastOneFlagTwo
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_item_itemhasatleastoneflagtwo[`ItemHasAtLeastOneFlagTwo`]
+
+
+
+
+[source%nowrap, php]
+[#itemhasatleastoneid]
+----
+
+public itemHasAtLeastOneId():Plenty\Modules\Pim\Catalog\Variation\Filters\Item\ItemHasAtLeastOneId
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_item_itemhasatleastoneid[`ItemHasAtLeastOneId`]
+
+
+
+
+[source%nowrap, php]
+[#itemistype]
+----
+
+public itemIsType():Plenty\Modules\Pim\Catalog\Variation\Filters\Item\ItemIsType
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_item_itemistype[`ItemIsType`]
+
+
+
+
+[source%nowrap, php]
+[#itemupdatedat]
+----
+
+public itemUpdatedAt():Plenty\Modules\Pim\Catalog\Variation\Filters\Item\ItemUpdatedAt
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_item_itemupdatedat[`ItemUpdatedAt`]
+
+
+
+
+[source%nowrap, php]
+[#itemhasatleastonemanufacturer]
+----
+
+public itemHasAtLeastOneManufacturer():Plenty\Modules\Pim\Catalog\Variation\Filters\Manufacturer\ItemHasAtLeastOneManufacturer
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_manufacturer_itemhasatleastonemanufacturer[`ItemHasAtLeastOneManufacturer`]
+
+
+
+
+[source%nowrap, php]
+[#variationisvisibleforatleastonemarket]
+----
+
+public variationIsVisibleForAtLeastOneMarket():Plenty\Modules\Pim\Catalog\Variation\Filters\Markets\VariationIsVisibleForAtLeastOneMarket
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_markets_variationisvisibleforatleastonemarket[`VariationIsVisibleForAtLeastOneMarket`]
+
+
+
+
+[source%nowrap, php]
+[#variationisvisibleformarkets]
+----
+
+public variationIsVisibleForMarkets():Plenty\Modules\Pim\Catalog\Variation\Filters\Markets\VariationIsVisibleForMarkets
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_markets_variationisvisibleformarkets[`VariationIsVisibleForMarkets`]
+
+
+
+
+[source%nowrap, php]
+[#variationhasatleastonepropertyselection]
+----
+
+public variationHasAtLeastOnePropertySelection():Plenty\Modules\Pim\Catalog\Variation\Filters\Property\VariationHasAtLeastOnePropertySelection
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_property_variationhasatleastonepropertyselection[`VariationHasAtLeastOnePropertySelection`]
+
+
+
+
+[source%nowrap, php]
+[#variationhaspropertyselections]
+----
+
+public variationHasPropertySelections():Plenty\Modules\Pim\Catalog\Variation\Filters\Property\VariationHasPropertySelections
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_property_variationhaspropertyselections[`VariationHasPropertySelections`]
+
+
+
+
+[source%nowrap, php]
+[#variationhassku]
+----
+
+public variationHasSku():Plenty\Modules\Pim\Catalog\Variation\Filters\Sku\VariationHasSku
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_sku_variationhassku[`VariationHasSku`]
+
+
+
+
+[source%nowrap, php]
+[#variationhasatleastonetag]
+----
+
+public variationHasAtLeastOneTag():Plenty\Modules\Pim\Catalog\Variation\Filters\Tag\VariationHasAtLeastOneTag
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_tag_variationhasatleastonetag[`VariationHasAtLeastOneTag`]
+
+
+
+
+[source%nowrap, php]
+[#variationhastags]
+----
+
+public variationHasTags():Plenty\Modules\Pim\Catalog\Variation\Filters\Tag\VariationHasTags
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_tag_variationhastags[`VariationHasTags`]
+
+
+
+
+[source%nowrap, php]
+[#variationcreatedat]
+----
+
+public variationCreatedAt():Plenty\Modules\Pim\Catalog\Variation\Filters\Variation\VariationCreatedAt
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_variationcreatedat[`VariationCreatedAt`]
+
+
+
+
+[source%nowrap, php]
+[#variationhaschildren]
+----
+
+public variationHasChildren():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#variationisactive]
+----
+
+public variationIsActive():Plenty\Modules\Pim\Catalog\Variation\Filters\Variation\VariationIsActive
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_variationisactive[`VariationIsActive`]
+
+
+
+
+[source%nowrap, php]
+[#variationismain]
+----
+
+public variationIsMain():Plenty\Modules\Pim\Catalog\Variation\Filters\Variation\VariationIsMain
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_variationismain[`VariationIsMain`]
+
+
+
+
+[source%nowrap, php]
+[#variationupdatedat]
+----
+
+public variationUpdatedAt():Plenty\Modules\Pim\Catalog\Variation\Filters\Variation\VariationUpdatedAt
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_variationupdatedat[`VariationUpdatedAt`]
+
+
+
+
+[[pim_filters]]
+== Filters
+
+[[pim_filters_availability]]
+===  Availability
+[[pim_availability_variationhasatleastoneavailability]]
+==== VariationHasAtLeastOneAvailability
+
+Used to represent the VariationHasAtLeastOneAvailability filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Availability`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\VariationBaseFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_variationbasefilter[`VariationBaseFilter`]
+
+
+Will return a VariationBaseFilter if at least one availability is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setavailabilities]
+----
+
+public setAvailabilities($availabilities):Plenty\Modules\Pim\Catalog\Variation\Filters\Availability
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_availability[`Availability`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$availabilities`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addavailability]
+----
+
+public addAvailability($availabilitiy):Plenty\Modules\Pim\Catalog\Variation\Filters\Availability
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_availability[`Availability`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$availabilitiy`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[[pim_filters_bundletype]]
+===  BundleType
+[[pim_bundletype_variationhasatleastonebundletype]]
+==== VariationHasAtLeastOneBundleType
+
+Used to represent the hasBundleType filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\BundleType`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\VariationBundleFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_variationbundlefilter[`VariationBundleFilter`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setbundletypes]
+----
+
+public setBundleTypes($bundleTypes):Plenty\Modules\Pim\Catalog\Variation\Filters\BundleType
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_bundletype[`BundleType`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$bundleTypes`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addbundletype]
+----
+
+public addBundleType($bundleType):Plenty\Modules\Pim\Catalog\Variation\Filters\BundleType
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_bundletype[`BundleType`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$bundleType`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[[pim_filters_category]]
+===  Category
+[[pim_category_variationisinacategory]]
+==== VariationIsInACategory
+
+Used to represent the IsInACategory filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Category`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\CategoryFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_categoryfilter[`CategoryFilter`]
+
+
+Will return a CategoryFilter if a category id is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setshouldbeinacategory]
+----
+
+public setShouldBeInACategory($shouldBeInACategory):Plenty\Modules\Pim\Catalog\Variation\Filters\Category
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_category[`Category`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$shouldBeInACategory`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_category_variationisinatleastonecategory]]
+==== VariationIsInAtLeastOneCategory
+
+Used to represent the isInAtLeastOneCategory filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Category`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\CategoryFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_categoryfilter[`CategoryFilter`]
+
+
+Will return a CategoryFilter if a category id is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setcategoryids]
+----
+
+public setCategoryIds($categoryIds):Plenty\Modules\Pim\Catalog\Variation\Filters\Category
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_category[`Category`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$categoryIds`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addcategoryid]
+----
+
+public addCategoryId($categoryId):Plenty\Modules\Pim\Catalog\Variation\Filters\Category
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_category[`Category`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$categoryId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_category_variationisincategories]]
+==== VariationIsInCategories
+
+Used to represent the isInEachCategory filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Category`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\CategoryFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_categoryfilter[`CategoryFilter`]
+
+
+Will return a CategoryFilter if a category id is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setcategoryids]
+----
+
+public setCategoryIds($categoryIds):Plenty\Modules\Pim\Catalog\Variation\Filters\Category
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_category[`Category`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$categoryIds`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addcategoryid]
+----
+
+public addCategoryId($categoryId):Plenty\Modules\Pim\Catalog\Variation\Filters\Category
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_category[`Category`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$categoryId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[[pim_filters_client]]
+===  Client
+[[pim_client_variationhasatleastoneclient]]
+==== VariationHasAtLeastOneClient
+
+Used to represent the isVisibleForAtLeastOneClient filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Client`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\ClientFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_clientfilter[`ClientFilter`]
+
+
+Will return a ClientFilter if at least one client id is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setclientids]
+----
+
+public setClientIds($clientIds):Plenty\Modules\Pim\Catalog\Variation\Filters\Client
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_client[`Client`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$clientIds`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addclientid]
+----
+
+public addClientId($clientId):Plenty\Modules\Pim\Catalog\Variation\Filters\Client
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_client[`Client`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$clientId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_client_variationhasclients]]
+==== VariationHasClients
+
+Used to represent the isVisibleForAllClients filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Client`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\ClientFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_clientfilter[`ClientFilter`]
+
+
+Will return a ClientFilter if at least one client id is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setclientids]
+----
+
+public setClientIds($clientIds):Plenty\Modules\Pim\Catalog\Variation\Filters\Client
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_client[`Client`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$clientIds`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addclientid]
+----
+
+public addClientId($clientId):Plenty\Modules\Pim\Catalog\Variation\Filters\Client
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_client[`Client`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$clientId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[[pim_filters_image]]
+===  Image
+[[pim_image_variationhasimage]]
+==== VariationHasImage
+
+Used to represent the HasAnImage filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Image`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\VariationBaseFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_variationbasefilter[`VariationBaseFilter`]
+
+
+Will return a VariationBaseFilter if shouldHaveImage is set. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setshouldhaveimage]
+----
+
+public setShouldHaveImage($shouldHaveImage):Plenty\Modules\Pim\Catalog\Variation\Filters\Image
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_image[`Image`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$shouldHaveImage`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[[pim_filters_item]]
+===  Item
+[[pim_item_itembelongstoatleastoneamazonflatfile]]
+==== ItemBelongsToAtLeastOneAmazonFlatFile
+
+Used to represent the ItemBelongsToAmazonFlatFile filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Item`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\AmazonFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_amazonfilter[`AmazonFilter`]
+
+
+Will return a TypeInterface filter if at least one flat file is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setamazonflatfiles]
+----
+
+public setAmazonFlatFiles($flatFiles):Plenty\Modules\Pim\Catalog\Variation\Filters\Item
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_item[`Item`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$flatFiles`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addamazonflatfile]
+----
+
+public addAmazonFlatFile($flatFile):Plenty\Modules\Pim\Catalog\Variation\Filters\Item
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_item[`Item`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$flatFile`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_item_itemcreatedat]]
+==== ItemCreatedAt
+
+Used to represent the ItemCreatedAtFilter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Item`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\ItemCreatedAtFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_itemcreatedatfilter[`ItemCreatedAtFilter`]
+
+
+Will return a TypeInterface filter if at least one flat file is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#settimewindow]
+----
+
+public setTimeWindow($fromDate, $toDate = null):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$fromDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+
+a|`$toDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_item_itemhasatleastoneflagone]]
+==== ItemHasAtLeastOneFlagOne
+
+Used to represent the ItemHasFlagOne filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Item`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\ItemFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_itemfilter[`ItemFilter`]
+
+
+Will return a ItemFilter if a flag is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setflags]
+----
+
+public setFlags($flags):Plenty\Modules\Pim\Catalog\Variation\Filters\Item
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_item[`Item`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$flags`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_item_itemhasatleastoneflagtwo]]
+==== ItemHasAtLeastOneFlagTwo
+
+Used to represent the ItemHasFlagTwo filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Item`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\ItemFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_itemfilter[`ItemFilter`]
+
+
+Will return a ItemFilter if a flag is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setflags]
+----
+
+public setFlags($flags):Plenty\Modules\Pim\Catalog\Variation\Filters\Item
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_item[`Item`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$flags`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_item_itemhasatleastoneid]]
+==== ItemHasAtLeastOneId
+
+Used to represent the ItemHasIds filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Item`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setitemids]
+----
+
+public setItemIds($itemIds):Plenty\Modules\Pim\Catalog\Variation\Filters\Item
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_item[`Item`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$itemIds`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#additemid]
+----
+
+public addItemId($itemId):Plenty\Modules\Pim\Catalog\Variation\Filters\Item
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_item[`Item`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$itemId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_item_itemistype]]
+==== ItemIsType
+
+Used to represent the isItemType filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Item`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\ItemFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_itemfilter[`ItemFilter`]
+
+
+Will return a ItemFilter if a item type is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setitemtype]
+----
+
+public setItemType($itemType):Plenty\Modules\Pim\Catalog\Variation\Filters\Item
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_item[`Item`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$itemType`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_item_itemupdatedat]]
+==== ItemUpdatedAt
+
+Used to represent the ItemUpdatedAtFilter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Item`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\ItemUpdatedAtFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_itemupdatedatfilter[`ItemUpdatedAtFilter`]
+
+
+Will return a TypeInterface filter if at least one flat file is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#settimewindow]
+----
+
+public setTimeWindow($fromDate, $toDate = null):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$fromDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+
+a|`$toDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[[pim_filters_manufacturer]]
+===  Manufacturer
+[[pim_manufacturer_itemhasatleastonemanufacturer]]
+==== ItemHasAtLeastOneManufacturer
+
+Used to represent the HasManufacturer filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Manufacturer`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\ItemFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_itemfilter[`ItemFilter`]
+
+
+Will return a VariationBaseFilter if at least one manufacturer id is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setmanufacturerids]
+----
+
+public setManufacturerIds($manufacturerIds):Plenty\Modules\Pim\Catalog\Variation\Filters\Manufacturer
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_manufacturer[`Manufacturer`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$manufacturerIds`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addmanufacturerid]
+----
+
+public addManufacturerId($manufacturerId):Plenty\Modules\Pim\Catalog\Variation\Filters\Manufacturer
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_manufacturer[`Manufacturer`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$manufacturerId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[[pim_filters_markets]]
+===  Markets
+[[pim_markets_variationisvisibleforatleastonemarket]]
+==== VariationIsVisibleForAtLeastOneMarket
+
+Used to represent the VariationIsVisibleForAtLeastOneMarket filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Markets`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\MarketFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_marketfilter[`MarketFilter`]
+
+
+Will return a MarketFilter if at least one market id is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setmarketids]
+----
+
+public setMarketIds($marketIds):Plenty\Modules\Pim\Catalog\Variation\Filters\Markets
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_markets[`Markets`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$marketIds`
+|link:http://php.net/float[float^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addmarketid]
+----
+
+public addMarketId($marketId):Plenty\Modules\Pim\Catalog\Variation\Filters\Markets
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_markets[`Markets`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$marketId`
+|link:http://php.net/float[float^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_markets_variationisvisibleformarkets]]
+==== VariationIsVisibleForMarkets
+
+Used to represent the VariationIsVisibleForAllMarkets filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Markets`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\MarketFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_marketfilter[`MarketFilter`]
+
+
+Will return a MarketFilter if at least one market id is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setmarketids]
+----
+
+public setMarketIds($marketIds):Plenty\Modules\Pim\Catalog\Variation\Filters\Markets
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_markets[`Markets`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$marketIds`
+|link:http://php.net/float[float^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addmarketid]
+----
+
+public addMarketId($marketId):Plenty\Modules\Pim\Catalog\Variation\Filters\Markets
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_markets[`Markets`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$marketId`
+|link:http://php.net/float[float^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[[pim_filters_property]]
+===  Property
+[[pim_property_variationhasatleastonepropertyselection]]
+==== VariationHasAtLeastOnePropertySelection
+
+Used to represent the VariationHasAtLeastOnePropertySelection filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Property`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\PropertyFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_propertyfilter[`PropertyFilter`]
+
+
+Will return a VariationPropertyFilter if at least property selection id is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setpropertyselectionids]
+----
+
+public setPropertySelectionIds($propertySelectionIds):Plenty\Modules\Pim\Catalog\Variation\Filters\Property
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_property[`Property`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$propertySelectionIds`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addpropertyselectionid]
+----
+
+public addPropertySelectionId($propertySelectionId):Plenty\Modules\Pim\Catalog\Variation\Filters\Property
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_property[`Property`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$propertySelectionId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_property_variationhaspropertyselections]]
+==== VariationHasPropertySelections
+
+Used to represent the VariationHasEachPropertySelection filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Property`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\PropertyFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_propertyfilter[`PropertyFilter`]
+
+
+Will return a VariationPropertyFilter if at least property selection id is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setpropertyselectionids]
+----
+
+public setPropertySelectionIds($propertySelectionIds):Plenty\Modules\Pim\Catalog\Variation\Filters\Property
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_property[`Property`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$propertySelectionIds`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addpropertyselectionid]
+----
+
+public addPropertySelectionId($propertySelectionId):Plenty\Modules\Pim\Catalog\Variation\Filters\Property
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_property[`Property`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$propertySelectionId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[[pim_filters_sku]]
+===  Sku
+[[pim_sku_variationhassku]]
+==== VariationHasSku
+
+Used to represent the VariationHasSku filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Sku`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\SkuFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_skufilter[`SkuFilter`]
+
+
+Will return a SkuFilter if at least accountId, marketId or status are provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setreferrer]
+----
+
+public setReferrer($referrer):Plenty\Modules\Pim\Catalog\Variation\Filters\Sku
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_sku[`Sku`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$referrer`
+|link:http://php.net/float[float^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setaccountid]
+----
+
+public setAccountId($accountId):Plenty\Modules\Pim\Catalog\Variation\Filters\Sku
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_sku[`Sku`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$accountId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setstatus]
+----
+
+public setStatus($status):Plenty\Modules\Pim\Catalog\Variation\Filters\Sku
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_sku[`Sku`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$status`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[[pim_filters_tag]]
+===  Tag
+[[pim_tag_variationhasatleastonetag]]
+==== VariationHasAtLeastOneTag
+
+Used to represent the ItemHasAtLeastOneTag filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Tag`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\TagFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_tagfilter[`TagFilter`]
+
+
+Will return a TagFilter if at least one tag id is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#settagids]
+----
+
+public setTagIds($tagIds):Plenty\Modules\Pim\Catalog\Variation\Filters\Tag
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_tag[`Tag`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$tagIds`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addtagid]
+----
+
+public addTagId($tagId):Plenty\Modules\Pim\Catalog\Variation\Filters\Tag
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_tag[`Tag`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$tagId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_tag_variationhastags]]
+==== VariationHasTags
+
+Used to represent the ItemHasTags filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Tag`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\TagFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_tagfilter[`TagFilter`]
+
+
+Will return a TagFilter if at least one tag id is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#settagids]
+----
+
+public setTagIds($tagIds):Plenty\Modules\Pim\Catalog\Variation\Filters\Tag
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_tag[`Tag`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$tagIds`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addtagid]
+----
+
+public addTagId($tagId):Plenty\Modules\Pim\Catalog\Variation\Filters\Tag
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_tag[`Tag`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$tagId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[[pim_filters_variation]]
+===  Variation
+[[pim_variation_variationcreatedat]]
+==== VariationCreatedAt
+
+Used to represent the VariationCreatedAtFilter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Variation`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\VariationCreatedAtFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_variationcreatedatfilter[`VariationCreatedAtFilter`]
+
+
+Will return a TypeInterface filter if at least one flat file is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#settimewindow]
+----
+
+public setTimeWindow($fromDate, $toDate = null):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$fromDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+
+a|`$toDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_variation_variationhaschildren]]
+==== VariationHasChildren
+
+Used to represent the hasChildren filters in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Variation`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\VariationBaseFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_variationbasefilter[`VariationBaseFilter`]
+
+
+Will return a VariationBaseFilter if shouldBeMain is defined. Otherwise null will be returned
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setshouldhavechildren]
+----
+
+public setShouldHaveChildren($shouldHaveChildren):Plenty\Modules\Pim\Catalog\Variation\Filters\Variation
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_variation[`Variation`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$shouldHaveChildren`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_variation_variationisactive]]
+==== VariationIsActive
+
+Used to represent the VariationIsActive filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Variation`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\VariationBaseFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_variationbasefilter[`VariationBaseFilter`]
+
+
+Will return a VariationBaseFilter if shouldBeActive is defined. Otherwise null will be returned
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setshouldbeactive]
+----
+
+public setShouldBeActive($shouldBeActive):Plenty\Modules\Pim\Catalog\Variation\Filters\Variation
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_variation[`Variation`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$shouldBeActive`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_variation_variationismain]]
+==== VariationIsMain
+
+Used to represent the isMain and isChild filters in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Variation`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\VariationBaseFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_variationbasefilter[`VariationBaseFilter`]
+
+
+Will return a VariationBaseFilter if shouldBeMain is defined. Otherwise null will be returned
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setshouldbemain]
+----
+
+public setShouldBeMain($shouldBeMain):Plenty\Modules\Pim\Catalog\Variation\Filters\Variation
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_variation[`Variation`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$shouldBeMain`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_variation_variationupdatedat]]
+==== VariationUpdatedAt
+
+Used to represent the VariationUpdatedAtFilter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Variation`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\VariationLastUpdatedAtFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_variationlastupdatedatfilter[`VariationLastUpdatedAtFilter`]
+
+
+Will return a TypeInterface filter if at least one flat file is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#settimewindow]
+----
+
+public setTimeWindow($fromDate, $toDate = null):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$fromDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+
+a|`$toDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_filters[`Filters`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
 [[pim_contracts]]
 == Contracts
 
@@ -2883,7 +9132,7 @@ a|
 [#isinacategory]
 ----
 
-public isInACategory():Plenty\Modules\Pim\SearchService\Filter
+public isInACategory($bool = true):Plenty\Modules\Pim\SearchService\Filter
 
 ----
 
@@ -2894,6 +9143,16 @@ public isInACategory():Plenty\Modules\Pim\SearchService\Filter
 
 
 Restricts the result to have a category.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$bool`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
 
 [source%nowrap, php]
 [#toarray]
@@ -6802,7 +13061,7 @@ Restricts the result to have an image.
 [#hasanimage]
 ----
 
-public hasAnImage():Plenty\Modules\Pim\SearchService\Filter
+public hasAnImage($bool = true):Plenty\Modules\Pim\SearchService\Filter
 
 ----
 
@@ -6813,6 +13072,16 @@ public hasAnImage():Plenty\Modules\Pim\SearchService\Filter
 
 
 Restricts the result to have an item image.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$bool`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
 
 [source%nowrap, php]
 [#hasmanufacturer]
