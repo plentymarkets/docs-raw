@@ -146,6 +146,40 @@ a|The number of items per page
 
 
 [source%nowrap, php]
+[#liststockjoinstoragelocation]
+----
+
+public listStockJoinStorageLocation($columns = [], $page = 1, $itemsPerPage = 50):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+List stock joined with storage locations
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$columns`
+|link:http://php.net/array[array^]
+a|The properties to be loaded
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|The requested page
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|The number of items per page
+|===
+
+
+[source%nowrap, php]
 [#liststockbywarehousetype]
 ----
 
@@ -529,6 +563,48 @@ The StockStorageLocationRepositoryContract is the interface for the stock storag
 
 
 ===== Methods
+
+[source%nowrap, php]
+[#liststockstoragelocations]
+----
+
+public listStockStorageLocations($columns = [], $page = 1, $itemsPerPage = 50, $with = [], $filters = []):void
+
+----
+
+
+
+
+
+
+
+List stock of all storage locations
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$columns`
+|
+a|The properties to be loaded
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|The requested page
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|The number of items per page
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|The relations to load in the StockStorageLocationInstance
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|Conditions to be applied to the search
+|===
+
 
 [source%nowrap, php]
 [#liststockstoragelocationsbywarehouseid]
