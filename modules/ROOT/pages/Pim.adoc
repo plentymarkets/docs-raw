@@ -46,6 +46,32 @@ Default variation filter builder container. Contains all available filter builde
 ===== Methods
 
 [source%nowrap, php]
+[#removefilterbuilder]
+----
+
+public removeFilterBuilder($key):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|
+a|
+|===
+
+
+[source%nowrap, php]
 [#addfilterbuilder]
 ----
 
@@ -18970,10 +18996,26 @@ public isGetAllFound():bool
 returns whether get all found or not
 
 [source%nowrap, php]
+[#getlimit]
+----
+
+public getLimit():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#setgetallfound]
 ----
 
-public setGetAllFound($getAll):Plenty\Modules\Pim\VariationDataInterface\Model
+public setGetAllFound($getAll, $limit = null):Plenty\Modules\Pim\VariationDataInterface\Model
 
 ----
 
@@ -18983,7 +19025,7 @@ public setGetAllFound($getAll):Plenty\Modules\Pim\VariationDataInterface\Model
 ====== *Return type:*        xref:Pim.adoc#pim_variationdatainterface_model[`Model`]
 
 
-set whether the result should return all found entities or not
+set whether the result should return all found entities without pagination or not
 
 .*Parameters*
 [cols="3,1,6"]
@@ -18991,6 +19033,10 @@ set whether the result should return all found entities or not
 |Name |Type |Description
 a|`$getAll`
 |link:http://php.net/bool[bool^]
+a|
+
+a|`$limit`
+|link:http://php.net/int[int^]
 a|
 |===
 
