@@ -626,6 +626,9 @@ The model of the order.
 |transactionSums
     |        xref:Order.adoc#order_models_ordertransactionsums[`OrderTransactionSums`]
     a|The sums of all order item transactions.
+|orderItemSummary
+    |        xref:Order.adoc#order_models_orderitemsummary[`OrderItemSummary`]
+    a|The order item summary
 |paymentTerms
     |        xref:Order.adoc#order_models_orderpaymentterms[`OrderPaymentTerms`]
     a|The payment terms of this order.
@@ -1221,6 +1224,57 @@ The order item reference model. Each OrderItemReference has a referenced OrderIt
 |referencedOrderItem
     |        xref:Order.adoc#order_models_orderitem[`OrderItem`]
     a|The referenced order item
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[order_models_orderitemsummary]]
+==== OrderItemSummary
+
+The order item summary model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|orderId
+    |link:http://php.net/int[int^]
+    a|The ID of the order
+|quantity
+    |link:http://php.net/float[float^]
+    a|The summed up quantity of all order items visible in the UI
+|weight
+    |link:http://php.net/float[float^]
+    a|The summed up weight (property type ID 11) of all order items
 |===
 
 
