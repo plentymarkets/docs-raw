@@ -725,7 +725,7 @@ The AddressRepositoryContract is the interface for the address repository contra
 [#findaddressbyid]
 ----
 
-public findAddressById($addressId):Plenty\Modules\Account\Address\Models\Address
+public findAddressById($addressId, $with = []):Plenty\Modules\Account\Address\Models\Address
 
 ----
 
@@ -744,6 +744,10 @@ Gets an address. The ID of the address must be specified.
 a|`$addressId`
 |link:http://php.net/int[int^]
 a|The ID of the address
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|Optional: The relationships that should be eager loaded.
 |===
 
 
