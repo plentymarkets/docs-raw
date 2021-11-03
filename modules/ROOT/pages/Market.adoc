@@ -5,6 +5,171 @@
 = Plentymarkets interface documentation
 
 
+[[market_accounts]]
+== Accounts
+
+[[market_accounts_contracts]]
+===  Contracts
+[[market_contracts_marketaccountsrepositorycontract]]
+==== MarketAccountsRepositoryContract
+
+The contract for the market accounts repository.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Market\Accounts\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getall]
+----
+
+public getAll():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getbyreferrerid]
+----
+
+public getByReferrerId($referrerId):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$referrerId`
+|
+a|
+|===
+
+
+[[market_accounts_models]]
+===  Models
+[[market_models_account]]
+==== Account
+
+The market account model
+
+
+
+===== Namespace
+
+`Plenty\Modules\Market\Accounts\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|accountId
+    |link:http://php.net/string[string^]
+    a|The account id of the market
+|label
+    |link:http://php.net/string[string^]
+    a|The label of the account
+|referrerId
+    |link:http://php.net/float[float^]
+    a|The referrer the account depends to
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[market_models_market]]
+==== Market
+
+The market account model
+
+
+
+===== Namespace
+
+`Plenty\Modules\Market\Accounts\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|accounts
+    |link:http://php.net/array[array^]
+    a|The label of the account
+|referrerId
+    |link:http://php.net/float[float^]
+    a|The referrer the account depends to
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
 [[market_credentials]]
 == Credentials
 
