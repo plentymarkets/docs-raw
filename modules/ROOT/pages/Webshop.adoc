@@ -5,6 +5,109 @@
 = Plentymarkets interface documentation
 
 
+[[webshop_category]]
+== Category
+
+[[webshop_category_contracts]]
+===  Contracts
+[[webshop_contracts_categoryrepositorycontract]]
+==== CategoryRepositoryContract
+
+Get category data for plentyShop.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Webshop\Category\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($categoryId, $language = null, $webstoreId = null, $additionalFilter = [], $toObject = true):void
+
+----
+
+
+
+
+
+
+
+Return one category by id.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$categoryId`
+|link:http://php.net/int[int^]
+a|The id of the category.
+
+a|`$language`
+|link:http://php.net/string[string^]
+a|Optional language of category details, fallback is session language.
+
+a|`$webstoreId`
+|link:http://php.net/int[int^]
+a|Optional webstore id of category details, fallback is current webstore id.
+
+a|`$additionalFilter`
+|link:http://php.net/array[array^]
+a|Optional Whether or not to only include categories with given filters, allowed values ['onlySitemaps' => bool]
+
+a|`$toObject`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#geturl]
+----
+
+public getUrl($categoryId, $language = null, $webstoreId = null, $additionalFilter = []):string
+
+----
+
+
+
+
+
+
+
+Retrieve the url for a category by id.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$categoryId`
+|link:http://php.net/int[int^]
+a|The id of the category.
+
+a|`$language`
+|link:http://php.net/string[string^]
+a|Optional language of category details, fallback is session language.
+
+a|`$webstoreId`
+|link:http://php.net/int[int^]
+a|Optional webstore id of category details, fallback is current webstore id.
+
+a|`$additionalFilter`
+|link:http://php.net/array[array^]
+a|Optional Whether or not to only include categories with given filters, allowed values ['onlySitemaps' => bool]
+|===
+
+
 [[webshop_consent]]
 == Consent
 
