@@ -202,7 +202,7 @@ a|
 [#invalidateall]
 ----
 
-public invalidateAll($plentyId = null):void
+public invalidateAll($plentyId = null, $bypassActiveCheck = false):void
 
 ----
 
@@ -220,6 +220,10 @@ Invalidate all cache entries related to given plenty ID.
 |Name |Type |Description
 a|`$plentyId`
 |link:http://php.net/int[int^]
+a|
+
+a|`$bypassActiveCheck`
+|link:http://php.net/bool[bool^]
 a|
 |===
 
@@ -380,6 +384,32 @@ a|`$options`
 |link:http://php.net/array[array^]
 a|Additional options to be considered when handling cache entries. Possible options are:
 - enableQueryParams: boolean Set to true to enable caching pages having query params.
+|===
+
+
+[source%nowrap, php]
+[#disablecacheforresponse]
+----
+
+public disableCacheForResponse($reason = &quot;&quot;):void
+
+----
+
+
+
+
+
+
+
+Disable caching for current response because of any unwanted behavior.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$reason`
+|link:http://php.net/string[string^]
+a|Reason why the response is not cached.
 |===
 
 
