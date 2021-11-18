@@ -18544,6 +18544,9 @@ The variation model, contains all possible informations of a variation
 |properties
     |link:http://php.net/array[array^]
     a|The properties of the variation.
+|inheritance
+    |        xref:Pim.adoc#pim_decoratedattributes_inheritance[`Inheritance`]
+    a|The inheritance of the variation.
 |elasticSearchSource
     |link:http://php.net/array[array^]
     a|
@@ -20434,6 +20437,99 @@ public getLazyLoadParts():void
 
 
 
+[[pim_attributes_variationinheritanceattribute]]
+==== VariationInheritanceAttribute
+
+The market part of the variation
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\VariationDataInterface\Model\Attributes`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getvariationattribute]
+----
+
+public static getVariationAttribute():string
+
+----
+
+
+
+
+
+
+
+Get the related key on the variation model.
+
+[source%nowrap, php]
+[#getname]
+----
+
+public getName():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#addlazyloadparts]
+----
+
+public addLazyLoadParts($lazyLoadParts):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$lazyLoadParts`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getlazyloadparts]
+----
+
+public getLazyLoadParts():void
+
+----
+
+
+
+
+
+
+
+
+
+
 [[pim_attributes_variationmarketattribute]]
 ==== VariationMarketAttribute
 
@@ -21610,6 +21706,9 @@ contains the basic informations of a variation
 |availability
     |link:http://php.net/int[int^]
     a|
+|availabilityId
+    |link:http://php.net/int[int^]
+    a|
 |estimatedAvailableAt
     |link:http://php.net/string[string^]
     a|
@@ -22090,6 +22189,195 @@ contains informations about an image, belongs to a variation
 |imageId
     |link:http://php.net/int[int^]
     a|The unique ID of the image
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[pim_decoratedattributes_inheritance]]
+==== Inheritance
+
+contains the inheritance informations of a variation
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\VariationDataInterface\Model\DecoratedAttributes`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|categories
+    |link:http://php.net/bool[bool^]
+    a|
+|referrer
+    |link:http://php.net/bool[bool^]
+    a|
+|clients
+    |link:http://php.net/bool[bool^]
+    a|
+|salesPrices
+    |link:http://php.net/bool[bool^]
+    a|
+|supplier
+    |link:http://php.net/bool[bool^]
+    a|
+|warehouses
+    |link:http://php.net/bool[bool^]
+    a|
+|properties
+    |link:http://php.net/bool[bool^]
+    a|
+|tags
+    |link:http://php.net/bool[bool^]
+    a|
+|customs
+    |link:http://php.net/bool[bool^]
+    a|
+|estimatedAvailableAt
+    |link:http://php.net/bool[bool^]
+    a|
+|externalId
+    |link:http://php.net/bool[bool^]
+    a|
+|position
+    |link:http://php.net/bool[bool^]
+    a|
+|extraShippingCharge1
+    |link:http://php.net/bool[bool^]
+    a|
+|extraShippingCharge2
+    |link:http://php.net/bool[bool^]
+    a|
+|intervalOrderQuantity
+    |link:http://php.net/bool[bool^]
+    a|
+|maximumOrderQuantity
+    |link:http://php.net/bool[bool^]
+    a|
+|minimumOrderQuantity
+    |link:http://php.net/bool[bool^]
+    a|
+|model
+    |link:http://php.net/bool[bool^]
+    a|
+|packingUnits
+    |link:http://php.net/bool[bool^]
+    a|
+|picking
+    |link:http://php.net/bool[bool^]
+    a|
+|purchasePrice
+    |link:http://php.net/bool[bool^]
+    a|
+|storageCosts
+    |link:http://php.net/bool[bool^]
+    a|
+|transportationCosts
+    |link:http://php.net/bool[bool^]
+    a|
+|unitCombinationId
+    |link:http://php.net/bool[bool^]
+    a|
+|unitsContained
+    |link:http://php.net/bool[bool^]
+    a|
+|vatId
+    |link:http://php.net/bool[bool^]
+    a|
+|weightG
+    |link:http://php.net/bool[bool^]
+    a|
+|weightNetG
+    |link:http://php.net/bool[bool^]
+    a|
+|availability
+    |link:http://php.net/bool[bool^]
+    a|
+|stockLimitation
+    |link:http://php.net/bool[bool^]
+    a|
+|isVisibleIfNetStockIsPositive
+    |link:http://php.net/bool[bool^]
+    a|
+|isInvisibleIfNetStockIsNotPositive
+    |link:http://php.net/bool[bool^]
+    a|
+|isAvailableIfNetStockIsPositive
+    |link:http://php.net/bool[bool^]
+    a|
+|isUnavailableIfNetStockIsNotPositive
+    |link:http://php.net/bool[bool^]
+    a|
+|isVisibleInListIfNetStockIsPositive
+    |link:http://php.net/bool[bool^]
+    a|
+|isInvisibleInListIfNetStockIsNotPositive
+    |link:http://php.net/bool[bool^]
+    a|
+|mainWarehouseId
+    |link:http://php.net/bool[bool^]
+    a|
+|releasedAt
+    |link:http://php.net/bool[bool^]
+    a|
+|name
+    |link:http://php.net/bool[bool^]
+    a|
+|widthMM
+    |link:http://php.net/bool[bool^]
+    a|
+|lengthMM
+    |link:http://php.net/bool[bool^]
+    a|
+|heightMM
+    |link:http://php.net/bool[bool^]
+    a|
+|palletTypeId
+    |link:http://php.net/bool[bool^]
+    a|
+|packingUnitTypeId
+    |link:http://php.net/bool[bool^]
+    a|
+|operatingCosts
+    |link:http://php.net/bool[bool^]
+    a|
+|isHiddenInCategoryList
+    |link:http://php.net/bool[bool^]
+    a|
+|availableUntil
+    |link:http://php.net/bool[bool^]
+    a|
+|mayShowUnitPrice
+    |link:http://php.net/bool[bool^]
+    a|
+|customsTariffNumber
+    |link:http://php.net/bool[bool^]
+    a|
 |===
 
 
