@@ -5,6 +5,63 @@
 = Plentymarkets interface documentation
 
 
+[[contentcache_cacheblocks]]
+== CacheBlocks
+
+[[contentcache_cacheblocks_contracts]]
+===  Contracts
+[[contentcache_contracts_cachetagrepositorycontract]]
+==== CacheTagRepositoryContract
+
+Add tags to content cache entries for tag based invalidation.
+
+
+
+===== Namespace
+
+`Plenty\Modules\ContentCache\CacheBlocks\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#maketaggable]
+----
+
+public makeTaggable($variableName, $factory, $dataType = &quot;&quot;):void
+
+----
+
+
+
+
+
+
+
+Watch for accesses on a global twig variable and add all related cache tags on use.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$variableName`
+|link:http://php.net/string[string^]
+a|
+
+a|`$factory`
+|link:http://php.net/callable[callable^]
+a|
+
+a|`$dataType`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
 [[contentcache_contentcachelink]]
 == ContentCacheLink
 
