@@ -2891,7 +2891,7 @@ a|The relations to load in the Order instance. Valid are "addresses", "events", 
 [#getlatestorderbycontactid]
 ----
 
-public getLatestOrderByContactId($contactId, $with = []):Plenty\Modules\Order\Models\Order
+public getLatestOrderByContactId($contactId, $with = [], $lazyLoaded = false):Plenty\Modules\Order\Models\Order
 
 ----
 
@@ -2915,6 +2915,10 @@ a|`$with`
 |link:http://php.net/array[array^]
 a|The relations to load in the Order instance. The relations available are: "addresses", "events", "dates", "relation", "reference", "location", "payments", "documents" and "comments".
 If you want to load relations, you need to include at least one, but you can also include several or all.
+
+a|`$lazyLoaded`
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
