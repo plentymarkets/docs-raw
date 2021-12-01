@@ -700,7 +700,7 @@ public resetShipment($orderId):bool
 
 
 
-
+Reset the shipment of the order
 
 .*Parameters*
 [cols="3,1,6"]
@@ -742,7 +742,7 @@ a|The ID of the order
 [#registershipment]
 ----
 
-public registerShipment($orderId):bool
+public registerShipment($orderId, $shippingProviderCode = &quot;&quot;):bool
 
 ----
 
@@ -761,6 +761,36 @@ Register the shipment of an order.
 a|`$orderId`
 |link:http://php.net/int[int^]
 a|The ID of the order
+
+a|`$shippingProviderCode`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getshippingserviceproviders]
+----
+
+public getShippingServiceProviders($includePlugins = true):array
+
+----
+
+
+
+
+
+
+
+List all the active shipping service providers
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$includePlugins`
+|link:http://php.net/bool[bool^]
+a|Flag to indicate if the plugin shipping service providers should be included in the list
 |===
 
 
