@@ -1307,6 +1307,22 @@ public getDefaultCatalogSettings():array
 
 Defines settings that will be applied to newly created catalogs by default
 
+[source%nowrap, php]
+[#getsections]
+----
+
+public getSections():Plenty\Modules\Catalog\Services\UI\Sections\Sections
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_sections_sections[`Sections`]
+
+
+Returns Sections with options that will be displayed in the UI of each catalogue with a template that uses this provider. The selected values for all those settings can then be used in the export.
+
 
 [[catalog_contracts_catalogmappingvalueprovidercontract]]
 ==== CatalogMappingValueProviderContract
@@ -4361,6 +4377,22 @@ public getSettings():array
 Returns the settings of a template.
 
 [source%nowrap, php]
+[#getsections]
+----
+
+public getSections():Plenty\Modules\Catalog\Services\UI\Sections\Sections
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_sections_sections[`Sections`]
+
+
+Returns the sections of a template
+
+[source%nowrap, php]
 [#setmetainfo]
 ----
 
@@ -7223,6 +7255,22 @@ public getAssignments():array
 
 
 
+[source%nowrap, php]
+[#getsections]
+----
+
+public getSections():Plenty\Modules\Catalog\Services\UI\Sections\Sections
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_sections_sections[`Sections`]
+
+
+
+
 
 [[catalog_templates_template]]
 ==== Template
@@ -7798,6 +7846,48 @@ Adds a general assignments to the template. If possible, don&#039;t use this dir
 |Name |Type |Description
 a|`$assignment`
 |link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getsections]
+----
+
+public getSections():Plenty\Modules\Catalog\Services\UI\Sections\Sections
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_sections_sections[`Sections`]
+
+
+Returns sections
+
+[source%nowrap, php]
+[#setsections]
+----
+
+public setSections($sections):void
+
+----
+
+
+
+
+
+
+
+Sets sections
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$sections`
+|        xref:Catalog.adoc#catalog_sections_sections[`Sections`]
 a|
 |===
 
@@ -9620,14 +9710,14 @@ The UIValuesContract is the interface for the catalogue option values. This inte
 [#add]
 ----
 
-public add($value):Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
+public add($value):Plenty\Modules\Catalog\Contracts\UI\UIValuesContract
 
 ----
 
 
 
 
-====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
 
 
 Add a value
@@ -12547,23 +12637,37 @@ Assignments container
 [#add]
 ----
 
-public add():void
+public add($option, $key = null):Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
 
 
+Add an option
 
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$option`
+|        xref:Catalog.adoc#catalog_ui_uioptioncontract[`UIOptionContract`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
 
 
 [source%nowrap, php]
 [#toarray]
 ----
 
-public toArray():void
+public toArray():array
 
 ----
 
@@ -12573,7 +12677,7 @@ public toArray():void
 
 
 
-
+Get the instance as an array.
 
 [[catalog_ui_filters]]
 ===  Filters
@@ -12739,23 +12843,37 @@ a|
 [#add]
 ----
 
-public add():void
+public add($option, $key = null):Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
 
 
+Add an option
 
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$option`
+|        xref:Catalog.adoc#catalog_ui_uioptioncontract[`UIOptionContract`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
 
 
 [source%nowrap, php]
 [#toarray]
 ----
 
-public toArray():void
+public toArray():array
 
 ----
 
@@ -12765,7 +12883,7 @@ public toArray():void
 
 
 
-
+Get the instance as an array.
 
 [[catalog_ui_options]]
 ===  Options
@@ -12791,23 +12909,37 @@ UI Options container
 [#add]
 ----
 
-public add():void
+public add($option, $key = null):Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
 
 
+Add an option
 
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$option`
+|        xref:Catalog.adoc#catalog_ui_uioptioncontract[`UIOptionContract`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
 
 
 [source%nowrap, php]
 [#toarray]
 ----
 
-public toArray():void
+public toArray():array
 
 ----
 
@@ -12817,7 +12949,69 @@ public toArray():void
 
 
 
+Get the instance as an array.
 
+[[catalog_ui_sections]]
+===  Sections
+[[catalog_sections_sections]]
+==== Sections
+
+Sections container
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Sections`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($section):Plenty\Modules\Catalog\Services\UI\Sections\Sections
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_sections_sections[`Sections`]
+
+
+Adds a section to the container
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$section`
+|        xref:Catalog.adoc#catalog_section_section[`Section`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+Get the instance as an array.
 
 [[catalog_elements]]
 == Elements
@@ -14215,24 +14409,24 @@ UI Option values container
 [#add]
 ----
 
-public add($value):void
+public add($value):Plenty\Modules\Catalog\Contracts\UI\UIValuesContract
 
 ----
 
 
 
 
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uivaluescontract[`UIValuesContract`]
 
 
-
-
+Add a value
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
 a|`$value`
-|
+|        xref:Catalog.adoc#catalog_ui_uivaluecontract[`UIValueContract`]
 a|
 |===
 
@@ -19555,6 +19749,159 @@ a|
 |===
 
 
+[[catalog_sections]]
+== Sections
+
+[[catalog_sections_section]]
+===  Section
+[[catalog_section_section]]
+==== Section
+
+Section container
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\UI\Sections\Section`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($option, $key = null):Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
+
+
+Add an option
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$option`
+|        xref:Catalog.adoc#catalog_ui_uioptioncontract[`UIOptionContract`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+Get the instance as an array.
+
+[source%nowrap, php]
+[#getlabel]
+----
+
+public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setlabel]
+----
+
+public setLabel($label):Plenty\Modules\Catalog\Services\UI\Sections\Section\Section
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_section_section[`Section`]
+
+
+Setter for label property
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$label`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+Getter for the key property
+
+[source%nowrap, php]
+[#setkey]
+----
+
+public setKey($key):Plenty\Modules\Catalog\Services\UI\Sections\Section\Section
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_section_section[`Section`]
+
+
+Setter for the key property
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
 [[catalog_templates]]
 == Templates
 
@@ -19835,6 +20182,22 @@ public getDefaultCatalogSettings():array
 
 
 
+
+
+
+
+[source%nowrap, php]
+[#getsections]
+----
+
+public getSections():Plenty\Modules\Catalog\Services\UI\Sections\Sections
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_sections_sections[`Sections`]
 
 
 
