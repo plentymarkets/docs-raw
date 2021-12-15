@@ -320,7 +320,7 @@ a|The ID of the payment
 [#createorderrelationwithvalidation]
 ----
 
-public createOrderRelationWithValidation($paymentId, $orderId):Plenty\Modules\Payment\Models\PaymentOrderRelation
+public createOrderRelationWithValidation($paymentId, $orderId, $matchingRate = null):Plenty\Modules\Payment\Models\PaymentOrderRelation
 
 ----
 
@@ -341,6 +341,10 @@ a|`$paymentId`
 a|
 
 a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$matchingRate`
 |link:http://php.net/int[int^]
 a|
 |===
@@ -1614,6 +1618,9 @@ The payment model representing a received payment by a payment service provider.
     a|The payment method
 |order
     |        xref:Payment.adoc#payment_models_paymentorderrelation[`PaymentOrderRelation`]
+    a|
+|contact
+    |        xref:Payment.adoc#payment_models_paymentcontactrelation[`PaymentContactRelation`]
     a|
 |histories
     |link:http://php.net/array[array^]
