@@ -10,6 +10,191 @@
 
 [[warehouse_warehouse_contracts]]
 ===  Contracts
+[[warehouse_contracts_inventoryjournalrepositorycontract]]
+==== InventoryJournalRepositoryContract
+
+Get, create, update and delete inventory journal
+
+
+
+===== Namespace
+
+`Plenty\Modules\Warehouse\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getinventoryjournal]
+----
+
+public getInventoryJournal($inventoryJournal):Plenty\Modules\Warehouse\Models\InventoryJournal
+
+----
+
+
+
+
+====== *Return type:*        xref:Warehouse.adoc#warehouse_models_inventoryjournal[`InventoryJournal`]
+
+
+Get a inventory journal
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$inventoryJournal`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getinventoryjournallist]
+----
+
+public getInventoryJournalList($page = 1, $itemsPerPage = 50, $with = []):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Get a inventory journal
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
 [[warehouse_contracts_warehouselocationdimensionrepositorycontract]]
 ==== WarehouseLocationDimensionRepositoryContract
 
@@ -1483,6 +1668,108 @@ Clears the filter array.
 
 [[warehouse_warehouse_models]]
 ===  Models
+[[warehouse_models_inventoryjournal]]
+==== InventoryJournal
+
+The inventory journal model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Warehouse\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the inventory journal
+|warehouseLocationInventoryId
+    |link:http://php.net/int[int^]
+    a|The ID of the warehouse location inventory / stocktaking entry
+|warehouseId
+    |link:http://php.net/int[int^]
+    a|The warehouse id
+|warehouseName
+    |link:http://php.net/string[string^]
+    a|The warehouse name
+|storageLocationId
+    |link:http://php.net/int[int^]
+    a|The storage location Id of the inventory / stocktaking
+|storageLocationName
+    |link:http://php.net/string[string^]
+    a|The name of the storage location
+|variationId
+    |link:http://php.net/int[int^]
+    a|variation Id
+|variationNumber
+    |link:http://php.net/string[string^]
+    a|The shortcut of the warehouse location dimension
+|variationDescription
+    |link:http://php.net/string[string^]
+    a|The description / name  of the variation
+|purchasePrice
+    |link:http://php.net/float[float^]
+    a|the purchase price of the variation
+|movingAveragePrice
+    |link:http://php.net/float[float^]
+    a|the moving average price of the variation
+|bestBeforeDate
+    |
+    a|the best before date of the variation
+|batch
+    |link:http://php.net/float[float^]
+    a|variation batch
+|quantity
+    |link:http://php.net/float[float^]
+    a|variation quantity
+|unit
+    |link:http://php.net/string[string^]
+    a|used unit for the variation
+|userId
+    |link:http://php.net/int[int^]
+    a|user Id
+|userName
+    |link:http://php.net/string[string^]
+    a|user name
+|origin
+    |link:http://php.net/string[string^]
+    a|origin
+|createdAt
+    |
+    a|Date when the stocktaking / inventory journal for this location was created
+|updatedAt
+    |
+    a|Date when the stocktaking / inventory journal for this location was updated
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
 [[warehouse_models_warehouselocation]]
 ==== WarehouseLocation
 
