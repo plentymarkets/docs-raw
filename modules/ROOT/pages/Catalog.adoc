@@ -1308,6 +1308,22 @@ public getDefaultCatalogSettings():array
 Defines settings that will be applied to newly created catalogs by default
 
 [source%nowrap, php]
+[#gethooks]
+----
+
+public getHooks():void
+
+----
+
+
+
+
+
+
+
+Register hooks in specific event slots
+
+[source%nowrap, php]
 [#getsections]
 ----
 
@@ -7256,6 +7272,22 @@ public getAssignments():array
 
 
 [source%nowrap, php]
+[#gethooks]
+----
+
+public getHooks():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#getsections]
 ----
 
@@ -8640,6 +8672,56 @@ public getValues():array
 [[catalog_contracts]]
 == Contracts
 
+[[catalog_contracts_events]]
+===  Events
+[[catalog_events_eventslotcontract]]
+==== EventSlotContract
+
+The EventSlotContract is the inferface of EventSlot.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Contracts\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($hook, $template):Plenty\Modules\Catalog\Services\Events\EventSlot\EventSlot
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_eventslot_eventslot[`EventSlot`]
+
+
+Add hook to event slot
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hook`
+|        xref:Catalog.adoc#catalog_hook_hook[`Hook`]
+a|
+
+a|`$template`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
 [[catalog_contracts_filters]]
 ===  Filters
 [[catalog_filters_catalogfilterbuildercontract]]
@@ -9930,6 +10012,22 @@ public getDefaultValue():void
 ----
 
 public getValues():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getcustomdata]
+----
+
+public getCustomData():void
 
 ----
 
@@ -12609,6 +12707,718 @@ public getType():string
 
 
 Returns the type of the converted result
+
+[[catalog_eventslot]]
+== EventSlot
+
+[[catalog_eventslot_defaultslots]]
+===  DefaultSlots
+[[catalog_defaultslots_afterasyncfullfileisbuilteventslot]]
+==== AfterAsyncFullFileIsBuiltEventSlot
+
+After async full file is built event slot
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Events\EventSlot\DefaultSlots`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($hook, $template):Plenty\Modules\Catalog\Services\Events\EventSlot\EventSlot
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_eventslot_eventslot[`EventSlot`]
+
+
+Add hook to event slot
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hook`
+|        xref:Catalog.adoc#catalog_hook_hook[`Hook`]
+a|
+
+a|`$template`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+
+[[catalog_defaultslots_afterdevcachefullresourceisfetchedeventslot]]
+==== AfterDevCacheFullResourceIsFetchedEventSlot
+
+After dev cache full resource is fetched event slot
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Events\EventSlot\DefaultSlots`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($hook, $template):Plenty\Modules\Catalog\Services\Events\EventSlot\EventSlot
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_eventslot_eventslot[`EventSlot`]
+
+
+Add hook to event slot
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hook`
+|        xref:Catalog.adoc#catalog_hook_hook[`Hook`]
+a|
+
+a|`$template`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+
+[[catalog_defaultslots_aftereverypageexportresulteventslot]]
+==== AfterEveryPageExportResultEventSlot
+
+After every page export result event slot
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Events\EventSlot\DefaultSlots`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($hook, $template):Plenty\Modules\Catalog\Services\Events\EventSlot\EventSlot
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_eventslot_eventslot[`EventSlot`]
+
+
+Add hook to event slot
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hook`
+|        xref:Catalog.adoc#catalog_hook_hook[`Hook`]
+a|
+
+a|`$template`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+
+[[catalog_defaultslots_aftereveryrowexportresulteventslot]]
+==== AfterEveryRowExportResultEventSlot
+
+After every row from export result event slot
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Events\EventSlot\DefaultSlots`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($hook, $template):Plenty\Modules\Catalog\Services\Events\EventSlot\EventSlot
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_eventslot_eventslot[`EventSlot`]
+
+
+Add hook to event slot
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hook`
+|        xref:Catalog.adoc#catalog_hook_hook[`Hook`]
+a|
+
+a|`$template`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+
+[[catalog_defaultslots_afterpreviewisfinishedeventslot]]
+==== AfterPreviewIsFinishedEventSlot
+
+After preview is finish event slot
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Events\EventSlot\DefaultSlots`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($hook, $template):Plenty\Modules\Catalog\Services\Events\EventSlot\EventSlot
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_eventslot_eventslot[`EventSlot`]
+
+
+Add hook to event slot
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hook`
+|        xref:Catalog.adoc#catalog_hook_hook[`Hook`]
+a|
+
+a|`$template`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+
+[[catalog_defaultslots_aftertherearenomorepagescatalogexportresulteventslot]]
+==== AfterThereAreNoMorePagesCatalogExportResultEventSlot
+
+After there are no more pages event slot
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Events\EventSlot\DefaultSlots`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($hook, $template):Plenty\Modules\Catalog\Services\Events\EventSlot\EventSlot
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_eventslot_eventslot[`EventSlot`]
+
+
+Add hook to event slot
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hook`
+|        xref:Catalog.adoc#catalog_hook_hook[`Hook`]
+a|
+
+a|`$template`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+
+[[catalog_defaultslots_beforeasyncuploadpagetostorageeventslot]]
+==== BeforeAsyncUploadPageToStorageEventSlot
+
+Before async upload&#039;s page to storage event slot
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Events\EventSlot\DefaultSlots`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($hook, $template):Plenty\Modules\Catalog\Services\Events\EventSlot\EventSlot
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_eventslot_eventslot[`EventSlot`]
+
+
+Add hook to event slot
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hook`
+|        xref:Catalog.adoc#catalog_hook_hook[`Hook`]
+a|
+
+a|`$template`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[[catalog_events]]
+== Events
+
+[[catalog_events_eventslot]]
+===  EventSlot
+[[catalog_eventslot_eventslot]]
+==== EventSlot
+
+Event slot
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Events\EventSlot`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($hook, $template):Plenty\Modules\Catalog\Services\Events\EventSlot\EventSlot
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_eventslot_eventslot[`EventSlot`]
+
+
+Add hook to event slot
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hook`
+|        xref:Catalog.adoc#catalog_hook_hook[`Hook`]
+a|
+
+a|`$template`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[[catalog_events_events]]
+===  Events
+[[catalog_events_events]]
+==== Events
+
+Events container
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Events\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($eventSlot):Plenty\Modules\Catalog\Services\Events\Events\Events
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_events_events[`Events`]
+
+
+Registers event slots into the event container
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$eventSlot`
+|        xref:Catalog.adoc#catalog_eventslot_eventslot[`EventSlot`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addhooktoslot]
+----
+
+public addHookToSlot($hook, $slotKey):Plenty\Modules\Catalog\Services\Events\Events\Events
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_events_events[`Events`]
+
+
+Register hook to a specific slot
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hook`
+|        xref:Catalog.adoc#catalog_hook_hook[`Hook`]
+a|
+
+a|`$slotKey`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#instance]
+----
+
+public static instance():Plenty\Modules\Catalog\Services\Events\Events\Events
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_events_events[`Events`]
+
+
+Instantiates the Events class
+
+[[catalog_events_hook]]
+===  Hook
+[[catalog_hook_hook]]
+==== Hook
+
+Hook abstract base
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Events\Hook`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#handle]
+----
+
+public handle($data):void
+
+----
+
+
+
+
+
+
+
+Handles the hook action
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#failurehandle]
+----
+
+public failureHandle($exception, $data):void
+
+----
+
+
+
+
+
+
+
+Handles the actions if method handle fails
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$exception`
+|
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getcatalog]
+----
+
+public getCatalog():Plenty\Modules\Catalog\Models\Catalog
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_models_catalog[`Catalog`]
+
+
+Gets the catalog
+
+[source%nowrap, php]
+[#gettemplate]
+----
+
+public getTemplate():Plenty\Modules\Catalog\Templates\Template
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_templates_template[`Template`]
+
+
+Gets template
 
 [[catalog_ui]]
 == UI
@@ -20187,6 +20997,22 @@ public getDefaultCatalogSettings():array
 
 
 [source%nowrap, php]
+[#gethooks]
+----
+
+public getHooks():void
+
+----
+
+
+
+
+
+
+
+Register hooks in specific event slots
+
+[source%nowrap, php]
 [#getsections]
 ----
 
@@ -20200,7 +21026,7 @@ public getSections():Plenty\Modules\Catalog\Services\UI\Sections\Sections
 ====== *Return type:*        xref:Catalog.adoc#catalog_sections_sections[`Sections`]
 
 
-
+Gets sections
 
 [source%nowrap, php]
 [#gettemplategroupcontainer]
