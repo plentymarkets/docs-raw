@@ -70,6 +70,36 @@ a|
 |===
 
 
+[source%nowrap, php]
+[#setpickingorderitemstate]
+----
+
+public setPickingOrderItemState($pickingOrderItemId, $state):Plenty\Modules\Fulfillment\Picklist\Models\PickingOrderItem
+
+----
+
+
+
+
+====== *Return type:*        xref:Fulfillment.adoc#fulfillment_models_pickingorderitem[`PickingOrderItem`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$pickingOrderItemId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$state`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
 [[fulfillment_picklist_events]]
 ===  Events
 [[fulfillment_events_getpickingitemconfig]]
@@ -170,6 +200,84 @@ Return all plugin configurations
 
 [[fulfillment_picklist_models]]
 ===  Models
+[[fulfillment_models_pickingorder]]
+==== PickingOrder
+
+Represent a picking order
+
+
+
+===== Namespace
+
+`Plenty\Modules\Fulfillment\Picklist\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|
+|createdAt
+    |
+    a|
+|processDate
+    |
+    a|
+|doneDate
+    |
+    a|
+|ownerId
+    |link:http://php.net/int[int^]
+    a|
+|processUserId
+    |link:http://php.net/int[int^]
+    a|
+|processState
+    |link:http://php.net/string[string^]
+    a|
+|webstoreId
+    |link:http://php.net/int[int^]
+    a|
+|warehouseId
+    |link:http://php.net/int[int^]
+    a|
+|comment
+    |link:http://php.net/string[string^]
+    a|
+|filterOptions
+    |link:http://php.net/array[array^]
+    a|
+|pickingOrderItems
+    |        xref:Fulfillment.adoc#fulfillment_models_pickingorderitem[`PickingOrderItem`]
+    a|The picking order items.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
 [[fulfillment_models_pickingorderitem]]
 ==== PickingOrderItem
 
@@ -226,6 +334,9 @@ Represent a picking order item
 |orderIdList
     |link:http://php.net/string[string^]
     a|
+|pickingOrder
+    |        xref:Fulfillment.adoc#fulfillment_models_pickingorder[`PickingOrder`]
+    a|The picking order.
 |===
 
 
