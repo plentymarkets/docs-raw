@@ -37119,6 +37119,36 @@ a|
 
 
 [source%nowrap, php]
+[#updatedeletedat]
+----
+
+public updateDeletedAt($ids, $time = null):void
+
+----
+
+
+
+
+
+
+
+Updates deletedAt for multiple SKUs.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$ids`
+|link:http://php.net/array[array^]
+a|
+
+a|`$time`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#delete]
 ----
 
@@ -37371,7 +37401,7 @@ a|The unique ID of the SKU
 [#search]
 ----
 
-public search($filter):array
+public search($filter, $limit = null, $page = 1):array
 
 ----
 
@@ -37390,6 +37420,14 @@ Lists SKUs
 a|`$filter`
 |link:http://php.net/array[array^]
 a|
+
+a|`$limit`
+|link:http://php.net/int[int^]
+a|limits the result to the specified amound
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|defines at which entity the result should start depending on the provided limit
 |===
 
 
