@@ -2135,7 +2135,7 @@ a|
 [#copybasketfiletoorder]
 ----
 
-public copyBasketFileToOrder($filename):string
+public copyBasketFileToOrder($filename, $collectDeletingFiles = false):string
 
 ----
 
@@ -2154,8 +2154,28 @@ Copy the uploaded file to the order.
 a|`$filename`
 |link:http://php.net/string[string^]
 a|
+
+a|`$collectDeletingFiles`
+|link:http://php.net/string[string^]
+a|
 |===
 
+
+[source%nowrap, php]
+[#deletecollectedfiles]
+----
+
+public deleteCollectedFiles():void
+
+----
+
+
+
+
+
+
+
+Delete collected files on s3 temp directory
 
 [source%nowrap, php]
 [#deletefile]
