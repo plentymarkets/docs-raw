@@ -555,6 +555,32 @@ The contract for the eBay fulfillment policy repository.
 ===== Methods
 
 [source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Market\Ebay\AccountPolicy\Models\FulfillmentPolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_fulfillmentpolicy[`FulfillmentPolicy`]
+
+
+Creates a new fulfillment policy.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#get]
 ----
 
@@ -584,6 +610,126 @@ a|A list of filters that are needed to get the corresponding policy. Available: 
 |===
 
 
+[source%nowrap, php]
+[#getpolicies]
+----
+
+public getPolicies($credentialsId, $marketplaceId):array
+
+----
+
+
+
+
+
+
+
+Get a stored fulfillment policy based on ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$credentialsId`
+|link:http://php.net/int[int^]
+a|The ID of the account credentials
+
+a|`$marketplaceId`
+|link:http://php.net/string[string^]
+a|The eBay marketplace id
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Market\Ebay\AccountPolicy\Models\FulfillmentPolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_fulfillmentpolicy[`FulfillmentPolicy`]
+
+
+Updates a new fulfillment policy.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id, $data):bool
+
+----
+
+
+
+
+
+
+
+Deletes a fulfillment policy.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deletebulk]
+----
+
+public deleteBulk($userId, $marketId):bool
+
+----
+
+
+
+
+
+
+
+Deletes a fulfillment policies.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$userId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$marketId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
 
 [[market_contracts_paymentpolicyrepositorycontract]]
 ==== PaymentPolicyRepositoryContract
@@ -602,6 +748,32 @@ The contract for the eBay payment policy repository.
 
 
 ===== Methods
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Market\Ebay\AccountPolicy\Models\PaymentPolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_paymentpolicy[`PaymentPolicy`]
+
+
+Creates a new payment policy.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
 
 [source%nowrap, php]
 [#get]
@@ -633,6 +805,126 @@ a|A list of filters that are needed to get the corresponding policy. Available: 
 |===
 
 
+[source%nowrap, php]
+[#getpolicies]
+----
+
+public getPolicies($credentialsId, $marketplaceId):array
+
+----
+
+
+
+
+
+
+
+Get a stored fulfillment policy based on ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$credentialsId`
+|link:http://php.net/int[int^]
+a|The ID of the account credentials
+
+a|`$marketplaceId`
+|link:http://php.net/string[string^]
+a|The eBay marketplace id
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Market\Ebay\AccountPolicy\Models\PaymentPolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_paymentpolicy[`PaymentPolicy`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|The ID of the payment policy.
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|The payment policy data
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id, $data):bool
+
+----
+
+
+
+
+
+
+
+Deletes a payment policy.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deletebulk]
+----
+
+public deleteBulk($userId, $marketId):bool
+
+----
+
+
+
+
+
+
+
+Deletes a payment policies.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$userId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$marketId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
 
 [[market_contracts_returnpolicyrepositorycontract]]
 ==== ReturnPolicyRepositoryContract
@@ -651,6 +943,32 @@ The contract for the eBay return policy repository.
 
 
 ===== Methods
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Market\Ebay\AccountPolicy\Models\ReturnPolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_returnpolicy[`ReturnPolicy`]
+
+
+Creates a new return policy.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
 
 [source%nowrap, php]
 [#get]
@@ -679,6 +997,126 @@ a|The ID of the policy that we want to get
 a|`$filters`
 |link:http://php.net/array[array^]
 a|A list of filters that are needed to get the corresponding policy. Available: `marketplaceId´, `credentialsId´.
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Market\Ebay\AccountPolicy\Models\ReturnPolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_returnpolicy[`ReturnPolicy`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|The ID of the return policy.
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|The payment policy data
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id, $data):bool
+
+----
+
+
+
+
+
+
+
+Deletes a return policy.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deletebulk]
+----
+
+public deleteBulk($userId, $marketId):bool
+
+----
+
+
+
+
+
+
+
+Deletes a return policy.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$userId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$marketId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getpolicies]
+----
+
+public getPolicies($credentialsId, $marketplaceId):array
+
+----
+
+
+
+
+
+
+
+Get a stored fulfillment policy based on ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$credentialsId`
+|link:http://php.net/int[int^]
+a|The ID of the account credentials
+
+a|`$marketplaceId`
+|link:http://php.net/string[string^]
+a|The eBay marketplace id
 |===
 
 
@@ -1954,6 +2392,9 @@ The eBay return policy model
     |link:http://php.net/string[string^]
     a|Sellers who accept returns should include this field if they charge buyers a restocking fee when items are returned.
 |returnInstruction
+    |link:http://php.net/string[string^]
+    a|This optional free-form string field lets the seller provide a detailed explanation of the return policy.
+|returnInstructions
     |link:http://php.net/string[string^]
     a|This optional free-form string field lets the seller provide a detailed explanation of the return policy.
 |returnMethod
@@ -6820,6 +7261,32 @@ a|
 
 
 [source%nowrap, php]
+[#getmarketplaceidforrest]
+----
+
+public getMarketplaceIdForRest($filters):string
+
+----
+
+
+
+
+
+
+
+Get the marketplace ID based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#getmarketplaceids]
 ----
 
@@ -6946,6 +7413,32 @@ a|
 
 
 [source%nowrap, php]
+[#getmarketidforrest]
+----
+
+public getMarketIdForRest($filters):string
+
+----
+
+
+
+
+
+
+
+Get the market ID based on given filters. Possible filters: `marketplaceId`.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#getmarketids]
 ----
 
@@ -6976,6 +7469,32 @@ public getCurrency($filters):string
 
 
 Get the currency based on given filters. Possible filters: `marketplaceId`, `referrerId`, `marketId`, `siteId`.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getcurrencyforrest]
+----
+
+public getCurrencyForRest($filters):string
+
+----
+
+
+
+
+
+
+
+Get the currency based on given filters. Possible filters: `marketplaceId`.
 
 .*Parameters*
 [cols="3,1,6"]
