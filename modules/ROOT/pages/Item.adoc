@@ -10258,6 +10258,40 @@ a|
 
 
 [source%nowrap, php]
+[#update]
+----
+
+public update($itemId, $crossItemId, $data):Plenty\Modules\Item\ItemCrossSelling\Models\ItemCrossSelling
+
+----
+
+
+
+
+====== *Return type:*        xref:Item.adoc#item_models_itemcrossselling[`ItemCrossSelling`]
+
+
+Update an item cross-selling. The item ID and the cross item ID must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$itemId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$crossItemId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#show]
 ----
 
@@ -11881,6 +11915,328 @@ public toArray()
 
 
 Returns this model as an array.
+
+[[item_itemlistingcategory]]
+== ItemListingCategory
+
+[[item_itemlistingcategory_contracts]]
+===  Contracts
+[[item_contracts_itemlistingcategoryrepositorycontract]]
+==== ItemListingCategoryRepositoryContract
+
+Search for item listing categories
+
+
+
+===== Namespace
+
+`Plenty\Modules\Item\ItemListingCategory\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#search]
+----
+
+public search():Illuminate\Support\Collection
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+
+
+Search for item listing categories
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id):void
+
+----
+
+
+
+
+
+
+
+Gets one item listing category
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+
+[[item_contracts_itemlistingshopcategoryrepositorycontract]]
+==== ItemListingShopCategoryRepositoryContract
+
+Get item listing shop categories
+
+
+
+===== Namespace
+
+`Plenty\Modules\Item\ItemListingCategory\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($ebayAccountId):Illuminate\Support\Collection
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+
+
+Get a list of listing shop categories
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$ebayAccountId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
 
 [[item_itemproperty]]
 == ItemProperty
@@ -37119,6 +37475,36 @@ a|
 
 
 [source%nowrap, php]
+[#updatedeletedat]
+----
+
+public updateDeletedAt($ids, $time = null):void
+
+----
+
+
+
+
+
+
+
+Updates deletedAt for multiple SKUs.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$ids`
+|link:http://php.net/array[array^]
+a|
+
+a|`$time`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#delete]
 ----
 
@@ -37371,7 +37757,7 @@ a|The unique ID of the SKU
 [#search]
 ----
 
-public search($filter):array
+public search($filter, $limit = null, $page = 1):array
 
 ----
 
@@ -37390,6 +37776,14 @@ Lists SKUs
 a|`$filter`
 |link:http://php.net/array[array^]
 a|
+
+a|`$limit`
+|link:http://php.net/int[int^]
+a|limits the result to the specified amound
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|defines at which entity the result should start depending on the provided limit
 |===
 
 

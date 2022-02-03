@@ -561,6 +561,9 @@ The model of the order.
 |originOrderReferences
     |
     a|The references of other orders, e.g. returns or credit notes, associated with the order.
+|shippingPallets
+    |
+    a|The shipping pallets that are associated with the order.
 |shippingPackages
     |
     a|The shipping packages that are associated with the order.
@@ -22534,6 +22537,394 @@ a|
 |===
 
 
+[[order_repairreason]]
+== RepairReason
+
+[[order_repairreason_contracts]]
+===  Contracts
+[[order_contracts_repairreasonrepositorycontract]]
+==== RepairReasonRepositoryContract
+
+Use this interface to retrieve order repair reasons.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\RepairReason\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#all]
+----
+
+public all():array
+
+----
+
+
+
+
+
+
+
+Get all repair reasons.
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id):Plenty\Modules\Order\RepairReason\Models\RepairReason
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_repairreason[`RepairReason`]
+
+
+Get a repair reason.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|The ID of the repair reason.
+|===
+
+
+[source%nowrap, php]
+[#set]
+----
+
+public set($data):array
+
+----
+
+
+
+
+
+
+
+Set a repair reason.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[[order_repairreason_models]]
+===  Models
+[[order_models_repairreason]]
+==== RepairReason
+
+The repair reason model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\RepairReason\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the repair reason.
+|reason
+    |link:http://php.net/string[string^]
+    a|The specified reason in system language.
+|names
+    |link:http://php.net/array[array^]
+    a|The specified reason in different languages.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[order_models_repairreasonname]]
+==== RepairReasonName
+
+The repair reason name model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\RepairReason\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the repair reason.
+|reason
+    |link:http://php.net/string[string^]
+    a|The specified reason.
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the reason.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+[[order_repairstatus]]
+== RepairStatus
+
+[[order_repairstatus_contracts]]
+===  Contracts
+[[order_contracts_repairstatusrepositorycontract]]
+==== RepairStatusRepositoryContract
+
+Use this interface to retrieve order repair status.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\RepairStatus\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#all]
+----
+
+public all():array
+
+----
+
+
+
+
+
+
+
+Get all repair status.
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id):Plenty\Modules\Order\RepairStatus\Models\RepairStatus
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_repairstatus[`RepairStatus`]
+
+
+Get a repair status.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|The ID of the repair status.
+|===
+
+
+[source%nowrap, php]
+[#set]
+----
+
+public set($data):array
+
+----
+
+
+
+
+
+
+
+Set a repair status.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[[order_repairstatus_models]]
+===  Models
+[[order_models_repairstatus]]
+==== RepairStatus
+
+The repair status model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\RepairStatus\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the repair status.
+|status
+    |link:http://php.net/string[string^]
+    a|The specified status in system language.
+|names
+    |link:http://php.net/array[array^]
+    a|The specified status in different languages.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[order_models_repairstatusname]]
+==== RepairStatusName
+
+The repair status name model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\RepairStatus\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the repair status.
+|status
+    |link:http://php.net/string[string^]
+    a|The specified status.
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the status.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
 [[order_returnorder]]
 == ReturnOrder
 
@@ -22836,6 +23227,32 @@ a|The ID of the return reason.
 |===
 
 
+[source%nowrap, php]
+[#set]
+----
+
+public set($data):array
+
+----
+
+
+
+
+
+
+
+Set a return reason.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
 [[order_returnreason_models]]
 ===  Models
 [[order_models_returnreason]]
@@ -22863,7 +23280,61 @@ The return reason model.
     a|The ID of the return reason.
 |reason
     |link:http://php.net/string[string^]
+    a|The specified reason in system language.
+|names
+    |link:http://php.net/array[array^]
+    a|The specified reason in different languages.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[order_models_returnreasonname]]
+==== ReturnReasonName
+
+The return reason name model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\ReturnReason\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the return reason.
+|reason
+    |link:http://php.net/string[string^]
     a|The specified reason.
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the reason.
 |===
 
 
@@ -22950,6 +23421,32 @@ a|The ID of the return status.
 |===
 
 
+[source%nowrap, php]
+[#set]
+----
+
+public set($data):array
+
+----
+
+
+
+
+
+
+
+Set a return status.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
 [[order_returnstatus_models]]
 ===  Models
 [[order_models_returnstatus]]
@@ -22977,7 +23474,61 @@ The return status model.
     a|The ID of the return status.
 |status
     |link:http://php.net/string[string^]
+    a|The specified status in system language.
+|names
+    |link:http://php.net/array[array^]
+    a|The specified status in different languages.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[order_models_returnstatusname]]
+==== ReturnStatusName
+
+The return status name model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\ReturnStatus\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the return status.
+|status
+    |link:http://php.net/string[string^]
     a|The specified status.
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the status.
 |===
 
 
