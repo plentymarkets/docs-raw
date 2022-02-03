@@ -9239,6 +9239,36 @@ a|
 
 
 [source%nowrap, php]
+[#hasnotcategoryids]
+----
+
+public hasNotCategoryIds($categoryIds, $depth = self::DEPTH_ANY):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+Restricts the result to not match the specified IDs.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$categoryIds`
+|link:http://php.net/array[array^]
+a|
+
+a|`$depth`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#toarray]
 ----
 
@@ -9563,6 +9593,32 @@ Restricts the result to have any of the automaticClientVisibilities. (-1, 0, 1, 
 |===
 |Name |Type |Description
 a|`$values`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#hasnotclientids]
+----
+
+public hasNotClientIds($clientIds):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+Restricts the result to not match the specified IDs.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$clientIds`
 |link:http://php.net/array[array^]
 a|
 |===
@@ -11587,6 +11643,58 @@ a|
 
 
 [source%nowrap, php]
+[#haspriceids]
+----
+
+public hasPriceIds($priceIds):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$priceIds`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#hasnotpriceids]
+----
+
+public hasNotPriceIds($priceIds):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+Restricts the result to not match the specified IDs.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$priceIds`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#toarray]
 ----
 
@@ -12064,6 +12172,32 @@ public hasAllTags($tagIds):Plenty\Modules\Pim\SearchService\Filter
 
 
 Restricts the result to have all of the tag ids.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$tagIds`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#hasnottagids]
+----
+
+public hasNotTagIds($tagIds):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+Restricts the result to not match the specified IDs.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -13356,6 +13490,84 @@ public customsTariffNumberExists():Plenty\Modules\Pim\SearchService\Filter
 Restricts the result to have a customs tariff number.
 
 [source%nowrap, php]
+[#hasnotreferrerids]
+----
+
+public hasNotReferrerIds($ids):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+Restricts the result to not match the specified referrer IDs.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$ids`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#hasnotids]
+----
+
+public hasNotIds($ids):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+Restricts the result to not match the specified IDs.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$ids`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#hasnotitemids]
+----
+
+public hasNotItemIds($itemIds):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+Restricts the result to not match the specified item IDs.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$itemIds`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#toarray]
 ----
 
@@ -13506,6 +13718,32 @@ Restricts the result to have the bundle component variation id.
 |Name |Type |Description
 a|`$componentVariationId`
 |link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#hasnotbundletype]
+----
+
+public hasNotBundleType($bundleType):Plenty\Modules\Pim\SearchService\Filter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_searchservice_filter[`Filter`]
+
+
+Restricts the result to not match the specified bundle type.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$bundleType`
+|link:http://php.net/string[string^]
 a|
 |===
 

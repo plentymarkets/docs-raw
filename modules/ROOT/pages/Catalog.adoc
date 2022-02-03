@@ -10542,6 +10542,78 @@ public rewind():bool
 
 Rewinds resource
 
+[[catalog_services_mutator]]
+===  Mutator
+[[catalog_mutator_mutatorcontainer]]
+==== MutatorContainer
+
+Mutator container
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Mutator`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($mutator):Plenty\Modules\Catalog\Services\Mutator\MutatorContainer
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_mutator_mutatorcontainer[`MutatorContainer`]
+
+
+Register Mutators implementing CatalogMutatorContract
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$mutator`
+|        xref:Catalog.adoc#catalog_contracts_catalogmutatorcontract[`CatalogMutatorContract`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#mutate]
+----
+
+public mutate($item):void
+
+----
+
+
+
+
+
+
+
+Calls function mutator inside every mutator class in the order of registration
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$item`
+|
+a|
+|===
+
+
 [[catalog_converter]]
 == Converter
 
@@ -11242,6 +11314,38 @@ public getOptions():Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
 
 
 [source%nowrap, php]
+[#getcsvheaderrowincluded]
+----
+
+public getCSVHeaderRowIncluded():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdecimalseparator]
+----
+
+public getDecimalSeparator():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#todownload]
 ----
 
@@ -11591,6 +11695,22 @@ public getKey():string
 ----
 
 public getLabel():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdecimalseparator]
+----
+
+public getDecimalSeparator():string
 
 ----
 
@@ -12022,6 +12142,38 @@ public getOptions():Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
 
 
 [source%nowrap, php]
+[#getcsvheaderrowincluded]
+----
+
+public getCSVHeaderRowIncluded():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdecimalseparator]
+----
+
+public getDecimalSeparator():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#todownload]
 ----
 
@@ -12394,6 +12546,38 @@ public getOptions():Plenty\Modules\Catalog\Contracts\UI\UIOptionsContract
 
 
 ====== *Return type:*        xref:Catalog.adoc#catalog_ui_uioptionscontract[`UIOptionsContract`]
+
+
+
+
+[source%nowrap, php]
+[#getrootkey]
+----
+
+public getRootKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdecimalseparator]
+----
+
+public getDecimalSeparator():string
+
+----
+
+
+
+
+
 
 
 
@@ -13387,6 +13571,22 @@ a|`$data`
 a|
 |===
 
+
+[source%nowrap, php]
+[#shouldrun]
+----
+
+public shouldRun():bool
+
+----
+
+
+
+
+
+
+
+Checks if hook should run
 
 [source%nowrap, php]
 [#getcatalog]
