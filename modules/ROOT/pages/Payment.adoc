@@ -346,7 +346,7 @@ a|The ID of the payment
 [#createorderrelationwithvalidation]
 ----
 
-public createOrderRelationWithValidation($paymentId, $orderId, $matchingRate = null):Plenty\Modules\Payment\Models\PaymentOrderRelation
+public createOrderRelationWithValidation($paymentId, $orderId, $matchingRate = null, $allowMultiplePaymentsPerOrder = false):Plenty\Modules\Payment\Models\PaymentOrderRelation
 
 ----
 
@@ -372,6 +372,10 @@ a|
 
 a|`$matchingRate`
 |link:http://php.net/int[int^]
+a|
+
+a|`$allowMultiplePaymentsPerOrder`
+|link:http://php.net/bool[bool^]
 a|
 |===
 
