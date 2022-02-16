@@ -954,14 +954,14 @@ Factory to generate widget settings
 [#inherit]
 ----
 
-public static inherit($parentWidgetClass):Plenty\Modules\ContentBuilder\Factories
+public static inherit($parentWidgetClass):Plenty\Modules\ContentBuilder\Factories\WidgetSettingsFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_contentbuilder_factories[`Factories`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_widgetsettingsfactory[`WidgetSettingsFactory`]
 
 
 Create a new factory instance and initialize values from given widget class.
@@ -980,14 +980,14 @@ a|
 [#create]
 ----
 
-public static create($data = []):Plenty\Modules\ContentBuilder\Factories
+public static create($data = []):Plenty\Modules\ContentBuilder\Factories\WidgetSettingsFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_contentbuilder_factories[`Factories`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_widgetsettingsfactory[`WidgetSettingsFactory`]
 
 
 Create a new factory instance with initial values.
@@ -1056,14 +1056,14 @@ Generate settings data from all registered factories
 [#withpointer]
 ----
 
-public withPointer($key):Plenty\Modules\ContentBuilder\Factories
+public withPointer($key):Plenty\Modules\ContentBuilder\Factories\WidgetSettingsFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_contentbuilder_factories[`Factories`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_widgetsettingsfactory[`WidgetSettingsFactory`]
 
 
 Set a settings key to insert new settings after.
@@ -1889,14 +1889,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -1915,14 +1915,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -1945,14 +1945,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -1971,14 +1971,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -1997,14 +1997,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -2023,14 +2023,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -2049,14 +2049,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -2114,14 +2114,14 @@ Factory to define a category picker in the widget settings.
 [#withdisplayresetbutton]
 ----
 
-public withDisplayResetButton($displayResetButton):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDisplayResetButton($displayResetButton):Plenty\Modules\ContentBuilder\Factories\Settings\CategorySettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_categorysettingfactory[`CategorySettingFactory`]
 
 
 Display or hide a button to reset the current selection.
@@ -2140,14 +2140,14 @@ a|
 [#withdisplaysearch]
 ----
 
-public withDisplaySearch($displaySearch):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDisplaySearch($displaySearch):Plenty\Modules\ContentBuilder\Factories\Settings\CategorySettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_categorysettingfactory[`CategorySettingFactory`]
 
 
 Display or hide an input to search for categories with.
@@ -2166,14 +2166,14 @@ a|
 [#withshowfullselectionpath]
 ----
 
-public withShowFullSelectionPath($showFullSelectionPath):Plenty\Modules\ContentBuilder\Factories\Settings
+public withShowFullSelectionPath($showFullSelectionPath):Plenty\Modules\ContentBuilder\Factories\Settings\CategorySettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_categorysettingfactory[`CategorySettingFactory`]
 
 
 
@@ -2218,14 +2218,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -2244,14 +2244,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -2274,14 +2274,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -2300,14 +2300,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -2326,14 +2326,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -2352,14 +2352,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -2378,14 +2378,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -2443,14 +2443,14 @@ Factory to define a checkbox group in the widget settings.
 [#withcollapsed]
 ----
 
-public withCollapsed($collapsed):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCollapsed($collapsed):Plenty\Modules\ContentBuilder\Factories\Settings\CheckboxGroupSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_checkboxgroupsettingfactory[`CheckboxGroupSettingFactory`]
 
 
 Collapse or expand the group by default. The group can be toggled by the user.
@@ -2469,14 +2469,14 @@ a|
 [#withcheckboxvalues]
 ----
 
-public withCheckboxValues($checkboxValues):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCheckboxValues($checkboxValues):Plenty\Modules\ContentBuilder\Factories\Settings\CheckboxGroupSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_checkboxgroupsettingfactory[`CheckboxGroupSettingFactory`]
 
 
 Set available checkboxes of the group.
@@ -2495,14 +2495,14 @@ a|
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\CheckboxGroupSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_checkboxgroupsettingfactory[`CheckboxGroupSettingFactory`]
 
 
 Set the default value of the group. This should be an array of values.
@@ -2547,14 +2547,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -2573,14 +2573,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -2603,14 +2603,14 @@ a|The option value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -2629,14 +2629,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -2655,14 +2655,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -2681,14 +2681,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -2746,14 +2746,14 @@ Factory to define a checkbox in the widget settings.
 [#withicon]
 ----
 
-public withIcon($icon):Plenty\Modules\ContentBuilder\Factories\Settings
+public withIcon($icon):Plenty\Modules\ContentBuilder\Factories\Settings\CheckboxSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_checkboxsettingfactory[`CheckboxSettingFactory`]
 
 
 Set the icon of the checkbox.
@@ -2798,14 +2798,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -2824,14 +2824,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -2854,14 +2854,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -2880,14 +2880,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -2906,14 +2906,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -2932,14 +2932,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -2958,14 +2958,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -3023,14 +3023,14 @@ Factory to define a container for nested settings.
 [#create]
 ----
 
-public static create($data = []):Plenty\Modules\ContentBuilder\Factories\Settings
+public static create($data = []):Plenty\Modules\ContentBuilder\Factories\Settings\ContainerSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_containersettingfactory[`ContainerSettingFactory`]
 
 
 Create a new factory instance with initial value.
@@ -3065,14 +3065,14 @@ Get all children as a native array
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -3091,14 +3091,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -3121,14 +3121,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -3147,14 +3147,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -3173,14 +3173,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -3199,14 +3199,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -3225,14 +3225,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -3274,14 +3274,14 @@ Factory to define a date picker in the widget settings.
 [#withcalendartop]
 ----
 
-public withCalendarTop($isCalendarTop):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCalendarTop($isCalendarTop):Plenty\Modules\ContentBuilder\Factories\Settings\DateSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_datesettingfactory[`DateSettingFactory`]
 
 
 Display the popup containing the calendar above or below the input field.
@@ -3300,14 +3300,14 @@ a|
 [#withdisplaydateformat]
 ----
 
-public withDisplayDateFormat($format):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDisplayDateFormat($format):Plenty\Modules\ContentBuilder\Factories\Settings\DateSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_datesettingfactory[`DateSettingFactory`]
 
 
 Set the date format to apply to the input field.
@@ -3352,14 +3352,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -3378,14 +3378,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -3408,14 +3408,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -3434,14 +3434,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -3460,14 +3460,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -3486,14 +3486,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -3512,14 +3512,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -3577,14 +3577,14 @@ Factory to define a number input in the widget settings.
 [#withpriceinput]
 ----
 
-public withPriceInput($isPriceInput):Plenty\Modules\ContentBuilder\Factories\Settings
+public withPriceInput($isPriceInput):Plenty\Modules\ContentBuilder\Factories\Settings\DoubleSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_doublesettingfactory[`DoubleSettingFactory`]
 
 
 Define if input expects a monetary value.
@@ -3603,14 +3603,14 @@ a|
 [#withdecimalcount]
 ----
 
-public withDecimalCount($decimalCount):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDecimalCount($decimalCount):Plenty\Modules\ContentBuilder\Factories\Settings\DoubleSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_doublesettingfactory[`DoubleSettingFactory`]
 
 
 Set the number of decimal places for the input.
@@ -3655,14 +3655,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -3681,14 +3681,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -3711,14 +3711,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -3737,14 +3737,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -3763,14 +3763,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -3789,14 +3789,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -3815,14 +3815,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -3880,14 +3880,14 @@ Factory to define a file input in the widget settings.
 [#withshowpreview]
 ----
 
-public withShowPreview($showPreview):Plenty\Modules\ContentBuilder\Factories\Settings
+public withShowPreview($showPreview):Plenty\Modules\ContentBuilder\Factories\Settings\FileSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_filesettingfactory[`FileSettingFactory`]
 
 
 Display the preview of the selected file.
@@ -3906,14 +3906,14 @@ a|
 [#withallowedextensions]
 ----
 
-public withAllowedExtensions($allowedExtensions):Plenty\Modules\ContentBuilder\Factories\Settings
+public withAllowedExtensions($allowedExtensions):Plenty\Modules\ContentBuilder\Factories\Settings\FileSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_filesettingfactory[`FileSettingFactory`]
 
 
 Restrict allowed file extensions.
@@ -3932,14 +3932,14 @@ a|
 [#withfoldersallowed]
 ----
 
-public withFoldersAllowed($foldersAllowed):Plenty\Modules\ContentBuilder\Factories\Settings
+public withFoldersAllowed($foldersAllowed):Plenty\Modules\ContentBuilder\Factories\Settings\FileSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_filesettingfactory[`FileSettingFactory`]
 
 
 Set to true if the user should be allowed to create new folders.
@@ -3984,14 +3984,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -4010,14 +4010,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -4040,14 +4040,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -4066,14 +4066,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -4092,14 +4092,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -4118,14 +4118,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -4144,14 +4144,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -4209,14 +4209,14 @@ Factory to define a group of radio buttons in the widget settings.
 [#withradiovalues]
 ----
 
-public withRadioValues($radioValues):Plenty\Modules\ContentBuilder\Factories\Settings
+public withRadioValues($radioValues):Plenty\Modules\ContentBuilder\Factories\Settings\RadioGroupSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_radiogroupsettingfactory[`RadioGroupSettingFactory`]
 
 
 Set the available radio buttons in this group.
@@ -4261,14 +4261,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -4287,14 +4287,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -4317,14 +4317,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -4343,14 +4343,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -4369,14 +4369,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -4395,14 +4395,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -4421,14 +4421,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -4486,14 +4486,14 @@ Factory to define a selection input in the widget settings.
 [#withopenontop]
 ----
 
-public withOpenOnTop($openOnTop):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOpenOnTop($openOnTop):Plenty\Modules\ContentBuilder\Factories\Settings\SelectSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_selectsettingfactory[`SelectSettingFactory`]
 
 
 Set to true to open selection values above the input field.
@@ -4512,14 +4512,14 @@ a|
 [#withlistboxvalues]
 ----
 
-public withListBoxValues($listBoxValues):Plenty\Modules\ContentBuilder\Factories\Settings
+public withListBoxValues($listBoxValues):Plenty\Modules\ContentBuilder\Factories\Settings\SelectSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_selectsettingfactory[`SelectSettingFactory`]
 
 
 Set available selection values.
@@ -4564,14 +4564,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -4590,14 +4590,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -4620,14 +4620,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -4646,14 +4646,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -4672,14 +4672,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -4698,14 +4698,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -4724,14 +4724,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -4789,14 +4789,14 @@ Factory to define a slider in the widget settings.
 [#withmin]
 ----
 
-public withMin($min):Plenty\Modules\ContentBuilder\Factories\Settings
+public withMin($min):Plenty\Modules\ContentBuilder\Factories\Settings\SliderSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_slidersettingfactory[`SliderSettingFactory`]
 
 
 Set the minimum value of the slider.
@@ -4815,14 +4815,14 @@ a|
 [#withmax]
 ----
 
-public withMax($max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withMax($max):Plenty\Modules\ContentBuilder\Factories\Settings\SliderSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_slidersettingfactory[`SliderSettingFactory`]
 
 
 Set the maximum value of the slider.
@@ -4841,14 +4841,14 @@ a|
 [#withinterval]
 ----
 
-public withInterval($interval):Plenty\Modules\ContentBuilder\Factories\Settings
+public withInterval($interval):Plenty\Modules\ContentBuilder\Factories\Settings\SliderSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_slidersettingfactory[`SliderSettingFactory`]
 
 
 Set the interval between the values of the slider.
@@ -4867,14 +4867,14 @@ a|
 [#withprecision]
 ----
 
-public withPrecision($precision):Plenty\Modules\ContentBuilder\Factories\Settings
+public withPrecision($precision):Plenty\Modules\ContentBuilder\Factories\Settings\SliderSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_slidersettingfactory[`SliderSettingFactory`]
 
 
 Set the number of decimal places of the value.
@@ -4893,14 +4893,14 @@ a|
 [#withshowminmax]
 ----
 
-public withShowMinMax($showMinMax):Plenty\Modules\ContentBuilder\Factories\Settings
+public withShowMinMax($showMinMax):Plenty\Modules\ContentBuilder\Factories\Settings\SliderSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_slidersettingfactory[`SliderSettingFactory`]
 
 
 Set to true to display the minimum and maximum values at each end of the slider.
@@ -4919,14 +4919,14 @@ a|
 [#withshowticks]
 ----
 
-public withShowTicks($showTicks):Plenty\Modules\ContentBuilder\Factories\Settings
+public withShowTicks($showTicks):Plenty\Modules\ContentBuilder\Factories\Settings\SliderSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_slidersettingfactory[`SliderSettingFactory`]
 
 
 Set to true to display ticks on each value.
@@ -4971,14 +4971,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -4997,14 +4997,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -5027,14 +5027,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -5053,14 +5053,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -5079,14 +5079,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -5105,14 +5105,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -5131,14 +5131,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -5196,14 +5196,14 @@ Factory to define an input with suggestions in the widget settings.
 [#withlistboxvalues]
 ----
 
-public withListBoxValues($listBoxValues):Plenty\Modules\ContentBuilder\Factories\Settings
+public withListBoxValues($listBoxValues):Plenty\Modules\ContentBuilder\Factories\Settings\SuggestionSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_suggestionsettingfactory[`SuggestionSettingFactory`]
 
 
 Set available values.
@@ -5248,14 +5248,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -5274,14 +5274,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -5304,14 +5304,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -5330,14 +5330,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -5356,14 +5356,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -5382,14 +5382,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -5408,14 +5408,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -5473,14 +5473,14 @@ Factory to define a text input in the widget settings.
 [#withpassword]
 ----
 
-public withPassword($isPassword):Plenty\Modules\ContentBuilder\Factories\Settings
+public withPassword($isPassword):Plenty\Modules\ContentBuilder\Factories\Settings\TextSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_textsettingfactory[`TextSettingFactory`]
 
 
 Set to true if the input field should be handled as a password input
@@ -5499,14 +5499,14 @@ a|
 [#withreadonly]
 ----
 
-public withReadonly($isReadonly):Plenty\Modules\ContentBuilder\Factories\Settings
+public withReadonly($isReadonly):Plenty\Modules\ContentBuilder\Factories\Settings\TextSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_textsettingfactory[`TextSettingFactory`]
 
 
 Set to true if input field should be readonly.
@@ -5551,14 +5551,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -5577,14 +5577,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -5607,14 +5607,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -5633,14 +5633,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -5659,14 +5659,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -5685,14 +5685,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -5711,14 +5711,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -5776,14 +5776,14 @@ Factory to define a textarea in the widget settings.
 [#withfixedheight]
 ----
 
-public withFixedHeight($isFixedHeight):Plenty\Modules\ContentBuilder\Factories\Settings
+public withFixedHeight($isFixedHeight):Plenty\Modules\ContentBuilder\Factories\Settings\TextareaSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_textareasettingfactory[`TextareaSettingFactory`]
 
 
 Set to true if the height should be fixed.
@@ -5802,14 +5802,14 @@ a|
 [#withmaxrows]
 ----
 
-public withMaxRows($maxRows):Plenty\Modules\ContentBuilder\Factories\Settings
+public withMaxRows($maxRows):Plenty\Modules\ContentBuilder\Factories\Settings\TextareaSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_textareasettingfactory[`TextareaSettingFactory`]
 
 
 Set the maximum number of rows for the textarea.
@@ -5854,14 +5854,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -5880,14 +5880,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -5910,14 +5910,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -5936,14 +5936,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -5962,14 +5962,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -5988,14 +5988,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -6014,14 +6014,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -6131,14 +6131,14 @@ a|
 [#withtype]
 ----
 
-public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings
+public withType($type):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the type of the setting.
@@ -6157,14 +6157,14 @@ a|
 [#withoption]
 ----
 
-public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings
+public withOption($key, $value):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set an option for the setting.
@@ -6187,14 +6187,14 @@ a|The option value
 [#withdefaultvalue]
 ----
 
-public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings
+public withDefaultValue($defaultValue):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the default value for the setting.
@@ -6213,14 +6213,14 @@ a|The default value
 [#withcondition]
 ----
 
-public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings
+public withCondition($condition):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a condition if the setting should be visible or not.
@@ -6239,14 +6239,14 @@ a|Condition if the related form element should be visible or not.
 [#withname]
 ----
 
-public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings
+public withName($name):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set the name of the setting.
@@ -6265,14 +6265,14 @@ a|The label of the setting
 [#withtooltip]
 ----
 
-public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings
+public withTooltip($tooltip):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Set a tooltip text for this input
@@ -6291,14 +6291,14 @@ a|An additional description of the setting
 [#withlist]
 ----
 
-public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings
+public withList($min, $max):Plenty\Modules\ContentBuilder\Factories\Settings\BaseSettingFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_basesettingfactory[`BaseSettingFactory`]
 
 
 Determines whether the declaration is used to render a list of the specified form field.
@@ -6356,14 +6356,14 @@ Create a list of values to be used by settings with multiple predefined values.
 [#make]
 ----
 
-public static make():Plenty\Modules\ContentBuilder\Factories\Settings
+public static make():Plenty\Modules\ContentBuilder\Factories\Settings\ValueListFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_valuelistfactory[`ValueListFactory`]
 
 
 Create a new factory instance.
@@ -6372,14 +6372,14 @@ Create a new factory instance.
 [#addentry]
 ----
 
-public addEntry($value, $caption):Plenty\Modules\ContentBuilder\Factories\Settings
+public addEntry($value, $caption):Plenty\Modules\ContentBuilder\Factories\Settings\ValueListFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_factories_settings[`Settings`]
+====== *Return type:*        xref:Contentbuilder.adoc#contentbuilder_settings_valuelistfactory[`ValueListFactory`]
 
 
 Add an entry to the list of values
