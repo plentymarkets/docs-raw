@@ -624,7 +624,7 @@ public getPolicies($credentialsId, $marketplaceId):array
 
 
 
-Get a stored fulfillment policy based on ID.
+Get a stored fulfillment policy based on credentials &amp; marketplace ID.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -714,7 +714,7 @@ public deleteBulk($userId, $marketId):bool
 
 
 
-Deletes a fulfillment policies.
+Deletes fulfillment policies.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -819,7 +819,7 @@ public getPolicies($credentialsId, $marketplaceId):array
 
 
 
-Get a stored fulfillment policy based on ID.
+Get a stored fulfillment policy based on credentials &amp; marketplace ID.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -909,7 +909,7 @@ public deleteBulk($userId, $marketId):bool
 
 
 
-Deletes a payment policies.
+Deletes payment policies.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -922,6 +922,213 @@ a|
 a|`$marketId`
 |link:http://php.net/int[int^]
 a|
+|===
+
+
+
+[[market_contracts_productcompliancepolicyrepositorycontract]]
+==== ProductCompliancePolicyRepositoryContract
+
+The contract for the eBay productCompliance policy repository.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data, $marketplaceId):Plenty\Modules\Market\Ebay\AccountPolicy\Models\ProductCompliancePolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_productcompliancepolicy[`ProductCompliancePolicy`]
+
+
+Creates a new productCompliance policy.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+
+a|`$marketplaceId`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $filters = []):Plenty\Modules\Market\Ebay\AccountPolicy\Models\ProductCompliancePolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_productcompliancepolicy[`ProductCompliancePolicy`]
+
+
+Get a stored productCompliance policy based on ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|The ID of the policy that we want to get
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|A list of filters that are needed to get the corresponding policy. Available: `marketplaceId´, `credentialsId´.
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data, $marketplaceId):Plenty\Modules\Market\Ebay\AccountPolicy\Models\ProductCompliancePolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_productcompliancepolicy[`ProductCompliancePolicy`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|The ID of the productCompliance policy.
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|The productCompliance policy data
+
+a|`$marketplaceId`
+|link:http://php.net/string[string^]
+a|The eBay marketplace id
+|===
+
+
+[source%nowrap, php]
+[#deletebulk]
+----
+
+public deleteBulk($userId, $marketId):bool
+
+----
+
+
+
+
+
+
+
+Deletes productCompliance policies.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$userId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$marketId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getpolicies]
+----
+
+public getPolicies($credentialsId, $marketplaceId):array
+
+----
+
+
+
+
+
+
+
+Get a stored productCompliance policy based on credentials &amp; marketplace ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$credentialsId`
+|link:http://php.net/int[int^]
+a|The ID of the account credentials
+
+a|`$marketplaceId`
+|link:http://php.net/string[string^]
+a|The eBay marketplace id
+|===
+
+
+[source%nowrap, php]
+[#getpolicy]
+----
+
+public getPolicy($credentialsId, $marketplaceId, $policyId):Plenty\Modules\Market\Ebay\AccountPolicy\Models\ProductCompliancePolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_productcompliancepolicy[`ProductCompliancePolicy`]
+
+
+Get a stored productCompliance policy based on policy ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$credentialsId`
+|link:http://php.net/int[int^]
+a|The ID of the account credentials
+
+a|`$marketplaceId`
+|link:http://php.net/string[string^]
+a|The eBay marketplace id
+
+a|`$policyId`
+|link:http://php.net/string[string^]
+a|The ID of the policy
 |===
 
 
@@ -1074,7 +1281,7 @@ public deleteBulk($userId, $marketId):bool
 
 
 
-Deletes a return policy.
+Deletes return policies.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -1104,7 +1311,7 @@ public getPolicies($credentialsId, $marketplaceId):array
 
 
 
-Get a stored fulfillment policy based on ID.
+Get a stored fulfillment policy based on credentials &amp; marketplace ID.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -1117,6 +1324,213 @@ a|The ID of the account credentials
 a|`$marketplaceId`
 |link:http://php.net/string[string^]
 a|The eBay marketplace id
+|===
+
+
+
+[[market_contracts_takebackpolicyrepositorycontract]]
+==== TakeBackPolicyRepositoryContract
+
+The contract for the eBay takeBack policy repository.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data, $marketplaceId):Plenty\Modules\Market\Ebay\AccountPolicy\Models\TakeBackPolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_takebackpolicy[`TakeBackPolicy`]
+
+
+Creates a new takeBack policy.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+
+a|`$marketplaceId`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $filters = []):Plenty\Modules\Market\Ebay\AccountPolicy\Models\TakeBackPolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_takebackpolicy[`TakeBackPolicy`]
+
+
+Get a stored takeBack policy based on ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|The ID of the policy that we want to get
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|A list of filters that are needed to get the corresponding policy. Available: `marketplaceId´, `credentialsId´.
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data, $marketplaceId):Plenty\Modules\Market\Ebay\AccountPolicy\Models\TakeBackPolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_takebackpolicy[`TakeBackPolicy`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|The ID of the takeBack policy.
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|The takeBack policy data
+
+a|`$marketplaceId`
+|link:http://php.net/string[string^]
+a|The eBay marketplace id
+|===
+
+
+[source%nowrap, php]
+[#deletebulk]
+----
+
+public deleteBulk($userId, $marketId):bool
+
+----
+
+
+
+
+
+
+
+Deletes takeBack policies.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$userId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$marketId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getpolicies]
+----
+
+public getPolicies($credentialsId, $marketplaceId):array
+
+----
+
+
+
+
+
+
+
+Get stored takeBack policies based on credentials &amp; marketplace ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$credentialsId`
+|link:http://php.net/int[int^]
+a|The ID of the account credentials
+
+a|`$marketplaceId`
+|link:http://php.net/string[string^]
+a|The eBay marketplace id
+|===
+
+
+[source%nowrap, php]
+[#getpolicy]
+----
+
+public getPolicy($credentialsId, $marketplaceId, $policyId):Plenty\Modules\Market\Ebay\AccountPolicy\Models\TakeBackPolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_takebackpolicy[`TakeBackPolicy`]
+
+
+Get a stored takeBack policy based on policy ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$credentialsId`
+|link:http://php.net/int[int^]
+a|The ID of the account credentials
+
+a|`$marketplaceId`
+|link:http://php.net/string[string^]
+a|The eBay marketplace id
+
+a|`$policyId`
+|link:http://php.net/string[string^]
+a|The ID of the policy
 |===
 
 
@@ -1610,6 +2024,189 @@ public getPaymentPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\Paymen
 Get the PaymentPolicy instance.
 
 
+[[market_events_productcompliancepolicycreated]]
+==== ProductCompliancePolicyCreated
+
+An event class fired after a new product compliance policy is created.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#__construct]
+----
+
+public __construct($productCompliancePolicy):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$productCompliancePolicy`
+|        xref:Market.adoc#market_models_productcompliancepolicy[`ProductCompliancePolicy`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getproductcompliancepolicy]
+----
+
+public getProductCompliancePolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\ProductCompliancePolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_productcompliancepolicy[`ProductCompliancePolicy`]
+
+
+Get the ProductCompliancePolicy instance.
+
+
+[[market_events_productcompliancepolicyevent]]
+==== ProductCompliancePolicyEvent
+
+A base event class for all product compliance policy events. Each product compliance policy event expects a ProductCompliancePolicy model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#__construct]
+----
+
+public __construct($productCompliancePolicy):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$productCompliancePolicy`
+|        xref:Market.adoc#market_models_productcompliancepolicy[`ProductCompliancePolicy`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getproductcompliancepolicy]
+----
+
+public getProductCompliancePolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\ProductCompliancePolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_productcompliancepolicy[`ProductCompliancePolicy`]
+
+
+Get the ProductCompliancePolicy instance.
+
+
+[[market_events_productcompliancepolicyupdated]]
+==== ProductCompliancePolicyUpdated
+
+An event class fired after a product compliance policy is updated.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#__construct]
+----
+
+public __construct($productCompliancePolicy):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$productCompliancePolicy`
+|        xref:Market.adoc#market_models_productcompliancepolicy[`ProductCompliancePolicy`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getproductcompliancepolicy]
+----
+
+public getProductCompliancePolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\ProductCompliancePolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_productcompliancepolicy[`ProductCompliancePolicy`]
+
+
+Get the ProductCompliancePolicy instance.
+
+
 [[market_events_returnpolicycreated]]
 ==== ReturnPolicyCreated
 
@@ -1852,6 +2449,189 @@ public getReturnPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\ReturnP
 
 
 Get the ReturnPolicy instance.
+
+
+[[market_events_takebackpolicycreated]]
+==== TakeBackPolicyCreated
+
+An event class fired after a new take back policy is created.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#__construct]
+----
+
+public __construct($takeBackPolicy):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$takeBackPolicy`
+|        xref:Market.adoc#market_models_takebackpolicy[`TakeBackPolicy`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#gettakebackpolicy]
+----
+
+public getTakeBackPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\TakeBackPolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_takebackpolicy[`TakeBackPolicy`]
+
+
+Get the TakeBackPolicy instance.
+
+
+[[market_events_takebackpolicyevent]]
+==== TakeBackPolicyEvent
+
+A base event class for all take back policy events. Each take back policy event expects a TakeBackPolicy model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#__construct]
+----
+
+public __construct($takeBackPolicy):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$takeBackPolicy`
+|        xref:Market.adoc#market_models_takebackpolicy[`TakeBackPolicy`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#gettakebackpolicy]
+----
+
+public getTakeBackPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\TakeBackPolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_takebackpolicy[`TakeBackPolicy`]
+
+
+Get the TakeBackPolicy instance.
+
+
+[[market_events_takebackpolicyupdated]]
+==== TakeBackPolicyUpdated
+
+An event class fired after a take back policy is updated.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#__construct]
+----
+
+public __construct($takeBackPolicy):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$takeBackPolicy`
+|        xref:Market.adoc#market_models_takebackpolicy[`TakeBackPolicy`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#gettakebackpolicy]
+----
+
+public getTakeBackPolicy():Plenty\Modules\Market\Ebay\AccountPolicy\Models\TakeBackPolicy
+
+----
+
+
+
+
+====== *Return type:*        xref:Market.adoc#market_models_takebackpolicy[`TakeBackPolicy`]
+
+
+Get the TakeBackPolicy instance.
 
 [[market_accountpolicy_models]]
 ===  Models
@@ -2181,6 +2961,63 @@ The eBay payment policy model
 |paymentMethods
     |        xref:Market.adoc#market_models_paymentmethod[`PaymentMethod`]
     a|A list of the payment methods accepted by the seller. Each payment policy must specify at least one payment method.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[market_models_productcompliancepolicy]]
+==== ProductCompliancePolicy
+
+The eBay productCompliance policy model
+
+
+
+===== Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|customPolicyId
+    |link:http://php.net/string[string^]
+    a|The ID of the custom productCompliance policy.
+|description
+    |link:http://php.net/string[string^]
+    a|An optional seller-defined description of the productCompliance policy. (Max length: 250)
+|policyType
+    |link:http://php.net/string[string^]
+    a|The type of the productCompliance policy. Should always be "PRODUCT_COMPLIANCE".
+|name
+    |link:http://php.net/string[string^]
+    a|A user-defined name for this productCompliance policy. Names must be unique for policies assigned to the same marketplace. (Max length: 64)
+|label
+    |link:http://php.net/string[string^]
+    a|A user-defined name for this productCompliance policy on eBay. (Max length: 64)
 |===
 
 
@@ -2547,6 +3384,63 @@ The eBay shipping service model
 |surcharge
     |        xref:Market.adoc#market_models_amounttype[`AmountType`]
     a|A fee that can be charged to US buyers when they have an item shipped via UPS or FedEx to Alaska, Hawaii or Puerto Rico.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[market_models_takebackpolicy]]
+==== TakeBackPolicy
+
+The eBay takeBack policy model
+
+
+
+===== Namespace
+
+`Plenty\Modules\Market\Ebay\AccountPolicy\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|customPolicyId
+    |link:http://php.net/string[string^]
+    a|The ID of the custom takeBack policy.
+|description
+    |link:http://php.net/string[string^]
+    a|An optional seller-defined description of the takeBack policy. (Max length: 250)
+|policyType
+    |link:http://php.net/string[string^]
+    a|The type of the takeBack policy. Should always be "TAKE_BACK".
+|name
+    |link:http://php.net/string[string^]
+    a|A user-defined name for this takeBack policy. Names must be unique for policies assigned to the same marketplace. (Max length: 64)
+|label
+    |link:http://php.net/string[string^]
+    a|A user-defined name for this takeBack policy on eBay. (Max length: 64)
 |===
 
 
