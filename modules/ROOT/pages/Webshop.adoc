@@ -1940,14 +1940,14 @@ Check if a trailing slash should be appended to urls.
 [#append]
 ----
 
-public append($suffix):Plenty\Modules\Webshop\Helpers
+public append($suffix):Plenty\Modules\Webshop\Helpers\UrlQuery
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_webshop_helpers[`Helpers`]
+====== *Return type:*        xref:Webshop.adoc#webshop_helpers_urlquery[`UrlQuery`]
 
 
 Append a string to the path the url without checking for slashes.
@@ -1966,14 +1966,14 @@ a|String to append to the path.
 [#join]
 ----
 
-public join($path):Plenty\Modules\Webshop\Helpers
+public join($path):Plenty\Modules\Webshop\Helpers\UrlQuery
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_webshop_helpers[`Helpers`]
+====== *Return type:*        xref:Webshop.adoc#webshop_helpers_urlquery[`UrlQuery`]
 
 
 Append a new path to the existing one. Ensure having a slash as glue between existing path and the new segment.
@@ -2296,14 +2296,14 @@ a|List of properties to inherit or null to inherit all properties.
 [#withmutator]
 ----
 
-public withMutator($mutator, $excludeDependencies = false, $position = 1000):Plenty\Modules\Webshop\ItemSearch\Factories
+public withMutator($mutator, $excludeDependencies = false, $position = 1000):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add a mutator to transform search results.
@@ -2361,14 +2361,14 @@ a|
 [#withfilter]
 ----
 
-public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories
+public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add a filter. Will override existing filter instances.
@@ -2387,14 +2387,14 @@ a|
 [#withresultfields]
 ----
 
-public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories
+public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Set fields to be contained in search result.
@@ -2471,14 +2471,14 @@ Get additional result fields required by webshop mutators.
 [#withextension]
 ----
 
-public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webshop\ItemSearch\Factories
+public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add an extension.
@@ -2533,14 +2533,14 @@ Get all registered mutators
 [#withaggregation]
 ----
 
-public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories
+public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add an aggregation
@@ -2559,14 +2559,14 @@ a|
 [#withsuggestion]
 ----
 
-public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories
+public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add a suggestion
@@ -2585,14 +2585,14 @@ a|
 [#setpage]
 ----
 
-public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories
+public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Set pagination parameters.
@@ -2615,14 +2615,14 @@ a|
 [#sortby]
 ----
 
-public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory::SORTING_ORDER_DESC):Plenty\Modules\Webshop\ItemSearch\Factories
+public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory::SORTING_ORDER_DESC):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add sorting parameters
@@ -2645,14 +2645,14 @@ a|Direction to order results. Possible values: 'asc' or 'desc'
 [#sortbymultiple]
 ----
 
-public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories
+public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add multiple sorting parameters
@@ -2671,14 +2671,14 @@ a|List of sorting parameters. Each entry should have a 'field' and an 'order' pr
 [#setorder]
 ----
 
-public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories
+public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Set the order of the search results by ids.
@@ -2697,14 +2697,14 @@ a|List of variation ids. Search results will be sorted in the same order.
 [#groupby]
 ----
 
-public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factories
+public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Group results by field
@@ -2746,14 +2746,14 @@ Prepare and build search requests to query facets
 [#create]
 ----
 
-public static create($facets):Plenty\Modules\Webshop\ItemSearch\Factories
+public static create($facets):Plenty\Modules\Webshop\ItemSearch\Factories\FacetSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_facetsearchfactory[`FacetSearchFactory`]
 
 
 Create a factory instance depending on a given set of facet values.
@@ -2772,14 +2772,14 @@ a|List of active facet values. If string is given, it will be exploded by ',' to
 [#withminimumcount]
 ----
 
-public withMinimumCount():Plenty\Modules\Webshop\ItemSearch\Factories
+public withMinimumCount():Plenty\Modules\Webshop\ItemSearch\Factories\FacetSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_facetsearchfactory[`FacetSearchFactory`]
 
 
 Register extension to filter facets by minimum hit count.
@@ -2804,14 +2804,14 @@ Return selected facet values as array
 [#default]
 ----
 
-public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories
+public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Get the default configuration of a search factory. This applies the following filters
@@ -2843,14 +2843,14 @@ a|Available options
 [#setadminpreview]
 ----
 
-public setAdminPreview($isAdminPreview):Plenty\Modules\Webshop\ItemSearch\Factories
+public setAdminPreview($isAdminPreview):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Set preview mode for the search request.
@@ -2869,14 +2869,14 @@ a|Set to true to enable preview.
 [#isactive]
 ----
 
-public isActive():Plenty\Modules\Webshop\ItemSearch\Factories
+public isActive():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter active variations
@@ -2885,14 +2885,14 @@ Filter active variations
 [#isinactive]
 ----
 
-public isInactive():Plenty\Modules\Webshop\ItemSearch\Factories
+public isInactive():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter inactive variations
@@ -2901,14 +2901,14 @@ Filter inactive variations
 [#hasitemid]
 ----
 
-public hasItemId($itemId):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasItemId($itemId):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variation by a single item id
@@ -2927,14 +2927,14 @@ a|Item id to filter by.
 [#hasitemids]
 ----
 
-public hasItemIds($itemIds):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasItemIds($itemIds):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by multiple item ids
@@ -2953,14 +2953,14 @@ a|List of item ids to filter by.
 [#hasvariationid]
 ----
 
-public hasVariationId($variationId):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasVariationId($variationId):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variation by a single variation id.
@@ -2979,14 +2979,14 @@ a|The variation id to filter by.
 [#hasvariationids]
 ----
 
-public hasVariationIds($variationIds):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasVariationIds($variationIds):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by multiple variation ids.
@@ -3005,14 +3005,14 @@ a|List of variation ids to filter by.
 [#hasatleastoneavailability]
 ----
 
-public hasAtLeastOneAvailability($availabilityIds):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasAtLeastOneAvailability($availabilityIds):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by multiple availability ids.
@@ -3031,14 +3031,14 @@ a|List of availability ids to filter by.
 [#hassupplier]
 ----
 
-public hasSupplier($supplierId):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasSupplier($supplierId):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by multiple availability ids.
@@ -3057,14 +3057,14 @@ a|The supplier id to filter by.
 [#hasmanufacturer]
 ----
 
-public hasManufacturer($manufacturerId):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasManufacturer($manufacturerId):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter manufacturers by id.
@@ -3083,14 +3083,14 @@ a|To filter by manufacturer
 [#haseachproperty]
 ----
 
-public hasEachProperty($propertyIds):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasEachProperty($propertyIds):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by multiple property ids.
@@ -3109,14 +3109,14 @@ a|The property ids to filter by.
 [#ismain]
 ----
 
-public isMain():Plenty\Modules\Webshop\ItemSearch\Factories
+public isMain():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter only main variations
@@ -3125,14 +3125,14 @@ Filter only main variations
 [#ischild]
 ----
 
-public isChild():Plenty\Modules\Webshop\ItemSearch\Factories
+public isChild():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter only child variations
@@ -3141,14 +3141,14 @@ Filter only child variations
 [#ishiddenincategorylist]
 ----
 
-public isHiddenInCategoryList($isHidden = true):Plenty\Modules\Webshop\ItemSearch\Factories
+public isHiddenInCategoryList($isHidden = true):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter by visibility in category list.
@@ -3167,14 +3167,14 @@ a|Visibility in category list to filter by.
 [#issalable]
 ----
 
-public isSalable():Plenty\Modules\Webshop\ItemSearch\Factories
+public isSalable():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by isSalable flag
@@ -3183,14 +3183,14 @@ Filter variations by isSalable flag
 [#isvisibleforclient]
 ----
 
-public isVisibleForClient($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public isVisibleForClient($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by visibility for client
@@ -3209,14 +3209,14 @@ a|The client id to filter by. If null, default client id from config will be use
 [#hasnameinlanguage]
 ----
 
-public hasNameInLanguage($type = &quot;hasAnyNameInLanguage&quot;, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasNameInLanguage($type = &quot;hasAnyNameInLanguage&quot;, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations having texts in a given language.
@@ -3239,14 +3239,14 @@ a|The language to filter by. If null, language defined in session will be used.
 [#isincategory]
 ----
 
-public isInCategory($categoryId):Plenty\Modules\Webshop\ItemSearch\Factories
+public isInCategory($categoryId):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations contained in a category.
@@ -3265,14 +3265,14 @@ a|A category id to filter variations by.
 [#hasatleastoneprice]
 ----
 
-public hasAtLeastOnePrice($priceIds):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasAtLeastOnePrice($priceIds):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations having at least on price.
@@ -3291,14 +3291,14 @@ a|List of price ids to filter variations by
 [#haspriceforcustomer]
 ----
 
-public hasPriceForCustomer():Plenty\Modules\Webshop\ItemSearch\Factories
+public hasPriceForCustomer():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations having at least one price accessible by current customer.
@@ -3307,14 +3307,14 @@ Filter variations having at least one price accessible by current customer.
 [#haspriceinrange]
 ----
 
-public hasPriceInRange($priceMin, $priceMax):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasPriceInRange($priceMin, $priceMax):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -3337,14 +3337,14 @@ a|
 [#hastag]
 ----
 
-public hasTag($tagId):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasTag($tagId):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -3363,14 +3363,14 @@ a|
 [#hasanytag]
 ----
 
-public hasAnyTag($tagIds):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasAnyTag($tagIds):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -3389,14 +3389,14 @@ a|
 [#groupbytemplateconfig]
 ----
 
-public groupByTemplateConfig():Plenty\Modules\Webshop\ItemSearch\Factories
+public groupByTemplateConfig():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Group results depending on a config value.
@@ -3405,14 +3405,14 @@ Group results depending on a config value.
 [#iscrosssellingitem]
 ----
 
-public isCrossSellingItem($itemId, $relation):Plenty\Modules\Webshop\ItemSearch\Factories
+public isCrossSellingItem($itemId, $relation):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations having a cross selling relation to a given item.
@@ -3435,14 +3435,14 @@ a|The relation of cross selling items.
 [#hasfacets]
 ----
 
-public hasFacets($facetValues, $clientId = null, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasFacets($facetValues, $clientId = null, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by facets.
@@ -3469,14 +3469,14 @@ a|Language to filter facets by. If null, active language from session will be us
 [#hassearchstring]
 ----
 
-public hasSearchString($query, $lang = null, $a = &quot;&quot;, $b = &quot;&quot;):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasSearchString($query, $lang = null, $a = &quot;&quot;, $b = &quot;&quot;):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by given search string.
@@ -3507,14 +3507,14 @@ a|
 [#hasnamestring]
 ----
 
-public hasNameString($query, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasNameString($query, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by searching names
@@ -3537,14 +3537,14 @@ a|Language to apply search on. If null, default language from session will be us
 [#withlanguage]
 ----
 
-public withLanguage($lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public withLanguage($lang = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Only request given language.
@@ -3563,14 +3563,14 @@ a|Language to get texts for. If null, default language from session will be used
 [#withimages]
 ----
 
-public withImages($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public withImages($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Include images in result
@@ -3589,14 +3589,14 @@ a|The client id to get images for. If null, default client id from config will b
 [#withvariationattributemap]
 ----
 
-public withVariationAttributeMap($itemId, $initialVariationId, $afterKey = []):Plenty\Modules\Webshop\ItemSearch\Factories
+public withVariationAttributeMap($itemId, $initialVariationId, $afterKey = []):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Includes VariationAttributeMap for variation select
@@ -3623,14 +3623,14 @@ a|
 [#withpropertygroups]
 ----
 
-public withPropertyGroups($displaySettings = []):Plenty\Modules\Webshop\ItemSearch\Factories
+public withPropertyGroups($displaySettings = []):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -3649,14 +3649,14 @@ a|
 [#withorderpropertyselectionvalues]
 ----
 
-public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Factories
+public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -3665,14 +3665,14 @@ public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Fact
 [#withvariationproperties]
 ----
 
-public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories
+public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -3681,14 +3681,14 @@ public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withurls]
 ----
 
-public withUrls():Plenty\Modules\Webshop\ItemSearch\Factories
+public withUrls():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Append URLs to result.
@@ -3697,14 +3697,14 @@ Append URLs to result.
 [#withprices]
 ----
 
-public withPrices($quantities = [], $setPriceOnly = false):Plenty\Modules\Webshop\ItemSearch\Factories
+public withPrices($quantities = [], $setPriceOnly = false):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Append prices to result.
@@ -3727,14 +3727,14 @@ a|
 [#withcurrentcategory]
 ----
 
-public withCurrentCategory():Plenty\Modules\Webshop\ItemSearch\Factories
+public withCurrentCategory():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Set result as current category
@@ -3743,14 +3743,14 @@ Set result as current category
 [#withdefaultimage]
 ----
 
-public withDefaultImage():Plenty\Modules\Webshop\ItemSearch\Factories
+public withDefaultImage():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Append default item image if images are requested by result fields and item does not have any image
@@ -3759,14 +3759,14 @@ Append default item image if images are requested by result fields and item does
 [#withbundlecomponents]
 ----
 
-public withBundleComponents():Plenty\Modules\Webshop\ItemSearch\Factories
+public withBundleComponents():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Add bundle component variations.
@@ -3791,14 +3791,14 @@ Add set component variations to item set entries.
 [#withlinktocontent]
 ----
 
-public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories
+public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -3807,14 +3807,14 @@ public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withgroupedattributevalues]
 ----
 
-public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories
+public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -3823,14 +3823,14 @@ public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withreducedresults]
 ----
 
-public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories
+public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -3839,14 +3839,14 @@ public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withavailability]
 ----
 
-public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories
+public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -3855,14 +3855,14 @@ public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withtags]
 ----
 
-public withTags():Plenty\Modules\Webshop\ItemSearch\Factories
+public withTags():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -3871,14 +3871,14 @@ public withTags():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withcategories]
 ----
 
-public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories
+public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -3887,14 +3887,14 @@ public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withsuggestions]
 ----
 
-public withSuggestions($query = &quot;&quot;, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public withSuggestions($query = &quot;&quot;, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -3917,14 +3917,14 @@ a|
 [#withdidyoumeansuggestions]
 ----
 
-public withDidYouMeanSuggestions($query):Plenty\Modules\Webshop\ItemSearch\Factories
+public withDidYouMeanSuggestions($query):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -4033,14 +4033,14 @@ a|List of properties to inherit or null to inherit all properties.
 [#withmutator]
 ----
 
-public withMutator($mutator, $excludeDependencies = false, $position = 1000):Plenty\Modules\Webshop\ItemSearch\Factories
+public withMutator($mutator, $excludeDependencies = false, $position = 1000):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add a mutator to transform search results.
@@ -4098,14 +4098,14 @@ a|
 [#withfilter]
 ----
 
-public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories
+public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add a filter. Will override existing filter instances.
@@ -4124,14 +4124,14 @@ a|
 [#withresultfields]
 ----
 
-public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories
+public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Set fields to be contained in search result.
@@ -4208,14 +4208,14 @@ Get additional result fields required by webshop mutators.
 [#withextension]
 ----
 
-public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webshop\ItemSearch\Factories
+public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add an extension.
@@ -4270,14 +4270,14 @@ Get all registered mutators
 [#withaggregation]
 ----
 
-public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories
+public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add an aggregation
@@ -4296,14 +4296,14 @@ a|
 [#withsuggestion]
 ----
 
-public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories
+public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add a suggestion
@@ -4322,14 +4322,14 @@ a|
 [#setpage]
 ----
 
-public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories
+public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Set pagination parameters.
@@ -4352,14 +4352,14 @@ a|
 [#sortby]
 ----
 
-public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory::SORTING_ORDER_DESC):Plenty\Modules\Webshop\ItemSearch\Factories
+public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory::SORTING_ORDER_DESC):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add sorting parameters
@@ -4382,14 +4382,14 @@ a|Direction to order results. Possible values: 'asc' or 'desc'
 [#sortbymultiple]
 ----
 
-public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories
+public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add multiple sorting parameters
@@ -4408,14 +4408,14 @@ a|List of sorting parameters. Each entry should have a 'field' and an 'order' pr
 [#setorder]
 ----
 
-public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories
+public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Set the order of the search results by ids.
@@ -4434,14 +4434,14 @@ a|List of variation ids. Search results will be sorted in the same order.
 [#groupby]
 ----
 
-public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factories
+public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Group results by field
@@ -4483,14 +4483,14 @@ Prepare and build search requests to query variations
 [#default]
 ----
 
-public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories
+public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Get the default configuration of a search factory. This applies the following filters
@@ -4522,14 +4522,14 @@ a|Available options
 [#setadminpreview]
 ----
 
-public setAdminPreview($isAdminPreview):Plenty\Modules\Webshop\ItemSearch\Factories
+public setAdminPreview($isAdminPreview):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Set preview mode for the search request.
@@ -4548,14 +4548,14 @@ a|Set to true to enable preview.
 [#isactive]
 ----
 
-public isActive():Plenty\Modules\Webshop\ItemSearch\Factories
+public isActive():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter active variations
@@ -4564,14 +4564,14 @@ Filter active variations
 [#isinactive]
 ----
 
-public isInactive():Plenty\Modules\Webshop\ItemSearch\Factories
+public isInactive():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter inactive variations
@@ -4580,14 +4580,14 @@ Filter inactive variations
 [#hasitemid]
 ----
 
-public hasItemId($itemId):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasItemId($itemId):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variation by a single item id
@@ -4606,14 +4606,14 @@ a|Item id to filter by.
 [#hasitemids]
 ----
 
-public hasItemIds($itemIds):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasItemIds($itemIds):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by multiple item ids
@@ -4632,14 +4632,14 @@ a|List of item ids to filter by.
 [#hasvariationid]
 ----
 
-public hasVariationId($variationId):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasVariationId($variationId):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variation by a single variation id.
@@ -4658,14 +4658,14 @@ a|The variation id to filter by.
 [#hasvariationids]
 ----
 
-public hasVariationIds($variationIds):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasVariationIds($variationIds):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by multiple variation ids.
@@ -4684,14 +4684,14 @@ a|List of variation ids to filter by.
 [#hasatleastoneavailability]
 ----
 
-public hasAtLeastOneAvailability($availabilityIds):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasAtLeastOneAvailability($availabilityIds):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by multiple availability ids.
@@ -4710,14 +4710,14 @@ a|List of availability ids to filter by.
 [#hassupplier]
 ----
 
-public hasSupplier($supplierId):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasSupplier($supplierId):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by multiple availability ids.
@@ -4736,14 +4736,14 @@ a|The supplier id to filter by.
 [#hasmanufacturer]
 ----
 
-public hasManufacturer($manufacturerId):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasManufacturer($manufacturerId):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter manufacturers by id.
@@ -4762,14 +4762,14 @@ a|To filter by manufacturer
 [#haseachproperty]
 ----
 
-public hasEachProperty($propertyIds):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasEachProperty($propertyIds):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by multiple property ids.
@@ -4788,14 +4788,14 @@ a|The property ids to filter by.
 [#ismain]
 ----
 
-public isMain():Plenty\Modules\Webshop\ItemSearch\Factories
+public isMain():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter only main variations
@@ -4804,14 +4804,14 @@ Filter only main variations
 [#ischild]
 ----
 
-public isChild():Plenty\Modules\Webshop\ItemSearch\Factories
+public isChild():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter only child variations
@@ -4820,14 +4820,14 @@ Filter only child variations
 [#ishiddenincategorylist]
 ----
 
-public isHiddenInCategoryList($isHidden = true):Plenty\Modules\Webshop\ItemSearch\Factories
+public isHiddenInCategoryList($isHidden = true):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter by visibility in category list.
@@ -4846,14 +4846,14 @@ a|Visibility in category list to filter by.
 [#issalable]
 ----
 
-public isSalable():Plenty\Modules\Webshop\ItemSearch\Factories
+public isSalable():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by isSalable flag
@@ -4862,14 +4862,14 @@ Filter variations by isSalable flag
 [#isvisibleforclient]
 ----
 
-public isVisibleForClient($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public isVisibleForClient($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by visibility for client
@@ -4888,14 +4888,14 @@ a|The client id to filter by. If null, default client id from config will be use
 [#hasnameinlanguage]
 ----
 
-public hasNameInLanguage($type = &quot;hasAnyNameInLanguage&quot;, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasNameInLanguage($type = &quot;hasAnyNameInLanguage&quot;, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations having texts in a given language.
@@ -4918,14 +4918,14 @@ a|The language to filter by. If null, language defined in session will be used.
 [#isincategory]
 ----
 
-public isInCategory($categoryId):Plenty\Modules\Webshop\ItemSearch\Factories
+public isInCategory($categoryId):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations contained in a category.
@@ -4944,14 +4944,14 @@ a|A category id to filter variations by.
 [#hasatleastoneprice]
 ----
 
-public hasAtLeastOnePrice($priceIds):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasAtLeastOnePrice($priceIds):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations having at least on price.
@@ -4970,14 +4970,14 @@ a|List of price ids to filter variations by
 [#haspriceforcustomer]
 ----
 
-public hasPriceForCustomer():Plenty\Modules\Webshop\ItemSearch\Factories
+public hasPriceForCustomer():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations having at least one price accessible by current customer.
@@ -4986,14 +4986,14 @@ Filter variations having at least one price accessible by current customer.
 [#haspriceinrange]
 ----
 
-public hasPriceInRange($priceMin, $priceMax):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasPriceInRange($priceMin, $priceMax):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5016,14 +5016,14 @@ a|
 [#hastag]
 ----
 
-public hasTag($tagId):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasTag($tagId):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5042,14 +5042,14 @@ a|
 [#hasanytag]
 ----
 
-public hasAnyTag($tagIds):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasAnyTag($tagIds):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5068,14 +5068,14 @@ a|
 [#groupbytemplateconfig]
 ----
 
-public groupByTemplateConfig():Plenty\Modules\Webshop\ItemSearch\Factories
+public groupByTemplateConfig():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Group results depending on a config value.
@@ -5084,14 +5084,14 @@ Group results depending on a config value.
 [#iscrosssellingitem]
 ----
 
-public isCrossSellingItem($itemId, $relation):Plenty\Modules\Webshop\ItemSearch\Factories
+public isCrossSellingItem($itemId, $relation):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations having a cross selling relation to a given item.
@@ -5114,14 +5114,14 @@ a|The relation of cross selling items.
 [#hasfacets]
 ----
 
-public hasFacets($facetValues, $clientId = null, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasFacets($facetValues, $clientId = null, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by facets.
@@ -5148,14 +5148,14 @@ a|Language to filter facets by. If null, active language from session will be us
 [#hassearchstring]
 ----
 
-public hasSearchString($query, $lang = null, $a = &quot;&quot;, $b = &quot;&quot;):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasSearchString($query, $lang = null, $a = &quot;&quot;, $b = &quot;&quot;):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by given search string.
@@ -5186,14 +5186,14 @@ a|
 [#hasnamestring]
 ----
 
-public hasNameString($query, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public hasNameString($query, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Filter variations by searching names
@@ -5216,14 +5216,14 @@ a|Language to apply search on. If null, default language from session will be us
 [#withlanguage]
 ----
 
-public withLanguage($lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public withLanguage($lang = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Only request given language.
@@ -5242,14 +5242,14 @@ a|Language to get texts for. If null, default language from session will be used
 [#withimages]
 ----
 
-public withImages($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public withImages($clientId = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Include images in result
@@ -5268,14 +5268,14 @@ a|The client id to get images for. If null, default client id from config will b
 [#withvariationattributemap]
 ----
 
-public withVariationAttributeMap($itemId, $initialVariationId, $afterKey = []):Plenty\Modules\Webshop\ItemSearch\Factories
+public withVariationAttributeMap($itemId, $initialVariationId, $afterKey = []):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Includes VariationAttributeMap for variation select
@@ -5302,14 +5302,14 @@ a|
 [#withpropertygroups]
 ----
 
-public withPropertyGroups($displaySettings = []):Plenty\Modules\Webshop\ItemSearch\Factories
+public withPropertyGroups($displaySettings = []):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5328,14 +5328,14 @@ a|
 [#withorderpropertyselectionvalues]
 ----
 
-public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Factories
+public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5344,14 +5344,14 @@ public withOrderPropertySelectionValues():Plenty\Modules\Webshop\ItemSearch\Fact
 [#withvariationproperties]
 ----
 
-public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories
+public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5360,14 +5360,14 @@ public withVariationProperties():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withurls]
 ----
 
-public withUrls():Plenty\Modules\Webshop\ItemSearch\Factories
+public withUrls():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Append URLs to result.
@@ -5376,14 +5376,14 @@ Append URLs to result.
 [#withprices]
 ----
 
-public withPrices($quantities = [], $setPriceOnly = false):Plenty\Modules\Webshop\ItemSearch\Factories
+public withPrices($quantities = [], $setPriceOnly = false):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Append prices to result.
@@ -5406,14 +5406,14 @@ a|
 [#withcurrentcategory]
 ----
 
-public withCurrentCategory():Plenty\Modules\Webshop\ItemSearch\Factories
+public withCurrentCategory():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Set result as current category
@@ -5422,14 +5422,14 @@ Set result as current category
 [#withdefaultimage]
 ----
 
-public withDefaultImage():Plenty\Modules\Webshop\ItemSearch\Factories
+public withDefaultImage():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Append default item image if images are requested by result fields and item does not have any image
@@ -5438,14 +5438,14 @@ Append default item image if images are requested by result fields and item does
 [#withbundlecomponents]
 ----
 
-public withBundleComponents():Plenty\Modules\Webshop\ItemSearch\Factories
+public withBundleComponents():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 Add bundle component variations.
@@ -5470,14 +5470,14 @@ Add set component variations to item set entries.
 [#withlinktocontent]
 ----
 
-public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories
+public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5486,14 +5486,14 @@ public withLinkToContent():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withgroupedattributevalues]
 ----
 
-public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories
+public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5502,14 +5502,14 @@ public withGroupedAttributeValues():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withreducedresults]
 ----
 
-public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories
+public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5518,14 +5518,14 @@ public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withavailability]
 ----
 
-public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories
+public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5534,14 +5534,14 @@ public withAvailability():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withtags]
 ----
 
-public withTags():Plenty\Modules\Webshop\ItemSearch\Factories
+public withTags():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5550,14 +5550,14 @@ public withTags():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withcategories]
 ----
 
-public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories
+public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5566,14 +5566,14 @@ public withCategories():Plenty\Modules\Webshop\ItemSearch\Factories
 [#withsuggestions]
 ----
 
-public withSuggestions($query = &quot;&quot;, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories
+public withSuggestions($query = &quot;&quot;, $lang = null):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5596,14 +5596,14 @@ a|
 [#withdidyoumeansuggestions]
 ----
 
-public withDidYouMeanSuggestions($query):Plenty\Modules\Webshop\ItemSearch\Factories
+public withDidYouMeanSuggestions($query):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
 
@@ -5712,14 +5712,14 @@ a|List of properties to inherit or null to inherit all properties.
 [#withmutator]
 ----
 
-public withMutator($mutator, $excludeDependencies = false, $position = 1000):Plenty\Modules\Webshop\ItemSearch\Factories
+public withMutator($mutator, $excludeDependencies = false, $position = 1000):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add a mutator to transform search results.
@@ -5777,14 +5777,14 @@ a|
 [#withfilter]
 ----
 
-public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories
+public withFilter($filter):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add a filter. Will override existing filter instances.
@@ -5803,14 +5803,14 @@ a|
 [#withresultfields]
 ----
 
-public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories
+public withResultFields($fields):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Set fields to be contained in search result.
@@ -5887,14 +5887,14 @@ Get additional result fields required by webshop mutators.
 [#withextension]
 ----
 
-public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webshop\ItemSearch\Factories
+public withExtension($extensionClass, $extensionParams = []):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add an extension.
@@ -5949,14 +5949,14 @@ Get all registered mutators
 [#withaggregation]
 ----
 
-public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories
+public withAggregation($aggregation):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add an aggregation
@@ -5975,14 +5975,14 @@ a|
 [#withsuggestion]
 ----
 
-public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories
+public withSuggestion($suggestion):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add a suggestion
@@ -6001,14 +6001,14 @@ a|
 [#setpage]
 ----
 
-public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories
+public setPage($page, $itemsPerPage):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Set pagination parameters.
@@ -6031,14 +6031,14 @@ a|
 [#sortby]
 ----
 
-public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory::SORTING_ORDER_DESC):Plenty\Modules\Webshop\ItemSearch\Factories
+public sortBy($field, $order = \Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory::SORTING_ORDER_DESC):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add sorting parameters
@@ -6061,14 +6061,14 @@ a|Direction to order results. Possible values: 'asc' or 'desc'
 [#sortbymultiple]
 ----
 
-public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories
+public sortByMultiple($sortingList):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Add multiple sorting parameters
@@ -6087,14 +6087,14 @@ a|List of sorting parameters. Each entry should have a 'field' and an 'order' pr
 [#setorder]
 ----
 
-public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories
+public setOrder($idList):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Set the order of the search results by ids.
@@ -6113,14 +6113,14 @@ a|List of variation ids. Search results will be sorted in the same order.
 [#groupby]
 ----
 
-public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factories
+public groupBy($field, $sortings = []):Plenty\Modules\Webshop\ItemSearch\Factories\BaseSearchFactory
 
 ----
 
 
 
 
-====== *Return type:*        xref:Webshop.adoc#webshop_itemsearch_factories[`Factories`]
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_basesearchfactory[`BaseSearchFactory`]
 
 
 Group results by field

@@ -1974,14 +1974,14 @@ database query
 [#where]
 ----
 
-public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
+public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts\CriteriaQuery
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_criteriaquery[`CriteriaQuery`]
 
 
 Add a basic where clause to the query.
@@ -2008,14 +2008,14 @@ a|
 [#wherein]
 ----
 
-public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
+public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts\CriteriaQuery
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_criteriaquery[`CriteriaQuery`]
 
 
 Add a &quot;where in&quot; clause to the query.
@@ -2046,14 +2046,14 @@ a|
 [#orwherein]
 ----
 
-public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts
+public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts\CriteriaQuery
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_criteriaquery[`CriteriaQuery`]
 
 
 Add an &quot;or where in&quot; clause to the query.
@@ -2076,14 +2076,14 @@ a|
 [#orwhere]
 ----
 
-public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
+public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts\CriteriaQuery
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_criteriaquery[`CriteriaQuery`]
 
 
 Add an &quot;or where&quot; clause to the query.
@@ -2110,14 +2110,14 @@ a|
 [#wherenull]
 ----
 
-public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
+public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts\CriteriaQuery
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_criteriaquery[`CriteriaQuery`]
 
 
 Add a &quot;where null&quot; clause to the query.
@@ -2170,14 +2170,14 @@ a|
 [#having]
 ----
 
-public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
+public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts\CriteriaQuery
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_criteriaquery[`CriteriaQuery`]
 
 
 Add a &quot;having&quot; clause to the query.
@@ -2490,14 +2490,14 @@ database join query
 [#on]
 ----
 
-public on($firstModelName, $first, $operator = null, $secondModelName = null, $second = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
+public on($firstModelName, $first, $operator = null, $secondModelName = null, $second = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts\JoinClauseQuery
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_joinclausequery[`JoinClauseQuery`]
 
 
 
@@ -2536,14 +2536,14 @@ a|
 [#where]
 ----
 
-public where($modelName, $column, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
+public where($modelName, $column, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts\JoinClauseQuery
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_joinclausequery[`JoinClauseQuery`]
 
 
 Add a basic where clause to the query.
@@ -2578,14 +2578,14 @@ a|
 [#orwhere]
 ----
 
-public orWhere($modelName, $column, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
+public orWhere($modelName, $column, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts\JoinClauseQuery
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_joinclausequery[`JoinClauseQuery`]
 
 
 Add an &quot;or where&quot; clause to the query.
@@ -2616,14 +2616,14 @@ a|
 [#wherenull]
 ----
 
-public whereNull($modelName, $column, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
+public whereNull($modelName, $column, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts\JoinClauseQuery
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_joinclausequery[`JoinClauseQuery`]
 
 
 Add a &quot;where null&quot; clause to the query.
@@ -2654,14 +2654,14 @@ a|
 [#orwherenull]
 ----
 
-public orWhereNull($modelName, $column):Plenty\Modules\Plugin\DataBase\Contracts
+public orWhereNull($modelName, $column):Plenty\Modules\Plugin\DataBase\Contracts\JoinClauseQuery
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_joinclausequery[`JoinClauseQuery`]
 
 
 Add an &quot;or where null&quot; clause to the query.
@@ -3036,14 +3036,14 @@ a|
 [#setattribute]
 ----
 
-public setAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts
+public setAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts\Model
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_model[`Model`]
 
 
 Set a given attribute on the model.
@@ -3092,14 +3092,14 @@ a|
 [#filljsonattribute]
 ----
 
-public fillJsonAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts
+public fillJsonAttribute($key, $value):Plenty\Modules\Plugin\DataBase\Contracts\Model
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_model[`Model`]
 
 
 Set a given JSON attribute on the model.
@@ -3194,14 +3194,14 @@ Get the attributes that should be converted to dates.
 [#setdateformat]
 ----
 
-public setDateFormat($format):Plenty\Modules\Plugin\DataBase\Contracts
+public setDateFormat($format):Plenty\Modules\Plugin\DataBase\Contracts\Model
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_model[`Model`]
 
 
 Set the date format used by the model.
@@ -3282,14 +3282,14 @@ Get all of the current attributes on the model.
 [#setrawattributes]
 ----
 
-public setRawAttributes($attributes, $sync = false):Plenty\Modules\Plugin\DataBase\Contracts
+public setRawAttributes($attributes, $sync = false):Plenty\Modules\Plugin\DataBase\Contracts\Model
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_model[`Model`]
 
 
 Set the array of model attributes. No checking is done.
@@ -3368,14 +3368,14 @@ a|
 [#syncoriginal]
 ----
 
-public syncOriginal():Plenty\Modules\Plugin\DataBase\Contracts
+public syncOriginal():Plenty\Modules\Plugin\DataBase\Contracts\Model
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_model[`Model`]
 
 
 Sync the original attributes with the current.
@@ -3384,14 +3384,14 @@ Sync the original attributes with the current.
 [#syncoriginalattribute]
 ----
 
-public syncOriginalAttribute($attribute):Plenty\Modules\Plugin\DataBase\Contracts
+public syncOriginalAttribute($attribute):Plenty\Modules\Plugin\DataBase\Contracts\Model
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_model[`Model`]
 
 
 Sync a single original attribute with its current value.
@@ -3410,14 +3410,14 @@ a|
 [#syncchanges]
 ----
 
-public syncChanges():Plenty\Modules\Plugin\DataBase\Contracts
+public syncChanges():Plenty\Modules\Plugin\DataBase\Contracts\Model
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_model[`Model`]
 
 
 Sync the changed attributes.
@@ -3613,14 +3613,14 @@ database query
 [#select]
 ----
 
-public select($columns = []):Plenty\Modules\Plugin\DataBase\Contracts
+public select($columns = []):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a basic select clause to the query.
@@ -3639,14 +3639,14 @@ a|
 [#where]
 ----
 
-public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
+public where($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a basic where clause to the query.
@@ -3673,14 +3673,14 @@ a|
 [#wherein]
 ----
 
-public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
+public whereIn($fieldName, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a &quot;where in&quot; clause to the query.
@@ -3711,14 +3711,14 @@ a|
 [#orwherein]
 ----
 
-public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts
+public orWhereIn($fieldName, $values):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add an &quot;or where in&quot; clause to the query.
@@ -3741,14 +3741,14 @@ a|
 [#orwhere]
 ----
 
-public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
+public orWhere($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add an &quot;or where&quot; clause to the query.
@@ -3775,14 +3775,14 @@ a|
 [#wherenull]
 ----
 
-public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
+public whereNull($fieldName, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a &quot;where null&quot; clause to the query.
@@ -3809,14 +3809,14 @@ a|
 [#orwherenull]
 ----
 
-public orWhereNull($fieldName):Plenty\Modules\Plugin\DataBase\Contracts
+public orWhereNull($fieldName):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add an &quot;or where null&quot; clause to the query.
@@ -3835,14 +3835,14 @@ a|
 [#wherebetween]
 ----
 
-public whereBetween($column, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts
+public whereBetween($column, $values, $boolean = &quot;and&quot;, $not = false):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a where between statement to the query.
@@ -3873,14 +3873,14 @@ a|
 [#wherenotbetween]
 ----
 
-public whereNotBetween($column, $values, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
+public whereNotBetween($column, $values, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a where not between statement to the query.
@@ -3907,14 +3907,14 @@ a|
 [#wheredate]
 ----
 
-public whereDate($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
+public whereDate($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a &quot;where date&quot; statement to the query.
@@ -3945,14 +3945,14 @@ a|
 [#wheremonth]
 ----
 
-public whereMonth($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
+public whereMonth($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a &quot;where month&quot; statement to the query.
@@ -3983,14 +3983,14 @@ a|
 [#whereday]
 ----
 
-public whereDay($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
+public whereDay($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a &quot;where day&quot; statement to the query.
@@ -4021,14 +4021,14 @@ a|
 [#whereyear]
 ----
 
-public whereYear($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
+public whereYear($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a &quot;where year&quot; statement to the query.
@@ -4059,14 +4059,14 @@ a|
 [#wheretime]
 ----
 
-public whereTime($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
+public whereTime($column, $operator, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a &quot;where time&quot; statement to the query.
@@ -4097,14 +4097,14 @@ a|
 [#wherenested]
 ----
 
-public whereNested($callback):Plenty\Modules\Plugin\DataBase\Contracts
+public whereNested($callback):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Create a nested where condition
@@ -4123,14 +4123,14 @@ a|
 [#groupby]
 ----
 
-public groupBy($groups):Plenty\Modules\Plugin\DataBase\Contracts
+public groupBy($groups):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a &quot;group by&quot; statement to the query.
@@ -4149,14 +4149,14 @@ a|
 [#having]
 ----
 
-public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts
+public having($fieldName, $operator = null, $value = null, $boolean = &quot;and&quot;):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a &quot;having&quot; clause to the query.
@@ -4187,14 +4187,14 @@ a|
 [#orhaving]
 ----
 
-public orHaving($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts
+public orHaving($fieldName, $operator = null, $value = null):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add a &quot;or having&quot; clause to the query.
@@ -4221,14 +4221,14 @@ a|
 [#orderby]
 ----
 
-public orderBy($fieldName, $direction = &quot;asc&quot;):Plenty\Modules\Plugin\DataBase\Contracts
+public orderBy($fieldName, $direction = &quot;asc&quot;):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Add an &quot;order by&quot; clause to the query.
@@ -4251,14 +4251,14 @@ a|
 [#forpage]
 ----
 
-public forPage($page, $perPage = 15):Plenty\Modules\Plugin\DataBase\Contracts
+public forPage($page, $perPage = 15):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Set the limit and offset for a given page.
@@ -4307,14 +4307,14 @@ a|
 [#limit]
 ----
 
-public limit($value):Plenty\Modules\Plugin\DataBase\Contracts
+public limit($value):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Set the &quot;limit&quot; value of the query.
@@ -4333,14 +4333,14 @@ a|
 [#offset]
 ----
 
-public offset($value):Plenty\Modules\Plugin\DataBase\Contracts
+public offset($value):Plenty\Modules\Plugin\DataBase\Contracts\Query
 
 ----
 
 
 
 
-====== *Return type:*        xref:Plugin.adoc#plugin_database_contracts[`Contracts`]
+====== *Return type:*        xref:Plugin.adoc#plugin_contracts_query[`Query`]
 
 
 Set the &quot;offset&quot; value of the query.
