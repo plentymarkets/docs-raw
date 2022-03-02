@@ -627,6 +627,36 @@ a|Maximum age in seconds. Defaults to 4 hours.
 |===
 
 
+[source%nowrap, php]
+[#exportbyidandversion]
+----
+
+public exportByIdAndVersion($id, $version):Plenty\Modules\Catalog\Contracts\CatalogExportServiceContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_contracts_catalogexportservicecontract[`CatalogExportServiceContract`]
+
+
+Export by id and version
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|
+
+a|`$version`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
 
 [[catalog_contracts_catalogexportservicecontract]]
 ==== CatalogExportServiceContract
@@ -10264,6 +10294,9 @@ The catalog status model.
 |catalog_id
     |link:http://php.net/int[int^]
     a|The ID of the catalog
+|version_id
+    |link:http://php.net/string[string^]
+    a|The ID of the version
 |type
     |link:http://php.net/string[string^]
     a|The type of status ( run, etc )
