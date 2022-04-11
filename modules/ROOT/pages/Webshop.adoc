@@ -460,6 +460,51 @@ public getShippingCountryId():int
 Get the id of the current shipping country. Default to the configured country id from the webstore configuration.
 
 
+[[webshop_contracts_confirmationrepositorycontract]]
+==== ConfirmationRepositoryContract
+
+Repository to validate a order confirmation
+
+
+
+===== Namespace
+
+`Plenty\Modules\Webshop\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#checkvalidity]
+----
+
+public checkValidity($order):bool
+
+----
+
+
+
+
+
+
+
+Check validity for a given order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|Order data to check validity
+|===
+
+
+
 [[webshop_contracts_contactrepositorycontract]]
 ==== ContactRepositoryContract
 
