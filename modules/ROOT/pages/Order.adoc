@@ -3122,7 +3122,7 @@ a|The access key, that belongs to the order.
 [#generateaccesskey]
 ----
 
-public generateAccessKey($orderId):string
+public generateAccessKey($orderId, $regenerate = false):string
 
 ----
 
@@ -3140,6 +3140,10 @@ Generate an access key for the given order ID.
 |Name |Type |Description
 a|`$orderId`
 |link:http://php.net/int[int^]
+a|
+
+a|`$regenerate`
+|link:http://php.net/bool[bool^]
 a|
 |===
 
@@ -17931,6 +17935,7 @@ The OrderDateType model.
 * Subscription cancelled on = 13
 * Subscription last run = 14
 * Subscription next run = 15
+* Confirmation link valid until  = 19
 |isErasable
     |link:http://php.net/bool[bool^]
     a|Flag that indicates if this type can be deleted or not.
