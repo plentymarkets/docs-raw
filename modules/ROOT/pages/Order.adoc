@@ -17062,6 +17062,318 @@ a|
 |===
 
 
+[[order_settings]]
+== Settings
+
+[[order_settings_models]]
+===  Models
+[[order_models_creditnotesettings]]
+==== CreditNoteSettings
+
+The model of the creditNote order settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\CreditNote\Settings\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|defaultOrderStatus
+    |link:http://php.net/float[float^]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[order_models_repairsettings]]
+==== RepairSettings
+
+The model of the repair order settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Repair\Settings\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|defaultOrderStatus
+    |link:http://php.net/float[float^]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[order_models_returnordersettings]]
+==== ReturnOrderSettings
+
+The model of the return order settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\ReturnOrder\Settings\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|defaultOrderStatus
+    |link:http://php.net/float[float^]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[order_models_ordersettings]]
+==== OrderSettings
+
+The model of the order settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Settings\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|warehouseAssignment
+    |link:http://php.net/string[string^]
+    a|
+|cancelStatusFrom
+    |link:http://php.net/float[float^]
+    a|
+|cancelStatusTo
+    |link:http://php.net/float[float^]
+    a|
+|orderItemPrefixes
+    |link:http://php.net/array[array^]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[order_models_storeordersettings]]
+==== StoreOrderSettings
+
+The model of the store order settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Settings\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|defaultLanguage
+    |link:http://php.net/string[string^]
+    a|
+|defaultParcelServiceId
+    |link:http://php.net/int[int^]
+    a|
+|defaultParcelServicePresetId
+    |link:http://php.net/int[int^]
+    a|
+|defaultMethodOfPaymentId
+    |link:http://php.net/int[int^]
+    a|
+|defaultCustomerClassId
+    |link:http://php.net/int[int^]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+[[order_settings_contracts]]
+===  Contracts
+[[order_contracts_ordersettingsrepositorycontract]]
+==== OrderSettingsRepositoryContract
+
+Get settings for orders.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Settings\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getstoresettings]
+----
+
+public getStoreSettings($storeId):Plenty\Modules\Order\Settings\Models\StoreOrderSettings
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_storeordersettings[`StoreOrderSettings`]
+
+
+Get order settings for store
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$storeId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public get():Plenty\Modules\Order\Settings\Models\OrderSettings
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_ordersettings[`OrderSettings`]
+
+
+Get basic order settings
+
 [[order_date]]
 == Date
 
@@ -24618,183 +24930,6 @@ public execute():array
 
 
 
-
-[[order_settings]]
-== Settings
-
-[[order_settings_contracts]]
-===  Contracts
-[[order_contracts_ordersettingsrepositorycontract]]
-==== OrderSettingsRepositoryContract
-
-Get settings for orders.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Order\Settings\Contracts`
-
-
-
-
-
-
-===== Methods
-
-[source%nowrap, php]
-[#getstoresettings]
-----
-
-public getStoreSettings($storeId):Plenty\Modules\Order\Settings\Models\StoreOrderSettings
-
-----
-
-
-
-
-====== *Return type:*        xref:Order.adoc#order_models_storeordersettings[`StoreOrderSettings`]
-
-
-Get order settings for store
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$storeId`
-|link:http://php.net/int[int^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#get]
-----
-
-public get():Plenty\Modules\Order\Settings\Models\OrderSettings
-
-----
-
-
-
-
-====== *Return type:*        xref:Order.adoc#order_models_ordersettings[`OrderSettings`]
-
-
-Get basic order settings
-
-[[order_settings_models]]
-===  Models
-[[order_models_ordersettings]]
-==== OrderSettings
-
-The model of the order settings.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Order\Settings\Models`
-
-
-
-
-
-.Properties
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-
-|warehouseAssignment
-    |link:http://php.net/string[string^]
-    a|
-|cancelStatusFrom
-    |link:http://php.net/float[float^]
-    a|
-|cancelStatusTo
-    |link:http://php.net/float[float^]
-    a|
-|orderItemPrefixes
-    |link:http://php.net/array[array^]
-    a|
-|===
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
-
-[[order_models_storeordersettings]]
-==== StoreOrderSettings
-
-The model of the store order settings.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Order\Settings\Models`
-
-
-
-
-
-.Properties
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-
-|defaultLanguage
-    |link:http://php.net/string[string^]
-    a|
-|defaultParcelServiceId
-    |link:http://php.net/int[int^]
-    a|
-|defaultParcelServicePresetId
-    |link:http://php.net/int[int^]
-    a|
-|defaultMethodOfPaymentId
-    |link:http://php.net/int[int^]
-    a|
-|defaultCustomerClassId
-    |link:http://php.net/int[int^]
-    a|
-|===
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
 
 [[order_shippingprofiles]]
 == ShippingProfiles
