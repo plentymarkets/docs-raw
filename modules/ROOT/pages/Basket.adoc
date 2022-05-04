@@ -365,7 +365,7 @@ Delete the basket for current session
 [#gettaxfreeamount]
 ----
 
-public getTaxFreeAmount():void
+public getTaxFreeAmount($basketItems = []):float
 
 ----
 
@@ -375,7 +375,17 @@ public getTaxFreeAmount():void
 
 
 
-Load amount from tax free items
+Load amount from tax-free items
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$basketItems`
+|link:http://php.net/array[array^]
+a|Basket items, needed for old item characteristics (deprecated soon, use new properties)
+|===
+
 
 [[basket_basket_exceptions]]
 ===  Exceptions
