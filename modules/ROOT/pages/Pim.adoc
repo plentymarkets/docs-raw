@@ -720,6 +720,38 @@ public variationUpdatedAt():Plenty\Modules\Pim\Catalog\Variation\Filters\Variati
 
 
 
+[source%nowrap, php]
+[#salespriceupdatedat]
+----
+
+public salesPriceUpdatedAt():Plenty\Modules\Pim\Catalog\Variation\Filters\Price\SalesPriceUpdatedAt
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_price_salespriceupdatedat[`SalesPriceUpdatedAt`]
+
+
+
+
+[source%nowrap, php]
+[#stockupdatedat]
+----
+
+public stockUpdatedAt():Plenty\Modules\Pim\Catalog\Variation\Filters\Stock\StockUpdatedAt
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_stock_stockupdatedat[`StockUpdatedAt`]
+
+
+
+
 [[pim_filters]]
 == Filters
 
@@ -4294,6 +4326,192 @@ a|
 |===
 
 
+[[pim_filters_price]]
+===  Price
+[[pim_price_salespriceupdatedat]]
+==== SalesPriceUpdatedAt
+
+Used to filter by variation salesPrice last update timestamp
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Price`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\VariationSalesPriceUpdatedAtFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_variationsalespriceupdatedatfilter[`VariationSalesPriceUpdatedAtFilter`]
+
+
+Will return a TypeInterface filter if at least one flat file is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#settimewindow]
+----
+
+public setTimeWindow($fromDate, $toDate = null):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$fromDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+
+a|`$toDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters\FilterBuilder
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_filterbuilder[`FilterBuilder`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters\FilterBuilder
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_filterbuilder[`FilterBuilder`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
 [[pim_filters_property]]
 ===  Property
 [[pim_property_variationhasatleastonepropertyselection]]
@@ -4890,6 +5108,192 @@ public setStatus($status):Plenty\Modules\Pim\Catalog\Variation\Filters\Sku\Varia
 |Name |Type |Description
 a|`$status`
 |link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters\FilterBuilder
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_filterbuilder[`FilterBuilder`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters\FilterBuilder
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_filterbuilder[`FilterBuilder`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[[pim_filters_stock]]
+===  Stock
+[[pim_stock_stockupdatedat]]
+==== StockUpdatedAt
+
+Used to filter by variation stock last update timestamp
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Stock`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\VariationStockUpdatedAtFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_variationstockupdatedatfilter[`VariationStockUpdatedAtFilter`]
+
+
+Will return a TypeInterface filter if at least one flat file is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#settimewindow]
+----
+
+public setTimeWindow($fromDate, $toDate = null):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$fromDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+
+a|`$toDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
 a|
 |===
 
