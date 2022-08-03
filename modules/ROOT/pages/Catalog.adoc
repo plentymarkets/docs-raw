@@ -1369,6 +1369,22 @@ public getSections():Plenty\Modules\Catalog\Services\UI\Sections\Sections
 
 Returns Sections with options that will be displayed in the UI of each catalogue with a template that uses this provider. The selected values for all those settings can then be used in the export.
 
+[source%nowrap, php]
+[#getdevcacheintervals]
+----
+
+public getDevcacheIntervals():Plenty\Modules\Catalog\Services\Cache\Intervals\Intervals
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_intervals_intervals[`Intervals`]
+
+
+Returns devcache intervals
+
 
 [[catalog_contracts_catalogmappingvalueprovidercontract]]
 ==== CatalogMappingValueProviderContract
@@ -4916,6 +4932,22 @@ public isBooted():bool
 Returns the current boot state of the template.
 
 [source%nowrap, php]
+[#isfastbooted]
+----
+
+public isFastBooted():bool
+
+----
+
+
+
+
+
+
+
+Returns the current fast boot state of the template.
+
+[source%nowrap, php]
 [#translatedtoarray]
 ----
 
@@ -4972,6 +5004,22 @@ public getResultConverterContainer():Plenty\Modules\Catalog\Services\Converter\C
 
 
 Returns the container including all registered result converters of the template
+
+[source%nowrap, php]
+[#getdevcacheintervals]
+----
+
+public getDevcacheIntervals():Plenty\Modules\Catalog\Services\Cache\Intervals\Intervals
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_intervals_intervals[`Intervals`]
+
+
+Returns devcache intervals
 
 [source%nowrap, php]
 [#toarray]
@@ -7491,6 +7539,22 @@ public getSections():Plenty\Modules\Catalog\Services\UI\Sections\Sections
 
 
 
+[source%nowrap, php]
+[#getdevcacheintervals]
+----
+
+public getDevcacheIntervals():Plenty\Modules\Catalog\Services\Cache\Intervals\Intervals
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_intervals_intervals[`Intervals`]
+
+
+
+
 
 [[catalog_templates_template]]
 ==== Template
@@ -8113,6 +8177,48 @@ a|
 
 
 [source%nowrap, php]
+[#getdevcacheintervals]
+----
+
+public getDevcacheIntervals():Plenty\Modules\Catalog\Services\Cache\Intervals\Intervals
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_intervals_intervals[`Intervals`]
+
+
+Gets devcache intervals
+
+[source%nowrap, php]
+[#setdevcacheintervals]
+----
+
+public setDevcacheIntervals($intervals):void
+
+----
+
+
+
+
+
+
+
+Sets devcache intervals
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$intervals`
+|        xref:Catalog.adoc#catalog_intervals_intervals[`Intervals`]
+a|
+|===
+
+
+[source%nowrap, php]
 [#getname]
 ----
 
@@ -8571,10 +8677,52 @@ public getDynamicConfig():Plenty\Modules\Catalog\Contracts\CatalogDynamicConfigC
 
 
 [source%nowrap, php]
+[#fastboot]
+----
+
+public fastBoot($provider):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$provider`
+|
+a|
+|===
+
+
+[source%nowrap, php]
 [#isbooted]
 ----
 
 public isBooted():bool
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#isfastbooted]
+----
+
+public isFastBooted():bool
 
 ----
 
@@ -10598,8 +10746,553 @@ public toArray()
 
 Returns this model as an array.
 
+[[catalog_cache]]
+== Cache
+
+[[catalog_cache_intervals]]
+===  Intervals
+[[catalog_intervals_intervals]]
+==== Intervals
+
+Intervals container
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Cache\Intervals`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#addinterval]
+----
+
+public addInterval($intervalId):Plenty\Modules\Catalog\Services\Cache\Intervals\Intervals
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_intervals_intervals[`Intervals`]
+
+
+Adds interval
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$intervalId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addfrequency]
+----
+
+public addFrequency($frequency):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$frequency`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getintervals]
+----
+
+public getIntervals():array
+
+----
+
+
+
+
+
+
+
+Returns all intervals
+
+[source%nowrap, php]
+[#getfrequencies]
+----
+
+public getFrequencies():array
+
+----
+
+
+
+
+
+
+
+Returns all frequency
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+Get the instance as an array.
+
+[[catalog_intervals]]
+== Intervals
+
+[[catalog_intervals_models]]
+===  Models
+[[catalog_models_frequency]]
+==== Frequency
+
+Frequencies available
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Cache\Intervals\Models`
+
+
+
+
+
+
+[[catalog_models_interval]]
+==== Interval
+
+Intervals available
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Cache\Intervals\Models`
+
+
+
+
+
 [[catalog_services]]
 == Services
+
+[[catalog_services_cache]]
+===  Cache
+[[catalog_cache_ordercacheservice]]
+==== OrderCacheService
+
+Order Processing Cache.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Services\Cache`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#putcache]
+----
+
+public static putCache($identifier, $value = true):void
+
+----
+
+
+
+
+
+
+
+Puts a cache
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$identifier`
+|link:http://php.net/string[string^]
+a|
+
+a|`$value`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#addcache]
+----
+
+public static addCache($identifier, $value = true):void
+
+----
+
+
+
+
+
+
+
+Adds a cache
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$identifier`
+|link:http://php.net/string[string^]
+a|
+
+a|`$value`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#iscached]
+----
+
+public static isCached($identifier):bool
+
+----
+
+
+
+
+
+
+
+Checks if cache exists
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$identifier`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getcache]
+----
+
+public static getCache($identifier):void
+
+----
+
+
+
+
+
+
+
+Gets the cached value
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$identifier`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#iscachedwithvalue]
+----
+
+public static isCachedWithValue($identifier, $value = true):bool
+
+----
+
+
+
+
+
+
+
+Checks if cache exists and if it has the given value
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$identifier`
+|link:http://php.net/string[string^]
+a|
+
+a|`$value`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#put]
+----
+
+public static put($keys, $value, $additional = []):void
+
+----
+
+
+
+
+
+
+
+Store cache entry
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$keys`
+|
+a|
+
+a|`$value`
+|
+a|
+
+a|`$additional`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#add]
+----
+
+public static add($keys, $value, $additional = []):void
+
+----
+
+
+
+
+
+
+
+Adds a cache entry
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$keys`
+|
+a|
+
+a|`$value`
+|
+a|
+
+a|`$additional`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public static get($keys, $default = null):void
+
+----
+
+
+
+
+
+
+
+Gets a cache entry
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$keys`
+|
+a|
+
+a|`$default`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#has]
+----
+
+public static has($keys):bool
+
+----
+
+
+
+
+
+
+
+Checks if cache entry exists
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$keys`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#deletebyprefix]
+----
+
+public static deleteByPrefix($keys):void
+
+----
+
+
+
+
+
+
+
+Deletes cache entries by prefix
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$keys`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#forget]
+----
+
+public static forget($keys):void
+
+----
+
+
+
+
+
+
+
+Delete cache entry
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$keys`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#flush]
+----
+
+public static flush():void
+
+----
+
+
+
+
+
+
+
+Flushes the cache
+
+[source%nowrap, php]
+[#getprefix]
+----
+
+public static getPrefix():string
+
+----
+
+
+
+
+
+
+
+Gets the prefix
+
+[source%nowrap, php]
+[#getage]
+----
+
+public static getAge():int
+
+----
+
+
+
+
+
+
+
+Gets the age
 
 [[catalog_services_collections]]
 ===  Collections
@@ -22306,6 +22999,22 @@ public getSections():Plenty\Modules\Catalog\Services\UI\Sections\Sections
 
 
 Gets sections
+
+[source%nowrap, php]
+[#getdevcacheintervals]
+----
+
+public getDevcacheIntervals():Plenty\Modules\Catalog\Services\Cache\Intervals\Intervals
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_intervals_intervals[`Intervals`]
+
+
+Gets devcache intervals
 
 [source%nowrap, php]
 [#gettemplategroupcontainer]

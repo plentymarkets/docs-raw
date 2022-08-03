@@ -12426,6 +12426,153 @@ a|
 
 
 
+[[pim_filter_stockfilter]]
+==== StockFilter
+
+Includes filters for stock
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\SearchService\Filter`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#netstock]
+----
+
+public netStock($netStock, $operator = &quot;eq&quot;):Plenty\Modules\Pim\SearchService\Filter\StockFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_stockfilter[`StockFilter`]
+
+
+Restricts the result to meet the specified net stock value depending on the operator
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$netStock`
+|link:http://php.net/float[float^]
+a|
+
+a|`$operator`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#physicalstock]
+----
+
+public physicalStock($physicalStock, $operator = &quot;eq&quot;):Plenty\Modules\Pim\SearchService\Filter\StockFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_stockfilter[`StockFilter`]
+
+
+Restricts the result to meet the specified physical stock value depending on the operator
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$physicalStock`
+|link:http://php.net/float[float^]
+a|
+
+a|`$operator`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#addstatement]
+----
+
+public addStatement($statement):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statement`
+|        xref:Cloud.adoc#cloud_statement_statementinterface[`StatementInterface`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addquery]
+----
+
+public addQuery($statement):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statement`
+|
+a|
+|===
+
+
+
 [[pim_filter_supplierfilter]]
 ==== SupplierFilter
 
@@ -15667,6 +15814,171 @@ public getType():string
 
 
 
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#addstatement]
+----
+
+public addStatement($statement):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statement`
+|        xref:Cloud.adoc#cloud_statement_statementinterface[`StatementInterface`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addquery]
+----
+
+public addQuery($statement):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statement`
+|
+a|
+|===
+
+
+
+[[pim_filter_warehousefilter]]
+==== WarehouseFilter
+
+Includes filters for warehouse
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\SearchService\Filter`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#isinwarehouse]
+----
+
+public isInWarehouse($warehouseId):Plenty\Modules\Pim\SearchService\Filter\WarehouseFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_warehousefilter[`WarehouseFilter`]
+
+
+Restricts the result to have the warehouse ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$warehouseId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#hasnotwarehouseids]
+----
+
+public hasNotWarehouseIds($warehouseIds):Plenty\Modules\Pim\SearchService\Filter\WarehouseFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_warehousefilter[`WarehouseFilter`]
+
+
+Restricts the result to not match the specified IDs.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$warehouseIds`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#haswarehouseids]
+----
+
+public hasWarehouseIds($warehouseIds):Plenty\Modules\Pim\SearchService\Filter\WarehouseFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_warehousefilter[`WarehouseFilter`]
+
+
+Restricts the result to have the any of the warehouse IDs.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$warehouseIds`
+|link:http://php.net/array[array^]
+a|
+|===
 
 
 [source%nowrap, php]
