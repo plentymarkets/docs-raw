@@ -352,6 +352,32 @@ a|The file name of the attachment
 
 
 [source%nowrap, php]
+[#getallattachments]
+----
+
+public getAllAttachments($uuid):Plenty\Modules\Messenger\Models\Attachment
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_attachment[`Attachment`]
+
+
+Gets all message attachments as zip.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuid`
+|link:http://php.net/string[string^]
+a|The UUID of the message
+|===
+
+
+[source%nowrap, php]
 [#updatemetadata]
 ----
 
@@ -508,6 +534,22 @@ public isFirstMessage():bool
 If TRUE, the message is the first one. Otherwise, it is a reply message.
 
 [source%nowrap, php]
+[#broadcastwhen]
+----
+
+public broadcastWhen():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#getmessage]
 ----
 
@@ -614,6 +656,9 @@ The Message model of the messenger.
 |parentUuid
     |link:http://php.net/string[string^]
     a|The UUID5 of the parent message
+|conversationId
+    |link:http://php.net/string[string^]
+    a|The UUID5 of the conversation
 |linkedTo
     |link:http://php.net/array[array^]
     a|An array with MessageLinkedTo instances
@@ -638,6 +683,9 @@ The Message model of the messenger.
 |message
     |link:http://php.net/string[string^]
     a|The content of the message
+|plainMessage
+    |link:http://php.net/string[string^]
+    a|The content of the message as plain text
 |attachedFilesCount
     |link:http://php.net/int[int^]
     a|The amount of attached files (readonly)
@@ -1539,6 +1587,32 @@ public getTotalEntries():int
 Returns total entries
 
 [source%nowrap, php]
+[#findbyconversationid]
+----
+
+public findByConversationId($conversationUuid):array
+
+----
+
+
+
+
+
+
+
+Gets a stream of messages. The given UUID can be the UUID of the first message in the stream or one of the replied messages.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$conversationUuid`
+|link:http://php.net/string[string^]
+a|The UUID of the message
+|===
+
+
+[source%nowrap, php]
 [#toarray]
 ----
 
@@ -2223,6 +2297,41 @@ public getSorting():void
 ----
 
 public getScoreModifier():void
+
+----
+
+
+
+
+
+
+
+
+
+
+[[messenger_services_newmessengerstatusservice]]
+==== NewMessengerStatusService
+
+New messenger status checker service
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Services`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#isactive]
+----
+
+public static isActive():void
 
 ----
 
