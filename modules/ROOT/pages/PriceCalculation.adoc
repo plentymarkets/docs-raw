@@ -1,0 +1,259 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
+
+
+[[pricecalculation_pricecalculation]]
+== PriceCalculation
+
+[[pricecalculation_pricecalculation_contracts]]
+===  Contracts
+[[pricecalculation_contracts_pricecalculationrepositorycontract]]
+==== PriceCalculationRepositoryContract
+
+The repository contract for the new price calculations
+
+
+
+===== Namespace
+
+`Plenty\Modules\PriceCalculation\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#createorupdate]
+----
+
+public createOrUpdate($id, $body):array
+
+----
+
+
+
+
+
+
+
+Creates or updates a price calculation
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|
+
+a|`$body`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $with = []):array
+
+----
+
+
+
+
+
+
+
+Gets a price calculation by the specified UUID
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getlist]
+----
+
+public getList():void
+
+----
+
+
+
+
+
+
+
+Gets a list of price calculations
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):Plenty\Repositories\Models\DeleteResponse
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[`DeleteResponse`]
+
+
+Deletes a price calculation with the specified UUID
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#uses]
+----
+
+public uses($id, $type, $key):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|
+
+a|`$type`
+|link:http://php.net/string[string^]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getvariationsbypricecalculationid]
+----
+
+public getVariationsByPriceCalculationId($priceCalculationId):array
+
+----
+
+
+
+
+
+
+
+Gets variations which use the specified price calculation. The price calculation UUID is required.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$priceCalculationId`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[[pricecalculation_pricecalculation_models]]
+===  Models
+[[pricecalculation_models_pricecalculation]]
+==== PriceCalculation
+
+The price calculation model
+
+
+
+===== Namespace
+
+`Plenty\Modules\PriceCalculation\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/string[string^]
+    a|The id of a price calculation
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the a price calculation
+|
+    |link:http://php.net/string[string^]
+    a|dataHash The md5 hash created by the content of data
+|placeholder
+    |link:http://php.net/array[array^]
+    a|The used placeholder of every formula collected and unique
+|createdAt
+    |link:http://php.net/string[string^]
+    a|ISO8601 timestamp represents creation date
+|updatedAt
+    |link:http://php.net/string[string^]
+    a|ISO8601 timestamp represents last update date
+|ranAt
+    |link:http://php.net/string[string^]
+    a|ISO8601 timestamp represents last full run
+|data
+    |link:http://php.net/array[array^]
+    a|contains core information for formulas
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
