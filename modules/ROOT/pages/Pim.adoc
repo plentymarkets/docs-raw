@@ -9255,6 +9255,148 @@ public toArray()
 
 Returns this model as an array.
 
+[[pim_documentservice]]
+== DocumentService
+
+[[pim_documentservice_models]]
+===  Models
+[[pim_models_writeresponse]]
+==== WriteResponse
+
+The write response model of the vdi.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\DocumentService\Models`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[pim_models_writeableattribute]]
+==== WriteableAttribute
+
+The writeable attribute interface for the vdi models
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\DocumentService\Models`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getvariationid]
+----
+
+public getVariationId():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setvariationid]
+----
+
+public setVariationId($variationId):Plenty\Modules\Pim\DocumentService\Models\WriteableAttribute
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_models_writeableattribute[`WriteableAttribute`]
+
+
+Set the variation ID of the part
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$variationId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getvalidator]
+----
+
+public getValidator($operation):string
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$operation`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
 [[pim_searchservice]]
 == SearchService
 
@@ -21738,6 +21880,84 @@ a|
 |===
 
 
+[source%nowrap, php]
+[#createorupdate]
+----
+
+public createOrUpdate($entities):Plenty\Modules\Pim\VariationDataInterface\Operations\CreateOrUpdateOperation
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_operations_createorupdateoperation[`CreateOrUpdateOperation`]
+
+
+Get an operation to create or update data.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$entities`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#replace]
+----
+
+public replace($entities):Plenty\Modules\Pim\VariationDataInterface\Operations\ReplaceOperation
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_operations_replaceoperation[`ReplaceOperation`]
+
+
+Get an operation to replace data.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$entities`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($entities):Plenty\Modules\Pim\VariationDataInterface\Operations\DeleteOperation
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_operations_deleteoperation[`DeleteOperation`]
+
+
+Get a operation to delete data.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$entities`
+|
+a|
+|===
+
+
 
 [[pim_contracts_variationdatainterfaceresultinterface]]
 ==== VariationDataInterfaceResultInterface
@@ -22863,6 +23083,190 @@ public isSearchAfter():bool
 
 
 Returns whether this is an search after search.
+
+[[pim_variationdatainterface_operations]]
+===  Operations
+[[pim_operations_createorupdateoperation]]
+==== CreateOrUpdateOperation
+
+The create or update operation for the vdi.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\VariationDataInterface\Operations`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($variations):Plenty\Modules\Pim\VariationDataInterface\Operations\BaseOperation
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_operations_baseoperation[`BaseOperation`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$variations`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#save]
+----
+
+public save():Plenty\Modules\Pim\DocumentService\Models\WriteResponse
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_models_writeresponse[`WriteResponse`]
+
+
+
+
+
+[[pim_operations_deleteoperation]]
+==== DeleteOperation
+
+The delete operation for the vdi.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\VariationDataInterface\Operations`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($variations):Plenty\Modules\Pim\VariationDataInterface\Operations\BaseOperation
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_operations_baseoperation[`BaseOperation`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$variations`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#save]
+----
+
+public save():Plenty\Modules\Pim\DocumentService\Models\WriteResponse
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_models_writeresponse[`WriteResponse`]
+
+
+
+
+
+[[pim_operations_replaceoperation]]
+==== ReplaceOperation
+
+The replace operation for the vdi.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\VariationDataInterface\Operations`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#add]
+----
+
+public add($variations):Plenty\Modules\Pim\VariationDataInterface\Operations\BaseOperation
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_operations_baseoperation[`BaseOperation`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$variations`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#save]
+----
+
+public save():Plenty\Modules\Pim\DocumentService\Models\WriteResponse
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_models_writeresponse[`WriteResponse`]
+
+
+
 
 [[pim_model]]
 == Model
