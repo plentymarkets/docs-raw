@@ -381,6 +381,40 @@ a|
 
 
 [source%nowrap, php]
+[#createorderrelationbyinvoicenumber]
+----
+
+public createOrderRelationByInvoiceNumber($paymentId, $invoiceNumber, $allowMultiplePaymentsPerOrder = false):Plenty\Modules\Payment\Models\PaymentOrderRelation
+
+----
+
+
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentorderrelation[`PaymentOrderRelation`]
+
+
+Assign a payment to an order if invoice number is valid.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$paymentId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$invoiceNumber`
+|link:http://php.net/string[string^]
+a|
+
+a|`$allowMultiplePaymentsPerOrder`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#autoassignpayments]
 ----
 

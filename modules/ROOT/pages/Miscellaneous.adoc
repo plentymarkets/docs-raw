@@ -12020,6 +12020,40 @@ a|
 
 
 [source%nowrap, php]
+[#addif]
+----
+
+public addIf($boolean, $key, $message):Illuminate\Support\MessageBag
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_messagebag[`MessageBag`]
+
+
+Add a message to the message bag if the given conditional is &quot;true&quot;.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$boolean`
+|link:http://php.net/bool[bool^]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+
+a|`$message`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#merge]
 ----
 
@@ -12439,36 +12473,6 @@ a|
 
 
 ===== Methods
-
-[source%nowrap, php]
-[#times]
-----
-
-public static times($number, $callback = null):Illuminate\Support\Collection
-
-----
-
-
-
-
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
-
-
-Create a new collection by invoking the callback a given amount of times.
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$number`
-|link:http://php.net/int[int^]
-a|
-
-a|`$callback`
-|link:http://php.net/callable[callable^]
-a|
-|===
-
 
 [source%nowrap, php]
 [#all]
@@ -12949,7 +12953,7 @@ Concatenate values of a given key as a string.
 |===
 |Name |Type |Description
 a|`$value`
-|link:http://php.net/string[string^]
+|
 a|
 
 a|`$glue`
@@ -13318,17 +13322,27 @@ a|
 [#pop]
 ----
 
-public pop():void
+public pop($count = 1):Illuminate\Support\Collection
 
 ----
 
 
 
 
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
+Get and remove the last N items from the collection.
 
-Get and remove the last item from the collection.
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$count`
+|link:http://php.net/int[int^]
+a|
+|===
+
 
 [source%nowrap, php]
 [#prepend]
@@ -13364,7 +13378,7 @@ a|
 [#push]
 ----
 
-public push($value):Illuminate\Support\Collection
+public push($values):Illuminate\Support\Collection
 
 ----
 
@@ -13374,13 +13388,13 @@ public push($value):Illuminate\Support\Collection
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
-Push an item onto the end of the collection.
+Push one or more items onto the end of the collection.
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
-a|`$value`
+a|`$values`
 |
 a|
 |===
@@ -13467,36 +13481,6 @@ Get one or a specified number of items randomly from the collection.
 |===
 |Name |Type |Description
 a|`$number`
-|link:http://php.net/int[int^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#reduce]
-----
-
-public reduce($callback, $initial = null):void
-
-----
-
-
-
-
-
-
-
-Reduce the collection to a single value.
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$callback`
-|link:http://php.net/callable[callable^]
-a|
-
-a|`$initial`
 |
 a|
 |===
@@ -13552,17 +13536,27 @@ a|
 [#shift]
 ----
 
-public shift():void
+public shift($count = 1):Illuminate\Support\Collection
 
 ----
 
 
 
 
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
+Get and remove the first N items from the collection.
 
-Get and remove the first item from the collection.
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$count`
+|link:http://php.net/int[int^]
+a|
+|===
+
 
 [source%nowrap, php]
 [#shuffle]
@@ -13693,7 +13687,7 @@ Sort through each item with a callback.
 |===
 |Name |Type |Description
 a|`$callback`
-|link:http://php.net/callable[callable^]
+|
 a|
 |===
 
@@ -13727,7 +13721,7 @@ a|`$length`
 a|
 
 a|`$replacement`
-|
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -13780,6 +13774,36 @@ Transform each item in the collection using a callback.
 |Name |Type |Description
 a|`$callback`
 |link:http://php.net/callable[callable^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#unique]
+----
+
+public unique($key = null, $strict = false):Illuminate\Support\Collection
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+
+
+Return only unique items from the collection array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|
+a|
+
+a|`$strict`
+|link:http://php.net/bool[bool^]
 a|
 |===
 
@@ -13975,7 +13999,7 @@ Unset the item at a given offset.
 |===
 |Name |Type |Description
 a|`$key`
-|link:http://php.net/string[string^]
+|
 a|
 |===
 
@@ -14027,7 +14051,7 @@ Wrap the given value in a collection if applicable.
 |===
 |Name |Type |Description
 a|`$value`
-|
+|link:http://php.net/string[string^]
 a|
 |===
 
@@ -14054,6 +14078,36 @@ Get the underlying items from the given collection if applicable.
 |Name |Type |Description
 a|`$value`
 |
+a|
+|===
+
+
+[source%nowrap, php]
+[#times]
+----
+
+public static times($number, $callback = null):Illuminate\Support\Collection
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+
+
+Create a new collection by invoking the callback a given amount of times.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$number`
+|link:http://php.net/int[int^]
+a|
+
+a|`$callback`
+|link:http://php.net/callable[callable^]
 a|
 |===
 
@@ -14221,7 +14275,7 @@ Get the first item by the given key value pair.
 |===
 |Name |Type |Description
 a|`$key`
-|link:http://php.net/string[string^]
+|
 a|
 
 a|`$operator`
@@ -14497,74 +14551,6 @@ a|
 
 
 [source%nowrap, php]
-[#when]
-----
-
-public when($value, $callback, $default = null):Illuminate\Support\Collection
-
-----
-
-
-
-
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
-
-
-Apply the callback if the value is truthy.
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$value`
-|
-a|
-
-a|`$callback`
-|link:http://php.net/callable[callable^]
-a|
-
-a|`$default`
-|link:http://php.net/callable[callable^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#unless]
-----
-
-public unless($value, $callback, $default = null):Illuminate\Support\Collection
-
-----
-
-
-
-
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
-
-
-Apply the callback if the value is falsy.
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$value`
-|link:http://php.net/bool[bool^]
-a|
-
-a|`$callback`
-|link:http://php.net/callable[callable^]
-a|
-
-a|`$default`
-|link:http://php.net/callable[callable^]
-a|
-|===
-
-
-[source%nowrap, php]
 [#where]
 ----
 
@@ -14585,7 +14571,7 @@ Filter items by the given key value pair.
 |===
 |Name |Type |Description
 a|`$key`
-|link:http://php.net/string[string^]
+|
 a|
 
 a|`$operator`
@@ -14783,20 +14769,20 @@ a|
 
 
 [source%nowrap, php]
-[#tap]
+[#reduce]
 ----
 
-public tap($callback):Illuminate\Support\Collection
+public reduce($callback, $initial = null):void
 
 ----
 
 
 
 
-====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
-Pass the collection to the given callback and then return it.
+
+Reduce the collection to a single value.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -14804,6 +14790,10 @@ Pass the collection to the given callback and then return it.
 |Name |Type |Description
 a|`$callback`
 |link:http://php.net/callable[callable^]
+a|
+
+a|`$initial`
+|
 a|
 |===
 
@@ -14835,10 +14825,10 @@ a|
 
 
 [source%nowrap, php]
-[#unique]
+[#tap]
 ----
 
-public unique($key = null, $strict = false):Illuminate\Support\Collection
+public tap($callback):Illuminate\Support\Collection
 
 ----
 
@@ -14848,18 +14838,14 @@ public unique($key = null, $strict = false):Illuminate\Support\Collection
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
-Return only unique items from the collection array.
+Pass the collection to the given callback and then return it.
 
 .*Parameters*
 [cols="3,1,6"]
 |===
 |Name |Type |Description
-a|`$key`
-|
-a|
-
-a|`$strict`
-|link:http://php.net/bool[bool^]
+a|`$callback`
+|link:http://php.net/callable[callable^]
 a|
 |===
 
@@ -14970,6 +14956,74 @@ Add a method to the list of proxied methods.
 |Name |Type |Description
 a|`$method`
 |link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#when]
+----
+
+public when($value = null, $callback = null, $default = null):Illuminate\Support\Collection
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+
+
+Apply the callback if the given &quot;value&quot; is (or resolves to) truthy.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$value`
+|
+a|
+
+a|`$callback`
+|link:http://php.net/callable[callable^]
+a|
+
+a|`$default`
+|link:http://php.net/callable[callable^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#unless]
+----
+
+public unless($value = null, $callback = null, $default = null):Illuminate\Support\Collection
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+
+
+Apply the callback if the given &quot;value&quot; is (or resolves to) falsy.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$value`
+|
+a|
+
+a|`$callback`
+|link:http://php.net/callable[callable^]
+a|
+
+a|`$default`
+|link:http://php.net/callable[callable^]
 a|
 |===
 
