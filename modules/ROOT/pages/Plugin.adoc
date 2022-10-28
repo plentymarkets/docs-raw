@@ -881,6 +881,57 @@ a|
 
 
 
+[[plugin_events_aftercodeupdate]]
+==== AfterCodeUpdate
+
+Event after a plugin file was updated.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Plugin\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getpluginsetid]
+----
+
+public getPluginSetId():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getpluginid]
+----
+
+public getPluginId():int
+
+----
+
+
+
+
+
+
+
+
+
+
 [[plugin_events_copypluginset]]
 ==== CopyPluginSet
 
@@ -4864,6 +4915,36 @@ a|The Id of the PluginSetEntry to retrieve or the PluginSetEntry object itself.
 
 
 [source%nowrap, php]
+[#getbypluginsetidandpluginid]
+----
+
+public getByPluginSetIdAndPluginId($pluginSetId, $pluginId):Plenty\Modules\Plugin\PluginSet\Models\PluginSetEntry
+
+----
+
+
+
+
+====== *Return type:*        xref:Plugin.adoc#plugin_models_pluginsetentry[`PluginSetEntry`]
+
+
+Get a PluginSetEntry using a PluginSetId and PluginId
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$pluginSetId`
+|link:http://php.net/int[int^]
+a|The id of the PluginSet for the PluginSetEntry which should be retrieved.
+
+a|`$pluginId`
+|link:http://php.net/int[int^]
+a|The id of the Plugin for the PluginSetEntry which should be retrieved.
+|===
+
+
+[source%nowrap, php]
 [#create]
 ----
 
@@ -5681,6 +5762,9 @@ Eloquent model representing a PluginSetEntry.
     a|
 |isInstalledFromGit
     |link:http://php.net/bool[bool^]
+    a|
+|lastCodeUpdateAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
     a|
 |===
 
