@@ -8649,6 +8649,52 @@ a|The ID of the order
 
 
 [source%nowrap, php]
+[#getpackeditemsfrompackage]
+----
+
+public getPackedItemsFromPackage($packageId, $with = [], $page = 1, $perPage = 25, $sortBy = &quot;variationId&quot;, $sortOrder = &quot;asc&quot;):Plenty\Modules\Order\Shipping\Package\Models\OrderShippingPackageItems
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_ordershippingpackageitems[`OrderShippingPackageItems`]
+
+
+Get packed items in a package
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$packageId`
+|link:http://php.net/int[int^]
+a|The ID of the package for which you want to get the items for
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|Possible value is 'images' to get also the images for the items
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|The page to get. By default, we take the first page
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|The number of variations to get per each page. By default, we take 25 variations per page
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|The column for which to sort the values with. Default value is 'variationId'
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|The order in which to sort the values. Possible values are 'asc' and 'desc'. Default value is ascending
+|===
+
+
+[source%nowrap, php]
 [#getunpackeditemsfrompackagesfororder]
 ----
 
@@ -8671,6 +8717,48 @@ Get unpacked items for an order
 a|`$orderId`
 |link:http://php.net/int[int^]
 a|The ID of the order
+|===
+
+
+[source%nowrap, php]
+[#getunpackeditemsfororderpaginated]
+----
+
+public getUnpackedItemsForOrderPaginated($orderId, $page = 1, $perPage = 25, $sortBy = &quot;itemVariationId&quot;, $sortOrder = &quot;asc&quot;):Plenty\Modules\Order\Shipping\Package\Models\OrderShippingPackageItems
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_ordershippingpackageitems[`OrderShippingPackageItems`]
+
+
+Get all the unpacked items in the order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|The ID of the order
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|The page to get. By default, we take the first page
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|The number of variations to get per each page. By default, we take 25 variations per page
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|The column for which to sort the values with. Default value is 'itemVariationId'
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|The order in which to sort the values. Possible values are 'asc' and 'desc'. Default value is ascending
 |===
 
 
@@ -8980,6 +9068,52 @@ a|[optional, default=id]
 a|`$sortOrder`
 |link:http://php.net/string[string^]
 a|[optional, default=desc]
+|===
+
+
+[source%nowrap, php]
+[#getpackagesfrompallet]
+----
+
+public getPackagesFromPallet($palletId, $with = [], $page = 1, $perPage = 1000, $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;):array
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$palletId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -9573,6 +9707,32 @@ a|
 
 
 [source%nowrap, php]
+[#getpalletsfromorders]
+----
+
+public getPalletsFromOrders($orderIds):array
+
+----
+
+
+
+
+
+
+
+Get all pallets from given order IDs
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderIds`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#createordershippingpallet]
 ----
 
@@ -9815,6 +9975,9 @@ The order shipping pallet model.
 |palletSscc
     |link:http://php.net/string[string^]
     a|Amazon Vendor PalletSscc
+|orderId
+    |link:http://php.net/int[int^]
+    a|The id of the order
 |===
 
 
