@@ -10,6 +10,67 @@
 
 [[stockmanagement_stock_contracts]]
 ===  Contracts
+[[stockmanagement_contracts_incomingstocksettingsrepositorycontract]]
+==== IncomingStockSettingsRepositoryContract
+
+Get or update incoming stock settings
+
+
+
+===== Namespace
+
+`Plenty\Modules\StockManagement\Stock\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#get]
+----
+
+public get():Plenty\Modules\StockManagement\Stock\Models\IncomingStockSettings
+
+----
+
+
+
+
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_incomingstocksettings[`IncomingStockSettings`]
+
+
+Get the incoming stock settings.
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($data):Plenty\Modules\StockManagement\Stock\Models\IncomingStockSettings
+
+----
+
+
+
+
+====== *Return type:*        xref:Stockmanagement.adoc#stockmanagement_models_incomingstocksettings[`IncomingStockSettings`]
+
+
+Update the incoming stock settings.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+
 [[stockmanagement_contracts_itemvariationwarehousedynamicrepositorycontract]]
 ==== ItemVariationWarehouseDynamicRepositoryContract
 
@@ -864,6 +925,72 @@ Clears the filter array.
 
 [[stockmanagement_stock_models]]
 ===  Models
+[[stockmanagement_models_incomingstocksettings]]
+==== IncomingStockSettings
+
+Configuration of incoming stock
+
+
+
+===== Namespace
+
+`Plenty\Modules\StockManagement\Stock\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|intakePurchasePriceTransferred
+    |link:http://php.net/int[int^]
+    a|Whether the purchase price is transferred and the transfer method. Accepted values: 0: No transfer, 1: Save purchase price in variation data, 2: Save purchase price in variation and supplier data, 3: Save live average purchase price in variation data, 4: Save the highest purchase price in the variation, 5: Save the lowest purchase price in the variation.
+|intakeStorageLocationTransferred
+    |link:http://php.net/int[int^]
+    a|Whether the storage location is saved and the save method. Accepted values: 0: Storage location not saved, 1: Save storage location in variation data, 2: Save storage location in variation data if no storage location or default storage location saved.
+|warehouseSearchPurchasePrice
+    |link:http://php.net/int[int^]
+    a|
+|intakeMaximumQuantity
+    |link:http://php.net/float[float^]
+    a|Maximum quantity for incoming stock
+|deleteStorageLocationTime
+    |link:http://php.net/int[int^]
+    a|Time after empty stock information for storage locations is deleted. Accepted values: 1: 1 day, 2: 2 days, 3: 3 days, 4: 4 days, 5: 5 days, 6: 6 days, 7: 1 week, 14: 2 weeks, 30: 1 month, 91: 3 months, 183: 6 months, 365: 1 year.
+|invisibleStockEntryZeroTime
+    |link:http://php.net/int[int^]
+    a|Time after empty stock information for warehouses is deleted. Accepted values: 2: 2 days, 3: 3 days, 4: 4 days, 5: 5 days, 6: 6 days, 7: 1 week, 14: 2 weeks, 21: 3 weeks, 30: 1 month, 0: Never.
+|movingAveragePriceWarehouses
+    |link:http://php.net/array[array^]
+    a|
+|intakeCheckMultiBatchOfStorageLocation
+    |link:http://php.net/int[int^]
+    a|Batch/BBD per storage location rule. Accepted values: 0: Only one batch/BBD per variation per storage location, 1: Only one batch/BBD per storage location, 2: No limitation.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
 [[stockmanagement_models_itemvariationwarehousedynamic]]
 ==== ItemVariationWarehouseDynamic
 
