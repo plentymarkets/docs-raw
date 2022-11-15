@@ -1666,6 +1666,251 @@ public clearFilters():void
 
 Clears the filter array.
 
+
+[[warehouse_contracts_warehouserepositorycontract]]
+==== WarehouseRepositoryContract
+
+The interface for the warehouse repository
+
+
+
+===== Namespace
+
+`Plenty\Modules\Warehouse\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#search]
+----
+
+public search($perPage = 50, $page = 1, $with = []):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Gets a list of warehouses. Filter can be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($data):Plenty\Modules\Warehouse\Models\Warehouse
+
+----
+
+
+
+
+====== *Return type:*        xref:Warehouse.adoc#warehouse_models_warehouse[`Warehouse`]
+
+
+Creates a warehouse.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($id, $data):Plenty\Modules\Warehouse\Models\Warehouse
+
+----
+
+
+
+
+====== *Return type:*        xref:Warehouse.adoc#warehouse_models_warehouse[`Warehouse`]
+
+
+Updates a warehouse. The ID of the warehouse must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id, $newWarehouseId = -1):bool
+
+----
+
+
+
+
+
+
+
+Deletes a warehouse. The ID of the warehouse must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$newWarehouseId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
 [[warehouse_warehouse_models]]
 ===  Models
 [[warehouse_models_inventoryjournal]]
@@ -1751,6 +1996,112 @@ The stocktaking journal model.
 |updatedAt
     |
     a|Date when the stocktaking / stocktaking journal for this location was updated
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[warehouse_models_warehouse]]
+==== Warehouse
+
+The warehouse model in plentymarkets represents actual warehouses. Every warehouse is identified by an Id. Furthermore a warehouse is described by a name and is always associated with an address. This address may not only contain a physical address information like a street, a house number, a postal code and a town, but also an email address, a telephone number or a fax number.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Warehouse\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The id of the warehouse
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the warehouse
+|note
+    |link:http://php.net/string[string^]
+    a|A note for this warehouse
+|typeId
+    |link:http://php.net/int[int^]
+    a|The id of the warehouse type. The following types are available:
+<ul>
+    <li>0 = Sales warehouse</li>
+    <li>1 = Repair warehouse</li>
+    <li>4 = Storage warehouse</li>
+    <li>5 = Transit warehouse</li>
+    <li>6 = Distribution warehouse</li>
+    <li>7 = Other</li>
+</ul>
+|allocationReferrerIds
+    |link:http://php.net/array[array^]
+    a|Allocation Referrer Ids by automatic warehouse detection
+|onStockAvailability
+    |link:http://php.net/int[int^]
+    a|Displayed availability of a variation if stock is available
+|outOfStockAvailability
+    |link:http://php.net/int[int^]
+    a|Displayed availability of a variation if no stock is available
+|splitByShippingProfile
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if for this warehouse orders are split by shipping profiles or not. <ul><li>True = Orders are split by shipping profiles</li> <li>False = Orders will not be split by shipping profiles</li></ul>
+|storageLocationType
+    |link:http://php.net/string[string^]
+    a|The storage location type. The following types are available: <ul><li>none</li> <li>small</li><li>medium</li> <li>large</li> <li>europallet</li></ul>
+|storageLocationZone
+    |link:http://php.net/int[int^]
+    a|The zone that the storage location is in
+|repairWarehouseId
+    |link:http://php.net/int[int^]
+    a|The id of the associated repair warehouse
+|isInventoryModeActive
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if the stocktaking mode for this warehouse is active or not. <ul><li>True = active</li> <li>False = inactive</li></ul>
+|logisticsType
+    |link:http://php.net/string[string^]
+    a|The id of the logistics type of the warehouse. The logistics type states which service provider fulfills the storage and shipping. The following logistics types are available:
+<ul>
+<li>own</li>
+<li>amazon</li>
+<li>dhlFulfillment</li>
+</ul>
+|address
+    |        xref:Account.adoc#account_models_address[`Address`]
+    a|The address that the warehouse is located at
+|repairWarehouse
+    |        xref:Warehouse.adoc#warehouse_models_warehouse[`Warehouse`]
+    a|All information about the repair warehouse if a repair warehouse is linked to the sales warehouse
+|updatedAt
+    |link:http://php.net/string[string^]
+    a|The updated at timestamp of the warehouse
+|createdAt
+    |link:http://php.net/string[string^]
+    a|The created at timestamp of the warehouse
 |===
 
 
