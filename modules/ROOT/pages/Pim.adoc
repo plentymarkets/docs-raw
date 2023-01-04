@@ -721,6 +721,22 @@ public variationUpdatedAt():Plenty\Modules\Pim\Catalog\Variation\Filters\Variati
 
 
 [source%nowrap, php]
+[#variationrelatedupdatedat]
+----
+
+public variationRelatedUpdatedAt():Plenty\Modules\Pim\Catalog\Variation\Filters\Variation\VariationRelatedUpdatedAt
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_variationrelatedupdatedat[`VariationRelatedUpdatedAt`]
+
+
+
+
+[source%nowrap, php]
 [#salespriceupdatedat]
 ----
 
@@ -6443,6 +6459,191 @@ public setShouldBeMain($shouldBeMain):Plenty\Modules\Pim\Catalog\Variation\Filte
 |Name |Type |Description
 a|`$shouldBeMain`
 |link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters\FilterBuilder
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_filterbuilder[`FilterBuilder`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters\FilterBuilder
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_filterbuilder[`FilterBuilder`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_variation_variationrelatedupdatedat]]
+==== VariationRelatedUpdatedAt
+
+Used to represent the VariationRelatedUpdatedAtFilter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Variation`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\VariationRelatedLastUpdatedAtFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_variationrelatedlastupdatedatfilter[`VariationRelatedLastUpdatedAtFilter`]
+
+
+Will return a TypeInterface filter if at least one flat file is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#settimewindow]
+----
+
+public setTimeWindow($fromDate, $toDate = null):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$fromDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+
+a|`$toDate`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
 a|
 |===
 
