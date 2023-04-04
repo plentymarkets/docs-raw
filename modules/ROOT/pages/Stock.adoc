@@ -1,0 +1,238 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
+
+
+[[stock_stock]]
+== Stock
+
+[[stock_stock_contracts]]
+===  Contracts
+[[stock_contracts_internalstockreceiptmaincontract]]
+==== InternalStockReceiptMainContract
+
+This interface allows you to get stock receipt mains.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Stock\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $with = []):Plenty\Modules\Stock\Models\StockReceiptMain
+
+----
+
+
+
+
+====== *Return type:*        xref:Stock.adoc#stock_models_stockreceiptmain[`StockReceiptMain`]
+
+
+Gets a stock receipt main. The receipt ID must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[[stock_stock_models]]
+===  Models
+[[stock_models_stockreceipt]]
+==== StockReceipt
+
+The stock receipt model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Stock\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the stock receipt
+|receiptId
+    |link:http://php.net/int[int^]
+    a|
+|itemId
+    |link:http://php.net/int[int^]
+    a|
+|articleNo
+    |link:http://php.net/string[string^]
+    a|
+|name
+    |link:http://php.net/string[string^]
+    a|
+|num
+    |link:http://php.net/float[float^]
+    a|
+|inStock
+    |link:http://php.net/float[float^]
+    a|
+|price
+    |link:http://php.net/float[float^]
+    a|
+|priceId
+    |link:http://php.net/int[int^]
+    a|
+|attributeValueSetId
+    |link:http://php.net/int[int^]
+    a|
+|warehouseId
+    |link:http://php.net/int[int^]
+    a|
+|attributeSelection
+    |link:http://php.net/string[string^]
+    a|
+|position
+    |link:http://php.net/string[string^]
+    a|
+|externalItemId
+    |link:http://php.net/int[int^]
+    a|
+|updatedAt
+    |
+    a|
+|storageLocationId
+    |link:http://php.net/int[int^]
+    a|
+|variationId
+    |link:http://php.net/int[int^]
+    a|
+|batchBestBeforeDateId
+    |link:http://php.net/int[int^]
+    a|
+|receiptMain
+    |        xref:Stock.adoc#stock_models_stockreceiptmain[`StockReceiptMain`]
+    a|
+|variation
+    |        xref:Item.adoc#item_models_variation[`Variation`]
+    a|
+|batchBestBeforeDate
+    |        xref:Stockmanagement.adoc#stockmanagement_models_stockbatchbestbeforedate[`StockBatchBestBeforeDate`]
+    a|
+|warehouse
+    |        xref:Warehouse.adoc#warehouse_models_warehouse[`Warehouse`]
+    a|
+|warehouseLocation
+    |        xref:Warehouse.adoc#warehouse_models_warehouselocation[`WarehouseLocation`]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[stock_models_stockreceiptmain]]
+==== StockReceiptMain
+
+The stock receipt main model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Stock\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|receiptId
+    |link:http://php.net/int[int^]
+    a|
+|dealerId
+    |link:http://php.net/int[int^]
+    a|
+|orderNo
+    |link:http://php.net/string[string^]
+    a|
+|arrival
+    |link:http://php.net/string[string^]
+    a|
+|currency
+    |link:http://php.net/string[string^]
+    a|
+|exchangeRatio
+    |link:http://php.net/float[float^]
+    a|
+|createdAt
+    |
+    a|
+|receipts
+    |link:http://php.net/array[array^]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
