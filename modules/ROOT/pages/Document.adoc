@@ -767,6 +767,9 @@ The document model contains information about actual documents.
     <li>webstores = refers to clients</li>
     <li>categories</li>
 </ul>
+|comment
+    |        xref:Document.adoc#document_models_documentcomment[`DocumentComment`]
+    a|The manual comment
 |cancelledBy
     |        xref:Document.adoc#document_models_document[`Document`]
     a|The reference document that cancelled the current document, if any
@@ -785,6 +788,60 @@ The document model contains information about actual documents.
 |categories
     |        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
     a|Collection of categories that are associated with the document
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_models_documentcomment]]
+==== DocumentComment
+
+The manual comment model for the document model .
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|documentId
+    |link:http://php.net/int[int^]
+    a|The id of the document.
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the text (comment).
+|value
+    |link:http://php.net/string[string^]
+    a|The text value
+|document
+    |        xref:Document.adoc#document_models_document[`Document`]
+    a|The related document.
 |===
 
 

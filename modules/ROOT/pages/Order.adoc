@@ -17705,12 +17705,15 @@ The model of the creditNote order settings.
 |===
 |Name |Type |Description
 
-|defaultOrderStatus
+|defaultStatusId
     |link:http://php.net/float[float^]
     a|
 |setShippingCostsToZero
     |link:http://php.net/bool[bool^]
     a|
+|defaultOrderStatus
+    |link:http://php.net/float[float^]
+    a|Deprecated, not filled anymore. Use $defaultStatusId instead.
 |===
 
 
@@ -17753,9 +17756,15 @@ The model of the repair order settings.
 |===
 |Name |Type |Description
 
-|defaultOrderStatus
+|defaultStatusId
     |link:http://php.net/float[float^]
     a|
+|defaultOrderStatus
+    |link:http://php.net/float[float^]
+    a|Deprecated, not filled anymore. Use $defaultStatusId instead.
+|resetOutgoingItemsStatusId
+    |link:http://php.net/float[float^]
+    a|Values: -1: no status change, 0: last status , >0: defined status
 |===
 
 
@@ -17798,9 +17807,12 @@ The model of the return order settings.
 |===
 |Name |Type |Description
 
-|defaultOrderStatus
+|defaultStatusId
     |link:http://php.net/float[float^]
     a|
+|defaultOrderStatus
+    |link:http://php.net/float[float^]
+    a|Deprecated, not filled anymore. Use $defaultStatusId instead.
 |===
 
 
@@ -17845,6 +17857,12 @@ The model of the order settings.
 
 |warehouseAssignment
     |link:http://php.net/string[string^]
+    a|Possible values: 'order', 'order_row'
+|warehouseSelection
+    |link:http://php.net/string[string^]
+    a|Possible values: 'shipping_country', 'primary_storehouse', 'maximum_stock', 'minimum_stock', 'highest_priority_warehouse', 'lowest_priority_warehouse', 'highest_priority_warehouse_fallback_primary_warehouse', 'lowest_priority_warehouse_fallback_primary_warehouse'
+|orderItemPrefixes
+    |link:http://php.net/array[array^]
     a|
 |cancelStatusFrom
     |link:http://php.net/float[float^]
@@ -17852,8 +17870,47 @@ The model of the order settings.
 |cancelStatusTo
     |link:http://php.net/float[float^]
     a|
-|orderItemPrefixes
-    |link:http://php.net/array[array^]
+|reservationStatusFrom
+    |link:http://php.net/float[float^]
+    a|
+|reservationStatusTo
+    |link:http://php.net/float[float^]
+    a|
+|reservationOnlyPaidOrders
+    |link:http://php.net/bool[bool^]
+    a|
+|noStockStatus4
+    |link:http://php.net/bool[bool^]
+    a|
+|stockChangeStatusFrom
+    |link:http://php.net/float[float^]
+    a|
+|stockChangeStatusTo
+    |link:http://php.net/float[float^]
+    a|
+|defaultVariationIdForDunningFees
+    |link:http://php.net/int[int^]
+    a|
+|defaultReferrerId
+    |link:http://php.net/float[float^]
+    a|
+|showInactivePaymentMethods
+    |link:http://php.net/bool[bool^]
+    a|
+|downPayment
+    |link:http://php.net/float[float^]
+    a|
+|useNewOrderUi
+    |link:http://php.net/bool[bool^]
+    a|
+|oldUiDisplayAddress
+    |link:http://php.net/string[string^]
+    a|
+|oldUiDisplayPricesNet
+    |link:http://php.net/bool[bool^]
+    a|
+|oldUiChangeableBundleQuantity
+    |link:http://php.net/bool[bool^]
     a|
 |===
 
@@ -17954,9 +18011,15 @@ The model of the warranty order settings.
 |===
 |Name |Type |Description
 
+|defaultStatusId
+    |link:http://php.net/float[float^]
+    a|
 |setShippingCostsToZero
     |link:http://php.net/bool[bool^]
     a|
+|resetOutgoingItemsStatusId
+    |link:http://php.net/float[float^]
+    a|Values: -1: no status change, 0: last status , >0: defined status
 |===
 
 
@@ -17999,6 +18062,48 @@ Get settings for orders.
 ===== Methods
 
 [source%nowrap, php]
+[#get]
+----
+
+public get():Plenty\Modules\Order\Settings\Models\OrderSettings
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_ordersettings[`OrderSettings`]
+
+
+Get basic order settings
+
+[source%nowrap, php]
+[#set]
+----
+
+public set($data):Plenty\Modules\Order\Settings\Models\OrderSettings
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_ordersettings[`OrderSettings`]
+
+
+Update basic order settings
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#getstoresettings]
 ----
 
@@ -18023,22 +18128,6 @@ a|`$storeId`
 a|
 |===
 
-
-[source%nowrap, php]
-[#get]
-----
-
-public get():Plenty\Modules\Order\Settings\Models\OrderSettings
-
-----
-
-
-
-
-====== *Return type:*        xref:Order.adoc#order_models_ordersettings[`OrderSettings`]
-
-
-Get basic order settings
 
 [[order_date]]
 == Date
