@@ -10,6 +10,165 @@
 
 [[pricecalculation_pricecalculation_contracts]]
 ===  Contracts
+[[pricecalculation_contracts_pricecalculationerrorrepositorycontract]]
+==== PriceCalculationErrorRepositoryContract
+
+The repository contract for the price calculation errors
+
+
+
+===== Namespace
+
+`Plenty\Modules\PriceCalculation\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id, $page, $itemsPerPage, $variationIds = null):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/string[string^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$variationIds`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getall]
+----
+
+public getAll($columns = [], $page = 1, $itemsPerPage = 50, $variationIds = null):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$columns`
+|link:http://php.net/array[array^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$variationIds`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#create]
+----
+
+public create($variationId, $formulaId, $uuid, $reason):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$variationId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$formulaId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$uuid`
+|link:http://php.net/string[string^]
+a|
+
+a|`$reason`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($ids):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$ids`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+
 [[pricecalculation_contracts_pricecalculationrepositorycontract]]
 ==== PriceCalculationRepositoryContract
 
