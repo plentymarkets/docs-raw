@@ -2592,6 +2592,3205 @@ public toArray()
 
 Returns this model as an array.
 
+[[payment_matcherrules]]
+== MatcherRules
+
+[[payment_matcherrules_contracts]]
+===  Contracts
+[[payment_contracts_paymentmatcherrulescontainercontract]]
+==== PaymentMatcherRulesContainerContract
+
+Payment Matcher Rules Container Service
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#registerrule]
+----
+
+public registerRule($ruleClass, $mopIds = []):void
+
+----
+
+
+
+
+
+
+
+Register a specific rule class, either for specific methods of payment, or, lacking the second param, for all
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$ruleClass`
+|link:http://php.net/string[string^]
+a|
+
+a|`$mopIds`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getregisteredrules]
+----
+
+public getRegisteredRules($mopId):array
+
+----
+
+
+
+
+
+
+
+Gets all registered rules that apply to a specific method of payment
+If the payment method doesn&#039;t have any specificity, the rule set that applies generically is returned
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$mopId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#excluderuleformethods]
+----
+
+public excludeRuleForMethods($ruleClass, $mopIds):void
+
+----
+
+
+
+
+
+
+
+Excludes the specified rule from the method&#039;s ruleset.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$ruleClass`
+|link:http://php.net/string[string^]
+a|
+
+a|`$mopIds`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[[payment_matcherrules_rules]]
+===  Rules
+[[payment_rules_checkmatchedorderinvoiceamount]]
+==== CheckMatchedOrderInvoiceAmount
+
+Invoice Amount Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchalreadyoverpaid]]
+==== MatchAlreadyOverpaid
+
+Already Overpaid Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchamount]]
+==== MatchAmount
+
+Amount Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchcustomeremail]]
+==== MatchCustomerEmail
+
+Customer E-Mail Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchcustomerid]]
+==== MatchCustomerId
+
+Customer ID Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchcustomername]]
+==== MatchCustomerName
+
+Customer Name Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchdeutschepost]]
+==== MatchDeutschePost
+
+Deutsche Post Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchebayname]]
+==== MatchEbayName
+
+Ebay Name Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchebaytransactionid]]
+==== MatchEbayTransactionId
+
+Ebay Transaction ID Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchebayuniquepaymentid]]
+==== MatchEbayUniquePaymentId
+
+Ebay Unique Payment ID Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchexternalorderid]]
+==== MatchExternalOrderId
+
+External Order ID Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchinvoicenumber]]
+==== MatchInvoiceNumber
+
+Invoice Number Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchorderid]]
+==== MatchOrderId
+
+Order ID Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchpackagenum]]
+==== MatchPackageNum
+
+Package Number Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchpaymentbeforeentrydate]]
+==== MatchPaymentBeforeEntryDate
+
+Payment Before Entry Date Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+
+[[payment_rules_matchpaymenttransactionid]]
+==== MatchPaymentTransactionId
+
+Payment Transaction ID Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
 [[payment_method]]
 == Method
 
