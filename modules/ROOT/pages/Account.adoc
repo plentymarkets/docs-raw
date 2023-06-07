@@ -4343,7 +4343,8 @@ a|
 [[account_contracts_contactpaymentrepositorycontract]]
 ==== ContactPaymentRepositoryContract
 
-The ContactPaymentRepositoryContract is the interface for the contact payment repository. This interface allows to list, get, create, update and delete bank details of the contact.
+The ContactPaymentRepositoryContract is the interface for the contact payment repository.
+ * This interface allows to list, get, create, update and delete bank details of the contact.
 
 
 
@@ -4357,6 +4358,44 @@ The ContactPaymentRepositoryContract is the interface for the contact payment re
 
 
 ===== Methods
+
+[source%nowrap, php]
+[#getbanksofcontactpaginated]
+----
+
+public getBanksOfContactPaginated($contactId, $columns = [], $perPage = 50, $page = 1):array
+
+----
+
+
+
+
+
+
+
+Gets a collection of bank accounts of a contact. The ID of the contact must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$contactId`
+|link:http://php.net/int[int^]
+a|The ID of the contact
+
+a|`$columns`
+|link:http://php.net/array[array^]
+a|Optional: The columns to retrieve (Default: '[*]')
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|Optional: The number of bank accounts per page (Default: 50)
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+|===
+
 
 [source%nowrap, php]
 [#getbanksofcontact]
@@ -4492,7 +4531,7 @@ public deleteContactBank($contactBankId):bool
 
 
 
-Deletes a bank account. The ID of the bank account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+Deletes a bank account. The ID of the bank account must be specified.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -5256,6 +5295,44 @@ The contract for the contact payment repository.
 ===== Methods
 
 [source%nowrap, php]
+[#getbanksofcontactpaginated]
+----
+
+public getBanksOfContactPaginated($contactId, $columns = [], $perPage = 50, $page = 1):array
+
+----
+
+
+
+
+
+
+
+Gets a collection of bank accounts of a contact. The ID of the contact must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$contactId`
+|link:http://php.net/int[int^]
+a|The ID of the contact
+
+a|`$columns`
+|link:http://php.net/array[array^]
+a|Optional: The columns to retrieve (Default: '[*]')
+
+a|`$perPage`
+|link:http://php.net/int[int^]
+a|Optional: The number of bank accounts per page (Default: 50)
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#getbanksofcontact]
 ----
 
@@ -5389,7 +5466,7 @@ public deleteContactBank($contactBankId):bool
 
 
 
-Deletes a bank account. The ID of the bank account must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+Deletes a bank account. The ID of the bank account must be specified.
 
 .*Parameters*
 [cols="3,1,6"]
