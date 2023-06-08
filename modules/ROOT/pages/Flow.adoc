@@ -1,0 +1,936 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
+
+
+[[flow_flow]]
+== Flow
+
+[[flow_flow_contracts]]
+===  Contracts
+[[flow_contracts_uiconfigformcontract]]
+==== UIConfigFormContract
+
+Add fields to config form.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#adddatefield]
+----
+
+public addDateField($dateField):void
+
+----
+
+
+
+
+
+
+
+Add a  date field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$dateField`
+|        xref:Fulfillment.adoc#fulfillment_configform_datefield[`DateField`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addtimefield]
+----
+
+public addTimeField($timeField):void
+
+----
+
+
+
+
+
+
+
+Add a time field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$timeField`
+|        xref:Fulfillment.adoc#fulfillment_configform_timefield[`TimeField`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addinputfield]
+----
+
+public addInputField($inputField):void
+
+----
+
+
+
+
+
+
+
+Add an input field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$inputField`
+|        xref:Fulfillment.adoc#fulfillment_configform_inputfield[`InputField`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addcheckboxfield]
+----
+
+public addCheckboxField($checkboxField):void
+
+----
+
+
+
+
+
+
+
+Add a checkbox field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$checkboxField`
+|        xref:Fulfillment.adoc#fulfillment_configform_checkboxfield[`CheckboxField`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addselectboxfield]
+----
+
+public addSelectboxField($selectboxField):void
+
+----
+
+
+
+
+
+
+
+Add a selectbox field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$selectboxField`
+|        xref:Fulfillment.adoc#fulfillment_configform_selectboxfield[`SelectboxField`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addhyperlinkfield]
+----
+
+public addHyperlinkField($hyperlinkField):void
+
+----
+
+
+
+
+
+
+
+Add a  hyperlink field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hyperlinkField`
+|        xref:Fulfillment.adoc#fulfillment_configform_hyperlinkfield[`HyperlinkField`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getconfigfields]
+----
+
+public getConfigFields():array
+
+----
+
+
+
+
+
+
+
+Get the list with the config fields
+
+[[flow_definitions]]
+== Definitions
+
+[[flow_definitions_contracts]]
+===  Contracts
+[[flow_contracts_stepactiondefinitioncontract]]
+==== StepActionDefinitionContract
+
+Flow step action
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\StepActions\Definitions\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getidentifier]
+----
+
+public getIdentifier():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getname]
+----
+
+public getName():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdescription]
+----
+
+public getDescription():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getuiaction]
+----
+
+public getUIAction():Plenty\Modules\Flow\StepActions\Definitions\Models\UI\StepActionUI
+
+----
+
+
+
+
+====== *Return type:*        xref:Flow.adoc#flow_ui_stepactionui[`StepActionUI`]
+
+
+
+
+[source%nowrap, php]
+[#getuiconfigfields]
+----
+
+public getUIConfigFields():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getrequiredinputtypes]
+----
+
+public getRequiredInputTypes():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getprovidedoutputtypes]
+----
+
+public getProvidedOutputTypes():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#performtask]
+----
+
+public performTask($inputs, $configFields):array
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$inputs`
+|link:http://php.net/array[array^]
+a|
+
+a|`$configFields`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#validateconfigfields]
+----
+
+public validateConfigFields($configFields):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$configFields`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#validateinputs]
+----
+
+public validateInputs($inputs):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$inputs`
+|
+a|
+|===
+
+
+
+[[flow_contracts_flowtriggerdefinitioncontract]]
+==== FlowTriggerDefinitionContract
+
+Flow trigger definition
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\Triggers\Definitions\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#gettriggertype]
+----
+
+public getTriggerType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggerobject]
+----
+
+public getTriggerObject():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggeridentifier]
+----
+
+public getTriggerIdentifier():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggername]
+----
+
+public getTriggerName():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggerdescription]
+----
+
+public getTriggerDescription():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getuiconfigfield]
+----
+
+public getUIConfigField():Plenty\Modules\Fulfillment\DataModels\ConfigForm\FormField
+
+----
+
+
+
+
+====== *Return type:*        xref:Fulfillment.adoc#fulfillment_configform_formfield[`FormField`]
+
+
+
+
+
+[[flow_contracts_flowtriggerplentydefinitioncontract]]
+==== FlowTriggerPlentyDefinitionContract
+
+Flow trigger plenty definition
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\Triggers\Definitions\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getareaname]
+----
+
+public getAreaName():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getareagroupname]
+----
+
+public getAreaGroupName():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggertype]
+----
+
+public getTriggerType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggerobject]
+----
+
+public getTriggerObject():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggeridentifier]
+----
+
+public getTriggerIdentifier():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggername]
+----
+
+public getTriggerName():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggerdescription]
+----
+
+public getTriggerDescription():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getuiconfigfield]
+----
+
+public getUIConfigField():Plenty\Modules\Fulfillment\DataModels\ConfigForm\FormField
+
+----
+
+
+
+
+====== *Return type:*        xref:Fulfillment.adoc#fulfillment_configform_formfield[`FormField`]
+
+
+
+
+
+[[flow_contracts_flowtriggerplugindefinitioncontract]]
+==== FlowTriggerPluginDefinitionContract
+
+Flow trigger plugin Definition
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\Triggers\Definitions\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getpluginname]
+----
+
+public getPluginName():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getplugingroupname]
+----
+
+public getPluginGroupName():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggertype]
+----
+
+public getTriggerType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggerobject]
+----
+
+public getTriggerObject():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggeridentifier]
+----
+
+public getTriggerIdentifier():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggername]
+----
+
+public getTriggerName():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettriggerdescription]
+----
+
+public getTriggerDescription():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getuiconfigfield]
+----
+
+public getUIConfigField():Plenty\Modules\Fulfillment\DataModels\ConfigForm\FormField
+
+----
+
+
+
+
+====== *Return type:*        xref:Fulfillment.adoc#fulfillment_configform_formfield[`FormField`]
+
+
+
+
+[[flow_definitions_containers]]
+===  Containers
+[[flow_containers_flowtriggerdefinitioncontainer]]
+==== FlowTriggerDefinitionContainer
+
+The FlowTriggerDefinitionContainer collects and returns multiple flow trigger definitions .
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\Triggers\Definitions\Containers`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getregisteredtriggers]
+----
+
+public getRegisteredTriggers():array
+
+----
+
+
+
+
+
+
+
+Retrieves all registered trigger definitions
+
+[source%nowrap, php]
+[#register]
+----
+
+public register($triggerDefinition):void
+
+----
+
+
+
+
+
+
+
+Register new flow trigger definition
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$triggerDefinition`
+|        xref:Flow.adoc#flow_contracts_flowtriggerdefinitioncontract[`FlowTriggerDefinitionContract`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#gettrigger]
+----
+
+public getTrigger($identifier):Plenty\Modules\Flow\Triggers\Definitions\Contracts\FlowTriggerDefinitionContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Flow.adoc#flow_contracts_flowtriggerdefinitioncontract[`FlowTriggerDefinitionContract`]
+
+
+Retrieves a trigger definition
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$identifier`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[[flow_models]]
+== Models
+
+[[flow_models_ui]]
+===  UI
+[[flow_ui_stepactionui]]
+==== StepActionUI
+
+A flow UI step action provides the information that is necessary for an action to be displayed in the UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\StepActions\Definitions\Models\UI`
+
+
+
+
+
