@@ -202,7 +202,7 @@ Interface for content cache invalidation
 [#invalidatevariationids]
 ----
 
-public invalidateVariationIds($variationIds, $plentyId = null, $delaySeconds):void
+public invalidateVariationIds($variationIds, $plentyId = null, $delaySeconds, $invalidateParent = false):void
 
 ----
 
@@ -229,6 +229,10 @@ a|
 a|`$delaySeconds`
 |link:http://php.net/int[int^]
 a|
+
+a|`$invalidateParent`
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -236,7 +240,7 @@ a|
 [#invalidateitemids]
 ----
 
-public invalidateItemIds($itemIds, $plentyId = null):void
+public invalidateItemIds($itemIds, $plentyId = null, $delaySeconds):void
 
 ----
 
@@ -257,6 +261,10 @@ a|`$itemIds`
 a|
 
 a|`$plentyId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$delaySeconds`
 |link:http://php.net/int[int^]
 a|
 |===
