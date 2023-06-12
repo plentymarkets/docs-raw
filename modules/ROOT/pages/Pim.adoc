@@ -16041,6 +16041,36 @@ a|
 
 
 [source%nowrap, php]
+[#hasmodel]
+----
+
+public hasModel($model, $precision):Plenty\Modules\Pim\SearchService\Filter\VariationBaseFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_variationbasefilter[`VariationBaseFilter`]
+
+
+Restricts the result to have the model. Possible precisions are: exact, fuzzy and autocomplete
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$model`
+|link:http://php.net/string[string^]
+a|
+
+a|`$precision`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#hasanynumber]
 ----
 
@@ -23290,6 +23320,48 @@ a|
 
 
 [source%nowrap, php]
+[#getusesearchcache]
+----
+
+public getUseSearchCache():bool
+
+----
+
+
+
+
+
+
+
+Return whether the search cache should be used or not
+
+[source%nowrap, php]
+[#setusesearchcache]
+----
+
+public setUseSearchCache($useSearchCache):Plenty\Modules\Pim\VariationDataInterface\Model\VariationDataInterfaceContext
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+
+
+Set whether the search cache should be used or not. It is recommended to use this cache (Default)
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$useSearchCache`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#ishasadditionalsource]
 ----
 
@@ -23410,6 +23482,32 @@ The create or update operation for the vdi.
 ===== Methods
 
 [source%nowrap, php]
+[#setdirectrefresh]
+----
+
+public setDirectRefresh($directRefresh):Plenty\Modules\Pim\VariationDataInterface\Operations\BaseOperation
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_operations_baseoperation[`BaseOperation`]
+
+
+Updated variations will be direct refreshed in the elasticsearch index. !!! ONLY USE IN AGREEMENT WITH PIM TEAM !!!
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$directRefresh`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#add]
 ----
 
@@ -23471,6 +23569,32 @@ The delete operation for the vdi.
 ===== Methods
 
 [source%nowrap, php]
+[#setdirectrefresh]
+----
+
+public setDirectRefresh($directRefresh):Plenty\Modules\Pim\VariationDataInterface\Operations\BaseOperation
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_operations_baseoperation[`BaseOperation`]
+
+
+Updated variations will be direct refreshed in the elasticsearch index. !!! ONLY USE IN AGREEMENT WITH PIM TEAM !!!
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$directRefresh`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#add]
 ----
 
@@ -23530,6 +23654,32 @@ The replace operation for the vdi.
 
 
 ===== Methods
+
+[source%nowrap, php]
+[#setdirectrefresh]
+----
+
+public setDirectRefresh($directRefresh):Plenty\Modules\Pim\VariationDataInterface\Operations\BaseOperation
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_operations_baseoperation[`BaseOperation`]
+
+
+Updated variations will be direct refreshed in the elasticsearch index. !!! ONLY USE IN AGREEMENT WITH PIM TEAM !!!
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$directRefresh`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
 
 [source%nowrap, php]
 [#add]
