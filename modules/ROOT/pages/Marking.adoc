@@ -1,0 +1,239 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
+
+
+[[marking_marking]]
+== Marking
+
+[[marking_marking_contracts]]
+===  Contracts
+[[marking_contracts_markingrepositorycontract]]
+==== MarkingRepositoryContract
+
+Markings lookup repository
+
+
+
+===== Namespace
+
+`Plenty\Modules\Marking\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id):Plenty\Modules\Marking\Models\Marking
+
+----
+
+
+
+
+====== *Return type:*        xref:Marking.adoc#marking_models_marking[`Marking`]
+
+
+Gets a marking by given ID
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#search]
+----
+
+public search():void
+
+----
+
+
+
+
+
+
+
+Search markings by given criteria
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
+
+[[marking_marking_models]]
+===  Models
+[[marking_models_marking]]
+==== Marking
+
+Marking
+
+
+
+===== Namespace
+
+`Plenty\Modules\Marking\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|
+|markId
+    |link:http://php.net/int[int^]
+    a|
+|name
+    |link:http://php.net/string[string^]
+    a|
+|icon
+    |link:http://php.net/string[string^]
+    a|
+|text
+    |link:http://php.net/string[string^]
+    a|
+|type
+    |link:http://php.net/string[string^]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
