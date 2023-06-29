@@ -673,6 +673,22 @@ public variationHasChildren():void
 
 
 [source%nowrap, php]
+[#variationids]
+----
+
+public variationIds():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#variationisactive]
 ----
 
@@ -6095,6 +6111,188 @@ public setShouldHaveChildren($shouldHaveChildren):Plenty\Modules\Pim\Catalog\Var
 |Name |Type |Description
 a|`$shouldHaveChildren`
 |link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters\FilterBuilder
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_filterbuilder[`FilterBuilder`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters\FilterBuilder
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_filterbuilder[`FilterBuilder`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_variation_variationids]]
+==== VariationIds
+
+Used to represent the VariationIsActive filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Variation`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\VariationBaseFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_variationbasefilter[`VariationBaseFilter`]
+
+
+Will return a VariationBaseFilter if shouldBeActive is defined. Otherwise null will be returned
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setvariationids]
+----
+
+public setVariationIds($variationIds):Plenty\Modules\Pim\Catalog\Variation\Filters\Variation\VariationIds
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_variation_variationids[`VariationIds`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$variationIds`
+|link:http://php.net/int[int^]
 a|
 |===
 
