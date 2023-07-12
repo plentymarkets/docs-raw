@@ -116,6 +116,32 @@ a|The amount of messages to list (defaults to 50)
 
 
 [source%nowrap, php]
+[#listarchivedmessages]
+----
+
+public listArchivedMessages($conversationUuid):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Lists messages for an archived conversation
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$conversationUuid`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#getmessages]
 ----
 
@@ -1585,6 +1611,32 @@ public getTotalEntries():int
 
 
 Returns total entries
+
+[source%nowrap, php]
+[#loadmessage]
+----
+
+public static loadMessage($path):Plenty\Modules\Messenger\Models\Message
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_message[`Message`]
+
+
+Get an instance of the model.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$path`
+|link:http://php.net/string[string^]
+a|
+|===
+
 
 [source%nowrap, php]
 [#findbyconversationid]
