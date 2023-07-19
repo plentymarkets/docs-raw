@@ -2395,3 +2395,2335 @@ public static isActive():void
 
 
 
+[[messenger_conversations]]
+== Conversations
+
+[[messenger_conversations_contracts]]
+===  Contracts
+[[messenger_contracts_conversationfolderrepositorycontract]]
+==== ConversationFolderRepositoryContract
+
+The ConversationFolderRepositoryContract is the interface for the messenger conversations folders. This interface defines methods to add, update and show folders.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getfolder]
+----
+
+public getFolder($uuid):Plenty\Modules\Messenger\Conversations\Models\ConversationFolder
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversationfolder[`ConversationFolder`]
+
+
+Retrieves a folder object based on UUID
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuid`
+|link:http://php.net/string[string^]
+a|The UUID of the folder
+|===
+
+
+[source%nowrap, php]
+[#createfolder]
+----
+
+public createFolder($data):Plenty\Modules\Messenger\Conversations\Models\ConversationFolder
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversationfolder[`ConversationFolder`]
+
+
+Creates a new folder. Important! The userId property will be automatically set based on the current logged in user.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|Array with folder properties
+|===
+
+
+[source%nowrap, php]
+[#updatefolder]
+----
+
+public updateFolder($uuid, $data):Plenty\Modules\Messenger\Conversations\Models\ConversationFolder
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversationfolder[`ConversationFolder`]
+
+
+Updates an existing folder.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuid`
+|link:http://php.net/string[string^]
+a|Folder UUID
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|Array with folder properties
+|===
+
+
+[source%nowrap, php]
+[#listfolders]
+----
+
+public listFolders($userId, $page, $itemsPerPage, $sortBy, $sortOrder):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Returns a paginated result with all folders
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$userId`
+|link:http://php.net/int[int^]
+a|ID of the folder owner
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|Page number
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|Items per page
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|Sort column
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|Sort order
+|===
+
+
+[source%nowrap, php]
+[#deletefolder]
+----
+
+public deleteFolder($uuid):bool
+
+----
+
+
+
+
+
+
+
+Deletes a folder
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuid`
+|link:http://php.net/string[string^]
+a|The UUID of the deleted folder
+|===
+
+
+
+[[messenger_contracts_conversationrepositorycontract]]
+==== ConversationRepositoryContract
+
+The ConversationRepositoryContract is the interface for the messenger conversations repository. This interface defines methods to add, update and show conversations.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#listconversations]
+----
+
+public listConversations($request):array
+
+----
+
+
+
+
+
+
+
+List all conversations and returns a paginated result
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$request`
+|link:http://php.net/array[array^]
+a|List of filters, page number, items per page and "with" array
+|===
+
+
+[source%nowrap, php]
+[#createconversation]
+----
+
+public createConversation($data):Plenty\Modules\Messenger\Conversations\Models\Conversation
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversation[`Conversation`]
+
+
+Creates a new conversation
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|Conversation data
+|===
+
+
+[source%nowrap, php]
+[#getconversation]
+----
+
+public getConversation($uuid5, $with = []):Plenty\Modules\Messenger\Conversations\Models\Conversation
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversation[`Conversation`]
+
+
+Retrieves a conversation
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuid5`
+|link:http://php.net/string[string^]
+a|Conversation UUID
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|Array with extra relations (possible values: ["messages"])
+|===
+
+
+[source%nowrap, php]
+[#updateconversation]
+----
+
+public updateConversation($uuid5, $data):Plenty\Modules\Messenger\Conversations\Models\Conversation
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversation[`Conversation`]
+
+
+Updates a conversation
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuid5`
+|link:http://php.net/string[string^]
+a|Conversation UUID
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|Conversation data. If a property key is missing, the old value will be kept.
+|===
+
+
+[source%nowrap, php]
+[#updateclose]
+----
+
+public updateClose($uuids, $isClosed):int
+
+----
+
+
+
+
+
+
+
+Sets a batch of conversations closed status
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's
+
+a|`$isClosed`
+|link:http://php.net/bool[bool^]
+a|Close status (true/false)
+|===
+
+
+[source%nowrap, php]
+[#updatetags]
+----
+
+public updateTags($uuid, $tagIds):int
+
+----
+
+
+
+
+
+
+
+Update the list of tags for a conversation
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuid`
+|link:http://php.net/string[string^]
+a|Conversation UUID
+
+a|`$tagIds`
+|link:http://php.net/array[array^]
+a|Array of tag ID's
+|===
+
+
+[source%nowrap, php]
+[#addtags]
+----
+
+public addTags($uuids, $tagIds):int
+
+----
+
+
+
+
+
+
+
+Adds to a batch of conversations new tags. The list of tags will be extra added to the existing list of tags for each conversation
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's
+
+a|`$tagIds`
+|link:http://php.net/array[array^]
+a|Array of tag ID's
+|===
+
+
+[source%nowrap, php]
+[#updatedeadline]
+----
+
+public updateDeadline($uuids, $deadline = null):int
+
+----
+
+
+
+
+
+
+
+Sets deadline for a batch of conversations
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's
+
+a|`$deadline`
+|link:http://php.net/string[string^]
+a|Deadline in format YYYY-MM-DD H:i:s. If null is set, the deadline will be removed
+|===
+
+
+[source%nowrap, php]
+[#updateread]
+----
+
+public updateRead($uuids, $userId, $read):int
+
+----
+
+
+
+
+
+
+
+Marks a batch of conversations as red/not read by the given user
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's
+
+a|`$userId`
+|link:http://php.net/int[int^]
+a|ID of the user
+
+a|`$read`
+|link:http://php.net/bool[bool^]
+a|Read status: true/false
+|===
+
+
+[source%nowrap, php]
+[#addsubscribers]
+----
+
+public addSubscribers($uuid, $userId):int
+
+----
+
+
+
+
+
+
+
+Subscribes a user to a conversation. A subscribed user will receive notifications related to that conversation (via email or in the admin notifications area)
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuid`
+|link:http://php.net/string[string^]
+a|Conversation UUID
+
+a|`$userId`
+|link:http://php.net/int[int^]
+a|ID of the user
+|===
+
+
+[source%nowrap, php]
+[#removesubscribers]
+----
+
+public removeSubscribers($uuid, $userId):int
+
+----
+
+
+
+
+
+
+
+Unsubscribes a user from a conversation
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuid`
+|link:http://php.net/string[string^]
+a|Conversation UUID
+
+a|`$userId`
+|link:http://php.net/int[int^]
+a|ID of the user
+|===
+
+
+[source%nowrap, php]
+[#deleteconversation]
+----
+
+public deleteConversation($uuid5):int
+
+----
+
+
+
+
+
+
+
+Soft deletes a conversation. Conversation will be visible in the trash folder.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuid5`
+|link:http://php.net/string[string^]
+a|Conversation UUID
+|===
+
+
+[source%nowrap, php]
+[#batchdeleteconversations]
+----
+
+public batchDeleteConversations($uuids):int
+
+----
+
+
+
+
+
+
+
+Soft deletes a batch of conversations. Conversations will be visible in the trash folder.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/string[string^]
+a|List of conversations UUID's separated by comma
+|===
+
+
+[source%nowrap, php]
+[#searchreceiver]
+----
+
+public searchReceiver($searchTerm):array
+
+----
+
+
+
+
+
+
+
+Search and returns a list of possible receivers. Search is done by contact name, contact id, order ID, user ID, user name. Search term must have minimum 3 letters
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$searchTerm`
+|link:http://php.net/string[string^]
+a|The searched term
+|===
+
+
+[source%nowrap, php]
+[#getinboxes]
+----
+
+public getInboxes():array
+
+----
+
+
+
+
+
+
+
+Retrieves the list of configured inboxes. If the inbox is not active it will not be returned in the response.
+
+[source%nowrap, php]
+[#updatepriority]
+----
+
+public updatePriority($uuids, $priorityId):int
+
+----
+
+
+
+
+
+
+
+Sets priority for a batch of conversations
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's
+
+a|`$priorityId`
+|link:http://php.net/int[int^]
+a|Id of priority (0 - No priority, 1 - Very low, 2 - low, 3 - Medium, 4 - High, 5 - Very high)
+|===
+
+
+[source%nowrap, php]
+[#updateconversationsfoldersrelations]
+----
+
+public updateConversationsFoldersRelations($conversationsUuids, $foldersUuids):bool
+
+----
+
+
+
+
+
+
+
+Assigns batch of conversation to batch of folders. The list of folders must belong to the current logged in user ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$conversationsUuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's
+
+a|`$foldersUuids`
+|link:http://php.net/array[array^]
+a|Array of folders UUID's
+|===
+
+
+[source%nowrap, php]
+[#removeconversationfolders]
+----
+
+public removeConversationFolders($conversationsUuid, $foldersUuidsToKeep):bool
+
+----
+
+
+
+
+
+
+
+Removes conversation from all folders except the ones passed to array $foldersUuidsToKeep. This operation will be performed only for folders belonging to current logged in user ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$conversationsUuid`
+|link:http://php.net/string[string^]
+a|Conversation UUID
+
+a|`$foldersUuidsToKeep`
+|link:http://php.net/array[array^]
+a|Array of folders UUID's to keep. If array is empty, conversation will be removed from all folders
+|===
+
+
+[source%nowrap, php]
+[#updateconversationstypeandstatus]
+----
+
+public updateConversationsTypeAndStatus($conversationsUuids, $typeId, $statusId):bool
+
+----
+
+
+
+
+
+
+
+Sets the type and status for a batch of conversations
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$conversationsUuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's
+
+a|`$typeId`
+|link:http://php.net/int[int^]
+a|Type ID of conversation. If null is set, the conversation type will be removed.
+
+a|`$statusId`
+|link:http://php.net/int[int^]
+a|Status ID of conversation. If null is set, the conversation status will be removed.
+|===
+
+
+[source%nowrap, php]
+[#gettotals]
+----
+
+public getTotals():array
+
+----
+
+
+
+
+
+
+
+Returns the total number of unread conversations for current user
+
+[source%nowrap, php]
+[#emptytrash]
+----
+
+public emptyTrash($days = null):bool
+
+----
+
+
+
+
+
+
+
+Permanently deletes all the messages from trash older than $days (based on deleted at field). If days is null, all messages from trash will be permanently deleted. Emptying of the trash will be done immediately.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$days`
+|link:http://php.net/int[int^]
+a|Minimum number of days since the conversation was moved to trash
+|===
+
+
+[source%nowrap, php]
+[#queueemptytrash]
+----
+
+public queueEmptyTrash($days = null):bool
+
+----
+
+
+
+
+
+
+
+Adds the empty trash command to a queue. Emptying of the trash will happen sometime in the future, when the first worker is available to process the queue (less impact on Elastic Search index).
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$days`
+|link:http://php.net/int[int^]
+a|Minimum number of days since the conversation was moved to trash
+|===
+
+
+[source%nowrap, php]
+[#archiveconversations]
+----
+
+public archiveConversations($uuids, $isFromUI):int
+
+----
+
+
+
+
+
+
+
+Archives a batch of conversations. Conversations will be visible in archive folder (filter isArchive = true in list conversations)
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's
+
+a|`$isFromUI`
+|link:http://php.net/bool[bool^]
+a|Flag that specifies if action is triggered from UI. If set to true, the action will be performed immediately. If set to false, the action will be queued (less impact on Elastic Search index)
+|===
+
+
+[source%nowrap, php]
+[#restorearchivedconversations]
+----
+
+public restoreArchivedConversations($uuids):int
+
+----
+
+
+
+
+
+
+
+Restores a batch of conversations from the archive. The operation is performed immediately.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's
+|===
+
+
+[source%nowrap, php]
+[#permanentlydeletearchivedconversations]
+----
+
+public permanentlyDeleteArchivedConversations($uuids):int
+
+----
+
+
+
+
+
+
+
+Permanently deletes a batch of conversations from the archive
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/string[string^]
+a|List of conversations UUID's separated by comma. The operation is performed immediately.
+|===
+
+
+[source%nowrap, php]
+[#batchrestoreconversations]
+----
+
+public batchRestoreConversations($uuids):int
+
+----
+
+
+
+
+
+
+
+Restores from trash a batch of conversations
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's. The operation is performed immediately.
+|===
+
+
+[source%nowrap, php]
+[#updatesubscribe]
+----
+
+public updateSubscribe($uuids):int
+
+----
+
+
+
+
+
+
+
+Subscribes current user to a batch of conversations
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's.
+|===
+
+
+[source%nowrap, php]
+[#updateunsubscribe]
+----
+
+public updateUnsubscribe($uuids):int
+
+----
+
+
+
+
+
+
+
+Unsubscribes the current user from a batch of conversations
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's.
+|===
+
+
+[source%nowrap, php]
+[#automaticallyarchiveconversations]
+----
+
+public automaticallyArchiveConversations($days):bool
+
+----
+
+
+
+
+
+
+
+Automatically archives conversations older than $days days. The updatedAt field is taken into consideration when calculating conversation age.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$days`
+|link:http://php.net/int[int^]
+a|Minimum number of days since the conversation was last updated
+|===
+
+
+
+[[messenger_contracts_conversationstatusrepositorycontract]]
+==== ConversationStatusRepositoryContract
+
+The ConversationStatusRepositoryContract is the interface for the messenger conversations statuses. This interface defines methods to add, update and show statuses.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getstatus]
+----
+
+public getStatus($id):Plenty\Modules\Messenger\Conversations\Models\ConversationStatus
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversationstatus[`ConversationStatus`]
+
+
+Retrieves a status based on ID
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|Status ID
+|===
+
+
+[source%nowrap, php]
+[#createstatus]
+----
+
+public createStatus($statusData):Plenty\Modules\Messenger\Conversations\Models\ConversationStatus
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversationstatus[`ConversationStatus`]
+
+
+Creates a new status
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statusData`
+|link:http://php.net/array[array^]
+a|Array with status properties
+|===
+
+
+[source%nowrap, php]
+[#updatestatus]
+----
+
+public updateStatus($id, $data):Plenty\Modules\Messenger\Conversations\Models\ConversationStatus
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversationstatus[`ConversationStatus`]
+
+
+Updates an existing status
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|Status ID
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|Array with status properties
+|===
+
+
+[source%nowrap, php]
+[#liststatuses]
+----
+
+public listStatuses($page, $itemsPerPage, $sortBy, $sortOrder, $filters = []):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Lists all statuses based on provided filters
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$page`
+|link:http://php.net/int[int^]
+a|Page number
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|Number of results per page
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|Sort column (id, position)
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|Sort order (asc/desc)
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|Array with filters (isDeleted, typeId, id, name)
+|===
+
+
+[source%nowrap, php]
+[#deletestatus]
+----
+
+public deleteStatus($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a status (soft delete)
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|Status ID
+|===
+
+
+[source%nowrap, php]
+[#batchdeletestatuses]
+----
+
+public batchDeleteStatuses($statusIds):bool
+
+----
+
+
+
+
+
+
+
+Deletes a batch of statuses
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statusIds`
+|link:http://php.net/array[array^]
+a|Array with status ID's
+|===
+
+
+
+[[messenger_contracts_conversationtyperepositorycontract]]
+==== ConversationTypeRepositoryContract
+
+The ConversationTypeRepositoryContract is the interface for the messenger conversations types. This interface defines methods to add, update and show types.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType($id):Plenty\Modules\Messenger\Conversations\Models\ConversationType
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversationtype[`ConversationType`]
+
+
+Retrieves a type based on ID
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|Type ID
+|===
+
+
+[source%nowrap, php]
+[#createtype]
+----
+
+public createType($typeData):Plenty\Modules\Messenger\Conversations\Models\ConversationType
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversationtype[`ConversationType`]
+
+
+Creates a new type
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$typeData`
+|link:http://php.net/array[array^]
+a|Array with type properties
+|===
+
+
+[source%nowrap, php]
+[#updatetype]
+----
+
+public updateType($id, $typeData):Plenty\Modules\Messenger\Conversations\Models\ConversationType
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversationtype[`ConversationType`]
+
+
+TUpdates an existing type
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|Type ID
+
+a|`$typeData`
+|link:http://php.net/array[array^]
+a|Array with type properties
+|===
+
+
+[source%nowrap, php]
+[#listtypes]
+----
+
+public listTypes($page, $itemsPerPage, $sortBy, $sortOrder, $filters = [], $with = []):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Lists all types based on filters and returns a paginated result
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$page`
+|link:http://php.net/int[int^]
+a|Page number
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|Number of results per page
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|Sort column (id, position)
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|Sort order (asc/desc)
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|Array with filters (name, isDeleted, id)
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|(allStatuses ,activeStatuses)
+|===
+
+
+[source%nowrap, php]
+[#deletetype]
+----
+
+public deleteType($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a type
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|Type ID
+|===
+
+
+[source%nowrap, php]
+[#batchdeletetypes]
+----
+
+public batchDeleteTypes($typeIds):bool
+
+----
+
+
+
+
+
+
+
+Deletes a batch of types
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$typeIds`
+|link:http://php.net/array[array^]
+a|Array of type ID's
+|===
+
+
+[[messenger_conversations_events]]
+===  Events
+[[messenger_events_deadlinechangeconversationevent]]
+==== DeadlineChangeConversationEvent
+
+The event is triggered when the conversation deadline is changed.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getconversationuuid]
+----
+
+public getConversationUUID():void
+
+----
+
+
+
+
+
+
+
+
+
+
+[[messenger_events_newconversationevent]]
+==== NewConversationEvent
+
+The event is triggered when a new conversation is created by a user (via UI or REST API).
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getconversationuuid]
+----
+
+public getConversationUUID():void
+
+----
+
+
+
+
+
+
+
+
+
+
+[[messenger_events_newemailfromcustomerconversationevent]]
+==== NewEmailFromCustomerConversationEvent
+
+The event is triggered when a new conversation is created by a customer (received via inbox).
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getconversationuuid]
+----
+
+public getConversationUUID():void
+
+----
+
+
+
+
+
+
+
+
+
+
+[[messenger_events_newreplyconversationevent]]
+==== NewReplyConversationEvent
+
+The event is triggered when an user replyes to an existing conversation (via UI or REST API).
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getconversationuuid]
+----
+
+public getConversationUUID():void
+
+----
+
+
+
+
+
+
+
+
+
+
+[[messenger_events_newreplyfromcustomerconversationevent]]
+==== NewReplyFromCustomerConversationEvent
+
+The event is triggered when the customer replyes to an existing conversation (reply received via inbox).
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getconversationuuid]
+----
+
+public getConversationUUID():void
+
+----
+
+
+
+
+
+
+
+
+
+
+[[messenger_events_prioritychangeconversationevent]]
+==== PriorityChangeConversationEvent
+
+The event is triggered when the conversation priority is changed.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getconversationuuid]
+----
+
+public getConversationUUID():void
+
+----
+
+
+
+
+
+
+
+
+
+
+[[messenger_events_statuschangeconversationevent]]
+==== StatusChangeConversationEvent
+
+The event is triggered when the conversation status is changed.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getconversationuuid]
+----
+
+public getConversationUUID():void
+
+----
+
+
+
+
+
+
+
+
+
+
+[[messenger_events_tagaddedconversationevent]]
+==== TagAddedConversationEvent
+
+The event is triggered when a tag is added to a conversation.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getconversationuuid]
+----
+
+public getConversationUUID():void
+
+----
+
+
+
+
+
+
+
+
+
+
+[[messenger_events_tagremovedconversationevent]]
+==== TagRemovedConversationEvent
+
+The event is triggered when a tag is removed from a conversation.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getconversationuuid]
+----
+
+public getConversationUUID():void
+
+----
+
+
+
+
+
+
+
+
+
+[[messenger_conversations_models]]
+===  Models
+[[messenger_models_conversation]]
+==== Conversation
+
+The Conversation model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|uuid
+    |link:http://php.net/string[string^]
+    a|The UUID of the conversation
+|shortId
+    |link:http://php.net/string[string^]
+    a|The Short ID of the Conversation
+|plentyIdHash
+    |link:http://php.net/string[string^]
+    a|The plentyIdHash
+|plentyId
+    |link:http://php.net/int[int^]
+    a|The plentyId of the relation contact
+|inboxId
+    |link:http://php.net/string[string^]
+    a|The inboxId from the assistant
+|title
+    |link:http://php.net/string[string^]
+    a|The Title of the Conversation
+|conversationRelation
+    |link:http://php.net/array[array^]
+    a|The relations to other entities
+|tagIds
+    |link:http://php.net/array[array^]
+    a|Array of tag IDs
+|isClosed
+    |link:http://php.net/bool[bool^]
+    a|Boolean that indicates if the conversation is closed
+|isDeleted
+    |link:http://php.net/bool[bool^]
+    a|Boolean that indicates if the conversation is deleted
+|referrer
+    |        xref:Messenger.adoc#messenger_models_messagereferrer[`MessageReferrer`]
+    a|Array of referrers
+|readBy
+    |link:http://php.net/array[array^]
+    a|Array of user ids (int)
+|subscribers
+    |        xref:Messenger.adoc#messenger_models_conversationsubscribers[`ConversationSubscribers`]
+    a|Subscribers of the conversation
+|createdAt
+    |
+    a|Creation Date
+|updatedAt
+    |
+    a|Update Date
+|deletedAt
+    |
+    a|Deletion Date
+|deadline
+    |
+    a|Deadline Date
+|messages
+    |link:http://php.net/array[array^]
+    a|Conversation messages
+|
+    |link:http://php.net/int[int^]
+    a|attachmentsCount Attachment messages count
+|
+    |link:http://php.net/int[int^]
+    a|billedMsgCount Conversation billed msg count
+|
+    |link:http://php.net/int[int^]
+    a|billedMinutesCount Conversation billed minutes count
+|
+    |link:http://php.net/bool[bool^]
+    a|validRelation Conversation has the relations validated
+|priorityId
+    |link:http://php.net/string[string^]
+    a|The Priority of the Conversation
+|from
+    |        xref:Messenger.adoc#messenger_models_conversationfrom[`ConversationFrom`]
+    a|Conversation from
+|typeId
+    |link:http://php.net/int[int^]
+    a|ID of conversation type
+|typePosition
+    |link:http://php.net/int[int^]
+    a|Sort order of conversation type
+|statusId
+    |link:http://php.net/int[int^]
+    a|ID of conversation status
+|statusPosition
+    |link:http://php.net/int[int^]
+    a|Sort order of conversation status
+|hasWhisperedMessages
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if a conversation contains whispered messages
+|messagesTitles
+    |link:http://php.net/array[array^]
+    a|Array of all message titles
+|messagesBodies
+    |link:http://php.net/array[array^]
+    a|Array with all message bodies stripped of tags
+|messagesTags
+    |link:http://php.net/array[array^]
+    a|Array with all tag ID's from all messages
+|messagesReferrers
+    |link:http://php.net/array[array^]
+    a|Array with all referrers from all messages
+|messagesFroms
+    |link:http://php.net/array[array^]
+    a|Array with all from fields from all messages
+|messagesPaths
+    |link:http://php.net/array[array^]
+    a|Array with s3 messages paths
+|messagesIds
+    |link:http://php.net/array[array^]
+    a|Array with all messages UUID's
+|isMigratedToEs
+    |link:http://php.net/int[int^]
+    a|Flag that indicates if the conversation is synced to ES (used during messenger migration to new structure)
+|isArchived
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if the conversation is archived
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_conversationfolder]]
+==== ConversationFolder
+
+The Conversation model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|uuid
+    |link:http://php.net/string[string^]
+    a|The UUID of the folder
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the folder
+|userId
+    |link:http://php.net/int[int^]
+    a|The user ID which is the folder owner
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_conversationfolderproperty]]
+==== ConversationFolderProperty
+
+The ConversationFolderProperty model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|userId
+    |link:http://php.net/string[string^]
+    a|
+|foldersUuids
+    |link:http://php.net/array[array^]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_conversationfrom]]
+==== ConversationFrom
+
+The ConversationFrom model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the from instance (one of {@link ConversationFrom::FROM_TYPE_USER},
+{@link ConversationFrom::FROM_TYPE_CONTACT} and {@link ConversationFrom::FROM_TYPE_EMAIL})
+|value
+    |
+    a|The value of the instance. For type {@link ConversationFrom::FROM_TYPE_EMAIL} it is a string (the email)
+and the id of the user or the contact otherwise.
+|name
+    |link:http://php.net/string[string^]
+    a|An optional name for the instance, e.g. the real name for type {@link ConversationFrom::FROM_TYPE_EMAIL}
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_conversationrelation]]
+==== ConversationRelation
+
+The ConversationRelation model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the relation (one of {@link ConversationRelation::RELATION_TYPE_CONTACT}, {@link ConversationRelation::RELATION_TYPE_ORDER},
+{@link ConversationRelation::RELATION_TYPE_EMAIL}, {@link ConversationRelation::RELATION_TYPE_PAYMENT})
+{@link ConversationRelation::RELATION_TYPE_USER}, {@link ConversationRelation::RELATION_AMAZON_ORDER})
+{@link ConversationRelation::RELATION_TYPE_CONTACT_EMAIL}, {@link ConversationRelation::RELATION_TYPE_CONTACT_ID})
+{@link ConversationRelation::RELATION_TYPE_CONTACT_NUMBER}, {@link ConversationRelation::RELATION_TYPE_INVOICE_NUMBER})
+{@link ConversationRelation::RELATION_TYPE_ORDER_ID})
+|value
+    |
+    a|Array with entity values
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_conversationstatus]]
+==== ConversationStatus
+
+The ConversationStatus model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|names
+    |link:http://php.net/array[array^]
+    a|Collection of status names for different languages
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the status
+|position
+    |link:http://php.net/int[int^]
+    a|The position of the status (used in sorting)
+|userId
+    |link:http://php.net/int[int^]
+    a|The suer ID which performed the last update
+|isDeleted
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if the status was deleted
+|
+    |link:http://php.net/int[int^]
+    a|typeId The ID of the parent type
+|
+    |link:http://php.net/int[int^]
+    a|progress Percentage of progress (0, 10, 20, 30, 40, 50, 60, 70, 80, 90, 100)
+|
+    |link:http://php.net/string[string^]
+    a|colour Color of the status background (example: #0084ff)
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_conversationstatusnames]]
+==== ConversationStatusNames
+
+The ConversationStatusNames model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the name
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the status
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_conversationsubscribers]]
+==== ConversationSubscribers
+
+The ConversationSubscribers model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|userIds
+    |link:http://php.net/array[array^]
+    a|The array of userIds subscribed to a message
+|roleIds
+    |link:http://php.net/array[array^]
+    a|The array of roleIds subscribed to a message (not used)
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_conversationtype]]
+==== ConversationType
+
+The ConversationType model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|names
+    |link:http://php.net/array[array^]
+    a|Collection of type names for different languages
+|statuses
+    |link:http://php.net/array[array^]
+    a|Collection of statuses that belong to that type
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the type
+|position
+    |link:http://php.net/int[int^]
+    a|The position of the type (used in sorting)
+|userId
+    |link:http://php.net/int[int^]
+    a|The suer ID which performed the last update
+|isDeleted
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if the type was deleted
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_conversationtypenames]]
+==== ConversationTypeNames
+
+The ConversationTypeNames model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the name
+|name
+    |link:http://php.net/string[string^]
+    a|The type name
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
