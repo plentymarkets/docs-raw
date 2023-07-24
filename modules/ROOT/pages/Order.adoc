@@ -26836,7 +26836,7 @@ Order shipping profile repository contract to load the shipping profile combinat
 [#getcombinations]
 ----
 
-public getCombinations($orderId):array
+public getCombinations($orderId, $uniqueMainShippingProfiles = false):array
 
 ----
 
@@ -26855,6 +26855,10 @@ Get the shipping profile combinations for an order.
 a|`$orderId`
 |link:http://php.net/int[int^]
 a|
+
+a|`$uniqueMainShippingProfiles`
+|link:http://php.net/bool[bool^]
+a|When true, only one result per main shipping profile is returned
 |===
 
 
@@ -26862,7 +26866,7 @@ a|
 [#getcombinationsfororderdata]
 ----
 
-public getCombinationsForOrderData($data):array
+public getCombinationsForOrderData($data, $uniqueMainShippingProfiles = false):array
 
 ----
 
@@ -26881,6 +26885,10 @@ Get the shipping profile combinations for the given order data.
 a|`$data`
 |link:http://php.net/array[array^]
 a|The (basket) data.
+
+a|`$uniqueMainShippingProfiles`
+|link:http://php.net/bool[bool^]
+a|When true, only one result per main shipping profile is returned
 |===
 
 
