@@ -9680,13 +9680,19 @@ The item model
     a|The position of the item
 |itemType
     |link:http://php.net/string[string^]
-    a|The type of the item. Because Set items are managed using a separate route, this value is always Default.
+    a|The type of the item. Because Set items are managed using a separate route,
+this value is always Default.
 |stockType
     |link:http://php.net/int[int^]
-    a|The stock type of the item. Possible values:<ul><li>0 = Stocked item (default)</li><li>1 = Production item</li><li>2 = Colli</li><li>3 = Special order item</li></ul>
+    a|The stock type of the item. Possible values:
+<ul><li>0 = Stocked item (default)</li>
+    <li>1 = Production item</li>
+    <li>2 = Colli</li>
+    <li>3 = Special order item</li></ul>
 |storeSpecial
     |link:http://php.net/int[int^]
-    a|Option to present items more prominently in the online store.<ul><li>1 = Special offer</li><li>2 = New items</li><li>3 = Top items</li></ul>
+    a|Option to present items more prominently in the online store.
+<ul><li>1 = Special offer</li><li>2 = New items</li><li>3 = Top items</li></ul>
 |ownerId
     |link:http://php.net/int[int^]
     a|The plentymarkets user that is assigned as owner of this item.
@@ -9701,16 +9707,32 @@ The item model
     a|The ID of the main variation of the item. The ID must be unique.
 |revenueAccount
     |link:http://php.net/int[int^]
-    a|The revenue account the item is linked to. An individual revenue account can be saved for each item in plentymarkets. If this is not done, plentymarkets automatically determines a revenue account based on the VAT rate.
+    a|The revenue account the item is linked to.
+An individual revenue account can be saved for each item in plentymarkets.
+If this is not done, plentymarkets automatically determines a revenue account
+based on the VAT rate.
 |couponRestriction
     |link:http://php.net/int[int^]
-    a|Indicates if the item can be purchased using a promotional coupon.<ul><li>0 = Permitted</li><li>1 = Not permitted</li><li>2 = Purchasable with coupon only</li></ul>
+    a|Indicates if the item can be purchased using a promotional coupon.
+<ul><li>0 = Permitted</li>
+    <li>1 = Not permitted</li>
+    <li>2 = Purchasable with coupon only</li></ul>
 |condition
     |link:http://php.net/int[int^]
-    a|The condition of the item. Possible values:<ul><li>0 = New</li><li>1 = Used</li><li>2 = Boxed as new</li><li>3 = New with label</li><li>4 = Factory seconds</li></ul>
+    a|The condition of the item. Possible values:
+<ul><li>0 = New</li><li>1 = Used</li>
+    <li>2 = Boxed as new</li>
+    <li>3 = New with label</li>
+    <li>4 = Factory seconds</li></ul>
 |conditionApi
     |link:http://php.net/int[int^]
-    a|The condition of the item that is transferred to markets via API.<ul><li>0 = New</li><li>1 = Used but as new</li><li>2 = Used but very good</li><li>3 = Used but good</li><li>4 = Used but acceptable</li><li>5 = Factory seconds</li></ul>
+    a|The condition of the item that is transferred to markets via API.
+<ul><li>0 = New</li>
+    <li>1 = Used but as new</li>
+    <li>2 = Used but very good</li>
+    <li>3 = Used but good</li>
+    <li>4 = Used but acceptable</li>
+    <li>5 = Factory seconds</li></ul>
 |createdAt
     |link:http://php.net/string[string^]
     a|Timestamp of the date and time the item was created.
@@ -9719,28 +9741,42 @@ The item model
     a|Timestamp of the last date and time the item was updated.
 |isSubscribable
     |link:http://php.net/bool[bool^]
-    a|Flag that indicates if the item can be ordered as a subscription item. If yes, the item can be ordered for delivery at regular intervals.
+    a|Flag that indicates if the item can be ordered as a subscription item.
+If yes, the item can be ordered for delivery at regular intervals.
 |isSerialNumber
     |link:http://php.net/bool[bool^]
-    a|Flag that indicates if serial numbers are to be assigned to variations of this item to uniquely identify every item sold. Serial numbers ensure traceability of an item in case of errors or problems.
+    a|Flag that indicates if serial numbers are to be assigned to variations of this item
+to uniquely identify every item sold. Serial numbers ensure traceability of an item
+in case of errors or problems.
 |isShippingPackage
     |link:http://php.net/bool[bool^]
-    a|Flag that indicates if a shipping package is to be used for this item. If yes and the variation's dimensions are entered in the <b>Settings</b> tab of a variation, the correct shipping package is assigned automatically.
+    a|Flag that indicates if a shipping package is to be used for this item.
+If yes and the variation's dimensions are entered in the <b>Settings</b> tab of a
+variation, the correct shipping package is assigned automatically.
 |amazonFbaPlatform
     |link:http://php.net/int[int^]
-    a|Indicates the platform used for Fulfilment by Amazon (FBA). <ul><li>0 = Do not use</li><li>1 = AMAZON EU (Europe)</li><li>2 = AMAZON FE (Far East)</li><li>3 = AMAZON NA (North America)</li></ul>
+    a|Indicates the platform used for Fulfilment by Amazon (FBA).
+<ul><li>0 = Do not use</li>
+    <li>1 = AMAZON EU (Europe)</li>
+    <li>2 = AMAZON FE (Far East)</li>
+    <li>3 = AMAZON NA (North America)</li></ul>
 |isShippableByAmazon
     |link:http://php.net/bool[bool^]
-    a|Flag that indicates if the item can be shipped with Amazon Multi-Channel. Amazon Multi-Channel Fulfillment is a service for fulfilling orders from sales channels other than Amazon platforms using inventory stored in the Amazon fulfillment center.
+    a|Flag that indicates if the item can be shipped with Amazon Multi-Channel.
+Amazon Multi-Channel Fulfillment is a service for fulfilling orders from sales
+channels other than Amazon platforms using inventory stored in the Amazon
+fulfillment center.
 |amazonProductType
     |link:http://php.net/int[int^]
-    a|The Amazon product type of the item. List of IDs: https://www.plentymarkets.co.uk/manual/data-exchange/data-formats/item/
+    a|The Amazon product type of the item. List of IDs:
+https://www.plentymarkets.co.uk/manual/data-exchange/data-formats/item/
 |amazonFedas
     |link:http://php.net/string[string^]
     a|The FEDAS product classification key of the item.
 |ebayPresetId
     |link:http://php.net/int[int^]
-    a|The eBay preset ID. This plentymarkets ID must be specified to save values for $ebayCategory, $ebayCategory2, $ebayStoreCategory and $ebayStoreCategory2.
+    a|The eBay preset ID. This plentymarkets ID must be specified to save values for
+$ebayCategory, $ebayCategory2, $ebayStoreCategory and $ebayStoreCategory2.
 |ebayCategory
     |link:http://php.net/int[int^]
     a|The eBay category 1 of the item. This category is used when a new listing is created.
@@ -9749,25 +9785,46 @@ The item model
     a|The eBay category 2 of the item. This category is used when a new listing is created.
 |ebayStoreCategory
     |link:http://php.net/int[int^]
-    a|The ID of the eBay store category 1 of the item. This value is used for new listings.
+    a|The ID of the eBay store category 1 of the item.
+This value is used for new listings.
 |ebayStoreCategory2
     |link:http://php.net/int[int^]
-    a|The ID of the eBay store category 2 of the item. This value is used for new listings.
+    a|The ID of the eBay store category 2 of the item.
+This value is used for new listings.
 |rakutenCategoryId
     |link:http://php.net/int[int^]
     a|The ID of the Rakuten category of this item.
 |flagOne
     |link:http://php.net/int[int^]
-    a|Flag 1 of the item. Flags can be used to organise and filter items. Each item can be assigned up to two flags. Possible values: 1 to 31, 0 = no flag
+    a|Flag 1 of the item. Flags can be used to organise and filter items.
+Each item can be assigned up to two flags. Possible values: 1 to 31, 0 = no flag
 |flagTwo
     |link:http://php.net/int[int^]
-    a|Flag 2 of the item. Flags can be used to organise and filter items. Each item can be assigned up to two flags. Possible values: 1 to 11, 0 = no flag
+    a|Flag 2 of the item. Flags can be used to organise and filter items.
+Each item can be assigned up to two flags. Possible values: 1 to 11, 0 = no flag
 |ageRestriction
     |link:http://php.net/int[int^]
-    a|The age customers must be to purchase the item. Items with an age rating of 18+ must be linked to a shipping profile for which the PostIdent option is activated.<ul><li>0 = None available</li><li>3 = Released for ages 3 and up</li><li>6 = Ages 6 and up</li><li>9 = Ages 9 and up</li><li>12 = Ages 12 and up</li><li>14 = Ages 14 and up</li><li>16 = Ages 16 and up</li><li>18 = Ages 18 and up</li><li>50 = Not marked</li><li>88 = Not required</li><li>99 = Unknown</li></ul>
+    a|The age customers must be to purchase the item.
+Items with an age rating of 18+ must be linked to a shipping profile for which the
+PostIdent option is activated.
+<ul><li>0 = None available</li>
+   <li>3 = Released for ages 3 and up</li>
+   <li>6 = Ages 6 and up</li>
+   <li>9 = Ages 9 and up</li>
+   <li>12 = Ages 12 and up</li>
+   <li>14 = Ages 14 and up</li>
+   <li>16 = Ages 16 and up</li>
+   <li>18 = Ages 18 and up</li>
+   <li>50 = Not marked</li>
+   <li>88 = Not required</li>
+   <li>99 = Unknown</li></ul>
 |feedback
     |link:http://php.net/int[int^]
-    a|The feedback, i.e. rating, that this item received. Possible values are 1 to 5 or 1 to 10 depending on the maximum rating setting. An initial feedback can be saved for items. The saved value will then be displayed as the initial feedback. Every time new feedback is submitted, the average value will be recalculated automatically.
+    a|The feedback, i.e. rating, that this item received.
+Possible values are 1 to 5 or 1 to 10 depending on the maximum rating setting.
+An initial feedback can be saved for items. The saved value will then be displayed as the
+initial feedback. Every time new feedback is submitted, the average value will be
+recalculated automatically.
 |free1
     |link:http://php.net/string[string^]
     a|The content of the free text field 1. This can be displayed in the online store or on eBay.
@@ -9830,9 +9887,16 @@ The item model
     a|The content of the free text field 20. This can be displayed in the online store or on eBay.
 |maximumOrderQuantity
     |link:http://php.net/float[float^]
-    a|The maximum order quantity of an item permitted per order. If a maximum order quantity is specified, no more than this quantity of any combination of the variations of the item can be ordered. Decimal values are possible to allow orders by weight or length. Default value is 0. If value is 0, the maximum order quantity is unlimited.
+    a|The maximum order quantity of an item permitted per order.
+If a maximum order quantity is specified, no more than this quantity of any
+combination of the variations of the item can be ordered.
+Decimal values are possible to allow orders by weight or length.
+Default value is 0. If value is 0, the maximum order quantity is unlimited.
 |manufacturer
     |        xref:Item.adoc#item_models_manufacturer[`Manufacturer`]
+    a|
+|producingCountry
+    |        xref:Order.adoc#order_models_country[`Country`]
     a|
 |texts
     |link:http://php.net/array[array^]
@@ -9857,7 +9921,8 @@ The item model
     a|An array of the images of the item.
 |customsTariffNumber
     |link:http://php.net/string[string^]
-    a|Deprecated: The customs tariff number of the item; usually a 11 digit code number based on the Harmonised System
+    a|Deprecated: The customs tariff number of the item;
+usually a 11 digit code number based on the Harmonised System
 |===
 
 
