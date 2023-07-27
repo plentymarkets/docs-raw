@@ -3356,10 +3356,10 @@ a|Array of folders UUID's
 
 
 [source%nowrap, php]
-[#updatesingleconversationfoldersrelations]
+[#removeconversationfolders]
 ----
 
-public updateSingleConversationFoldersRelations($conversationsUuid, $foldersUuidsToKeep):bool
+public removeConversationFolders($conversationsUuid, $foldersUuidsToKeep):bool
 
 ----
 
@@ -3369,7 +3369,7 @@ public updateSingleConversationFoldersRelations($conversationsUuid, $foldersUuid
 
 
 
-Removes conversation from all folders except the ones passed to array $foldersUuidsToKeep.
+Removes conversation from all folders except the ones passed to array $foldersUuidsToKeep. This operation will be performed only for folders belonging to current logged in user ID.
 
 .*Parameters*
 [cols="3,1,6"]
