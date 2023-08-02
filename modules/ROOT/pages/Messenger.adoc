@@ -3038,66 +3038,6 @@ a|Id of priority (0 - No priority, 1 - Very low, 2 - low, 3 - Medium, 4 - High, 
 
 
 [source%nowrap, php]
-[#updateconversationsfoldersrelations]
-----
-
-public updateConversationsFoldersRelations($conversationsUuids, $foldersUuids):bool
-
-----
-
-
-
-
-
-
-
-Assigns batch of conversation to batch of folders. The list of folders must belong to the current logged in user ID.
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$conversationsUuids`
-|link:http://php.net/array[array^]
-a|Array of conversations UUID's
-
-a|`$foldersUuids`
-|link:http://php.net/array[array^]
-a|Array of folders UUID's
-|===
-
-
-[source%nowrap, php]
-[#removeconversationfolders]
-----
-
-public removeConversationFolders($conversationsUuid, $foldersUuidsToKeep):bool
-
-----
-
-
-
-
-
-
-
-Removes conversation from all folders except the ones passed to array $foldersUuidsToKeep. This operation will be performed only for folders belonging to current logged in user ID.
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$conversationsUuid`
-|link:http://php.net/string[string^]
-a|Conversation UUID
-
-a|`$foldersUuidsToKeep`
-|link:http://php.net/array[array^]
-a|Array of folders UUID's to keep. If array is empty, conversation will be removed from all folders
-|===
-
-
-[source%nowrap, php]
 [#updateconversationstypeandstatus]
 ----
 
@@ -3382,6 +3322,126 @@ Automatically archives conversations older than $days days. The updatedAt field 
 a|`$days`
 |link:http://php.net/int[int^]
 a|Minimum number of days since the conversation was last updated
+|===
+
+
+[source%nowrap, php]
+[#updateconversationsfoldersrelations]
+----
+
+public updateConversationsFoldersRelations($conversationsUuids, $foldersUuids):bool
+
+----
+
+
+
+
+
+
+
+Assigns batch of conversation to batch of folders. The list of folders must belong to the current logged in user ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$conversationsUuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's
+
+a|`$foldersUuids`
+|link:http://php.net/array[array^]
+a|Array of folders UUID's
+|===
+
+
+[source%nowrap, php]
+[#removeconversationfolders]
+----
+
+public removeConversationFolders($conversationsUuid, $foldersUuidsToKeep):bool
+
+----
+
+
+
+
+
+
+
+Removes conversation from all folders except the ones passed to array $foldersUuidsToKeep. This operation will be performed only for folders belonging to current logged in user ID.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$conversationsUuid`
+|link:http://php.net/string[string^]
+a|Conversation UUID
+
+a|`$foldersUuidsToKeep`
+|link:http://php.net/array[array^]
+a|Array of folders UUID's to keep. If array is empty, conversation will be removed from all folders
+|===
+
+
+[source%nowrap, php]
+[#addtofolders]
+----
+
+public addToFolders($conversationsUuids, $foldersUuids):bool
+
+----
+
+
+
+
+
+
+
+Add multiple conversations to multiple folders
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$conversationsUuids`
+|link:http://php.net/array[array^]
+a|The conversations UUIDs
+
+a|`$foldersUuids`
+|link:http://php.net/array[array^]
+a|The folders UUIDs
+|===
+
+
+[source%nowrap, php]
+[#removefromfolders]
+----
+
+public removeFromFolders($conversationsUuids, $foldersUuids):bool
+
+----
+
+
+
+
+
+
+
+Remove multiple conversations from multiple folders
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$conversationsUuids`
+|link:http://php.net/array[array^]
+a|The conversations UUIDs
+
+a|`$foldersUuids`
+|link:http://php.net/array[array^]
+a|The folders UUIDs
 |===
 
 

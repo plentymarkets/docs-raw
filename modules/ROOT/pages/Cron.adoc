@@ -59,7 +59,8 @@ public add($schedule, $handlerClass):void
 
 
 
-Use this method to add a handler class and a schedule time for your desired cron event. The action will then be triggered according to the given schedule.
+Use this method to add a handler class and a schedule time for your desired cron event. The action will then be
+triggered according to the given schedule.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -67,11 +68,15 @@ Use this method to add a handler class and a schedule time for your desired cron
 |Name |Type |Description
 a|`$schedule`
 |link:http://php.net/int[int^]
-a|The number of minutes for which the cron action should be scheduled. Currently allowed are: 15, 20, 60 and 3600. You can also use constants like `CronContainer::EVERY_FIFTEEN_MINUTES`, `CronContainer::EVERY_TWENTY_MINUTES`, `CronContainer::HOURLY`, `CronContainer::DAILY`;
+a|The number of minutes for which the cron action should be scheduled.
+Currently allowed are: 15, 20, 60 and 3600. You can also use constants like
+`CronContainer::EVERY_FIFTEEN_MINUTES`, `CronContainer::EVERY_TWENTY_MINUTES`, `CronContainer::HOURLY`,
+`CronContainer::DAILY`;
 
 a|`$handlerClass`
 |link:http://php.net/string[string^]
-a|The handler class that should be triggered when the cron event is launched. This class has to extend the CronHandler interface and implement the `handle()` method.
+a|The handler class that should be triggered when the cron event is launched.
+This class has to extend the CronHandler interface and implement the `handle()` method.
 |===
 
 
