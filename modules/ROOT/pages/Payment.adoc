@@ -5817,6 +5817,199 @@ a|
 |===
 
 
+
+[[payment_rules_paymentmatcherbaserule]]
+==== PaymentMatcherBaseRule
+
+Abstract Payment Matcher Rule
+
+
+
+===== Namespace
+
+`Plenty\Modules\Payment\MatcherRules\Rules`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getscoreup]
+----
+
+public getScoreUp():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoreup]
+----
+
+public setScoreUp($scoreUp):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreUp`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getscoredown]
+----
+
+public getScoreDown():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setscoredown]
+----
+
+public setScoreDown($scoreDown):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$scoreDown`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#calculatematchingcondition]
+----
+
+public calculateMatchingCondition($payment):int
+
+----
+
+
+
+
+
+
+
+calculate the matching condition used in 2 rules - amount and email
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#canscore]
+----
+
+public canScore($payment, $matchScore, $scoringLog):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$matchScore`
+|link:http://php.net/int[int^]
+a|
+
+a|`$scoringLog`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#score]
+----
+
+public score($payment, $order):float
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$payment`
+|        xref:Payment.adoc#payment_models_payment[`Payment`]
+a|
+
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
 [[payment_method]]
 == Method
 
