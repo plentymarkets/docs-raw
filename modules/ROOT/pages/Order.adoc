@@ -19409,6 +19409,9 @@ The model of the creditNote order settings.
 |setShippingCostsToZero
     |link:http://php.net/bool[bool^]
     a|
+|validateQuantityFromParent
+    |link:http://php.net/bool[bool^]
+    a|
 |defaultOrderStatus
     |link:http://php.net/float[float^]
     a|Deprecated, not filled anymore. Use $defaultStatusId instead.
@@ -19713,6 +19716,9 @@ The model of the warranty order settings.
     |link:http://php.net/float[float^]
     a|
 |setShippingCostsToZero
+    |link:http://php.net/bool[bool^]
+    a|
+|validateQuantityFromParent
     |link:http://php.net/bool[bool^]
     a|
 |resetOutgoingItemsStatusId
@@ -27666,6 +27672,36 @@ public createFromParent($orderId, $data):Plenty\Modules\Order\Models\Order
 
 
 Create a sales order from a parent order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$orderId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#validatefromparent]
+----
+
+public validateFromParent($orderId, $data = []):array
+
+----
+
+
+
+
+
+
+
+Validate order items for create a sales order from a parent order
 
 .*Parameters*
 [cols="3,1,6"]
