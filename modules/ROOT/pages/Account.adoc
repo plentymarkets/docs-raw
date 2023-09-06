@@ -2660,7 +2660,8 @@ a|The ID of the contact
 [[account_contracts_contactaddressrepositorycontract]]
 ==== ContactAddressRepositoryContract
 
-The ContactAddressRepositoryContract is the interface for the contact address repository. This interface allows to list, get, create, update, add and delete addresses of the contact.
+The ContactAddressRepositoryContract is the interface for the contact address repository.
+ * This interface allows to list, get, create, update, add and delete addresses of the contact.
 
 
 
@@ -2749,7 +2750,8 @@ public createAddress($data, $contactId, $typeId):Plenty\Modules\Account\Address\
 ====== *Return type:*        xref:Account.adoc#account_models_address[`Address`]
 
 
-Creates an address, associates it immediately with the given contact ID with the given type and returns the new address.
+Creates an address, associates it immediately with the given contact ID with
+the given type and returns the new address.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -2974,6 +2976,36 @@ a|The ID of the address type
 
 
 [source%nowrap, php]
+[#hasprimaryaddress]
+----
+
+public hasPrimaryAddress($contactId, $addressTypeId):bool
+
+----
+
+
+
+
+
+
+
+Returns true if contact has primary address of type
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$contactId`
+|link:http://php.net/int[int^]
+a|The ID of the contact
+
+a|`$addressTypeId`
+|link:http://php.net/int[int^]
+a|The ID of the address type
+|===
+
+
+[source%nowrap, php]
 [#deleteaddress]
 ----
 
@@ -2987,7 +3019,7 @@ public deleteAddress($addressId, $contactId, $typeId):bool
 
 
 
-Deletes an existing address of a given contact and type. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+Deletes an existing address of a given contact and type. Returns `true` if deletion was successful.
 
 .*Parameters*
 [cols="3,1,6"]

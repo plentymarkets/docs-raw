@@ -71,6 +71,40 @@ a|
 
 
 [source%nowrap, php]
+[#getbycategoryurl]
+----
+
+public getByCategoryUrl($categoryUrl, $language = null, $webstoreId = null):Plenty\Modules\Category\Models\Category
+
+----
+
+
+
+
+====== *Return type:*        xref:Category.adoc#category_models_category[`Category`]
+
+
+Return one category by category url.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$categoryUrl`
+|link:http://php.net/string[string^]
+a|The url of the category.
+
+a|`$language`
+|link:http://php.net/string[string^]
+a|Optional language of category details, fallback is session language.
+
+a|`$webstoreId`
+|link:http://php.net/int[int^]
+a|Optional webstore id of category details, fallback is current webstore id.
+|===
+
+
+[source%nowrap, php]
 [#geturl]
 ----
 
