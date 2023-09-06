@@ -205,16 +205,16 @@ Get the list with the config fields
 
 [[flow_definitions_contracts]]
 ===  Contracts
-[[flow_contracts_stepactiondefinitioncontract]]
-==== StepActionDefinitionContract
+[[flow_contracts_filterdefinitioncontract]]
+==== FilterDefinitionContract
 
-Flow step action
+Flow filter
 
 
 
 ===== Namespace
 
-`Plenty\Modules\Flow\StepActions\Definitions\Contracts`
+`Plenty\Modules\Flow\Filters\Definitions\Contracts`
 
 
 
@@ -272,6 +272,181 @@ public getDescription():string
 
 
 [source%nowrap, php]
+[#getuiconfigfields]
+----
+
+public getUIConfigFields():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getrequiredinputtypes]
+----
+
+public getRequiredInputTypes():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getoperators]
+----
+
+public getOperators():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#performfilter]
+----
+
+public performFilter($inputs, $configFields):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$inputs`
+|link:http://php.net/array[array^]
+a|
+
+a|`$configFields`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addoperators]
+----
+
+public addOperators($configForm):Plenty\Modules\Flow\Contracts\UIConfigFormContract
+
+----
+
+
+
+
+====== *Return type:*        xref:Flow.adoc#flow_contracts_uiconfigformcontract[`UIConfigFormContract`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$configForm`
+|        xref:Flow.adoc#flow_contracts_uiconfigformcontract[`UIConfigFormContract`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#validateconfigfields]
+----
+
+public validateConfigFields($configFields):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$configFields`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#validateinputs]
+----
+
+public validateInputs($inputs):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$inputs`
+|
+a|
+|===
+
+
+
+[[flow_contracts_stepactiondefinitioncontract]]
+==== StepActionDefinitionContract
+
+Flow step action
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\StepActions\Definitions\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
 [#getuiaction]
 ----
 
@@ -283,6 +458,255 @@ public getUIAction():Plenty\Modules\Flow\StepActions\Definitions\Models\UI\StepA
 
 
 ====== *Return type:*        xref:Flow.adoc#flow_ui_stepactionui[`StepActionUI`]
+
+
+
+
+[source%nowrap, php]
+[#getidentifier]
+----
+
+public getIdentifier():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getname]
+----
+
+public getName():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdescription]
+----
+
+public getDescription():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getuiconfigfields]
+----
+
+public getUIConfigFields():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getrequiredinputtypes]
+----
+
+public getRequiredInputTypes():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getprovidedoutputtypes]
+----
+
+public getProvidedOutputTypes():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#performtask]
+----
+
+public performTask($inputs, $configFields, $filter = null):array
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$inputs`
+|link:http://php.net/array[array^]
+a|
+
+a|`$configFields`
+|link:http://php.net/array[array^]
+a|
+
+a|`$filter`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#validateconfigfields]
+----
+
+public validateConfigFields($configFields):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$configFields`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#validateinputs]
+----
+
+public validateInputs($inputs):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$inputs`
+|
+a|
+|===
+
+
+
+[[flow_contracts_stepcontroldefinitioncontract]]
+==== StepControlDefinitionContract
+
+Flow step control
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\StepControls\Definitions\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getidentifier]
+----
+
+public getIdentifier():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getname]
+----
+
+public getName():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdescription]
+----
+
+public getDescription():string
+
+----
+
+
+
+
+
 
 
 
