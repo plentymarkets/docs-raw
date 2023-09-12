@@ -4639,7 +4639,8 @@ a|The ID of the bank account entry
 [[account_contracts_contactrepositorycontract]]
 ==== ContactRepositoryContract
 
-The ContactRepositoryContract is the interface for the contact repository. This interface allows to list, get, create, update and delete contacts. A contact is equivalent to a person.
+The ContactRepositoryContract is the interface for the contact repository.
+ * This interface allows to list, get, create, update and delete contacts. A contact is equivalent to a person.
 
 
 
@@ -4758,11 +4759,13 @@ Deletes a contact. The ID of the contact must be specified.
 |Name |Type |Description
 a|`$contactId`
 |link:http://php.net/int[int^]
-a|The ID of the contact. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+a|The ID of the contact. Returns `true` if deletion was successful.
+Returns `false` if deletion was not successful.
 
 a|`$checkExistingOrders`
 |link:http://php.net/bool[bool^]
-a|Flag that checks if the contact is linked to orders. If the contact is linked to orders, CustomerDeleteException is thrown and the contact will not be deleted.
+a|Flag that checks if the contact is linked to orders.
+If the contact is linked to orders, CustomerDeleteException is thrown and the contact will not be deleted.
 |===
 
 
