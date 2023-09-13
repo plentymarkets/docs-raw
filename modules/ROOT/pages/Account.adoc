@@ -4639,7 +4639,8 @@ a|The ID of the bank account entry
 [[account_contracts_contactrepositorycontract]]
 ==== ContactRepositoryContract
 
-The ContactRepositoryContract is the interface for the contact repository. This interface allows to list, get, create, update and delete contacts. A contact is equivalent to a person.
+The ContactRepositoryContract is the interface for the contact repository.
+ * This interface allows to list, get, create, update and delete contacts. A contact is equivalent to a person.
 
 
 
@@ -4758,11 +4759,13 @@ Deletes a contact. The ID of the contact must be specified.
 |Name |Type |Description
 a|`$contactId`
 |link:http://php.net/int[int^]
-a|The ID of the contact. Returns `true` if deletion was successful. Returns `false` if deletion was not successful.
+a|The ID of the contact. Returns `true` if deletion was successful.
+Returns `false` if deletion was not successful.
 
 a|`$checkExistingOrders`
 |link:http://php.net/bool[bool^]
-a|Flag that checks if the contact is linked to orders. If the contact is linked to orders, CustomerDeleteException is thrown and the contact will not be deleted.
+a|Flag that checks if the contact is linked to orders.
+If the contact is linked to orders, CustomerDeleteException is thrown and the contact will not be deleted.
 |===
 
 
@@ -8756,7 +8759,7 @@ a|The ID of the company contact relation
 [#updateaccountcontactrelationisprimary]
 ----
 
-public updateAccountContactRelationIsPrimary($accountContactRelationId, $isPrimary):Plenty\Modules\Account\Models\AccountContactRelation
+public updateAccountContactRelationIsPrimary($accountContactRelationId, $isPrimary, $data = []):Plenty\Modules\Account\Models\AccountContactRelation
 
 ----
 
@@ -8779,6 +8782,10 @@ a|
 a|`$isPrimary`
 |link:http://php.net/bool[bool^]
 a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -8786,7 +8793,9 @@ a|
 [[account_contracts_accountrepositorycontract]]
 ==== AccountRepositoryContract
 
-The AccountRepositoryContract is the interface for the account repository. This interface allows to list, get, create, update and delete accounts. An account contains company-related data. It is also possible to list all contacts of an account.
+The AccountRepositoryContract is the interface for the account repository.
+ * This interface allows to list, get, create, update and delete accounts.
+ *     An account contains company-related data. It is also possible to list all contacts of an account.
 
 
 
@@ -8841,7 +8850,7 @@ public updateAccount($data, $accountId):Plenty\Modules\Account\Models\Account
 ====== *Return type:*        xref:Account.adoc#account_models_account[`Account`]
 
 
-Updates an existing company and returns it. The ID of the company must be specified. An account is equivalent to a company.
+Updates an existing company and returns it. The ID of the company must be specified.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -8871,7 +8880,7 @@ public deleteAccount($accountId):bool
 
 
 
-Deletes a company. The ID of the company must be specified. Returns `true` if deletion was successful. Returns `false` if deletion was not successful. An account is equivalent to a company.
+Deletes a company. The ID of the company must be specified. Returns `true` if deletion was successful.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -8906,6 +8915,32 @@ Gets a company. The ID of the company must be specified. An account is equivalen
 a|`$accountId`
 |link:http://php.net/int[int^]
 a|The ID of the company
+|===
+
+
+[source%nowrap, php]
+[#findaccountsbyids]
+----
+
+public findAccountsByIds($accountIds):void
+
+----
+
+
+
+
+
+
+
+Gets multiple accounts. The IDs of the accounts must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$accountIds`
+|link:http://php.net/array[array^]
+a|
 |===
 
 
