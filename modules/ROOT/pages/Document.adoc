@@ -92,7 +92,7 @@ a|The relations to be loaded. Possible value is "references".
 [#find]
 ----
 
-public find($page = 1, $itemsPerPage = 50, $columns = [], $with = []):Plenty\Repositories\Models\PaginatedResult
+public find($page = 1, $itemsPerPage = 50, $columns = [], $with = [], $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
@@ -123,6 +123,14 @@ a|The columns to be loaded
 a|`$with`
 |link:http://php.net/array[array^]
 a|The relations to be loaded. Possible value is "references".
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|This field is used for sorting. Default is 'id'. Possible values are 'id', 'type', 'number', 'createdAt', 'displayDate'
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|The order to sort by. Possible values are 'asc' and 'desc'.
 |===
 
 

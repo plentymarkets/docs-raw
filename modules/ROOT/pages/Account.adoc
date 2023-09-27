@@ -9881,6 +9881,300 @@ public toArray()
 
 Returns this model as an array.
 
+[[account_job]]
+== Job
+
+[[account_job_contracts]]
+===  Contracts
+[[account_contracts_jobrepositorycontract]]
+==== JobRepositoryContract
+
+The JobRepositoryContract is the interface for the job repository.
+ * This interface allows to list, get, create, update and delete jobs.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Account\Job\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#createjob]
+----
+
+public createJob($jobData):Plenty\Modules\Account\Job\Models\Job
+
+----
+
+
+
+
+====== *Return type:*        xref:Account.adoc#account_models_job[`Job`]
+
+
+Create a job with given data
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$jobData`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deletejob]
+----
+
+public deleteJob($jobId):bool
+
+----
+
+
+
+
+
+
+
+Delete a job by a given id. The ID of the job must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$jobId`
+|link:http://php.net/int[int^]
+a|The ID of the job. Returns `true` if deletion was successful.
+Returns `false` if deletion was not successful.
+|===
+
+
+[source%nowrap, php]
+[#updatejob]
+----
+
+public updateJob($jobData, $jobId):Plenty\Modules\Account\Job\Models\Job
+
+----
+
+
+
+
+====== *Return type:*        xref:Account.adoc#account_models_job[`Job`]
+
+
+Update a job names with given data. The id of the job must be specified. Returns the job.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$jobData`
+|link:http://php.net/array[array^]
+a|The job data as associative array
+
+a|`$jobId`
+|link:http://php.net/int[int^]
+a|The ID of the job
+|===
+
+
+[source%nowrap, php]
+[#getjob]
+----
+
+public getJob($jobId):Plenty\Modules\Account\Job\Models\Job
+
+----
+
+
+
+
+====== *Return type:*        xref:Account.adoc#account_models_job[`Job`]
+
+
+Get single job by id. The ID of the job must be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$jobId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getjobslist]
+----
+
+public getJobsList($filters = [], $page = 1, $itemsPerPage = 50, $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Get paginated list of jobs
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|Filter that restrict the search result. Filter can be for name or jobId
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|The page of results to search for [optional, default = 1]
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|The number of items to list per page [optional, default = 50]
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|[optional, default=id]
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|[optional, default=desc]
+|===
+
+
+[[account_job_models]]
+===  Models
+[[account_models_job]]
+==== Job
+
+The job model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Account\Job\Models`
+
+===== Referenceable
+id
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the job
+|position
+    |link:http://php.net/int[int^]
+    a|The position ID
+|createdAt
+    |
+    a|The date the contact was created
+|updatedAt
+    |
+    a|The date the contact was last updated
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[account_models_jobname]]
+==== JobName
+
+The job name model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Account\Job\Models`
+
+===== Referenceable
+id
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the job name
+|positionId
+    |link:http://php.net/int[int^]
+    a|The job ID
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the job name
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the job
+|createdAt
+    |
+    a|The date the contact was created
+|updatedAt
+    |
+    a|The date the contact was last updated
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
 [[account_newsletter]]
 == Newsletter
 

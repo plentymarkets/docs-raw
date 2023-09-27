@@ -456,6 +456,36 @@ The modes are described in detail in the DebtorAccountConfiguration model as wel
 |===
 
 
+[source%nowrap, php]
+[#update]
+----
+
+public update($locationId, $data):Plenty\Modules\Accounting\Models\DebtorAccountConfiguration
+
+----
+
+
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_debtoraccountconfiguration[`DebtorAccountConfiguration`]
+
+
+Updates the debtor account configuration of an accounting location. The ID of the accounting location has to be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$locationId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
 
 [[accounting_contracts_determineshopcountrycontract]]
 ==== DetermineShopCountryContract
@@ -780,6 +810,36 @@ a|The ID of the accounting location
 |===
 
 
+[source%nowrap, php]
+[#update]
+----
+
+public update($locationId, $data):Plenty\Modules\Accounting\Models\PostingKeyConfiguration
+
+----
+
+
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_postingkeyconfiguration[`PostingKeyConfiguration`]
+
+
+Updates a posting key configuration of an accounting location. The ID of the accounting location has to be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$locationId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
 
 [[accounting_contracts_revenueaccountrepositorycontract]]
 ==== RevenueAccountRepositoryContract
@@ -882,6 +942,36 @@ a|The ID of the accounting location
 a|`$countryId`
 |link:http://php.net/int[int^]
 a|The ID of the country
+|===
+
+
+[source%nowrap, php]
+[#update]
+----
+
+public update($locationId, $data):Plenty\Modules\Accounting\Models\RevenueAccountLocationConfiguration
+
+----
+
+
+
+
+====== *Return type:*        xref:Accounting.adoc#accounting_models_revenueaccountlocationconfiguration[`RevenueAccountLocationConfiguration`]
+
+
+Updates the revenue account configuration of an accounting location. The ID of the accounting location has to be specified.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$locationId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -2084,6 +2174,32 @@ a|
 
 a|`$data`
 |link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deletevat]
+----
+
+public deleteVat($id):void
+
+----
+
+
+
+
+
+
+
+Delete a VAT configuration
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
 a|
 |===
 
