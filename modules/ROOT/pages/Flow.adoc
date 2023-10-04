@@ -159,6 +159,32 @@ a|
 
 
 [source%nowrap, php]
+[#addcheckboxgroupfield]
+----
+
+public addCheckboxGroupField($checkboxGroupField):void
+
+----
+
+
+
+
+
+
+
+Add a checkboxGroup field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$checkboxGroupField`
+|        xref:Flow.adoc#flow_configform_checkboxgroupfield[`CheckboxGroupField`]
+a|
+|===
+
+
+[source%nowrap, php]
 [#addhyperlinkfield]
 ----
 
@@ -240,6 +266,117 @@ The checkbox field model.
 |isVisible
     |link:http://php.net/bool[bool^]
     a|The visibility of the form on the config form
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_checkboxgroupfield]]
+==== CheckboxGroupField
+
+The checkbox group field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|label
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the field
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the field
+|
+    |link:http://php.net/array[array^]
+    a|selectBoxValues    The checkbox values of the field
+|isVisible
+    |link:http://php.net/bool[bool^]
+    a|The visibility of the form on the config form
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_checkboxvalue]]
+==== CheckboxValue
+
+The checkbox value field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|caption
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|value
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|translateCaption
+    |link:http://php.net/bool[bool^]
+    a|The option to translate caption, default value is true
 |===
 
 
