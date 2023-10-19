@@ -739,6 +739,9 @@ The Message model of the messenger.
 |attachments
     |link:http://php.net/array[array^]
     a|The message attachments
+|categoryId
+    |link:http://php.net/int[int^]
+    a|The categoryID of the message/conversation
 |===
 
 
@@ -2400,6 +2403,231 @@ public static isActive():void
 
 [[messenger_conversations_contracts]]
 ===  Contracts
+[[messenger_contracts_conversationcategoryrepositorycontract]]
+==== ConversationCategoryRepositoryContract
+
+The ConversationCategoryRepositoryContract is the interface for the messenger conversations categories. This interface defines methods to add, update and show categories.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getcategory]
+----
+
+public getCategory($id):Plenty\Modules\Messenger\Conversations\Models\ConversationCategory
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversationcategory[`ConversationCategory`]
+
+
+Retrieves a category based on ID
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|Category ID
+|===
+
+
+[source%nowrap, php]
+[#createcategory]
+----
+
+public createCategory($categoryData):Plenty\Modules\Messenger\Conversations\Models\ConversationCategory
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversationcategory[`ConversationCategory`]
+
+
+Creates a new category
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$categoryData`
+|link:http://php.net/array[array^]
+a|Array with category properties
+|===
+
+
+[source%nowrap, php]
+[#updatecategory]
+----
+
+public updateCategory($id, $data):Plenty\Modules\Messenger\Conversations\Models\ConversationCategory
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversationcategory[`ConversationCategory`]
+
+
+Updates an existing category
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|Category ID
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|Array with cateogry properties
+|===
+
+
+[source%nowrap, php]
+[#updatecategorystatus]
+----
+
+public updateCategoryStatus($id, $isEnabled):Plenty\Modules\Messenger\Conversations\Models\ConversationCategory
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_conversationcategory[`ConversationCategory`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+
+a|`$isEnabled`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#listcategories]
+----
+
+public listCategories($page, $itemsPerPage, $sortBy, $sortOrder, $filters = []):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Lists all categories based on provided filters
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$page`
+|link:http://php.net/int[int^]
+a|Page number
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|Number of results per page
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|Sort column (id, position)
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|Sort order (asc/desc)
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|Array with filters (isDeleted, typeId, id, name)
+|===
+
+
+[source%nowrap, php]
+[#deletecategory]
+----
+
+public deleteCategory($id):bool
+
+----
+
+
+
+
+
+
+
+Deletes a category (soft delete)
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|Status ID
+|===
+
+
+[source%nowrap, php]
+[#batchdeletecategories]
+----
+
+public batchDeleteCategories($categoryIds):bool
+
+----
+
+
+
+
+
+
+
+Deletes a batch of categories
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$categoryIds`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+
 [[messenger_contracts_conversationfolderrepositorycontract]]
 ==== ConversationFolderRepositoryContract
 
@@ -4298,6 +4526,126 @@ The Conversation model of the messenger.
 |conversationPreview
     |link:http://php.net/string[string^]
     a|Strip last the message from messagesBodies to 200 characters, used for preview.
+|categoryId
+    |link:http://php.net/int[int^]
+    a|Flag that indicates if the conversation is archived
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_conversationcategory]]
+==== ConversationCategory
+
+The ConversationCategory model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|names
+    |link:http://php.net/array[array^]
+    a|Collection of category names for different languages
+|types
+    |link:http://php.net/array[array^]
+    a|Collection of types that belong to that category
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the type
+|position
+    |link:http://php.net/int[int^]
+    a|The position of the type (used in sorting)
+|userId
+    |link:http://php.net/int[int^]
+    a|The user ID which performed the last update
+|icon
+    |link:http://php.net/string[string^]
+    a|The icon for messenger tab
+|iconType
+    |link:http://php.net/string[string^]
+    a|The icon type
+|isDeleted
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if the type was deleted
+|isEnabled
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if the type is enabled
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_conversationcategorynames]]
+==== ConversationCategoryNames
+
+The ConversationCategoryNames model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the name
+|name
+    |link:http://php.net/string[string^]
+    a|The category name
 |===
 
 
@@ -4725,6 +5073,9 @@ The ConversationType model of the messenger.
 |isDeleted
     |link:http://php.net/bool[bool^]
     a|Flag that indicates if the type was deleted
+|categoryId
+    |link:http://php.net/bool[bool^]
+    a|The ID of the parent category
 |===
 
 
