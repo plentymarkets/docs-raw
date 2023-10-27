@@ -8899,7 +8899,7 @@ a|The ID of the company
 [#findaccountbyid]
 ----
 
-public findAccountById($accountId):Plenty\Modules\Account\Models\Account
+public findAccountById($accountId, $with = []):Plenty\Modules\Account\Models\Account
 
 ----
 
@@ -8918,6 +8918,10 @@ Gets a company. The ID of the company must be specified. An account is equivalen
 a|`$accountId`
 |link:http://php.net/int[int^]
 a|The ID of the company
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|Optional: The relationships that should be eager loaded. (example ['contacts']).
 |===
 
 
@@ -8951,7 +8955,7 @@ a|
 [#allaccounts]
 ----
 
-public allAccounts($columns = [], $perPage = 50):Illuminate\Database\Eloquent\Collection
+public allAccounts($columns = [], $perPage = 50, $with = []):Illuminate\Database\Eloquent\Collection
 
 ----
 
@@ -8974,6 +8978,10 @@ a|Optional: The columns to retrieve (Default: '[*]').
 a|`$perPage`
 |link:http://php.net/int[int^]
 a|Optional: The number of objects per page (Default: 50).
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|Optional: The relationships that should be eager loaded. (example ['contacts']).
 |===
 
 
