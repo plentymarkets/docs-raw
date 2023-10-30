@@ -9892,6 +9892,137 @@ public toArray()
 
 Returns this model as an array.
 
+[[account_hubspot]]
+== Hubspot
+
+[[account_hubspot_contracts]]
+===  Contracts
+[[account_contracts_hubspotstatusrepositorycontract]]
+==== HubspotStatusRepositoryContract
+
+The HubspotStatusRepositoryContract is the interface for the hubspotStatus repository.
+ * This interface allows to list, get, create hubspotStatus.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Account\Hubspot\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#savehubspotstatus]
+----
+
+public saveHubspotStatus($data):bool
+
+----
+
+
+
+
+
+
+
+Adds a new hubspotStatus entry
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|The hubspotStatus data as array.
+|===
+
+
+[[account_hubspot_models]]
+===  Models
+[[account_models_hubspotstatus]]
+==== HubspotStatus
+
+The hubspot status model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Account\Hubspot\Models`
+
+===== Referenceable
+id
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The PK ID
+|createdAt
+    |
+    a|The date the hubspot status was created
+|updatedAt
+    |
+    a|The date the hubspot status was last updated
+|plentyContactId
+    |link:http://php.net/int[int^]
+    a|The plenty contact ID
+|hubspotContactId
+    |link:http://php.net/int[int^]
+    a|The hubspot contact ID
+|plentyCompanyId
+    |link:http://php.net/int[int^]
+    a|The plenty company ID
+|hubspotCompanyId
+    |link:http://php.net/int[int^]
+    a|The hubspot company ID
+|operation
+    |link:http://php.net/string[string^]
+    a|The operation that took place:
+ * <ul>
+<li> create_plenty_contact</li>
+<li> update_plenty_contact</li>
+<li> create_plenty_company</li>
+<li> update_plenty_company</li>
+<li> create_plenty_contact_company_relation</li>
+<li> create_hubspot_contact</li>
+<li> update_hubspot_contact</li>
+<li> create_hubspot_company</li>
+<li> update_hubspot_company</li>
+<li> create_hubspot_contact_company_relation</li>
+</ul>
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
 [[account_job]]
 == Job
 
