@@ -10021,7 +10021,7 @@ a|
 [#getjobslist]
 ----
 
-public getJobsList($filters = [], $page = 1, $itemsPerPage = 50, $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;):Plenty\Repositories\Models\PaginatedResult
+public getJobsList($page = 1, $itemsPerPage = 50, $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;, $filters = [], $with = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
@@ -10037,10 +10037,6 @@ Get paginated list of jobs
 [cols="3,1,6"]
 |===
 |Name |Type |Description
-a|`$filters`
-|link:http://php.net/array[array^]
-a|Filter that restrict the search result. Filter can be for name or jobId
-
 a|`$page`
 |link:http://php.net/int[int^]
 a|The page of results to search for [optional, default = 1]
@@ -10056,8 +10052,122 @@ a|[optional, default=id]
 a|`$sortOrder`
 |link:http://php.net/string[string^]
 a|[optional, default=desc]
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|Filter that restrict the search result. Filter can be for name or jobId
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
 |===
 
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
 
 [[account_job_models]]
 ===  Models
