@@ -32,7 +32,7 @@ Add fields to config form.
 [#adddatefield]
 ----
 
-public addDateField($dateField):void
+public addDateField($dateField, $key = &quot;key&quot;):void
 
 ----
 
@@ -51,6 +51,10 @@ Add a  date field to the config form
 a|`$dateField`
 |        xref:Flow.adoc#flow_configform_datefield[`DateField`]
 a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -58,7 +62,7 @@ a|
 [#addtimefield]
 ----
 
-public addTimeField($timeField):void
+public addTimeField($timeField, $key = &quot;key&quot;):void
 
 ----
 
@@ -77,6 +81,10 @@ Add a time field to the config form
 a|`$timeField`
 |        xref:Flow.adoc#flow_configform_timefield[`TimeField`]
 a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -84,7 +92,7 @@ a|
 [#addinputfield]
 ----
 
-public addInputField($inputField):void
+public addInputField($inputField, $key = &quot;key&quot;):void
 
 ----
 
@@ -103,6 +111,70 @@ Add an input field to the config form
 a|`$inputField`
 |        xref:Flow.adoc#flow_configform_inputfield[`InputField`]
 a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addnumberfield]
+----
+
+public addNumberField($doubleField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add a number input field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$doubleField`
+|        xref:Flow.adoc#flow_configform_numberfield[`NumberField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#adddoublefield]
+----
+
+public addDoubleField($doubleField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add an double input field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$doubleField`
+|        xref:Flow.adoc#flow_configform_doublefield[`DoubleField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -110,7 +182,7 @@ a|
 [#addcheckboxfield]
 ----
 
-public addCheckboxField($checkboxField):void
+public addCheckboxField($checkboxField, $key = &quot;key&quot;):void
 
 ----
 
@@ -129,6 +201,10 @@ Add a checkbox field to the config form
 a|`$checkboxField`
 |        xref:Flow.adoc#flow_configform_checkboxfield[`CheckboxField`]
 a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -136,7 +212,7 @@ a|
 [#addselectboxfield]
 ----
 
-public addSelectboxField($selectboxField):void
+public addSelectboxField($selectboxField, $key = &quot;key&quot;):void
 
 ----
 
@@ -155,6 +231,10 @@ Add a selectbox field to the config form
 a|`$selectboxField`
 |        xref:Flow.adoc#flow_configform_selectboxfield[`SelectboxField`]
 a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -162,7 +242,7 @@ a|
 [#addcheckboxgroupfield]
 ----
 
-public addCheckboxGroupField($checkboxGroupField):void
+public addCheckboxGroupField($checkboxGroupField, $key = &quot;key&quot;):void
 
 ----
 
@@ -181,6 +261,10 @@ Add a checkboxGroup field to the config form
 a|`$checkboxGroupField`
 |        xref:Flow.adoc#flow_configform_checkboxgroupfield[`CheckboxGroupField`]
 a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
 |===
 
 
@@ -188,7 +272,7 @@ a|
 [#addhyperlinkfield]
 ----
 
-public addHyperlinkField($hyperlinkField):void
+public addHyperlinkField($hyperlinkField, $key = &quot;key&quot;):void
 
 ----
 
@@ -206,6 +290,10 @@ Add a  hyperlink field to the config form
 |Name |Type |Description
 a|`$hyperlinkField`
 |        xref:Flow.adoc#flow_configform_hyperlinkfield[`HyperlinkField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
 a|
 |===
 
@@ -456,6 +544,63 @@ public toArray()
 Returns this model as an array.
 
 
+[[flow_configform_doublefield]]
+==== DoubleField
+
+The input field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|label
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the field
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the field
+|isVisible
+    |link:http://php.net/bool[bool^]
+    a|The visibility of the form on the config form
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
 [[flow_configform_formfield]]
 ==== FormField
 
@@ -575,6 +720,63 @@ Returns this model as an array.
 
 [[flow_configform_inputfield]]
 ==== InputField
+
+The input field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|label
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the field
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the field
+|isVisible
+    |link:http://php.net/bool[bool^]
+    a|The visibility of the form on the config form
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_numberfield]]
+==== NumberField
 
 The input field model.
 
@@ -954,7 +1156,7 @@ a|
 [#addoperators]
 ----
 
-public addOperators($configForm):Plenty\Modules\Flow\Contracts\UIConfigFormContract
+public addOperators($configForm, $key = &quot;key&quot;):Plenty\Modules\Flow\Contracts\UIConfigFormContract
 
 ----
 
@@ -972,6 +1174,10 @@ public addOperators($configForm):Plenty\Modules\Flow\Contracts\UIConfigFormContr
 |Name |Type |Description
 a|`$configForm`
 |        xref:Flow.adoc#flow_contracts_uiconfigformcontract[`UIConfigFormContract`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
 a|
 |===
 
@@ -1023,6 +1229,32 @@ public validateInputs($inputs):void
 |===
 |Name |Type |Description
 a|`$inputs`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#mapfilterfields]
+----
+
+public mapFilterFields($filterField):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterField`
 |
 a|
 |===
