@@ -8899,7 +8899,7 @@ a|The ID of the company
 [#findaccountbyid]
 ----
 
-public findAccountById($accountId):Plenty\Modules\Account\Models\Account
+public findAccountById($accountId, $with = []):Plenty\Modules\Account\Models\Account
 
 ----
 
@@ -8918,6 +8918,10 @@ Gets a company. The ID of the company must be specified. An account is equivalen
 a|`$accountId`
 |link:http://php.net/int[int^]
 a|The ID of the company
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|Optional: The relationships that should be eager loaded. (example ['contacts']).
 |===
 
 
@@ -8951,7 +8955,7 @@ a|
 [#allaccounts]
 ----
 
-public allAccounts($columns = [], $perPage = 50):Illuminate\Database\Eloquent\Collection
+public allAccounts($columns = [], $perPage = 50, $with = []):Illuminate\Database\Eloquent\Collection
 
 ----
 
@@ -8974,6 +8978,10 @@ a|Optional: The columns to retrieve (Default: '[*]').
 a|`$perPage`
 |link:http://php.net/int[int^]
 a|Optional: The number of objects per page (Default: 50).
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|Optional: The relationships that should be eager loaded. (example ['contacts']).
 |===
 
 
@@ -9863,6 +9871,137 @@ Sales representative region model
 |accountContactRelation
     |        xref:Account.adoc#account_models_accountcontactrelation[`AccountContactRelation`]
     a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+[[account_hubspot]]
+== Hubspot
+
+[[account_hubspot_contracts]]
+===  Contracts
+[[account_contracts_hubspotstatusrepositorycontract]]
+==== HubspotStatusRepositoryContract
+
+The HubspotStatusRepositoryContract is the interface for the hubspotStatus repository.
+ * This interface allows to list, get, create hubspotStatus.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Account\Hubspot\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#savehubspotstatus]
+----
+
+public saveHubspotStatus($data):bool
+
+----
+
+
+
+
+
+
+
+Adds a new hubspotStatus entry
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|The hubspotStatus data as array.
+|===
+
+
+[[account_hubspot_models]]
+===  Models
+[[account_models_hubspotstatus]]
+==== HubspotStatus
+
+The hubspot status model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Account\Hubspot\Models`
+
+===== Referenceable
+id
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The PK ID
+|createdAt
+    |
+    a|The date the hubspot status was created
+|updatedAt
+    |
+    a|The date the hubspot status was last updated
+|plentyContactId
+    |link:http://php.net/int[int^]
+    a|The plenty contact ID
+|hubspotContactId
+    |link:http://php.net/int[int^]
+    a|The hubspot contact ID
+|plentyCompanyId
+    |link:http://php.net/int[int^]
+    a|The plenty company ID
+|hubspotCompanyId
+    |link:http://php.net/int[int^]
+    a|The hubspot company ID
+|operation
+    |link:http://php.net/string[string^]
+    a|The operation that took place:
+ * <ul>
+<li> create_plenty_contact</li>
+<li> update_plenty_contact</li>
+<li> create_plenty_company</li>
+<li> update_plenty_company</li>
+<li> create_plenty_contact_company_relation</li>
+<li> create_hubspot_contact</li>
+<li> update_hubspot_contact</li>
+<li> create_hubspot_company</li>
+<li> update_hubspot_company</li>
+<li> create_hubspot_contact_company_relation</li>
+</ul>
 |===
 
 
