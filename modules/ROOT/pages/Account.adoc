@@ -4429,7 +4429,7 @@ The ContactPaymentRepositoryContract is the interface for the contact payment re
 [#getbanksofcontactpaginated]
 ----
 
-public getBanksOfContactPaginated($contactId, $columns = [], $perPage = 50, $page = 1):array
+public getBanksOfContactPaginated($contactId, $columns = [], $perPage = 50, $page = 1, $filters = []):array
 
 ----
 
@@ -4459,6 +4459,10 @@ a|Optional: The number of bank accounts per page (Default: 50)
 
 a|`$page`
 |link:http://php.net/int[int^]
+a|
+
+a|`$filters`
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -4634,6 +4638,112 @@ a|`$contactBankId`
 a|The ID of the bank account entry
 |===
 
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
 
 
 [[account_contracts_contactrepositorycontract]]
@@ -5367,7 +5477,7 @@ The contract for the contact payment repository.
 [#getbanksofcontactpaginated]
 ----
 
-public getBanksOfContactPaginated($contactId, $columns = [], $perPage = 50, $page = 1):array
+public getBanksOfContactPaginated($contactId, $columns = [], $perPage = 50, $page = 1, $filters = []):array
 
 ----
 
@@ -5397,6 +5507,10 @@ a|Optional: The number of bank accounts per page (Default: 50)
 
 a|`$page`
 |link:http://php.net/int[int^]
+a|
+
+a|`$filters`
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -5572,6 +5686,112 @@ a|`$contactBankId`
 a|The ID of the bank account entry
 |===
 
+
+[source%nowrap, php]
+[#clearcriteria]
+----
+
+public clearCriteria():void
+
+----
+
+
+
+
+
+
+
+Resets all Criteria filters by creating a new instance of the builder object.
+
+[source%nowrap, php]
+[#applycriteriafromfilters]
+----
+
+public applyCriteriaFromFilters():void
+
+----
+
+
+
+
+
+
+
+Applies criteria classes to the current repository.
+
+[source%nowrap, php]
+[#setfilters]
+----
+
+public setFilters($filters = []):void
+
+----
+
+
+
+
+
+
+
+Sets the filter array.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilters]
+----
+
+public getFilters():void
+
+----
+
+
+
+
+
+
+
+Returns the filter array.
+
+[source%nowrap, php]
+[#getconditions]
+----
+
+public getConditions():void
+
+----
+
+
+
+
+
+
+
+Returns a collection of parsed filters as Condition object
+
+[source%nowrap, php]
+[#clearfilters]
+----
+
+public clearFilters():void
+
+----
+
+
+
+
+
+
+
+Clears the filter array.
 
 
 [[account_contracts_salesrepresentativeregionrepositorycontract]]
