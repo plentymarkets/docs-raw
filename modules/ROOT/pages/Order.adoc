@@ -20453,6 +20453,9 @@ The model of the creditNote order settings.
 |defaultOrderStatus
     |link:http://php.net/float[float^]
     a|Deprecated, not filled anymore. Use $defaultStatusId instead.
+|
+    |link:http://php.net/int[int^]
+    a|defaultCreditNoteReasonId
 |===
 
 
@@ -20504,6 +20507,12 @@ The model of the repair order settings.
 |resetOutgoingItemsStatusId
     |link:http://php.net/float[float^]
     a|Values: -1: no status change, 0: last status , >0: defined status
+|
+    |link:http://php.net/int[int^]
+    a|defaultRepairReasonId
+|
+    |link:http://php.net/int[int^]
+    a|defaultRepairStatusId
 |===
 
 
@@ -20552,6 +20561,12 @@ The model of the return order settings.
 |defaultOrderStatus
     |link:http://php.net/float[float^]
     a|Deprecated, not filled anymore. Use $defaultStatusId instead.
+|
+    |link:http://php.net/int[int^]
+    a|defaultReturnReasonId
+|
+    |link:http://php.net/int[int^]
+    a|defaultReturnStatusId
 |===
 
 
@@ -20870,6 +20885,226 @@ a|`$storeId`
 a|
 |===
 
+
+[[order_creditnotereason]]
+== CreditNoteReason
+
+[[order_creditnotereason_contracts]]
+===  Contracts
+[[order_contracts_creditnotereasonrepositorycontract]]
+==== CreditNoteReasonRepositoryContract
+
+Use this interface to retrieve order credit note reasons.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\CreditNoteReason\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#all]
+----
+
+public all():array
+
+----
+
+
+
+
+
+
+
+Get all credit note reasons.
+
+[source%nowrap, php]
+[#get]
+----
+
+public get($id):Plenty\Modules\Order\CreditNoteReason\Models\CreditNoteReason
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_creditnotereason[`CreditNoteReason`]
+
+
+Get a credit note reason.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|The ID of the credit note reason.
+|===
+
+
+[source%nowrap, php]
+[#set]
+----
+
+public set($data):array
+
+----
+
+
+
+
+
+
+
+Set a credit note reason.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#delete]
+----
+
+public delete($id):bool
+
+----
+
+
+
+
+
+
+
+Delete an order credit note reason
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[[order_creditnotereason_models]]
+===  Models
+[[order_models_creditnotereason]]
+==== CreditNoteReason
+
+The credit note reason model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\CreditNoteReason\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the credit note reason.
+|reason
+    |link:http://php.net/string[string^]
+    a|The specified reason in system language.
+|names
+    |link:http://php.net/array[array^]
+    a|The specified reason in different languages.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[order_models_creditnotereasonname]]
+==== CreditNoteReasonName
+
+The credit note reason name model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\CreditNoteReason\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the credit note reason.
+|reason
+    |link:http://php.net/string[string^]
+    a|The specified reason.
+|lang
+    |link:http://php.net/string[string^]
+    a|The language of the reason.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
 
 [[order_date]]
 == Date
