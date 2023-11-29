@@ -5,6 +5,974 @@
 = Plentymarkets interface documentation
 
 
+[[document_variables]]
+== Variables
+
+[[document_variables_contracts]]
+===  Contracts
+[[document_contracts_documentbuildervariablescontainercontract]]
+==== DocumentBuilderVariablesContainerContract
+
+A container service for DocumentBuilder variables and variable groups registration
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#registervariablegroup]
+----
+
+public registerVariableGroup($group):void
+
+----
+
+
+
+
+
+
+
+Register a variable group.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$group`
+|        xref:Document.adoc#document_models_variablegroup[`VariableGroup`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#registervariable]
+----
+
+public registerVariable($variable):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$variable`
+|        xref:Document.adoc#document_models_variable[`Variable`]
+a|
+|===
+
+
+[[document_variables_enums]]
+===  Enums
+[[document_enums_variablesobjecttypeenum]]
+==== VariablesObjectTypeEnum
+
+An enum type with all objects available for variables.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Enums`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+[[document_variables_events]]
+===  Events
+[[document_events_documentbuildervariablesregistering]]
+==== DocumentBuilderVariablesRegistering
+
+An event class, which will be triggered, when the DocumentBuilder variables are registered.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Events`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+[[document_variables_models]]
+===  Models
+[[document_models_dynamicvariable]]
+==== DynamicVariable
+
+The base class for dynamically detected variables.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_models_dynamicvariablegroup]]
+==== DynamicVariableGroup
+
+A variable group that can be used to register dynamically determined variables.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_models_variable]]
+==== Variable
+
+The base class for DocumentBuilder variables.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_models_variablegroup]]
+==== VariableGroup
+
+The base class for DocumentBuilder variable groups.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+[[document_variables_services]]
+===  Services
+[[document_services_variablesresolutionservice]]
+==== VariablesResolutionService
+
+The service for variables resolution
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Services`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#setorder]
+----
+
+public setOrder($order):Plenty\Modules\Document\Builder\Variables\Services\VariablesResolutionService
+
+----
+
+
+
+
+====== *Return type:*        xref:Document.adoc#document_services_variablesresolutionservice[`VariablesResolutionService`]
+
+
+Set the order into the variables context
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setdocument]
+----
+
+public setDocument($document):Plenty\Modules\Document\Builder\Variables\Services\VariablesResolutionService
+
+----
+
+
+
+
+====== *Return type:*        xref:Document.adoc#document_services_variablesresolutionservice[`VariablesResolutionService`]
+
+
+Set the document into the variables context
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$document`
+|        xref:Document.adoc#document_models_document[`Document`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setobject]
+----
+
+public setObject($typeEnum, $object):Plenty\Modules\Document\Builder\Variables\Services\VariablesResolutionService
+
+----
+
+
+
+
+====== *Return type:*        xref:Document.adoc#document_services_variablesresolutionservice[`VariablesResolutionService`]
+
+
+Set an object into the variables context.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$typeEnum`
+|link:http://php.net/string[string^]
+a|A VariablesObjectTypeEnum constant
+
+a|`$object`
+|
+a|
+|===
+
+
+[[document_models]]
+== Models
+
+[[document_models_context]]
+===  Context
+[[document_context_objectentry]]
+==== ObjectEntry
+
+This class represents an object entry with the object type and the object itself.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Context`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|objectType
+    |link:http://php.net/string[string^]
+    a|A VariablesObjectTypeEnum constant
+|object
+    |
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_context_plugincontext]]
+==== PluginContext
+
+Informations about plugin entries for the plugin variables (old logic).
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Context`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_context_variablescontext]]
+==== VariablesContext
+
+This class is a container for all available object entries
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Context`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_context_variablesresolution]]
+==== VariablesResolution
+
+This class can be used by variables to get the needed objects and to push resolved variable content.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Context`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+[[document_models_groups]]
+===  Groups
+[[document_groups_bankdatagroup]]
+==== BankDataGroup
+
+The BankData variables group
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Groups`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_groups_companygroup]]
+==== CompanyGroup
+
+The Company variables group
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Groups`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_groups_headerfootergroup]]
+==== HeaderFooterGroup
+
+The HeaderFooter variables group
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Groups`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_groups_orderforeignamountgroup]]
+==== OrderForeignAmountGroup
+
+The OrderForeignAmount variables group
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Groups`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_groups_ordergroup]]
+==== OrderGroup
+
+The Order variables group
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Groups`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_groups_orderitemforeignamountgroup]]
+==== OrderItemForeignAmountGroup
+
+The OrderItemForeignAmount variables group
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Groups`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_groups_orderitemgroup]]
+==== OrderItemGroup
+
+The OrderItem variables group
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Groups`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_groups_orderitempropertygroup]]
+==== OrderItemPropertyGroup
+
+The OrderItemProperty variables group
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Groups`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_groups_orderitemsystemamountgroup]]
+==== OrderItemSystemAmountGroup
+
+The OrderItemSystemAmount variables group
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Groups`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_groups_orderpropertygroup]]
+==== OrderPropertyGroup
+
+The OrderPropety variables group
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Groups`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_groups_ordersystemamountgroup]]
+==== OrderSystemAmountGroup
+
+The OrderSystemAmount variables group
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Groups`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_groups_plugingroup]]
+==== PluginGroup
+
+The Plugin variables group
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Builder\Variables\Models\Groups`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
 [[document_document]]
 == Document
 
@@ -702,6 +1670,77 @@ public clearFilters():void
 
 Clears the filter array.
 
+[[document_document_enums]]
+===  Enums
+[[document_enums_documentgrouptypeenum]]
+==== DocumentGroupTypeEnum
+
+A list of document type groups
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Enums`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_enums_documenttypeenum]]
+==== DocumentTypeEnum
+
+A list of document types
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Enums`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
 [[document_document_models]]
 ===  Models
 [[document_models_document]]
@@ -952,6 +1991,199 @@ The document reference model. A document reference allows you to assign a docume
 |document
     |        xref:Document.adoc#document_models_document[`Document`]
     a|The document this reference belongs to
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+[[document_templatesetting]]
+== TemplateSetting
+
+[[document_templatesetting_models]]
+===  Models
+[[document_models_documenttemplateoutputsetting]]
+==== DocumentTemplateOutputSetting
+
+The DocumentBuilder template output setting model
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\TemplateSetting\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|
+|templateId
+    |link:http://php.net/int[int^]
+    a|
+|pageWidth
+    |link:http://php.net/float[float^]
+    a|
+|pageHeight
+    |link:http://php.net/float[float^]
+    a|
+|marginTop
+    |link:http://php.net/float[float^]
+    a|
+|marginBottom
+    |link:http://php.net/float[float^]
+    a|
+|marginLeft
+    |link:http://php.net/float[float^]
+    a|
+|marginRight
+    |link:http://php.net/float[float^]
+    a|
+|header
+    |link:http://php.net/string[string^]
+    a|
+|footer
+    |link:http://php.net/string[string^]
+    a|
+|createdAt
+    |
+    a|
+|updatedAt
+    |
+    a|
+|fontFamily
+    |link:http://php.net/string[string^]
+    a|
+|fontSize
+    |link:http://php.net/int[int^]
+    a|
+|amountFormat
+    |link:http://php.net/string[string^]
+    a|
+|currencyFormat
+    |link:http://php.net/string[string^]
+    a|
+|dateFormat
+    |link:http://php.net/string[string^]
+    a|
+|pdfBackground
+    |
+    a|
+|outputType
+    |link:http://php.net/string[string^]
+    a|
+|xmlFormat
+    |link:http://php.net/string[string^]
+    a|
+|documentTemplateSetting
+    |        xref:Document.adoc#document_models_documenttemplatesetting[`DocumentTemplateSetting`]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_models_documenttemplatesetting]]
+==== DocumentTemplateSetting
+
+The DocumentBuilder template setting model
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\TemplateSetting\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|
+|defaultTemplate
+    |link:http://php.net/bool[bool^]
+    a|
+|referenceId
+    |link:http://php.net/string[string^]
+    a|
+|active
+    |link:http://php.net/bool[bool^]
+    a|
+|documentType
+    |link:http://php.net/string[string^]
+    a|
+|templateName
+    |link:http://php.net/string[string^]
+    a|
+|metaData
+    |link:http://php.net/array[array^]
+    a|
+|fileName
+    |link:http://php.net/string[string^]
+    a|
+|stateChangeDate
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|
+|createdAt
+    |
+    a|
+|updatedAt
+    |
+    a|
+|tags
+    |
+    a|
+|outputSetting
+    |        xref:Document.adoc#document_models_documenttemplateoutputsetting[`DocumentTemplateOutputSetting`]
+    a|
+|typeSettings
+    |
+    a|
 |===
 
 
