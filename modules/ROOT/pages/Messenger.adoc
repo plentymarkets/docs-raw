@@ -3048,6 +3048,37 @@ a|Deadline in format YYYY-MM-DD H:i:s. If null is set, the deadline will be remo
 
 
 [source%nowrap, php]
+[#updatefollowupdate]
+----
+
+public updateFollowUpDate($uuids, $followUpDate = null):int
+
+----
+
+
+
+
+
+
+
+Sets follow up date for a batch of conversations
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's
+
+a|`$followUpDate`
+|link:http://php.net/string[string^]
+a|Follow up date in format YYYY-MM-DD H:i:s.
+If null is set, the follow up date will be removed
+|===
+
+
+[source%nowrap, php]
 [#updateread]
 ----
 
@@ -3078,6 +3109,32 @@ a|ID of the user
 a|`$read`
 |link:http://php.net/bool[bool^]
 a|Read status: true/false
+|===
+
+
+[source%nowrap, php]
+[#batchresubmitconversations]
+----
+
+public batchResubmitConversations($uuids):int
+
+----
+
+
+
+
+
+
+
+Resubmits all conversations with follow up date today (resets read by array, resets follow up date)
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's
 |===
 
 
@@ -4486,6 +4543,9 @@ The Conversation model of the messenger.
 |deadline
     |
     a|Deadline Date
+|followUpDate
+    |
+    a|FollowUpDate Date
 |messages
     |link:http://php.net/array[array^]
     a|Conversation messages
