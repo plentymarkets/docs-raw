@@ -122,7 +122,7 @@ a|
 [#addnumberfield]
 ----
 
-public addNumberField($doubleField, $key = &quot;key&quot;):void
+public addNumberField($numberField, $key = &quot;key&quot;):void
 
 ----
 
@@ -138,7 +138,7 @@ Add a number input field to the config form
 [cols="3,1,6"]
 |===
 |Name |Type |Description
-a|`$doubleField`
+a|`$numberField`
 |        xref:Flow.adoc#flow_configform_numberfield[`NumberField`]
 a|
 
@@ -290,6 +290,36 @@ Add a  hyperlink field to the config form
 |Name |Type |Description
 a|`$hyperlinkField`
 |        xref:Flow.adoc#flow_configform_hyperlinkfield[`HyperlinkField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addtextareafield]
+----
+
+public addTextAreaField($textAreaField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add a text area field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$textAreaField`
+|        xref:Flow.adoc#flow_configform_textareafield[`TextAreaField`]
 a|
 
 a|`$key`
@@ -792,6 +822,41 @@ The selectbox value model.
     |link:http://php.net/bool[bool^]
     a|The option to translate caption, default value is true
 |===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_textareafield]]
+==== TextAreaField
+
+The text area field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
 
 
 ===== Methods
