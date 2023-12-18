@@ -9209,7 +9209,7 @@ a|Optional: The relationships that should be eager loaded. (example ['contacts']
 [#allaccountspaginated]
 ----
 
-public allAccountsPaginated($columns = [], $page = 1, $itemsPerPage = 50, $with = [], $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;):Plenty\Repositories\Models\PaginatedResult
+public allAccountsPaginated($columns = [], $page = 1, $itemsPerPage = 50, $with = [], $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;, $filters = []):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
@@ -9248,6 +9248,10 @@ a|Optional: The field to be sorted (Default: id).
 a|`$sortOrder`
 |link:http://php.net/string[string^]
 a|Optional: The order for sorting (Default: desc).
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|Filter that restrict the search result
 |===
 
 

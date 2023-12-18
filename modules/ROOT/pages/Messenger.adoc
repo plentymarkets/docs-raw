@@ -742,6 +742,21 @@ The Message model of the messenger.
 |categoryId
     |link:http://php.net/int[int^]
     a|The categoryID of the message/conversation
+|typeId
+    |link:http://php.net/int[int^]
+    a|The typeID of the conversation
+|typePosition
+    |link:http://php.net/int[int^]
+    a|The typePosition of the typeID
+|statusId
+    |link:http://php.net/int[int^]
+    a|The statusID of the conversation
+|statusPosition
+    |link:http://php.net/int[int^]
+    a|The statusPosition of statusID
+|marketplacesMetadata
+    |        xref:Messenger.adoc#messenger_models_messagemarketplacesmetadata[`MessageMarketplacesMetaData`]
+    a|The marketplace metadata
 |===
 
 
@@ -4618,6 +4633,9 @@ The Conversation model of the messenger.
 |linkedFolders
     |link:http://php.net/array[array^]
     a|List of linked folders
+|marketplacesMetadata
+    |link:http://php.net/array[array^]
+    a|marketplaces Meta data
 |===
 
 
@@ -5273,6 +5291,403 @@ The Conversation model of the messenger.
 |type
     |link:http://php.net/string[string^]
     a|The entity type
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+[[messenger_ebay]]
+== Ebay
+
+[[messenger_ebay_contracts]]
+===  Contracts
+[[messenger_contracts_ebayaccountsrepositorycontract]]
+==== EbayAccountsRepositoryContract
+
+The EbayAccountsRepositoryContract is the interface for Merketplaces Ebay EbayAccount
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Marketplaces\Ebay\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#listebayaccounts]
+----
+
+public listEbayAccounts():Illuminate\Support\Collection
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+
+
+Get all ebay accounts
+
+[source%nowrap, php]
+[#getactiveebayaccounts]
+----
+
+public getActiveEbayAccounts():Illuminate\Support\Collection
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+
+
+Get all ebay active accounts
+
+[source%nowrap, php]
+[#createebayaccount]
+----
+
+public createEbayAccount($data):Plenty\Modules\Messenger\Conversations\Marketplaces\Ebay\Models\EbayAccount
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_ebayaccount[`EbayAccount`]
+
+
+Create a new Ebay account
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#updateebayaccounts]
+----
+
+public updateEbayAccounts($data):Illuminate\Support\Collection
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+
+
+Update an existing array of Ebay account settings
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deleteebayaccount]
+----
+
+public deleteEbayAccount($accountSettingsId):bool
+
+----
+
+
+
+
+
+
+
+Delete an Ebay account (the account will be flagged with deleted=1)
+The action will not delete the account
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$accountSettingsId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getebayaccount]
+----
+
+public getEbayAccount($accountSettingsId):Plenty\Modules\Messenger\Conversations\Marketplaces\Ebay\Models\EbayAccount
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_models_ebayaccount[`EbayAccount`]
+
+
+Get Ebay account details
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$accountSettingsId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[[messenger_ebay_models]]
+===  Models
+[[messenger_models_ebayaccount]]
+==== EbayAccount
+
+The Ebay Settings model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Marketplaces\Ebay\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The id of the messenger ebay settings account
+|ebayAccountId
+    |link:http://php.net/int[int^]
+    a|The id of the ebay account
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the ebay account
+|isEnabled
+    |link:http://php.net/bool[bool^]
+    a|The status of the messenger ebay settings account
+|isDeleted
+    |link:http://php.net/bool[bool^]
+    a|The deleted status of the messenger ebay settings account
+|settings
+    |link:http://php.net/array[array^]
+    a|The list of settings of the messenger ebay settings account
+*
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_marketplacesmetadataebayproperties]]
+==== MarketplacesMetaDataEbayProperties
+
+The Ebay properties model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Marketplaces\Ebay\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|ebayCreatedAt
+    |link:http://php.net/string[string^]
+    a|The creation datetime
+|ebaySenderName
+    |link:http://php.net/string[string^]
+    a|The name of the sender
+|ebayMessageId
+    |link:http://php.net/string[string^]
+    a|The message id
+|ebayExternalMessageId
+    |link:http://php.net/string[string^]
+    a|The external message id
+|ebaySellerName
+    |link:http://php.net/string[string^]
+    a|The name of the seller
+|ebayItemId
+    |link:http://php.net/string[string^]
+    a|The id of the item
+|ebayItemEndTime
+    |link:http://php.net/string[string^]
+    a|The end time of the item
+|ebayType
+    |link:http://php.net/string[string^]
+    a|Ebay message type
+|ebayResponseEnabled
+    |link:http://php.net/bool[bool^]
+    a|Ebay reponse enabled/disabled
+|ebayAccountId
+    |link:http://php.net/int[int^]
+    a|Ebay account ID
+|ebayMessengerAccountId
+    |link:http://php.net/int[int^]
+    a|Messenger Ebay account ID
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_settings]]
+==== Settings
+
+The EbayAccount&#039;s settings model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Marketplaces\Ebay\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|markAsRead
+    |link:http://php.net/bool[bool^]
+    a|Mark the conversation as read
+|defaultStatus
+    |link:http://php.net/int[int^]
+    a|The conversation's default status
+|defaultType
+    |link:http://php.net/int[int^]
+    a|The conversation's default status
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+[[messenger_marketplaces]]
+== Marketplaces
+
+[[messenger_marketplaces_models]]
+===  Models
+[[messenger_models_messagemarketplacesmetadata]]
+==== MessageMarketplacesMetaData
+
+The marketplaces data model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Marketplaces\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|ebayProperties
+    |        xref:Messenger.adoc#messenger_models_marketplacesmetadataebayproperties[`MarketplacesMetaDataEbayProperties`]
+    a|Ebay properties
 |===
 
 
