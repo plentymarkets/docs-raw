@@ -1066,6 +1066,22 @@ a|
 
 
 [source%nowrap, php]
+[#searchcriteria]
+----
+
+public searchCriteria():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#addoperators]
 ----
 
@@ -1308,7 +1324,7 @@ public getProvidedOutputTypes():array
 [#performtask]
 ----
 
-public performTask($inputs, $configFields, $filter = null):array
+public performTask($inputs, $configFields, $filter = null, $extraParams = []):array
 
 ----
 
@@ -1334,6 +1350,10 @@ a|
 
 a|`$filter`
 |
+a|
+
+a|`$extraParams`
+|link:http://php.net/array[array^]
 a|
 |===
 
