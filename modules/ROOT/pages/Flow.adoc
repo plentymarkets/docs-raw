@@ -122,7 +122,7 @@ a|
 [#addnumberfield]
 ----
 
-public addNumberField($doubleField, $key = &quot;key&quot;):void
+public addNumberField($numberField, $key = &quot;key&quot;):void
 
 ----
 
@@ -138,7 +138,7 @@ Add a number input field to the config form
 [cols="3,1,6"]
 |===
 |Name |Type |Description
-a|`$doubleField`
+a|`$numberField`
 |        xref:Flow.adoc#flow_configform_numberfield[`NumberField`]
 a|
 
@@ -290,6 +290,36 @@ Add a  hyperlink field to the config form
 |Name |Type |Description
 a|`$hyperlinkField`
 |        xref:Flow.adoc#flow_configform_hyperlinkfield[`HyperlinkField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addtextareafield]
+----
+
+public addTextAreaField($textAreaField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add a text area field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$textAreaField`
+|        xref:Flow.adoc#flow_configform_textareafield[`TextAreaField`]
 a|
 
 a|`$key`
@@ -813,6 +843,41 @@ public toArray()
 Returns this model as an array.
 
 
+[[flow_configform_textareafield]]
+==== TextAreaField
+
+The text area field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
 [[flow_configform_timefield]]
 ==== TimeField
 
@@ -967,6 +1032,22 @@ public getOperators():array
 
 
 [source%nowrap, php]
+[#getavailabilities]
+----
+
+public getAvailabilities():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#performfilter]
 ----
 
@@ -998,6 +1079,22 @@ a|`$extraParams`
 |link:http://php.net/array[array^]
 a|
 |===
+
+
+[source%nowrap, php]
+[#searchcriteria]
+----
+
+public searchCriteria():string
+
+----
+
+
+
+
+
+
+
 
 
 [source%nowrap, php]
@@ -1243,7 +1340,7 @@ public getProvidedOutputTypes():array
 [#performtask]
 ----
 
-public performTask($inputs, $configFields, $filter = null):array
+public performTask($inputs, $configFields, $filter = null, $extraParams = []):array
 
 ----
 
@@ -1269,6 +1366,10 @@ a|
 
 a|`$filter`
 |
+a|
+
+a|`$extraParams`
+|link:http://php.net/array[array^]
 a|
 |===
 
