@@ -3776,6 +3776,202 @@ a|
 
 
 
+[[messenger_contracts_conversationrolerepositorycontract]]
+==== ConversationRoleRepositoryContract
+
+The ConversationRoleRepositoryContract is the interface for the messenger conversations roles.
+ *     This interface defines methods to add, update, delete and show roles.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getrolebyid]
+----
+
+public getRoleById($roleId):Plenty\Modules\Messenger\Conversations\Models\Roles\ConversationRole
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_roles_conversationrole[`ConversationRole`]
+
+
+Get role details by role id
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$roleId`
+|link:http://php.net/int[int^]
+a|ID of the role
+|===
+
+
+[source%nowrap, php]
+[#listroles]
+----
+
+public listRoles($page = 1, $itemPerPage = 25, $sortBy = &quot;id&quot;, $sortOrder = &quot;asc&quot;, $filters = []):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Get paginated results for roles
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$page`
+|link:http://php.net/int[int^]
+a|Page number
+
+a|`$itemPerPage`
+|link:http://php.net/int[int^]
+a|Items per page
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|Column name to be sorted by
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|Sort order
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#updaterole]
+----
+
+public updateRole($roleId, $data):Plenty\Modules\Messenger\Conversations\Models\Roles\ConversationRole
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_roles_conversationrole[`ConversationRole`]
+
+
+Update a role
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$roleId`
+|link:http://php.net/int[int^]
+a|The id of the role to be updated
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|Aray with Role properties to be updated
+|===
+
+
+[source%nowrap, php]
+[#deleterole]
+----
+
+public deleteRole($roleId):bool
+
+----
+
+
+
+
+
+
+
+Delete a role
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$roleId`
+|link:http://php.net/int[int^]
+a|The id of the role to be deleted
+|===
+
+
+[source%nowrap, php]
+[#createrole]
+----
+
+public createRole($data):Plenty\Modules\Messenger\Conversations\Models\Roles\ConversationRole
+
+----
+
+
+
+
+====== *Return type:*        xref:Messenger.adoc#messenger_roles_conversationrole[`ConversationRole`]
+
+
+Create new role
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#batchdeleteroles]
+----
+
+public batchDeleteRoles($roleIds):bool
+
+----
+
+
+
+
+
+
+
+Deletes a batch of roles
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$roleIds`
+|link:http://php.net/array[array^]
+a|Array with role ID's
+|===
+
+
+
 [[messenger_contracts_conversationstatusrepositorycontract]]
 ==== ConversationStatusRepositoryContract
 
@@ -4636,6 +4832,9 @@ The Conversation model of the messenger.
 |marketplacesMetadata
     |link:http://php.net/array[array^]
     a|marketplaces Meta data
+|owners
+    |link:http://php.net/array[array^]
+    a|Conversation Owners
 |===
 
 
@@ -4905,6 +5104,54 @@ and the id of the user or the contact otherwise.
 |name
     |link:http://php.net/string[string^]
     a|An optional name for the instance, e.g. the real name for type {@link ConversationFrom::FROM_TYPE_EMAIL}
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_models_conversationowner]]
+==== ConversationOwner
+
+The ConversationOwners model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|roleId
+    |link:http://php.net/int[int^]
+    a|The id of the role
+|ownerId
+    |link:http://php.net/int[int^]
+    a|The user id value
 |===
 
 
@@ -5688,6 +5935,112 @@ The marketplaces data model of the messenger.
 |ebayProperties
     |        xref:Messenger.adoc#messenger_models_marketplacesmetadataebayproperties[`MarketplacesMetaDataEbayProperties`]
     a|Ebay properties
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+[[messenger_models]]
+== Models
+
+[[messenger_models_roles]]
+===  Roles
+[[messenger_roles_conversationrole]]
+==== ConversationRole
+
+The ConversationRole model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models\Roles`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|position
+    |link:http://php.net/int[int^]
+    a|
+|userId
+    |link:http://php.net/int[int^]
+    a|
+|isDeleted
+    |link:http://php.net/bool[bool^]
+    a|
+|names
+    |        xref:Messenger.adoc#messenger_roles_conversationrolenames[`ConversationRoleNames`]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[messenger_roles_conversationrolenames]]
+==== ConversationRoleNames
+
+The ConversationRoleNames model of the messenger.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\Conversations\Models\Roles`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|lang
+    |link:http://php.net/string[string^]
+    a|
+|name
+    |link:http://php.net/string[string^]
+    a|
 |===
 
 
