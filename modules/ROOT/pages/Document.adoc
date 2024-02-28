@@ -385,6 +385,32 @@ The service for variables resolution
 ===== Methods
 
 [source%nowrap, php]
+[#setlanguage]
+----
+
+public setLanguage($language):Plenty\Modules\Document\Builder\Variables\Services\VariablesResolutionService
+
+----
+
+
+
+
+====== *Return type:*        xref:Document.adoc#document_services_variablesresolutionservice[`VariablesResolutionService`]
+
+
+Set the language to be used by the variables resolution.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$language`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#setorder]
 ----
 
@@ -2321,6 +2347,90 @@ public toArray()
 
 
 Returns this model as an array.
+
+[[document_generation]]
+== Generation
+
+[[document_generation_contracts]]
+===  Contracts
+[[document_contracts_documentbuildergenerationrestrictioncontainercontract]]
+==== DocumentBuilderGenerationRestrictionContainerContract
+
+A container service for DocumentBuilder document generation restrictions registration
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Generation\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#registergenerationrestriction]
+----
+
+public registerGenerationRestriction($restriction, $descriptions):void
+
+----
+
+
+
+
+
+
+
+Register a document generation restriction.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$restriction`
+|
+a|The Closure should have the signature
+<pre>function(Order $order, string $documentType): bool</pre>
+
+a|`$descriptions`
+|
+a|The messages in case of restriction. At least the keys 'de' and 'en' are required.
+|===
+
+
+[source%nowrap, php]
+[#checkgenerationrestrictions]
+----
+
+public checkGenerationRestrictions($order, $documentType):void
+
+----
+
+
+
+
+
+
+
+Check for restrictions of the generation of the given document type for the given order.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$order`
+|        xref:Order.adoc#order_models_order[`Order`]
+a|The order for which the document is to be generated
+
+a|`$documentType`
+|link:http://php.net/string[string^]
+a|The document type of the document to be generated
+|===
+
 
 [[document_templatesetting]]
 == TemplateSetting
