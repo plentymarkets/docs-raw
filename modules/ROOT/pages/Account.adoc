@@ -3040,6 +3040,182 @@ a|The ID of the address type
 
 
 
+[[account_contracts_contactclassconfigrepositorycontract]]
+==== ContactClassConfigRepositoryContract
+
+The ContactClassConfigRepositoryContract is the interface
+ * for managing the contact classes. This interface allows to list, delete, create,
+ * update or get a contact class.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Account\Contact\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getcontactclassespaginated]
+----
+
+public getContactClassesPaginated($columns = [], $page = 1, $itemsPerPage = 50, $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;, $filters = []):array
+
+----
+
+
+
+
+
+
+
+Returns a collection of all contact classes.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$columns`
+|link:http://php.net/array[array^]
+a|Optional: The columns to retrieve (Default: '[*]').
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|Optional: The number of the page (Default: 1).
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|Optional: The number of objects per page (Default: 50).
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|Optional: The field to be sorted (Default: id).
+Possible values: any property of ContactClass model
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|Optional: The order for sorting (Default: desc).
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|Optional: Filter results by different criteria. Possible values: id, name
+|===
+
+
+[source%nowrap, php]
+[#showcontactclass]
+----
+
+public showContactClass($contactClassId):Plenty\Modules\Account\Contact\Models\ContactClass
+
+----
+
+
+
+
+====== *Return type:*        xref:Account.adoc#account_models_contactclass[`ContactClass`]
+
+
+Return a ContactClass model based on class ID
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$contactClassId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#createcontactclass]
+----
+
+public createContactClass($data):Plenty\Modules\Account\Contact\Models\ContactClass
+
+----
+
+
+
+
+====== *Return type:*        xref:Account.adoc#account_models_contactclass[`ContactClass`]
+
+
+Creates a new contact class
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#updatecontactclass]
+----
+
+public updateContactClass($data, $contactClassId):Plenty\Modules\Account\Contact\Models\ContactClass
+
+----
+
+
+
+
+====== *Return type:*        xref:Account.adoc#account_models_contactclass[`ContactClass`]
+
+
+Updates an existing contact class
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+
+a|`$contactClassId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deletecontactclass]
+----
+
+public deleteContactClass($contactClassId):void
+
+----
+
+
+
+
+
+
+
+Deletes a contact class
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$contactClassId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+
 [[account_contracts_contactclassrepositorycontract]]
 ==== ContactClassRepositoryContract
 
@@ -6699,6 +6875,228 @@ The contact bank model.
 |order
     |        xref:Order.adoc#order_legacy_order[`Order`]
     a|The order the bank account belongs to
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[account_models_contactclass]]
+==== ContactClass
+
+The contact class model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the contact class
+|name
+    |link:http://php.net/string[string^]
+    a|
+|priceColumn
+    |link:http://php.net/int[int^]
+    a|
+|showPrice
+    |link:http://php.net/int[int^]
+    a|Flag to display price in the online store as Gross(1) or Net(2)
+|discountType
+    |link:http://php.net/int[int^]
+    a|
+|position
+    |link:http://php.net/int[int^]
+    a|
+|pqsQuantity1
+    |link:http://php.net/float[float^]
+    a|
+|
+    |link:http://php.net/float[float^]
+    a|pqsDiscount1
+|pqsQuantity2
+    |link:http://php.net/float[float^]
+    a|
+|
+    |link:http://php.net/float[float^]
+    a|pqsDiscount2
+|pqsQuantity3
+    |link:http://php.net/float[float^]
+    a|
+|
+    |link:http://php.net/float[float^]
+    a|pqsDiscount3
+|pqsQuantity4
+    |link:http://php.net/float[float^]
+    a|
+|
+    |link:http://php.net/float[float^]
+    a|pqsDiscount4
+|pqsQuantity5
+    |link:http://php.net/float[float^]
+    a|
+|
+    |link:http://php.net/float[float^]
+    a|pqsDiscount5
+|pqsQuantity6
+    |link:http://php.net/float[float^]
+    a|
+|
+    |link:http://php.net/float[float^]
+    a|pqsDiscount6
+|pqsQuantity7
+    |link:http://php.net/float[float^]
+    a|
+|
+    |link:http://php.net/float[float^]
+    a|pqsDiscount7
+|pqsQuantity8
+    |link:http://php.net/float[float^]
+    a|
+|
+    |link:http://php.net/float[float^]
+    a|pqsDiscount8
+|pqsQuantity9
+    |link:http://php.net/float[float^]
+    a|
+|
+    |link:http://php.net/float[float^]
+    a|pqsDiscount9
+|pqsQuantity10
+    |link:http://php.net/float[float^]
+    a|
+|
+    |link:http://php.net/float[float^]
+    a|pqsDiscount10
+|pnsQuantity1
+    |link:http://php.net/float[float^]
+    a|
+|pnsDiscount1
+    |link:http://php.net/float[float^]
+    a|
+|pnsQuantity2
+    |link:http://php.net/float[float^]
+    a|
+|pnsDiscount2
+    |link:http://php.net/float[float^]
+    a|
+|pnsQuantity3
+    |link:http://php.net/float[float^]
+    a|
+|pnsDiscount3
+    |link:http://php.net/float[float^]
+    a|
+|pnsQuantity4
+    |link:http://php.net/float[float^]
+    a|
+|pnsDiscount4
+    |link:http://php.net/float[float^]
+    a|
+|pnsQuantity5
+    |link:http://php.net/float[float^]
+    a|
+|pnsDiscount5
+    |link:http://php.net/float[float^]
+    a|
+|pmsMop
+    |link:http://php.net/string[string^]
+    a|
+|pmsDiscount
+    |link:http://php.net/float[float^]
+    a|
+|paqsDiscount
+    |link:http://php.net/float[float^]
+    a|
+|payableDueWithin
+    |link:http://php.net/int[int^]
+    a|
+|minQuantity
+    |link:http://php.net/int[int^]
+    a|
+|dontUseItemPriceRebates
+    |link:http://php.net/int[int^]
+    a|
+|customerId
+    |link:http://php.net/int[int^]
+    a|
+|allowedMops
+    |link:http://php.net/string[string^]
+    a|The list of allowed payment methods
+|pdwQuantity1
+    |link:http://php.net/float[float^]
+    a|
+|pdwDays1
+    |link:http://php.net/int[int^]
+    a|
+|pdwQuantity2
+    |link:http://php.net/float[float^]
+    a|
+|pdwDays2
+    |link:http://php.net/int[int^]
+    a|
+|pdwQuantity3
+    |link:http://php.net/float[float^]
+    a|
+|pdwDays3
+    |link:http://php.net/int[int^]
+    a|
+|pdwQuantity4
+    |link:http://php.net/float[float^]
+    a|
+|pdwDays4
+    |link:http://php.net/int[int^]
+    a|
+|pdwQuantity5
+    |link:http://php.net/float[float^]
+    a|
+|pdwDays5
+    |link:http://php.net/int[int^]
+    a|
+|customerGroupsPaymentNotice
+    |link:http://php.net/string[string^]
+    a|
+|earlyPaymentDiscount
+    |link:http://php.net/float[float^]
+    a|
+|earlyPaymentDiscountDays
+    |link:http://php.net/float[float^]
+    a|
+|valuta
+    |link:http://php.net/int[int^]
+    a|
+|manualDiscount
+    |link:http://php.net/float[float^]
+    a|
+|allowedMethodOfPaymentIdsList
+    |link:http://php.net/array[array^]
+    a|
 |===
 
 
