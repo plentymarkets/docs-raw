@@ -5858,7 +5858,7 @@ The Ebay properties model of the messenger.
     a|Ebay message type
 |ebayResponseEnabled
     |link:http://php.net/bool[bool^]
-    a|Ebay reponse enabled/disabled
+    a|Ebay response enabled/disabled
 |ebayAccountId
     |link:http://php.net/int[int^]
     a|Ebay account ID
@@ -6011,6 +6011,9 @@ The ConversationRole model of the messenger.
 |===
 |Name |Type |Description
 
+|id
+    |link:http://php.net/int[int^]
+    a|
 |position
     |link:http://php.net/int[int^]
     a|
@@ -6071,6 +6074,126 @@ The ConversationRoleNames model of the messenger.
 |name
     |link:http://php.net/string[string^]
     a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+[[messenger_ticketsystemmigration]]
+== TicketSystemMigration
+
+[[messenger_ticketsystemmigration_contracts]]
+===  Contracts
+[[messenger_contracts_ticketmigrationstatusrepositorycontract]]
+==== TicketMigrationStatusRepositoryContract
+
+TicketMigrationRepositoryContract is the interface for the ticketMigrationStatus repository.
+ * This interface allows to list, get, create ticketMigrationStatus.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\TicketSystemMigration\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#saveticketmigrationstatus]
+----
+
+public saveTicketMigrationStatus($data):bool
+
+----
+
+
+
+
+
+
+
+Adds a new ticketMigrationStatus entry
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|The ticketMigrationStatus data as array.
+|===
+
+
+[[messenger_ticketsystemmigration_models]]
+===  Models
+[[messenger_models_ticketmigrationstatus]]
+==== TicketMigrationStatus
+
+The ticket migration status model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Messenger\TicketSystemMigration\Models`
+
+===== Referenceable
+id
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The PK ID
+|ticketId
+    |link:http://php.net/int[int^]
+    a|The ticket ID
+|migrationStatus
+    |link:http://php.net/int[int^]
+    a|The status of the migration that took place:
+<ul>
+<li> failed </li>
+<li> migrated</li>
+</ul>
+|errorMessage
+    |link:http://php.net/string[string^]
+    a|The details of the failed migration
+|conversationId
+    |link:http://php.net/string[string^]
+    a|The new conversation Id that the ticket is mapped to
+|createdAt
+    |
+    a|The date the ticket status of the migration was created
+|updatedAt
+    |
+    a|The date the ticket status of the migration was last updated
 |===
 
 
