@@ -463,6 +463,32 @@ a|
 
 
 [source%nowrap, php]
+[#setmetadata]
+----
+
+public setMetaData($metaData):Plenty\Modules\Document\Builder\Variables\Services\VariablesResolutionService
+
+----
+
+
+
+
+====== *Return type:*        xref:Document.adoc#document_services_variablesresolutionservice[`VariablesResolutionService`]
+
+
+Set the meta data of the template into the variables context
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$metaData`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#setcontact]
 ----
 
@@ -2517,7 +2543,70 @@ The DocumentBuilder template output setting model
 |xmlFormat
     |link:http://php.net/string[string^]
     a|
+|repeatPdfBackground
+    |link:http://php.net/string[string^]
+    a|
+|unitFormat
+    |link:http://php.net/string[string^]
+    a|
 |documentTemplateSetting
+    |        xref:Document.adoc#document_models_documenttemplatesetting[`DocumentTemplateSetting`]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_models_documenttemplatereference]]
+==== DocumentTemplateReference
+
+The DocumentBuilder template reference model
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\TemplateSetting\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|templateId
+    |link:http://php.net/int[int^]
+    a|
+|type
+    |link:http://php.net/int[int^]
+    a|
+|referenceTemplateId
+    |link:http://php.net/int[int^]
+    a|
+|documentTemplateSetting
+    |        xref:Document.adoc#document_models_documenttemplatesetting[`DocumentTemplateSetting`]
+    a|
+|referenceDocumentTemplateSetting
     |        xref:Document.adoc#document_models_documenttemplatesetting[`DocumentTemplateSetting`]
     a|
 |===
@@ -2600,6 +2689,24 @@ The DocumentBuilder template setting model
     a|
 |outputSetting
     |        xref:Document.adoc#document_models_documenttemplateoutputsetting[`DocumentTemplateOutputSetting`]
+    a|
+|references
+    |
+    a|
+|headerReference
+    |        xref:Document.adoc#document_models_documenttemplatereference[`DocumentTemplateReference`]
+    a|
+|footerReference
+    |        xref:Document.adoc#document_models_documenttemplatereference[`DocumentTemplateReference`]
+    a|
+|referencedBy
+    |
+    a|
+|headerReferencedBy
+    |
+    a|
+|footerReferencedBy
+    |
     a|
 |typeSettings
     |
