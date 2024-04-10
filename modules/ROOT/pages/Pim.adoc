@@ -9515,6 +9515,12 @@ The Property selection values of the variation
 |selectionId
     |link:http://php.net/int[int^]
     a|The selection id of the relation selection value
+|createdAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The creation date of the relation selection value
+|updatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The last update date of the relation selection value
 |===
 
 
@@ -9569,6 +9575,12 @@ The Property values of the variation
 |description
     |link:http://php.net/string[string^]
     a|The description of the relation value
+|createdAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The creation date of the relation value
+|updatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The last update date of the relation value
 |===
 
 
@@ -9817,6 +9829,22 @@ public getKey():string
 
 
 [source%nowrap, php]
+[#getuniquekeyvalue]
+----
+
+public getUniqueKeyValue():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#getvalidator]
 ----
 
@@ -9838,6 +9866,32 @@ public getValidator($operation):string
 |Name |Type |Description
 a|`$operation`
 |link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#haschanged]
+----
+
+public hasChanged($model):bool
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$model`
+|
 a|
 |===
 
@@ -26116,6 +26170,9 @@ Contains information about an additonal sku, belongs to a variation.
 |sku
     |link:http://php.net/string[string^]
     a|The additional sku for this variation.
+|updatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the linked additional sku was last updated
 |===
 
 
@@ -26227,6 +26284,9 @@ Contains information about a barcode, belongs to a variation.
 |variationId
     |link:http://php.net/int[int^]
     a|The unique ID of the variation.
+|createdAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The creation date of the barcode.
 |===
 
 
@@ -26458,6 +26518,18 @@ Contains the basic information of a variation.
 |campaignId
     |link:http://php.net/int[int^]
     a|
+|createdAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|
+|updatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|
+|relatedUpdatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|
+|availabilityUpdatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|
 |categoriesInherited
     |link:http://php.net/bool[bool^]
     a|
@@ -26539,6 +26611,12 @@ Contains information about a barcode, belongs to a variation.
 |componentQuantity
     |link:http://php.net/float[float^]
     a|The quantity of the variation to be added as bundle component
+|createdAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the linked bundle component was created
+|updatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the linked bundle component was last updated
 |===
 
 
@@ -26596,6 +26674,12 @@ Contains information about a category, belongs to a variation.
 |isNeckermannPrimary
     |link:http://php.net/string[string^]
     a|Flag that indicates if the category is the primary category for the market Neckermann for this variation.
+|createdAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the linked category was created
+|updatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the linked category was last updated
 |===
 
 
@@ -26644,6 +26728,9 @@ Contains information about a client, belongs to a variation.
 |plentyId
     |link:http://php.net/int[int^]
     a|The unique ID of the client (store)
+|createdAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the linked price was created
 |===
 
 
@@ -26812,6 +26899,9 @@ Contains information about an image, belongs to a variation.
 |imageId
     |link:http://php.net/int[int^]
     a|The unique ID of the image
+|updatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the linked image was last updated
 |===
 
 
@@ -27052,6 +27142,9 @@ Contains information about an market, belongs to a variation.
 |marketId
     |link:http://php.net/float[float^]
     a|The unique ID of the market
+|createdAt
+    |link:http://php.net/string[string^]
+    a|The creation date of the market
 |===
 
 
@@ -27184,6 +27277,12 @@ Contains information about a property, belongs to a variation.
 |selectionValues
     |link:http://php.net/array[array^]
     a|The selection values of this relation
+|createdAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The creation date of the property relation
+|updatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The last update date of the property relation
 |===
 
 
@@ -27331,6 +27430,9 @@ Contains information about a sku, belongs to a variation.
 |additionalInformation
     |link:http://php.net/string[string^]
     a|The field that contains additional information.
+|updatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time SKU was last updated
 |===
 
 
@@ -27415,6 +27517,9 @@ contains informations about a supplier, belongs to a variation.
 |itemDescription
     |link:http://php.net/string[string^]
     a|The supplier item description.
+|updatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the supplier was last updated
 |===
 
 
@@ -27466,6 +27571,12 @@ Contains information about a tag, belongs to a variation.
 |tagId
     |link:http://php.net/int[int^]
     a|The unique ID of the tag
+|createdAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the tag was created
+|updatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the tag was last updated
 |===
 
 
@@ -27703,6 +27814,12 @@ Contains information about a warehouse, belongs to a variation.
 |isBestBeforeDate
     |link:http://php.net/bool[bool^]
     a|Is for warehouse and variation stock best before date active
+|updatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the warehouse relation was last updated
+|createdAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the warehouse relation was created
 |===
 
 
