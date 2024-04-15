@@ -8949,7 +8949,7 @@ Contract for search contacts
 [#search]
 ----
 
-public search($page = 1, $itemsPerPage = 50, $filters = [], $sortBy = &quot;contactId&quot;, $sortOrder = &quot;desc&quot;, $with = &quot;&quot;):Plenty\Repositories\Models\FilteredPaginatedResult
+public search($page = 1, $itemsPerPage = 50, $filters = [], $sortBy = &quot;contactId&quot;, $sortOrder = &quot;desc&quot;, $with = &quot;&quot;, $returnAsArray = true):Plenty\Repositories\Models\FilteredPaginatedResult
 
 ----
 
@@ -8988,6 +8988,10 @@ a|
 a|`$with`
 |link:http://php.net/string[string^]
 a|
+
+a|`$returnAsArray`
+|link:http://php.net/bool[bool^]
+a|
 |===
 
 
@@ -8995,7 +8999,7 @@ a|
 [#searchafter]
 ----
 
-public searchAfter($itemsPerPage = 50, $filters = [], $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;, $with = &quot;&quot;, $searchAfterKey = [], $withResult = true):array
+public searchAfter($itemsPerPage = 50, $filters = [], $sortBy = &quot;id&quot;, $sortOrder = &quot;desc&quot;, $with = &quot;&quot;, $searchAfterKey = [], $withResult = true, $returnAsArray = true):array
 
 ----
 
@@ -9036,6 +9040,10 @@ a|`$searchAfterKey`
 a|
 
 a|`$withResult`
+|link:http://php.net/bool[bool^]
+a|
+
+a|`$returnAsArray`
 |link:http://php.net/bool[bool^]
 a|
 |===
