@@ -6347,6 +6347,58 @@ a|
 
 
 [source%nowrap, php]
+[#update]
+----
+
+public update($paymentMethodData):Plenty\Modules\Payment\Method\Models\PaymentMethod
+
+----
+
+
+
+
+====== *Return type:*        xref:Payment.adoc#payment_models_paymentmethod[`PaymentMethod`]
+
+
+Updates payment method name and isDocumentBuilderActive
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$paymentMethodData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#updatebulk]
+----
+
+public updateBulk($paymentMethods):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$paymentMethods`
+|
+a|
+|===
+
+
+[source%nowrap, php]
 [#preparepaymentmethod]
 ----
 
@@ -6554,6 +6606,32 @@ public backendActivePaymentMethods():array
 
 
 
+[source%nowrap, php]
+[#listdocumentbuilderactive]
+----
+
+public listDocumentBuilderActive($lang):array
+
+----
+
+
+
+
+
+
+
+List all payment methods which are active for DocumentBuilder
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$lang`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
 
 [[payment_contracts_paymentmethodservice]]
 ==== PaymentMethodService
@@ -6681,6 +6759,9 @@ The payment method model
 |name
     |link:http://php.net/string[string^]
     a|The name of the payment method
+|isDocumentBuilderActive
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if payment method is checked for document builder
 |===
 
 
