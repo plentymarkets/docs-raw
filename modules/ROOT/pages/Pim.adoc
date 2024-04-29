@@ -18330,6 +18330,125 @@ a|
 
 
 
+[[pim_filter_variationskuupdatedatfilter]]
+==== VariationSkuUpdatedAtFilter
+
+Used to filter by variation saleyPrice last update timestamp
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\SearchService\Filter`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#gettimestamp]
+----
+
+public getTimestamp():string
+
+----
+
+
+
+
+
+
+
+Get the timestamp of the filter
+
+[source%nowrap, php]
+[#gettype]
+----
+
+public getType():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#addstatement]
+----
+
+public addStatement($statement):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statement`
+|        xref:Cloud.adoc#cloud_statement_statementinterface[`StatementInterface`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addquery]
+----
+
+public addQuery($statement):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statement`
+|
+a|
+|===
+
+
+
 [[pim_filter_variationstockupdatedatfilter]]
 ==== VariationStockUpdatedAtFilter
 
@@ -27331,6 +27450,12 @@ Contains information about a sku, belongs to a variation.
 |additionalInformation
     |link:http://php.net/string[string^]
     a|The field that contains additional information.
+|updatedAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the linked sku was last updated
+|createdAt
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The time the linked sku was created
 |===
 
 
