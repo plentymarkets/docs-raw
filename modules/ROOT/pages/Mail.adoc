@@ -84,6 +84,206 @@ a|The class of the new class to get information of the widget from.
 |===
 
 
+[[mail_service]]
+== Service
+
+[[mail_service_emailservice]]
+===  EmailService
+[[mail_emailservice_emailtemplatessendservicecontract]]
+==== EmailTemplatesSendServiceContract
+
+The EmailTemplatesSendServiceContract is the interface for the email service.
+ * This interface defines methods to list available accounts, get list of templates, get send email history,
+ * render a template preview, send a template or send a custom email.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Mail\Templates\Contracts\Service\EmailService`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getaccounts]
+----
+
+public getAccounts($filters):array
+
+----
+
+
+
+
+
+
+
+List all email accounts that can be used to send emails (e.g. Webstore or Messenger inboxes)
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|List of filters, see REST API documentation for more information
+|===
+
+
+[source%nowrap, php]
+[#gettemplatestree]
+----
+
+public getTemplatesTree($sortBy = &quot;id&quot;, $sortOrder = &quot;asc&quot;, $filters = []):Illuminate\Support\Collection
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+
+
+List all EmailBuilder templates and folders structured as a nested tree
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|Sort results by a specific field
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|Sort results in ascending or descending order
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|Filters to apply to the results
+|===
+
+
+[source%nowrap, php]
+[#getemailhistory]
+----
+
+public getEmailHistory($filters = []):array
+
+----
+
+
+
+
+
+
+
+List all sent email for a specific entity (e.g order, contact, etc.)
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|link:http://php.net/array[array^]
+a|Filters to apply to the results, see REST API documentation for more information
+|===
+
+
+[source%nowrap, php]
+[#getpreview]
+----
+
+public getPreview($templateId, $data = []):array
+
+----
+
+
+
+
+
+
+
+Generates a render preview of a specific template
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$templateId`
+|link:http://php.net/int[int^]
+a|ID of the template to preview
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|Array with additional parameters (e.g order ID, receiver email, etc.),
+see REST API documentation for more information
+|===
+
+
+[source%nowrap, php]
+[#sendemail]
+----
+
+public sendEmail($templateId, $data = []):array
+
+----
+
+
+
+
+
+
+
+Renders a template and sends an email to the specified recipients
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$templateId`
+|link:http://php.net/int[int^]
+a|ID of the template to be sent
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|Array with additional parameters (e.g order ID, receiver email, etc.),
+see REST API documentation for more information
+|===
+
+
+[source%nowrap, php]
+[#sendpreview]
+----
+
+public sendPreview($data = []):array
+
+----
+
+
+
+
+
+
+
+Sends a direct email to the specified recipients (a preview of a template or any other custom content email)
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|Array with email data (e.g Account ID, from, subject, body, receivers, cc, bcc,
+attachments, etc.), see REST API documentation for more information
+|===
+
+
 [[mail_models]]
 == Models
 
