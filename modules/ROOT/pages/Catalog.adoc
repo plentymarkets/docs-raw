@@ -7382,6 +7382,99 @@ public toArray():array
 
 
 
+
+[[catalog_models_catalogstatus]]
+==== CatalogStatus
+
+The catalog status model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Catalog\Version2\Catalog\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|The ID of the status
+|catalog_id
+    |link:http://php.net/int[int^]
+    a|The ID of the catalog
+|version_id
+    |link:http://php.net/string[string^]
+    a|The ID of the version
+|type
+    |link:http://php.net/string[string^]
+    a|The type of status ( run, etc )
+|subtype
+    |link:http://php.net/string[string^]
+    a|The subtype of the status ( marketplace, async, etc )
+|has_data
+    |link:http://php.net/bool[bool^]
+    a|Checks if it has a status file on S3
+|has_logs
+    |link:http://php.net/bool[bool^]
+    a|Checks if it has logs on S3
+|logs
+    |link:http://php.net/int[int^]
+    a|The logs count
+|initiator
+    |link:http://php.net/string[string^]
+    a|The initiator of this status. Who started it. ( User, Cron, Marketplace )
+|initiator_id
+    |link:http://php.net/string[string^]
+    a|The initiator ID
+|state
+    |link:http://php.net/string[string^]
+    a|The state of this status (Starting, Processing, Completed, Failed, etc)
+|speed
+    |link:http://php.net/float[float^]
+    a|The speed per page
+|total
+    |link:http://php.net/int[int^]
+    a|The total count of what needs to be processed
+|processed
+    |link:http://php.net/int[int^]
+    a|The processed count
+|successful
+    |link:http://php.net/int[int^]
+    a|The successful processes count
+|createdAt
+    |
+    a|The date when the status was created
+|updatedAt
+    |
+    a|The date when the status was last updated
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
 [[catalog_catalog_templates]]
 ===  Templates
 [[catalog_templates_basetemplateprovider]]
