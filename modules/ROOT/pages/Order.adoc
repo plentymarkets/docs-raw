@@ -28355,7 +28355,7 @@ a|
 [#updatedeliverydates]
 ----
 
-public updateDeliveryDates($orderId):Plenty\Modules\Order\Models\Order
+public updateDeliveryDates($orderId, $date = null, $transferToOrderItems = null):Plenty\Modules\Order\Models\Order
 
 ----
 
@@ -28373,6 +28373,14 @@ Calculate and save the delivery dates
 |Name |Type |Description
 a|`$orderId`
 |link:http://php.net/int[int^]
+a|
+
+a|`$date`
+|        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+a|
+
+a|`$transferToOrderItems`
+|link:http://php.net/string[string^]
 a|
 |===
 
@@ -32920,6 +32928,32 @@ public create($data):Plenty\Modules\Order\Transaction\Models\OrderItemTransactio
 
 
 Create a transaction
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#createmany]
+----
+
+public createMany($data):array
+
+----
+
+
+
+
+
+
+
+Create multiple transactions
 
 .*Parameters*
 [cols="3,1,6"]
