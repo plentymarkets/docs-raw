@@ -4998,6 +4998,32 @@ a|The ID of the contact
 
 
 [source%nowrap, php]
+[#batchupdate]
+----
+
+public batchUpdate($contactsBatch):bool
+
+----
+
+
+
+
+
+
+
+Updates batch of contacts and returns them.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$contactsBatch`
+|        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
+a|
+|===
+
+
+[source%nowrap, php]
 [#updatenewsletterdate]
 ----
 
@@ -6875,6 +6901,78 @@ The contact bank model.
 |order
     |        xref:Order.adoc#order_legacy_order[`Order`]
     a|The order the bank account belongs to
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[account_models_contactbatchupdateentry]]
+==== ContactBatchUpdateEntry
+
+The ContactBatchUpdateEntry model of the contact.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Account\Contact\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|
+    |link:http://php.net/int[int^]
+    a|contactId
+|
+    |link:http://php.net/int[int^]
+    a|typeId
+|
+    |link:http://php.net/int[int^]
+    a|classId
+|
+    |link:http://php.net/int[int^]
+    a|userId
+|
+    |link:http://php.net/string[string^]
+    a|firstName
+|
+    |link:http://php.net/string[string^]
+    a|lastName
+|
+    |link:http://php.net/string[string^]
+    a|lang
+|
+    |link:http://php.net/string[string^]
+    a|plentyId
+|
+    |link:http://php.net/int[int^]
+    a|rating
+|
+    |link:http://php.net/array[array^]
+    a|tagsIds
 |===
 
 
