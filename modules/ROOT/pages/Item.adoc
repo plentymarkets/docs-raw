@@ -34526,7 +34526,7 @@ public show($variationId, $categoryId):Plenty\Modules\Item\VariationCategory\Mod
 ====== *Return type:*        xref:Item.adoc#item_models_variationcategory[`VariationCategory`]
 
 
-Gets the link between a category and a variation. The ID of the variation and the ID of the category must be specified.
+Gets the link between a category and a variation.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -34582,7 +34582,7 @@ public update($data, $variationId, $categoryId):Plenty\Modules\Item\VariationCat
 ====== *Return type:*        xref:Item.adoc#item_models_variationcategory[`VariationCategory`]
 
 
-Updates a link between a category and a variation. The ID of the variation and the ID of the category must be specified.
+Updates a link between a category and a variation.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -34616,7 +34616,7 @@ public delete($variationId, $categoryId):Plenty\Repositories\Models\DeleteRespon
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[`DeleteResponse`]
 
 
-Deletes the link between a category and a variation. The ID of the variation and the ID of the category must be specified.
+Deletes the link between a category and a variation.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -34646,7 +34646,7 @@ public findByVariationId($variationId):Plenty\Modules\Item\VariationCategory\Mod
 ====== *Return type:*        xref:Item.adoc#item_models_variationcategory[`VariationCategory`]
 
 
-Lists the categories linked to a variation. The ID of the variation must be specified.
+Lists the categories linked to a variation.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -34672,7 +34672,7 @@ public findByVariationIdWithInheritance($variationId):Plenty\Modules\Item\Variat
 ====== *Return type:*        xref:Item.adoc#item_models_variationcategory[`VariationCategory`]
 
 
-Lists the categories linked to a variation including inheritance information. The ID of the variation must be specified.
+Lists the categories linked to a variation including inheritance information.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -34698,7 +34698,7 @@ public updateBulk($data):Illuminate\Support\Collection
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
-Updates up to 50 links between variations and categories. The ID of the variations and the ID of the categories must be specified.
+Updates up to 50 links between variations and categories.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -34724,7 +34724,7 @@ public createBulk($data):Illuminate\Support\Collection
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 
 
-Creates up to 50 links between variations and categories. The ID of the variations and the ID of the categories must be specified.
+Creates up to 50 links between variations and categories.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -34828,7 +34828,7 @@ public findOne($plentyId, $variationId):Plenty\Modules\Item\VariationClient\Mode
 ====== *Return type:*        xref:Item.adoc#item_models_variationclient[`VariationClient`]
 
 
-Gets a client (store) linked to a variation. The ID of the variation and the client ID must be specified.
+Gets a client (store) linked to a variation.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -34884,7 +34884,7 @@ public delete($plentyId, $variationId):Plenty\Repositories\Models\DeleteResponse
 ====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_deleteresponse[`DeleteResponse`]
 
 
-Deletes the link between a variation and a client (store). The ID of the variation and the client ID must be specified.
+Deletes the link between a variation and a client (store).
 
 .*Parameters*
 [cols="3,1,6"]
@@ -34940,7 +34940,7 @@ public findByVariationIdWithInheritance($variationId):Plenty\Modules\Item\Variat
 ====== *Return type:*        xref:Item.adoc#item_models_variationclient[`VariationClient`]
 
 
-Lists the clients (stores) linked to a variation including inheritance information. The ID of the variation must be specified.
+Lists the clients (stores) linked to a variation including inheritance information.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -36366,7 +36366,7 @@ a|The unique ID of the market ident number
 [#delete]
 ----
 
-public delete($variationMarketIdentNumberId):Plenty\Repositories\Models\DeleteResponse
+public delete($variationMarketIdentNumberId, $variationId = null):Plenty\Repositories\Models\DeleteResponse
 
 ----
 
@@ -36385,6 +36385,10 @@ Deletes a market ident number (ASIN/ePID) of a variation. The ID of the market i
 a|`$variationMarketIdentNumberId`
 |link:http://php.net/int[int^]
 a|The unique ID of the market ident number
+
+a|`$variationId`
+|link:http://php.net/int[int^]
+a|The unique ID of the variation which belongs to the market ident number ID
 |===
 
 
