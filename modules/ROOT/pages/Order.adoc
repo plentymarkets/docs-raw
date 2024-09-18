@@ -2260,6 +2260,22 @@ public orderShippingProfileFilterBuilder():Plenty\Modules\Order\Catalogues\Order
 
 
 
+[source%nowrap, php]
+[#orderexcludemainordersfilterbuilder]
+----
+
+public orderExcludeMainOrdersFilterBuilder():Plenty\Modules\Order\Catalogues\Order\Template\Filters\OrderShippingProfileFilterBuilder
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_filters_ordershippingprofilefilterbuilder[`OrderShippingProfileFilterBuilder`]
+
+
+
+
 [[order_order_contracts]]
 ===  Contracts
 [[order_contracts_orderamountrepositorycontract]]
@@ -18838,6 +18854,109 @@ a|
 
 
 
+[[order_filters_orderexcludemainordersfilterbuilder]]
+==== OrderExcludeMainOrdersFilterBuilder
+
+Used to represent the exclude main orders filter.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Catalogues\Order\Template\Filters`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+
 [[order_filters_orderidfilterbuilder]]
 ==== OrderIdFilterBuilder
 
@@ -20712,6 +20831,51 @@ The model of the creditNote order settings.
 |
     |link:http://php.net/int[int^]
     a|defaultCreditNoteReasonId
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[order_models_offersettings]]
+==== OfferSettings
+
+The model of the offer settings.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Offer\Settings\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|validDays
+    |link:http://php.net/int[int^]
+    a|
 |===
 
 
