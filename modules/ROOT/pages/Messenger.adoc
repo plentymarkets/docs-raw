@@ -1262,6 +1262,15 @@ The MessageTo model of the messenger.
 |allUsers
     |link:http://php.net/bool[bool^]
     a|Flag indicating that all system users receive the message
+|contacts
+    |link:http://php.net/array[array^]
+    a|A snapshot of the contacts from conversation->conversationRecipients
+|orders
+    |link:http://php.net/array[array^]
+    a|A snapshot of the orders from conversation->conversationRecipients
+|emails
+    |link:http://php.net/array[array^]
+    a|A snapshot of the emails from conversation->conversationRecipients
 |===
 
 
@@ -3326,7 +3335,7 @@ a|List of conversations UUID's separated by comma
 [#searchreceiver]
 ----
 
-public searchReceiver($searchTerm, $companyId = null):array
+public searchReceiver($searchTerm, $companyId = null, $extraParams = []):array
 
 ----
 
@@ -3349,6 +3358,10 @@ a|The searched term
 a|`$companyId`
 |link:http://php.net/int[int^]
 a|The company ID for witch will make the search
+
+a|`$extraParams`
+|link:http://php.net/array[array^]
+a|
 |===
 
 
@@ -3836,7 +3849,7 @@ a|
 [#removeconversationrelation]
 ----
 
-public removeConversationRelation($conversationUuid, $type, $value):bool
+public removeConversationRelation($conversationUuid, $type, $value, $removeRecipient = false):bool
 
 ----
 
@@ -3862,6 +3875,52 @@ a|
 
 a|`$value`
 |link:http://php.net/string[string^]
+a|
+
+a|`$removeRecipient`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addconversationrelation]
+----
+
+public addConversationRelation($conversationUuid, $emails, $contacts, $orders, $addToRecipients):bool
+
+----
+
+
+
+
+
+
+
+Adds relations to a conversation
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$conversationUuid`
+|link:http://php.net/string[string^]
+a|
+
+a|`$emails`
+|link:http://php.net/array[array^]
+a|
+
+a|`$contacts`
+|link:http://php.net/array[array^]
+a|
+
+a|`$orders`
+|link:http://php.net/array[array^]
+a|
+
+a|`$addToRecipients`
+|link:http://php.net/bool[bool^]
 a|
 |===
 
@@ -4850,6 +4909,9 @@ The Conversation model of the messenger.
 |conversationRelation
     |link:http://php.net/array[array^]
     a|The relations to other entities
+|conversationRecipients
+    |link:http://php.net/array[array^]
+    a|The recipients of new Messages
 |tagIds
     |link:http://php.net/array[array^]
     a|Array of tag IDs
