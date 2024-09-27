@@ -932,6 +932,291 @@ a|
 
 [[shopbuilder_shopbuilder_factories]]
 ===  Factories
+[[shopbuilder_factories_widgetdatafactory]]
+==== WidgetDataFactory
+
+Factory to create widget data
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Factories`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#make]
+----
+
+public static make($identifier):Plenty\Modules\ShopBuilder\Factories\WidgetDataFactory
+
+----
+
+
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_factories_widgetdatafactory[`WidgetDataFactory`]
+
+
+Create a new widget factory instance.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$identifier`
+|link:http://php.net/string[string^]
+a|Unique identifier of the widget.
+|===
+
+
+[source%nowrap, php]
+[#withlabel]
+----
+
+public withLabel($label):Plenty\Modules\ShopBuilder\Factories\WidgetDataFactory
+
+----
+
+
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_factories_widgetdatafactory[`WidgetDataFactory`]
+
+
+Set a label for this widget. Will be translated.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$label`
+|link:http://php.net/string[string^]
+a|Label of the widget to be displayed in the shop builder
+|===
+
+
+[source%nowrap, php]
+[#withpreviewimageurl]
+----
+
+public withPreviewImageUrl($previewImageUrl):Plenty\Modules\ShopBuilder\Factories\WidgetDataFactory
+
+----
+
+
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_factories_widgetdatafactory[`WidgetDataFactory`]
+
+
+Set the url of a preview image for the widget.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$previewImageUrl`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#withtype]
+----
+
+public withType($type):Plenty\Modules\ShopBuilder\Factories\WidgetDataFactory
+
+----
+
+
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_factories_widgetdatafactory[`WidgetDataFactory`]
+
+
+Set the type of the widget.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$type`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#withcategory]
+----
+
+public withCategory($category):Plenty\Modules\ShopBuilder\Factories\WidgetDataFactory
+
+----
+
+
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_factories_widgetdatafactory[`WidgetDataFactory`]
+
+
+Add a category for the widget. A widget might be assigned to multiple categories.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$category`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#withposition]
+----
+
+public withPosition($position):Plenty\Modules\ShopBuilder\Factories\WidgetDataFactory
+
+----
+
+
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_factories_widgetdatafactory[`WidgetDataFactory`]
+
+
+Set the position of the widget.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$position`
+|link:http://php.net/int[int^]
+a|Position of the widget
+|===
+
+
+[source%nowrap, php]
+[#withmaxperpage]
+----
+
+public withMaxPerPage($maxPerPage):Plenty\Modules\ShopBuilder\Factories\WidgetDataFactory
+
+----
+
+
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_factories_widgetdatafactory[`WidgetDataFactory`]
+
+
+Limit the amount of times a widget can be placed on a content.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$maxPerPage`
+|link:http://php.net/int[int^]
+a|Maximum allowed amount of instances of the widget on a content
+|===
+
+
+[source%nowrap, php]
+[#withallowednestingtypes]
+----
+
+public withAllowedNestingTypes($allowedTypes):Plenty\Modules\ShopBuilder\Factories\WidgetDataFactory
+
+----
+
+
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_factories_widgetdatafactory[`WidgetDataFactory`]
+
+
+Limits the widget types that you can drop into this widget.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$allowedTypes`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#withdeprecated]
+----
+
+public withDeprecated():Plenty\Modules\ShopBuilder\Factories\WidgetDataFactory
+
+----
+
+
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_factories_widgetdatafactory[`WidgetDataFactory`]
+
+
+Set the widget as deprecated.
+
+[source%nowrap, php]
+[#withsearchkeywords]
+----
+
+public withSearchKeyWords($keywords):Plenty\Modules\ShopBuilder\Factories\WidgetDataFactory
+
+----
+
+
+
+
+====== *Return type:*        xref:Shopbuilder.adoc#shopbuilder_factories_widgetdatafactory[`WidgetDataFactory`]
+
+
+List of keywords for the shopBuilder widget search
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$keywords`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+Get widget data.
+
+
 [[shopbuilder_factories_widgetsettingsfactory]]
 ==== WidgetSettingsFactory
 
@@ -1823,6 +2108,118 @@ a|The identifier of the field to assign keywords to.
 a|`$keywords`
 |link:http://php.net/array[array^]
 a|A list of keywords. Each keyword may contain a translation key. A single keyword could be a comma separated list of words.
+|===
+
+
+[[shopbuilder_shopbuilder_widgets]]
+===  Widgets
+[[shopbuilder_widgets_basewidget]]
+==== BaseWidget
+
+BaseWidget class for plentyShop LTS
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Widgets`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getdata]
+----
+
+public getData():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getsettings]
+----
+
+public getSettings():void
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getpreview]
+----
+
+public getPreview($widgetSettings = [], $children = []):string
+
+----
+
+
+
+
+
+
+
+Get the html representation of the widget.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$widgetSettings`
+|link:http://php.net/array[array^]
+a|The settings provided by the widget.
+
+a|`$children`
+|link:http://php.net/array[array^]
+a|The child widgets of the widget.
+|===
+
+
+[source%nowrap, php]
+[#render]
+----
+
+public render($widgetSettings = [], $children = []):string
+
+----
+
+
+
+
+
+
+
+Render the template of the widget.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$widgetSettings`
+|link:http://php.net/array[array^]
+a|The settings provided by the widget.
+
+a|`$children`
+|link:http://php.net/array[array^]
+a|The child widgets of the widget.
 |===
 
 
@@ -6818,4 +7215,24 @@ public toArray():void
 
 
 Get all values.
+
+[[shopbuilder_widgets]]
+== Widgets
+
+[[shopbuilder_widgets_helper]]
+===  Helper
+[[shopbuilder_helper_widgettypes]]
+==== WidgetTypes
+
+Class to define widget types
+
+
+
+===== Namespace
+
+`Plenty\Modules\ShopBuilder\Widgets\Helper`
+
+
+
+
 
