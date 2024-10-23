@@ -5162,6 +5162,52 @@ a|[optional, default=desc]
 
 
 [source%nowrap, php]
+[#searchcontacts]
+----
+
+public searchContacts($filters, $with, $page, $itemsPerPage, $sortBy, $sortOrder):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filters`
+|        xref:Account.adoc#account_complex_contactsearchrequestfilters[`ContactSearchRequestFilters`]
+a|
+
+a|`$with`
+|link:http://php.net/array[array^]
+a|
+
+a|`$page`
+|link:http://php.net/int[int^]
+a|
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#getcontactbyoptionvalue]
 ----
 
@@ -9385,6 +9431,58 @@ public static isIndexReadyToBeUsed():void
 
 
 
+
+[[account_filter]]
+== Filter
+
+[[account_filter_complex]]
+===  Complex
+[[account_complex_contactsearchrequestfilters]]
+==== ContactSearchRequestFilters
+
+Represent the request filters model for searching contacts
+
+
+
+===== Namespace
+
+`Plenty\Modules\Account\Contact\Search7\Filter\Complex`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|conditionType
+    |link:http://php.net/string[string^]
+    a|
+|fields
+    |link:http://php.net/array[array^]
+    a|
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
 
 [[account_account]]
 == Account
