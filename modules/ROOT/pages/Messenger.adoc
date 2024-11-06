@@ -116,6 +116,36 @@ a|The amount of messages to list (defaults to 50)
 
 
 [source%nowrap, php]
+[#listconversationmessages]
+----
+
+public listConversationMessages($conversationUuid, $isDeleted = false):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Lists messages for a single conversation
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$conversationUuid`
+|link:http://php.net/string[string^]
+a|
+
+a|`$isDeleted`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#listarchivedmessages]
 ----
 
@@ -3921,6 +3951,36 @@ a|
 
 a|`$addToRecipients`
 |link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#batchchangegroup]
+----
+
+public batchChangeGroup($uuids, $groupId):int
+
+----
+
+
+
+
+
+
+
+Changes group for a batch of conversations
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|
+
+a|`$groupId`
+|link:http://php.net/int[int^]
 a|
 |===
 
