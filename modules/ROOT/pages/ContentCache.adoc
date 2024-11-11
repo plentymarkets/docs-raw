@@ -506,7 +506,7 @@ public enableCacheForResponse($options = []):void
 
 
 
-Enable content caching for current response so next request on this resource will be delivered from content cache.
+Enable content caching for response so next request on this resource will be delivered from content cache.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -523,7 +523,7 @@ a|Additional options to be considered when handling cache entries. Possible opti
 [#disablecacheforresponse]
 ----
 
-public disableCacheForResponse($reason = &quot;&quot;):void
+public disableCacheForResponse($reason = &quot;&quot;, $disableLog = false):void
 
 ----
 
@@ -542,6 +542,10 @@ Disable caching for current response because of any unwanted behavior.
 a|`$reason`
 |link:http://php.net/string[string^]
 a|Reason why the response is not cached.
+
+a|`$disableLog`
+|link:http://php.net/bool[bool^]
+a|Option to disable log entries.
 |===
 
 
