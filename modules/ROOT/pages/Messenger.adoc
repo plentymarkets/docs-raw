@@ -3224,6 +3224,32 @@ a|Read status: true/false
 
 
 [source%nowrap, php]
+[#marknotspam]
+----
+
+public markNotSpam($uuids):int
+
+----
+
+
+
+
+
+
+
+Marks a batch of conversations as red/not read by the given user
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$uuids`
+|link:http://php.net/array[array^]
+a|Array of conversations UUID's
+|===
+
+
+[source%nowrap, php]
 [#batchresubmitconversations]
 ----
 
@@ -5141,6 +5167,9 @@ The Conversation model of the messenger.
 |isArchived
     |link:http://php.net/bool[bool^]
     a|Flag that indicates if the conversation is archived
+|isSpam
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if the conversation is spam
 |conversationPreview
     |link:http://php.net/string[string^]
     a|Strip last the message from messagesBodies to 200 characters, used for preview.
