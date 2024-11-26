@@ -3227,17 +3227,6 @@ public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 Get the default configuration of a search factory. This applies the following filters
- - @see VariationSearchFactory::isActive()
- - @see VariationSearchFactory::isVisibleForClient()
- - @see VariationSearchFactory::hasPriceForCustomer()
- - @see VariationSearchFactory::hasNameInLanguage()
- - @see VariationSearchFactory::withLanguage()
- - @see VariationSearchFactory::withUrls()
- - @see VariationSearchFactory::withImages()
- - @see VariationSearchFactory::withDefaultImage()
- - @see VariationSearchFactory::withPrices()
- - @see VariationSearchFactory::withReducedResults()
- - @see VariationSearchFactory::withSalableVariationCount()
 
 .*Parameters*
 [cols="3,1,6"]
@@ -3246,7 +3235,7 @@ Get the default configuration of a search factory. This applies the following fi
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options
-- `quantities` Quantities of the variations in the basket. This will be considered while calculating graduated prices
+- `quantities` Quantities of the variations in the basket. This will be considered while calculating prices
 - `setPriceOnly` Set to true to only consider prices for item sets
 |===
 
@@ -4261,6 +4250,32 @@ public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories\Variatio
 ====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
+
+
+[source%nowrap, php]
+[#withreducedmanufacturerdata]
+----
+
+public withReducedManufacturerData($manufacturerFields):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
+
+----
+
+
+
+
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$manufacturerFields`
+|link:http://php.net/string[string^]
+a|
+|===
 
 
 [source%nowrap, php]
@@ -4938,17 +4953,6 @@ public static default($options = []):Plenty\Modules\Webshop\ItemSearch\Factories
 
 
 Get the default configuration of a search factory. This applies the following filters
- - @see VariationSearchFactory::isActive()
- - @see VariationSearchFactory::isVisibleForClient()
- - @see VariationSearchFactory::hasPriceForCustomer()
- - @see VariationSearchFactory::hasNameInLanguage()
- - @see VariationSearchFactory::withLanguage()
- - @see VariationSearchFactory::withUrls()
- - @see VariationSearchFactory::withImages()
- - @see VariationSearchFactory::withDefaultImage()
- - @see VariationSearchFactory::withPrices()
- - @see VariationSearchFactory::withReducedResults()
- - @see VariationSearchFactory::withSalableVariationCount()
 
 .*Parameters*
 [cols="3,1,6"]
@@ -4957,7 +4961,7 @@ Get the default configuration of a search factory. This applies the following fi
 a|`$options`
 |link:http://php.net/array[array^]
 a|Available options
-- `quantities` Quantities of the variations in the basket. This will be considered while calculating graduated prices
+- `quantities` Quantities of the variations in the basket. This will be considered while calculating prices
 - `setPriceOnly` Set to true to only consider prices for item sets
 |===
 
@@ -5972,6 +5976,32 @@ public withReducedResults():Plenty\Modules\Webshop\ItemSearch\Factories\Variatio
 ====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
 
 
+
+
+[source%nowrap, php]
+[#withreducedmanufacturerdata]
+----
+
+public withReducedManufacturerData($manufacturerFields):Plenty\Modules\Webshop\ItemSearch\Factories\VariationSearchFactory
+
+----
+
+
+
+
+====== *Return type:*        xref:Webshop.adoc#webshop_factories_variationsearchfactory[`VariationSearchFactory`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$manufacturerFields`
+|link:http://php.net/string[string^]
+a|
+|===
 
 
 [source%nowrap, php]
@@ -7698,7 +7728,7 @@ a|`$options`
 |link:http://php.net/array[array^]
 a|Available options:
 - *itemId* Item id to get
-- *variationId* Variation id to get. If not defined, plugin configuration will be considered if main or child variation should be displayed.
+- *variationId* Variation id to get. If not defined, plugin configuration will be considered
 - *setCategory* Flag indicating if item should be set as current item to be displayed in breadcrumbs
 |===
 
