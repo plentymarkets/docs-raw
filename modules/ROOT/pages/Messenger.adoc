@@ -2714,6 +2714,32 @@ a|
 |===
 
 
+[source%nowrap, php]
+[#createdefaulttypesandstatuses]
+----
+
+public createDefaultTypesAndStatuses($id):bool
+
+----
+
+
+
+
+
+
+
+Creates default types and statuses for a category
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$id`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
 
 [[messenger_contracts_conversationfolderrepositorycontract]]
 ==== ConversationFolderRepositoryContract
@@ -4408,6 +4434,64 @@ a|Array with status ID's
 |===
 
 
+[source%nowrap, php]
+[#getlaststatusid]
+----
+
+public getLastStatusId():void
+
+----
+
+
+
+
+
+
+
+Get the ID of the last created status
+
+[source%nowrap, php]
+[#getmaxposition]
+----
+
+public getMaxPosition($typeId):void
+
+----
+
+
+
+
+
+
+
+Gets the highest position of a status
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$typeId`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setstatuseslist]
+----
+
+public setStatusesList():void
+
+----
+
+
+
+
+
+
+
+Refreshes list of statuses
+
 
 [[messenger_contracts_conversationtyperepositorycontract]]
 ==== ConversationTypeRepositoryContract
@@ -4606,6 +4690,64 @@ a|`$typeIds`
 a|Array of type ID's
 |===
 
+
+[source%nowrap, php]
+[#getlasttypeid]
+----
+
+public getLastTypeId():void
+
+----
+
+
+
+
+
+
+
+Get the ID of the last created type
+
+[source%nowrap, php]
+[#getmaxposition]
+----
+
+public getMaxPosition($categoryId):void
+
+----
+
+
+
+
+
+
+
+Gets the highest position of a type
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$categoryId`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#settypeslist]
+----
+
+public setTypesList():void
+
+----
+
+
+
+
+
+
+
+Refreshes list of types
 
 [[messenger_conversations_events]]
 ===  Events
