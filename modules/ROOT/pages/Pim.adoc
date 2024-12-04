@@ -539,6 +539,22 @@ public itemBelongsToAtLeastOneAmazonFlatFile():Plenty\Modules\Pim\Catalog\Variat
 
 
 [source%nowrap, php]
+[#itembelongstoatleastoneamazonproducttype]
+----
+
+public itemBelongsToAtLeastOneAmazonProductType():Plenty\Modules\Pim\Catalog\Variation\Filters\Item\ItemBelongsToAtLeastOneAmazonProductType
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_item_itembelongstoatleastoneamazonproducttype[`ItemBelongsToAtLeastOneAmazonProductType`]
+
+
+
+
+[source%nowrap, php]
 [#itemcreatedat]
 ----
 
@@ -3166,6 +3182,188 @@ public addAmazonFlatFile($flatFile):Plenty\Modules\Pim\Catalog\Variation\Filters
 |===
 |Name |Type |Description
 a|`$flatFile`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters\FilterBuilder
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_filterbuilder[`FilterBuilder`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters\FilterBuilder
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_filterbuilder[`FilterBuilder`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_item_itembelongstoatleastoneamazonproducttype]]
+==== ItemBelongsToAtLeastOneAmazonProductType
+
+Used to represent the ItemBelongsToAmazonFlatFile filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Item`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\AmazonFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_amazonfilter[`AmazonFilter`]
+
+
+Will return a TypeInterface filter if at least one flat file is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#setamazonproducttypes]
+----
+
+public setAmazonProductTypes($productTypes):Plenty\Modules\Pim\Catalog\Variation\Filters\Item\ItemBelongsToAtLeastOneAmazonProductType
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_item_itembelongstoatleastoneamazonproducttype[`ItemBelongsToAtLeastOneAmazonProductType`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$productTypes`
 |link:http://php.net/string[string^]
 a|
 |===
@@ -26943,6 +27141,48 @@ Set whether the context has an additional source or not. This is normally determ
 |===
 |Name |Type |Description
 a|`$hasAdditionalSource`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#istracktotalhits]
+----
+
+public isTrackTotalHits():bool
+
+----
+
+
+
+
+
+
+
+Returns whether the total hits should be tracked or not
+
+[source%nowrap, php]
+[#settracktotalhits]
+----
+
+public setTrackTotalHits($trackTotalHits):Plenty\Modules\Pim\VariationDataInterface\Model\VariationDataInterfaceContext
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_model_variationdatainterfacecontext[`VariationDataInterfaceContext`]
+
+
+Set whether the total hits should be tracked or not
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$trackTotalHits`
 |link:http://php.net/bool[bool^]
 a|
 |===
