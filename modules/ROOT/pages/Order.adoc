@@ -32457,7 +32457,7 @@ a|The date that the subscriptions are due on. Given in the following format: Y-m
 [#manualrun]
 ----
 
-public manualRun($orderId, $skipNextRun = false):Plenty\Modules\Order\Models\Order
+public manualRun($orderId, $skipNextRun = false, $data = []):Plenty\Modules\Order\Models\Order
 
 ----
 
@@ -32479,7 +32479,11 @@ a|The ID of the subscription.
 
 a|`$skipNextRun`
 |link:http://php.net/bool[bool^]
-a|If true, the next run of this subscription will be skipped.
+a|If true, the next run of this subscription will be skipped. Is only used when not given in $data.
+
+a|`$data`
+|link:http://php.net/array[array^]
+a|Defines the order items that should be taken in the order. If empty, all items are taken.
 |===
 
 
