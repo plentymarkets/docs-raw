@@ -5,918 +5,108 @@
 = Plentymarkets interface documentation
 
 
-[[flow_flow]]
-== Flow
-
-[[flow_flow_contracts]]
-===  Contracts
-[[flow_contracts_uiconfigformcontract]]
-==== UIConfigFormContract
-
-Add fields to config form.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\Contracts`
-
-
-
-
-
-
-===== Methods
-
-[source%nowrap, php]
-[#adddatefield]
-----
-
-public addDateField($dateField, $key = &quot;key&quot;):void
-
-----
-
-
-
-
-
-
-
-Add a  date field to the config form
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$dateField`
-|        xref:Flow.adoc#flow_configform_datefield[`DateField`]
-a|
-
-a|`$key`
-|link:http://php.net/string[string^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#addtimefield]
-----
-
-public addTimeField($timeField, $key = &quot;key&quot;):void
-
-----
-
-
-
-
-
-
-
-Add a time field to the config form
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$timeField`
-|        xref:Flow.adoc#flow_configform_timefield[`TimeField`]
-a|
-
-a|`$key`
-|link:http://php.net/string[string^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#addinputfield]
-----
-
-public addInputField($inputField, $key = &quot;key&quot;):void
-
-----
-
-
-
-
-
-
-
-Add an input field to the config form
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$inputField`
-|        xref:Flow.adoc#flow_configform_inputfield[`InputField`]
-a|
-
-a|`$key`
-|link:http://php.net/string[string^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#addnumberfield]
-----
-
-public addNumberField($numberField, $key = &quot;key&quot;):void
-
-----
-
-
-
-
-
-
-
-Add a number input field to the config form
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$numberField`
-|        xref:Flow.adoc#flow_configform_numberfield[`NumberField`]
-a|
-
-a|`$key`
-|link:http://php.net/string[string^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#adddoublefield]
-----
-
-public addDoubleField($doubleField, $key = &quot;key&quot;):void
-
-----
-
-
-
-
-
-
-
-Add an double input field to the config form
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$doubleField`
-|        xref:Flow.adoc#flow_configform_doublefield[`DoubleField`]
-a|
-
-a|`$key`
-|link:http://php.net/string[string^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#addcheckboxfield]
-----
-
-public addCheckboxField($checkboxField, $key = &quot;key&quot;):void
-
-----
-
-
-
-
-
-
-
-Add a checkbox field to the config form
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$checkboxField`
-|        xref:Flow.adoc#flow_configform_checkboxfield[`CheckboxField`]
-a|
-
-a|`$key`
-|link:http://php.net/string[string^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#addselectboxfield]
-----
-
-public addSelectboxField($selectboxField, $key = &quot;key&quot;):void
-
-----
-
-
-
-
-
-
-
-Add a selectbox field to the config form
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$selectboxField`
-|        xref:Flow.adoc#flow_configform_selectboxfield[`SelectboxField`]
-a|
-
-a|`$key`
-|link:http://php.net/string[string^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#addcheckboxgroupfield]
-----
-
-public addCheckboxGroupField($checkboxGroupField, $key = &quot;key&quot;):void
-
-----
-
-
-
-
-
-
-
-Add a checkboxGroup field to the config form
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$checkboxGroupField`
-|        xref:Flow.adoc#flow_configform_checkboxgroupfield[`CheckboxGroupField`]
-a|
-
-a|`$key`
-|link:http://php.net/string[string^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#addhyperlinkfield]
-----
-
-public addHyperlinkField($hyperlinkField, $key = &quot;key&quot;):void
-
-----
-
-
-
-
-
-
-
-Add a  hyperlink field to the config form
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$hyperlinkField`
-|        xref:Flow.adoc#flow_configform_hyperlinkfield[`HyperlinkField`]
-a|
-
-a|`$key`
-|link:http://php.net/string[string^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#addtextareafield]
-----
-
-public addTextAreaField($textAreaField, $key = &quot;key&quot;):void
-
-----
-
-
-
-
-
-
-
-Add a text area field to the config form
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$textAreaField`
-|        xref:Flow.adoc#flow_configform_textareafield[`TextAreaField`]
-a|
-
-a|`$key`
-|link:http://php.net/string[string^]
-a|
-|===
-
-
-[source%nowrap, php]
-[#getconfigfields]
-----
-
-public getConfigFields():array
-
-----
-
-
-
-
-
-
-
-Get the list with the config fields
-
-[[flow_datamodels]]
-== DataModels
-
-[[flow_datamodels_configform]]
-===  ConfigForm
-[[flow_configform_checkboxfield]]
-==== CheckboxField
-
-The checkbox field model.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\DataModels\ConfigForm`
-
-
-
-
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
-
-[[flow_configform_checkboxgroupfield]]
-==== CheckboxGroupField
-
-The checkbox group field model.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\DataModels\ConfigForm`
-
-
-
-
-
-.Properties
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-
-|selectBoxValues
-    |link:http://php.net/array[array^]
-    a|The checkbox values of the field
-|formGroup
-    |link:http://php.net/string[string^]
-    a|Group of fields with a shared set of values
-|formGroupValues
-    |link:http://php.net/array[array^]
-    a|Shared set of values of the form group
-|===
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
-
-[[flow_configform_checkboxvalue]]
-==== CheckboxValue
-
-The checkbox value field model.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\DataModels\ConfigForm`
-
-
-
-
-
-.Properties
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-
-|caption
-    |link:http://php.net/string[string^]
-    a|The name of the field
-|value
-    |link:http://php.net/string[string^]
-    a|The label of the field
-|translateCaption
-    |link:http://php.net/bool[bool^]
-    a|The option to translate caption, default value is true
-|===
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
-
-[[flow_configform_datefield]]
-==== DateField
-
-The date field model.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\DataModels\ConfigForm`
-
-
-
-
-
-.Properties
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-
-|value
-    |
-    a|The value of the field
-|===
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
-
-[[flow_configform_doublefield]]
-==== DoubleField
-
-The input field model.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\DataModels\ConfigForm`
-
-
-
-
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
-
-[[flow_configform_formfield]]
-==== FormField
-
-The form field model.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\DataModels\ConfigForm`
-
-
-
-
-
-.Properties
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-
-|name
-    |link:http://php.net/string[string^]
-    a|The name of the field
-|label
-    |link:http://php.net/string[string^]
-    a|The label of the field
-|value
-    |link:http://php.net/string[string^]
-    a|The value of the field
-|type
-    |link:http://php.net/string[string^]
-    a|The type of the field
-|isVisible
-    |link:http://php.net/bool[bool^]
-    a|The visibility of the form on the config form
-|isRequired
-    |link:http://php.net/bool[bool^]
-    a|The requirement of the form on the config form
-|condition
-    |link:http://php.net/string[string^]
-    a|The condition for visibility of the form on the config form
-|effectedFields
-    |link:http://php.net/array[array^]
-    a|Fields that will be effected on change
-|===
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
-
-[[flow_configform_hyperlinkfield]]
-==== HyperlinkField
-
-The hyperlink field model.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\DataModels\ConfigForm`
-
-
-
-
-
-.Properties
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-
-|url
-    |link:http://php.net/string[string^]
-    a|The url of the field
-|===
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
-
-[[flow_configform_inputfield]]
-==== InputField
-
-The input field model.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\DataModels\ConfigForm`
-
-
-
-
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
-
-[[flow_configform_numberfield]]
-==== NumberField
-
-The input field model.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\DataModels\ConfigForm`
-
-
-
-
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
-
-[[flow_configform_selectboxfield]]
-==== SelectboxField
-
-The selectbox field model.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\DataModels\ConfigForm`
-
-
-
-
-
-.Properties
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-
-|selectBoxValues
-    |link:http://php.net/array[array^]
-    a|The selectbox values of the field
-|===
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
-
-[[flow_configform_selectboxvalue]]
-==== SelectboxValue
-
-The selectbox value model.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\DataModels\ConfigForm`
-
-
-
-
-
-.Properties
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-
-|caption
-    |link:http://php.net/string[string^]
-    a|The name of the field
-|value
-    |link:http://php.net/string[string^]
-    a|The label of the field
-|translateCaption
-    |link:http://php.net/bool[bool^]
-    a|The option to translate caption, default value is true
-|===
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
-
-[[flow_configform_textareafield]]
-==== TextAreaField
-
-The text area field model.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\DataModels\ConfigForm`
-
-
-
-
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
-
-[[flow_configform_timefield]]
-==== TimeField
-
-The time field model.
-
-
-
-===== Namespace
-
-`Plenty\Modules\Flow\DataModels\ConfigForm`
-
-
-
-
-
-
-===== Methods
-
-[source%nowrap, php]
-[#toarray]
-----
-
-public toArray()
-
-----
-
-
-
-
-
-
-
-Returns this model as an array.
-
 [[flow_definitions]]
 == Definitions
 
 [[flow_definitions_contracts]]
 ===  Contracts
+[[flow_contracts_adaptationdefinitioncontract]]
+==== AdaptationDefinitionContract
+
+Flow Adaptation
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\Adaptations\Definitions\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#getidentifier]
+----
+
+public getIdentifier():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getfrom]
+----
+
+public getFrom():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getto]
+----
+
+public getTo():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#performtask]
+----
+
+public performTask($inputs, $replaceOption):array
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$inputs`
+|link:http://php.net/array[array^]
+a|
+
+a|`$replaceOption`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+
 [[flow_contracts_filterdefinitioncontract]]
 ==== FilterDefinitionContract
 
@@ -2541,4 +1731,914 @@ a|`$identifier`
 a|
 |===
 
+
+[[flow_flow]]
+== Flow
+
+[[flow_flow_contracts]]
+===  Contracts
+[[flow_contracts_uiconfigformcontract]]
+==== UIConfigFormContract
+
+Add fields to config form.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\Contracts`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#adddatefield]
+----
+
+public addDateField($dateField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add a  date field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$dateField`
+|        xref:Flow.adoc#flow_configform_datefield[`DateField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addtimefield]
+----
+
+public addTimeField($timeField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add a time field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$timeField`
+|        xref:Flow.adoc#flow_configform_timefield[`TimeField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addinputfield]
+----
+
+public addInputField($inputField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add an input field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$inputField`
+|        xref:Flow.adoc#flow_configform_inputfield[`InputField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addnumberfield]
+----
+
+public addNumberField($numberField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add a number input field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$numberField`
+|        xref:Flow.adoc#flow_configform_numberfield[`NumberField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#adddoublefield]
+----
+
+public addDoubleField($doubleField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add an double input field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$doubleField`
+|        xref:Flow.adoc#flow_configform_doublefield[`DoubleField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addcheckboxfield]
+----
+
+public addCheckboxField($checkboxField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add a checkbox field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$checkboxField`
+|        xref:Flow.adoc#flow_configform_checkboxfield[`CheckboxField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addselectboxfield]
+----
+
+public addSelectboxField($selectboxField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add a selectbox field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$selectboxField`
+|        xref:Flow.adoc#flow_configform_selectboxfield[`SelectboxField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addcheckboxgroupfield]
+----
+
+public addCheckboxGroupField($checkboxGroupField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add a checkboxGroup field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$checkboxGroupField`
+|        xref:Flow.adoc#flow_configform_checkboxgroupfield[`CheckboxGroupField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addhyperlinkfield]
+----
+
+public addHyperlinkField($hyperlinkField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add a  hyperlink field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$hyperlinkField`
+|        xref:Flow.adoc#flow_configform_hyperlinkfield[`HyperlinkField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addtextareafield]
+----
+
+public addTextAreaField($textAreaField, $key = &quot;key&quot;):void
+
+----
+
+
+
+
+
+
+
+Add a text area field to the config form
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$textAreaField`
+|        xref:Flow.adoc#flow_configform_textareafield[`TextAreaField`]
+a|
+
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getconfigfields]
+----
+
+public getConfigFields():array
+
+----
+
+
+
+
+
+
+
+Get the list with the config fields
+
+[[flow_datamodels]]
+== DataModels
+
+[[flow_datamodels_configform]]
+===  ConfigForm
+[[flow_configform_checkboxfield]]
+==== CheckboxField
+
+The checkbox field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_checkboxgroupfield]]
+==== CheckboxGroupField
+
+The checkbox group field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|selectBoxValues
+    |link:http://php.net/array[array^]
+    a|The checkbox values of the field
+|formGroup
+    |link:http://php.net/string[string^]
+    a|Group of fields with a shared set of values
+|formGroupValues
+    |link:http://php.net/array[array^]
+    a|Shared set of values of the form group
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_checkboxvalue]]
+==== CheckboxValue
+
+The checkbox value field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|caption
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|value
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|translateCaption
+    |link:http://php.net/bool[bool^]
+    a|The option to translate caption, default value is true
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_datefield]]
+==== DateField
+
+The date field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|value
+    |
+    a|The value of the field
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_doublefield]]
+==== DoubleField
+
+The input field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_formfield]]
+==== FormField
+
+The form field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|name
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|label
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|value
+    |link:http://php.net/string[string^]
+    a|The value of the field
+|type
+    |link:http://php.net/string[string^]
+    a|The type of the field
+|isVisible
+    |link:http://php.net/bool[bool^]
+    a|The visibility of the form on the config form
+|isRequired
+    |link:http://php.net/bool[bool^]
+    a|The requirement of the form on the config form
+|condition
+    |link:http://php.net/string[string^]
+    a|The condition for visibility of the form on the config form
+|effectedFields
+    |link:http://php.net/array[array^]
+    a|Fields that will be effected on change
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_hyperlinkfield]]
+==== HyperlinkField
+
+The hyperlink field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|url
+    |link:http://php.net/string[string^]
+    a|The url of the field
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_inputfield]]
+==== InputField
+
+The input field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_numberfield]]
+==== NumberField
+
+The input field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_selectboxfield]]
+==== SelectboxField
+
+The selectbox field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|selectBoxValues
+    |link:http://php.net/array[array^]
+    a|The selectbox values of the field
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_selectboxvalue]]
+==== SelectboxValue
+
+The selectbox value model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|caption
+    |link:http://php.net/string[string^]
+    a|The name of the field
+|value
+    |link:http://php.net/string[string^]
+    a|The label of the field
+|translateCaption
+    |link:http://php.net/bool[bool^]
+    a|The option to translate caption, default value is true
+|tooltip
+    |link:http://php.net/string[string^]
+    a|Optional tooltip for this box value
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_textareafield]]
+==== TextAreaField
+
+The text area field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[flow_configform_timefield]]
+==== TimeField
+
+The time field model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Flow\DataModels\ConfigForm`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
 
