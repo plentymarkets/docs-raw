@@ -891,21 +891,21 @@ The order item model. Items, shipping costs, coupons, surcharges etc. are all di
     |link:http://php.net/int[int^]
     a|The ID of the order item type
 
-* VARIATION			=	1
-* ITEM_BUNDLE			=	2
-* BUNDLE_COMPONENT		=	3
-* PROMOTIONAL_COUPON	=	4
-* GIFT_CARD			=	5
-* SHIPPING_COSTS		=	6
-* PAYMENT_SURCHARGE	=	7
-* GIFT_WRAP			=	8
-* UNASSIGEND_VARIATION	=	9
-* DEPOSIT				=	10
-* ORDER				=	11
-* DUNNING_CHARGE		=   12
-* ITEM_SET		        =   13
-* SET_COMPONENT		=   14
-* ORDER_PROPERTY		=   15
+* VARIATION          =   1
+* ITEM_BUNDLE            =   2
+* BUNDLE_COMPONENT       =   3
+* PROMOTIONAL_COUPON =   4
+* GIFT_CARD          =   5
+* SHIPPING_COSTS     =   6
+* PAYMENT_SURCHARGE  =   7
+* GIFT_WRAP          =   8
+* UNASSIGEND_VARIATION   =   9
+* DEPOSIT                =   10
+* ORDER              =   11
+* DUNNING_CHARGE     =   12
+* ITEM_SET               =   13
+* SET_COMPONENT      =   14
+* ORDER_PROPERTY     =   15
 |referrerId
     |link:http://php.net/float[float^]
     a|The ID of order item referrer
@@ -1430,17 +1430,17 @@ The order item type model.
     |link:http://php.net/int[int^]
     a|The ID of the order item type. The following types are currently available: <br />
 
-* VARIATION			=	1
-* ITEM_BUNDLE			=	2
-* BUNDLE_COMPONENT		=	3
-* PROMOTIONAL_COUPON	=	4
-* GIFT_CARD			=	5
-* SHIPPING_COSTS		=	6
-* PAYMENT_SURCHARGE	=	7
-* GIFT_WRAP			=	8
-* UNASSIGEND_VARIATION	=	9
-* DEPOSIT				=	10
-* ORDER				=	11
+* VARIATION          =   1
+* ITEM_BUNDLE            =   2
+* BUNDLE_COMPONENT       =   3
+* PROMOTIONAL_COUPON =   4
+* GIFT_CARD          =   5
+* SHIPPING_COSTS     =   6
+* PAYMENT_SURCHARGE  =   7
+* GIFT_WRAP          =   8
+* UNASSIGEND_VARIATION   =   9
+* DEPOSIT                =   10
+* ORDER              =   11
 |isErasable
     |link:http://php.net/bool[bool^]
     a|Flag that indicates if this type can be deleted or not
@@ -3709,7 +3709,7 @@ Clears the filter array.
 ==== OrderCreated
 
 An event class fired after a new order is created. The order type is not relevant.
- * 	At the same time also type depended events will be fired, like ReturnsCreated or CreditNoteCreated.
+ *  At the same time also type depended events will be fired, like ReturnsCreated or CreditNoteCreated.
 
 
 
@@ -4749,7 +4749,7 @@ public broadcastWith():void
 
 An Event class fired after a payment was assigned to an order.
  * After this event one of the following events will be fired, depending the payment status of the order:
- *	 OrderPrepaid, OrderPartlyPaid, OrderFullyPaid, OrderOverpaid.
+ *   OrderPrepaid, OrderPartlyPaid, OrderFullyPaid, OrderOverpaid.
 
 
 
@@ -5116,7 +5116,7 @@ public broadcastWith():void
 ==== SubscriptionChildOrderCreated
 
 An event class fired after a new order for a subscription is created. The order type is not relevant.
- * 	At the same time also type depended events will be fired, like ReturnsCreated or CreditNoteCreated.
+ *  At the same time also type depended events will be fired, like ReturnsCreated or CreditNoteCreated.
 
 
 
@@ -27452,32 +27452,32 @@ The order item property model.
     |link:http://php.net/int[int^]
     a|The ID of the property type.
 
-* WAREHOUSE		              =	1
-* SHIPPING_PROFILE	              =	2
-* PAYMENT_METHOD	              =	3
-* WEIGHT			              =	11
-* WIDTH			              =	12
-* LENGTH		                  =	13
-* HEIGHT	      		          = 14
-* EXTERNAL_TOKEN_ID              =	16
-* EXTERNAL_ITEM_ID               =	17
-* COUPON_CODE	      	          =	18
-* COUPON_TYPE		              =	19
-* ORIGINAL_WAREHOUSE	          =	20
-* ORIGINAL_QUANTITY              =	21
+* WAREHOUSE                    = 1
+* SHIPPING_PROFILE                 = 2
+* PAYMENT_METHOD               = 3
+* WEIGHT                       = 11
+* WIDTH                        = 12
+* LENGTH                       = 13
+* HEIGHT                       = 14
+* EXTERNAL_TOKEN_ID              =   16
+* EXTERNAL_ITEM_ID               =   17
+* COUPON_CODE                      = 18
+* COUPON_TYPE                      = 19
+* ORIGINAL_WAREHOUSE           = 20
+* ORIGINAL_QUANTITY              =   21
 * CATEGORY_ID                    = 22
-* MARKET_FEE		              =	23
-* STOCK_REVERSING	              =	24
-* DISPUTE_STATUS      	          =	25
+* MARKET_FEE                   = 23
+* STOCK_REVERSING                  = 24
+* DISPUTE_STATUS                   = 25
 * NO_CHANGE_BY_CONTACT           = 26
-* SIZE 			              =	29
-* LOCATION_RESERVED	          =	30
-* EXTERNAL_SHIPMENT_ITEM_ID      =	31
-* PARTIAL_SHIPPING_COSTS         =	32
-* MAIN_DOCUMENT_NUMBER           =	33
-* SALES_TAX_ID_NUMBER            =	34
-* RETURNS_REASON                 =	35
-* RETURNS_ITEM_STATUS            =	36
+* SIZE                         = 29
+* LOCATION_RESERVED            = 30
+* EXTERNAL_SHIPMENT_ITEM_ID      =   31
+* PARTIAL_SHIPPING_COSTS         =   32
+* MAIN_DOCUMENT_NUMBER           =   33
+* SALES_TAX_ID_NUMBER            =   34
+* RETURNS_REASON                 =   35
+* RETURNS_ITEM_STATUS            =   36
 * FULFILLMENT_CENTER_ID          = 37
 * FULFILLMENT_CENTER_COUNTRY_ISO = 38
 * REORDER_ITEM_ID                = 39
@@ -27562,24 +27562,24 @@ The order properties model. Each order property has a type.
     |link:http://php.net/int[int^]
     a|The ID of the property type. The following types are available:
 
-* WAREHOUSE		=	1
-* SHIPPING_PROFILE	=	2
-* PAYMENT_METHOD			=	3
-* PAYMENT_STATUS			=	4
-* EXTERNAL_SHIPPING_PROFILE			=	5
-* DOCUMENT_LANGUAGE			=	6
-* EXTERNAL_ORDER_ID			=	7
-* CUSTOMER_SIGN			=	8
-* DUNNING_LEVEL			=	9
-* SELLER_ACCOUNT			=	10
-* WEIGHT			=	11
-* WIDTH			=	12
-* LENGTH          =	13
-* HEIGHT		=	14
-* FLAG			=	15
-* EXTERNAL_TOKEN_ID			=	16
-* EXTERNAL_ITEM_ID			=	17
-* COUPON_CODE			=	18
+* WAREHOUSE      =   1
+* SHIPPING_PROFILE   =   2
+* PAYMENT_METHOD         =   3
+* PAYMENT_STATUS         =   4
+* EXTERNAL_SHIPPING_PROFILE          =   5
+* DOCUMENT_LANGUAGE          =   6
+* EXTERNAL_ORDER_ID          =   7
+* CUSTOMER_SIGN          =   8
+* DUNNING_LEVEL          =   9
+* SELLER_ACCOUNT         =   10
+* WEIGHT         =   11
+* WIDTH          =   12
+* LENGTH          =  13
+* HEIGHT     =   14
+* FLAG           =   15
+* EXTERNAL_TOKEN_ID          =   16
+* EXTERNAL_ITEM_ID           =   17
+* COUPON_CODE            =   18
 * COUPON_TYPE         =   19
 * SALES_TAX_ID_NUMBER =   34
 * MAIN_DOCUMENT_NUMBER = 33
