@@ -70,6 +70,22 @@ public getMappingValues():array
 
 Get all mapping values that are collected in the container.
 
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+
+
 
 [[catalog_containers_catalogtemplatefieldcontainer]]
 ==== CatalogTemplateFieldContainer
@@ -156,6 +172,22 @@ public getFields():array
 
 
 Get all fields that are collected in the container.
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+
 
 
 [[catalog_containers_templategroupcontainer]]
@@ -1384,6 +1416,22 @@ public getDevcacheIntervals():Plenty\Modules\Catalog\Services\Cache\Intervals\In
 
 
 Returns devcache intervals
+
+[source%nowrap, php]
+[#getmapfieldkeys]
+----
+
+public getMapFieldKeys():array
+
+----
+
+
+
+
+
+
+
+Gets Channel Map custom keys
 
 
 [[catalog_contracts_catalogmappingvalueprovidercontract]]
@@ -6034,6 +6082,9 @@ The catalog model - stores on S3
 |active
     |link:http://php.net/bool[bool^]
     a|Determines whether a catalogue can be exported
+|with
+    |link:http://php.net/array[array^]
+    a|Contains the data attached to the catalog
 |showMandatoryFields
     |link:http://php.net/bool[bool^]
     a|Determines if only the mandatory fields should be displayed in the catalogue UI
@@ -6361,6 +6412,32 @@ public getKey():string
 
 
 [source%nowrap, php]
+[#applycustomchannelmapkey]
+----
+
+public applyCustomChannelMapKey($key):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#getlabel]
 ----
 
@@ -6679,6 +6756,32 @@ public getKey():string
 
 
 [source%nowrap, php]
+[#applycustomchannelmapkey]
+----
+
+public applyCustomChannelMapKey($key):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#getlabel]
 ----
 
@@ -6990,6 +7093,32 @@ public getKey():string
 
 
 
+
+
+[source%nowrap, php]
+[#applycustomchannelmapkey]
+----
+
+public applyCustomChannelMapKey($key):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$key`
+|link:http://php.net/string[string^]
+a|
+|===
 
 
 [source%nowrap, php]
@@ -8953,6 +9082,48 @@ public setFilterContainer($filterContainer):void
 |Name |Type |Description
 a|`$filterContainer`
 |        xref:Catalog.adoc#catalog_filters_catalogfilterbuildercontainer[`CatalogFilterBuilderContainer`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getmapfieldkeys]
+----
+
+public getMapFieldKeys():array
+
+----
+
+
+
+
+
+
+
+Gets map field keys
+
+[source%nowrap, php]
+[#setmapfieldkeys]
+----
+
+public setMapFieldKeys($mapFieldKeys):void
+
+----
+
+
+
+
+
+
+
+Sets map field keys
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$mapFieldKeys`
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -23904,6 +24075,22 @@ public getDevcacheIntervals():Plenty\Modules\Catalog\Services\Cache\Intervals\In
 
 
 Gets devcache intervals
+
+[source%nowrap, php]
+[#getmapfieldkeys]
+----
+
+public getMapFieldKeys():array
+
+----
+
+
+
+
+
+
+
+Gets Channel Map custom keys
 
 [source%nowrap, php]
 [#gettemplategroupcontainer]
