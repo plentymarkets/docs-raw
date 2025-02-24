@@ -1,0 +1,344 @@
+:table-caption!:
+:example-caption!:
+:source-highlighter: prettify
+:sectids!:
+= Plentymarkets interface documentation
+
+
+[[plentychannel_services]]
+== Services
+
+[[plentychannel_services_connectors]]
+===  Connectors
+[[plentychannel_connectors_sftpconnector]]
+==== SFTPConnector
+
+SFTP Connector
+
+
+
+===== Namespace
+
+`Plenty\Modules\Plentychannel\Services\Connectors`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#login]
+----
+
+public login():bool
+
+----
+
+
+
+
+
+
+
+Open the connection and log in
+
+[source%nowrap, php]
+[#createdirectory]
+----
+
+public createDirectory($folder, $mode = 511):bool
+
+----
+
+
+
+
+
+
+
+Creates directory
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$folder`
+|link:http://php.net/string[string^]
+a|
+
+a|`$mode`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#uploadcontent]
+----
+
+public uploadContent($filename, $content):bool
+
+----
+
+
+
+
+
+
+
+Uploads content into file
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filename`
+|link:http://php.net/string[string^]
+a|
+
+a|`$content`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getcontent]
+----
+
+public getContent($filename):void
+
+----
+
+
+
+
+
+
+
+Gets content of file
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filename`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setlistorder]
+----
+
+public setListOrder($args):void
+
+----
+
+
+
+
+
+
+
+Sets list order
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$args`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#nlist]
+----
+
+public nlist($folder, $recursive = false):void
+
+----
+
+
+
+
+
+
+
+N-list
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$folder`
+|link:http://php.net/string[string^]
+a|
+
+a|`$recursive`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#rawlist]
+----
+
+public rawlist($folder, $recursive = false):void
+
+----
+
+
+
+
+
+
+
+Raw-List
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$folder`
+|link:http://php.net/string[string^]
+a|
+
+a|`$recursive`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deletefile]
+----
+
+public deleteFile($filename):bool
+
+----
+
+
+
+
+
+
+
+Delete file
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filename`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#deletefolder]
+----
+
+public deleteFolder($folder):bool
+
+----
+
+
+
+
+
+
+
+Delete entire folder. Use with caution!
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$folder`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getallerrors]
+----
+
+public getAllErrors():array
+
+----
+
+
+
+
+
+
+
+Get all SFTP errors
+
+[source%nowrap, php]
+[#getlasterror]
+----
+
+public getLastError():string
+
+----
+
+
+
+
+
+
+
+Get last SFTP error
+
+[source%nowrap, php]
+[#__construct]
+----
+
+public __construct($host, $username, $password, $port, $logPrefix = &quot;Connector&quot;):void
+
+----
+
+
+
+
+
+
+
+Initializes the connector
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$host`
+|link:http://php.net/string[string^]
+a|
+
+a|`$username`
+|link:http://php.net/string[string^]
+a|
+
+a|`$password`
+|link:http://php.net/string[string^]
+a|
+
+a|`$port`
+|link:http://php.net/int[int^]
+a|
+
+a|`$logPrefix`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
