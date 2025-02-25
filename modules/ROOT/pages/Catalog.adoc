@@ -6353,7 +6353,7 @@ A combined template field is a mix out of simple and complex template fields. Yo
 [#__construct]
 ----
 
-public __construct($exportKey, $key, $label, $catalogMappingValueProvider, $catalogTemplateFieldContainer, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = [], $description = null):void
+public __construct($exportKey, $key, $label, $catalogMappingValueProvider, $catalogTemplateFieldContainer, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = [], $templates = [], $description = null):void
 
 ----
 
@@ -6406,6 +6406,10 @@ a|`$meta`
 a|
 
 a|`$defaultSources`
+|link:http://php.net/array[array^]
+a|
+
+a|`$templates`
 |link:http://php.net/array[array^]
 a|
 
@@ -6526,6 +6530,22 @@ public isArray():bool
 ----
 
 public getMeta():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettemplates]
+----
+
+public getTemplates():array
 
 ----
 
@@ -6721,7 +6741,7 @@ A complex template field is used for Mappings with predefined valid values. The 
 [#__construct]
 ----
 
-public __construct($exportKey, $key, $label, $catalogMappingValueProvider, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = [], $description = null):void
+public __construct($exportKey, $key, $label, $catalogMappingValueProvider, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = [], $templates = [], $description = null):void
 
 ----
 
@@ -6770,6 +6790,10 @@ a|`$meta`
 a|
 
 a|`$defaultSources`
+|link:http://php.net/array[array^]
+a|
+
+a|`$templates`
 |link:http://php.net/array[array^]
 a|
 
@@ -6890,6 +6914,22 @@ public isArray():bool
 ----
 
 public getMeta():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettemplates]
+----
+
+public getTemplates():array
 
 ----
 
@@ -7085,7 +7125,7 @@ A simple template field is used to fill a specific key through a data source whi
 [#__construct]
 ----
 
-public __construct($exportKey, $key, $label, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = [], $description = null):void
+public __construct($exportKey, $key, $label, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = [], $templates = [], $description = null):void
 
 ----
 
@@ -7130,6 +7170,10 @@ a|`$meta`
 a|
 
 a|`$defaultSources`
+|link:http://php.net/array[array^]
+a|
+
+a|`$templates`
 |link:http://php.net/array[array^]
 a|
 
@@ -7234,6 +7278,22 @@ public isArray():bool
 ----
 
 public getMeta():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#gettemplates]
+----
+
+public getTemplates():array
 
 ----
 
