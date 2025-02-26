@@ -3314,6 +3314,22 @@ Whole interface is deprecated
 
 Returns an array of meta information which can be used to forward information to the export which could otherwise not be received.
 
+[source%nowrap, php]
+[#getmapfieldkeys]
+----
+
+public getMapFieldKeys():array
+
+----
+
+
+
+
+
+
+
+Gets Channel Map custom keys
+
 
 [[catalog_contracts_dataprovidercontract]]
 ==== DataProviderContract
@@ -6337,7 +6353,7 @@ A combined template field is a mix out of simple and complex template fields. Yo
 [#__construct]
 ----
 
-public __construct($exportKey, $key, $label, $catalogMappingValueProvider, $catalogTemplateFieldContainer, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = []):void
+public __construct($exportKey, $key, $label, $catalogMappingValueProvider, $catalogTemplateFieldContainer, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = [], $templates = [], $description = null):void
 
 ----
 
@@ -6391,6 +6407,14 @@ a|
 
 a|`$defaultSources`
 |link:http://php.net/array[array^]
+a|
+
+a|`$templates`
+|link:http://php.net/array[array^]
+a|
+
+a|`$description`
+|link:http://php.net/string[string^]
 a|
 |===
 
@@ -6518,6 +6542,22 @@ public getMeta():array
 
 
 [source%nowrap, php]
+[#gettemplates]
+----
+
+public getTemplates():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#getcallable]
 ----
 
@@ -6602,6 +6642,22 @@ public getNestedFields():Plenty\Modules\Catalog\Containers\CatalogTemplateFieldC
 ----
 
 public getType():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdescription]
+----
+
+public getDescription():string
 
 ----
 
@@ -6685,7 +6741,7 @@ A complex template field is used for Mappings with predefined valid values. The 
 [#__construct]
 ----
 
-public __construct($exportKey, $key, $label, $catalogMappingValueProvider, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = []):void
+public __construct($exportKey, $key, $label, $catalogMappingValueProvider, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = [], $templates = [], $description = null):void
 
 ----
 
@@ -6735,6 +6791,14 @@ a|
 
 a|`$defaultSources`
 |link:http://php.net/array[array^]
+a|
+
+a|`$templates`
+|link:http://php.net/array[array^]
+a|
+
+a|`$description`
+|link:http://php.net/string[string^]
 a|
 |===
 
@@ -6862,6 +6926,22 @@ public getMeta():array
 
 
 [source%nowrap, php]
+[#gettemplates]
+----
+
+public getTemplates():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#getcallable]
 ----
 
@@ -6958,6 +7038,22 @@ public getType():int
 
 
 [source%nowrap, php]
+[#getdescription]
+----
+
+public getDescription():string
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#setcallable]
 ----
 
@@ -7029,7 +7125,7 @@ A simple template field is used to fill a specific key through a data source whi
 [#__construct]
 ----
 
-public __construct($exportKey, $key, $label, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = []):void
+public __construct($exportKey, $key, $label, $isRequired = false, $isLocked = false, $isArray = false, $meta = [], $defaultSources = [], $templates = [], $description = null):void
 
 ----
 
@@ -7075,6 +7171,14 @@ a|
 
 a|`$defaultSources`
 |link:http://php.net/array[array^]
+a|
+
+a|`$templates`
+|link:http://php.net/array[array^]
+a|
+
+a|`$description`
+|link:http://php.net/string[string^]
 a|
 |===
 
@@ -7186,6 +7290,22 @@ public getMeta():array
 
 
 [source%nowrap, php]
+[#gettemplates]
+----
+
+public getTemplates():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
 [#getcallable]
 ----
 
@@ -7270,6 +7390,22 @@ public getNestedFields():Plenty\Modules\Catalog\Containers\CatalogTemplateFieldC
 ----
 
 public getType():int
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#getdescription]
+----
+
+public getDescription():string
 
 ----
 
@@ -7822,6 +7958,22 @@ public getDevcacheIntervals():Plenty\Modules\Catalog\Services\Cache\Intervals\In
 
 
 
+
+[source%nowrap, php]
+[#getmapfieldkeys]
+----
+
+public getMapFieldKeys():array
+
+----
+
+
+
+
+
+
+
+Gets Channel Map custom keys
 
 
 [[catalog_templates_template]]
