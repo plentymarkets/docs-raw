@@ -3503,7 +3503,7 @@ a|Id of priority (0 - No priority, 1 - Very low, 2 - low, 3 - Medium, 4 - High, 
 [#updateconversationstypeandstatus]
 ----
 
-public updateConversationsTypeAndStatus($conversationsUuids, $typeId, $statusId):bool
+public updateConversationsTypeAndStatus($conversationsUuids, $typeId, $statusId, $categoryId = null):bool
 
 ----
 
@@ -3530,6 +3530,10 @@ a|Type ID of conversation. If null is set, the conversation type will be removed
 a|`$statusId`
 |link:http://php.net/int[int^]
 a|Status ID of conversation. If null is set, the conversation status will be removed.
+
+a|`$categoryId`
+|link:http://php.net/int[int^]
+a|Category ID of conversation. If null is passed, the conversation category will not be changed.
 |===
 
 
