@@ -2916,7 +2916,8 @@ Returns this model as an array.
 [[document_contracts_documentrepositorycontract]]
 ==== DocumentRepositoryContract
 
-Download and list order documents as well as download, list, upload and delete category documents.
+Download and list order documents as well as download, list,
+ * upload and delete category documents.
 
 
 
@@ -3017,7 +3018,8 @@ a|The page to get. The default page that will be returned is page 1.
 
 a|`$itemsPerPage`
 |link:http://php.net/int[int^]
-a|The number of orders to be displayed per page. The default number of orders per page is 50.
+a|The number of orders to be displayed per page.
+The default number of orders per page is 50.
 
 a|`$columns`
 |link:http://php.net/array[array^]
@@ -3029,7 +3031,8 @@ a|The relations to be loaded. Possible value is "references".
 
 a|`$sortBy`
 |link:http://php.net/string[string^]
-a|This field is used for sorting. Default is 'id'. Possible values are 'id', 'type', 'number', 'createdAt', 'displayDate', 'updatedAt'
+a|This field is used for sorting. Default is 'id'.
+Possible values are 'id', 'type', 'number', 'createdAt', 'displayDate', 'updatedAt'
 
 a|`$sortOrder`
 |link:http://php.net/string[string^]
@@ -3063,7 +3066,9 @@ a|The ID of the order
 
 a|`$type`
 |link:http://php.net/string[string^]
-a|The document type. Supported types are 'invoiceExternal', 'deliveryNote', 'poDeliveryNote', 'orderConfirmation', 'offer', 'dunningLetter', 'returnNote', 'successConfirmation', 'correction', 'creditNoteExternal', 'reorder', 'uploaded'.
+a|The document type. Supported types are 'invoiceExternal', 'deliveryNote', 'poDeliveryNote',
+'orderConfirmation', 'offer', 'dunningLetter', 'returnNote', 'successConfirmation',
+'correction', 'creditNoteExternal', 'reorder', 'uploaded'.
 
 a|`$data`
 |link:http://php.net/array[array^]
@@ -3363,7 +3368,7 @@ public deleteOrderShippingPackageDocuments($packageId):bool
 
 
 
-Delets a document.
+Deletes a document.
 
 .*Parameters*
 [cols="3,1,6"]
@@ -3730,44 +3735,44 @@ The document model contains information about actual documents.
 |type
     |link:http://php.net/string[string^]
     a|The type of the document. The following types are available:
-                           <ul>
+<ul>
     <li>admin</li>
     <li>blog</li>
- <li>category</li>
- <li>correction_document</li>
- <li>credit_note</li>
+    <li>category</li>
+    <li>correction_document</li>
+    <li>credit_note</li>
     <li>credit_note_external</li>
-       <li>customer</li>
- <li>delivery_note</li>
+    <li>customer</li>
+    <li>delivery_note</li>
     <li>dunning_letter</li>
-       <li>ebics_hash</li>
+    <li>ebics_hash</li>
     <li>facet</li>
     <li>invoice</li>
     <li>invoice_external</li>
-                               <li>pos_invoice</li>
-                               <li>pos_invoice_cancellation</li>
- <li>item</li>
- <li>multi_credit_note</li>
+    <li>pos_invoice</li>
+    <li>pos_invoice_cancellation</li>
+    <li>item</li>
+    <li>multi_credit_note</li>
     <li>multi_invoice</li>
-       <li>offer</li>
+    <li>offer</li>
     <li>order_confirmation</li>
-       <li>pickup_delivery</li>
+    <li>pickup_delivery</li>
     <li>receipt</li>
-                               <li>refund_reversal</li>
+    <li>refund_reversal</li>
     <li>reorder</li>
     <li>repair_bill</li>
     <li>return_note</li>
-       <li>reversal_document</li>
-       <li>settlement_report</li>
+    <li>reversal_document</li>
+    <li>settlement_report</li>
     <li>success_confirmation</li>
     <li>ticket</li>
     <li>webshop</li>
-  <li>webshop_customer</li>
+    <li>webshop_customer</li>
     <li>z_report</li>
     <li>shipping_label</li>
     <li>shipping_export_label</li>
     <li>returns_label</li>
-                               <li>reversal_dunning_letter</l>
+    <li>reversal_dunning_letter</l>
 </ul>
 |number
     |link:http://php.net/int[int^]
@@ -3783,7 +3788,8 @@ The document model contains information about actual documents.
     a|The ID of the user
 |source
     |link:http://php.net/string[string^]
-    a|The source where the document was generated. Possible sources are 'klarna', 'soap', 'admin', 'hitmeister', 'paypal' and 'rest'.
+    a|The source where the document was generated. Possible sources are 'klarna',
+'soap', 'admin', 'hitmeister', 'paypal' and 'rest'.
 |displayDate
     |link:http://php.net/string[string^]
     a|The date displayed on the document
@@ -3934,21 +3940,21 @@ The document reference model. A document reference allows you to assign a docume
 |type
     |link:http://php.net/string[string^]
     a|The reference type. The following reference types are available:
-                            <ul>
-    <li>blog</li>
-                               <li>cash_register</li>
-                               <li>category</li>
-    <li>customer</li>
+<ul>
+     <li>blog</li>
+   <li>cash_register</li>
+   <li>category</li>
+     <li>customer</li>
  <li>facet</li>
-    <li>facet_value</li>
-    <li>item</li>
+     <li>facet_value</li>
+ <li>item</li>
  <li>multishop</li>
-    <li>order</li>
-    <li>reorder</li>
+     <li>order</li>
+     <li>reorder</li>
  <li>ticket</li>
-                               <li>warehouse</li>
-                               <li>order_shipping_package</li>
-</ul>
+   <li>warehouse</li>
+   <li>order_shipping_package</li>
+ </ul>
 |value
     |link:http://php.net/string[string^]
     a|The reference value (e.g. the ID of another model)
