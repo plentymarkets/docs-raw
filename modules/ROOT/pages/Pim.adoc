@@ -16764,6 +16764,58 @@ a|
 
 
 [source%nowrap, php]
+[#isagerestriction]
+----
+
+public isAgeRestriction($ageRestriction):Plenty\Modules\Pim\SearchService\Filter\ItemFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_itemfilter[`ItemFilter`]
+
+
+Restricts the result to have the specified item age restriction.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$ageRestriction`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#isnotagerestriction]
+----
+
+public isNotAgeRestriction($ageRestriction):Plenty\Modules\Pim\SearchService\Filter\ItemFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_itemfilter[`ItemFilter`]
+
+
+Restricts the result to not have the specified item age restriction.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$ageRestriction`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#toarray]
 ----
 
@@ -17873,6 +17925,119 @@ Restricts the result item that have a price for the given parameters.
 |===
 |Name |Type |Description
 a|`$data`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#addstatement]
+----
+
+public addStatement($statement):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statement`
+|        xref:Cloud.adoc#cloud_statement_statementinterface[`StatementInterface`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addquery]
+----
+
+public addQuery($statement):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statement`
+|
+a|
+|===
+
+
+
+[[pim_filter_shippingfilter]]
+==== ShippingFilter
+
+Includes filters for shipping profiles
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\SearchService\Filter`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#hasshippingprofile]
+----
+
+public hasShippingProfile($ids):Plenty\Modules\Pim\SearchService\Filter\ShippingFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_shippingfilter[`ShippingFilter`]
+
+
+Restricts the result to have the shipping profile id.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$ids`
 |link:http://php.net/array[array^]
 a|
 |===
