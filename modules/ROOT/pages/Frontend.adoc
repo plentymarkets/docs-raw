@@ -13,7 +13,7 @@
 [[frontend_contracts_checkout]]
 ==== Checkout
 
-The CheckoutContract is the interface for the checkout repository. This interface allows to set the shipping country ID, the payment method ID, the shipping profile ID and the currency in the checkout.
+The CheckoutContract is the interface for the checkout repository.
 
 
 
@@ -238,7 +238,7 @@ Updates the ID of the order referrer. The ID must be specified.
 |Name |Type |Description
 a|`$referrerId`
 |link:http://php.net/int[int^]
-a|The ID of the order referrer. The <a href="https://www.plentymarkets.co.uk/manual/settings/orders/order-referrer/" target="_blank">order referrer</a> settings can be changed in the plentymarkets back end.
+a|The ID of the order referrer.
 |===
 
 
@@ -262,7 +262,7 @@ Gets the invoice address id of the current shopping cart.
 [#setcustomerinvoiceaddressid]
 ----
 
-public setCustomerInvoiceAddressId($invoiceAddressId):void
+public setCustomerInvoiceAddressId($invoiceAddressId, $skipBasketCalculation = false):void
 
 ----
 
@@ -280,6 +280,10 @@ Sets the invoice address id for the current shopping cart.
 |Name |Type |Description
 a|`$invoiceAddressId`
 |link:http://php.net/int[int^]
+a|
+
+a|`$skipBasketCalculation`
+|link:http://php.net/bool[bool^]
 a|
 |===
 
@@ -304,7 +308,7 @@ Gets the shipping address id of the current shopping cart.
 [#setcustomershippingaddressid]
 ----
 
-public setCustomerShippingAddressId($shippingAddressId):void
+public setCustomerShippingAddressId($shippingAddressId, $skipBasketCalculation = false):void
 
 ----
 
@@ -322,6 +326,10 @@ Sets the shipping address id for the current shopping cart.
 |Name |Type |Description
 a|`$shippingAddressId`
 |link:http://php.net/int[int^]
+a|
+
+a|`$skipBasketCalculation`
+|link:http://php.net/bool[bool^]
 a|
 |===
 
@@ -341,6 +349,22 @@ public validateCheckout():Plenty\Modules\Frontend\Events\ValidateCheckoutEvent
 
 
 Validate all data of the checkout
+
+[source%nowrap, php]
+[#resetaddresses]
+----
+
+public resetAddresses():void
+
+----
+
+
+
+
+
+
+
+Reset addresses
 
 
 [[frontend_contracts_currencyexchangerepositorycontract]]
@@ -538,6 +562,25 @@ The event is triggered when a customer address is changed in the online store.
 
 
 
+
+
+===== Methods
+
+[source%nowrap, php]
+[#isskipbasketcalculation]
+----
+
+public isSkipBasketCalculation():bool
+
+----
+
+
+
+
+
+
+
+Shows if the basket calculation should be skipped
 
 
 [[frontend_events_frontendlanguagechanged]]
@@ -773,6 +816,22 @@ a|The ID of the shipping country
 |===
 
 
+[source%nowrap, php]
+[#isskipbasketcalculation]
+----
+
+public isSkipBasketCalculation():bool
+
+----
+
+
+
+
+
+
+
+Shows if the basket calculation should be skipped
+
 
 [[frontend_events_frontendshippingprofilechanged]]
 ==== FrontendShippingProfileChanged
@@ -869,6 +928,22 @@ public getAccountAddressId():int
 
 Gets the ID of the address saved for the account.
 
+[source%nowrap, php]
+[#isskipbasketcalculation]
+----
+
+public isSkipBasketCalculation():bool
+
+----
+
+
+
+
+
+
+
+Shows if the basket calculation should be skipped
+
 
 [[frontend_events_frontendupdateinvoiceaddress]]
 ==== FrontendUpdateInvoiceAddress
@@ -903,6 +978,22 @@ public getAccountAddressId():int
 
 
 Gets the ID of the address saved for the account.
+
+[source%nowrap, php]
+[#isskipbasketcalculation]
+----
+
+public isSkipBasketCalculation():bool
+
+----
+
+
+
+
+
+
+
+Shows if the basket calculation should be skipped
 
 
 [[frontend_events_frontendupdatepaymentsettings]]
