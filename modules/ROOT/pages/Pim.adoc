@@ -3626,22 +3626,6 @@ Used to represent the ItemHasFlagOne filter in both the catalog export and UI.
 ===== Methods
 
 [source%nowrap, php]
-[#getkey]
-----
-
-public getKey():string
-
-----
-
-
-
-
-
-
-
-
-
-[source%nowrap, php]
 [#setfilterdata]
 ----
 
@@ -3664,6 +3648,32 @@ template definition this should not be called. Use the specific setter methods i
 |Name |Type |Description
 a|`$filterData`
 |
+a|
+|===
+
+
+[source%nowrap, php]
+[#setflags]
+----
+
+public setFlags($flags):Plenty\Modules\Pim\Catalog\Variation\Filters\Item\ItemHasAtLeastOneFlagOne
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_item_itemhasatleastoneflagone[`ItemHasAtLeastOneFlagOne`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$flags`
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -3711,29 +3721,19 @@ public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
 
 
 [source%nowrap, php]
-[#setflags]
+[#getkey]
 ----
 
-public setFlags($flags):Plenty\Modules\Pim\Catalog\Variation\Filters\Item\ItemHasAtLeastOneFlagOne
+public getKey():string
 
 ----
 
 
 
 
-====== *Return type:*        xref:Pim.adoc#pim_item_itemhasatleastoneflagone[`ItemHasAtLeastOneFlagOne`]
 
 
 
-
-.*Parameters*
-[cols="3,1,6"]
-|===
-|Name |Type |Description
-a|`$flags`
-|link:http://php.net/array[array^]
-a|
-|===
 
 
 [source%nowrap, php]
@@ -10122,7 +10122,7 @@ The contract for the pim attribute repository
 [#search]
 ----
 
-public search($with = [], $page = 1, $perPage = 50):Illuminate\Support\Collection
+public search($with = [], $page = 1, $perPage = 50, $sorting = []):Illuminate\Support\Collection
 
 ----
 
@@ -10148,6 +10148,10 @@ a|
 
 a|`$perPage`
 |link:http://php.net/int[int^]
+a|
+
+a|`$sorting`
+|link:http://php.net/array[array^]
 a|
 |===
 
@@ -16764,6 +16768,32 @@ a|
 
 
 [source%nowrap, php]
+[#isshopaction]
+----
+
+public isShopAction($shopAction):Plenty\Modules\Pim\SearchService\Filter\ItemFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_itemfilter[`ItemFilter`]
+
+
+Restricts the result to have the specified item shop action / store special.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$shopAction`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#isagerestriction]
 ----
 
@@ -16811,6 +16841,32 @@ Restricts the result to not have the specified item age restriction.
 |Name |Type |Description
 a|`$ageRestriction`
 |link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#isstocktype]
+----
+
+public isStockType($stockType):Plenty\Modules\Pim\SearchService\Filter\ItemFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_itemfilter[`ItemFilter`]
+
+
+Restricts the result to have the specified item stock type.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$stockType`
+|link:http://php.net/string[string^]
 a|
 |===
 
@@ -18505,6 +18561,36 @@ public matchSupplierItemNumber($term, $precision = \Plenty\Modules\Cloud\Elastic
 |===
 |Name |Type |Description
 a|`$term`
+|link:http://php.net/string[string^]
+a|
+
+a|`$precision`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#hassuppliervariationnumber]
+----
+
+public hasSupplierVariationNumber($supplierNumber, $precision):Plenty\Modules\Pim\SearchService\Filter\SupplierFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_supplierfilter[`SupplierFilter`]
+
+
+Restricts the result to have the supplier variation number.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$supplierNumber`
 |link:http://php.net/string[string^]
 a|
 
