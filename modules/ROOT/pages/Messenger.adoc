@@ -3257,7 +3257,7 @@ If null is set, the follow up date will be removed
 [#updateread]
 ----
 
-public updateRead($uuids, $userId, $read):int
+public updateRead($uuids, $userId, $read, $globalReadStatus = null):int
 
 ----
 
@@ -3284,6 +3284,10 @@ a|ID of the user
 a|`$read`
 |link:http://php.net/bool[bool^]
 a|Read status: true/false
+
+a|`$globalReadStatus`
+|link:http://php.net/bool[bool^]
+a|Is global read status active, when null it used the system settings
 |===
 
 
