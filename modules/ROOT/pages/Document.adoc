@@ -3557,6 +3557,62 @@ a|The ID of the document
 
 
 [source%nowrap, php]
+[#gettags]
+----
+
+public getTags($documentId):array
+
+----
+
+
+
+
+
+
+
+Get the document tags as array of tag IDs.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$documentId`
+|link:http://php.net/int[int^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#settags]
+----
+
+public setTags($documentId, $tags):array
+
+----
+
+
+
+
+
+
+
+Set the document tags as array of tag IDs.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$documentId`
+|link:http://php.net/int[int^]
+a|
+
+a|`$tags`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
 [#clearcriteria]
 ----
 
@@ -3862,6 +3918,9 @@ The document model contains information about actual documents.
     |        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
     a|Collection of categories that are associated with the document
 |tags
+    |
+    a|
+|tagRelationships
     |
     a|
 |===
