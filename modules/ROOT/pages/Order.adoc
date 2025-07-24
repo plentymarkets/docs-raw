@@ -6774,6 +6774,13 @@ public getExchangeRatesFrom($currencyIso):array
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2025-07)#
+====
+
+Method is deprecated
+
+====
 
 
 
@@ -6800,6 +6807,13 @@ public getExchangeRatesTo($currencyIso):array
 
 ----
 
+[WARNING]
+.Deprecated! [small]#(since 2025-07)#
+====
+
+Method is deprecated
+
+====
 
 
 
@@ -6817,6 +6831,22 @@ a|`$currencyIso`
 a|The currency ISO 4217 code, e.g. "EUR".
 |===
 
+
+[source%nowrap, php]
+[#getliveexchangerates]
+----
+
+public getLiveExchangeRates():Plenty\Modules\Order\Currency\Models\LiveExchangeRatesResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Order.adoc#order_models_liveexchangeratesresult[`LiveExchangeRatesResult`]
+
+
+Get the live exchange rates
 
 [[order_currency_models]]
 ===  Models
@@ -7023,6 +7053,57 @@ The currency name model.
 |currencyInstance
     |        xref:Order.adoc#order_models_currency[`Currency`]
     a|The currency instance.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[order_models_liveexchangeratesresult]]
+==== LiveExchangeRatesResult
+
+The live exchange rates result model.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Order\Currency\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|baseCurrency
+    |link:http://php.net/string[string^]
+    a|The base currency
+|lastUpdate
+    |        xref:Miscellaneous.adoc#miscellaneous_carbon_carbon[`Carbon`]
+    a|The last update of the exchange rates
+|exchangeRates
+    |link:http://php.net/array[array^]
+    a|The exchange rates
 |===
 
 
