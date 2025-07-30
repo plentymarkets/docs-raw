@@ -555,6 +555,22 @@ public itemBelongsToAtLeastOneAmazonProductType():Plenty\Modules\Pim\Catalog\Var
 
 
 [source%nowrap, php]
+[#itembelongstoatleastonenewamazonproducttype]
+----
+
+public itemBelongsToAtLeastOneNewAmazonProductType():Plenty\Modules\Pim\Catalog\Variation\Filters\Item\ItemBelongsToAtLeastOneNewAmazonProductType
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_item_itembelongstoatleastonenewamazonproducttype[`ItemBelongsToAtLeastOneNewAmazonProductType`]
+
+
+
+
+[source%nowrap, php]
 [#itemcreatedat]
 ----
 
@@ -3367,6 +3383,188 @@ a|`$productTypes`
 |link:http://php.net/string[string^]
 a|
 |===
+
+
+[source%nowrap, php]
+[#setrequired]
+----
+
+public setRequired($required):Plenty\Modules\Pim\Catalog\Variation\Filters\FilterBuilder
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_filterbuilder[`FilterBuilder`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$required`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#setisvisible]
+----
+
+public setIsVisible($isVisible):Plenty\Modules\Pim\Catalog\Variation\Filters\FilterBuilder
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filters_filterbuilder[`FilterBuilder`]
+
+
+Fluent setter
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$isVisible`
+|link:http://php.net/bool[bool^]
+a|
+|===
+
+
+
+[[pim_item_itembelongstoatleastonenewamazonproducttype]]
+==== ItemBelongsToAtLeastOneNewAmazonProductType
+
+Used to represent the ItemBelongsToAmazonFlatFile filter in both the catalog export and UI.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\Catalog\Variation\Filters\Item`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#setfilterdata]
+----
+
+public setFilterData($filterData):void
+
+----
+
+
+
+
+
+
+
+This method will be called in the export process if the filter was registered as a custom filter. In the
+template definition this should not be called. Use the specific setter methods instead.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$filterData`
+|
+a|
+|===
+
+
+[source%nowrap, php]
+[#setamazonproducttypes]
+----
+
+public setAmazonProductTypes($productTypes):Plenty\Modules\Pim\Catalog\Variation\Filters\Item\ItemBelongsToAtLeastOneNewAmazonProductType
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_item_itembelongstoatleastonenewamazonproducttype[`ItemBelongsToAtLeastOneNewAmazonProductType`]
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$productTypes`
+|link:http://php.net/string[string^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getfilter]
+----
+
+public getFilter($settings = []):Plenty\Modules\Pim\SearchService\Filter\NewAmazonFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_newamazonfilter[`NewAmazonFilter`]
+
+
+Will return a TypeInterface filter if at least one flat file is provided. Otherwise null is returned.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$settings`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#getuifilter]
+----
+
+public getUiFilter():Plenty\Modules\Catalog\Models\Filters\CatalogUiFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Catalog.adoc#catalog_filters_cataloguifilter[`CatalogUiFilter`]
+
+
+
+
+[source%nowrap, php]
+[#getkey]
+----
+
+public getKey():string
+
+----
+
+
+
+
+
+
+
 
 
 [source%nowrap, php]
@@ -17580,6 +17778,119 @@ Restricts the result to have all the market ids.
 |===
 |Name |Type |Description
 a|`$marketIds`
+|link:http://php.net/array[array^]
+a|
+|===
+
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray():array
+
+----
+
+
+
+
+
+
+
+
+
+[source%nowrap, php]
+[#addstatement]
+----
+
+public addStatement($statement):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statement`
+|        xref:Cloud.adoc#cloud_statement_statementinterface[`StatementInterface`]
+a|
+|===
+
+
+[source%nowrap, php]
+[#addquery]
+----
+
+public addQuery($statement):void
+
+----
+
+
+
+
+
+
+
+
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$statement`
+|
+a|
+|===
+
+
+
+[[pim_filter_newamazonfilter]]
+==== NewAmazonFilter
+
+Includes filters for new amazon product type
+
+
+
+===== Namespace
+
+`Plenty\Modules\Pim\SearchService\Filter`
+
+
+
+
+
+
+===== Methods
+
+[source%nowrap, php]
+[#hasanyproducttype]
+----
+
+public hasAnyProductType($productTypeIds):Plenty\Modules\Pim\SearchService\Filter\NewAmazonFilter
+
+----
+
+
+
+
+====== *Return type:*        xref:Pim.adoc#pim_filter_newamazonfilter[`NewAmazonFilter`]
+
+
+Restricts the result to have any of the specified typeIds.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$productTypeIds`
 |link:http://php.net/array[array^]
 a|
 |===
