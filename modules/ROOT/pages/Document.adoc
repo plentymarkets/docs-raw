@@ -3923,6 +3923,9 @@ The document model contains information about actual documents.
 |tagRelationships
     |
     a|
+|generationInformation
+    |        xref:Document.adoc#document_models_documentgenerationinformation[`DocumentGenerationInformation`]
+    a|
 |===
 
 
@@ -3977,6 +3980,60 @@ The manual comment model for the document model .
 |document
     |        xref:Document.adoc#document_models_document[`Document`]
     a|The related document.
+|===
+
+
+===== Methods
+
+[source%nowrap, php]
+[#toarray]
+----
+
+public toArray()
+
+----
+
+
+
+
+
+
+
+Returns this model as an array.
+
+
+[[document_models_documentgenerationinformation]]
+==== DocumentGenerationInformation
+
+Informations about a document generation.
+
+
+
+===== Namespace
+
+`Plenty\Modules\Document\Models`
+
+
+
+
+
+.Properties
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+
+|id
+    |link:http://php.net/int[int^]
+    a|
+|documentId
+    |link:http://php.net/int[int^]
+    a|
+|templateId
+    |link:http://php.net/int[int^]
+    a|
+|type
+    |link:http://php.net/string[string^]
+    a|
 |===
 
 
@@ -4411,6 +4468,9 @@ The DocumentBuilder template setting model
     |
     a|
 |typeSettings
+    |
+    a|
+|generationInformations
     |
     a|
 |===
