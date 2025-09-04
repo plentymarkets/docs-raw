@@ -27724,7 +27724,7 @@ Get ids which are added to the context.
 [#setids]
 ----
 
-public setIds($ids):void
+public setIds($ids, $useBatchSize = false):void
 
 ----
 
@@ -27743,8 +27743,28 @@ Set ids. All other restrictions are ignored.
 a|`$ids`
 |        xref:Miscellaneous.adoc#miscellaneous_support_collection[`Collection`]
 a|
+
+a|`$useBatchSize`
+|link:http://php.net/bool[bool^]
+a|Use batch size. This can help with memory problems on large result sets.
 |===
 
+
+[source%nowrap, php]
+[#isbatchsizeinnosearch]
+----
+
+public isBatchSizeInNoSearch():bool
+
+----
+
+
+
+
+
+
+
+Use batch size also in NoSearch repo (setIds). This can help with memory problems on large result sets.
 
 [source%nowrap, php]
 [#getaggregations]
