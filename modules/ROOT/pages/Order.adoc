@@ -23437,7 +23437,10 @@ Clears the filter array.
 [[order_contracts_orderdocumentstoragecontract]]
 ==== OrderDocumentStorageContract
 
-Provides methods to store, get and delete order document files. The files are stored on an AWS S3 storage by default. The implementation for this contract can be replaced by your own implementation.
+
+ * Provides methods to store, get and delete order document files.
+ *     The files are stored on an AWS S3 storage by default. The implementation for this contract can be
+ *     replaced by your own implementation.
 
 
 
@@ -23556,6 +23559,32 @@ Delete a file from the storage.
 |Name |Type |Description
 a|`$path`
 |link:http://php.net/string[string^]
+a|The file path
+|===
+
+
+[source%nowrap, php]
+[#deletemultiple]
+----
+
+public deleteMultiple($paths):bool
+
+----
+
+
+
+
+
+
+
+Delete the requested files from the storage.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$paths`
+|link:http://php.net/array[array^]
 a|The file path
 |===
 
