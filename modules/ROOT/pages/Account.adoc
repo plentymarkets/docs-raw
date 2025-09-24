@@ -11364,6 +11364,32 @@ a|The ID of the recipient
 
 
 [source%nowrap, php]
+[#batchdeleterecipientsbyid]
+----
+
+public batchDeleteRecipientsById($recipientIds):int
+
+----
+
+
+
+
+
+
+
+Deletes multiple recipients by their IDs.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$recipientIds`
+|link:http://php.net/array[array^]
+a|An array of recipient IDs to delete
+|===
+
+
+[source%nowrap, php]
 [#listallentries]
 ----
 
@@ -11394,6 +11420,48 @@ public listAllFolders():array
 
 
 Lists all newsletter folders.
+
+[source%nowrap, php]
+[#searchfolders]
+----
+
+public searchFolders($page, $itemsPerPage, $sortBy, $sortOrder, $filters):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Lists all newsletter recipients.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$page`
+|link:http://php.net/int[int^]
+a|Page number for pagination
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|Number of items per page for pagination
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|The column to sort by
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|The order to sort by (asc or desc)
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|Filters to apply to the search
+|===
+
 
 [source%nowrap, php]
 [#listallrecipients]
@@ -11451,7 +11519,7 @@ a|The email address of the recipient
 [#listrecipients]
 ----
 
-public listRecipients($columns, $page, $itemsPerPage, $filter, $with):Plenty\Repositories\Models\PaginatedResult
+public listRecipients($columns, $page, $itemsPerPage, $filter, $with, $append = [], $sortBy = null, $sortOrder = null):Plenty\Repositories\Models\PaginatedResult
 
 ----
 
@@ -11486,6 +11554,18 @@ a|Filter that restricts the search result
 a|`$with`
 |link:http://php.net/array[array^]
 a|An array with child instances to be loaded
+
+a|`$append`
+|link:http://php.net/array[array^]
+a|An array with custom attributes to be appended
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|The column to sort by
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|The order to sort by (asc or desc)
 |===
 
 
@@ -11702,6 +11782,138 @@ a|The IDs of the email folders. The email addresses of the contacts and interest
 |===
 
 
+[source%nowrap, php]
+[#moverecipients]
+----
+
+public moveRecipients($sourceFolderId, $destinationFolderId):int
+
+----
+
+
+
+
+
+
+
+Moves all recipients from one folder to another.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$sourceFolderId`
+|link:http://php.net/int[int^]
+a|The ID of the source folder from which the recipients will be moved
+
+a|`$destinationFolderId`
+|link:http://php.net/int[int^]
+a|The ID of the destination folder to which the recipients will be moved
+|===
+
+
+[source%nowrap, php]
+[#moverecipientsbyid]
+----
+
+public moveRecipientsById($recipientIds, $destinationFolderId):int
+
+----
+
+
+
+
+
+
+
+Moves recipients by their IDs from one folder to another.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$recipientIds`
+|link:http://php.net/array[array^]
+a|An array of recipient IDs to be moved
+
+a|`$destinationFolderId`
+|link:http://php.net/int[int^]
+a|The ID of the destination folder to which the recipients will be moved
+|===
+
+
+[source%nowrap, php]
+[#searchorders]
+----
+
+public searchOrders($page, $itemsPerPage, $sortBy, $sortOrder, $filters):Plenty\Repositories\Models\PaginatedResult
+
+----
+
+
+
+
+====== *Return type:*        xref:Miscellaneous.adoc#miscellaneous_models_paginatedresult[`PaginatedResult`]
+
+
+Searches for orders based on the provided parameters.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$page`
+|link:http://php.net/int[int^]
+a|The page number for pagination
+
+a|`$itemsPerPage`
+|link:http://php.net/int[int^]
+a|The number of items per page
+
+a|`$sortBy`
+|link:http://php.net/string[string^]
+a|The column to sort by
+
+a|`$sortOrder`
+|link:http://php.net/string[string^]
+a|The order to sort by (asc or desc)
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|Filters to apply to the search
+|===
+
+
+[source%nowrap, php]
+[#importfromorders]
+----
+
+public importFromOrders($folderId, $filters):int
+
+----
+
+
+
+
+
+
+
+Import email addresses to a newsletter folder for found orders.
+
+.*Parameters*
+[cols="3,1,6"]
+|===
+|Name |Type |Description
+a|`$folderId`
+|link:http://php.net/int[int^]
+a|The ID of the folder to which the email addresses will be imported
+
+a|`$filters`
+|link:http://php.net/array[array^]
+a|Filters to apply to the search
+|===
+
+
 [[account_newsletter_models]]
 ===  Models
 [[account_models_entry]]
@@ -11786,13 +11998,22 @@ The newsletter folder model.
     a|The name of the newsletter folder
 |isDeletable
     |link:http://php.net/bool[bool^]
-    a|Flag that indicates if the newsletter folder can be deleted. The folders 'Customers' and 'Interested parties' are available by default and cannot be deleted.
+    a|Typo, wrong property name, should be isDeleteable.
+|isDeleteable
+    |link:http://php.net/bool[bool^]
+    a|Flag that indicates if the newsletter folder can be deleted.
+The folders 'Customers' and 'Interested parties' are available by default and cannot be deleted.
 |position
     |link:http://php.net/int[int^]
     a|The position of the newsletter folder
 |isSelectable
     |link:http://php.net/bool[bool^]
-    a|Flag that indicates if the newsletter folder can be selected by customers in the online store. If this is allowed, the folder will be displayed in the My account area of the online store. Customers will then be able to subscribe to the newsletters that are included in this folder.
+    a|Flag that indicates if the newsletter folder can be selected by customers
+in the online store. If this is allowed, the folder will be displayed in the My account area of the online store.
+Customers will then be able to subscribe to the newsletters that are included in this folder.
+|numberOfRecipients
+    |link:http://php.net/int[int^]
+    a|The number of recipients in the newsletter folder
 |===
 
 
